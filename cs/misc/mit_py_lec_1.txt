@@ -1,0 +1,32 @@
+mit py lec 1
+
+Two types of knowledge:
+    1. Declarative
+        - square root of x is that number `y` s.t. `y^2=x`
+
+    2. Imperative ("how to", "receipe")
+        - Tells you HOW to do something.
+        - start with a guess "g"
+        - If g^2 = x
+        - then stop
+        - otherwise take average of x and x/g and start again
+
+- Earliest Computers: "Build a circuit"
+    - Fixed Program computers e.g. Calculators, Turing Bombe
+    - Stored Program computers: came later.
+
+- Wonderful computer?
+    - A circuit which accepts a circuit diagram and
+    - reconfigures itself into that diagram. (i.e. emulate the
+    - diagram) Such a circuit exists:
+        - its called an "interpreter"!
+
+- Basic Computer:
+    - Memory
+    - CPU, ALU
+    - "PC" - program counter, points to current instruction
+
+- Parts of a language:
+    - Syntax
+    - Static Semantics - "My desk is mary". Syntactically correct, but meaning?!
+    - Full Semantics - what does program mean? What does code do when run?

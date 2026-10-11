@@ -1,0 +1,139 @@
+# Core idea:
+    - Most people get weak AI results because they prompt
+      vaguely, provide no context, and never iterate. The video
+      gives a 7-step system to use AI like a top 1% user.
+
+
+### Content
+    1. Learn “machine English”
+    2. Pick one model and go deep
+    3. Give it real context (MAP)
+    4. Debug your thinking, not the model
+    5. Steer the model toward experts
+    6. Verify everything
+    7. Add your taste (OCEAN)
+
+
+──────────────────────
+
+### 1. Learn “machine English”
+
+AI doesn’t “understand” your words — it predicts tokens.
+So vague prompt → vague prediction.
+Sharp prompt → sharp prediction.
+
+Actionable habit:
+Use the AIM structure:
+• Actor → who the AI should act as
+• Input → the data or context you provide
+• Mission → the exact task/output you want
+
+Example pattern you can reuse:
+“You are a … (actor). Here is my input … (input). Your mission: … (mission).”
+
+──────────────────────
+
+### 2. Pick one model and go deep
+
+Don’t try 20 tools. Pick one (ChatGPT, Gemini, Claude) and get fluent with its quirks, strengths, and limits.
+
+Actionable habit:
+Commit to one model for a week and practice daily with AIM-prompts until it feels natural.
+
+──────────────────────
+
+### 3. Give it real context (MAP)
+
+AI only reasons well when grounded in context.
+
+Use MAP:
+• Memory → paste relevant history or ask it to summarize previous chats
+• Assets → attach files, paste data, include references
+• Actions → let it call tools (search, code, etc.) when available
+• Prompt → only after the other three pieces are ready
+
+Actionable habit:
+Before asking a big question, give it:
+“Here is context… Here are assets… Here is what came before…”
+Then your instruction.
+
+──────────────────────
+
+### 4. Debug your thinking, not the model
+
+Weak output usually means weak instructions.
+Treat prompting as iteration, not one-shot requests.
+
+Three techniques:
+• Chain-of-thought pattern: “Think step by step. Show reasoning, then final answer.”
+• Verifier pattern: “Ask me 3 questions that clarify my intent before answering.”
+• Refinement pattern: “Suggest 2 clearer rewrites of my question. I’ll pick one.”
+
+Actionable habit:
+If an answer is bad, don’t re-prompt — fix your prompt using these patterns.
+
+──────────────────────
+
+### 5. Steer the model toward experts
+
+Generic prompts → generic outputs.
+Specific expert-anchored prompts → high-level answers.
+
+Actionable habit:
+Instead of “Explain X,” use:
+“Explain X using ideas from [expert], [framework], [institution].”
+If you don’t know the experts, ask the model to list them first.
+
+──────────────────────
+
+### 6. Verify everything
+
+AI sounds confident even when wrong.
+Use 5 verification checks:
+
+• Assumptions: “List all assumptions and rate confidence.”
+• Sources: “Cite 2 independent sources for each major claim.”
+• Counter-evidence: “Find one credible source that disagrees.”
+• Audit: “Recompute all figures. Show math.”
+• Cross-model verification:
+Run the same prompt in another model and compare.
+
+Actionable habit:
+Use verification steps for anything factual, numerical, or high-stakes.
+
+──────────────────────
+
+### 7. Add your taste (OCEAN)
+
+Strong AI output must sound like you, not like an AI.
+
+Use OCEAN to refine responses:
+• Original → ask for non-obvious angles
+• Concrete → ask for real examples or numbers
+• Evident → ask for logic and evidence
+• Assertive → ask it to pick a stance and defend it
+• Narrative → ask for a coherent story/flow
+
+Actionable habit:
+After any draft, ask:
+“Improve this using OCEAN.”
+
+──────────────────────
+
+Quick Practical Workflow (you can copy this)
+
+Define actor, input, mission (AIM).
+
+Add memory + assets (MAP).
+
+Ask it to think step by step.
+
+Improve the prompt with verifier/refinement.
+
+Anchor to experts.
+
+Verify the result.
+
+OCEAN-polish the final output to match your taste.
+
+Follow this and your AI usage quality will jump massively.

@@ -1,0 +1,83 @@
+### Lectures:
+    - $MY_VIDEOS/maths/green-calc/01_introduction/01_introduction-to-the-course/03_introduction.mp4
+    - $MY_VIDEOS/maths/green-calc/02_a-review-of-functions/01_functions/01_functions.mp4
+    - $MY_VIDEOS/maths/green-calc/02_a-review-of-functions/02_exponentials/01_exponentials.mp4
+    - $MY_VIDEOS/maths/green-calc/02_a-review-of-functions/02_exponentials/02_bonus.mp4
+    - $MY_VIDEOS/maths/green-calc/03_taylor-series/01_taylor-series/01_taylor-series.mp4
+    - $MY_VIDEOS/maths/green-calc/03_taylor-series/02_computing-taylor-series/01_computing-taylor-series.mp4
+    - $MY_VIDEOS/maths/green-calc/03_taylor-series/03_convergence/01_convergence.mp4
+    - $MY_VIDEOS/maths/green-calc/03_taylor-series/03_convergence/02_bonus.mp4
+    - $MY_VIDEOS/maths/green-calc/03_taylor-series/04_expansion-points/01_expansion-points.mp4
+    - $MY_VIDEOS/maths/green-calc/04_limits-and-asymptotics/01_limits/01_limits.mp4
+    - $MY_VIDEOS/maths/green-calc/04_limits-and-asymptotics/02_l-hopitals-rule/01_l-hopitals-rule.mp4
+    - $MY_VIDEOS/maths/green-calc/04_limits-and-asymptotics/03_orders-of-growth/01_orders-of-growth.mp4
+    - $MY_VIDEOS/maths/green-calc/04_limits-and-asymptotics/03_orders-of-growth/02_bonus.mp4
+
+
+# Overview
+    - Part 1: Functions         https://www.coursera.org/learn/single-variable-calculus/home/week/1
+    - Part 2: Differentiation   https://www.coursera.org/learn/differentiation-calculus/home/week/1
+    - Part 3: Integration       https://www.coursera.org/learn/integration-calculus/home/week/1
+    - Part 4: Applications      https://www.coursera.org/learn/applications-calculus/home/week/1
+    - Part 5: Discrete Calculus https://www.coursera.org/learn/discrete-calculus/home/week/1
+
+# Part 1: functions
+    - Great links between exponentials and Trigonometry...
+        - (link: hyperbolics! and the TAYLOR SERIES)
+    - nice visualisation of domain and range of a function
+        - $MY_IMAGES/maths/calculus-green/domain-range-function.jpg
+        - (range makes sense where the outputs can 'shoot out')
+    - composition
+        - $MY_IMAGES/maths/calculus-green/function-composition.jpg
+    - inverses
+        - $MY_IMAGES/maths/calculus-green/function-inverses-02.jpg
+        - The 'inverse' is like a mirror reflection through the
+          central diagonal
+            - $MY_IMAGES/maths/calculus-green/function-inverses-03.jpg
+        - `ln` is the mirror reflection of `e`
+            - (so we learn a few handy values for ln, such as
+              `ln(1)=0`)
+            - $MY_IMAGES/maths/calculus-green/e-and-ln-inverses.jpg
+    - common inverses
+        - $MY_IMAGES/maths/calculus-green/common-inverses.jpg
+
+### exponential function
+    - But what does `e^(x)` mean?
+        - $MY_IMAGES/maths/calculus-green/what-does-e-mean.jpg
+    - definition of `e`
+        - It's based on an infinite series polynomial approximation.
+        - Really it's based on a TAYLOR SERIES approximation.
+            - $MY_IMAGES/maths/calculus-green/definition-of-e.jpg
+    - pretend `e` is a long polynomial
+        - $MY_IMAGES/maths/calculus-green/e-long-polynomial.jpg
+
+### Eulers Formula
+    - $MY_IMAGES/maths/calculus-green/Eulers-formula.jpg
+
+
+### Hyperbolic Trigs: Link Exponentials & Trigonometry
+    - Note: the TAYLOR SERIES lies underneath all this.
+    - Link between the standard "elliptic" trig functions and the
+      hyperbolic trig functions...
+    - The Hyperbolics are defined in terms of `e` 
+        - $MY_IMAGES/maths/calculus-green/Definition-Hyperbolics.jpg
+    - Now `sin` and `cos` are called "elliptic trig functions"
+      because they're related to the geometry of the circle.
+        - note: we're dealing with a unit circle here
+        - $MY_IMAGES/maths/calculus-green/Hyperbolics-Trigs-Link-01.jpg
+    - Symmetry between elliptic trigs and hyperbolic trigs
+        - $MY_IMAGES/maths/calculus-green/symmetry-elliptic-hyperbolic-trigs.jpg
+
+### EXPONENTIAL is the key function
+    - it unlocks so many other functions...
+    - Gaussian: has exponential in the definition
+    - erf function: (sigmoid function)
+
+### Ch 2.2
+    - a mad factorial formula for `e^(anything)`
+    - ah it's the binomial theorem
+    - ie. the exponential function is defined in terms of (an infinite?) series
+
+### Links
+    - Prof. Ghrist "Calculus Green" Single Variable https://www.youtube.com/playlist?list=PL8erL0pXF3JaFSMdokheNMvTa96jdc4GU
+    - Prof. Ghrist Coursera Single Variable         https://www.coursera.org/learn/single-variable-calculus

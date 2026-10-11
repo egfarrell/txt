@@ -1,0 +1,83 @@
+### Aim
+    - Help NOAA forecast changes in Earth’s magnetic field!
+
+    - The efficient transfer of energy from solar wind into the
+      Earth’s magnetic field causes geomagnetic storms.
+
+    - The resulting variations in the magnetic field increase
+      errors in magnetic navigation. The disturbance-storm-time
+      index (`Dst`), is a measure of the severity of the
+      geomagnetic storm.
+
+    - Empirical models have been proposed as early as 1975 to
+      forecast `Dst` solely on solar-wind observations at the
+      Lagrangian (L1) position by satellites. Physics-based and
+      ML models are also used for solar wind forcasting of Dst.
+
+    - Although ML models usually perform better than other
+      approaches, there is still room to improve, especially
+      predicting extreme events.
+
+    - More importantly, we seek solutions that work on the RAW,
+      REAL-TIME data streams and are agnostic to sensor
+      malfunctions and noise.
+
+    - TASK: develop models to forcast `Dst` that push the
+      boundary of predictive performance, under operationally
+      viable constraints, using the real-time solar-wind (RTSW)
+      data feeds from NOAA’s DSCOVR and NASA’s ACE satellites.
+        - Improved models can provide more advanced warning of
+          geomagnetic storms and reduce errors in magnetic
+          navigation systems.
+
+### Background
+    - The efficient transfer of energy from solar-wind into
+      Earth’s magnetic field causes geomagnetic storms.
+        - The resulting ground magnetic field variations increase
+          errors in systems that use Earth’s magnetic field as
+          a pointing reference.
+
+    - The `Dst` or disturbance-storm-time index is a measure of
+      the severity of the geomagnetic storm.
+        - Specifically, the _negative deflection_ of the Earth's
+          magnetic field due to the ring current (see images) is
+          measured by the Dst index.
+
+    - The Dst index is a key specification of the magnetospheric
+      dynamics, and used to drive geomagnetic disturbance models
+      such as NOAA/NCEI’s High Definition Geomagnetic Model Real
+      Time (HDGM-RT).
+        - Additionally, magnetic surveyors, government agencies,
+          academic institutions, satellite operators, and power
+          grid operators use the Dst index to analyze the
+          strength and duration of geomagnetic storms.
+
+    - The Dst is calculated as an average deflection of the
+      horizontal component of the magnetic field observed at four
+      near-equatorial ground observatories.
+
+    - The more intense the geomagnetic storm is, the more
+      negative the Dst value becomes. However, the
+      observatory-based Dst values are not very useful for the
+      _real-time_ magnetic modeling due to latency, instrument
+      outages and connectivity issues.
+
+    - Over recent decades, several models were proposed for
+      solar-wind forecasting of Dst. Here, instead of relying on
+      ground measurements, models predict the Dst values solely
+      from solar-wind measurements by satellites such as DSCOVR
+      or NASA's ACE, situated 1.6 million km away from Earth
+      along the Sun-Earth line.
+        - Since radio communication is faster than the solar
+          wind, the measurements at L1 provide _15-30 minutes of
+          lead-time_ before the storm hits Earth.
+
+    - The NCEI, in partnership with CIRES is conducting
+      a data-science challenge to forecast Dst from RTSW data in
+      an operationally viable setup.
+
+    - Recent advances in machine learning research hold immediate
+      promise for improving Dst forecasting even without formal
+      training in space physics. The right challenge in this
+      context can identify solutions that are both operationally
+      viable and highly accurate.

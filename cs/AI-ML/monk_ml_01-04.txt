@@ -1,0 +1,57 @@
+monk ml 01-04
+
+Machine learning
+algorithms for inferring unknowns from knowns
+
+spam 
+hand writing
+vehicle navigating
+speech recogntion
+google map block faces/car regs
+netflix recommendations
+climate modelling - interpolate between points in climate
+
+
+Classes of ML problems
+
+SUPERVISED 
+	give set of data points (x1,y1), (x2, y2)
+	find a FUNCTION f(x) = y, that gives the correct output
+	illposed problem! Break into 
+	classification: {yi are finite set}
+	regression - y's are in R (real numbers) or R^d (d-dimensional real space)
+
+	classification: 
+		x1 and x2 axises with 1's and 0's. Given a point is it a 1 or 0.
+
+	regression: 
+        normal x, y axis. given an x, what y should you associate with
+        it. ie come up with a function that will give an accurate y.
+
+UNSUPERVISED
+	much less well-defined. given {x1....xK} then FIND PATTERNS!
+	* clustering, 
+		(plot on graph and they bunch together)
+	* density estimation 
+		(assume underlying probability density distribution, plot density)
+	* dimensionality reduction
+		(snake in 2-D, reduced down to a line. but want to preserve structure)
+
+SEMI-SUPERVISED
+    sort of inbetween the first two methods. give a few (x,y) tuples
+    and then a few x values. Must predict good y values to go wtih the
+    x values "two moons data problem", two semi-circles, X and
+    0 classes
+
+ACTIVE LEARNING
+        A bit like semi-supervised but you get to ask for the label of
+        a few important points
+
+DECISION THEORY
+        Rate your performance in semi-supervised. loss matrix, cancer, no
+        cancer, do test, dont do test
+
+REINFORCEMENT LEARNING
+        sequential decision theory. Rewards, losess associated with
+        actions, states. want to maximise lifetime reward. Minimise
+        lifetime loss.

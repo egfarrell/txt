@@ -1,0 +1,247 @@
+
+### safari books online (Mysql)
+    - = ANY, = ALL, > ANY
+    - co-related subquery (where exists...)
+
+stored procedures
+	
+    - declaring variables
+        - DECLARE variable_name datatype(size) DEFAULT default_value;
+        - DECLARE total_count INT DEFAULT 0;
+        - DECLARE total_products INT DEFAULT 0;
+    - assign values:
+        - SET total_count = 10;
+        - `SELECT COUNT(*) INTO total_products FROM products;`
+    - 'OUT' variable
+        - CALL CountOrderByStatus('Shipped', `@total`);
+        - SELECT `@total`;
+    - 'INOUT' variable
+            ```
+            DELIMITER $$
+            CREATE PROCEDURE set_counter(INOUT count INT(4), 
+                                         IN    inc   INT(4))
+            BEGIN
+                SET count = count + inc;
+            END$$
+            DELIMITER ;
+            ```
+
+            ```
+            SET @counter = 1;
+            CALL set_counter(@counter,1); -- 2
+            CALL set_counter(@counter,1); -- 3
+            CALL set_counter(@counter,5); -- 8
+            SELECT @counter; -- 8
+            ```
+        - if statement:
+            IF expression THEN
+                statements;
+            ELSEIF elseif-expression THEN
+                elseif-statements;
+                ...
+            ELSE
+                else-statements;
+            END IF;
+
+        - Case statement
+            CASE customerCountry
+            WHEN  'USA' THEN
+            SET p_shiping = '2-day Shipping';
+            WHEN 'Canada' THEN
+            SET p_shiping = '3-day Shipping';
+            ELSE
+            SET p_shiping = '5-day Shipping';
+            END CASE;
+
+            CASE  
+            WHEN creditlim > 50000 THEN 
+            SET p_customerLevel = 'PLATINUM';
+            WHEN (creditlim <= 50000 AND creditlim >= 10000) THEN
+            SET p_customerLevel = 'GOLD';
+            WHEN creditlim < 10000 THEN
+            SET p_customerLevel = 'SILVER';
+            END CASE;
+
+        - loops
+            WHILE x  <= 5 DO
+                SET  str = CONCAT(str,x,',');
+                SET  x = x + 1; 
+            END WHILE;
+
+            REPEAT
+                SET  str = CONCAT(str,x,',');
+                SET  x = x + 1; 
+            UNTIL x  > 5
+            END REPEAT;
+
+### cursor inside a stored proc
+        DEClARE email_cursor CURSOR FOR 
+            SELECT email FROM employees;
+ 
+        -- declare NOT FOUND handler
+        DECLARE CONTINUE HANDLER 
+            FOR NOT FOUND SET v_finished = 1;
+ 
+        OPEN email_cursor;
+        get_email: LOOP
+            FETCH email_cursor INTO v_email;
+ 
+            IF v_finished = 1 THEN 
+                LEAVE get_email;
+            END IF;
+ 
+            -- build email list
+            SET email_list = CONCAT(v_email,";",email_list);
+ 
+        END LOOP get_email;
+ 
+        CLOSE email_cursor;
+
+### stored proc error handler
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN
+        ROLLBACK;
+        SELECT 'Error occurred. Operation rollbacked. Stored procedure terminated';
+    END;
+ 
+    - DECLARE EXIT HANDLER FOR 1062             SELECT 'Duplicate keys error encountered';
+    - DECLARE EXIT HANDLER FOR SQLEXCEPTION     SELECT 'SQLException encountered';
+    - DECLARE EXIT HANDLER FOR SQLSTATE '23000' SELECT 'SQLSTATE 23000';
+
+    - more readable:
+        - DECLARE table_not_found CONDITION for 1051;
+        - DECLARE EXIT HANDLER FOR  table_not_found SELECT 'Please create table abc first';
+        - SELECT * FROM abc;
+
+### stored proc signal / resignal
+        IF(C != 1) THEN 
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Order No not found in orders table';
+        END IF;
+
+        DECLARE division_by_zero CONDITION FOR SQLSTATE '22012';
+ 
+        DECLARE CONTINUE HANDLER FOR division_by_zero 
+            RESIGNAL SET MESSAGE_TEXT = 'Division by zero / Denominator cannot be zero';
+
+        IF denominator = 0 THEN
+            SIGNAL division_by_zero;
+        ELSE
+            SET result := numerator / denominator;
+        END IF;
+
+### "using":
+    - if joining two tables and on the SAME column name
+    `select * from customer join address USING(customer_id);`
+
+### backticks
+    - if you are using field names that are offical MySQL
+      reserved words you have to use backticks
+    - select `status` from table_name
+    - select `id` from table_name where `status`=1
+    - otherwise  mysql returns errors or the query doesnt work.
+    - note: you can use double quotes too?
+        - select first_name as "first name" from actor;
+        - select first_name as `first name` from actor;
+
+### perform a risk stunt
+    mysql> start transaction;
+    mysql> _... test something risky ..._
+    mysql> rollback;
+    or
+    mysql> commit;
+
+### command line
+    ```
+    mysql -u root -p
+    ```
+    my local mysql root password: 'seasonone1'
+    ubuntu mysql service:
+        ```
+        sudo service mysql stop
+        sudo service mysql start
+        ```
+
+
+### handy 'mysql>' commands
+    status;
+    select user();
+    show variables;
+    show databases;
+    show tables;
+    desc [tablename];
+    SHOW VARIABLES WHERE Variable_name = 'version';
+    SELECT @@GLOBAL.sql_mode;
+    SELECT @@SESSION.sql_mode;
+    SELECT * FROM actor INTO OUTFILE '/tmp/actor.txt';
+    - mysql '8':
+        SELECT ROUTINE_SCHEMA, ROUTINE_NAME, ROUTINE_TYPE FROM information_schema.routines;
+    - mysql '5':
+        SELECT db, name, type FROM mysql.proc;
+
+### show stored functions/procedures
+    - show list of stored functions/procedures: 
+        -- MySQL "8":
+        SELECT   ROUTINE_SCHEMA, ROUTINE_NAME, ROUTINE_TYPE
+        FROM     information_schema.routines
+        where    ROUTINE_SCHEMA = database()
+        order    by ROUTINE_TYPE, ROUTINE_NAME;
+
+        SHOW FUNCTION STATUS;
+        SHOW PROCEDURE STATUS;
+
+        SHOW FUNCTION STATUS  WHERE Db = DATABASE() AND Type = 'FUNCTION';
+        SHOW PROCEDURE STATUS WHERE Db = DATABASE() AND Type = 'PROCEDURE';
+
+    - show function definition:
+        SHOW CREATE FUNCTION [function_name];
+
+    - delete function:
+        DROP FUNCTION [function_name];
+
+### writing stored procedures (from command line)
+    - temporarily change delimeter when entering stored proc
+    - `DELIMITER $$`
+    - ... write procedure ...
+    - now revert to normal delmiter
+    - `DELIMITER ;`
+
+### command line display
+    - end line in `\G` instead of `;` to show row in vertical fashion
+    - mysql> pager less -n -i -S
+
+### Views are STATIC!
+    - if the underlying objects in a view definition change (we
+      rename a table, delete a column) then the view will break.
+    - use the 'ALTER VIEW' to redefine view...
+
+### No 'FULL OUTER JOIN'!
+    - Unlike other database systems, MySQL doesnt support FULL
+      OUTER JOIN (a join that includes the unmatched rows of both
+      the left and right tables).
+    - See post “How to Simulate FULL OUTER JOIN in MySQL” by
+      Baron Schwartz.
+
+### ON DELETE CASCADE
+    - When defining relationships, we can specify ON DELETE
+      CASCADE for a table’s foreign key definition.
+    - Whenever MySQL detects the delete action would result in
+      orphaned rows, the delete will cascade to the associated
+      table and those rows are deleted as well.
+
+### dbeaver driver
+    - download proper jdbc driver: (for mySQL '8' not '5'!)
+    - https://dev.mysql.com/downloads/connector/j/
+    - mysql-connector-java_8.0.11-1ubuntu17.10_all.deb
+
+### dbeaver create new database
+    - click on mySQL connection (it expands)
+    - click on databases
+    - choose 'create new database' from popup menu
+
+### load sample database
+    mysql -u root -p -t < employees.sql
+
+### restore backup dump
+    https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html
+    mysql -u [uname] -p[pass] [db_to_restore] < [backupfile.sql]

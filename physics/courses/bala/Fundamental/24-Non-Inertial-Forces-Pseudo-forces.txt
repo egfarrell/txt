@@ -1,0 +1,329 @@
+$MY_VIDEOS/physics/bala_fundamental/24-Non-Inertial-Forces-Pseudo-forces.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 24
+Non – Inertial Forces (“Pseudo - Forces”)
+Today, we will take up this topic of non inertial forces also known as pseudo forces
+sometimes called fictitious forces. The concept in Newtonian dynamics that has actually
+quite simple, a quite simple explanation, but it is occasionally very confusing especially
+because of a lack of clarity as to where these forces come from and what exactly they
+mean. It will turn out that, what we mean by a non inertial force should really be called a
+non inertial acceleration.
+And then, once you multiplied by a suitable mass of a body which you are tracking, it
+becomes a force apparent force acting on the body and this is the whole origin of it.
+Extremely simple, it has to do with the fact that Newton’s laws of motion are valid in
+inertial frames, Newton second law of motion which relates mass times the acceleration
+for constant mass to the force acting on the body is valid in an inertial frame. And an
+inertial frame is one in which the first law of motion is valid.
+So, the question arise is as to, what happens if you have an accelerated frame, a frame
+that is in that is undergoing an acceleration with respect to the family of inertial frames.
+What happens to Newton’s law? What does it look like in that instants and this is what
+we are going to address today. So, to make matters simple, let us take a very simple
+specific example.
+
+(Refer Slide Time: 01:43)
+
+I have in mind a coordinate system in an inertial frame like this in x, y and z and I have
+in mind transforming from this frame of reference to a frame of reference that is rotating
+about the z axis at a uniform angular speed omega. So, we have a new frame that is
+rotating with respect to this frame, the x and y axis become some other variable x prime
+and y prime or capital X, capital Y, while the z axis remains unchanged. So, if you look
+at it from above, it looks like this, the original frame and I am going to use small letters
+for the original frame.
+So, here is x and here is y that is the origin and in the new frame of reference, the x and y
+coordinates rotate at a uniform angular speed. So, at some instant of time the coordinates,
+the new coordinates look like this, let us call that capital X and this capital Y and the
+rotation is a steady rotation, so at time t this angle is omega t. And then, the question is if
+I give you a mass m and it is undergoing some dynamics in the x y plane, what does it
+looks like. If looked at from the coordinate system, the capital X and capital Y which are
+changing with time.
+So, the way to transform from little x to capital X and capital Y is the familiar one. So, I
+have X of t and I am not going to write the t dependence here, it is explicit, it is implicit
+this is equal to cos omega t times little x plus sin omega t times little y, whereas capital Y
+is equal to minus sin omega t times little x plus cos omega t times little y. Now, we have
+dynamics going on in the little x little y plane.
+So, we have a particle of mass m which then under goes an acceleration a, which is a
+
+function of t and that is equal to the force acting on it and I will denote that by a small f
+here, that too in generally changing with time. Now of course, I can resolve this into x
+and y components and it is clear that this will imply that m times a x equal to f sub x m
+times a y equal to f sub y in Cartesian coordinates. What happens here in this case?
+(Refer Slide Time: 04:30)
+
+Well the first thing we have to do is to differentiate these with respect to time and this
+will immediately imply that x dot of t and let us, saves space by putting overhead dots
+for time derivatives x dot of t is equal to there is one term in which x and y get
+differentiated to give me little x dot and little y dot. So, this is equal to and let us put
+brackets to combine terms together suitably. So, this is cos omega times little x dot plus
+sin omega t times little y dot and then, there are two other terms which are plus.
+So, we have an omega coming out, so plus let us put omega insides. So, this is minus
+omega sin omega t times little x plus omega cos omega t times little y and that is it, once
+I differentiated the first time not only does do these get differentiated, because the
+particle is moving has some velocity components. But, in addition these two quantities,
+which are the coefficients relating the whole coordinates to the new coordinates also get
+differentiated with time and this is what happens, those terms are sitting here.
+Similarly, this will imply that y dot of t is equal to again the same thing minus sin omega
+t times little x plus cos omega t times little y plus extra terms y dot in this side plus extra
+terms, which correspond to minus omega cos omega t times little x minus omega sin
+omega t. So, let us put a plus sign and I want to keep all the minus signs right, so let me
+
+put them in brackets in the sin omega t little 1 in this fashion.
+So, we have two extra terms, which come from the differentiation of the manner in
+which the coordinates, the new moving coordinates depend on the old coordinates here.
+Now, these of course, x dot and y dot are components, so v x equal to x dot v y equal to y
+dot and we will deal with these in a minute. What happens if I differentiate one second, I
+need to differentiate one second, because I want to relate the acceleration in the new
+frame to the force in the new frame and find out if Newton’s law is valid.
+Or, if it is not valid as I suspected it would not be because of these extra terms, what are
+the extra terms that get in, so this is the target to find out, to what extend can I write
+Newton’s laws after identify the new force in the new frame of reference and the new
+acceleration. So, the second derivative x double dot of t is equal to again I differentiate
+this term and this term first and I get cos omega t x double dot plus sin omega t times y
+double dot that is the first path.
+And then, there are several other terms coming from the fact that I have to differentiate
+this and of course, I get twice this bracket now. Because, if I differentiate this I get minus
+omega sin omega t plus omega cos omega t and this time I am going to get, if I
+differentiate these two the dots on top. So, there is a term which is equal to twice and
+then whatever inside the bracket omega sin omega t x dot this time plus omega cos
+omega t y dot this time twice.
+Because, once from this term and once by differentiating these two the x and y there.
+And finally, there is a third kind of term which comes from differentiating this quantity
+that is minus omega square cos omega t minus omega square sin omega t. So, let us put a
+plus and in minus this guy here I should be careful times little x of course, plus. So, let us
+put the minus sign out minus omega square minus omega squared cos omega t sin omega
+t y expression.
+So, we are comes from differentiating X a second time and let us differentiate y quickly a
+second time. And then, we see the structure of the whole thing this is equal to again I
+differentiate this part and this part, so it is exactly as before minus sin omega t x double
+dot plus cos omega t y double dot plus twice. And now, I am going to get these
+derivatives, so it is going to be minus omega cos omega t x dot, this time plus minus
+omega sin omega t y dot this time.
+And finally, whatever I get by differentiating this and this second time. So, plus omega
+
+square sin omega t the minus sign goes away here, x and then the derivative of this,
+which is minus omega square cos omega t y and that is it. We finish differentiating and
+we got six terms on either side, because I started with two and I differentiate twice. Now,
+it is immediately clear that if I multiply this by mass, I get here the component of the
+acceleration along the capital X direction in the moving frame.
+So, this is equal to A let us call it A and this is the X component of the A, A sub X that is
+m X double dot the A X component of the, let us know let us be careful here, this
+quantity here is the mass times the acceleration as it stands. So, let me call this m times A
+subscript x, by definition A subscript x is x double dot just as little a subscript x is little x
+double dot. So, I am going to use a capital letters for the rotating frame, small letters for
+the original frame the inertial frame of reference.
+And similarly, I multiplied by m here, this is m times A y and now I need to multiply this
+whole thing by m. So, there is a m here there is a m here plus twice m here, plus twice m
+here plus m times this plus m times this, that is it. Now, what is m x double dot? It is
+equal to and I am going to write on this board itself to say myself, space in right time and
+writing. This is equal to a subscript little x m times x double dot and m times y double
+dot is a subscript little y times and m, so let us put m a little x plus sin omega t m a little
+y plus.
+(Refer Slide Time: 12:58)
+
+But, what is m a x? I know that in the inertial frame of reference ((Refer Time: 12:57)) m
+times m a x equal to f sub x, m times a y equal to f sub y, this is Newton second law,
+
+where f sub x and f sub y are the Cartesian components in the inertial frame of reference
+of whatever forces acting on this body of mass m. ((Refer Time: 13:21)) So, I replace
+those here and I get f subscript x and f subscript y out here, in exactly the same way on
+this equation I get this is equal to once I multiplied by m, I get f subscript x f subscript y
+plus this the term whatever is here. But, what is this quantity here? This is the
+transformation of the force, the new x component when you rotate the frame of reference
+through an angle omega t. Remember, that the force is a vector.
+(Refer Slide Time: 14:09)
+
+So, it is immediately clear that F subscript X must be equal to cos omega t f x plus sin
+omega t f y by the very meaning of the statement that the force is a vector. So, this
+combination here, by it is very definition is the force the new x component of the force
+and let us use a capital F for that.
+
+(Refer Slide Time: 14:41)
+
+So, this whole thing goes way and I get F subscript X and in exactly plus all this terms
+and in exactly the same way I get here F subscript Y plus a whole lot of other terms. So,
+it is immediately clear that Newton second law is not valid in the original form in the
+rotated frame of reference, so the accelerated frame of reference. ((Refer Time: 15:05))
+Remember when you have rotational motion is always an acceleration you cannot kill the
+acceleration. So, this immediately implies that new ton second law is not valid.
+So, write in Newton second law in this form tells ((Refer Time: 15:21)) you that m A X is
+equal to F subscript X plus some other piece. And similarly, m A sub Y is equal to F sun
+Y plus some other piece and these are the dimensions of force components, which is why
+these are called pseudo forces or non inertial forces the arise entirely from the fact that
+the co efficient in the expansion a time depend and we have to differentiate them.
+So, although there is no physical agency that produces these forces for instants sub F x is
+some kind of force, which arises to some electrical charges or electrical force there is no
+such agency produces these terms these arise purely from the kinematic some accelerated
+motion. So, since we multiplied this by m to produce forces, what really arise initially
+was differentiating this coordinate we discover extra terms in the acceleration. So, I
+should really call these in inertial a effects are acceleration pseudo acceleration if you
+like.
+But, then once I multiplied by m they become forces are some kind, they are forces in the
+sense that in the new coordinate system the system does see this forces. Because, this
+
+acceleration has a this transformed force the physical force and then there are these extra
+terms here, which are sitting here. But, what do this terms look like well immediately see
+that this term for pull out and omega and let us, do that ((Refer Time: 16:55)) 2 m omega
+and, so this omega goes away that omega goes away this term alone remember that this
+is v sub x and this is v sub y.
+And, what is it look like it is clear that it is look like the velocities also vector this looks
+like the y component the transform the y component of the velocity. So, the immediate
+identification remember again are original rules of transformation for the x and y this
+tells you, what is going to happen this think here ((Refer Time: 17:51)) is v capital V sub
+y here. So, this is capital V sub y, so that part is identify and this term here, with the
+minus sin and then omega is capital V sub x.
+So, the some structure imagine here, this tells you that in the new coordinate system, if
+you measure velocities, in the velocity of the object multiplied by omega times m.
+Whatever, then this, this extra terms sitting here, and the dimensionally these things are
+dimensions of force and they are these term and what are these terms like well again you
+can see that this is minus m omega square. So, pull out minus some omega square I get
+cos omega t x plus sin omega t y that is capital X
+So, this is minus then omega square capital X and that is gone and in exactly the same
+way pull out sin this gives me minus sin omega t plus cos omega t, so this is minus m
+omega square capital Y. So, these are final expressions for the x and y components of the
+acceleration the mass time acceleration is actual physical force transform and looked at a
+new coordinates plus these extra terms or the extra forces. If, you like non inertial forces
+are rather forces arising in a non inertial system due to the kinematics due to the fact that
+your accelerated frame of reference.
+This term these two term this or this are the components of the, so call coriolis force,
+while these two terms are the components are the, so call centrifugal force. Can we write
+this in a more elegant form, then this in the answer is here, what is needed is the
+followed give rotated about the z access.
+
+(Refer Slide Time: 20:11)
+
+So, let us define an angular velocity to be equal to omega times is sub set that equal to
+the angular velocity and what is this term here ((Refer Time: 20:27)), then the omega it
+part of is a component of the angular velocity z components. So, if you consider, what
+omega cross V is this is equal to omega e subscript that small z or capital Z does not
+matter does not change at all cross and here. You have V x e x plus V y e y here, and this
+quantity is equal to z e x is minus is plus e y.
+So, it is omega is a cross product e y and then, z cross to y is minus y cross z, which is x,
+so minus omega e y e x in this fashion this a vector ((Refer Time: 21:33)) we have a 2 m
+omega V Y seeing there. So, it is minus the X component of omega cross V, so I could
+remove this and write it as minus 2 m omega cross V the X component of it because we
+had a Y and that was minus omega V Y and this is equal to this term here is minus V X e
+y and sitting V X sitting there. So, it is minus 2 m omega cross V the y component of
+there.
+So, you see we are beginning to get a structure here m times a the X component is F the
+X component does not two m omega cross V the X component and ditto here, on this
+side here. It remains to identify this and it is clear here that this X and Y or the
+components of the capital R. The new, if I call capital R has X and Y components given
+by this quantity and this respectively well little more intricate that put the structure down.
+
+(Refer Slide Time: 22:55)
+
+If, you look at what omega cross omega cross R is and use the vector identity, then it is
+equal to omega dot R times omega minus omega dot omega, which is omega square
+times R. And that is precisely, what we have here, apart from the fact that m omega dot R
+is 0, if R has only x and y components has we assume we will set this object moving in
+the x y plane that does not change never get to the z axis. ((Refer Time: 23:34)) So, these
+two components of omega cross omega cross R the x and y components is respectively
+with the minus sign.
+So, let us write this has minus m omega cross omega cross R the x component and minus
+plus it was a minus sign is already there this minus sign, which is already sitting there, so
+plus m times omega cross omega cross R the y component.
+
+(Refer Slide Time: 24:28)
+
+So, we have result now, it says that in vector of form the dynamics will look like this,
+what originally look like m a equal to f. Now, looks like that goes over into m times A
+the acceleration equal to the force F out here minus 2 m omega cross V, then velocity
+new frame. So, everything is equation refers to the new frame of the reference rotated
+frame of reference plus m times omega cross omega cross R that term is the coriolis
+force and that term is the centrifugal force and that is it.
+So, we have this extra force is a pair in to forces, if you like pseudo forces, non inertial
+forces, what are you call it. Appearing entirely, because of the fact that you have move
+the over to an accelerated frame of reference in which Newton’s law is not m times a
+equal to the force applied are the external force, but there are these kinematic
+contribution here. When I multiply those acceleration by m I get forces effective forces
+these forces do exist and they do act on the body as seen in the retaining frame of
+references.
+One point you note immediately is that, if in the rotated frame of reference the object
+does not move in other words V is 0 the coriolis force is 0 identically and you have the
+centrifugal force that always present no matter, what? Even, if you have a static object it
+does not move in the new frame of reference it still experience this force this term is still
+present. So, the ways it is coordinate related to acceleration that is this extra contribution
+here.
+And of course, in the simple instance, we have looked at of a constant rotating uniformly
+
+rotating x y plane this thing reduces somewhat minus m omega square with
+corresponding component ((refer Time: 26:38)) of R that part, but this is the general form
+in general. For arbitrary omega no matter, what this is the general form like here, we
+need not now restrict ourselves to the x y plane omega rotation. There is one assumption
+we made namely we rotated this frame at a constant rate angular speed.
+So, the question is, what happens, if I also change the rate of rotation or change even the
+axis of a rotation as a function of time. There is one more pseudo force or inertial force,
+so it is called the oil of force and it is depended on omega dot as you would expect I am
+not going to write that down since that beyond into scope of what I want to say here.
+These are the most common forces here and we can actually compute these quantities.
+Basically, what we need to compute is the correction to is the acceleration in the
+centrifugal acceleration we can estimate, what this centrifugal acceleration is in various
+cases the most common example of course, is what happens of the center of the earth
+from, let us estimate that immediately.
+(Refer Slide Time: 27:42)
+
+So, we have the earth rotating about it is axis are an angle that is the equator and let us
+look at, what happens to a point on the equator. Because then, we have to worry about
+the total radius of this earth on the other hand, if you are in this latitude is only this
+action distance that effectively contributes to the rotation that is the one that appears in
+this formula the R. So, what we need to compute is, what is omega square R in the case
+of point on the equator of the earth.
+
+So, omega square R on the equator is equal to 2 pi divided by the time period just 24
+hours and 24 hours as you know has 86400 seconds. So, we need to square this and
+multiplied by the radius of the earth and the radius of the earth 6400 kilometers. So, it is
+6400 multiplied by 10 to the power of 3 in meters and it is not have to say this number is
+well known this is approximately 3 times 10 to the minus 2 meter second is minus 2 that
+is the correction this units.
+So, given that in little g is of order of 10 meter second this is like three parts in a 1000
+meter second this is like three parts in a 1000 the correction more precise number is
+between 980 and 983 at the pole this correction would not be there, but at this equator it
+is maximum. So, it is a small correction to the force of the gravity here and it is cost that
+is out word filing of the due to the rotation of the earth not in a inertial frame. But, you
+practically in inertial frame, because this correction is pretty small compare to little g,
+which is of the order of 10.
+So, the ratio is the order of 10 to the minus 3 and therefore, what happens, now when the
+sun go the earth goes on the sun that two is rotating frame of reference. So, we can
+compute, what happens the quickly.
+(Refer Slide Time: 29:53)
+
+So, orbit around the sun orbit around the sun and we need to compute omega square R.
+So, omega in this case is 2 pi divided by a year and year is got 365 days multiplied by
+8600, whatever this is a 3.15 into 10 to the 7 seconds that is useful figure to remember all
+ways, because 3 point 15 is pretty close to pi and we can cancel the pi's on top to get an
+
+order of magnitude estimate. So, that omega and R so let us put omega square R less then
+square times R is the rate less the distance from sun to the earth and this is a 150 million
+kilometers.
+So, it is 1.5 into 10 to the 8 into 10 to the 3, so that is into 10 to the 11 and this is, what
+we have to compute and this is of the order of 10 to the minus 3. Again a very small
+correction this acceleration is very, very small compare to little g, well that is not the end
+of the story, because a sun goes around the center of the galaxy. So, one could ask is that
+going to make a difference that is going to be hopefully and much smaller contribution.
+So, sun around galactic center omega in this case is 2 pi divided by the period around it
+takes to go, that is 21 and 50 million years approximately. So, it is a form a 2.5 in to 10
+to the power 8 times 3.15 times 10 to the power 7 that is in seconds this whole thing is
+square multiplied by the distance from here to the center of the galaxy. Well this galaxy
+is of the order of 100 thousands kilo a light years in terms of it is diameter and we are
+about two thirds in the way center.
+So, perhaps about 30 thousand light years also, so this is 3 times 10 to the 4 light years
+and the light year 10 to the 7. So, this is of the order of 10 to the 16 meters and we need
+to compute this and this of course, immediately show it is 16 small this of the order of 10
+to the minus 10, 10 to the minus 9, 10 to the minus 10 etc meters square. So, again very
+small correction very, very small correction due to this non inertial force this centrifugal
+force, you could ask what happens, if you has much more indecent gravity and much
+more fastest spinning.
+So, as a little exercise calculate what happens when this is a pulsar 10 kilo meters and
+radius R equal to 10 kilometers and it is a millisecond pulsar. So, the thing takes 10 to
+the minus 3 seconds is a time period and you need to, now find out what is omega square
+R in this case and I leave you to figure out what happens on the surface of this. And
+compare it to the gravity there assuming that the row density equal to nuclear density. So,
+say 100 protons in a volume, which is linear dimension extend to the minus 15 meters.
+So, compute that and find out the correction is in other words find out, what omega
+square R divided by little on the surface of a pulsar a millisecond pulsar that is a 10
+kilometers all that object rotating of nuclear density rotating at the rate of a millisecond
+that some interesting exercise look at.
+
+

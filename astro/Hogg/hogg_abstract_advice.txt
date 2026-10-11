@@ -1,0 +1,41 @@
+
+### Hogg
+    - As my loyal reader knows, I believe in trying to use the
+      immense data sets we have on stars (in particular spectral
+      data sets) to build data-driven models that have some kind
+      of interpretability. 
+
+    - The problem is interpretability, because purely data-driven
+      models are uninterpretable by construction. My biggest
+      success along these lines is The Cannon, first built by
+      Melissa Ness (MPIA) and followed up by Anna Ho (Caltech)
+      and Andy Casey (Cambridge). 
+
+    - An amusing and mostly true summary of ML is that all
+      supervised methods are, fundamentally, nearest-neighbor
+      methods. This suggests that we might be able to make
+      massive progress if we just started to look at stars with
+      identical or near-identical spectra. And of course I mean
+      in the space of spectral pixels, not in the space of labels
+      derived from those pixels. I pitched this project to Marc
+      Williamson (NYU) today, and sent him off with some reading.
+      We are going to look for twins, but accounting for
+      variations in radial velocity and line-spread function, so
+      it won't be completely trivial.
+
+    - Megan Bedell (Chicago) pointed out to me today that the
+      binary masks used by the HARPS pipeline appeared on arXiv
+      today. That's big for our radial-velocity projects.
+
+### Layout science paper
+    - The abstract is the most important part of the paper, so it
+      makes sense to spend a lot of time working on it. We agreed
+      to follow the (annoying but useful) Astronomy
+      & Astrophysics template of 
+    - Context,
+    - Aims, 
+    - Method, 
+    - Results. 
+
+    - This guidance is great (and, in the end, you 
+

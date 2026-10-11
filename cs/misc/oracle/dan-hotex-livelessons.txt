@@ -1,0 +1,21 @@
+
+### Oracle Architecture
+    - $MY_IMAGES/cs/oracle/architecture.jpg
+    - SQL*Net. 
+        - Remote data access software. It enables both
+          client-server and server-server communications across
+          any network. 
+    - Data Dictionary: checks permissions
+    - Really detailed
+        - $MY_IMAGES/cs/oracle/architecture-detailed.jpg
+    - PGA: 
+        - Program Global Area. When your SQL is done processing,
+          it comes back here
+        - (its the cursor storage space?)
+    - Tablespaces
+        - Tables are stored physically in 'tablespaces' 
+
+### long running queries
+    - make sure to terminate them properly
+    - you could have terminated a query on the client, but the
+      host is still merrily processing away

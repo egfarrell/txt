@@ -1,0 +1,115 @@
+# Lecture 01
+    - Double slit:
+        - Superposition of waves is LINEAR!
+
+    - Assumption:
+        - system is "isolated"
+        - ie no measurement (physical record) made
+        - ie informationally isolated
+
+    - Then we say:
+        - The system evolves LINEARLY in time
+
+    - normal operators
+        - `A†A = AA†` if an operator is normal then its basis
+          vectors are orthonormal, the eigenvalues of a normal
+          operator have unit modules,
+        - ie `e^iφ` where `φ` is some real phase
+
+    - uniform dynamics
+        - basically the `elapsed time` is the only thing that
+          matters when bringing you from one state to another
+          using a unitary operator.
+        - Unitary operators are related to the underlying laws of
+          physics so they shouldnt really change from time to
+          time.
+
+# Lecture 08 (Bloch Sphere)
+
+- trace turns an outer product into an inner product
+    - `tr |a⟩⟨b| = ⟨b|a⟩`
+    - `tr(AB) = tr(BA)`
+
+
+    - no definite state
+        1. mixture state (state random)
+            - but this isnt a SUPERPOSITION, but instead
+              a probabilistic mixture
+
+        2. Entanglement
+            - we're examining a subsystem of a global entangled
+
+
+
+- Mixtures:
+    - Think of an ensemble.
+    - Theres many many systems with a fraction `Pα` in
+      a particular state `|α⟩`
+    - Now consider the expectation value `<A>` of the ensemble.
+      ('Expectation' value = average value)
+    - It depends both on the mixture and the operator
+      (observable) A.
+
+    - `<A> = tr(ρA)`
+
+### Trace of a density operator
+    - `tr(ρ) = 1`
+
+    - The density operator is a complete statistical description
+      of results of experiments on the system.
+
+    - The density operator of a pure state: all the probabilities
+      are zero except for one which is one.
+
+- Phase factors, Density operators
+- you know |a⟩ ~ e^iθ|a⟩ ... kind of many state vectors for the same physical state
+- well |a⟩ and e^iθ|a⟩ correspond to the same density operator, so a density operator gives a more one-to-one map to physical states in a way.
+
+- Now many sub-ensembles of one big ensemble
+- Mixture rule:     ρ1 with probability p1
+                    ρ2 with probability p2
+
+- Then we have ρ = p1ρ1 + p2ρ2 ....
+                 = ∑(pα)(ρα)
+
+- Different mixtures can have the same density operator:
+- mixture 1: `1/2|z+⟩ + 1/2|Z-⟩`    equal likelyhood z-direction spin
+- mixture 2: `1/2|X+⟩ + 1/2|X-⟩`    equal likelyhood x-component spin
+
+    - both mixtures described by the same density operator!
+    - both mixtures lead to the same ensemble averages in any experiment.
+    - both mixtures statistically indistinguishable
+
+- Time evolution of density operator
+- Schrodinger equation of density operator
+- Matrix representation of density operator
+
+- VonNeumann originally called it the density matrix!
+
+- The entries along the diagonal of the density matrix are called the populations.
+- The difference between a superposition and a mixture are the OFF-DIAGONAL elements.
+- OFF-DIAGONAL elements are called coherences.
+
+- difference density operators and hermitian operators?
+- PREPARATION of system: represented by `Density operators`
+- MEASUREMENTS:          represented by `Hermitian operators` (observables?)
+
+- Vector space for Operators!
+- Good basis for Qubit (Hilbert space of dimension 2) is the Pauli basis:
+    - (11, X, Y, Z)
+
+- This Pauli basis isnt fully normalised - think it adds up to 2.
+
+- So you can write any density operator what so ever as a sum of these basis operators.
+- ρ = 1/2(11 + axX +ayY +azZ) - factor of 1/2 because the pauli basis is normalised to 2.
+- ρ = 1/2(11 + a∙σ)           - where a is the 3-D REAL bloch vector (because ρ(dagger)=ρ)
+
+- lots of talk, => bloch vector is a unit vector
+=> the set of pure states is a unit sphere.
+
+- why can't you have a bloch vector outside the bloch sphere
+  (ball)
+    - because you'd have negative values (for the trace??) which
+      would lead to negative probabilities.
+
+- Centre point of bloch sphere gives the maximally mixed state.

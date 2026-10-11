@@ -1,0 +1,46 @@
+pudb
+
+launch debugger inside script
+    import pudb; pu.db
+
+handy keys
+    move to current line        H
+    config screen               ctrl + p
+    resize windows              [ or ]
+    resize windows              + or -
+    find next/prev              . or ,
+
+
+conda linux 64-bit install
+
+    conda install -c https://conda.binstar.org/public pudb
+
+
+ubuntu 32-bit install
+
+    urwid dependency > 1.1
+        from source
+            github
+                https://github.com/wardi/urwid
+            tarball
+                http://urwid.org/
+                download tarball and extract to {DIR}
+            cd {DIR}
+            python setup.py install
+
+        deb package
+            http://ftp.ubuntu.com/ubuntu/pool/universe/u/urwid/
+
+    pudb install
+        from source
+            mine
+              gh clone pudb
+            official
+                git clone http://git.tiker.net/trees/pudb.git pudb
+            cd pudb
+            sudo python setup.py install
+
+        from package
+            apt-get install python-pudb
+
+

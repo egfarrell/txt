@@ -1,0 +1,594 @@
+### key:
+    - Navier-Stokes equations are an extension of the Euler
+      Equations which also treat viscosity
+    - aside: if `ρ` (density) is constant => incompressible fluid
+    - Random: the CURL tells you the `current` in ideal MHD
+    - Rheology: study of flow of matter (primarily liquid or gas)
+    - Viscosity: is "thickness" of the fluid (Coursera)
+    - Viscosity: is fluid friction
+    - Viscosity: internal friction in the fluid
+    - Navier-Stokes equations: pure Hydrodynamics with viscosity added
+    - laminar flow: fluid flows in layers, no mixing
+    - turbulent flow: layers mix, velocity occur in other
+      directions that aren't the overall fluid flow direction
+    - Chicken/egg: Does a velocity field define streamlines?
+        - Or do the streamlines create the velocity field?
+    - CFD comment: Navier-Stokes equations are about CONSERVATION
+      OF MOMENTUM
+    - Is "convection" a wave-like motion?
+        - Later: yes! There's a connection between "pure"
+          convection and wave propogation.
+        - Convection: the transfer energy between an object and
+          its environment, due to _fluid_ motion.
+
+### Difference gas / liquid
+    - a gas is compressible
+    - Euler view:      stay in one place
+    - Lagrangian view: follow a group of molecules
+
+### Fluid MECHANICS_(part of continuum mechanics)
+    - Fluid mechanics is concerned with the mechanics of liquids,
+      gases, and plasmas and the forces on them.
+    - Its divided into:
+        - Fluid _STATICS_:
+            - fluids at rest
+        - Fluid _DYNAMICS_:
+            - effect of forces on fluid motion. (fluid flow)
+    - Its a branch of continuum mechanics, which models matter
+      without using the fact that it's made of atoms;
+        - ie, It models matter from a MACROSCOPIC viewpoint,
+          rather than microscopic.
+
+
+### Anderson: 3 physical principles for Hydro
+    1.  mass is conserved
+        - $MY_IMAGES/physics/fluid-dynamics/continuity-equation.jpg
+    2.  Newton's second Law: `F = ma`
+        - $MY_IMAGES/physics/fluid-dynamics/momentum-equations.jpg
+    3.  Energy is conserved
+        - $MY_IMAGES/physics/fluid-dynamics/energy-equation.jpg
+
+
+### Breakdown of Euler fluid equations
+    - https://news.ycombinator.com/item?id=33653108
+    - (177 page proof with computers)
+    - It gets even more complicated if you’re trying to model
+      a fluid which has viscosity (as almost all real-world
+      fluids do).
+    - A Millennium Prize from the Clay Institute awaits anyone
+      who can prove whether similar failures occur in the
+      Navier-Stokes equations, a generalization of the Euler
+      equations that account for viscosity.
+
+### 3 energies in a fluid
+    - Quora: How is the 'flow energy' of a fluid different to its
+      kinetic energy?
+
+    - Any flowing fluid has 3 components of energy:
+        - flow energy               (energy possessed by virtue of its sustained pressure)
+        - kinetic energy            (energy possessed by virtue of motion of fluid)
+        - potential or datum energy (energy possessed by virtue of position of fluid)
+
+    - 'Flow energy' of a fluid is energy possessed by virtue of
+      its sustained pressure and it is represented by a static
+      pressure head whereas kinetic energy is the energy a fluid
+      has by virtue of its motion and is represented by
+      a velocity head.
+
+    - The `work` done by a section of fluid on its adjacent
+      downstream section in order for the flow to take place is
+      termed as 'flow work' and 'flow work per unit volume' gives
+      the static pressure head.
+
+### Compressible fluids
+    - https://news.ycombinator.com/item?id=28780335
+    - The author wants to avoid showing equations (or even naming
+      the Navier Stokes equations), but gets rid of the physics
+      along the way.
+    - No, fluids can absolutely be compressible, and
+      incompressible fluids absolutely HAVE PRESSURE DIFFERENCES.
+      (?!)
+
+### MHD simulations
+    - https://news.ycombinator.com/item?id=27806125
+    - Remember that most of that comes from MHD simulations and
+      the community knows well that MHD simulations can get
+      details of the reconnection quite wrong [1].
+    - So until somebody has confirmed that with either:
+        - particle-in-cell simulations,
+        - hybrid simulations with a good Ohms law
+        - or an experimental device,
+    - take all performance numbers with a grain of salt.
+
+
+### physics: coursera mooc:
+    - Dimensionless Navier-Stokes, Reynolds very good
+
+### Shear thinning fluid
+    - In rheology, shear thinning is the non-Newtonian behavior
+      of fluids whose viscosity _decreases_ under shear strain. 
+    - It is sometimes considered synonymous for pseudoplastic
+      behaviour, and is usually defined as excluding
+      time-dependent effects, such as thixotropy.
+
+### GR Magnetohydrodynamics Course (GRMHD):
+    - https://www.youtube.com/watch?v=HToi0_YA5UM
+    - (1) Anile, 1990, "Relativistic Fluids and Magneto-fluids", Cambridge
+    - (2) Andersson & Comer 2007, "Relativistic Fluid Dynamics: Physics for Many Different Scales", Living Reviews in Relativity
+        - https://link.springer.com/article/10.12942/lrr-2007-1
+    - (3) Font 2008, "Numerical Hydrodynamics and Magnetohydrodynamics in General Relativity", Living Reviews in Relativity
+    - (4) Rezzolla & Zanotti 2013, "Relativistic Hydrodynamics", Oxford
+
+### Intro to Hydrodynamics
+    - CCA Summer School - Pascale Garaud
+        - https://www.youtube.com/watch?v=oGhQT-T3hBo&list=PLWAzLum_3a180ECznso6HvwstZthGSoEZ&index=100
+    - Gases and Liquids are fluids.
+        - The only difference is the `EOS`
+    - Non-Newtonian effects. Not about GR, instead about
+      properties of the strain tensor
+        - butter, toothpaste, shampoo, mud, flour
+    - two ways of deriving equations of fluid dynamics
+        - Mechanistic way:
+            - Newtonain fluid elements
+        - Stochastic way:
+            - fluid is collection of microscopic particles whose
+              average properties (density, velocity) obtained via
+              Boltzmann equation
+            - $MY_IMAGES/physics/fluid-dynamics/2-ways-derive-fluid-eqns.jpg
+        - note: can also be derived from variational principles?
+    - Derive conservation of mass
+        - $MY_IMAGES/physics/fluid-dynamics/derive-conservation-mass.jpg
+    - "lagrangian derivative"
+        - a derivative that follows a parcel of fluid as it moves
+        - same as convective derivative?
+            - $MY_IMAGES/physics/fluid-dynamics/lagrangian-derivative.jpg
+            - $MY_IMAGES/physics/fluid-dynamics/lagrangian-derivative2.jpg
+            - $MY_IMAGES/physics/fluid-dynamics/lagrangian-derivative3.jpg
+    - mass conservation
+        - flow converge / diverge
+        - $MY_IMAGES/physics/fluid-dynamics/mass-conservation-flow-diverge.jpg
+    - momentum conservation
+        - the pressure gradiant and
+        - stress tensor
+        - are 2 things specific to fluids that are added to
+          Newtons Law
+            - $MY_IMAGES/physics/fluid-dynamics/derive-conservation-momentum.jpg
+
+### Navier-Stokes equations
+    - assumptions:
+        - incompressibility (`ρ = const`)
+        - isothermal,
+        - constant viscosity
+            - $MY_IMAGES/physics/fluid-dynamics/navier-stokes-04.jpg
+
+    - Also a few extra remarks:
+        - note: need EOS to close the system
+        - note: non-linear system
+        - note: it's a 2nd order PDE, very few known solutions
+            - the solutions need some sort of symmetry where the
+              non-linear term disappears
+            - the non-linear term is the convective derivative
+              (convective acceleration) which produces most of
+              the problems: `(ṽ • ∇)ṽ`
+            - e.g. if a fluid speeds up when it enters a narrow
+              channel
+            - main approach: computational solutions
+        - $MY_IMAGES/physics/fluid-dynamics/navier-stokes-05.jpg
+
+
+### fluid "pressure"
+    - pressure is the "thermodynamic" pressure?
+    - That's what lecturer said in 12 steps Navier-Stokes course?
+        - ../astro/courses/navier-stokes/00-preamble-derive-eqns.txt
+
+### CFD: monitonicity
+    - (For Euler codes?)
+	- $MY_IMAGES/physics/fluid-dynamics/monitonic-cell-resolution.jpg
+
+### Eulers equation
+    - its an equation of MOTION
+    - comes from Newtons 2nd law
+        - (ie RHS is `mass • acceleration`)
+    - is for Inviscid situations
+        - (no viscosity)
+        - (ie no shearing stresses)
+        - (so the normal stress is = pressure)
+    - $MY_IMAGES/physics/navier-CFD/Eulers-equation-of-motion.jpg
+
+### Goldap explanations of viscosity / laminar etc
+    - I snapped these in Aug 2020 in Goldap
+    - $MY_IMAGES/physics/fluid-dynamics/Goldap-Viscosity-01.jpg
+    - $MY_IMAGES/physics/fluid-dynamics/Goldap-Viscosity-02.jpg
+    - $MY_IMAGES/physics/fluid-dynamics/Goldap-Viscosity-03.jpg
+    - $MY_IMAGES/physics/fluid-dynamics/Goldap-Viscosity-04.jpg
+    - $MY_IMAGES/physics/fluid-dynamics/Goldap-Viscosity-05.jpg
+
+### Inviscid flow
+    - no Viscosity
+    - inviscid flow: shearing stresses are zero
+    - shearing stresses develop because of viscosity
+    - e.g. `τ_xy` etc = 0
+    - see the Navier-Stokes course "Zero lecture"
+
+
+### Stewart: Visions of Infinity
+    - $MY_BOOKS/Physics/Maths/Misc-Overview/Visions-Infinity-Ian-Stewart.pdf
+    - The millennium prize problems refer to _incompressible_
+      flows because _compressible_ flows are known to be badly
+      behaved.
+    - E.g. aircraft equations run into trouble if the aircraft
+      travels faster than sound. This is the famous ‘sound
+      barrier’, which worried engineers when designing supersonic
+      jetfighters, and the problem is related to the
+      compressibility of air.
+    - Incompressible fluid:
+        - If a body moves through an incompressible fluid, it
+          pushes the fluid particles out of the way, like
+          tunnelling through a box full of ball bearings. If the
+          particles pile up, they slow the body down.
+    - Compressible fluid:
+        - In a _compressible_ fluid, this doesn't happen;
+          Because there is a limit to the speed with which waves
+          can travel: the speed of sound.
+        - At supersonic speeds, instead of being pushed out of
+          the way, the air _piles up ahead_ of the aircraft, and
+          its _density there increases without limit_.
+    - The result is a SHOCKWAVE.
+    - Mathematically, this is a discontinuity in the pressure of
+      the air, which suddenly jumps from one value to a different
+      one across the shockwave.
+    - Physically, the result is a sonic boom: a loud bang.
+    - If not understood and taken into account, a shockwave can
+      damage the aircraft, so the engineers were right to worry.
+    - But the speed of sound isn’t really a barrier, just an
+      obstacle.
+    - The presence of shock waves implies that the compressible
+      Navier-Stokes equations need not have SMOOTH SOLUTIONS for
+      all time, even in two dimensions. So the answer is already
+      known in that case, and it’s negative.
+
+
+### Chicken and Egg
+    - Does a velocity field define streamlines?
+        - Or do the streamlines create the velocity field?
+    - Given a path, we can take its time derivative and get
+      tangent vectors. The same works in reverse, given a (nice)
+      vector fleld, one can find a family of paths so that every
+      vector in the vector field is tangent to a path. Hence
+      paths determine vector fields and vector fields determine
+      paths. This applies to fluid dynamics in that `V` is
+      a vector field tangent to the streamlines (paths).
+    - You could think of the streamlines flrst and creating the
+      velocity vector field, or start with the velocity vector
+      field and from that construct the streamlines to which the
+      vector field is tangent.
+    - The conceptual and theoretical connection above is fairly
+      clear. But actually going from vector eld to path can be
+      a  little bit difficult. When you go from path to vector,
+      you are taking a derivative. When you are going from
+      a given vector eld to the paths it is tangent to, you are
+      solving a differential equation.
+
+
+### Curry: Bernoulli's equation
+    - `p + 1/2 ρ V^2`
+    - let’s mention everything that went into it:
+    - First, because it was derived from Euler’s equation, we
+      assume
+        - no body forces and
+        - the flow is inviscid
+    - Next we assumed we are following one streamline.
+        - Don’t go moving over to ANOTHER STREAMLINE. (CAMK
+          lecture said too!)
+    - Then to pull off the penultimate step we assumed the flow
+      is incompressible so we could factor out the `p`.
+    - So, the point is:
+        - it is a beautifully simple equation, that should only
+          be applied in circumstances where it applies.
+
+
+### Curry: Body Forces
+    - If a fluid is in an EM field or gravitational field, and it
+      interacts with that field, that will apply a force
+      pervasively through the body of the control volume. Such
+      forces are called “body forces”.
+        - Pressure Forces
+        - Viscous Forces
+
+### Signficance of conservation form
+    - before 1980s, no much attention was paid to the different
+      forms: conserved vs non-conserved forms of the equations...
+    - but CFD finds the conserved forms more numerically
+      convenient
+        - $MY_IMAGES/physics/fluid-dynamics/conserved-form-convenient.jpg
+        - $MY_IMAGES/physics/fluid-dynamics/generic-conservation-form-01.jpg
+        - $MY_IMAGES/physics/fluid-dynamics/generic-conservation-form-02.jpg
+    - strong and weak conservation
+    - shock capturing and shock fitting
+
+### Physical Boundary conditions
+    - The governing equations are the same everywhere, but
+      despite the same equations, why are the flow fields very
+      different depending on situation. (e.g plane or windmill)
+    - Answer: boundary conditions (and sometimes intitial
+      conditions)
+        - example boundary condition: "no slip"
+        - zero relative velocity between the surface and the gas
+          immediately below the surface
+        - also "no slip Temperature" :
+            - eg if material temperature of the surface is `Tw`
+              (wall temperature) then the temperature of the
+              fluid layer immediately in contanct with the
+              surface is also `Tw`
+        - Wall temperature where there's no heat transfer to the
+          surface is the 'adiabatic wall temperature', `Taw`
+
+### Anderson comments on general governing equations
+    - coupled system of non-linear PDE's. Difficult to solve
+      analytically. No closed-form solution exists yet.
+    - for momentum and energy eqns: the difference between
+      conservation and non-conservation forms is just the LHS.
+      The RHS of both forms is the same.
+    - conservation form is sometimes called the 'divergence'
+      form. (LHS includes the divergence of some quantity)
+    - the normal and shear stress terms are functions of the
+      velocity gradients (eqns 2.57a-b)
+    - Historically the Navier-Stokes equations were momentum for
+      a viscous flow. But nowadays it usually references to the
+      complete system of equations: energy and continuity as
+      well.
+    - Strictly historically Euler only did inviscid flow for
+      continuity and momentum. (But not it usually means energy
+      too. Euler didnt have much "thermodynamics" in his day.)
+
+### Energy equation
+    - Principle: Energy is conserved
+    - it's the 1st law of thermo really
+        - $MY_IMAGES/physics/fluid-dynamics/1st-law-thermo-energy-conserved.jpg
+    - Total Energy = (internal energy) + (kinetic energy)
+    - internal energy:
+        - due to random molecular motion,
+        - `e` (per unit mass)
+    - kinetic energy:
+        - due to translational motion of fluid element.
+        - KE per unit mass is `V^2 / 2`
+
+### Stokes conjecture
+    - not confirmed to present day!
+    - `α = -2/3 μ`
+	- $MY_IMAGES/physics/fluid-dynamics/stokes-conjecture-not-confirmed.jpg
+
+### Andersons map/route to governing flow equations
+    - KEY:
+        - $MY_IMAGES/physics/fluid-dynamics/finite-control-models.jpg
+        - $MY_IMAGES/physics/fluid-dynamics/fluid-element-moving.jpg
+        - $MY_IMAGES/physics/fluid-dynamics/anderson-flow-equations-roadmap.jpg
+        - $MY_IMAGES/physics/fluid-dynamics/anderson-substantive-derivative.jpg
+        - copy example of walking into a cave and being hit by
+          a snowball at the same time
+
+    - "substantial" derivative is the same as "TOTAL"
+      derivative??
+        - CURRY: When I saw this, I thought the author was
+          confused. This substantial derivative is nothing more
+          than the regular full on derivative!
+        - But that’s just not right. It looks like the CHAIN RULE
+          formally, but the two objects are about different
+          things! (different physical situations)
+        - "TOTAL" Derivative
+            - The chain rule says that if you have a thing moving
+              along a path given by (x(t), y(t),Z(t)) and you
+              want to flnd out how fast a function p(x, y, z, t)
+              is changing with time, as the value of `p` changes
+              everywhere and the point we are monitoring moves
+              along the given path, then you use that terrible
+              formula.
+        - "SUBSTANTIVE" Derivative
+            - But this is something else! The point we are
+              monitoring does not move along the path! We keep
+              staring at a flxed point `r` and watch what passes
+              through it.
+            - The fluid element passes through our monitoring
+              point with velocity `V`. This is a physically
+              different situation!
+            - So, yes, the formula for the substantial derivative
+              is formally the same as that for the ordinary
+              derivative using the chain rule.
+            - But they are completely different things because
+              the substantial derivative describes a DIFFERENT
+              PHYSICAL SITUATION.
+
+    - $MY_IMAGES/physics/fluid-dynamics/alternative-name-substantial-derivative.jpg
+    - divergence of the velocity:  `∇ • v`
+        - physical meaning:
+        - "the time rate of change of the volume of a _moving_
+          fluid element, PER UNIT VOLUME"
+    - $MY_IMAGES/physics/fluid-dynamics/velocity-divergence-control-volume.jpg
+    - $MY_IMAGES/physics/fluid-dynamics/velocity-divergence-definition.jpg
+
+### Important difference: Differential / Integral forms
+    - There's a subtle difference between the integral
+      & differential forms of the governing flow equations.
+    - The integral form 
+        - allows for the presence of DISCONTINUITIES inside the
+          fixed control volume (fixed in space). 
+        - There is no inherent mathematical reason to asume
+          otherwise.
+    - But the differential form 
+        - assumes the flow properties are differentiable, hence
+          _continuous_. 
+        - This is very evident when we use the divergence theorem
+          to derive the `differential form` from the `internal
+          form`.
+        - The divergence theorm assumes mathematical continuity.
+    - There is a strong argument for the integral form to be
+      considered more _fundamental_.
+    - This distinction becomes more important when calculating
+      a flow with real discontinuities, eg 'shock waves'
+
+
+### Anderson flow of ideas
+    - ideas leading to imcompressible inviscid cylinder flow
+        - $MY_IMAGES/physics/fluid-dynamics/anderson-flow-ideas.jpg
+
+### fluid element
+    - ... is a crazy and beautiful thing.
+    - Its a region in space which is inflnitesimal in volume, yet
+      big enough to hold enough molecules so that what is inside
+      will behave like a fluid (the thing that we want to
+      understand)
+    - These are contradictory demands. So they are a bit absurd
+      philosophically. But they work great!
+
+### Track Energy
+    - To master fluid dynamics you must know a lot of
+      thermodynamics, Because you need to track the different
+      ways that energy moves around in a fluid.
+
+### Advection
+    - A common problem in gas & liquid flows is advection: 
+        - the process of fluid motion carrying some other
+          quantity along with it. 
+        - ("Fluid" here is generic, meaning liquid or gas)
+    - Imagine putting a drop of dye into water. 
+        - As the water flows, it carries the dye with it, and
+          we'd like to calculate how much dye will be present at
+          a given point in the water at a given time.
+    - Another example: 
+        - advection of heat by a fluid. 
+        - The same idea as the dye, except _heat_ is being
+          carried around by the fluid instead – warm and cold
+          bits of fluid are moving around, and we want to know
+          the temperature at any given point and time.
+
+### Reynolds Transport Theorem
+    - Use system and control volume methods
+        - $MY_IMAGES/physics/fluid-dynamics/reynolds-transport-theorem.jpg
+    - aside: if `ρ` (density) is constant => incompressible fluid
+
+### Differential Form: fluid equations
+    - $MY_VIDEOS/physics/Navier-CFD/02-Navier-Lecture-zero-part-1.mp4
+    - $MY_VIDEOS/physics/Navier-CFD/03-Navier-Lecture-zero-part-2.mp4
+    - $MY_VIDEOS/physics/Navier-CFD/04-Navier-Lecture-zero-part-3.mp4
+    - Conservation of mass
+
+### Navier stokes 1st lesson
+    - "Linear Convection" is the same as the wave equation
+    - Is "convection" a wave-like motion?
+        - Later: yes! There's a connection between "pure"
+          convection and wave propogation.
+
+### HN Comment
+    - I think the scientific questions are just bigger in HEP,
+      even if turbulence has more interesting engineering
+      questions.
+    - Those are just fundamentally different to different people.
+        - This! To my understanding, as a dilettante in fluid
+          science. Turbulence is an open problem mostly only in
+          subfields pretty far removed from everyday engineering:
+        - The mathematicians question whether the Navier-Stokes
+          continuum fluid model can be trusted to remain
+          mathematically well-posed in all scenarios;
+            - but Navier-Stokes is just a second-order
+              approximation to _Boltzmann transport_, and
+              higher-order approximations are well known.
+        - If Navier-Stokes were to blow up, it would merely
+          indicate that the second-order approximation breaks
+          down in some regime, necessarily involving shocks.
+        - But... I don’t think any experts in transport theory
+          would be surprised by that. It would be more like
+          solving the mystery of rogue waves, and less like
+          finding bigfoot.
+        - The other group are those studying large-scale
+          turbulence. The goal is to summarize or coarse-grain
+          the turbulence that happens within a small
+          computational volume, as a cost-saving measure versus
+          using a more finely-resolved mesh in space and time.
+        - That’s valuable work with true social impact, such as
+          in atmospheric forecasting and erosion studies. 
+            - But... it’s kinda phenomenological. Not as much fun
+              for many scientists.
+
+    - Reply: The turbulence "closure" problem you describe here is the
+      main obstacle for the prediction of any turbulent flow.
+    - This is not far removed from everyday engineering! Practically
+      speaking, the computational complexity of turbulence is far too
+      high, so approximations become necessary.
+
+    - You've described the basic idea behind large-eddy
+      simulation, but I think you underestimate how interesting
+      the theory could be there.
+    - Look into spectral theories of turbulence. I find this sort
+      of research rather interesting, though it's formidable.
+    - My understanding is that some of the techniques Kraichnan
+      applied to turbulence in the late 1950s were later
+      independently redeveloped by QFT theorists in the 1970s.
+      (Note that I'm no expert in these models, but learning
+      about them is on my TODO list.)
+
+    - The media unfortunately gives the wrong impression about
+      the Navier-Stokes existence and uniqueness problem. This
+      problem doesn't have much to do with turbulence in the
+      computational complexity sense. 
+        - I honestly don't see how proving that the Navier-Stokes
+          equations do or do not have unique solutions is going
+          to help turbulence. They've already proved that for 2D
+          turbulence, but that didn't help solve 2D turbulence.
+
+    - Anyway, your understanding of the problem is basically
+      correct if not focused on the best examples.
+    - It's already known that the solutions aren't unique in
+      inviscid compressible flows, but that doesn't stop people
+      from using the compressible Euler equations as a model.
+    - They just add an extra condition to make the solutions
+      unique (arguing that the other solutions won't appear in
+      reality). 
+    - My impression is that many people working on the NS
+      existence problem believe that in certain circumstances the
+      dissipation can become unbounded, and would be limited by
+      different physical mechanisms that should be used instead.
+    - Practically speaking this might solved by simply using
+      a different viscosity model, for example...
+
+### NPTEL lectures
+    - NPTEL - Fluid mechanics               https://www.youtube.com/playlist?list=PLbMVogVj5nJQqyKLjvvgAC38ThsmjCJad
+    - NPTEL - Mechanical CFD                https://www.youtube.com/course?list=EC8EAF844326CBB2E3
+    - NPTEL - CFD                           https://www.youtube.com/course?list=ECA862585F1B9ACCBD
+    - NPTEL - Gas dynamics                  https://www.youtube.com/playlist?list=PLbMVogVj5nJRm6ODNAemYPS7E62_hPiqH
+    - NPTEL - Advanced gas dynamics         https://www.youtube.com/course?list=ECF1779EDE134553BB
+    - NPTEL - Astrophysics                  https://www.youtube.com/playlist?list=PLbMVogVj5nJROKq6v6sZq74sjty86dAQ2
+    - NPTEL - Conduction radiation          https://www.youtube.com/course?list=EC42D75EB85932E7D3
+    - NPTEL - Convective heat mass transfer https://www.youtube.com/playlist?list=PLbMVogVj5nJQ1egblJLMA1gbHs3DYT2uo
+    - NPTEL - Radiative transfer            https://www.youtube.com/playlist?list=PLbMVogVj5nJRRoRAkT1aFHiE4yD6Vsfom
+    - NPTEL - Physics of turbulance         https://nptel.ac.in/courses/115/104/115104112/
+    - NPTEL - Plasma physics                https://nptel.ac.in/courses/115/102/115102020/
+
+
+### CFD books
+    - Good book:                                                              $MY_BOOKS/Astro/Fluid-Dynamics/Lecture-Notes-Fluid-dynamics.pdf
+    - 12 Steps Navier:                                                        $MY_NOTES/astro/courses/12-steps-Navier-Stokes.txt
+    - Computational Fluid Dynamics (John Anderson) Nice talk about derivative https://www.amazon.co.uk/Computational-Dynamics-McGraw-Hill-International-Editions/dp/0071132104
+    - Introduction to Computational Fluid Dynamics - Versteeg                 https://www.scribd.com/doc/7504135/An-Introduction-to-Computational-Fluid-Dynamics-Versteeg
+    - Computational Fluid Dynamics: T. J. Chung                               https://www.amazon.com/Computational-Fluid-Dynamics-T-Chung/dp/0521769698
+    - Fluid Mechanics, 2nd Ed: Volume 6, Landau, Lifshitz                     https://www.amazon.com/Fluid-Mechanics-Second-Theoretical-Physics/dp/0750627670
+    - Fundamentals of Computational Fluid Dynamics (Lomax)                    https://www.amazon.com/Fundamentals-Computational-Dynamics-Scientific-Computation/dp/3540416072
+
+### Astro fluids
+    - AN INTRODUCTION TO RELATIVISTIC HYDRODYNAMICS Gourgoulhon
+    - Fundamentals of Astrophysical Fluid Dynamics Kato
+    - MHD Flows in Compact Astrophysical Objects: Accretion, Winds and Jets
+    - Astrophysical Fluid Dynamics: $MY_BOOKS/Astro/Fluid-Dynamics/Principles-Astrophical-Fluid-Dynamics.pdf
+
+
+### Links
+    - LaTeX notes CFD                                        https://github.com/Open-Astrophysics-Bookshelf/numerical_exercises
+    - Numerical Hydrodynamics in SR                          https://link.springer.com/article/10.12942/lrr-2003-7
+    - Numerical Hydrodynamics and Magnetohydrodynamics in GR https://link.springer.com/article/10.12942/lrr-2008-7
+    - GOOD: Intro Numerical Hydrodynamics (David Nielson)    https://www.youtube.com/watch?v=lPmZgbCpnrE
+    - Tumblr Fluid animations                                https://fuckyeahfluiddynamics.tumblr.com/
+    - CFD: Lattice Boltzmann modeling of fluid flow          https://www.coursera.org/learn/modeling-simulation-natural-processes/home/week/5
+    - CCA Summer School, Numerical-hydro, GR, accretion      https://www.simonsfoundation.org/event/cca-summer-school-lectures/
+    - Jim Stone Numerical methods GRMHD                      https://www.youtube.com/watch?v=l7obS9W1Egk
+    - How to simulate a fluid | astrobites                   https://astrobites.org/2010/12/11/how-to-simulate-a-fluid/
+    - Formula One CFD                                        https://news.ycombinator.com/item?id=26938515
+    - HN: Realtime fluid simulation                          https://news.ycombinator.com/item?id=28780335

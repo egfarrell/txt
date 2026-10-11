@@ -1,0 +1,36 @@
+
+In principle both the parametric and the non-parametric
+bootstrap are special cases of Monte Carlo simulations used
+for a very specific purpose: estimate some characteristics
+of the sampling distribution. 
+
+Remember that the sampling distribution of statistic could
+be obtained if we could draw many samples from the
+population and compute a statistic in each sample. The idea
+behind the bootstrap is that the sample is an estimate of
+the population, so an estimate of the sampling distribution
+can be obtained by drawing many samples (with replacement)
+from the observed sample, compute the statistic in each new
+sample. (In case of the parametric bootstrap you add some
+extra restrictions while sampling from the data, but that
+does not change the point here) 
+
+Monte Carlo simulations are _more general_: basically it
+refers to repeatedly creating random data in some way, do
+something to that random data, and collect some results.
+This strategy could be used to estimate some quantity, like
+in the bootstrap, but also to theoretically investigate some
+general characteristic of an estimator which is hard to
+derive analytically. 
+
+In practice it would be pretty safe to presume that whenever
+someone speaks of a Monte Carlo simulation they are talking
+about a theoretical investigation, e.g. creating random data
+with no empirical content what so ever to investigate
+whether an estimator can recover known characteristics of
+this random 'data', while the (parametric) bootstrap refers
+to an emprical estimation. 
+
+The fact that the parametric bootstrap implies a model
+should not worry you: any empirical estimate is based on
+a model.

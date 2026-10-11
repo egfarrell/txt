@@ -1,0 +1,90 @@
+
+A typical WordPress installation comprises a collection of files
+and folders that work together to create a functional website or
+blog. 
+
+### 1. WordPress Core Files:
+
+   - `wp-config.php`:
+        - crucial configuration file containing info such as
+          database credentials, security keys, and other
+          settings. It connects WordPress to your database.
+   - `wp-admin/`:
+        - contains admin dashboard files
+   - `wp-includes/`:
+        - includes essential WordPress core files and libraries
+          that provide functions and features used throughout the
+          site.
+   - `wp-content/`:
+        - where most of your site-specific files and
+          customization reside. It includes themes, plugins,
+          uploads...
+
+### 2. Themes:
+   - wp-content/themes/:
+        - WordPress allows you to install and activate different
+          themes to change the site's appearance. Each theme has
+          its own folder containing template files, stylesheets,
+          and images.
+
+### 3. Plugins:
+   - `wp-content/plugins/`:
+        - Plugins extend the functionality of your WordPress
+          site. Each plugin is stored in its own folder and can
+          include PHP files, stylesheets, JavaScript files, and
+          more.
+
+### 4. Uploads:
+   - `wp-content/uploads/`:
+        - WordPress stores media files (images, videos, etc.) you
+          upload through the dashboard in this folder, organized
+          by year and month.
+
+### 5. Database:
+   - WordPress relies on a `MySQL` or `MariaDB` database to store
+     content, settings, and user data. The database structure is
+     managed by WordPress itself and is defined in the database
+     tables.
+
+### 6. Additional Files:
+   - `index.php:`
+        - The main entry point for your site, which loads
+          WordPress and initiates the rendering of pages.
+   - `.htaccess`:
+        - A configuration file used for controlling access and
+          enabling various server-level settings. It's often used
+          for URL rewriting and security purposes.
+   - `robots.txt`:
+        - instructs search engine crawlers on how to index your
+          site.
+   - `sitemaps`:
+        - Some plugins or themes generate XML sitemaps to help
+          search engines index your site better.
+
+### 7. Configuration Files:
+   - `wp-config.php`:
+        - As mentioned earlier, this is a crucial file for
+          configuring database connections, secret keys, and
+          other settings.
+   - `.htaccess`:
+        - Contains server-level configuration directives, often
+          used for URL rewriting.
+   - `wp-content/uploads/.htaccess`:
+        - May be used for additional security in the uploads
+          directory.
+
+### Typical flow of WordPress request:
+
+    - A user visits site.
+
+    - The web server (e.g., Apache, Nginx) routes the request to
+      WordPress through the `index.php` file.
+
+    - WordPress uses `wp-config.php` to establish a database
+      connection and retrieve necessary settings.
+
+    - Based on the URL and user input, WordPress selects the
+      appropriate theme and plugins.
+
+    - The requested content is fetched from the database,
+      processed, and displayed to the user.

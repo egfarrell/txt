@@ -1,0 +1,26 @@
+betterexplained algebra
+
+    - When we write a polynomial like `x^2 + x = 6 ` we can think
+      at a higher level.
+
+    - `^2`, `x` and `6` are all "numbers", but now we’re keeping
+      track of how they’re made:
+
+    - `x^2` is a component interacting with itself
+    - `x` is a component on its own
+    - `6` is the desired state we want the entire system to become.
+
+- After the interactions are finished, we should get 6.
+- What number is hiding inside of x?
+
+- Our original system is `x^2 + x`.
+- The desired state is `6`.
+
+- A new system:
+- `{x^2 + x - 6}`
+- will track the difference between the original system and the
+  desired state.
+
+- When are we happiest?
+- When there’s NO DIFFERENCE:
+- `{x^2 + x - 6 = 0}`

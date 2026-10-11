@@ -1,0 +1,51 @@
+numpy stats
+# numpy for stats
+# short video by Travis Oliphant
+
+# mask is an array of true and false values.
+# Pass a reduced data set to calcs which will 
+# give summary stats for pitchers only 
+print "*** For Pitchers ***"
+mask = (data1[:,POSITION] == "Pitcher")
+calcs(salary_data[mask], data1[mask])
+
+# now same again but this time for shortstops
+print "*** For shortstops ***"
+mask = (data1[:,POSITION] == "shortstop")
+calcs(salary_data[mask], data1[mask])
+
+# shape command outputs (# rows, # columns)
+data1.shape()
+
+# output the first and last rows of the array
+data1
+
+# what is the datatype of the elements of the array
+data1.dtype
+
+# extract first column
+data1[:,0]
+
+# extract unique values of first column
+# think this only works when dtype = "object"
+set(data1[:,0])
+
+# Print salary stats for each team
+# shows how useful the "set" function is
+for name in set(data1[:,0])
+    mask = (data1[:,TEAM] == name)
+
+    print
+    print "*** %s ***", % name
+    calcs(salary_data[mask], data1[mask])
+
+# now see who is getting the minimum wage
+mask = (salary.data == 300000)
+minwage = data1[mask]
+
+for x in minwage
+    name = x[PLAYER.split(", ")[::-1]
+    tup = tuple(name) + (x[TEAM],)
+    print "%s %s on the %s", % tup
+
+    

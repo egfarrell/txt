@@ -1,0 +1,83 @@
+
+
+Juice Boom Bar Bluetooth Speaker
+
+### Blue ASUS tiny E210MA
+    - https://www.asus.com/laptops/for-home/all-series/asus-e210/techspec/
+
+### White HP PAVILLION 14-AM079NA 14-inch Laptop
+        - Serial number: 5CG7066LRN
+        - Elan touchpad: 
+            - I installed driver from internet: sp75529.exe
+            - _To disable touchpad_: double tap in the top left
+              corner of the touchpad!
+        - drivers https://support.hp.com/us-en/drivers/selfservice/hp-14-am000-notebook-pc-series/10862182/model/15234642
+        - spec https://support.hp.com/au-en/product/hp-14-am000-notebook-pc-series/10862182/document/c05370447
+        - Intel Pentium N3710 1.6 GHz / 2.48 GHz 4 Cores
+        - 8GB RAM, 2TB HDD, HD Display (1366 x 768 Resolution)
+        - External ports 1 VGA; 1 HDMI; 1 headphone/microphone combo; 2 USB 2.0; 1 USB 3.0; 1 RJ-45
+        - Product code 1BW96EA#ABU
+
+        - Product name        HP Notebook 14-am079na
+        - Product number      1BW96EA
+        - Microprocessor      Intel Pentium N3710 (1.6 GHz, up to 2.56 GHz, 2 MB cache, 4 cores)
+        - Memory,             8 GB DDR3L-1600 SDRAM (1 x 8 GB)
+        - Video graphics      Intel® HD Graphics 405 Integrated
+        - Hard drive          2 TB 5400 rpm SATA
+        - Display             35.6 cm (14") diagonal HD SVA BrightView WLED-backlit (1366 x 768)
+        - Keyboard            Full-size island-style keyboard
+        - Pointing device     Touchpad with multi-touch gesture support
+        - Wireless            802.11b/g/n (1x1) and Bluetooth® 4.0 combo
+        - Network interface   Integrated 10/100 BASE-T Ethernet LAN
+        - Expansion slots     1 multi-format SD media card reader
+        - External ports      1 VGA; 1 HDMI; 1 headphone/microphone combo; 2 USB 2.0; 1 USB 3.0; 1 RJ-45
+        - Dimensions          (W x D x H) 34.54 x 24.15 x 2.39 cm
+        - Weight              1.94 kg
+        - Power supply        45 W AC power adapter
+        - Battery type        3-cell, 41 Wh Li-ion
+        - Webcam              HP TrueVision HD Camera with integrated digital microphone
+        - Audio features      DTS Studio Sound™; Dual speakers
+
+### my monitor
+    - ASUS VS247HR Full HD LED Monitor (1920 x 1080, TN, 2 ms, HDMI, DVI-D, D-Sub) - 23.6 inch
+
+### Teaching pen tablets
+    - Wacom
+        - $MY_NOTES/cs/wacom-pen-tablet.txt
+    - Star G640 PenTablet (xp-pen) <--- Ania uses now
+        - https://www.xp-pen.com/download-55.html
+
+### Acer Swift 1 SF114-32
+    - My 'pink' laptop
+    - Original Intel(R) UHD Graphics 605: 26.20.100.6998
+    - Install drivers? See here: $MY_NOTES/cs/windows-office-tips.md
+
+### Printer
+    - ./hp-printer.txt
+
+### Audio
+    - Sennheiser PC 360 Headset
+    - New Audio M-06BT
+
+### - Ania small laptop:
+    - ASUS X205TA
+
+### My lenovo tablet
+    - Lenovo Tab M8 LTE TB-8505X
+    - IMEI 863440052672247 (IMEI SV 78)
+
+### other links:
+    ./digital-ocean-new-vm.txt
+
+### ssh clone
+    git clone vcbbgh@bitbucket.org:vcbbgh/dotfiles.git
+
+### portable cluster
+    git clone --depth 1 https://vcbbgh@bitbucket.org/vcbbgh/dotfiles
+    cd dotfiles
+    source ./env_setup.sh
+    ai -y make trash-cli
+    git clone --depth 1 https://vcbbgh@bitbucket.org/vcbbgh/code $MY_CODE
+    cpr  $MY_CODE/data-sci/portable_cluster   ~/repos
+    j cl
+    command cp  ~/repos/portable_cluster/Makefile  $MY_CODE/data-sci/portable_cluster

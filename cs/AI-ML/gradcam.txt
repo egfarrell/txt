@@ -1,0 +1,72 @@
+
+
+BinaryClassifierOutputTarget
+
+
+### Choosing the Target Layer
+    - Choose target layer to compute CAM. Common choices:
+        - FasterRCNN          : model.backbone
+        - Resnet18 and 50     : model.layer4[-1]
+        - VGG and densenet161 : model.features[-1]
+        - mnasnet1_0          : model.layers[-1]
+        - ViT                 : model.blocks[-1].norm1
+        - SwinT               : model.layers[-1].blocks[-1].norm1
+
+    - If you pass a `list` with several layers, the CAM will be
+      averaged accross them. useful if you're not sure what layer
+      will perform best.
+
+### pytorch-grad-cam Tutorial
+    - http://localhost:8888/notebooks/CAM%20Metrics%20And%20Tuning%20Tutorial.ipynb
+    - 2016: First explainability methods: 
+        - `CAM`, Global Average Pooling
+          https://arxiv.org/abs/1512.04150v1
+        - `GradCAM` https://arxiv.org/abs/1610.02391
+    - `CAM`: 
+        - Evaluate explanations using bounding box extraction,
+          compare with ILSVRC dataset. Good overlap indicates
+          accurate explanation.
+    - Bounding box creation: 
+        - Retain top 20% CAM pixels, form largest connected
+          component.
+    - Goal: 
+        - Explanations mirroring model's decision process.
+          Example: Model recognizing cat by ears only.
+    - Ideal explanation: 
+        - Highlights model's focus (e.g., cat ears), even with
+          low bounding box overlap.
+    - `GradCAM`: 
+        - Introduces "pointing game" - highest CAM point checked
+          within bounding box. Slightly improved metric.
+            - ./pointing-game.txt
+    - Score-CAM 
+        - https://arxiv.org/abs/1910.01279: 
+        - Assess explanations by measuring CAM pixel sum inside
+          bounding box.
+
+### Install
+    ippt licz:
+        conda create -n pytorch-gradcam2 python=3.9
+        conda activate pytorch-gradcam2
+        conda install mamba
+        mamba install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+        mamba install -c conda-forge grad-cam
+
+
+### Links
+    - Pytorch gradcam GITHUB                                      https://github.com/jacobgil/pytorch-grad-cam
+    - Pytorch gradcam Book                                        https://jacobgil.github.io/pytorch-gradcam-book/CAM%20Metrics%20And%20Tuning%20Tutorial.html
+    - Pytorch gradcam conda                                       https://anaconda.org/conda-forge/grad-cam
+    - Pytorch gradcam fastai notebook                             https://www.kaggle.com/code/noobiedatascientist/getting-hooked-with-pytorch-and-grad-cam
+    - Article: self written grad-cam 1                            https://medium.com/@stepanulyanin/implementing-grad-cam-in-pytorch-ea0937c31e82
+    - Article: self written grad-cam 2                            https://towardsdatascience.com/grad-cam-in-pytorch-use-of-forward-and-backward-hooks-7eba5e38d569
+    - PAPER: Grad-CAM: Visual Explanations from Deep Networks ... https://arxiv.org/abs/1610.02391
+    - Video: Grad-CAM Short intro                                 https://www.youtube.com/watch?v=COjUB9Izk6E
+    - Code: Simple grad-cam example                               https://coderzcolumn.com/tutorials/artificial-intelligence/pytorch-grad-cam
+    - jacobgil blog: Vision Transformers CAM(?)                   https://jacobgil.github.io/deeplearning/vision-transformer-explainability
+    - jacobgil blog: CAMs                                         https://jacobgil.github.io/deeplearning/class-activation-maps
+    - Good kaggle notebook: fastai, pytorch, grad-cam             https://www.kaggle.com/code/noobiedatascientist/getting-hooked-with-pytorch-and-grad-cam
+    - Interesting long example, uses fastai?                      https://fritz.ai/heatmaps-and-convolutional-neural-networks-using-fast-ai/
+    - `GOOD`:                                                     https://www.aimspress.com/article/doi/10.3934/mbe.2023457?viewType=HTML
+    - `GOOD` general guide to CNNs that deals with grad cam too   https://medium.com/data-science-engineering/how-to-train-your-cnn-a8c84d108a77
+    - Explainable AI: nice chapter on grad cam                    $MY_BOOKS/CS/AI-ML/2022-Explainable-AI-for-Practitioners.pdf

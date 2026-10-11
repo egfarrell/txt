@@ -1,0 +1,206 @@
+# Oracle binary data "LOBS"
+
+### LOB Storage 
+    1.  SecureFiles 
+    2.  BasicFiles
+
+    - Setup
+        - V$PARAMETER
+        - DB_SECUREFILE = PERMITTED
+
+        - DBA_TABLESPACES
+        - ASSM
+
+    - To use SecureFiles with your LOBs, your database
+      initialization parameter DB_SECUREFILE must be set to
+      PERMITTED (the default setting). In addition, the
+      tablespace that will store the LOBs must use Automatic
+      Segment Space Management (ASSM).
+
+    - If you are not sure about your database, ask your DBA. If
+      you are the DBA, check in V$PARAMETER for initialization
+      parameters and in DBA_TABLESPACES for Segment Space
+      Management settings.
+
+
+### Documentation
+	- SecureFiles and Large Objects Developer’s Guide.
+    - Oracle Database 11g guide to LOB programming.
+
+	- PL/SQL Packages and Types Reference.
+    - See chapter on DBMS_LOB package.
+
+	- SQL Reference. Basic Elements of Oracle SQL
+        - “Datatypes” section in Chapter 2,
+        - contains important information about LOBs.
+
+
+### LOB LOCATOR
+	- pointer to actual LOB data in database
+        - can be "NULL" (pointer unitialised)
+        - can be "EMPTY" (pointer points to no LOB data)
+
+    - db "lob columns" hold "LOB LOCATORS" and these locators
+      point to real data stored in LOB segment somewhere in
+      database
+
+
+### LOB LOCATOR example
+	DECLARE
+		photo BLOB;
+	BEGIN
+		SELECT falls_photo
+		INTO photo
+		FROM waterfalls
+		WHERE falls_name='Dryer Hose';
+
+	- What does "photo" hold? actual photo?
+	- No it holds pointer to photo data.
+
+### Processing
+	1. 	Issue SELECT statement
+		to retrieve LOB locator
+		for photo you wish to display.
+
+	2. 	Open LOB via call to DBMS_LOB.OPEN.
+
+	3. 	Make call to DBMS_LOB.GETCHUNKSIZE to
+		get optimal chunk size to use
+		when reading (and writing) LOB’s value.
+
+	4. 	Make call to DBMS_LOB.GETLENGTH to
+		get number of bytes or characters
+		in LOB value.
+
+	5. 	Make multiple calls to DBMS_LOB.READ
+		in order to retrieve LOB data.
+
+	6. 	Close LOB.
+
+### Test presence absence of Data
+    - the way in which you test for the presence or absence of
+      data is more complicated for a LOB than it is for scalar
+      datatypes.
+
+    - `IS NULL` suffices for traditional scalar datatypes:
+        - IF some_number IS NULL THEN 
+            - --You know there is no data
+
+        - If an "IS NULL" test on a NUMBER or a VARCHAR2 (or any
+          other scalar type) returns TRUE, you know that the
+          variable holds no data.
+
+    - With LOBs, however, you not only need to check for nullity
+      (no locator), but you also need to check the length:
+
+		IF some_clob IS NULL THEN
+			--There is no data
+		ELSIF DBMS_LOB.GETLENGTH(some_clob) = 0 THEN
+			--There is no data
+		ELSE
+			--Only now is there data
+		END IF;
+
+    - As illustrated in this example, you can’t check the length
+      of a LOB without first having a locator.
+
+    - Thus, to determine whether a LOB holds data, you must first
+      check for the presence of a locator using an `IS NULL`
+      test, and then check for a _non-zero length_ or perform
+      BOTH CHECKS together like this:
+
+		IF NVL(DBMS_LOB.GETLENGTH(some_clob),0) = 0 THEN
+		-- There is no data
+		ELSE
+		-- There is data
+		END IF;
+
+    - The bottom line is that you need to check for two
+      conditions, not just one.
+
+### LOB BFILES
+    - Internal LOB types
+        - BLOB, CLOB, and NCLOB stored within database.
+
+    - External LOB types
+        - A BFILE, on other hand, is an EXTERNAL LOB type.
+
+    - BFILEs differ from internal LOBs in 3 ways:
+
+        - the value of a BFILE is stored in an operating-system
+          file, not within the database.
+
+        - BFILEs do not participate in transactions (ie, changes
+          to a BFILE cant be rolled back or committed). However,
+          changes to a BFILE _locator_ can be rolled back and
+          committed.
+
+        - From within PL/SQL and Oracle database in general, you
+          can only read BFILEs. The database does not allow you
+          to write BFILE data. You must generate external files
+          to which BFILE locators point—completely outside of
+          database.
+
+### LOB types
+
+    - BLOB
+        - Binary large object. Declares variable that holds LOB
+          locator pointing to large binary object stored INSIDE
+          the database.
+
+    - CLOB
+        - Character large object. Declares variable that holds
+          LOB locator pointing to a large block of character data
+          in the database character set, stored INSIDE the
+          database.
+
+    - NCLOB
+        - Native/National Language Support (NLS) character large
+          object. Declares a variable that holds LOB locator
+          pointing to large block of character data in the
+          national character set, stored INSIDE the database.
+
+    - RAW
+        - Store and manipulate relatively small amounts of binary
+          data. variable length (like VARCHAR) only oracle never
+          performs character set conversion when transmitting RAW
+          back and forth between PL/SQL and db.
+
+    - LONG, LONG RAW
+        - obselete. supported for backwards compatibility LONG
+          RAW column can be 2GB but PL/SQL accesses only first
+          32,760 bytes Exceed this and you'll get: ORA-06502
+          PL/SQL numeric or value error
+
+        - If you’ve been around Oracle for a few years, you’ve
+          probably noticed that so far I’ve omitted any
+          discussion of two datatypes: LONG and LONG RAW.
+
+        - This is intentional. In the database, LONG and LONG RAW
+          allow you to store large amounts (up to 2 gigabytes) of
+          character and binary data, respectively. The maximum
+          lengths of the PL/SQL types, however, are much shorter:
+          only 32,760 bytes, which is less than the 32,767 bytes
+          supported by VARCHAR2 and RAW. Given this rather odd
+          length limitation, I recommend using VARCHAR2 and RAW,
+          instead of LONG and LONG RAW, in your PL/SQL programs.
+          If you’re retrieving LONG and LONG RAW columns that may
+          contain more than 32,767 bytes of data, you won’t be
+          able to store the returned values in VARCHAR2 or RAW
+          variables. This is an unfortunate restriction and
+          a good reason to avoid LONG and LONG RAW to begin with.
+          LONG and LONG RAW are obsolete types, maintained only
+          for backward compatibility. Oracle doesn’t recommend
+          their use, and neither do I. For new applications where
+          you have a choice, use CLOB and BLOB instead. For
+          existing applications, Oracle’s SecureFiles and Large
+          Objects Developer’s Guide provides guidance for
+          migrating existing data from LONG to LOB columns.
+
+    - BFILE
+        - Binary file. unstructured binary data in
+          operating-system files outside the db.
+
+        - Declares variable that holds file locator pointing to
+          an operating- system file outside the database. The
+          database treats the data in the file as binary data.

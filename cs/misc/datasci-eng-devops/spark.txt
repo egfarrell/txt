@@ -1,0 +1,249 @@
+### save dataframe to _local_ filesystem (not HDFS) file:///
+    https://www.safaribooksonline.com/library/view/introduction-to-pyspark/9781771375535/video239199.html
+    https://stackoverflow.com/questions/33860730/wordcounts-dstream-saveastextfileslocal-file-system-path-txt-does-not
+    https://stackoverflow.com/questions/31239161/save-a-spark-rdd-to-the-local-file-system-using-java
+    https://stackoverflow.com/questions/40786093/writing-files-to-local-system-with-spark-in-cluster-mode
+
+    It seems saveAsTextFile requires chmod 777 but the local directory
+    won't default to give w to other users. I've tried saving to
+    a mounted drive and was able to save without an error.
+
+    Without the the "file", it won't save to the file system. e.g.
+    ```
+    rdd = df.rdd.map(list)
+    rdd.map(lambda x: ",".join(map(str, x))).coalesce(1).saveAsTextFile("file:///tmp/myfolder/out.txt")
+    ```
+
+### drop dataframe columns ('select')
+    drop_list = ['a column', 'another column', ...]
+    df.select([column for column in df.columns if column not in drop_list])
+
+### udemy course
+    https://www.udemy.com/spark-and-python-for-big-data-with-pyspark/
+
+### spark documentation
+    https://www.datacamp.com/community/tutorials/apache-spark-python#gs.3P1FkPs
+    https://docs.databricks.com/spark/latest/dataframes-datasets/index.html
+
+    Spark SQL, DataFrames and Datasets Guide https://spark.apache.org/docs/latest/sql-programming-guide.html
+    Spark Python API Docs https://spark.apache.org/docs/latest/api/python/index.html
+
+transformations v actions
+
+    Transformations (lazy)          Actions
+    ---------------------------------------
+    select                          show
+    distinct                        count
+    groupBy                         collect
+    sum                             save
+    orderBy
+    filter
+    limit
+
+### window functions
+
+    Ranking functions  SQL                  DataFrame API
+                       ---                  -------------
+                       rank                 rank
+                       dense_rank           denseRank
+                       percent_rank         percentRank
+                       ntile                ntile
+                       row_number           rowNumber
+
+
+
+    Analytic functions  SQL                  DataFrame API
+                        ---                  -------------
+                        cume_dist            cumeDist
+                        first_value          firstValue
+                        last_value           lastValue
+                        lag                  lag
+                        lead                 lead
+
+    Once a function is marked as a window function, the next
+    key step is to define the Window Specification
+    associated with this function. A window specification
+    defines which rows are included in the frame associated
+    with a given input row. A window specification includes
+    three parts:
+
+    - _Partitioning Specification_: controls which rows will
+      be in the same partition with the given row. Also, the
+      user might want to make sure all rows having the same
+      value for  the category column are collected to the
+      same machine before ordering and calculating the
+      frame.  If no partitioning specification is given,
+      then all data must be collected to a single machine.
+
+    - _Ordering Specification_: controls the way that rows
+      in a partition are ordered, determining the position
+      of the given row in its partition.
+
+    - _Frame Specification_ (OPTIONAL?): states which rows
+      will be included in the frame for the current input
+      row, based on their relative position to the current
+      row.  For example, “the three rows preceding the
+      current row to the current row” describes a frame
+      including the current input row and three rows
+      appearing before the current row.
+
+### spark <-> hive integration
+    - SparkSQL gets shipped with its _own metastore (derby)_,
+      so that it can work even if hive is not installed on
+      the system. This is the _default_ mode.
+
+    - In the above question, you created a table in hive.
+      You get the table not found error because SparkSQL is
+      using its default metastore which doesn't have
+      metadata of your hive table.
+
+    - If you want SparkSQL to use the hive metastore instead
+      and access hive tables, then you have to add
+      hive-site.xml in spark conf folder.
+
+### my scaleway setup
+    Need:
+        - Java JDK (not JRE!)
+        - spark pre-built binary
+        - ENV paths for java and spark
+        - Python 2.7 environment (conda)
+        - py4j
+
+    Java
+        java -version  # check JRE
+        javac -version # check JDK
+
+    Spark
+        wget http://apache.mirror.anlx.net/spark/spark-2.1.1/spark-2.1.1-bin-hadoop2.7.tgz
+        utar spark-2.1.1-bin-hadoop2.7.tgz
+        rm spark-2.1.1-bin-hadoop2.7.tgz
+
+    Python 2.7 environment
+        conda create --name pyhadoop27 python=2.7 pandas
+        conda install ipython
+        conda install jupyter
+
+    Paths
+        export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
+        export SPARK_HOME=~/spark-2.1.1-bin-hadoop2.7
+        export PATH=$PATH:$SPARK_HOME/bin
+        # export PYSPARK_SUBMIT_ARGS="--master local[2]"
+        export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+        # export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
+        # export PYSPARK_DRIVER_PYTHON=jupyter
+
+    Py4j
+        pip install py4j
+
+    Run it:
+        > pyspark
+        or
+        > coa pyhadoop27
+        > ipy
+            import pyspark as ps
+            sc = ps.SparkContext()
+            sc.master
+
+### whole dev setup
+    https://medium.com/@ivanermilov/setting-up-hadoop-spark-hive-development-environment-on-ubuntu-94f0f8166ef1
+    https://github.com/earthquakesan/hdfs-spark-hive-dev-setup
+    https://github.com/databricks/learning-spark
+
+notebooks from edx course
+    https://github.com/dipanjanS/BerkeleyX-CS100.1x-Big-Data-with-Apache-Spark
+
+Recommendations                         https://www.quora.com/How-do-I-learn-Apache-Spark/answer/DurgaSwaroop-Perla
+Learning Spark                          https://www.amazon.co.uk/Learning-Spark-Lightning-Fast-Data-Analysis/dp/1449358624/
+Mastering Apache Spark                  https://www.safaribooksonline.com/library/view/mastering-apache-spark/9781783987146/
+Spark YouTube Channel                   https://www.youtube.com/user/TheApacheSpark/videos
+
+Overview of Spark                       https://www.youtube.com/watch?v=mL5dQ_1gkiA
+Intro to Spark (Brian Clapper)          https://www.youtube.com/watch?v=PFK6gsnlV5E
+Advanced Spark Analytics (Farooqui)     https://www.youtube.com/watch?v=7ooZ4S7Ay6Y
+Good trainer Sameer Farooqui            https://www.youtube.com/watch?v=K14plpZgy_c
+
+Suggest you to start with the below links:
+
+- EDx Introduction to Apache Spark
+- EDx Big Data Analysis with Apache Spark
+- Next, head over to Databricks - Sign In
+- gentle-introduction-to-apache-spark - Databricks
+- databricks-for-data-scientists - Databricks
+
+Here are few Github links which might be useful for you:
+
+1. matteoredaelli/pyspark-examples   https://github.com/matteoredaelli/pyspark-examples
+2. databricks/spark-knowledgebase    https://github.com/databricks/spark-knowledgebase
+3. databricks/spark-training         https://github.com/databricks/spark-training
+4. XD-DENG/Spark-practice            https://github.com/XD-DENG/Spark-practice
+5. databricks/learning-spark         https://github.com/databricks/learning-spark
+6. PacktPublishing/Learning-PySpark  https://github.com/PacktPublishing/Learning-PySpark
+7. jadianes/spark-py-notebooks       https://github.com/jadianes/spark-py-notebooks
+
+### Chris Webster  Advice
+    "Spark In Action" from Manning is the best all-round book on
+    Spark that I've seen, and it's fairly up to date (Spark
+    2.x):
+
+    https://www.manning.com/books/spark-in-action
+
+    There are a couple of O'Reilly books that are a bit older so
+    some of their contents are obsolete.
+
+    "Learning Spark" (2013) is pretty good on the basics of how
+    Spark works, and also has useful information on some of the
+    painful configuration stuff. But it's quite old now e.g.
+    limited coverage of Data Frames, and nothing on Data Sets.
+
+    http://shop.oreilly.com/product/0636920028512.do
+
+    "Advanced Analytics With Spark" (2015) is more recent and
+    focuses mainly on machine learning with various practical
+    examples:
+
+    http://shop.oreilly.com/product/0636920035091.do
+
+    O'Reilly are also promoting a new book "Spark: The
+    Definitive Guide" but it's not out yet, although some
+    chapters are available to download:
+
+    http://shop.oreilly.com/product/0636920034957.do
+
+    On PySpark vs. Scala Spark:
+
+    DataBricks has some decent documentation which includes
+    stuff on moving from Python to PySpark, although some of
+    their docs are specific to their proprietary
+    Spark-as-a-platform product:
+
+    https://docs.databricks.com/index.html
+
+    One big problem with Python/Scala on Spark in general is
+    that the Scala API is more comprehensive than Python, so
+    there are things you can do in Scala with Spark that you
+    can't do in Python.
+
+    Another common problem that I've seen is that people really
+    struggle to adapt their thinking from the single-machine
+    classic Python mode (numpy, pandas, scikit-learn etc) to the
+    fundamentally different distributed model of Spark.
+
+    People keep trying to work with Python dicts, lists and
+    arrays instead of Spark's RDDs and Data Frames/Sets. This
+    forces data to be collected onto single nodes instead of
+    being distributed, eliminating the key benefit of Spark and
+    often killing your program when the RAM is used up.
+
+    So the best thing you can do if you're learning PySpark is
+    learn the basics of *Spark* first: learn about why Spark
+    uses the distributed model, how it does it, how Spark uses
+    functional programming patterns (map etc) to do things
+    instead of loops, what the core data structures are (RDDs,
+    Data Frames, Data Sets), and how to use the incredibly rich
+    APIs offered by these data structures.
+
+    Understand Spark, and you'll find it much easier to write
+    proper programs in PySpark.
+
+    Or learn Scala and enjoy the full power of Spark!

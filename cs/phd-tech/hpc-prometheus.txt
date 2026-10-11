@@ -1,0 +1,88 @@
+### Prometheus
+    - https://osworld.pl/tag/prometheus/
+    - Prometheus, working at the AGH UST Academic Computer Centre
+      Cyfronet, is the fastest supercomputer in Poland since its
+      launch in 2015. 
+    - It has a  theoretical computing power of 2.4 PFlops
+      (PetaFlops), which has been possible thanks to the use of
+      efficient servers of the HP Apollo 8000 platform, connected
+      via a superfast InfiniBand network offering a transfer
+      capacity of 56 Gb/s. 
+    - The supercomputer has 53,604 processing cores (power-saving
+      and efficient Intel Haswell processors), as well as 282 TB
+      of internal memory made in the DDR4 technology. 
+    - Prometheus has two file systems of total capacity equal to
+      10 PB, and the access speed of 180 GB/s. 
+    - It is also equipped with _NVIDIA Tesla cards_ with GPGPU
+      graphics processing units. 
+    - Prometheus was built by Hewlett-Packard according to the
+      specifications developed by the experts of AGH UST
+      Cyfronet.
+
+### HP Apollo 8000
+    - 2 procesory Intel Xeon serii E5-2600 V3 na serwer: E5-2690v3, E5-2680v3, E5-2670v3, E5-2683v3, E5-2695v3
+        - CPU: Intel Xeon E5-2600 series:
+            - E5-2699 v3,
+              E5-2698 v3,
+              E5-2697 v3,
+              E5-2695 v3,
+              E5-2690 v3,
+              E5-2683 v3,
+              E5-2680 v3,
+              E5-2670 v3,
+              E5-2667 v3,
+              E5-2660 v3
+            - Xenon spec: https://software.intel.com/content/www/us/en/develop/articles/intel-xeon-processor-e5-2600-v3-product-family-technical-overview.html
+            - Xenon info: https://www.theregister.com/2014/09/08/intel_xeon_e5_v3/
+
+- Like other members of the Xeon E5-2600 series, the E5-2666
+  delivers additional computational oomph thanks to Intel's
+  Advanced Vector Extensions 2 (AVX2), which can handle vector
+  instructions of up to 256 bytes per clock cycle. AVX2 can
+  reportedly double floating-point performance for some
+  workloads, while improvements in the Haswell microarchitecture
+  can speed up existing applications by as much as 30 per cent.
+
+    - Finally, it is worth mentioning accelerators and
+      coprocessors. 52 machines have nVidia chipsets, 4 use AMD
+      cards, and _33 of them use Intel Xeon Phi_. 4 of them have
+      hybrid technologies from nVidia and Intel Xeon Phi.
+
+### LOFAR install on Prometheus
+    - To ensure satisfactory calculation speed and suitably large
+      disk resources, an eﬀort was made to install the complete
+      LOFAR environment (including the still-developed FACTOR
+      module) on ACC Cyfronet AGH cluster Prometheus
+      (conﬁguration HP Apollo 8000) with the following resources:
+      279 TB or RAM memory, 10 PB of total disc storage space,
+      and computing power equal to 2399 Tﬂops. The installation
+      of most of the LOFAR components on Prometheus was performed
+      based on the pro- cedures from the LOFAR wiki pages
+      7 , providing the instructions for Ubuntu 14.04 and CentOS
+      6.5. Installation was carried out in a hybrid manner.
+      First, it was done using the popular Intel compilers (icc,
+      icpc) for C, C++ and Fortran-written compo- nents.
+    - However, due to the incopatibility of this components with
+      some parts of the additional LOFAR code, GNU GCC (gcc and
+      g++) compilers had to be also used for C and C++-written
+      components, while the Fortran components compiler was In-
+      tel ifort (due to its compatibility with some libraries
+      previously installed from the sources). Further, some parts
+      of the code (with MPI support) were build with Intel MPI.
+      To achieve the proper functioning of the software on the
+      cluster it was also nec- essary to modify the selected
+      Python libraries and adapt them for the SLURM-based
+      environment (typically not present on linux-based
+      desktops).
+
+### Misc
+    - Prometheus operating system is CentOS 7. or Scientific
+      Linux 7 operating system???
+
+    - The authors thank Andrew Chael and Brandon Curd for support
+      with the KORAL code. The computations were supported by the
+      PLGrid Infrastructure through which access to the
+      Prometheus super-computer, located at ACK Cyfronet AGH in
+      Krakow, was provided.
+
+    - CAMK cmputers: use gcc C11!

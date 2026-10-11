@@ -1,0 +1,41 @@
+Merging Overview
+
+### Tips
+    - "merge early, merge often"
+    - BEWARE: even if conflictless merge, there still may be bugs
+      or suble logic errors
+
+### 3 diff formats
+    - LCS algorithm - Longest Common Subset (default for diff utility)
+    - context format
+    - unified format
+
+### Mercurial merge tools
+    - Mercurial just uses whatever merge tools are on your
+      system. 
+    - In linux: "diff3" and "kdiff3" (graphical)
+
+### binary diffs
+    - not useful when changing compressed files (e.g. audio files)
+    - useful for binary exe's though (bsdiff)
+    - useful for remote syncing too (rsync) ... rolling hash
+
+### Merging
+    - no absolutely correct way to do it... judgement
+    - common merge algorithm: "2-way merge"
+    - merging is a commutative operation. 
+        - (But Diffs not commutative!)
+        - Merging A with B, same as merging B with A.
+        - producing diff of A -> B, not same as producing diff
+          B -> A
+
+### 2-way merge conflict
+    - Revision1   Revision2   ->  MergeOutput
+    - ---------------------------------------
+    - Ted         Ted         ->  Ted
+    - Alice       Bob         ->  `[MERGE CONFLICT?]`
+    - Uri         Uri         ->  Uri
+
+### 3-way merge
+    - Looks at COMMON ANCESTOR of A and B, 
+    - as well as both revisions

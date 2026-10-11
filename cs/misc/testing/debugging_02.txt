@@ -1,0 +1,116 @@
+udacity debugging 02
+
+assert conditions
+	assume assert will usually hold
+	if assert fails, then throw exception
+	note: you can write your own assertion function!
+
+builtin-assertion advantages
+	identification - tells you which one failed
+	location - where in code it failed
+	optional - can be turned on or off
+	standardised - immediately recognised always have same form
+
+C/C++
+	#include <assert.h>
+	assert(sqrt(9.0)==3)
+
+Precondition
+	assertion called at beginning of function
+	and checks properties of arguments
+
+Postcondition
+	checks result of computation before its returned
+
+Advatages of assertions included in code
+	you can catch the infection earlier
+	and if enough program states are covered by assertions 
+	you can see the infection 
+	the moment it is introduced. 
+	This leaves a shorter cause-effect chain 
+	which is easier to debug.
+
+Precondition violated
+	Preconditions serve as specifications
+	Two functions: f() calls g()
+	g()'s precondition fails => f() is at fault!
+
+Advantages of assertions in code
+	help catch errors (during development)
+	help with testing (will catch false results during randomised testing)
+	help wtih documentation
+
+Refining preconditions and postconditions
+	can be too permissive or too strict.
+	Can usually find the right level of precision for Preconditions
+	but postconditions usually only check PART of a state and are usually
+	simple and a little too permissive
+
+Timebombs
+	e.g. Time class - can be intialised with a string
+	but the class only fails when it is printed out
+
+Invariants, "Invariant Checkers"
+	conditions that must ALWAYS holds for an object
+	ie. at the beginning AND end of EACH public method
+	so we need "invariant checker" assertions
+
+Eiffel language
+	Has invariants builtin to the language
+
+Turn off (on) assertions
+	Python: -O (for optimise)
+	C/C++: -DNDEBUG
+	Java: -ea --------> turns ON assertions!
+
+No side effects!
+	Asserts must not change the program semantics.
+	Also should be no side effects if assertions turned on or off
+
+Public preconditions
+	asserts SHOULDNT check for public preconditions
+	* assert deposit > 0	(WRONG)
+	* if deposit < 0 raise illegialdataexception	(RIGHT)
+
+Enable assertions in production code?
+	Pro
+		Failing is better than bad data
+		Eases debugging
+		Defects in field hard to trace
+	Cons
+		Performance!
+		Not user-friendly (program crashes)
+		
+System Invariants
+	need flag=false to hold ALWAYS
+	import sys
+	sys.settrace(traceit)
+	def traceit(frame, ev, args):
+		global flag
+		assert not flag
+		return traceit
+
+Buffer overflows
+	can happen in C and C++
+	use a system invariant checker to block access of uninitialised memory
+	Some tools to stop this: "electric fence", "Valgrid"
+
+(Dynamically) Inferring Invariants
+	There are tools which automatically provide
+	data invariants, precondtions, postconditions
+	"DAIKON" - Michael Ernst et al.
+		Daikon has loads of patterns
+		It traces a function many times
+		and discovers what patterns hold for all runs
+		e.g. pattern: SOMEVAR = 0, VAR1 * VAR2 = VAR3 etc etc
+		If a pattern holds, it is reported as an invariant.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,750 @@
+- PROFESSOR: OK. Let's start. So let's review what we've been trying to do in
+  the past few lectures. It's to understand a typical situation involving
+  something like a gas, which, let's say, initially is in one half of the
+  container. And then expands until it occupies the entire container, going from
+  one equilibrium state to another equilibrium state.
+- Question is, how to describe this from the perspective of microscopic degrees
+  of freedom, getting the idea that eventually you will come to some form of
+  equilibrium. And actually, more seriously, quantifying the process and
+  timescales by which the gas comes to equilibrium.
+- So the first stage was to say that we will describe the process by looking at
+  the density, which describes the number of representative examples of the
+  system, whose collections of coordinates and momenta occupy a particular point
+  in the 6N-dimensional phase space. So basically, this is a function that
+  depends on 6N coordinates. And of course, it changes as a function of time.
+- And we saw that, basically, if we were to look at how this set of points were
+  streaming in phase space, and this can be mathematically represented by
+  looking at the direct time dependence and the implicit time dependence of all
+  of the coordinates captured through the Poisson bracket. And the answer was
+  that it is a characteristic of the type of Hamiltonian evolution equations,
+  that the flow is such that the phase space does not change volume. And hence,
+  this quantity is 0.
+- We said, OK, all of that is fine. But what does that tell me about how this
+  gas is expanding? So for that, we said that we need to look at descriptions
+  that are more appropriate to thinking about the volume and density of a gas
+  expanding. And we really want to capture that through the one-particle
+  density.
+- But along the way, we introduced s particle densities, normalized up to
+  something, to correspond to, essentially, integrating over all of the
+  coordinates that we're not interested in. Say coordinates pertaining to
+  numbers s plus 1 to N, corresponding 6N-dimensional phase space and the entire
+  [INAUDIBLE] of this density or probability.
+- Then the next stage was to be more specific about what governs the evolution
+  of these gas particles, i.e., what is the Hamiltonian. And we said, let's
+  focus on an N particle Hamiltonian that is composed, by necessity certainly,
+  of one-body terms that is the kinetic energy and the potential energy, the
+  latter describing the box, for example. And we added a two-particle
+  interaction. qi minus qj, which, for the sake of simplicity, let's imagine is
+  spherically symmetric-- only depends on the relative position of these
+  particles.
+- Then we say that if I look at the evolution of this s particle density, I
+  start by writing an equation that kind of looks like the full Liouville
+  equation. There is a Hamiltonian that describes this set of particles
+  interacting among themselves, just replacing n by s. And so if these were the
+  only particles in the universe, this is what I would get.
+- Except that we know that there are other particles. And since we have two-body
+  collisions possible, any one of the particles in the set that I'm describing
+  here, composed of s particles, can potentially collide with a particle from
+  this set that I don't want to include. And that will change the volume of
+  phase space. This incompressibility condition was valid only if the entire
+  thing of the Hamiltonian was considered. Here, I'm only looking at the partial
+  subset.
+- And so then what did I have here? I had the force exerted from particle s plus
+  1 on particle n changing the momentum of the particle n. But the likelihood
+  that this happens depends on finding the other particle also. So I had this
+  dependence on the density that was s plus 1. So this was the BBGKY hierarchy.
+- Then we said, let's take a look at the typical value of the terms that we have
+  in this equation. And for s that is larger than 2, this Hamiltonian that
+  pertains to s particles will have a collision term among the particles. And
+  that collision term will give you some typical inverse timescale here, which
+  is related to the collision time.
+- Whereas on the right-hand side, for this collision to take place, you have to
+  find another particle to interact with in the range of interactions that we
+  indicated by d. And for density n, this was smaller by a factor of nd cubed
+  for dilute gases. Therefore, the left-hand side is much larger than the
+  right-hand side. And within particular approximation, we said that we are
+  going to approximately set this right-hand side to 0. OK?
+- Except that we couldn't do this for the equation that pertained to s equals to
+  1, because for s equals to 1, I did not have the analog of this term. If I
+  were to write the precise form of this Poisson bracket, I had the partial
+  derivative with respect to time, the momentum divided by mass, which is the
+  velocity driving the change in coordinate. And the force that comes from the
+  external potential, let's call it f1, we arrive in the change in momentum of
+  the one-particle density, which is a function-- let's write it explicitly-- of
+  p1, q1, and t.
+- And on the other side, I had the possibility to have a term such as this that
+  describes a collision with a second particle. I have to look at all possible
+  second particles that I can collide with. They could come with all variety of
+  momenta, which we will indicate p2. They can be all over the place. So I have
+  integrations over space.
+- And then I have a bunch of terms. So for this, we said, let's take a slightly
+  better look at the kind of collisions that are implicitly described via the
+  term that we would have here as f2. And since the right-hand side of f2 we set
+  to 0, essentially, f2 really describes the Newtonian evolution of two
+  particles coming together and having a collision.
+- And this collision, I can-- really, the way that I have it over there is in
+  what I would call a lab frame. And the perspective that we should have is that
+  in this frame, I have a particle that is coming with momentum, let's say, p1,
+  which is the one that I have specified on the left-hand side of the equation.
+- That's the density that I'm following in the channel represented by p1. But
+  then along comes a particle with momentum p2. And there is some place where
+  they hit each other, after which this one goes off with p1 prime. Actually,
+  let me call it p1 double prime. And this one goes off with p2 double prime.
+- Now, we will find it useful to also look at the same thing in the center of
+  mass frame. Now, in the center of mass frame-- oops-- my particle p1 is coming
+  with a momentum that is shifted by the p of center of mass, which is really p1
+  plus p2 over 2. So this is p1 minus p2 over 2. And my particle number two
+  comes with p2 minus center of mass, which is p2 minus p1 over 2. So they're
+  minus each other.
+- So in the center of mass frame, they are basically coming to each other along
+  the same line. So we could define one of the axes of coordinates as the
+  distance along which they are approaching. And let's say we put the center of
+  mass at the origin, which means that I have two more directions to work with.
+  So essentially, the coordinates of this second particle can be described
+  through a vector b, which we call the impact parameter.
+- And really, what happens to the collision is classically determined by how
+  close they approach together to make that. To quantify that, we really need
+  this impact vector. So b equals to 0, they are coming at each other head on.
+  For a different b, they are coming at some angle. So really, I need to put
+  here a d2b.
+- Now, once I have specified the form of the interaction that is taking place
+  when the two things come together, then the process is completely
+  deterministic. Particle number one will come. And after the location at which
+  you have the interaction, will go off with p1 double prime minus center of
+  mass. And particle number two will come and get deflected to p2 prime minus--
+  or double prime minus p center of mass. OK?
+- And again, it is important to note that this parameter A is irrelevant to the
+  collision, in that once I have stated that before collision, I have a
+  momentum, say, p1 and p2. And this impact parameter b is specified, then p1
+  double prime is known completely as a function of p1, p2, and b. And p2 double
+  prime is known completely as a function of p1, p2, and b. And everything in
+  that sense is well-defined.
+- So really, this parameter A is not relevant. And it's really the B that is
+  important. But ultimately, we also need to get these other terms, something
+  that has the appropriate dimensions of inverse time. And if I have a density
+  of particles coming hitting a target, how frequently they hit depends on the
+  product of the density as well as the velocity. So really, I have to add here
+  a term that is related to the velocity with which these things are approaching
+  each other. And so I can write it either as v2 minus v1, or p2 minus 1 over m.
+  So that's the other thing that I have to look at.
+- And then, essentially, what we saw last time is that the rest of the story--
+  if you sort of think of these as billiard balls, so that the collision is
+  instantaneous and takes place at a well-specified point, instantaneously, at
+  some location, you're going with some momentum, and then turn and go with some
+  other momentum. So the channel that was carrying in momentum p1, which is the
+  one that we are interested in, suddenly gets depleted by an amount that is
+  related to the probability of having simultaneously particles of momenta p1
+  and p2.
+- And the locations that I have to specify here-- well, again, I'm really
+  following this channel. And in this channel, I have specified q1. And
+  suddenly, I see that at the moment of collision, the momentum changes, if you
+  are thinking about billiard balls. So really, it is at that location that I'm
+  interested for particle one.
+- For particle two, I'm interested at something that is, let's say, q1 plus,
+  because it depends on the location of particle two shifted from particle one
+  by an amount that is related by b and whatever this amount slightly of A is
+  that is related to the size of your billiard ball. OK?
+- Now, we said that there is a corresponding addition, which comes from the fact
+  that it is possible suddenly to not have a particle moving along, say, this
+  direction. And the collision of these two particles created something along
+  that direction. So the same way that probabilities can be subtracted amongst
+  some channels, they can be added to channels, because collision of two
+  particles created something. And so I will indicate that by p1 prime, p2
+  prime, again, coordinates in t, something like this.
+- So basically, I try to be a little bit more careful here, not calling these
+  outgoing channels p prime, but p double prime. Because really, if I were to
+  invert p1 double prime and p2 double prime, I will generate things that are
+  going backward.
+- So there's a couple of sign issues involved. But essentially, there is a
+  similar function that relates p1 prime and p2 prime. It is, basically, you
+  have to search out momenta whose outcome will create particles in the channels
+  prescribed by p1 and p2.
+- So as we said, up to here, we have done a variety of approximations. They're
+  kind of physically reasonable. There is some difficulty here in specifying if
+  I want to be very accurate where the locations of q1 and q2 are within this
+  interaction size d that I am looking at.
+- And if I don't think about billiard balls, where the interactions are not
+  quite instantaneous where you change momenta, but particles that are
+  deformable, there is also certainly a certain amount of time where the
+  potential is acting. And so exactly what time you are looking at here is also
+  not appropriate-- is not completely, no.
+- But if you sort of make all of those things precise, then my statement is that
+  this equation still respects the reversibility of the equations of motions
+  that we had initially. But at this stage, we say, well, what can I do with
+  this equation? I really want to solve an equation that involves f of p1, q1,
+  and t.
+- So the best that I can do is, first of all, simplify all of the arguments here
+  to be more or less at the same location. I don't want to think about one
+  particle being shifted by an amount that is related by b plus something that
+  is related to the interaction potential size, et cetera. Let's sort of change
+  our focus, so that our picture size, essentially, is something that is of the
+  order of the size of the interaction.
+- And also, our resolution in time is shifted, so that we don't really ask about
+  moments of time slightly before and after collision, where the particle, let's
+  say, could be deformed or whatever. So having done that, we make these
+  approximations that, essentially, all of these f2's, we are going to replace
+  as a product of f1's evaluated all at the same location-- the location that is
+  specified here, as well as the same time, the time that is specified there. So
+  this becomes-- OK?
+- So essentially, the result of the collisions is described on the left-hand
+  side of our equation by a term that integrates over all momenta and overall
+  impact parameters of a bracket, which is a product of two one-particle
+  densities. And just to simplify notation, I will call this the collision term
+  that involves two factors of f1. So that's just a shorthand for that. Yes.
+- AUDIENCE: Is that process equivalent of a similar molecule [INAUDIBLE]?
+- PROFESSOR: That, if you want to give it a name, yes. It's called the
+  assumption of molecular chaos. And physically, it is the assumption that the
+  probability to find the two particles is the product of one-particle
+  probabilities.
+- And again, we say that you have to worry about the accuracy of that if you
+  want to focus on sizes that are smaller than the interaction parameter size.
+  But we change that as part of our resolution. So we don't worry about that
+  aspect.
+- AUDIENCE: So molecular chaos doesn't include eliminating this space? It's a
+  separate thing.
+- PROFESSOR: I've only seen the word "molecular chaos" applied in this context.
+  I think you are asking whether or not if q1 and q2 are different. I can
+  replace that and call that molecular chaos. I would say that that's actually a
+  correct statement. It's not an assumption.
+- Basically, when the two particles are away from each other to a good
+  approximation, they don't really know about-- well, actually, what I am saying
+  is if I really want to sort of focus on time dependence, maybe that is also an
+  assumption. Yes. So they're really, if you like, indeed, two parts. It is the
+  replacing of f2 with the product of two f2's, and then evaluating them at the
+  same point. Yes.
+- AUDIENCE: But based on your first line-- I mean, you could break that
+  assumption of different distribution functions have different events that
+  occur when they get close, and the framework still works, right? It would just
+  become-- when you got down to the bottom line, it would just become a much
+  larger equation, right?
+- PROFESSOR: I don't understand.
+- AUDIENCE: Like if you assume different interactions.
+- PROFESSOR: The interactions are here in how p1 prime and p2 prime depend on p1
+  and p2.
+- AUDIENCE: Right. What I'm suggesting is if you change H by keeping the top
+  [INAUDIBLE]. That's a pretty simple H. Would this framework work for a more
+  complicated H. But then your bottom two lines would become [INAUDIBLE].
+- PROFESSOR: What more can I do here? How can I make this more general? Are you
+  thinking about adding it?
+- AUDIENCE: No, no, no. I'm not suggesting you make it more general. I'm
+  suggesting you make it more specific to break that assumption of molecular
+  chaos.
+- PROFESSOR: OK. So how should I modify if I'm not saying--
+- AUDIENCE: I didn't have something in mind. I was just suggesting [INAUDIBLE].
+- PROFESSOR: Well, that's where I have problem, because it seems to me that this
+  is very general. The only thing that I left out is the body interactions may
+  be having to do with this being spherically symmetric. But apart from that,
+  this is basically as general as you can get with two bodies.
+- Now, the part that is pertaining to three bodies, again, you would basically--
+  not need to worry about as long as nd cubed is less than 1. So I don't quite
+  know what you have in mind.
+- AUDIENCE: I guess I was thinking about three- and four-body interactions. But
+  if you're covered against that, then what I said, it's not valid or relevant.
+- PROFESSOR: Right. So certainly, three-body and higher body interactions would
+  be important if you're thinking about writing a description for a liquid, for
+  example. And then the story becomes more complicated. You can't really make
+  the truncations that would give you the Boltzmann equation. You need to go by
+  some other set of approximations, such as the Vlasov equation, that you will
+  see in the problem set. And the actual theory that one can write down for
+  liquids is very complicated. So it's-- yeah.
+- AUDIENCE: Can it get more complicated yet if, based on the same framework,
+  isn't this similar to, like, the formulation of the neutron transport
+  equation, where if you have, in addition to scattering, you have particles
+  that don't attract, but you have fission events and you have inelastic center?
+- PROFESSOR: OK. Yes. That's good.
+- AUDIENCE: And then your H would change dramatically, right?
+- PROFESSOR: Yes. That's right. Yes.
+- AUDIENCE: But my point is that it's the same framework.
+- PROFESSOR: Yes. Yes. So basically, you're right. One assumption that I have
+  here is that the number of particles is conserved. We say that if the
+  particles can break or diffuse, one has to generalize this approximation. And
+  there would be an appropriate generalization of the Boltzmann equation to
+  cover those terms. And I don't have a problem set related to that, but maybe
+  you are suggesting that I should provide one.
+- [LAUGHTER]
+- OK. That's a good point. OK? All right. So we have made some assumptions here.
+  And I guess my claim is that this equation-- well, what equation? So
+  basically, what I'm going to do, I call the right-hand side of this equation
+  after this assumption of molecular chaos, CFF. For simplicity, let me call
+  this bunch of first derivatives that act on f1 L for Liouvillian. It's kind of
+  like a Liouville operator.
+- So I have an equation that is the bunch of first derivatives acting on f1,
+  which is essentially a linear partial differential equation in six or seven
+  dimensions, depending on how you count time-- is equal to a non-linear
+  integral on the right-hand side. OK? So this is the entity that is the
+  Boltzmann equation.
+- Now, the statement is that this equation no longer has time reversal symmetry.
+  And so if I were to solve this equation for the one function that I'm
+  interested, after all, the f1, which really tells me how the particles stream
+  from the left-hand side of the box to the right-hand side of the box, that
+  equation is not reversible.
+- That is, the solution to this equation will indeed take the density that was
+  on the left-hand side of the box and uniformly distribute it on the two sides
+  of the box. And that will stay forever. That's, of course, a consequence of
+  the various approximations that we made here, removing the reversibility. OK?
+- And the statement to show that mathematically is that if there is a function--
+  and now, for simplicity, since from now on, we don't care about f2, f3, et
+  cetera, we are only caring about f1, I'm going to drop the index one and say
+  that if there is a density f, which is really my f1, that satisfies the
+  Boltzmann-- that is, I have a form such as this-- then there is a quantity H
+  that only depends on time that, under the evolution that is implicit in this
+  Boltzmann equation will always decrease, where H is an integral over the
+  coordinates and momenta that are in this function f of p, q, and t.
+- And all I need to do is to multiply by the log. And then all of these are
+  vectors if I drop it for saving time. And we said that once we recognize that
+  f, up to a normalization, is the same thing as the one-particle probability--
+  and having previously seen objects such as this in probability theory
+  corresponding to entropy information, entropy of mixing, you will not be
+  surprised at how this expression came about.
+- And I had told you that in each one of the four sections, we will introduce
+  some quantity that plays the role of entropy. So this is the one that is
+  appropriate to our section on kinetic theory. So let's see how we go about--
+- AUDIENCE: Question.
+- PROFESSOR: Yes?
+- AUDIENCE: When you introduced the-- initialized the concept of entropy of
+  information of the message that's p log p, [INAUDIBLE] entropy. And as far as
+  I understand, this concept came up in, like, mid 20th century at least, right?
+- PROFESSOR: I think slightly later than that. Of that order, yes.
+- AUDIENCE: OK. And these are Boltzmann equations?
+- PROFESSOR: Yes.
+- AUDIENCE: And so this was, like, 100 years before, at least?
+- PROFESSOR: Not 100 years, but maybe 60 years away, yeah. 50, 60.
+- AUDIENCE: OK. I'm just interested, what is the motivation for picking this
+  form of functionality, that it's integral of f log f rather than integral of
+  something else?
+- PROFESSOR: OK. I mean, there is another place that you've seen it, that has
+  nothing to do with information. And that's mixing entropy. If I have [? n ?]
+  one particles of one type and two particles of another type, et cetera, and
+  mixed them up, then the mixing entropy, you can relate to a form such as this.
+  It is some ni log ni. OK? Fine.
+- It's just for discrete variables, it makes much more sense than for the
+  continuum. But OK. So let's see if this is indeed the case. So we say that dH
+  by dt is the-- I have to take the time derivative inside. And as we discussed
+  before, the full derivative becomes a partial derivative inside the integral.
+  And I have either acting on f and acting on log f, which will give me 1 over
+  f, canceling the f outside. And this term corresponded to the derivative of
+  the normalization, which is fixed.
+- And then we had to replace what we have for df by dt. And for df by dt, we
+  either have the Poisson bracket of the one-particle Hamiltonian with f coming
+  from the L part of the equation, once we get d by dt on one side. And then the
+  collision part that depends on two f's. And we have to multiply this by f.
+- And again, let's remind you that f really has argument-- oops, log f-- that
+  has argument p1. I won't write q1 and t.
+- And the next thing that we did at the end of last lecture is that typically,
+  when you have integral of a Poisson bracket by doing some combination of
+  integrations by part, you can even eventually show that this contribution is
+  0. And really, the important thing is the integration against the collision
+  term of the Boltzmann equation.
+- So writing that explicitly, what do we have? We have that it is integral d
+  cubed. Let's say q1. Again, I don't really need to keep track of the index on
+  this dummy variable. I have the integral over q1. I have the two integral over
+  p1. Let's keep it so that it doesn't confuse anybody.
+- Then I have the collision term. Now, the collision term is a bunch of
+  integrals itself. It involves integrals over p2, integral over an impact
+  vector b, the relative velocity. And then I had minus f of p1, f of p2 for the
+  loss in the channel because of the collisions, plus the addition to the
+  channel from the inverse collisions. And this whole thing has to be multiplied
+  by log f evaluated at p1. OK?
+- So that's really the quantity that we are interested. And the quantity that we
+  are interested, we notice, has some kind of a symmetry with respect to indices
+  one and two. Something to do with prime and un-prime coordinates. But
+  multiplied this bracket that has all of these symmetries, with this function
+  that is only evaluated for one of the four coordinates for momenta that are
+  appearing here.
+- So our next set of tasks is to somehow make this as symmetric as possible. So
+  the first thing that we do is we exchange indices one and two, because really,
+  these are simply dummy integration variables. I can call the thing that I was
+  calling p1 p2, and vice versa. And the integration then becomes the integral
+  over q.
+- Maybe that's why it's useful not to have, for the q, any index, because I
+  don't care to change the index for that. d cubed p2, p1. Doesn't really matter
+  in what order I write them. d2b is a relative separation. Again, it's an
+  impact parameter. I can call this v1 minus v2. But since it's an absolute
+  value, it doesn't matter really.
+- And so the only thing that happens is that I will have-- essentially, the
+  product is symmetric. The only thing that was separately f of p1 before now
+  becomes f of p2.
+- And then what I can do is I can say, OK, those are really two forms of the
+  same integral, and I can average them, and write the average, which is 1/2 the
+  integral d cubed q, d cubed p1, d cubed p2, d2 b, relative velocity, minus f
+  of p1, f of p2, f of p1 prime, f of p2 prime. And then I have a log of f of p1
+  plus log of f of p2. And I have divided through 1/2. OK?
+- So what I will do is to now write the next line. And then we'll spend some
+  time discussing what happens. So artificially, what will happen looks like I
+  essentially move prime and un-prime things the same way that I exchanged one
+  and two indices before. I will exchange the superscripts that are prime or
+  non-prime. And if I were to do that, I will get an integral d cubed q, d
+  cubed, let's say, p1 prime, d cubed p2 prime, d2b, v2 minus v1 prime, minus f
+  of p1-- [SIGHS]
+- --prime, f or p2 prime, plus f of p1, f of p2. And then here, we would have
+  log of f of p1 prime, log of f of p2 prime. OK?
+- So this is a statement that just saying, I moved the primes and un-primes,
+  it's very easy to come up with this answer. What you have to think very much
+  about what that means. Essentially, what I had originally was integration
+  invariables p1 and p2. And p1 prime and p2 prime were never integration
+  variables. So there was not symmetry at the level that I have written between
+  one and two, which are integration variables, and one prime and two prime,
+  which are the quantities that, through the collision operator, are related to
+  p1 and p2.
+- So essentially, p1 prime and p2 prime are the kind of functions that we have
+  written here. Here, I had p1 double prime, p2 double prime. But up to sort of
+  inverting some signs, et cetera, this is the kind of functional relationship
+  that you have between p primes and p's. OK?
+- So now we have to worry about a number of things. The simplest one is actually
+  what happened to this factor here-- the relative velocity. Now think back
+  about collisions that you have in the center of mass. In the center of mass,
+  two particles come with velocities that are opposite each other. They bang
+  onto each other, go different direction. The magnitude of the velocities does
+  not change an inelastic collision, which is what we are looking at. Right? So
+  after the collision, what we have is that p2 prime minus p1 prime is the same
+  thing as p1 and minus p2 for elastic conditions.
+- So as far as this factor is concerned, I could very well replace that with v1
+  minus v2 without the primes. It really doesn't make any difference.
+- Another thing that you can convince yourself is that from the perspective of
+  the picture that I drew, there was some kind of an impact vector B. You say,
+  well, what happens if I look at from the perspective of the products of the
+  interaction? So the products of the interaction are going in a different
+  direction. I would have to redraw my coordinates that would correspond to A
+  prime and B prime.
+- But what you can convince yourself that essentially, the impact parameter, as
+  far as these products is concerned, is just a rotated version of the original
+  one without changing its magnitude. So you have also that magnitude of b prime
+  is the same thing as magnitude of b. There's a rotation, but the impact
+  parameter does not change. If you like, that is also related to conservation
+  of energy, because if it wasn't so, the potential energy would be different
+  right after the collisions. OK?
+- So I really was kind of careless here. I should have written d2 b prime. But I
+  could have written also d2b. It didn't make any difference. It's the same.
+- And then, of course, these functions-- essentially, you can see that you say,
+  OK, I start with, here, p1 and p2. And these were functions of p1 and p2. And
+  here, I have reversed this. p1 prime and p2 prime are the integration
+  variables. p1 and p2 are functions of p1 prime and p2 prime that, in
+  principle, are obtained by inverting this set of equations. Right?
+- But it really, again, doesn't matter, because once you have specified what
+  incoming p1, p2, and b are, you know what the outcome of the collision is. So
+  it's really the same function. Whether you are inverting it, you will, again,
+  presume the different location of the arguments, but you will have the same
+  function that would tell you what the inverse relationship is. So really,
+  these functional forms are the same as the functional forms that we had
+  before.
+- And finally, I claim that in order to go through this change of variable, I
+  have to also deal with the Jacobian of the transformation. But that we have
+  the d3p1d3p2 is the same thing as d3p1 prime d3p2 prime. And that, in some
+  sense, you can sort of also think about what we were doing before with the
+  Liouville equation maintaining the volume of phase space. So I have some
+  volume of phase space prior to the collision. After the collision, I would
+  need to have the same volume.
+- There is, of course, in the volumes that we are considering for the case of
+  the Liouville operator, in addition, products of dq1, dq2. But you can see
+  that all of those things are really put into the same volume when we are
+  considering the collision. So really, the only thing that is left is that the
+  Liouvillian preservation of the volume of phase space would say that the
+  Jacobian here, you can also ignore. Yes.
+- AUDIENCE: So are you assuming that this transformation [INAUDIBLE] is [? an
+  article, ?] because it's [INAUDIBLE]?
+- PROFESSOR: Yes. So everything that we do is within the framework of a
+  Hamiltonian evolution equation. OK? So if you like, these kinds of things that
+  I'm saying here sometimes are said to be consequence of microscopic
+  reversibility, in that I'm sort of using, in this panel over here, things that
+  are completely Newtonian and microscopic. The place that I use statistical
+  argument was over here. OK?
+- So essentially, having done that, you can basically also rename variables.
+  Things that I was calling p1 prime I can call p1. It's another renaming of
+  some variable. And again, it really doesn't matter which relative velocity I
+  write down. They're all the same thing.
+- So what will happen is that I will get minus f or p1, f of p2, plus f of p1
+  prime, f of p2 prime. And the only thing that happened is that the logs--
+  oops. I should have maintained. I don't know why-- where I made a mistake. But
+  I should ultimately have come up with this answer.
+- So what I wanted to do, and I really have to maybe look at it again, is do one
+  more step of symmetrization. The answer will come down to an integral over p1
+  and p2, d2b, at relative velocity. We would have minus f of p1, f of p2, plus
+  f of p1 prime, f of p2 prime.
+- So this is our collision operator that we have discussed here-- the difference
+  between what comes in and what comes out. And from the first part here, we
+  should get log of f of p1, plus log of f of p2, which is the same thing as the
+  log of the product. And if I had not made errors, the subtraction would have
+  involved f of p1 prime, f of p2 prime.
+- And the idea is that if you think about the function log of something as a
+  function of that something, the log is a monotonic function. So that if you
+  were to evaluate the log at two different points, the sign of the log would
+  grow in the same way as the sign of the two points, which means that here, you
+  have the difference of two logs.
+- This is like log of s1 minus log of s2. And it is multiplied with minus s1
+  minus s2. So if s1 is greater than s2, log s1 would be greater than log s2. If
+  s1 is less than s2, log s1 would be less than log s2. In either case, what you
+  would find is that the product of the two brackets is negative. And this whole
+  thing has to be negative. OK.
+- So the thing that confused me-- and maybe we can go back and look at is that
+  probably, what I was doing here was a little bit too impatient, because when I
+  changed variables, p1 prime f of p2. I removed the primes. Log. Reduced
+  primes. Actually, I had it here. I don't know why I was worried. Yeah. So the
+  signs are, I think, right, that when I add them, I would get the subtraction.
+- So in one case, I had the f's of the p's with the negative sign. After I did
+  this change, they appear with the positive sign. So there is the sign
+  difference between the two of them. OK?
+- So we have a function, therefore, that, just like entropy throughout the
+  process, will increase. This is like a negative entropy. If I were to really
+  solve this set of equations, starting with the f that describes things that
+  are distributed in this box, and then allow it to expand into the other box,
+  it will follow-- this solution will follow some particular trajectory that
+  will ultimately no longer change as a function of time. It will not go back
+  and forth. It will not have the full reversibility that these set of equations
+  does have.
+- Now, that's actually not a bad thing. It is true, indeed, that these equations
+  are reversible. And there is a theorem that if you wait sufficiently long,
+  this will go back into here. But the time it take for that to happen grows
+  something of the order of the size of the system divided these. The time, up
+  to various pre-factors, would grow exponentially with the number of particles
+  that you have. And remember that you have of the order of 10 to the 23
+  particles.
+- So there is, indeed, mathematically rigorously, a recursion time if you really
+  had this box sitting in vacuum and there was no influence on the walls of the
+  container. After many, many, many, many ages of the universe, the gas would go
+  back for an instant of time in the other box, and then would go over there.
+  But that's something that really is of no practical relevance when we are
+  thinking about the gas and how it expands. OK?
+- But now let's see, with these approximations, can we do better. Can we figure
+  out exactly how long does it take for the gas to go from one side to the other
+  side. And what is the shape of the streamlines and everything else as this
+  process is taking place? Yes.
+- AUDIENCE: [INAUDIBLE].
+- PROFESSOR: Yes. Yes. So if you like, we want to think of this in terms of
+  information, in terms of entropy. It doesn't matter. It is something that is
+  changing as a function of time. And the timescale by which that happens has to
+  do with the timescales that we set up and imprinted into this equation. OK?
+- So the next step that I have to answer is, what is that time step? And in
+  particular, if I look at this equation by itself, I would say that it has two
+  timescales. On the left-hand side, you have this tau that has to do with the
+  size of the box. We said it's very long.
+- On the right-hand side, it has the time that I have to wait for a collision to
+  occur, which is certainly much shorter than this time, for an ordinary gas.
+  And so we expect, therefore, that the right-hand side of this equation would
+  determine things much more rapidly compared to the left-hand side of the
+  equation. And we want to now quantify that and make that into something that
+  is relevant to things that we know and understand about a gas expand. OK?
+- So let's sort of think about, well, what would happen? We said that this H, as
+  a function of time, is going in one direction. Presumably, after some time--
+  we don't know how long here, and that's a good question-- eventually,
+  hopefully, it will reach an equilibrium, like, the entropy will cease to
+  change. And the question is, what is this equilibrium?
+- So let's see if we can gain some information about equilibrium. So we said
+  that dH by dt presumably has to be 0, because if it is not 0, then it can
+  continue to decrease. You are not quite where you want to be.
+- Now let's look at what is the condition for dH by dt to be 0. H is this
+  integral that I have to perform over the entire phase space. Now, each element
+  of that integral evaluated at some particular location in phase space is by
+  itself positive. This argument that we had before is not about the entire
+  integral. It's valid about every little piece of the integration that I am
+  making. It has a particular sign.
+- So if the entire integral has to be 0, every little piece of it has to be
+  individually 0. So that means that I would require that log of f at any q
+  evaluated, let's say, for p1 and p2 should be the same thing as log of f
+  evaluated at p1 prime and p2. This would be true for all q. Right?
+- You look at this and you say, well, what? This seems kind of-- yes?
+- AUDIENCE: What about the other one in parentheses, beside the integral?
+- PROFESSOR: It is the same thing. So this is s1 minus s2. And the other is log
+  of s1 minus s2. So I'm saying that the only time it is 0 is s1 is equal to s2.
+  When s1 equals to s2, both parentheses are 0. Although, even if it wasn't, it
+  would have been sufficient for one parentheses to be 0. But this is necessary,
+  because the sign is determined by this. OK?
+- Now, you look at this and you say, well, what the he-- what does this mean?
+  How can I-- and the functions p1 prime and p2 prime I have to get by
+  integrating Newton's equations. I have no idea how complicated they are. And
+  you want me to solve this equation. Well, I tell you that the answer to this
+  is actually very simple.
+- So let me write the answer to it in stages. Log of f of p and q. So it's a
+  function of p and q that I'm after that have to be evaluated at p1, p2, and
+  then should be equal to p1 prime and p2 prime for any combination of p1, p2,
+  et cetera, that I choose.
+- Well, I say, OK, I will put any function of q that I like. And that will work,
+  because it's independent of p. So I have minus alpha, minus alpha is the same
+  as minus alpha, minus alpha. OK? Then I claim that, OK, I will put a minus
+  gamma dot p. Gamma could be dependent on q. Dot p.
+- And I claim that that would work, because that term would give me gamma dot p1
+  plus p2, gamma dot p1 prime plus p2 prime. What do I know for sure? Momentum
+  is conserved. p1 plus p2 is the same thing as p1 prime plus p2 prime. It's
+  just the conservation of momentum. I know that to be true for sure.
+- And finally, kinetic energy is conserved. Once I'm away from the location
+  where the interaction is taking place, I can choose any function of q
+  multiplied with p squared over 2m. And then on the left-hand side, I would
+  have the sum of the incoming kinetic energies.
+- On the right-hand side, I would have the sum of outgoing kinetic energies. So
+  what have I done? I have identified quantities that are conserved in the
+  collision. So basically, I can keep going if I have additional such things.
+  And so basically, the key to this is to identify collision-conserved
+  quantities.
+- And so momentum, energy, the first one corresponds to the number of particles.
+  These are quantities that are conserved. And so you know that this form will
+  work, which means that I have a candidate for equilibrium, which is that f of
+  p and q should have a form that is exponential of some function of q that I
+  don't-- at this stage, could be quite arbitrary. And some other function of q
+  times p squared minus 2m. And let me absorb this other gamma term. I can
+  certainly do so by putting something like pi of 1 squared over 2m. OK?
+- And this certainly is a form that will set the right-hand side of the H
+  theorem to 0. And furthermore, it sets the right-hand side of the Boltzmann
+  equation to 0, because, again, for the Boltzmann equation, all I needed was
+  that the product of two f's should be the same before and after the collision.
+  And this is just the logs. If I were to exponentiate that, I have exactly what
+  I need.
+- So basically, this also sets the right-hand side of the Boltzmann equation to
+  0. And this is what I will call a local equilibrium. What do I mean by that?
+  Essentially, we can see that right now, I have no knowledge about the
+  relationship between different points in space, because these alpha, beta, and
+  pi are completely arbitrary, as far as my argumentation so far is concerned.
+  So locally, at each point in q, I can have a form such as this. And this form,
+  you should remind you it's something like a Boltzmann weight of the kinetic
+  energy, but moving in some particular direction.
+- And essentially, what this captures is that through relaxing the right-hand
+  side of the Boltzmann equation, we randomize the magnitude of the momenta, so
+  that the magnitudes of the kinetic energy are kind of Boltzmann-distributed.
+  This is what this term does. If I say that this term being much larger than
+  this term is the more important one. If I need neglect this, then this is what
+  happens.
+- I will very rapidly reach a situation in which the momenta have been
+  randomized through the collisions. Essentially, the collisions, they change
+  the direction of the momenta. They preserve the average of the momenta. So
+  there is some sense of the momentum of the incoming thing that is left over
+  still. But there is some relaxation that took place.
+- But clearly, this is not the end of the story, because this f that I have
+  written here-- let's say local equilibrium. f local equilibrium does not
+  satisfy the Boltzmann equation. Right? It set the right-hand side of the
+  Boltzmann equation to 0. But it doesn't set the left-hand side. The left-hand
+  side completely is unhappy with this.
+- For the left-hand side to be 0, I would require the Poisson bracket of H1 and
+  f to be 0. After all, the Liouvillian operator had the Poisson bracket of H1
+  and f. And we have seen functions that satisfy this have to be of the form f1
+  of H. And in our case, my f1 is simply the kinetic energy of one particle,
+  plus the potential due to the box. OK?
+- So you can see that the only way that I can make this marriage with this is to
+  have a global equilibrium, where f for the global equilibrium is proportional,
+  let's say, to exponential of minus beta p squared over 2m plus U of q. OK?
+- So I identify a piece that looks like this p squared over 2m. I have to make
+  pi to be 0 in order to achieve this. I have to make beta to be independent of
+  q. I have to make alpha of f marriage with beta to give me the potential. OK?
+- So essentially, what happens is this. I open this hole. The gas starts to
+  stream out. And then the particles will collide with each other. The collision
+  of particles over some timescale that is related to this collision time will
+  randomize their momenta so that locally, suddenly, I have a solution such as
+  this.
+- But then the left-hand side of the Boltzmann equation takes over. And over a
+  timescale that is much longer, it will then change the parameters of this. So
+  basically, these parameters should really be thought of as functions of time,
+  whose evolution changes. So initially, maybe locally over here, there is a
+  stream velocity that goes towards the right. So I should have an average at
+  that time that prefers to go to the right.
+- I wait sufficiently long. Presumably, the whole thing comes to equilibrium.
+  And that average goes to 0 [INAUDIBLE]. So presumably, the next thing that I
+  need to do in order to answer the question, how does this thing come to
+  equilibrium, is to find out how the left-hand side of the equation manipulates
+  these parameters alpha, beta, and pi. But that's not quite consistent either.
+- Because I first assume that the right-hand side is 0, and then said, oh,
+  that's not a good solution. Let's go and see what the left-hand side does. But
+  then if the left-hand side is changing things, I can't be over here where dH
+  by dt is 0. So I have not done things consistently yet, although I have
+  clearly captured the whole lot of what I want to describe eventually. OK?
+- So let's see how we can do it systematically.
+- AUDIENCE: Question.
+- PROFESSOR: Yes.
+- AUDIENCE: When you [? write ?] the condition for [INAUDIBLE], [? did you ?]
+  write f1 of Hamiltonian. And ends up Hamiltonian [INAUDIBLE] includes
+  interaction terms.
+- PROFESSOR: It's the one-particle Hamiltonian.
+- AUDIENCE: Oh.
+- PROFESSOR: Right. So by the time I got to the equation for f1, I have H1. H1
+  does not have a second particle in it to collide with. OK?
+- AUDIENCE: Then equilibrium system's distribution of particles in container
+  does not depend on their interactions after the [INAUDIBLE]?
+- PROFESSOR: In the story that we are following here, yes, it does not. So this
+  is an approximation that actually goes with the approximations that we made in
+  neglecting some of the higher order terms, with nd cubed being much less than
+  1, and not looking at things at resolution that is of the order of d. And we
+  would imagine that it is only at the resolutions--
+- AUDIENCE: [INAUDIBLE] neglected [INAUDIBLE] atomized gas conjoined onto the
+  molecules. Something like that.
+- PROFESSOR: That would require a different description.
+- AUDIENCE: Yeah. It would require [INAUDIBLE].
+- PROFESSOR: Yeah. So indeed. Eventually, in the description that we are going
+  to get, we are looking at the distribution that would be appropriate to a
+  dilute gas and which interactions are not seen. OK? All right.
+- So let's see how we can do it better. So clearly, the key to the process is
+  that collisions that take place frequently at timescale tau x randomize a lot
+  of things. But they cannot randomize quantities that are conserved in
+  collisions. So those are the quantities that we have to look at.
+- And again, these are quantities that are conserved in collision, as opposed to
+  quantities that are conserved according to H1. Like, momentum is conserved in
+  the collision. Clearly, momentum was not conserved in H1 because of the size
+  of the box and did not appear in the eventual solution. OK. Let's see what we
+  get.
+- So we are going to make a couple of definitions. First, we define a local
+  density. I say that I take my solution to Boltzmann equation. And now I don't
+  know what it is. But whatever it is, I take the solution to the Boltzmann
+  equation as a function of p and q and t. But all I am interested is, at this
+  particular location, have the particles arrived yet, what's the density. So to
+  get that, I essentially integrate over the momenta, which is the quantity that
+  I am not interested. OK? Obvious.
+- I define-- maybe I need the average kinetic energy at that location. So maybe,
+  in general, I need the average or some other quantity that I define at
+  location q and t. What I do is I integrate at that position f of p, and q, and
+  t, and this function O. Actually, I also define a normalization. I divide by n
+  of q and t. OK?
+- Now, I implicitly used something over there that, again, I define here, which
+  is a collision-conserved quantity, is some function of momentum-- I could put
+  q also-- such that when evaluated for p1 plus p2 for any pair of p1's and p2's
+  that I take is the same thing as when evaluated for functions of p1 and p2
+  that would correspond to the outcomes of the collision from or giving rights
+  to p1, p2. OK?
+- And then there's a following theorem that we were going to use, which is that
+  for any collision-conserved quantity, what I have is that I will define a
+  quantity J, which is a function of q and t in principle, which is obtained by
+  integrating over all momenta. Chi-- let's say, evaluated at p1; it could be
+  evaluated at q-- times this collision operator-- C of f, f.
+- And the answer is that for any collision-conserved quantity, if you were to
+  evaluate this, the answer would be 0. OK? So let's write that down. So J of q
+  and t is an integral over some momentum p1. Because of the collision integral,
+  what do I have?
+- I have the integration over momentum. I have the integration over b. I have
+  the relative velocity v2 minus v1. And then I have the subtraction of
+  interaction between p1 and p2-- addition of the interactions between p1 prime,
+  p2 prime. And this collision integral has to be multiplied with chi evaluated
+  at p1. OK? Fine.
+- So then I will follow exactly the steps that we had in the proof of the H
+  theorem. I have some function that only depends on one of four momenta that
+  are appearing here. And I want to symmetrize it. So I change the index one to
+  two. So this becomes 1/2 of chi of p1 plus chi of p2.
+- I do this transition between primed and un-primed. And when I do that, I pick
+  this additional factor of minus chi of p1 prime, chi of p2 prime. And this
+  becomes division by 2 times 2.
+- But then I stated that chi is a collision-conserved quantity, so that this
+  term in the bracket is 0 for each point that I'm integrating. And hence, the
+  answer is 0. Yes.
+- AUDIENCE: In the [INAUDIBLE] theorem, in the second [INAUDIBLE], do you want
+  to put minus sign of the--?
+- PROFESSOR: There was a minus sign worry that I had somewhere.
+- AUDIENCE: I think in front of 1/2, at the right term.
+- PROFESSOR: In front of the 1/2, minus f of p1. You say I have to do this?
+- AUDIENCE: No, no, no. The next term.
+- PROFESSOR: Here?
+- AUDIENCE: Yeah. I mean, if you put minus sign in front of the 1/2, then
+  [INAUDIBLE]?
+- PROFESSOR: OK. Let's put a question mark here, because I don't want to go over
+  that.
+- AUDIENCE: [INAUDIBLE] but you switched the order of the subtraction [? 1/2. ?]
+  So it's minus [INAUDIBLE].
+- PROFESSOR: But I changed also the arguments here.
+- AUDIENCE: Oh, OK.
+- PROFESSOR: Right? So there is some issue. But this eventual thing is correct.
+  So we will go back to that. OK.
+- So what is the use of stating that for every conserved quantity, you have
+  this? It will allow us to get equations that will determine how these
+  parameters change as a function of time? OK. So let's see how that goes.
+- If then I have that Lf is C, f, f, and I showed that the integral of chi
+  against C, f, f is 0, then I also know that the integral of chi against this L
+  operator on f is 0. OK?
+- And let's remind you that the L operator is a bunch of first derivatives-- d
+  by dt, d by dq, d by dp. And so I can use the following result. I can write
+  the result as this derivative acting on both chi and f. And then I will get
+  chi prime f plus f chi prime. Chi f prime I have, so I have to subtract fL
+  acting on chi. OK?
+- And proceeding a little bit. One more line maybe. d cubed p. I have dt plus--
+  well, actually, let me do the rest next time around. 

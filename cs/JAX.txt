@@ -1,0 +1,112 @@
+https://news.ycombinator.com/item?id=37698740
+https://news.ycombinator.com/item?id=22812312
+
+A two-week ramp into JAX + Tunix is doable if you treat it like
+learning a new dialect of a language you already speak. You
+already know tensors, gradients, and training loops from PyTorch;
+JAX is those same ideas wrapped in a “pure function + compiler”
+philosophy.
+
+There’s no single canonical textbook, but there is a practical
+path made of a few excellent sources. Here’s a clear, human-sized
+learning trail you can follow without drowning in academic
+papers.
+
+JAX (week 1)
+
+Start with these, in roughly this order:
+
+• “JAX – The Sharp Bits” (Google) This is the Rosetta Stone of
+JAX thinking. It explains jit, vmap, pmap, and why JAX behaves
+like a strict functional creature. It’s online and concise.
+
+    - “jax sharp bits” https://docs.jax.dev/en/latest/notebooks/Common_Gotchas_in_JAX.html
+
+• Mistral AI’s JAX tutorial notebooks Even if you’re not building
+a model like theirs, these notebooks show clean, modern training
+loops in JAX: how to structure state, run jit-compiled steps,
+handle random keys, and keep code pure. Very clear style.
+    - Amsterdam notebook https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/JAX/tutorial2/Introduction_to_JAX.html
+    - simple image classifier https://wandb.ai/jax-series/simple-training-loop/reports/Writing-a-Training-Loop-in-JAX-and-Flax--VmlldzoyMzA4ODEy?utm_source=chatgpt.com
+
+• DeepMind’s Haiku quickstart Haiku is a small neural-net library
+on top of JAX with PyTorch-like ergonomics but functional under
+the hood. Spend an afternoon building a toy MLP and CNN here. It
+makes the JAX worldview click.
+    - overview https://www.youtube.com/watch?v=iDxJxIyzSiM
+    - The official Haiku documentation has a “Basics” notebook covering hk.transform, module definitions, state handling, RNG keys, etc. 
+    - A blog tutorial: “Haiku: Guide to Create Multi-Layer Perceptrons using JAX” — walks through building an MLP with Haiku. CoderzColumn
+    - A GitHub repository “get-started-with-JAX” contains tutorials for JAX/Flax/Haiku (videos and notebooks) — though the Haiku video part is marked “coming soon
+
+• Karpathy’s short video “JAX crash course” Fast, friendly, and
+it orients you well. Great for conceptual anchoring.
+
+• Look at tiny training examples Search for “MNIST JAX Haiku
+example” and train a classifier in 50 lines. Nothing beats
+touching the machinery.
+
+What you want from week 1: • How to write pure compute functions
+• How jax.jit transforms them • How vmap gives you vectorized
+batched code • How PRNGKeys work • How training state is stored
+as plain pytree objects Once those concepts feel mechanical
+rather than mystical, you’re ready for Tunix.
+
+Tunix (week 2)
+
+There isn’t a long history of tutorials yet because Tunix is new.
+But Google has already published enough to get you rolling. Focus
+on:
+
+• The official Tunix GitHub It has example configs, training
+loops, and Gemma loading code. The examples are short but dense.
+Read every file slowly; this is your “textbook”.
+
+• The starter Kaggle notebook for Gemma2 math reasoning This is
+gold. You’ll see how Tunix handles model loading, tokenizer,
+training state, reward functions, and logging. It’s a real
+template you can copy and mutate. Reverse-engineering this
+notebook gives you 80% of the knowledge you need.
+
+• Kaggle discussions for the Tunix hackathon Competitors are
+dropping notes, experiments, and gotchas. Great for practical
+wisdom.
+
+• YouTube: “Training LLMs with JAX and XLA” (Google/TF Dev Summit
+clips) They aren’t Tunix-specific, but they teach you why JAX
+loves TPUs and how compilation pipelines behave. That intuition
+helps a lot later on.
+
+• If you want depth: read the RLHF-style explanations in the
+Gemma technical report It shows the conceptual foundations Tunix
+is built on: supervised finetuning → preference optimization
+→ reinforcement-style post-training.
+
+What to aim for by the end of week 2: • Load a Gemma model in
+Tunix • Run a small supervised finetune on a toy reasoning
+dataset • Add a tiny reward function (even something silly like
+“reward any trace longer than 200 tokens”) • Generate a response
+in the required competition format: <reasoning>...</reasoning>
+<answer>...</answer>
+
+Once that loop runs once, you’ve mentally “arrived.” Everything
+after that is refinement.
+
+A realistic two-week progression
+
+Days 1–3: JAX intro Build tiny models. Play with jit and vmap
+until they feel natural.
+
+Days 4–6: JAX training loops Implement a handwritten training
+step with gradients, parameter updates, and logging.
+
+Days 7–9: Explore Tunix source + Kaggle notebook Understand how
+Tunix wraps Gemma and how config-driven pipelines work.
+
+Days 10–14: Build a micro end-to-end pipeline Tiny dataset, tiny
+reward, one training run. Produce a reasoning trace. Celebrate.
+
+Following this track gives you enough mastery to decide whether
+you want to enter the competition seriously. And even if you
+don’t, it’s a fun tour through the more alien end of the ML
+software ecosystem, where tensors behave like mathematical
+objects with compiler spirits lurking inside them.

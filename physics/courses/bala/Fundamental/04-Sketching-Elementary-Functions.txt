@@ -1,0 +1,337 @@
+$MY_VIDEOS/physics/bala_fundamental/04-sketching-Elementary-Functions.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture - 04
+Sketching Elementary Functions
+Today, we are going to take a little digression and speak about a topic that you might
+think properly belongs in Mathematics. But, it actually belongs in Physics in a very real
+sense and this has to do with the way functions look when you sketch them, when you
+plot them. We are not going to plot graphs to some fixed scale or anything like that, but
+you see in the study of Physics you often come across mathematical formulas, you come
+across them all the time and then, you would like to know how one quantity varies as
+another quantity is varied.
+You would like to know the dependence of x and y or one variable on another and so on
+and this happen all the time. We have a mathematical formula, but then it does not speak
+to us unless we are able to visualize it in terms of a picture, which tells you what the
+function roughly looks like and I would like to call this the idea of sketching elementary
+functions. So, we are not going to try to plot this on some specific scale of course, you
+can program a computer to plot these functions very trivially.
+But, the point about physics is that when you have a formula in front of you, it should be
+able to speak to you. It should give you information about how these variables change as
+other variables are changed and this is very important a little art. There is a little art to
+this and it is the art of sketching functions qualitatively rather than quantitatively.
+
+(Refer Slide Time: 01:45)
+
+For instance, you take an extremely elementary example, if I plotted this function y equal
+to x cube for instance, that is already a non-linear function, it is a cubic function. If I
+want to start sketching this function by linear scales, if I did x here and y here and that is
+the origin and this is 1, 2, 3 and so on 1, 2, 3 etcetera. As long as you are between 0 and 1
+there is no problem, because this point is a point on the graph, when both are 0 there is a
+point on the graph here.
+But, the moment you come to 2 here y has gone to 8 and therefore, this graph increases
+extremely rapidly, there is something like this. So, linear scale is immediately useless as
+far as such a function is concerned. And since, most functions are non-linear it is
+immediately obvious that the, you should be able to sketch these functions qualitatively
+without specifying this scale which can always imported in subsequently. Even when you
+program on a machine or a computer to sketch these functions, you have to display little
+bit of cleverness in choosing different scales for the x and y axis; otherwise, you do not
+get any graph that you can recognize.
+So, today I am going to spend a little bit of time telling you how these functions are
+sketched, what you should look for in these functions, how does the graph speak to you
+((Refer Time: 03:07)) speak and that will make the sub sequence study of physics and
+physics formulas much more easy for you to understand, when I use terms like this is
+exponential in something and it dominates over a power law behavior or a such and such
+a quantity goes to 0 faster than any reciprocal power, inverse power of this variable and
+so on.
+
+You should be able to make sense out of it right away and for that purpose, let me spend
+a little bit of time telling you how graphs are sketched qualitatively. What you look for
+any function? Let us start with simple examples.
+(Refer Slide Time: 03:53)
+
+So, I am going to start with this example of y equal to x to the power n and we will start
+with an example of n integer first, positive integer to start with. So, here we go and the
+idea is to plot everything on the same graph y here and it is obvious that whenever n is
+any positive integer x to the power n and when x is 1, y is also equal to 1 whatever be the
+value of n. So, there is a point here which remains on the graph and there is a point here
+which is on the graph.
+But, if n is equal to 1 it is just a linear curve, it is just a straight line goes off like that. So,
+that is n equal to 1, when n is 2 you have a parabola which passes through the point 1, 1
+and the slope here is flat, so it goes like that. So, parabola when n is 3 it is an even flatter
+curve and rises even more rapidly and when n is 4 and so on it goes even faster and when
+n is an even number, the graph is simply reflected on this side. So, the parabola is
+reflected here and then n is an odd number, then the graph bends down under this, that is
+it.
+And you can therefore, plot n equal to 4, 5, etcetera they going to rise even more steeply
+after 1, go towards infinity as x extends to infinity and minus infinity or plus infinity
+depending on whether n is negative or even. So, we got a graph, we understood the
+qualitative behavior of the function x to the power n, but it is interesting to ask what
+
+happens if n becomes a fraction between 0 and 1.
+So, again on the same graph here is y, here is x I am not even going to mark the unique
+point anymore, this is what a positive power is going to look like. Depending on how
+large that power is, it gets flatter and flatter at the origin, x to the 4 is extremely flat, x to
+the 6 is even flatter and so on. And here is n equal to 1, y equal to x what happens if n is
+a fraction, like a half for instance. When 2, the graph is going to go through 1, but it is
+going to go like this say n equal to half, it is very steep at this point in fact the slope here
+is infinity at that point.
+And this let say is n equal to 2, it is also going go to infinity as x goes to plus infinity, but
+it is going to go slower than linearly which in turn is going to goes slower than quadratic
+ally. So, now, we immediately have this concept of how the function becomes infinite,
+how fast is 10 toward become unbounded, if n equal to a positive integer greater than 1 it
+is certainly increases faster than linearly and less than 1, it will increases slower than
+linearly.
+What happens if n is 1 3rd, just like x cube was flatter and steeper this fellow is sleeper
+here and also goes to infinity, but a little slower. So, we have this whole family of curves
+x to the n, when n is a positive number as n goes from 0, where the graph goes like
+essentially goes flat 1 and remains after that 1 as a extension as n goes to 0. As n
+increases, it goes to the linear graph and then it goes through graphs which can flatter
+and flatter of the origin and becomes steeper and steeper as x increases on the positive
+side and tends to infinity.
+Now, the graphs for integer values of n, when n is even or odd or either reflections in this
+plane or in this quadrant or in this quadrant depending on whether n is even or odd. So,
+we have the possibility now of understanding that the function x to the power n, for
+general n is one member of a family of curves, for all sorts of values of n and that is the
+way to understand this simple function here. Now, what happens to a function like log x
+for instance?
+
+(Refer Slide Time: 08:14)
+
+But, before that let us look at a function like the exponential of x, you are familiar with
+this graph y equal to e to the power x. I presume that you are familiar already with the
+idea of an exponential, but if not let me explain very quickly what it is. This number e
+the base of natural logarithm can be defined as the limit as n tends to infinity of a certain
+number is tends to 1 as n tends to infinity, but raise to a power which increases as n tends
+to infinity.
+So, it is the limit of 1 plus 1 over n to the power n that is the definition of this number e.
+Now, it is a remarkable fact that this limit actually exist and this is quite finite. In fact, it
+is numerical value is 2.7182818 etcetera, it is a non repeating decimal all the way to
+infinity number of places, it is an irrational number it is called a transcendental number.
+It is even more than irrational, so it is a special kind of irrational number.
+But, what is remarkable is that you see when n is a large positive value, 1 over n is the
+small positive value. So, you have a number 1 plus a small positive value, so this number
+is bigger than one and therefore, when you raise it to a power it increases all the time and
+now it is raise to a power n which is itself increasing. So, you therefore, saying if you
+had just 1 here no matter what you raising it to get 1, on the other hand you have 1 plus 1
+over n here a little increment over 1 and that is raise to the power n.
+So, you would wonder what is going to happen is it going to become unbounded,
+because you have a number bigger than 1 and that is raise to a positive value power and
+it is therefore, increasing all the time. But, the fact is whatever you raising your argument
+
+is decreasing here, because this is tending towards 1, had it be 1 like I said no matter
+what you raise it to continue to get in 1. So, there is a competition between the fact that
+this number extending towards 1.
+And the fact that this power is tending towards the infinity and the result of this
+competition is that there is actually a finite limit and it happens to be this number here, it
+is the base of natural logarithms and it is a very fundamental number e. Now, extra
+polluting that a little bit the number e to the x it can be written as the limit as n tends to
+infinity as 1 plus x over n to the power for any value of the variable x.
+You cannot in fact, define it not only for positive values of x, but also negative values of
+x fractional, irrational it does not matter you can in fact, define it even for complex
+values of this number x, but we would not get into that now. Can is there any other
+formula for e other than this? And the answer is yes, this is also equal to 1 plus 1 over 1
+factorial plus 1 over 2 factorial plus 1 over 3 factorial plus etcetera and infinity, this is an
+infinite series and it converges in other words the sum of this infinite number of terms is
+finite and it is guaranteed to be equal to this number here.
+You can see that these numbers are becoming smaller and smaller as n increases as you
+go further and further. And finally, in the limit you end up with this number which is
+convergent, a series which is convergent converges to this value. Similarly, this quantity
+also has an expansion which goes like 1 plus x over 1 factorial plus x squared over 2
+factorial plus x cubed over 3 factorial plus etcetera and this too goes on infinity and the
+fact is that this make sense this infinite series converges. It is sum and produces to a
+finite sum as n go all the way up to infinity, infinite number of terms and the answer is e
+to the power x. So, one could ask what is this function look like, so let see how the
+function e to the power x is plotted and it goes like this.
+
+(Refer Slide Time: 12:29)
+
+So, here is x, here is e to the power x out here, when x is equal to 0 e to the 0 is 1. So, it
+is starts at the value 1 and as extends towards larger and larger values it goes up in this
+fraction and tends to infinity more rapidly than any positive power of x. So, we says that
+e to the x tends to infinity exponentially rapidly; that means, it goes to 0, it goes to
+infinity as extends to infinity more rapidly than any x to the end for any positive n here.
+But, as for is a graph is concern I just shown it in this fashion, this is not quantitative as
+you can see not only the same scale for anything like that. So, this is what e to the x does
+as long as x is positive, what happens when x is negative well that is easily found,
+because e to the power minus a number e to the minus x is equal to 1 over e to the power
+x. So, e to the minus x for negative x, e to the x for negative x remains positive, but it
+tends to 0, because it is the reciprocal of large positive number, so it goes to 0 in this
+fashion.
+Once again it goes to 0 faster than any reciprocal power of x 1 over x to the 100 certainly
+goes to 0 when x tends to infinity much faster than 1 over x to the power 10. On the other
+hand e to the minus x goes to 0 even faster goes to 0 much faster than any power in the
+reciprocal power negative power of x. So, this is what the function e to the power x looks
+like, but you guaranteed that the numerical value of e to the x for any value of x and the
+real value of x is given by the sum in the series or preceding to this limit which is a
+compression way of doing it.
+But, that series there converges very rapidly and within a sort number of terms
+
+depending on what the value of x is you get the numerical value of e to the x to whatever
+degree of accuracy that you desire. So, so much for e to the power x from you could ask
+what about the function e to the minus x, what is that look like is the reciprocal of either
+the x. So, we need to reciprocal of this function, so this is y equal to e to the x I would
+like to know plot y equal to e to the minus x and that is just the reciprocal of this
+function.
+So, it goes to one once again, but it is the other curve namely, because down like this and
+equations. So, this is y equal to e to the minus x also remains positive is this, now you
+ask a little more complicated question, what does the function y equal to x e to the x look
+like, what is this look like. Once again, the argument is as follows let us plot it for
+positive values of x, so that you can see what is actually happening for positive values of
+x for very small x remember that e to the power x goes like 1 plus x over 1 factorial plus
+order x square and so on.
+So, if a x very small compare to unity, but positive this number here is negligible and you
+have 1 plus x plus x etcetera, the leading term is 1, but there is already in the x here and
+therefore, this function looks like x, near x equal to 0 looks like x means it does this with
+the 45 degree slope and then the higher order terms kick in had it been just x to go on
+forever. But, because the higher order terms kick in this functions tool starts at any the
+aspect of an exponential.
+Of course, it is going to go to infinity has x becomes large positive faster than need to the
+x, because the some other x multiplying it. But, the important thing is to look at the
+structure of the graph here ((Refer Time: 16:44)) in this function, I leave it you as an
+exercise to find out what this function does for negative values of x is got to have some
+continuity here and it does something on this side and ask to find out what is do when x
+is negative on this side.
+Let us look at what x square e to the x looks like. So, let us plot x square e to the x as
+before by the same argument is before e to the x square form less near x equal to 0, it just
+1 plus order x etcetera. And therefore, the leading term is going to come from x squared
+which has been known is like a parabola and then it takes of exponential this function.
+So, this is the way this graph looks like once you multiply with an x square and
+therefore, x cubed x 4 etcetera, etcetera.
+
+(Refer Slide Time: 17:42)
+
+More interesting is a question of what is this look like y equal to x e to the minus x, what
+is this graph look like. So, here is x and this y what would this look like, again when x
+goes to 0 this function here goes to 0 that goes to 1. So, the limit is 0 passes through the
+origin right here, on the other hand for very, very small values of x this function is
+approximately x and then there are corrections of order x squared, in approximately x
+means it takes of linearly and then it could have continued for ever had this been just x,
+but it is now being multiplied by e to the minus x which if you recall starts at 1 and goes
+to 0 in this fashion.
+So, we have the product of a function which starts at 1 and goes to 0 very rapidly and we
+have that multiplied by a functions it is starts at 0 and claims to infinity not so rapidly
+because it is a linear function whereas, the exponential drops to 0 much faster. So, as x
+goes to 0, this 0 is going to dominate because multiplied by finite number. So, the graph
+indeed takes of like that, but then once x becomes significant the functions drop back to
+0, because e to the minus x is dropping to 0 very fast.
+So, it is start at 0 it is guaranteed to go up and then it must drop to 0 eventually. So, the
+only thing it can do is to actually go like this and drop down to 0 in this fashion, it is not
+hard to the little bit of calculus to find out when the peek occurs. But, the qualitative
+structure of this function is clear just by looking at it by this little way of sketching this
+functions that this function here the product of an increasing function and the decreasing
+function, where this one dominates for large x is going to like this with a single peek.
+
+(Refer Slide Time: 19:39)
+
+What about x square e 2 the minus x, it is going to behave an more or less the same way
+the only difference now is going to be exactly the same argument as before. But, the only
+difference now is that near the origin, the behavior is like x squared which is flat at the
+origin and therefore you have a graph it is look like this fashion, etcetera. So, one can
+now multiply by other function of x and so on.
+So, the interesting thing is in this is what is going to happen in general very often you
+have a function, what is of interest in following facts, where does it have a peek, where
+does have a minimum, where does it have a maximum, what does it do for a small values
+of the argument near 0, what does it go for a large values of the argument near infinity
+does it become infinite for any become unbounded for any finite value of x and so on and
+so forth.
+
+(Refer Slide Time: 20:37)
+
+How about the function 1 over x, this function is an odd function of x, in other words
+when x is negative it just the negative or whatever the function was corresponding
+positive value of x. So, in this case for positive value of x, this is 0 the functions starts
+goes down it tends to infinity as extends to 0 plus infinity and I extends to plus infinity
+the function tends to 0. But, for negative values of x is just the reflection of this graph
+into the third quadrant and it looks like this.
+And as you know this can also be written as x y equal to 1 which is called a rectangle are
+hyperbola, it is the very special kind of graph. But, this is what the function looks like,
+this quadrant is decreasing this way and this quadrant it goes up in this fashion, just
+reflected and of course, in this case at passes through the point 1, 1 or the point minus 1
+minus 1 on this side. What happens if x y could 10 for instance it is again qualitatively
+just hyperbola except it will pass through the point here square root of 10 square root of
+10 and minus those values here on this side qualitatively to look at exactly like this in
+this fashion ((Refer Time: 22:03)).
+
+(Refer Slide Time: 22:07)
+
+So, that takes care of 1 over x how about 1 over x squared and that is not a hyperbola,
+what would this function look like. Well, the first thing you going to ask in all these cases
+is the function in even function of x or an odd function of x. Because of the function is
+even you save yourself of trouble, because it simply reflected on the vertical axis,
+whatever happens in the first quadrant happens in the second and if it is an odd function
+whatever happens here happens in the third quadrant here.
+So, the symmetric property is worth always being attention to because it will save your
+lot of labor. This function is an even function of x as x tends to 0 it becomes infinite and
+as an x tends to infinity goes to 0 both these are faster than the way 1 over x goes to
+infinity or 0 more rapidly. Because, it is the power is higher and known this side;
+however, it look like this and the reason is that this is an even function of x 1 over x cube
+it will again qualitatively look like that except this portion would be sitting on here on
+this side. So, we have y equal to x to the power n for negative values of n, as well we can
+plot what this function looks like, how about a function like the following.
+
+(Refer Slide Time: 23:32)
+
+How about a function like y equal to e to the power x square, what is that look like well
+it is an even function of x. So, once again same argument is before whatever happens
+here is going to happen here, e to the x square starts at 0 at x equal to 0 starts at the value
+1, e to the 0 is 1 and increases faster than exponentially, because x square goes to infinity
+faster than x itself does. So, e to the x square goes to infinity even faster it goes often in
+this fashion.
+But, because it is an even function this function deep in this function, it is not a parabola
+it just a function which in looks like a bowl and this symmetric about x is going to minus
+x and it goes off to infinity on both sides this fashion. What about the reciprocal of this
+function, y equal to e to the minus x square that is a very, very important function it is
+called the Gaussian it appears all over the place in many, many physical applications and
+statics. So, it is worth remembering all it looks like, here is the x axis, here the 0 and
+what is the reciprocal of this function what is it look like.
+Well, remember that the function is always bigger than one therefore, the reciprocal is
+always less than 1 and the function is positive and therefore, the reciprocal is also always
+positive and as extends to infinity. Now, e to the minus x square goes to 0 extremely
+faster on both sides and it is a bell shape curve which is therefore, looks like this. So, that
+is what this Gaussian function e to the minus x square looks like you will learn a lot
+more about it study of physics as you go along.
+
+(Refer Slide Time: 25:23)
+
+How about y equal to e to the power 1 over x, what would that look like? Again
+qualitatively, because it is fairly complicated function in that sense, but we can sketch
+what it looks like quite easily. Again, so y is e to the 1 over x as a function of x is it in
+even function or odd function of x can we said what it is, well since if we put x to the
+minus x when we write e to the minus 1 over x that is not the same as minus e to the 1
+over x.
+So, this is not in even function or an odd function of x it mixed, we can say what it does
+on this side without examining in this function more carefully. But, let us argue in the
+following the way as extends to plus infinity 1 over x tends to 0 e to the 0 tends to unity.
+So, it is clear that if this is 1, this function must go to 0 must tend to this value of a very
+large x. On the other hand, it is a positive number e to a positive number is bigger than
+one always.
+So, the function remains on top of this graph and then what is it do as x tends to 0, 1 over
+x tends to infinity plus infinity. So, e to the infinity becomes infinity, so the function very
+rapidly increases and drops on in this fashion, what about negative values well if x is a
+large negative value 1 over x is nearly 0 e to the 0 is again 1. So, the function is going to
+approach the value 1 on this side.
+But, because it is a negative e to the negative number it less than 1. So, it remains below
+this curve, but then a x tends to 0 from the negative side it is going to e to the minus
+infinity that is like 1 over e to the infinity which goes to 0 very rapidly. So, the function
+
+indeed does this goes to 0 extremely rapidly and very flat it looks like that. So, that is
+what e to the 1 over x look like for both positive x and negative x here.
+And once I write that you should be able to say very easily what does y equal to e to the
+minus 1 over x look like and this case. Because, now all I have done is to change x to
+minus x, so it is immediately clear that the graph is going to look like this and this side
+and on this side it is going to do this in this plot portion that just by examining in this and
+saying instead of x and I call it minus x. So, it is like flipping this graph over twisting it
+180 degree about this access rotating the graph and that is it this is what it looks like.
+So, as we come across more and more complicated functions, you will see that I will use
+such arguments to plot these functions qualitatively schematically to try to understand
+what these thing look like. But, the take home lesson here now is that the exponential in
+general tends to dominate over any powers, but when you take limits and something
+becomes very large, very small and so on. In general rule of ((Refer Time: 28:32)) that
+the exponential will dominate this issue and it is behavior will dictate what happens
+when you have a product of such function, we will have a occasions to do many more of
+these examples as we go along.
+
+

@@ -1,0 +1,39 @@
+- I'm going to try asking this, hope I don't make a fool
+  of myself:
+
+- I understand that `basis vectors` transform via the Jacobian;
+  they're covariant. I understand that vector components
+  transform via the inverse Jacobian; they're contravariant. No
+  problems here.
+
+- I understand that `basis 1-forms` transform via the inverse
+  Jacobian; they're contravariant. I understand that 1-form
+  components transform via the Jacobian; they're covariant.
+  Again, no problems here.
+
+- Regarding dimensional analysis, I understand quantities with
+  length in the numerator are contravariant and quantities with
+  length in the denominator are covariant. Once again, no
+  problems here I think.
+
+- Oh, and I understand that _with a metric_, there is no
+  distinction between vectors and 1-forms. Either can be
+  transformed into the other.
+    - When I look at this one way, I can see contravariant
+      components with covariant bases.
+    - Another way, I can see covariant components with
+      contravariant bases. This is beautiful.
+
+
+- Now, look at this equation:
+    - The partial is clearly covariant, and the differential is
+      clearly contravariant.
+    - The partial can be treated as a basis vector and the
+      differential as a vector component. BUT...
+    - ...the differential can also be treated as a basis 1-form
+      (https://math.stackexchange.com/a/240629 ).
+    - That means the partial is a 1-form component.
+
+  My question is (I think): HOW can the same thing be both
+  a vector and a 1-form? What am I missing? Am I conflating two
+  frameworks?

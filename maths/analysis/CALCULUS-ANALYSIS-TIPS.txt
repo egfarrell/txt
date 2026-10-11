@@ -1,0 +1,768 @@
+# TODO:
+    - download DIRAACC calculus
+    - HN: derivaatives / fractions https://news.ycombinator.com/item?id=42427826
+
+
+### Intuitive derivative
+    - $MY_BOOKS/Physics/Maths/Mathematical-Physics/Maths-for-Physicists-Good-Introductory-Concepts.pdf
+    - Eg, the methodological knowledge that the derivative of
+      `x^2` equals `2x` remains hollow, unless the conceptual
+      meaning of that `2x` as a local linear approximation of
+      a parabola is fully appreciated.
+
+
+### Key insights in this file:
+    - This is a differential!
+        - $MY_IMAGES/maths/analysis/graphical-view-of-a-differential.jpg
+    - TANGENT lines; 
+        - it's not the tangent line itself that's important...
+          but the fact that the `function` LOCALLY has the same
+          rate of change as the tangent line. 
+        - From Seth:
+            - On `infinitesimal` scales, all curves are STRAIGHT.
+            - The curve and tangent line are indistinguishable.
+    - Derivatives: limits of mathematical FUNCTIONS. 
+    - Calculus and Analysis are dealing with the INFINITE!
+    - Leibnitz called infinitesimals: 'differentials', `dx`, `dy`
+        - So a 'differential' is actually an infinitesimal
+    - don't mix up `power functions` and `exponential functions`!
+        - $MY_NOTES/maths/analysis/power-and-exp-funcs.txt
+    - Book: Calculus made even easier
+        - $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Calculus-even-easier-infinitesimals.pdf
+        - (similar approach to Tevian Dray, especially how
+          Physics RELATES physical quantities through
+          `equations`, rather than independent/dependent
+          variables of mathematical `functions`)
+        - In science, variables are related in _equations_ so we
+          focus on that, rather than dependent and independent
+          variables of _functions_.
+
+### 'Standard' calculus v 'Infinitesimal' Calculus
+    - See more: $MY_NOTES/maths/analysis/infinitesimals.txt
+    - $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Calculus-even-easier-infinitesimals.pdf
+    - In standard calculus 
+        - the fundamental concept is not the differential of
+          a variable but the `derivative` of a function which is
+          defined as a limit. 
+        - The differential is then defined in terms of the
+          derivative. The notion of a function and limits
+          involves dependent and independent variables. 
+    - In the infinitesimal approach 
+        - the fundamental concept is the `differential` of any
+          variable, regardless of dependence or independence, and
+          the derivative is defined as a quotient of
+          differentials.
+
+### Heaviside Operational Calculus
+    - https://news.ycombinator.com/item?id=42289913
+    - "In the end `Laplace transforms` overtook the operational
+      calculus of Heaviside, because it was easier to use, had
+      a more rigorous structure and incorporated the powerful
+      tool of convolution. His methods largely fell victim to
+      history."
+
+### Chain Rule
+    - 3 ways of saying it:
+    - Leibnitz notation (infinitesmal fractions)
+        - `dy/dx = dy/du * du/dx`
+        - aside: the 'prime notation' version stems from this
+          Leibnitz version (via the rhetorical words)
+        - But the Leibniz version is the most intuitive.
+    - 'Rhetorical version'
+        - The derivative of the outer function, evaluated AT the
+          inner function, times the derivative of the inner
+          function.
+    - Prime notation
+        - `[ g( f(x) ) ]'` = `g'(f(x)) ∙ f'(x)`
+
+
+### Nice definition of a derivative
+    - $MY_NOTES/physics/spacetime/Maudlin-Philosophy-Physics-annotate.txt
+    - In the most convenient coordinatizations of Newtonian space
+      and time, the acceleration of a trajectory through time is
+      proportional to the `second derivative of the spatial
+      coordinates` with RESPECT TO the `time coordinate`.
+
+
+### Integration trick
+    - Cool integration trick somebody taught me: 
+        - if you’re integrating some tricky function over some
+          interval that symmetrically straddles zero (say,
+          between -1 and +1), split the integrand into even and
+          odd functions and see if the EVEN FUNCTION is easier to
+          analyse.
+        - This is because the contributions of the odd function
+          will cancel out and can be ignored.
+
+### Hubbard: Lots of calculus (and Linear algebra)!
+    - $MY_NOTES/maths/linear-algebra/Hubbard-Vector-Calculus.txt
+
+### 'Rectangle' integrations
+    - Audio: 20190903-200756.txt
+    - We've previously learned how to integrate functions of
+      multiple variables over rectangular regions.
+    - Eventually we'll learn how to integrate such functions over
+      regions of any shape.
+    - The trick is to `parameterize` such regions by functions
+      whose `DOMAIN` is a rectangle.
+    - That's the trick!
+
+### Velocity, distance, area
+    - Calculus Reordered:
+        - $MY_BOOKS/Physics/Maths/Analysis/History/Calculus-Reordered-A-History.pdf
+    - Preface: interesting comment about velocity and distance,
+      how the sum of the AREA gives you total DISTANCE travelled.
+      This is the key line:
+        - These philosophers realised that if the velocity is
+          represented by distance above horizontal axis, then the
+          area between the curve representing velocity and the
+          horizontal axis corresponds to the total distance that
+          has been travelled.
+    - Thus the accumulation of distances can be represented as an
+      accumulation of area, which connects _geometry to motion_. 
+        - But the key thing I never thought about is the
+          `velocity` being represented by distance above an axis.
+
+### Mixed partials
+    - Audio: 20190903-192813.txt
+    - David Bachman talks about mixed partial derivatives in his
+      differential forms book.
+    - He says that amazingly the mixed partials `d^2f/dydx` and
+      `d^2f/dxdy` are always equal.
+    - This is not a coincidence.
+    - Somehow the mixed partials measure the TWISTING of the
+      graph and this is the same from every direction.
+
+
+### Differential
+    - The differential `Df` is the change in the _linearisation_
+      of a function around a certain point.
+    - I always thought the differential was? What? I didn't
+      know... the change in the tangent line?
+        - (But the tangent line is equivalent to the
+          "linearisation")
+        - Or the change in the value of the function `∆f`... but
+          `∆f = Df` alright when `∆x` is small
+        - $MY_IMAGES/maths/analysis/graphical-view-of-a-differential.jpg
+    - Ah I'd seen this idea of a differential before... (As
+      a linear approximation) but didn't make sense then...
+            - $MY_IMAGES/maths/dray-dislikes-differentials-in-linear-approximations.jpg
+        - See more in:
+          $MY_NOTES/maths/analysis/Tevian-Dray-Calculus.txt
+        - But Tevian says it's not the most useful way to think
+          about differentials as linear approximations... better
+          to think of them as infintesimals (??)
+            - Whether one regards differentials as the conceptual
+              core of calculus, as we do, or merely a heuristic
+              tool, they reflect the way many of our professional
+              colleagues think about calculus.
+            - This invaluable tool should be emphasized, not
+              relegated to a _recently-invented role in linear
+              approximation_, for which it is neither suited nor
+              needed.
+
+# Derivative
+    - Rise over run:
+        - How much do you go "up" (rise), when you go over by
+          "one". 
+    - Better to think... run? how much rise?
+
+### differential
+    - 3Blue1Brown: `dr` as the thickness of each little circle
+      segment
+    - `dr` is also a "tiny nudge"
+
+### Cumulative Function rate of change
+    - Nice visualisation of the rate-of-change (derivative) of
+      a Cumulative function. Gives me more of a feeling for
+      cumulatives...
+        - $MY_IMAGES/maths/2brown-calculus/distance-velocity-cumulative.jpg
+        - $MY_IMAGES/maths/2brown-calculus/distance-velocity-cumulative-2.jpg
+        - $MY_IMAGES/maths/2brown-calculus/distance-velocity-cumulative-3.jpg
+        - $MY_IMAGES/maths/2brown-calculus/distance-velocity-cumulative-4.jpg
+
+### Derivatives
+    - look at the "2nd order" `dx^2` bit
+        - $MY_IMAGES/maths/derivative-2nd-order-square.jpg
+    - Also: instantaneous rate of change is an oxymoron.
+        - "instant":        one moment in time
+        - "rate-of-change": two moments in time
+    - Better to think of: 
+        - "the best constant approximation for rate of change"
+
+### Derivative / Slope
+    - https://themathpage.com/aCalc/derivative.htm
+    - "slope" only really applies for _straight_ lines
+    - Now, since we consider `x` to be the independent variable
+      and `y` the dependent, then any change `Δx` in the value of
+      `x`, will result in a change `Δy` in the value of `y`.
+        - In a straight line, the rate of change, so many units
+          of `y` for each unit of `x`, is constant, and is called
+          the SLOPE of the line.
+    - However, Calculus IS CONCERNED with rates of change that
+      are NOT CONSTANT.
+    - If a curve represents distance `Y` versus time `X`, then
+      the rate of change, the speed, at each moment of time is
+      not constant.
+    - The question calculus asks is: "What is the rate of change
+      at exactly the `point P` ?"
+    - The answer will be the SLOPE of the TANGENT LINE to the
+      curve at that point.
+    - And the method for finding that slope, _that NUMBER_, was
+      the remarkable discovery by both Newton and Leibniz.
+    - That is the method for finding what is called the
+      derivative.
+
+
+### The derivative
+    - is a NUMBER(?)
+
+### "Leibnizian calculus"
+    - Approach which emphasises _differentials_:
+        - $MY_NOTES/maths/analysis/Tevian-Dray-Calculus.txt
+
+    - The central idea of calculus is NOT the limit
+            - Calculus is about `infinitesimal` reasoning
+
+    - The central idea of derivatives isn't slope
+            - Derivatives are `RATIOS` of small quantities
+
+    - The central idea of curves/surfaces isnt parameterisation.
+            - The central idea is "use what you know"
+
+    - Functions:
+        - are not the main representation of physical quantities:
+            - The main representation of physical quantities is
+              the RELATIONSHIPS (equations) between them.
+                - $MY_IMAGES/maths/what-are-functions-tevian-dray.jpg
+
+### Partial derivative insight:
+    - there's actually a FUNCTION `f`, and it's the value of this
+      FUNCTION that changes as you walk along the x-axis or the
+      y-axis.
+    - for some reason I kind of always forget about that
+      function...
+    - I just think of the `x` and `y` axis and dont really think
+      about WHAT is changing
+    - So for the directional derivative there 3 different
+      'actors' in the scene:
+        - the axes,
+        - the function `f`
+        - and another vector (the directional vector) that we
+          want to see how `f` changes along
+            - Sept 2022: and the LENGTH of this directional
+              vector represents the SPEED we're walking along at
+            - July 2023: ah very similar idea from Fleisch. The
+              funtion `f` is a separate function about air
+              temperature along the curve.
+                - Search Fleisch here:
+                - $MY_NOTES/maths/linear-algebra/vectors-vector-spaces.txt
+        - (Or 4 different 'actors' needed?):
+            - ALSO need a 'curve' or path through the space,
+              parameterised by something?
+
+### derivative
+    - a measure of how sensitive a function is to small changes
+      in its input... (at a particular point)
+    - working out a derivative algebraically
+        - work out velocity (derivative) at t = 2
+        - velocity = (tiny change in distance) / (tiny change in time)
+            - $MY_IMAGES/maths/analysis/calculate-derivative-algebraically-1.jpg
+            - $MY_IMAGES/maths/analysis/calculate-derivative-algebraically-2.jpg
+            - $MY_IMAGES/maths/analysis/calculate-derivative-algebraically-3.jpg
+            - $MY_IMAGES/maths/analysis/calculate-derivative-algebraically-4.jpg
+            - $MY_IMAGES/maths/analysis/calculate-derivative-algebraically-5.jpg
+        - as `dt -> 0`,
+            - $MY_IMAGES/maths/analysis/calculate-derivative-algebraically-6.jpg
+            - $MY_IMAGES/maths/analysis/calculate-derivative-algebraically-7.jpg
+        - general formula for any 't'
+            - $MY_IMAGES/maths/analysis/calculate-derivative-algebraically-8.jpg
+        - note: `dt -> 0` really simplifies the algebraic 'mess'
+        - (`dt` doesnt really have a specific size)
+            - $MY_IMAGES/maths/analysis/calculate-derivative-algebraically-9.jpg
+
+    - 3Blue1Brown: I mark the little "rises" as `ds` but
+      technically the use of `ds` or `dt` in calculus usually
+      signals it'll be taken to a limit `-> 0`... ie `ds -> 0`
+    - another point:
+        - the derivative is the "best constant approximation"
+          around that point
+
+
+### oh wow... meaning of an "integral"
+    - The _AREA_ of a graph of `x^2` from `0` to `x` is called
+      the INTEGRAL of `x^2`
+        - Never thought of the integral like that...
+        - Knew it was adding up loads of little pieces, but never
+          really thought of it as the AREA under the graph...
+    - but now:
+        - find out the area of a little bit under the graph, when
+          you move forward a little bit 'dx'
+            - $MY_IMAGES/maths/relationshipt-integration-differentiation-01.jpg
+            - $MY_IMAGES/maths/relationshipt-integration-differentiation-02.jpg
+            - its all RECTANGLES!
+    - This leads to the fundamental theorem of calculus
+        - We don't know the mystery function `A(x)` which holds
+          the AREA under the graph of `x^2`
+        - But we know ONE property of this mystery AREA function:
+            - It's derivative at a point `x` is equal to `x^2`...
+        - ie the derivative of the mystery function `A(x)` at any
+          point is equal to the HEIGHT (value?) of the original
+          function at that point...
+            - (April 2026: I don't get it. Height? Must recheck.)
+            - $MY_IMAGES/maths/fundamental-theorem-calculus.jpg
+
+### Adding up small things
+    - adding up lots of small things is often the same as finding
+      the AREA under a graph
+        - $MY_IMAGES/maths/integration-and-area-under-graph.jpg
+        - $MY_IMAGES/maths/integration-and-area-under-graph-2.jpg
+
+### Approaches to Integration
+    - 3Blue1Brown
+    - You try slicing a circle into many concentric rings...
+    - This could be promising because it respects the symmetry of
+      a circle...
+    - and Maths rewards you when you _respect it's symmetries_
+
+
+### Link: Pascals triangle and integral
+    - Interesting!
+        - $MY_IMAGES/maths/analysis/link-pascals-triangle-integration.jpg
+
+### Intuition for Product Rule
+    - $MY_BOOKS/Physics/Maths/Analysis/calculus-lifesaver.pdf
+    - For product rule `D(uv)`... think 'RECTANGLES'!
+    - To differentiate a product `uv`, we add some strips along
+      the rectangle which are `∆u` and `∆v` wide...
+        - $MY_IMAGES/maths/intuition-product-rule-1.jpg
+        - $MY_IMAGES/maths/intuition-product-rule-2.jpg
+
+
+### Calculus of differences?
+    - $MY_NOTES/physics/QM/quantum-ten.txt
+    - Calculus was fine for continuous change in the classical
+      world, but didn’t suit the discontinuous jumps of
+      electrons.
+        - For that, Born used a different kind of maths:
+            - THE CALCULUS OF DIFFERENCES
+            - (finite difference calculus)
+            - (finite difference methods)
+        - It built the “chunking” of energy right into the
+          fundamental principles of QM.
+
+### Newton's calculus 'refactored'?
+    - HN about Oppie:
+        - https://news.ycombinator.com/item?id=36808001
+    - Newton was a genius, but stuff was ripe for picking at that
+      time and there were several contributors to calculus.
+    - And Newton's calculus was soon "refactored" from
+      _geometric_ to _analytic_ terms.
+
+
+### What are infinitesimals?
+    - $MY_NOTES/maths/analysis/Seth-Calculus.txt
+    - By definition, an infinitesimal is an infinitely small
+      number: smaller than every positive `real` number, yet
+      still GREATER than zero.
+    - NO real number satisfies this definition, so infinitesimals
+      are _not real_.
+        - Yet, by developing a "calculus of infinitesimals" (as
+          it was known for two centuries), mathematicians got
+          great insight into `real` functions, breaking through
+          the static algebraic ice shelf to reach a flowing world
+          of motion below, changing and evolving in time.
+    - So, calculus is the mathematics of _continuous_ change.
+    - But even as calculus ignited modern science, philosophical
+      problems remained.
+        - Do infinitesimals really exist?
+        - Are they just useful fictions?
+        - How could mathematics (of all subjects) risk having
+          fictional foundations?
+        - This wasn't resolved until the 19th century, when
+          mathematicians developed 'limits' as a rigorous
+          foundation for calculus.
+        - The new 'limits' answered the philosophical questions,
+          but made calculus less intuitive for average users (non
+          philosophers!) who liked infinitesimals.
+    - This book returns infinitesimals to the stage, restoring
+      the intuitions that originally motivated them, putting you
+      in touch with the thoughts of the intellectual giants who
+      developed it.
+        - You'll learn the same results as someone with a typical
+          limit-based approach, but your path will be more
+          intriguing, simpler and shorter.
+        - (Most textbooks devote 500+ pages to developing
+          single-variable calculus. Here- just 160 pages)
+
+
+### What does 'Calculus' mean?
+    - $MY_NOTES/maths/analysis/Seth-Calculus.txt
+    - "calculus" means 'small stone' in Latin. (May God protect
+      you from renal calculi)
+    - Our ancestors used pebbles (calculi) as aids for simple
+      calculations. Descendants of pebble manipulations included
+      the abacus, positional notation, etc ... including the
+      subject called "calculus".
+    - Newton described himself as: " ... a boy playing on the
+      shore, diverting myself in now and then finding a smoother
+      _pebble_ or prettier shell than ordinary, whilst the great
+      ocean of truth lay undiscovered before me."
+    - Among the smoothest of Newton's 'calculi' was... Calculus.
+
+
+### Connection between Series & derivatives
+    - $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Series-and-Products-from-15th-Century-Ranjan-Roy.pdf
+    - Newton discovered and used infinite series between
+      1664–1670, but during that time seemingly didn't notice the
+      connection between the `derivatives` of a function and the
+      `coefficients` of its series expansion.
+
+### Newton: 3 approaches!
+    - $MY_BOOKS/Physics/Maths/Misc-History/Burton-history-maths-7e.pdf
+    - Newton developed 3 different versions of his calculus,
+      apparently searching for the best approach; or maybe each
+      version served a different purpose:
+        - to derive results effectively
+        - to supply useful algorithms
+        - to give convincing proofs
+    - Thus Newton used:
+        - Infinitesimals
+            - largely a geometric approach,
+        - 'Fluxions'
+            - a kinematic approach,
+        - 'Prime and ultimate ratios'
+            - his most rigorous, "algebraic" approach.
+    - The 3 methods weren't always kept apart when solving
+      problems. See: DT Whiteside, Mathematical Papers Isaac
+      Newton.
+    - Or according to Keisler (the same 3 ways?)
+        - $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Calculus-Infinitesimal-Approach-Keisler.pdf
+            - At various times Newton described the derivative
+              of `y` (which he called the “fluxion” of y) in
+              3 different ways:
+              1. The INFINITESIMAL method
+                - The ratio of an infinitesimal change in `y` to
+                  an infinitesimal change in `x`.
+              2. The VELOCITY method
+                - The velocity of `y` where `x` denotes time.
+              3. The LIMIT method
+                - The limit of the ratio of the change in `y` to
+                  the change in `x`, `Δy/Δx`, as `Δx` approaches
+                  zero.
+            - In his later writings Newton sought to avoid
+              infinitesimals and emphasised methods 2 and 3.
+
+        - Aside: "Transfer Principle" 
+            - Leibniz consistently favored the infinitesimal
+              method but believed (correctly) that the same
+              results could be obtained using only real numbers.
+            - He regarded the infinitesimals as “`ideal`” numbers
+              like the imaginary numbers.
+            - To justify them he proposed his law of continuity:
+                - “In any supposed transition, ending in any
+                  terminus, it is permissible to institute
+                  a general reasoning, in which the terminus may
+                  also be included.”
+            - This “law” is far too imprecise by present
+              standards. But it was a remarkable forerunner of
+              the "Transfer Principle" on which modern
+              infinitesimal calculus is based. Leibniz was on the
+              right track, but 300 years too soon!
+
+
+### Calculus Green
+    - Prof. Ghrist: starts his approach to calculus with
+      definitions of `e^x` using infinite series (Taylor series)
+        - $MY_NOTES/maths/analysis/Calculus-Green.txt
+
+### Newtons Geometrical Calculus
+    - Tristan uses it...
+        - ./Newton-Geometric-Calculus.txt
+
+### Derivative: Explore Sensitivity
+    - The next big idea to emerge was "differentiation": various
+      techniques whose core idea is _ratios of change_.
+    - Linear functions are special because the ratio of ...
+        - change in output to change in input ...
+        - is CONSTANT.
+    - In the first millennium, Indian astronomers discovered what
+      we think of as the `derivatives` of `sine` and `cosine` as
+      they explored how changes in arc length affected changes in
+      the corresponding lengths of chords.
+    - They were exploring _sensitivity_, one of the key
+      applications of the derivative:
+        - understanding how small changes in one variable will
+          affect another variable to which it is linked.
+    - (I never got this idea at Uni, but came up in ML)
+    - Then in the 17th century the study of ratios appeared. The
+      ratios of change appeared in the guise of tangent lines.
+    - And this was connected to the general study of rates of
+      change.
+    - Calculus was born with Newton when he came to realise that
+      the techniques for solving problems of accumulation and
+      ratios of change were inverse to each other.
+    - Thus enabling natural philosophers to use solutions found
+      IN ONE REALM to answer questions in the _other_.
+
+
+
+
+### Four big ideas
+    - $MY_BOOKS/Physics/Maths/Analysis/History/Calculus-Reordered-A-History.pdf
+    - However today's curriculum was shaped in the 19th century,
+      mainly to suit _research mathematicians_.
+    - The progression we use today for the '4 Big Ideas of
+      calculus' is appropriate for a course seeking to understand
+      what can _go wrong_ with calculus. 
+    - But it's a difficult route to _understanding_ calculus:
+        - limits
+        - derivatives
+        - integrals
+        - series
+    - We intend to use the historical development of the 4 big
+      ideas to suggest a more natural, intuitive route.
+
+### Newton fluxions
+    - https://www.youtube.com/watch?v=5M2RWtD4EzI
+    - Newton examined every variable by how it varied with time,
+      rather than directly comparing one variable with another...
+    - ie rather than `dy/dx`... Newton compared `dy/dt / dx/dt`
+    - This is like treating every variable like a parametric
+      equation...
+        - $MY_IMAGES/maths/analysis/Newton-fluxions.jpg
+    - Leibniz looked at infinitesmal nudges in variables, while
+      Newton looked at infinitesmal nudges in time...
+
+### Different ways of viewing the "derivative"
+    - Chapter 1 of this book:
+        - $MY_NOTES/cs/AI-ML/DL-from-scratch.txt
+        - slope of tangent line
+        - box with input and output string
+            - pull up on input string:
+            - how much does output string go up or down?
+
+### How Leibniz learnt Calculus (Gilbert)
+    - I was pleased to learn that Leibniz began with _sums and
+      differences_. 
+        - Maybe they guided his intuition. Until Cauchy arrived,
+          everything was calculus without limits.
+    - Whether Newton would approve I don't know. It seems he
+      cared less than others about clear expression, but then he
+      left one or two priceless compensations.
+    - And our own job is not easy. For teachers who have to
+      explain the ideas of Newton in the notation of Leibniz to
+      pupils who may not be as apt as Cauchy...
+    - [1] CH Edwards: The Historical Development of the Calculus
+
+### Fundamental Theorem of Calculus
+      - do we recover the `f`'s from the `v`'s?
+    - The whole relation between differential calculus and
+      integral calculus rests on the fact that taking sums is the
+      inverse of taking differences.
+    - We saw the _discrete form of differentiation_ in equation
+      (1); now we see the discrete form of integration in
+      equation (2}.
+    - Fundamental Theorem of Calculus (before limits).
+        - If each `v_j = f_j - f_j-1` then
+        - the sum v_1 + v_2 ··· v_n equals f_n - f_0
+        - The area under the graph of `v` is the change in `f`.
+        - Proof: really nice
+            - $MY_IMAGES/maths/analysis/Gilbert-Proof-FTC.jpg
+
+### Initial conditions
+    - The first step begins with the `f` 's. 
+        - We are given 1, 4, 9, 16, 25 and 
+        - we are aiming for 1, 3, 5, 7, 9. 
+        - Those v's are the differences of the f 's:
+            - `v_j` is the difference `f_j f_i-1`
+    - The velocity `v_5` = 9 is the difference 25 - 16. It is the
+      slope of the f-graph in the fifth interval.
+    - Similarly `v_4` = 7 is 16 - 9.
+    - I admit to a small difficulty in the first interval (at `j
+      = 1`), from the fact there is no `f_0`
+    - For this example the natural choice is `f_0 = 0`. The need
+      for a starting point will come back to haunt us (or help
+      us) in calculus.
+
+### Gilbert Strang article
+    - The effect of NAMING something
+        - $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Gilbert-Strang-sums-differences-paper.pdf
+    - There are two goals, different but complementary.
+        - One is abstract, the other concrete.
+    - THE FIRST GOAL
+        - To understand the relation of
+            - a function `f` to its derivative `v`,
+        - and the relation of
+            - `v` to its integral `f`.
+        - (Never thought of `f` as the integral of `v`!)
+        - Starting cold from the definitions, this is
+          challenging. Working with graphs is better. Slope and
+          area are tremendous visual supports. But my experience
+          is:
+            - `v` = velocity and
+            - `f` = distance are the best.
+        - The intuition that comes from driving a car, and from
+          the everyday use of speedometer and odometer, is a gift
+          to calculus teachers.
+            - The relation of `v` to `f` is understood
+              implicitly, and we only make it explicit.
+    - THE SECOND GOAL is more special.
+        - The applications of calculus are built on a _few
+          functions_ (amazingly few).
+        - The student needs to be familiar with those functions.
+          They come in pairs `f` and `v`. Where the first goal
+          was to know the relation between them, the second goal
+          is to know the functions themselves.
+        - Certain special pairs arise constantly in mathematical
+          models, and we should connect with those `v's` and
+          `f's` from the start.
+        - Gilbert gives these functions:
+            - constant `v` and linear `f`
+            - piecewise constant `v` and piecewise linear `f`
+              (forward and back motion)
+    - Now I can describe the plan:
+        - to IMITATE CALCULUS BY ALGEBRA(!)
+
+
+### wow great article: DIRACC
+    - $MY_BOOKS/Physics/Maths/Analysis/Alt-View/DIRACC-Calculus-thru-quantities.pdf
+    - key:
+        - (just like the key idea from JF Riley Derbyshire)
+        - Integration:
+            - accumulation from rate-of-change
+        - Derivative:
+            - rate-of-change of accumulation
+            - (concepts NOT tied to the Cartesian Coord system)
+    - TRADITIONAL WAY
+        - (tied to Cartesian system):
+        - ... these textbooks define derivative as the slope of
+          a _tangent line_.
+        - Their meaning for integral is _area_ of a region
+          bounded by a curve.
+        - The net result is the FTC seems nothing more than a way
+          to compute definite integrals. It adds nothing to their
+          understanding of derivatives or integrals.
+    - BETTER WAY, more generalisable
+        - The standard statement of the FTC is _not_ true in
+          general when integrals are areas and derivatives are
+          slopes(!)
+        - The integral `∫f(x)` gives the area of a region bounded
+          by `x=a`, `x=b`, and `y = f(x)` 
+            - ONLY when `y` and `x` are ordinate and abscissa in
+              a _Cartesian_ coordinate system. 
+            - It doesn’t work in any other coordinate system(!)
+        - Also, in a polar coordinate system, the graph of
+          `y=mx+b` is a spiral, not a line, making the definition
+          of the derivative as "slope of a tangent" _unworkable_.
+        - As I will clarify later,
+            - ------------------------------------------------
+            - integral as `accumulation` from rate of change and
+            - derivative as `rate of change` of accumulation are
+              NOT DEPENDENT on a coordinate system.
+            - ------------------------------------------------
+        - Pat Thompson's goal:
+            - ... that students understand a calculus that arises
+              from their reasoning about _quantities_ and
+              relationships among quantities
+            - Ah just like the key idea from JF Riley
+              (Derbyshire)
+
+### ** Calculus key insight **
+    - All is Change: Of Motion: Ancient and Modern
+    - JF Riley (Derbyshire)
+    - Calculus insight:
+        - terms in series = sum of differences = difference of sums?
+
+        -      1  3  5  7  9  11      difference of sums
+
+         -      1  4  9  16 25 36     sum (accumulate)
+
+        - `0`  1  3  5  7  9  11      ORIGINAL SERIES (ic = `0`)
+
+        -    1   2  2  2  2  2        differences
+
+        -      1  3  5  7  9  11      sum of differences
+
+        - $MY_IMAGES/physics/all-is-change-calculus-insight.jpg
+
+    - Oct 2022: Ah Gilbert Strang had the same insight:
+            - $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Strang-sums-differences-integrals-derivatives.pdf
+        - "The whole relation between differential calculus and
+          integral calculus rests on the fact that taking sums is
+          the inverse of taking differences."
+
+
+### Interesting: Calculus Made Even Easier
+    - Calculus Even Easier: Infinitesimal Differential Approach
+        - $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Calculus-even-easier-infinitesimals.pdf
+    - (similar approach to Tevian Dray, especially the way in
+      Physics we relate PHYSICAL QUANTITIES through EQUATIONS,
+      rather than the independent/dependent variables of
+      mathematical functions)
+    - This book is intended for engineers who are required to
+      take calculus and want a more intuitive presentation.
+    - This is a non-rigorous infinitesimal approach focusing on
+      `differentials` of variables that represent physical
+      quantities rather than derivatives as limits of
+      mathematical functions.
+    - In science, variables are related in _equations_ so this is
+      the focus rather than dependent and independent variables
+      of _functions_.
+    - These methods were originally conceived by Leibniz over 300
+      years ago and used successfully by scientists ever since.
+    - It is written in the spirit of 'Calculus Made Easy' by S.
+      Thompson. Thompson wrote his book in 1910 before
+      infinitesimals were legitimized. He used the concept of
+      'little bits' of variables. Hopefully infinitesimal
+      differentials will make calculus even easier.
+
+### Discrete Calculus?
+    - aka Calculus for _sequences_?
+    - aka the calculus of differences?
+    - (finite difference calculus)
+    - (finite difference methods)
+    - Used by Born in QM?
+
+### Calculus of asymtotics
+    - the exponential function `e` represented as a Taylor series
+
+### GREAT BOOKS: infinitesimals
+    - Seth Infinitesimals                  $MY_NOTES/maths/analysis/Seth-Calculus.txt
+    - Primer Infinitesimal Analysis        $MY_NOTES/maths/analysis/Bell-Primer-Infinitesimal-Calculus.txt
+    - Calculus Even Easier                 $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Calculus-even-easier-infinitesimals.pdf
+    - History: (recommended by DSP course) $MY_BOOKS/Physics/Maths/Analysis/History/Analysis-by-its-History.pdf
+    - Teaching with infinitesimals         $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Teaching-calculus-with-informal-infinitesimals.pdf
+    - Teaching with infinitesimals 2       $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Teach-Calculus-with-Infinitesimals.pdf
+    - Calculus Reordered (History)         $MY_BOOKS/Physics/Maths/Analysis/History/Calculus-Reordered-A-History.pdf
+    - Folder: History                      $MY_BOOKS/Physics/Maths/Analysis/History/
+    - Folder: Alternative Calculus         $MY_BOOKS/Physics/Maths/Analysis/Alt-View/
+
+    - Hubbard mentioned Jean Alexandre Dieudonné (Author), who
+      was a leader in Bourbaki and wrote a book, Infinitesimal
+      Calculus. So Check his book too:
+    - https://www.amazon.com/Infinitesimal-calculus-Jean-Alexandre-Dieudonne%CC%81/dp/0395120349
+
+
+### Links
+    - Prof. Ghrist "Calculus Green" Single Variable                    https://www.youtube.com/playlist?list=PL8erL0pXF3JaFSMdokheNMvTa96jdc4GU
+    - Prof. Ghrist  Calculus Coursera                                  https://www.coursera.org/learn/single-variable-calculus
+    - Online book: Calculus infinitesimal approach (H. Jerome Keisler) https://people.math.wisc.edu/~keisler/calc.html
+
+### Links
+    - udacity - differential equations in action                    https://www.udacity.com/course/differential-equations-in-action--cs222
+    - Real Analysis, Harvey Mudd college                            https://www.youtube.com/watch?v=sqEyWLGvvdw&list=PL0E754696F72137EC&index=2&t=0s
+    - Long form discurive intro to Real analysis                    https://longformmath.com/analysis-home
+    - Long form discurive intro to Real analysis                    $MY_BOOKS/Physics/Maths/Analysis/Analysis-long-form.pdf
+    - _Good_: Project DIRACC calculus alternative (quantities)      http://patthompson.net/ThompsonCalc/
+    - _Good_: Stack: Difference between differential and derivative https://math.stackexchange.com/questions/23902/what-is-the-practical-difference-between-a-differential-and-a-derivative
+    - Gilbert: Differential Equations and Linear Algebra (+ MATLAB) https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/pages/differential-equations-and-linear-algebra/
+    - Gilbert: Youtube: Big picture calculus                        https://www.youtube.com/watch?v=UcWsDwg1XwM
+    - Youtube: calclus they didn't teach you                        https://www.youtube.com/watch?v=5M2RWtD4EzI
+    - Youtube: Seth Calculus of infinitesmals                       https://www.youtube.com/playlist?list=PLFFekKQwSI_1q-qGq1WLSxw3oGfXXzAeH
+    - Youtube: Infinitesimals - Newton to Robinson                  https://www.youtube.com/watch?v=JEr6sE1C2kc
+    - HN: Best DE courses                                           https://news.ycombinator.com/item?id=38248532
+    - Viktor Blasjo: Learn calculus like Huygens                    http://intellectualmathematics.com/blog/learn-calculus-like-huygens/
+    - Good: CH Edwards: The Historical Development of the Calculus  https://www.amazon.com/Historical-Development-Calculus-Springer-Study/dp/0387904360/
+    - HN: stochastic calculus                                       https://news.ycombinator.com/item?id=43160779
+    - HN: Feynmann integration tricks                               https://news.ycombinator.com/item?id=46090269

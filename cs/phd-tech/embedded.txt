@@ -1,0 +1,29 @@
+### Someone who uses Vim for embedded systems programming
+    - https://www.reddit.com/r/vim/comments/83zjuu/does_anybody_do_programming_for_embedded_devices/
+    - I write for a variety of devices (AVR, PIC, STM8, STM32,
+      ESP32) all with nothing else but Vim. I leverage built in
+      vim functionality for completion, and some handy plugins
+      like vim-visual-increment and vim-vmath.
+    - The magic is Makefiles, let them help you compiling,
+      testing, debugging and flashing your firmware, then write
+      vim mappings to execute make commands like gjj to build or
+      gjb to flash.
+    - Other than that, I write vim functions to ease the editing
+      when needed, for instance, to set/unset individual bits
+      with this function:
+      https://github.com/alx741/dotfiles/blob/master/vim/.vim/ftplugin/c.vim#L8-L11
+
+        - So visual-increment is for easy incrementation of hex
+          values? What do you use vmath for?
+
+        - Easy incrementing any values really. When I'm writing registers
+          structures as bit fields, vmath lets me easily verify that all the
+          bits add up to the register size (lots of headaches, when they don't)
+
+### links
+    - some framework for microboards development http://docs.platformio.org/en/latest/what-is-platformio.html
+    - How to get into embedded                   https://www.reddit.com/r/embedded/comments/cbswjt/entry_level_embedded_software_career_guide/
+    - vim dotfiles, embedded programmer          https://github.com/alx741/dotfiles
+    - how a professor teaches embedded systems   https://jaycarlson.net/2019/07/26/how-i-teach-embedded-systems/
+    - Bare-metal C programming on ARM            https://github.com/umanovskis/baremetal-arm
+    - Embedded C programmign course              https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM

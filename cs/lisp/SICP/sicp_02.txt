@@ -1,0 +1,48 @@
+sicp 02 Lecture 2
+
+### Substitution Rule
+    Operator    ----->     procedure
+    Operands    ----->     arguments
+
+### What gets evaluated first?
+    "Normal order evaluation"
+
+(If (predicate)
+    (consequent)
+    (alternative))
+
+derementer "-1+"
+incrementer "1+"
+
+### Task:
+    - Peano arithmetic - add 2 numbers
+    - Both methods are recursive definitions but lead to different SHAPED processes
+    - TIME  - is down the blackboard
+    - SPACE  - (or memory) is width across blackboard
+
+### method1 - ITERATION:
+    - transfer from one pile to another
+    - TIME O(x) - ie if x is one bigger, then its one more line down the board
+    - SPACE O(1) - its always only one expression wide
+    - comment: has all its state in explicit variables
+    - comment: If the computation got whacked you can resume easier
+
+### method2 - linear RECURSION:
+    TIME O(x)
+    SPACE O(x)
+    transfer to a pile in your hand and then add them(?!)
+    like a mountain turned on its side
+    - comment: The computer has extra information under the table
+    - comment: If computation whacked you dont know how many were supposed to be incremented
+
+### Fibonacci
+    - exponential recursion
+    - time complexity O(fib n)
+    - space complexity O(n) --->
+        have to remember how far down the tree youve come
+    - keep having to recalculate subtrees that you already calculated
+
+### Towers of Hannoi
+    - produces an exponential tree just like Fibonacci
+    - theres No algorithm thats not going to take exponential time
+    - but can you write an iterative one

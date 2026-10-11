@@ -1,0 +1,304 @@
+$MY_VIDEOS/physics/bala_fundamental/33-Fluid-Dynamics-Hydrostatic-Equilibrium.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 33
+Fluid Dynamics
+Hydrostatic Equilibrium
+We looked at a little bit of the kinematics and dynamics of system of particles of
+individual particles in an external force and a few aspects of what happens when
+particles are interaction with each other and what the dynamic equations or equations of
+motion look like. We also went on and looked at a case where you had a continuous
+medium, such as a string and a tension and we saw what it is equation of motion would
+look like and in general it was the wave equation that we obtained for the displacement
+transfers vibrations of a string.
+We also saw very briefly what happens, when you have a three dimensional medium
+such as air and you set up pressure waves in it which magnifies themselves as sound.
+And we saw a few aspects of what happens there and wrote down the corresponding
+wave equation. In the same logical progression, we now like to go on and study the
+dynamics of a continuous medium such as a fluid, when it is in motion. So, for the next
+few modules we will look at fluid dynamics, namely the most elementary aspect of a
+fluid in motion as a continuous medium.
+Now, because it is a continuous medium we have certain very special features which
+arise in the motion of this system of such a system, which I will try to emphasize here. I
+am saying right away that we are not going to look at fluid dynamics at the atomic or
+molecular level. Because, we know ultimately the fluid is composed of individual
+molecules which move around in close interaction with each other. We are not going to
+get to that level of description, we are going to look at it at a more coarse grained or
+rougher level by we will talk about infinite decimal fluid elements as if they were all part
+of a continuous medium.
+So, we will not go to the atomic level, but we looked at it effectively at a much more
+coarse level which is good enough for understanding fluid dynamics as it magnifies itself
+in normal life. Now, there are several aspects to this and the something that I want to say
+right in the beginning which is that fluid dynamics offers a very natural and physically
+
+intuitive way of understanding many concepts of vector calculus. And in fact, vector
+calculus to some extent was derived or invented if you like with the specific purpose of
+applying it to a fluid dynamics.
+So, this gives us an opportunity to understand certain concepts in vector calculus such as
+the gradient and the divergence and the curl and so on which really are part of a formal
+mathematical structure called vector calculus. But, the physical interpretations of these
+objects of these various quantities is so simple and so straight forward, that is it actually
+worth understanding it in the context of fluid dynamics, which is what we are going to
+do.
+As always, this is going to be pitched at a slightly higher level than is generally in the
+case at the high school level or even in the beginning undergraduate level. But, I hope
+that we will make things very clear in a physically intuitive way, so that there should be
+no difficult in understanding it as long as one understands the elementary operations of
+the calculus, so let start by asking how one would describe the continuous medium such
+as a fluid.
+(Refer Slide Time: 03:43)
+
+So, you have a fluid in some container perhaps and I would like to understand what
+happens to this fluid or maybe it is in motion in a pipe of some kind and we would like to
+understand what the flow is like, what the equations of motion are like etcetera. Now,
+there are two ways in which you can approach a fluid dynamical problem. One of them is
+the Lagrangian method, where imagine that you have a medium.
+
+(Refer Slide Time: 04:10)
+
+So, there is fluid everywhere and you focus on a particular fluid element at some instant
+of time and then, follow the path of this fluid element as a function of time. And you
+really have to do this for all the fluid elements in the fluid allowing for various constrains
+such as the fact that two fluid elements ((Refer Time: 04:32)) on the top of each other
+etcetera and this approach is called the Lagrangian approach, where you focus on any
+given individual fluid element and what it is motion as a function of time through the
+fluid. On the other hand, there is another approach to it which is the following.
+(Refer Slide Time: 05:02)
+
+We focus on a particular location, so I focus on a location whose coordinate is r and look
+at what sort of flow you have at that point at any instant of time. So, it is possible that at
+
+some instant of time this, the element the velocity vector at this point points like this.
+And of course, it should be part of some continuous curve and at a later instant of time it
+is possible that the flow changes in such a way that this velocity vector points like this
+and so on.
+So, the idea is to focus on a location rather than in individual fluid element and the two
+approaches are related to each other. The second approach is called the Eulerian
+approach and that is the one in which it is easiest to write things down specifically,
+especially at an elementary level and therefore, we will look at the Eulerian approach.
+Then, what are the variables that would describe and the element of fluid at this location
+at any instant of time?
+Well, in the case of particles you talk about the position of the particle in all three
+Cartesian coordinates for instance, plus the momentum of the particle or the velocity of
+the particle at any given instant of time and you do this for each particle in the system.
+(Refer Slide Time: 06:36)
+
+Here, what we do is to associate with any point in the fluid at density rho which could be
+a function of time, because the fluid could be compressible and the fluid could be in
+homogenous, in other words they could be different densities at different points in
+general. So, the density the pressure of the fluid at that point P of r and t and the velocity
+at that point and I will use this symbol v as a function of r and t. I emphasize once again
+that by this v I do not mean the velocity of any individual fluid element in particular.
+I mean the velocity field of the fluid at the point r at a time given t. So, at different times
+
+different parcels or different elements of fluid would occupy the location r and I am
+taking about the velocity of anything that occupies the location r at time t. So, these are
+the dynamical variables in the system to describe a fluid and what we need to know is to
+determine, what we need to find is to find all these quantities given certain inputs which
+would be like conservation of matter, conservation of momentum, the equation of motion
+of a fluid element and so on.
+So, we will do that systematically, but these are the unknowns in fact, in general one is
+told what the pressure gradient is or what the pressure is, if you given this field then the
+task is to determine this and that. So, that is the general problem of fluid dynamics in the
+Euler approach, namely given the external forces on the fluid, the pressure of the fluid,
+the pressure heads and so on determine the local density and the local velocity, you need
+a sufficient number of equations to do this.
+Now, this is a scalar quantity that is important to remember and that is a vector quantity
+of course. So, the fluid state is determined by a space and time dependent scalar field rho
+and the space and time dependent vector field the velocity as a function of space and
+time coordinates. So, that is the general problem that we are going to tackle or at least
+formulate in solving, in trying to understand fluid dynamics, but let us first look at a
+much simpler case namely that of equilibrium, hydrostatic equilibrium.
+So, I have in mind of fluid in some container which is completely at rest, nothing is
+moving, every element is at rest and I would like to know what is the condition for this
+hydrostatic equilibrium. You know that the condition for the equilibrium in mechanics
+for a single particle would be to say or a body, given body would be to say the net force
+on this body must be 0 and if it is initially at rest, then by the first law it continuous to be
+at rest.
+
+(Refer Slide Time: 09:51)
+
+A similar constrain condition of hydrostatic equilibrium is what we see and for this
+purpose let set up a coordinate system somewhere completely arbitrary where you
+choose it. And let look at some given fluid element at the position vector r and let us take
+this element to be at this position r which is got Cartesian coordinates x, y and z and ask
+in this case what is the condition for this element to be a trust, well there is a pressure
+acting on this fluid. So, there is a pressure acting this direction, like this from all
+directions, there is a pressure acting on it.
+So, from the front and from the real this motion and let us look at the y component of
+this presser, the pressure at the point r is p of r and that stands for x, y and z. But, if this
+line element is d y, this is d x and that is d z infinite decimal volume element of volume d
+v, so let us write d v equal to d x, d y, d z then from the left you have a force pushing in
+the plus e y direction. So, this is equal to e y from the left you have e y times p of r
+minus, because this phase is d y over 2 to the left of the point x, y, z. So, this equal to d y
+over 2 multiplied by the derivative of this pressure with respective y.
+So, I do a Taylor expansion of the pressure on this phase about the pressure in a middle
+of the volume element. And the first term is the pressure at that reference point minus the
+correction which is proportional to the increment length increment which is d y over 2.
+Because, it is half here down and then multiplied by the derivative with respect to y of
+the pressure itself and this must be multiplied by d x d z, because that is the area of this
+element here, the vertical is d z and the horizontal going in to the board is d x.
+
+And the pressure of course, is the force per unit area you can see that this multiplied by
+that is a force has physical dimensions of force that is the force appearing from the left.
+But, that is compensated partially by the force from the right here and that force is minus
+e y again p of r, but this time with the plus d y over 2, because this front phase is d y over
+2 removed in the y direction positive y direction from the centre of the q times again the
+derivative d x d z and may you add these two the net force in the y direction of this
+element is equal to minus e y delta p over delta y times d x d y d z which is equal to
+minus e y delta p over delta y times d v.
+So, that is the y component of this force and exactly the same short of argument will tell
+you that the z and x components are respectively given by the same things with e z delta
+p over delta z and e x delta p over delta x.
+(Refer Slide Time: 13:54)
+
+Therefore, the net force the force as say the force on the volume element d v is given by
+a sum of all these things quantities minus e x delta p over delta x plus e y delta p over
+delta y plus e z delta p over delta z times d physical dimensions are, because this is force
+per unit volume and this here is a gradient force per unit area and this gives you one over
+length once again multiplied by volume element gives you a force physical dimensions
+of force.
+So, this quantity is the force on the volume element d v, now this looks very much like
+you take the quantity p which is a scalar function. So, remember that p is a scalar it is a
+scalar function the pressure is a scalar, but it take it is derivative with respect to each of
+
+the coordinates on which it depends and you multiplied by the corresponding unit vector
+in this direction. Now, this quantity has a physical significance which we will see in a
+second and it is got the name this thing is called the gradient of the pressure p, it is a
+vector and the idea of gradient this is a natural place to introduce it is. So, let us do that.
+(Refer Slide Time: 15:41)
+
+If you give me a scalar function phi of x, y and z any scalar function of the three
+coordinates then I can construct just as I define the position vector to be e x times x plus
+e y times y plus e z time z what I can do with this quantity is to construct partial
+derivative. So, I can find the rate of change of this function here at any point with respect
+to each of the three independent coordinates x, y and z keep in the other two constants.
+So, I move in the x direction by d x and find out how much changes and so on and I get
+this times d x, this times d y that times d z and I can constructer vector from this quantity
+which is defined in this fashion and this is by definition. This is the definition of the so
+called gradient which is denoted by the symbol here the Greek symbol lambda of phi
+which of course, the function of r, this is called the gradient of phi.
+So, the gradient produces of vector function from a scalar function a vector function of
+the coordinates is produce from a scalar function of the coordinates by this operation
+here of differentiating with respective each of the independent coordinates multiplying
+by the corresponding unit vector and then it is some kind of vector. Now, the question is
+what is the meaning of this vector? What is this gradient actually tell us? Well, it is not
+hard to see that it tells us what the rate of change of this function is in any direction what
+
+so ever.
+So, if start with some point r in space and there is a neighboring point r plus d r in this
+fashion, then I could ask if you have a phi which is function of r and it has some value
+here and this phi has some other value at this point how much does this phi change by.
+So, this is phi and this is phi plus d phi I could ask what is d phi equal to clearly d phi
+going to depend on in which direction you move away from r. So, even for a given
+distance from r if you move in any direction in space, you may have a different d phi at
+each of these points.
+But, you see if you give me a d r then I can always write it in the form d r is e x times d x
+plus e y times d y plus e z times d z and then it is immediately clear that if I define the
+gradient in this fashion ((Refer Time: 18:46)) phi dotted with d r. Well, one should
+strictly speaking put a vector symbol on this triangle here on this delta, but I want do so
+because it is a understood that this is a vector quantity. So, I do not need to put this delta
+each times, since I cannot write bolt phase and just going to leave it without an arrow.
+This quantity here, if I use the rule for cross products the x of these with the x of that the
+y of this with the y of that and so on this as you can see is immediately equal to delta phi
+over delta x d x plus delta hi over delta y d y plus delta phi over delta z d z. But, this is a
+total change in phi by definition, if phi is a function x, y, z then the change in phi d phi
+along any direction is not in to components this is the change if you move only in the x
+direction, only in the y, only in the z direction.
+But, to go to this point you have to do a little x x recursion, little x recursion little y x
+recursion to go there and this is the net change here. So, by definition this is equal to d
+phi, in other words the gradient of a scalar function dotted with the infinite decimal
+displacement d r gives you the change in the function, when you move from r to r plus d
+r. So, it actually gives you the change of the function in any direction in space which is
+why the gradient is called the directional derivative on directional.
+If you need to find out what is the rate of change of this phi along any direction, then
+what you have to do is to dot this gradient of phi with the unit vector in the direction and
+you have the rate of change. In other words, if you have a phi and it changes along some
+directions specified by the unit vector n then this is equal to grad phi dot n. So, that is the
+meaning of the gradient of any scalar function.
+Now, one could ask for a geometrical meaning in addition to this, one could ask if there
+
+are physical meaning of some kind and the answer is yes, and it is very simply
+understood if you look at not a function of three variables for which it hot from it to draw
+pictures, but let us look at a function of two variable, let suppose that you have a Helitran
+on the surface of this earth which I will assume to be plane for moment and I have a
+Helitran at which for each x and y horizontal coordinates I have a certain given height.
+(Refer Slide Time: 21:44)
+
+So, it is like mountain and range is like some kind of complicated mountain range of this
+kind and on this mountain range you would have seen there are contour maps which you
+tells you all points of the same height. So, all points of the same height same given
+height are form contour map and if you look at it from above the contour map is going to
+look like this. So, that is the peek and then you have points of equal height in the x, y
+plain is look like this etcetera and that is the peek looking at from above.
+So, we are now in the x, y plain and z the height is coming out and this is an equal
+contour map it is says the height at a point x comma y along this curve is come constant
+equal to h 1 some height h 1 and this contour, the height as a function of x comma y is h
+2 some other height and so on till you hit the pick here at this point, then you can ask
+what does the gradient of this h look like. So, it is clear that gradient of h of x comma y
+in this case is just e x delta h over delta x plus e y delta h over delta y at any point.
+So, the question is what is the direction of this gradient, the magnitude is trivial it is
+square root of this squared plus that is squared. But, what is the direction of it well it is
+clear that if you move along this curve, the height does not change at all. So, it is not
+
+contributing to the gradient at all, on the other hand if you move normal to it that is what
+is going to contribute the maximum to the gradient. Because, if you move in any other
+direction like this you can resolve it into motion along the contour and perpendicular to
+the contour and along the contour there is no change at all.
+So, it is only the perpendicular component that contributes the gradient therefore, the
+gradient of a scalar function is in the direction in which the function increases in
+magnitude, increases the most t p. In other words this is the steepest way to claim the
+mountain normally you take a winding path you claim up, but if you did this you go
+straight up the gradient, the maximum possible steepest. So, the physical the geometrical
+idea of the gradient of a scalar function delta phi in three dimensions for example, is
+directed along the direction in which phi increases most rapidly as a function of space
+coordinates for a given time if it is function of time as well.
+So, that is the geometrical meaning of a gradient that the level surfaces of a function in
+three dimensions for instance, it would be some plane which say phi of x, y, z phi of r
+equal to constant, when along the surface phi does not change at all and the gradient
+points normal to the surface, this is the direction of a grad phi, just as if you had a
+function of two variables, the level curves of this function or h of x y equal to constant
+and the gradient points normal to that level curve, there is level curves at any point.
+Similarly, the direction of a gradient phi in three dimensions is normal to the level
+surfaces phi of x, y, z equal to constant at any point and what we just is discovered is that
+the pressure the force on this liquid we have just discovered on a volume element piece.
+
+(Refer Slide Time: 25:53)
+
+So, force on a volume element p a delta v d v is minus the gradient of the pressure at that
+point r could be a function of t. But, for the moment let us just look at like this, it is a
+static case times d v. Now, if there is an external pressure on the external force on this,
+which is the general case for instance, you put a fluid and the gravity there is in external
+force you to gravity, then you have if f external equal to force per unit mass then the net
+force on the fluid equal to minus gradient p, the force per unit volume then is minus
+gradient p plus rho times of external per unit volume of the fluid.
+So, let us write that out explicitly equal to minus gradient of p plus with density of the
+fluid times F x time, which implies that the gradient of p equal to rho F external for
+equilibrium. So, this is the condition for hydrostatic equilibrium in a fluid, if f external
+which could be a function of space of the coordinate is the force per unit mass of the
+fluid, you multiplied by the density you get the force per unit volume the external force
+and you equated to the gradient of the pressure and that gives you the condition for static
+or hydrostatic equilibrium in this case. Now, immediately you see that when you have a
+gravity fluid and a gravity.
+
+(Refer Slide Time: 28:39)
+
+So, let us put a fluid in a container and this, the z direction and the gravity then we see
+that gradient of p would be equal to minus the density of the fluid times g. Because, that
+is the force in the vertical direction pointing downwards to the minus sign and that is it
+here. But, this quantity has a x component delta p over delta x delta p over y the y
+component etcetera and those are 0. So, this implies that delta p over delta x equal to 0
+delta p over delta y equal to 0, which means that p is really a function only of z, because
+this says that no depends on x no depends on y at all.
+So, this implies that delta p over delta z this same as d p over d z, because there is no
+dependence on x and y at all and this is equal to minus rho g and of course, if you can
+trivially integrate this to write p of z in this case equal to p 0 which is maybe the force or
+the floor of this resell minus over g, which is a statement which is we know immediately
+that the pressure decreases as you go up and it is the largest here and it decreases linearly
+as you go up here the fluid column. So, that is the elementary relation which are already
+familiar with, but it comes from the more general relation which says the gradient of p is
+rho times f external per unit volume.
+
+

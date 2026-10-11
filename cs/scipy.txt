@@ -1,0 +1,8 @@
+
+# create rv random variable object
+    mu1, sig1 = 178, 7.7
+    male_height_rv = scipy.stats.norm(mu1, sig1)
+
+    # draw random samples from the male heights
+    male_sample = male_height_rv.rvs(1000)
+

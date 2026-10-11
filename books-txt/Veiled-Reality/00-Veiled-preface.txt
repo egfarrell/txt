@@ -1,0 +1,223 @@
+
+### Contents
+
+1.  Philosophy and Physics                         (01-Veiled.txt)
+2.  Matter Waves, Superposition, Linearity
+3.  The Rules of Quantum Mechanics
+4.  Comments
+5.  Complements
+6.  The Density Matrix Formalism
+7.  Proper and Improper Mixtures
+8.  Quantum States and the Nonseparability Problem
+9.  The EPR Problem and Nonseparability
+10. On Measurement
+11. Variations on a Bohrian Theme
+12. QM as Universal Theory; Classical Appearances in Quantum World
+13. Ontological Approaches;Hidden Variables etc
+14. Open Realism                                   (14-Veiled.txt)
+15. Veiled, Independent Reality, Empirical Reality (15-Veiled.txt)
+16. Lessons and Hints from Quantum Physics         (16-Veiled.txt)
+17. Postface                                       (17-Veiled-postface.txt)
+
+
+### Preface
+
+This whole book is built on the conviction that anyone who tries
+to form an idea of the world—and of man's place in it—must take
+the findings of quantum physics very seriously. I don't deny the
+difficulty or the need to resort to scientific technicalities.
+
+The truth just stated is not immediately obvious. Quantum physics
+opens wide vistas precisely because it clashes with commonsense
+views; at first, of course, that clash produces dissatisfaction.
+It may take time before one recognizes that the mismatch points
+to a deep and fascinating subject.
+
+- I still remember the strange perplexity I felt as a beginner
+  reading texts on quantum physics and, later, articles on its
+  foundations. Those sources described the relevant facts and the
+  formalism correctly, but I found them unclear about what the
+  authors meant the formulas to represent. Were the rules merely
+  efficient recipes for predicting experiment _outcomes_, or were
+  they intended to describe the very _processes_ the experiments
+  probe?
+    - In some places the argument seemed to rest on the tacit
+      axiom that correctly predicting observations is all we may
+      expect of science, and everything else is just empty words.
+    - Yet in introductions, summaries, and applications (to
+      solid-state physics, thermodynamics, cosmology) the same
+      authors would speak as if the probabilities and other
+      formal quantities referred to events “as they really
+      happen,” expecting me to accept that meaning without
+      question. This inconsistency was frustrating.
+
+- My unease was not relieved by the quantum measurement theories
+  available at the time. It grew particularly acute when I read
+  a then-common suggestion about correlations at a distance: that
+  entanglement could be eliminated simply by describing systems
+  with density matrices instead of state vectors.
+    - Reflecting on this convinced me that any tentative
+      realistic description (in the sense of conventional
+      realism) requires distinguishing proper from improper
+      mixtures, as I called them. The negative but
+      epistemologically significant consequence is that
+      entanglement, or nonseparability, is not merely a quirky
+      feature of the wave-function or state-vector formalism.
+    - In slightly different form it appears in any conventional
+      (that is, hidden-variables–free) quantum-mechanical
+      description that one treats as revealing how “things really
+      are,” whether that description uses density matrices or
+      some other concept.
+    - When John Bell, who worked with me at CERN, told me about
+      his disproof of “local causality,” I at first thought his
+      result was simply another demonstration of the same point.
+    - He convinced me, however, that although violation of local
+      causality and entanglement are closely related, his result
+      is more general because it also applies to quantum theories
+      that admit hidden variables.
+    - I regarded that generalization as crucial:
+        - it showed something philosophy alone had failed to
+          prove, namely that many of our so-called commonsense
+          views of the world (indeed, views inherited from the
+          eighteenth century) are mistaken and cannot be rescued
+          by speculative extensions confined to their conceptual
+          framework.
+        - Viewed this way, `entanglement` and the failure of
+          `local causality` together raise fascinating conceptual
+          problems. I should add that Bell and I agreed amicably
+          that we differed about the directions in which
+          solutions to these problems should most fruitfully be
+          sought.
+
+- This book aims to analyze further that constellation of
+  conceptual problems. In doing so it departs from the mainstream
+  of the scientific literature. Most books on QM fall into one of
+  two categories:
+    - they either focus mainly on mathematical techniques and say
+      little about interpretation, or
+    - they concentrate on epistemological or historical aspects.
+
+- When the latter refer to the mathematical formalism, they
+  rarely go into the detail needed to analyze the implicit
+  philosophical assumptions and epistemological implications of
+  the more elaborate theoretical developments.
+
+- Here I attempt to combine the two approaches. My final
+  objective is interpretation of the existing theory (or
+  theories). I believe that sound views about interpretation
+  cannot be reached without a fairly detailed description of the
+  formulas and physical arguments that constitute the theoretical
+  models—including the most recent ones. Such a description is
+  given in the central part of the book.
+
+- By contrast, the first chapter and the last three chapters
+  focus on the philosophical problems themselves. Chapter 1 is an
+  introduction for physicists: a reminder of essential proposals
+  from past and present philosophical research about reality,
+  experience, and the link between them, with special emphasis on
+  problems raised by physics.
+- The last three chapters (14–16) form the essential part of the
+  book; they present an attempt to extract philosophical
+  implications and suggestions from contemporary knowledge of
+  quantum physics. There are stylistic differences between these
+  four chapters and the rest of the book, reflecting the fact
+  that physics and epistemology are two genuinely different
+  approaches, which I try here to bring closer together.
+
+- My interest in conceptual and interpretive problems should make
+  clear that I am not one of those who reject realism on a priori
+  grounds—even in its so-called naive form.
+- If physics unambiguously offered a picture of the world
+  satisfying the conditions of physicalism (also called “physical
+  realism,” the doctrine that physics is a candidate to describe
+  reality exhaustively and in detail), I would be inclined to
+  accept it.
+
+- My point, however, is that physics does not unambiguously do
+  so, and one main purpose of this book is to make that point
+  clear. This is not easy.
+
+- Elementary claims that merely inspecting the formal structure
+  of QM (Heisenberg relations and so on) suffices to rule out
+  physicalism are incorrect.
+
+- From time to time a theorist proposes a brilliant scheme
+  intended to restore physical realism, and some (though not all)
+  come quite close.
+
+- Several of those theorists are friends whose work I thoroughly
+  admire; I therefore apologize to them collectively that this
+  book contains a critical analysis, not so much of their
+  theories as of the plausibility of regarding any one of them as
+  the true description of reality. That is not to say I gained
+  nothing from their investigations—most chapters of this book
+  testify otherwise.
+
+- I could not, however, benefit from everything published in this
+  vast domain, and I did not attempt an exhaustive review. In
+  particular, I systematically ignored theoretical proposals that
+  do not meet a certain condition of epistemological strictness
+  explained below (Section 1.6).
+
+- I tried to do justice to all proposals that do meet that
+  condition, but I cannot rule out the possibility that
+  I overlooked some. Perhaps I missed the rare idea that would
+  make physical realism scientifically convincing. If later
+  developments show that to be the case, my only excuse will be
+  that I surveyed the field with zeal and impartiality.
+
+- We live at a time when many students in applied fields need to
+  learn the basic ideas and calculation techniques of QM and to
+  do so competently.
+- Students of the philosophy of science would no doubt benefit
+  from the same path, and it would be regrettable if they alone
+  found that path unduly steep. Many of them have been trained
+  more in the humanities than in the natural sciences.
+
+- With this in mind, although my ambition is to tackle delicate
+  questions at the level of experts, I have chosen to begin more
+  or less from the beginning: I explain, even if concisely, the
+  essential elements of quantum-mechanical techniques and give
+  calculation details that experienced theorists are, of course,
+  free to skip.
+
+- The book is intended to be readable by first-year graduate
+  students in physics and, for its main part, understandable by
+  students of epistemology with a smattering of physics.
+
+- It can be seen in some respects as a sequel to my Conceptual
+  Foundations of QM, going more to the core of the philosophical
+  problem and taking account of important theoretical
+  developments since that book appeared.
+    - $MY_BOOKS/Physics/QM/dEspagnat-QM-Foundations-2e.pdf
+
+- I also aimed to make this book fairly self-contained; to that
+  end I incorporated the small introductory scientific chapters
+  (1–7) of Conceptual Foundations with relatively short
+  additions.
+
+- Still, my main purpose in writing this book has been to argue
+  for my own views. In that sense it is not a textbook. I am well
+  aware that the arguments here do not settle matters once and
+  for all.
+
+- In particular, I reiterate that the critical analysis in the
+  central chapters of a set of current physicalist proposals does
+  not have the force of a no-go theorem.
+
+- New, brilliant proposals for reconciling quantum physics with
+  physical realism will no doubt continue to appear: how could
+  one demonstrate in advance that none of them will ultimately
+  prove satisfactory and convincing?
+
+- This subordination to the passage of time is, however, the
+  common fate of all scientific inquiry. Such considerations do
+  not, in my view, undermine the reasoned expectation that the
+  general idea underlying the conclusions of this book will
+  remain credible.
+
+- In other words, it seems to me that, when all is said and done,
+  the notion of a veiled reality emerges with increased
+  plausibility from what is presented here.
+
+- Bernard d'Espagnat Paris and Orsay, 1994

@@ -1,0 +1,6 @@
+perforce setup
+cd ~/perforce_workspace
+echo "P4PORT=perforce.assembla.com:1666" >> p4config.txt
+echo "P4HOST=ef_lboro_test" >> p4config.txt
+echo "P4USER=foxe25" >> p4config.txt
+echo "P4CLIENT=perforce_workspace" >> p4config.txt

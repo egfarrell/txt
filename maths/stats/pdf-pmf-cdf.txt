@@ -1,0 +1,39 @@
+probability pdf pmf cdf
+
+# PMF - Probability Mass Function
+    - (Discrete probability distribution)
+    - If the random variable is discrete, then the probability
+      mass function (PMF) is the probability that the discrete
+      random variable assumes the _exact_ value of x;
+    - i.e., PMF: `P(X = x)`
+
+# PDF - Probability Density Function
+    - (Continuous probability distribution)
+    - If the random variable is continuous, then the probability
+      density function (PDF) is the probability that the
+      continuous random variable assumes a value over an
+      _INTERVAL_ or range;
+    - i.e., PDF: `P(x1 < X < x2)`
+
+# CDF - Cumulative Density Function
+    - The cumulative density function (CDF) associates with
+      either a PMF or PDF
+    - ie the CDF can apply to either continuous or discrete RV's.
+    - The CDF gives the probability the random variable will be
+      less than, or equal to, some value.
+        - CDF: `P(X <= x)`
+        - Discrete 	 PMF --> CDF (step function)
+        - Continuous PDF --> CDF (continuous curve)
+
+# In summary:
+    - PMF:
+        - Probability mass function: probability that discrete
+          random variable will EXACTLY EQUAL a discrete value
+
+    - PDF:
+        - Probability density function: probability that
+          continuous random variable will fall within an INTERVAL
+
+    - CDF:
+        - probability that either a discrete or continuous random
+          variable with take a value of LESS THAN a certain value.

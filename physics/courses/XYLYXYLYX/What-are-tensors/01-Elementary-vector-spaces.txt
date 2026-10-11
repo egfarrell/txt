@@ -1,0 +1,61 @@
+01-Elementary-vector-spaces.txt
+
+$MY_VIDEOS/physics/what-are-tensors/01-Elementary-vector-spaces.mp4
+
+- how to get from a `vector` ---> to a `tensor`?
+
+- we're starting with the _MATHEMATICAL_ concept of a vector
+    - not an arrow
+    - (remember: 3b1b said mathematicians and physicists had
+      different concepts for a vector)
+
+- new notion of a vector: a vector is an element of a _set_
+
+- what kind of SET makes a vector space?
+
+    - well it must have _vector addition_
+    - you put a vector on the left, vector on the right, and the
+      result is a vector
+    - important: addition only works for vectors in the set. It's
+      not a general rule that allows you add vectors from
+      different vector spaces or different spaces altogether. It
+      only allows you take 2 vectors and the output vector is
+      also in the set. (ie closure)
+
+    - put out of a number out of the Real number "bin"
+    - GR: dont worry about complex vector spaces
+
+    - note: linearity actually encompasess TWO notions:
+        - vector addition and scalar multiplication
+
+    - note: only _FOUR_ types of vector space
+        - $MY_NOTES/maths/linear-algebra/vectors-vector-spaces.txt
+
+    - The plus sign for `w+q` is not the same as the plus sign
+      for `r+s` !!!
+        - $MY_IMAGES/physics/what-are-tensors/vector-addition.jpg
+    - the "+" is not the same operation.
+    - They are different operations. (because they operate in
+      different spaces)
+        - $MY_IMAGES/physics/what-are-tensors/cant-add-w-and-r.jpg
+
+    - What's difference between vector space `V` and space `W`?
+        - What can distinguish between two vector spaces?
+        - They're both Real... often there is no way, but
+          sometimes there is a key characteristic:
+            - dimension of the space
+
+### Dimensionality
+    - if I draw a vector out of `V`, whats the minimum number of
+      other vectors I need, to linerly combine them to create
+      `q`?
+    - how many elements in the minimal set? (elements)
+
+### isomorphic
+    -  if two spaces have the same field and Dimension, they are
+       practically the same, apart from the name (isomorphic)
+
+### Advanced spaces!
+    - the cross product, dot product, magnitudes etc dont exist in an
+      elementary vector space... they are added later... more
+      advanced!

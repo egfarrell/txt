@@ -1,0 +1,40 @@
+markov
+
+Markov idea
+    - The future is independent of the past..... 
+        - ... given the _present_!!
+
+- Quite natural really when you think about it...
+
+- If youre looking for information `Xn+1` then `Xn` will give you
+  the most information! Recent data tells you more...
+
+- 1st order model
+    - Prediction depends on current state only
+
+### 2nd order models
+    - when the prediction depends on the TWO previous states
+
+### ergodic
+    knowledge of intial state fades over time
+    And the chain approaches some asymptotic state
+    ie the states mix!
+    The speed at which the intial state gets lost is called the mixing speed.
+
+### Random walk
+    a 2-D markov process with discrete time _and_ discrete
+    space
+
+### Transition probabilities
+    describes liklihood of changing from one state to
+    another
+
+### Transition matrix
+    The entries in the matrix should all be less than one.
+    The individual rows in the matrix should add up to one.
+
+### caveat
+    You cant assume to have perfect knowledge of the current
+    state. There must be some hidden/latent info in the
+    state. This is modelled by _hidden markov models_ HMM!!
+

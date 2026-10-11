@@ -1,0 +1,34 @@
+unix zip/unzip
+
+### view contents
+    unzip -l sample.zip
+
+### zip a folder ('txt')
+    zip -r myfolder.zip ./txt/
+
+### Overwrite existing
+    - An alternative to using the -FS option (or deleting the old
+      ZIP file), is to overwrite the existing ZIP file by having
+      zip write to stdout and redirecting it to the designated
+      file:
+
+    zip -r - foo >foo.zip
+
+    - `-r`       : Add directory and its contents
+    - `-`        : Instead of writing ZIP to a file, write to stdout
+    - `foo`      : The directory to be zipped
+    - `>foo.zip` : Redirect stdout to file foo.zip
+
+    - If foo.zip exists, it will be overwritten by shell
+      redirection, meaning you'll get a brand new ZIP file all
+      the time, every time.
+
+
+### compile from source
+    source
+        http://freecode.com/projects/unzip
+    - make
+        - `make -f unix/Makefile generic`
+        - (the "generic" bit was hard)
+    - executable
+        - `zip` 

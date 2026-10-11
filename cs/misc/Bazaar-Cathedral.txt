@@ -1,0 +1,2518 @@
+A Generation Lost in the Bazaar (2012) (acm.org) 308
+
+
+danblick 10 hours ago [-]
+
+- Slightly OT, but I enjoyed the discussion about (physical
+  building) construction in the book "the Checklist Manifesto".
+  In The Mythical Man Month, Brooks advocates the use of
+  something like the "master builder" model for software. It
+  turns out that in actual (physical building) construction, the
+  master builder model is no longer used, because the
+  construction process has become much too complex to be
+  understood by a single person.
+
+Instead, in construction, they use a system of checks to
+ensure that different experts consult one another so that
+every decision is reviewed by a relevant expert.
+
+I suspect that the "chief architect" approach that Brooks
+advocates may have become obsolete as well since the
+Mythical Man Month was written. Perhaps software developers
+could learn something from the newer methods that replaced
+the "master builder" model in construction.
+
+
+
+
+DenisM 5 hours ago [-]
+
+David Brooks himself wrote as much in 1986:
+
+I still remember the jolt I felt in 1958 when I first heard
+a friend talk about building a program, as opposed to
+writing one. In a flash he broadened my whole view of the
+software process. The metaphor shift was powerful, and
+accurate. Today we understand how like other building
+processes the construction of software is, and we freely use
+other elements of the metaphor, such as specifications,
+assembly of components, and scaffolding.
+
+The building metaphor has outlived its usefulness. It is
+time to change again. If, as I believe, the conceptual
+structures we construct today are too complicated to be
+specified accurately in advance, and too complex to be built
+faultlessly, then we must take a radically different
+approach.
+
+Let us turn nature and study complexity in living things,
+instead of just the dead works of man. Here we find
+constructs whose complexities thrill us with awe. The brain
+alone is intricate beyond mapping, powerful beyond
+imitation, rich in diversity, self-protecting, and
+selfrenewing. The secret is that it is grown, not built.
+
+
+
+
+erelde 1 hour ago [-]
+
+That quote is beautiful but it reminds me a lot of tales of
+hubris, although I do not believe in any god(s), I always
+felt some truth in that mythical sin.
+
+Can we grow designed software? Or, can we design truly
+growing software? I guess it depends on the definition of
+growing you use, "scalable" ? "alive" ?
+
+
+
+
+adrianN 1 hour ago [-]
+
+Refactor, refactor, refactor. Growing things adapt to
+changing circumstances. Software must adapt to changing
+requirements. Refactoring is the only way.
+
+
+
+
+JanezStupar 1 hour ago [-]
+
+This is so important. We all know beautifully "designed"
+API's or libraries.
+
+The secret is that the "elegant" API design you see is
+usually the n-th iteration.
+
+Growing code is much like growing trees. The tree grows
+itself, what it requires is that it is pruned and helped to
+reshape in a fashion that will allow it to stay alive for
+a long time and bear fruit.
+
+But one needs to constantly prune the damn thing.
+
+
+
+
+fauigerzigerk 2 hours ago [-]
+
+>Perhaps software developers could learn something from the
+newer methods that replaced the "master builder" model in
+construction
+
+I don't know. I get the feeling that large construction
+projects suffer from many of the same issues that affect
+software projects.
+
+And every time something goes wrong enough to end up in the
+media, the reason is invevitably that the various
+contractors/experts didn't coordinate properly, that no one
+really feels responsible, that major design flaws were
+overlooked early on and now there's no way to undo them
+without going even further over budget. (Yes, I am aware of
+the selection bias)
+
+Big projects are hard and their hardness increases
+disproportionately with size. If a project's goals are such
+that there can be no "master builder", then things become
+a lot riskier and they go wrong more often.
+
+So I think what we actually want is a bazaar of projects
+where each project is architected and overseen by a master
+builder.
+
+Like with the endless state vs market debates, it's always
+a question of balance, not one of either or.
+
+
+
+
+qwertyuiop924 8 hours ago [-]
+
+...Wait. That sounds a heck of a lot like Linux's leadership
+model (although Linux has somebody on top as well).
+
+
+
+
+sbov 7 hours ago [-]
+
+When reading the Mythical Man Month I got the impression
+that their idea of a "chief architect" is more like today's
+"product manager", not today's "chief architect".
+
+
+
+
+DigitalJack 9 hours ago [-]
+
+The checklist manifesto was a great book. Probably time
+i read it again.
+
+
+
+
+bordercases 9 hours ago [-]
+
+It was too breezy, too slim and too hyped for my taste. The
+insights themselves still are valuable, but perhaps worth
+only half the size of the book.
+
+
+
+
+djtriptych 9 hours ago [-]
+
+But would you have paid $15 for a 25 page pamphlet? :)
+
+
+
+
+13of40 7 hours ago [-]
+
+That's a very good point - I've always felt it was a shame
+that in order for a thesis to be "publishable" you have to
+frame it in 300 to 500 pages. The Design of Everyday Things
+by Don Norman is a great example. It's an awesome book, and
+anyone who's designing user-facing-anything should read it,
+but I think the story could have been told in about half as
+many words.
+
+
+
+
+srtjstjsj 7 hours ago [-]
+
+Are you offended that you got that extra words for free?
+I enjoyed every page -- should Norman have published two
+versions of the book?
+
+
+
+
+kgwgk 4 hours ago [-]
+
+Are you offended when you get extra lines of code for free?
+
+
+
+
+13of40 6 hours ago [-]
+
+No, I liked the book. My point is that there are other great
+ideas out there that we're not exposed to because they're
+100 page ideas rather than 300 page ones. It's less of an
+issue as we go more digital and rely less on traditional
+publishing channels, but there's still a knee there right
+now.
+
+
+
+
+T2_t2 7 hours ago [-]
+
+I actually did. I bought it (accidentally) from
+http://www.goodreads.com/book/show/19327621-summary which is
+a summary of the book. So glad I did - I thought it was
+a little long even in this format.
+
+
+
+
+dsr 11 hours ago [-]
+
+Cathedrals are beautiful. They represent the vision of one
+person or a very small group made real by the hard work of
+hundreds or thousands of skilled and semi-skilled workers
+over dozens of years.
+
+Cathedrals are not, generally speaking, profitable. They
+represent the expenditure of lots of capital over a long
+period of time.
+
+Bazaars don't cost much to start. You can start quite small
+and have a functioning system that does useful things for
+people. They can grow quite large, and when they grow too
+large it becomes difficult to find exactly what you want
+without a really good map. But you can probably quickly find
+a bunch of things that are more or less close to what you
+want.
+
+Cathedrals are not easy or cheap to repair, but the
+investment is so large that people usually prefer to repair
+them. A bazaar that doesn't work out makes some local people
+sad, but they will go to another bazaar that is a little
+less convenient for them, and perhaps do better there.
+
+It's nice to have some cathedrals, because they feed the
+soul. But you need to eat every day, so there will always be
+bazaars, and if you need to make a choice, the bazaar is
+going to win unless you have a lot of resources stored up to
+fall back on.
+
+
+
+
+jaza 6 hours ago [-]
+
+Perhaps what we need are shopping malls. Aren't they, after
+all, the modern cathedrals of consumerism? (And aren't they
+just what we need more of in this world?) :P
+
+Shopping malls aspire to be beautiful (primarily on the
+inside), but they can never be as beautiful or as
+well-architected as cathedrals, in form or in spirit.
+
+Shopping malls have a bigger overhead than bazaars, and are
+less flexible. But their overhead is much less, and their
+flexibility much greater, than that of cathedrals.
+
+Shopping malls provide more foundation and infrastructure
+than bazaars do. A bazaar minus its stalls is just a dusty
+field. A shopping mall minus its shops still has multiple
+levels, maps / directories, elevators / escalators, parking,
+loading docks, etc.
+
+It costs more to set up shop in a mall than in a bazaar, but
+your shop will be more trusted, you won't have to squabble
+for space with your neighbours every day, and you won't get
+blown away by the next storm.
+
+Shopping malls are designed with dedicated spaces that are
+tailored to different businesses. A supermarket has very
+different needs compared to a shoe shop.
+
+Shopping malls are bazaars with a tonne of design,
+engineering, and regulation thrown in. But they're still
+bazaars. They're still where you get your groceries.
+
+
+
+
+mbrock 2 hours ago [-]
+
+A shopping mall is also an example of what some theorists
+call "antimarkets": places which resemble a typical market
+with competition and choice but which are heavily regulated
+and controlled to exclude open participation.
+
+Kind of like if the iOS App Store only had room for 15 apps,
+and Apple Inc decided which, and the roster was only updated
+every few years at most.
+
+
+
+
+pjc50 1 hour ago [-]
+
+To a first approximation, it does only have room for the top
+10/20 apps per category. Discovery is notoriously difficult
+and the benefits of buying your way onto the top 10 are
+validated.
+
+
+
+
+HillaryBriss 5 hours ago [-]
+
+you're on to something good
+
+are you the one who writes "The Shopping Mall and the
+Bazaar" and leads us into a better era?
+
+
+
+
+DonHopkins 5 hours ago [-]
+
+"Software development is hard. Let's go shopping!" -Tech
+Talk Barbie
+
+
+
+
+cvs268 1 hour ago [-]
+
+> Software development is hard. Let's go shopping!" -Tech
+Talk Barbie
+
+...or Yahoo, or Google, or IBM, or Hooli, or
+<Big-Fat-Tech-Giant>.
+
+
+
+
+CookieMon 10 hours ago [-]
+
+> Cathedrals are not, generally speaking, profitable.
+
+This is getting lost in the metaphore, instead of the topic.
+Architected software is profitable.
+
+
+
+
+erikpukinskis 10 hours ago [-]
+
+Architected software would be profitable in fewer scenarios
+if we (software developers) didn't maintain such a high
+barrier to entry. We design our tools for ourselves and
+other professional programmers so that we don't have to
+compete with non-professionals with a better sense of the
+requirements. We force people to come to us, to defer to our
+understanding of how much architecture is necessary. We make
+our codebases just easy enough for a pro developer and no
+easier, refactoring and simplifying only when it becomes
+painful for a pro developer, and no sooner. That way they
+have to keep us as gatekeepers to all code.
+
+It's essentially like you only made building tools for
+cathedrals, and no tools for thatched stick homes, and you
+create a culture around always building a cathedral so no
+one really knows how to build a thatched home. Essentially,
+creating a market irregularity through cultural expectations
+about how serious software has to be and who is going to be
+writing it.
+
+(The complaint people always make when I say this is that
+making software isn't easy, it's hard, and notices couldn't
+possibly build useful software. I would half agree: some
+software problems are hard, and require a grizzled developer
+and some hard planning. But much of software involves no
+difficult computer science problems, and is more about
+understanding requirements well enough to be able to assign
+them to the right basic programming primitive, or a handful
+of common libraries. This is the kind of code that we use
+cultural friction to keep inside Engineering, and build
+cathedral-style, even though it could be done in
+thatched-home style by notices, if we structured our
+codebases for that.)
+
+
+
+
+dietrichepp 10 hours ago [-]
+
+I almost spit out my drink. High barrier to entry? The
+barrier is lower than it ever has been. Any nut-job with
+a few weeks of training can make a shitty website with PHP
+or Node.js and have it instantly accessible to the most of
+the English-speaking world.
+
+Most of the tools I see for software development seem to be
+organized around the needs of the bazaar (or thatched huts)
+not the needs of the cathedral. A million toy languages
+which might solve your problem well, but don't scale to
+a million users. Websites like GitLab and GitHub so you can
+share last week's 1 kloc project with collaborators.
+Libraries that do that one weird thing you need for your
+project, and nothing else.
+
+By comparison, the cathedral builders (Google, Facebook,
+Apple, Microsoft, etc.) seem to be building a lot of their
+own tools. This includes programming languages, frameworks,
+build systems, version control, operating systems, and so
+many other things. They build their own stuff because the
+tools of the bazaar don't work quite well enough for
+cathedrals.
+
+
+
+
+paganel 3 hours ago [-]
+
+> Most of the tools I see for software development seem to
+be organized around the needs of the bazaar (or thatched
+huts) not the needs of the cathedral. A million toy
+languages which might solve your problem well, but don't
+scale to a million users
+
+Not the OP, but when I see comments like this one I do
+realize that sometime HN has a very strong echo-chamber. The
+world doesn't need more than 100 (give-or-take, maybe 1,000,
+maybe 10,000) apps/websites which need to scale to "millions
+of users", a situation which doesn't keep that many workers
+occupied (Google&FB and the like employ much less people
+compared to the industrial giants of the early 20th
+century).
+
+But the world does need millions of apps for the 10-100-1000
+users, if needed built using the "toy languages" you decry.
+If we make it easy enough for people to build these apps,
+using "toy languages" if need be, the world would be in
+a much better place (we'd have higher productivity).
+
+I'll give you my example at the company I used to work for
+in the early 2000s (when the "Cathedral and the Bazaar was
+written"). I was doing some office work, along with my other
+20 or so colleagues, which involved having to check that two
+separate folders on our computers had the same files. This
+took each of us about one-hour each, so, there were 20
+man-hours spent each working day on this mundane task. Lucky
+me I was a (already close-to-dropout) CS student, and I had
+heard about Python and about how easy it was to do stuff
+with it, and lo and behold, it really was. Just:
+
+> import os
+
+> l1 = os.listdir('first folder')
+
+> l2 = os.listdir('second folder')
+
+>a_call_to_a_custom_function_which_was_comparing_l1_to_l2()
+//which was probably quadratic, but it didn't matter
+
+then use py2exe to put it all up in an .exe file which could
+be also run on my colleagues' computers (along with some
+inputs and the like) and that was about it.
+
+A task that used to take an hour each day now was only
+requiring a script/program call. I fail to see how this
+program would have required a grown-up language which would
+need to be scaled to "millions of users", even though it
+proved to be pretty useful. And there are countless examples
+like my anecdotal one I gave above, you just need to go into
+any institution or company office, look at how people work
+on their computers and realize that the world needs millions
+of small programs like mine that would substantially
+increase productivity. The problem is, like the OP said,
+that us, "programmers", like to keep the playing field only
+for ourselves.
+
+
+
+
+ern 8 hours ago [-]
+
+In the business software world, the barrier to entry for
+end-users seems a lot higher than it used to be. Learning
+PHP, standing up a database and getting it all hosted is
+a lot more difficult that taking an application suite like
+MS Access, creating some tables, and then putting forms up
+on top of them.
+
+Microsoft created a tool a few years ago called Lighswitch
+that allowed end-users to throw together CRUD apps quickly,
+and it seems to have been met with deafening silence.
+I wonder if managers and CIOs in BigCorps would tolerate
+their end-users throwing together little apps that solved
+their problems in today's equivalent of VB6, or MS Access
+(the ultimate agile experience since users are solving their
+own problems). Experience suggests not, and although those
+apps could have become unmaintainable, it seems that there
+is little effort being made by vendors to address that
+market, and to provide ease of use, with better
+maintainability and scalability.
+
+
+
+
+manyxcxi 7 hours ago [-]
+
+In the business world the barrier to entry is often imposed
+(and for many good and bad reasons) by the IT/OPs/Security
+teams.
+
+Going to the PHP example, you could pick one of a number of
+deploy and hosting providers and have your code running and
+world visible in minutes for less than a Starbucks coffee
+a week (specific example Laravel Forge + Digital Ocean).
+
+The problem is that even mediocre software developers with
+a couple years of experience can miss critical things in any
+language with any framework that can leave them incredibly
+vulnerable to attack.
+
+For homegrown internal systems, the barrier to entry isn't
+the code, it's putting it somewhere people can access. In ye
+olde days you could slap together some VB6 and throw it in
+an Excel template and have a workable product- but have you
+ever inherited something like that? I have, multiple times.
+It's AWFUL- but I also have made a lot of money on not
+making it awful.
+
+As an engineer, my rapid prototype basically means I eschew
+some things like a cache layer or performance optimization
+for just getting the concept out- but at an organization
+with no real devs, I can see the value in someone who can
+hack together anything with whatever they have to prove the
+idea, then calling in the mercenaries like myself to make
+the concept a real thing. The problem (and expense) usually
+lies in the fact that they wait until the concept is
+completely untenable in its current state and everyone is in
+a panic.
+
+
+
+
+ern 4 hours ago [-]
+
+I agree with you largely. I've inherited plenty of
+unmaintainable code, including a few user-created
+abominations. But that doesn't necessarily mean that the
+idea of end-users writing applications is bad per se,
+rather, that more effort should go into making it harder for
+them to shoot themselves in the foot.
+
+
+
+
+manyxcxi 2 hours ago [-]
+
+I think yes and no. For example, for public web application
+development the barrier is already low enough that you can
+put your entire company at risk pretty easily. I think there
+is little reverence for what it actually means to craft
+a proper web based application, and that it's not even all
+about the code, and then there's the never ending
+maintenance and administration of the server(s).
+
+Now, if you're a spreadsheet jockey and you just need to
+gather and display your data in a non-trivial way, there are
+quite a number of things already out there. Business Objects
+(or whatever it's called now) and Tableau have basically
+formed large companies upon this idea and there's open
+source options like Jasper Reports.
+
+I think the days of being able to slap some VB together and
+write a desktop application are just about completely dead
+in most situations, which means you really do need a vast
+breadth of knowledge that a weekend warrior developer didn't
+need to have a number of years ago.
+
+
+
+
+bpyne 6 hours ago [-]
+
+manyxcxi summed it nicely. I want to highlight part of what
+(s)he wrote.
+
+I've watched this play out for 25 years with dbase, Paradox,
+Access, and countless other tools intended to empower
+end-users. Typically only one person in a User Area (UA) has
+the gumption to want to develop an application. It's wildly
+successful at first. As time goes along, the person devlops
+the app based on new requirements as is true with any app.
+At some point, the complexity exceeds the user's skill and
+time. Often, it's when they want the app to become
+multi-concurrent user.
+
+I saw that one play out around 1995 with an app built on
+Access 2.0. The department had a copy installed on each of
+20 desktops. The manager came to realize it needed to be
+a shared app. The power user didn't know how. My colleague
+spent the better part of a year doing it.
+
+Whatever the reason, IT gets called in. Then we have to
+salvage a good-for-an-amateur app. Usually the app has
+become critical to that department so the developer resource
+has to be pulled from other priorities to salvage the
+situation.
+
+The problem isn't the lack of tools or CIO's protecting
+their turf. It's IT being left with messes when a power user
+gets into trouble. Whether it's Oracle Glue, Access, Gupta
+SqlWindows, Crystal Reports, or Frontpage, the scenario
+consistently plays out the same way.
+
+
+
+
+sgift 4 hours ago [-]
+
+I don't see a problem here. Basically, the amateur build the
+MVP and validated the use case. And when it was shown that
+the software served actually a need (maybe one people
+couldn't even articulate before, but when they saw the app
+they knew "that's fine, I just need this feature too) the
+app got used more. At some point the app will have to be
+replaced. Software ages and rots. My software, your
+software, everyones software.
+
+So, now we are at the point where the app is breaking down
+under its own weight. What do we have now?
+
+- Clear specification: The users already know what they want
+  from the app, something very rare in our business
+
+- Proven value: The app is not something someone designed by
+  looking at people from the outside and saying "I think
+  that can be done better ..." but something which stems
+  from their own daily needs and pains.
+
+- Experience with likely extension points: From the history
+  of the app and where new features had to be bolted on you
+  can already see where new feature requests will likely
+  come in, so a new design can accomodate that
+
+And last but not least: A working app, so you have less
+stress to finish something, but instead can iterate on your
+new version until it really is better than the current
+version, without anyone bothering "when is it finished? when
+is it finished? We need that yesterday. When is it
+finished?!"
+
+
+
+
+haimez 7 hours ago [-]
+
+Maybe this is an argument for the inherent complexity of the
+solution being (at least) an order of magnitude more than
+the tools themselves?
+
+Honestly, I'm very unimpressed with tools these days solving
+actually useful problems BECAUSE they're so dependent on
+their assumptions of the simplicity of the problem space.
+
+I don't think we're disagreeing, necessarily. Just
+speculating on how to put a conclusion on the end of your
+thought.
+
+
+
+
+erikpukinskis 8 hours ago [-]
+
+> High barrier to entry? The barrier is lower than it ever
+has been.
+
+I agree with you, but everything is relative. It's expensive
+to produce a custom microprocessor, but it's cheaper than
+it's ever been.
+
+> Any nut-job with a few weeks of training can make a shitty
+website with PHP or Node.js and have it instantly accessible
+to the most of the English-speaking world.
+
+The barrier to entry can be much lower than that. Someone
+without any programming experience could fork and deploy
+a Node service in 60 seconds if the tools were designed for
+that. I think you and I are just putting our parameters for
+"low" and "high" in different places. You are comparing
+Google (cathedral) to entry-level programmers (bazaar). I am
+comparing a random engineer in your company (cathedral) to
+one of your customer support staff who is requesting a copy
+change (bazaar).
+
+Two totally separate conversations.
+
+
+
+
+dietrichepp 6 hours ago [-]
+
+> It's expensive to produce a custom microprocessor, but
+it's cheaper than it's ever been.
+
+My impression is that it's more expensive these days, which
+is why we don't see as many startups like MOS or Acorn, and
+see instead partnerships between larger companies. It also
+seems less likely for anyone producing an ASIC to get funded
+in the first place these days. I couldn't find good data to
+settle the cost issue, though.
+
+> I am comparing a random engineer in your company
+(cathedral) to one of your customer support staff who is
+requesting a copy change (bazaar).
+
+I don't understand this argument. I'm not sure what "copy
+change" means in context, and I don't know how customer
+support relates to the discussion.
+
+I guess the main point I was trying to make was that the
+tooling for bazaar-style development is at your fingertips
+from the moment you sit down at a computer, but the
+cathedral is harder to make and the publicly available tools
+aren't as good.
+
+
+
+
+winstonewert 8 hours ago [-]
+
+You make it sound like we deliberately make our code hard to
+work with. That's absurd. Code being hard to work with is
+the natural state, unless you work really hard to avoid it.
+
+
+
+
+ccvannorman 6 hours ago [-]
+
+My thoughts exactly. I'll be damned if I'm going to put
+additional time and effort into meeting some "just hard
+enough" spec in order to secure my job for the future.
+
+1) I'm lazy 2) I am not worried about job security
+
+Does anyone actually, honestly, incorporate "how can I keep
+the application of my skills here the right amount of
+inaccessible to others?" into their time spent on project?
+Shame on you.
+
+
+
+
+caf 8 hours ago [-]
+
+I think you have a blind spot for just how much shantytown
+style software development goes on in tools like MS Excel,
+MS Access and Oracle APEX.
+
+
+
+
+Annatar 3 hours ago [-]
+
+We design our tools for ourselves and other professional
+programmers so that we don't have to compete with
+non-professionals with a better sense of the requirements.
+
+In all my decades of programming, I have never met
+a non-professional with good, let alone better sense of
+requirements. A layman does not think in terms of details;
+they think in terms of abstractions, often in terms of
+castles in the sky. The problem is that computers are the
+exact opposite of abstractions and castles in the sky:
+exact, unforgiving, and dumb.
+
+In fact, in all my decades of programming and working with
+computers, in my journeys across two continents, the number
+of professionals with a good sense of requirements I have
+met can be counted on the fingers of my one hand. If that is
+not disheartening, I do not know what is. It's emotionally
+and psychologically devastating to me personally. It's
+extremely depressing to even think about it. What does it
+say about our profession?
+
+As for writing tools for ourselves, learn UNIX, and then
+you'll learn of the UNIX programming model:
+
+write programs which work with other programs; write
+programs with the notion that the output of your program
+could very well become another program's input. Write
+programs which accept ASCII input from other programs, for
+that is a universal interface. Be liberal in what you
+accept, and conservative in what you send.
+
+
+
+
+Clubber 8 hours ago [-]
+
+A few points just for fun:
+
+1. Christianity, the group who builds Cathedrals, is
+probably the most profitable organization in the history of
+mankind.
+
+2. Bazaars blow away when the wind picks up. If too many
+people show up, things start falling down. Cathedrals, and
+their close cousins, castles, last centuries.
+
+3. I think Bazaars have their place, when you really need to
+ramp up something to show. We used to call that prototyping.
+If it gets past that, you gotta build it right eventually.
+
+
+
+
+eggy 2 hours ago [-]
+
+Point 3 is what I consider a good model for the building
+metaphor. Let Bazaars spring up where needed and wanted.
+When the ground is proven, then clear and build
+a well-architectured Bazaar, not necessarily a full-blown
+cathedral unless it really calls for it. This sometimes
+happens when codebase if re-written from scratch with the
+old code as reference, not just cleaning up old code.
+
+I think AutoDesk did this when Inventor came along, but I am
+not sure. A big re-write if ever there were one.
+
+
+
+
+hexane360 7 hours ago [-]
+
+2. Bazaars pop back up seconds after they blow away.
+http://youtu.be/MENjFkEAj9g
+
+
+
+
+taneq 5 hours ago [-]
+
+Yeah, but nothing's quite where you left it, your favourite
+curry stall is gone for good, and you'll never be able to
+get a refund on that thing you bought that stopped working
+the day before the storm.
+
+
+
+
+happyslobro 5 hours ago [-]
+
+An epic win for cross platform compatibility ;)
+
+
+
+
+aaron695 7 hours ago [-]
+
+> 1. Christianity, the group who builds Cathedrals, is
+probably the most profitable organization in the history of
+mankind.
+
+I don't need to be the richest organization ever. I'd be
+happy for 1000th place and those billions rather than
+overreaching for number one and the risk that entails.
+
+
+
+
+wiz21 2 hours ago [-]
+
+2. Cathedrals, and their close cousins, castles, last
+centuries
+
+Business problem spaces don't last centuries. Algorithm do.
+
+
+
+
+derefr 11 hours ago [-]
+
+You can build a cathedral around the stalls of a successful
+bazaar, no? Like OSX or Android.
+
+
+
+
+adamnemecek 10 hours ago [-]
+
+macos (nee osx) is the result of combining freebsd and the
+mach kernel, both very cathedraly technologies.
+
+
+
+
+mturmon 7 hours ago [-]
+
+And now we see just how confused this discussion is. It's
+conflating a bunch of concepts via a historically weighted
+analogy, which itself has a lot of baggage at this point.
+
+For more, see this perceptive comment:
+https://news.ycombinator.com/item?id=12251705
+
+
+
+
+nickpsecurity 5 hours ago [-]
+
+I'd consider what's on top the more cathedraly part. It has
+the consistency in design and implementations. Merging
+FreeBSD with Mach might have been centralized developers
+looking for good results but actual results seem a bit more
+bazaar. QNX was the older cathedral of mixing UNIX and
+microkernels with good design + performance. There were
+others but it stands out.
+
+
+
+
+Ologn 10 hours ago [-]
+
+Android a cathedral?
+
+If you wanted tabs in Android prior to 13, you'd setup
+a TabHost with a LocalActivityManager
+( https://developer.android.com/reference/android/widget/TabHo...
+).
+
+Then in version 11 ActionBar.Tab is added and
+LocalActivityManager is deprecated in version 13.
+
+By version 21 they became bored with that and deprecated it
+( https://developer.android.com/reference/android/app/ActionBa...
+).
+
+You wouldn't know it was deprecated though as the most
+current training documentation still recommends using this
+now-deprecated method
+( https://developer.android.com/training/implementing-navigati...
+). All you are left with is a pointer to a vague, ambiguous
+page in the context of the deprecation method. Welcome to
+the cathedral of Android developing.
+
+BTW the release dates for these APIs:
+
+    API 11 - February 2011 API 13 - July 2011 API 21
+    - November 2014
+
+The annoyance isn't that they changed it, it's that they
+didn't like the old way, so they changed it, then three
+years later they changed it again. They do this all the
+time. Plus they deprecated it, but still recommend the
+deprecated method in the tutorial, and leave it as a mystery
+how it should be implemented in current best practices.
+
+The current most up-to-date tutorial on their web site is
+chock full of recommending things which they deprecated
+already.
+
+
+
+
+anabis 10 hours ago [-]
+
+I wish they would at least put dates on the documentation.
+I find myself reading halfway through a outdated tutorial
+before some names or versions makes me realize it.
+
+
+
+
+flukus 10 hours ago [-]
+
+I wish google would favor newer, more accurate solutions. Or
+at least provide away to flag no longer useful content.
+
+
+
+
+pjmlp 5 hours ago [-]
+
+And that is just one example, each Android release is full
+of such examples.
+
+Then we also have the whole story with the NDK, after
+3 years having officially deprecated Eclipse, only now they
+are finally getting something comparable to the CDT.
+
+The experimental Gradle plugin for the NDK still doesn't
+work that well, just got replaced by something else in the
+stable Gradle plugin, which is also kind of legacy support,
+because the way forward seems to actually be cmake. All
+because that is what Clion knows anyway.
+
+And as usual for these things, it is documentated across
+Android samples, Git commit messages and blogs.
+
+
+
+
+HillaryBriss 10 hours ago [-]
+
+Agree. Definitely no cathedral.
+
+And what about customizing a Spinner's font and background
+color and popupBackground color and putting a non-standard
+element at the top?
+
+And the amount of time it took before Android got percentage
+based spacing in layouts?
+
+And the fun of remembering what UI attribute-values like
+android:gravity="center_horizontal",
+android:layout_centerHorizontal="true" and
+android:layout_gravity="center" mean?
+
+And the awkwardness of using non-standard typefaces and
+using things like the RecyclerView and it's weird Adapter?
+
+And the fact that for some reason they used an XML element
+named "layout" when they implemented their data binding
+feature?
+
+And the fact that some attribute names are camelCased while
+others are underscore_cased?
+
+And the ease with which memory leaks are introduced by
+inadvertently closing around context instances because you
+need context instances all over the place because the
+Activity is a god object?
+
+It's all so very ... not ... like ... a cathedral.
+
+
+
+
+pjmlp 5 hours ago [-]
+
+Sometimes I have this feeling that they just offshore
+everything and just do some kind of integration at Mountain
+View.
+
+
+
+
+phkamp 3 hours ago [-]
+
+(Author of the essay here)
+
+It is discussions like this which make me truly admire
+Douglas Adams for his insights and ability to express them.
+
+For instance, when I read through the debate here, I can't
+help notice how many of the arguments are really variations
+of "It's a bypass! You've got to build bypasses! Not really
+any alternative."
+
+
+
+
+isuckatcoding 2 hours ago [-]
+
+For me the highlight was:
+
+'That is the sorry reality of the bazaar Raymond praised in
+his book: a pile of old festering hacks, endlessly copied
+and pasted by a clueless generation of IT "professionals"
+who wouldn't recognize sound IT architecture if you hit them
+over the head with it.'
+
+I was hoping for some kind of expansion or attempt at
+a solution here (which of course would be non-trivial).
+
+
+
+
+phkamp 2 hours ago [-]
+
+The (only) solution is for people to care about quality in
+computing.
+
+There's still too much money to be made on kludges for that
+to happen.
+
+
+
+
+pjc50 1 hour ago [-]
+
+.. and no money to be made on quality.
+
+It's Akerlof's "Market For Lemons" writ large. Users can't
+assess the quality of software before they buy it and sink
+ages of their own time into learning it. Often users can't
+assess quality problems even after they've bought it. So the
+market isn't going to reward quality.
+
+(The original paper was about cars; now we have software in
+our cars the problem is twice as bad. VW 'defeat devices'
+and Toyota 'unintended acceleration' passim).
+
+
+
+
+sutro 2 hours ago [-]
+
+Thanks for your words and your code, phk. Thanks especially
+for Varnish, a beautiful cathedral.
+
+
+
+
+veddox 20 minutes ago [-]
+
+It sounds like a lot of stuff that the author complains
+about falls under Sturgeon's Law. To paraphrase him: "Sure,
+90% of FOSS is crud. That's because 90% of everything is
+crud."
+
+Not to lessen the many valid criticisms that the article
+contains, but I think the low average quality of code can be
+adequately explained with the above law.
+
+
+
+
+vessenes 10 hours ago [-]
+
+And yet..I think this critique gets less strong as time goes
+on.
+
+The amount of productivity available to Mr. Kamp for free
+today is conservatively double or triple that available in
+1999. Databases, web frameworks, scale know-how, IDEs,
+hosting platforms, the list goes on.
+
+He harkens back, sadly, to an era in which codebases like
+Genuity Black Rocket cost $100k in licensing, and ran on
+$30k/month Sun servers. Seriously.
+
+Languages are faster, development times are shorter, and
+chips are WAY faster. And, code can be pushed out for
+tinkering and innovation onto github for free. Combine that
+with his estimate that we have 100x more people in
+computing, and the combination is a riot of creativity,
+crap, fascinating tech and everything in between.
+
+The bazaar is messy, but I'm not aware of any solid
+critiques which show cathedrals are more efficient at the
+multiples-of-efficiency kind of gains we get from legions of
+self-interested, self-motivated coders.
+
+
+
+
+_bpo 10 hours ago [-]
+
+> Languages are faster, development times are shorter, and
+chips are WAY faster.
+
+This is due to Moore's law, not the software design choices
+that the article bemoans. Those $30k/month Sun servers were
+many times faster and cheaper than the earlier machines they
+replaced as well.
+
+
+
+
+vessenes 9 hours ago [-]
+
+While Moore's law helps, languages are more expressive,
+safer, more performant and have more batteries included
+yielding a whole bunch of improvements.
+
+We've had software and hardware gains, massive ones, and
+they compound.
+
+
+
+
+ckastner 3 hours ago [-]
+
+> The bazaar is messy, but I'm not aware of any solid
+critiques which show cathedrals are more efficient at the
+multiples-of-efficiency kind of gains we get from legions of
+self-interested, self-motivated coders.
+
+The article isn't about efficiency, it's about quality. The
+assertion is "Quality happens only when someone is
+responsible for it."
+
+
+
+
+dkarapetyan 5 hours ago [-]
+
+How many of those languages were developed in the bazaar
+style? All the ones I can think of came from a single person
+designing things from first principles and taking
+inspiration from other cathedrals around them. Lisp, Scala,
+Ruby, Smalltalk, Prolog, Typescript, etc. are cathedrals.
+The one bazaar IDE I can think of is Eclipse and it's
+terrible. Visual Studio and Visual Studio Code on the other
+hand are much more sensible and again it's because they're
+cathedrals.
+
+
+
+
+jdminhbg 3 hours ago [-]
+
+Another bazaar IDE is Emacs, and I'd say it's not terrible,
+although YMMV.
+
+I'm not sure how you can say Lisp is a cathedral; it's not
+even "a" anything. Common Lisp, Racket, Clojure, Emacs Lisp,
+etc., many of which are themselves bazaars. Ruby, for
+another example, may have started as one person's vision,
+but now the canonical implementation is a big multisourced
+effort, and there are other implementations with lots of
+uptake that aren't directed or blessed by the mainline Ruby.
+
+
+
+
+RachelF 10 hours ago [-]
+
+Having seen the source for a non-Bazaar OS (Windows), I can
+say that they are not built like cathedrals:
+
+Most of the original developers have long since moved on,
+there are design problems, various teams and managers
+rebuild or duplicate work, and management sometimes imposes
+big changes just before release.
+
+Software quality is hard to judge from the outside, and
+takes longer to build.
+
+
+
+
+aidenn0 7 hours ago [-]
+
+That still sounds like a Cathedral. The whole point of
+a Bazaar is that there is nobody to impose big changes.
+Also, in the original essay the Cathedral wasn't Microsoft,
+it was GNU.
+
+
+
+
+flukus 10 hours ago [-]
+
+This is a good point, I wonder if cathedrals really exist in
+the real world? I suspect they are all just isolated
+bazaar's.
+
+
+
+
+dfox 9 hours ago [-]
+
+Windows (at least for userspace components) has
+significantly less self-contained modules (which thus
+contain larger amounts of functionality) than any modern
+unix-based system and there are almost no modules that are
+widely used and not supplied by Microsoft (excluding stuff
+that is ported from unix and various third-party hardware
+APIs). One of reasons for that is probably that before .NET,
+there was essentially no support in VS for building
+applications as anything other than big self-contained .EXEs
+and the current solution/project mechanism leaves much to be
+desired.
+
+
+
+
+asveikau 6 hours ago [-]
+
+What the hell are you talking about?
+
+Just take your Unix mentality and make a few substitutions:
+
+* gcc -> cl.exe
+
+* ar -> lib.exe
+
+* ld -> link.exe
+
+* make -> nmake.exe
+
+* libfoo.so -> foo.dll
+
+And there you have it, the world that "didn't exist before
+.NET" ... This is crazy amounts of ironic because Windows
+had DLLs at a time when shared libraries were not so much
+a thing on Unix. Not to mention things like COM which are
+all about creating de-coupled components.
+
+
+
+
+dfox 2 hours ago [-]
+
+I'm not saying that it wasn't possible, but that it wasn't
+exposed in Visual Studio in usable way.
+
+As for COM, it seems to me that most common reason why
+something developed by some ISV is separate DLL is that it's
+COM component.
+
+
+
+
+marcus_holmes 6 hours ago [-]
+
+I still miss COM. It had its problems, sure, but it worked
+really well.
+
+I haven't seen anything since that allowed such decoupled
+development
+
+
+
+
+mike_hearn 1 hour ago [-]
+
+I think you have rose tinted classes on.
+
+COM is/was a rats nest of confusing and frequently
+duplicated APIs with insanely complicated rules that by the
+end really only Don Box understood.
+CoMarshalInterThreadInterfaceInStream was one of the simpler
+ones, iirc. COM attempted to abstract object language,
+location, thread safety, types, and then the layers on top
+tried to add serialisation and documented embedding too,
+except that the separation wasn't really clean because
+document embedding had come first.
+
+Even just implementing IUnknown was riddled with sharp edges
+and the total lack of any kind of tooling meant people
+frequently screwed it up:
+
+https://blogs.msdn.microsoft.com/oldnewthing/20040326-00/?p=...
+
+The modern equivalent of COM is the JVM and it works wildly
+better, even if you look at the messy neglected bits (like
+serialisation and RPC).
+
+
+
+
+flukus 5 hours ago [-]
+
+It came back with a vengeance in windows 10.
+
+
+
+
+marcus_holmes 1 hour ago [-]
+
+really? I must have missed that... I stopped doing windows
+dev around Vista, because Vista.
+
+Any details?
+
+
+
+
+douche 6 hours ago [-]
+
+Do you remember DLL hell? Pepperidge Farms remembers /s
+
+
+
+
+pacaro 8 hours ago [-]
+
+At my first job (94-97) we were writing a (16bit) Windows
+application that was a relatively slim EXE and several
+hundred DLLs. This wasn't necessarily the mainstream
+approach, but it was supported just fine by the tools. What
+didn't really exist was a mechanism to safely use DLLs from
+3rd parties, and sometimes even from MS. DLL hell was very
+real, but shared objects in any system will always have the
+same challenge. You are at the mercy of the module writer
+not breaking binary compatibility without bumping a version
+number (or part thereof)
+
+
+
+
+Clubber 8 hours ago [-]
+
+Well, in all fairness, that's a 30+ year old codebase. There
+have been a lot of fingers in there and a lot of hard
+deadlines.
+
+
+
+
+amasad 11 hours ago [-]
+
+I've been thinking a lot about this in the context of
+software development tools. It is now just expected that
+IDEs, compilers, tooling etc are free and OSS. On the one
+hand this enables bottom-up innovation and shorter
+development cycles. On the other hand setting up
+a development environment is a royal pain in the butt. And
+a big turnoff for newbies -- they begin to think that
+programming is some sort of IT job about installing and
+troubleshooting software. Even when you manage to set
+everything up there is constant maintenance cost as you
+update software and as new things come out.
+
+At the very least, I would love to see companies created
+around popular open source tools and verticals to create
+designed end-to-end experiences. Download, double-click,
+start coding, and see something on the screen.
+
+
+
+
+douche 10 hours ago [-]
+
+There are non-terrible development stacks. Some of them are
+even free. Unfortunately too much of it is endless
+turtles-all-the-way-down yak shaving marathons, like in the
+JS world. I forget whether I'm supposed to grunt, gulp,
+babble, or barf.
+
+You just have to get out of the churn-for-churn's-sake
+cesspools. There are high-quality, stable software stacks
+out there, where the Cambrian explosions and rediscovery of
+ideas from a generation ago have already passed.
+
+
+
+
+qwertyuiop924 8 hours ago [-]
+
+>Unfortunately too much of it is endless
+turtles-all-the-way-down yak shaving marathons, like in the
+JS world. I forget whether I'm supposed to grunt, gulp,
+babble, or barf.
+
+I don't use any of 'em. If you can afford to give the finger
+to those not running in a near-POSIX environment, you can
+just use makefiles or npm scripts: write your code, and run
+shell scripts to build it, the way God, Doug, Dennis, Brian,
+and Ken intended.
+
+As for good dev environments, I will not leave my beloved
+emacs (C-x C-e in geiser-mode means that you can run your
+software as you write it, and I love it: Most dynamic
+languages have something similar), but that would intimidate
+newbies. Gedit and a shell is probably the best environment
+to start them with: It's about as simple as you get, and
+every developer is expected to have a rudimentary knowledge
+of shell, so best to start early.
+
+
+
+
+abc_lisper 9 hours ago [-]
+
+>  Unfortunately too much of it is endless
+turtles-all-the-way-down yak shaving marathons, like in the
+JS world
+
+Laughed for 5 mins on this. So true! Somehow we are expected
+to take this into stride.
+
+
+
+
+csours 10 hours ago [-]
+
+And if you work behind a corporate proxy, expect all of the
+above to be an order of magnitude worse. Oh you set the
+proxy setting in the IDE/Shell/Package Manager? You forgot
+about x, y and z; and websites foo, bar, and bas are
+blocked!
+
+
+
+
+superuser2 6 hours ago [-]
+
+Transparent proxies and 802.1x auth have been around for
+a while. Even my high school got off the "you must configure
+a proxy server in every application" train. IMO that is just
+poor IT.
+
+
+
+
+voltagex_ 10 hours ago [-]
+
+I remember a few years ago, before Git had NTLM support (for
+proxies), I had to use all kinds of terrible hacks to get
+online. Recently, the proxy I'm behind for at least 8 hours
+a day has been changed to accept Basic and Negotiate, but
+I didn't realise that until I'd spent a not insignificant
+amount of time yelling at NPM.
+
+Even if you do get online, don't forget to configure the
+MITM CA cert!
+
+Next up, apps that try to execute from %LOCALAPPDATA%
+(Squirrel installers). This is blocked by most AppLocker
+configs.
+
+Isn't "enterprise" computing fun?
+
+
+
+
+csours 10 hours ago [-]
+
+Recurrent calamities, fires and earthquakes hit the Grand
+Bazaar. The first fire occurred in 1515; another in 1548.[9]
+Other fires ravaged the complex in 1588, 1618 (when the Bit
+Pazari was destroyed), 1645, 1652, 1658, 1660 (on that
+occasion the whole city was devastated), 1687, 1688 (great
+damage occurred to the Uzun Carsi) 1695, 1701.[14] The fire
+of 1701 was particularly fierce, forcing in 1730-31 Grand
+Vizier Nevşehirli Damad Ibrahim Pasha to rebuild several
+parts of the complex. In 1738 the Kizlar Aĝasi Beşir Ağa
+endowed the Fountain (still existing) near Mercan Kapi.
+
+https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul#History
+
+
+
+
+spitfire 6 hours ago [-]
+
+That's a good idea, maybe the Baazar needs a good fire.
+Fires help forests stay healthy returning a lot of biomass
+for new healthy forests to grow.
+
+Maybe the ecosystem needs a good fire to clear out the
+diseased old growth?
+
+
+
+
+kardos 4 hours ago [-]
+
+> Maybe the ecosystem needs a good fire to clear out the
+diseased old growth?
+
+Ehhh, the analogy works better in terms of competing
+species. If a stronger invasive species rolls in and takes
+over due to raw excellence, we can see the eviction of the
+old cruft. For example, once the dust is finally settled in
+a few more years, we may come to see systemd as such
+a force.
+
+
+
+
+haddr 11 hours ago [-]
+
+It's a very nice read with many good points, but any person
+with some experience in IT projects could argue with it. The
+author is taking one side without any self-criticism.
+
+It is true that configure scripts are probably doing some
+useless things, "31,085 lines of configure for libtool still
+check if <sys/stat.h> and <stdlib.h> exist, even though the
+Unixen, which lacked them, had neither sufficient memory to
+execute libtool nor disks big enough for its 16-MB source
+code", etc. But then what is the alternative? Writing
+a configure module each time by every programmer who wants
+to release some software? This is called code reuse and yes,
+it's not perfect but it saves time. By not reinventing the
+wheel again and again. By reusing something that is stable
+and has been there for some time. Probably such thing is
+generalizing over many architectures, and making useless
+things, but then again, who cares for some extra 5-10
+seconds of the "configure" command, when you are covered for
+all those strange corner cases that it already handles?
+
+
+
+
+phkamp 3 hours ago [-]
+
+The alternative ?
+
+You could start out removing the autocrap checks for
+<sys/stat.h> and <stdlib.h>.
+
+Then you could eliminate all the other autocrap checks which
+come out one and the same way on every single OS in
+existence.
+
+And in all likelyhood, you would find out that you don't
+actually need autocrap at all, because the remaining two
+checks can be done with an #ifdef instead.
+
+
+
+
+mjevans 10 hours ago [-]
+
+Mostly, he's lamenting the need for it. The fact that after
+3 decades this thing that every modern OS needs isn't
+a standard.
+
+It actually is kind of silly that you can't depend on this
+stuff being abstracted, but instead must individually test
+it instead of asking a reference on a given system.
+
+
+
+
+adekok 2 hours ago [-]
+
+> who cares for some extra 5-10 seconds of the "configure"
+command
+
+For me, it's closer to a minute. "configure" is good enough
+that it does the job, and it's hard to replace it.
+"configure" is bad enough that I loathe it with emotions
+that words cannot describe. It's design is terrible. It's
+slow. It's opaque and hard to understand. It doesn't
+understand recursion (module code? pshaw!)
+
+automake is similarly terrible I looked at it 20 years ago,
+and realized that you could do 110% of what automake does
+with a simple GNU Makefile. So... that's what I've done.
+
+I used to use libtool and libltdl in FreeRADIUS. They
+gradually became more pain than they were worth.
+
+libtool is slow and disgusting. Pass "/foo/bar/libbaz.a",
+and it sometimes magically turns that to "-L/foo/bar -lbaz".
+Pass "-lbaz", and it sometimes magically turns it into
+linking against "/foo/bar/libbaz.a".
+
+No, libtool. I know what I'm doing. It shouldn't mangle my
+build rules!
+
+Couple that with the sheer idiocy of a tool to build
+C programs which is written in shell script. Really? You
+couldn't have "configure" assemble "libtool.c" from
+templates? It would only be 10x faster.
+
+And libltld was just retarded. Depressingly retarded.
+
+I took the effort a few years ago to replace them both.
+I picked up jlibtool and fixed it. I dumped libltld for just
+dlopen(). The build for 100K LoC and ~200 files is about 1/4
+the time, and most of that is running "configure".
+Subsequent partial builds are ~2s.
+
+If I every get enough time, I'll replace "configure", too.
+Many of it's checks are simply unnecessary in 2016. Many of
+the rest can be templated with simple scripts and GNU
+makefile rules.
+
+Once that's done, I expect the build to be ~15s start to
+finish.
+
+The whole debacle around configure / libtool / libltdl shows
+that terrible software practices aren't new. The whole NPM
+/ left-pad issue is just "configure" writ large.
+
+
+
+
+xapata 6 hours ago [-]
+
+> writing a configure module each time
+
+No, he suggested writing the code to be cross-platform so
+that configuration at compile time is unnecessary.
+
+
+
+
+technofiend 9 hours ago [-]
+
+I'm not sure why you wouldn't pack the config chains like
+a fractal of dependencies and only probe (for instance) for
+Fortran if it's required.
+
+
+
+
+endgame 9 hours ago [-]
+
+Didn't libtool 2.0's autoconf macros do away with the need
+to check for CXX and F77 on totally irrelevant projects?
+
+
+
+
+x0x0 10 hours ago [-]
+
+Insane complexity in build systems just makes your life sad.
+Trust me, I know -- I write java for a living. We have ivy,
+maven, ant, gradle, sbt, leiningen, and I'm sure a few more.
+
+
+
+
+d_burfoot 9 hours ago [-]
+
+Hey, I write Java for a living and my build script is just
+a Python program that marshals a javac call.
+
+
+
+
+qwertyuiop924 8 hours ago [-]
+
+I write scheme not for a living. My build script is a scheme
+file or a makefile, depending on the project.
+
+The build complexity is one of the reasons I stay away from
+Java: If these people think they need XML for builds, what
+other needlessly complex horrors have they perpetrated? And
+that sort of thing.
+
+Do you have your buildscript template on github?
+
+
+
+
+mike_hearn 1 hour ago [-]
+
+The Maven POM syntax might look bloaty to modern post-XML
+eyes, but it's not actually complicated: a typical POM only
+specifies the name of the project and its dependencies. The
+rest is typically all done by convention. It's also purely
+declarative so ordering doesn't matter.
+
+M4 and sh are very concise languages. Nonetheless autotools
+is orders of magnitude more complex than Maven. You really
+can't compare at all.
+
+At any rate, if you want a more concise syntax there is
+gradle (but it's a bit slower as it's actually executing
+a real scripting language) and, perhaps a nice middle
+ground, a thing called Polyglot Maven which is the same
+build engine but with a variety of non-XML syntaxes. The
+YAML one is quite nice:
+
+https://github.com/takari/polyglot-maven/blob/master/poms/po...
+
+That way you get simple syntax and a simple model, but still
+with lots of features.
+
+
+
+
+quantumhobbit 5 hours ago [-]
+
+I'm beginning to think that build scripts should be written
+in the language they are building, or a more expressive
+language. So many seem to go in the other direction.
+
+
+
+
+hornetblack 38 minutes ago [-]
+
+I've written build scripts in Rust. I take's flippin'
+forever (relative to shell or make). But at least it has
+proper error checking.
+
+One of the guys working on Redox OS make a library called
+cake which provides macros for a Makefile style script:
+https://github.com/ticki/cake
+
+
+
+
+flukus 5 hours ago [-]
+
+I disagree. The worst problems I see with build scripts are
+that they are trying to do too much, create branches/tags of
+themselves, be environmentally aware, etc.
+
+Limited build tools are a good thing.
+
+
+
+
+ashitlerferad 2 hours ago [-]
+
+I disagree. We need declarative build systems instead so
+building is auditable and doesn't require arbitrary code
+execution.
+
+
+
+
+jesstaa 5 hours ago [-]
+
+"the ruins of the beautiful cathedral of Unix, deservedly
+famous for its simplicity of design, its economy of
+features, and its elegance of execution"
+
+unix is the bazaar enabler. An OS that is so simple as to be
+mostly useless without third party additions but also
+without enough of an overall design to give the third
+parties much of a guide on how things should fit together.
+The mess that unix enabled is also the reason we can't get
+away from it and move on to better architectured systems.
+
+
+
+
+asragab 10 hours ago [-]
+
+I love how this article makes its reappearance on HN every
+two years...
+
+https://news.ycombinator.com/item?id=4407188
+https://news.ycombinator.com/item?id=8812724
+
+
+
+
+HillaryBriss 5 hours ago [-]
+
+nice
+
+
+
+
+smegel 10 hours ago [-]
+
+> The bazaar meme advocated by Raymond, "Just hack it," as
+opposed to the carefully designed cathedrals
+
+More like carefully designed procedures (not the software
+kind), meetings, and suit ties.
+
+The waterfall process can be as technically deficient as you
+want it to be, just like agile.
+
+
+
+
+kuharich 2 hours ago [-]
+
+Previous discussions:
+http://news.ycombinator.com/item?id=4407188
+https://news.ycombinator.com/item?id=8812724
+
+
+
+
+njharman 5 hours ago [-]
+
+For any given software thing you can
+
+1) pay for the cathedral
+
+2) use the bazaar, possibly needing to seed it
+
+3) do without
+
+Since 1) is typically very expensive and lacks guarantees of
+suitability to purpose and continued existence, the ROI is
+so massively negative few can even try it. 3) often isn't an
+option.
+
+the bazaar is an inevitability. No one has been mandating it
+for past decades. No laws enforce it. It occurs cause it is
+the only available/possible option.
+
+
+
+
+sbarski 1 hour ago [-]
+
+One of my favourite ACM articles. I think I read it twice
+the first time I came across it. Also bought "The Design of
+Design" thanks to it.
+
+
+
+
+jmspring 3 hours ago [-]
+
+When it comes to ecosystems, the definition of the Cathedral
+becomes interesting. Say what you will about business
+practices in the 80s, 90s, early 2000s...
+
+In a sense Windows was a cathedral. It bent over backwards
+while accepting the new. Welcoming many under the umbrella.
+
+Sure it is a stretch, but the Windows platform (for years)
+required backward compatibility. That was the world
+Microsoft worked in.
+
+Today, the OS still maintains cathedral aspects, but the
+company is embracing the bazaar way more than I ever thought
+I would see in my lifetime.
+
+
+
+
+ktRolster 10 hours ago [-]
+
+The article says that to have quality, someone needs to be
+responsible for it.
+
+Of course, the "Bazaar" included the project named "Linux,"
+which does have a single person in charge. So "single person
+in charge (or not in charge)" isn't really what the bazaar
+is about.
+
+More generally, the article laments the lack of quality in
+modern software. I don't think that's a problem of Cathedral
+vs Bazaar, though, since software designed top down with
+authority telling everyone what to do can be low quality
+(indeed, you can see this sort of thing happening in many
+scrum style companies).
+
+Rather low quality software is a reflection of the skill of
+the people who built it.
+
+
+
+
+davidw 10 hours ago [-]
+
+>  compiling even my Spartan work environment from source
+code takes a full day
+
+Maybe compiling everything on every computer is not the best
+approach...
+
+
+
+
+phkamp 3 hours ago [-]
+
+For everybody ? No.
+
+But some minority have to take the open SOURCE seriously, if
+we want it to actually work.
+
+I'm part of that minority.
+
+
+
+
+emmelaich 2 hours ago [-]
+
+I don't understand that point of view at all. If you control
+the dependencies, you get a predictable result.*
+
+Why do it again and again? To be sure to be sure?
+
+* Debian's work on reproducible builds will help here.
+
+
+
+
+BadassFractal 10 hours ago [-]
+
+It's why I use OSX at home for anything non-work related,
+I want an integrated experience that just works, I don't
+want to be IT guy at home. No messing around with video card
+drivers, no figuring out why my printer chops off pieces of
+the page, no constant wifi or bluetooth crapouts, support
+for Adobe suite or popular digital audio workstation
+software.
+
+At work I'm happy to use Linux, but I use it for things it's
+great at, such as simulating our prod environment, coding,
+etc, but at home I just don't want to think after a long ass
+day, I want to enjoy computing.
+
+
+
+
+linuxhansl 3 hours ago [-]
+
+Printer support (as an example) worked much better with
+Linux (Fedora) than my MacBook. On the Mac I had know the IP
+address, download a driver myself, fiddle around with it. On
+Fedora, it said it found this printer, installed the driver,
+and whether I wanted to print a test page. The test page
+printed fine.
+
+That was a while ago, and things may have changed. But it's
+not the only example. With OSX I am boxed into what Apple
+thinks is best for me. With Linux I can do whatever I like,
+while most things also just work.
+
+None of the issues you mention are an issue with Linux
+anymore. Wifi, Bluetooth, printers, sound, video, etc, all
+just work, most (IMHO) more intuitively than with OSX. Only
+for faster 3D graphics I had to install the vendor driver
+from a non-free Fedora repository.
+
+
+
+
+c22 7 hours ago [-]
+
+I'm not sure which linuxes you use but sans Adobe support
+I haven't had any of those issues for at least 7 or 8 years.
+In fact Debian just works with both my printer and my
+graphics card while Windows 10 refuses to print or display
+a resolution above 1024x768.
+
+
+
+
+BadassFractal 6 hours ago [-]
+
+Been using Ubuntu for about 5-6 years now. On laptops the
+wifi drops all the time. Bluetooth fails to connect half of
+the time or gets stuck and needs a reboot. I can use my
+Brother printer, those drivers "work", but it fails to
+center the page properly out of the box, comes out all
+mangled. Just got a 16.04 fresh install from a vendor,
+software update immediately borked permanently, had to find
+https://www.youtube.com/watch?v=vjfMYjRjAv8 to be able to
+move past it. Again, I'm expected to be IT guy or Geeksquad
+Man to be able to use this OS, which I'm happy to do at
+work, just not on my time.
+
+If you go over Ethernet, use extremely conventional hardware
+and only expect to use it as a machine to browse the
+Internet then you'll generally be just fine.
+
+It's free, I can't complain, but it doesn't make it any less
+of a shit show.
+
+
+
+
+hyperpallium 10 hours ago [-]
+
+Successful bazaars have a flat architecture, meaning you can
+easily add another component, to handle a new case.
+
+It's not always the ideal technical architecture for the
+problem.
+
+
+
+
+cbsmith 9 hours ago [-]
+
+I still hate this essay as much as I did when it first
+published it. It misunderstands the problems.
+
+Unix was fragmented long before 1991, when autoconf was
+created. Prior to autoconf, Perl's Metaconfig did this
+dance, and a lot of other, lower quality systems like imake
+were used to work around the problem. The forces behind
+Unix's fragmentation was actually not the Bazaar (open
+source software), but attempts by multiple parties to
+independently build their own Cathedrals (in attempts to
+differentiate/provide value with proprietary systems). Of
+course, autoconf, as a GNU system, was, in Cathedral
+& Bazaar terms, a Cathedral, not a Bazaar.
+
+Autoconf is ugly/copy-paste code because it is comparatively
+rarely run, so as long as it produces a passable result,
+people use it and focus their efforts on other, bigger
+itches.
+
+There's also a long history of open source products which
+have enjoyed higher quality implementations than their
+proprietary equivalent. The Apache project itself stood as
+a higher quality web server than a lot of other choices (not
+as true today, but it was true for quite some time).
+
+One could go on...
+
+
+
+
+phkamp 3 hours ago [-]
+
+I think you misunderstand my essay.
+
+Yes, autoconf was clearly a response to the incompetence of
+the UNIX industry, were everybody thought they could become
+Da Man over everybody else.
+
+But that doesn't mean that it was the right solution then,
+and it certainly is not the right solution now.
+
+And autoconf is absolutly nothing like a cathedral: There is
+no archtectural vision, no economy of style, no consistency
+and absolutely no symmetry or simplicity.
+
+Your argument that "autoconf [...] is [...] rarely run" is
+akin to saying "I only pee in the shower in the morning":
+That is of course better than doing it all the time, but it
+is still going to stink.
+
+
+
+
+cbsmith 1 hour ago [-]
+
+> But that doesn't mean that it was the right solution then,
+and it certainly is not the right solution now.
+
+I'm not saying it was the right solution, but the essay
+makes a lot of claims beyond some straw man notion that
+autoconf is the right solution. Even in my critique I made
+it clear that autoconf is inevitably NOT the best solution.
+
+> There is no archtectural vision, no economy of style, no
+consistency and absolutely no symmetry or simplicity.
+
+There's a distinction between autoconf & the autoconf
+library. Autoconf itself has a comparatively simple design
+that was conceived and implemented largely over one summer
+by one engineer, who curated it through several subsequent
+iterations of embellishments. It's design was extended in to
+automake, etc. which lead to the whole GNU build system.
+
+The automake library on the other hand is largely a Bazaar
+of contribution of work arounds from developers, with some
+modest efforts at curation that emerged over time, rather
+than being conceived from the get go.
+
+> That is of course better than doing it all the time, but
+it is still going to stink.
+
+It still might stink, but it is hardly the most important
+problem most people deal with, and the whole process
+functions well enough in the end, so the people with the
+expertise to make a better solution have other more pressing
+problems instead.
+
+
+
+
+emmelaich 2 hours ago [-]
+
+But really there are only two ways to deal with this. 1.
+make a better autoconf 2. avoid it as much as possible.
+
+The first has been tried, many times and always found
+wanting.
+
+The second - well, it's FreeBSDs fault using software
+'ports' rather than prebuilt binaries. (Although
+I understand that you do that now)
+
+
+
+
+cjg_ 22 minutes ago [-]
+
+Well, those binaries still needs to get built somewhere, so
+the makefiles, patches etc still need to live somewhere.
+
+
+
+
+cbsmith 1 hour ago [-]
+
+It's not entirely true that a replacement for autoconf would
+just have to be a better autoconf. You don't need a solution
+that works at all like autoconf (doesn't even have to
+generate code at all). You can avoid MUCH of what autoconf
+deals with by writing portable code and following some sane
+strategies for constructing include paths and selecting
+library files. It's just that when you do that, you have to
+solve all of these problems yourself, while the autoconf
+library has already been battle tested on a wide variety of
+platforms... a level of effort that would be hard to
+replicate.
+
+
+
+
+cpeterso 8 hours ago [-]
+
+Do we still need autoconf in 2016? Systems are becoming more
+homogeneous with the spread of Linux, GNU, and common
+programming conventions.
+
+
+
+
+cbsmith 7 hours ago [-]
+
+People have been asking that question since forever. It
+turns out, the world is a lot less homogeneous than it
+seems. If it weren't, package managers & containerized
+systems wouldn't be such a big deal.
+
+You've still got a fair number of processor architectures
+and instruction sets (at the very least, you've got all the
+x86 & x64 variants + ARM + Power + Sparq), and you've got
+some pretty significant variants on the OS front as well
+(Windows, Mac, Linux, Android, iOS... and that's not getting
+into the embedded platforms), and you've got all kinds of
+variants (still) in C runtimes, let alone differences above
+that level.
+
+You might not perceive the ugly, because tools like autoconf
+are abstracting the problem away, and that's exactly why
+they are beneficial. There are much better ways to build
+portable software, but they require a lot more expertise,
+and believe it or not, autoconf means you need much less
+expertise to make software that runs on the broadest set of
+platforms.
+
+I've got a friend, a very senior software engineer, whose
+full time job is a build platform that builds software
+designed to run on customer platforms (and this is for
+office environments, so a comparatively limited set of
+permutations)... and this isn't for a big company. That's
+the size of his job when he can take advantage autoconf.
+
+There certainly are other ways to do what autoconf does, but
+being able to leverage a ton of work that other people have
+already done dealing with odd inconsistencies that come up
+with platforms is very hard to walk away from, even if it is
+done in an ugly fashion.
+
+
+
+
+jbk 5 hours ago [-]
+
+Unfortunately yes.
+
+We compile VLC for at least 9 different OSes, and on some of
+them, for 8 platforms. Autotools is the only tool that does
+it correctly. It's a pile of crap, but there is nothing else
+that works.
+
+
+
+
+swolchok 8 hours ago [-]
+
+You could argue that autoconf sucks and clearly everyone
+should use your favorite build system, but you need
+something to do the job. Not even two systems running the
+same release of the same distribution are going to have all
+the same packages installed. I might have put a newer
+version of X in /usr/local. I might want to cross-compile.
+Even considering all Linuxes the same, I might want to build
+for x86, x86_64, MIPS (routers), ARM, PowerPC, or some more
+esoteric chip. Android has its own special problems,
+including a different libc. I might want to ship on BSD
+(which one?), OS X, iOS, cygwin, mingw, or that newfangled
+Windows subsystem.
+
+
+
+
+cbsmith 7 hours ago [-]
+
+> You could argue that autoconf sucks and clearly everyone
+should use your favorite build system
+
+Well, in fairness, build systems often deal with a different
+set of problems.
+
+
+
+
+sgt101 2 hours ago [-]
+
+petty point; the author says "growth by 2 orders of
+magnitude or 10000%" is it just me or is that 4 orders of
+magnitude?
+
+
+
+
+mdpopescu 1 hour ago [-]
+
+10000% = 10000 / 100 = 100 = 2 orders of magnitude
+
+
+
+
+haberman 10 hours ago [-]
+
+There are way too many dichotomies that are getting muddled
+in this discussion:
+
+  - hacky vs. beautiful
+  - professional vs. amateur
+  - waterfall-designed vs. evolving
+  - centralized control vs. consensus control
+  - crufty vs. well-maintained
+  - open-source vs. closed-source
+
+With so many axes to argue about, we can project whatever we
+are feeling about software today onto this
+"cathedral/bazaar" debate. We may think we are having one
+discussion, but we're actually having six discussions (or
+more) at the same time.
+
+
+
+
+qwertyuiop924 8 hours ago [-]
+
+Hacky vs beautiful is diferent from The Right Thing vs.
+Worse is Better.
+
+Worse is Better is a very specific philosophy (at least, as
+it is described in Lisp: The Good News, The Bad News, And
+How to Win Big)
+
+The Right Thing philsophy is, in essence, that simplicity of
+interface is the most important thing: every interface is an
+abstraction, abstractions shouldn't leak. Have a simple
+interface, be correct, be consistant, be complete. If the
+implementation is complex, so be it.
+
+By contrast, the worse is better philosophy prioritizes
+simplicity of implementation: Be simple, be as complete,
+correct, and consistant as possible, but between having
+a simple design, and being slightly wrong, a little
+inconsistant, and not as complete, and having a complex
+design that is all of those things, take simplicity: 90% now
+is better than 100% never.
+
+Over time, Unix has adoped some Right Thing ideas (plan9
+took this to 11), and Lisp has adopted some New Jerseyisms
+(Scheme's dynamic-wind is definitely this).
+
+
+
+
+haberman 8 hours ago [-]
+
+You are right. I wrote that too quickly before thinking
+about it. I removed that part of the post.
+
+
+
+
+qwertyuiop924 8 hours ago [-]
+
+You are far from the first person to
+misunderstand/misrepresent worse is better. The best part is
+when people recommend reading the essay, and then
+demonstrate they they don't know what it meant: It's not
+about the battle between simplicity and complexity, it's
+about the battle between simplicity of interface and the
+simplicity of implementation.
+
+
+
+
+haberman 7 hours ago [-]
+
+I definitely understood the distinction when I previously
+read the article. I just didn't reload enough of it into
+mental cache to remember.
+
+
+
+
+qwertyuiop924 11 hours ago [-]
+
+...And if you think the Bazaar precludes somebody making
+decisions about quality, you haven't payed attention to how
+linux development works.
+
+Except epoll. And vsyscalls. And...
+
+You know, maybe Linux isn't well managed.
+
+
+
+
+lifeisstillgood 4 hours ago [-]
+
+So a while back I had a JIRA ticket, to go add a feature to
+a pile of JS front end. I did not understand the pile very
+well, but that's OK, neither did anyone else, and I expected
+to add a large amount of tests and code to get the job done.
+
+But I like understanding the code, so I read and read and
+puzzled and fended off "hurry up" comments.
+
+And then I added two lines and it basically worked.
+
+I am in favour of a slow code movement
+(http://www.mikadosoftware.com/articles/slowcodemovement)
+which seems relevant here.
+
+Even better was a guy I worked with, physics PHd from
+central China, whose daily stand up reports mostly consisted
+of "Inspent yesterday reading around the subject, I shall
+spend today, reading around the subject."
+
+Love him, love the brass balls.
+
+
+
+
+duncan_bayne 7 hours ago [-]
+
+ESR agrees with the criticism of Autotools:
+http://esr.ibiblio.org/?p=1877
+
+"Autotools must die"
+
+
+
+
+peterwwillis 9 hours ago [-]
+
+He's complaining that the Bazaar is not efficient, and that
+it's a pile of hacks.
+
+No. Shit.
+
+Yes, it's an inefficient pile of garbage built one heap on
+top of another.
+
+But it's also incredibly useful.
+
+  Modularity and code reuse are, of course, A Good Thing.
+  Even in the most trivially simple case, however, the CS/IT
+  dogma of code reuse is totally foreign in the bazaar: the
+  software in the FreeBSD ports collection contains at least
+  1,342 copied and pasted cryptographic algorithms.
+
+  If that resistance/ignorance of code reuse had resulted in
+  self-contained and independent packages of software, the
+  price of the code duplication might actually have been
+  a good tradeoff for ease of package management. But that
+  was not the case: the packages form a tangled web of
+  haphazard dependencies that results in much code
+  duplication and waste.
+
+Code duplication, waste, and a tangled web of haphazard
+dependencies are only a bad thing in theory. PHK talks about
+"CS/IT dogma" like it's the rule rather than the exception.
+But the CS/IT dogma, like most other dogma, always runs into
+exceptions when put into practice.
+
+When you have many, many independent teams of people
+developing software, you may want to implement something
+someone else has already done. As a member of your team, you
+have two choices: 1) re-implement the original as part of
+your own cathedral, or 2) put some glue around the existing
+solution.
+
+Sometimes, 1) will be the best choice. But sometimes - and
+this is usually the case with Unix tools - 2) works just as
+well, and you get the benefit of only having to write and
+maintain glue, rather than a constantly morphing feature
+implementation. If the original was done well, and your glue
+supports it well, you get a feature without paying for it.
+
+The foundation of Unix is a strong Cathedral. But this
+foundation is what makes the Bazaar fit so well around it:
+it provides something strong to glue other shit to. As long
+as you have someone to continue gluing shit together, you
+can keep adding pieces ad infinitum, and what you lose in
+the end is essentially disk space and compilation time. I'm
+willing to accept that.
+
+
+
+
+gavinpc 11 hours ago [-]
+
+Mods, please add 2012. Most recently discussed here at
+https://news.ycombinator.com/item?id=9403124
+
+
+
+
+k__ 11 hours ago [-]
+
+I like the Bazaar.
+
+It's a bit like "normal" people sticking it to the elite.
+The rest of the world getting a piece of the cake too...
+
+
+
+
+droopyEyelids 11 hours ago [-]
+
+In your analogy the people who get stuck trying to fix crazy
+shit with makefiles are the elite. Which will probably be
+you one day. Which means you're sticking it to yourself.
+
+
+
+
+pjc50 1 hour ago [-]
+
+In Free Software, everyone gets a turn at being the Man.

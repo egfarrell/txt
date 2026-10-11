@@ -1,0 +1,153 @@
+
+### Course 3: Gravitational waves from neutron stars (Nils Andersson)
+
+### key:
+    - lecture 02: braking index: EM 3?? GW 5??
+
+- Youtube playlist https://www.youtube.com/playlist?list=PL04QVxpjcnjhVKkLepArMABB13zIqfXcI
+- Course page https://www.icts.res.in/event/page/11645
+
+- Relativity and fluid dynamics                   - Chandrasekhar-Friedman-Schutz instability    
+- The stellar graveyard                           - Lagrangian perturbation theory               
+- Neutron stars                                   - F- and r-mode instability                    
+- The equation of state                           - GW signals and detectability 
+- A bit of thermodynamics and nuclear physics     - Damping                                      
+- The quadrupole formula                          - Mechanisms and astrophysical constraints     
+- Continuous gravitational-wave sources           - Numerical relativity                         
+- Rotating deformed neutron stars                 - 3+1 decomposition                            
+- Accreting systems                               - Initial value problem                        
+- Asteroseismology                                - Neutron star mergers                         
+- Perturbation theory                             - Gamma-ray bursts                             
+- Classifying stellar oscillations                - Electromagnetic counterparts
+- F-p-g-w-r modes
+
+### Lecture 01
+    - 0:00:08 Gravitational waves from neutron stars (Lecture - 01)
+    - 0:00:11 ICTS summer school Lecture 1
+    - 0:04:44 Back to the envelope 
+    - 0:13:47 Gravitational wave detector 
+    - 0:15:30 Gravitational wave signal 
+    - 0:19:11 Dynamical frequency 
+    - 0:21:59 How do neutron star radiate GWs?
+    - 0:30:36 Quadrupole formula 
+    - 0:35:19 Integrate (with Green's function)
+    - 0:44:00 Fluids: Stress-energy 
+    - 0:49:58 Momentum flux 
+    - 0:52:29 "Simplest" option - perfect fluid 
+    - 1:00:36 Relativistic Euler equation etc
+    - 1:08:37 Energy conservation 
+    - 1:09:47 Thermodynamics 
+    - 1:17:01 NPE matter (T=0)
+
+
+### Interesting Lecture 01
+    - Possible to get maps of the gravitational potential of the
+      Earth. Big potential difference (in our units) between the
+      top of Everest and a deep sea trench
+    - Neutron stars are made of _fluid_. 
+        - They can slosh about. 
+        - They have different ways of _oscillating_. 
+        - (You end up with a varying `quadrupole` moment)
+        - NSs oscillate differently depending on what it's made
+          of.
+    - Also a NS 'kick' may come from an _instability_. Fluid
+      dynamic instabilities
+    - naive: for a core collapse super-nova, you would think the
+      gravitational energy released is simply the difference
+      between the starting grav potential (of the star before
+      explosion) and the end-point grav potential (of the
+      spinning NS core?).
+        - But that would be totally wrong. For Grav Wave
+          astronomy what matters is _how you got there_ (???),
+          not just the (initial - final) difference
+    - comment: "What underlies any of these calculations is
+      treating fluid dynamics in full general relativity".
+        - Basically, how do we model fluids?
+        - and, NSs are generally relativistic objects
+    - Approach: start with a Newtonian approximation...
+    - Later: 
+        - the first thing we do with Einstein's equation is
+          introduce an observer...
+        - $MY_IMAGES/astro/grav-waves/NS/introduce-observer.jpg
+    - Derive the energy, momentum and stress
+        - Originally from GR book by Tolman
+        - $MY_IMAGES/astro/grav-waves/NS/define-energy-stress.jpg
+    - What ingredients do we need for the stress-energy tensor of
+      a NS? Elasticity (crust), superfluids, heat flow, charge
+      currents (proton gas)
+        - $MY_IMAGES/astro/grav-waves/NS/what-we-need-to-describe-a-NS.jpg
+
+### Lecture 02
+    - 0:00:08 Gravitational waves from neutron stars (Lecture - 02)
+    - 0:00:11 ICTS summer school Lecture 2
+    - 0:03:01 Spinning stars 
+    - 0:09:55 Note 
+    - 0:12:41 Best to work in "body frame"
+    - 0:20:44 Simply the equation 
+    - 0:24:48 Change in spin 
+    - 0:26:18 Crab pulsar 
+    - 0:29:46 Note: breaking index
+    - 0:41:52 Spin down limit 
+    - 0:42:54 Gravitational wave frequency(Hz) vs Strain Sensitivity
+    - 0:48:35 Building mountains 
+    - 0:51:49 Total energy 
+    - 0:53:28 Actual shape from minimizing E @ fixed z
+    - 1:02:29 When does it break?
+    - 1:08:56 Nr. Accreting Neutron Stars vs Spin Frequency [Hz]
+    - 1:10:45 Accretion 
+    - 1:19:00 Sketch 
+    - 1:21:45 Q&A
+
+### Lecture 03 Seismology
+    - 0:00:08 Gravitational waves from neutron stars (Lecture - 03)
+    - 0:00:12 Seismology 
+    - 0:11:15 Fundamental (f) mode - incompressible + non-rotating 
+    - 0:13:51 Background star (equilibrium): vi=0
+    - 0:14:32 Perturbations, Eulerian 
+    - 0:22:01 Fluid is in compressible/irrotational 
+    - 0:26:47 Solve Laplace equation 
+    - 0:32:37 Counting approximation =delta I=0
+    - 0:44:53 Two Figures
+    - 0:48:01 Pressure (p) & gravity (g) modes 
+    - 0:48:48 Allow density variations 
+    - 0:50:55 Need perturbed equations 
+    - 0:54:06 Recall
+    - 0:55:11 In Eulerian perturbations 
+    - 1:06:34 Propagation diagram 
+    - 1:07:39 normal matter
+    - 1:12:58 Rotation (r) modes 
+    - 1:21:07 In inertial frame 
+    - 1:22:44 Pattern speed
+
+### Lecture 04
+    - 0:00:08 Gravitational waves from neutron stars (Lecture - 04)
+    - 0:02:36 Ellipsoids Diagram 
+    - 0:06:28 Uniform rotation (a2/a1 = 1)
+    - 0:08:15 Triaxial 
+    - 0:23:26 What happens to f-mode with rotation?
+    - 0:25:13 Diagrams
+    - 0:31:27 Lagrangian perturbation 
+    - 0:37:08 Important: L, gij not equal to 0
+    - 0:42:06 Euler equations 
+    - 0:45:16 Two solutions 
+    - 0:50:18 Canonical energy
+    - 0:59:04 Generic instability of f-mode 
+    - 1:07:52 How fast does instability grow?
+    - 1:14:22 Bulk velocity (reactions)
+    - 1:18:31 Problematic curve 
+    - 1:19:12 Viscous boundary layer
+
+
+### References
+    - 3+1 split and Initial Value problem: 
+        - Chapter 21 and 26 of 'Gravitation' by MTW, 
+        - Numerical Relativity by Baumgarte and Shapiro
+    - Hydrodynamic and Hydromagnetic Stability by S.
+      Chandrasekhar (chapter 13,14)
+    - Chapter 2 for a brief discussion of Lagrangian and Eulerian
+      perturbation and for rotating fluid bodies: Ellipsoidal
+      Figures of Equillibrium by S. Chandrasekhar
+    - Nuclear Astrophysics
+    - Nuclear Physics of Stars by Christian Illiadis
+
+

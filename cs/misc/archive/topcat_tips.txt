@@ -1,0 +1,7 @@
+topcat tips
+
+conversion
+    toString($1) + ", " + toString($2)
+
+decimal places
+    toString(formatDecimal($1,1)) + ", " + toString(formatDecimal($2,1))

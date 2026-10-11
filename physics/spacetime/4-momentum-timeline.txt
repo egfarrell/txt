@@ -1,0 +1,87 @@
+- QUESTION: "energy & momentum → 4-momentum" 
+    - is that more `SR` or `GR` that created that?
+
+
+- That’s squarely `SR`:
+    * In Newtonian mechanics, energy and momentum are separate
+      conserved quantities, but they live in different
+      mathematical worlds. Momentum is a 3-vector p = m v. Energy
+      is a scalar (kinetic + potential). There’s no single
+      unified object that contains both.
+
+    * In special relativity, Einstein rewrote the kinematics so
+      that energy and momentum are components of the same
+      4-vector:
+
+    - `P^mu = (E/c, p_x, p_y, p_z)`
+    - The conservation law is then simple: total 4-momentum before = total 4-momentum after, in any inertial frame.
+    - This also gives the beautiful invariant relation:
+        - E^2 - (pc)^2 = (mc^2)^2
+
+  which ties together mass, energy, and momentum in a single equation.
+
+* GR builds on that structure, but it doesn’t *create* the
+  unification. 
+    - In GR, energy-momentum is packaged into the stress-energy
+      tensor `T_{mu nu}`, which acts as the "source" for
+      spacetime curvature in Einstein’s field equations. 
+    - So GR takes the SR concept of unified 4-momentum and
+      generalizes it to curved spacetime and continuous
+      matter/fields.
+
+So:
+    * SR unified energy and momentum.
+    * GR elevated that 4-momentum into the bigger framework of
+      spacetime geometry.
+
+- Would you like me to show you the actual way the SR Lorentz
+  transformations *force* energy and momentum to join together
+  (basically, how boosting frames mixes them the same way boosts
+  mix space and time)?
+
+
+
+# More info:
+
+### Einstein’s June 1905 SR paper
+    - ("On the Electrodynamics of Moving Bodies")
+    - This is where he lays out SR. Space and time become
+      spacetime, simultaneity is relative, Lorentz
+      transformations are the law of the land. 
+    - But in that paper, he didn’t yet write down `E = mc^2`.
+      Energy and momentum aren’t explicitly unified into
+      a 4-vector there.
+
+### Einstein’s September 1905 follow-up note
+    - ("Does the Inertia of a Body Depend Upon Its Energy
+      Content?")
+    - This is the short, famous one where he derives that if
+      a body emits energy L in the form of radiation, its mass
+      decreases by L/c^2. That’s the germ of E = mc^2. Still, he
+      didn’t yet have the modern formalism of 4-vectors.
+
+- The full unification into the 4-momentum relation 
+    - `E^2 (pc)^2 = (mc^2)^2`
+    - This came later, in the years after Minkowski’s spacetime
+      formalism (1908) and the development of relativistic
+      mechanics by people like Planck, Lewis & Tolman. 
+    - The invariant relation really crystallized when physicists
+      started using 4-vectors consistently.
+
+So:
+    - `E = mc^2` (rest energy) was Einstein’s September 1905
+      insight.
+    - The more general relation `E^2 - (pc)^2 = (mc^2)^2` is the
+      later, fully fleshed-out relativistic mechanics, but it’s
+      entirely implied by the structure of SR.
+    - In other words: the seed was Einstein’s follow-up 1905
+      note, but the elegant 4-vector form was a collaborative
+      unfolding over the next decade.
+
+- That equation, by the way, is the “Pythagorean theorem of
+  relativity”:
+    - energy is the “time-like leg,”
+    - momentum is the “space-like leg,” and
+    - rest mass energy is the invariant “hypotenuse.”
+
+- It’s the geometric heart of why SR unifies them.

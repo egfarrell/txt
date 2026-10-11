@@ -1,0 +1,85 @@
+unix find tips
+
+
+### find symlinks and list full path
+    find . -type l -ls
+    find . -type l -print
+
+### advice
+    - put `-name` before `-type`
+    - I've seen advice to always run `-type` after `-name` in
+      find commands, since calls to `stat` to get the type are
+      expensive. 
+        - I just tried it myself on a fairly large bunch of
+          files, and it seems to be true: 
+        - running find . -name 'foo' -type d took 19 secs, 
+        - while find . -type d -name 'foo' took 32 secs. 
+
+### find files/folders with same names, mixed case
+    find .  | sort -f | uniq -iD
+    find . | tr '[:upper:]' '[:lower:]' | sort | uniq -d
+
+### find every single file in a certain folder
+    - including hidden files...
+    - `find .`
+
+### Get all my physics pdfs
+    find .  -name "*.pdf" -type f -path "./Big4/*"        -not -iwholename "*zotfiles*" -print
+    find .  -name "*.pdf" -type f -path "./CM/*"          -not -iwholename "*zotfiles*" -print
+    find .  -name "*.pdf" -type f -path "./EM/*"          -not -iwholename "*zotfiles*" -print
+    find .  -name "*.pdf" -type f -path "./Maths/*"       -not -iwholename "*zotfiles*" -print
+    find .  -name "*.pdf" -type f -path "./Metaphysics/*" -not -iwholename "*zotfiles*" -print
+    find .  -name "*.pdf" -type f -path "./Misc/*"        -not -iwholename "*zotfiles*" -print
+    find .  -name "*.pdf" -type f -path "./QM/*"          -not -iwholename "*zotfiles*" -print
+    find .  -name "*.pdf" -type f -path "./Spacetime/*"   -not -iwholename "*zotfiles*" -print
+    find .  -name "*.pdf" -type f -path "./Thermo/*"      -not -iwholename "*zotfiles*" -print
+    find .  -name "*.pdf" -type f -path "./Undergrad/*"   -not -iwholename "*zotfiles*" -print
+
+
+# august 2016
+    # (Spent 20 mins figuring out the find regex again!)
+    # Because find includes the path, I explicitly escaped
+    # './' at the start of the regex pattern
+    `find  . -regex  '\.\/d.*pdf'`
+
+# using regex 
+    # (key point: put `.*` first because find includes the path)
+    `find . -regex '.*math.*phil.*' -print`
+    `find . -regextype posix-extended -regex '.*math.*phil.*' -print`
+
+# error paths must preceed expression
+    # CORRECT (with quotes '')
+        `find . -name '*test.c'`
+    # wrong
+        `find . -name *test.c`
+
+# files altered in last 5 days
+    find . -mtime -5
+
+# find all "mag.dat" files and count lines in each one
+    ff mag.dat | xargs wc -l
+
+# find files and list file attributes
+    find . -name "blah" -ls
+
+# find files for a specific date (e.g. Oct 9th 2013)
+    `find  -type f -name "*" -newermt 2013-10-09 ! -newermt 2013-10-10 -ls`
+
+# delete all .svn diretories
+    `find . -name ".svn" -type d -exec rm -rf {} \;`
+
+# find all files without an extension and stick ".txt" on them
+    `find /path -type f -not -name "*.*" -exec mv "{}" "{}".txt \;`
+
+# copy all 'svg' files to the '~/eficons' folder
+    `find . -name '*.svg' -exec cp {} ~/eficons \;`
+
+# find with regex, then delete what was found
+    `find -maxdepth 1 -regex ".*.[0-9]" | xargs rm -f`
+
+# List PROGRAM files user can run
+    find . -perm -u=x -type f
+
+# delete hidden files in current folder
+    find -path './.*' -delete
+

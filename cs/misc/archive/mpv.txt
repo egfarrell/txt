@@ -1,0 +1,24 @@
+### CONFIGS
+    - ACTIVE config:                $HOME/.config/mpv/mpv.conf
+    - ACTIVE Keybindings:           $HOME/config/mpv/input.conf
+
+    - Dotfiles config:              $HOME/dotfiles/ini/mpv/mpv.conf
+    - Dotfiles keybindings default: $HOME/dotfiles/ini/mpv/input.conf.default
+    - Dotfiles keybindings mine:    $HOME/dotfiles/ini/mpv/input.conf
+
+### always show time progress
+    osd-level=3
+
+### Listen to livestream
+    - HN tip https://news.ycombinator.com/item?id=26805702
+    mpv --no-video --vo=null --ytdl-format='bestaudio/best'
+
+### Handy Keys
+    - "P": show progress
+    - "O": show progress keey on-screen
+    - ">": next in playlist
+    - "<": prev in playlist
+    - "s": screenshot
+
+### Show key names
+    mpv --input-keylist

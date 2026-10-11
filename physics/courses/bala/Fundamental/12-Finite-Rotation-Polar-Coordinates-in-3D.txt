@@ -1,0 +1,281 @@
+$MY_VIDEOS/physics/bala_fundamental/12-The-Finite-Rotation-Formula,-Polar-Coordinates-i.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 12
+The Finite Rotation Formula
+We are going to continue with little more mathematical preliminaries, especially with
+regard to vector analysis. Because, this is going to be the sort of basic language in which
+Mechanics is going to be study and therefore, it is work understanding these very clearly.
+I am going to complete a couple of things, which I started talking about the last time and
+which we are not gone to the end of.
+(Refer Slide Time: 00:44)
+
+In the first of these, I have to do with resolving a vector, a given vector b along some
+specific given vector a. So, the question was given two vectors in three dimensional
+space, what is the way in which you can resolve this vector b into a component along the
+vector a and a component in a plane perpendicular to the vector a. And the answer was
+that you could write b as b parallel plus b perpendicular.
+And this was along a and this component is normal to a and b parallel, we had a very
+simple formula for and this formula was simply to take the component of b along a,
+multiplied by a and ensure that, these are unit vectors by dividing by a squared. So, that
+is b parallel, the question is what is b perpendicular and the best we could do at that stage
+was to write this as b minus b dot a, a divided by a squared.
+
+So, this part is b parallel and this part is by definition b perpendicular, this was just an
+identity. But, now that what we know, what the triple cross product does this can be
+written down in a slightly more simple form and that is the following b perpendicular is
+moving the a squared to the top and writing it as a dot a. We have a dot a b minus a dot b
+a divided by a squared taking this common factor out.
+And of course, you recognize the fact that because we have a formula for the triple cross
+product which we derived the last time, you could also write this as a cross b cross a
+divided by a squared. So, we have a very elegant formula for resolving the given vector b
+in the form of this nice little formula a dot b, a over a squared plus a cross b cross a over
+a squared. So, the dot product appears in the parallel path and the cross product, the triple
+cross product appears in the normal path here.
+So, that is the useful formula to remember, not necessary to memorize it, you can
+actually derive it whenever you need, it is quite easy and straight forward do so, but it is
+a very simple looking formula out here. I thought of I mention this just so that you know,
+what the resolution of the vector along some other direction means. This part is
+sometimes called the longitudinal component along a and this is the transverse
+component in a plane perpendicular to a. Having done this, the next thing I want to
+mention is an important formula in vector analysis, which is called the finite vector
+formula and the finite rotation formula and it goes as follows.
+(Refer Slide Time: 04:30)
+
+We have already mentioned, I have already mentioned several times that if you give a
+coordinate system O with x, y and z axis and we rotate this coordinate system to produce
+another orthogonal coordinate system. The new Cartesian axis x prime y prime z prime,
+such that any position vector r, which was originally x, y, z in Cartesian components
+goes under this rotation about the origin.
+So, rotation about O, it goes to a point r prime or new coordinates r prime, which are
+given by x prime, y prime, z prime where x, y, z determine, what x prime, y prime, z
+prime are according to the action of some 3 by 3 matrix called the rotation matrix. So, in
+symbols, we said that r prime was equal to rotation matrix defined by the axis of rotation.
+So, whatever direction of rotation you had in space to rotate about and then, in the plane
+perpendicular to this n, the rotation was by some angle psi.
+So, the rotation is parameterized as we say is described or specified by specifying the
+unit vector, which tells you the direction or axis of rotation and the amount by which you
+rotate, which is this angle psi. This matrix, when it acts on r written as a column vector
+produces the new coordinates out here. In general, this is hard to write down, it is quite a
+messy thing to write down.
+But, it turns out that you can actually write down a simple formula called the finite
+rotation formula, which summaries the effect of this r, of this rotation matrix on any
+given point r. And therefore, on any vector which you start with and it tells you, how a
+vector transforms under a finite rotation about some specified axis and through an angle
+psi and here is the formula.
+
+(Refer Slide Time: 07:02)
+
+So, r goes to r prime, any r goes to r prime, any point coordinates r go to r prime, which
+is R specified by n inside acting on r equal to… Now, what can it possibly be equal to?
+Well, we know that the origin is left unchanged. So, if r is 0, namely the components of r
+are 0, 0 and 0, then r prime is also be 0, a rotation is a linear transformation. So, each
+term in the right hand side must be proportional to the first power of r, it cannot depend
+on r squared for instance or any more non-linear function of r. It must depend on n and it
+must depend on psi.
+But, you see if you have an arbitrary vector r and some arbitrary direction n in space,
+these two in general, these two vectors would specify part of a triad, this is third vector
+which comes out to the plane of n and r. And that is the vector r cross n, which might
+perhaps come out in this fashion. Now, together the vectors n, r and r cross n would
+actually determine a kind of basis in three dimensional space. So, this vector is r cross n
+and it is normal to the plane from by the vectors r and n.
+So, it is clear that this r prime being a vector in three dimensional space must have a
+portion which is along r, a portion which is along n and a portion, which is along r cross
+n and there is nothing else possible. So, there must be something here multiplying r plus
+something here multiplying n plus something here multiplying r cross n. Now, what goes
+in here is what we have to determine by the physical argument.
+Now, one can derive this formula recursively completely from, have to ensure starting
+systematically from this starts, specifying this rotation as a proper 3 by 3 matrix. But,
+
+what I am trying to get is a simple physical argument, which practically enable you to
+guess the answer inside here, based on just physical reasoning. Now, this term here, I
+have already said should depend on r, should be linear in r, but the vector was point
+along n.
+So, it is clear that this is the component of r along n and therefore, whatever is here must
+be of the form r dot n times n. This is the scalar product and it is proportional to the
+magnitude of r, which enables us to satisfy this requirement, that every term on the right
+hand side must be linear in r. In other words, you multiply little r by 6, the whole answer
+must get multiplied by 6, each term must get multiplied by 6.
+Now, what can be inside here, cannot depend on r, cannot depend on n, because this
+vector n, all it dependence is already been explicitly stated. So, all it can depend on is
+this angle psi. So, there must be some function of this angle f of psi plus some other
+function of psi, g of psi plus some other function of psi, h of psi and that is what the
+finite formula must look like, the rotation formula must look like for any arbitrary r.
+Now, what is it that we can say further? Well, we can simplify things a little bit by
+pointing out, that if it should so happen that r is along n itself or n is along r itself. So,
+looking at all those points which are along the axis of rotation, which is quite clear that
+these points on the axis of rotation do not get affected at all. So, if I have a point along
+the axis of rotation, those points do not get changed at all.
+So, r prime must be equal to r in that case and what is that imply. Well, r cross n is 0, if r
+is parallel to n, because the sign of the angle between them vanishes, the angle vanishes.
+So, this term goes away, r dot n, n is simply r itself. So, in the case, in this special case,
+when r is along n, you must have r prime equal to r, must be equal to f of psi r plus g of
+psi, r dot n which is the same as magnitude r, multiplied by n which is the same as the
+vector r, equal to f of psi plus g of psi times r. And therefore, this combination must be
+equal to 1.
+So, in the general case, whatever happens these two functions must be such that they add
+up to unity. So, we can write down now, we can eliminate one of them and simply write
+the finite formula as plus 1 minus f of psi times that. That is already got rid of one of the
+unknown functions, we have just two unknown functions now.
+
+(Refer Slide Time: 13:13)
+
+What else can we do? Well, when you have no rotation at all, it is clear r prime must be
+identically equal to r for every point r and therefore, if you have no rotation at all, f of 0
+plus 1 minus f of 0 and in this case psi is 0. So, 1 minus f of 0, r dot n, n plus h of 0, r
+cross n. In this case must be equal to r itself, no matter what n is and what is that tell you,
+it is very clear that immediately implies certain things about f and h.
+For instance, if you have no rotation at all and I am sitting here and that say it, no
+rotation at all and then, r prime is identically equal to r or if I rotate through 0 angle, it is
+the same thing as I am saying I rotate through 0 angle. You have f of 0 here, you have h
+of 0 and it is trivial to see that h of 0 must be 0, f of 0 must be equal to unity.
+(Refer Slide Time: 14:18)
+
+So, those are little inputs which one can put in and let us f of 0 equal to 1 h of… So, that
+this term vanishes h of 0 equal to 0. And then, you can use further symmetric properties
+such as the fact that this must be, must change sign when psi changes from plus psi to
+minus psi. Well, you can also ask, can I impose the condition r prime squared equal to r
+squared, so dot place with itself and then, we use the fact that under a rotation the
+distance from the origin to any point does not change at all. So, you have to put this in as
+well and this enables us to practically guess the answer, I am going to write the answer
+down and tell you exactly, what this looks like.
+(Refer Slide Time: 15:05)
+
+This turns out to be cosine psi times r plus 1 minus cosine psi times this quantity plus as
+we might guess by now sin psi times r cosine. This is called the finite rotation formula. It
+is a very compact and simple expression and telling you, how under an arbitrary rotation
+about the access n, through an angle psi. Any the coordinates of any point, the position
+vector of any point, transforms some new value, which is given by this formula here.
+Three terms, one propositional to r, one propositional to n, one ground that direction of r
+cross n.
+Now of course, we know that the vector is a set of three quantities in three dimensions,
+which transforms precisely the way the coordinate transform. If A is any vector then
+under the rotation of the coordinate axis, the new components of A are related to the
+whole components of A, the precisely this formula. A goes to A prime, which is equal to
+cos psi times A plus 1 minus cos psi times A dot n along n plus sin psi times A cross n.
+
+You have grantee that by the definition of the word of the vector, what is mean by a
+vector, a very useful and extremely practical formula, a very compact one which enable
+you to short circuit do not have to go through detail lodgments to find out, what a the
+new vectors are, new components are, you can use this formula. Now, once you have
+this, then many other things can possible.
+If this is the position coordinate, then I can ask what happens to the velocity, what
+happens to the acceleration and so on under a rotation of the coordinate system. In
+particular and we do this subsequently, one can ask, if I gone rotating about this access n
+at a constant angular speed omega, then this psi increases with time like omega t, it is
+just starting from 0 it is equal to omega t increases with time.
+So, I put that in here and then you see that the new coordinates a changing with time.
+Now, if you have this as the position of the new of a particle in the original coordinate
+system, one can now predict, what it will look do in rotating coordinate system. And
+then, one can look at what the acceleration does not and so on and will subsequently see
+that the whole idea of inertial forces or non inertial forces or Pseudo forces immerges
+from this formula here in a straight forward way.
+(Refer Slide Time: 18:34)
+
+Mean, while before we do that, let me just point out, that this formula reduces in the
+special case, when you had a rotation in the z access along the z access. So, now, I am go
+to look at this situation x, y and z; that was the origin and I am going to look at a rotation
+along the z access itself, so that is the unit vector n, which is equal to the unit vector in
+
+the z direction. And ask, what happens to this formula, well it is immediately clear that
+we expect nothing along the z coordinate to change.
+So, the z coordinate, the vertical coordinate of no particle should change at all and the x
+and y coordinates should get mixed up according to rotation in a plane and for that we
+already have formulas. So, is this true, this is coming out and the answer is yes.
+(Refer Slide Time: 19:19)
+
+Because, if n equal to e z, then let us look at what is the new coordinates are and let us
+look at the x component of it. So, this is equal to x prime and that must be equal to the x
+component of r, which is x itself, x cos psi plus 1 minus cos psi r. Now, we looking at a x
+component, so this is prepositional to e x, got it with n is that is 0 plus sin psi that comes
+in plus sin psi and then, we looking at x component e x cross with e z out here goes to e y
+with the minus sign.
+On the other hand the e y cross with e z is going to give you e x. So, can we do that, the y
+component here cross with e z gives you e x. So, I am using the fact that e y, so the y
+component of this r is of course y and then, there is a sin psi; that is it. On the other hand,
+the y prime component will have the y prime component here, so this is y cos psi have
+return this out e y dot e z is 0 once again and then, e y cross n is going to give me.
+So, it is the x component that is going to give me a y and therefore, this is a minus and
+there is no z here, there is no z here. And what about z prime, again z cos psi plus this is
+z, e z dot e z, e z got e z is 1 and then, z times n out there that gives me z itself and then,
+e z cross e z is 0, so that does not contributes at all and this is equal to z. So, this checks
+
+out, it essentially tells us that if you rotate about z access, points the z coordinates of
+points do not change and the x and y coordinate get mixed up according to this plane
+trigonometry formula. So, the general formula reduces to this special case in that case we
+looked at earlier from simple geometry. But, this is the general formula here, a very
+useful one and we will have a occasion to come back to this subsequently.
+(Refer Slide Time: 22:30)
+
+The next topic now is to look at polar coordinates in three dimensions. Again, the topic
+of a great important, so let us look at polar coordination in three dimensions. And just to
+refresh your memory, we looked out plane polar coordinates in the x, y plane with the
+origin here. And the statement was, if you gave me a arbitrary point there with
+coordinate x and y in Cartesian coordinates, I could look at it in terms of distance from
+the origin, which I call rho and the azimuthal angle phi angle made from the this access
+to this radius vector.
+And we had the radius vector of any point was rho times e rho, the unit vector in the
+direction of increasing rho and we have a orthogonal vector in the direction of increasing
+phi. So, we had that thing there and the unit vector e rho, because equal to cos psi times e
+x plus sin psi times e y, whereas the vector e phi was equal to minus sin psi e x plus cos
+psi e rho. We also know that e rho dot e phi equal to 0, we are perpendicular to each
+other that every point.
+We saw some length e rho is a function of psi of the position of the azimuthal angle of
+the point as is e phi, according to these formulas here, this is e y, e x and e y the same at
+
+all points, so that is e x, that is e y and it remains the same wherever you are in the plane.
+So, this much we are already seen from plane polar coordinates. What also remain was
+that in the infinite plane the ranges are 0 less then equal to rho the less than less then
+infinity and phi 0 less than equal to phi less than 2 phi in order to make phi single value,
+because 0 was identified with 2 phi.
+One little point got left out and that is the distance between two points. So, if you have
+two points nest to each other, a point here and a point here and ask, what is the square of
+this distance in Cartesian coordinates, this is very simple. So, if I call this distance d s,
+that is d x and d y. So, it is immediately clear that d x squared by the Pythagoras theorem
+is d x squared plus d y whole squared.
+But, you want to do it in terms of plane polar coordinates; you have to argue slightly
+differently; that is the rho for one point; that is the rho for other point, the neighboring
+point. There is a change in angle which is of the order of d phi, which is d phi here and
+this distance, if this is rho, when again to exactly the same thing as before. They draw
+circle of this kind of radius rho, then the reason there is a line element, this thing here
+this is square of this quantity is what you want to find. It is equal to some of this square
+plus this square.
+But, this sum of this square here is purely due to the increase of rho, so that is d rho. On
+this other hand, this quantity here is rho times d phi, whereas that portion is d rho. So,
+therefore, the square of the line element can also we return as b rho squared plus rho
+squared d phi squared in plane polar coordinates. This square of an infinitesimal d s
+squared is given by these two quantities and dimensionally, you can see this is the all
+right, because this is length squared, length squared, length squared, length squared
+dimension less quantity here.
+It is important to recognize that there is coordinate dependence in the line element here
+as soon as you go to any coordinate system other than Cartesian coordinates. This is
+absolutely crucial. Now, the extension of the this two third dimension can be done many
+ways, but the most trivial extension is to simply say this z coordinate is not effect at all.
+
+(Refer Slide Time: 27:49)
+
+So, what one does is to introduce this cylindrical polar coordinates. Now, you do exactly
+what you did earlier for plane polar coordinates, so this is the x y plane on which use
+plane polar coordinates. And if I have a arbitrary point here with the radius vector r in
+three dimensions, then the cylindrical polar coordinates would corresponds to join the
+projection of this on to the x, y plane here; that distance is rho as before. This angle from
+the x access is the azimuthal angle phi as before and the third coordinate is this height
+here, which is the same as this height here and this is z.
+So, position vector of any point is to describe in cylindrical coordinates by rho phi and z
+this try at of quantities. The ranges of rho and phi are exactly as over here and 0 minus
+infinity less than z less than infinity, z positive is above the x, y plane; z negative is
+below the x, y plane in this fashion. So, the connection to plane polar coordinates in that
+to the Cartesian coordinates is obvious is exactly as it is in plane polar coordinates in the
+sense that x is rho cos phi y equal to rho sin phi.
+And of course, z in Cartesian is the same as z in cylindrical polar coordinates in this
+fashion. What is the line element now; that is as a remains, the line element is this square
+of two points, you can see by the Pythagoras theorem that r squared is rho squared plus z
+squared. So, you that r squared rho squared plus z squared and rho squared is x squared
+plus y squared. So, the geometry is extremely straight forward this square of the line
+element is d s squared equal to d rho squared plus rho squared d phi squared plus d z
+squared, this function. The unit vectors are interesting and this is what we will look at
+next.
+
+

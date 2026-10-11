@@ -1,0 +1,91 @@
+ipy pycon 2012
+%quickref is handy!
+
+Commands V Variables
+	cd ~ 	
+	works normally
+	
+	cd = 123 	
+	now cd is a normal python variable
+
+run -i simple_script.py
+	run the screen in the interactive namespace, not in an empty namespace!
+
+run -n simple_script.py
+	normally it thinks name == "__main__", but if you set "-n" then the "__main__" part doesnt execute. A bit like importing the file really
+
+run -t
+run -p
+	run a script under the time and under the python profiler.
+
+run -d
+	run under the ipdb debugger(enhanced version of pdb). Press "c" for continue
+
+notebook limitation
+	doesnt currently support raw_input
+
+qtconsole copy
+	you can copy or "raw copy", normaly "copy" strips away the ... bits
+
+shell scripting inside ipython
+	!echo "hello world" - use the exlamation mark symbol
+	$i - single dollar - python variables interpolated into the shell
+	$$HOME - double dollar - gives you a full shell variable
+	do shell scripting from iPython
+
+Assign shell output to a python variable
+	a = !ls
+	now "a" is a list object....!
+
+iPython "scripts"
+	you can save all your ipython commands in a file."ipy" and then run it by calling ipython...??? And all the magics, shell stuff etc gets run properly
+
+debugging
+	script crashes... just type "debug", then use !print to show variable values
+
+
+_5
+	whatever out[5] was
+
+_i2
+	whatever in[2] was
+
+In, Out
+	List objects holding all commandline input and output
+
+#####################################
+CONFIGURATION
+#####################################
+
+extra files I dont have
+	iPython_notebook_config.py
+	iPython_qtconsole_config.py
+
+iPython --help-all
+	long class form name
+	deep introspection, show you all the classes and options that that are configurable
+
+get handle on ipython object itself
+	ip = get_ipython()
+	ip.ipython_dir
+
+create new profile directory
+	ipython create profile pycon
+
+now use the new profile
+	iPython --profile pycon
+	(ignore any warning messages about old config files, or switch off warning)
+
+config files are valid python files
+	you can put if statments e.g. os.system == "linux" etc etc in your config
+
+#####################################
+notebook
+#####################################
+
+Nice latex rendering
+	Download mathJAX - about 200mb
+
+what url?
+	run ipython notebook --no-browser
+

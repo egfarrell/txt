@@ -1,0 +1,109 @@
+01-Intro
+
+https://www.youtube.com/watch?v=R-n1yUIbfsM&list=PLDlWMHnDwyljkfy3EBSMlM5D5KQiUSpsB&index=1
+
+- Newtonian Mechanics can be applied to general _field_ systems,
+  although at undergrad level it's normally applied to particles.
+
+- QM, reduces to Newtonian under the appropriate conditions
+  (when?)
+
+- different definitions of Bohr's complementarity principles
+
+- QFT has no particles... it's just a _field_ theory!
+    - Why do we need a field theory when we join QM and SR?
+    - Because they have two incompatible ideas:
+        - QM: 
+            - need wavefunction renormalisation to CONSERVE
+              particle number
+        - SR: 
+            - allows for creation & annihilation of particles ie
+              particle number can CHANGE
+    - But using fields for everything in QFT gives a very
+      consistant story
+    - Perturbative Relativistic Quantum Theory: 
+        - It is possible to successfully join QM and SR using
+          _particles_... but these ways are limited in their
+          applicability. 
+        - It doesn't cover certain phenomena we know exists in
+          the universe. e.g. the Higgs mechanism is
+          a non-perturbative effect and can only be accurately
+          described using a QFT description.
+
+
+### Observation: Theories & Frameworks
+    - QM, SR, Newtonian are all FRAMEWORKS... not theories.
+
+    - What is a theory?
+        - theory = dof's + interactions + framework...
+
+    - But GR?
+        - GR is not a framework... it is a theory of gravitation.
+        - If I want to take a correspondence principle associated
+          with GR... it won't give me back a framework... e.g.
+          it's not going to give me back SR.
+        - I wonder: a bit like Einstein's classification of
+          'principle' and 'constructive' theories...
+
+### Conclusions
+    - There's no "correspondence principle" between GR and SR
+      (but there is a "link" between them... see below)
+    - GR is a generalisation of the theory of Newtonian Gravity.
+    - There should be a limit we can take in GR, where we reduce
+      to Newtonian Gravity.
+    - Link(s) between GR and SR?
+        - GR has solutions, and one solution will be SR.
+          Basically you take out all the sources that curve
+          spacetime, and solve the equation, and the solution you
+          get is flat spacetime. And that's the spacetime of SR.
+        - (But it's not a generalisation stemming from
+          a correspondence principle, it's just a solution of GR)
+
+### Compare GR to Relativistic EM
+    - Equations 1 and 2 stem from...? 
+        - if you apply the Euler-Lagrange equation to the EM
+          Lagrangian, you get the first two equations...
+        - ie Equations 1 and 2 are the resulting _equations of
+          motion_ stemming from the EM Lagrangian
+    - Equations 3 and 4 stem from the Bianchi Identity. 
+        - The Bianchi Identity is a statement about the
+          underlying EM _geometry_. 
+        - NOT the spacetime geometry though, rather the geometry
+          of the electric & magnetic fields OVER spacetime. 
+        - Each point in spacetime has a "blade of grass"
+          representing the electric field value, and another
+          blade of grass representing the magnetic field value,
+          and you take that field of grass and it has
+          a volumetric geometry more so than the spacetime upon
+          which it was born.
+
+- Electrodynamics says how the sources create the fields...
+    - Then you need the Lorentz force law and Newton's 2nd law
+      once you know the fields
+        - $MY_IMAGES/physics/GR/Flournoy-2021/EM-Framework.jpg
+    - The whole schema in the screenshot is a breakdown of
+      Electrodynamics into a background and test particles...
+    - Feedback loop:
+    - Techncially the test particle should be tiny compared to
+      the sources which are HUGE. Or else the test particles
+      start creating their own electric fields which mess up what
+      you've already calculated.
+    - So you assume you've got a fixed EM field background when
+      you start seeing how particles react with the Lorentz force
+      law etc...
+        - That's actually an approximation, but one that's often used
+
+### GR has a similar schema to Electrodynamics...
+    - Einsteins equations: Tell us how sources create the
+      gravitational field / curvature
+        - note: the "field" here isn't the gravitational field
+          per se, it's the "metric field"
+    - The geodesic equation: Tells us how a test particle
+      responds to curvature
+        - $MY_IMAGES/physics/GR/Flournoy-2021/GR-Framework.jpg
+    - That's just like the Wheeler comment I was surprised about
+      before...
+        - ie there's TWO key equations for GR. I used always
+          think it was the first one only `G_μν = 8π T_μν`
+        - $MY_IMAGES/physics/GR/Wheeler-Maxim.jpg
+

@@ -1,0 +1,358 @@
+### Nora Workshop 
+
+
+### Attention versus convolutional
+    - what is close in 3D space may not be close in sequence
+      space and visa versa
+
+
+- a 'base' is a single nucelotide
+- 200,000,000 different proteins sequenced from various
+  organisims
+- Poster of inside of cell, everything packed together
+- covid spike protein, little flap goes up and down
+- Hydrophobic: 'oil-like' properties
+- peptide bond is 'stiff', not much rotation
+- most important force for protein folding is the _Hydrophobic_
+  interaction force
+
+- 30% proteins in cells 
+- but 50% of proteins interact with membranes
+
+- "Domains": compact parts of proteins represeting a structurally
+  independent region
+    - separate functional units, can be studied separately
+
+- Structural disorder
+    - not all parts of a structure can be predicted from a sequence
+    - Janusz said this
+    - have 'linkers' between them
+
+- Cryo-EM
+    - another revolution in Structural Biology? (apart from AI)
+    - very high resolution
+
+- Without the PDB, the AI methods would have nothing to learn
+  from
+
+- sequences with high similarity encode identical/similar 3D
+  structures
+
+- template models
+    - homology: ok
+    - threading/folding templates: not so good
+        - threading when there is not as much sequence similarity
+
+### Co-evolution
+    - residues that are in contact should co-evolve
+    - can infer which residues are in contact by looking at which
+      residues co-evolve
+
+### Comment about crystallisation
+    - $MY_IMAGES/bio/nora-workshop-01.jpg
+                
+### Sequence alignment
+    - "Two homologous sequences whisper, a multiple alignment
+      shouts loudly"
+
+- Clustal W: landmark paper in sequence alignment 
+
+### Questions
+    - How easy/accurate is to predict the active site of
+      a protein utilizing modeling from the protein sequence?
+      When utilizing machine learning, what is the lower training
+      data set one can start with to generate valuable
+      results?/Cynthia
+        - In many cases, the most important and conserved parts
+          of the protein, including the active site, will be
+          modelled well by AlphaFold and RoseTTAFold. Not always,
+          so it’s still going to be a good idea to obtain an
+          experimental structure. For training data, I don’t
+          think the deep-learning models are tailored to
+          particular proteins, but the prediction step does
+          benefit a lot from prior knowledge of related proteins.
+
+    - This is more a comment than a question. One point I always
+      found amazing: how scientists focus  on the mutations
+      mostly in viruses. But do we have any information on the
+      conservation (I mean 100% conservation) of sequences and
+      amino acids in the human proteome? In other words: if we
+      sequence the full genome of people, would we find any
+      mutations that could also argue for the higher affinity of
+      the spike for some people (perhaps even tribes?)
+
+    - in the template based modeling, how far evolutionarily can
+      the proteins be , to generate accurate models?
+        - With sequence identity between target and template at
+          60% and higher, the model of the target will be very
+          accurate, usually. At 25% and higher you can also
+          sometimes get quite good models. It depends on the
+          number of insertions/deletions comparing target and
+          template. And the length of the sequences. Few indels
+          good, long segments good.
+
+
+- Do you think we are far from predicting geometries of protein
+  with several stable conformations? The most clear case would be
+  Prions
+    - I think a general approach is a still a matter of current
+      research: i think Frank Noé gives a good account of current
+      progress here:
+      https://www.annualreviews.org/doi/abs/10.1146/annurev-physchem-042018-052331.
+
+
+
+### transformers
+- AF2 uses an 'attention' approach
+- One big difference between Alphafold1 and Alphafold2 is the use
+  of transformers. These are very, very effective at sequence
+  problems (such as language, where they originated).
+    - very good point - I should have emphasized that during my
+      talk
+- From the name Evoformer - does Alphafold 2 use Transformers?
+    - that is correct - transformers and attention operators
+
+### Transformers 2
+    - How does the attention-based approach differ from
+      a convolutional neural network
+    - convolutional networks were developed a lot with image
+      recognition tasks in mind and includes applicatoin of
+      filters in multiple layers. Attenttion netwok has been
+      developed with for example translation of natural languages
+      in mind.  
+        - See for example https://youtu.be/a8xRE9AAJw8
+
+
+### metagenomics
+- excluding metagenomics database gives a big reduction in
+  performance
+
+### Code issues
+- Does AF2 release code include the code for training our own
+  system locally or they just released the predictor to be used
+  together with their trained model weights?
+    - they only published the inference code. Writing your own
+      training scripts should be relatively straightforward, but
+      as Sachin pointed out, resource intensive.
+    - Aside: I noticed RoseTTAfold released their training system
+      but AF2 didn't
+    - Other question: Do you have a concrete example where
+      training with custom data would be interesting?
+    - I could imagine trying out some transfer learning with new
+      structures, protein complexes, or specific sets of
+      structures (e.g. transmembrane)
+
+### Gradient Descent
+- In the slide that illustrates the AlphaFold1 internal workings,
+  it would seem that from the initial guess of the CNN, the
+  protein-specific gradient descent basically folds the whole
+  protein. I am surprised by this, is it known what
+  optimization/relaxation routine did they use? Great talk!
+    - A simple gradient descent algorithm based on a learned cost
+      function.
+
+- And related to my question: I am not sure I understood how
+  AlphaFold v2 differs from this, i.e. does v2 still use this
+  gradient descent method?
+    - Simply put: the difference is that AF2 learns end-to-end
+      (sequence in, structure out), whereas AF1 learns
+      a potential from which it then gets a structure after
+      gradient descent.
+    - Less simply put: AF2 has some later stages that do some
+      non-physical optimisation on a “triangle gas” to get a good
+      structure and it can do postprocessing that involves an
+      amber relaxation process. All explained in detail in the
+      appendices of the AF2 paper.
+
+
+### MSA
+- There are many algorithms to generate MSA alignments, each one
+  of them trying to detect a different property or enancing
+  a particular feature. There would be any advantage on feeding
+  different MSA generated with different algorithm or there will
+  be just a MSA that will work better than others?
+    - it is clear that MSA methods really aiming for aligning
+      structurally equivalent parts (rather than reflecting
+      evolutionary history) is more suitable for being used in
+      alphafold. As the number of sequences available for many
+      families is large, the challenges are different than when
+      for example clustalw was developed. I have not seen
+      analyses of how sensitive alphafold is on the accuracy of
+      the MSA, this would be interesting.
+
+
+### Deeper knowledge
+- Have we already learned anything about HOW proteins fold from
+  AlphaFold?
+    - I believe the consensus is that AF2/RF are able to predict
+      the final, folded 3D structures for protein domains and
+      some whole proteins when there are many, 60-100 or more,
+      homologous proteins in the same protein (super)family.
+      AF2/RF does NOT explain how the unfolded to folded process
+      takes place, or HOW proteins fold. Btw the methods are also
+      not good, currently, at de novo prediction. You cannot use
+      a random sequence, not related to anything in the sequence
+      databases, and expect to get a good model.
+
+
+### Folding Process
+- Great talk Inge. While AlphaFold2 predicts brilliantly, could
+  you comment on the prospects for this type of technology to
+  give us insight on the actual folding process?
+    - Thanks, Rein! Alphafold as such is not targeted to this
+      problem. In order to use a similar approach to learn about
+      the folding process, one would need to have example data
+      informative for this process. You may know more than me
+      about data available - I am not aware of large datasets on
+      protein folding trajectories.
+
+
+### - 5 models used in AF2?
+    - They are not that different...
+    - output has 5 independent structures but they are not
+      different 'confirmational states' (they are not very
+      different)
+
+### Mutations
+    - conversation about mutations?
+    - doesnt predict them
+
+
+# Day 1
+    - `Session 1: AlphaFold,RoseTTAFold – paradigm shift for
+      molecular biology?`
+    -  Jon Lærdahl, 
+        - Oslo University Hospital & University of Oslo: 
+        - Proteins and techniques for predicting protein
+          structure: an introduction 
+    - Inge Jonassen, 
+        - University of Bergen:
+        - Computational structure prediction, 
+        - CASP and AlphaFold (v1 and v2)
+    - Sameer Velankar, 
+        - EMBL-EBI: 
+        - AlphaFold Protein Structure Database
+
+    - `Session 2: Technical tutorial and hands on coding`
+    - Randy John Read, 
+        - Cambridge University: 
+        - Quality of Protein Structures from experiments and
+          simulations
+    - Jonas Verhellen, 
+        - University of Oslo 
+        - Technical tutorial on how to use our implementations of
+          AlphaFold v2.0 and RoseTTAFold
+        - How to use the algorithms?
+        - Showcase of protein examples
+
+# Day 2
+
+### 09:00 - 13:00 Session 3:
+    - `AlphaFold and RoseTTAFold – applications + limitations`
+    - Dr. Minkyung Baek
+        - University of  Washington
+        - RoseTTAFold
+    - Philippe Paul Auguste Robert
+        - University of Oslo
+        - From structural biology to practice: AI applied to
+          ultra-large datasets for therapeutics discovery
+    - Sabry Razick
+        - University of Oslo: 
+        - The Fox server at University of Oslo and requirements
+          for running AlphaFold v2 and RoseTTAFold
+    - Inger Berg Ørstavik
+        - Dept Private Law, Uni Oslo: 
+        - Licensing and legal restrictions for use of AlphaFold,
+          RoseTTAFold and AlphaFold Protein Structure Database
+    - 11:40-13:00: Results/Discussion led by Jon Lærdahl,  Oslo
+      University Hospital & University of Oslo
+    - 11:40-12:00 Preliminary results 1: Unknown protein 1 and
+      possible implications of its structure
+    - 12:00-12:20 Preliminary results 2: Unknown protein 2 and
+      possible implications of its structure
+    - 12:40-13:00 Preliminary results 3: Unknown protein 3 and
+      possible implications of its structure
+
+### 14:00 - 15:30 Session 4:
+    - `Future perspectives`
+    - 14:00-14:30 Victor Greiff, University of Oslo: Future
+      perspectives: from structure to function
+    - 14:30-15:00 Jim Brase, Co-lead of The ATOM consortium and
+      Deputy Associate Director for Computing, Lawrence Livermore
+      National Laboratory: The ATOM consortium: from protein
+      structure to drug discovery
+    - 15:00-15:50: Panel Debate. (Panelists: Randy Read, Jim
+      Brase, Jon Lærdahl,  Inge Jonassen, Victor Greiff.
+      Moderator: Klas Pettersen)
+    - 15:50-16:00: Klas Pettersen, NORA. Closing
+
+### Email
+
+- Hi,
+- Sunandan, thank you very much for sending the link.
+- I have registered and I recommend the participation to all
+  computationally-oriented members of the group.
+- best,
+- Janusz
+
+- Hi,
+- These is an interesting and super hot workshop on protein
+  structure prediction. This is virtual and free. Please see the
+  trailing email if you are interested.
+- Best regards,
+- Sunandan
+
+### Original Email
+
+- From: Randy John Read <rjr27@cam.ac.uk>
+- Date: Aug 26, 2021 8:27 PM
+- Subject: [phenixbb] NORA workshop on AlphaFold2 and RoseTTAFold, 31 August and 1 September
+- To: "CCP4BB@jiscmail.ac.uk" <CCP4BB@JISCMAIL.AC.UK>,PHENIX user mailing list <phenixbb@phenix-online.org>
+- Cc:
+
+> Hi,
+>
+> I’ve just learned that this online workshop is generally open,
+> not just to members of the Norwegian Artificial Intelligence
+> Consortium (NORA), and it’s free!  Information, including the
+> current programme and a link to registration, can be found
+> here:
+>
+> https://www.nora.ai/events/AlphaFoldv2.0-and-RoseTTAFold-workshop%20.html
+>
+> I’ll be talking a bit about experiences with models from
+> AlphaFold2 and RoseTTAFold, but the real draw should be talks
+> by people who really understand these two deep learning
+> algorithms: Minkyung Baek (first author on the RoseTTAFold
+> paper, from David Baker’s group) and a representative of the
+> DeepMind team that developed the two versions of AlphaFold.
+> Sameer Velankar will also be there to talk about the exciting
+> new AlphaFold database at the EBI.
+>
+> Best wishes,
+>
+> Randy Read
+>
+> ----- Randy J. Read Department of Haematology, University of
+> Cambridge Cambridge Institute for Medical Research     Tel: +44
+> 1223 336500 The Keith Peters Building
+> Fax: +44 1223 336827 Hills Road
+> E-mail: rjr27@cam.ac.uk Cambridge CB2 0XY, U.K.
+> www-structmed.cimr.cam.ac.uk
+>
+> _______________________________________________ phenixbb
+> mailing list phenixbb@phenix-online.org
+> http://phenix-online.org/mailman/listinfo/phenixbb Unsubscribe:
+> phenixbb-leave@phenix-online.org
+
+
+
+### Links
+    - Conference Website https://www.nora.ai/events/AlphaFoldv2.0-and-RoseTTAFold-workshop%20.html
+    - Day 1 morning      https://drive.google.com/drive/u/0/folders/1lVw5fgYvsh7ZzZzgMQi_UdtZDihDKM51
+    - Videos             https://www.nora.ai/nora-webinars/alphafold/
+    - Cameo 3d server    https://www.cameo3d.org/
+    - 3D Beacons         https://3d-beacons.github.io/3D-Beacons/
+    - 3D Beacons Github  https://github.com/3D-Beacons
+    - Videos             https://www.nora.ai/nora-webinars/alphafold/
+    

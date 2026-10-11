@@ -1,0 +1,38 @@
+malan 13
+XHTML
+	The "clean" version of html
+	you have to paste some extra lines at the top for XHTML
+	code can be validated at http://validator.w3.org
+
+html
+	head
+	body
+
+
+shortcut to close tag
+	<br></br>	... thats stupid!
+	<br />		... thats better!
+
+web server convention
+	mkdir public_html
+
+css
+	convention for signalling css code
+	<style type="text/css">
+	<!--
+	-->
+
+	element {property:value;}
+	#id {property:value;}		...control specific tag
+
+	.class {property:value;}
+	...further down...
+	<span class="copyright"> copyright cs50 </span>
+
+Google compressors
+	takes their html and removes whitespace, renames variables to x,y etc
+	
+forms
+	<form action="http://www.google.com/search">
+	<input type="text" name="q" />
+	<input type="subimt" name="Google Search" />

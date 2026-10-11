@@ -1,0 +1,192 @@
+
+
+### Good Marbuger Intuition
+    - $MY_NOTES/physics/QM/Constructing-reality-marburger.txt
+    - Let me quickly correct the particle-centric language of the
+      pre- ceding paragraphs. Spin is a property that occurs at
+      _every point in space_ where the wave function does not
+      vanish. 
+    - Wherever an electron detector clicks, you could have chosen
+      to detect its spin along an arbitrary direction that you
+      define as “up,” and the detector would always register
+      either up or down along that direction. 
+    - So there are two probbility waves, `ψ↑(x)` and `ψ↓(x)`,
+      each of which will satisfy a different Schrödinger
+      equation. The two cases are so similar that the two waves
+      can be treated together in a spreadsheet-like approach as
+      components of a single object called a `spinor`. 
+    - Then the two Schrödinger equations can be treated together
+      as one “matrix equation” acting on the two-component spinor
+      `Ψ = (ψ↑(x), ψ↓(x))`, just as the simultaneous equations in
+      our matrix example above can be replaced by a simpler
+      matrix notation. 
+    - This is what I meant when I said that spin introduces more
+      structure to Nature’s geometry. It is always present,
+      regardless of the spatial or temporal behavior of the wave
+      function. The two-fold nature of the electron state can be
+      revealed by a detector set to measure the spin components
+      along an arbitrary direction.
+
+
+
+### Pauli spin matrices
+    - $MY_NOTES/physics/QM/Age-Entanglement-Louisa-Gilder.txt
+    - Highlight: Page 118 | Added Saturday, April 07, 2012, 01:05 AM
+    - As it turned out, in three months, Pauli developed three
+      matrices that described what he still deplored calling
+      “spin”: one matrix to describe the phenomenon in each of
+      the three perpendicular Cartesian directions.
+
+
+
+### History of spin
+    - $MY_NOTES/physics/QM/Age-Entanglement-Louisa-Gilder.txt
+    - But eventually Pauli found that the half-quanta described
+      something real about the electron. Real, but impossible to
+      visualize: 
+        - the electron seems to be spinning, but this is no spin
+          anyone has ever seen; what should be a complete
+          rotation is only halfway around to an electron. 
+    - It must “spin” two full times to reach its starting point
+      again. No one understands what this means. 
+    - But the electrons that “spin” in one direction are
+      attracted to one pole of the Stern-Gerlach magnet, and
+      electrons that “spin” in the opposite direction are drawn
+      the other way: two piles.`*6` 
+
+
+
+### Peter Woit advice
+    - https://www.math.columbia.edu/~woit/wordpress/?p=15155#comments
+    - Spinors are a good example. You can find various versions
+      of the story of spinors and rotations in the math
+      literature, but almost always doing things for arbitrary
+      dimensions and arbitrary signature. Mathematicians rarely
+      write down the details of the specific case of 3 and
+      4 dimensions, which are very special (in particular the
+      phenomenon of the spin group not being simple (in signature
+      (4,0) and (2,2)).
+    - Physicists often recognize that students need an expository
+      discussion of this subject beyond the formulas in every
+      textbook, and then go write something really confused,
+      because they are confused about this. This is a bit
+      disturbing: if you’re confused about something and you try
+      and teach it to others, it’s very bad news if this doesn’t
+      make clear to you that you are confused and encourage you
+      to become unconfused. Bad to be confused, worse to not even
+      be aware you are confused.
+
+
+### Mentat Discord: spinors
+    - https://discord.com/channels/731131562002743336/973988739644788816
+    - Chapter 11
+    - Hyper Complex Numbers
+    - I stalled on this Chapter on Clifford Algebras. I couldn't
+      get my head around them. Coming back much later and
+      re-reading it seems actually easy. Viewed as a symbol
+      shuffling exercise, we have some intriguing symbols with
+      some interesting new rules. 
+    - Do I have any kind of intuitive grasp of these algebras?
+      Nope. Does it matter? Nope.
+    - I think what went wrong is that I already have some picture
+      of Quaternions - I used them in Orbital Control software
+      for the ISO satellite. So I skimmed over them and the
+      spinors to get to Clifford Algebras, without internalising
+      what Spinors (new concept for me) are.
+    - This diagram (1/3rd shown here) is pedagogically unhelpful:
+        - $MY_IMAGES/maths/unhelpful-spinor-intuition.jpg
+    - I'm left with all kind of questions such as 'What makes the
+      twisty cable? Is this somehow related to String Theory or
+      what?'.
+    - When I 'got it' about Clifford Algebras I found the diagram
+      annoying. In one sense it is valid; it shows a physical
+      setup that has a spinorial state space. 
+    - But come on guys, it's a lot easier and more intuitive to
+      say 'there are particles that have state that behaves
+      algebraically like this object.... don't worry about what
+      up, down, strange, charm, top, bottom and spin mean
+      physically. Just treat them as magic names for aspects of
+      state'
+
+
+    - Reply:
+        - My understanding is that the "twist" comes from the
+          combinatorics of adding elements to your vector.
+          Essentially you can't just keep rotating by 2pi anymore
+          because the trigonometric properties of each additional
+          relation to each additional element will covary
+          simultaneously.
+        - So now you have to find the new rule to get
+          a "symmetric" rotation, where all the relations reset
+          to the initial point, instead of just your first
+          n relations. Spin is a convenient metaphor because
+          rotating on one axis will not create a cycle on its
+          other axes (possible connection to tennis racket
+          theorem?).
+        - It does feel to me that there is something missing in
+          our fundamental understanding of the categories that
+          unite trigonometries and power laws, eg the relation
+          between `pi` and `e`
+
+# atyiah
+    - spinors are the square root of geometry
+    - (just as `i` is the square root of `-1`)
+    - but...
+    - spinors exists without the need for complex structures
+    - spinor analysis is a substitute for _complex analysis_
+
+### Penrose talking on the Portal
+    - A spinor is the "square root" of a vector
+    - and when I went to Diracs course it did become clear
+    - roll one cone on another cone, it goes around twice (form
+      Weyl)
+
+### quantum classical difference 2
+    - quantum spinors: spin by 360 twice to get back to starting
+      state.
+    - but Glashow belt example in classical physics!
+
+
+### Gerret "Portal" Podcast - SPINORS
+    - Spin Group act on spinors: hidden level of structure that
+      you wouldn't know from 3D space. There's some secret of
+      3 dimensions.
+    - All other basic kinds of symmetries, we don't have these
+      hidden spaces, hidden representations... orthogonal groups.
+    - Nature bases her particles on these hidden
+      representations...
+    - There's something about spinors that we don't understand
+      where they came from... they're a hidden feature of the
+      universe.
+    - If I don't have length and angle, I can't talk about
+      spinors. Einstein used a ruler and protractor to define spacetime.
+    - Gravitational charge isn't mass... it's spin!
+
+
+
+### Brain Keating talk
+    - Losing the Nobel Prize | Talks at Google
+    - link to spinors (?)
+    - he rotated two sheets of polaroid
+    - the sheets are sensitive to one orientation of light's
+      polarisation
+    - and as you physically rotate one sheet wrt the other sheet,
+      the intersection goes:
+        - from light to dark,
+        - to   light, to dark
+    - so it rotates twice in _amplitude_ for every single
+      physical rotation
+
+
+### Tip
+        - Lex interview with Eric Weinstein:
+            - he explains spinors (Weinstein mentioned naked
+              spinor)
+
+### links
+    - Peter Woit spinor lecture + discussion                     https://www.math.columbia.edu/~woit/wordpress/?p=12154
+    - William O Straub Tribute to Weyl, Spinors etc              http://www.weylmann.com/
+    - Dennis Morris: permutation matrices 7.99                   https://www.amazon.co.uk/Little-Book-Permutation-Matrices/dp/1546702083/
+    - Dennis Morris: Complex numbers higher forms spinor algebra https://www.amazon.co.uk/Complex-Numbers-Higher-Dimensional-Forms/dp/1508677492
+    - Dennis Morris: spinors                                     https://www.amazon.co.uk/gp/product/1507817991
+    - Eigen Chris: Spinors for beginners                         https://www.youtube.com/playlist?list=PLJHszsWbB6hoOo_wMb0b6T44KM_ABZtBs

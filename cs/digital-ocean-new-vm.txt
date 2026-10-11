@@ -1,0 +1,127 @@
+digital ocean - new vm
+
+### vast cloud
+    wget https://raw.githubusercontent.com/vast-ai/vast-python/master/vast.py -O vast; chmod +x vast;
+    Get key: https://cloud.vast.ai/cli
+    export VAST_KEY=
+    vast set api-key "$VAST_KEY"
+    Saved to: ~/.vast_api_key
+
+    > handy
+        vast search offers > ~/offers.txt
+        vast show ssh-keys
+
+
+### power-off for snapshot
+    ```
+    sudo shutdown -h now
+    or
+	poweroff
+    ```
+
+
+--------------------
+New automated setup:
+--------------------
+    - $HOME/dotfiles/bin/inject-cloud-setup.sh
+
+### create new 'ef' user
+    ### Create user
+        sudo adduser --gecos "" ef
+
+    ### Grant sudo
+        sudo usermod -aG sudo ef
+
+    ### If password-checking too strict,
+    ### remove user, loosen restrictions & retry...
+        sudo deluser --remove-home ef
+        sudo vim /etc/pam.d/common-password
+
+### Allow "ssh-copy-id" for non-root user
+    sudo vim /etc/ssh/sshd_config
+        PermitRootLogin yes
+        PasswordAuthentication yes
+        KbdInteractiveAuthentication yes
+    UBUNTU 22.10
+        sudo systemctl restart ssh.service
+    old ubuntus
+        sudo systemctl restart sshd
+    logout
+
+### Copy my key to remote
+    export REMOTE="vast"
+    export REMOTE="aws"
+        ssh-copy-id "$REMOTE"
+
+### Transfer EXISTING bitbucket SSH key
+    - see: $HOME/bin/cloud-setup.sh
+
+### NEW ssh identity
+        sudo apt-get update
+        ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+        eval `ssh-agent -s`
+        ssh-add ~/.ssh/id_rsa
+        sudo apt install -y xclip
+        logout
+        - COPY SSH IDENTITY TO LOCAL
+            scp do:/home/ef/.ssh/id_rsa.pub  .
+            scp do2:/home/ef/.ssh/id_rsa.pub .
+
+### DOTFILES
+    - see: $HOME/bin/cloud-setup.sh
+
+    sudo apt-get update
+    sudo apt-get install -y git
+    git clone git@bitbucket.org:vcbbgh/dotfiles.git
+            - Or HTTP:
+            git clone https://bitbucket.org/vcbbgh/dotfiles.git
+    cd ~/dotfiles && source env_setup.sh
+
+### VPN: handy "self-hosted"
+    cd ~/repos
+    git cone https://github.com/Nyr/openvpn-install
+    cd ~/repos/openvpn-install
+    ocx openvpn-install.sh
+    sudo ./openvpn-install.sh
+
+
+### gecos
+    - The GECOS field is the 5th entry in Unix `/etc/passwd`
+      records, storing user account details like real name and
+      contact.
+    - (Originally, GECOS stood for "General Electric Comprehensive
+      Operating Supervisor," which was an operating system
+      developed by General Electric. However, in the context of
+      Unix and Linux systems, the term has lost its original
+      association and simply refers to this informational field.)
+
+### Create Droplet via API
+export $TOKEN=
+curl -X POST -H 'Content-Type: application/json' \
+    -H 'Authorization: Bearer '$TOKEN'' \
+    -d '{"name":"lon-01",
+        "size":"s-1vcpu-1gb",
+        "region":"lon1",
+        "image":"ubuntu-22-10-x64"}' \
+    "https://api.digitalocean.com/v2/droplets"
+
+
+### remember!!
+    - home directory for root isnt '/home/...'.
+    - Its '/root'!
+
+### set date timezone
+    - stay in sync with other servers (starts daemon)
+    sudo dpkg-reconfigure tzdata
+    ai ntp
+
+### digital ocean command line client (skiff)
+    python 2
+        pip install skiff
+    python 3
+        git clone https://github.com/Shrugs/skiff.git
+        cd skiff
+        py setup.py install
+    install encryption module
+        (for my DO encryption)
+        conda install pycrypto

@@ -1,0 +1,54 @@
+
+> key point: you can build a "job", and then the artifacts can
+> be "published" and used by other processes.
+
+- web browser interface: localhost:8880
+- its a windows service: use `services.msc` to start/stop
+- "job" = project = instructions to build a project
+- each "job" has many "builds"
+- first example: "freestyle project": run a MS-DOS "job": echo "hello"
+- dashboard: show status of the last few runs: blue ball, red ball etc
+- live console output: click on "ball" when its building
+- theres an "auto refresh" option
+- disable job
+- update various plugins
+- green balls plugin: change "blue ball" for success to green!
+- can delete from "build history": but only do that at the
+  start when setting up the process. Don't amend the build
+  history
+
+- jenkins configuration: setup java JDK (not JRE!)
+- jenkins configuration: setup MAVEN_HOME
+
+- sample maven project: https://github.com/srctips/time-tracker
+- confirm that maven project builds OK _outside_ of jenkins: `mvn clean package`
+- jenkins plugins: install git / github (theres a gitlab plugin too!)
+- maven project: link jenkins to github, specify maven "goals" eg: clean package
+- workspaces: can browse project structure
+
+- automate builds: schedule them (like a `cron` tab)
+- automate builds: H/3 * * * *
+
+- automate builds: POLL SCM (check git for changes)
+- automate builds: You have a "git polling log"
+
+- jenkins "TABS": one tab for "freestyle", "maven" etc
+- jenkins "TABS": delete `view`
+
+- file explorer: ... program files \ jekins: "jobs folder" - shows you config for the job
+
+- unit tests: install junit plugin
+- unit tests: jenkins gives a graph showing results of unit tests
+
+- quality metrics: 3 new plugins: PMD, checkstyle etc
+- quality metrics: Enable the plugins for the "job"/project
+- quality metrics: After each build, you get a load of graphs
+- quality metrics: config: set `Status Thresholds` and fail the build if threshold not reached
+- quality metrics: yellow status ball: unstable: quality metric failed
+
+
+- publish artifacts: maven repository server plugin
+- publish artifacts: new options: "upstream repository" + URL
+
+- deploy to application server: deploy plugin (he setup tomcat server too)
+- deploy to application server: \*.war files, gave user/password to tomcat "container"

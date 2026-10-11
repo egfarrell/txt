@@ -1,0 +1,130 @@
+
+# Map s3 bucket to local folder
+
+Handy
+    findmnt -t fuse.rclone
+    rclone config show
+    rclone listremotes
+    rclone tree aws_s3:`bucketname`          --max-depth 3 --dirs-only
+    rclone tree aws_s3:asr-data-988779896750 --max-depth 3 --dirs-only
+
+## Config location
+
+rclone config file:
+    - ~/.config/rclone/rclone.conf
+
+Check location:
+    rclone config file
+
+- Config only contains the remote definition, no CREDENTIALS.
+- AWS credentials are stored separately in:
+    - `~/.aws/credentials`
+    - `~/.aws/config`
+
+- rclone uses AWS CREDS automatically via:
+    - `env_auth = true`
+
+
+## Remote definition
+
+Example config (`rclone.conf`):
+
+```
+[aws_s3]
+type = s3
+provider = AWS
+env_auth = true
+region = eu-central-1
+```
+
+Mapping:
+    - aws_s3:asr-comp        → s3://asr-comp/
+    - aws_s3:asr-comp/train  → s3://asr-comp/train/
+
+Syntax:
+    - remote_name:bucket/path
+
+
+## Basic commands
+
+List buckets:
+    rclone lsd aws_s3:
+
+List bucket contents:
+    rclone ls aws_s3:asr-comp
+
+List specific folder:
+    rclone ls aws_s3:asr-comp/train
+
+
+## Mount bucket locally
+
+Create mount point:
+    mkdir -p ~/repos/s3_asr_comp
+
+Mount bucket:
+```
+rclone mount aws_s3:asr-comp ~/repos/s3_asr_comp \
+  --read-only \
+  --vfs-cache-mode minimal \
+  --daemon
+```
+
+Access files normally:
+```
+ls ~/repos/s3_asr_comp
+cd ~/repos/s3_asr_comp/train
+```
+
+Unmount:
+```
+fusermount -u ~/repos/s3_asr_comp
+```
+
+
+## Mount SPECIFIC subfolder only
+
+```
+rclone mount aws_s3:asr-comp/train ~/repos/s3_train \
+  --read-only \
+  --daemon
+```
+
+
+## Copy file from S3
+rclone copy aws_s3:asr-comp/train/file.flac .
+
+
+## Copy file to S3
+rclone copy localfile.flac aws_s3:asr-comp/train/
+
+
+## Sync directory
+Download:
+rclone sync aws_s3:asr-comp/train ~/local_train
+
+Upload:
+rclone sync ~/local_train aws_s3:asr-comp/train
+
+## Notes
+    - rclone uses AWS credentials automatically from ~/.aws/
+    - No credentials stored in rclone.conf
+    - Mount behaves like a normal filesystem but backed by S3
+    - Best for large datasets when local disk is limited
+    - Reads stream directly from S3
+    - Writes upload to S3
+
+
+### Aside
+- Why rclone exists if AWS CLI already does this:
+    - `aws s3 ls s3://asr-comp/train/`
+    - `rclone ls aws_s3:asr-comp/train`
+
+- rclone adds capabilities AWS CLI does not have:
+    - mount S3 as filesystem (rclone mount)
+    - works with many cloud providers (S3, Google Drive, Dropbox, etc.)
+    - advanced caching
+    - bandwidth limiting
+    - encryption layers
+    - better integration with Linux filesystem tools
+    - AWS CLI cannot mount S3.

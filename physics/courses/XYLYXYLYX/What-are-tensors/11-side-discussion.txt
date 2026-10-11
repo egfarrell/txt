@@ -1,0 +1,519 @@
+- Alan Grayson 
+    - I've had a long standing unresolved problem: 
+        - Why, when writing Einstein's Field Equations in tensor
+          form, they are alleged to be independent of coordinate
+          systems. 
+        - After reading some of Norman Levitt's old posts on
+          Avoid, I think I see the light. It seems that in your
+          definition of tensors, you NEVER assume a coordinate
+          system; rather, just a basis in a vector space and some
+          inner product on that basis. Later, you generate the
+          transformation equations. 
+        - The usual MIS-leading approach is to start with the
+          transformation equations and assert, without an
+          explicit definition, that any mathematical object that
+          obeys these transformation rules IS a tensor. 
+        - Please tell me this; IYO is the foregoing correct? TIA,
+          AG
+
+- XylyXylyX 
+    - Yes, I think that is certainly part of it. I work hard to
+      point out that introducing tensors from a definition based
+      on their transformation rules is a bad place to start.
+      However, I don’t think it is misleading as you seem to
+      suggest, because those are the only transformation rules
+      that keep expressions built from the transforming objects
+      (tensors) invariant. But yes, it is not a good approach
+      because it hides the rich structure and seems so very very
+      arbitrary.
+
+    - Despite this, you can still idea of invariance using just
+      the pure component notation. I explicitly did this in one
+      of the GR lectures (starting at 8 min into lecture 56 of
+      the General Relativity series) where I try to explain
+      explicitly why these tensor transformation rules are so
+      important. The example I use is the transformation rule for
+      the Christoffel Symbol, which is famously not a tensor. If
+      you look up that that transformation rule, you will see the
+      “non tesorial part” of the transformation rule is a term
+      that depended entirely on the coordinate systems! Therefore
+      it is obvious that the Christofel symbol is NOT going to be
+      an invariant object and its nature will always depend on
+      the coordinate systems involved. Check out that section of
+      the lecture and let me know if that helps.
+
+    - Also, I actually DO use coordinates systems a bit more than
+      you might think. Whenever we apply the coordinate basis we
+      presume a coordinate system on the manifold
+
+- Alan Grayson 
+    - @XylyXylyX This raises a related question.  Is it correct
+      that when you assume a basis in `V` and define the metric
+      tensor, this does NOT imply a coordinate system?
+
+- XylyXylyX
+    - Alan Grayson Let me lay the foundation for an answer:
+
+    - The term “coordinate system”I have seen used two ways. The
+      most important way, and the way you are using it I’m sure,
+      means “coordinate system on the manifold.” That is the
+      usage in GR and it is the most common usage. Keep that in
+      mind for a moment.
+
+    - Now, if we consider a single vector space V and its dual V*
+      we can build up all the possible tensor product spaces. We
+      can create an inner product or, equivalently, declare
+      a particular (0,2) tensor to be the metric tensor on
+      V (remember that defining an inner product on V and
+      declaring a (0,2)-rank tensor as the special metric tensor
+      are equivalent). When we do this, we typically also assert
+      a basis in V even if the basis is rather abstract: “e_i”
+      for example. If we do all this, we are really doing all
+      this for only ONE vector space, namely “V”. This discussion
+      had no manifold involved at all and therefore no
+      “coordinate system”. In fact the words “coordinate system”
+      , under the first usage, have no real meaning: no manifold,
+      no coordinates. So the most technically correct answer to
+      your question is “no”.
+
+    - However, occasionally the use of the word “coordinate
+      system” is applied to the basis of a single vector space
+      and when we identify/choose a basis for V some might say we
+      have “chosen a coordinate system on V”. After all, every
+      vector in V can now be expresses by its components in that
+      basis, which is an ordered n-tuple that can be treated like
+      the “coordinates of a vector in V with the basis e_i”.
+      Also, a vector space is also its own trivial manifold with
+      one chart into R^n. Each possible basis on the vector space
+      is actually a chart mapping onto R^n and therefore it is
+      not wrong to think of a choice of basis in V to be
+      “creating a coordinate system on V”. It is technically
+      correct, but this usage is rare, but I have seen it and if
+      you see it don’t let it confuse you.
+
+    - In GR we always want to apply the first usage: coordinate
+      system applied to the manifold of space time. In that work,
+      we presume the existence of the space time manifold,
+      presume the existence of coordinates on that manifold,
+      presume the existence of tangent spaces at every point on
+      the manifold, apply the “coordinate basis” to every tangent
+      space at every point all at once, and proceed to study GR.
+      All of these presumptions necessarily exist: a manifold by
+      definition has coordinate charts homeomorphic to R^4,
+      a manifold by construction has tangent spaces T(p), and the
+      differential operators `\partial_\mu` can act as a basis for
+      a realization of each of the uncountable infinite number of
+      tangent spaces associated with the manifold.
+
+    - However, if for some reason, as your question implies, we
+      took only ONE tangent space and focused our attention only
+      on that and set up some basis on that isolated tangent
+      space ignoring all the others, then establishing a basis
+      and inner product or metric in that single isolated tangent
+      space would NOT have any implications for the manifold at
+      all. It always goes the other way: the coordinate system
+      assumed for the manifold creates a basis for every tangent
+      space. Namely, the “coordinate basis”. From that basis we
+      can make different basis using the “tetrad formalism” but
+      in the end, AFAIK, it always ties back to the coordinate
+      basis which is completely linked to coordinates on the
+      manifold.
+
+    - The next logical question is “well, then why do we speak of
+      ‘coordinate free’ formalism at all?” <—- a bit of a long
+      answer for later.
+
+- XylyXylyX
+    - Alan Grayson Are you ok with the answer, as I see it, so
+      far? The next part is a bit more of an opinion, but
+      everything so far is necessarily true.
+
+- XylyXylyX
+    - Alan Grayson Oh, and did the material in that small section
+      of Lesson 56 help you understand why the linear tensor
+      transformations are so important for physical laws? That is
+      a good question really, and I agree with you, it is rarely
+      addressed is a straightforward manner.
+
+- Alan Grayson
+    - @XylyXylyX Give me a few days to review some lectures here,
+      including Lesson 56. So far, I can't say I understand your
+      long initial replies.
+
+- Alan Grayson
+    - I haven't yet viewed your Lesson 56 reference, but I can
+      say that I do NOT understand your replies. You seem to be
+      saying that a coordinate system for a manifold is implied
+      by your lectures on tensors. If that's the case, why is it
+      claimed that laws of physics defined in terms of tensors
+      are coordinate independent? AG
+
+- Alan Grayson
+    - Maybe we should go back to the beginning? Why are tensors
+      used in Einstein's Field Equations; that is, what are the
+      specific advantages of tensors? Also, if a tensor is a map,
+      what are the domains and ranges of those maps in the EFE?
+      AG
+
+- XylyXylyX
+    - Alan Grayson It is a core assumption of GR that space time
+      can be modeled as a 4D manifold. A 4D manifold by
+      construction has coordinates. That is what a manifold is:
+      a set that can be given coordinates. Then we assert, again
+      by assumption, that the laws of nature do not care about
+      the coordinate system chosen to establish those laws. Then,
+      based on these assumptions, we are force to write down the
+      mathematical laws of nature in a way such that the form of
+      those laws does not change when the underlying coordinate
+      system changes. The only way to do that is with equations
+      that are constructed from tensors.
+
+    - I think you may be thinking that the necessary existence of
+      coordinates (which is driven by the properties of
+      a manifold) somehow demands that physical laws are
+      therefore dependent on the coordinate system. That would be
+      true for any physical law that was constructed from
+      non-tensorial mathematical objects. The point is that
+      coordinate systems can always be applied and they can also
+      be arbitrarily changed. The form of physical laws must be
+      blind to the choice and the change.
+
+    - The notion of “coordinate free” formalism is just a way of
+      writing tensor equations so that the arbitrary choice and
+      change of coordinates is hidden from view. It does NOT mean
+      “coordinates don’t exist”.
+
+- XylyXylyX
+    - Alan Grayson The reason tensors are used in the EFE is
+      because the EFE claims to be a law of physics. As such it
+      MUST be constructed from tensors. The left and right side
+      are both, usually, (0,2) rank tensors so the domain is the
+      Cartesian product of a tangent space of the manifold. The
+      domain is the real numbers. Good news: my next lecture
+      sequence is all about the Einstein Equation!
+
+- Alan Grayson
+    - @XylyXylyX I have no problem with the postulates of GR, and
+      the need for the laws of physics to be independent of
+      choice of coordinates. The foregoing makes perfect sense.
+      However, where I am stuck is with the assertion that
+      tensors are coordinate independent.  Have you shown this in
+      any lecture, directly or indirectly? TIA, AG
+
+- Alan Grayson
+    - @XylyXylyX I do not expect or demand that the laws of
+      physics should be dependent on coordinate systems. This
+      would make no sense.
+    - But I would like to see that the laws, when written as
+      tensors, are indeed independent of coordinate systems.
+      Where do you do this, if you do this? Further, I would like
+      to see the demonstration that tensors are the only way to
+      achieve this result. TIA, AG
+
+- XylyXylyX
+    - @Alan Grayson Yes, I made a digression in GR Lesson 56
+      starting right around minute 8 lasting for about three min
+      or so. You do not need to be caught up to lesson 56 to
+      follow that little digression.
+
+- Alan Grayson
+    - @XylyXylyX  Again, it's the "MUST" I seek!  Also, you must
+      mean the RANGE is the real numbers (whereas the domain is
+      the Cartesian product of a tangent space on the manifold).
+      I will be looking forward to your next lecture, which IMO
+      should have come at the beginning of your GR lecture
+      series. AG
+
+- XylyXylyX
+    - The core of the proof that tensor's are coordinate
+      independent flowed directly from the fact that the
+      components of the basis vectors transform inversely from
+      the basis vectors. So for a tensor, all coordinate
+      transformations are basically matrix multiplications with
+      the unit matrix: one factor of \Lambda to transform the
+      basis vectors, and one factor of \Lambda^(-1) to transform
+      the components. As you pointed out earlier, when we learn
+      GR through the standard notation of component-only
+      formalism, this point is deeply obscured and leads to
+      students puzzling over the details. This is one of the
+      reasons my presentation in "What is a Tensor?" meticulously
+      carries around the basis vectors. The lesson on
+      coordinate/basis transformations covers this in detail.
+
+Alan Grayson
+    - Please do me a little favor and define explicitly what the
+      domain is at some point P on the manifold. AG
+
+XylyXylyX
+    - @Alan Grayson Yes, the range will be the real numbers as
+      long as the domain is the Cartesian product. Note that if
+      the domain is chosen to be just ONE copy of a tangent space
+      then the range is V*.
+
+
+    - Regarding the "must" point, I have never seen a uniqueness
+      demonstration, but I do know that no alternative
+      mathematical structure is known to exist. If such an
+      alternative structure did exist then those objects would
+      indeed pose a threat to GR. I am trying to imagine how
+      a uniqueness proof would go. A uniqueness proof might
+      assume the existence of non-tensor objects and then
+      demonstrate that those object must actually transform like
+      tensors, contradicting the assumption.
+
+XylyXylyX
+    - @Alan Grayson I think you are asking "What is the domain of
+      the Einstein tensor at some point P on the spacetime
+      manifold?" The ET is a tensor field and it takes a specific
+      value at P, call that value "G(p)". G(p) is a (0,2) tensor
+      whose domain is V x V where "V" is the tangent space at the
+      location P and its range is the real numbers.
+
+Alan Grayson
+    - @XylyXylyX Firstly, if there existed another mathematical
+      object that transformed as a tensor, why would that pose
+      a threat to GR? Secondly, how many tangent spaces exist at
+      some point P on the GR manifold?  What does it mean to
+      choose ONE copy of a tangent space? If that copy is chosen,
+      why is the range now a member of V*, instead of the real
+      numbers? TIA, AG
+
+XylyXylyX
+    - Alan Grayson A new object that transform “as a tensor”
+      would actually be a tensor. What I meant was some
+      hypothetical object that also transformed in a way that
+      keep any laws constructed from those object invariant. If
+      such things existed, then we would have to consider a law
+      of gravity based on those objects, and that would be a GR
+      competitor. I’m not certain, but I am confident that
+      a uniqueness proof is out there, so it is sort of moot.
+
+    - The other questions you ask would require that I repeat the
+      contents of “What is a Tensor” in this comment section, so
+      all I can do is refer you back to the lessons. But....
+
+    - Any tangent space erected at P is identical to any other,
+      so in that sense there is only “one” tangent space at P. To
+      make tensor product spaced you must have several “copies”
+      of that space.
+
+    - If you take a function of two variables f(x,y) and then you
+      set y=3 you get f(x,3) which is a function of one variable.
+      So the “range of f(x,y)” depends on whether or not you put
+      in a value for x and y, in which case the range is the real
+      numbers, or a value for just y, in which case the range is
+      a set of functions g(x) = f(x, y) given only a value for y.
+      The same applies to (0,2) tensors. If you feed it one
+      vector the object left over is a map waiting for a single
+      vector to then return a real number. Such an object is
+      a covector which lives in V*.
+
+Alan Grayson
+    - @XylyXylyX In a GR manifold, is there a special choice of
+      V, and if so, what is it? Now I'll go to GR Lecture 56 and
+      study the transformations you referenced. Thanks for your
+      help. AG
+
+XylyXylyX
+    - Alan Grayson Every manifold relevant for GR has a tangent
+      space at every point. Those tangent spaces are used to
+      build the tensor product spaces and become the “V” from the
+      lectures. The “What is a Tensor” series focuses mostly on
+      a SINGLE vector space in the early lectures, but when we
+      introduce the coordinate basis concept we boost into the
+      idea of “vector fields” which involves treating every
+      single tangent space on the manifold all at once. That is
+      the magic of the coordinate basis: it puts a basis in every
+      single one of the uncountable infinite number of tangent
+      spaces of the space time manifold in one stroke of the pen!
+
+Alan Grayson
+    - @XylyXylyX But doesn't V have to have special properties to
+      get the results of GR, or is any ole V ok?
+
+XylyXylyX
+    - @Alan Grayson There is only one possible vector space : the
+      tangent space. The only thing we are guaranteed to have
+      (given that spacetime is a manifold) is a tangent space at
+      each point of the manifold. Everything must be constructed
+      from the mathematical objects that flow from the assumed
+      manifold.
+
+
+    - The "results of GR" are just the results of
+      pseudo-Riemannian geometry plus the Einstein equation. The
+      EE connects energy with the metric. That part is physics.
+      The metric creates the connection which is what wires
+      together the tangent spaces across the manifold. That is
+      all pure math via pseudo-Riemannian geometry.
+
+Alan Grayson
+    - @XylyXylyX It's coming together, slowly. I assume the
+      tangent vector spaces are of dimension 4. But how can they
+      be identical at all points P on a manifold which has
+      curvature? And where in your GR lectures do you apply the
+      Lorentz metric to make the manifold pseudo (Riemannian). AG
+
+XylyXylyX
+    - @Alan Grayson It is a fundamental result that the
+      dimensionality of the manifold will always be the same as
+      the dimensionality of the tangent space and vice versa.
+      That fact is evident from the construction of the tangent
+      space.
+
+
+    - Curvature is manifestation of the connection, which is
+      a manifestation of the metric tensor field*. Each vector
+      space is just a plain old vector space. (In fact it is also
+      a fundamental result that all n-dimensional vector spaces
+      are essentially the same with the only possible difference
+      being the metric). The metric tensor field on the manifold
+      has a different value at every point. Therefore, in GR
+      there is a *different metric at each point p. The value of
+      the metric at p is what we mean by "`g_\mu\nu (p)`" although
+      sometimes the argument is suppressed. The fact that each
+      tangent space has a different metric is what give curvature
+      to the manifold. That is that the nature of
+      pseudo-Reimannian geometry.
+
+
+    - In GR the Lorentz metric is just assumed in various ways:
+      it is placed into the theory as a fundamental axiom.
+      Usually it happens during proofs and demonstrations that
+      exploit the Einstein Equivalence Principle where we assume
+      that at a chosen point the metric field can be forced to be
+      Lorentzian.  Check out GR lesson 3, I think I drone on
+      about that for a while.
+
+Alan Grayson
+    - @XylyXylyX OK, I've looked at Lecture 56. It's not what
+      I need. The expression is too advanced and I'm behind on
+      the GR lectures. Where, if anywhere, do you directly show
+      that tensors are independent of coordinate systems? TIA, AG
+
+XylyXylyX
+    - Alan Grayson Hmmm...Well then go back to Lesson 8 In “What
+      is a Tensor?” At about 15:40. By that time stamp I have
+      explained the nature of covariant and contravariant objects
+      and I demonstrate the full transformation of a (1,0)
+      tensor. The point you are looking for is front and center:
+      to complete the full transformation we insert the linear
+      transformation matrix \Lambda and also \Lambda^(-1).
+      Combined these two matrices are simply the Identity matrix
+      and the transformation is essentially multiplication by the
+      identity. That is the exact point you are seeking: (1,0)
+      tensors are unchanged (multiplied by the identity) during
+      a basis transformation. All higher rank tensors are
+      constructed from (1,0) and (0,1) tensors, so....voila. That
+      is it!
+
+    - The reason this is obscured in the common treatment is that
+      the component formalism conceals the basis vectors, so we
+      only see the part of the Identity matrix that transforms
+      the index on the component! This is VERY confusing, I know.
+
+Alan Grayson
+    - Since a tensor is a map, from VxV --> R, the proof should
+      start with an arbitrary pair, (v1, v2) in VxV, and some
+      value the pair maps to in R, and two underlying coordinate
+      systems, and show that the map is unchanged when there is
+      a change of coordinate systems. I am not clear how any
+      coordinate system relates to the map/tensor. AG
+
+XylyXylyX
+    - Alan Grayson The chain of logic goes like this:
+
+    - 1) all tensors are constructed linearly from (1,0) and
+      (0,1) tensors, so if we prove the invariance of those
+      objects we prove it for all objects.
+    - 2) The lesson demonstrates that (1,0) tensors are multiples
+      by the unit matrix when a change of basis in the vector
+      space occurs.
+    - 3) the basis in a vector space in GR is established by the
+      coordinate system on the manifold via the “coordinate
+      basis”. That is, the coordinate system on the manifold is
+      what gives us the `\partial_\mu` coordinate basis in every
+      tangent space.
+    - 4) if you change the coordinate system on the manifold, you
+      change the basis system on every tangent space. This
+      induces a basis transformation in each tangent space.
+    - 5) see #2!
+
+    - That is the proof you seek.
+
+Alan Grayson
+    - @XylyXylyX "The lesson" -- which lesson? Please remind me what the (1,0) and (0,1) tensors are. Was the proof I outlined only applicable for a 4d manifold? AG
+
+
+XylyXylyX
+    - Alan Grayson Check this out https://youtu.be/PPIJsObJ47A
+    - I just made a tiny video hoping to zero in on this topic.
+      It was quick, but I think it starts to focus on the point
+      you are interested in.
+
+Alan Grayson
+    - @XylyXylyX Are you still planning a lecture sequence on
+      Einstein's Equation? It won't be easy. I recall reading
+      that the equation he published in November 1915, was the
+      equation he rejected two years earlier. So it seems
+      improbable that the "final" published equation can be
+      directly inferred or implied by the postulates of GR. As
+      for tensors being invariant under coordinate
+      transformations, your video specifically addressing that
+      question, did so! Thanks a lot!
+
+XylyXylyX
+    - Alan Grayson I have started and stopped it, but not because
+      it is hard. The equation is quite straightforward. You seem
+      quite hung up on the history of the equation and the
+      inspiration of the equation, but that does NOT implicate
+      the difficulty of the equation at all.
+
+    - The final form of the EE was probably a form AE actually
+      considered early on but either dismissed or was reluctant
+      to commit to for various reasons. AE was quite concerned
+      about some aspects of the metric that are no longer the
+      source of puzzlement and this stymied his progress for
+      a while, AFAIK. Regardless, I am certainly no historian
+      regarding the evolution of AE’s thought, but the end result
+      is surprisingly elegant, clean, and straightforward. The
+      key is understanding how to interpret the Ricci tensor and
+      the curvature scalar which is where the lecture stopped.
+      I’ll get them moving again in a few days!
+
+Alan Grayson
+    - @XylyXylyX I wouldn't say I am "hung up" with the history
+      of the equation. Rather, I want to understand the process
+      of arriving at the equation, which is how I understand the
+      meaning of knowledge in this context. AE knew the equation
+      must be in tensor form to satisfy the requirement that any
+      "law of physics" must be independent of coordinate system.
+      He also knew, via the Equivalence Principle, that
+      matter/energy causes or implies curvature of spacetime. It
+      then becomes a problem, I think, of equating curvature,
+      with an appropriate matter/energy distribution. But
+      assuming I'm on the right track here, how does one define
+      such a distribution?
+
+XylyXylyX
+    - Alan Grayson That is what the stress-Energy tensor does. It
+      is the only known way of constructing such a distribution.
+      We will cover it’s basics soon.
+
+Alan Grayson
+    - @XylyXylyX  I sense a subtle law in GR, suggested by the
+      inclusion of G, the gravitational constant. How can
+      a constant inferred from an approximate theory of gravity,
+      Newton's Theory of Gravitation, be included in a presumed
+      perfect theory of gravity, General Relativity? Don't you
+      think something very subtle is awry here?
+
+Alan Grayson
+    - I meant "subtle flaw" above.
+
+XylyXylyX
+    - Alan Grayson When we do the Einstein equation you will see
+      that we don’t presume `G` from the start, as you probably
+      know already. Ultimately there is SOME proportionality
+      constant between the units of energy and the dimensionless
+      units of geometry.

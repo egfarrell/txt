@@ -1,0 +1,1023 @@
+### Vector Story
+    - Great history, background
+    - $MY_NOTES/maths/linear-algebra/Vector-Story-Arianrhod.txt
+
+### Heaviside
+    - $MY_NOTES/physics/EM/Heaviside-maverick.txt
+    - Hamilton thought that his symbolic scheme of opposite
+      rotations (`ij = k` but `ji = −k`) would be just the thing
+      to represent physical relationships like that between
+      electricity and magnetism;
+        - E.g., it was well known that if you reversed the linear
+          direction of the current in a straight wire the
+          circular magnetic field around it would also reverse,
+          but in a rotatory sense, from, say, clockwise to
+          anticlockwise.
+        - But there was a flaw in the scheme. He used `i`, `j`
+          and `k` to represent `90 ◦` rotations about three
+          mutually perpendicular axes and the _SAME SYMBOLS_ to
+          represent unit vectors in the `x`, `y` and `z`
+          directions.
+        - This led to some strange properties:
+            - E.g., the square of a vector was negative.
+            - Heaviside and Gibbs overcame the difficulty by
+              distinguishing between so-called vector and scalar
+              products.
+        - In modern notation bold-faced letters `i`, `j` and `k`
+          represent the three unit vectors, and rotations are not
+          defined not by `i`, `j` and `k` themselves but by their
+          vector products:
+            - i×j = k
+            - j×k = i
+            - k×i = j
+            - i×i = j×j = k×k = 0
+        - whereas, in the scalar products:
+            - i.i = j.j = k.k = 1 and
+            - i.j = j.k = k.i = 0
+        - Problem solved – the square of a vector was no longer
+          negative – but Tait saw this as a desecration of
+          Hamilton's beautiful scheme
+
+### Trace
+    - $MY_NOTES/physics/courses/misc/Schumacher-QM-Masters.txt
+    - trace turns an outer product into an inner product
+        - `tr |a⟩⟨b| = ⟨b|a⟩`
+        - `tr(AB) = tr(BA)`
+
+### Unit vector
+    - whats it good for?
+    - Gives pure direction only!
+    - (It has no units either)
+        - $MY_NOTES/physics/courses/misc/Matter-interaction.md
+
+### the Outer Product
+
+- Yes, Example 1 is an example of the outer product of two
+  vectors. The outer product of a column vector `u` and a row
+  vector `v` produces a matrix. Specifically, if:
+
+- `u = [[u1], [u2]]`
+- `v = [v1, v2]`
+
+Then their outer product `u * v` is:
+
+```
+u * v = [[u1 * v1, u1 * v2],
+         [u2 * v1, u2 * v2]]
+```
+
+Using the specific values from Example 1:
+
+- `u = [[1], [3]]`
+- `v = [2, 4]`
+
+The outer product is:
+
+```
+[[1], [3]] * [2, 4] = [[1 * 2, 1 * 4],
+                       [3 * 2, 3 * 4]]
+                   = [[2, 4],
+                      [6, 12]]
+```
+
+### Use and Significance of the Outer Product
+
+    1. Constructing Matrices: The outer product is used to
+       construct matrices from vectors, which is particularly
+       useful in tensor algebra and various applications in
+       linear algebra.
+
+    2. Tensor Product: The outer product is a special case of the
+       tensor product for vectors, which is essential in fields
+       like QM, where the state of a system is represented as
+       a tensor product of individual states.
+
+    3. Representation of Linear Transformations: Outer products
+       can represent linear transformations. E.g. in ML, outer
+       products are used in neural networks to represent the
+       weight matrices that map input vectors to output vectors.
+
+    4. Covariance Matrices: In statistics, the outer product of
+       a random vector with itself is used to form covariance
+       matrices, which are crucial in understanding the variance
+       and relationships between variables.
+
+    5. Rank-1 Matrices: The outer product always results in
+       a rank-1 matrix, meaning it captures the simplest form of
+       a matrix that still maintains its structure, often used in
+       low-rank approximations and data compression.
+
+    6. Geometric Interpretation: Geometrically, the outer product
+       can be viewed as creating a grid or area in space defined
+       by the vectors, useful in physics and engineering for
+       defining planes or surfaces in multidimensional spaces.
+
+    - The outer product is a powerful tool in linear algebra that
+      allows for the extension of vector operations to more
+      complex matrix structures, making it essential for various
+      applications in science and engineering.
+
+### Linear Map: "factorisation"
+    - Never thought of the properties of linearisation as a way
+      to `factor` a map
+        - $MY_IMAGES/maths/linear-algebra/linear-map-factorisation.jpg
+
+### Curry: Representation of Vectors:
+    - $MY_BOOKS/Physics/Maths/Math-Phy-General/curry-volume-01.pdf
+    - You've been mislead, and I'm here to straighten you out(!)
+    - You've been told vectors are n-tuples. e.g. in `ℝ^2`
+      a vector is an ordered pair `(x, y)`
+    - Vectors aren't tuples.
+    - They are pointy things.
+    - They are geometrical objects.
+    - If you want to represent a vector as an ordered n-tuple you
+      must first choose BASIS vectors.
+    - When you write `x = (3, 4)`,
+        - what you really mean is `x = 3i + 4j`.
+        - The symbol `(3, 4)` only has meaning when `i` and `j`
+          are already defined.
+        - (Yes this is a HUGE point I missed in undergrad. Same
+          point I finally figured from Schumachers QM book)
+
+### What's the point?
+    - Covariance and contravariance are all about representing
+      something as INVARIAT!
+    - e.g., changing an inertial frame of reference using
+      covariant and contravariant transformation matrices
+        - $MY_IMAGES/physics/vectors/Galilean-transformation.jpg
+
+### Canadian lecturer
+    - Components are only half the story. We must remember the
+      basis too. Components and bases are like two sides of the
+      same coin:
+    - also: a basis is like a 'measuring stick'
+        - $MY_IMAGES/physics/vectors/coin-components-bases.jpg
+    - He gives an example with a pencil:
+        - $MY_IMAGES/physics/vectors/pencil-example-1.jpg
+        - $MY_IMAGES/physics/vectors/pencil-example-2.jpg
+    - insert the number '1' inbetween the component and basis
+        - $MY_IMAGES/physics/vectors/pencil-example-3.jpg
+    - NICE: building on the idea of inserting '1', he inserts
+      a matrix instead between the component and basis. This
+      matrix is then split into two:
+            - a change of basis matrix
+            - a change of component matrix
+        - $MY_IMAGES/physics/vectors/pencil-example-4-matrices.jpg
+    - But these 'changing' matrices don't only apply to scaling.
+      They can apply to rotations or shearing as well. It's just
+      whatever you apply to a basis, you should apply the
+      _inverse_ to the components. i.e. the two matrices used to
+      change the basis and components should multiply together to
+      give the identity matrix.
+        - $MY_IMAGES/physics/vectors/pencil-example-4-matrices-2.jpg
+    - Interesting: Galilean transformations and Lorentz
+      transformations are really just about changing the space
+      and time components in a special way
+        - $MY_IMAGES/physics/vectors/Galilean-Lorentz-transformation-matrices.jpg
+        - $MY_IMAGES/physics/vectors/Galilean-Lorentz-transformation-matrices-2.jpg
+    - Link to SR: the pencil is invariant
+        - $MY_IMAGES/physics/vectors/pencil-invariant.jpg
+        - $MY_IMAGES/physics/vectors/pencil-invariant-2.jpg
+        - $MY_IMAGES/physics/vectors/pencil-invariant-3.jpg
+
+### Vectors - general
+    - lay down a `basis` first BEFORE you generate any component
+      values. ie COMPONENTS always pre-suppose a BASIS!
+
+### 3blue
+    - https://www.youtube.com/watch?v=LyGKycYT2v0&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&index=10
+    - Sometimes you realize that it's easier to understand a
+      vector not as an arrow in space, but as the physical
+      embodiment of a linear transformation - it's as if a vector
+      is a conceptual shorthand for a linear transformation."
+
+### Basis Vectors: converting
+    - Page 22: $MY_BOOKS/Physics/Undergrad/Students-Guide-Fleisch-Vectors-Tensors.pdf
+    - One last fact about basis vectors in various coordinate
+      systems will be useful if you continue to study physics,
+      especially if studying tensors. That fact is this:
+        - basis vectors that point ALONG the axes of one
+          coordinate system may be described in another
+          coordinate system using PARTIAL DERIVATIVES.
+    - Specifically, imagine you’re converting FROM spherical TO
+      rectangular coordinates.
+        - The basis vector along the original spherical `(r)`
+          axis can be written in the Cartesian (`x`, `y`, and
+          `z`) system as:
+            - $MY_IMAGES/maths/fleisch-vectors/spherical-coord-system.jpg
+            - $MY_IMAGES/maths/fleisch-vectors/convert-basis-pde.jpg
+        - The general rule is:
+            - $MY_IMAGES/maths/fleisch-vectors/convert-basis-pde-general.jpg
+    - Notice that these basis vectors are not all unit vectors
+      (because their magnitudes are not all equal to one), nor do
+      they all have the same dimensions `e_r` is dimensionless,
+      but `e_θ` and `e_φ` have dimensions of length).
+        - Neither of these characteristics disqualifies these as
+          basis vectors, and you can always turn them into unit
+          vectors by dividing by their magnitudes
+
+### Beginnings of vectors
+    - $MY_VIDEOS/maths/Vector-algebra-war-Clifford.mp4
+    - Decartes 1637
+    - Just as arithmetic consists of only a few operations:
+      addition, subtraction, multiplication, division, extraction
+      of roots... so in geometry, to find required lines it is
+      merely neccessary to _add or subtract lines_...
+
+### From my main maths file
+    - $MY_NOTES/maths/maths-tips.md
+    > We define the addition of vectors to mean the COMPOSITION
+    > OF TRANSLATIONS.
+
+### Interesting: zero vector perpendicular to every v...
+    - Theorem:
+        - The vectors `(x1, x2)` and `(y1, y2)` are perpendicular
+          to each other if and only if `x1 • y1 + x2 • y2 = 0`.
+    - Proof.
+        - Notice if one, or both, of the two vectors is the zero
+          vector, then `x1 • y1 + x2 • y2 = 0`.
+        - For this reason we define the zero vector as being
+          PERPENDICULAR to every vector. (!)
+        - Another special case is when the two vectors lie on the
+          same line through the origin; ie, when `y1 = t • x1`
+          and y2 = t • x2 for some real number t.
+        - In this case, the vectors are perpendicular iff one of
+          them is the zero vector, which happens if and only if
+          t • x1 = t • x2 = 0.
+        - Thus, the theorem holds in this case. Now assume that
+          the two vectors do not lie on the same line through the
+          origin.
+        - Theorem continues...
+
+### Senese tips (interesting!)
+    - `∇ `isnt really a vector;
+        - it’s a vector OPERATOR.
+    - `∇ × 𝐯` isnt a cross product;
+        - its just a symbol for `curl 𝐯`.
+    - Nor is `∇⋅𝐯` actually a dot product;
+        - its a symbol for the divergence of `𝐯`
+
+### Vector
+    - Schutz GR
+    - For the moment we use the notion of a vector carried over
+      from Euclidean geometry:
+        - that a vector is something whose _components_ transform
+          as do the _coordinates_ under a coordinate
+          transformation.
+
+    - To give concreteness to this notion of the dot product
+      being a tensor, we introduce a name and notation for it.
+
+    - This enables us to regard a tensor as a function of the
+      _vectors themselves_ rather than of their _components_, and
+      this can be helpful conceptually.
+        - Thats like XYLYXYLYX, he defined the tensor by
+          accepting 2 vectors into 2 slots...
+
+    - A tensor of the type (0 1) is called a covector, covariant
+      vector, or one-form interchangeably, even in a single book.
+
+### Direct sum and cartesian product
+    - Vector spaces are special because for two spaces `V` and
+      `W`:
+        - `V x W` and `V ⊕ W` are isomorphic
+        - ... for a finite number of products/summands
+    - The cartesian product and direct sum are the "same"??
+        - Another answer:
+            - Basically for finite index sets (finite number of
+              factors), the two constructions are the same.
+
+            - Only when there is an infinite number of factors,
+              the direct sum `⊕_i ∈ I G_i` is the
+              subgroup of the Cartesian product consisting of all
+              tuples `g_i` where there are only finitely many
+              `g_i` that are nonzero.
+
+### XYLYXYLYX lecture
+    - went through all the algebraic structures
+    - we get to fields...
+    - and then the punch-line: we construct our vector spaces
+      over a field...
+    - in fact we can construct a vector space over any bin of
+      scalars that's a field
+    - actually older definitions of vector spaces said they could
+      be formed over a division ring (this doesn't have
+      commutative multiplication... eg the quaternions)
+      - you could have a "quaternionic vector space" under that
+        older definition
+
+### Does a vector space always have a basis!
+    - You said something that has stuck in my head and I am only
+      asking if you can repeat it (because it is so important to
+      me).
+    - I NEVER considered the fact that the assumption that the
+      vector space has a basis is obvious. It is not, is it?  You
+      can prove it to have a basis, by relying on some of the
+      attributes of a vector space, along with the Axiom of
+      Choice.   But this thought has so unnerved me, (I never
+      thought about the issue), could you say a bit more about
+      this, even at the risk of redundancy.
+    - XylyXylyX:
+    - Others have brought this up and I'm not sure where people
+      are digging up this question. The idea that a every vector
+      space has a basis is obvious, but it is actually a bit
+      touchy to prove.
+        - Proving it requires the Axiom of Choice. All I can say
+          is that you should find the proof and read through it.
+          The hard part of the proof is understanding the Axiom
+          of Choice itself, every other part of the proof is
+          pretty simple.
+        - There isn't much else to say about it except that one
+          can always ask increasingly fundamental questions about
+          any branch of mathematics and such questions always
+          seem to drive us into axiomatic set theory and logic of
+          some kind. I am not an expert at this. Few people are,
+          actually.
+
+### XYLYXYLYX
+    - $MY_NOTES/physics/courses/XYLYXYLYX/What-are-tensors/01-Elementary-vector-spaces.txt
+    - Basically only FOUR types of vector space:
+        - Real
+        - Complex
+        - Quaterion
+        - Octonian
+    - Any other types are really a mathematical generalisation of
+      the concept
+
+
+### Linearity
+    - Linearity actually encompasess TWO notions:
+        - vector addition
+        - and scalar multiplication
+    - $MY_NOTES/physics/courses/XYLYXYLYX/What-are-tensors/01-Elementary-vector-spaces.txt
+
+### Vector Pure and Applied - Cambridge prof!
+    - A basis is an INDEXED set, not an ORDERED set
+    - 'Non-degenerate' and 'generic' (often) deliberately vague
+      adjectives used by mathematicians to mean ‘avoiding special
+      cases’.
+    - Thus a 'non-degenerate' triangle has all 3 vertices
+      distinct and the vertices of a non-degenerate tetrahedron
+      do not lie in a plane.
+        - Even if you are only asked to consider non-degenerate
+          cases, it is often instructive to think about what
+          happens in the degenerate cases.
+
+### Interesting about vectors
+    - Russian course (Stepik)
+      https://stepik.org/lesson/7560/step/2?unit=1267
+    - Tutor points out that vectors (directed arrows) and
+      polynomials, seem quite different.
+    - but then shows they behave similarly under various (vector
+      space) rules. eg multiplied by a scalar.
+    - Anyway, thought it was nice that he acknowledged they
+      appear to be two very different things!
+
+### Explanation: Tensor Product / Direct Sum
+    - $MY_BOOKS/Physics/Maths/Mathematical-Physics/direct-sum-tensor-product-explanation.pdf
+    - Direct SUM
+        - notice is a "sum"!
+        - Before getting into the tensor product, let me first
+          discuss "direct sum". Its a way of getting a new big
+          vector space from two (or more) smaller vector spaces
+          in the simplest way you can imagine: you just line them
+          up.
+        - Start with two vector spaces:
+            - `V` is `n`-dimensional,
+            - `W` is `m`-dimensional.
+            - The direct sum of the two spaces is `n + m`-
+              dimensional
+    - TENSOR PRODUCT
+        - The word “tensor product” refers to another way of
+          constructing a big vector space out of two (or more)
+          smaller vector spaces.
+        - You can see that the spirit of the word “tensor” is
+          there. It is also called Kronecker product or direct
+          product.
+        - Start with two vector spaces:
+            - `V` is `n`-dimensional,
+            - `W` is `m`-dimensional.
+            - The tensor product of both spaces is `nm`- dimensional
+
+
+### MacLane
+    - Analysis soon produces infinite-dimensional spaces such as
+      `L 2 2`
+
+    - To say an effect is "linear" means:
+        - the effect respects proportions and
+        - the effect of a sum, is the sum of the separate effects.
+
+    - In the calculus of functions of two variables `x` and `y`,
+      we have seen in §V1.9  that the _chain rule_ suggests TWO
+      different vector spaces attached to each point in the
+      (x,y)-plane:
+
+        1. The tangent space, consisting of all the vectors
+           tangent to the various possible paths through the
+           point,
+
+        2. and the cotangent space, consisting of all the
+           _differentials_ of smooth functions at this point.
+
+    - The relation between these two spaces is one source of
+      a notion of "dual" vector spaces (§4), and is a background
+      on which much higher dimensional geometry is developed.
+
+    - If we think of a path as the trajectory of a moving
+      particle, its clear that the tangent space is suggested by
+      the development of mechanics, as we will see in more detail
+      soon.
+
+    - The notion "vector space" thus organizes diverse examples.
+
+    - Given all these examples its remarkable that the axioms for
+      a vector space (though stated by Peano in 1888 for spaces
+      over ℝ) were not generally recognized by Mathematicians
+      until Weyl's 1913 book on relativity (where he needed to
+      use vector and affine geometry.
+
+### Vector Spaces:  Maclane
+    - In the calculus of functions of two variables `x` and `y`,
+      we have seen in §V1.9  that the _chain rule_ suggests two
+      different vector spaces attached to each point in the
+      (x,y)-plane:
+
+    1. The tangent space, consisting of all the vectors tangent
+       to the various possible paths through the point,
+
+    2. and the cotangent space, consisting of all the
+       _differentials_ of smooth functions at this point.
+           - ??????
+
+    - The relation between these two spaces is one source of
+      a notion of "dual" vector spaces (§4), and is a background
+      on which much higher dimensional geometry is developed.
+
+    - Me: So thats how how you get a number when you "join" the
+      tangent and the co-tangent... ie you combine the
+      differential and the tanget vector to get a "value"...
+
+### vector space question
+    - Is the following a vector space:
+        - triplets (a, b, c) over the integers?
+    - Answer: NO.
+    - The set of all integers _does not comprise a field_, so
+      a vector space cannot be defined over it.
+
+    - I got thrown and I know a lot of math. Because I don't
+      focus on the field a vector space is over, when thinking
+      about vector space structure.
+    - It took me a second to see why the ground set has to be
+      a FIELD at all - so that you _CAN UNDO SCALINGS_
+
+    - You can generalize vector spaces to work over arbitrary
+      rings - in which case its a _module_. I did a double take
+      on this question, because when I see a vector space over
+      a ring, I silently translate it to a module (because 90% of
+      the time, the person misspoke, 9% of the time, even if
+      they meant vector space, the immediate follow up would be
+      "no, but does your point still stand if we consider it
+      a module?", and maybe 1% of the time they are actually
+      being adversarial.
+
+    - another answer: you need closure on scalar multiplication.
+    - If `(2,3,4)` is a valid integer triple and `1/3` is your
+      scalar then `(2/3, 1, 4/3)` throws you out of the group so
+      there goes your closure. Unlike OP, you don’t really need
+      to know about fields to solve this.
+
+        - While that's right, I'd push back about not needing to
+          know fields since the scalars are just field elements.
+          If you try to define a vector space over the integers,
+          it's more accurate to say you can't choose `1/n` as
+          a scalar, because `1/n` doesnt exist in your underlying
+          field. Your closure ends before you even get to choose
+          the element.
+
+        - For students it might not be immediately obvious why
+          that's a problem for vector spaces, but yes it does
+          mean scalar multiplication won't be closed in the
+          vector space. And more practically speaking, if you
+          tried to solve a system of equations without invertible
+          linear combinations, you'd have no linearity
+          whatsoever. Elementary row operations likewise cease to
+          be invertible, so matrix reduction isn't possible...the
+          whole thing breaks down really.
+
+        - Not quite: you also need to know that multiplying by
+          integer scalars instead isn't an option.
+
+        - The question asked as to use the "obvious" choice of
+          scalar multiplication, and to a student who hasn't yet
+          taken the "field" part on board, it might seem obvious
+          to achieve closure by using the integers for scalars.
+
+            - This isn’t quite right. When I learnt this as a US
+              undergrad, we learnt monoids. Then semigroups. Then
+              groups. Then abelian groups. Then vector spaces. At
+              midterm we got questions exactly like the one we
+              are debating here
+              - is this guy a vector space, a semigroup, an
+                abelian etc.
+            - At that point, none of us knew what a ring was,
+              what a field was etc. In the US you learn things
+              like cosets and Lagrange’s theorem way before you
+              even get to fields. That’s why I said you don’t
+              need fields.
+
+            - If you have `(2, 3, 4)` and want to navigate to
+              `(5, 6, 7)` which is also in your space and you
+              have scalar multiplication as your tool of choice
+              then multiply with `2` gets you to `(4, 6, 8)` but
+              then youre stuck.
+                - Soon you realize no matter what you do you
+                  can’t navigate that space without fractions.
+
+            - A working definition of a space might be:
+                - if you have a member in that space, you can get
+                  to every other member by just scalar
+                  multiplication.
+                - Addition is just freebie because you can
+                  rephrase it as bunch of scalar mults.(?)
+
+### difference between Points + Vectors
+    - MathFoundations30: What exactly is a vector?
+    - The notion of vector is here made completely explicit.
+      Points and vectors are different types of mathematical
+      objects. (where is this from?)
+
+    - Generally mathematicians distinguish between points
+      & vectors in a context where this distinction is important,
+      but they mightnt bother in a context where it isn't
+      important.
+
+    - To talk about the coordinates of a vector, you need a basis (only),
+    - To talk about the coordinates of a point   you need a basis and an origin
+      (an arbitrarily selected reference point).
+
+        - However, converting points `P` to vectors `OP` is
+          strictly speaking not necessary (and in my opinion
+          a bit artificial actually).
+
+        - You can instead use the geometrically natural
+          operations "point + vector = point" and "point - point
+          = vector" (but, as Qiaochu already said, not "point
+          + point", which is geometrically meaningless).
+
+        - The textbooks insist on using the vector `OP` just so
+          that they can express things in terms of the operation
+          "vector + vector = vector" and don't have to introduce
+          those other operations.
+
+    - It's a good habit to distinguish the _COORDINATES_ of a point
+      from vectors.
+
+        - As everyone said, Euclidean space is special but also:
+          cartesian coordinates on Euclidean space are special.
+
+        - Eg: If you use polar coordinates on Euclidean space,
+          you can't subtract the coordinate components of
+          different points to obtain the components of the
+          displacement vector.
+
+        - Eg the displacement vector from the point `(r, θ)` to
+          the origin is `re_r`, not `re_r + θe_θ`, where `e_r`
+          and `e_θ` are the normalised coordinate basis. It only
+          gets worse when you start working with general curved
+          spaces.
+
+        - (A pet peeve of mine is when people talk about position
+          vectors, especially in the context of non-affine
+          spaces.)
+
+### vectors as functions
+    - Defining the vector as a function is just a mathematical
+      formalism, one of the several possible rigorous ways to
+      define it:
+
+    - The ordered list
+        - `x = (x_1, ... ,x_n) ` of scalars in a field F can be
+          defined as the function:
+        - `x:{1, ..., n} → F`
+
+    - For example, the vector
+        - `x = (5,6,7) `
+    - is the function
+        - `x: {1,2,3} -> {5,6,7} `
+    - ie, from the
+        - index set `{1,2,3}`
+        - to the real numbers `ℝ`
+        - (specifically to the real numbers 5, 6, 7)
+    We have
+        `x(1) = 5 = x_1, `
+        `x(2) = 6 = x_2, `
+        `x(3) = 7 = x_3. `
+
+    key point:
+        - The ordered list of values that you usually think of as
+          a vector is really a _set of elements in the codomain_
+          of the function that defines the vector.
+
+    - The order of the ordered list comes from the order of the
+      underlying natural numbers in the domain.
+
+    - Of course, we aren't limited to using the natural numbers
+      as the _index set_. We can use pretty much an arbitrary
+      set.
+
+### field of vectors?
+    - So, `F^D` a set of all functions  `D -> F`, and since we
+      can think of function as a vector, we got a set of vectors
+      `F^D`.
+
+    - Hence, we have set of some elements on which we can do '+'
+      and '×'. Can this set of functions or vectors be a FIELD OF
+      VECTORS as a result ?
+
+    - "No, vector is not _closed_ under _multiplication_. Note
+      that it must be a multiplication between vector and vector,
+      not vector and scalar."
+
+    - "I should not even have said about "closed under
+      multiplication", as even multiplication itself is not
+      defined on vectors (cross product is not considered
+      multiplication; it's not commutative)"
+
+    - further discussion:
+        - Vectors can sometimes form a field.  A trivial example
+          would just be 1D vectors over the field.
+          That is the vectors are elements of F{1}.  I'm not sure
+          what the notation should be, so I'll invent my own. ...
+          ...
+
+        - So can vectors be a field?  The answer is sometimes,
+          but you'll have to come up with _clever operations_ to
+          define addition and multiplication.
+
+        - answer:
+        - I disagree. If you have your "clever operations", you
+          are making a _new mathematical object_. It's not called
+          a vector anymore.
+
+        - my thought:
+            - a 1D vector is a scalar anyway?! (2020: not really?
+              think Balakrishan explaining that scalars are
+              objects that don't change their value under
+              rotations)
+
+### linear combination
+    - many problems can be reformulated as the question:
+    how do we express a vector as a linear combination of
+    other vectors?
+        - e.g. S = lights out state vector
+        -      B = button press vector (many different B vectors)
+
+        - S = _(?)_B1 + _(?)_B2 + _(?)_B3 + _(?)_B4
+        - _(?)_ are the cofficients we're looking for
+
+### zero vector same as origin?
+    - http://math.stackexchange.com/questions/505380/what-is-an-intuitive-definition-of-the-zero-vector
+    - The "spirit" of the `0`-vector is this:
+        - its the identity element in the "addition" operation
+          defined on the vector space.
+
+    - So, whether or not your set contains "the" `0`-vector is
+      really a question about how you've defined addition:
+        - is there an element `0` in your set such that
+        - ṽ + `0` =  `0` + ṽ  =  ṽ
+        - for all ṽ in the set?
+
+### coordinate representation
+    1. we have generators for a vector space `V`
+
+    2. this means every vector in `V` can be written as
+       a linear combination of the generators
+
+    3. coordinate representation: a vector is represented by the
+       _coefficients_ in its linear combination
+        - May 2019: I get the coordinate representation now! It's
+          just the pure numbers that are the "components" (2020:
+          should this be "coordinate numbers"?? are components
+          something different?), ie the pure numbers of the
+          linear combination that ignore the basis you're working
+          in...(sort of)
+
+    - # coding the matrix - follow up??
+    - early lecture in week 2 or 3
+    - that showed a matrix represented as a linear
+    - combination??
+    - I think that was the "coordinate representation" I've
+    - just described above
+
+### difference
+    - between a set of generators for a vector space and a basis
+      for a vector space!
+### Vector * scalar?
+    - You can multiply a vector by a scalar on the left:
+        - `α V`
+    - but you CANNOT multiply a vector by a scalar on the
+      right:
+        - `V * α`.
+    - This doesnt have any mathematical significance.
+    - You could certainly define the latter to be the same
+      as the former.
+
+    - The reason our Vec implementation doesnt support
+      multiplication on the right is to be consistent with
+      traditional mathematical notation.
+
+    - People write `αV` to mean the scalar-vector product:
+    - `α V`
+    - but they dont write `Vα`. However, people do write `V\α` so
+      Vec's allow for this notation.  (This is useful in
+      normalizing a vector `v / |v|`)
+    - (thats funny because I was just thinking about that today)
+
+### question about span
+    - is the span of 2 vectors is always a vector space?
+    - i.e. the span always goes through the origin?
+
+### insight
+    - affine spaces are just like vector spaces except they're
+      not _tethered_ to the origin.
+    - It's like they cut the string to the origin and are free
+      floating, but apart from that have the rigid skeleton of
+      a vector space.
+    - (yes they have the 'linear structure' of a vector space)
+
+### express a plane
+    - A plane can be expressed in an affine way:
+        - way 1:
+            1. ū + _V_                        <---- where 'V' is a vector space
+            2. ū1 + Span {ū2 - ū1, ū3 - ū1}   <---- not very elegant
+            3. _α_ū1 + _β_ū2 + _γ_ū3          <---- affine combination (nicer)
+               where `α + β + γ = 1`
+
+        - way 2:
+            - affine hull of (ū1, ū2, ..., ūn)
+            - The hull is the set of _all_ affine combinations.
+
+    - or more usual way for a plane:
+        * solution set of `ax + by + cz = d`
+        * or in vector terms { [x,y,z]: [a,b,c]∙[x,y,z] = d}
+
+    - Therefore:
+                               _implies_
+        (AFFINE SPACE)     -------------->       (SOLUTION SET OF EQUATION)
+
+    - Conjecture:
+        - Any geometric object (point, line, plane..) can be
+          expressed as the solution set of a system of linear
+          equations.
+
+    - key question:
+        - Conversely, are these solutions sets of geometric
+          objects _always an affine space_?
+
+                                           _implies???_
+        (SOLUTION SET OF EQUATION)       -------------->      (AFFINE SPACE)
+
+    - first answer:
+        - well a contradictory system of equations:
+        - `1x = 1`
+        - `2x = 1`
+        - has an empty solution set `{}`
+
+        - but the affine space is _never empty_!
+            - (affine spaces in the form `ū + 'V'` always have
+              the zero vector)
+        - So a contradiction!
+        - It looks like this conjecture breaks down, because of
+          this exception...
+        - BUT !! Its the _only_ exception.
+        - Its the only time the solution set of a system of
+          linear equations _isnt_ an affine space.
+
+    - THEOREM:
+        - Solution set of linear system of equations is either:
+            1. _empty_ (like contradictory system above)
+            2. an AFFINE SPACE!
+
+    - _Number_ of linear system solutions
+        - Can we tell how many solutions a linear system has?
+        - Well if `ū1` is one solution to a linear system then:
+            - {linear system solutions} = `{ū + v: v ∈ V}`
+            - where the vector space `V` = {solutions to
+              corresponding _homogeneous_ linear system}
+
+        - So now `V` is the key!
+        - JULY 2019: THIS IS JUST LIKE LBORO KERNEL LESSON FROM
+          TONY CROFT
+
+        - `ū1` is the _unique_ solution to a linear system, if
+          the _only_ solution to the corresponding homogeneous
+          linear system is the _zero vector_.
+          - ie if the kernel of .....? is only the zero vector?
+
+### excluding the origin
+    - How do we represent a line that does _not_ contain the
+      origin?
+
+    - Well start with a line that does contain the origin.
+    - We know this is a vector space `V`.
+
+    - shifting:
+        - now shift (translate) the line by adding
+        - a vector `c` to every vector in `V`:
+
+    - We get a new set:
+    - `{c + v: v ∈ 'V'}`
+        - abbreviation: `c + 'V'`
+
+    - If `c` is a vector, and
+    - `'V'` is a vector space,
+    - then `c + 'V'` is an _affine space_.
+
+### abstract vectors / vector spaces
+    - In the traditional abstract approach to linear algebra, we
+      dont define vectors as:
+        -  sequences e.g. [1,3,5]
+        -  or even functions {a:1, b:3, c:5}
+
+    First we define a vector space over a field `F`, to be any
+    _set_ `V` that is equipped with:
+        1. an addition operation `+`
+        2. a scalar multiplication operation
+        3. satisfying certain axioms
+            - (e.g. commutative, associative laws)
+        4. and properties V1, V2, V3 (i.e. linear function)
+
+    - The abstract approach has the advantage it avoids commiting
+      to a specific structure for vectors. "... a bit like
+      encapsulation in programming..."
+
+    - ... but a more concrete notion of vectors is helpful for
+      developing intuition.
+
+### convention
+    - we always interpret a bare vector `b` as a COLUMN vector.
+    - So if you want a ROW vector from `b`, we always write:
+      `b^T` (i.e. b transpose)
+
+### question
+    difference between (inner product) and (outer product)?
+
+    (a^T)b    inner product =
+                    dot product (scalar)
+                    row * `col`
+                    gives a one element matrix! e.g. [10]
+                    i.e. a "scalar" matrix!
+
+    a(b^T)    outer product =
+                    cross product (vector)
+                    `col` * row
+                    gives an output matrix
+
+    difference between (matrix\*vector) and (outer product)
+
+    outer product
+        youtube video: lattic method
+
+            _i   j   k_
+            -------------
+    _i_ |      -k   j
+    _j_ |
+    _k_ |
+
+### Affine Space - no distinguished origin
+    - You wake up one day on an infinite flat desert. You
+      have a compass, so you know what "2 meters north", or
+      "one kilometer east" means.
+
+    - These notions make sense as a movement to make, or
+      difference between two points.
+
+    - But how do you determine _where_ you are? It's just
+      sand everywhere. Nothing you do or observe allows you
+      to conclude "yup, that's the origin"
+
+### (Affine Space) v (Vector Space)
+    - Consider an infinite sheet (of idealised paper, if you
+      like). If it is blank, then there is absolutely no way to
+      distinguish between any two points on the sheet.
+      Nonetheless, if you do have two points on the sheet, you
+      can measure the distance between them.
+        - And if theres a uniform magnetic field parallel to
+          the sheet, then you can even measure the bearing from
+          one point to another.
+
+    - Thus, given any point `P` on the sheet, you can uniquely
+        - describe every other point on the sheet by its distance
+          and bearing from P;
+        - and conversely, given any distance and bearing, there
+          is a point with that distance and bearing from P.
+
+    - This is the situation that the notion of
+      a 2-dimensional _affine space_ is an abstraction of.
+
+    - Now suppose we have marked a point `O` on the sheet.
+        - Then we can "add" points P and Q on the sheet by
+          drawing the usual parallelogram diagram.
+        - The result P+Q of the "addition" depends on the choice
+          of O (and, of course, P and Q), but nothing else.
+
+    - This is what the notion of a 2-dimensional _vector
+      space_ is an abstraction of.
+
+### vector over field of reals
+    - Each element in the vector is a real number.
+    - But the _domain_ doesn't neccessarily have to be _numbers_
+      (!!!)
+
+### DOT PRODUCT: use case 1
+    - See how similar a piece of music is: apply dot product to
+      two _equal length_ audio signals (dot against each other).
+    - or find a _needle_ (clip) in an _haystack_ (long audio
+      segment).
+    - dot the clip at many different points and see where very
+      positive (very similar). But that's a lot of dot products
+      - expensive computation!
+    - shortcut: Fast Fourier Transform (FFT)
+
+### DOT PRODUCT: use case 2
+    - measure the _similarity_ between vectors (coding matrix:
+      senator voting records)
+    - +1  voted in favour
+    - -1  voted against
+    -  0  abstained
+    - dot them:
+    `[+1, +1, 0, -1] ∙ [-1, -1, 0, -1]`
+    - very positive: both senators tend to agree
+    - very negative: both voting records tend to disagree
+
+### DOT PRODUCT: use case 3
+    - You can build a set of linear _simultaneous equations_
+    - by dotting an unknown vector `x` with known vectors
+        - v1 · x  =  10
+        - v2 · x  =  35
+        - v3 · x  =  8
+    solve for `x` with:
+        - v1 = [2,  3, -4,  1]
+        - v2 = [1, -5,  2,  0]
+        - v3 = [4,  1, -1, -1]
+
+### dot product insight!
+    - `v1  ∙ v2  ∙  v3 `
+    - I wondered why I got a _vector_ back here!
+    - I was expecting a scaler! but of course, `v1 ∙ v2` gives
+      a scaler,
+    - and `scalar ∙ v3` gives a new `vector`
+
+### vector {components} v {coordinates}
+    - The vector space `F^n` is the set of all n-tuples of
+      elements of F.
+    - So given a vector (a1,…,an) ∈ F^n, we can define the i'th
+      component of (a1,…,an) to be `a_i`.
+    - To define the coordinate vector of a vector, we need to fix
+      an ordered basis β={v1,…,vn}. For any v∈F^n, by definition,
+      we can find scalars c1,…,cn such that
+
+    v=c1v1+⋯+cnvn
+
+    We define the coordinate vector of v with respect to β to be
+
+    [v]β=(c1,…,cn)
+
+    - Note that if β is the standard basis, we have [v]β=v for
+      any v∈F^n.
+    - Coordinate vectors are always defined for vectors in
+      a vector space with an ordered basis.
+    - However, components are only defined in F^n.
+
+### Vector Spaces
+    - the axioms of a vector space are just the familiar rules of
+      algebraic manipulations with real numbers (or complex
+      numbers)
+
+### Lanczos
+    - dont think of a matrix as "n by n" but as "n by _m_" so
+      that a matrix involves TWO SPACES not just one
+
+    - i.e. a matrix doesnt just transform a vector from one
+      position to another, but
+      - a vector from one space to...
+      - a vector in another space
+        - (aha! just like coding the matrix! the vector is
+          a mapping from one domain to another!)
+
+    - and theres no such thing as a "_singular matrix_".
+
+    - Zero eigenvalues just means that a matrix doesnt operate in
+      a certain space or in a certain dimension of the space.
+
+    - ... consider every matrix in its own operational space, not
+      outside
+
+### DSP: Cartesian Plane
+    - cartesian plane is grand daddy of all vector spaces
+
+### Links
+    - What is the inverse of a vector? https://news.ycombinator.com/item?id=29080360
+    - What is a tensor product?        https://news.ycombinator.com/item?id=37358577
+    - Tensor phobia                    https://jeremykun.com/2014/01/17/how-to-conquer-tensorphobia/

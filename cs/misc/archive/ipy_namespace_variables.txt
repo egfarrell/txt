@@ -1,0 +1,18 @@
+ipy namespace variables
+who                     		list all Namespace variables
+whos                    		list all Namespace variables in table form
+who int                 		list only "int" variables
+reset                   		delete all variables
+
+reload <module>         	refresh all function definitions and variables
+
+psearch msgflag         search Namespace for "msgflag" variable
+psearch msg*            pattern match - return all vars beginning with "msg"
+psearch msg* int        pattern match- return all "int” vars starting with "msg"
+
+
+store                   		show all variables STORED in iPython profile
+store msgflag           	store "msgflag" variable in iPython profile.
+store -r                		restore variables from profile,
+store -z                		clear (zero) all variables from profile
+store msg > /tmp/a.txt  store value of variable in a text file

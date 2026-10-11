@@ -1,0 +1,343 @@
+
+
+### Robert Hermann: Maxima (!)
+    - $MY_BOOKS/Physics/Maths/Mathematical-Physics/Hermann/Hermann-Cartanian-geometry-from-Woit.pdf
+    - Page 44... 
+    - Another attractive development on the horizon is MACSYMA,
+      a system of symbolic and algebraic computation...
+
+### iPhone Recordings: Dec 26, 2020
+    - COMPLEX NUMBERS
+        - Maxima calculations are performed over the entire field
+          of complex numbers. This makes the results completely
+          general.
+        - But it sometimes prevents the computation of an
+          integral, or the solution of an equation, when no
+          totally general solution exists
+    - ASSIGNMENTS V EQUATIONS
+        - remember the difference between an assignment and an
+          equation. 
+        - an assignment stores a value in a variable e.g. `a : 1`
+        - an equation is simply the statement that `a = 1`. An
+          equation will not _change_ the actual value of `a`
+    - VARIABLE NAMES 
+        - if you want a variable name like `b+` or `a-`, then
+          escape the `+, -` with a backslash (Senese, p. 136)
+    - INTERPOLATION 
+        - p. 145 boodling function from interpolated data: trick
+          with DOUBLE QUOTE
+    - FUNCTIONAL DEPENDENCY 
+        - p. 164 
+        - it's best to show the dependence of a function `f` on
+          variables `x, y` by typing it out explicitly `f(x, y)`
+          rather than using the Maxima `depends` function to
+          declare dependancies
+            - gotcha: you can use `depends` for derivatives, but
+              not for integrals, or integral transforms
+    - PLOTTING 
+        - to plot the critical points on a surface, you have to
+          use the `Draw3D` environment, rather than the much
+          simpler `plot3D` that's covered in the Senese book
+
+### Surprising / gotchas
+    - exponents: `**` and `^` works
+    - Command history is also different within a block. 
+        - The system variable for previous statement within
+          a block is`%%`, not `%`
+    - file not found error with `load(draw);`
+        - gcc compiler wasnt installed on ubuntu
+        - do ai build-essential
+    - Maxima can't load/batch files which end with a comment!
+ 
+
+### IMPORTANT: plotting
+
+    - For JUPYTER NOTEBOOK plotting:
+        - Set the default plot options to SVG output so
+        Maxima-Jupyter can capture the output.
+        ```
+        set_plot_option([svg_file, "maxplot.svg"])$
+        ```
+        - see plotting examples: 
+            - $MY_CODE/maxima/jupyter-maxima/plots-examples.py
+
+    - For wxMAXIMA plots:
+        - to make the plots embedded, inline in the workbook, use 
+        - `wxplot`, `wxdraw`, `wxdraw2d`... 
+        - (rather than plot, draw etc)
+
+
+### Build / install MAXIMA
+    # remove existing ubuntu packages
+        sudo apt-get remove maxima maxima-doc maxima-share maxima-src maxima-test wxmaxima xmaxima
+
+    # MAXIMA
+        - Ensure lisp is present
+            - sbcl is recommended? (Roland Salz)
+            sudo apt-get install  gcl
+            sudo apt-get install  sbcl
+            - Dont use 'clisp'. (Can produce garbled output)
+
+        - Download source from:
+            - https://sourceforge.net/projects/maxima/files/Maxima-source/
+
+        - Build process
+            ./configure --enable-gcl
+            or
+            ./configure --enable-sbcl
+            make
+            sudo make install
+
+    # JUPYTER NOTEBOOK MAXIMA
+        - Ensure its a sbcl version of maxima
+                ./configure --enable-sbcl
+        - Install quicklisp
+                - https://www.quicklisp.org/beta/
+                curl -O https://beta.quicklisp.org/quicklisp.lisp
+                sbcl --load quicklisp.lisp
+                * (quicklisp-quickstart:install)
+                * (ql:add-to-init-file)
+                v .sbclrc  # check its in startup
+        - install zmq headers
+                ai libczmq-dev
+        - download source 
+                - https://github.com/robert-dodier/maxima-jupyter
+                cd maxima-jupyter
+        - Then run:
+                maxima 
+                load("load-maxima-jupyter.lisp");
+                jupyter_install();
+
+
+    # WXMAXIMA
+        - Source:         
+            - problems with wxWidgets library on my Acer
+            - https://github.com/wxMaxima-developers/wxmaxima
+            - How to compile: https://github.com/wxMaxima-developers/wxmaxima/blob/master/Compiling.md
+        - Deb files:      
+            - ubuntu 18.04: dont use deb as it needs libc > 2.29
+            - https://sourceforge.net/projects/maxima/files/Maxima-Linux
+        - Deb files Ubuntu 18.04
+            - (some error messages due to wxWidgets) 
+            sudo add-apt-repository ppa:maxima-developers/maxima-nightly
+            sudo apt-get update
+            sudo apt-get install wxmaxima
+
+    ### OLD: Maxima at CAMK
+        - Use pre-built CMUCL lisp (couldnt build GCL...)
+        - wget https://common-lisp.net/project/cmucl/downloads/release/21d/cmucl-21d-x86-linux.tar.bz2
+            - untar "cmucl" and copy relevant files to $HOME/.local
+        - Then maxima configure 
+            ./configure --prefix=$HOME/.local --enable-cmucl
+        - (one test failed for maxima but I think it's because I had
+          altered the default maxima TEX environment so the output
+          didn't match the expected output)
+
+    ### OLD: install (conda!)
+        conda config --add channels conda-forge
+        conda install maxima
+
+
+### Save & restore commands
+    stringout ("filename_in_quotes", input);
+    batch ("filename_in_quotes");
+
+### Jargon
+    - ATOM
+        - names of variables or procedures,
+        - numbers (integer or floating-point),
+        - "strings" (enclosed in double-quotes).
+
+    - LIST
+        - Ordered set of objects, written as a comma-separated
+          list of items in square brackets: eg: [a, b, c]
+
+    - NOUN
+        - A literal, symbolic name, that isn't evaluated.
+        - operator:    myfunc
+        - NOUN form:  'myfunc (not evaluated)
+        - VERB form: ''myfunc (force evaluation)
+        - as opposed to:
+
+    - VERB
+        - the execution of a procedure, or value of a variable, 
+          invoked by using its name.
+          (See the discussion of evaluation below.)
+
+    - PREDICATE
+        - LISP: "predicate" is a function that tests a condition.
+          By convention, LISP predicate names end in "p".
+        - You'll notice a lot of these in maxima. They return
+          Boolean true or false.
+
+    - EVALUATION
+        - Often see: “This function evaluates its arguments”
+            - Actually, most maxima functions evaluate their
+              arguments; but a few dont.
+        - Sometimes it's necessary to change the default
+          behavior, and either inhibit or force evaluation.
+        - Use _single quote_ operator
+            - myfunc
+            - NOUN form:  'myfunc (not evaluated)
+            - VERB form: ''myfunc (force evaluation)
+
+        - handy hint: single-quote operators protect the name
+          that follows from evaluation, much like single quotes
+          protect arguments from expansion in UNIX. 
+
+### Maxima help:
+    ? tex           /* exact match */
+    ?? tex          /* fuzzy match */
+    example diff
+    demo ("array")
+    demo ("contrib/format/format.demo");
+    - note:
+        - "demo" needs double-quoted strings. example doesnt.
+
+### Low level lisp
+    - Write low level LISP for maxima:
+    ./maxima/hints-for-maxima-programmers.txt
+
+### execute lisp source
+    - `load("myprog.lsp");`
+        - 'load' calls 'loadfile'  to load Lisp files
+        - 'load' calls 'batchload' to load Maxima files
+
+### lisp REPL (nice!!)
+    (%1) to_lisp()
+    - Type (to-maxima) to restart
+
+
+### Capture Maxima output
+    - Maxima cell select - click on cell marker and drag to more
+      cells > right-click > Copy as Image
+
+    - my favourite because I can select which range of cells to
+      include, easy to use, well worth learning
+
+
+### show/remove defined variables
+        infolists;
+        values;
+        functions;
+        kill(all);
+
+### load/run script
+    batch("allops.mc")
+    maxima -b allops.mc
+
+### Maxima Console:
+    - Break out of error loop
+    - press "q"
+
+### MAXIMA init Files
+    - ~/.maxima/maxima-init.mac
+
+    - Older info?
+    - Several initialization files, if in place, are loaded into
+      every maxima when you enter maxima top-level the first time
+      by typing (run).
+    - CL file: /usr/local/maxima/obj/maximarc.lsp is loaded into
+      every maxima. Therefore it is the place we put fixes for
+      MAXIMA bugs.
+
+    - For each individual user, the file .maxima.lsp in the home
+      directory is a private init file which will be loaded after
+      loading maximarc.lsp. For example, one may have the
+      following lines in one's .maxima.lsp file.
+    ```
+    (loadfile "file1.lsp")
+    (loadfile "file2.lsp")
+    (setq $fpprec 30)
+    ```
+
+    - The effect of this file (when loaded automatically into
+      maxima) is to cause loading of the two indicated CL files
+      and the setting of the variable $fpprec to 30.
+
+    - After loading the above two initialization files, maxima
+      looks for a file under the name .maxima-wd.lsp in the
+      current working directory. If found it is also loaded. This
+      allows different initialization to be done if the maxima
+      system is invoked in different working directories. Thus,
+      for example, one may have a finite-element .maxima-wd.lsp
+      in one directory and a factoring .maxima-wd.lsp in another
+      directory. This makes working with MAXIMA under different
+      testing conditions much easier.
+
+
+### X11 plotting:
+    - plot using ascii ("dumb")
+    - plot using "xmaxima" (aka "openmath")
+    - (I have "openmath" as a default in my config)
+        plot2d(sin(x),[x,0,2*%pi], [gnuplot_term,dumb]);
+        plot2d(sin(x),[x,0,2*%pi], [plot_format, openmath]);
+
+### Code example
+    - The Maxima solution can be simplified quite a bit..
+    - There is no need for (arcane) functions like funmake or
+      matrixmap.
+    - There is also a standard function for identity matrices
+      (`ident(2)` for a 2×2 one). And I prefer curly brackets for
+      control blocks.
+    - Then we get:
+        for a:0 thru 4 do
+        for b:0 thru 4 do
+        for c:0 thru 4 do
+        for d:0 thru 4 do
+        {
+            M: matrix([2,0],[0,3]),
+            P: matrix([a,b],[c,d]),
+            if mod(transpose(P).M.P, 5) = ident(2)
+            then print(P)
+        };
+
+### WXMAXIMA
+    config location;
+        %install_folder%\wxMaxima\maxima-init.mac
+
+    tip:
+        install jsMath fonts on Windows computer!
+
+    GUI Settings
+        - Edit -> Configure
+        - Worksheet -> untick: "Enter evaluates cells" (use shift+enter to evaluate)
+        - Worksheet -> tick: "Open cell when Maxima expects input"
+        - Worksheet -> untick: "Show user-defined lables instead of ..."
+
+    Evaluate:
+        - {shift+Enter} or {ctrl+Enter} ... both the same!
+
+    links:
+        - https://themaximalist.org/
+
+
+### Check these
+    - stardisp
+    - ttyoff
+
+### Links
+    - FORUM                              https://sourceforge.net/p/maxima/mailman/maxima-discuss/
+    - syntax help                        http://hyperpolyglot.org/computer-algebra
+    - UI tips                            http://maxima.sourceforge.net/ui-tips.html
+    - Docs All                           http://maxima.sourceforge.net/documentation.html
+    - Docs Manual                        https://maxima.sourceforge.io/docs/manual/maxima_0.html
+    - Classical Mechanics for Maxima     https://sites.berry.edu/ttimberlake/teaching/cm_maxima/
+    - Scientific Programming with Maxima http://www.cambridgescholars.com/scientific-programming
+    - mad config file                    https://github.com/maths/moodle-qtype_stack/blob/master/stack/maxima/stackmaxima.mac
+    - geometric algebra                  https://github.com/stephenathel/gawxm
+    - clifford algebra                   https://github.com/dprodanov/clifford
+    - Convert from mathematica to maxima https://github.com/jlapeyre/mixima
+    - Senese Maxima for Chemists         https://sourceforge.net/p/maxima/mailman/message/36727240/
+    - GCL: GNU common lisp source code   http://git.savannah.gnu.org/cgit/gcl.git
+    - Maxima client                      https://github.com/lokedhs/maxima-client
+    - Ted Woolet Computational Physics   https://web.csulb.edu/~woollett/cp.html
+    - Viktor Toth GR Maxima              https://www.vttoth.com/CMS/projects/61-the-maxima-computer-algebra-system
+    - Robert Dodier repos                https://github.com/robert-dodier?tab=repositories
+    - Extra Tables of Integrals (TOI)    https://github.com/robert-dodier/maxima-toi
+    - Senese Symbolic Maths              $MY_NOTES/cs/lang/maxima/Fred-Senese-Maxima-Chemists.txt
+    - Good info? Beginners blog          https://pro-prof.com/en/forums/topic/maxima-beginners-faq
+    - Roland Salz wrote workbook         http://roland-salz.de/
+    - Roland Salz workbook forum message https://sourceforge.net/p/maxima/mailman/message/36339459/
+    - Roland Salz workbook               $MY_BOOKS/Cs/Maxima/Roland-Salz-Maxima-Workbook.pdf
+    - Chris Sangwin: Maxima & Stack      https://www.youtube.com/watch?v=55yyyRjYIWM

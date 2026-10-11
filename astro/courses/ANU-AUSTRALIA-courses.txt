@@ -1,0 +1,182 @@
+### Link
+    - Main overview            https://www.edx.org/xseries/astrophysics
+    - Paul Francis Simulations http://www.mso.anu.edu.au/pfrancis/simulations/
+
+### Courses
+    - ./ANU/ANU-01x-Unsolved-Mysteries.txt
+    - ./ANU/ANU-02x-Exoplanets.txt
+    - ./ANU/ANU-03x-Stellar-Endstates.txt
+    - ./ANU/ANU-04x-Cosmology.txt
+
+
+### Misc: Work out Stellar MASS
+
+    - PAUL: So if we see a star out there, can we calculate how
+      far it is and how massive?
+
+    - BRIAN: So stars roughly tell us how _massive_ they are by
+      how _hot_ they are and how puffy they are, what their
+      _radius_ is.
+
+    - Its easy to measure the temperature of a star. Just look at
+      its color essentially. And the bluer it is, the hotter it
+      is.
+
+    - And it turns out we can measure the temperature to probably
+      within 100 degrees pretty easily. And that gives us,
+      essentially, through the black body equation, how much
+      _energy_ it puts out if we know its area.
+
+    - Now the _area_ is harder, but there is one indication we
+      can do. 
+        - And that is we can measure the _gravity_ of the star,
+          because the gravity of the star affects the way
+          `hydrogen lines` are formed.
+
+    - PAUL: So you're talking about the surface gravity, how
+      strong gravity is standing on the surface of the star.
+
+    - BRIAN: Yes we know here on Earth, it's 9.8 meters per
+      second squared. And we can essentially measure that same
+      thing on stars.
+
+    - Because it turns out the way `hydrogen spectral lines` look
+      depends on how much gravity there is in that.
+
+    - Once we've estimated surface gravity, then: whats that
+      surface gravity equal to?
+        - It's a combination of MASS and the RADIUS of the star.
+          (mass and distance)
+
+    - But we don't know that ... except for we sort of do.
+
+    - And that's because when stars evolve, their nuclear
+      reactors evolve. They sit in very specific places between
+      temperature and the total energy they're putting out.
+
+    - We can all these together and actually say e.g. "that star
+      is a red giant about twice the mass of our sun that has
+      this temperature and this surface gravity".
+        - And we can sort of pick it out in that thing with that
+          amount of information.
+
+    - PAUL: OK. So what we can measure is _the temperature and
+      the surface gravity_.
+        - But the surface gravity doesn't tell us either the mass
+          or the radius, but a combination of the two. So you
+          need some other clue.
+
+    And that _other clue_ comes from either
+
+        1. Our _models_ of stars: Eg surface gravity is enough to
+           tell us whether its a red giant or a red dwarf. And we
+           know all red dwarfs are practically the same and all
+           red giants are kind of the same too.
+
+       2. Or it could be something we measure _empirically_:
+          because often we will find stars that are much nearer,
+          so we can actually measure the its distance by
+          something like parallax.
+            - We look, as the Earth goes around the sun, we see
+              how the angle changes and work out how far away it
+              is.
+            - And if it's in a binary companion, we can use the
+              orbital with a normal star. So maybe like Alpha
+              Centauri, two yellow dwarf stars orbiting each
+              other- we can use that to try and measure the mass
+              of the two things.
+            - So we can use that to calibrate our theoretical
+              models.
+
+    - BRIAN: That's right. So we have these models. And then
+      there is this scaffolding of being able to measure
+      distances through parallax, measuring different things such
+      as the mass, and building the whole thing up and making it
+      self-consistent. So 100 years of astrophysics really is
+      calibrating those models.
+
+        - And they're pretty good now. Once you have essentially
+          that Hertzsprung-Russell diagram, which really tells
+          you these things, you literally can use that to say,
+          it's one of those stars. So it's very useful.
+
+    - PAUL: So we get a detailed spectrum, look at the exact
+      shape of the lines, and that gives-- and particularly the
+      ratios -- different spectral lines. That tells us surface
+      gravity.
+
+        - We know the color, therefore we can measure the
+          temperature. That tells us it's going to be, say,
+          a 6,000-degree star, either a dwarf star or a giant
+          star or possibly a white dwarf or a supergiant.
+        - Surface gravity tells us which type of star it is. And
+          once we know this, we can compare it with nearer ones
+          or with theoretical models and know how massive these
+          things are or how luminous they are or what their
+          radius is.
+
+    - BRIAN: Absolutely. So that's essentially the way we do it.
+      Occasionally, we get lucky. And there's a way to measure
+      the distance to the system itself.
+        - In those cases we can literally read off how bright it
+          is, how far away it is, and there has to be some sort
+          of geometric conspiracy which gives us that little
+          insight in this case, often related to parallax. 
+        - But most of the time, we don't have that. So this is
+          a way do it for most stars.
+
+    - PAUL: I know for some sources, if there are only radio wave
+      lengths, you can't see the companion star.
+        - It's much harder to get the distances eg, for pulsars.
+          In this case, we use a trick called rotation measure.
+        - Often the radio waves coming from these things are
+          polarized, so the radio waves, will be going up and
+          down in this direction.
+        - But as they travel through interstellar space, the
+          radio waves go past electrons, and they cause the
+          electrons to jiggle. 
+            - And that rotates the polarisation.
+        - But it tilts it differently depending on whether it's
+          a low frequency or a high frequency wave.
+        - So the high-frequency waves are rotated less.
+        - The low-frequency ones are rotated more.
+        - So what you find is that as you change your frequency,
+          you can see that the angle of polarization shifts.
+        - And that tells you basically how many electrons are on
+          the line of sight from Earth to this thing.
+        - Then you have to guess the electron density of
+          interstellar space, which is rather hard and probably
+          not constant. But that also gives you a way of
+          measuring distances if you don't see any optical light
+          at all.
+
+    - BRIAN: That's right. So what astronomers have done is
+      they've really mapped out essentially the number of
+      electrons in the Milky Way, through another 100 years of
+      astrophysics-- and so any direction we know where distance
+      is versus how many electrons there are and how much the
+      radio has rotated in its polarization. 
+        - And that gives us probably a measurement, which is good
+          to within a factor of 2 usually, sometimes quite a bit
+          better. But it's a good rough measure.
+
+    - PAUL: And there are other tricks you can play. Eg. if
+      something's in front of a giant molecular cloud. Then you
+      know if it was behind you wouldn't see it.
+        - If you see absorption lines from something, say, from
+          a nebula, then you know it must be behind it. So you
+          can get relative distances sometimes this sort of way.
+          It can be quite hard, though.
+
+    - BRIAN: Yeah. But within a factor of two, and most of
+      astronomy is factors of two, then we really can sort things
+      out here.
+
+    - PAUL: The bottom line: its possible to measure the masses
+      of these stars. How you do so is complicated. And as Brian
+      said: it's 100 years of astrophysics.
+    - It's not always very reliable. Sometimes it can be very
+      reliable. 
+        - It's a bit beyond the scope of this course. So for the
+          problems in this course, we'll just tell you the masses
+          of the companion star.

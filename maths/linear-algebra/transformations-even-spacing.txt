@@ -1,0 +1,83 @@
+See Grant's course where he talks about how a linear
+transformation preserves spacing between dots in the output
+space:
+    - $MY_NOTES/maths/linear-algebra/3b1b-3Blue1Brown-Linear-Algebra.txt
+
+### Aside: formal definition of Linear transformation
+    - First, the formal properties:
+        1. Additivity
+            - (Preserves Vector Addition)
+            - `L(v + w) = L(v) + L(w)`
+        2. Homogeneity 
+            - ("same-kind" scaling behavior)
+            - (preserves the uniformity or structure of scalar
+              multiplication across the transformation)
+            - `L(c * v) = c * L(v)`
+
+
+### Step 1: Understanding Evenly Spaced Dots in Input Space
+
+    - Imagine a row of evenly spaced dots along a straight line
+      in the input space. Mathematically, we can describe these
+      dots as points that follow a simple pattern:
+        - `v0, v0 + d, v0 + 2d, v0 + 3d, ...`
+
+    - where:
+        - `v0` is some starting point (which could be the origin,
+          but doesn't have to be).
+        - `d` is a fixed vector that represents the "step size"
+          between consecutive dots.
+
+    - This means the dots are positioned at regular intervals
+      along the direction of `d`.
+
+### Step 2: Applying the Linear Transformation
+
+    - Now, let's apply a linear transformation L to these points:
+        - `L(v0), L(v0 + d), L(v0 + 2d), L(v0 + 3d), ...`
+
+    - Using the two properties of linearity:
+        - Additivity: L(v0 + d) = L(v0) + L(d)
+        - Homogeneity: L(2d) = 2L(d),   L(3d) = 3L(d),   ...
+
+    - This transforms our original sequence into:
+        - `L(v0), L(v0) + L(d), L(v0) + 2L(d), L(v0) + 3L(d), ...`
+
+### Step 3: Spacing in the Output Space
+
+- Looking at this new sequence, we see something important:
+    - each 'transformed' dot is still separated by the same amount, namely `L(d)`.
+
+    - The difference between two consecutive transformed points
+      is:
+        - (L(v0) + (k+1)L(d)) - (L(v0) + kL(d)) = L(d)
+    - This means that the dots remain evenly spaced in the
+      transformed space, but now they are spaced by `L(d)` instead
+      of `d`.
+
+### Step 4: What Changes and What Stays the Same?
+
+    - The dots may move, and their spacing direction may change
+      (depending on L), but they will still be EVENLY SPACED.
+        - If `L` stretches or compresses space, the spacing
+          between dots will also stretch or compress.
+        - If `L` skews or rotates space, the pattern of dots will
+          also be skewed or rotated.
+
+- However, the fundamental property—EQUAL SPACING BETWEEN
+  CONSECUTIVE DOTS—is preserved because `L` distributes evenly
+  across scalar multiples of the vector `d`.
+
+### Conclusion: The Visual Interpretation of Linearity
+
+- The reason a linear transformation keeps evenly spaced dots
+  evenly spaced comes directly from its two properties:
+
+    - `Additivity` ensures that the transformation respects the
+      pattern of how dots are added together.
+    - `Homogeneity` ensures that scaling relationships remain
+      proportional.
+
+- This is a super intuitive way to see linearity in action:
+    - linear transformations preserve even spacing, just possibly
+      in a distorted or rotated way!

@@ -1,0 +1,55 @@
+
+### philosophy
+    - "Convention over configuration"
+
+### overview
+    "Lifecycle" -> "phases" -> "goals"
+
+    - _BUILD_ lifecycle
+        - Phases                    goals (plugin:goal)
+        - ------                    -------------------
+        - compile                   compiler:compile
+        - test                      surefire:test
+        - package                   jar:jar
+        - install                   install:install
+        - deploy                    deploy:deploy
+
+### handy 
+    - mvn plugin:goal
+    - mvn dependency:list
+    - mvn clean package
+    - maven 'install' location: `~/.m2`
+
+### maven central
+    - remote repository holding many open-source projects
+    - https://search.maven.org
+
+### POM - project object model
+    - holds object based representation of the build
+    - Project meta data: 
+        - "Coordinates" - "_GAV_"
+        - [G]roup    Name
+        - [A]rtifact Name
+        - [V]ersion  Name
+    - dependencies
+    - build settings
+    - Inheritance / Super POM
+
+### maven - basic tutorial
+    note: pom.xml -> project object model
+
+    check version
+        > mvn --version
+
+    create project using pre-defined "Artifact"
+        > mvn archetype:generate -DgroupId=com.mycompany.app \
+        > -DartifactId=my-app \
+        > -DarchetypeArtifactId=maven-archetype-quickstart \
+        > -DinteractiveMode=false
+
+    build project
+        > cd my-app
+        > mvn package
+
+    test newly compiled jar
+        > java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App

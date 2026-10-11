@@ -1,0 +1,64 @@
+$MY_VIDEOS/physics/What-is-GR/05-Catalogue-of-Spacetimes.mp4
+https://www.youtube.com/watch?v=QCSCb6das48&list=PLRlVmXqzHjURQIIebhT7UNTwGQHUEPlsb&index=5
+
+- find "catelogue of spaceitmes" on the arxiv
+
+- A Christofel symbol of the 1st kind = ???
+- A Christofel symbol of the 2nd kind = "the connection"
+
+- The metric defines the connection!
+
+- "killing equation": when satisfifed gives you a "killing vector",
+  which gives you directions where the metric is constant
+
+- reading the metric off the spacetime interval 
+	- $MY_IMAGES/physics/What-is-GR/read-metric-from-interval.jpg
+
+- the connection is used to transition between coordinate systems
+- arctan2 
+
+
+- tetrad: find a local frame where the spacetime is flat _AND_ cartesian
+
+- Minkowski flat space but in a rotating reference frame . messy!
+	- $MY_IMAGES/physics/What-is-GR/rotating-minkowski.jpg
+    - you even have off diagonal metric elements, but it can
+      still all be transformed back to `η`
+        - $MY_IMAGES/physics/What-is-GR/minkowski-off-diagonal.jpg
+        - but how would you actaully get back to the minkowski
+          metric?? so hard... so instead you calculate the
+          curvature tensor and see if `R=0` 
+
+### Youtube:
+    - Could you tell me why at 34:57 E^{beta} is either 1 or -1
+      when it is a coordinate function that we should be able to
+      express as a function of X coordinate system
+
+    - Hey. I just finished your manifold lectures and I am trying
+      to connect them to these lectures. In your modelling of
+      spacetime you do not mention the manifold, which is the set
+      of points, the topology and the atlas. Where do they fit in
+      all of this? You seem to skip all the way to the metric
+      field
+        - You noticed! :) I started the GR series first and like
+          most presentations I tried to get by without explicitly
+          covering the topic of differentiable manifolds in
+          depth. Then I realized that to really get this right
+          I needed to cover manifolds, so I started the other
+          series. Basically, anywhere you see a coordinate system
+          and a tangent space or a tensor product space, you are
+          looking at a manifold structure. I think I explicitly
+          say so more often in the later lectures.
+
+    - Another comment, it is minor again  in 47:08 concerning the
+      \phi angle in spherical coordinates I have the impression
+      that is  \phi = atan2(y,x)
+
+    - Time: 1:02:33 When you are discussing metric for rotating
+      coordinates, you said that there are g02 and g20 elements.
+      However, they only listed `g_(t,phi)`. Seeing how metric
+      should be symmetric, it means that `g_(phi, t) = g_(t,
+      phi)`. Shouldn't then your elements `g20` and `g02` be
+      divided by 2? Because when you expand the square, isn't the
+      `2*c*Omega*dt x dphi` actually `-c*Omega(dt x dphi + dphi
+      x dt)` and they just wrote that out as a simplification?

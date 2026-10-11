@@ -1,0 +1,268 @@
+### Pilot wave theory (basic idea)
+
+- Pilot wave theory is an interpretation of QM first proposed by
+  de Broglie in 1927 and later developed by David Bohm.
+- (Pilot wave theory is the overarching theory, the "double
+  solution" is a specific variant)
+
+### See also: 
+    - ./DeBroglie-Double-Solution2.txt
+
+- Core claim:
+    - A particle is always a real, localized object with
+      a definite position.
+    - At the same time, there's a `real wave` existing in space.
+        - This wave guides the motion of the particle.
+
+- Instead of saying “the particle is spread out” (Copenhagen),
+  the theory says:
+    - The particle is always somewhere specific.
+    - The wave tells it where to go.
+
+- ASIDE: Copenhagen has `|Ψ|²` spread across space, implying:
+    - The particle has no definite position before measurement.
+    - It is not localized at a single point
+    - It has a spatially extended PROBABILITY distribution
+    - See also:
+        - $MY_NOTES/physics/QM/superposition.txt
+        - "In a position superposition, the wavefunction is
+          spread out, assigning a `probability amplitude` to
+          multiple locations."
+
+
+- Mathematically, the wave is described by the usual wavefunction `Ψ`.
+
+- The wave determines the particle velocity via a guidance
+  equation:
+    - `v = (∇S) / m`
+    - where `S` is the phase of the wavefunction
+    - and `m` is particle mass.
+
+- This removes randomness at the fundamental level.
+    - The motion is deterministic. The apparent randomness comes
+      from not knowing the exact starting position.
+
+
+### Problem with standard pilot wave theory
+
+In standard pilot wave theory (Bohmian mechanics):
+
+- The wavefunction `Ψ` is treated as physically real.
+- But `Ψ` exists in configuration space, not ordinary 3D space.
+
+- Configuration space is abstract.
+    - For `N` particles, it has `3N` dimensions.
+- This makes the ontology less intuitive, because the guiding
+  wave isn't a normal wave in physical space.
+
+- De Broglie wasn't satisfied with this.
+    - He wanted a theory where everything exists in real 3D space.
+
+
+### Double solution theory (de Broglie’s deeper idea)
+
+- De Broglie proposed the double solution theory to fix this.
+
+- It introduces two different waves:
+    1. The usual wavefunction `Ψ`
+    2. A second, PHYSICAL wave with a real localized bump
+
+- Hence the “double solution” (two waves).
+
+
+### First wave: Ψ (statistical wave)
+
+- This is the normal wavefunction from QM.
+
+- It:
+    - Obeys the Schrödinger equation
+    - Is smooth and spread out
+    - Describes probabilities
+    - Is not itself the PARTICLE
+
+- This wave is sometimes called the “pilot wave.”
+- It guides motion, but it isn't the particle itself.
+
+
+### Second wave: physical wave with singularity
+
+- This is the key new idea.
+- De Broglie proposed a second wave, usually called `u`.
+
+- This wave:
+    - Exists in real 3D space
+    - Has a localized `high-amplitude` region
+        - (a bump or singularity)
+    - This bump is the particle
+
+- In this theory:
+    - The particle isn't a separate object
+    - The particle is a concentrated part of a real physical wave
+
+- In other words:
+    - particle = localized peak in a _real_ wave
+
+
+### Double Solution: how motion works
+
+There are two layers:
+
+- Layer 1: `Ψ` wave
+    - This is smooth and spread out. It determines the overall structure.
+
+- Layer 2: `u` wave
+    - This has a localized bump. This bump moves.
+
+- The bump moves according to the guidance from `Ψ`.
+
+- So:
+    - `Ψ` guides `u`
+    - `u` contains the particle
+
+### Different from standard Bohmian mechanics
+
+- Standard Bohmian mechanics:
+    - Particle = separate point object in real 3D space
+    - Wavefunction `Ψ` guides it
+    - `Ψ` exists in configuration space (3N-dimensional for N particles)
+    - `Ψ` is treated as physically real
+
+- Double solution theory (as actually formulated):
+    - Particle = singularity (localized peak) in a real physical wave `u(x, t)`
+    - `u` exists in real 3D space
+    - `Ψ` still exists and still plays a guiding role
+    - `Ψ` still lives in configuration space for multi-particle systems
+    - `Ψ` is not the particle itself, but determines the motion of the singularity
+
+So:
+    - The ontology becomes more wave-based
+    - But configuration space is not fully eliminated in the working theory
+
+### What de Broglie wanted (not fully achieved)
+
+- He wanted a theory where:
+    - Every physically real thing exists in ordinary 3D space
+    - The particle is a localized structure in a real wave
+    - `Ψ` is not a fundamental physical object
+    - ----------------------------------------------------
+    - `Ψ` emerges from deeper physical waves in real space
+    - ----------------------------------------------------
+    - Configuration space is only a mathematical tool, not
+      fundamental reality
+
+- Instead of:
+    - particle + configuration-space wave `Ψ`
+    - he wanted:
+    - real physical wave(s) in 3D space + localized singularities
+    - ... and `Ψ` would be derived from those.
+
+
+### Crucial distinction: Achieved vs Intended
+
+- Achieved in his actual theory:
+    - `u` exists in real space
+    - particle = singularity in `u`
+    - `Ψ` still exists and still guides motion
+    - `Ψ` still lives in configuration space (for many particles)
+
+- Not achieved (only intended):
+    - complete elimination of configuration space
+    - derivation of `Ψ` entirely from real physical waves
+    - a fully closed theory using only real-space ontology
+    - cf: 
+        - $MY_NOTES/physics/QM/Bohm/Reconsidering-Solvay.txt
+        - Note that the theory was regarded as only provisional,
+          by both de Broglie in 1927 and Bohm in 1952. 
+        - In particular, ... de Broglie regarded the introduction
+          of a pilot wave in configuration space as a provisional
+          measure. Bohm, on the other hand, suggested that the
+          basic principles of the theory would break down at
+          nuclear distances of order 10−13 cm (Bohm 1952a, pp.
+          178–9)
+
+
+### Why Ψ still needed
+
+- Because `Ψ` contains the correct PHASE STRUCTURE needed to
+  reproduce quantum predictions.
+
+- The velocity law depends on the phase `S` of `Ψ`:
+    - `v = (∇S) / m`
+
+- Without `Ψ`, he did not yet have a complete replacement that
+  reproduced all quantum results.
+
+- So `Ψ` remained part of the theory as a guiding structure.
+
+
+### Clean correction of original summary
+
+- Replace:
+    - "Everything exists in real 3D space"
+- with:
+    - "The particle and the physical wave `u` exist in real 3D
+      space, but `Ψ` still exists as a guiding wave in
+      configuration space; 
+        - de Broglie’s goal was to eventually derive `Ψ` from
+          real physical waves and eliminate configuration space
+          as fundamental."
+
+
+### Connection to pilot wave theory
+
+- Pilot wave theory is the broader idea:
+    - wave guides particle
+
+- Double solution theory is a specific version:
+    - particle is part of a real wave, guided by another wave
+
+- So:
+    - pilot wave theory = general framework
+    - double solution theory = specific deeper model
+
+
+### Why walker experiments are relevant
+
+- Walker experiments (bouncing droplets on vibrating fluid) show:
+    - A droplet moves
+    - It creates waves
+    - Those waves guide the droplet
+
+- This is very similar to pilot wave theory:
+    - droplet ↔ particle
+    - fluid wave ↔ pilot wave
+
+- In some sense, it visually demonstrates how a wave can guide
+  a localized object.
+
+- But it doesn't prove QM works this way. It only shows such
+  behavior is physically possible.
+
+
+### Double Solution: why not fully developed
+
+- De Broglie never completed the theory mathematically.
+
+- The main difficulty is constructing a stable localized wave that:
+    - Does not spread out
+    - Moves correctly
+    - Matches all quantum predictions
+
+- This is still an open research problem.
+
+
+### Summary
+
+- Pilot wave theory:
+    - Particle is real
+    - Wavefunction is real
+    - Wave guides particle motion
+
+- Double solution theory:
+    - There are two waves
+    - One smooth wave (`Ψ`) guides motion
+    - One localized wave (`u`) contains the particle itself
+    - Particle is a concentrated part of a real wave
+
+- Walker experiments illustrate this idea but don't prove it's
+  true for QM.

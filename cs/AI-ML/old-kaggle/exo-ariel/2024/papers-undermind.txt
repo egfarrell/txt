@@ -1,0 +1,188 @@
+
+
+- Link:
+    - https://www.undermind.ai/query_app/display_one_search/f520a2f132a19b0786523091efc4c2e6424a989f32952200bc06fcfddb9f3328/
+
+### Summary
+
+- Found practical applications of regression methods for noise
+  detrending in time-series spectro-spatial data from space-based
+  telescopes, specifically for missions akin to Ariel, with
+  ARIELSim, ExoSim, and machine learning playing pivotal roles
+  [1, 3, 7, 8].
+
+### Detailed Summary:
+
+    - Simulation Tools:
+        -  `ARIELSim` and `ExoSim` are prominent tools for
+           modeling noise characteristics specific to the Ariel
+           mission, enabling validation and development of noise
+           mitigation strategies under realistic noise
+           conditions, including pointing jitter [1, 8, 23].
+           These tools are crucial in designing mission-specific
+           noise models and refining observational strategies.
+
+    - Regression and Noise Models:
+        -  Several studies emphasize the use of advanced
+           regression methods, including Gaussian Processes and
+           pixel-level decorrelation, to address pointing jitter
+           and instrumental noise effectively. These methods
+           demonstrated significant improvements in photometric
+           precision for missions such as K2 and Spitzer,
+           showcasing their relevance to Ariel-like missions [2,
+           4].
+
+    - Machine Learning Applications:
+        -  The use of ML techniques, highlighted by the ARIEL
+           Data Challenge, demonstrates the ability of ML models,
+           such as NNs, to handle complex noise patterns in
+           exoplanet data, indicating a growing trend toward
+           _AUTOMATED NOISE CORRECTION_ methods [3, 7, 9].
+           Competitive frameworks like the ARIEL Data Challenge
+           push for continuous innovations applicable to future
+           missions.
+
+    - Consensus and Innovation:
+        -  There is consensus of INTEGRATING realistic noise
+           simulations and advanced ML models to develop robust
+           data correction pipelines. 
+        - However, discrepancies in method effectiveness and the
+          ongoing need for better evaluation frameworks have been
+          noted, highlighting areas for further exploration and
+          development [9, 27].
+
+- The literature reflects a CONVERGENCE of _SIMULATION-BASED
+  modeling_ and _ML_ approaches to refine noise detrending
+  methodologies, crucial for maximizing the scientific outcomes
+  from missions like Ariel.
+
+# Categories of papers
+
+### Simulation Tools for Space Missions
+
+    - Description: Papers focusing on the development and
+      application of simulation tools to model noise impacts in
+      space missions, particularly targeting realistic noise and
+      pointing jitter as present in the Ariel mission.
+    - Details:
+        - [1] ARIELSim tool simulating complex noise and
+          systematics specific to the Ariel mission.
+        - [5, 13] PLATO simulation tools focused on modeling
+          space-based CCD photometry and assessing noise sources.
+        - [8] ExoSim used within the Ariel mission to simulate
+          transiting exoplanet observations.
+        - [12] ASTROID Simulator models jitter and other
+          instrumental noise for high-precision space imaging.
+        - [23] ExoSim provides a time domain simulator to assay
+          exoplanet transit spectroscopy.
+
+### Regression Techniques for Noise Detrending
+
+    - Description: Studies exploring various regression methods,
+      including advanced statistical and machine learning
+      approaches, for noise detrending in space telescope
+      datasets.
+    - Details:
+        - [2] EVEREST pipeline uses Gaussian processes for
+          removing pointing error systematics from light curves.
+        - [4] ICA method for detrending instrumental systematics
+          in exoplanetary light curves.
+        - [6] Handles missing data with autoregressive noise
+          models in space mission data.
+        - [19] 2D Gaussian Process for modeling correlated noise
+          in spectroscopic datasets.
+        - [25] Neural networks applied for unsupervised
+          correlated noise removal.
+
+### Machine Learning Applications
+
+    - Description: use ML methods to address spectro-spatial
+      noise challenges in datasets similar to Ariel.
+    - Details:
+        - [3] Employs machine learning to handle intra-pixel gain
+          variations and pointing fluctuations in photometry.
+        - [9, 11] Challenges driving development of ML models for
+          noise correction in Ariel mission datasets.
+        - [18] Combination of machine learning models for
+          atmospheric parameter retrieval accuracy in Ariel data
+          challenge.
+        - [27] Deep learning pipeline for modeling
+          time-correlated noise in exoplanet observations.
+
+### Practical Applications and Case Studies
+
+    - Description: applying and testing of noise-mitigation
+      techniques in real or simulated observational scenarios.
+    - Details:
+        - [2] Application of EVEREST pipeline to K2 light curves
+          improving precision.
+        - [5, 13] Use of PLATO Sim and ASTROID for space mission
+          readiness through detailed simulation.
+        - [10] Machine learning approach for precise analysis of
+          spectrophotometric observations.
+        - [21] Review and analysis of correlated noise on
+          exoplanet light curve modeling.
+        - [22] ICA applied in reanalysis of Spitzer/IRAC transit
+          observations.
+
+- Each category aggregates collective insights and methodologies
+  that advance the effective discrepancy handling of noise in
+  spectro-spatial data from space telescopes using sophisticated
+  regression tactics, simulative environments, and cutting-edge
+  machine learning innovations.
+
+Timeline and citation network
+Historical Development of Ideas:
+
+    - Early Developments (2010-2014):
+        -  The initial focus was on building robust _simulation
+           tools_ like the PLATO Simulator [5, 13], which
+           modelled noise properties, including pointing jitter,
+           to improve photometric precision. The `ASTROID`
+           package [12] further emphasized realistic simulation
+           environments.
+    - Mid-2010s Advances (2015-2017):
+        -  Methods began shifting towards more sophisticated
+           noise detrending techniques such as Independent
+           Component Analysis (`ICA`) introduced by Morello [4,
+           22] and the application of statistically robust
+           regression models to handle missing data and unknown
+           colored noise [6].
+    - Integration of Machine Learning (2018-2020):
+        -  ML methodologies started gaining prominence with
+           studies exploring the effectiveness of models like NN
+           for noise mitigation in datasets from missions such as
+           Spitzer [3] and challenges organized around Ariel data
+           simulations [9, 11].
+    - Current Trends (2021-Present):
+        -  There's a continued development of specialized tools
+           such as ARIELSim and ExoSim [1, 8], and increased
+           involvement in machine learning, focusing on refining
+           data correction techniques [27, 18], including
+           competing in structured challenges aimed at optimizing
+           methods for Ariel mission applications [9].
+
+### Clusters of Research Groups or Key Individuals:
+
+    - Subhajit Sarkar: 
+        - Active in the development of simulation tools such as
+          ARIELSim and ExoSim [1, 8, 23], contributing
+          significantly to designing mission-specific noise
+          models and data reduction strategies.
+    - G. Morello and Collaborators: 
+        - Focused on ICA and wavelet methods for detrending noise
+          from space mission data [4, 22, 17], offering
+          alternative non-parametric approaches to traditional
+          parametric ones.
+    - ESA's Ariel Machine Learning Challenges: 
+        - Provide a collaborative platform for researchers like
+          Nikolaou and Tinetti [7, 11], driving machine learning
+          innovations specifically tailored to address scenarios
+          faced in missions like Ariel.
+
+- These references trace the evolution from basic simulation and
+  statistical techniques to the integration of machine learning
+  and advanced simulators, highlighting growing community efforts
+  to enhance noise detrending methods for complex space-based
+  datasets.
+

@@ -1,0 +1,159 @@
+### IMAGES and CONTAINERS 
+    _NOTE_: container "name" is last column
+
+    sudo docker container ls            # SHOW RUNNING Containers (alias `dls`)
+    sudo docker container ls -a         # SHOW all     Containers (alias `dlsa`)
+    sudo docker image ls                # SHOW all     IMAGES     (alias `dlsi`)
+
+    sudo docker start f7423ddd41a6      # START Container (that is stopped)
+    sudo docker start 65efea3993c7      # START Container
+
+    sudo docker stop e1942d18da1a          # STOP Containers
+    sudo docker stop lfura_benchmark_enda  # STOP Containers
+
+    sudo docker kill hive-metastore     # STOP AGGRESSIVELY
+
+    sudo docker rm  782f3f2236e1        # Remove container id?   (STOPPED)
+    sudo docker rm  quirky_aryabhata    # Remove container name? (STOPPED)
+    sudo docker rmi  e32b6b36feb9       # DELETE image
+    
+    sudo docker rename happy_chaplygin  Ubuntu-10.04       # Rename container
+
+### Misc handy:
+	sudo systemctl stop docker
+	sudo systemctl start docker
+        
+    # copy file _FROM_ container
+        sudo docker cp 2f749baa1189:/home/builder/build.sh      /home/ef
+
+    # copy file _TO_ container
+        sudo docker cp /home/ef/build.sh  2f749baa1189:/home/builder/termux-packages/packages/etags/build.sh 
+        sudo docker cp $HOME/sources.list   93f91070eb56:/root 
+        sudo docker cp  $HOME/dotfiles/   93f91070eb56:/root 
+
+    # Start container from an image
+        sudo docker run [image name]
+        sudo docker run 45b4d263d160
+
+    # START container and jump `inside`
+        sudo docker run -it e1942d18da1a /bin/bash
+
+    # `ATTACH` to running container
+        sudo docker exec -it 65efea3993c7   /bin/bash
+
+    # Jump inside a container that exits too quickly
+        # (Gives you a few seconds)
+        docker start [container_name] && docker exec -it [container_name] bash
+
+### Create ubuntu 12.04 docker image
+    sudo docker pull ubuntu:12.04
+    # run the ubuntu container, but in "detached -d" mode
+    sudo docker run -d -t ubuntu:12.04 /bin/bash
+
+    sudo docker rename 9143ad373f77  Ubuntu-12.04
+
+    export CURRENT_CONTAINER=337c5a676c29
+    echo $CURRENT_CONTAINER
+
+    sudo docker cp $HOME/sources.list.precise   "$CURRENT_CONTAINER":/root
+    sudo docker cp  $HOME/dotfiles/             "$CURRENT_CONTAINER":/root
+    sudo docker cp  $HOME/get-MCFOLD-DB.sh      "$CURRENT_CONTAINER":/root
+
+    `ATTACH`:
+    -------------------------------------------------------
+    sudo docker exec -it "$CURRENT_CONTAINER"     /bin/bash
+    -------------------------------------------------------
+
+
+    sudo docker cp  $HOME/RF00002.cm "$CURRENT_CONTAINER":/root/repos/CMCompare
+
+    sudo docker container ls            # SHOW RUNNING Containers
+    sudo docker container ls -a         # SHOW all     Containers
+    sudo docker image ls                # SHOW all     IMAGES
+
+
+
+### Install (Ubuntu 18.04)
+    - https://docs.docker.com/engine/install/ubuntu/
+    # How to install Docker on Ubuntu 18.04
+
+    # Step 1: Cleanup + prerequisites
+        
+        sudo apt-get remove docker docker-engine docker.io containerd runc
+        sudo apt-get update
+        sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+
+    # add docker GPG key
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+    # The key should be: 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88
+        sudo apt-key fingerprint 0EBFCD88
+
+    # Add repo
+        sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+    # Now Install docker
+        sudo apt-get update
+        sudo apt-get install docker-ce docker-ce-cli containerd.io
+        
+    # Test Docker to see if it works...
+        sudo docker run hello-world
+
+### "Dockerfile"
+    - A `Dockerfile` is a text-based script of instructions used
+      to create a container image
+    - Might have a final line to auto-execute a script on
+      startup. eg:
+        - `CMD ["/bin/bash", "/codeexecution/entrypoint.sh"]`
+
+
+### Dont require "sudo" for docker
+    - first:
+        sudo groupadd docker
+
+    - Add the connected user "${USER}" to the docker group.
+    - Change the user name to match your preferred user:
+        sudo gpasswd -a ${USER} docker
+
+    - Restart Docker daemon:
+        sudo service docker restart
+        - If on Ubuntu 14.04-15.10 use "docker.io" instead:
+            sudo service docker.io restart
+
+### kernel
+    - each docker app uses the same underlying kernel
+
+### run GUI application
+    - docker run -e DISPLAY -v $HOME/.Xauthority:/home/developer/.Xauthority --net=host firefox
+
+### copy files from host
+    docker run -v /home/ef/dotfiles:/mnt --name sagedev sagemath/sage
+
+### access data
+    from host or other containers
+        create a DATA container
+        then run: "docker run ... --volumes-from DATA ... etc"
+
+### container for full development
+    - search dockerhub for "baseimage"
+
+### exposed ports
+    - `-p` flag
+    - can also set default port values into the containers
+      metadata. its a simple json file
+
+### Interesting:
+    - how to see what a package manager installed!
+    - open a docker image
+    - install a package
+    - run `docker diff`
+
+### MAKEFILE docker recipies
+    - $MY_CODE/old/data-sci/portable_cluster/docker-version/makefile-docker
+    - search for: start_hive_postgres_metastore
+    - search for: get_docker
+
+### Links
+    - Alpine Linux image (Alpine is a tiny busybox based Linux) https://hub.docker.com/_/alpine
+    - Podman: rootless alternative to docker                    https://news.ycombinator.com/item?id=31615517
+

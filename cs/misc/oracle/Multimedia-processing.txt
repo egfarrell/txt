@@ -1,0 +1,112 @@
+Oracle multimedia
+
+### multimedia users
+    - ORDSYS
+    - ORDPLUGINS
+    - SI_INFORMTN_SCHEMA
+
+
+### To access files with PL/SQL,
+    - you must create DIRECTORY OBJECT in database that points to
+      directory that is accessible by database server. To create
+      MEDIA_DIR directory in sample schema:
+
+    - CREATE DIRECTORY MEDIA_DIR AS
+      'c:\oracle\product\10.2.0\db_1\demo\schema\product_media';
+
+    - To retrieve media data from database to file, you must
+      grant write permission on specified directory to
+      appropriate user. GRANT WRITE ON DIRECTORY MEDIA_DIR TO
+      SCOTT;
+
+    - To upload media data from file to database, you must grant
+      read permission on specified directory to appropriate user.
+      GRANT READ ON DIRECTORY MEDIA_DIR TO SCOTT;
+
+
+### Media Download in PL/SQL
+    - call EXPORT method of Oracle Multimedia object.
+    - e.g. export image in row with product_id 3117
+    to file named 3117.jpg in directory MEDIA_DIR.
+
+    DECLARE
+        img ORDImage;
+        ctx RAW(64) := NULL;
+    BEGIN
+        SELECT product_photo
+        INTO img
+        FROM pm.online_media
+        WHERE product_id = 3117;
+
+        img.export(ctx, 'FILE', 'MEDIA_DIR', '3117.jpg');
+    END;
+    /
+
+### Media Upload in PL/SQL
+    - Media upload means importing media data from file system into database
+    tablespaces. following series of steps is typical:
+
+    1. Insert new row into table,
+        - creating new objects by using init method of Oracle Multimedia object type.
+
+    2. Call import method
+        - of Oracle Multimedia object to bring data from the file
+          system into database.
+
+    3. Call setProperties method
+        - of Oracle Multimedia object to determine and populate
+          attributes of object.
+
+    4. Update table
+        - so that Oracle Multimedia object in table contains the
+          attribute values extracted in previous step.
+
+    DECLARE
+        img ORDImage;
+        aud ORDAudio;
+        vid ORDVideo;
+        ctx RAW(64) := NULL;
+    BEGIN
+        -- Insert new row into pm.online_media table.
+        DELETE FROM pm.online_media WHERE product_id = 3003;
+
+        INSERT INTO pm.online_media
+            (product_id,
+            product_photo,
+            product_audio,
+            product_video)
+        VALUES (3003,
+            ORDImage.init('FILE', 'MEDIA_DIR', 'laptop.jpg'),
+            ORDAudio.init('FILE', 'MEDIA_DIR', 'laptop.mpa'),
+            ORDVideo.init('FILE', 'MEDIA_DIR', 'laptop.rm'))
+        RETURNING
+            product_photo, product_audio, product_video
+        INTO
+            img, aud, vid;
+
+        -- Bring media into database and populate attributes.
+
+        -- ORDImage.import also
+        -- calls ORDImage.setProperties.
+        img.import(ctx);
+
+        -- audio
+        aud.import(ctx);
+        aud.setProperties(ctx);
+
+        -- video
+        vid.import(ctx);
+        vid.setProperties(ctx);
+
+        -- Update table with properties we have extracted.
+        UPDATE
+            pm.online_media
+        SET
+            product_photo = img,
+            product_audio = aud,
+            product_video = vid
+        WHERE
+            product_id = 3003;
+        COMMIT;
+    END;
+    /

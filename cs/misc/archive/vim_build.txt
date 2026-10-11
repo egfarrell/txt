@@ -1,0 +1,80 @@
+vim compile from source
+
+- " RANDOM REDDIT COMMENT 
+    - vim-nox ... is actually... vim no-X (!)
+
+compile vim source
+
+    remove existing stuff
+        sudo apt-get remove vim vim-runtime gvim
+        sudo apt-get remove vim-tiny vim-common vim-gui-common
+
+    if ubuntu (get x clipboard working)
+        ai make ncurses-dev libx11-dev libxtst-dev libxt-dev libsm-dev libxpm-dev
+
+    get source
+        > mirror of vim mercurial repo
+        > get last release of version 7.4
+        git clone --depth 1 https://github.com/vim/vim.git
+        cd vim
+        g fetch --tags
+        g co tags/v7.4.2367 -b v7.4.2367
+
+### _SYSTEM-WIDE_ 
+        ai python-pip                    <--- only for ultisnips?
+        sudo pip install unidecode       <--- only for ultisnips?
+        ai python-dev
+        python 2
+            ./configure --prefix=/usr/local --enable-gui=yes --with-x -with-features=huge --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config
+        python 3
+            ./configure --prefix=/usr/local --enable-gui=yes --with-x -with-features=huge --enable-python3interp --with-python-config-dir=/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu
+        make
+        sudo make install
+
+### _LOCAL_ 
+        (to specific 'my_vim' folder)
+        python 2
+            ./configure --enable-gui=yes --with-x -with-features=huge --enable-pythoninterp  --prefix=$HOME/my_vim
+        python 3
+            ./configure --enable-gui=yes --with-x -with-features=huge --enable-python3interp  --prefix=$HOME/my_vim
+        make
+        make install
+
+original helpful article
+
+    Sometimes user does not have control over Linux-like system but still would
+    like to have a latest version or VIM in use. Such setup can be still reached,
+    but not suggested, with local install of the software. However, there is a
+    small trick with installation.
+
+    didnt need this ( but did need it on UBUNTU)
+        1. Install latest nurses library. Most of the systems have this lib pre-
+        installed. Nevertheless, we want user to have the most up-to-date install. For
+        this, follow next steps:
+
+        mkdir ~/Downloads
+        cd ~/Downloads
+        wget http://ftp.gnu.org/gnu/ncurses/ncurses-5.9.tar.gz
+        tar -xzf ncurses-5.9.tar.gz
+        cd ncurses-5.9
+        mkdir ~/Applications
+        ./configure --prefix=$HOME/Applications/ncurses
+
+    2. Install vim (main step!)
+        cd ~/Downloads
+        hg clone https://vim.googlecode.com/hg/ vim
+        export LDFLAGS="-L$HOME/Applications/ncurses/lib"
+        cd vim
+
+        ./configure --enable-gui=no --without-x -with-features=huge --prefix=$HOME/Applications/vim --with-tlib=ncurses
+        or with python
+        ./configure --enable-gui=no --without-x -with-features=huge --enable-pythoninterp --prefix=$HOME/ef_apps/vim --with-tlib=ncurses
+
+        make
+        make install
+
+    3. Make vim accessible system-wide: (add to ~/.bashrc)
+        export VIM_DIR=$HOME/Applications/vim
+        export VIMRUNTIME=$VIM_DIR/share/vim/vim73
+        export EDITOR=vim
+        export PATH=$VIM_DIR/bin:$PATH

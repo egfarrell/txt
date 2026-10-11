@@ -1,0 +1,311 @@
+$MY_VIDEOS/physics/bala_fundamental/15-Newtons-laws-of-motion.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture - 15
+Newton’s Laws of Motion
+(Refer Slide Time: 00:29)
+
+Well, we had start a stage where I said that in principle we could solve Newton’s
+equation of motion, the second law of motions for a given body by pointing out that
+starting with m d v over d t equal to F of t. If we manage to specify the force on this
+particle at every instant of time, then it followed that the position of this particle at any
+instant of time was equal to the initial position plus the initial velocity multiplied by time
+in this fashion plus a complicated quantity which was 1 over m, an integral from 0 to t d t
+2 for want by the symbol integral 0 to t 2 d t 1 f of t 1. So, you first integrate this from 0
+to t 2 and then you integrated as a function of t 2 from 0 to t and in principle this was
+your solution.
+Now, where is the difficulty in this problem? The answer is that the specification of this
+force at every instant of time in some sense already presumes the solution of the
+problem. Because, most often what happens is that F is a function of r of t, in other
+words the force on the particle will depend on where the particle is, the moment that
+
+happens you realize that this is useless kind of solution. Because, out here you are going
+to have an r dependence, but that is precisely what you are trying to find out here.
+So, in that sense be able to formally integrate Newton's equation of motions is essentially
+useless except in very simple cases, except if this were not true, if this were a constant
+course for instance or a force which does not have any r dependence at all, but can be
+prescribed explicitly as a function of time. Then of course, in principle one can go ahead
+with this program and write down what the solution is all instance, but otherwise it is not
+going to work.
+And now, let me give you an example of a case where it does work, namely projectile
+motion this is a classic example which you have already studied in some other context in
+simpler notion, but we are trying to do this in the context of vector notion. So, here we
+are, the problem is that if you take a particle and you project it at some angle to the
+horizontal and call this x and the vertical coordinate y and the system, the particle is
+under the action of gravity at every instant of time, then we are able to write down.
+If you project from the origin for example, r of 0 would be 0 one can write down what r
+of t is at any instant of time. So, the idea is that the force of gravity on this particle is
+such that the f at all instance of time is minus m g times e subscript y and that is
+independent of time, it is a independent of the position as well. This of course, is a big
+approximation here, the approximation is that every instant of time the force is vertically
+downwards and it is exactly the mass times the acceleration due to gravity.
+This would not be true if it were a projectile which actually went some distance like a
+missile for example.
+
+(Refer Slide Time: 03:51)
+
+In that case you start with the surface of the earth, you project from the certain point in
+the side, you will launch it and you goes and land somewhere else in this fashion. As you
+know, this is really part of an elliptic orbit if you neglect a distance and this assumes that
+this is essentially and free fall. Then, this orbit here hits at this point and clearly the force
+of gravity on this object is not constant at all times.
+Because, now you reached a height which is comparable to the radius of the earth and
+you gone a range which is also comparable to the radius of the earth and no longer do
+you have this approximation possible that the force of gravity is a constant independent
+of the location of the body and of time not true. But, otherwise if this distance here is
+extremely small and the height here is the extremely small compared to the radius of the
+earth, this picture is valid approximately and you have what is called a parabolic orbit.
+Technically this parabolic orbit is valid only if the force is a constant independent of the
+location and of time. But, in practice the force of gravity is not directed the parallel lines
+of force, but rather they converges to the center of the earth and then you got to do more
+sophisticated calculation in that case. But, here in this approximation that the force of
+gravity is a constant, the problem is solvable immediately we could even write down the
+solution by plugging it in to this thing here or we could work it out laboriously one way
+or the other.
+
+So, r of t in this case is equal to whatever be the initial velocity out here, the initial
+projection velocity v of 0 t which I believe this generally called u times t, u being a
+constant. So, this is u times t plus 1 over m F of t, but F of t is a constant, it is minus m g.
+So, that portion comes out, so this is equal to minus and the m cancels out, the g comes
+out all together and you have an integral and the e sub y comes out also and you have an
+integral 0 to t d t 2, 0 to t 2 d t 1 times 1 and that is it.
+And of course, this integral this simple is equal to u t minus g e sub y, the first integral
+gives you t 2 and integrating t 2 from 0 to t is half t 2 squared and then half t squared if
+you substitute out of this there and that is it. So, that is the explicit solution and just to
+keep track of things let me call this v of 0, let me leave it as v of 0. So, that it is explicit
+but it is an initial velocity. Assuming you projected from the origin; otherwise, you add
+the position vector of the origin to this result here.
+(Refer Slide Time: 07:09)
+
+Now, of course, this familiar formula which you are normally used to for projectile
+motion, imagine immediately from this. If you write it in components, it immediately
+means in Cartesian components, if x is the horizontal component x of t is equal to v x
+times t at time 0 times t and the horizontal component does not change at all of the
+velocity, simply because this acceleration due to gravity is vertically downwards and
+does not affect the horizontal component of the velocity at any time.
+
+So, it is v x 0 of t out here minus and this is in the y direction and that is it, this is all it is.
+So, the horizontal component increases linearly with time, if the velocity has in initial
+horizontal component. The vertical component is another story, the vertical component is
+equal to v y of 0 times t minus half g t squared and this is the expression that you plot x
+verses y will give you a parabola.
+Because, this goes linearly with t, this goes quadratically with t and when you eliminate
+one versus the other, when you eliminate time between these two quantities, these two
+variables then you get a parabola in the x y plane and that is the path of the particle the
+trajectory that you get. Now, we are able to integrate the equation of motion in this case
+explicitly, because this force was the constant force and these integrals could therefore,
+be done immediately.
+But, in the non trivial cases where it is the function of the coordinates in general, this
+could be much harder problem to do. So, this is not the way to do it, the straight forward
+integration generally will not work and that is important to understand. It is also
+important to understand the role of initial conditions and let me say about this here. If I
+start with this object here and I say there is a force of gravity acting on it and nothing
+else acting on it, I tell you what it is initial position vector is and I tell you the force on it
+initially and at all instance of time, it is not possible to predict the future path of this
+particle based on this data.
+The reason is, if I let go from rest it will falls straight down towards the center of the
+earth. But, I give it a horizontal velocity initially when it moves in a parabolic path and
+falls in a trajectory like a projectile, I give it a slightly higher initial horizontal velocity, it
+goes further the range increases. In principle, if I give it a high enough initial velocity
+and there is no air resistance it would go into an elliptic orbit around the earth and in
+principle, if I increase the horizontal velocity further it would go in to hyperbolic orbit
+and escape to earth gravitational feel all together.
+So, it is clear that specifying the instantaneous position and the instantaneous force on it,
+it is not sufficient to solve for the particles trajectory at all subsequent times that is what
+we are seeing, when we see that this displacement or position vector at any time is
+dependent on the initial position and the initial velocity.
+
+(Refer Slide Time: 10:10)
+
+So, the initial conditions matter, not only it does the initial position matter, but the initial
+velocity also matters that is telling us something extremely deep. It telling us that when
+you solve an equation of this kind or you rewrite this in terms of the position, you write
+this as m times d 2 r d 2 to F of t you have two constants of the motion.
+So, the speak two vector constants of the motion to deal with namely the initial position
+and the initial velocity before you get a unique solution for the position of the particle at
+any instant of time greater than 0. And those initial conditions are the initial position and
+the initial velocity, it is not enough to specify just this or just this, you have to specify
+both and when you have more than one particle you have to specify in principle, the
+initial positions and the initial velocities of all the particles before you can find an unique
+solution for the paths in time as a function of time.
+This has to be a appreciated carefully and it is a consequence of the fact that Newton’s
+laws says that the force on a particle changes it is velocity. And therefore, it is position as
+a consequence and does not directly become proportional to the instantaneous velocity of
+the particle, it is proportional to the instantaneous acceleration of the particle. This is
+important, very, very important, it took a long time to understand this simple this fact of
+nature so to speak and it is get important consequences.
+It essentially says that what varies as a function of time, what dynamics is trying to tell
+you is how the positions and velocities of various particles change with the function of
+
+time or more generally the positions and the momentum of these particles of these
+objects changes as a function of time, we will come back to this idea.
+So, that is has to do with the importance of initial conditions, we are going to say lot
+more about initial conditions as we go along. Meanwhile, one small digression we should
+have done this little earlier and that has to do with this, so called work energy theorem,
+let us go back to this equation and look at, what it has to say. So, if I take a single object
+mass m and apply a force f on it which could be time dependent, then I get an equation
+Newton’s equations says that m d v over d t is F of t.
+(Refer Slide Time: 12:54)
+
+Now, let us take a dot product of both sides of this equation with v itself. Suppressing the
+t dependence in all these quantities, this is what this looks like after I take a dot product
+on both sides. Now, what is this thing trying to tell you? You have a vector dotted with
+the rate of change of that same vector and there is no reason to imagine that this is
+normal to that or parallel to that, these two could be in very different directions.
+We already saw that in the case of motion in a circle, we saw that in general the motion
+in a circle was such that there was both the tangential acceleration as well as a radial
+acceleration. So, that tells you that although the velocity is purely tangential in the case
+of motion in the circle, the acceleration could be radial normal to it could be partially
+tangential, partially radial and no general principle at all, no general constraint at all, in
+general these vectors are not either parallel or perpendicular to each other. So, this dot
+
+product has some value or some kind here, but this is simple identity one can write
+down.
+(Refer Slide Time: 14:10)
+
+If you give me any vector u and you write it in Cartesian components u x, u y, u z, then u
+dot d u over d t. If u is a function of time, in other words it is components change with
+time, then if I write this out in Cartesian components, this is u x e x plus u y e y plus u z
+e z and that is multiply or dotted with d u x over d t e x plus d u y over d t e y plus d u z
+over d t e z, e x dot e x is 1 and e x dot e y is 0 and e x dot e z is 0, because these are
+perpendicular vectors.
+Therefore, this thing becomes u x d u x over d t plus u y d y over d t plus u z d z over d t
+identically equal to that, but u x d u x over d t is half of d over d t u x squared. So, you
+can write this as equal to 1 half of d over d t u x squared plus u y squared plus u z
+squared. But, u x squared plus u y squared plus u z squared is equal to 1 half d over d t of
+u squared, where u squared is a square of the magnitude of this vector.
+But, that of course, is equal to 1 half times 2 times u d over d t in the 2 cancels out and
+we are left with this identity which says the any vector u which depends on time u dot d
+over d t equal to u magnitude d over d t in the magnitude, this is identically true these
+vectors can point in arbitrary directions. But, the dot product of the two is just the
+magnitude of the vector times a rate of change of the magnitude of a vector that is an
+extremely useful identity which is used over and over again, so very simply identity.
+
+But, you say what happens here, once I use that identity the left hand side becomes m v d
+v over d t no vectors and that is equal to f dot d r over d t, because the velocity is d r over
+d t and now I move d t to the other side and integrate. So, I get n v d v equal to f dot d r
+and I integrate both sides and let suppose I start from 0 velocity 0 speed and integrate up
+to some speed, the object attain in some speed then 0 up to v v prime d v prime is equal
+to the integral on the right hand side starting from wherever the initial value r is up to n's
+at when the velocity is v wherever, but this right hand side...
+So, there are limits placed here, but the right had side f dot d r we know that if at any
+instant of time the position vector of this particle is r and you apply a force on it and it
+causes a displacement d r, then f dot d r is the work done on this particle in this infinite
+decimal displacement by the force. So, this is equal to work done on the particle on the
+object to do what to start it at rest and give it a velocity v a speed v and this side is trivial
+to integrate this is half m v squared.
+So, it is the work done on the object to change it speed from 0 to v, so that is called
+kinetic energy of the body. So, we have a definition of the kinetic energy this is the so
+called work energy theorem cote and code, because it is just a straight forward
+consequence of Newton’s equations here, it says the work done in moving an object from
+rest to some speed to give it some speed v is called the kinetic energy of this object and it
+happens to be half m v squared this sense.
+A little later we will see on a talk about relativity, we will see that this formula is an
+approximation just as Newton’s equation itself is an approximation, then the speeds over
+very small compare to the speed of light and more over when you in a inertial frame, so
+we will come to this brings a little later. But, right now I just want to do point out that
+here is an operational definition of the kinetic energy and this is how the formula half m
+v squared arises by the simple argument here.
+Now, couple of questions one of them is the following, Newton’s first law told as that an
+object either continuous to be at rest or moves an uniform in a straight line with uniform
+velocity if there is no external force on it.
+
+(Refer Slide Time: 20:43)
+
+The second law on the other hands says that the mass times the acceleration equal to the
+force on it. Now, you can force on the body happens to be 0 then it says the acceleration
+of the body 0 with says the velocity is a constant. So, if f equal to 0 then v of t is equal to
+v of 0 whatever was the initial velocity will persist for all time if the force happens to be
+identically 0 at all times, but that is the first law.
+So, does this mean that the fist law of Newton was the motion the first of the laws is not
+independent of the second law does not mean that it derive from the second law, it would
+look like it, it would look saying that the first law is a special case of the second law the
+force on the body happens to vanish is this true it cannot be, because we have three laws
+of motion and they have to be mutually constant with each other.
+And I leave it to you to think about this and we will talk about this little later as to where
+the difference between the first and second laws comes. So, it is not that the first law is it
+special case of the second law, it is true that the law constant with each other they have
+to be; otherwise, they want form a set of loss of motion, but it is not true to imagine that
+the first law of the Newton is actually derive thus is special case of the second law not
+true thing about y this should be shown.
+Now, that we cannot for this for let us go back once again and explore what these laws
+are really trying to tell us. Well, I mention a little bit about the important of initial
+conditions, but we need a little more than that in principle when the trying to do integrate
+
+equations of motion, there are constants of the motion integration constants. Now, the
+mathematical sense they may be integration constant in the physical sense their initial
+conditions.
+So, you need to know what the initial velocity is what the initial velocity of each particle
+is or each object is initial position of each object is and you need to know the set of these
+conditions for all the objects that you deal with new dynamics problem. How does one
+discover these Constance of the notion, well either you specified all these initial values
+or you specify quantities which do not change with time and already the first law is
+trying to tell you something about it, it saying that if you do not have any force an
+objects a by the way just one small remark is a very important one though, this quantity
+here is not the most general from of Newton second law of motion.
+(Refer Slide Time: 23:39)
+
+The general form is that the force is equal to the rate of change of the momentum of this
+body and the momentum is defined as the mass times the velocity at this level. Now, this
+might look like a very trivial statement is might appear that all we done is to take this m
+inside and since I am is constant where the differentiate p or v does not matter not so at
+all. Even if m change is with time this is the correct law and not this that is the first point
+that this is the right law.
+The second point which is even more profound is that the momentum is not always
+defined as the mass times the velocity, we will come to examples of why this is not so
+
+and there are fairly a simple example of why this is not so. The momentum has a slightly
+more general definition then the mass times velocity in the Newtonian approximation
+that we are dealing with here implicitly, the mass times the velocity of an object is
+indeed is linear momentum.
+But, this is not the generated formula and the fact that this is the rule the law of motion
+and not this is actually dramatically manifested in the case of say rocket which is
+carrying it is own fuel and as it goes up in it is part, the mass is changing because the fuel
+is bunt and put out is gas is exacted gases, in which case this is the correct law. So, if you
+give me the instantaneous force on the rocket I can tell you is rate of change of
+momentum including the fact that is masses changing as a function of time.
+So, this is the right law here, we will keep this and we will use this only in those cases
+we are very sure that the physical situation is such that the masses a constant and you are
+in the reign in which this law is applicable in carful about that. Now, the first law
+essentially is telling you that in actions of a external force the momentum does not
+change, in other wards the momentum is constant.
+So, it is really telling you the first law p is a constant of the motion and I am go to use
+that an abbreviation c o m for it. Because, it is so important as a concept, p is a constant
+of a motion, when if f is absent, if there is no force on a body then according to Newton’s
+first law is momentum is constant in time; that means, it is constant not only in
+magnitude, but also in direction.
+If it is started out in 0 momentum it remains at 0 momentum, it remains at the 0
+momentum, it remains at rest. If it is started out with the finite momentum in some
+direction then the momentum continuous to be the same in magnitude and direction as a
+function of time with for all time it remains so. And therefore, p is a constant of the
+motion, actually a vector constant of the motion. So, there are three components here
+each of which is constant in time.
+So, there is a deep symmetric principle involves here, we talk about why these constant
+of motion arise. where do constant of the motion arise from, why are certain
+combinations of these dynamical variables constant time, this is very deep in dynamics
+itself it has to do with the symmetry in the problem, just to cut a long story short and we
+will talk about this elaborate on this an momentum conservation arises, because of the
+
+homogeneity of space in space is assume to be homogeneous and there is no difference
+in space between one point and another, then we have the possibility of the conservation
+of the momentum.
+Similarly, the conservation of energy comes, because of the homogametic in time, if you
+say that the origin in time is a relevant the law does not change if you start the clock at
+different instance of time, then you have the possibility of the conservation of energy.
+And the conservation of angular momentum also has geometrical or a physical
+explanation it arises.
+Because, space isotropic in all mentions in other ward in all directions of space is a
+exactly the same properties, then you have the possibility of angular momentum
+conservation. When these quantities are not conserved, then there is some physical effect
+which is spoiling the symmetry, which is spoiling breaking this a symmetry and that is
+what is responsible for the conservation law to break down.
+I will elaborate on this starting with the example of the projectile itself it will be easy to
+see where this conform and what these constant of the motion mean and this is very, very
+basic and important constant and dynamics. And if you understand what the role of
+consents of motion is about the role of symmetries is in dynamics, then you gone a long
+way in understanding the structure of Newton’s equations and there solution is specific
+cases.
+
+

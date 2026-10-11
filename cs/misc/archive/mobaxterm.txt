@@ -1,0 +1,45 @@
+mobaxterm
+
+yt-dlp
+    https://www.reddit.com/r/youtubedl/comments/pr7ruk/ytdlp_on_termux/
+    pkg up
+    pkg install python
+    pkg install ffmpeg
+    python3 -m pip install --upgrade yt-dlp
+
+moba dircolors folder colour
+    setting: "show bold font as color"
+        makes directory listsings all grey
+    change "MobaXterm.ini"
+        Blue=38,139,210
+        BoldBlue=38,139,210
+        and then folders will be blue too
+
+tmux unknown "TERM=xterm-256color"
+    delete existing tmux.mxt3, 
+    then reboot
+
+remove mobaxterm ctrl-h binding
+    (it interferes with my vim and tmux bindings)
+    stty erase '^?'
+    
+font size
+    increase    ctrl + =
+    decrease    ctrl + -
+
+moba system-wide aliases
+    /etc/baseprofile
+
+edit files in GUI
+    Edit <<filename>>>
+
+apt-get MD5 sum error
+    change script:
+        /bin/apt-cyg
+        comment out md5sum check
+
+persistent home folder
+    in MobaXterm.ini
+        HomeDir=_MobaFolder_\home
+        SlashDir=_MobaFolder_\root
+

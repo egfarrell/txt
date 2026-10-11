@@ -1,0 +1,117 @@
+
+
+# Kirchhoff's Law 1
+    - (OPAQUE bodies)
+    - An OPAQUE object emits a _continuous_ spectrum of light at
+      all wavelengths. (it emits all wavelengths of light, from
+      gamma rays to radio waves and everything in between)
+    - a solid is opaque
+    - liquids can be opaque
+    - even gases can be opaque (i.e. stars!)
+
+    * note: _some_ amount of light is emitted at all
+      wavelengths - but not the _same_ amount of light at
+      all wavelengths (see Wiens law!)
+
+# Kirchhoff's Law 2
+    - (NON-OPAQUE/transparent body)
+    - a transparent gas will emit light at only certain
+      discrete wavelengths.
+    - these specific discrete wavelengths of emission match
+      the energy levels in the atom that its electrons are
+      permitted to jump between.
+    - this means each element in the gas emits a distinct
+      finger-print (its own unique pattern of wavelengths)
+
+# Kirchhoff's Law 3
+    - NON-OPAQUE/transparent body
+    - a transparent gas, when exposed to a continuous spectrum of
+      light, will absorb a specific, discrete set of those
+      photons
+    - it will be the same wavelengths of light that the gas would
+      emit in Kirchoffs 2nd law scenario.
+    - in a way we are seeing the same elements from the 2nd law,
+      but against the background (backdrop) of a continuous
+      spectrum of light
+
+# *Essential* point of Kirchoffs laws
+    - when we look at the light spectrum emitted by actual stars,
+      we mainly see a continuous spectrum of light.
+    - But we also see (imprinted on that continuous spectrum)
+      a set of dark absorption bands from which we can determine
+      the elemental make-up of the star.
+
+# colour
+    - one of the simplest and most important pieces of
+      information we can glean from stars.
+    - _color_ is associated with _energy_
+    - a basic measure of an objects energy is temperature.
+      You know this: a hotter object contains more energy in
+      it in the form of heat (thermal energy)
+    - we can quantify this relationship between COLOR and
+      TEMPERATURE: Wiens Law!
+
+# Wiens _displacement_ Law (λ max emission)
+    - The wavelength of light at which an object emits most
+      strongly (brightest wavelength) is a constant divided
+      by that objects temperature.
+
+    - [1]: `λ_(max) = b / T (kelvin)` where `b = 2.89`
+
+    -later addition: another way of looking at it from
+      LJMU: the most popular frequency is linearly related
+      to the temperature: 
+        - [2]: `h  • ν_(max) = 2.82 kT`
+        - ../ljmu/obs/obs-lecture-notes.md:236
+
+        - Sept 2020: wait a minute, [1] has `λ_(max)` but [2] has
+          `ν_(max)`. Need to dig about `kT` and `h`
+
+    - or: the wavelength of _peak_ light emission is
+      _inversely proportional_ to the temperature of the
+      emitting body.
+
+    - any OPAQUE emitting body will emit most of its light
+      in one part of the spectrum. (humans emit about 100
+      Watts in the infra red)
+
+# Use of Wiens Law:
+    - we now know have a straight-forward way of measuring
+      the _temperature_ of a star: just measure a stars
+      continuous light spectrum through a spectrograph
+      (attached to a telescope)
+
+    - Then record the _WAVELENGTH_ at which most of the
+      light is being emitted. (ie which wavelength of light
+      is brightest)
+
+    - And voila! We can calculate the TEMPERATURE of that
+      stars emitting surface.
+
+# Measure a stars motion!
+    - when an object moves towards you the emitted waves are
+      bunched up (due to the motion of the emitter/source!)
+    - we register the "bunching up" as a higher frequency of
+      light or a bluer color
+    - and vica versa when the _emitting_ object moves away
+    - Doppler formula:
+            `∆λ    v`
+            `--  = --`
+            `λ     c`
+
+    - ∆λ  = wavelength shift
+    -  λ  = wavelength of source not moving
+    -  v  = velocity of source
+    -  c  = speed of light
+
+    - Doppler formula in words:
+        (the % a stars          =  (the % of the speed
+         wavelength is shifted)     of light a star is moving)
+
+# Doppler question!
+    - if we see light that is blue or red, how do we know it may
+      be "shifted"?
+      - Maybe thats just the color of the source?
+    - absorption bands tell us! We can compare the percentage
+      that the bands are shifted
+

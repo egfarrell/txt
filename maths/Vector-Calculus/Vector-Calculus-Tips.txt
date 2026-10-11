@@ -1,0 +1,80 @@
+### Curl
+    - Anytime a vector fleld is irrotational (has zero curl) it
+      can be written as a gradient of a scalar function.
+    - irrotational: `∇ x V = 0` (see Senese above)
+    - gradiant of scalar func:  `V = ∇φ`
+    - you should have a clear picture of `V = ∇φ`.
+        - In case you don’t, I’ll help a little bit.
+        - `φ` is a function increasing most rapidly in the
+          direction `V` points, and it is increasing at a rate
+          equal to the length of `V` at each point.
+        - If `V` were circulating then the function would have to
+          increase in a circle like a spiral staircase, and then
+          it would have a problem existing because when the
+          staircase goes all the way around it has two heights at
+          that point, the top step and the bottom step.
+            - So we can’t have any circulation if we are going to
+              represent `V` in this way.
+
+### Bachman
+    - $MY_BOOKS/Physics/Maths/Math-Phy-General/Bachman-calculus-demystified.pdf
+    - CHAPTER 7 Vectors and Gradients
+    - Mathematically, there is very little difference between
+      a vector and a point. In two dimensions, for example,
+      a point is really just a pair of numbers.
+    - We visualize this pair as a dot in a plane.
+    - A two-dimensional vector is similar. Technically, it is
+      alsojust a pair of numbers. But this time we visualize it
+      as an arrow (Figure 7-1). This arrow does not have
+      a preferred location. The two numbers that specify it only
+      give its magnitude(i.e., size) and direction.
+    - This can be convenient, since certainalgebraic operations
+      with vectors can be seen visually by moving them
+      around.Some differences between points and vectors are
+      purely cosmetic.
+    - For example,the numbers that you give to specify a point
+      are called itscoordinates. The numbers that specify
+      a vector are its components.
+    - The main difference between points and vectors is that we
+      can do _algebra with vectors_. This is a topic studied in
+      detail in a class onlinear algebra. We will need some of the
+      ideas from linear algebra here.
+
+
+### Vector Analysis
+    - $MY_NOTES/books/annotate/heaviside_maverick.txt
+    - Gibbs and Heaviside went through the same sequence.
+    - Both eagerly looked up the theory of quaternions, were
+      disappointed to find it of little use, and went on to
+      develop a simplified version that was useful.
+    - What they produced was the system of vector analysis, which
+      eventually became the standard language used by physi-
+      cists and engineers to describe fields.
+    - Astonishingly, the two men, working quite independently,
+      developed systems that were identical apart from small
+      differences
+
+### 'Paths' v 'Curves'
+    - Page 42: $MY_BOOKS/Physics/Undergrad/Students-Guide-Fleisch-Vectors-Tensors.pdf
+    - Some authors are careful to distinguish between a “path”
+      and a “curve,” using “curve” only when a _parameter_ has
+      been assigned to each point on a path.
+
+### Curl
+    - Anytime a vector fleld is irrotational (has zero curl) it
+      can be written as a gradient of a scalar function.
+    - irrotational: `∇ x V = 0`
+    - gradiant of scalar func:  `V = ∇φ`
+    - you should have a clear picture of `V = ∇φ`.
+        - In case you don’t, I’ll help a little bit.
+        - `φ` is a function that is increasing most rapidly in
+          the direction `V` points, and it is increasing at
+          a rate equal to the length of `V` at each point.
+        - If `V` were circulating then the function would have to
+          increase in a circle like a spiral staircase, and then
+          it'd have a problem existing because when the staircase
+          goes all the way around it has TWO heights at that
+          point, the top step and the bottom step.
+            - So we can’t have any circulation if we are going to
+              represent `V` in this way.
+

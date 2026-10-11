@@ -1,0 +1,43 @@
+### Notes:
+    - ./RL-Udacity/01-Foundations-RL.txt
+    - ./RL-Udacity/02-Value-Based-Methods.txt
+    - ./RL-Udacity/03-Policy-Based-Methods.txt
+    - ./RL-Udacity/04-Multi-Agent-RL.txt
+
+
+### On-Policy / Off-Policy Difference?
+    - Main difference is the update rule:
+    - on-policy
+        - updates `Q-value` assuming the current policy is taken
+          at the next time step,
+    - off-policy
+        - updates its `Q-value` by assuming only the optimal
+          policy is taken by the next time step.
+    - But when taking actions, both of the agents behave under
+      the epsilon-greedy policy
+
+### GITHUB: Previous students
+    - basic         https://github.com/ishgirwan/udacity_drlnd
+    - good          https://github.com/Rafael1s/Deep-Reinforcement-Learning-Algorithms
+    - older?        https://github.com/JpMCarrilho/deep-reinforcement-learning-nanodegree
+    - nice TOC      https://github.com/ekaakurniawan/DRLND
+    - More recent   https://github.com/gfredtech/reinforcement-learning-nanodegree
+    - Has blog link https://github.com/amitp-ai/Deep_Reinforcement_Learning
+    - nice readme   https://github.com/francescotorregrossa/deep-reinforcement-learning-nanodegree
+
+### Links
+    - Udacity GITHUB Repo                     https://github.com/udacity/deep-reinforcement-learning
+    - Udacity Peer Chat                       https://hub.udacity.com/rooms/community:nd893:845401-project-499-smg-2?contextType=room
+    - Udacity Knowledge Base                  https://knowledge.udacity.com/
+    - Udacity Ask a Mentor                    https://knowledge.udacity.com/questions/new
+    - Udacity Career Opt-out                  https://forms.udacity.com/forms/career-opt-out
+    - Paper: On-Policy RL? (Hyperparameters)  $MY_ZOTERO/2020/andrychowicz_et_al_2020_what_matters_in_on-policy_reinforcement_learning.pdf
+    - Coursera: Reinforcement learning course https://www.coursera.org/specializations/reinforcement-learning
+    - Coursera: Reinforcement learning course $MY_VIDEOS/CS/AI-ML/Coursera-RL/
+    - fastai RL                               https://github.com/josiahls/fastrl
+    - MIT RL course                           https://www.youtube.com/watch?v=FgzM3zpZ55o&list=PLoROMvodv4rOSOPzutgyCTapiGlY2Nd8u
+    - Unity ML-Agents Github                  https://github.com/Unity-Technologies/ml-agents
+    - OpenAI Gym                              https://github.com/openai/gym
+    - RL in 60 days                           https://github.com/andri27-ts/Reinforcement-Learning
+    - Curated RL list                         https://github.com/aikorea/awesome-rl
+    - RL enough for AGI                       https://news.ycombinator.com/item?id=27456315

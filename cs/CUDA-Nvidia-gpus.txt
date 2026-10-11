@@ -1,0 +1,193 @@
+
+### Cloud GPU providers
+    - genisis cloud   https://console.genesiscloud.com/dashboard/
+    - genisis support https://support.genesiscloud.com/support/home
+    - tensordock      https://marketplace.tensordock.com/deploy
+    - vast            https://cloud.vast.ai/instances/
+
+### Gensis mount volume
+    - Genesis `mount volume` https://support.genesiscloud.com/support/solutions/articles/47001259016-how-to-format-and-mount-block-storage-volume
+        lsblk -f
+        sudo mkfs.ext4 /dev/vdb         # format volume
+        lsblk -f
+        sudo mkdir /mnt/ARIEL_DATA
+        sudo mount -o defaults /dev/vdb /mnt/ARIEL_DATA
+        df -h
+        ls -ld /mnt/ARIEL_DATA          # Check ownership
+        sudo chmod 777 /mnt/ARIEL_DATA  # change permissions
+        # ensure volume is auto-mounted
+            sudo vim /etc/fstab
+        # add this line
+            /dev/vdb    /mnt/ARIEL_DATA   ext4   defaults,nofail   0   2
+
+
+### Genisis Cloud setup CUDA/pytorch
+    sudo apt-get install nvidia-driver-525
+    sudo apt install nvidia-utils-525
+
+
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    ocx Miniconda3-latest-Linux-x86_64.sh
+    bash ./Miniconda3-latest-Linux-x86_64.sh
+
+    conda config --add channels conda-forge
+    conda install mamba
+    mamba init
+
+    mamba create -n ai-ml
+    mamba activate ai-ml
+    mamba install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+    mamba install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+
+    mamba install duckdb
+
+
+### Comparison of GPU cards: "compute" power 
+    - https://developer.nvidia.com/cuda-gpus#compute
+
+### Check Nvidia System
+    > note: INSTALL NVIDIA drivers first! (see below)
+    nvidia-smi
+    nvcc --version
+
+### `INSTALLING` pytorch? 
+    - See $MY_NOTES/cs/AI-ML/fastai/fastai-course-2020.txt
+
+### monitor gpu performance
+    nvidia-smi dmon -d 5
+    - see also: ubuntu package: nvtop
+
+### - Aside:
+    - Performance chart of all NVIDIA cards
+        - $MY_IMAGES/cs/performance-chart-nvidia-cards.jpg
+
+### GPU utilisation: 
+        - nvidia-smi dmon
+        - if below 50% then items are not being supplied fast
+          enough to the GPU (i.e. slow file I/O)
+
+### Cloud providers
+    - As one of the first major cloud providers to provide GPU
+      cloud service, Amazon offers various GPUs in its `P3` and
+      `G4` EC2 instances.
+    - The P3 instance offers the Tesla V100 GPU (one of the most
+      popular NVIDIA GPU provided by many cloud providers), which
+      has 16 GB and a 32 GB variant of VRAM per GPU.
+    - The G4 instances are in two types:
+        - G4dn: NVIDIA T4 GPUs with 16GB VRAM,
+        - G4ad:more powerful AMD Radeon Pro VS20 GPUs with 64
+          vCPUs.
+
+    - Good overview of AWS offer
+        - https://towardsdatascience.com/the-way-to-deep-learning-on-aws-851fad7e5725
+        - $MY_IMAGES/cs/aws-gpu-offer.jpg
+        - cheapest: g4dn.xlarge     0.60 per hr
+        - dearest: p4d.24xlarge    35.00 per hr
+
+
+### List GPU's
+    - SIMPLE WAY
+        lspci | grep -i nvidia
+
+    - SINGLE GPU CARD
+        > lspci  -v -s  $(lspci | grep ' VGA ' | cut -d" " -f 1) <--- doesnt work
+        lspci  -v $(lspci | grep ' VGA ' | cut -d" " -f 1)
+        - Inner command finds device ID, equivalent to:
+            - lspci  -v -s  81:00.0
+
+    - MULTIPLE GPU-CARDS
+        lspci | grep ' VGA ' | cut -d" " -f 1 | xargs -i lspci -v -s {}
+
+
+### Install CUDA
+    - Download Nvidia drivers
+        - See: https://developer.nvidia.com/cuda-toolkit-archive
+
+        - Example:
+            ai build-essential
+            CUDA 11.1
+                wget https://developer.download.nvidia.com/compute/cuda/11.1.1/local_installers/cuda_11.1.1_455.32.00_linux.run
+                sudo sh cuda_11.1.1_455.32.00_linux.run
+
+            CUDA 11.4 (Rakija)
+                wget https://developer.download.nvidia.com/compute/cuda/11.4.1/local_installers/cuda_11.4.1_470.57.02_linux.run 
+                - (note: I wanted to add '--toolkit' because I don't want to re-install the NVIDIA drivers, but this didn't work)
+                sudo sh cuda_11.4.1_470.57.02_linux.run --toolkit 
+
+
+        - NOTE: install sometimes _fails_. Check logs:
+            cat /var/log/cuda-installer.log
+            cat /var/log/nvidia-installer.log
+            - disable nouveau
+                - Create:
+                    sudo touch /etc/modprobe.d/blacklist-nouveau.conf
+                    v /etc/modprobe.d/blacklist-nouveau.conf
+                - Add following lines
+                    blacklist nouveau
+                    options nouveau modeset=0
+            - Regenerate kernel:
+                    sudo update-initramfs -u
+                    sudo reboot
+
+    - Required (paths):
+        - add to ~/.bashrc.local
+            export PATH="/usr/local/cuda-11.x/bin:$PATH"
+            export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-11.x/lib64"
+        - OR ADD
+            - /usr/local/cuda-11.1/lib64 to `/etc/ld.so.conf`
+            - run `ldconfig` as root
+
+
+### Rakija install:
+    - (Ubuntu 18.04)
+    ai nvidia-cuda-drivers
+
+### FASTAI install: old install (not needed?)
+    > NOUVEAU remove
+        sudo touch /etc/modprobe.d/blacklist-nouveau.conf
+        v /etc/modprobe.d/blacklist-nouveau.conf
+        blacklist nouveau
+        options nouveau modeset=0
+        sudo update-initramfs -u
+        sudo reboot
+
+    > NVIDIA drivers
+        - List of drivers: https://developer.nvidia.com/cuda-toolkit-archive
+        wget https://developer.download.nvidia.com/compute/cuda/11.0.3/local_installers/cuda_11.0.3_450.51.06_linux.run
+        sudo sh cuda_11.0.3_450.51.06_linux.run
+        `add cuda paths and reboot`
+        nvidia-smi
+        nvcc --version
+
+
+
+### Google GCE CUDA install message
+    > ===========
+    > = Summary =
+    > ===========
+    >
+    > Driver:   Installed
+    > Toolkit:  Installed in /usr/local/cuda-11.1/
+    > Samples:  Installed in /home/ef/, but missing recommended libraries
+    >
+    > Please make sure that
+    >  -   PATH includes /usr/local/cuda-11.1/bin
+    >  -   LD_LIBRARY_PATH includes /usr/local/cuda-11.1/lib64, or, add /usr/local/cuda-11.1/lib64 to /etc/ld.so.conf and run ldconfig as root
+    >
+    > To UNINSTALL the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-11.1/bin
+    > To UNINSTALL the NVIDIA Driver, run nvidia-uninstall
+    > Logfile is /var/log/cuda-installer.log
+
+
+### Links
+    - compare CUDA & OPENCL                                https://streamhpc.com/blog/2010-09-23/learning-both-opencl-and-cuda/
+    - Auto-install Nvidia Driver                           https://support.genesiscloud.com/support/solutions/articles/47001122478
+    - Good book: Programming Massively Parallel Processors https://www.amazon.com/Programming-Massively-Parallel-Processors-Hands/dp/0128119861/
+    - CUDA training courses                                https://developer.nvidia.com/educators/existing-courses
+    - calculate vCPU limit                                 https://aws.amazon.com/premiumsupport/knowledge-center/ec2-on-demand-instance-vcpu-increase/
+    - AWS Support Home Page                                https://console.aws.amazon.com/support/home#/
+    - Cheap GPU: Genesis Cloud (slow wget though)          https://www.genesiscloud.com/
+    - Uninstall Ubuntu drivers, re-install toolkit         https://askubuntu.com/questions/1211919/error-installing-cuda-toolkit-existing-package-manager-installation-of-the-driv
+    - Intro GPU inner workings                             https://news.ycombinator.com/item?id=28728138
+    - Current ML contests                                  https://mlcontests.com
+    - Compare Cloud GPU prices                             https://cloud-gpus.com/

@@ -1,0 +1,253 @@
+
+
+### Binary Image ('mask')
+    - A binary image is an image where each pixel can have only
+      one of two possible values, typically represented as black
+      and white, or 0 and 1. It's a simple form of image
+      representation used for tasks like object segmentation,
+      where pixels are either considered part of an object (1) or
+      not (0).
+
+### 8-bit v 'float' images
+    - 8-bit and floating-point (0.0 to 1.0) representations in
+      RGB images have their own advantages and disadvantages:
+
+    ### Advantages of 8-bit (0 to 255) format:
+    1. Compactness: 8-bit images use less memory and storage
+       compared to floating-point images, which is advantageous
+       when working with limited resources.
+    2. Compatibility: Many image processing libraries and
+       hardware devices are optimized for 8-bit images, making
+       them a widely supported format.
+    3. Easy Visualization: The 8-bit format maps directly to the
+       0-255 range, making it easier to understand and visualize
+       pixel values.
+
+    ### Disadvantages of 8-bit format:
+    1. Limited Precision: 8-bit images have limited precision,
+       which can lead to loss of subtle details and color
+       accuracy, especially in high-contrast or low-light
+       situations.
+    2. Clipping: Values outside the 0-255 range may be clipped,
+       resulting in data loss.
+
+    ### Advantages of floating-point (0.0 to 1.0) format:
+    1. High Precision: Floating-point images offer higher
+       precision, allowing for better representation of subtle
+       color variations and details, especially in HDR (High
+       Dynamic Range) imaging.
+    2. No Clipping: Floating-point format can represent values
+       outside the 0-1 range without clipping, which is useful in
+       certain image processing tasks.
+    3. Compatibility with Some Algorithms: Some image processing
+       algorithms, like those used in deep learning, work better
+       with floating-point input due to their flexibility.
+
+    ### Disadvantages of floating-point format:
+    1. Larger Storage: Floating-point images require more memory
+       and storage compared to 8-bit images, which can be
+       a limitation in resource-constrained environments.
+    2. Compatibility Challenges: Not all image processing
+       software and hardware may support floating-point images,
+       leading to potential compatibility issues. In summary, the
+       choice between 8-bit and floating-point RGB formats
+       depends on your specific use case. If memory and
+       compatibility are critical, 8-bit is a good choice.
+       However, if you need high precision and are willing to
+       handle larger file sizes, floating-point format can be
+       advantageous for preserving image quality and detail.
+
+
+
+### PIL 
+    - from PIL import Image 
+    - # Greyscale image 
+    - grey_image = Image.open('greyscale.jpg').convert('L')
+    - Without `convert('L')` in PIL, the `grey_image` would still
+      be loaded, but it would be in RGB format. 
+    - However, all three color channels (R, G, and B) would have
+      the same values, making it effectively a greyscale image,
+      but with unnecessary color channels. It would be in RGB
+      format, but visually indistinguishable from a true
+      greyscale image.
+
+### Python for microscopists
+    - $MY_REPOS/py-image-processing/
+    - key point: an 'image' is just a numpy array(!)
+    - key point: "float" image has values between `0.0` and `1.0`
+        - later: ah ... a "float" image is just all the `0..255`
+          unsigned integer values / 255 to scale everything
+          between `0` and `1`
+    - DigitalSreeni
+      https://www.youtube.com/watch?v=Ijc-9L2iXEc&list=PLZsOBAyNTZwYHBIlu_PUO19M7aHMgwBJr&index=17
+    - try this: 
+        - print(my_image)
+        - you'll see a numpy array
+    - images are nothing but ARRAYS of NUMBERS
+    - Can have unsigned integer `uint8` image with values 
+        - `0` `255` (8-bit image)
+    - or can convert it to float image: `0.0` - `1.0`
+    - "darken" an image: 
+        - dark_image = my_image * 0.5
+    - key point: whatever 'math' you can do to numpy arrays, you
+      can do to images as well
+
+    - LECTURE 17
+        - key packages:
+            - Pillow
+            - matplotlib
+            - scikit image
+            - cv2
+    - interesting: pixel size is important. 
+        - Is it a satellite image and 20 pixels is 20 km? 
+        - Or a microscopy image and 20 pixels is 0.2 microns?!
+    - PILLOW
+        - my_image = `Image.open`('image.jpg')
+        - note: It's type is NOT a numpy array! (It's
+          PIL.JpegImagePlugin....)
+        - what image type?
+            - print(my_image.`format`)
+        - convert to np array
+            - img_np = np.`asarray`(my_image)
+    - MATPLOTLIB
+        - import matplolib.image as mpimg
+        - img = mpimg.imread('image.jpg')
+        - (read as a np array)
+        - See image size...
+            - print(img.shape)
+        - display image
+            - plt.imshow(img)
+            - plt.colorbar() # handy
+    - SCIKIT-IMAGE
+        - can do image segmentation, geometric transformation,
+          colorspace manipulation, analysis, filtering, FEATURE
+          DETECTION (extract features for ML!)
+        - from skimage import io, img_as_float, img_as_ubyte
+        - img = io.imread('myimage.jpg')
+            - (imported as np array)
+    - opencv
+        - img = cv2.imread('image.jpg', 0) # read as greyscale
+        - img = cv2.imread('image.jpg', 1) # read as color
+        - cv2.imshow('my image', img)
+        - cv2.waitKey(0) # <--- gotcha!
+        - cv2.DestroyAllWindows()
+        - note: by default cv2 handles images as BGR, not RGB
+
+    - lecture 18 ((Pillow))
+        - https://www.youtube.com/watch?v=uDNqNv2N-pY&list=PLZsOBAyNTZwYHBIlu_PUO19M7aHMgwBJr&index=19
+        - basic image processing
+        - img.mode
+        - img.size
+        - small_img = img.resize((200,300)) <--- squished, aspect ratio gone
+        - small_img.save('newsmall.jpg')
+        - in place resize, but respects wdith, and scales accordingly to preserve aspect ratio
+        - So in example before it won't actually be 200,300 cos
+          original image had width 160 or something
+        - aside: 'thumbnail' a funny name
+            - img.thumbnail((200,300)) 
+            - image.save('test_image.jpg')
+            - Try to blow it up bigger than original image, won't
+              work... won't expand beyond orig image dimensions
+            - img.thumbnail((2000,3000)) 
+
+    - lecture 19 (Scipy)
+        - get mean grey level
+            - img.mean()
+        - max value
+            - img.max()
+        - scipy has "ndimage"
+            - from scipy import ndimage
+            - rotated = ndimage.rotate(img, 45, reshape=True)
+            - rotated = ndimage.rotate(img, 45, reshape=False)
+        - flipping
+            - flippedLR = np.fliplr(img)
+        - plt color maps
+            plt.imshow(img, cmap='greys')
+            plt.imshow(img, cmap='blues')
+            plt.imshow(img, cmap='hsv')
+        - filters
+            - guassian_filter = ndimage.`gaussian_filter`(img, sigma=3)
+            - guassian_filter = ndimage.gaussian_filter(img, sigma=8)
+            - guassian filters don't preserve edges!
+            - median filter DOES preserve edges...
+                - median_filter = ndimage.`median_filter`(img, 3)
+            - edge detection algorithm "sobel"
+                - sobel_filter = ndimage.`sobel`(img)
+                    - default axis if none specified: -1
+                - sobel_filter = ndimage.`sobel`(img, axis=0)
+            - scipy has an info page with loads of filters
+
+    - lecture 20 (SCIKIT-IMAGE): scratch assay
+        - difference between 'rescale' and 'resize'??
+        - downscale...
+        - edge detection
+            - sobel, robert, 
+            - fav filter: `canny edge detector`
+        - deconvolution...
+            - reverse or undo the blurring or degradation that
+              occurs during the process of image convolution. It
+              aims to recover a sharper image from a blurred or
+              convolved version.
+            - Deconvolution is primarily used to address the
+              issue of image degradation caused by various
+              factors like motion blur, defocus, or noise. It
+              helps in restoring the original details and
+              sharpness in an image, making it a valuable tool in
+              tasks like image restoration and deblurring.
+            - remove halo, remove light source?? remove blurring?
+        - uses `PSF`
+            - u can define a custom PSF 'kernel' (a matrix)
+        - scikit-image examples web page
+            - entropy filter: how much 'disorder' in your image
+            - so he's hoping to quantify the disorder to use as
+              a segmentation tool
+            - note: he can't use grayscale, histogram based
+              segmentation here, because the clean 'scratch' area
+              has the same mean grey level as the rest of the
+              image
+            - entropy filter is a 'texture' filter, used to
+              segment his scratch assay
+            - after applying the filter, it's bright on the left
+              and right, dark on the 'scratch' area... so now he
+              applies a _threshold_
+
+### Jeremy
+    - https://www.youtube.com/watch?v=WhuhnJMNack
+    - `jpeg2000` is a good image compression 
+        - (for converting diacom medical files)
+
+### Pixels per cm
+    - The `PixelX` column indicates how many centimeters are
+      represented by the WIDTH of one pixel in the image 
+        - (i.e. cm/pixel). 
+    - The `PixelY` column indicates how many centimeters are
+      represented by the HEIGHT of one pixel in the image.
+    - If there was an ultrasound image of a breast and `PixelX`
+      was `0.1`, (i.e. 0.1 cm/pixel) this means the width of 10
+      pixels in the image equals 1 centimeter in real life.
+    - Now, say a lump on the breast ultrasound image is 30 pixels
+      wide in the image. Given our `PixelX` value of `0.1
+      cm/pixel`, you'd determine that the lump is 3 centimeters
+      wide in real life.
+    - In this context, understanding pixel size in relation to
+      real-world centimeters is crucial for medical
+      professionals. 
+        - They can estimate the size and extent of abnormalities
+          seen in ultrasound images and make informed decisions
+          based on these measurements.
+
+### Pytorch size
+    - image shape of `[224, 224, 3]` 
+    - (`[height, width, color_channels`]).???
+    - later: no [B, C, H, W]
+
+### image dimensions
+    - (`height`, width): fastai, numpy, pytorch, cv2
+    - (width, `height`): PIL, matplolib
+        - Note: In fastai we follow the convention of numpy and
+          pytorch for image dimensions: (height, width). It's
+          different from PIL or matplolib so don't get confused.
+
+### Grayscale
+    - intensity images (grayscale) correspond to color images
+      with _equal values_ in all three color channels. 

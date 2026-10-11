@@ -1,0 +1,120 @@
+# Initial Recommendations
+
+### Modelling RNA 3D structures
+    - Short, high-level introduction to "structural bioinformatics of RNA":
+        - $MY_ZOTERO/2016/dawson_et_al-2016-computational_modeling_of_rna_3d.pdf
+    - Difference between 'Greek' and 'Babylonian' science
+        - $MY_IMAGES/bio/Greek-Babylonian-Science.jpg
+
+### ... modeling of RNA 3D structure using Experimental data
+    - A more advanced (and longer) review on how experimental
+      methods are combined with computational approaches to
+      determine RNA structure. This is what we do in the lab:
+        - $MY_ZOTERO/2019/ponce-salvatierra_et_al-2019-computational_modeling_of_rna_3d.pdf
+
+### Genome-wide mapping of SARS-CoV-2
+    - Our recent work on the SARS-CoV-2 RNA genome, which we
+      continue in various other projects - something that may be
+      interesting for you from the point of view of combination
+      of computational research with medicine:
+        - $MY_ZOTERO/2020/manfredonia_et_al-2020-genome-wide_mapping_of_sars-cov-2_rna.pdf
+
+- These articles have been written for readers with specialized
+  knowledge and technical details may be very difficult to
+  understand (and quite distracting) for someone coming from
+  a very different area.
+
+- But I hope they can give you a general overview of our interest
+  and current work.
+
+# Recommended further reading
+    - See Zotero: 'Janusz-Recommended-more'
+
+    - Nature and magnitude of aromatic base stacking in DNA and
+      RNA: Quantum chemistry, molecular mechanics, and experiment
+        - Rating: `**`
+        - An instructive review of the concepts used in quantum
+          chemistry and molecular mechanics. It makes clear why
+          the origin of stacking is more akin to London forces
+          than the interaction of overlapping π orbitals.
+        - https://onlinelibrary.wiley.com/doi/10.1002/bip.22322
+
+
+    - Modeling complex RNA tertiary folds with Rosetta. (2015)
+        - Rating: `**`
+        - Recent developments on the very first atomic-resolution
+          method for predicting RNA 3D structures inspired by
+          a successful approach developed earlier for proteins.
+        - https://www.sciencedirect.com/science/article/abs/pii/S0076687914000524
+
+
+    - RNA-Puzzles Round II: assessment of RNA structure
+      prediction programs applied to three large RNA structures.
+      (2015)
+        - Rating: `**`
+        - A report of a second round of RNA-Puzzles, highlights
+          progress and remaining challenges in RNA 3D structure
+          modeling, as well as possible synergies between
+          different approaches.
+            - $MY_ZOTERO/2015/miao_et_al-2015-rna-puzzles_round_ii.pdf
+            - https://rnajournal.cshlp.org/content/21/6/1066
+
+
+    - TBI server: web server predicting ion effects in RNA
+      folding. PLOS ONE 2015
+        - Rating: `**`
+        - Back references (to 2005) provide details on the
+          tightly bound ion (TBI) model. It is important to treat
+          [Mg(OH2)6]2+ (the real species) in a different manner
+          than mean field approximations (such as
+          Poisson-Boltzmann) permit.
+            - $MY_ZOTERO/2015/zhu_et_al-2015-tbi_server.pdf
+            - http://rna.physics.missouri.edu/MCTBI/
+            - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0119705
+
+
+
+    - Theoretical studies of RNA catalysis: Hybrid QM/MM methods
+      and their comparison with MD and QM (2009)
+        - Rating: `*`
+        - A frank assessment of the strengths and limitations of
+          applying QM/MM to biological applications; in
+          particular, pointing out the difficulty of partitioning
+          and computing the QM and MM interfaces in a way that
+          generates meaningful understanding of the process under
+          study.
+            - $MY_ZOTERO/2009/banáš_et_al-2009-theoretical_studies_of_rna_catalysis.pdf
+            - https://www.sciencedirect.com/science/article/abs/pii/S1046202309000905
+
+
+    - Chapter Five - Computational Prediction of Riboswitch
+      Tertiary Structures Including Pseudoknots by RAGTOP:
+      A Hierarchical Graph Sampling Approach
+        - Rating: `*`
+        - Provides an introduction to the concept of using graphs
+          of the global secondary structure structure to map out
+          the global architecture of the structure using the
+          statistics of known structures as a basis for finding
+          these configurations.
+        - https://www.sciencedirect.com/science/article/abs/pii/S007668791400055X
+
+
+    - RNA-Puzzles: a CASP-like evaluation of RNA
+      three-dimensional structure prediction. (2012)
+      14:610-625.
+        - Rating: `*`
+        - The description of the very first community-wide
+          experiment aiming at evaluation of RNA 3D structure
+          prediction methods and approaches. Introduces
+          methodology of RNA structure assessment.
+            - $MY_ZOTERO/2012/cruz_et_al-2012-rna-puzzles.pdf
+            - https://rnajournal.cshlp.org/content/18/4/610
+
+
+    - Sampling and scoring: a marriage made in heaven. (2013)
+        - Rating: `*`
+        - Though directed to proteins, the same conclusions apply
+          to RNA-protein interactions.
+            - $MY_ZOTERO/2013/vajda_et_al-2013-sampling_and_scoring.pdf
+            - https://onlinelibrary.wiley.com/doi/10.1002/prot.24343
+

@@ -1,0 +1,87 @@
+cloudera
+
+### useful video
+    https://www.youtube.com/watch?v=HT_3F6TGiZY
+
+### Cloudera director
+    https://www.cloudera.com/documentation/director/latest/topics/director_get_started_aws_install_dir_server.html
+
+    login to director:
+        ssh -i "winserverrdp.pem" ec2-user@ec2-54-171-70-255.eu-west-1.compute.amazonaws.com
+    or
+        ssh director
+
+    Start director
+        sudo service cloudera-director-server start
+
+    Create proxy tunnel
+        tun -i "winserverrdp.pem" ec2-user@ec2-54-171-70-255.eu-west-1.compute.amazonaws.com
+        tun director
+
+    Start google with socks proxy
+        alias cprox='chromium-browser --proxy-server="socks5://127.0.0.1:8080"'
+
+    Goto Web UI
+        > http://[aws ec2 instance PRIVATE ip]:7189
+        user/password: admin/admin
+
+    Cloudera Manager Configurations
+        Host Monitor:    firehose_heapsize 1073741824
+        Service Monitor: firehose_heapsize 1073741824
+
+    Instance templates
+        ami-02ace471
+        sg-3776764e
+        vpc-8f5e94e8
+        subnet-7ac71633
+
+    Old setup commands for director instance:
+        http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+        wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"  ....rpm file
+
+
+### Install "Cloudera Manager":
+    Droplets:
+        "master"      Ubuntu 14.04   8GB memory
+        "worker01"    Ubuntu 14.04   4GB memory
+
+    [Note: error with Ubuntu 16.04 - oracle sdk install fails]
+
+    vi /etc/hosts
+            delete
+                127.0.0.1  worker01
+                127.0.0.1  master etc
+            add
+                146.x.x.x  worker01
+                146.x.x.x  master
+
+    worker01
+        method 01:
+        vi /etc/sysctl.conf
+        vm.swappiness = 10
+
+        method 02: running
+        sysctl vm.swappiness=10
+
+    wget http://archive.cloudera.com/cm5/installer/latest/cloudera-manager-installer.bin
+    chmod +x cloudera-manager-installer.bin
+    ./cloudera-manager-installer.bin
+    tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
+
+    Browser:
+        http://master:7180
+        (login with "admin", "admin")
+
+        note: to re-start express setup, goto:
+            http://master:7180/cmf/express-wizard/welcome
+
+
+### restart server
+    sudo service cloudera-scm-server restart
+
+    Monitor startup process:
+        tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
+
+### Cloudera Manager Install Errors:
+    To view errors on host machine:
+        cat /var/log/cloudera-scm-agent/cloudera-scm-agent.{log,out}

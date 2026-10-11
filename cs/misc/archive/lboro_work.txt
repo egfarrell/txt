@@ -1,0 +1,323 @@
+documentation
+
+
+to do  ------------------------------------------------------------------------------------------
+
+    Release sequence:
+        R2223/lusi/R2223_main.sql against CSLIVE (create id_photo_export)
+
+        R2234/dpu/R2234_main.sql
+        R2234/lusi/R2234_main.sql
+
+        R2238/lusi/R2238_main.sql against CSLIVE (create triggers)
+        R2238/lusi_reg/R2238_main.sql against CSWEB
+
+
+
+    CSWEB
+        id_photo_export is currently pointing to cscopy
+
+
+    virus scan
+        MUST ADD TO CRON JOB THAT RUNS DAD DOCS!!!!!
+        which schema to put reg_doc_virus_scan_pk  ----> lusi_reg : need new directory objects
+                                                   ----> pas: then need lots of synonyms
+
+    no need for grant execute on a package??
+    e.g lusi_reg.reg_utils_pk could be executed from lusi
+
+
+    --> change email from efarrell to sisjobmonitor
+            reg_doc_virus_scan
+            mini_test_fail
+
+
+    maybe its not enough for Dave to get staff regnos - there must be other reg_students, student_programmes infrastructure??
+    R2234 (reg_docs_populate_pk) must wait until R2238 (main photo backend)...because of id_photo_totals
+    run verify job to see if oracle multimedia ok...
+    is it ok to leave dbms_output.put_lines in production code?
+    reg_Docs_pk is going into CSWEB again - need to double check validate_reg_file
+    views must be compiled again AFTER insert into lusi_web_domains
+
+
+    documentation
+        reg_docs_populate_pk
+
+    documentation
+        for Dave S test
+
+    handover
+        audio/video
+
+
+    idea
+        get reg_docs_populate_pk to compile on cscopy
+        without uncommenting ss_Admin_pk
+
+    grant execute on what?
+        grant execute on dpu.image_get to LUSI
+        GRANT EXECUTE ON reg_const_pk TO LUSI;
+
+    Directory Objects on lusi_reg CSWEB
+        PGDOCS there now on lusi_reg cswebdev???!
+        virus scanning directory objects:
+        PHOTO_FOLDER_TO_SCAN ---> PAS.PGDOCS
+        PHOTO_FOLDER_SCANNED ---> PAS.PGDOCS_SCANNED
+        need to create pgdocs, pgdocs_scanned directory objects for lusi_reg
+
+    on lusi_reg CSWEB
+        test directory PHOTO_FOLDER_TEST - leave on devel
+        failure directory PHOTO_FOLDER_FAIL  ---> do photos upload
+
+    photo batch
+        run full unit test with failures (checks new error logging) ---> done
+
+
+done ------------------------------------------------------------------------------------------
+
+    trigger constant
+        dont use reg_const_pk
+        change to "36"
+
+    clear out id_photo_export
+        each time   -----> easier to select, no confusion with previous run, no mismatch between export rec and file
+        undergoing export - put back to awaiting write
+
+
+    lusi_reg directory objects
+            TEST
+                SYS                            DO_PHOTOS_TO_SYMMETRY          /sw/cisdev/photos_to_symmetry
+                SYS                            DO_PHOTOS_UPLOADED             /sw/cisdev/photos_uploaded
+                SYS                            PGDOCS                         /sw/cisapps/dir/pgdocs
+                SYS                            PGDOCS_SCANNED                 /sw/cisapps/dir/scanned
+
+            LIVE
+                SYS                            DO_PHOTOS_TO_SYMMETRY          /sw/cisapps/dir/photos_to_symmetry
+                SYS                            DO_PHOTOS_UPLOADED             /sw/cisapps/dir/photos_uploaded
+                SYS                            PGDOCS                         /sw/cisapps/dir/pgdocs
+                SYS                            PGDOCS_SCANNED                 /sw/cisapps/dir/scanned
+
+    code
+        --> email if bResult for full process not true
+        generic 0 doc_id when logging an error
+        currently allow gifs too - change test data
+        daily REG_DOC_DAILY_SUMMARY_V view has date bit commented out...
+        reg_utils functions: log errors to table? - no need
+
+    synonyms
+        attachment_list, attachment (used for emails)
+
+    on lusi_reg CSWEB
+        create directory objects DO_PHOTOS_TO_SYMMETRY , DO_PHOTOS_UPLOADED
+        DONE - theyre there!
+
+    dblink to live symmetry from cscopy
+        no need - just go straight to live
+
+    which version of dpu.image_get on cscopy?
+        no need, its there on live
+
+    reg_docs_populate_pk
+        put it on CSLIVE - same as ss_admin_pk
+
+    select
+        views
+        GRANT SELECT ON LUSI.SS_STAFF_PROGRAMMES_V TO LUSI_SS;
+
+
+    grant execute on what?
+    execution
+        grant execute on image_get to lusi
+        grant execute on image_get to lusi_reg
+
+
+-------------------------------------------------------------------------------------------------------
+
+apex online reg
+
+to do
+        check for bad input in text-boxes
+        check field sizes match database
+
+
+done
+        authentication
+            should we have a test user/password for initial logon - NO!
+
+
+misc
+
+    enda regnos
+            A760200 - Mr Baldrick Magoo
+
+    regnos used by registry
+            Taught in hall:
+            A76010  5
+            A760104
+            A760108
+            A760107
+
+            Taught not in hall:
+            A760100
+            A760109
+            A760103
+            A760101
+            A760106
+            A760102
+
+            Research:
+            B110020
+            B210045
+
+
+-------------------------------------------------------------------------------------------------------
+
+transfer photos from symmetry
+
+    ss_admin_pk
+        populate_reg_tables
+            ss_temp_students (global temp table)
+            gets copied from ss_temp_students accross dlblink to reg_students
+            using a MINUS join to figure out which records to bring accross
+
+    pas_db_link_pk
+        blob stuff
+
+
+to do?
+
+
+-------------------------------------------------------------------------------------------------------
+
+questions
+    single photo process
+    have probe function to test main things like directory objects, permissions, oracle multimedia
+    clear out export directory before writing new exports?
+    delete from virus scanned directory - what if fail?
+
+    write will fail if file of same name already exists
+    maybe: lusi_domains status code inserts - have individual names
+    wrapper function for dave function (lusi check if previous student)
+    verify_uploaded_image - what if no image found? for specific id
+    where will we get regno's to use as test? - contact registry?
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+DONE
+    some variables declared as just "VARCHAR"?????
+    re-write probe function? just export 1 or 2 records
+    take pixel size and compression from lusi_web_domains
+    read_scan_results ---> create new status parameter awaiting compress
+    is regno populated from somewhere??
+    time factor for symmetry export - last 24 hours
+    what should I put out for dave? (filename as well)
+    should I have 2 filename columns
+    just limit to jpg (bristol jpg, wolves recommend jpg)
+    constants package: maybe: package initialisation - load status codes
+    is_virusscan_working (interval) -- paramaterise interval
+    get_blob_length "bytes"
+    tiff file type lost color
+    vBatchSize to_number
+    file validate
+    virus scan photos
+    dave table - present records for export
+    write_photos_for_compress - it writes out the compressed blobs!! instead of uploaded blobs
+
+
+timing
+    Oracle
+        10 mins for 16 files - 0.6 mins per file
+        500 files = 300 mins = 5 hours
+
+    Imagemagick
+        2 seconds for 16 files
+
+    comments
+        limit all to jpegs - quicker?
+        currently 400x400 passport standard (harvard use 280x296)
+        define columns as ORDimage - quicker?
+
+
+    identify what image file
+        Oracle
+            use ORDimage.getfileformat() - not tricked
+
+        Unix
+            use file -i << filename >>
+
+
+time factor
+	only include photo of students registered in the last 24 hours
+	up to 2 hours ago
+	why only last 24 hours?
+	use AUD table to see whats happening?
+
+    SELECT count(*)
+    INTO nCount
+    FROM direct_adm_docs d
+    WHERE d.upload_status_code = '06'  ----undergoing virus scan
+    AND   d.av_check_date + INTERVAL '30' MINUTE < SYSDATE; --file was written out for scanning more than 30 minutes ago
+    AND   d.av_check_date + INTERVAL '2' HOUR < SYSDATE; --enda sample
+    AND   d.av_check_date + INTERVAL '24' HOUR > SYSDATE; --enda sample
+
+meeting march 5
+    dave table
+        DATE REGNO STATUS
+        updated by Dave
+        this triggers an update on REG_DOCS
+        which triggers an update on AUD_REG_DOCS
+
+    documentation
+        important
+
+    AUD_REG_DOCS audit table
+        primary key, status code, old, new, user?
+        View based on OA_UPLOAD_STATUS_LV
+        hold status codes
+
+    jpeg
+        check what type symmetry needs
+
+    number of files
+        limit symmetry export to 250 files at a time
+        (limit compression to 250 at a time aswell)
+
+    virus scan
+        when does that take place?
+        use PGDOCS and PGDOCS_SCANNED
+
+    Photo already?
+        wrapper function for Dave function
+        run off to lusi and check are they
+        a previous student...
+
+ask RKH project
+	data duplication for file types - or needed for speed?
+	raise_application_error
+
+	answers
+		extracting DDL for tables. How much to use/run? - just basic for now, they use designer
+		get_dir_list - RKH showed how to setup WinSCP
+		@symmetry - thats a dblink
+		RKH to manage: Dave S. will write Symmetry import?
+		use DPU image_get: need status/errors from Symmetry import
+		cron: how are upload documents virus checked - schedule job to update status?
+		ok: is imagemagik acceptable
+		not ok: use german guys compress code
+
+ask RKH General
+	should we always send a response to a meeting?
+
+Work
+	review ACTIVE DIRECTORY youtube tutorial
+	add APEX APPLICATION constant in selenium
+	Oracle Intermedia / Multimedia
+	DBMS_LOB DBMS_SCHEDULER, DBMS_JOB UTL_COMPRESS
+	imagemagik to batch convert images to 32k or convert during upload?
+	XnView - allow registry staff to reject or acccept photos
+	list UK and US universities - url, max file size

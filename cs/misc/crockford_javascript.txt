@@ -1,0 +1,163 @@
+crockford javascript
+
+### just one numeric datatype :
+    - number!!!! 64-bit double... (hey memory is cheap)
+    - note: because of finite floating point, the associative law
+      doesnt neccessarily hold!
+    - `(a + b) + c` != `a + (b c)`
+    - really bad: decimal fractions (eg. for money) is
+      approximate.
+    - Most reported mozilla bug. So turn decimals into
+      integers!!!
+
+    - all numbers inherit from `number.prototype` which can be
+      extended.
+    - But if you extend a prototype check that the new method
+      doesnt exist already in the global space.
+    - note: `NaN === Nan` is false!! confusing eh
+
+# strings
+    - immutable
+    - sequence of 0 or more 16 bit unicode
+    - doesnt handle "surrogate pairs"
+    - convert number to string: str = num.tostring, or str = string(num)
+
+### object
+    - a dynamic collection of properties
+    - (not an instance of a class as in other languages!)
+    - every property has a key string which is unique within that object.
+    - javascript doesnt use classes, it uses prototypes
+    - prototypes is an easier program model, don't have to "classify" a whole system
+    - just do object.create and pass some object to inherit.(used to have "new" operator)
+    - "prototypes" is sometimes call "delegation" or "differential inheritance"
+
+### Property
+    - named collection of attributes
+    - name,
+    - 3 boolean flags: writeable, readable, enumerable
+    - get: add function which will be called in any attempt to get from object
+    - set: add function which will be called in any attempt to set from object
+
+### object literals
+    - expressive way of creating new objects
+    - initialise object?
+
+### two kinds of property
+    - data properties
+    - accessor properties: get or set
+
+# edge case problems in ES3
+    - accidental collisions: if you pass in the word "constructor" to a word count function
+    - you will get truthy back instead of a number!!! cos word_count["constructor"] already exists.
+    - solution: if typeof word_count[word] = 'number' ...
+
+    - funcions inherited from the prototype are included in for in enumeration
+    - using "for in" you start to cycle through some of the inherited methods
+    - if object.hasownproperty(name) will fill if prototype has "hasownproperty"
+    - solution: if object.prototype.hasownproperty.call(object, name)
+
+### edge case solutions in ES5
+    - object.createe(null) doesnt inherit anything
+    - set enumerable to false when adding methods to prototypes
+    - object.keys(object) produces keys of own properties, not inherited ones
+
+### keys must be strings
+    - objects have an extensible attribute
+    - can be turned off
+        - object.preventextensions
+        - object.freeze
+        - object.seal ... ie immutable objects!
+
+# parseint
+    - tell it what base youre using, radix 10
+    - parseint ("08", "10")
+
+### trim
+    - a string function that only made it in in ES5
+    - but you could add a trim function if one doesnt exist
+    - ie if youre an AJAX library maker
+    - if typeof.string.prototype.trim !== "function"
+
+### arrays
+    - javascript doesnt have them!
+    - It has objects!
+    - efficient for sparse arrays, but not for dense
+    - however you dont have to specify a size,
+    - the array can grow dynamically
+
+### sort
+    - beware!
+    - It sorts a list of numbers as if they were strings
+    - so returns 1, 11, 14, 2, 20 etc
+
+### delete array element
+    - splice method, its not fast!
+
+### arrays v objects
+    - nearly the same thing in javascript
+    - use objects when names are arbitrary strings
+    - use arrays when names are sequential integers
+
+### values/objects
+    - all values in the language are objects
+    - except for `null` and undefined
+    - undefined is even less than null.
+    - if you declare a variable first its undefined, bit of a paradox!
+    - missing members in objects are undefined.
+
+### typeof
+    - returns "object" for an array!.
+    - ES5 has array.isarray
+    - returns "object" for null!
+
+### "truthy"
+    - if you put it in the control part of an `if` statement it
+      will take the `then` branch
+    - "0"     is truthy cos not empty string
+    - "false" is truthy cos not empty string
+
+### "falsy"
+    if you put it in the control part of
+    an if statement it will take the else branch
+    false, null, undefined, 0, NaN, == empty string
+
+### objects
+    - can be passed to functions and returned by functions
+    - are passed by reference, not by value.
+    - So objects never really copied.
+    - equality `===` compares object _references_, not values.
+    - therefore `true` if both are same object.
+
+### constructor functions
+    - that require `New` always start with an uppercase character
+
+### variable naming
+    $ and _
+
+### Addition and concatenation
+    - `+` is for addition and concatenation.
+    - Mistake! can mix strings and numbers
+
+### `==` and `!=`
+    - these do a type coersion before comparing...
+    - ... so you can get a false positive.
+    - so use the triple operators `===` and `!==`
+
+
+### functions
+    - are key idea.
+    - Other languages have methods, class, constructor, module
+    - they inherit from function.prototype.
+    - so functions have methods!!
+    - "hoisting": if you declare a var and give it a value,
+    the declaration gets hoisted to the top, and the value assignment
+    stays where it is.
+    - this means there is no BLOCK SCOPE (ie inside curly braces),
+    - only FUNCTION scope
+    - can have function statements and function expressions.
+    - which is which?
+    - if the first word is "function" then its a function statement.
+
+### Closure
+    - lexical scoping, static scoping
+    - how variable names are resolved in nested functions

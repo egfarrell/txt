@@ -1,0 +1,74 @@
+
+### GR "Pressure":
+    - $MY_NOTES/physics/spacetime/pressure-momentum-flux.txt
+
+### Some definitions of pressure
+    - Pressure is CONFINED kinetic energy
+        - According the kinetic theory of ideal gases, `air
+          pressure` can be defined as the average momentum
+          transfer per unit area, per unit time, due to molecular
+          collisions between a confined gas and its boundary
+    - Pressure _in a fluid_ is a measure of energy per unit
+      volume via the definition of work.
+        - This energy is related to other forms of fluid energy
+          by the _Bernoulli equation_.
+        - $MY_IMAGES/physics/thermo/Pressure-as-energy-density-Bernoulli.jpg
+
+### Difference between temperature and Pressure
+    - (2022 pilgrimage, Piotrków Trybunalski)
+    - Both pressure and temperature can be thought of as forms of
+      _kinetic energy density_, but they are divided over
+      different quantities.
+    - Pressure is proportional to
+        - kinetic energy `per unit VOLUME`,
+    - while temperature is proportional to
+        - kinetic energy `per PARTICLE`.
+    - The conversion factor between the two measures (per-volume
+      vs. per-particle) is the `number density` (particles per
+      unit volume).
+        - A gas can be at high temperature and low pressure
+            - if it has LOW number density
+        - A gas can be at low temperature and high pressure
+            - if it has HIGH number density
+    - The relationship between these three quantities (pressure,
+      temperature, density) is contained in the EOS for the
+      material.
+    - For ideal gases, the EOS is the ideal gas law:
+        - `P = (N/V)kT`
+
+### older pressure notes
+    - pressure in fluids
+        - Pressure is a concept also applied to _fluids_.
+        - It is force per cross sectional area.
+        - scalar ???
+            - Since fluids can move, the pressure is in *all
+              directions* not just in the direction of the force
+              (???), therefore pressure has no defined direction
+              and is a scalar.
+
+    - stress!
+        - Force per area on a solid is not technically `pressure`
+          though many people use that word when they should use
+          *stress*.
+
+    - Curry comment:
+        - "In the case of frictionless flow,
+        - there are no shear stresses
+        - and the normal stresses are the pressure,
+            - oh a bit like where the comment above says stress
+              is a type of pressure (in solids)
+        - which is ISOTROPIC..."
+            - oh a bit like the comment above about pressure in
+              *all directions*
+
+    - older notes:
+    - units
+        - Pressure has same units as (potential) _energy_ per
+          unit volume. So pressure is like _energy density_.
+          `J·m−3`
+
+    - Compressibility and Pressure.
+        - Compressibility modulus `K` is related to pressure.
+          (`K= 1/p`). Thats why the bicycle guy kicks the tire to
+          see if theres enough pressure.
+

@@ -1,0 +1,177 @@
+### Floating point reproducability
+    - Averaging samples to eliminate random noise works only if
+      the noise is actually random. The mishmash of iteratively
+      accumulated floating point uncertainty, uninitialised
+      reads, broken shuffles, broken random number generators and
+      other issues in this model may yield unexpected output
+      changes but they are not truly random deviations, so they
+      can’t just be averaged out. Taking the average of a lot of
+      faulty measurements doesn’t give a correct measurement. And
+      though it would be convenient for the computer industry if
+      it were true, you can’t fix data corruption by averaging.
+
+    - I’d recommend all scientists writing code in C/C++ read
+      this training material from Intel. It explains how code
+      that works with fractional numbers (floating point) can
+      look deterministic yet end up giving non-reproducible
+      results. It also explains how to fix it:
+        - https://software.intel.com/sites/default/files/article/164389/fp-consistency-102511.pdf
+        - $MY_BOOKS/Cs/Numerical/Intel-floating-point-consistency.pdf
+
+
+### Automatic differentiation
+    - What is automatic differentiation?
+    - https://www.youtube.com/watch?v=wG_nF1awSSY
+	- $MY_IMAGES/cs/truncation-error-rounding-error.jpg
+    - forward mode "auto diff"
+    - primitvies and tangents
+
+
+### Numerical GR: CCA Flatiron Summer Lecture
+    - https://www.youtube.com/watch?v=ayCzHL9z-GQ&list=PLWAzLum_3a180ECznso6HvwstZthGSoEZ&index=99
+    - Luis Lehner
+    - GR doesn't have to worry about "shocks" much
+    - We're standing on a huge density discontinuity (ie the
+      floor is much higher density than the air!)
+    - but if you measure the gravitational field accross the
+      floor, it would be continuous and smooth
+
+
+### mesa accuracy (forum discussion)
+    - Dave Arnett: There is a dragon lurking here. Chaotic
+      systems have the property that slight differences in
+      initial conditions allow the solutions to diverge with
+      time. Edward Lorenz found this on his SuperBee computer in
+      1962 or so; he saved a dump to less than machine accuracy
+      and rerunning it gave significantly different answers. This
+      was the discovery of deterministic chaos.  Does MESA have
+      this? We hope not, but there are chaotic elements.
+
+    - We know that convection is chaotic. The mixing-length
+      theory is a steady state approximation, probably surviving
+      because it is a time average which smooths the chaotic
+      excursions. So MESA should PROBABLY not be chaotic, unless
+      we have some unidentified chaos going on (with nonlinear
+      systems, there is no insurance they are not chaotic in some
+      regimes).
+
+    - I claim (hope?) that MESA at present should not be chaotic.
+      It should capture the robust AVERAGE behavior, independent
+      of computer word length. However this suggests that we
+      should be sophisticated about our tests on different
+      platforms. Identity and statistical equivalence are not the
+      same; it is the latter we want. We need to be careful to
+      distinguish between the two.
+
+    - I agree with Bill that if the word length is really the
+      same, through all the math packages, we should have the
+      same answers. I suspect that this is not the case, so we
+      have to come to grips with the idea of ROBUST average
+      behavior.
+
+
+### Using Maxima for GR
+    - 2010 discussion  https://www.physicsforums.com/threads/brs-using-maxima-for-gtr-computations.378991/
+    - 2016 interesting https://www.physicsforums.com/insights/solving-einsteins-field-equations-in-maxima/#toggle-id-2
+
+
+### Viktor Toth Maxima
+    - https://www.vttoth.com/CMS/projects/61-the-maxima-computer-algebra-system
+    - 3 representations of tensors exist in Maxima as add-on packages.
+        - `Ctensor`:  component tensor manipulation
+        - `Itensor`:  indicial  tensor manipulation
+        - `Atensor`:  algebraic tensor manipulation
+
+### Books:
+    - $MY_BOOKS/Cs/Numerical/
+
+### PhD Numerical computing links
+    - Viscous Accretion Disk Evolution Code. (VADER) https://bitbucket.org/krumholz/vader/
+    - Princeton RSE group                            https://rse.princeton.edu/
+    - hn discussion scientific coding                https://news.ycombinator.com/item?id=24260337
+    - rules for open source science                  https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002802
+    - best practice                                  https://github.com/neherlab/covid19_scenarios
+    - Info from Intel about FP consistancy           https://software.intel.com/sites/default/files/article/164389/fp-consistency-102511.pdf
+    - Numerical GR September 14-18, 2020             https://icerm.brown.edu/programs/sp-f20/w1/
+    - nptel - HPC computing                          https://nptel.ac.in/courses/128/106/128106014/
+    - nptel - numerical computing                    https://nptel.ac.in/courses/122/106/122106033/
+
+### Prometheus
+    - ./hpc-prometheus.txt
+    - Available softare prometheus https://apps.plgrid.pl/
+    - http://koralcode.wikidot.com/
+    - http://www.plgrid.pl/en
+    - https://en.wikipedia.org/wiki/Slurm_Workload_Manager
+    - https://kdm.cyfronet.pl/portal/Main_page
+    - https://kdm.cyfronet.pl/portal/Prometheus:Basics#Available_software
+    - Access to `plgrid-gpu` requires applying for a separate
+      grant which is wholly dedicated to GPGPU computations.
+
+### Visualise BH's
+    - Movies of binary BH mergers (SXS team):                  https://www.black-holes.org/explore/movies
+    - Center for Computational Relativity, Rochester:          https://ccrg.rit.edu/videos
+    - Alain Riazuelo: Schwarzschild BH:                        http://www2.iap.fr/users/riazuelo/bh/
+    - David Madore's: Kerr BH:                                 http://www.madore.org/~david/math/kerr.html
+    - Gyoto gallery (BH accretion flows and compact objects)): https://gyoto.obspm.fr/gallery/
+    - Scratch pad visualise geodesics in Kerr spacetime:       http://nielswarburton.net/geodesics/interactive/Kerr_geodesic.html
+
+
+### MHD codes / links
+    - Koral Github                                           https://github.com/achael/koral_lite
+    - Andrew Chael                                           https://achael.github.io/_pages/pubs/
+    - my Koral                                               https://github.com/egfarrell/koral_lite
+    - my Koral docs                                          https://bitbucket.org/vcbbgh/koral-docs/src/master/
+    - MPI-AMRVAC (Fortran 90)                                http://amrvac.org/
+    - BHAC Black hole accretion code                         https://bhac.science/
+    - Illinois Gammie list of codes                          https://horizon.astro.illinois.edu/codes/
+    - Illinois AFD Group Kharma                              https://github.com/AFD-Illinois/kharma
+    - Jonathan McKinney HARM                                 https://github.com/pseudotensor/harm_harmgit
+    - EHT GRMHD Codes Comparison                             https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UCFCLK
+    - Numerical Hydrodynamics in Special Relativity          https://link.springer.com/article/10.12942/lrr-2003-7
+    - Numerical Hydrodynamics and Magnetohydrodynamics in GR https://link.springer.com/article/10.12942/lrr-2008-7
+    - Computational Hydrodynamics for Astrophysics           https://github.com/Open-Astrophysics-Bookshelf/numerical_exercises
+    - Flash MHD simulation code                              http://flash.uchicago.edu/site/flashcode/user_support/flash_ug_devel/node5.html
+    - Flash MHD good tests                                   http://flash.uchicago.edu/site/flashcode/user_support/flash_ug_devel/node185.html
+    - VADER: Viscous Accretion Disk Evolution Code (Python)  https://bitbucket.org/krumholz/vader/
+
+
+
+### links
+    - Cadabra Tensor algebra                                                                            https://cadabra.science/
+    - Cadabra Tutorial                                                                                  https://github.com/leo-brewin/cadabra-tutorial
+    - FORM: Github                                                                                      https://github.com/vermaseren/form
+    - FORM: Website                                                                                     https://www.nikhef.nl/~form/maindir/maindir.html
+    - Stone ZEUS code                                                                                   https://www.astro.princeton.edu/~jstone/zeus.html
+    - HN Numerical Binaries                                                                             https://news.ycombinator.com/item?id=24926925
+    - Computer Algebra in GR: Living Review Good                                                        https://link.springer.com/article/10.1007/s41114-018-0015-6
+    - How fast does interpolation search converge                                                       https://news.ycombinator.com/item?id=25215527
+    - Flatiron CCA Center Computational Astrophysics                                                    https://www.youtube.com/playlist?list=PLWAzLum_3a180ECznso6HvwstZthGSoEZ
+    - AWS hpc info                                                                                      https://www.hpcworkshops.com/?cmptd_hpc1
+    - ADASS Cloud costs for scientific HPC                                                              https://www.youtube.com/watch?v=5lnR-kpyaf0&t=2h58m40s
+    - CITA 420: GRMHD simulations - NS, Black Holes                                                     https://www.youtube.com/watch?v=mnTzgiYyhlc
+    - Raytrace a black hole -                                                                           http://rantonels.github.io/starless/
+    - Find this: cs: EXTREME C LINKERS
+    - Numerical relativity course                                                                       https://icerm.brown.edu/video_archive/
+    - Remove C preprocessor code                                                                        http://coan2.sourceforge.net/
+    - KORAL wiki!                                                                                       http://koralcode.wikidot.com/
+    - Terminal 'framebuffer' image/pdf viewer                                                           http://litcave.rudi.ir/
+    - HPC Stream magazine                                                                               https://streamhpc.com/
+    - MPI-AMRVAC (Fortran 90)                                                                           http://amrvac.org/
+    - BHAC Black hole accretion code                                                                    https://bhac.science/
+    - Good: LLNL info on Math Software:                                                                 https://hpc.llnl.gov/software/mathematical-software
+    - Info on libm                                                                                      https://sourceware.org/newlib/libm.html
+    - Redhad newlib implementation                                                                      https://sourceware.org/newlib/
+    - C-for-Metal: High Performance SIMD Programming (Intel GPUs)                                       https://news.ycombinator.com/item?id=25955579
+    - Intel processor names                                                                             https://news.ycombinator.com/item?id=26012829
+    - Python Programming Numerical: looks good                                                          https://pythonnumericalmethods.berkeley.edu/notebooks/Index.html
+    - HN: Python Numerical: Someone advocates LISP
+    - MIT Computational Thinking (Julia), has lecture by 3b1b                                           https://computationalthinking.mit.edu/Fall20/
+    - bugs in computational research                                                                    https://news.ycombinator.com/item?id=18364518
+    - bugs in computational research (academia)                                                         https://news.ycombinator.com/item?id=17789308
+    - Wang: Computational Modeling / Visualization / Physical Systems with Python (matter interactions) $MY_BOOKS/CS/Physics-Software/Computational-Modeling-Visualization-Jay-Wang.pdf
+    - Sympy theoretical Physics                                                                         https://www.theoretical-physics.net/dev/intro.html
+    - Hans Petter Langtangen: Primer on Scientific Programming with Python                              http://hplgit.github.io/
+    - finite element tutorial                                                                           https://fenicsproject.org/tutorial/
+    - "pycon de" theoretical physics with sympy                                                         https://2017.pycon.de/schedule/talks/theoretical-physics-with-sympy/
+    - effective computation in Physics - chapter: important data structures in physics                  $MY_BOOKS/CS/Python/effective_computation_python.pdf
+    - Maths Junkie python maths - looks good. (go with sympy?)                                          $MY_BOOKS/CS/Physics-Software/Python-Hacking-Math-Junkies.pdf

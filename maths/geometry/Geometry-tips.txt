@@ -1,0 +1,257 @@
+### Metric Spaces
+    - Metric Spaces are often the first introduction to the more
+      abstract ideas from topology.
+    - A metric space is a mathematical set along with an
+      associated function of two points within the set that
+      defines a sense of "distance" or "metric" between them.
+    - This idea of distance within a set allows interesting
+      properties to be discussed such as openness, closedness,
+      completeness, connectedness as well as varying forms of
+      continuity of functions between metric spaces.
+    - These ideas build on concepts from Real Analysis, including
+      sequences, series and convergence, albeit in higher
+      dimensional settings.
+
+### Metric Space (PCM) .... Distance
+    - What properties do we want for a sensible definition of
+      distance? A metric space is an abstract notion that
+      addresses this...
+    - Let `X` be a set of "points". Given any two of these
+      points, `x` and `y`, suppose there's a way of assigning
+      a real number `d(x,y)` that could be regarded as the
+      distance between them.
+    - 3 properties are desirable for a 'distance' idea:
+        - (P1)
+            - `d(x,y) >= 0`
+            - with equality iff x = y
+            - distance always positive except when points equal
+              (equal points, then d=0)
+        - (P2)
+            - `d(x,y) = d(y,x)`
+            - for any two points x and y
+            - distance is a symmetric notion.
+            - From x to y, same as from y to x
+        - (P3)
+            - `d(x,y) + d(y,z) >= d(x,z)`
+            - for any x, y, z
+            - triangle inequality:
+            - length of any single side never exceeds the sum of
+              the other two sides
+    - A function `d` defined on pairs of points `(x,y)` from
+      a set `X` is called a metric if it has properties (P1) to
+      (P3).
+        - (hmmm.. the "metric" is a FUNCTION of points)
+    - In that case, `X` and `d` together form a METRIC SPACE.
+        - (ie the set + the function)
+    - This abstraction of the notion of distance is very useful.
+
+
+### Eccentricity
+    - Comes from Latin *ex-* (out of, from) and *centrum* (center):
+    - Originally used in astronomy to describe orbits
+      "off-center" from Earth.
+    - Applied to conics in the 17th century as a measure of
+      deviation from a circle (circle: center = focus).
+    - Conics
+        - circle:    `e = 0`     no deviation
+        - ellipse:   `0 < e < 1` slightly off-center
+        - parabola:  `e = 1`     boundary case
+        - hyperbola: `e > 1`     focus further from the directrix → strongly off-center
+    - So eccentricity reflects how "off-center" the conic is
+      relative to a circle.
+
+
+### Different geometries
+    - $MY_NOTES/physics/metaphysics/saylor/Newtons-Laser-Sword.txt
+    - Bolyai tried to deduce a contradiction.
+        - He assumed that through a point, parallel to a given
+          line, _many lines could be drawn_.
+        - He deduced like crazy but failed to find any
+          contradictions, eventually realising he had invented
+          a new geometry, different from Euclid’s but just as
+          respectable.
+    - Riemann went the other way.
+        - He assumed that through a point, parallel to a given
+          line, _no line could be drawn_.
+        - He realised that he too had invented another geometry:
+          the geometry of `great circles` on a sphere.
+
+### Preptorial review: The Geometry of Physics (Frankel)
+    - $MY_BOOKS/Physics/Spacetime/GR-Prep-Frankel-Geometry-In-Physics.pdf
+    - "Best of Class & Only Modern Text in Genre"
+    - Some texts enhance understanding, while others aid
+      practical computation, making them excellent for
+      self-study.
+    - In this edition, Frankel integrates a 34-page preface using
+      Cartan's exterior differential forms and a "metal torsion"
+      example applied to Cauchy's stress tensor.
+    - Frankel covers a broad range of physics, from classical to
+      quantum, excluding string theory but including numerous
+      gauge applications in 750 pages filled with detailed
+      calculations.
+    - Despite claims of accessibility for grad students or
+      advanced undergrads, I recommend advanced calculus
+      (analysis) and analytic geometry for self-study or
+      reference.
+    - The book assumes knowledge of analytic geometry, focusing
+      on its applications in physics and engineering.
+    - This text demonstrates the relevance of geometric
+      approaches in physics, even in _non-physical geometries_
+      like vector bundles.
+    - The "introduction" refers to applications and calculations,
+      not basic understanding, requiring prior knowledge of
+      analytic geometry.
+    - The author explains advanced applications of analytic
+      geometry but assumes a solid base in both analytic geometry
+      and physics.
+    - The text includes numerous diagrams and illustrations,
+      enhancing the computational focus with didactic elements.
+    - Illustrations provide "aha" moments, and the author
+      explains the reasoning behind formulas for deeper
+      understanding.
+    - For instance, explanations of proportionality constants
+      help generalize lessons beyond rote memorization.
+    - Highly recommended with the caveat to brush up on analytic
+      and differential geometry beforehand.
+
+
+### Differential Geometry
+    - $MY_NOTES/physics/spacetime/EigenChris.txt
+    - I found it's nearly impossible to understand Riemannian
+      Geometry unless you STUDY CLASSICAL DIFFERENTIAL GEOMETRY
+      FIRST. But many books and courses just throw Riemannian
+      Geometry at you, where everything is symbols and no
+      pictures, and expect you to understand it.
+
+### Subtle: We like 'similarity' in geometric shapes
+    - $MY_NOTES/maths/analysis/full-frontal-calculus-Seth.txt
+    - Why do we like `similarity` so much?
+        - Because when we have 2 similar figures, they are
+          proportionate to each other.
+        - The ratio of two sides on one figure is going to be the
+          SAME as the corresponding ratio on the other.
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-02.jpg
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-03.jpg
+    - But the key point:
+        - Circles are really, really similar, so no matter the
+          size, every circle satisfies: `π = C / d`!
+        - So similarity very powerful!
+
+
+### Poor Man's Tensors
+    - https://justincfeng.github.io/
+    - Simply put, a tensor is a mathematical construction that
+      “eats” a bunch of vectors, and “spits out” a `scalar`.
+        - But is that the same as a differential form?
+    - The central principle of tensor analysis lies in the
+      simple,  trivial fact that scalars are unaffected by
+      coordinate transformations.
+    - From this trivial fact, one may obtain the main result of
+      tensor analysis: an equation written in tensor form is
+      valid in any coordinate system.
+    - In my attempt to summarize tensor analysis in a single
+      paragraph, I have left out many important details.
+        - For instance, the definition for tensors in the first
+          sentence is an incomplete one;
+        - It leaves out the fact that tensors are `linear maps`,
+          as well as the fact that tensors also “eat” other
+          objects called `dual vectors`.
+
+### Brilliant: Clifford multivectors
+    - $MY_NOTES/maths/geometry/Clifford-Multivectors-Adelaide.txt
+    - "... Clifford's multivectors best fulfills the goal of
+      describing vectorial quantities in 3D and providing
+      a unified vector system for science."
+
+### Gaussian Geometry
+    - Oct 2022 Warsaw
+    - $MY_BOOKS/Physics/Big4/Lanczos-Space.pdf
+    - Never appreciated that Riemannian goemetry really followed
+      on from Guassian with `n > 2`
+    - and especially that Gauss's amazing intrinsic curvature `k`
+      is mimicked by the Riemann curvature tensor in higher
+      dimensions...
+        - Sep 2023: Ah this point appeared again with EigenChris
+        - $MY_NOTES/physics/spacetime/EigenChris.txt
+
+### Differential Geometry books
+    - Boothby: Intro Differentiable Manifolds & Riemannian Geometry, 2e
+        - https://www.amazon.com/Introduction-Differentiable-Manifolds-Riemannian-Mathematics/dp/0121160513
+
+    - Loring W. Tu: An Introduction to Manifolds 2nd ed. 2011
+        - scimutils recommended
+        - https://www.amazon.com/Introduction-Manifolds-Second-Universitext/dp/1441973990
+
+    - John Lee: Intro to Smooth Manifolds
+        - https://www.amazon.com/Introduction-Smooth-Manifolds-Graduate-Mathematics/dp/0387954953
+
+    - $MY_NOTES/maths/analysis/review-spivak-calculus.txt
+        - $MY_BOOKS/physics/Maths/Analysis/MIT-Analysis-II-18-101.pdf
+
+
+### Eric Weinstein Recommends
+    - Einstein manifolds (Besse)                                                            https://link.springer.com/book/10.1007/978-3-540-74311-8
+    - Spin geometry (Lawson, Michelsohn)                                                    https://press.princeton.edu/books/hardcover/9780691085425/spin-geometry-pms-38-volume-38
+    - Gravitation, gauge theories and differential geometry (Eguchi, Gilkey, Hanson)        https://www.sciencedirect.com/science/article/abs/pii/0370157380901301
+    - Geometric Quantization (Woodhouse)                                                    https://www.amazon.co.uk/Geometric-Quantization-Oxford-Mathematical-Monographs/dp/0198502702
+    - QFT,
+    - Getsler, Berlin Heat equation methods in Singer Theory
+    - Aside:
+        - Modern Geometry (Woit)                                                            https://www.math.columbia.edu/~woit/wordpress/?p=9502
+        - Introduction to Manifolds. (Loring Tu)
+        - Differential Geometry: Connections, Curvature, Characteristic Classes (Loring Tu) https://www.amazon.com/Differential-Geometry-Connections-Characteristic-Mathematics/dp/3319550829/
+        - Lee's book on Smooth Manifolds, although his treatment can be a bit *too* chatty.
+        - Gauge Theory and Variational Principles (Bleecker)                                https://www.amazon.com/Gauge-Theory-Variational-Principles-Physics/dp/0486445461/
+        - ./geometry/review-guage-theory-Bleecker.txt
+
+
+
+
+### affine geometry
+    - No notion of DISTANCE measurement in the affine plane.
+    - No notion of ANGLE MEASUREMENT either.
+    - No ORIGIN.
+    - Geometry of parallels. No notion of perpendicular!
+    - Two pairs of parallel lines create a parallelogram.
+        - Affine grid plane.
+
+    - Then draw diagonals through the parallelogram. These
+      construct a sequence of horizontal and vertical lines, all
+      EQUALLY separated. So a plane of parallelograms, each one
+      translated from the first one using only the notion of
+      parallel lines.
+
+
+### Lboro differential geometry lectures
+    - 01  Plane curves. Curvature.
+    - 02  Geometric interpretation of curvature: osculating circle.
+    - 03  Determinacy of a curve by its curvature.
+    - 04  Envelopes.
+    - 05  Space curves: Frenet frame, curvature and torsion.
+    - 06  Surfaces in 3-space. The first fundamental form. Computation of arc lengths and areas.
+    - 07  The second fundamental form. Curvatures.
+    - 08  Elliptic, hyperbolic and parabolic types of points on surfaces.
+    - 09  The total Gaussian curvature of a compact convex surface.
+    - 10  Developable surfaces.
+    - 11  The Euler-Lagrange equations.
+    - 12  Minimal surfaces (soap films).
+    - 13  Equations of the moving trihedron. The Gauss-Codazzi equations.
+    - 14  Geodesics.
+    - 14  Geodesics via Euler-Lagrange equations.
+    - 15  Geodesics on a surface of revolution.
+    - 17  Hyperbolic geometry. The Lobachevsky plane.
+    - 18  The Gauss-Bonnet theorem.
+    - 19  The Gauss-Bonnet theorem: continuation.
+
+
+### Links
+    - Discrete Differential Geometry course             https://www.cs.cmu.edu/~kmcrane/Projects/DDG/
+    - EM using Geometric algebra                        https://news.ycombinator.com/item?id=25219503
+    - Geometric Algebra primer Eric Chisolm             https://arxiv.org/abs/1205.5935
+    - Geometric calculus on pseudo-Riemannian manifolds https://arxiv.org/abs/1911.07145
+    - Huge list of DG books                             http://www.geometry.org/tex/conc/differential_geometry_books.html
+    - HN: Quaternions                                   https://news.ycombinator.com/item?id=29510237
+    - Stacks Project: Algebraic GEometry                https://stacks.math.columbia.edu/
+    - Tristan Needham Visual Differential Geometry      https://www.vdgf.space/
+    - Viktor Blasjo Geometry notes                      https://intellectualmathematics.com/geometry/
+	- Hidden 'reset button' for undoing rotation        https://news.ycombinator.com/item?id=45606853

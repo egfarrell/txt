@@ -1,0 +1,185 @@
+
+
+
+### Overview of 'Emmy' (formerly 'sicmutils')
+    - https://news.ycombinator.com/item?id=37391161
+    - It's fully rejuvenated in Clojure as "Emmy", with Sussman's
+      support and a bunch of 2D and 3D graphing extensions. 
+    - See Emmy-Viewers: https://emmy-viewers.mentat.org/ 
+    - and Emmy: https://emmy.mentat.org/
+    - Thanks to https://2.maria.cloud, everything in SICM and FDG
+      works in the browser as well: 
+        - https://2.maria.cloud/gist/d3c76ee5e9eaf6b3367949f43873e8b2 
+
+### Emmy Internals
+    - https://news.ycombinator.com/item?id=37391161
+    - During the 2 year period I've been working on Emmy (on top
+      of work by Colin Smith), I was keen to make the
+      implementation more accessible and well-documented than the
+      original.  
+    - There's still not a great map of the project (from
+      primitives to general relativity), but many of the
+      namespaces are written as literate programming
+      explorations: https://emmy.mentat.org/#explore-the-project
+    - Here's the automatic differentiation implementation/essay,
+      for example:
+      https://sritchie.github.io/emmy/src/emmy/differential.html
+    - A rough sketch of the tower is:  
+        - `emmy.value` and `emmy.generic` 
+            - implement the extensible generic operations
+        - `emmy.ratio`, `emmy.complex` and `emmy.numbers` 
+            - fleshes out the numeric tower  
+        - `emmy.expression` and `emmy.abstract.number` 
+            - add support for symbolic literals
+        - Next we need an algebraic simplifier...
+        - `emmy.pattern.{match,rule,syntax}` 
+            - give us a pattern matching language  
+        - `emmy.simplify.rules` 
+            - adds a ton of simplification rules, out of which  
+        - `emmy.simplify` 
+            - builds a simplification engine Actually the
+              simplifier has three parts... 
+                - the first two start in `emmy.rational-function`
+                  and `emmy.polynomial` and involve converting an
+                  expression into either a polynomial or
+                  a rational function and then back out, putting
+                  them into "canonical form" in the process. 
+        - That will send you down the rabbit hole of polynomial
+          GCD etc...  And on and on! I'm happy to facilitate any
+          code reading journey you go on or chat about Emmy or
+          the original scmutils, feel free to write at sam [at]
+          mentat.org, or else visit the Discord I run for the
+          project at https://discord.gg/hsRBqGEeQ4
+
+
+### late night
+    - "integral / integrate" is really add up lots of little bits
+    - A stationary point of a function is a point where the
+      function's output value DOES NOT VARY as the _input is varied_.
+
+
+### Calculus refresher
+    - 3blue1brown https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr
+    - $MY_IMAGES/physics/SICM/calculus-refresher-01.jpg
+    - $MY_IMAGES/physics/SICM/calculus-refresher-02.jpg
+    - $MY_IMAGES/physics/SICM/calculus-refresher-03.jpg
+    - $MY_IMAGES/physics/SICM/calculus-refresher-04.jpg
+    - See also: $MY_NOTES/maths/directional-derivative.md
+
+
+### Brilliant talk: Colin Smith
+    - porting SICM to Clojure
+    - Also basic explanation of the maths
+    - $MY_VIDEOS/CS/sicm/Colin-Smith-Clojure-SICM.mp4
+    - $MY_VIDEOS/CS/sicm/Sicmutils-meetup-Dec-2020.mp4
+
+
+### Sam Ritchie: Various
+    - Chapter 1 solutions         https://github.com/sicmutils/sicm-exercises/blob/master/md/1_lagrangian_mechanics.md
+    - MathJax 3 Plugin for Github https://chrome.google.com/webstore/detail/mathjax-3-plugin-for-gith/peoghobgdhejhcmgoppjpjcidngdfkod
+    - Exercise solutions          $MY_BOOKS/Cs/Scheme/SICM/Sam-SICM-Exercises.pdf
+    - Principle of Least Time     $MY_IMAGES/physics/CM/principle-least-time-Sam-Ritchie.jpg
+    - Notes on SICM book          $MY_IMAGES/physics/SICM/Sam-Ritchie-Notes
+
+### Mechanics is more than equations of motion
+    - Double Pendulum Demo        https://youtu.be/xiYLZmBwTn8
+    - Double Pendulum Simulations https://youtu.be/XAXmxYOHxNg
+    - Driven Pendulum Sections    https://youtu.be/PCl3RvShhmY
+
+### Double Double Pendulum
+    - With this activity you can explore the double double
+      pendulum.  Two double pendula are simulated with nearly
+      identical initial conditions.
+    - The initial conditions of the first pendulum (the red one)
+      are input. For the second pendulum (the blue one) the
+      position of the lower pendulum bob is displaced by one
+      micron.  The left panel shows the evolution of both double
+      pendula.
+    - Initially the blue pendulum is hidden by the red pendulum.
+      The panel on the right shows the common logarithm of the
+      difference between the angles of the lower bob for the two
+      pendula.
+    - http://groups.csail.mit.edu/mac/users/gjs/6946/Activities/dp6.html
+    - $MY_CODE/scheme/SICM/pendulum-html/dp6.html
+
+### Surfaces of section
+    - With this activity you can explore surfaces of section for
+      the driven pendulum.  Input the parameters you wish to
+      explore, then click "start".
+    - The evolution of the driven pendulum is shown in the left
+      panel. The surface of section is shown in the right panel.
+    - Click on the right panel to choose initial conditions, and
+      the simulation will begin.  To try a different initial
+      condition click the "restart" button.
+    - http://groups.csail.mit.edu/mac/users/gjs/6946/Activities/driven-pendulum.html
+    - $MY_CODE/Scheme/SICM/pendulum-html/driven-pendulum.html
+
+
+### Handy SICM Files / videos etc
+    - $MY_CODE/scheme/SICM/
+    - ~/dotfiles/ini/scheme
+    - $MY_VIDEOS/CS/Sussman-talks/Gerald-J-Sussman-Programming-for-the-Expression-of-Ideas.mp4
+    - $MY_BOOKS/CS/LISP/Scheme-SICM/Sussman-Programming-Expression-Ideas.pdf
+
+### INSTALL SICM
+    - Feb 2021:
+        - only install mit-scheme 10.1.11 for now.
+        - mit-scheme 11.1 has been compiled differently and is
+          not compatible with Scmutils
+    - Install Scheme          https://www.gnu.org/software/mit-scheme/
+    - Install Scheme Scmutils https://groups.csail.mit.edu/mac/users/gjs/6946/installation.html
+    - ./scheme-install-old.md
+    - Note: mit-scheme 10.1.10 had a vector printing bug, dont use.
+
+### Activate SICM scheme "band"
+    - There are 3 ways:
+    1. mit-scheme -band mechanics.com
+    2. export MITSCHEME_BAND=mechanics.com && mit-scheme
+    3. mit-scheme, then: `(disk-restore "mechanics.com")`
+
+### GJS Good videos
+    - Functional Notation $MY_VIDEOS/CS/sicm/gjs-notation.m3u
+    - Scheme tutorial     $MY_VIDEOS/CS/sicm/gjs-scheme.m3u
+
+### Handy
+
+
+### Links
+    - _SICMUTILS GITHUB_                                 https://github.com/sicmutils/sicmutils
+    - _SCIMUTILS WORKSHOPS_                              https://www.youtube.com/playlist?list=PLHHhj3uwR8rko-ftVXbG58pHtwVLkOqXm
+    - Github: Mentat-collective                          https://github.com/mentat-collective
+    - Sicmutils Discord                                  https://discord.com/channels/731131562002743336/733356506568851558
+    - Sicmutils Slack channel                            https://app.slack.com/client/T03RZGPFR/C01ECA9AA74
+    - Sicmutils Trello                                   https://trello.com/b/x3Z275Ol/sicmutils
+    - Recommended                                        $MY_BOOKS/Physics/Maths/Mathematical-Physics/Forms-diff-geometry/Edwards_advanced_calculus_forms_approach.pdf
+    - Sussman page                                       http://groups.csail.mit.edu/mac/users/gjs/
+    - SICM lectures                                      http://groups.csail.mit.edu/mac/users/gjs/6946/index.html
+    - Adventures in Advanced Symbolic Programming        http://groups.csail.mit.edu/mac/users/gjs/6.945/
+    - Lots of Scheme info                                https://schemers.org/
+    - Sam Ritchie SICM blogpost                          https://roadtoreality.substack.com/p/building-tools-for-sharing-physics
+    - Sam Ritchie SICM solutions                         https://github.com/sicmutils/sicm-exercises
+    - Sam Ritchie SICM solutions (my copy) Feb 2021      $MY_CODE/scheme/SICM/solutions-02/
+    - Sam Ritchie SICM Discord channel                   https://discord.com/channels/731131562002743336/731835099490025473
+    - SICM Zulip                                         https://clojurians.zulipchat.com/login/#narrow/stream/267174-sicmutils
+    - SICM Zulip Meetup Recordings                       https://clojurians.zulipchat.com/#narrow/stream/267174-sicmutils/topic/recordings
+    - Talk: Functional Physics Preservation of Society   https://www.youtube.com/watch?v=qRI1Ved0SfE&t=6947s
+    - Talk: SicmUtils meetup 2020                        https://www.youtube.com/watch?v=GyUSh0AAloA
+    - sicmutils study group                              https://clojurians.zulipchat.com/#narrow/stream/267174-sicmutils/topic/study.20group.20announcements/near/227202012
+    - NextJournal SICM                                   https://nextjournal.com/SICM_in_Clojure/structure-and-interpretation-of-classical-mechanics-in-clojure
+    - Jupyter Notebook SICM                              https://github.com/sicmutils/sicmutils/blob/master/jupyter/book-examples.ipynb
+    - Clojure sicmutils documentation                    https://cljdoc.org/d/sicmutils/sicmutils/
+    - Clojure sicmutils Big features                     https://github.com/sicmutils/sicmutils/wiki/Big-Feature-Requests
+    - Clojure sicmutils study group                      https://github.com/sicmutils/sicmutils/wiki/Scicloj-Study-Groups-and-Projects
+    - Clojure sicmutils Porting scimutils                https://github.com/sicmutils/sicmutils/wiki/Porting-scmutils
+    - Clojure sicmutils Readable overview library        https://github.com/sicmutils/sicmutils/wiki/Library-Design#sec-1
+    - Maths blocks Interactive narative                  https://kloimhardt.github.io/cljtiles.html?page=freeparticle
+    - _Sams Learning Resources_                          https://github.com/sicmutils/sicmutils/wiki/SICM-and-FDG-Learning-Resources
+    - Sam intro tutorial                                 https://nextjournal.com/try/samritchie/sicmutils/
+    - Literate programming: Notespace, Hanami            https://www.youtube.com/watch?v=2tGk1Jh7dJs&feature=youtu.be
+    - Rotating bodies                                    https://www.youtube.com/watch?v=1VPfZ_XzisU&feature=youtu.be
+    - Feynman Least action                               https://www.feynmanlectures.caltech.edu/II_19.html
+    - John Molinas exercises                             https://nextjournal.com/johnjmolina/sicm-ch1-1
+    - Francesco Montanari Tutorial SICM notation         http://fmnt.info/blog/20180228_sicm/index.html
+    - Functional Geometry in "R": (A bit like the SICM?) https://github.com/mhenderson/funcgeo
+    - Talk about automatic differentiation Tovieye Ozi   https://www.youtube.com/watch?v=kp-4WuyDGww
+

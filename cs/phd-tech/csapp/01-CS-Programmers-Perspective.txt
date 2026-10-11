@@ -1,0 +1,53 @@
+01-Overview.txt
+
+Computer Systems - A Programmers Perspective
+
+lecture: $MY_BOOKS/Cs/C/csapp-lectures/01-overview.pdf
+
+### gdb:
+    - He uses `gdb` as a repl
+    - `print 50000 * 50000`
+    - Point: ints aren't integers, floats aren't reals!
+
+### Numerical quirks:
+    - you can overflow integers
+    - and roundoff problems with floats (you can overflow floats
+      as well but roundoff is the main problem) 
+
+### Integer arithmetic:
+    - 300 * 400 * 500 * 600
+    - this gives wrong result but still has some well-behaved
+      properties.
+    - 400 * 500 * 600 * 300 
+    - still gives wrong result, but the same wrong result!
+    - so integer arithmetic is commutative and associative, even
+      if it gives the wrong answers
+    - ie integer 
+
+### Float point arithmetic
+    - range of numbers are so extreme you get even more quirks
+    - (1e20 + -1e20)   + 3.14 = 3.14 
+    - 1e20 + (-1e20    + 3.14) = 0
+    - so floats aren't associative
+
+### key problem 
+    - using a _finite_ representation of thinks that are
+      potentially infinite
+    - with integers, it goes up to the largest value it can
+      represent, and when it goes one more, it flips into the
+      negative numbers 
+
+### Bounds checking
+    - Can reference array elements beyond the actual bounds of
+      the array.
+    - What happens then is neighbouring parts of the memory get
+      overwritten, which can impact the values of other
+      neighbouring variables
+    - Very subtle hard to find errors 
+
+### Memory access patterns: 
+    - Different performance
+    - two pieces of code, one processing an array row-by-row and
+      the other column-by-column
+    - the row by row was much better 
+    - has to do with cache memory 

@@ -1,0 +1,191 @@
+
+# Derive Differential form of fluid equations
+
+### Lectures
+    - YouTube Videos    https://www.youtube.com/playlist?list=PL30F4C5ABCE62CB61
+    - $MY_VIDEOS/physics/Navier-CFD/02-Navier-Lecture-zero-part-1.mp4
+    - $MY_VIDEOS/physics/Navier-CFD/03-Navier-Lecture-zero-part-2.mp4
+    - $MY_VIDEOS/physics/Navier-CFD/04-Navier-Lecture-zero-part-3.mp4
+
+### Part 1: Conservation of Mass:
+    - aka continuity equation
+    - For a system: 
+        - The change wrt `time` for the `mass` of a system has to
+          be zero. `D/dt(m)  = 0`
+
+    - Note: The Reynolds transport theorem allows us write
+      equations for a control volume
+
+    - For a control volume (CV):
+        - Same idea but uses integrals, and a flux flow over
+          a control volume surface
+        - CV = control volume
+        - CS = control surface
+        - $MY_IMAGES/physics/navier-CFD/conservation-of-mass.jpg
+
+    - Then derive the differential form for a CV:
+        - note: `ρu` is the `x` component of mass flow rate
+        - note: In this screenshot `∇ • ρV`, the `V` is velocity
+          not volume!
+        - $MY_IMAGES/physics/navier-CFD/conservation-of-mass2.jpg
+
+    - Note: for steady flow, the diveregence of the velocity = 0!
+
+### Part 2: Conservation of mementum
+    - aka Newtons second law
+    - note: written for a control volume and also momentum flux
+      for an infinitesimal fluid mass 
+	- $MY_IMAGES/physics/navier-CFD/conservation-of-momentum1.jpg
+
+    - two types of forces
+        - Body forces: 
+            - consider _weight_ of element `F_b = δm • g`
+        - Surface forces: 
+            - normal: `δF_n`
+            - tangential: two perpendicular tangential forces 
+            - `δF_1`
+            - `δF_2`
+        - $MY_IMAGES/physics/navier-CFD/conservation-of-momentum2.jpg
+
+    - Two types of Stress:
+        - normal stress: 
+            - `σ_n`
+        - shearing stress: 
+            - `τ_1`
+            - `τ_2`
+        - $MY_IMAGES/physics/navier-CFD/conservation-of-momentum3.jpg
+
+    - Add in a coordinate system:
+        - interesting: 
+        - kind of tensor notation for stress
+        - `τ_xy`: 
+            - _1st_ subscript refers to normal vector direction
+            - _2nd_ subscript refers to stress vector direction 
+        - $MY_IMAGES/physics/navier-CFD/conservation-of-momentum4.jpg
+
+
+    - sign convention for the tangential shear stresses:
+        - $MY_IMAGES/physics/navier-CFD/stress-sign-convention.jpg
+        - shearing signs take their cue from the normal stress
+          sign 
+        - case 1: 
+            - NORMAL stress vector is in NEGATIVE coord direction
+            - if `τ_xy` points in the negative coord direction,
+              its considered a _positive_ shear stress! 
+            - Because it's negative like the negative normal
+              stress.
+        - case 2: 
+            - NORMAL stress vector is in POSITIVE coord direction
+            - if `τ_xy` points in the positive coord direction,
+              its considered a _positive_ shear stress! 
+            - Because it's positive like the positive normal
+              stress.
+
+    - surface forces in the `X` direction
+        - a whooper of a derivation 
+        - $MY_IMAGES/physics/navier-CFD/surface-forces-in-terms-of-stress.jpg
+        - then the sum of forces in the `X` direction (due to the
+          surface forces) is:
+        - $MY_IMAGES/physics/navier-CFD/surface-forces-in-x-direction.jpg
+
+        - do the same for the other two directions:
+        - $MY_IMAGES/physics/navier-CFD/surface-forces-in-other-two-directions.jpg
+
+        - the resultant surface force:
+        - the sum of all 3 terms... 
+
+        - so the equations of motion are 
+        - the RHS is `mass x acceleration`, 
+            ie acceleration = derivative of velocity
+        - $MY_IMAGES/physics/navier-CFD/surface-forces-equations-of-motion.jpg
+            - 3 equations + continuity equation = 4 equations 
+            - but we have a lot of unknowns!: 
+                - velocity: `u, v, w` 
+                - all the stresses
+
+        - so we need some assumptions about the stresses
+        - eg: inviscid flow => shearing stresses = 0 
+
+        - example formulas: inviscid flow
+        - there's no shearing stresses so the normal stress is
+          the same in each direction and also equal to the
+          _pressure_(!) 
+        - You then get Eulers equation as the equation of motion: 
+        - nice: in the screenshot below, Eulers equation is
+          written in component form in the "x" direction, but
+          then the shorthand vector notation is given:
+            - $MY_IMAGES/physics/navier-CFD/Eulers-equation-of-motion.jpg
+
+### Part 3: Navier-Stokes
+    - to reduce the number of unknowns, we need relationships
+      between the _stresses_ and _velocities_
+        - ie "constitutive relations" 
+    - stress deformation equations: 
+        - we relate(?) stress with the derivatives of velocity
+    - assume: the stress are "Newtonian". This means the stresses
+      are linearly proportional to the strain rates. 
+        - (ie proportional to the "velocity derivatives")
+        - (ie proportional to the "deformation rates")
+    - ASSUME: 
+        - incompressible fluids: 
+            - ie density is constant 
+        - isothermal flows: 
+            - temperature changes not important / don't happen.
+            - This means we don't need an _energy equation_!
+
+    - SO:
+        - Viscosity & density are _constant_ 
+
+    - Normal stress:
+        - `σ_xx = -p + 2μ • du/dx`
+        - `σ_yy = -p + 2μ • du/dy`
+        - `σ_zz = -p + 2μ • du/dz`
+            - where 
+            - `p` = "thermodynamic pressure" 
+            - `μ` = coeff of Newtonaian viscosity
+        - add all 3 together 
+        - `(σ_xx + σ_yy + σ_zz) = -3p` 
+        - the du/dx etc disappear because: ∇ • ṽ = 0
+
+     - Shearing stresses
+        - note they have some symmetry 
+
+    - summary of normal / shearing stress formulas
+        - $MY_IMAGES/physics/fluid-dynamics/navier-stokes-01.jpg
+
+    - now insert these equations back into the momentum
+      equation (the screenshot doesnt show the full momentum eqn,
+      just the relevant bit)
+    - note: we'll have some 2nd order differentials now 
+        - $MY_IMAGES/physics/fluid-dynamics/navier-stokes-02.jpg
+    - reminder: this was the momentum equation
+        - $MY_IMAGES/physics/navier-CFD/surface-forces-equations-of-motion.jpg
+
+
+    - now rewrite & tidy up the equations
+    - but we lose a chuck of the equations because of
+      incompressibility 
+        - $MY_IMAGES/physics/fluid-dynamics/navier-stokes-03.jpg
+
+    - now put the whole lot back into the momentum equations
+    - (the first line is just for the `x` direction, and then the
+      full vector equation is written out)
+    - Navier-Stokes equations 
+    - assumptions: 
+        - incompressibility (`ρ=const`)
+        - isothermal, 
+        - constant viscosity 
+        - $MY_IMAGES/physics/fluid-dynamics/navier-stokes-04.jpg
+
+    - Also a few extra remarks: 
+        - note: need EOS to close the system 
+        - note: non-linear system 
+        - note: it's a 2nd order PDE, very few known solutions 
+            - the solutions need some sort of symmetry where the
+              non-linear term disappears 
+            - the non-linear term is the convective derivative
+              which produces most of the problems: `(ṽ • ∇)ṽ` 
+            - may approach: computational solutions 
+        - $MY_IMAGES/physics/fluid-dynamics/navier-stokes-05.jpg
+
+

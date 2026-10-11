@@ -1,0 +1,276 @@
+### book
+    - $MY_BOOKS/Physics/Metaphysics/Philosophy-Physics-Rickles.pdf
+
+### Measuring rods (Discworld)
+    - From their results they would wrongly infer they live in an
+      infinite non-Euclidean world 
+        - (wrongly, by construction: we know it is a finite
+          Euclidean disk). 
+        - If distance is defined in terms of what is measured
+          with rulers and the like, then the space is infinite in
+          extent! 
+    - Of course they have a perfectly rational ‘rigid body
+      hypothesis,’ which ensures that merely moving about in
+      space will not distort shapes and sizes. 
+        - (but this is a wrong hypothesis as it transpires)
+    - But now suppose a maverick physicist Albert Fleinstein
+      points out that all the surveyors’ results are compatible
+      with the presence of precisely the forces introduced above
+      in a flat, closed Euclidean world. So we have two theories:
+        - `T1` 
+            - The world is infinite & non-Euclidean (hyperbolic).
+        - `T2` 
+            - The world is finite and Euclidean, though with
+              universal forces.
+
+### Difference between GR 'geometry' & metric
+    - Monster was fooled into thinking he was doing some
+      NON-TRIVIAL (significant) operation by the mathematical
+      machinery we use in GR!
+    - But according to the `Leibniz equivalence` option, the
+      mathematics of such transformations are only
+      REPRESENTATIONS that do not map onto the world: 
+        - the world is best represented by the intrinsic
+          structure that is invariant under such transformations:
+            - this _equivalence class_ of diffeomorphic metrics
+              is called the GEOMETRY by physicists, by contrast
+              with the METRIC.
+
+### 'Quotienting out' or 'modding' symmetry
+    - There's a formal method to remove unobservable structure if
+      we decide it is not to our taste.
+    - We 'quotenient out' or 'mod out' the symmetry.
+    - We form an _equivalence class_ of all the symmetric
+      possibilities. 
+        - (All possibilities directly related by some symmetry
+          operation)
+    - The `equivalence class` of possibilities has many elements,
+      and each element would be 'up to the task' of representing
+      the physical situation. 
+        - Therefore there are many mathematical descriptions of
+          the same situation.
+    - The symmetry transformations (shifts, boosts etc) would
+      take us from one possible description to another possible
+      description. 
+        - That is, from one element of the equivalence class to
+          another element.
+    - Quotienting: We then 'mod' or 'quotient' the equivalence
+      class, reducing the multiplicity of indistinguishable
+      possibilities to a _single possibility_. 
+        - We have reduced the size of physically possible worlds.
+    - Newton v Leibnitz centred on just this: 
+        - how big is the space of possibilities?
+    - Key:
+        - Should we include INDISTINGUISHABLE possibilities or
+          eliminate them?
+
+### Unobservable structure
+    - The debate is that for each set of parameters there's some
+      piece of physical structure rendered `unobservable`.
+        - In the case of the translation element of the Galilean
+          group, (the bit that shifts objects in space), one
+          cannot observe absolute locations (ie positions
+          relative to space itself).
+    - Invariance under 'time shifts' renders absolute time
+      location also unobservable 
+        - (you can't tell _when_ you are relative to time
+          itself).
+    - Invariance under rotations renders absolute orientation
+      unobservable (you can't tell which way you are pointing
+      relative to space itself).
+    - And, finally, invariance under velocity changes renders
+      absolute velocity (or absolute rest) unobservable (you
+      can't tell how fast you are moving relative to space
+      itself).
+    - That's a lot of unobservable structure.
+    - In general the more symmetries one has, the more
+      unobservable structure one introduces, since such
+      symmetries destroy our ability to discern differences
+      between certain physical situations, so we can't tell which
+      of some set of possibilities we are in fact observing
+      (assuming there is indeed a fact of the matter).
+
+### What is physically distinct?
+    - Newton's laws of motion are 
+        - independent of location
+        - independent of time
+        - independent of orientation
+        - independent of state of uniform motion 
+                        - (constant velocity)
+    - Hence, they are Galilean invariant: 
+        - they take the same form in all reference frames related
+          by Galilean transformations.
+    - This implies we can't detect `position` and `velocity` by
+      any process governed by Newton's laws:
+        - a kind of 'conspiracy of nature' hides any such
+          transformations from our gaze.
+    - This 'conspiracy' lies at the heart of a debate between
+      Newton and Leibnitz. 
+        - What happens when you do a Galilean shift on the entire
+          contents of the universe?
+        - A Galilean shift seems to result in something that
+          DOESN'T DIFFER physically.
+        - But if we think of space and time as containers, then
+          they must be _physically distinct_ none-the-less.
+
+
+### Possible worlds
+    - if `x(t)` is a solution to some theory equations 
+        - (ie, some trajectory of a system such as a particle) 
+        - then so is the alteration `ψ(x(t))`, 
+            - where `ψ` ∈ Galilean Group ("Gal").
+            - Note: `ψ(x(t))` and `x(t)` represent PHYSICALLY
+              DISTINCT SOLUTIONS.
+            - They are different as physical states: 
+                - different positions, velocities, etc. and yet
+                  they are also the same in terms of their
+                  intrinsic properties.
+    - In terms of the "possible world" talk from earlier, we can
+      say Galilean transformations leave a theory's space of
+      _physically possible worlds_ the same, so that applying one
+      of these transformations to a state (i.e. of a physically
+      possible world) leads to another physically possible world
+        - (see 3.2 for more on the connection between laws and
+          possible worlds).
+
+
+### Galilean Transformations (a group)
+    - This family of transformation-types gives us _10
+      parameters_ describing ways a system can be altered while
+      leaving the LAWS undisturbed.
+        - (it's Nature's symmetry group in a CM world)
+    - 10 params:
+        - `3` parameters to describe spatial _translations_
+        - `1` parameter for _temporal_ translation
+        - `3` axes of space: 
+                - _reorientations_ about each axis
+        - `3` velocity directions: 
+                - _velocity_ 'boosts' in each direction
+    - These are the 'Galilean transformations' and they satisfy
+      the mathematical properties of being a _group_; 
+        - basically a set of elements that must satisfy certain
+          conditions about how the elements combine. (in this
+          case: a set of transformations)
+    - for an initial state `(x, t)` we consider transformations
+      of coordinates of the form:
+        - (x, t) -> (`A`x+`vt`+`b`,  t+`s`)
+            - `A`:
+                - rotate system by rotation matrix `A`
+                - (an element of the rotation group SO(3))
+
+            - `s`:
+                - shift forward in time
+
+            - `b`:
+                - translate the point `x` by the point `b`
+                - (where `b` is a vector in Space ℝ^3)
+
+            - `vt`:
+                - change the velocity by a velocity "boost"
+                - `v` is a velocity vector in space
+
+### Galileo: Ship
+    - This passage destroys the intuitive reasoning for believing
+      we live on a stationary Earth: 
+        - why don't we feel the wind on our faces and why aren't
+          we thrown off?
+    - By linking the Earth whizzing through space with a ship
+      cutting through the water, Galileo shows we wouldn't notice
+      any of the effects we might naively expect ...
+        - (Never knew Galileo's ship was really promoting the
+          Copernican view about the Earth etc)
+    - Also this passage contains a _symmetry principle_:
+        - that unifrom motion is undetectable...
+        - the LAWS of motion are insensitive to transformations
+          that involve switching a pair of uniformly moving
+          reference frames.
+    - Hence, we have a _change without change_: 
+        - an equivalence of motions of objects below the deck, 
+        - coupled with a known PHYSICAL DIFFERENCE: 
+            - the different states of motion of the ship.
+
+### Symmetries
+    - Key modern meaning: SYMMETRY = TRANSFORMATION that leaves
+      some property invariant.
+    - Originally 'symmetry' meant harmonious, balanced or
+      well-proportioned. (Greek word meant: 'same measure')
+        - But this definition is in a static sense: a figure or
+          building can be symmetric without us doing anything.
+    - But in modern terms, a 'symmetry' means observing something
+      `before` and `after` some action has been performed on it.
+    - It's kind of a 'change without a change':
+        - operations or _transformations_ that leave something
+          (or everything) about an object the same as before.
+        - It indicates a kind of 'insensitivity' of some
+          properties or relations to certain transformations.
+            - e.g. transformations that rotate, shuffle, move,
+              twist, push or modify a system in some way.
+        - In such cases, the TRANSFORMATIONS for which this holds
+          true are called 'symmetries' and the object is said to
+          be invariant (or symmetric) under the transformation.
+
+### Plenum
+    - Aristotle’s account is more detailed. He has a ‘plenistic’
+      view: space (the universe) is viewed as always full (no
+      genuinely empty spaces):
+        - if some portion of space is not occupied by water or
+          matter it is occupied by air, each displacing one or
+          the other as they are moved.
+    - In 'Timaeus', Plato also defends a view the world is
+      a plenum: matter and space are, in fact, identified.
+    - Aristotle, however, introduces 'place' as an entity
+      independent from matter, because although matter is
+      essential to a body, place is not:
+        - different objects can occupy the same space (Marc Lange
+          says no), and the same object can occupy different
+          places.
+
+### Rickles Recommends: General Physics
+    - Rober Mills 1994: Space, Time and Quanta
+    - John Taylor:                  $MY_BOOKS/Physics/Undergrad/Overview-taylor-hidden-unity.pdf
+    - Sklar:                        $MY_BOOKS/Physics/Spacetime/Sklar-foundations-dynamics.pdf
+    - Susskind: Classical Mechanics $MY_BOOKS/Physics/Undergrad/Susskind-01-Classical-Mechanics.pdf
+    - Penrose: Road to Reality      $MY_BOOKS/Physics/Maths/Math-Phy-General/Penrose-road-reality.pdf
+
+
+### Rickles Recommends: Symmetry
+    - Fun
+        - _Symmetry_ 
+        - $MY_BOOKS/Physics/Metaphysics/Rickles/Symmetry-Weyl.pdf
+        - Hermann Weyl 1952
+        - Classic discussion of symmetry, with examples from art,
+          nature, and science and introduces the technical
+          notions with brilliant clarity.
+
+        - _Symmetry: A Mathematical Exploration._
+        - $MY_BOOKS/Physics/Metaphysics/Rickles/Symmetry-Mathematical-Exploration-Tapp.pdf
+        - Kristopher Tapp 2010
+        - Though it says "Mathematical Exploration," its very
+          easy to read, and leads to an intuitive grasp of the
+          relationship between group theory and symmetry.
+
+    - Serious
+        - _Symmetry in Physics: Philosophical Reflections._
+        - $MY_BOOKS/Physics/Metaphysics/Rickles/Symmetries-Philosophical-reflections-Katherine-Elena.pdf
+        - Elena Castellani, Katherine Brading, eds. (2003)
+        - Superb collection of readings on philosophical aspects
+          of symmetry.
+
+    - Connoisseurs
+        - _Symmetries and Reflections_
+        - https://archive.org/details/symmetriesreflec0000unse/
+        - Eugene Wigner (1967)
+        - Much of our terminology and concepts come from this
+          book. Written in crystal clear prose.
+
+### Rickles tips: Lie Groups
+    - Good for the physical applications of groups is Isham:
+        - $MY_BOOKS/Physics/Metaphysics/Rickles/Groups-Vector-Spaces-Isham.pdf
+    - The Galilean group is strictly speaking a 'Lie group' since
+      the various parameters are continuous.
+        - e.g. A finite rotation of a planet would be generated
+          (or 'built up') by the accumulation of lots of
+          infinitesimal rotations.
+    - Useful book on Lie groups (based on vectors and matrices):
+        - _Lie Groups: Problem-Oriented Intro via Matrix Groups._
+        - $MY_BOOKS/Physics/Metaphysics/Rickles/Lie-Groups-Problem-Oriented-Harriet.pdf

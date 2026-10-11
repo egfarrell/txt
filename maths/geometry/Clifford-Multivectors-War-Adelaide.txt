@@ -1,0 +1,173 @@
+
+### Links:
+    - paper: Vector Algebra War: A Historical Perspective https://arxiv.org/abs/1509.00501
+    - YT: Adelaide Uni Talk:                              https://www.youtube.com/watch?v=_AaOFCl2ihc
+    - Paper:                                              $MY_BOOKS/Physics/Maths/Math-Phy-Clifford-Geo-Algebra/Vector-Algebra-War-Historical.pdf
+
+### Abstract
+    - There are a wide variety of vector formalisms currently
+      utilized in engineering and physics. 
+    - E.g., Gibbs' three-vectors, Minkowski four-vectors, complex
+      spinors in QM, quaternions for rigid body rotations and
+      vectors defined in Clifford geometric algebra. 
+    - With such a range of vector formalisms in use, it thus
+      appears that there is as yet no general agreement on
+      a vector formalism suitable for science as a whole. 
+    - This is surprising, because one of the primary goals of
+      19th century science was to suitably describe vectors in 3D
+      space. 
+    - This situation results in the unfortunate consequence of
+      fragmenting knowledge across many disciplines, and
+      requiring much time and effort to learn various formalisms. 
+    - We thus historically review the development of our various
+      vector systems and conclude that `Clifford's multivectors`
+      best fulfills the goal of describing vectorial quantities
+      in 3D and providing a unified vector system for science. 
+
+### Talk
+    - key: 
+        - Clifford algebras unify three things: 
+            - Complex numbers
+            - Gibbs Vectors 
+            - Quaternions
+
+    - Varieties of Vector notation
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-01.jpg
+
+    - Early vectors: 
+        - Decartes: 'add or subtract LINES'
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-02.jpg
+
+    - Hamilton 
+        - He generalised the algebra of complex numbers to 3D
+          quaternions. (This also allows for `vector division`)
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-03.jpg
+
+    - But it transpires that quaternions are NOT suitable to
+      describe Cartesian vectors in 3 dimensions.
+        - Why not? 
+        - It turns out complex numbers & quaternions describe the
+          _ROTATIONAL ALGEBRA_ of 3D spaces!
+            - Complex numbers: so(2)
+            - Quaternions: su(2)
+
+    - Two parallel developments
+        - Hamilton -> Gibbs, Heaviside
+        - Grassman -> Clifford
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-04.jpg
+
+    - But... what is wrong with quaternions?
+        - Prob 1: 
+            - basis vectors square to MINUS 1 
+            - So squaring a vector will give the negative of
+              a Pythagorean length
+            - so kinetic energy would be negative!
+        - Prob 2:
+            - all `basis vectors` anti-commute in Hamilton's
+              quaternion system
+            - therefore all operations with quaternions are
+              anti-commutative
+        - Prob 3:
+            - instead of a simple 3-component Gibbs vector, we
+              have to add a fourth scalar component 
+            - (apparently unneccessary)
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-05.jpg
+
+    - After all those probs, what's the solution? 
+        - Well generalise the quaternions... 
+            - ... while retaining the quaternions to be used as
+              a sub-algebra for rotations
+        - Cliffords description of space:
+            - Basis vectors: `e1`, `e2`, `e3`
+            - He defines _positive square_ for them (so that
+              they're suitable as Cartesian vectors)
+            - Innovation: 
+                - allows the BASIS ELEMENTS to be combined, such
+                  as `bivectors` and `trivectors`
+            - The bivectors 
+                - square to `-1` and are isomorphic to the
+                  quaternion basis vectors `i,j,k`
+            - The one trivector 
+                - is a _commuting_ quantity and is a natural
+                  replacement for the UNIT IMAGINARY!
+            - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-06.jpg
+
+    - Mulivector
+        - Combine all of Cliffords basis vectors to form
+          a general object called the `multi-vector`
+        - Using bold symbols `v` and `w` to represent 3-component
+          vectors, and `j = e1e2e3`, the whole thing can be
+          simplified as `M` the multivector (with 8 components)
+            - `M = a + v + jw + jb`
+            - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-07.jpg
+
+    - All systems contained in `M` (multivector)
+        - Multivector:  `M = a + v + jw + jb`
+        - Quaternion:   `a + jw` 
+        - Gibbs vector: `v` 
+        - Complext numbers: both bivectors (e.g. `e1e2`) and
+          trivectors `e1e2e3` square to `-1` and can represent
+          the unit imaginary, and hence complex numbers!
+            - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-07.jpg
+
+
+    - scalar `a`
+        - describes points
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-09.jpg
+    - vector `v`
+        - describes lines
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-09.jpg
+    - bivectors: 
+        - describes orientated PLANES
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-08.jpg
+    - trivectors: 
+        - describes orientated VOLUMES
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-10.jpg
+
+
+    - Why is Clifford Algebra 8-dimensional?
+    - (Why 8 component multivector?)
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-11.jpg
+
+    - Can simplify Maxwells Equations
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-12.jpg
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-13.jpg
+
+    - Can represent physical quantities better
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-14.jpg
+
+    - 4 types of physical quantities??
+        - scalars
+        - polar vectors
+        - axial vectors
+        - pseudoscalars 
+        - Hmm... how do they fit into this table?
+            - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-14.jpg
+
+    - ???
+    - "Actual vectors" (Axial vectors?)
+        - 'Angular velocity and the magnetic field are actual
+          vectors and are represented by `bivectors`'
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-15.jpg
+    - "Polar vectors"
+        - Velocity and Electric field are "distinct polar
+          vectors"
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-16.jpg
+
+    - Electrical engineers use complex numbers, even though the
+      unit imaginary is a completely abstract quantity, without
+      any geometrical, physical meaning.
+    - Imaginary numbers first appeared as roots to quadratic
+      equations...
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-17.jpg
+        - but `e1e2` square to `-1` and is a rotational operator
+          for the plane
+
+    - Clifford: Combines Gibbs vector with a rotational algebra
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-18.jpg
+
+    - Potential applications
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-19.jpg
+
+    - Conclusion
+        - $MY_IMAGES/maths/Clifford-Vectors/Vec-War-20.jpg

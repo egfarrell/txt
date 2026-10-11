@@ -1,0 +1,564 @@
+
+$MY_BOOKS/Physics/Maths/Math-Phy-Forms-diff-geometry/Diff-geometry-physicsts-with-farewells.pdf
+
+
+### CHAPTER 13. A BOOK OF FAREWELLS
+    - 13.1 Introduction
+    - 13.2 Farewell to vector algebra and calculus
+    - 13.3 Farewell to calculus of complex VARIABLE
+    - 13.4 Farewell to Dirac's CALCULUS
+    - 13.5 Farewell to tensor calculus
+    - 13.6 Farewell to auxiliary BUNDLES?
+
+
+### First: Amazon Reviews
+    - The main idea of the book is: 
+        - Cartan was right, but not right enough. 
+        - He introduced differential forms, but only number
+          valued, while we need vector-valued and tensor-valued. 
+    - Then we learn Kahler was right, but not right enough.
+        - He also has forgotten vector-valued differential forms.
+          No mention about books on differential geometry on
+          tensor-valued differential forms like those of Kolar,
+          Michor, and Mangiarotti etc.
+    - Kahler was right about spinors, but the reader will not
+      find a definition of a spinor or a Kahler co-differential.
+      Just a couple of impressions.
+    - Teleparallelism is the way, but no examples of great
+      successes of teleparallel connections are given.
+      `Teleparallelism` is supposed to help in fixing the problem
+      of conservation of energy-momentum in GR, but these are
+      just declaration, without any real work in this direction.
+    - Tensors are bad, Clifford algebras are better. But no
+      pointers to the literature that treats both, tensors and
+      Clifford algebras, deeply and from a wide perspective.
+    - That said, if one first learns the theory of frame bundles
+      from a superb book like Lawrence Conlon's Differentiable
+      Manifolds (get superior 2nd edition), one may be able
+      to derive some benefit from Vargas' insights as to how
+      Cartan generalized the Klein geometries to manifolds and
+      developed his own unique (but generally ignored) approach
+      to geometry. 
+
+
+### 13.1 Introduction
+
+    - In the previous two chapters, we have made the point that
+      there is a large amount of unfinished work in the lines of
+      geometry and calculus created by Cartan and K?ahler. In
+      this chapter, we make the presentation of our next book,
+      where new lines of mathematical development are outlined
+      when not developed. How can physics make progress with its
+      most difficult issues while ignoring such related
+      mathematics?
+
+    - The case we try to make in it is contained in the title
+      "Differential forms: farewell to vector, tensor, Cauchy and
+      Dirac calculi". In order to be able to bid farewell to
+      them, we must have a replacement. We show that the
+      K?ahler's calculus of differential forms not only replaces
+      but actually supersedes them.
+
+### 13.2 Farewell to vector algebra and calculus
+
+    - Practitioners of Clifford algebra know that it replaces
+      vector algebra with advantage. In this section, we
+      summarize our attempt to make that point in our next book.
+      Since the subject of that book is not Clifford algebra per
+      se, its treatment there of this algebra will be only as
+      comprehensive as needed for replacing vector algebra, and
+      for other objectives of this book, like replacing the
+      vector and Cauchy calculi.
+
+    - Clifford algebra is not an algebra created by
+      mathematicians to make physicists' life miserable. It has
+      to be considered as the true Euclidean algebra, valid in
+      arbitrary dimension. 
+
+    - Standard vector algebra is valid only in `dimension 3`.
+      There is not a similar algebra in other dimensions, though
+      there is a vector product in seven dimensions. 
+
+    - But it is a different type of algebra since, perpendicular
+      to the plane of two vectors, there is a whole five
+      dimensional space.
+
+    - Whenever at least one of two factors in a Clifford
+      multiplication is of grade one, the dot and, after surgery,
+      vector products come together. 
+        - Why surgery? The vector product `a ? b` is the
+          composition of the exterior product, `a  b`, with which
+          we have already become familiar in terms of
+          differential forms, and Hodge duality (See section
+          6.4). The surgery consists in not taking the dual of `a
+          b`.
+
+    - Vector calculus is horrible for several reasons. One is
+      that its curl is based on the vector product. So, we do not
+      have a curl in other dimensions. 
+        - Another reason is that it uses tangent vectors where it
+          should use differential forms. One more is that it
+          often uses more structure than needed to solve
+          a problem, say a metric structure. 
+        - Still another one is that one can do so little with it
+          that it has to be complemented with all the other
+          calculi that we also think of replacing with
+          differential forms. 
+        - The Kahler calculus --based on Clifford algebra of
+          differential forms-- replaces tangent vectors and
+          tangent-valued operators with differential forms whose
+          coefficients are functions and operators respectively.
+
+    - The replacement of much of the vector calculus with the
+      calculus of differential forms is nothing new. It can be
+      found in different books on the exterior calculus, say for
+      obtaining curl and divergence in curvilinear coordinates.
+
+    - In the Kahler calculus, they are given by the exterior (d)
+      and interior () derivatives of a differential 1-form, not
+      of a vector field. The two operations are just part of one,
+      (= d + ) (See equation (5.1) of the previous chapter). 
+
+    - It is easy to check that, if  is a differential 1-form in
+      Euclidean 3-space, `d` is a differential 2-form with the
+      same components as the curl of the vector field that has
+      the same components as . And  is the scalar known as the
+      divergence of that vector field. They are much easier to
+      work with, actually without resort to Hodge duality. In
+      addition,  acts on differential forms of any grade and of
+      any valuedness. Kahler differentiation also applies to
+      vector fields, but not to yield the curl and the divergence
+      of a vector field in the vector calculus.
+
+    - K?ahler defines the interior "derivative" in terms of the
+      LCC on the differentiable manifold. He then shows that his
+      definition coincides what in the modern literature is
+      defined as the co-derivative, which is obtained in terms of
+      the metric. Ka?hler's definition, however, may be used with
+      any Euclidean connection.
+
+    - Neither  nor  satisfy the (present form of the) Leibniz
+      rule, meaning that they are not derivatives in the modern
+      sense of the word. However, following Ka?hler, we shall
+      still use the term derivative. It is only a matter of
+      "relaxing the concept of Leibniz rule", as it had been
+      relaxed in the past with the emergence of the exterior
+      derivative.
+
+    - The foregoing considerations make a case for farewell to
+      vector calculus, after first getting a glimpse of what it
+      is. Let it be clearly understood that we do not advocate
+      not teaching vector calculus, but that one do so only to
+      the point where the transition to the exterior calculus is
+      easiest. In any case, due to the rather generalized
+      deterioration in academic standards, one does not get much
+      more than a glimpse of vector calculus in most courses on
+      the subject. In addition, that knowledge can be recycled.
+
+### 13.3 Farewell to calculus of complex VARIABLE
+
+The alternative to the Cauchy calculus that we propose is a direct application
+of the Clifford algebra of differential forms in the plane. We give the defining
+relations both in Cartesian and polar coordinates:
+
+                       dx2 = dy2 = d2 = 1,             d2    =  1     .                (4.1)
+                                                                2
+
+Hence,
+
+                    dxdy = -dydx,                   (dxdy)2 = -1.                      (4.2)
+
+      As far as algebra is concerned, the complex looking inhomogeneous differen-
+
+tial form
+
+                                  z  x + ydxdy,                                        (4.3)
+
+plays in the real plane the role that the complex variable x + iy plays in the
+complex plane. It emerges from the relation between d and dy:
+
+           d  =  xdy   - ydx  =   x-   ydxdy    dy  =  x  +  1        dy  =    1  dy,  (4.4)
+                  x2   + y2        x2  + y2                  ydxdy             z
+
+where we have used that
+
+                       (x + ydxdy)(x - ydxdy) = x2 + y2,                               (4.5)
+
+by virtue of the second equation 4.2.
+
+      We proceed to provide an outline of the argument for the theorem of residues.
+                    
+Given the integral  -  F (x)dx,   consider      the  differential     1-form
+
+                                F (x + ydxdy)dx                                        (4.6)
+
+on a closed curve formed with the x axis of the real plane and a semicircle 
+at infinity. If   - 0 as the radius of the semicircle becomes greater and
+greater, we may then write
+
+                                                                                       (4.7)
+
+                                     F (x)dx = .
+
+                                 -
+
+Given the pull-back of  to polar coordinates (as in the physics literature, we
+ignore the pull-back symbol),
+
+                            = h(, )d + j(, )d,                                         (4.8)
+
+j is                                                                  1
+                                                                      z
+                 j  =  2(  ?  d)  =  2  [F  (x  +   ydxdy)dx]   ?  (     dy),          (4.9)
+
+in terms of Cartesian coordinates.
+    Let us use the symbol "" to indicate reversion of the order of dx and
+
+dy, which changes the sign of dxdy, as when replacing i with -i in complex
+240                                    CHAPTER 13. A BOOK OF FAREWELLS
+
+conjugation. With F standing for F (z), the right hand side of (4.9) further
+becomes
+
+     j  =  2  F  1  dx  dy  +  F    1  (dx  dy)  = (F zdx dy)0 = (-F z)2,  (4.10)
+           2     z                  z
+
+where the subscripts zero and two pick up the scalar part and the coefficient of
+the 2-form part respectively. The last one is equivalent to picking the imaginary
+part of F (z)z.
+
+    Let us take the next step in a simplified way. If the contour integral has a pole
+of first order, one gets the integration circle go to zero and, under appropriate
+conditions that we shall ignore here, one pulls (-F z)2 out of the integral, which
+then becomes just d and, therefore, 2. The well known theorem of residues
+as it applies to first order poles results.
+
+    If the pole is of higher order, one proceeds as in Cauchy's theory. As if that
+were not enough, the additional theoretical developments necessary for special
+purposes in the Cauchy calculus now become much simpler. It should not be sur-
+prising since, again, differential forms constitute the language of integration. In
+particular, the equivalence of the concepts of analytic (power series expansion),
+holomorphic (existence of derivatives) and the Cauchy-Riemann conditions be-
+come much more transparent since one does not need to create a concept of
+differentiation with respect to the z of the Cauchy calculus or to the new z.
+Differentiation with respect to real variables suffices.
+
+    Retrospectively, differentiations and integrations with respect to a complex
+variable constitute a less than ideal treatment of problems whose solutions
+should be dealt with the language of differential forms. Real integrals presently
+performed with Cauchy's calculus should just be viewed with the right perspec-
+tive, namely as an extension of a corollary of Stokes theorem of the real calculus
+in regions of the real plane that are not simply connected.
+
+    Two papers by this author deal with this subject rather comprehensibly [86],
+[87]. The second of these extends the theory just described, so as to deal also
+with integrals where the result is of the type u + vdxdy. They are accessible to
+everybody free of charge. Our next book should pick up the contents of those
+two papers and provide numerous additional worked examples, so that one can
+teach in a far shorter and more transparent way in the real plane what nowadays
+goes by the name of calculus of complex variable.
+
+### 13.4 Farewell to Dirac's CALCULUS
+
+Dirac's calculus and theory was a fantastic achievement of the arguably second
+greatest physicist of the twentieth century; his work may have had greater im-
+pact than even Einstein's. One could hardly have done better at the time. But
+that was then. When compared with Kahler's calculus, born a few decades later,
+Dirac's leaves a lot to be desired. That will be shown in a chapter in our next
+book, where the main purpose will be to show that the advantage of Kahler's
+calculus lies in its use of differential forms where one now uses gamma matrices.
+
+Of special interest is the treatment of the Lie derivative of those forms from the
+original and overlooked perspective of the treatments of Lie differentiation of
+the subject by Cartan [9], Kahler [46], [48] and Slebodzinski [69].
+
+    The extensive use made of Dirac's calculus has taught physicists to navigate
+its waters, but some difficult spots remain. We specially mean spurious negative
+energy. Through his replacement of the Dirac equation with his own equation,
+Kahler showed the emergence of antiparticles without resort to negative energy
+solutions [48]. He also showed that there is nothing mysterious about spin. As
+he put it [48]:
+
+    The spin of the electron will be interpreted as the necessity to represent
+    the state of an electron by a state differential rather than by a state
+    function.
+
+    It is not the intention of this author to reproduce in his next book the Kahler
+calculus in all its glory, but enough of it in order to show by comparison how
+unnecessarily cumbersome, and misleading at certain points, the Dirac theory
+can be.
+
+    We proceed to give some examples additional to the ones just mentioned.
+This author has shown that the obtaining of the "post Pauli-Dirac" approxima-
+tion of the K?ahler equation with electromagnetic coupling is little more than a
+one page development, half of it taken by the statement of results. It is done
+without resort to Foldy-Wouthuysen transformations and without the spurious
+interpretation of small components as representing negative energy contribu-
+tions [83]. Neither Foldy-Wouthuysen, nor anybody else for that matter, ap-
+pears to have addressed the fact that the same development of the equation
+should apply to antiparticles, except for the sign of the charge.
+
+    At the same time as one shows that the Foldy-Wouthuysen work is mis-
+leading, one interprets the -mc2 term as the result of adding a spurious term
+-2mc2 to the true rest energy mc2 [83]. One cannot ignore the problem of neg-
+ative energies in the Dirac theory on the grounds that it does not arise in the
+very successful quantum field theory, since the latter provides corrections, but
+not the basic values that it corrects.
+
+    Related to the foregoing quotation, Kahler could have been more specific and
+stated in the same breath that the action of the Lie derivative on differential
+forms is at the root of the emergence of spin. If he had raised more forcefully
+and in the English language this issue, he might have launched a reassessment
+of the use of the Dirac theory in high energy physics. In particular, he would
+have promoted Einstein's view of particles as concentrations of the field
+
+    The way in which one tinkers with the Dirac equation (perhaps unavoidably
+because of limited sophistication of the Dirac calculus) for obtaining free particle
+solutions is at the root of the spurious emergence of (particle, antiparticle)
+pairs with opposite sign of the energy. Kahler should have emphasized that the
+solutions to his differential equation are in principle members of his algebra, and
+not only members of those algebras' ideals. The spinor solutions are only specific
+solutions, not general ones. A key issue and source of interesting questions is
+242  CHAPTER 13. A BOOK OF FAREWELLS
+
+what symmetries can be put together in the same ideal, given the idiosyncrasies
+of products of idempotents corresponding to different symmetries. A little bit
+of this can be seen in section 6.
+
+    To summarize, Dirac's theory may be conceptually wrong in spite of the
+tremendous success of the high energy theory built upon it. Solutions of the
+Kahler equation pertaining to the algebra of clifforms may be the primordial
+concept; the solutions in ideals, thus representations of particles as spinors, are
+derived concepts. One by-product is that also quarks are a derived concept by
+a mechanism similar to the one by which particles emerge from the primordial
+field. These statements are supported in papers being prepared. It is the in-
+tention of this author to put into the book that we are announcing here the
+mathematics needed for understanding these claims.
+
+### 13.5 Farewell to tensor calculus
+
+For completeness purposes, a chapter of the book been announced will provide
+a summary of the main part of the present book. Its purpose is to explain why
+one should bid farewell to the tensor calculus and to approaches to differential
+geometry that draw significantly from it. It will emphasize the points about to
+be mentioned in this section and should put together some of the perspectives
+that non-expert readers should have acquired from reading the present book.
+
+    Tensor calculus lacks true geometric pedigree. Indeed, tensor fields relate
+to sections of the frame bundle, not to the frame bundle itself. But the frame
+bundle, not the sections, represent the groups that define a Klein geometry.
+
+    Tensor calculus emphasizes as geometric what is not, a point made by Cartan
+when he argued against viewing Riemannian geometry as the geometry of an in-
+finite Lie group [21]. Yang-Mills theory involves connections valued in finite Lie
+algebras of auxiliary bundles. Connections in non-Yang-Mills differential geom-
+etry also take values in finite Lie algebras. This should be emphasized in order
+to avoid being mislead into viewing by the infinite group of diffeomorphisms as
+underlying the geometry.
+
+    Tensor calculus belies the nature of the objects that it tries to represent.
+Tensors belong to a graded algebra, but only the lowest ranks of tensors emerge
+in geometry. Ranks higher than five do not appear. Tensor algebra usurps the
+roles of its quotient algebras.
+
+    Tensor calculus subverts the logical order of concepts. Its most common ver-
+sion makes very little emphasis on tensor algebra and focusses on how things
+transform. But the transformation properties are a consequence of the under-
+lying tensor algebra, which most authors for physicists barely define.
+
+    As a consequence, results happen in a haphazard way. Such is the case for
+instance with the argument to "discover" curvature in the approach of Ricci and
+Levi-Civita to Riemannian geometry, approach that Einstein adopted. Curva-
+ture there emerges not as a concept, but as a set of symbols that transform in
+a particular way.
+13.6. FAREWELL TO AUXILIARY BUNDLES?  243
+
+    One more respect in which tensor calculus fails to make justice to the founda-
+tions of geometry is its casual treatment of issues of integrability and equations
+of structure, specially of the first equation of structure. It thus produces the
+wrong statement that the torsion is the skew-symmetric part of the connection,
+which is correct only in coordinate bases.
+
+    Tensor calculus is too coarse, as it lacks discriminating power. It fails to dis-
+tinguish the different nature of objects whose components transform in the same
+way. As a result, one speaks of different differentiations (covariant, exterior, ...)
+of a mathematical object like, for example, wi.
+
+    Tensor calculus is too rigid. It makes Finsler geometry too cumbersome, due
+in part to the fact that the dimension of the space of tangent vectors and of the
+module of differential 1-forms are different in that geometry.
+
+    Tensor calculus is inimical to Klein geometries, bundles and Lie algebras,
+not to mention vector equality. Tensor calculus is one whose time is long past.
+
+13.6 Farewell to auxiliary BUNDLES?
+
+This author claims that auxiliary bundles are unnecessary if one simply uses
+the right mathematics. The key lies in recognizing the implications of viewing
+quantum mechanics from the perspective of Kahler's rather than Dirac's calcu-
+lus. A new vision of quantum mechanics emerges. First, let us make the case
+for the K?ahler calculus and concomitant quantum theory.
+
+    1. This calculus is the natural extension of the Cartan calculus, as it takes
+into account not only exterior differentiation (curls if you will) but also interior
+differentiation (divergences) with differential forms.
+
+    2. It is more comprehensive than the Dirac calculus since the spinors (eight
+real components) are replaced with objects of 32 real components. The Kahler
+equation --replacement for the Dirac equation-- is a most natural one (read
+unavoidable) in the K?ahler calculus.
+
+    3. It only uses scalar-valuedness to take care of what the Dirac calculus does
+with vector-valuedness, even though other valuednesses are allowed and should
+be used.
+
+    4. In it, spin is at par with orbital angular momentum and need not be
+forced into being by invoking it as an internal property of particles. Spin, being
+about rotations, cannot be identified with torsion, which is about the breaking
+of integrability of the translation part of the connection. K?ahler shows that spin
+is simply about knowing how to perform partial derivatives of differential forms
+when two systems of coordinates are involved.
+
+    5. In it, particles and antiparticles emerge with the same sign of energy.
+This is a direct consequence of splitting into two pieces the differential forms
+that satisfy the Kahler equation.
+
+    6. Foldy-Wouthuysen transformations are unnecessary to obtain the clas-
+sical electromagnetic Hamiltonian beyond the Pauli terms. In spite of what
+is claimed by its practitioners, those transformations do not separate particles
+244  CHAPTER 13. A BOOK OF FAREWELLS
+
+from antiparticles but odd and even parts of the primordial field in which an
+electron or a positron contain the dominant amount of energy in that field.
+
+    7. The difference of 2mc2 between the actual energy mc2 of a positron and
+the energy -mc2 that the Dirac theory assigns to it in the Dirac theory is easily
+explained by the same process as in #3.
+
+    Once we have made the case for it, let us see its implications for the foun-
+dations of quantum physics.
+
+    A. The field is the primordial concept. In a Stern-Gerlach experiment, we
+are certainly changing the orientation of spin, but this is a derived concept.
+What changes is the field itself of which the electrons form part. It entails the
+change in the concentrations of the energy of the field that we identify as the
+electrons in the beam.
+
+    B. Particles emerge from the primordial field as its components (in special
+cases) when decomposed into members of ideals. In a process in which a pair
+is created, or when particles come out together in a deep inelastic experiment,
+these are entangled ab initio by virtue of the fact that they emerge from the
+decomposition of some state of the primordial field.
+
+    C. Hence, an internal property from a particle perspective is standard prop-
+ertime property from a field perspective, and is, therefore, a spacetime property.
+
+    D. U (1) and Poincar?e symmetry come together in the splitting of the algebra
+of primordial fields into ideals. Hence, charge emerges in a spacetime context.
+In other words, charge emerges from the inner dynamics of bundles related to
+the tangent bundle, not related to auxiliary bundles. See item (a) below.
+
+    E. The symmetries that define particles are not symmetries of the equations
+of the primordial field, or even of the primordial field itself. They are properties
+of spinor solutions of those equations. In other words, they are symmetries of
+members of certain ideals. Hence, we should look at the symmetries of the
+idempotents that define those ideals. The symmetries that we can embody
+simultaneously into idempotents matter, not the symmetries of the equations
+that those idempotents satisfy, which are always larger.
+
+    F. The proper way to do rotations of spinors is through tangent Clifford
+algebra. The valuednesses of the differential forms in the theory of the moving
+frame --valuednesses of which we spoke in section 5 of chapter 12-- is now
+extended into a Clifford valuedness. Connections have to take care of that,
+which makes the arena of a corresponding theory of connections the same as
+the arena for K?ahler's theory beyond scalar-valuedness, and thus beyond the
+electromagnetic interaction.
+
+    G. When the unit imaginary is replaced by appropriate real geometric quan-
+tities, the other so called internal symmetries start to emerge in a spacetime
+related context. It is "spacetime related context" and not simply "spacetime
+context", since the theory of the moving frame on manifolds is not all that there
+is to the theory of connections. Particles and physical fields are not represented
+in depth in the theory of moving frames. A space-propertime subspace of a 5-
+D Kaluza-Klein space without compactification comes to the fore for quantum
+mechanics [89].
+
+    H. This Kaluza-Klein space exists only in an appropriate "preferred frame
+13.6. FAREWELL TO AUXILIARY BUNDLES?                                         245
+
+context", even though the Lorentz transformations retain their value for signifi-
+cant specific purposes. The Lorentz metric, now expressed as a Clifford algebra
+equation, plays the role of natural lifting condition for curves in time-space-
+propertime.
+
+    I. Preferred frames together with a metric canonically determine teleparallel
+connections, not Levi-Civita connections. Both types of connections are equally
+consistent with the same metric, as only the relations of affine type change.
+They favor teleparallelism since it entails equality of vectors at a distance, which
+Levi-Civita connections do not. In addition, teleparallelism brings new degrees
+of freedom, embodied in the torsion.
+
+    Let us now show how Clifford algebra and the Kahler's theory based on it
+take us beyond the electromagnetic interaction when we let the mathematics
+speak.
+
+    As a first step and by considerations related to solutions with time transla-
+tion and rotational symmetries, the factor eim/ -iE0t/ in solutions with proper
+values of energy and angular momentum for electrons and positrons now has to
+be replaced with
+
+                      eim/ -iE0t/ 1 (1 ? idt) 1 (1  idxdy),                  (6.1)
+                                         2         2
+
+where the star means ? and . So, a starting point to find such proper solutions
+is to write these in the form
+
+                             u = eim/ -iE0t/ p   ?  ,                        (6.2)
+
+where                 1                                      1
+                      2                                      2
+       ?                 (1  ?  idxdy),               ?         (1    idt),  (6.3)
+
+and where p is a differential form that depends only on (, z, d, dz) [47]. Idem-
+
+potents (6.3) represent the two properties of particles that are determined by
+
+representations of the Poincar?e group, mass and spin, here accessed on different
+
+grounds. Key also is the fact, not obvious if one has not stated the proof of
+
+#5, that charge comes intrinsically united with energy, since the two signs in
+ ? correspond to the two signs of charge [48]. Hence, in the electromagnetic
+solutions which are proper functions, U (1) is present in the factor ?, but there
+is the additional factor  ? in order to make particles.
+
+    We shall cut the story short and propose that U (1) ? SU (2) is represented
+
+by the 12 idempotents
+
+                             ?      ,       ? zx,     ?      ,               (6.4)
+                                yz                       xz
+
+where          1                                             1
+               2                                             2
+         ?            (1  ? aiaj dxidxj ),            ?         (1   wd ),   (6.5)
+         ij
+
+in the same way as  ?   represents the electromagnetic interaction. i and
+
+j are two consecutive numbers ordered as in 1, 2, 3, 1, and w is the unit vector
+
+dual to proper time.
+246  CHAPTER 13. A BOOK OF FAREWELLS
+
+    One cannot, however, represent particles as in (6.2) using (6.5) at the same
+time. The proper venue for such a possibility requires further steps that involve
+ab initio quarks. To obtain then it suffices to multiply (6.4) by another idem-
+potent that takes three values. But let us stop there. We have said enough for
+making the point that there is a future in bidding farewell to all calculus except
+a further enriched calculus of differential forms. With these, we approach the
+realization of Einstein's thesis of logical homogeneity of theoretical physics and
+tangent bundle differential geometry at the same time as calculus also becomes
+tangent bundle geometry, and this geometry becomes calculus. If this is not the
+germ of a farewell to auxiliary bundles, what is?
+

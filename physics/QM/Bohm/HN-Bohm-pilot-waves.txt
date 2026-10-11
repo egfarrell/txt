@@ -1,0 +1,514 @@
+- HN link: https://news.ycombinator.com/item?id=13198025
+
+- See also LLM summary: 
+    - $MY_NOTES/physics/QM/Bohm/HN-Bohm-pilot-waves2.txt
+
+### Key:
+    - There are plenty of `field theory extensions` for Bohmian
+      mechanics. Due the relatively few people working on it, no
+      single approach has become dominant.
+    - The PW may be correct but the particles are not following
+      a wave that is moving around them.
+        - What is happening is that each particle is 'emitting'
+          (spherically and radially outward from itself) a wave
+          of its own.
+
+# Why don't more physicists subscribe to pilot wave theory?
+
+### tzs
+
+- Possible Analogy?
+    - Would this kind of physics be equivalent to nonstandard
+      analysis in mathematics?
+
+- Nonstandard analysis (NSA) is an approach that essentially
+  makes rigorous the vague notions of infinitesimals that Newton,
+  Leibniz and other pioneers of calculus based their work on.
+    - cf: $MY_NOTES/maths/analysis/infinitesimals.txt
+
+- Newton's fluxions and Leibniz's differentials provided great
+  guidance, and in many cases even worked and gave correct
+  results, but they were not really rigorously defined.
+    - Later mathematicians started running into serious problems
+      with this approach. These were resolved with the approach
+      we all know and love (loath?): limits and epsilon/deltas.
+
+- NSA extends the real field to contain a new kind of number that
+  is positive but is less than `1/N` for any integer `N`, giving
+  a new field called the HYPERREALS.
+    - You can then do things like define the derivative of `f` at
+      `x` to be `(f(x+h) - f(x)) / h` where `h` is an
+      infinitesimal, work out that using ordinary algebraic
+      manipulations, and then just drop any terms that are
+      infinitesimal.
+    - NSA goes far beyond just calculus. You can use these ideas
+      throughout all of analysis.
+
+- Seems pretty cool, and a lot clearer than a limits approach. So
+  why has it not taken over?
+
+- I believe a big part of it is that it's been shown that NSA and
+  standard analysis are equivalent. Anything you can prove in one
+  can be proven in the other. Perhaps more important, one doesn't
+  seem any better than the other at leading to deep insights.
+    - If you can't solve a problem in standard analysis, you
+      probably aren't going to figure out the solution if you use
+      NSA, and vice versa.
+
+- So while it may be nicer overall to use NSA if starting from
+  scratch, instead of standard analysis everywhere, so much is
+  already done in standard analysis that switching now would be
+  too painful.
+
+### millstone
+
+- Interesting analogy but I'm not sure if it holds.
+    - Infinitesimals are an alternative to the typical
+      limit-based formalism. It changes the way you do calculus.
+
+- However Bohmian Mechanics is a different interpretation, not
+  a different formalism. You can accept the interpretation, but
+  still end up solving the Schrödinger equation in the same way,
+  using the same mathematical methods.
+
+- The analogy works better for matrix mechanics compared to
+  Schrödinger's wave mechanics. These are mathematically quite
+  different even though they give the same results.
+
+### naasking
+
+- You can use the same formalism for most things, but Bohmian
+  mechanics is a different formalism in some cases.
+    - e.g., you can derive the Born rule for systems in
+      equilibrium, but that leaves open the possibility of
+      `non-equilibrium` regimes, which simply don't exist in
+      orthodox QM.
+    - (Tim Maudlin says this too)
+        - $MY_NOTES/physics/QM/Bohm/DeBroglie-Bohm-Pilot-Waves.txt
+
+### jayajay
+
+- The Heisenberg picture and the Schrodinger picture the same;
+  sometimes using one particular basis is more useful and
+  intuitive than using the other.
+
+- Pilot Waves, on the other hand, are pretty much always
+  superfluous. Please link me, if you have seen a situation where
+  using Pilot Waves simplifies a calculation.
+
+    - Reply: naasking
+        - Pilot waves are always there whether you acknowledge
+          them or not. There's nothing superfluous about them.
+
+    - Reply: ajkjk
+        - I think you mean - you can always `reparameterize`
+          things to have a 'pilot wave' around. That doesn't mean
+          they're 'there', really.
+
+        - I think the 'default' interpretation would be to
+          exclude them, since (clearly) they're not necessary
+          (evidence being: interpretations without them exist).
+          That would be the definition of superfluous, right?
+          Unless they give different experimental results
+          somewhere, which I'm pretty sure in't the case.
+
+### qubex
+
+- The most amazing aspect of Non-Standard Analysis is that the
+  "tiny `∆x` becomes `h` and then you can just take the limit by
+  stripping out all the `h` symbols" approach was how I was first
+  taught "Calculus" in IB Maths 1997-99...
+    - an extraordinarily rickety foundation to build future
+      intuition upon.
+
+### thomasahle
+    - Not to start a big discussion about infinitesimals, but
+      don't they generalize a lot worse than limits?
+    - For example, what are their analogies in non-metric spaces?
+      Say in topology or category theory?
+        - $MY_NOTES/maths/analysis/infinitesimals.txt
+
+### kkylin 8 hours ago [-]
+
+- I agree with millstone below: interesting analogy, but not sure
+  it is quite right here.
+    - Off-topic comment: I agree that some things may be more
+      easily expressed in nonstandard analysis. For an
+      interesting experiment, see
+      https://web.math.princeton.edu/~nelson/books/rept.pdf .
+    - cf: $MY_NOTES/maths/analysis/infinitesimals.txt
+
+### rwallace 6 hours ago [-]
+
+- My impression of pilot wave theories is that when you look
+  closely, the pilot waves are basically doing all the work, and
+  the particles are just along for the ride.
+- At which point it's tempting to delete the particles and see
+  what happens.
+    - And when you give the result a fresh paint job, it turns
+      out to be isomorphic to Many Worlds interpretation (or
+      Copenhagen) if you take the computational step of not
+      following branches that can no longer be significant to
+      currently observed results).
+    - Am I missing something?
+
+### qubex
+- What's irksome about this 'reformulation' is the supposed Pilot
+  Wave is presumably 'pushing' on billiard-ball-like elementary
+  point-particles, but the particles aren't able to "push back"
+  on the Pilot Wave.
+- However, the Pilot Waves of two particles are assumed to
+  interact between themselves in a manner resembling the
+  elementary interaction of the particles... and really, this is
+  an extraordinary scenario, if you think about it.
+    - It's quite _aether-like_, and I mean that in a mildly
+      derogatory manner.
+    - (IANAP) ??? Ah: I am not a Physicist
+
+### lisper
+
+- This is the bottom line:
+    - "It has been demonstrated experimentally that you can't
+      have a local, deterministic, real, definite theory.
+        - (ie it'd lead to demonstrably false conclusions).
+    - People intuitively expect all of those things to be true,
+      but we can prove it isn't the case.
+    - The various interpretations all try to give up one of
+      "local", real", "definite", or "deterministic" in order to
+      preserve the others, thus preserving at least a modicum of
+      their intuition.
+    - The pilot wave idea gives up on locality"
+
+And I'll add:
+    - Multiple worlds gives up on definiteness.
+    - "`Zero worlds`" (my favorite) gives up on realism.
+    - And, of course Copenhagen gives up on determinism.
+
+- Take your pick. Or go with decoherence, which sort of lets you
+  turn a knob to give up a little bit of all four, and dial in
+  whatever setting you like.
+
+### phkahler
+- But if someone makes a conscious choice to choose one that
+  preserves locality, shouldn't they change their mind when
+  "spooky action at a distance" starts happening?
+- `Non-locality` is staring them in the face and they refuse to
+  adopt a formalism that makes it explicit. They seem to like
+  things that appear strange and non-intuitive.
+
+### lisper
+
+- There is no 'spooky action' at a distance. When you measure one
+  member of an EPR pair, nothing actually happens to the other
+  member.
+- See:
+    - $MY_NOTES/physics/QM/google-talk-Garret.txt
+
+### qubex
+- Boils down to the fact that “if I flip a coin and look at it
+  whilst hiding it from your sight, the outcome is perfectly
+  deterministic for me but it is still perfectly random for you”
+  (and, I'll add, the maximum speed at which I can “de-randomise”
+  the outcome for you is by telling you what I measured (at the
+  speed of light)).
+
+### VladKovac
+
+- How convenient that this supposed "spooky action at a distance"
+  can't actually send information FTL.
+- Locality is very important for coherent laws of physics.
+- Many worlds is still the most parsimonious explanation, which
+  is why it enjoys the most support from physicists.
+- It's literally just extrapolating what we already see in small
+  scale experiments to the macro scale; it's staring you in the
+  face!
+
+### bmh100
+
+- Could you touch on why many worlds is more parsimonious than
+  pilot wave? I'm not sure that I understand that reasoning.
+- Is it because a given "universe" is locally simpler?
+- Would it be accurate to describe the comparison as an infinite
+  number of universes (separated via some higher dimension) vs.
+  a single universe that is holistically connected throughout
+  spacetime?
+
+### obastani
+- "Spooky action at a distance" does not violate locality in the
+  sense that information does not travel faster than the speed of
+  light.
+
+### zeroer
+
+- You should be suspicious if your theory claims non-locality,
+  but in a way that does not allow any transfer of information.
+
+### combatentropy
+
+- I agree. I thought that the scientific world already gave up on
+  the idea of locality, since entanglement has been
+  experimentally demonstrated.
+
+- Also: I don't have a problem with accepting non-locality from
+  a theoretical perspective, now that I know about the
+  Holographic Principle. If the universe is a hologram, then the
+  apparatus projecting the hologram can be connected in ways that
+  aren't obvious in the hologram.
+
+### otakucode
+
+- It's not that kind of a hologram... The hologram idea says is
+  that all of the information in our universe can be represented
+  on a 2D surface.
+- It doesn't claim there is literally a hologram projector
+  somewhere projecting a hologram of our universe. Such a thing
+  would be nonsensical.
+- If the projector were outside our universe it would, by
+  definition, be causally disconnected from our universe and
+  thereby never capable of influencing it in any way. If it were
+  capable, it would, again by definition, be part of our
+  holographic universe.
+
+### wyager
+
+- You can reproduce entanglement in a number of local theories.
+  I always mention `Einselection` in these sorts of threads,
+  because it's a very clean way to get something that looks like
+  many-worlds but isn't hand-wavy and can reproduce entanglement
+  via local mechanisms.
+- In particular, contradictory measurements may take place, but
+  they are forbidden from interacting via superselection rules
+  (such that `<x|A|y> = 0` for any observable `A` for
+  contradictory states `x` and `y`).
+- The math isn't as developed as Pilot Wave theory, but it's at
+  least as aesthetically pleasing (deterministic, local, etc.).
+  I guess it gives up definiteness, but in a less objectionable
+  way than 'Many Worlds'.
+
+### wyager
+
+- Nope, you can get around that with superselection rules (which
+  give you a mathematically rigorous thing that sort of looks
+  like many worlds). Pilot wave and Einselection are the two most
+  promising avenues into making sense of apparent wavefunction
+  collapse, in my opinion.
+
+### nhaehnle
+
+- IANAP, but I think part of the problem with MWI is that
+  popularizers wanted it to sound cool.
+
+- The idea was originally known as the 'Theory of the Universal
+  Wave Function', which makes a lot more sense as long as you're
+  unafraid of mathematics.
+
+- There is no "splitting off" of universes; I agree with you that
+  that wouldn't make much sense. Instead, the observer simply
+  becomes entangled with the observed physical system during the
+  measurement process. This entanglement is a gradual process,
+  though it certainly happens very quickly.
+
+- This basically pushes all the weirdness out of QM and into the
+  fact that we just don't understand consciousness very well.
+- Why don't we perceive the full linear combination of quantum
+  states? And can we somehow map our subjective experience of
+  probability and statistics to what happens in the `Universal
+  Wave Function`?
+    - It's much easier to ignore that weirdness, since we're used
+      to ignoring it in our daily lives anyway.
+    - It's also a more parsimonious interpretation than the
+      others, because it doesn't postulate anything special about
+      us (the "observers").
+
+(This does not mean that consciousness is a quantum or even
+meta-physical phenomenon. Quite the opposite, actually: I find
+the mystery lies more in why consciousness is unable to perceive
+quantum states despite existing in a universe that has quantum
+physics.)
+
+### naasking
+
+- Copenhagen gives up determinism, definiteness and locality.
+  It's by far the worst of the interpretations, but chugs along
+  due to inertia
+
+### VladKovac
+
+- If you repeat the word "collapse" enough you can trick your
+  brain into thinking you've actually explained something :P
+
+### JshWright
+
+- If you're interested in this sort of thing, I'd recommend PBS
+  SpaceTime on YouTube. Be sure to stick around for the end of
+  each video, as he often calls out comments on earlier videos
+  that contain corrections or clarifications (in many cases, from
+  _very_ highly qualified physicists and other subject matter
+  experts).
+
+- Here's their recent episode on pilot wave theory:
+    - https://www.youtube.com/watch?v=RlXdsyctD50
+
+### naasking
+
+- Pilot waves aren't made of anything, they are a description of
+  configuration space. Think of it like this:
+    - To describe particle motion, take the ordinary/classical
+      equations of motion, and now add another term to account
+      for quantum behaviour.
+    - The force exerted by this term at time `t` is a function of
+      the position of every other particle in the universe at
+      time `t`, no matter the distance.
+
+- That's pilot wave theory, where this term is sometimes called
+  the "quantum potential" and is governed by Schroedinger's
+  equation.
+- As you can see, this extra term goes to zero when quantum
+  effects become negligible and we recover classical mechanics
+  straight away. The difficulty is the obvious nonlocality and
+  what that means for SR.
+
+### bmh100
+
+- Could this connection to the rest of the universe be considered
+  conceptually similar to a form of entanglement?
+
+### contravariant
+
+- I think the fact that pilot wave theory uses the
+  (multi-particle) Schroedinger equation, while most modern
+  physics is based on field theory, would be more important.
+- So far I've seen no formulation of the pilot wave theory in
+  a way that incorporates fields, or provides some other
+  mechanism to account for things like the annihilation of
+  particles.
+
+### dnautics
+
+- If I'm not mistaken, It's just formalism. Mathematically
+  a continuous wave function is equivalent to a countably
+  infinite vector space.
+
+- It can be hard to switch between the two (as a chemist we are
+  taught Schroeder and I have a hard time wrapping my head around
+  Heisenberg)
+
+### chestervonwinch
+
+> a continuous wave function is equivalent to a countably
+> infinite vector space
+
+- I think you mean that the function is a point in the vector
+  space. More precisely, it is a point in a particular separable
+  Hilbert space, i.e., a complete vector space equipped with an
+  inner product that has countable, dense basis.
+
+### naasking
+
+- There are plenty of field theory extensions for Bohmian
+  mechanics. Due the relatively few people working on it, no
+  single approach has become dominant.
+
+### ClayFerguson
+
+- There is one other interpretation of Pilot Wave theory that is
+  sort of the "inverse" of Pilot Wave. and to me makes more
+  sense.
+    - The PW may be correct but the particles are not following
+      a wave that is moving around them.
+    - What is happening is that each particle is 'emitting'
+      (spherically and radially outward from itself) a wave of
+      its own.
+    - It is the interaction of all other waves that cause the
+      particle to move. Just like a particle with mass distorts
+      the spacetime around it, in a 'static way', perhaps charged
+      particles distort spacetime in a way that is directly tied
+      to the speed of light, and thus distort spacetime in
+      a 'dynamic way'.
+    - But the fact that the slit experiment "works" even when we
+      know only a single particle at a time is being sent thru,
+      it just makes more intuitive sense that the particle is
+      neither interacting with itself, nor with other universes
+      (copies of itself).
+    - So what i'm saying is PW theory is FAR more intuitive than
+      Copenhagen/Many-Worlds to me.
+    - I believe there is genuinely one particle going thru the
+      slit experiment when we think there is, and it follows the
+      path thru in a way that is statistically determines much
+      more by a PW-type theory than any other theory.
+
+### lcvella
+
+- For me, what is most important on the subject is that, even if
+  we can't differentiate from one interpretation to another
+  experimentally (yet), it doesn't mean they are all equally
+  correct. Specifically in connection with general relativity,
+  which is an open issue, the exploration of alternative
+  interpretations of QM may lead to actual experiments
+  differentiating one interpretation from another, effectively
+  tuning it into a theory.
+
+### MichaelApproved
+
+- Here's another great video from PBS Spacetime on this topic
+https://youtube.com/watch?v=RlXdsyctD50
+
+- This channel and Sixty Symbols are awesome for Physics insight.
+
+### bicubic
+
+- There's one major shortcoming that the answer doesn't seem to
+  touch on:
+    - pilot wave theory doesn't explain relativity whatsoever,
+      while quantum field theory does. We've experimentally
+      confirmed relativity, so at best, pilot wave theory is
+      incomplete.
+
+### naasking
+
+- You're confusing QM with quantum field theory. Pilot wave
+  theory is just QM, although some field theory extensions have
+  been discussed. There's no particular reason such an extension
+  would be impossible.
+
+### phkahler
+
+- Since the pilot wave theory is deterministic, wouldn't someone
+  be able to simulate a quantum computer with a classical one in
+  reasonable time and storage?
+
+### oceanofsolaris
+
+- It is deterministic, but you still need to keep track of
+  a field that covers your whole configuration space (basically
+  you need all the information contained in a function R^n->C for
+  n degrees of freedom).
+    - Keeping track this high-dimensional field is what makes
+      a quantum computer hard to simulate in the first place, not
+      the non-determinism. So no, it doesn't make anything easier
+      to simulate.
+
+- This makes a lot of sense if you think of it that way:
+    - Pilot wave theory gives exactly the same results as any
+      other decent interpretation of QM.
+    - So the work necessary to simulate it will also be exactly
+      the same. Simulating QM is not hard because we don't
+      understand it. It is hard because it is an inherently hard
+      problem (otherwise, how could quantum computers be faster
+      than classical computers?).
+
+### scythe 9 hours ago [-]
+
+- I have a fond memory of taking an advanced (graduate) seminar
+  class with taught by one of the oldest professors at my
+  university -- and attended by another.
+- The lecturer was describing something to do with manifolds and
+  various obscure formulations of classical field theories and he
+  mentions that he was at a lecture once where someone had
+  related this theory to Bohmian mechanics
+    - The other professor cut him off:
+    - "It's wrong"
+    - A student held up his hand and asked what Bohmian mechanics
+      was. Before the lecturer could answer: "Don't worry, it's
+      wrong"
+    - It was difficult to contain myself.

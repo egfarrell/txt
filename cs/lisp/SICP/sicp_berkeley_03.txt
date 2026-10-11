@@ -1,0 +1,24 @@
+sicp berkeley 03
+
+
+First order function
+    Domain and range are numbers
+
+HIGHER ORDER FUNCTION
+    domain and range are functions
+
+FIRST CLASS DATA 
+    can be 4 things:
+        value of a variable
+        argument to a procedure
+        return value from a proc
+        member of an aggregate
+
+numbers are first class data in all programming languages.
+
+Scheme 
+    - any data type thats in the language at all should be first class. in
+    particular, procedures should be first class data
+
+Few examples, 
+    e.g. compose where a function actually returned a function!! (Lambda(x))

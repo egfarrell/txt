@@ -1,0 +1,60 @@
+Beautiful—this little exchange captures two worldviews colliding in miniature.
+Let’s unpack it line by line, because both of them are technically right but talking past one another.
+
+
+### 1. “AdS itself is invariant under the conformal group…”
+
+Tim’s objection:
+He points out—correctly—that *not every conformal transformation* is an isometry of AdS.
+An *isometry* is a transformation that leaves the spacetime metric exactly unchanged, while a *conformal transformation* rescales the metric by a local factor. So he’s saying: how can you claim AdS is invariant under *all* conformal transformations?
+
+BHG’s clarification:
+He means the *group structure*, not literal metric invariance.
+The isometry group of AdS_(d+1) is SO(d,2), which is exactly the same Lie group as the conformal group of a d-dimensional Minkowski space.
+So the boundary CFT’s conformal symmetries correspond one-for-one to bulk AdS isometries.
+
+It’s a slightly slippery phrasing, but standard in the literature:
+“AdS is invariant under the conformal group” really means “the AdS isometry group is mathematically isomorphic to the conformal group of the boundary.”
+
+So Tim caught an imprecise statement, but the physicist’s shorthand is conventional. It’s like saying “the hydrogen atom has SO(4) symmetry”—true algebraically, not literally geometric.
+
+
+### 2. “In what sense can any operator that lives near the boundary be identified as the Hamiltonian?”
+
+Tim’s worry:
+How can a boundary operator generate the *time evolution of the whole state*?
+From a GR viewpoint, the Hamiltonian should generate evolution of data on a *Cauchy surface*, i.e., through the bulk. So how can something living just on the boundary do that job?
+
+BHG’s response:
+This is where the *Regge–Teitelboim* result from the 1970s enters. They showed that in the canonical (Hamiltonian) formulation of GR, the total Hamiltonian is:
+
+H_total = ∫(constraints over volume) + ∮(boundary term)
+
+But the constraint equations (the Hamiltonian and momentum constraints) vanish for any physical solution—that’s what “on-shell” means.
+So, when you evaluate H_total on any physical state, the volume integral gives zero, leaving only the surface term at infinity.
+
+Thus, the Hamiltonian *reduces* to a boundary term. It still generates time evolution in the full bulk phase space (through Poisson brackets or commutators), but its *numerical value* and matrix elements depend only on boundary data.
+
+That’s why physicists say “energy lives on the boundary”: the bulk piece of the Hamiltonian is pure constraint.
+
+So when BHG says “the eigenvalues of the energy operator can be determined by measurements at the boundary,” he means that, once the constraints are enforced, all the dynamical information relevant to energy is encoded in the asymptotic falloff of the metric—exactly what the CFT measures.
+
+
+### 3. Philosophical tension
+
+Maudlin is thinking in standard GR terms, where the Hamiltonian is something that propagates data through the interior.
+BHG is thinking in canonical gravity terms, where the Hamiltonian *is* a boundary charge once the Einstein constraints are satisfied.
+
+Tim’s “how can a boundary operator generate the temporal evolution of the whole state?” is a great philosophical question, because it gets to the heart of holography’s nonlocality: time evolution *is* encoded at the boundary because the interior obeys constraints tying it to those boundary charges.
+
+From a physicist’s view, that’s just how gauge theories work: the Gauss-law constraints erase independent interior degrees of freedom. From a philosopher’s view, it sounds metaphysically shocking—how can the “whole universe” evolve from its edge?
+
+
+So:
+
+* Tim is defending ordinary intuition about energy as something *in* the bulk that causes motion.
+* BHG is invoking the canonical formalism where “energy” is a bookkeeping device at infinity that *encodes* that motion.
+
+The two aren’t contradicting each other so much as speaking two dialects of the same equation.
+But Tim’s resistance is important: he’s probing whether the holographic way of phrasing things really makes sense when you take the equations of GR literally rather than algebraically.
+

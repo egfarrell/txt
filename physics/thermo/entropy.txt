@@ -1,0 +1,265 @@
+
+### infophilosopher: "Room" for information
+    - $MY_NOTES/physics/infophilosopher-huge-archive.txt
+    - $MY_IMAGES/physics/thermo/infophilosopher-growth-of-information.jpg
+    - If entropy started at a maximum and can only increase, so
+      the universe is heading toward a so-called "heat death,"
+      I asked my astronomy professors, how is it today we can be
+      having such intelligent conversations about cosmology? How
+      is all our knowledge, all this information, being created?
+    - Only two faculty took the question seriously. 
+        - Chuck Whitney taught me about radiative energy transfer
+          in stellar interiors and suggested I look for possible
+          equations of entropy transfer. 
+        - David Layzer had also read Eddington. Layzer used
+          Eddington's suggestion (in "New Pathways in Science")
+          that the expansion of the universe could generate local
+          reductions in entropy where the formation of planets,
+          stars, and galaxies could occur.
+    - As every thermodynamics student knows, an irreversible
+      temporal process decreasing the physical entropy locally
+      requires a compensating increase in global entropy to
+      satisfy the 2nd law of thermodynamics.
+    - I'd like to call this Eddington's Law: 
+        - No Local Entropy Decline Without a Global Entropy
+          Increase
+    - Layzer's book `Cosmogenesis: The Growth of Order in the
+      Universe` showed how both disorder (entropy) and order
+      (negative entropy) are increasing in the universe.
+    - I've adapted Eddington and Layzer's descriptions to show
+      how actual entropy increases much more slowly than the
+      maximum possible entropy, leaving room for the growth of
+      information. 
+        - $MY_IMAGES/physics/thermo/infophilosopher-growth-of-information.jpg
+        - The universe began in equilibrium. It's maximum entropy
+          was very low.
+
+### Types of entropy
+    - $MY_NOTES/physics/QG/BH-Info-Loss-Sabine-Maudlin-BHG.txt
+    - See also: "# Different entropies?" below
+    - Thermodynamic entropy
+        - original 19th-century concept (Clausius) describing
+          heat and irreversibility.
+    - Statistical mechanical entropy
+        - Boltzmann’s and Gibbs’s microscopic explanation of
+          thermodynamic entropy.
+    - Shannon entropy
+        - mid-20th century abstraction by Shannon, reframing
+          entropy as information uncertainty.
+    - Von Neumann entropy
+        - quantum generalization of Shannon’s formula, applying
+          to density matrices.
+    - Entanglement entropy
+        - modern offspring, using von Neumann entropy to quantify
+          quantum correlations between subsystems.
+
+    - Thermodynamic entropy
+        - is the macroscopic measure of disorder or energy
+          dispersal in a system. Defined through `dS = δQ_rev
+          / T`, it increases irreversibly when energy spreads
+          into more microscopic degrees of freedom. 
+        - It governs the arrow of time via the second law:
+          isolated systems evolve toward higher entropy. 
+        - Unlike microscopic entropies, it doesn’t count states
+          directly but emerges as a coarse-grained, observable
+          quantity. It connects heat, work, and the statistical
+          underpinnings of irreversibility.
+    - Statistical mechanical entropy
+        - counts how many microscopic configurations
+          (microstates) correspond to a given macroscopic state.
+          Boltzmann gave it as `S = k * ln W`, where `W` is the
+          number of accessible microstates and `k` is Boltzmann’s
+          constant. 
+        - It links probability with thermodynamics: 
+            - more microstates mean higher entropy. 
+            - In quantum statistical mechanics, `W` becomes the
+              dimension of the relevant Hilbert subspace. 
+            - It’s the bridge between microscopic physics and
+              macroscopic irreversibility.
+    - Shannon entropy
+        - measures average uncertainty in a set of possible
+          messages with probabilities {p_i}. Defined as H = -∑
+          p_i log p_i, it quantifies how much information is
+          gained on average when you learn the outcome. High
+          entropy means high unpredictability; low entropy means
+          redundancy or certainty. It’s the bedrock of
+          information theory and data compression. In spirit,
+          it’s the same as statistical entropy—just applied to
+          abstract information rather than physical states.
+     - Von Neumann entropy
+        - generalizes classical entropy to quantum states,
+          quantifying uncertainty or mixedness of a density
+          matrix `ρ`.
+        - It’s given by `S = -Tr(ρ log ρ)`.
+        - For pure states, `S = 0` since there’s no uncertainty;
+          for mixed states, it’s positive. It tells how much
+          information is missing about which pure state the
+          system’s in. It’s the fundamental entropy concept
+          underlying quantum information theory.
+    - Entanglement entropy
+        - measures how much quantum information is shared between
+          two subsystems of an entangled state.
+        - If you take a pure quantum state and trace out part of
+          it, the remaining subsystem looks mixed—the
+          entanglement entropy quantifies that mixedness.
+        - It’s defined as `S = -Tr(ρ_A log ρ_A)`, where `ρ_A` is
+          the reduced density matrix.
+            - Zero entanglement entropy means the subsystems are
+              unentangled; maximal entropy means they’re deeply
+              correlated. It captures the “quantum glue” tying
+              parts of a system together.
+
+
+
+# Entropy (etymology)
+    - from `trope` = the Greek for 'transform'
+    - and `En` to signify it's relatedness to energy
+    - Entropy is heat's ability to be _transformed_ into other
+      forms of energy such as work
+    - Another version: What is entropy?
+        - Youtube video (or podcast): said Entropy was energy
+          "spreading out"
+
+# What is entropy? :)
+    - A professor of thermodynamics was known to give the same
+      final exam every year, always consisting of just the single
+      question:  "What is entropy?"
+    - One day an assistant suggested it might be better to ask
+      a different question now and then, so the students wouldn’t
+      know in advance what they would be asked.
+        - The professor said not to worry.  "It’s always the same
+          question, but every year I change the answer."
+        - $MY_NOTES/physics/thermo/gadflies-geniuses.txt
+
+
+### old physics note: entropy
+    - typically _hidden_ information
+
+### Entropy: Most Misunderstood Concept in Physics
+    - Veritasium https://www.youtube.com/watch?v=DxL2HoqLbyA
+    - Good visual of a Carnot engine
+    - Entropy: the tendency of energy to 'spead out'
+
+### Interesting stuff about Entropy
+    - $MY_NOTES/physics/QM/quantum-ten.txt
+    - Einstein posed the question of how the entropy, the measure
+      of 'disorder' of the gas molecules, would change if the
+      volume of the container got smaller but the number of
+      molecules stayed the same, and he proposed that:
+        - the change in ENTROPY
+        - corresponded to the change in VOLUME.
+    - ... idea of conservation of energy as a _statistical
+      probability_ rather than an absolute law.
+
+
+# Different entropies?
+    - you’ve just stumbled into one of the most fascinating
+      threads in the tapestry of physics: how *entropy* evolved
+      from thermodynamics to information theory, weaving through
+      Gibbs, von Neumann, and Shannon. It’s the story of how
+      “disorder” became “information,” and how the density matrix
+      sits right at the crossroads.
+    - Let’s walk through it chronologically — each thinker added
+      a new layer of meaning.
+
+
+### 1. Gibbs and the classical statistical world
+
+- In the late 1800s, J. Willard Gibbs developed *statistical
+  mechanics* — a way to describe macroscopic systems (like gases)
+  in terms of probabilities over microscopic states.
+
+- He realized you can’t know every molecule’s position and
+  momentum, so you describe the system by a probability
+  distribution {p_i} over all possible microstates. He defined
+  the Gibbs entropy as:
+    - `S = -k * Σ p_i * ln(p_i)`
+    - where `k` is Boltzmann’s constant.
+
+- This formula quantifies uncertainty: if one state has
+  probability `1` (you know everything), `S = 0`.
+- If probabilities are spread out, S increases.
+
+- So Gibbs entropy = *ignorance about microstates*.
+
+- It was the first time entropy was framed statistically rather
+  than mechanically.
+
+
+### 2. Von Neumann: the quantum leap
+
+- Jump to 1932. John von Neumann, building on both Gibbs and
+  quantum theory, asked:
+
+- “Okay, but what if the world is quantum, not classical?
+  Probabilities are replaced by density matrices. What’s entropy
+  then?”
+
+- He defined quantum entropy as:
+    - `S = -k * Tr(ρ * ln(ρ))`
+This is the von Neumann entropy.
+
+- It’s the *direct quantum analogue* of Gibbs’s formula, but
+  using the density matrix `ρ` instead of classical probabilities.
+
+- If `ρ` represents a *pure state*
+    - (ρ^2 = ρ), then S = 0 → no uncertainty.
+- If `ρ` is *mixed*,
+    - S > 0 → there’s missing information, either because of
+      classical ignorance or entanglement with something else.
+
+- That’s the key: quantum entropy can measure entanglement — the
+  “hidden” correlations between systems.
+
+- Von Neumann didn’t use that language yet, but he saw that
+  ρ could describe subsystems of a larger pure state, and that
+  tracing out part of the system increased entropy.
+
+- He had, without quite realizing it, described *entanglement
+  entropy* decades before anyone used that term.
+
+
+### 3. Shannon: the information twist
+
+- In 1948, Claude Shannon published *A Mathematical Theory of
+  Communication*, and introduced the Shannon entropy:
+    - `H = -Σ p_i * log_2(p_i)`
+
+- This measures *information content* — how many bits you need on
+  average to describe an outcome drawn from probabilities {p_i}.
+
+- It’s formally identical to Gibbs’s formula, just with different
+  units (bits instead of joules per kelvin).
+
+- Shannon probably didn’t know that von Neumann had already
+  written the same functional form for quantum systems. Legend
+  has it that when Shannon asked von Neumann what to call his new
+  measure, von Neumann said: “Call it *entropy*, because nobody
+  knows what entropy really is, so in a debate you’ll always have
+  the advantage.” (It’s probably apocryphal, but delightful.)
+
+
+### 4. The modern view: one idea, many faces
+
+So, the three are part of one evolutionary line:
+
+- Gibbs entropy: Classical uncertainty in phase space.
+- Von Neumann entropy: Quantum uncertainty in Hilbert space.
+- Shannon entropy: Information-theoretic uncertainty in abstract probability space.
+
+Same mathematical structure, different physical interpretation.
+
+- And now, in modern quantum information theory, the von Neumann
+  entropy plays the starring role again. It quantifies:
+
+    - How entangled two subsystems are (entanglement entropy).
+    - How much information is lost to the environment
+      (decoherence).
+    - The ultimate limits of quantum communication and
+      computation (via quantities like mutual information and
+      channel capacities).
+
+- In short: Gibbs gave entropy *teeth*, von Neumann gave it
+  *quantum depth*, and Shannon gave it *meaning*. They all
+  discovered the same equation hiding in different corners of
+  nature.

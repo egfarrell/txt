@@ -1,0 +1,225 @@
+# key:
+    - TYPES of dofs
+        - positional
+        - momentum
+        - rotational
+        - vibrational
+    - NUMBER of dofs: `3N` per atom
+
+
+### TYPES of dof
+    - molecules can have four types of degrees of freedom (dof's):
+
+    - POSITIONAL dof:
+        - 3 dof: x, y, z coordinates of the center of mass.
+
+    - MOMENTUM dof (translational):
+        - 3 dof: momentum in x, y, z directions.
+
+    - ROTATIONAL dof:
+        - `2` for linear (diatomic) molecules (no rotation around bond axis).
+        - `3` for non-linear (polyatomic) molecules.
+
+    - VIBRATIONAL dof –
+        - `3N - 5` for linear molecules.
+        - `3N - 6` for non-linear molecules (N = number of atoms).
+        - Note: Each vibrational mode contributes `2 dof` (`potential` + `kinetic` energy parts).
+
+- So, molecules can have these 4 types of dof’s. The total NUMBER
+  of dof depends on the exact molecular structure.
+
+### Total number of dof's
+    - `3N` total degrees of freedom:
+        - Any molecule with `N` atoms has `3N` total dof:
+        - Each atom can move independently in 3D space → x, y, z.
+
+### Focus on vibrational dof's
+    - Firstly `3N` total degrees of freedom:
+    - Now subtract the non-vibrational dof's:
+        1. Translational dof’s: `3`
+            - Entire molecule can move as a whole in x, y, z
+            - → `3 dof.`
+
+        2. Rotational dof’s:
+            - Linear molecules (e.g. O₂, CO₂):
+                - only rotate about 2 axes
+                - (not around the bond axis, as it has negligible
+                  moment of inertia).
+                - → `2 rotational dof`
+
+            - Non-linear molecules (e.g. H₂O, NH₃):
+                - rotate about all 3 axes
+                - → `3 rotational dof`
+
+    - So, vibrational dof’s = what's left:
+        - Linear:
+            - Vibrational dof = 3N - 3 (translational) - 2 (rotational)
+            - = `3N - 5`
+
+        - Non-linear:
+            - Vibrational dof = 3N - 3 - 3
+            - = `3N - 6`
+
+# Another explanation
+
+* Degrees of Freedom (DOF): 
+    - Independent ways a molecule can STORE ENERGY.
+
+* Total DOF: 
+    - For a molecule with N atoms, each atom has 3 spatial
+      coordinates, so `3N` total degrees of freedom. 
+    - These `3N` dof's are _distributed_ among translational,
+      rotational, and vibrational motions.
+
+* Translational DOF:
+    * Movement of the entire molecule through space (x, y, z directions).
+    * Always `3 dof`.
+
+* Rotational DOF:
+    * Rotation of the molecule around its center of mass.
+    * Linear molecules (e.g., `O_2`, `CO_2`): 
+        - Rotate around two axes perpendicular to the molecular
+          axis. Rotation around the bond axis doesn't change the
+          molecule's orientation, so it doesn't count as
+          a rotational DOF.
+        * `2 dof`
+    * Non-linear molecules (e.g., `H_2O`, `CH_4`): 
+        - Can rotate around three independent axes.
+        * `3 dof`
+
+* Vibrational DOF:
+    * Internal motions where atoms within the molecule move
+      relative to each other (stretching, bending bonds).
+    * Calculated by subtracting translational and rotational
+      dof's from the total `3N` dof's.
+
+    * For linear molecules:
+        * Total DOF: `3N`
+        * Translational DOF: 3
+        * Rotational DOF: 2
+        * Vibrational DOF `= 3N - Translational - Rotational 
+                           = 3N - 3 - 2 
+                           = 3N - 5`
+
+    * For non-linear molecules:
+        * Total DOF: `3N`
+        * Translational DOF: 3
+        * Rotational DOF: 3
+        * Vibrational DOF `= 3N - Translational - Rotational 
+                           = 3N - 3 - 3 
+                           = 3N - 6`
+
+* Each vibrational mode contributes `2 dof`:
+    * Unlike translational and rotational dof's (which are purely
+      kinetic energy), vibrational modes involve both `kinetic`
+      energy (atoms in motion) and `potential` energy (stored in
+      the stretched/compressed bonds).
+
+    * Therefore, each unique way a molecule can vibrate
+      contributes two degrees of freedom for energy storage.
+
+
+### convsersation:
+
+Question:
+    - Clarification: So for a diatomic molecule, then  N = 2
+        - So for vibrational dof it'd be:
+        - 3N - translational dofs - rotational dofs
+        - = 6 - 3 - 2
+        - = 1 vibrational dof
+        - *BUT* that 1 vibrational "dof" would actually have two "components": KE and PE... ??
+        - so that *one* vibrational dof is actually *two* vibrational dofs??
+
+Answer:
+    - Your calculation for a diatomic molecule is correct:
+        - N = 2 (e.g., O2, HCl)
+        - Total DOF: 3N=3×2=6
+        - Translational DOF: 3
+        - Rotational DOF: 2 (diatomic molecules are linear)
+        - Vibrational DOF: 3N−3−2=6−3−2=`1`
+
+    - Regarding your clarification:
+        - Yes, that one vibrational "mode" (or "degree of
+          freedom" in the `3N−X` formula sense) indeed has two
+          components: 
+            - Kinetic Energy (KE) and Potential Energy (PE).
+        - It's often clearer to say "1 vibrational mode" rather
+          than "1 vibrational dof" when referring to the outcome
+          of the 3N−X formula, and then acknowledge that each
+          mode contributes 2 actual degrees of freedom for energy
+          storage (one for KE, one for PE).
+
+- So, for a diatomic molecule:
+        - You calculate 1 vibrational mode.
+        - This single vibrational mode accounts for 2 actual
+          degrees of freedom for energy partitioning
+          (equipartition theorem context), one for the kinetic
+          energy of the vibrating atoms and one for the potential
+          energy stored in the bond.
+
+### Question:
+    - cheers... the use of the word "mode" has made it clearer...
+      (for vibrational modes/dofs)
+    - But does this distinction between "mode" and actual "dof"
+      apply also to translational, positional, rotational dofs? 
+
+
+### Answer
+    - This question highlights a subtle but important distinction
+      in the terminology!
+    - The distinction between "mode" and "actual DOF" is
+      primarily relevant and most prominent for vibrational
+      motion.
+
+    - Here's why:
+
+    - Translational DOF:
+        - For translational motion, "mode" and "DOF" are
+          essentially interchangeable.
+        - Moving in the x-direction is one translational mode,
+          and it contributes 1 DOF (specifically, `1 kinetic
+          energy term`, 1/2mvx2).
+        - There are 3 such independent directions (x, y, z), so
+          3 translational modes = 3 translational DOF. 
+        - There's no separate potential energy associated with
+          pure translation (in free space).
+
+    - Rotational DOF:
+        - Similar to translational, for rotational motion, "mode"
+          and "DOF" are also largely synonymous.
+        - Rotating around a specific axis (e.g., Rx, Ry, Rz) is
+          a rotational mode, and it contributes 1 DOF (`1 kinetic
+          energy term`, 1/2Iω2).
+        - For linear molecules, there are 2 rotational modes
+          = 2 rotational DOF.
+        - For non-linear molecules, there are 3 rotational modes
+          = 3 rotational DOF. Again, no separate potential energy
+          is stored in pure rotation.
+
+    - Vibrational DOF:
+        - This is where the distinction becomes crucial.
+          A "vibrational mode" refers to a specific, independent
+          pattern of atomic motion within the molecule (e.g.,
+          a symmetric stretch, an asymmetric stretch, a bending
+          motion).
+        - Each of these distinct vibrational "modes" stores
+          energy in two ways:
+            - Kinetic energy from the atoms moving.
+            - Potential energy from the bonds being stretched or
+              compressed (like a spring).
+        - Therefore, each vibrational mode contributes 2 degrees
+          of freedom to the total energy of the molecule
+          according to the equipartition theorem (at high enough
+          temperatures where these modes are fully "active").
+
+    - In summary:
+        - For translational and rotational motion, a "mode"
+          directly corresponds to a single degree of freedom
+          (which is associated with a `kinetic energy term`).
+        - For vibrational motion, a "mode" refers to a distinct
+          pattern of vibration, and each such mode contributes
+          two degrees of freedom (one for kinetic energy and one
+          for potential energy) to the overall energy balance of
+          the molecule.
+
+This is why the formulas for vibrational DOF (3N−5 or 3N−6) count the number of vibrational modes, and then for energy considerations, each of those modes is understood to contribute 2 DOF.

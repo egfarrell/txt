@@ -1,0 +1,26 @@
+
+### Random Thoughts
+    - Snakemake is much more focused on `naming files` in a way
+      that you can figure out what input data and _parameters_ were
+      used to produce them, making it easier to compare results
+      from variations on the main analysis. 
+
+    - Versioning: The way a workflow like Snakemake can help here
+      is by letting the filenames pretty much describe how each
+      particular output was created, meaning data outputs can act
+      as immutable in a sense.
+        - What I mean is that rather than create a _new version_
+          of a file, if you run the same analysis with different
+          sets of parameters, it should generate a new file with
+          a different name rather than a new version of the old
+          one. This also helps comparing differences between
+          output from different parameters etc.
+
+
+### Links
+    - Biostars advice Titus Brown:   https://www.biostars.org/p/9542739/
+    - yt: Titus Snakemake tutorial   https://hackmd.io/7k6JKE07Q4aCgyNmKQJ8Iw?view
+    - yt: Pat Snakemake example      https://www.youtube.com/watch?v=J6JIKk2MGs4
+    - hn: Snakemake                  https://news.ycombinator.com/item?id=36735616
+    - paper: Snakemake methods paper https://f1000research.com/articles/10-33/v2
+

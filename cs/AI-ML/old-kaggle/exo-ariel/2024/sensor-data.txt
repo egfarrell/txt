@@ -1,0 +1,339 @@
+
+- Kaggle: Understanding Exoplanets & FSG1 Signal https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/524109#2950885
+- Youtube: Vox explanation of Exoplanets         https://www.youtube.com/watch?v=STsI6IbPbGQ&ab_channel=Vox
+
+
+### Are calibration files all the same?
+    - I checked the calibration files for AIRS_CH0 sensor and
+      they are all the same for all the planets. That is the
+      dark.parquet, flat.parquet, read.parquet, dead.parquet
+      files of one planet is the same as those of others. The
+      same is true with the FGS1 sensor calibration data.
+    - I am wondering if I have made a mistake or is this
+      intended?
+    - Answer:
+        - They are for the train set, but not for the test set.
+
+
+### Understanding Calibration Data in Our Simulations
+    - Important info about Readout noise, Dark frames, ADUs etc
+
+    - Dark Frames vs Dark Current Calibration Products
+        - In typical astronomical data processing, dark frames
+          are images taken with the shutter closed, capturing
+          only the inherent electronic noise of the detector,
+          known as dark current. These dark frames are usually
+          subtracted from the actual observation data to remove
+          this unwanted noise.
+        - However, in our case, the "dark frames" we provide are
+          not traditional dark frames collected by a telescope.
+          Instead, they are estimates of the dark current.
+          Because of this, these dark current products need to be
+          scaled according to the integration time of each frame
+          before being subtracted from the observational data.
+          This ensures that the dark current is accurately
+          accounted for in relation to the exposure duration.
+
+    - Flat Fields in Our Simulations
+        - Similarly, flat fields in typical observations are used
+          to correct for variations in the pixel-to-pixel
+          sensitivity of the detector. Observationally, these are
+          obtained by imaging a uniformly illuminated field. The
+          data we provide, however, are not observational flat
+          fields. Instead, they are estimates of the relative
+          efficiency of each pixel in detecting light, which is
+          why these "flats" have a mean value of one. Their
+          purpose is to correct for variations in quantum
+          efficiency across the detector, but because they are
+          simulated, they might differ statistically from
+          observational flats.
+
+    - Uniformity of Calibration Products
+        - In our data, the calibration products (darks, flats,
+          etc.) are identical across frames. This is because
+          we’ve simulated observations using the same detector
+          consistently, which reflects real-life scenarios where
+          different observations would be made with the same
+          telescope. As a result, the same calibration products
+          would be available throughout all observations.
+
+    - Should I calibrate?
+        - Calibration is crucial in the study of planetary
+          transits to ensure precise measurements of the
+          brightness variations. Since transit signals are very
+          weak, with a required accuracy of about `100 ppm`, even
+          small instrumental errors can introduce significant
+          distortions.
+        - E.g., if there is a constant additive signal `C`
+          in the data, the transit depth, calculated as the
+          difference of the out of transit signal and the in
+          transit signal divided by the signal out of transit
+          will be distorted.
+            - $MY_IMAGES/astro/exo/calibration-error.jpg
+
+    - Readout
+        - DennisSakva
+            - This is the exposure taken with the shortest
+              possible exposure time with the shutter closed. You
+              take several, average and it gives you the readout
+              noise.
+            - After that, you can subtract readout noise from the
+              dark frame and get an estimate of dark current
+              which can be scaled upwards or downwards depending
+              on the exposure time. In our case, readout noise
+              was already subtracted (supposedly) from the dark
+              frame, it's not clear if it was subtracted from the
+              light frames though.
+        - Lorenzo Mugnai
+            - Yes, that’s correct. The "read" frames we provide
+              are estimates of the read noise amplitude for each
+              pixel. As mentioned earlier, in our case, the dark
+              frames are estimations of the dark current and are
+              not affected by read noise. However, the science
+              (or light) frames are affected by read noise.
+        - Bilzard
+            - Is this picture correct for detector measurements?
+                - $MY_IMAGES/astro/exo/detector-readout.jpg
+            - Then, since read noise is constant on both two
+              observations (i.e. at `0.1` and `4.5`), we don't
+              have to take care read noise because they cancel
+              out by subtracting them?
+            - And if we should take care read noise, should we
+              subtract them from actual measurements, or add to
+              them?
+
+        - Lorenzo Mugnai
+            - The read noise is an additional source of noise
+              originating from the electronic components of the
+              detector, such as the amplifiers and readout
+              circuitry, and is random in nature. 
+            - Even though the read noise may have similar
+              amplitudes for both images (at `0.1s`  and `4.5s`
+              in your diagram), it does not cancel out during
+              subtraction.
+            - To clean up for dark current, see:
+                - https://www.kaggle.com/code/gordonyip/update-calibrating-and-binning-astronomical-data?scriptVersionId=192915144&cellId=20
+
+        - DennisSakva
+            - It's not cancelling in the same sense as
+              subtracting one gaussian noise from another
+              generated with the same parameters do to cancel
+              each other.
+            - Rephrase: "The read noise doesn't cancel out in
+              the way that subtracting one set of random noise
+              (like Gaussian noise) from another set with the
+              same characteristics would result in cancellation."
+
+        - Lorenzo Mugnai
+            - That is correct. Because, as I said, read noise is
+              random in nature. Thank you
+
+        - Important Question: 
+            - Is the data uncalibrated or already calibrated to
+              a certain degree? 
+            - What _units_ is it in; 
+                - raw detector counts `dN`?
+            - Does the provided files properly flux calibrate
+              everything to `mJy`? or just to `Me/s`?
+        - Answer:
+            - The data we provide are raw and in units of `ADU`
+              (Analog-to-Digital Units).
+            - ADU refers to the digital values generated by the
+              detector in response to the light it collects. When
+              light hits the detector, it creates a signal that
+              is converted from an analogue signal (the voltage
+              produced by photons hitting the detector) to
+              a digital signal through an analogue-to-digital
+              converter. 
+                - These values are stored as integers because the
+                  analogue-to-digital conversion process rounds
+                  the signal to whole numbers for efficiency and
+                  simplicity in storage. 
+            - The ADU value represents the strength of this
+              signal but has not yet been calibrated into
+              physical units like flux (e.g., `mJy`).
+
+
+### Overview: sensor data
+    - $MY_IMAGES/astro/exo/time-series-sensor-data.jpg
+
+    - Discussion: better understanding: Targets vs Sensors mappings (FGS1 & CH0) https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/527039
+
+    - Sensor FGS1 
+        - => Every 0.1 sec, it captures a 32x32 image 
+        - => (135,000 secs x 10) x ( 32x32 ) 
+            - ME: I think the above line is wrong. (`x 10` is wrong)
+            - Each file contains 135,000 rows of images at 0.1 second time steps. 
+
+    - Sensor CH0 
+        - => Every time step in `axis_info.parquet` 
+        - => it captures (11,250 sub steps ) x (32 x 356)
+
+    - Me: All this about '1.2' secs is wrong?
+        - Total Time = 13,500 secs 
+            - => (13500x10)/(11250) 
+            - => approx every 1.2secs we have sensor data from `CH0`
+
+    - wavelengths.csv 
+        - `w_1`         = 0.70µm 
+        - `w_2 - w_283` = 1.95µm - 3.9µm 
+
+    - axis_info 
+        - => AIRS-CH0-axis0-h vs FGS1-axis0-h 
+        - => correlate 100% 
+        - => from axis 0 to 7.5 scale
+
+    - Discussion
+       - I find it interesting that they provide simulated data
+         outside the sensors wavelength sensitivity (1.95 -> 3.90
+         µm); it looks like Gordon is correcting for it in the
+         notebook.
+       - https://www.kaggle.com/code/gordonyip/calibrating-and-time-binning-astronomical-data?scriptVersionId=191665579
+
+        - I struggled to visualize it until I looked at the AIRS
+          optical chain diagram in the ARIEL red book, which
+          shows light entering via a slit then being partitioned
+          by wavelength using a Prism
+            - $MY_IMAGES/astro/exo/airs-optical-chain.jpg
+
+    - Thanks for reply! I agree that `x` is wavelength domain,
+      but how to understand that `y` is spatial domain? 
+        - Why is it only one dimension?
+        - For a given `x` (wavelength), we have a high flux when
+          `y` has a middle value, what's the meaning of this?
+        - $MY_IMAGES/astro/exo/ch0-spatial-y-high-middle.jpg
+
+    - Competition host:
+        - Originally, scientists only have _irradiated pixels_,
+          with the only unit being pixels. 
+        - To simplify the process of linking these pixels to the
+          _wavelength_ of the light, we simulated the detector so
+          that the light always aligns with the pixel window and
+          is dispersed in one direction: `the x-axis`. And this
+          is why we provide the wavelength of the light hitting
+          each pixel.
+        - Also, the signal is strongest at the center of the
+          `y-axis` because we've aligned the signal to be
+          dispersed horizontally, and the light from a point
+          source is spread by the telescope optics, and typically
+          it PEAKS AT THE CENTER.
+
+
+### Meaning of dimensions in AIRS-CH0 images
+    - I'm trying to understand what the `AIRS0-CH0` images
+      represent. 
+    - We are told they are `32 x 356` images.
+    - According to this diagram the `356` sized dimension
+      corresponds to different spectra. 
+        - It also says that the slice `[39,321]` corrosponds to
+          the spectra in `wavelengths.csv`. 
+        - Is this correct? 
+        - If so what is contained in the `[0, 39]` and `[321,
+          356]` slices (spectra outside 1.95um-3.90um)?
+    - Further what is the meaning of the length `32` dimension? 
+        - IS IT SPATIAL INFORMATION OF SOME SORT?
+        - YES: 32 pixels along the detectors spatial direction.
+    - Answer: 
+        - The `356-sized dimension` corresponds to different
+          spectral channels as the light is dispersed
+          horizontally, while the `32-sized dimension` represents
+          the SPATIAL DIRECTION OF THE DETECTOR. 
+        - Before the light is dispersed onto the detector, it is
+          _filtered_ to ensure that the relevant wavelengths
+          within the 1.95 µm to 3.90 µm range reach the detector.
+          The slice [39, 321] specifically contains the spectra
+          within this wavelength range, and therefore listed in
+          wavelengths.csv.
+        - The slices `[0, 39]` and `[321, 356]` represent regions
+          of the detector that fall outside the 1.95 µm to 3.90
+          µm band. These regions are considered "out-of-band"
+          because the signal in these areas is attenuated by the
+          filters.
+
+### Another try at spatial dimension for AIRS-CH0
+    - I understand two of the dimensions of the data: the 11,250
+      timestamps, and 356 is the different wavelengths of the
+      spectra... but what is the 'spatial dimension' of 32???
+    - I read somewhere the `32` represents '32 pixels along the
+      detectors spatial direction'
+    - But for a spectrograph, what does the 'spatial direction'
+      of the detector mean?? Or what is this dimension of 32
+      pixels physically? A strip on the sky 32 pixels
+      wide?(probably not)
+
+    - ChatGPT:
+
+    - In the context of a spectrometer, particularly for an
+      instrument like the Ariel InfraRed Spectrometer (AIRS), the
+      "spatial direction" of the detector refers to the way the
+      instrument images the light it captures before it disperses
+      it into a spectrum. Let's break this down:
+
+    1. Spectrometer Basics:
+        - A spectrometer disperses incoming light into its
+          component wavelengths (creating a spectrum) which is
+          then detected by a sensor.
+        - The sensor records both the _spatial and spectral_
+          information. The spectral information is usually
+          represented along one axis (e.g., the 356 pixels
+          corresponding to different wavelengths), while the
+          spatial information is captured along the other axis.
+
+    2. Spatial Dimension (32 Pixels):
+        - The 32 pixels along the "spatial direction" likely
+          correspond to a physical direction on the sky that the
+          instrument is imaging.
+        - Imagine the instrument is looking at a strip of the sky
+          or the surface of a planet; it captures a small slice
+          (or strip) of that image along one axis (this is your
+          32 pixels).
+        - The spectrometer then disperses the light from each of
+          those 32 spatial pixels into a spectrum, resulting in
+          the 356 different wavelengths (the spectral dimension).
+        - Each row in the 32 x 356 image corresponds to the
+          spectrum of light from one of those 32 spatial
+          positions.
+
+    3. Physical Interpretation:
+        - The 32 pixels do not directly correspond to a specific
+          width on the sky. Instead, they represent how the
+          instrument spatially samples the incoming light.
+        - It might be that the instrument is focused on
+          a specific target, and these 32 pixels are recording
+          different points across that target. For example, if
+          AIRS is observing a planet or a star, the 32 pixels
+          could correspond to different points across the
+          planet's disk or along a strip of the star.
+
+    4. Detector Layout:
+        - The detector used in a spectrometer typically has a 2D
+          array of pixels. One dimension of this array is aligned
+          with the spatial direction (here, 32 pixels), while the
+          other dimension is aligned with the spectral direction
+          (here, 356 pixels).
+        - After light from a specific region of the sky is
+          dispersed into its spectrum, the spectrum from each
+          spatial pixel is recorded along the spectral axis,
+          giving you the full 32 x 356 image for each timestamp.
+
+    5. In Summary:
+        - The "32 pixels along the detectors spatial direction"
+          means that the instrument is recording data from 32
+          different spatial points (like a strip) on the sky (or
+          target). Each of these points has a corresponding
+          spectrum, which is recorded as 356 different wavelength
+          measurements. The detector captures these 32 spatial
+          positions simultaneously, and each of these spatial
+          positions is dispersed into a spectrum. The result is
+          a 32 x 356 pixel image representing both spatial and
+          spectral information.
+
+        - So, to answer your specific question: the "spatial
+          direction" of the detector is the dimension that
+          captures different points (or "pixels") across the
+          object or field of view that the spectrometer is
+          observing. This dimension of 32 pixels is not a literal
+          strip on the sky but represents how the instrument
+          spatially samples the incoming light before dispersing
+          it into a spectrum.
+

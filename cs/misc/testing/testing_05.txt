@@ -1,0 +1,88 @@
+udacity software testing 05
+
+Overwhelmed by bugs?
+	If software not random tested before you could 
+	find loads of bugs.
+	But how often is the software updated?
+
+Need Bug triage
+	disambiguate bugs
+		based on assertion messages
+		based on core dump or stack message
+		based on search over revision history (git_bisect)
+		based on test cases
+	possible: 
+		one defect, many bugs
+		many defects, one bug (segmentation fault)
+		single defect, single symptom (parallel bug report)
+
+test case reduction
+	large input that triggers failure,
+	and turn it into a small input.
+	two options:
+		manual reduction (traditional)
+		delta debugging (words for any text based input!)
+
+Art of reporting bugs (to open source software)
+	dont report duplicates
+	respect local conventions
+	include a small standalone test-case
+	only report VALID test cases 
+		(e.g. internal interfaces dont perform checking)
+	include expected and actual output
+	instructions for reproduction
+		platform
+		SUT version
+
+
+Test suite 
+	collection of test cases
+	often run automatically
+	periodically - nightly, on every commit
+	goal: to show SUT has some desired properties
+
+Whats in a Test Suite?
+	small, feature specific tests
+	large realistic inputs
+	regression test (previous cases that caused SUT to fail)
+	usually NOT a random tester!
+		random testing can introduce new bugs
+		but we want the test suite to be predictable!
+
+Hard testing problems
+	lack of a (good) spec
+	no comparable implementations
+	big SUT
+	large, highly structured input space
+	non-determinism
+	lots of hidden states (in a large virtual machine)
+	lack of strong oracles
+	e.g. large molecular simulation
+	e.g. autopilot
+	e.g. JVM with 32 cores for a month, using 40G heap
+
+What to do about hard testing problems?
+	make do with weak oracles
+	make do with small hand-checked inputs
+	rely on code inspections, formal methods
+
+Summary of testing principles
+	testers must want software to fail
+	testers musnt ignore anomalies
+	ALL available test oracles should be used
+	test cases should have values from entire input domain
+	interfaces that cross trust boundary must be tested with all representable values
+	a little brute force goes a long way
+		sometimes exhaustively test selected interfaces
+		everything else can be randomly tested
+	quality cannot be tested into bad software (TRUE!)
+
+3 kinds of input 
+	should be used as basis for testing:
+	1. API's PROVIDED by SUT can be directly tested
+	2. API's USED by the SUT can be tested using fault injection
+	3. Non-functional inputs (thread scheduling) - test any way you can (coin on wire)
+
+Failed code coverage
+	doesnt provide mandate to cover failed items,
+	but instead gives clues as to how tests are inadequate

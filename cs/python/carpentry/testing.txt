@@ -1,0 +1,52 @@
+software carpentry testing
+
+
+Unit test, 
+    tests one component of a program
+    fixture
+    action
+    expected result
+    actual result
+    report
+
+Fixtures
+    When testing, the "fixtures" are inputs 
+    to a function or data file to be processed.
+
+Interface:
+    softwares "contract" with the outside world
+
+Implementation:
+    nuts and bolts of how it does it
+
+For testing, depend on INTERFACE not on implementation.
+    This means we can replace functions we are 
+    not currently testing with simplified versions.
+
+StringIO
+    is a Python function that simulates reading and writing to a disk
+    file. ".getvalue" is a method supplied by StringIO which checks what
+    was written.
+
+Some test output is stored in SET objects, 
+so SORT the set before checking test results.
+
+Discussion about float-point numbers.
+    Read "What every computer scientist should know about floating point numbers"
+
+Absolute Error = |val-approx|
+Relative Error = |val-approx|/ val
+
+Relative error is more useful.
+
+Never use == or != with floating point numbers.
+    Its ok to trust >, >= though.
+    Instead use nose.assert_almost_equals which uses a tolerance.
+
+Setup function
+    If a module contains "setup" Nose will run it before any of the tests.
+
+@with_setup decorator
+    If you need to recreate the original fixtures before running a unit
+    test, then from nose import with_setup
+

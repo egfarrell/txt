@@ -1,0 +1,199 @@
+
+
+### top bar (status bar) icon
+    - `Current Refresh mode` has an icon in the status bar
+    - e.g. normal mode: the circle arrows with dots etc in the middle
+    - A2, Speed mode etc all have slightly different icons
+    - (Oct 2022, spent ages in Warsaw looking for this)
+
+### Battery tip:
+    - disable google play when not needed
+
+### Remove Ugly fonts in Poke 3
+    - These instructions gave me access to Android settings but
+      didn't really fix the ugly fonts problem:
+        - Step 1: Enable developer mode
+            - not accessisble thru standard Onyx interface
+            - Install Dev Tools (Android Developer)
+            - Goto Settings -> About Tablet ->
+                    - click on Build number 7 times
+        - Step 2:
+        - Start all apps on "Android Settings" mode
+            - Change developer options using this app:
+            - https://play.google.com/store/apps/details?id=com.singlebyte.devshortcut
+
+
+    - Another way: Change app "Bleach" settings
+        - (BUT THIS MAKES ALL WHITE TXT DISAPPAEAR IN TERMUX)
+        - Long Press app -> Optimize -> Bleach ->
+            - Add strokes to text = 0
+            - Background Color = 255
+
+### Packages I uninstalled
+pm uninstall -k --user 0 com.android.email
+pm uninstall -k --user 0 com.onyx.appmarket
+pm uninstall -k --user 0 com.onyx.calculator
+pm uninstall -k --user 0 com.android.providers.userdictionary
+pm uninstall -k --user 0 com.android.egg
+pm uninstall -k --user 0 com.onyx.dict
+pm uninstall -k --user 0 com.onyx.mail
+pm uninstall -k --user 0 com.onyx.easytransfer
+pm uninstall -k --user 0 com.google.android.syncadapters.calendar
+pm uninstall -k --user 0 com.google.android.syncadapters.contacts
+pm uninstall -k --user 0 com.android.protips
+
+pm uninstall -k --user 0 com.simplemobiletools.musicplayer
+pm uninstall -k --user 0 com.onyx.floatingbutton
+pm uninstall -k --user 0 com.onyx.kreader
+pm uninstall -k --user 0 com.android.localtransport
+pm uninstall -k --user 0 com.onyx.latinime
+pm uninstall -k --user 0 com.onyx.android.ksync
+pm uninstall -k --user 0 com.onyx.android.onyxotaservice
+pm uninstall -k --user 0 com.simplemobiletools.voicerecorder
+
+pm uninstall -k --user 0 com.android.smspush
+pm uninstall -k --user 0 com.simplemobiletools.clock
+
+### Packages
+    - package: com.android.cts.priv.ctsshim
+    - package: com.android.internal.display.cutout.emulation.corner
+    - package: com.android.internal.display.cutout.emulation.double
+    - package: com.android.providers.telephony
+    - package: com.android.dynsystem
+    - package: com.android.providers.calendar
+    - package: com.android.providers.media
+    - package: com.qti.service.colorservice
+    - package: com.android.theme.icon.square
+    - package: com.android.internal.systemui.navbar.gestural_wide_back
+    - package: com.android.theme.color.cinnamon
+    - package: com.onyx.dict
+    - package: com.onyx.kime
+    - package: com.onyx.mail
+    - package: com.android.protips
+    - package: com.android.theme.icon_pack.rounded.systemui
+    - package: com.android.documentsui
+    - package: com.onyx.android.onyxotaservice
+    - package: com.android.externalstorage
+    - package: com.android.htmlviewer
+    - package: com.qualcomm.qti.uceShimService
+    - package: com.android.companiondevicemanager
+    - package: com.android.quicksearchbox
+    - package: com.android.providers.downloads
+    - package: com.android.networkstack.inprocess
+    - package: com.android.theme.icon_pack.rounded.android
+    - package: vendor.qti.hardware.cacert.server
+    - package: com.android.theme.icon_pack.circular.themepicker
+    - package: vendor.qti.iwlan
+    - package: com.qualcomm.qti.optinoverlay
+    - package: com.qti.confuridialer
+    - package: com.android.providers.downloads.ui
+    - package: com.android.vending
+    - package: com.android.pacprocessor
+    - package: com.onyx.latinime
+    - package: com.android.internal.display.cutout.emulation.tall
+    - package: com.android.modulemetadata
+    - package: com.android.certinstaller
+    - package: com.android.theme.color.black
+    - package: com.android.theme.color.green
+    - package: com.android.theme.color.ocean
+    - package: com.android.theme.color.space
+    - package: org.codeaurora.bluetooth
+    - package: com.android.internal.systemui.navbar.threebutton
+    - package: com.onyx.android.ksync
+    - package: android
+    - package: com.qualcomm.wfd.service
+    - package: com.android.theme.icon_pack.rounded.launcher
+    - package: com.android.egg
+    - package: com.android.mtp
+    - package: com.android.stk
+    - package: com.android.backupconfirm
+    - package: com.onyx
+    - package: com.android.internal.systemui.navbar.twobutton
+    - package: com.onyx.easytransfer
+    - package: com.android.provision
+    - package: org.codeaurora.ims
+    - package: com.android.statementservice
+    - package: com.android.hotspot2
+    - package: com.android.settings.intelligence
+    - package: com.android.internal.systemui.navbar.gestural_extra_wide_back
+    - package: com.android.providers.settings
+    - package: com.android.sharedstoragebackup
+    - package: com.android.printspooler
+    - package: com.android.theme.icon_pack.filled.settings
+    - package: com.android.dreams.basic
+    - package: com.android.se
+    - package: com.android.inputdevices
+    - package: com.android.bips
+    - package: com.android.theme.icon_pack.circular.settings
+    - package: org.codeaurora.bluetooth.batestapp
+    - package: com.android.cellbroadcastreceiver
+    - package: com.google.android.webview
+    - package: com.android.theme.icon.teardrop
+    - package: android.ext.shared
+    - package: com.android.onetimeinitializer
+    - package: com.google.android.syncadapters.contacts
+    - package: com.android.keychain
+    - package: com.onyx.kreader
+    - package: com.android.printservice.recommendation
+    - package: com.android.theme.icon_pack.filled.systemui
+    - package: com.google.android.gms
+    - package: com.google.android.gsf
+    - package: com.google.android.tts
+    - package: android.ext.services
+    - package: com.google.android.partnersetup
+    - package: com.android.localtransport
+    - package: com.android.packageinstaller
+    - package: com.dsi.ant.server
+    - package: com.android.theme.font.notoserifsource
+    - package: com.android.theme.icon_pack.filled.android
+    - package: com.android.proxyhandler
+    - package: com.android.theme.icon_pack.circular.systemui
+    - package: com.onyx.floatingbutton
+    - package: com.google.android.syncadapters.calendar
+    - package: com.android.managedprovisioning
+    - package: com.simplemobiletools.musicplayer
+    - package: com.android.dreams.phototable
+    - package: com.android.smspush
+    - package: com.android.wallpaper.livepicker
+    - package: com.android.theme.icon.squircle
+    - package: com.android.bookmarkprovider
+    - package: com.android.settings
+    - package: com.qualcomm.qti.ims
+    - package: com.android.theme.icon_pack.filled.launcher
+    - package: com.android.networkstack.permissionconfig
+    - package: com.qualcomm.location
+    - package: com.android.cts.ctsshim
+    - package: com.simplemobiletools.voicerecorder
+    - package: com.android.theme.icon_pack.circular.launcher
+    - package: com.qualcomm.qti.services.secureui
+    - package: com.android.vpndialogs
+    - package: com.qualcomm.location.XT
+    - package: com.android.shell
+    - package: com.android.theme.icon_pack.filled.themepicker
+    - package: com.android.wallpaperbackup
+    - package: com.android.providers.blockednumber
+    - package: com.android.providers.userdictionary
+    - package: com.qualcomm.qti.seccamservice
+    - package: com.android.internal.systemui.navbar.gestural
+    - package: com.android.location.fused
+    - package: com.android.theme.color.orchid
+    - package: com.android.systemui
+    - package: com.android.theme.color.purple
+    - package: com.android.bluetoothmidiservice
+    - package: com.qualcomm.qti.poweroffalarm
+    - package: com.android.permissioncontroller
+    - package: com.android.traceur
+    - package: com.qualcomm.qti.qms.service.trustzoneaccess
+    - package: com.google.android.gms.setup
+    - package: uninstalled com.onyx.appmarket
+    - package: com.android.bluetooth
+    - package: com.qualcomm.timeservice
+    - package: com.android.providers.contacts
+    - package: com.android.captiveportallogin
+    - package: com.android.theme.icon.roundedrect
+    - package: com.android.internal.systemui.navbar.gestural_narrow_back
+    - package: com.android.theme.icon_pack.rounded.settings
+    - package: uninstalled com.onyx.calculator
+    - package: com.simplemobiletools.gallery
+    - package: com.android.theme.icon_pack.circular.android
+    - package: com.simplemobiletools.clock

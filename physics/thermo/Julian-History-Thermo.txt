@@ -1,0 +1,378 @@
+$MY_BOOKS/Physics/Thermo/Julian-History-Thermodynamics.pdf
+
+### Clausius
+    - "If for the entire universe we conceive the same magnitude
+      to be determined, consistently and with due regard to all
+      circumstances, which for a single body I have called
+      _entropy_, and if at the same time we introduce the other
+      and simpler conception of energy, we may express in the
+      following manner the fundamental laws of the universe which
+      correspond to the two fundamental theorems of the
+      mechanical theory of heat."
+        1. The _energy_ of the universe is constant
+        2. The _entropy_ of the universe tends to a maximum
+    - Simple English
+        - Imagine we measure the same quantity, which I call
+          "entropy," for the entire universe, just as I did for
+          a single object.
+        - If we also consider the simpler idea of "energy," we
+          can state the universe's basic rules, which are like
+          the two main ideas in the study of heat.
+        - 1. The total energy in the universe stays the same.
+        - 2. The total entropy in the universe always increases
+          to its highest possible level.
+
+
+### State functions
+    - If you walk from any point `A` on the Earth’s surface to
+      any other point `B`, your ALTITUDE above sea level at `B`
+      will be the same, whatever route you take.
+    - The same is true of the difference of altitudes.
+    - In fact, the _difference_ is physically more significant
+      since altitude could just as well be measured relative to
+      Mount Everest’s peak as to sea level.
+    - Quantities that are _route independent_ are very important
+      in physics. In thermodynamics they're called STATE
+      FUNCTIONS.
+    - We already met them as the pressure, volume and temperature
+      of gases in equilibrium.
+    - But other important qualities are _route dependent_.
+        - E.g. driving to a town that has 3 different toll roads,
+          each with differing amounts to pay. Then your journey
+          cost is route dependent.
+    - To determine the difference in heights above sea level at
+      the end of a journey, all you need to know are the start
+      and end points.
+        - But if you have to pay tolls and there are different
+          routes, you cannot determine the cost of the journey
+          unless you specify the _route_.
+
+### Two kinds of work: Interior / Exterior Work
+    - In his 1850 paper, Clausius recognized the full
+      significance of Joule’s work when he observed that TWO
+      different kinds of work can be performed in
+      a thermodynamics system.
+    - One is _interior work_
+        - (route independent)
+        - eg the work needed “to overcome the mutual attraction
+          of the particles” of water. (Joule had spoken of the
+          molecules of a compressed spring being “forced
+          asunder”.)
+    - Now the same amount of heat will need to be expended on the
+      interior work whenever and however it happens, for that
+      depends solely on the nature of the molecules.
+        - It’s route independent and analogous to altitude; all
+          you need to know are the intial and final states.
+    - The other is _exterior work_
+        - (route dependent)
+        - E.g. done by successive EXPANSIONS and compressions of
+          a gas. If the original condition of the gas is again
+          established at the end of the process, there is no
+          guarantee that the entire amount of WORK PRODUCED will
+          equal the amount expended.
+        - This would be the case in a Carnot heat engine, Fig. 1,
+          taken along `abc` and then simply reverse back to `a`
+          along `cba`. Then no net work would be done.
+        - But with the route along `cda` back to `a` the maximum
+          possible work is done.
+        - Thus, exterior work is a ROUTE-DEPENDENT quantity.
+        - One has to know the _succession of states_ through
+          which the system is carried by the application of heat
+          or pressure from without (outside?).
+
+### Motions of molecules, dof's
+    - However, in a decisive advance, Clausius argues that “this
+      is not the only motion present”.
+        - Because molecules are composed of atoms and conceived
+          to be extended, they must be capable of _rotational
+          motion_ which can be increased or decreased whenever
+          two molecules collide.
+    - There can also surely be _vibrational motion_ corresponding
+      to motion of the atoms inside a molecule relative to each
+      other.
+    - Although the term was only coined later by Maxwell, we can
+      introduce the notion of mechanical `degrees of freedom`
+      here.
+    - The dof's come in two kinds:
+        - one related to `position`,
+        - the other to `translation` from place to place as
+          expressed by velocity (or more precisely momentum).
+    - If we consider a point particle, its `position` will be
+      defined by 3 coordinates.
+        - These are the 3 positional degrees of freedom.
+    - Also there are 3 `momentum` degrees of freedom associated
+      with motion along the 3 coordinate directions.
+    - However, if a molecule is made up of two or more atoms,
+      there are even more degrees of freedom.
+    - For example, a diatomic molecule will be like a dumbell
+      that can _rotate_ and _vibrate_, so there are further
+      possible motions.
+    - In the final third of his paper, Clausius translates these
+      qualitative ideas into concrete calculations for gases and
+      obtains important numerial results...
+    - Explanation / more info:
+        - $MY_NOTES/physics/thermo/molecule-dofs.txt
+
+
+
+### Chapter 9: Statistical Mechanics
+    - Great stuff: window into the microscopic world
+    - Clausis
+    - mean free path
+    - translational, rotational, vibrational energy
+
+
+### Maxwell peers through the microscopic window
+    - Keys: remarkable viscosity result
+    - He notes that two basically equivalent models can be
+      adopted for the ‘minute parts’ of matter.
+    - The parts can be represented either as:
+        - `centres of force`  (? Like Faraday)
+        - or as hard elastic bodies,
+    - He says it's evident the same results will be obtained.
+    - Maxwell opts for the second model and considers two
+      possibilities:
+        - the elastic bodies are exactly _spherical_ or
+        - have a bounding surface that is not spherical.
+    - Besides reproducing results that had already been obtained,
+      Maxwell’s paper contained a result of fundamental
+      conceptual significance as well as a prediction that was so
+      counterintuitive he initially thought it _disproved_ the
+      kinetic theory of gases.
+    - However, he later confirmed the prediction (concerning the
+      viscosity of gases) in a famous experiment with his wife.
+    - This can be illustrated by a pendulum. If it is set
+      swinging in air, its initial amplitude slowly decreases
+      until it eventually comes to rest.
+        - This happens partly because of friction at its point of
+          suspension and partly because the pendulum bob has to
+          ‘push aside’ the air it encounters during its swing.
+    - Air’s viscosity slows motion, like how walking through
+      water takes effort. So Maxwell thought a pendulum in denser
+      air would stop faster.
+        - To his great surprise, Maxwell's calculations showed
+          that changing the `density` had very little effect.
+        - With his wife, he performed an experiment that
+          confirmed the prediction.
+    - This boosted confidence in the theory, which by 1865 gained
+      widespread acceptance.
+    - Explanation:
+        - $MY_NOTES/physics/thermo/Viscosity-Density-air.txt
+
+
+### Mean Free Path
+    - Indeed, a striking by-product of Maxwell’s viscosity
+      calculations was his ability to estimate Clausius’s mean
+      free path.
+    - Taking the mean velocity of air molecules to be 1,505
+      ft/sec, he found the mean distance travelled by a molecule
+      between collisions is 1/447000th of an inch.
+    - ∴ Each molecule makes 8,077,200,000 collisions per sec(!)
+    - The colossal numbers involved in the atomic hypothesis were
+      beginning to emerge.
+    - However, this didn't yield an estimate of the diameter of
+      an individual molecule yet, or the number of atoms in your
+      little finger.
+    - A further idea would be needed to get at that.
+
+    - 'Further idea 1'
+        - The *further idea* hinted at above is *the concept of
+          molecular diameter and number density* (i.e. the number
+          of molecules per unit volume), which—combined with the
+          mean free path—can be used to estimate molecular size.
+        - Specifically, the key idea is:
+            - Using the kinetic theory relation for mean free path:
+            - `λ = 1 / (√2 * π * d^2 * n)`
+        - where:
+            - `λ` = mean free path
+            - `d` = molecular diameter
+            - `n` = number density (molecules per unit volume)
+        - From this, knowing `λ` and estimating `n` (from gas
+          laws), one can solve for `d`.
+        - This development was later made more precise by
+          *Boltzmann* and *Loschmidt*.
+
+    - "Further idea 2"
+        - The "further idea" needed to estimate the diameter of
+          individual molecules or the number of atoms in a given
+          volume (like a little finger) relates to comparing the
+          _volume of a gas_ to the actual volume occupied by the
+          molecules when they are in a _liquid state_.
+        - Here's why:
+        - Mean Free Path provides a distance:
+            - Maxwell's calculations on mean free path told them
+              the *average distance* a molecule travels before
+              hitting another. This gives an idea of how far
+              apart molecules are in a gas.
+        - Need for Molecular Size:
+            - To get the *actual size* of the molecules
+              themselves, you need a way to relate the empty
+              space in a gas to the space the molecules
+              physically occupy.
+        - The "Condensation Coefficient": 
+            - (Loschmidt's contribution)
+            - This "further idea" was largely developed by Johann
+              Josef Loschmidt. He recognized that if you condense
+              a gas into a liquid, the molecules are packed much
+              more closely together. By comparing the volume of
+              a gas at standard conditions to the volume of the
+              same substance in its liquid form, and knowing the
+              mean free path, he could estimate the actual volume
+              (and thus diameter) of the individual molecules. He
+              essentially used the ratio of the volume occupied
+              by the gas to the volume occupied by the liquid to
+              infer the space taken up by the molecules
+              themselves.
+
+        - So, in essence, the "further idea" involved:
+            - Understanding the relationship between the gas and
+              liquid phases.
+            - Using the concept of a "condensation coefficient"
+              (or packing density) to relate the macroscopic
+              volume of a liquid to the microscopic volume of its
+              constituent molecules.
+
+        - This allowed for a more direct estimation of molecular
+          dimensions and, consequently, the number of molecules
+          in a given volume (which led to the concept of the
+          Loschmidt constant, closely related to Avogadro's
+          number).
+
+    - Number Density v Packing density
+        - Yes, the number density is related to the concept
+          underlying Loschmidt's packing density (or condensation
+          coefficient), though they describe different aspects:
+        - Number density (n):
+            - Number of molecules per unit volume (e.g. molecules
+              per cm^3).
+            - Central to kinetic theory and used to estimate mean
+              free path, molecular diameter, etc.
+        - Condensation coefficient / packing density (as
+          discussed by Loschmidt):
+            - A speculative estimate of how closely gas molecules
+              would pack if condensed into a liquid or solid.
+            - Typically assumes molecules are hard spheres
+              touching each other, and looks at how many fit into
+              a given volume—giving an effective volume per
+              molecule.
+        - Relation:
+            - By estimating the volume a single molecule occupies
+              in a condensed state, Loschmidt could infer:
+                - Total number of molecules in a known gas volume
+                  ⇒ number density.
+                - Hence, link microscopic properties (molecular
+                  size) with macroscopic (volume, pressure).
+        - In summary:
+            - Yes, Loschmidt’s packing density idea helped
+              estimate number density by imagining gas as
+              a diluted version of a densely packed molecular
+              arrangement.
+
+### H-Theorem
+    - $MY_NOTES/physics/thermo/Boltzman-H-function.txt
+    - Boltzmann’s equation was not his only innovation. 
+    - In one of his most important contributions, he introduced
+      a quantity later called the `H function`.
+    - He proved a result this function's behaviour that became
+      known as the _H theorem_.
+    - Basically, the `H function` measures the deviation of:
+        - the current energy distribution
+        - from the Maxwell distibution
+        - ... for the same total energy of the system.
+    - To get a picture of this in concrete terms, suppose the
+      curve of the current distribution is superimposed on the
+      Maxwell distribution.
+    - The two curves will not overlap, there will in general be
+      closed areas between the two curves. The value of the `H
+      function` is a measure of the sum of these areas.
+        - It will tend to zero as the current distribution gets
+          closer and closer to the Maxwell distribution.
+    - Boltzmann interpreted such an effect as a _microscopic
+      mechanical explanation_ of the way the entropy of an
+      isolated system tends to a maximum.
+        - The actual relationship between the 'H function' and
+          entropy will be an important part of chapter 12.
+
+### Loschmidt's Reversibility paradox
+    - Given any possible state of a system of particles, defined
+      by their masses, positions and velocities, there will
+      always be a state paired with it, where the positions are
+      all the same, but all the velocities are exactly reversed.
+    - This manifest symmetry might lead one to expect a decrease
+      in entropy as often as an increase. But one never does.
+    - That's the paradox.
+
+### Importance of initial states
+    - Thus a proof cannot be given that after a certain time "the
+      spheres must necessarily be mixed uniformly" whatever the
+      initial state.
+        - He says this is a consequence of probability theory:
+          "because any non-uniform distribution, no matter how
+          improbable it may be, is still not absolutely
+          impossible "
+        - (This is a fact about probabilities.E.g. in Lotto, you
+          have the exact same chance of a winning sequence
+          1,2,3,4,5 as any other five number sequence.)
+    - In a critical passage, Boltzmann says:
+        - It is only because there are many more _uniform
+          distributions_ than non-uniform ones that the
+          distribution of states will become uniform in the
+          course of time.
+        - Therefore one cannot prove that, whatever the starting
+          positions and velocities of the spheres are, the
+          distribution MUST become uniform after a long time;
+        - Instead one can only prove that infinitely many more
+          initial states will lead to a uniform one than
+          a non-uniform one, after a definite length of time,
+
+### Counting states
+    - Boltzmann makes one of the most important observations in
+      the history of Physics:
+        - One could even calculate their probabilities, from the
+          relative numbers of the different state distributions,
+          which might lead to an interesting method for the
+          calculation of thermal equilibrium.
+    - He went on to do just that, utilising a simple method.
+    - Any collection of particles has two distinct kinds of
+      distribution:
+        - one of positions in space
+        - the other of kinetic energies
+    - But they need to be handled in different ways.
+    - In 1877, Boltzmann's main interest was the kinetic
+      energies. The prize he was after was the Maxwell
+      distribution and why it must be established eventually if
+      the energy distribution is initially non-Maxwellian.
+    - (Jullian gives an example with discrete quantities and
+      a chessboard.)
+
+### Microstates and macrostates
+    - In general, there will be many different microstates that
+      give the same macrostate.
+    - (Boltzmann called the number of microstates corresponding
+      to a given macrostate its `complexion`)
+
+### Famous formula
+    - `S = k log W`
+    - Actually written down by Planck!
+    - Boltzmann had the ratio `m_a / m_tot` as the entropy of the
+      considered macrostate.
+        - note:
+        - `m_a`:   # of microstates belonging to mactrostate `M_a`
+        - `m_tot`: total number of microstates
+
+### Chapter 13: Boltzmann tussle with Zermelo
+    - For 15 years after Boltzmann's 1877 insight, the majority
+      of German physicists surprisingly turned against atomism
+      and the statistical-mechanical interpretation of
+      Thermodynamics.
+    - Why?
+        - Failure to explain the ratio of specific heats: the
+          theory suggested energy should be present in internal
+          vibrational degrees of freedom but it refused to
+          manifest itself.
+        - Also: the spectral lines of radiation emitted and
+          absorbed by atoms were very hard to interpret
+          theoretically.
+        - Also the rise of positivism.
+        - (But classical mechanics had no chance of solving these
+          problems. They needed the discovery of QM)

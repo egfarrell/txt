@@ -1,0 +1,44 @@
+Jake Vanderplas: Frequentists versus Bayesians
+https://www.youtube.com/watch?v=KhAUfqhLakw
+
+# Probability: a question of philosophy
+    * Frequentist: 
+        - frequency of REPEATED events
+    * Bayesian: 
+        - our own certainty or uncertainty of events
+
+# Both groups are analysing different things
+    * Frequentist:
+        - analysing the variation of DATA and derived quantities
+          from the data
+    * Bayesian:
+        - are analysing variation of BELIEFS
+    * Frequentist:
+        - the models are fixed,
+        - and the data can vary around those
+    * Bayesians:
+        - we observe the (fixed) data,
+        - and the model can vary around those
+
+# bayes rule
+    ```
+    postierior = liklihood * prior
+                 -----------------
+                  model evidence
+    ```
+              (often a normalisation)
+
+# photon flux example
+    * Frequentists:
+        - take many many measurements.
+        - Multiply the probabilities together which gives the
+          "maximum likelihood"
+
+# pool table example
+    - Frequentists: 
+        - nuisance parameter 
+        - (how the table is divided) is fixed
+    - Bayesians: 
+        - marginalisation: nuisance parameter is integrated out!
+
+# handling uncertain

@@ -1,0 +1,311 @@
+### Import Export Data from SSMS:
+    - Import data: Right-click DATABASE -> Import Data...
+    - Export data: Right-click DATABASE -> Export Data...
+
+    - Export GOTCHA:
+        - CSV NULL Values:
+            - CSV export has NULL values saved as actual string "NULL"!!
+        - Launch EXPORT WIZARD
+            - right-click database and choosing "Tasks - Export Data..."
+            - For Source, choose "Microsoft OLE DB Provider for SQL Server"
+            - For destination choose "Flat File...",
+                - specify "Format" as delimited and text qualifier as double-quote
+
+### handy join
+    - join table on another database with a different collation!
+    - left join  [EBSLIVE].[ebslive].[dbo].Schools AS fs    
+        on  (fp.School `COLLATE DATABASE_DEFAULT`  = fs.school_code `COLLATE DATABASE_DEFAULT`)
+
+### grouping sets, cube
+    - The following is like the union of 4 "group by" statements
+        ```
+        SELECT empid, custid, SUM(qty) AS sumqty
+        FROM   dbo.Orders
+        GROUP BY
+            GROUPING SETS
+            (
+                (empid, custid),
+                (empid),
+                (custid),
+                ()   <--------"empty grouping set": so no grouping at all!
+            );
+        ```
+
+    - In set theory, the set of all subsets from a particular set
+      is the 'power set'.
+    - You can think CUBE as producing the _power set_ of grouping
+      sets from a given set of elements.
+    - Instead of using the GROUPING SETS subclause in the
+      previous query to define the four grouping sets (empid,
+      custid), (empid), (custid), and (), you can simply use
+      CUBE(empid, custid). Here’s the complete query:
+        - ```
+        - SELECT empid, custid, SUM(qty) AS sumqty
+        - FROM dbo.Orders
+        - GROUP BY CUBE(empid, custid);
+        - ```
+
+    - Rollup
+        - whereas CUBE(a, b, c) produces all eight possible
+          grouping sets, ROLLUP(a, b, c) produces only four based
+          on the hierarchy a>b>c. Its the same as specifying
+          GROUPING SETS( (a, b, c), (a, b), (a), () ).
+
+
+### window functions
+    - One of the great advantages of window functions is they
+      don't hide the detail. This means you can write expressions
+      that mix DETAIL and AGGREGATES.
+    ```
+      select orderid, custid, val,
+             100. * val / sum(val)  OVER()                    as percent_all,
+             100. * val / sum(val)  OVER(PARTITION BY custid) as percent_customer
+       from  Sales.OrderValues;
+      ```
+
+### window functions
+    - RUNNING total
+    - -------------
+    ```
+    select   *,
+             sum(sales_amount) over (order by [date]) as Running_Total
+    from     sales
+    order by [date];
+    ```
+    Date     sales_amount  Running_Total
+    ----     ------------  -------------
+    10-Jun   500           500
+    11-Jun   700           1200
+    12-Jun   500           1700
+
+    - ROLLING total
+    - -------------
+    ```
+    select      *,
+                sum(sales_amount) over (over by [date] rows BEWEEN 9 PRECEDING AND CURRENT ROW) as Rolling_Total
+    from        sales
+    order by    [date];
+    ```
+
+
+### window functions
+    - intro: "group by" queries provide insights from aggregates,
+      but you lose something: _the detail_.
+        - you often need to perform calculations that involve
+          BOTH detail and aggregate elements
+        - my summary: bit like attaching "group by" bits of info,
+          onto individual table rows
+
+    - "OVER":
+        - determines the windows (sets of rows)
+
+    - "PARTITION BY":
+        - splits resultset into partitions onto which the window
+          function is applied
+        - "Partition by" is a bit like "group by"
+
+    - if you want individual sales grouped by 'sales_id', but also
+      "total sales" for that sales_id at the end of each row:
+      ```
+        select sales_id,
+               sales_date,
+               sales_item,
+               sales_price,
+               quantity,
+               line_total,
+               sum(line_total) OVER (PARTITION BY sales_id) as sales_total
+        from Sales_details;
+      ```
+      - RESULT:
+        - sales_id   sales_date   sales_item    sales_price   quantity   line_total   sales_total
+        - --------   ----------   ----------    -----------   --------   ----------   -----------
+        - 1          10 June      purse         5             3           15          55
+        - 1          11 June      coat          10            4           40          55
+        - `2`        15 June      box           1             5           5          `82`  <----
+        - `2`        17 June      trousers      15            3           45         `82`  <---- Window function output
+        - `2`        18 June      hat           8             4           32         `82`  <----
+
+    - Note: you could also do a "group by " inside a cte, and
+      then join the 'cte' back to the individual sales lines.
+
+    - Based on the example above, you could add in extra running
+      totals:
+      ...
+      ...
+      count(line_total) OVER(PARTITION BY sales_id)     as line_count,
+      sum(line_total)   OVER(PARTITION BY sales_date)   as daily_total,
+      sum(line_total)   OVER()                          as overall_total  <--- note: no "partition by"
+
+
+
+### "Previous" or "next" Values
+    - previous value could be interpreted as:
+        "the maximum value thats SMALLER than the current value"
+    - Example:
+        - uses a corelated subquery:
+        select orderid, orderdate, empid, custid,
+               (select MAX(O2.orderid)
+                from   Sales.Orders as O2
+                where  O2.orderid < O1.orderid) as prev_orderid
+        from Sales.Orders as O1;
+
+### implicit date conversion
+    - select custid from table where `orderdate = '20160212'`
+    - is actually an implict version of:
+    - select custid from table where `orderdate = CAST('20160212' as DATE)`
+        - how the string '20160212' is interpreted depends on
+          language settings in the database (eg. DATEFORMAT)
+    - Solution: express literals in language neutral formats such as 'YYYYMMDD'
+    - T-SQL: select `parse`('02/12/2016' as date using 'en-US')
+
+
+### Concat and "+"
+    - CONCAT replaces NULL values with an empty string
+    - `concat('a', NULL, 'b')`
+    -       this returns 'ab'
+    - "+": if you have NULL values, the output will be NULL
+
+### top Percent, with ties,
+    --  Note this query is non-deterministic because theres no primary key or
+    --  unique constraint on 'orderdate'.
+    --  Multiple rows can have the same orderdate, and ordering among rows with the
+    --  same orderdate is undefined.
+    --  So the query is non-deterministic and more
+    --  that one result could be considered correct.
+    --  You could add a 'tiebreaker' to make the order by unique,
+    --  or you could actually use 'WITH TIES' to return all results
+    --  with the same sort order. So even if you want the top 1%
+    --  you might get extra rows.
+    --  Note: with ties will make the query deterministic although
+    --  the presentation order among rows with the same orderdate
+    --  isn't.
+
+    select top(1) `percent` orderid, orderdate, custid, empid
+    from sales.orders
+    order by orderdate DESC;
+
+    select top(5) `with ties` orderid, orderdate, custid, empid
+    from sales.orders
+    order by orderdate DESC;
+
+
+### Quotes
+    - Single quotes: literal character strings
+    - Double quotes: irregular system identifiers e.g.
+      table/column names.
+    - You can also delimit irregular identifiers with square
+      brackets: '[Strange.name]'
+
+### Collation:
+    - Defined at 4 different levels:
+      instance, database, column, expression
+    - 'Latin1_General_CI_AS'
+        - Latin1_General: (Code page 1252, English/German characters)
+        - CI:             Case insensitive (a = A)
+        - AS:             Accent sensitive (à <> á)
+    - You can change the collation in a query:
+      ```
+      Select * from employees
+      where lastname COLLATE Latin1_General_CS_AS = N'davis';
+      ```
+
+### Character types
+    - "N" prefix for unicode string ('N' for National)
+    - Declares string as 'nvarchar' (unicode) rather than 'varchar'
+        - char, varchar   ---> english only, 1 byte  per character
+        - nchar, nvarchar ---> unicode,      2 bytes per character
+    - Without the N prefix, strings are converted to the default
+      database code-page. This default code-page may not
+      recognise certain characters.
+    - Example:
+        - My database collation is
+          'SQL_Latin1_General_CP1_CI_AS'.
+        - Below fails: (even though value exists)
+        - ```
+        - SELECT TOP 1 * FROM myTable1 WHERE  MyCol1 = 'ESKİ'
+        - // 0 result
+        - ```
+        - using prefix N fixes it:
+        - ```
+        - SELECT TOP 1 * FROM myTable1 WHERE  MyCol1 = N'ESKİ'
+        - // 1 result - found!!!!
+        - ```
+        - 'latin1_general' doesnt have dotted 'İ' which is
+          why it fails.
+
+### Amazon RDS - MS SQL Database
+    - make sure you choose "Public Accessibility" = "Yes"
+    - make sure you choose "Create new VPC security group"
+        - the new VPC security group will automaically allow
+          access from your current IP
+        - https://forums.aws.amazon.com/thread.jspa?threadID=123483
+
+### Transact-SQL
+    - four-part object name:
+        - `Instance.Database.Schema.Object`
+    - A schema is a NAMESPACE and also used to control SECURITY
+        - Recommendation: Always refer to objects using two-part
+          object name: `Schema.Object`
+
+    - "Select" clauses are processed AFTER clauses such as
+      "from", "where", "group by", "having"
+        - implication: aliases defined in select clauses arent
+          available in other clauses such as the "where" clause
+
+        - APPLY:   T-SQL extension
+        - PIVOT:   T-SQL extension
+        - UNPIVOT: T-SQL extension
+
+
+### SSMS: SQL SERVER MANAGEMENT STUDIO
+
+    - _Filter_ Database list option (right-click "Databases")
+
+    - CTRL+N: new sql query editor screen
+
+    - view logs
+        - open SSMS
+        - click "Mangaement"
+        - click "SQL Server Logs"
+
+    - add HEADERS when exporting results
+        > Tools
+            > Options
+                > Query Results
+                    > SQL Server
+                        > Results to GRID (and Results to Text)
+                            > Include columns headers in result set
+
+    - execute sql
+        - "F5" - execute all in query editor
+        - "select + F5" - execute currently selected
+
+    - exec sp_help mytable; ???
+    - exec sp_columns mytable;
+    - exec sp_help mytable;
+
+
+### Create Azure SQL Server 2017 VM
+    - type into Azure searchbox:
+        "sql server 2017 developer"
+
+### load sample database
+    USE master
+    RESTORE DATABASE WideWorldImporters
+    FROM disk =
+    'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\WideWorldImporters-Full.bak'
+    WITH MOVE 'WWI_Primary' TO
+    'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\WideWorldImporters.mdf',
+    MOVE 'WWI_UserData' TO
+    'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\WideWorldImporters_UserData.ndf',
+    MOVE 'WWI_Log' TO
+    'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\WideWorldImporters.ldf',
+    MOVE 'WWI_InMemory_Data_1' TO
+    'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\WideWorldImporters_InMemory_Data_1',
+    REPLACE
+
+### links
+    - connect to sql-server via code   https://github.com/Microsoft/sql-server-samples
+    - T-SQL Fundamentals Itzik Ben-Gan $MY_CODE/SQL/T-SQL/README.txt
+    - T-SQL Fundamentals Book Itzik    $MY_BOOKS/Cs/SQL/T-SQL-Fundamentals-Itzik-Ben-Gan.pdf
+    - T-SQL Window functions           $MY_BOOKS/Cs/SQL/T-SQL-Window-Functions-Itzik-Ben-Gan.pdf

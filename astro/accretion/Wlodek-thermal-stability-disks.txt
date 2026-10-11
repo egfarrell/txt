@@ -1,0 +1,66 @@
+- Hello all,
+- It was great to have a semblance of discussion after
+  Bhupendra's talk 
+- ... I am writing to clarify points which were too subtle,
+  perhaps, for zoom:-) Feel free to correct me.
+- There are: 
+    1.  analytic models
+    2.  simulations
+    3.  observations
+    4.  and the (unknown) reality
+
+- Let's focus on the first two.
+
+Questions:
+    - Agnieszka, you pointed out advection stabilizes the disk in
+      your calculations within some analytic model; (if
+      I understood correctly). And asked whether the same would
+      happen in Bhupendra's simulations.
+    - And Maciek, you asked if the result depends on the mass
+      accretion rate.
+    - And Debora, you pointed out that sub-Eddington disks
+      without strong magnetic fields are unstable.
+
+- And I say, as in the famous joke, you are "both right" 
+
+- In the 2 best known 1D models the stability properties
+  are opposite to each other: 
+    - in 'Shakura Sunyaev' (no advection) the radiation
+      pressure dominated disk is violently unstable, 
+    - while the slim disk model (primarily differs from the
+      SS disk by including advection) is stable.
+
+- What is the situation in the (GR)MHD?
+
+- The simulations take into account motion of matter and
+  diffusion of radiation, so advection is automatically included:
+    - if the radiation does not have enough time to escape
+      locally it is carried in by the fluid flow. 
+    - And still the radiation pressure dominated THIN disks are
+      thermally unstable, as Bhupendra found.
+
+- However, David has perfectly stable radiation pressure
+  dominated MRI disks (with low values of magnetic pressure) at
+  2 or 3 Eddington mass accretion rates. But these are not
+  geometrically thin (nor thick either, really).
+
+- At sub-Eddington rates (but still a good fraction, say > 0.1)
+  the disk close to the BH is thermally unstable, unless it is
+  magnetically dominated (as shown by Olek Sądowski). 
+- And the _magnetically dominated_ one is stable, as first shown
+  numerically by Olek, and then by Bhupendra et al (elevated
+  disks) and Debora with David & Maciek et al (puffy disk).
+
+- So why do the numerical simulations differ from analytic models
+  with advection? 
+- Because the _slim disk model_ does not correspond to reality,
+  I think, whether in the the world of simulations or the
+  non-virtual world. 
+- It is essentially a 1D model, and there is no way it could
+  capture the back flow pattern, for instance, which was so
+  nicely presented in Ruchi's talk. 
+- Of course, the simulations are intrinsically 2D (if
+  axisymmetric), and even 3D (as in Bhupendra's elevated disk
+  simulations).
+
+- Cheers, Wlodek

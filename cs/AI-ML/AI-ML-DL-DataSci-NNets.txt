@@ -1,0 +1,2091 @@
+
+
+### Claude
+    - Reduce token output https://news.ycombinator.com/item?id=47581701
+
+### learning rate finder?
+    - Find DL paper by Leslie Smith introducing the learning rate
+      finder...
+
+### Turn video into sql table
+    - https://www.youtube.com/watch?v=F_1oDPWxpFQ
+    - Interesting: Head of Google AI
+    - Google Veo can watch a video, say famous sports events,
+      extract all the info and present it in a table
+
+### Claude plugins
+    - https://github.com/anthropics/knowledge-work-plugins/tree/main/legal
+    - Data
+        - Query, visualize, and interpret datasets — write SQL,
+          run statistical analysis, build dashboards, and
+          validate your work before sharing.
+        - Snowflake, Databricks, BigQuery, Hex, Amplitude, Jira
+    - Bio-research
+        - Connect to preclinical research tools and databases
+          (literature search, genomics analysis, target
+          prioritization) to accelerate early-stage life sciences
+          R&D.
+        - PubMed, BioRender, bioRxiv, ClinicalTrials.gov, ChEMBL,
+          Synapse, Wiley, Owkin, Open Targets, Benchling
+
+### History of LLMs
+    - Comments from Jeremy
+    - https://news.ycombinator.com/item?id=45488892
+
+### Learning v knowledge
+    - "Richard Sutton – Father of RL thinks LLMs are a dead end"
+    - https://www.youtube.com/watch?v=21EYKqUsPfg
+    - I think the distinction here is between `knowledge` and
+      `learning`. Learning is distinct from knowledge.
+        - You can use learning to gain knowledge, but you can't
+          knowledge your way to learning (or at least we don't
+          really have great examples of that, maybe it's
+          possible).
+    - In other words knowledge is a thin veneer that sits on top
+      of a way more complex behavior called "learning". Learning
+      is both what produces knowledge and what consumes it.
+      Learning is something all organisms do and it guides
+      behavior. The hack humans have found is to transfer that
+      learning through knowledge. We can encode knowledge and
+      transfer it from generation to generation, and that has
+      created an exponential, an accumulation of knowledge to
+      bootstrap learning. That is "schooling" or by any other
+      means of transmitting information. However that is only an
+      accumulation of knowledge, that uses the tools of learning
+      to learn. But is not learning itself.
+    - In other words knowledge is not the means/tool through
+      which we learn, it is the thing we consume. The tool we're
+      using to learn is something different entirely.
+    - LLMs are then the component that is the accumulator of
+      knowledge. It's able to parse knowledge, retrieve
+      knowledge, and even modify knowledge, but it is unable to
+      actually learn. That component is still missing in the
+      intelligent machines.
+    - This is similar to how language works for humans as well.
+      We're able to use language to structure sensory
+      information/information produced by learning.
+    - So basically the real question here is what are you using
+      to learn? What instruments are you using to learn? And this
+      distinction is subtle to what learning is using to learn.
+      That is we're talking about the activity of learning itself
+      in contrast to the things learning uses to learn.
+    - A windmill uses the wind to turn and produce some amount of
+      work. The question here is not about the wind, but about
+      the thing that is able to capture the wind and change its
+      behavior.
+
+### LLM coding
+    - https://news.ycombinator.com/item?id=45347532
+    - recommend: tell the LLM frequently to
+        - "_ask me clarifying questions_".
+    - It's simple, has a dramatic effect, it really cuts down on
+      ambiguity and wrong directions without having to think
+      about every little thing ahead of time.
+
+### Why LLMs hallucinate
+    - https://news.ycombinator.com/item?id=45147385
+    - They hallucinate because it's an ill-defined problem with
+      two conflicting usecases:
+        - 1. If I tell it the first two lines of a story, I want
+          the LLM to complete the story. This requires
+          hallucination, because it has to make up things. The
+          story has to be original.
+        - 2. If I ask it a question, I want it to reply with
+          facts. It should not make up stuff.
+    - LMs were originally designed for (1) because researchers
+      thought that (2) was out of reach. But it turned out that,
+      without any fundamental changes, LMs could do a little bit
+      of (2) and since that discovery things have improved but
+      not to the point that hallucination disappeared or was
+      under control.
+
+### open-ai best models
+    - HN: discussion https://news.ycombinator.com/item?id=43683410
+
+### Difference: ML / DL
+    1. Machine Learning (ML) is a broad field involving training
+       computers to find patterns in data and make predictions or
+       decisions without being explicitly programmed.
+        - Traditional ML has algorithms like:
+        - Linear Regression
+        - Decision Trees
+        - Random Forest
+        - Support Vector Machines (SVM)
+        - k-Nearest Neighbors (k-NN)
+
+    2. Deep Learning (DL) is a *subset* of ML specifically using
+       neural networks with multiple layers (hence "deep").
+       Unlike traditional ML, DL models automatically learn
+       feature representations from raw data, which makes them
+       particularly powerful for complex tasks like:
+       - Image recognition (e.g., CNNs)
+       - Natural language processing (e.g., Transformers, RNNs:
+         Recurrent Neural Networks)
+       - Autonomous driving and reinforcement learning
+
+    - ### Are Neural Networks ML or DL?
+        - Neural networks in general are part of `ML`.
+        - Deep neural networks (DNNs) (which have multiple hidden
+          layers) fall under `DL`.
+        - A simple neural network (e.g. only one hidden layer)
+          could still be considered ML, but when it becomes deep
+          (multiple layers), it moves into the DL category.
+
+    - So, all DL is ML, but not all ML is DL—DL is just a more
+      advanced and data-hungry subset of ML!
+
+
+### Handy llm script
+    - llm script https://til.simonwillison.net/llms/claude-hacker-news-themes#user-content-adding-a--m-model-option
+
+### What are AI 'Agents'?
+    - Autonomous Goal-Oriented Systems
+    - Tool-Using LLMs
+    - LLM-Driven Control Flow
+    - Long-Running Processes
+    - Acting on Behalf of a User
+    - Multi-Step Task Completion
+    - Metaphorical and Abstract Definitions
+    - Simpler/Humorous Definitions
+    - Vague or Incomplete Definitions
+    - Questioning the Definition
+    - Specific Implementations or Examples
+    - Non-Technical or Business-Oriented Definitions
+    - Relating Agents to Other Concepts
+        - $MY_NOTES/cs/AI-ML/Agent-AI.txt
+
+### Video generation: Sora
+    - https://news.ycombinator.com/item?id=42368604
+        - Good tips about other open-source generators like:
+          HunyuanVideo https://github.com/Tencent/HunyuanVideo
+
+### It's all just Curve fitting?
+    - https://news.ycombinator.com/item?id=41732853
+    - "Interesting work on reviving RNNs.
+      https://arxiv.org/abs/2410.01201 -- the fact that many
+      recent architectures coming from different directions
+      roughly match `Transformers` is proof that architectures
+      aren't fundamentally important in the curve-fitting
+      paradigm (aka deep learning)
+    - Curve-fitting is about embedding a dataset on a curve. The
+      critical factor is the dataset, not the specific hard-coded
+      bells and whistles that constrain the curve's shape. As
+      long as your curve is sufficiently expressive all
+      architectures will converge to the same performance in the
+      large-data regime."
+    - Reply:
+        > The critical factor is the dataset, not the specific
+        > hard-coded bells and whistles that constrain the
+        > curve's shape
+        - I have almost the opposite take. We've had a lot of
+          datasets for ages, but all the progress in the last
+          decade has come from advances how curves are
+          architected and fit to the dataset (including applying
+          more computing power).
+        - Maybe there's some theoretical sense in which older
+          models could have solved newer problems just as well if
+          only we applied 1000000x the computing power, so the
+          new models are 'just' an optimisation, but that's like
+          dismissing the importance of complexity analysis in
+          algorithm design, and thus insisting that bogosort and
+          quicksort are equivalent.
+        - When you start layering in normalisation techniques to
+          minimise overfitting, and especially once you start
+          thinking about more agentic architectures (eg. Deep
+          Q Learning, some of the search space design going into
+          OpenAI's o1), then I don't think the
+          just-an-optimisation perspective can hold much water at
+          all - more computing power simply couldn't solve those
+          problems with older architectures.
+    - Reply
+        > One big thing that bells and whistles do is limit the
+        > training space.
+        - For example, when CNNs took over computer vision it
+          wasn't because they were doing something that dense
+          networks couldn't do. It was because they removed a lot
+          of edges that didn't really matter, allowing us to
+          spend our training budget on DEEPER NETWORKS.
+        - Similarly transformers are great because they allow us
+          to train gigantic networks somewhat efficiently. And
+          this paper finds that if we make RNNs a lot faster to
+          train they are actually pretty good. Training speed and
+          efficiency remains the big bottleneck, not the actual
+          expressiveness of the architecture
+
+
+### 19-Dec 2023 Tue
+    - CNNs: each layer does a _TRANSFORMATION_ to a tensor before
+      passing it on... never really realised that.
+
+### Learn AI: good resources
+    - https://news.ycombinator.com/item?id=40397806
+    - Ilya gave John Carmack this reading list of approx 30
+      research papers and said, ‘If you really learn all of
+      these, you’ll know 90% of what matters today.’
+        1. The Annotated Transformer                                                              https://nlp.seas.harvard.edu/annotated-transformer/
+        2. The First Law of Complexodynamics                                                      https://scottaaronson.blog/?p=762
+        3. The Unreasonable Effectiveness of RNNs                                                 https://karpathy.github.io/2015/05/21/rnn-effectiveness/
+        4. Understanding LSTM Networks                                                            https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+        5. Recurrent Neural Network Regularization                                                https://arxiv.org/pdf/1409.2329.pdf
+        6. Keeping Neural Networks Simple by Minimizing the Description Length of the Weights     https://www.cs.toronto.edu/~hinton/absps/colt93.pdf
+        7. Pointer Networks                                                                       https://arxiv.org/pdf/1506.03134.pdf
+        8. ImageNet Classification with Deep CNNs                                                 https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+        9. Order Matters: Sequence to sequence for sets                                           https://arxiv.org/pdf/1511.06391.pdf
+        10. GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism         https://arxiv.org/pdf/1811.06965.pdf
+        11. Deep Residual Learning for Image Recognition                                          https://arxiv.org/pdf/1512.03385.pdf
+        12. Multi-Scale Context Aggregation by Dilated Convolutions                               https://arxiv.org/pdf/1511.07122.pdf
+        13. Neural Quantum Chemistry                                                              https://arxiv.org/pdf/1704.01212.pdf
+        14. Attention Is All You Need                                                             https://arxiv.org/pdf/1706.03762.pdf
+        15. Neural Machine Translation by Jointly Learning to Align and Translate                 https://arxiv.org/pdf/1409.0473.pdf
+        16. Identity Mappings in Deep Residual Networks                                           https://arxiv.org/pdf/1603.05027.pdf
+        17. A Simple NN Module for Relational Reasoning                                           https://arxiv.org/pdf/1706.01427.pdf
+        18. Variational Lossy Autoencoder                                                         https://arxiv.org/pdf/1611.02731.pdf
+        19. Relational RNNs                                                                       https://arxiv.org/pdf/1806.01822.pdf
+        20. Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton   https://arxiv.org/pdf/1405.6903.pdf
+        21. Neural Turing Machines                                                                https://arxiv.org/pdf/1410.5401.pdf
+        22. Deep Speech 2: End-to-End Speech Recognition in English and Mandarin                  https://arxiv.org/pdf/1512.02595.pdf
+        23. Scaling Laws for Neural LMs                                                           https://arxiv.org/pdf/2001.08361.pdf
+        24. A Tutorial Introduction to the Minimum Description Length Principle                   https://arxiv.org/pdf/math/0406077.pdf
+        25. Machine Super Intelligence Dissertation                                               https://www.vetta.org/documents/Machine_Super_Intelligence.pdf
+        26. PAGE 434 onwards: Komogrov Complexity                                                 https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf
+        27. CS231n Convolutional Neural Networks for Visual Recognition                           https://cs231n.github.io/
+
+
+
+### For kaggle competitions 2024?
+    - Comprehensible Convolutional Neural Networks via Guided Concept Learning
+    - Transformers, introduced in the paper "Attention is All You Need" by Vaswani
+
+
+### DL is Feedback?
+    - DL hitting a wall https://news.ycombinator.com/item?id=30622300
+    - ... if you dilute the meaning down to “feedback loop”,
+      then deep learning and the brain work the same way.
+
+### Books?
+    1. Life 3.0              https://amzn.to/3MVo8SH
+    2. Superintelligence     https://amzn.to/3MRKSTs
+    3. The Coming Wave       https://amzn.to/3MT8Ldv
+    4. Power and Progress    https://amzn.to/49tDiY7
+    4. Human Compatible      https://amzn.to/3sQpZBk
+    5. The Alignment Problem https://amzn.to/3SO1uPO
+    6. AI: Modern Approach   https://amzn.to/3G50wHs
+
+### RAG "Retrieval-Augmented Generation"
+    - It's a model architecture used in NLP tasks, combining the
+      capabilities of two major types of models:
+        - a retriever model
+        - and a generator model.
+    - Retriever Model: This component is responsible for fetching
+      relevant context or information from a large database or
+      corpus of documents. It retrieves documents that are likely
+      to contain useful information for generating a response or
+      output.
+    - Generator Model: After retrieval, the generator model,
+      often a large language model like GPT or BERT, uses the
+      retrieved documents along with the original query to
+      generate a coherent and contextually relevant response or
+      output.
+    - RAG models are very effective in tasks where additional
+      context or specific knowledge not contained within the
+      model itself is needed to generate accurate and
+      contextually rich responses. Examples include open-domain
+      question answering and fact-based content creation.
+    - The combination of retrieval and generation allows these
+      models to leverage vast amounts of information beyond their
+      training data, enabling more accurate and informed
+      responses in complex tasks.
+
+
+### Simple idea of grad-cam??
+    - grad = hook_g.stored[0][0].cpu()
+    - grad_chan = grad.mean(1).mean(1)
+    - grad.shape,grad_chan.shape
+    - mult = (acts*grad_chan[...,None,None]).mean(0)
+    - show_heatmap(mult)
+
+### What is a NN?
+    - In fact, a neural net is “just” a stack of _logistic
+      regressions_ if you only use sigmoid activations.
+
+### image sizes
+    - convnet and resnet take ANY input size for images
+    - only transformer models (`vit`) are limited to fixed sizes
+
+### training variation
+    - if the same model, with the same pre-processing has a lot
+      of natural variation in the accuracy / error_rate, then
+      it's not training in a stable way
+    - remedy: train for more epochs at a SMALLER learning rate
+    - Probably a lot of variation because the `lr` is too big
+    - minute 16: https://www.youtube.com/watch?v=GuCkpjXHdTc
+
+### Hyper-paramemter sweeps
+    - Jeremy doesn't really do them... he finds a few things that
+      work and uses them...
+    - prefers a more 'human' approach...
+        - set a hypothesis and test it...
+    - Jeremy feels hyper-parameters _generalise_ accross
+      different models, different architectures..
+
+### Ensemble tip
+    - for multiple models, does Jeremy use a 'majority vote'?
+        - no: because that throws away information
+        - Jeremy gets better results averaging the probabilities
+
+### Best models for fine tuning?
+    - Jeremy: `vit` models good, and `convnext`
+    - some `vit` models can only take square 224x224 images (`model*_224`)
+    - notebook: https://www.kaggle.com/code/jhoward/the-best-vision-models-for-fine-tuning
+
+### "Model zoo"...
+    - pre-trained models https://modelzoo.co/
+    - Jeremy never found much success with it
+
+### image wisdom
+    - what size images to use?
+        - start on small images so you can iterate fast
+        - as small as possible where u get good results...
+        - then towards the end keep increasing image size while
+          accuracy still improves
+        - generally larger images are more accurate
+    - $MY_NOTES/cs/AI-ML/fastai/fastai-live-code-2022.txt
+    - Jeremy comment: crop is always better than 'squish' for
+      image pre-processing / training
+    - wow: for batch augmentations, he wants his final patch size
+      to be `32x32` (for convnet models?) so he picks an aspect
+      ratio based on that
+        - train(arch, item=Resize((480,640))),
+          batch=aug_transforms(`size=(224, 288)`, min_scale=0.75)
+    - Jeremy often resizes images to `640 x 640` (item resize)
+        - $MY_IMAGES/cs/AI-ML/fastai-image-resizing.jpg
+    - then for batch augmentations he resizes to `224 x 224`
+      because timm models are often trained on ImageNet
+        - when doing batch augmentations: resize 'squish' and min
+          scale 0.75 (take at least 75% of the image?) the
+          problem is the validation always takes the centre of
+          the image (only) and also doesn't see any of the other
+          augmentations
+        - so he does `test time augmentation (tta)`... gives
+          original image and 4 augmented versions
+    - when NOT using 'squish'... use `tta` with `max=True` is
+      best
+    - if image training data is mixed size: tall rectangles, wide
+      rectangles, then resizing to a neutral 'square' makes sense
+        - but if all ur input data is rectangular, then resize to
+          rectangular
+    - another agumentation: Change probability of `affine
+      transforms`
+
+### training
+    - $MY_NOTES/cs/AI-ML/fastai/fastai-live-code-2022.txt
+    - Jeremy: if you train _OVER 5 EPOCHS_ you're in danger of
+      over-fitting(!)
+        - later: aaah but agumentations allows you to go over
+          5 epochs... Jeremy normally uses 12 epochs(!)
+    - why augmentations: to ensure it's seeing a slightly
+      different image each time
+    - batch_tfms gets applied to each MINI-BATCH
+    - `show_batch`: `unique`=True... shows the different
+      agumentations?
+    - low learning rate: less 'distance' the weights can move...
+    - high learning rate: helps the optimiser 'explore' the space
+      of options by jumping further
+    - he changed the `lr` to `0.01`... 5 times higher than the
+      suggested lr (or default lr)
+    - Jeremy talks about `learn.export()` and `learn.save()`
+        - He normally uses 'export'. Saves dataloaders info
+          too...
+        - Sometimes he uses 'save'. You can have a callback that
+          saves the model at the end of each epoch... or each
+          time it gets a better result... so that's when he uses
+          'save'
+
+### dropout
+    - $MY_NOTES/cs/AI-ML/fastai/fastai-course-2022-part1.txt
+    - dropout: prevent over-fitting
+    - kind of "data-augmentation" for the activations
+        - $MY_IMAGES/cs/AI-ML/dropout-prevent-overfitting.jpg
+
+### Convolution
+    - $MY_NOTES/cs/AI-ML/fastai/fastai-course-2022-part1.txt
+    - convolution: is special type of matrix multiplication
+        - $MY_IMAGES/cs/AI-ML/convolution-is-matmul.jpg
+
+### Pytorch forward()
+    - what is `x` here?
+        - $MY_IMAGES/cs/AI-ML/pytorch-forward-x.jpg
+    - later: ah `x` is the intput tensor.
+        - Deep Lizary normally passes in `t` as the input tensor
+          to the `forward()` method.
+
+### weight decay
+    - tell model: please don't make weights any bigger than they
+      have to be
+    - learn.fit_one_cycle(5, 5e-3, `wd=0.1`)
+    - $MY_IMAGES/cs/AI-ML/fastai-weight-decay.jpg
+
+### `bias`
+    - interesting: for the movie recommendation system, some
+      users gave movies all high scores... and some users were
+      very discerning, gave low scores
+    - but our recommendation model had no way of 'capturing' this
+      user tendency
+    - so he added one more number to the embedding matrix for
+      each user, and this was added after the dot product bit
+    - so really this 'extra number' is the `bias` for each user
+    - $MY_IMAGES/cs/AI-ML/Jeremy-adding-user-movie-bias.jpg
+
+### one-hot encoding
+    - Looking up something in a matrix is the same as multiplying
+      a matrix by a vector with [0, 0, 0, `1`, 0, 0] (for
+      example) and summing it up
+    - i.e. doing the dot-product of a matrix and a one-hot
+      encoded vector
+    - The `1` picks out the matrix element we want to 'look up'
+    - $MY_IMAGES/cs/AI-ML/Jeremy-one-hot-example.jpg
+    - link to embedding:
+        - a computational shortcut for multiplying something by
+          one-hot encoded vector
+
+### "embedding"
+    - "looking up" something in an array
+    - An embedding matrix in deep learning is a powerful concept
+      used to transform discrete data, like words in text
+      processing, into continuous vectors. Think of it as
+      a translation tool: it converts categorical, often
+      symbolic, data into a format that neural networks can
+      understand and process more effectively.
+    - Here's the kicker: each unique item (like a word) gets
+      mapped to a high-dimensional vector. These vectors capture
+      more than just the identity of the items; they encode
+      relationships and semantic meanings. For example, in word
+      embeddings, words with similar meanings tend to have
+      vectors that are close to each other in the embedding
+      space.
+    - The beauty of embedding matrices lies in their ability to
+      learn these representations during the training of a model,
+      making them context-aware. This isn't just about turning
+      words into numbers; it's about capturing the essence of
+      those words in a mathematical space. This is crucial for
+      tasks like natural language processing, where understanding
+      context and meaning is key.
+
+
+### convnext
+    - more modern than resnets
+    - Jeremy recommends
+
+### interesting: choosing your model
+    - Jeremy doesn't care about all complicated off-the-shelf
+      models... e.g. for speed he just chose `resnet26d`
+    - but they are all just functions
+    - what matters are the inputs to it, and the outputs
+
+### gradient boosting
+    - use a tiny tree (not many splits)
+    - residue: then calculate the difference between prediction and
+      actual (the residiue)
+    - then train another tiny tree to predict that residue (error)
+    - then calculate the residue again
+    - train another tree to predict that, keep going etc
+    - at the end, take the `SUM` of all the trees (not the mean of
+      all the trees like in 'bagging')
+    - because one predicts the difference between the ACTUAL and
+      all the previous trees...
+    - so 'boosting' vwesus 'bagging' as a meta-ensemble technqiue
+    - bagging trees: Random Forest
+    - boosting trees: Gradient Boosting Machine
+    - Generally gradient bossting is more accurate than random
+      forests, but you can over-fit
+
+### partial dependence model
+    - applies to any ML model, not just random forests
+    - what is the relationship between a column (feature) and the
+      dependent output variable?
+
+### random forest
+    - 'bagging' (meta-method, combining other models)
+    - crerate loads of uncorrelated unbiased models... each
+      trained on about 75% of the data
+    - some predictions will be too high, some too low...
+    - but if we take the `AVERAGE` of all predictions, we should
+      get the true prediction
+    - i.e. the average of lots of uncorrelated random errors is
+      zero
+    - aside: Jeremy doesn't often use more than 100 trees
+    - aside: out-of-bag error 'OOB': maybe u can get away without
+      a validationn set... get the tree to make a prediciton on
+      the 25% of the data it wasn't trained on
+    - standard deviation of predictions: gives us a way of
+      measuring the confidence of our prediction
+        - if large `std` then not confident, we don't know what
+          we're doing
+
+### Decision Tree
+    - a series of binary splits
+    - Titantic survival as a 4-leaf decision tree
+    - $MY_IMAGES/cs/AI-ML/titanic-decision-tree.jpg
+    - 'gini'
+        - if you go into the sample and grab an tiem, how likely
+          is it if you go in again will you grab the same item?
+
+### "OneR" (One Rule)
+    - a decision tree with a single binary split
+    - in the 1990s was the best performing model(!)
+    - e.g. titanic dataset:
+        - split on `female (0)` or `male (1)` (i.e. a binary
+          split) to predict survival
+    - The OneR method involves selecting the single rule that
+      performs the best across a dataset for creating a binary
+      split. It's a basic yet surprisingly effective technique,
+      especially useful for understanding the fundamental
+      behavior of a dataset. The algorithm scans through each
+      attribute in the data, evaluating how well it can classify
+      the data based on that single attribute. It then selects
+      the attribute with the best classification accuracy.
+    - OneR is favored for its simplicity and interpretability,
+      which is a contrast to more complex models like random
+      forests or neural networks. However, its simplicity can be
+      a limitation, as it might not capture complex patterns in
+      data as effectively as more sophisticated algorithms.
+
+### Random Forests
+    - very hard to mess up... (whereas with logistic regression
+      you have to be careful with the transforms, outlier
+      treatment etc)
+    - Jeremy used them all the time in the 1990s
+
+### Ensembling
+    - He just created 5 versions of the same model starting with
+      different randomly initialised coefficients...
+    - then took the mean of the 5 predictions...
+    - went from top `50%` to top `25%` in the Kaggle Titanic
+      leaderboard(!)
+
+### Titanic dataset
+    - interesting: one person got `84%` prediction accuracy on
+      titanic survival using PASSENGER NAME only(!)
+    - $MY_IMAGES/cs/AI-ML/titanic-prediction-name-only.jpg
+    - also, NN and DL won't neccessarily do better than linear
+      regression (linear model) for a simple dataset like this
+    - also: Jeremy often has to think long and hard about
+      _feature engineering_ before chucking his data at a model
+
+### Categorical data
+    - Jeremy fastai: for dummy variables (titanic dataset) he
+      converted '`male`', '`female`' to numeric columns...
+        - but what would happen if a later test dataset had
+          sex=`other`?
+    - So when encoding categories, you should always have another
+      miscellaneous bin called 'other'?
+    - fastai will do that for you automatically
+    - if that's not done, your extra 'level', value, column will
+      be silently ignored at inference time?
+    - Also Jeremy likes to put the less common categories
+      together in an 'other' category (fastai will do this too?
+      for CategoryBlock?)
+
+### sigmoid
+    - Titanic dataset
+    - $MY_IMAGES/cs/AI-ML/why-sigmoid.jpg
+    - Jeremy does a simple linear model, but the final, output
+      prediction layer sometimes has negative values for
+      survival, and sometimes has predictions greater than one
+    - but you can't have survival probability > 1, or < 0
+    - "It'd be nice to have a way to squish everthing between `0`
+      and `1`"
+    - Enter the sigmoid
+        - 0: for values < 0
+        - 1: for
+        - formula: `1 / 1+exp(-x)`
+    - makes it easier to optimse...
+    - optimiser doesn't have to try too hard to hit exactly one
+      or exactly zero
+        - instead try to create a really big number to mean
+          survive
+        - and a really small number for perish
+    - if using a framework or package, is it chucking your output
+      layer through a `sigmoid`?
+        - (Can be hard to fidnout; one time Jeremy had to check
+          huggingface transformers source code to be sure)
+
+### Dropout
+    - have a dropout 'mask'
+    - it blurred the number 7 in MNIST
+    - humans can recognise '7' even with bits missing, so good if
+      NN can generalise and recognise the numeral too...
+    - Prevents over-fitting and helps NN generalise more
+
+### convolution change 2022
+    - DON'T do a `max pool` after every conv layer
+        - instead do a stride-2 convolution
+        - so we reduce each axis by 2 on each pass
+    - we don't normally have a single dense layer at the end
+        - we generally keep doing stride-2 convolutions until
+          we're down to a 7-by-7 grid
+        - and we do a single pooling at the end... and now
+          usually average pool, rather than max pool
+        - (although max pool better if your're just looking for
+          a small object in any pixel of the 7x7 grid??)
+        - fastai: they actually do a `concat pool` at the end.
+            - that's average pool + max pool (i.e. both!)
+
+### intuition: dense layers
+    - e.g. in_features  = 1000
+    - e.g. out_features = 500
+    - for 'fully-connected' or 'dense' layers, we start with an
+      input vector but we want to extract some kind of features
+      out of that data...
+    - that's why we tend to filter DOWN (reduce size) when
+      dealing with dense layers
+
+### NN Training: integrations
+    - Weights and Biases    https://wandb.ai/site
+    - Tensorboard           https://www.tensorflow.org/tensorboard
+    - Captum Interpretation https://distill.pub/2020/attribution-baselines/
+    - Comet.ml              https://www.comet.com/site/
+    - huggingface hub
+
+### what is an NN
+    - Mathematically, the entire network is just a COMPOSITION of
+      FUNCTIONS, and a composition of functions is a function
+      itself.
+    - So a network is just a `FUNCTION`.
+    - Terms like "layers", "activation functions", and "weights",
+      are just used to help describe the different parts.
+
+### Kernel vs Filter
+    - Note: in DL, we often use the words 'filter' and 'kernel'
+      interchangeably. However, there's a technical distinction
+      between them.
+    - A kernel is a 2D tensor, and a filter is a 3D tensor that
+      contains a collection of kernels.
+    - We apply a `kernel` to a single channel, and we apply
+      a `filter` to multiple channels.
+    - To learn about this distinction, see:
+      https://stats.stackexchange.com/questions/154798/difference-between-kernel-and-filter-in-cnn/188216
+
+### terminology
+    - "forward propagation":
+        - passing an input tensor to the network, and receiving
+          the output from the network
+    - linear layers = 'fully connected layers' `fc`
+    - linear layers = 'dense' (another name for it)
+    - HYPERPARAMETERS:
+        - parameters whose values we choose manually and
+          arbitrarily
+        - its the job of the NN designer to choose these values
+        - e.g. for an NN layer:
+            - kernel_size,
+            - out_channels,
+            - out_features
+    - data hyperparameters: ?
+    - FEATURE MAPS
+        - feature maps are the output of a `conv layer`
+        - note: output of a linear layer are only called
+          'features' cos they're a rank 1 tensor
+        - also called: out_channels
+
+### max pooling
+    - define `filter size` e.g. 2 x 2
+    - `stride` = 2
+    - choose max value inside each nxn window (pool) as the
+      filter slides across an image
+    - reason: preserve high-value pixels going forward
+    - there's other types of 'pooling':
+        - average pooling
+
+### NNs (zero) padding
+    - 'valid' = no padding
+    - 'same' = output image same size as input image before filter
+
+### most import idea
+    - Jeremy fastai 2022 Lesson 4
+    - "having separate training, validation and test datasets"(!)
+
+### NLP
+    - Jeremy fastai 2022 Lesson 4
+    - two approaches: ulmfit & transformers (ulmfit better for
+      larger documents e.g. IMDB)
+    - turn words into tokens ('tokenisation') and then tokens
+      into numbers ('numericalisation')
+
+### Optimisation
+    - Is finding a way to efficiently LEARN the `parameters`
+      (weights + biases) that minimise a loss function.
+        - ie find weights that are 'least bad'
+
+### "Weights"
+    - "weights + biases"  = model "parameters"
+    - Weights are what we keep when we've trained the model
+
+### "Loss"
+    - Total Loss = data loss + regularization term
+
+### Etymology: Regularization
+    - "Regularization" for ML is rooted in mathematics,
+      specifically the field of _ill-posed problems_ and
+      _inverse_ problems.
+        - In many mathematical problems, one often wants to
+          "invert" a process. i.e., given some `output`, one
+          tries to determine the possible `input`.
+        - But not all problems are "well-posed" (introduced by
+          Jacques Hadamard). A well-posed problem is where
+          a solution exists, is unique, and changes continuously
+          with the initial data. Problems that don't meet these
+          criteria are "ill-posed."
+        - Inverse problems are typically ill-posed. E.g. consider
+          deducing an image (like a medical MRI) from a set of
+          measurements. Small errors in the measurements might
+          lead to wildly different images, making the problem
+          ill-posed.
+        - One way to address ill-posed problems: introduce
+          additional info or constraints to make them well-posed.
+          This is often done by seeking solutions that are not
+          just consistent with the data but also have some
+          "smoothness" or simplicity properties.
+        - This process of adding constraints or additional
+          criteria to _stabilize the solution_ of an ill-posed
+          problem is called "regularization."
+    - For ML, the idea is analogous. Complex models esp. DL can
+      overfit the training data (learn noise and fluctuations).
+      This is similar to an ill-posed problem where many
+      solutions (models) can fit the data.
+    - Regularization techniques introduce constraints to prefer
+      simpler or _smoother models_, analogous to mathematical
+      regularization which seeks smoother or simpler solutions.
+    - ML "regularization" essentially borrows this concept from
+      Maths, emphasizing the adding of constraints or _penalties_
+      to "regularize" or stabilize the learning process and
+      prevent overfitting.
+
+### regularization
+    - "Regularization" are techniques to prevent OVERFITTING.
+    - Overfitting occurs when a model performs super on training
+      data but poorly on unseen or test data.
+    - This is because the model may have learned the training
+      data's _noise_ or _fluctuations_ instead of the underlying
+      distribution.
+    - Regularization adds a penalty on the complexity of the
+      model, encouraging it to be simpler, which can lead to
+      better generalization to new data.
+    - 'Standford' slides:
+        - $MY_IMAGES/cs/AI-ML/computer-vision/svm-regularisation.jpg
+        - $MY_IMAGES/cs/AI-ML/computer-vision/types-of-regularisation.jpg
+
+    - Common regularization techniques:
+
+    1. _L1 Regularization (Lasso Regression)_:
+        - Adds a penalty equal to the absolute value of the
+          coefficients magnitudes.
+        - Can lead to some feature coefficients becoming exactly
+          zero, effectively leading to FEATURE SELECTION.
+
+    2. _L2 Regularization (Ridge Regression)_:
+        - Adds a penalty equal to the square of the coefficient
+          magntitudes.
+        - Keeps all features but can reduce the magnitude of
+          coefficients for features that are not informative.
+
+    3. _Elastic Net_:
+        - A combination of L1 and L2 regularization.
+        - Useful if many _correlated_ features in the dataset.
+
+    4. _Dropout (specifically for NNs)_:
+        - During training, randomly selected neurons are ignored
+          (i.e., their outputs are set to zero).
+        - This means that during each iteration of training,
+          a slightly different model is used, which can prevent
+          overfitting and co-adaptation of neurons.
+
+    5. _Early Stopping_:
+        - Training is stopped as soon as the performance on
+          a validation set starts to degrade, even if the
+          training set error is still decreasing.
+        - This prevents the model from learning the noise in the
+          training set.
+
+    6. _Batch Normalization_:
+        - Normalize the activations of the neurons in a layer for
+          each mini-batch.
+        - This can have a slight regularization effect, as the
+          _distribution_ of inputs to layers inside the neural
+          network can shift slightly for each mini-batch.
+
+    7. _Weight Decay_:
+        - A form of L2 regularization during the update of the
+          weights in NNs, where a small proportion of the weight
+          values is subtracted, pushing the weights towards zero.
+
+    8. _Noise Injection_:
+        - Noise is added to the inputs or in the network itself,
+          which can prevent over-reliance on any particular input
+          and improve generalization.
+
+    9. _Data Augmentation (common in DL for images)_:
+        - Training data is artificially increased by applying
+          various transformations (rotations, translations,
+          zooming) on the original images.
+        - Provides more varied examples for the model to learn
+          from, effectively regularizing the model.
+
+    - The choice of regularization method and its strength (often
+      controlled by a hyperparameter, like `lambda` in L1 and L2
+      regularization) depends on the specific problem, dataset,
+      and the nature of overfitting observed.
+
+
+### L1 and L2 Norms in Regularization
+    - "L1" and "L2" in the context of regularization refer to the
+      mathematical `norms` used to compute PENALTY TERMS.
+    - Both norms are ways to measure the "size" or "magnitude" of
+      vectors. In regularization, the vectors are typically the
+      WEIGHT VECTORS of a model.
+
+    #### L1 Norm
+    - Also known as the _Manhattan norm_ or _taxicab norm_.
+    - It is the sum of the absolute values of the components of
+      a vector.
+    - For a vector `v = [v_1, v_2, ..., v_n]`, the L1 norm is
+      calculated as: ``` ||v||_1 = |v_1| + |v_2| + ... + |v_n|
+      ```
+    - L1 regularization adds the L1 norm of the weights as
+      a PENALTY to the loss function.
+
+    #### L2 Norm
+    - Also known as the _Euclidean norm_.
+    - It is the square root of the sum of the squares of the
+      components of a vector.
+    - For a vector `v = [v_1, v_2, ..., v_n]`, the L2 norm is
+      calculated as:
+    - ```
+    - ||v||_2 = \sqrt{v_1^2 + v_2^2 + ... + v_n^2}
+    - ```
+
+    - `L2` regularization adds the squared `L2` norm of the
+      weights as a penalty to the loss function.
+
+    - The naming convention comes from the general _p-norms_ (or
+      Lp norms) in mathematics, where:
+    - For `p=1`, we have the L1 norm, and for  `p=2`, the L2
+      norm. Other values of `p` define other norms, but in
+      machine learning regularization, L1 and L2 are the most
+      commonly used.
+
+
+### 2023 good tools:
+    - https://news.ycombinator.com/item?id=34764554
+    - You'll probably start with an LLM API: `OpenAI`.  `Cohere`
+      and others aren't as good - `Anthropic`'s isn't available
+    - If you're using embeddings - If you're working with a lot
+      of items, you'll want a vector database, like `Pinecone`,
+      or `Weaviate`, or `pgvector`
+    - If you're building Q&A over a document - I'd suggest using
+      `GPT Index`
+    - If you need to interact with external data sources, do
+      google searches, database lookups, python REPL
+      - I'd suggest using `langchain`
+    - If you're doing chained prompts - Check out `dust tt` and
+      `langchain`
+    - If you want to deploy a little app quickly - Check out
+      `Streamlit`, `Gradio`
+    - If you need to use something like stable diffusion or
+      whisper in your product - `banana dev`, `modal`,
+      `replicate`, `tiyaro ai`, `beam cloud`, `inferrd`, or
+      `pipeline ai`
+    - If you need something to optimize your prompts - Check out
+      `Humanloop` and `Everyprompt`
+    - If you're building models and need an ml framework
+      - `PyTorch`, `Keras`, `TensorFlow`
+    - If you're deploying models to production - Check out MLOps
+      tools like `MLflow`, `Kubeflow`, `Metaflow`, `Airflow`,
+      `Seldon Core`, `TFServing`
+    - If you need to check out example projects for inspiration
+      - Check out the `pinecone op stack`, the `langchain
+        gallery`, the `gpt index showcase`, and the `openai
+        cookbook`
+    - For latest research: check out `arXiv`
+
+
+### Normalization
+    - Normalization Layers:
+        - Imagine you're preparing a cake recipe. You need to mix
+          ingredients: flour, sugar, eggs, and butter. However,
+          each ingredient might have different properties. E.g.,
+          flour might have different brands or types, some with
+          finer grains, others coarser.
+        - Normalization in the context of NNs is like ensuring
+          all your cake ingredients are the right consistency and
+          in the right proportion. It's a way to ensure
+          everything works together.
+    - Batch Normalization:
+        - Take 'normalization' a step further. Think of training
+          a NN like teaching a group of students a new skill,
+          like playing an instrument. Each student learns at
+          a different pace, and they might have different levels
+          of talent. Some become skilled quickly, while others
+          need more time.
+        - Batch normalization is like ensuring all students
+          progress at a _similar rate_ during their learning.
+          Imagine you're teaching them to play a musical piece,
+          and you want them all to reach the same level of
+          proficiency. You might:
+            1. Regularly assess their progress (after every
+            practice session) to determine how each student is
+            doing.
+            2. If one student is progressing faster than the
+            others, you might ask them to slow down a bit so that
+            everyone can catch up.
+            3. If one student is struggling and progressing
+            slowly, you might provide extra guidance or practice
+            to help them improve faster.
+    - In essence, batch normalization does something similar for
+      NNs during training. It keeps the activations (the outputs
+      of neurons) in each layer of the network at a similar
+      scale. It does this by examining how the activations change
+      during each batch of training data and adjusting them as
+      needed.
+    - This helps the network train more smoothly and converge
+      faster, similar to ensuring all your students learn to play
+      music at a similar pace. It's like fine-tuning the learning
+      process to make it more efficient and effective.
+    - In summary, normalization layers ensure the "ingredients"
+      in your NN work together smoothly, and batch normalization
+      is a technique to ensure the "students" (neurons) in your
+      network progress at a similar rate during training, helping
+      the network learn better and faster.
+
+### Embeddings
+    - Think of embeddings in DL networks as a way to translate
+      something complex or abstract, like words, into a format
+      the computer can manipulate more easily.
+    - Imagine you're a chef and you have a recipe book written in
+      a foreign language you don't understand. You want to cook
+      a dish from that book, but you need to figure out what each
+      ingredient is and how much of it to use. So, you decide to
+      create a special page in your recipe book where you write
+      down a list of ingredients and next to each one, you put
+      a picture of that ingredient. This way, even if you don't
+      understand the language, you can simply look at the
+      pictures to know what you need.
+    - In this analogy, the foreign language is like the words or
+      concepts in a neural network, and the pictures of
+      ingredients are like the embeddings. The embeddings take
+      something abstract and turn it into a more concrete and
+      numerical representation that the neural network can
+      process. So, instead of dealing with raw words, the network
+      works with these embeddings to understand and learn
+      patterns in the data.
+    - Embeddings make it easier for neural networks to work with
+      complex information, just like the pictures of ingredients
+      make it easier for you to cook from a foreign-language
+      recipe book. They help the network grasp the meaning and
+      relationships between words, which is crucial for tasks
+      like natural language processing and understanding.
+
+### Jeremy GPT4 prepend instructons
+    - $MY_NOTES/cs/AI-ML/LLms-openai-chatGPT.txt
+
+### 'Neat' versus 'scruffy' AI
+    - Doug Lenat has died (garymarcus.substack.com)
+      https://news.ycombinator.com/item?id=37354000
+    - Cyc (pronounced /ˈsaɪk/ SYKE) is a long-term artificial
+      intelligence project aiming to assemble a comprehensive
+      ontology and knowledge base spanning the basic concepts and
+      rules of how the world works. Hoping to capture common
+      sense knowledge, `Cyc` focuses on implicit knowledge that
+      other AI platforms may take for granted.
+
+### Frequentist advantage?
+    - https://news.ycombinator.com/item?id=37257027
+    - Bayesian techniques are useful for when you want to
+      _reason_ about limited data.
+    - But as soon as you have a fair sized dataset, frequentist
+      techniques are typically computationally simpler and faster
+      (no need for MCMC) and scale much better.
+
+### Old Annotations:
+    - The Fourth Paradigm: Data-Intensive Scientific Discovery
+      (Tony Hey, Stewart Tansley, Kristin Tolle, Tony Hey,
+      Stewart Tansley, Kristin Tolle)
+    -  Read it in 2011, before BSc thesis
+
+### Perceptron
+    - is a SINGLE neuron!
+        - Forward propagation:      $MY_IMAGES/cs/AI-ML/Perceptron.jpg
+        - Perceptron with bias term $MY_IMAGES/cs/AI-ML/Perceptron-with-bias.jpg
+
+
+### Multiple experts
+    - https://news.ycombinator.com/item?id=36890036
+    - ChatGPT-4 does something a bit similar with the
+      mixture-of-experts approach.
+    - Although I think they select which network to use ahead of
+      time rather than select the best answer from multiple.
+
+### Stable Diffusion intuition
+    - https://www.youtube.com/watch?v=1CIpzeNxIhU
+    - key words: 'the schedule'
+    - $MY_IMAGES/cs/AI-ML/stable-diffusion-1.jpg
+    - $MY_IMAGES/cs/AI-ML/stable-diffusion-2.jpg
+
+
+### Is is legal? Leak of background noise?
+    - Theme: using test data Test IDs
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/368387
+    - This corresponds to "Magic#2" from the SETI competition. At
+      that time, this solution was considered valid.
+    - https://www.kaggle.com/code/tanreinama/eliminate-noise-using-signal-similarity
+    - REPLY
+        - As we don't know the labels of test dataset, actually
+          it's nearly impossible to do such an operation. If you
+          try to take advantage of this 'leakage' then you need
+          to foucus on LB scores.
+        - However, public LB only contains the result of 24% of
+          the full data, which can easily leed to overfitting.
+        - REPLY
+        - I'm agreed. However, it's a good indicator for
+          evaluation/validation for the true model.
+    - REPLY
+    - A Kaggle mod has said they should be able to _completely
+      rename the test set_, and your code should still work. So
+      anything relying on manually setting `test IDs` is against
+      the rules.
+    - As it stands, this notebook wouldn't be valid, but if you
+      could automatically detect and leverage it, that'd be ok
+      (my interpretation).
+    - Official info from Inversion:
+        - General rule: Whatever you do has to be generalizable
+          to unseen data.
+        - E.g. You can calculate a noise factor and adjust model
+          predictions based on that. You cannot add something to
+          your code that makes an adjustment for a particular
+          observation based on its ID (or some proxy that is
+          effectively identifying a specific observation).
+        - We should be able to completely rename all test data,
+          and your model should give the exact same result. And
+          the model should give similar results on completely new
+          test data.
+
+
+### ChatGPT
+    - Scott https://scottaaronson.blog/?p=7094
+    - Incidentally, after writing about Galileo, I stopped,
+      asking if it was too hackneyed and overwrought. But
+      I decided this is a rare case where it isn’t.
+    - The discovery of how much of humans’ language understanding
+      _can be simulated by a probabilistic autocomplete_ is
+      entirely comparable to the discovery of the moons of
+      Jupiter. So no surprise that it engenders a similar
+      opposition.
+    - ChatGPT: a statistical parrot(?)
+
+### The reality of DataScience?(!)
+    - https://news.ycombinator.com/item?id=34198838
+    - User: "civilized"
+    - As a data scientist, I think _most data is useless_, but
+      there is an addictive, video game-like quality to throwing
+      lifeless spreadsheets into a machine and having colorful
+      visualizations pop out.
+    - It's like a boring video game for adults that makes them
+      feel they're working, when they're actually just enjoying
+      colorful abstract shapes and colors.
+    - Honestly, this is probably why I'm in this line of work.
+
+### backwards propogation
+    - is really the chain rule
+
+### Ah STOCHASTIC gradient descent!!!
+    - $MY_NOTES/cs/AI-ML/3blue1brown-neural-nets.txt
+    - To calculate the _exact proper_ gradient descent, we'd have
+      to use all the training data each time we calculate the
+      gradient.. but that's COMPUTATIONALLY EXPENSIVE...
+    - So we _RANDOMLY SPLIT_ (stochastic) the data into
+      `mini-batches` and calculate the negative gradient for each
+      smaller batch...
+        - much better computationally, but because we're only
+          operating on batches of data each time, we don't
+          actually compute the most "efficient" descent...
+    - So we're like a 'drunk man' coming down the hill in wobbly
+      steps, rather than the most precise, efficent, direct route
+      down the hill (if we were using ALL the data for each
+      negative gradient calculation)
+        - $MY_IMAGES/cs/AI-ML/stochastic-drunk-man-coming-down-the-hill.jpg
+
+
+### Cost function key insight
+    - For the cost of a single sample, take the output the
+      network gives (maybe "utter trash!"), along with the output
+      you wanted it to give... and then add up the `squares of
+      the differences` for each component
+        - this image shows the "cost" of digit 8
+        - must of the output is rubbish, and we just want the
+          single output neuron for `8` (in the output layer) to
+          be lit up....
+            - $MY_IMAGES/cs/AI-ML/cost-of-8-3brown1blue.jpg
+    - Doing this for thousands of training examples and averaging
+      the results, gives the total cost of the network
+    - (and we want the `negative gradient` of this huge cost
+      function to decrease the cost)
+
+### Floating point
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/364047
+    - CPUs have more accurate float point than GPU, maybe that's the reason. (??)
+    - Is this true?
+
+### Pseudo Labeling
+    - Pseudo labeling is where you add high-confidence predicted
+      test data to your training data.
+    - It's a 5 step process:
+        - (1) Build a model using training data.
+        - (2) Predict labels for an unseen test dataset.
+        - (3) Add confident predicted test observations to
+          training data
+        - (4) Build a new model using combined data.
+        - (5) use new model to predict the test data and submit
+          to Kaggle.
+
+### Mindscape podcast: Sean Carroll
+    - Gary Marcus on AI
+      https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi_xMqOp-73AhUKSMAKHdH_DFwQwqsBegQIAxAB&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DANRnuT9nLEE&usg=AOvVaw1z-h5TNSo2Tf4zLKDsZEjR
+    - Deep learning on it's own isn't enough... need symbolics
+      too... (i.e. need older AI techniques too)
+    - DL really only finds statistical correlations... It has no
+      underlying representation of it's knowledge
+    - Also Lex: https://www.youtube.com/watch?v=wh_IZNHH2S0
+        - Gary Marcus is a professor emeritus at NYU, founder of
+          Robust.AI and Geometric Intelligence, the latter is
+          a machine learning company acquired by Uber in 2016. He
+          is the author of several books on natural and
+          artificial intelligence, including his new book
+          Rebooting AI: Building Machines We Can Trust. Gary has
+          been a critical voice highlighting the limits of deep
+          learning and discussing the challenges before the AI
+          community that must be solved in order to achieve
+          artificial general intelligence.
+
+### Brian Schmidt
+    - on Brian Keating podcast
+    - AI at the moment is _interpolation_...
+        - it does not _extrapolate_ at all...
+
+### Learning step size
+    - $MY_BOOKS/CS/AI-ML/2016-Make-Your-Own-Neural-Network.pdf
+        - $MY_IMAGES/cs/AI-ML/learning-step-size.jpg
+    - We should moderate how much we nudge the value of `c`:
+        - If the outputs are getting close to the correct answer,
+          (the error is getting smaller), _then don’t nudge the
+          changeable bit so much_.
+        - That way we avoid overshooting the right value, like we
+          did earlier.
+    - Without getting distracted by the exact way of calculating
+      `c`, and to remain focussed on the idea of successively
+      refining it, we could suggest that the _correction is
+      a fraction of the error_.
+    - That’s intuitively right:
+        - a big error means a bigger correction is needed, and
+        - a tiny error requires the teeniest of nudges to `c`.
+
+### Misc Comments
+    - I'm interested in ML as career, coming from a math
+      background and starting to dip into ML. But Im afraid how
+      useful is it going to be to create a rigorous mathematical
+      framework?
+    - I'm afraid it might end up like _mathematical physics_,
+      where they are almost a century behind theoretical and
+      experimental physics and playing catch-up. What does anyone
+      else think?
+    - One thing to consider is the distinction between DL
+      networks as mathematical objects and ML as currently
+      practiced.
+    - Lately, there have been quite a few theories on neural
+      networks as ideal nonlinear approximators [1].
+    - Similarly, people have shown many ways that gradient
+      descent can tend to reach a global maximum of regularized
+      curve-closeness[2].
+        - Which is to say, if your development cycle is: gather
+          data, train, test, deploy, we know this approximates
+          the data almost ideally; you can't really do much
+          better than a deep network.
+    - But we know in practice, when deployed, that DL networks
+      actually have MANY LIMITATIONS (compared to our intuitions
+      or compared to human performance, etc).
+    - There are some obvious explanations.
+        - Of course, they're limited by our ability to gather
+          data and by the biases of the data.
+        - But even more, they're limited to situations where you
+          have large chunks of unchanging data that you can
+          extrapolate from (`? can they really extrapolate`).
+    - Given that deeps are perfect for the train-test-deploy
+      cycle, it seems like the problem is with this CYCLE itself.
+        - And it's easy to see human beings somehow acting
+          "intelligently" _without using this cycle_.
+        - So figuring out an alternative to this might be
+          something to look at.
+    - [1] e.g.: Nonlinear Approximation and (Deep) ReLU Networks
+      I. Daubechies, et al https://arxiv.org/abs/1905.02199
+    - [2] e.g.: Gradient descent optimizes over-parameterized
+      deep ReLU networks Difan Zou et al
+      https://link.springer.com/article/10.1007/s10994-019-05839-6
+
+### Fourier link
+    - This is a great time and place to be!
+    - Neural networks are the 21st century Fourier series.
+    - It's just that we don't understand them yet. We can run
+      them easily (synthesis) but we are missing the analysis.
+    - There's a lot of math to do here.
+
+### Free energy
+    - Relate it to free energy minimization, that's very hot
+      right now.
+        - Read Smolensky's 1986 article in PDP on the harmonium,
+          it was the first restricted boltzmann machine.
+    - Don't most NNs already do free energy minimization?
+        - Just about any information theoretic objective can be
+          interpreted that way...
+    - Yes, that's arguably the dominant paradigm.
+        - It's interesting because of the relationship to
+          thermodynamics: again, check out Smolensky's paper in
+          PDP, he was a postdoc (along with Geoff Hinton) at
+          UCSD's cognitive science dept, run by Don Norman.
+    - https://apps.dtic.mil/sti/pdfs/ADA620727.pdf
+
+### Important
+    - An actual theory of `ANN` (artifical neural networks) and
+      then of `NNN` (?) will be of more momentous import than of
+      any previous phenomena, will usher in a fundamentally
+      transformative age where we understand ourselves, and will
+      surely require a fundamental breakthrough in pure
+      mathematics... probably a great many.
+
+### Network topology (important)
+    - Another area to examine is network connectivity.
+        - When visualizing NNs we typically see a fully connected
+          network from one layer to the next, but if you set the
+          value of many weights to zero you'll find they have
+          absolutely no effect on the function of the network.
+        - So we're looking at a lot of _spurious interactions_
+          and this clouds our thinking.
+        - In fact the `network topology` is what's driving
+          network function here, but we're not doing a good job
+          exposing that intuitively.
+        - Computational research on `Gene Regulatory Networks`,
+          also modeled with the same NN math, have shown how
+          network topology is the key driver of function.
+    - I published a paper on this (195 citations).
+    - It shows that under an evolutionary process, Artificial
+      Gene Regulatory Networks select out spurious network
+      interactions, leaving you with what's functionally
+      necessary (Also see the supplementary).
+    - I believe this could be important for building a foundation
+      for NNs. (I came from AI before writing this paper)
+        - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2538912/
+
+### Cathedrals
+    - The current state of NNs is analogous to building
+      cathedrals in the medieval era.
+    - Master architects had a good understanding of ancient
+      geometry and applied that knowledge + knowledge of arches
+      from Roman times to create the great European cathedrals.
+    - The architects didn't have a deep understanding of material
+      science (stone) and other forces that are taken into
+      account in the modern era, but they had enough knowledge
+      from experience and experimentation, combined with
+      relatively simple geometry to create strong structures that
+      have stood for centuries.
+    - The analogy between that and modern practical AI/NN
+      implementations is that experts in the field have good
+      basic knowledge of how to construct NNs but there isn't yet
+      an advanced theoretical knowledge of the science that
+      allows for precise predictions and modeling.
+        - i.e. Experts are still at the level of experimentation
+          and noting the results and getting useful results
+          without a deep understanding of how NNs produce useful
+          results.
+
+### Difference perceptrons, sigmoid neurons
+    - The problem is: this isn't what happens when our network
+      contains perceptrons.
+        - In fact, a small change in the weights or bias of any
+          single perceptron in the network can sometimes cause
+          the output of that perceptron to completely flip, say
+          from `0` to `1`
+    - That flip may then cause the behaviour of the rest of the
+      network to completely change in some complicated way.
+    - So while your "9" might now be classified correctly, the
+      network behaviour on all the other images is likely to have
+      changed in some hard-to-control way.
+    - That makes it difficult to see how to gradually modify the
+      weights and biases so the network gets closer to the
+      desired behaviour.
+        - Perhaps there's some clever way of getting around this
+          problem. But it's not immediately obvious how we can
+          get a network of perceptrons to learn.
+    - We can overcome this problem by introducing a new type of
+      artificial neuron called a `sigmoid neuron`.
+        - Sigmoid neurons are similar to perceptrons, but
+          modified so that _small changes_ in their weights and
+          bias cause only a small change in their _output_.
+        - That's the crucial fact which will allow a network of
+          sigmoid neurons to learn.
+
+### Nora: Aug 2021 training data
+    - Nora conference
+    - to train ML models, we need negative data
+    - but hard to get for antibody-antigen binding
+    - Victor Greiff, University of Oslo: Future perspectives: from structure to function
+
+### Deep Dreaming
+    - The Art of Code - Dylan Beattie
+    - Dog amplifier
+        - $MY_IMAGES/cs/AI-ML/deep-dreaming-dogs-01.jpg
+        - $MY_IMAGES/cs/AI-ML/deep-dreaming-dogs-02.jpg
+        - $MY_IMAGES/cs/AI-ML/deep-dreaming-dogs-03.jpg
+
+### Learning Neural Nets DL
+    - Best (free) book for learning deep learning?
+      http://neuralnetworksanddeeplearning.com/
+    - It was hard for me to understand the basics of deep
+      learning. A lot of formal courses makes a lot of
+      assumptions.
+    - I ended up watching the deep learning series by
+      3blue1brown, reading the book it was based on.
+    - Watching lots of linear algebra and calculus videos too.
+    - Then taking the DL specialization program on Coursera. This
+      took 2 months and taught me the basics.
+    - Then I built my own project and realized there were lots
+      _holes_ in my knowledge base.
+    - I found an old post on HN that recommended _deeplizard_ on
+      YouTube: yes, an excellent intro to pytorch.
+    - One thing to remember: as you are learning, NEW METHODS are
+      being invented.
+    - DeepLizard
+      https://www.youtube.com/channel/UC4UJ26WkceqONNF5S26OiVw
+
+### Lex opinion:
+    - CNN's are passe... transformers are in!? (Lex)
+
+### What is 'Search' for
+    - I never understood this at Aberdeen...
+    - The methods AI researchers used to automatically create
+      sstructure from fragmented input were all based on
+      heuristic search:
+        - either searching for chains of logical deductions or
+          for paths in trees (and more generally graphs).
+    - ie creating structure from unstructured input
+
+### Jacob Schwartz
+    - $MY_BOOKS/Cs/AI-ML/History-Quest-for-AI.pdf
+    - In his article "The Limits of Artificial Intelligence"
+      Schwartz wrote that the extraordinary power of the human
+      brain arose from the way it used its huge computational and
+      storage abilities
+        - "to organize information presented in relatively
+          disordered form into internally organized structures
+          onto which sophisticated, coherent courses of symbolic
+          and real-world action can be based."
+    - Schwartz claimed that to rival the brain, AI needs
+      “coherent structures capable of directly guiding some form
+      of computer action ... generated automatically from
+      relatively disorganized, fragmented input.”
+    - The ability to generate such “organized structures” would
+      constitute a tremendous breakthrough because computers are
+      “already enormously superhuman” in solving problems for
+      which they can “accept, retain, and utilizefully structured
+      material.”
+    - “If the basic obstacle posed by the need to program
+      [computers] _in detail_ (NNs solve this?) could be
+      overcome,” he wrote, “computers could ingest the
+      information containedin all the world’s libraries and use
+      this information with superhuman effectiveness.”
+
+### Affordances
+    - However, in these games it was obvious for humans that
+      platforms can support agent sprites, ladders could be
+      climbed to reach different platforms (even when the ladders
+      were colored in uniform red in games shown in Figure
+      2(b,c), the connectivity pattern revealed where the ladders
+      were) and black parts of the game constitute free space.
+    - Here, the platforms and ladders _afford_ the actions of
+      walking and climbing (Gibson, 2014), irrespective of their
+      appearance.
+    - In the next set of experiments, we manipulated the game to
+      mask the affordance prior...
+
+### Learning Tip
+    - Kaggle Courses are good / clear
+
+### Fourier Transform is a Neural Net
+    - HN: https://news.ycombinator.com/item?id=26980169
+    - Is there anything deep here? There's a parametrized
+      representation of a function and it's being interpreted as
+      a NN: why is this surprising?
+    - It's like saying that Newton's second law is a NN: F=ma can
+      be written log(F) = log(m) + log(a).
+        - Aha, this is a neural network!
+        - The inputs are `m` and `a`, the first layer is sparsely
+          connected with log activation functions, the second
+          layer is fully connected with an exponential activation
+          function:
+    - `F = exp(c1 * o1 + c2 * o2) o1 = log(c3 * a + c4 * m) o2
+      = log(c5 * a + c6 * m)`
+    - If you feed it enough data you'll find c1=c2=c3=c6=1 and
+      c4=c5=0.
+    - But saying that Newton's second law is a NN, while correct,
+      seems a bit deceptive in that it's not a deep idea at all.
+
+
+### Pytorch / Numpy: seed random numbers
+    - https://news.ycombinator.com/item?id=26767441
+    - "Be careful when using random numbers and multi
+      processing..."
+    - Forgetting to seed your `RNG` is a really classic bug.
+    - IMHO RNGs should auto seed unless explicitly set not to,
+      but since the opposite behaviour was baked into `C` so many
+      years ago it's kind of the default.
+    - The worst part is how easy a bug this is to miss unless
+      you're explicitly printing out the first set of random
+      numbers for some strange reason.
+
+### Hogg: ML and ODE's
+    - Today Soledad Villar (JHU) and I discussed ways to
+      structure a ML method for a cosmological problem:
+        - The idea is to use the ML method to replace or emulate
+          a cosmological simulation.
+    - This is just a toy problem; really I'm interested in data
+      analysis, not theory, in the long run.
+    - But we realized today that we have a huge number of choices
+      how to structure this. Since the underlying data come from
+      an ordinary differential equation, we can structure our ML
+      method like an ordinary differential equation, and see what
+      it finds!
+    - Or we can give it less structure (and more freedom) and see
+      if it does better or worse.
+    - That is, you can build a NN that is, on the inside,
+      a _differential equation_.
+    - That's crazy. Obvious in retrospect but I've never thought
+      this way before.
+
+### MagNet competition
+    - cant use cnn_learner for multiple regression outputs(!)
+    - $MY_CODE/AI-ML/magnet/README.md
+
+### Magnet Scalers!!!
+    - remember the difference between:
+        - `fit_transform` and `transform`
+
+### Unknown Unknowns in Machine Learning
+    - https://news.ycombinator.com/item?id=26110715
+    - "Unknown unknowns" (UU) is an interesting term of art, but
+      it could hide the real issue.
+        - June 2021 aside:
+            - David Silver (UCL RL course) says we are only
+              concerned with observables that the brain can "SEE"
+            - David says 'there might be other things hiding
+              inside the environment, but the agent doesnt know
+              about them, cant observe them, so in a sense they
+              are _irrelevant_ to the algorithms we create...'
+            - $MY_IMAGES/cs/AI-ML/history-observables-RL.jpg
+    - A "UU" Example for an ML system is simply proof it has
+      failed to acquire the relevant classification criteria, and
+      on most problems, ML systems cannot in principle do so.
+        - eg. consider that 3D data is often needed and only 2D
+          given.
+    - I'd prefer to call these "breaking examples" or
+      "beyond-scope examples".
+    - What's happening is that the domain of inference (`X`)
+      fails to contain data about the target (`Y`), though `Y`
+      belongs to the `Problem Domain PD` of which `X` stands as
+      an incomplete sample. Eg:
+        - `X` = images of roads;
+        - `Y` = pedestrian in street;
+        - `PD` = X + 3D data + behavioural data + pedestraian
+          theory of mind + weather_data + ..
+    - Actually deciding `Y` requires the `PD`; we have `X`.
+    - So there are many "breaking examples" which fall within
+      `PD` but outside of `X`.
+    - In general, we cannot measure the full `PD` using
+      contemporary machine systems.
+    - Humans are able to capture much more of the `PD` in complex
+      ways which would take a while to spell out.
+    - Much of modern ML, as advertised, is a bit of delusion and
+      a bit of charlatanism:
+        - we are offered a means of obtaining `Y` via `X`, but
+          never consider `PD`.
+    - We just keep "evaluating" the systems on examples
+      consistent with `X`.
+    - That's the point of this article.
+    - However, it is much more radical than it's making out. This
+      practice is really a way of disguising that ML systems do
+      not work.
+
+### Metrics
+    - "error_rate":
+        - the percentage of incorrectly classified items
+    -  accuracy
+        - `1.0 - error_rate`
+
+### Optimizers (e.g. Gradient Descent)
+    - During the training process, we tweak and change the model
+      parameters (weights) to minimize the loss function, and
+      make our predictions as correct and optimized as possible.
+    - But how exactly do you do that?
+        - How do you change the parameters of your model, by how
+          much, and when?
+    - This is where optimizers come in.
+        - They tie together the loss function and model
+          parameters by updating the model in response to the
+          output of the loss function.
+    - In simpler terms, optimizers shape and mold your model into
+      its most accurate possible form by futzing the _weights_.
+    - The loss function is the guide to the terrain, telling the
+      optimizer when it’s moving in the right or wrong direction.
+    - The grandaddy of optimizers: Gradient Descent
+
+### THE CORE OF ML!
+    - $MY_CODE/AI-ML/core-of-learning.py
+
+### GD: Gradient Descent
+    - I got it with the gradient slope! `∇`
+        - why we take the negative gradient `-∇`
+
+    - `CHANGE forward (along x-axis, parameter-axis) = -∇`
+
+    - if `∇` (slope) is NEGATIVE,
+        - it means as we go forward on the x-axis, we will go
+          down. That is good so the change should be forward
+          (positive) by the amount of the slope. But to make it
+          "forward/positive" we have to multiply the slope by
+          a negative.
+
+    - if ∇ (slope) is POSITIVE,
+        - it means as we go forward on the x-axis we'll actually
+          start to "climb" up the hill, and so further away from
+          our desired target with is down the hill in the
+          minimum.
+        - therefore the negative `-` minus drags us back down, as
+          we move forward along the x-axis
+
+### Basic approach DL
+    - Initialize::
+        - We initialize the parameters to random values. This may
+          sound surprising. There are certainly other choices we
+          could make, such as initializing them to the percentage
+          of times that pixel is activated for that category, but
+          since we already know that we have a routine to improve
+          these weights, it turns out that just starting with
+          random weights works perfectly well.
+
+    - Loss::
+        - Samuel calls this "testing the effectiveness of any
+          current WEIGHT ASSIGNMENT in terms of actual
+          performance".
+        - We need a function that will return a number that is
+          small if the model performance is good (the standard
+          approach is to treat a small loss as good, and a large
+          loss as bad, though this is just convention).
+
+    - Step::
+        - A simple way to figure if a weight should be increased
+          a bit, or decreased a bit, would be just to try it:
+            - increase the weight by a small bit, and _see if the
+              loss goes up or down_.
+        - Once you find the correct direction, you could then
+          change that amount by a bit more, and a bit less, till
+          you find an amount that works well.
+        - However, this is slow!
+            - As we will see, the magic of calculus allows us to
+              directly figure out which direction, and by roughly
+              how much, to change each weight, without having to
+              try all these small changes.
+            - The way to do this is by calculating _gradients_.
+              This is just a performance optimization, we would
+              get exactly the same results by using the slower
+              manual process as well.
+
+    - Stop::
+        - Once we've decided how many epochs to train the model
+          for (a few suggestions for this were given in the
+          earlier list), we apply that decision. This is where
+          that decision is applied.
+        - For our digit classifier, we would keep training until
+          the accuracy of the model started getting worse, or we
+          ran out of time.
+
+### gradient / slope:
+    - whatever we get for the slope, just step in the NEGATIVE
+      direction (of that slope) to ensure we're going downhill...
+    - to make sure we are minimising the cost
+        - (making it as small as possible)
+
+### bias:
+    - Like raising the floor: a base level, base number that
+      a neuron has to reach before it "fires"
+    - ie if the bias is `-10` then realasitically, a neuron's
+      activation number has to be greater than 10 to actually
+      become positive and active...
+
+### fastai: cross-validation opinion
+    - not done as much any more
+    - was more when there wasn't enough data
+    - was done on Kaggle alot, because every little fraction of
+      percent matters
+    - its not really a deeplearning thing, its more do you have
+      lots of data and do you care about the last decimal place
+      of accuracy
+
+### Hogg: Cross-validation is good!
+	- $MY_IMAGES/maths/statistics/hogg-cross-validation-good.jpg
+
+### Validation Set, Hyper-parameters
+    - fastai: Jeremy used the validation set to plot many
+      different thresholds and pick the best one.
+    - The "best practice" is not to use the validation set in
+      this way as you might overfit
+    - Jeremy says when we're picking a single number from a very
+      smooth curve, not some random thing, then its ok
+        - $MY_IMAGES/cs/AI-ML/picking-threshold-hyperparameter.jpg
+
+    - In this case, we're using the validation set to pick
+      a hyperparameter (the threshold), which is the purpose of
+      the validation set.
+
+    - Sometimes students are concerned we might be *overfitting*
+      to the validation set, since we're trying lots of values to
+      see which is the best.
+        - However, as you see in the plot, changing the threshold
+          in this case results in a smooth curve, so we're
+          clearly not picking some inappropriate outlier.
+
+    - This is a good example of where you have to be careful of
+      the difference between theory (don't try lots of
+      hyperparameter values or you might overfit the validation
+      set) versus practice (if the relationship is _smooth_, then
+      it's fine to do this).
+
+
+### Neural Net summary
+    - A NN contains a number of layers. Each layer is either
+      _linear_ or _nonlinear_.
+    - We generally alternate between these two kinds of layers in
+      a NN.
+    - Sometimes people refer to both a linear layer and its
+      subsequent nonlinearity together as a single layer.
+        - Yes, this is confusing.
+    - Sometimes a nonlinearity is referred to as an _activation_
+      function.
+
+### Memristors
+    - ./memristors.txt
+    - https://news.ycombinator.com/item?id=25933723
+    - If memristors act like neurons, put them in NNs
+    - Memristors are the technology that seemed poised to ignite
+      a new era of computing. The promise of being able to redraw
+      the current computer architectural hierarchies is
+      tantalizing.
+    - If ML applications are what finally get memristors out into
+      the world, I wish them godspeed.
+    - What do you think of memristors vs FPGAs?
+        - They have many similarities -- they both redrew current
+          computer architectures, they integrate memory and
+          computing, they have randomness built-in, and they both
+          take less power than mainstream GPUs.
+    - What does memristor provide that specially designed "neural
+      FPGA" can not?
+        - They aren't really directly comparable like you imply.
+        - A memristor is basically a resistor that changes
+          resistance when you run current through it. An FPGA is
+          a clever layout of many thousands of logic gates that
+          can be programmed to form arbitrarily complex digital
+          logic circuits. It's like comparing apples to
+          skyscrapers because they're both associated with New
+          York.
+    - Presumably, a memristor based neural network would have the
+      advantage over an FPGA of requiring significantly less
+      silicon area to achieve the same function.
+    - I imagine an FPGA based neural network would approximate
+      analog signals digitally, perhaps using floating point
+      "half's" or something.
+    - Memristors would directly operate on analog signals,
+      encoding information as amplitudes or pulses of currents
+      and voltages.
+    - Notably, FPGAs and GPUs can't really be directly compared
+      to each other in terms of power consumption unless you
+      specify specific use cases. You can't build the equivalent
+      of a mainstream GPU out of FPGAs without severely limiting
+      the clock speed (because of how physically large it would
+      be), and if you did anyway, it would use many orders of
+      magnitude more power to function.
+    - So, a GPU is way more power efficient than an FPGA for
+      rendering graphics. There are certainly problems that a GPU
+      isn't good at solving, and so there's a good chance that an
+      FPGA solution would be more power efficient.
+    - Correct me if I'm wrong, but isn't it a good metaphor to
+      say that FPGAs are just ASIC emulators? I.e. much less
+      efficient than an equivalent ASIC, but good for prototyping
+      and something to use in production if you can't afford to
+      manufacture your own chip (which is most low-volume use
+      cases).
+        - Under this metaphor, memristor-based ASICs will
+          obviously be more efficient than FPGAs emulating them,
+          but that's predicated on there being a high-volume use
+          case justifying the creation of a memristor chip in the
+          first place.
+
+### Essence of gradient descent
+    - Short: `w     -= gradient(w) * lr`
+    - Long:  `weight = weight - gradient(weight) * learning_rate`
+    - This is known as stepping your parameters, using an
+      optimizer step.
+    - Picking a good `lr` is very important.
+        - Too small and it takes ages. Too big and you overshoot
+          or bounce around.
+
+### Backpropogation / Hebbian theory
+    - "Neurons that fire together wire together"
+        - $MY_IMAGES/cs/AI-ML/hebbian-theory-fire-wire.jpg
+
+### Are NN's just memorising?
+    https://arxiv.org/abs/1611.03530
+    https://arxiv.org/abs/1706.05394
+    https://arxiv.org/abs/1412.0233
+
+### Learning
+    - find which weights and biases minimise a cost function
+        - $MY_IMAGES/cs/AI-ML/nn-connections.jpg
+    - NOTE: biological neurons are active/inactive in a _binary_
+      way, whereas NN's use `real` numbers.
+
+### compare_gan critical error(!)
+    - https://github.com/google/compare_gan/issues/54
+    - Hello. After roughly one year and 200+ training runs,
+      I finally narrowed down why `compare_gan` fails to achieve
+      any kind of reasonable result for `BigGAN-Deep`, and why it
+      fails to achieve the same FID for vanilla BigGAN.
+    - The answer is that it's missing a `+ 1` in the conditional
+      batch norm function.
+        - Specifically, you must `add 1` to gamma so that it's
+          centered around `1`.
+        - Without this, the model is basically multiplied by zero
+          to start with.
+    - Good luck to whoever finds this, and godspeed.
+    - (Twitter thread with proof that BigGAN-Deep works now:
+      https://twitter.com/theshawwn/status/1342684798905688065
+      feel free to DM me with questions or whatever.)
+
+### Time Series
+    - Time series _regression_ is equivalent to time series
+      _forecasting_ for a single step ahead.
+    - In both cases, we want the system to assign a value to
+      a given time series pattern.
+    - What is Multi-step Forecasting ?
+        - If the model predicts a single value for next
+          time-step, it is called one-step forecast.
+        - For Multi-step forecast, it means predicting few
+          times-steps ahead
+
+### Time Series
+    - I’ve seen people call "time series forecasting":
+        - the process of "developing and using a predictive model
+          on data where there is an ordered relationship between
+          observations” [^1], and then differentiate between
+          _regression_ or _classification_ time series
+          forecasting problems,
+    - Others use the term "time series forecasting" just for
+      regression problems.
+    - [^1]
+      https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/
+
+### fastai code!
+    - Random forests (good explanation):
+        - $MY_CODE/AI-ML/fastai-2020/09_tabular.py
+
+### Fastai: "use the average!"
+    - Baseline idea: pixel similarity
+    - to define the "ideal" digit 3,
+        - take the pixel _AVERAGE_ of all '3's
+    - mistake: fail to create the baseline e.g:
+        - fancy model:      80% accuracy!
+        - predict the mean: 85% accuracy!  <--- so true
+
+
+### ML Jargon
+    - Search: "Jargon/Glossary/Terminology"
+        - $MY_NOTES/cs/AI-ML/fastai/fastai-MAIN.txt
+
+### Google TPU's
+    - Jeremy Howard thinks:
+        - "TPUs are unprogrammable"(!)
+        - "Google made it that way..."
+        - only possible to do "cookie-cutter" stuff
+
+### Adversarial training.
+    - A major weakness of NNs is they are vulnerable to
+      adversarial examples.
+    - E.g. for image classification, an adversarial example is an
+      image that has been produced by applying a small
+      PERTURBATION to an original image.
+    - That perturbation can be tailored in such a way that causes
+      the algorithm to miss-classify the image.
+
+### hn comment - "Attacking NNs"
+    - ..  Adversarial attacks are successful on NNs
+      because in order to train them successfully we design them
+      to operate on a _linear_ regime as much as possible.
+    - This linearity compounded with the high dimensionality of
+      the problem (images) makes it easy to find small
+      perturbations that make the output oscillate wildly.
+    - My point is that "attacking machine learning" maybe should
+      be renamed "attacking NNs"
+
+### Knowledge Discovery: Move 37
+    - However, what happened in the AlphaGo‐Seidol game will
+      remain famous in AI tradition.
+    - The computer played (at least once) a move that was simply
+      not understood by the experts.
+    - At first it was believed to be a mistake, until it became
+      clear the software had discovered a new strategy that the
+      collective intelligence of thousands of years of playing
+      had not yet considered.
+    - This is knowledge discovery at its finest (see Holcomb et
+      al., 2018; Metz, 2016, for an account of the now famous
+      Move 37)
+
+### Microsoft ML Classifier
+    - correct! Or maybe I was 45!
+    - https://www.how-old.net/
+        - $MY_IMAGES/cs/AI-ML/my-age-recognition.jpg
+
+### Fastai comment
+    - The key thing about ML is _overfitting_...
+
+### Frank Guerin (Aberdeen)
+    - lecturer: 'Grand Challenges of AI'
+    - Nature Inspired Computing & Engineering (NICE) Research
+      Group, Surrey
+    - Frank Guerin: f.guerin@surrey.ac.uk
+    - I am interested in new approaches to knowledge
+      representation and reasoning for AI systems which get over
+      the rigidity and brittleness of classical approaches.
+    - Human knowledge of a concept such as "container" is very
+      flexible to be applied to a wide range of objects (pots,
+      cups, bags, boxes, rooms, buildings, ...) and applied in
+      more abstract domains (political parties, controls on
+      disease spread, damage from a scandal).
+    - The actions associated with container (insert, remove,
+      escape, seal, breach, etc.) can also be adapted
+      appropriately. These are not special or unusual or
+      effortful applications of a concept for humans. Every human
+      concept is effortlessly applied to a wide range of
+      situations, and examples are everywhere in everyday
+      cognition. It suggests that the human representation and
+      reasoning machinery has a design which facilitates this.
+    - I am looking for (non-classical) knowledge representation
+      and reasoning which could allow AI systems to transfer
+      knowledge of basic concepts in a human-like way.
+    - Vision example:
+        - give a system some knowledge of the types of tool (e.g.
+          spatulas) that can lift pancakes or eggs from a pan,
+          and enable it to transfer the concept to other objects
+          which afford the same action.
+    - Manipulation example:
+        - give a system some knowledge of containers and
+          container actions and enable it to apply this across
+          a variety of scenarios.
+    - Language processing example:
+        - in understanding, given knowledge of concepts such as
+          container and associated actions, be able to recognise
+          it in varied instantiations, e.g. where not literally
+          used.
+
+### data modelling
+    - ... surprising insight that when given _enough data_, the
+      choice of mathematical model stops being as important!
+        - Oct 2023: bit like another comment today that says
+          Bayesian is less important than Frequentist when lots
+          of data available.
+
+    - ... particularly for automated language translation:
+        > "simple models and a lot of data are better than
+        > elaborate models based on less data."
+
+### As Karpaty said:
+    - Become one with the data.
+        - The first step to training a neural net is to not touch
+          any neural net code at all and instead thoroughly
+          inspect your data. This step is critical.
+    - I like to spend large amount of time (hours) scanning
+      thousands of examples, understanding their distribution and
+      looking for patterns.
+    - Luckily, your brain is good at this. One time I discovered
+      that the data contained duplicate examples.
+    - Another time I found corrupted images / labels.
+    - I look for data imbalances and biases.
+    - I typically pay attention TO MY OWN PROCESS for classifying
+      the data too, which hints at the kinds of architectures
+      we’ll eventually explore.
+    - Example:
+        - are local features enough or do we need global context?
+        - How much variation is there, what form does it take?
+        - What variation is spurious: should be preprocessed out?
+        - Does spatial position matter or average pool it out?
+        - How much does detail matter and how far could we afford
+          to downsample the images? How noisy are the labels?
+
+### Hogg
+    - An amusing and mostly true summary of machine learning is:
+        > all SUPERVISED methods are fundamentally
+        > nearest-neighbor methods.
+    - This suggests we could make massive progress if we just
+      looked at stars with identical or near-identical spectra.
+
+### Georgia Tech (Charles Isbell)
+    - I did my BSCS and MSCS at Georgia Tech. Great quality.
+    - Charles Isbell's 'Intro ML' class had high quality lectures
+      with entertaining anecdotes and high quality projects.
+      Probably the highlight of my graduate career
+        - For undergrad, the honor goes to Olin Shivers, not only
+          for his eclectic teaching style, but because his class
+          altered the way I think about all CS problems.
+    - Also: my mindset shifted to one of
+        - computation models
+        - and DECOMPOSITION of problems into subproblems where
+          the simplest model could apply.
+
+### Machine Learning Engineer Nanodegree
+    - Make Predictive Models
+
+### ML for language - Context
+    - Two experiences taught me that humans don't understand
+      language well WITHOUT CONTEXT:
+    - Raising a child.
+        - My father is surprised when my daughter knows how to
+          use a word in just the right context.
+        - I'm not, because its a natural product of mimicry: if
+          you copy what others say, you'll use the words in the
+          correct context usually.
+        - As with computer-generated text, the exceptions are
+          often hilarious.
+    - Song lyrics.
+        - I had a very clear experience where I just couldn't
+          understand the refrain of 'Gold Guns Girls'.
+        - It sounded unintelligible until I read the lyrics.
+          After that, it was crystal clear. Reading the lyrics
+          gives CONTEXT.
+
+### papers
+    - Frank Guerin $MY_ZOTERO/2011/guerin_2011_learning_like_a_baby.pdf
+
+### links
+    - 7 things ML cant do                                                    https://arxiv.org/abs/1801.04016
+    - Maths needed for ML/AI:                                                https://news.ycombinator.com/item?id=15116379
+    - Visualise ML datasets                                                  https://news.ycombinator.com/item?id=15427862
+    - Visual intro to probability and stats                                  https://news.ycombinator.com/item?id=18769099
+    - Python Pytorch ML from scratch                                         https://news.ycombinator.com/item?id=21298233
+    - Minimal ML algorithms                                                  https://github.com/rushter/MLAlgorithms
+    - ML can't handle long-term time-series data                             https://news.ycombinator.com/item?id=21959874
+    - Model Based ML - great read - wip book                                 http://www.mbmlbook.com/
+    - fast.ai Making neural nets uncool again                                https://www.fast.ai/
+    - HN ML                                                                  https://news.ycombinator.com/item?id=20570025
+    - Stanford Youtube Videos NLP with Deep Learning                         https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z
+    - MLIR compiler (tensorflow?) Multi-Level Intermediate Representation    https://mlir.llvm.org/
+    - Halide language for images / tensors                                   https://halide-lang.org/
+    - Deep learning book Ian Goodfellow                                      https://www.deeplearningbook.org/
+    - Good Jeremy Howard interview                                           https://www.youtube.com/watch?v=t2V2kf2gNnI
+    - Statistical and ML forecasting: Concerns and ways forward              https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0194889
+    - Taxonomy Time Series Forecasting                                       https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/
+    - pyts: a Python package for time series classification                  https://github.com/johannfaouzi/pyts
+    - cudf Pandas on a GPU!                                                  https://github.com/rapidsai/cudf
+    - Good ML site: machinelearningmastery                                   https://machinelearningmastery.com/
+    - Visual Forecasting of Time Series with Image-to-Image Regression       https://arxiv.org/abs/2011.09052
+    - Neural Prophet (Time Series)                                           https://github.com/ourownstory/neural_prophet
+    - HN: applications of DL networks                                        https://news.ycombinator.com/item?id=25898628
+    - Applications of DL networks                                            https://arxiv.org/abs/2009.05673
+    - Recommend blog (Network topology)                                      http://colah.github.io/
+    - Distill: Present ML papers in a dynamic way                            https://distill.pub/
+    - Deep Learning Book (Goodfellow, Bengio) Grad level                     https://www.amazon.co.uk/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618/
+    - HN Time Series Density Plots                                           https://news.ycombinator.com/item?id=25924426
+    - Andrew Ng DeepLearing ai coursera                                      https://www.coursera.org/specializations/deep-learning
+    - OpenCV and Python course                                               https://www.youtube.com/watch?v=oXlwWbU8l2o
+    - HN: Unknown Unknowns in Machine Learning                               https://news.ycombinator.com/item?id=26110715
+    - Pytorch                                                                https://pytorch.org/
+    - Video: Youtube Crash course AI                                         https://www.youtube.com/playlist?list=PL8dPuuaLjXtO65LeD2p4_Sb5XQ51par_b
+    - HN Discussion NNs                                                      $MY_NOTES/cs/AI-ML/HN-Deep-Learning-mathematical.txt
+    - CMUDeepLens: Image-based Galaxy-Galaxy Strong Lens Finding             https://github.com/McWilliamsCenter/CMUDeepLens
+    - ML in Astronomy course: data driven astro                              $MY_NOTES/astro/courses/data-driven-astronomy.txt
+    - CNN blog article explanation                                           http://gregorygundersen.com/blog/2017/02/24/cnns/
+    - Michael Nielson Best book for deep learning?                           http://neuralnetworksanddeeplearning.com/
+    - HN: the AI reckoning (good discussion)                                 https://news.ycombinator.com/item?id=28707382
+    - DL from Scratch: with Python from First Principles                     $MY_BOOKS/CS/AI-ML/2019-DL-From-Scratch-with-Python.pdf
+    - DL from Scratch: with Python github                                    https://github.com/SethHWeidman/DLFS_code
+    - Universal Approximation Theorem                                        http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.441.7873&rep=rep1&type=pdf
+    - HN: Pretrain a NN on garbage noise?                                    https://news.ycombinator.com/item?id=29496829
+    - HN: PyTorch vs. TensorFlow in 2022 (assemblyai.com)                    https://news.ycombinator.com/item?id=29552665
+    - Human brain cells learn Pong faster than AI                            https://news.ycombinator.com/item?id=29617659
+	- Trade-Offs in Automatic Differentiation: TensorFlow, PyTorch, Jax      https://news.ycombinator.com/item?id=29682507
+    - Mathematical basis NNs 2019                                            https://news.ycombinator.com/item?id=19069671
+    - Minitorch: build Pytorch from scratch                                  https://minitorch.github.io/
+    - Mathematical basis NNs 2020                                            https://news.ycombinator.com/item?id=25881740
+    - Google Free TPU Cloud for research                                     https://sites.research.google/trc/about/
+    - kaggle winning solutions                                               https://news.ycombinator.com/item?id=31448353
+    - Tree models better than deep learning for tabular data                 https://news.ycombinator.com/item?id=32333565
+    - Anthony Goldbloom — How to Win Kaggle Competitions                     https://www.youtube.com/watch?v=0ZJQ2Vsgwf0
+    - Pytorch Image Models (timm)                                            https://timm.fast.ai/
+    - Pytorch Image Models (timm) hugging face                               https://huggingface.co/timm
+    - Hugging face AI community                                              https://huggingface.co/
+    - Paperspace Gradient GPUs online (Jeremy recommends)                    https://www.paperspace.com/gradient
+    - _Good_: Python Engineer ML study plan                                  https://github.com/python-engineer/ml-study-plan
+    - _Good_ DeepLizard Learn deep learning                                  https://www.youtube.com/channel/UC4UJ26WkceqONNF5S26OiVw
+    - _Good_ MIT Introduction to Deep Learning | 6.S191                      https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
+    - _Good_ MIT Introduction to Deep Learning | course page                 http://introtodeeplearning.com/
+    - Steve Bruton Youtube (he had: Power Spectral Density PSD)              https://www.youtube.com/c/Eigensteve/playlists
+    - Forecasting methods: Statistial v Deep Learning                        https://news.ycombinator.com/item?id=33818531
+    - HN: tips for getting back into AI                                      https://news.ycombinator.com/item?id=33932594
+    - Resources to learn ML                                                  https://github.com/AssemblyAI-Examples/ML-Study-Guide
+    - _Book_: Machine Learning with PyTorch and Scikit-Learn:                https://www.amazon.com/Machine-Learning-PyTorch-Scikit-Learn-learning/dp/1801819319/
+    - How I would learn Machine Learning (if I could start over)             https://www.youtube.com/watch?v=wtolixa9XTg
+    - Deep Learning Systems (CMU Course)                                     https://news.ycombinator.com/item?id=37101515
+    - ML Topology Bayesian                                                   https://news.ycombinator.com/item?id=37257027
+    - _good_ Sentdex NNs from scratch (Python, videos)                       https://nnfs.io/
+    - _good_ Sentdex ML with Python                                          https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v
+    - Jeremy Hackers guide to LLMs                                           https://news.ycombinator.com/item?id=37631089
+    - ML UI: Streamlit                                                       https://streamlit.io/
+    - ML UI: Gradio                                                          https://www.gradio.app/
+    - Artificial Intelligence: A Modern Approach                             http://aima.cs.berkeley.edu/index.html
+    - Andrew Ng ML                                                           https://www.coursera.org/learn/machine-learning
+    - Andrew Ng Deep learning specialisation                                 https://www.coursera.org/specializations/deep-learning
+    - Course: Caltech Machine Learning                                       https://www.youtube.com/watch?v=mbyG85GZ0PI
+    - Latest ml trends                                                       https://news.ycombinator.com/item?id=35543774
+    - Why non-linear activation needed                                       https://www.youtube.com/watch?v=bVQUSndDllU
+    - HN: Embeddings (and visual embeddings bag-of-words)                    https://news.ycombinator.com/item?id=37985489
+    - HN: Animated AI                                                        https://news.ycombinator.com/item?id=37999035
+    - GH: Animated AI                                                        https://animatedai.github.io/
+    - YT: Animated AI                                                        https://www.youtube.com/channel/UC5bSCGdcE9x9ffqqgJlGp5Q
+    - Udemy: Animated AI                                                     https://www.udemy.com/user/brad-klingensmith-2/
+    - transformers explained                                                 https://news.ycombinator.com/item?id=38162380
+    - HN: frankenmodels                                                      https://news.ycombinator.com/item?id=38241235
+    - Lex and Andrej Karpathy: Transformers                                  https://www.youtube.com/watch?v=9uw3F6rndnA
+    - Lex and Andrej Karpathy: Beginners 10,000 hours                        https://www.youtube.com/watch?v=I2ZK3ngNvvI
+    - Perplexity: ChatGPT-4 competitor                                       https://labs.perplexity.ai/
+    - Free Data visualisation book                                           https://socviz.co/
+    - Understanding Deep Learning (udlbook.github.io)                        https://news.ycombinator.com/item?id=38424939
+    - Jeremy: best image models (plot)                                       https://www.kaggle.com/code/jhoward/which-image-models-are-best/
+    - Good: Explained.ai                                                     https://explained.ai/
+    - Good: Explained.ai DL crash course                                     https://www.youtube.com/watch?v=qU5YfOa_LeI
+    - Mechanistic interpretability                                           https://www.neelnanda.io/mechanistic-interpretability
+    - HN: what is a transformer                                              https://news.ycombinator.com/item?id=38859976
+    - Latent Space: AI blog/newsletter                                       https://www.latent.space/
+    - Latent Space: Github resources list                                    https://github.com/swyxio/ai-notes
+    - HN: discussing the trials of debugging & general ML lore               https://news.ycombinator.com/item?id=39109481
+    - HN: deep learning hitting a wall?                                      https://news.ycombinator.com/item?id=30622300
+    - The Scientist in the Crib: What Early Learning Tells Us About the Mind https://www.amazon.com/Scientist-Crib-Early-Learning-Tells/dp/0688177883
+    - Some resources for the data science ecosystem                          http://ivory.idyll.org/blog/2018-some-resources-on-data-science.html
+    - Collapsing the Singularity: Bergson, Gibson and the Mythologies of AI  https://www.amazon.com/Collapsing-Singularity-Mythologies-Artificial-Intelligence/dp/1494947641/
+	- A new type of neural network is more interpretable                     https://news.ycombinator.com/item?id=41162676
+    - statquest ML course: covers regression, ridge, lasso etc               https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
+    - HN: debate: RNNs & all architectures are just curve fitting?           https://news.ycombinator.com/item?id=41732853
+    - HN: good to argue with the llm                                         https://news.ycombinator.com/item?id=43835445
+    - HN: pivot into deep LLM knowledge?                                     https://news.ycombinator.com/item?id=44079303
+    - RL learning                                                            https://www.youtube.com/watch?v=21EYKqUsPfg
+    - Good learning videos and news                                          https://www.youtube.com/@WelchLabs/videos

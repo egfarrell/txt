@@ -1,0 +1,24 @@
+susskind gr 5
+
+Point of tensors:
+
+If they are equal in one coordinate system, then equal in all other coordinate systems (even if a different numerical value)
+
+However, the derivative of a tensor not neccessarily a tensor.
+You could have the derivative of a tensor in cartesian coordinates = 0, but in some curvilinear coordinates the derivative componenents keep changing.
+
+So the derivative of V in the x cordinates DONT transform as a tensor. If they were zero in x coordinates they should be zero in y coordinates too.
+
+so we need covariant differentiation
+
+Gamma makes derivatives = tensors.
+
+Note: ordinary derivative of a scalar IS a tensor... equal in all coordinate systems.
+
+Gamma is a "christofel" symbol or a "connection"!! christofel itself isnt a tensor, but it allows you to have a covariant differentiation of a tensor.
+
+susskind defined a vector in polar coords
+theta=0, r=1. The components of the vectors are constant but the vectors themselves arent constant, they change as you move around the plane.
+
+In a flat space you can find coordinates where the metric is the kroneckar delta and the christofel symbol is zero. In a curved space you cant find that...
+

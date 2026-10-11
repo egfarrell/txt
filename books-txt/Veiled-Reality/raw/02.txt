@@ -1,0 +1,328 @@
+### 2 Matter Waves, Superposition, Linearity
+
+Classical physics identified matter with particles and radiation
+with waves. Although these descriptions accounted for a large
+number of very important facts, it became apparent at the be-
+ginning of the twentieth century that other phenomena, such
+as blackbody radiation and photoelectric effect, are satisfacto-
+rily explained only if radiation is described in terms of particles.
+Some time later, in 1923-24, Louis de Broglie developed a theory
+according to which, conversely, matter has wave properties. As
+an outcome of this theory, he was able to write down a formula
+relating the corresponding wavelength with the momentum of
+the particle [formula (2.1)]. Three years later these predictions
+were quantitatively confirmed by Davisson and Germer's exper-
+iment of electron diffraction, an experiment in which an electron
+beam was passed through a regular lattice (crystal); the experi-
+ment showed the well-known diffraction pattern that is charac-
+teristic of waves. Meanwhile Schrödinger had written down a
+differential equation, since known as the Schrödinger equation,
+Eq. (2.11), of which the de Broglie wave is, in the free particle
+case, a solution. This equation yields quantization of the energy
+levels of bound systems, whence the name quantum mechanics.
+2.1 The Schrödinger Equation
+The outcome of the Davisson and Germer experiment and sim-
+ilar ones confirms the theoretical predictions that a monoener-
+getic electron beam should be described by a plane wave and
+3334
+2. Matter Waves, Superposition, Linearity
+that the wave vector k of the wave should be related to the
+momentum p of an individual electron by the formula
+p = ħk
+(2.1)
+where, by definition of the notion of wave vector, the direc-
+tion of k is that of the wave propagation and its magnitude is
+|k|= (2)¹ ( being the wavelength), and where h is Planck's
+constant divided by 2π.
+The simplest possible form for the x dependence of a plane
+wave with wave vector k is
+4(x) = eikx
+(2.2)
+However, as the particle propagates, it is natural to associate it
+with a traveling wave, whose direction of propagation is that of
+the particle. This is achieved by writing for the wave function of
+the free particle:
+w(x) =
+= e²(kx-wt)
+(2.3)
+where, by definition, w is the circular frequency of the wave.
+Now, if we assume that the Planck-Einstein relation
+E = hw
+(2.4)
+between the energy of a photon and the circular frequency of the
+corresponding wave is also valid for "material" particles such
+as those described by 4, we can infer from Eq. (2.3) an equation
+for ux,t) simply by noting the identities
+ihay/ǝt = hwy = Ey
+2
+ħ² = -ħ²k² = −p²
+Δψ
+and making use of the relation
+(2.5)
+(2.6)
+E = p²/2m
+(2.7)
+between the (nonrelativistic) energy and the momentum of a free
+particle. The result,
+ihdy/dt = -(h²/2m)Ay
+(2.8)2.1 The Schrödinger Equation
+55
+35
+is the Schrödinger equation for a free particle. It can be deduced
+formally from the corresponding classical equation (2.7) by the
+replacement
+p→ −iħ▼,
+E - ihǝ/ǝt
+(2.9)
+and the prescription that both members of the operator relation
+thus obtained should be applied to 4 4 is a function of the
+coordinate vector x of the particle and the time. It is called the
+wave function of the particle.
+• Remark 1. Phase and group velocities. The velocity of the trav-
+eling plane wave (2.3), that is, the velocity of motion of the plane
+of constant phase
+kxwt = C
+Is (setting k = k)
+Vph = w/k
+which is different from the classical velocity v of the particle.
+The "group velocity" of the wave, however, defined in the usual
+classical way as the velocity of the center of a wave packet made
+of waves with wave vectors centered around k is
+v₁ = dw/dk = dhw/dħk = dE/dp = p/m
+Y
+It is obviously equal to v
+In the general case when the particle is not free, the Schrödinger
+equation, that is, the equation for the wave function (x, t), is
+obtained formally by applying rule (2.9) to the identity
+E = H(x,p)
+(2.10)
+where H is the Hamiltonian function, that is, the total energy of
+the system, written in terms of x and the conjugate momentum
+p (the rule being to symmetrize between x and p whenever this
+proves necessary). In other words, the Schrödinger equation is
+a
+Hy(x,t) = ihy(x, t)
+(2.11)36
+2. Matter Waves, Superposition, Linearity
+where H, known as the Hamiltonian operator, is obtained from
+the classical expression H(x,p) of the total energy by making the
+substitutions
+x → X,
+P
+→>>
+-iħ▼
+(2.12)
+after the appropriate symmetrization of H(x,p)
+That the Schrödinger equation (2.11) is correct is, of course,
+not a deduction. It is really a physical assumption. The valid-
+ity of this assumption, however, is demonstrated beyond any
+reasonable doubt by the truth of its consequences.
+,XN are
+When several particles with coordinates X1, X2,
+present instead of just one, the wave function 4 of the system
+they constitute is a function
+4(X1, X2, XN,t)
+(2.13)
+of these coordinates and the time. The Schrödinger equation for
+4 is obtained from the expression for the total energy of the
+system, H(X1, X2, ,XN, P1, P2,
+PN), in exactly the same way as
+above.
+If a system has a definite energy E, the substitution
+4(x1,x2,,XN,t) = (x1, x2,,XN)e-i(Et/h)
+(2.13a)
+in Eq. (2.5) leads to the "time-independent Schrödinger
+equation"
+Ηφ = Εφ
+(2.14)
+is then called the time-independent wave function of the
+system.
+2.2 Superposition and the Born Rule
+As already mentioned, diffraction patterns characterize waves,
+and the basic fact that corroborated the validity of the notion
+of matter waves was that the Davisson and Germer experiment
+proved electrons can be diffracted. In classical optics the sim-
+plest experiment displaying this phenomenon is the well-known
+Young two-slit experiment, in which a beam of light is passed
+through a diaphragm with two slits. On a screen set beyond the2.2 Superposition and the Born Rule
+32
+37
+diaphragm a diffraction pattern (fringes formed by alternating
+zones of brightness and darkness) is then observed. For technical
+reasons it would be difficult to exactly reproduce this experiment
+with beams of electrons (or other particles), but other experi-
+ments equivalent to this one have been performed, notably with
+neutron beams passed through crystal interferometers [1]. To
+avoid going into the experimental technicalities that would be
+required for describing these actually performed experiments,
+let us just consider the simple gedanken experiment that would
+consist in passing a beam of particles (electrons, say) through a
+Young diaphragm with two slits. Let us choose a coordinate sys-
+tem in which the z axis is perpendicular to the slits, and let p₁ (z),
+P2(z) and p3(z) be the density distributions of the electron points
+of impact on the screen when slit 2 is shut, when slit 1 is shut,
+and when both slits are open respectively. The experimentally
+observed densities are such that
+P3 (2) P₁(z) + P₂(z)
+(2.15)
+and that two (complex) functions w₁ (2) and 42 (z) can be found,
+such that
+P₁(2) = |4₁ (2) |²
+P₂(z) = |42(z) |²
+P3(Z) = |41(Z) + 4/2 (2) | ²
+(2.16)
+(2.17)
+(2.18)
+which, of course, is just what is to be expected if the electron
+beam had wave structure (in the case of a classical wave, w
+would correspond to the amplitude and p to the intensity).
+The similarity of our electron beam with a wave is only par-
+tial, however, since, for instance, if the duration of the experiment
+with both holes open (the time of exposure of the screen) is kept
+constant and the intensity of the electron source is sufficiently
+lowered, what eventually happens is very different from what a
+classical wave theory would predict. The law p(z) of distribution
+of the observed intensity, that is, of blackening of the emulsion
+on the screen (if the impacts are registered by such means) is al-
+tered appreciably, in a way that (a) is not reproducible (it varies
+from one experiment to the next) and (b) is such that it corre-
+sponds to the impact of zero or an integer number of particles
+in any given small area. This shows that the assumption that the38
+38
+2. Matter Waves, Superposition, Linearity
+source emits just classical waves instead of particles, and that
+what is observed on the screen is simply the local effect of these
+waves, is certainly not a correct hypothesis, although, if the time
+of exposure is now increased so as to allow for a large num-
+ber of impacts in most areas of the screen, the cumulative den-
+sity of impacts p(z) again takes, within the usual approximation
+of statistics, the form p3(z) predicted by the wave picture.
+The preceding discussion is very sketchy (more elaborate
+ones can be found in many textbooks). It is, however, sufficient to
+show that these diffraction experiments on particles raise prob-
+lems that will not easily yield to an interpretation in terms of
+familiar concepts, such as those of waves or particles. Situations
+of this kind are not really exceptional in physics; and when they
+occur, it is usually not rewarding to try to force some model
+description upon them. A much better procedure, at least in the
+first stages of the inquiry, is to make no assumption whatsoever
+about the mechanisms at work and to simply describe the ob-
+served facts, it being understood that this description should be
+as general and as accurate as possible. The simple features of the
+description thus obtained are then assumed to be valid in similar
+cases involving different experimental settings and so forth.
+If this is done in regard to the experimental facts recalled
+above, three general ideas, or principles, emerge. They are as
+follows.
+(i) Elementarity of microstructures: Objects are normally en-
+dowed with properties that cannot be split indefinitely; con-
+sequently entities—called particles—apparently exist, which, in
+any experiment, manifest themselves as integer wholes.
+(ii) Probability principle (Born's rule): In some situations at least,
+functions 4(x,t) can be associated with particles in such a way
+that the probability of finding at time t a particle in a small region
+of volume dv around point x 1s
+P(x, t) dv
+=
+\w(x,t)|² dv
+fffy(x,t) 2 dv
+(2.19)
+where the summation extends over all space. It is to be noted
+that, in view of this formula, the value of P(x, t) remains the
+same if y(x,t) is multiplied by any constant factor. Because of2.2 Superposition and the Born Rule
+39
+this, no generality is lost by requiring to be "normalized to
+unity," that is, by setting the denominator in the right-hand side
+of Eq. (2.19) equal to 1. The probability P(x, t) then reads:
+P(x, t) dv = w(x, t) |² dv
+(2.20)
+These general ideas, suggested in a straightforward way by
+the experiments analyzed must now be supplemented by a the-
+oretical assumption. Justified, as already noted, by the truth of
+its consequences, the latter will be that the function w(x, t) is just
+the one we called the wave function of the particle; that is, it
+obeys the Schrödinger equation (2.11). More generally, it will be
+assumed that systems of particles are described by wave func-
+tions such as (2.13). Formulas (2.19) and (2.20) are then easily
+generalized. Let it be noted that, as a consequence of Eq. (2.11),
+if a wave function is normalized to unity at some time, it is also
+normalized to unity at any other time.
+Superposition principle: If 41 (x, t) and 42(x,t) are two possible
+wave functions, that is, two solutions of the Schrödinger equa-
+tion (2.11), any linear combination
+ay(x, t) + by₂ (x, t)
+(2.21)
+is also a possible wave function. This is an immediate mathe-
+matical consequence of the fact that the Schrödinger equation
+is homogenous and linear. It is called a principle only because
+of its great importance, particularly in matters concerning inter-
+pretation of the theory. The wave function (2.21) is said to be a
+superposition of the wave functions ₁ and 42. Note, moreover,
+that since the differential equation (2.11) only involves the first
+time derivative of 4, it determines 4 at any time t if 4 is known
+at one particular time to. An obvious, but quite far-reaching, con-
+sequence of this and of the superposition principle is that if, at
+time to, the wave function is
+ay(x, to) + by₂ (x, to)
+at time t it must be equal to
+(2.22)
+aw₁(x, t) + by₂(x, t)
+(2.23)40
+40
+2. Matter Waves, Superposition, Linearity
+The fact that the form (2.22) of the wave function at to entails
+this wave function has the form (2.23) at t is, as later chapters
+will show, of utmost importance for all the discussions bearing
+on the possible interpretations of quantum physics.
+2.3 The Necessity for a More General Formalism
+Wave mechanics, the formalism sketched in the foregoing sec-
+tions, accounts with remarkable precision for practically all
+atomic and molecular phenomena, that is, essentially for all
+phenomena that take place in nature around us, where, because
+of prevailing conditions of temperature and so forth, pair cre-
+ations and annihilations of nucleons and electrons seldom occur.
+This is because the conservation of the number of particles in
+a system makes it possible to describe the system by a wave
+function (x₁, ,XN,t) with a fixed number of variables. It is
+clear, however, that in problems in which pair creations and an-
+nihilations play a significant role, as is, for example, the case in
+high-energy physics, a formalism that attributes such an impor-
+tance to the coordinates of the constituent particles must lead
+to some difficulties, since a change in time of the number of
+variables of a function is definitely not a standard mathemati-
+cal operation. Moreover, even in low-energy physics there are
+physical observables, such as spin, the description of which by
+means of wave functions turns out to be, if not strictly impos-
+sible, at least very clumsy. These two reasons would suffice to
+Justify taking interest in a more general formalism. But there is
+still another reason, which is that this new formalism (described
+in the next chapter) happens to be, in many instances, easier to
+handle mathematically than the one based on wave functions,
+even in the cases of stable spinless particles.
+The formalism in question, due to Dirac, is known as the
+formalism of bras and kets. It describes the possible states of a
+system, not by wave functions but by abstract entities called
+state vectors, whose defining property is just that they obey
+the superposition principle. The mathematical notions that are
+prerequisites for understanding the said formalism are described
+in detail in practically all textbooks on quantum mechanics (see,
+e.g., Refs. [2], [3], or [4]). For the benefit of readers who do not
+have quite the patience to learn them as thoroughly as theyAdditional Introductory Reading
+41
+would in these books, some of the most basic among the notions
+in question are briefly summarized in Appendix 1.
+References
+1. H. Rauch, W. Treimer, and U. Bonse, Phys. Lett. A47, 369 (1974).
+2. A. Messiah, Mécanique Quantique. Dunod, Paris, 1958 (English transla-
+tion: Quantum Mechanics, Volumes 1 and 2, Elsevier-North-Holland.
+Amsterdam, 1961).
+3. K. Gottfied, Quantum Mechanics. W.A. Benjamin, Reading, Mass., 1966
+(4th printing, with corrections, 1974).
+4. C. Cohen-Tannoudji, B. Diu and F. Laloë, Mécanique quantique, Hermann,
+Paris, 1973 (English translation: Quantum Mechanics, Volumes 1 and 2),
+John Wiley and Sons, Ltd. Chichester Sussex, U.K., 1977).
+Additional Introductory Reading
+E. Squires, The Mystery of the Quantum World. Adam Hilger Ltd. Bristol,
+U.K., 1986.42
+
+ 

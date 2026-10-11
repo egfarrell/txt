@@ -1,0 +1,54 @@
+
+# Week 1: Thinking about data
+    - Principles of computational thinking
+    - Discovering pulsars in radio images
+
+### Pulsar history
+    - Zwicky: core collapse to dense neutron core, then outer
+      shells rebound off.. (super nova)
+    - This "neutron" stars were assumed too dim to be seen  
+    - But in the 60s astronomers realised 2 things: 
+        - angular momentum would be conserved... so these stars
+          would be spinning even once per second
+        - also collapsing stars would drag their magnetic field
+          with it...  neutron stars would have incredibly dense
+          magnetic fields. 
+        - Charged particles (+ plasma) surrounding the star would
+          get funneled to the magnetic poles and shot out into
+          space as 2 intense beams
+        - so a neutron star becomes a bit like a lighthouse  
+    - suddenly Jocelyn Bell observations made sense. The steady pulse
+      was a spinning neutron star  
+
+### Image stacking
+    - Use Murchison Widefield Array (MWA): low frequency radio
+      telescope
+    - Bands: between 80 to 300 MHz (similar to popular radio
+      stations!)
+    - large FOV ... good for large scale surveys  
+    - radio files usually FITS: view using DS9 or online with
+      Aladdin  
+    - remember: radio frequencies dont have color  
+    - DETECTION: if flux density is 5 standard
+      deviations higher than the noise in the local region  
+
+### Non detection
+    - too faint, intermittent
+    - statistical detection of a population of pulsars too faint to see in our original dataset
+
+
+### Extra Reading
+    - This is advanced (graduate-level) astronomy material for
+      people who want to read more about image stacking in
+      astronomy research.
+
+    - Signals from the Noise: 
+    - Image Stacking for Quasars in the FIRST Survey
+    - https://ui.adsabs.harvard.edu/abs/2007ApJ...654...99W/abstract
+
+    - Stacking of large interferometric data sets in the image-
+      and uv-domain - a comparative study. 
+    - https://academic.oup.com/mnras/article/446/4/3502/2892665
+
+    - Visibility Stacking in the Quest for Type Ia Supernova Radio Emission
+    - https://ui.adsabs.harvard.edu/abs/2011ApJ...735L..35H/abstract

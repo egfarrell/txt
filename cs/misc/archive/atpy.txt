@@ -1,0 +1,12 @@
+t = atpy.Table(...)
+
+t.write('m13.vot')
+t.write('sqlite', 'm13.db')
+
+Show home many rows and columns in table object
+t.shape
+
+Remove columns from a table
+list = ["UGRIZ", "UGRIZ_ERR", "UGRIZ_DERED", "JHK", "JHK_ERR", "WISE1234", "WISE1234_ERR"]
+tshen.remove_columns(list)
+

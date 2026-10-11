@@ -1,0 +1,120 @@
+udacity software testing 02
+
+How much testing is enough
+	Useful to assign a score to our testing
+	* can reflect how much of the input domain we are covering
+	* useful to tell management that software hasn't been tested
+	* useful to signal when code is safe to deploy
+
+Partitioning the input domain
+	split into a number of "classes" or subdomains
+	however domain may not be split up correctly
+	and some important cases not tested
+	So in practice this method NOT used
+
+Test Coverage 1
+	alternative way of partitioning the domain
+	using observed features of the source code.
+	e.g. split domain by function:
+	"test coverage metric" could be 181/250 functions
+
+Test coverage 2
+	A measure of the proportion of a program exercised during testing.
+	Good - gives us an objective score
+	Bad - "whitebox", not good at finding bugs of omission
+	Bad - difficult to interpret coverage < 100%
+	Bad - 100% coverage DOESNT mean all bugs found
+
+Splay Tree 
+	like a binary search tree but self-balancing.
+	nice feature: frequently accessed nodes end up at top of tree
+
+Python Coverage tool
+	"coverage run --branch branch.py; coverage html -i"
+	actually highlights lines not covered by the unittest
+	however the (broken) "is_prime" function had a bug 
+	even though 100% code coverage
+
+Coverage Metrics
+	Lecturer has document which lists 101 coverage metrics!
+
+statement coverage 	
+	(~line coverage)
+
+branch coverage (decision coverage)
+	basically asks are both sides of an "if" statement hit??
+	if you have no "elif" statements, then branch coverage is
+	the same as statement coverage
+
+loop coverage
+	exectute each loop 0, 1 and more than once
+
+(MC/DC) modified condition/decision coverage 
+	Used in avionics embedded software. Made up of:
+	branch coverage
+	+ conditions take all possible values
+	+ every condition INDEPENDENTLY affects
+	the outcome of the decision
+
+	For complex conditionals we need truth tables.
+	If we find that each condition doesnt independently
+	affect the outcome then something is a bit hazy in 
+	the code or that condition is not really needed.
+
+Path Coverage
+	cares how you got somewhere
+	impossible to have complete path coverage - 
+	e.g. a variable x can an infinity of values
+	but it gives us something to think about 
+
+	Find out how many paths:
+	fork on every "if" statement!
+
+boundary value coverage
+	not an exact definition. Can find "off by one" errors.
+	Can consider "boundary" in relation to spec or implementation.
+	If program depends on numerical range,
+	test numbers close to the range boundary.
+
+Concurrent Software
+	race conditions, deadlocks.
+	"interleaving coverage" - 
+		functions called in a true concurrent fashion
+		ie multiple threads at the same time
+	"synchronisation coverage" - 
+		that the "locks" actually fire during testing
+
+Errors of omission
+	splitting the input domain won't find omission errors
+	e.g. OS returns a file creation error, may not be a
+	branch in the code to handle this.
+	* So we can use "fault injection" to handle these errors
+	* or partition the input domain using the system spec
+	* or partition the input domain some other way not based on code features
+
+Meaning of Code not covered
+	1. infeasible code 
+		- e.g. a check for unbalanced splay tree - not possible!
+		so tell the code coverage tool that its infeasible "# pragma: no cover"
+
+	2. not worth covering
+		could be very hard to trigger!
+		res = formatdisk(); if res==ERROR: abort()
+
+	3. test suite inadequate
+		could be ok. Need cost/benefit analysis.
+
+SQLite
+	77k LOC, 91million testing LOC!!
+	1000x more tests than code
+	all the main metrics covered
+
+Automated Whitebox testing
+	Good for small codes - used by Microsoft too!
+	approach: determines constraints, calls a solver
+	no good ones for Python,
+	"Klee" for C programmers
+
+
+
+

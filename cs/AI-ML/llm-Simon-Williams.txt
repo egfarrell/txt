@@ -1,0 +1,112 @@
+$HOME/llm-answer.txt    
+$HOME/llm-prompt.txt
+
+llm -t mygpt     < $HOME/llm-prompt.txt > $HOME/llm-answer.txt
+llm -t myclaude  < $HOME/llm-prompt.txt > $HOME/llm-answer.txt
+llm -t mygemini  < $HOME/llm-prompt.txt > $HOME/llm-answer.txt
+
+llm --continue < $HOME/llm-prompt.txt  >> $HOME/llm-answer.txt
+
+
+### Templates
+Stored here:
+~/.config/io.datasette.llm/templates/
+
+llm -m gpt-5.2-chat-latest     --system 'Use UTF-8 math symbols.Avoid Markdown.Prefix answers with two blank lines.'  --save mygpt
+llm -m claude-sonnet-4.5       --system 'Use UTF-8 math symbols.Avoid Markdown.Prefix answers with two blank lines.'  --save myclaude
+llm -m gemini-3-flash-preview  --system 'Use UTF-8 math symbols.Avoid Markdown.Prefix answers with two blank lines.'  --save mygemini
+
+
+Summarise files
+---------------
+my script: lsm
+key: 'fragments' 
+llm 'summarize this please' -f ./long.txt
+or
+llm -s 'summarize this please' < ./long.txt > ./summary.txt
+
+------------------------------------------------------
+
+Create a TEMPLATE to summarise:
+-------------------------------
+llm '$input - summarize this' --save summary
+llm 'Summarize the following: ' --save summary
+Use: curl -s https://example.com/ | llm -t summary
+
+key: 'attachments'
+llm 'summarize this please' -a myimage.jpg
+llm 'summarize this please' -a myarticle.pdf
+
+
+
+pip install llm
+pip install -U llm # upgrade
+
+llm --version
+llm --help
+llm keys set openai
+llm "Ten fun names for a pet pelican"
+
+llm install llm-anthropic
+llm keys set anthropic
+llm -m claude-4-opus 'Impress me with wild facts about turnips'
+
+llm install llm-gemini
+llm keys set gemini
+llm -m gemini-3-flash-preview 'Tell me fun facts about Mountain View'
+
+llm keys
+llm keys path
+v $HOME/.config/io.datasette.llm/keys.json 
+
+# MODELS
+
+- Best Claude:          → anthropic/`claude-opus-4.5`
+- Best everyday Claude: → anthropic/`claude-sonnet-4.5`
+- Fast + cheap:         → anthropic/`claude-haiku-4.5-20251001`
+
+llm models -q 5.2
+llm models --schemas
+
+### Use bash env variable
+unset LLM_MODEL
+export LLM_MODEL=gpt-5.2-chat-latest 
+export LLM_MODEL=gemini-3-flash-preview
+export LLM_MODEL=claude-sonnet-4.5
+llm 'Tell me your model name and then list 3 names for cheesecakes' # Uses $LLM_MODEL
+
+### Use 'default' command
+llm models
+llm models default 
+llm models default claude-sonnet-4.5
+llm models default gpt-5.2-chat-latest
+llm models default gemini-3-flash-preview
+llm 'Tell me your model name and then say what the capital of Ireland is' # Uses default
+
+
+llm chat
+llm "what's the capital of spain"
+
+# Continue a conversation
+llm 'More names' -c
+llm 'More names' --continue
+llm 'More names' --cid <id>
+
+
+
+llm models --options
+llm version
+llm tools
+
+llm fragments
+llm fragments remove 5d710623a1c8836d6c4854ddaaa752c58fc9ee8c6b52c3c6c0e214a41ebf6117
+llm fragments remove -h
+
+------------
+llm logs off
+------------
+
+llm logs
+llm logs -c
+llm templates
+echo $EDITOR

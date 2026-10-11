@@ -1,0 +1,102 @@
+
+HN: Lie groups crucial https://news.ycombinator.com/item?id=46138632
+
+### What is a representation?
+    - https://www.math.columbia.edu/~woit/wordpress/?p=15155#comments
+    - Gavin:	
+        - One of the things I found confusing studying group
+          theory was how mathematicians would define
+          a `representation` of a group in terms of the
+          `matrices` that represent the group elements, while
+          physicists define a representation in terms of the
+          `vectors` in the vector space. 
+            - ie, “the electron is a spinor rep of the Lorentz
+              group” instead of something like “the electron is
+              a spinor in the spinor rep of the Lorentz group.” 
+        - After I realized that’s what was going on, it made
+          sense, since mathematicians are typically more
+          interested in the group itself, whereas physicists are
+          typically interested in particles/fields which
+          transform under group transformations. 
+        - But the lack of precision made it confusing to learn.
+        - Over the years I found a lot of physics notation is
+          like that: optimized for doing calculations but often
+          not for pedagogical clarity or conceptual precision.
+    - Peter Woit:	
+        - Gavin, the confusion is inherent in the fact that
+          a representation is a `vector space` together with
+          `linear maps` on the vector space. 
+        - If you want to be more _concise_, depending on the
+          context you might just specify the `vector space` (when
+          it’s clear what the representation is). 
+        - Not just physicists do this, mathematicians too. 
+        - Main difference is that sometimes physicists are hazy
+          about what a representation is, and more likely to use
+          ambiguous and confusing language to refer to it.
+
+
+### What is a Lie group
+    - $MY_NOTES/physics/books/curry-book-review.txt
+    - It also has 3 chapters devoted to Lie Groups and Lie
+      Algebras. Most elementary treatments describe Lie Groups as
+      "Groups of Matrices." Yes, that is how they are often
+      realized, but that misses the point.
+    - A Lie group is a group which is also a `manifold`(!) 
+    - And a Lie algebra is the set of all left invariant vector
+      fields on the Lie group. 
+    - They are connected by the `exponential map`, which sends
+      a vector in the `Lie algebra` to a point along a path
+      tangent to that vector down in the group. 
+    - What is good about the way Professor Curry approaches this
+      subject is that is mature, yet very accessible to beginning
+      students.
+
+
+### Rickles tips: Lie Groups
+    - Any book on group theory will explain this basic idea;
+      a good choice for physics applications is Chris Isham's: 
+        - Lectures on Groups and Vector Spaces for Physicists. 
+    - The Galilean group is strictly speaking a `Lie group` since
+      the various parameters are _continuous_. 
+    - e.g. A finite rotation of a planet would be generated (or
+      'built up') by the accumulation of lots of infinitesimal
+      rotations. 
+    - A useful book on Lie groups, for those who know vectors and
+      matrices, is Harriet Pollatsek's: 
+        - Lie Groups: A Problem-Oriented Introduction via Matrix
+          Groups.
+
+
+### What is a group?
+    - Algebraists say its a _set_ with two _operations_
+      satisfying a load of easily-forgettable axioms.
+
+    - Naturally this provokes a protest: why would any sensible
+      person need such pairs of operations? "Oh, curse this
+      maths" says the student (who, possibly becomes Minister for
+      Science in the future).
+
+    - Dont start with the concept of a group. We get a totally
+      different insight if we start with the concept of
+      a _transformation_ (a one-to-one mapping of a set onto
+      itself) as it was historically.
+
+    - A _collection_ of transformations of a set is called
+      a GROUP if:
+
+        1.	along with any two transformations, it contains the
+        result of their _consecutive_ application
+
+        2.	and an _inverse_ transformation along with every
+        transformation.
+
+    - That's all there is. The so-called "axioms" are in fact
+      just (obvious) properties of _groups of transformations_.
+
+    - What axiomatisators call "abstract groups" are just groups
+      of transformations of sets considered up to _isomorphisms_
+      (which are one-to-one mappings preserving the operations).
+
+    - As Cayley proved, there are no "more abstract" groups in
+      the world. So why do the algebraists keep on tormenting
+      students with the abstract definition?

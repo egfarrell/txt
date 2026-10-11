@@ -1,0 +1,108 @@
+### error codes 
+    http://support-sg.canon-asia.com/contents/SG/EN/8201156800.html
+
+### Scanning 
+    - mp navigator https://support-th.canon-asia.com/contents/TH/EN/0200395602.html
+
+### Red Printer
+    canon pixma: MG 3100
+
+### ink cartridges
+    normal (8 ml - low value)
+        - black "PG 540"
+        - color "CL 541"
+
+    bigger (21 ml - better!)
+        - PG-540 XL
+        - CL-541 XL
+
+    - PIXMA MG2150
+    - PIXMA MG2250
+    - PIXMA MG3150
+    - PIXMA MG3250
+    - PIXMA MG3550
+    - PIXMA MG4150
+    - PIXMA MG4250
+    - PIXMA MX375
+    - PIXMA MX395
+    - PIXMA MX435
+    - PIXMA MX455
+    - PIXMA MX475 <---- this one
+    - PIXMA MX515
+    - PIXMA MX525
+    - PIXMA MX535
+
+
+### out of ink message
+  press and hold "stop/reset/triangle button" for 5 seconds
+
+### scanner
+    scangearmp
+    scan tip
+        use dpi 100
+        then 'crush-gs' to reduce pdf size
+
+### xsane
+    ai sane-utils
+    sane-find-scanner
+    scanimage -L
+    v /etc/sane.d/pixma.conf
+        bjnp://192.168.0.1xx5
+
+### wps setup
+    http://canonmg3100wifi.blogspot.co.uk/2013/04/easy-wifi-setup-through-wps-function.html
+
+    Follow below steps to setup Canon MG3100 printer to wifi
+    using WPS function (by a button push on the wireless
+    router/access point)
+
+    - Press and hold maintenance button on printer. (button
+      with screw driver and cutting pair symbol)
+    - Now the LED should flash as `_`
+    - Press and hold 'Fit to Page" button, now LED should
+      flash as single dash moving vertically.
+    - Once the LED flash is confirmed, press and hold WPS
+      button on router/access point for about five seconds.
+    - Printer should stop the flashing and LED should be
+      back to normal displaying '1'.
+    - This completes the setup and you are ready to use your
+      printer wireless.
+
+### install on ubuntu
+    sudo add-apt-repository ppa:michael-gruz/canon-trunk
+    au
+    ai cnijfilter-common
+    ai cnijfilter-mg3100series
+
+### ubuntu - grayscale printing
+	right click on your printer and select PROPERTIES
+	Now select JOB OPTIONS
+	Now scroll down to the bottom
+ 	Add “CNGrayscale” "TRUE"
+
+### ubuntu - low quality printing
+	right click on your printer and select PROPERTIES
+	Now select JOB OPTIONS
+	click "more" under "common options"
+	"Print Quality" : "Draft"
+
+### printer "held status" error (ubuntu 14.04)
+    http://zedonet.com/en_p_turboprint_download_2.phtml
+        install TURBOPRINT deb package
+        then add printer again from ppa:michael-gruz/canon-trunk
+        uninstall TURBOPRINT
+        everything should work!
+
+### ubuntu 14.04 scangear
+    explanation: problem with scangear for 14.04
+        http://askubuntu.com/questions/516187/problem-installing-canon-software-scangear-mp
+    all deb files here: (scroll down the page)
+        https://launchpad.net/~michael-gruz/+archive/ubuntu/canon-trunk/+packages?field.name_filter=&field.status_filter=published&field.series_filter=raring
+
+### ubuntu 16.04
+   *bug* in 'libsane' library, need this ppa:
+   sudo add-apt-repository ppa:rolfbensch/sane-git
+   au
+   ai libsane
+   ai xsane (if you want to use it, seems complicated)
+   now simple scan works!

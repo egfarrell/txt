@@ -1,0 +1,156 @@
+- Code
+- Intro
+- Variables
+- PROCEDURES:
+- LOOPING:
+- Syntax
+- Naming:
+
+
+### Code
+    - $MY_CODE/scheme/scheme-4e/01-intro.ss
+    - $MY_CODE/scheme/scheme-4e/02-starting.ss
+    - $MY_CODE/scheme/scheme-4e/03-further.ss
+    - $MY_CODE/scheme/scheme-4e/04-procedures-variable-bindings.ss
+    - $MY_CODE/scheme/scheme-4e/05-control-operations.ss
+    - $MY_CODE/scheme/scheme-4e/06-operations-on-objects.ss
+    - $MY_CODE/scheme/scheme-4e/07-input-output.ss
+    - $MY_CODE/scheme/scheme-4e/08-syntactic-extension.ss
+    - $MY_CODE/scheme/scheme-4e/09-records.ss
+    - $MY_CODE/scheme/scheme-4e/10-libraries-top-level-progs.ss
+    - $MY_CODE/scheme/scheme-4e/11-exceptions-conditions.ss
+    - $MY_CODE/scheme/scheme-4e/12-extended-examples.ss
+
+
+### Intro
+    - DYNAMIC STORAGE: The storage for object contents is
+      dynamically allocated and retained as neccessary, then
+      auto-deallocated (garbage collector)
+
+    - simple ATOMS (small integers, chars, bool) are represented
+      as immediate values and incur no allocation / deallocation
+      overhead.
+
+    - Scheme is "CALL BY VALUE", but for mutable objects the
+      values are POINTERS to actual storage.
+        - Pointers are "hidden" from programmers: but handy to
+          know that object storage ISNT COPIED when its passed
+          to/from a procedure.
+
+### Variables
+    - Variables are _lexically scoped_ and programs are _block
+      structured_.
+    - Identifiers (variables??) maybe imported or bound locally
+      within a given block of code.
+    - A local binding is visible only lexically, ie within the
+      program _text_ that makes up the particular block of code.
+    - An identifier with the same name outside the block refers
+      to a different binding. If no binding for an identifier
+      exists OUTSIDE(?) the block (and inside as well???) then
+      the reference is invalid.
+    - Blocks may be nested. The binding in one block may shadow
+      a binding for an indentifier of the same name in
+      a surrounding block.
+    - Lexical scoping makes efficient code possible because the
+      compiler can determine the scope of all bindings and the
+      binding to which each identifier reference resolves. (But
+      the compiler cannot determine the values of all variables
+      since the values are not actually computed until the
+      program executes)
+
+### PROCEDURES:
+    - procedure def may appear inside another block /procedure.
+    - Also: a procedure may be INVOKED any time thereafter, even
+      if enclosing block has completed execution!
+    - To support lexical scoping, a procedure carries the lexical
+      context (environment) along with the code.
+    - Naming: Procedures arent always named. Procedures are
+      first-class data objects like strings or numbers. Variables
+      are bound to procedures in the same way as they are bound
+      to other objects.
+
+### LOOPING:
+    - tail recursion: Special case of recursion to express
+      looping.
+    - tail call: when one procedure directly returns the result
+      of invoking another procedure.
+    - tail recursion is when a procedure recursively tail-calls
+      itself, directly or indirectly. Impletmented as a "jump" (GOTO!)
+    - Jumps avlid storage overheads from recursion.
+
+    - New syntactic forms or syntactic extensions can be defined.
+      Write new transformation proceduress that determine how
+      each new syntactic form maps to existing syntactic forms.
+
+    - These transformation procedures are themselves expressed in
+      Scheme with the help of a convenient high-level pattern
+      language that automates syntax checking, input
+      deconstruction, and output reconstruction.
+
+    - By default, lexical scoping is maintained through the
+      transformation process, but the programmer can exercise
+      control over the scope of all identifiers appearing in the
+      output of a transformer.
+
+    - Syntactic extensions are useful for defining new language
+      constructs, for emulating language constructs found in
+      other languages, for achieving the effects of in-line code
+      expansion, and even for emulating entire languages in
+      Scheme.
+
+### Syntax
+    - Scheme programs are made of:
+        - keywords,
+        - variables,
+        - structured forms,
+        - constant data (numbers, characters, strings, quoted
+          vectors, quoted lists, quoted symbols, etc.),
+        - whitespace,
+        - comments.
+
+    - Scheme is cAsE-sEnSitive   (according to Scheme 4e book)
+    - Scheme is CASE-INSENSITIVE   (according to MIT scheme?)
+
+    - `()`: Empty list
+
+    - `( xyz [...])`: Matched brackets `[]` can be used as well
+      as parentheses. Used to set off subexpressions for certain
+      syntatic forms for readability.
+
+    - Vectors: "#"
+        - `# (this is a vector of symbols)`
+
+    - Byte Vectors: "#v"u8
+        - sequences of unsigned byte values (integers 0 to 255)
+        - `#vu8 (3 250 45 73)`
+
+    - Strings
+        - enclosed by DOUBLE quotes ??
+        - characters: (`#\`)   eg `#\a`
+
+    -  Boolean: `#t` and `#f`
+        - Scheme conditionals treat `#f` as false and everything
+          else as "TRUE"! eg 3, 0, (), "false" and nil are all
+          "TRUE".
+
+    - Comments
+        - block: `#|`  and then `|#`
+        - Datum comments: `(three #; four-ignored five six)`
+
+### Naming:
+    - Predicate names end in a question mark ( ? ). Examples: `eq?`,  `string=?`
+        - Predicates are procedures returning either `#t` or `#f`.
+
+Type predicates, such as pair?, are created from the name of the type, in this case pair, and the
+question mark.
+
+The names of most character, string, and vector procedures start with the prefix char-, string-,
+and vector-, e.g., string-append. (The names of some list procedures start with list-, but
+most do not.)
+
+The names of procedures that convert an object of one type into an object of another type are written
+as type 1 ->type 2 , e.g., vector->list.
+
+The names of procedures and syntactic forms that cause side effects end with an exclamation point
+( ! ). These include set! and vector-set!. Procedures that perform input or output technically
+cause side effects, but their names are exceptions to this rule.

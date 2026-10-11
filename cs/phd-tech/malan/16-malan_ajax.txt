@@ -1,0 +1,45 @@
+malan 16 AJAX
+
+AJAX
+    make additional calls to the server
+    AFTER the web page has loaded
+    (Using Javascript in a different way!)
+    you intercept the form action and call
+    a javascript function instead.
+
+Get AJAX up and running
+    two ways to create XMLHttpReqest Object
+    1.  standard way:
+    2.  microsoft way:
+
+Javascript concatenation
+    +
+
+Asynchronous
+    "xhr.onreadystatechange = handler;"
+    you reject an event handler
+    and that gets called when
+    the server returns with data
+
+replace webpage text
+
+    "xhr.getElementById("price").innerHTML = xhr.responseText"
+    "price" as a span with an id="price"
+    and this code clobbers the old span and
+    replaces it with xhr.respohseText
+
+convert PHP array to Javascript notation
+    json_encode($quote)
+
+Javascript: Main trick
+    have DIV and SPAN elements in the HTML that
+    get replaced later by dynamic Javascript content
+
+Javascript: load JSON string into memory
+    var some_variable = eval("(" + xhr.responseText + ")")
+
+Javascript: load some other script file
+    ```
+    <script scr="www.google.com/somescript...." type="text/javascript">
+    <\script>
+    ```

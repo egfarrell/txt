@@ -1,0 +1,318 @@
+Youtube: Neutron Stars and Black Holes
+(Lecture 12: Black Holes) by G. Srinivasan
+https://www.youtube.com/watch?v=4K2AhRHvorA&list=PL04QVxpjcnji8rMpLhbMYBanjrRg5xgWt&index=12
+
+### Oppenheimer & Volkoff
+    - 1938 showed there was a maximum mass for neutron stars
+    - but what was the fate of very massive stars?
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/fate-massive-stars.jpg
+
+### Synder
+    - worked as a truck driver, switched to Physics
+    - Very good at maths, careful with calculations
+    - Oppenheimer picked him to study stellar implosion in GR
+
+### Synder's task
+    - study a spherical star, non-rotating
+    - assume nothing is happening inside
+        - no energy generation
+        - shockwaves
+        - ionisation fronts
+    - but study the collapse exactly within GR, without making any
+      approximations
+
+### Synders conclusion
+    - As the star nears the critical radius, its shrinkage slows
+      down, till it becomes _frozen_ precisely at the critical
+      radius
+    - However: for an observer riding on the surface of the star,
+      the _implosion_ does not freeze at all!
+
+- Mitchell black stars
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/mitchell-black-stars.jpg
+
+### - Schwarzschild symmetry
+    - doesnt have to be a _single_ body that is spherically
+      symmetric
+    - for stellar globular clusters that maintained a spherically
+      symmetric distribution on average, his theory was equally
+      valid
+
+### - Schwarzschild metric
+    - notice "warpage of time"
+    - notice "warpage of space"
+    - other form of coefficients: `1 - U / c^2`
+        - where `U` is the gravitational potential
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/Schwarzschild-metric.jpg
+    - one of the great discoveries of the 20th century
+
+### Schwarzschild Geometry
+    - This describes not only the "curvature of space" but also
+      the "warpage of time" near the star.
+        - This is the dilation of time due to gravity.
+    - Leads to gravitational redshift of light emitted from the
+      stars surface.
+        - Near the star, _time flows more slowly_ than far away.
+          Therefore, the frequency of light must be lowered by
+          the same amount.
+    - Therefore for a distant observer, the star will become
+      progressively redder and redder (this is what Synder found)
+    - Schwarzschild exact result:
+        - note: the simple argument in this image isn't a bad
+          approximation
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/gravitational-redshift-formula.jpg
+    - note: as a photon climbs the gravitational potential well,
+      it loses kinetic energy, but `cannot slow down`.
+        - Since kinetic energy is related to the frequency, there
+          is a frequency shift.
+
+    - At the critical radius, time time dilation becomes
+      infinite. Time does not flow at all!
+    - As seen by an outside observer, frequency goes to zero.
+        - The wavelength of radiation becomes infinte.
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/Schwarzschild-radius.jpg
+
+### Coordinate systems
+    - Eddington had already proposed a coordinate system in "The
+      mathematical theory of relativity" where there is no
+      singularity at the Schwarzschild radius.
+    - Was re-discovered in 1958 by Finkelstein.
+    - So a star becomes black in GR at the same radius as John
+      Mitchell's star.
+    - But there's a fundamental difference.
+        - Mitchells star
+            - isn't black for everyone, just distant observers.
+              (e.g. if you could get close enough to his Black
+              star you'd see the light "jump up" before falling
+              down again)
+        - GR
+            - no matter how close you get to the critical
+              surface, no-one can see any light emerging
+
+### Important point:
+    - Dont think of the Schwarzschild radius as where the escape
+      velocity = the velocity of light.
+    - That is the wrong concept.
+    - Instead, the radius is the place where the `frequency
+      shift` becomes infinite.
+
+### Dissenting voices
+    - Veltmann argued with Srinivasan why a black hole couldn't
+      exist (was a ridicoulous concept)
+    - his argument is based on some deeper considerations and
+      that class of physicist still remains
+
+
+### Penrose visualisation
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/penrose-visualisation-light-emission.jpg
+
+### Some facts
+    - The surface of a BH is the Event Horizon
+    - It's a semi-permeable surface. Things can enter the
+      horizon, nothing can come out.
+    - Inside the Event Horizon, there are no allowed trajectories
+      with a _constant distance_ from the centre.
+        - once you're inside the EH, you can't say let me fire
+          a rocket and get out
+        - or let me `stay` at this current radius
+        - the only timelike worldlines are those that point to
+          `r=0`
+        - timelike worldlines have velocity  `< c` (ie they are
+          inside a light cone)
+    - in-falling matter cannot arrest its collapse. The only way
+      it could stop is by travelling at greater than light speed
+    - even light has to keep going to the singularity at the
+      centre
+
+
+
+### Good slide, complementary viewpoints
+    - Velocity of in-falling object:
+        - as seen from observer at infinity
+        - as seen from observer who builds a "shell" close to the
+          Event Horizon
+            - $MY_IMAGES/astro/bh-accretion/Srinivasan/velocity-formuala-falling-BH.jpg
+    - another plot: two views of the infalling particle
+            - $MY_IMAGES/astro/bh-accretion/Srinivasan/infalling-velocity-two-views.jpg
+
+
+### Kerr black hole
+    - static limit (edge of the ergosphere)
+    - once you come inside this limit, you can no longer be
+      stationary. You have to start `rotating` whether you like
+      it or not.
+        - Because the inertial frames are being dragged there by
+          the `dt/dφ` term in the metric
+        - it applies to material particles and light
+    - $MY_IMAGES/astro/bh-accretion/Srinivasan/kerr-BH-horizons.jpg
+
+### Differences Schwarzschild & Kerr
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/Schwarzschild-summary-01.jpg
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/Kerr-summary-01.jpg
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/Kerr-photon-trajectories.jpg
+
+### Plot
+    - "Angular motion without angular momentum"
+    - A particle is dropped _radially_ from rest at infinity onto
+      a Kerr BH
+    - notice: as it gets closer to the BH it temporarily moves
+      away from the BH !
+        - that's because the BH is rotating and it's dragging the
+          inertial frames, and the particle is being pulled a bit
+    - finally the particle is made to go _around_ ...
+    - so now it has angular motion, but it had no angular
+      momentum!
+    - in a Schwarzschild BH, if you throw something in radially,
+      it'll go in radially
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/angular-motion-without-angular-momentum.jpg
+
+
+### Penrose Process
+    - extract energy from a BH
+    - _negative energy_ states can exist inside the ergosphere
+
+
+### What is inside the black hole
+    - nothing
+    - no-one has every seen anything going into a BH
+    - there's a piling up on the surface
+    - (did he say like a hologram)
+    - what you thought went into the BH is still "there" at the
+      surface, so no information has been lost
+    - but remember the "complementary" point above... a person
+      falling in _would_  pass the horizon in finite time
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/whats-inside-a-BH.jpg
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/whats-inside-a-BH2.jpg
+
+### Philosophical point
+    - Srinivasan chatting to Chandra
+    - Chandra: normally a singularity signals theory breakdown,
+      but here is the first time that the acceptance or
+      regjection of a singularity (rigourous prediction of GR) is
+      based entirely on `philosophical` grounds
+
+
+### Los Alamos: recovered Synder
+    - hydro codes were declassified
+    - Colgate(!), White and May simulated implosion of
+      nonrotating star
+    - $MY_IMAGES/astro/bh-accretion/Srinivasan/los-alamos-numerical-implosion.jpg
+
+### Penrose theorem
+    - 1964, using topological methods
+    - every BH must have a singularity inside it
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/penrose-singularity-theorem.jpg
+
+### Naked singularity
+    - can the singularity be outside the BH?
+    - we wouldn't like it outside the BH because we don't know
+      how to describe it
+    - Penrose spent 6 years trying models with a singularity
+      outside the BH, but didn't succeed
+    - He put forward the Cosmic Censorship Principle
+
+### Black holes have no hair
+    - $MY_IMAGES/astro/bh-accretion/Srinivasan/bh-have-no-hair.jpg
+    - $MY_IMAGES/astro/bh-accretion/Srinivasan/bh-have-no-hair2.jpg
+    - 1972: Carter, Hawking and Israel: BH's are uniquely
+      characterised by their mass, charge and angular momentum
+    - all deformations are radiated away as gravitational waves
+      (quadropole moment)
+    - Chandra was shattered:
+        - all BH's can be exactly described by 2 parameters
+          (because they assume no BH has charge)
+        - amazing...
+        - people can't even exactly describe a helium atom
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/chandra-shattered.jpg
+
+### Quantum twist: Beckenstein
+    - the BH entropy must be `∝` to the BH area
+    - up till then, entropy was an _extensive_ quatity
+    - but Beckenstein didnt say entropy was `∝` to the volume,
+      but `∝` to the surface _area_
+    - $MY_IMAGES/astro/bh-accretion/Srinivasan/beckenstein-entropy.jpg
+    - $MY_IMAGES/astro/bh-accretion/Srinivasan/beckenstein-entropy2.jpg
+    - $MY_IMAGES/astro/bh-accretion/Srinivasan/beckenstein-entropy3.jpg
+    - notice something strange about Beckenstein's formula:
+        - _Planck's_ constant comes in
+    - At that time, from Beckenstein's statement, one sensed that
+      a great _revolution_ was immanent
+        - that QM and GR will finally be reconciled
+    - but Hawking said:
+        - a BH cannot have entropy unless it has a finite
+          temperature
+        - and a body with a temperature must be absorbing and
+          emitting
+        - but a classical BH is a perfect sink!
+        - and a perfect sink must have an zero absolute
+          temperature
+        - therefore a BH temperature = `0 K`
+
+### Zeldowich: deep insight
+    - A spinning metal sphere will emit EM radiation
+    - Virtual pairs materialise from the vacuum by extracting
+      energy from the rotating sphere
+    - A spinning BH must radiate!
+        - also: super radiance is like stimulated emission
+        - and there must be spontaneous emission too
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/zeldowich-super-radiance.jpg
+
+    - Einstein strikes again:
+    - $MY_IMAGES/astro/bh-accretion/Srinivasan/einstein-stimulated-emission.jpg
+    - $MY_IMAGES/astro/bh-accretion/Srinivasan/einstein-spontaneous-emission.jpg
+    - (spontaneous emission happens when the "vacuum" tickles an
+      electron already in an excited state)
+    - also: you won't get Plancks Law without these 3 types of
+      emission, (ie his A, B, C coefficients)
+
+### Hawking Discovery
+    - BH temperature is `∝` to surface gravity `κ`
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-discovery.jpg
+    - comparing Plancks law and Hawkings formula:
+    - the role of temperature is played by gravity(!)
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-discovery2.jpg
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-discovery3.jpg
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-discovery4.jpg
+    - Hawking didnt like it. But what convinced him was the
+      "thermal nature" of the radiation
+    - His discovery isn't mathematically rigourous because we've
+      no theory of QG. He used QFT in curved space (not Euclidean
+      space)
+
+### Blackbody Radiation
+    - remember by the time a photon finally emerges, it's energy
+      is a function of temperature alone
+    - it loses all memory of how it was produced, original
+      frequency at birth etc etc
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-discovery5.jpg
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-discovery6.jpg
+    - his formula for the temperature of the BH
+        - (or the _surface gravity_ of the BH!)
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-discovery7.jpg
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-discovery8.jpg
+    - but BH temperature is much lower than the cosmic microwave
+      background, "therefore they only absorb their emitted
+      radiation... they're perfectly classical" (????)
+        - so we haven't found any quantum BH's
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-discovery9.jpg
+
+### Naked Singularity
+    - will introduce an additional uncertainty over and above
+      Heisenbergs uncertainty principle
+	- $MY_IMAGES/astro/bh-accretion/Srinivasan/hawking-playing-dice.jpg
+
+### Conflict! (Information Paradox)
+    - This deep discovery of Hawking raises a serious conflict
+      between QM & gravity (if the no-hair theorems are correct)
+    - The information paradox
+    - no solutions ?
+    - "von Neumann entropy"
+    - what goes in is a pure quantum state, what comes out is
+      thermal radiation
+    - and thermal radiation will have a huge entropy
+    - but QM requires the evolution of a system is unitary
+    - (ie the probabilities of a system are conserved).
+        - or: the quantum entropy is _constant with time_
+    - Possible solution: "soft hairs" (Quantum micro-states)
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/black-hole-info-paradox.jpg
+        - $MY_IMAGES/astro/bh-accretion/Srinivasan/black-hole-info-paradox2.jpg

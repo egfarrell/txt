@@ -1,0 +1,77 @@
+
+
+### GPT: model interpretability (Pytorch)
+    - crucial for understanding, debugging, and improving NN
+      models, especially in applications like healthcare or
+      autonomous vehicles. 
+    - PyTorch-compatible libraries:
+
+    1. Captum: 
+        - From Facebook, offers a wide array of attribution
+          methods like Integrated Gradients, Saliency Maps, and
+          DeepLIFT. 
+        - It's like X-ray vision to see how neurons are firing
+          for a particular input.
+
+    2. LIME 
+        - (Local Interpretable Model-agnostic Explanations):
+        - Creates a simplified model around each prediction to
+          explain why the model made a specific decision. 
+        - Imagine modelling a complex terrain with a flat map to
+          understand the path you took.
+
+    3. SHAP 
+        - (SHapley Additive exPlanations): 
+        - Based on cooperative game theory, it fairly distributes
+          the "payout" (prediction contribution) among features.
+          It’s like dividing the credit for a group project based
+          on individual contributions.
+
+    4. Grad-CAM 
+        - (Gradient-weighted Class Activation Mapping):
+        - Visualizes where the model is looking by highlighting
+          input image regions that contributed most to the
+          output. Imagine highlighting text in a book that helps
+          answer a specific question.
+
+    5. TensorWatch: 
+        - A debugging and visualization tool from Microsoft that
+          offers real-time monitoring of various model metrics.
+          Picture a dashboard that shows you what your model is
+          doing at any given moment.
+
+    6. Netron: 
+        - Though not PyTorch-specific, Netron allows you to
+          visualize model architectures and layers by reading
+          saved model files. Think of it as seeing a blueprint of
+          a building to understand its structure.
+
+    7. Alibi: 
+        - Offers methods for model explanation, including
+          counterfactual explanations to show how to change input
+          for a different outcome. Like showing what you’d need
+          to change on a test to pass instead of fail.
+
+    8. What-If Tool: 
+        - From Google, lets you probe a trained model with
+          hypothetical inputs to understand its behavior. Imagine
+          a "what-if" analysis to understand your model’s
+          decisions better.
+
+    9. Skorch: 
+        - A scikit-learn-compatible NN library that includes
+          tools for interpretability. It lets you use familiar
+          scikit-learn methods but for PyTorch models.
+
+    - These tools depend on the type of interpretability we need: 
+        - feature attribution
+        - architecture understanding, or 
+        - real-time monitoring
+
+    - Libraries can be used individually or in _combination_.
+
+
+
+### Links
+    - Visualization for AI Explainability https://visxai.io/
+    - mechanistic-interpretability        https://www.neelnanda.io/mechanistic-interpretability

@@ -1,0 +1,56 @@
+10-Metric-spaces.txt
+
+$MY_VIDEOS/physics/what-are-tensors/10-Metric-spaces.mp4
+
+- oh!!! The "metric" is an INNER PRODUCT... (with a selection of
+  common inner product properties... but not all common
+  properties! 
+    - e.g. `f(v,v) >= 0` isn't used 
+      - (ie the space is NOT _positive definite_)
+
+- positive definite space: Riemanian space
+- indefinite space:        pseudo-Riemanian space
+
+- We built a lot from a single vector space. So far we didn't
+  create anything new...
+	- $MY_IMAGES/physics/what-are-tensors/all-built-logically-from-a-vector-space.jpg
+
+- Now we're going to add a new function, and it has to satisfy
+  some key properties
+	- $MY_IMAGES/physics/what-are-tensors/intro-to-metric-function.jpg
+
+extra thing for GR metric: we want the metric to be _symmetric_ 
+    - (in abstract mathematical definitions, this isn't neccessary)
+    - also we don't need the inner product 
+	- $MY_IMAGES/physics/what-are-tensors/metric-definition.jpg
+
+### "Promotion"
+    - a vector space that has an inner product, is called an
+      inner product space (or a metric space)
+    - I think there's a different between an "inner product
+      space" and a "vector space"
+    - the vector space is "promoted" to an inner product space
+
+### differing notation
+	- $MY_IMAGES/physics/what-are-tensors/notation-styles-for-inner-product.jpg
+
+### How to build a metric
+    - note: an inner product can only take vectors from the same
+      vector space... can't mix in vectors from another space...
+    - two vectors fed into an inner product... quite long when
+      you write it all out
+    - $MY_IMAGES/physics/what-are-tensors/inner-product-written-out.jpg
+    - key: if you know what the inner-product does on all
+      combinations of the basis vectors (to produce a number)
+      then you know how it operates on any vector in the vector
+      space.
+    - whimsical definition for basis inner product:
+        - $MY_IMAGES/physics/what-are-tensors/whimsical-inner-product-basis-vectors.jpg
+    - heres the rule / metric for SR: 
+        - $MY_IMAGES/physics/what-are-tensors/SR-metric.jpg
+
+
+### big jump:
+    - suddenly he wants something from a dual dual `V* ⊗ V*`tensor space
+      to be like the inner product
+	- $MY_IMAGES/physics/what-are-tensors/metric-tensor-like-a-tensor-product.jpg

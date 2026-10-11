@@ -1,0 +1,1004 @@
+### Scientists discover second code hiding in DNA (washington.edu)
+
+- "Exonic Transcription Factor Binding Directs Codon Choice and
+  Affects Protein Evolution"
+
+- Scientists have discovered a second code hiding within DNA.
+  This new code contains information that changes how scientists
+  read DNA instructions and interpret mutations to make sense of
+  health and disease.
+
+- Research team led by Dr. John Stamatoyannopoulos, University of Washington.
+
+- paper:      https://www.sciencemag.org/content/342/6164/1367
+- commentary: https://science.sciencemag.org/content/342/6164/1325
+
+
+skosuri on Dec 12, 2013 [-]
+
+- I looked over the paper pretty quickly, but on a quick read it
+  looks really nice. The data are really impressive, and they
+  seemed to have pulled out really interesting trends for how
+  transcription factors are affecting coding sequence.
+- They also map how variants found across the various cell lines
+  they used (81!) to show that these variants are actually causal
+  for transcription factor binding changes. 
+- For those saying this is not a big deal - it is!. And those
+  saying its obvious - it is not!
+
+- It's been clear for a while that codon choice is not random
+  (hence codon optimization is useful when taking a gene from one
+  organism to another), and recently it's also been clear that
+  codon bias can be evolutionarily constrained. It was thought to
+  be based on tRNA levels (basically anticodons). However, it's
+  now increasingly clear there are other constraints to protein
+  coding sequences than just the decoded protein sequence (aka
+  the genetic code).
+
+- For example, we published a paper [1] showing that in bacteria
+  (and probably higher organisms), the N-terminus of genes has
+  a lot of rare codons and this is due to other constraints such
+  as relieving mRNA structure to allow better translation of
+  proteins. 
+    - I think in the future, we'll find that other regulatory
+      elements also shape this code, including sequences that
+      control splicing, small RNAs, mRNA degradation and
+      transport, et cetera
+
+- Anyways, it's a pretty fun time in biology. The tools we have
+  now make studies that were impossible a few years ago a reality
+  for an individual lab. Can't wait to see what the next few
+  years bring.
+
+[1] http://arep.med.harvard.edu/pdf/Goodman_Sci_13.pdf\
+
+EDIT: Since my comment has hijacked the most useful comment linking to the
+original study, I'll link to the comment here:
+
+https://news.ycombinator.com/item?id=6897122
+
+
+
+timr on Dec 13, 2013 [-]
+
+- "over the last few years it's also been clear that codon bias
+  can be evolutionarily constrained. For a while, it mostly
+  thought to be based on tRNA levels (basically anticodons).
+  However, it's been increasingly clear that there are other
+  constraints to protein coding sequences than just the decoded
+  protein sequence (aka the genetic code)."
+
+This is a much older question than the last few years -- it's one of those
+"evergreen" questions that's been around for almost as long as we've been able
+to do statistics on codon prevalence. You'll see hand-wavy explanations for
+differences in codon usage in really old textbooks. The tRNA one is a
+particularly old chestnut -- I think I read about that one in my first undergrad
+course on molecular biology.
+
+
+
+daemonk on Dec 12, 2013 [-]
+
+Agreed. It's an interesting trend. I also just skimmed over it; however, I
+wonder how significant is their initial TF binding occupancy data. There are a
+bunch of papers recently that looked at binding sites and found that they don't
+really correlate well with transcription. The cell is just a stochastic bag of
+molecules. TFs bind whereever they can. I wonder if they are just seeing noise.
+
+
+
+skosuri on Dec 12, 2013 [-]
+
+Fig 1E seems promising, as it shows that the bound bases tend to be more
+conserved. That said, you are right that as far I could tell there were no
+direct measurements of transcriptional effects. Either way, it was a good read,
+and brought up a bunch of interesting questions to figure out next.
+
+
+
+Estragon on Dec 12, 2013 [-]
+
+Yes, so much bullshit has been published over the last decade as a result of
+artifacts in the measurement of TFBS that you have to be skeptical.
+
+
+
+sounds on Dec 12, 2013 [-]
+
+So I admit I haven't skimmed the paper yet.
+
+Is it as comprehensive a map of DNA-encoded transcription factors as can be had?
+I ask because I can understand the way DNA codes for proteins–as a
+software-head–but the article definitely gets me with this "second language" and
+I want to think more about how the overlapping meanings might have developed
+(and how that might be apply to digital code).
+
+Other than "start," "stop," "intron," "exon," and "suppress" (aka disable), what
+do the transcription factors do in terms of actual cell proteins?
+
+I admit that a really detailed description of cell protein processes will be
+beyond my depth. :)
+
+
+
+kissickas on Dec 12, 2013 [-]
+
+In case you were unaware, another really amazing example of overlapping
+meainings is in "normal" DNA code, where genes can overlap themselves.
+
+Because a stop codon would kill transcription, these are either on alternate
+reading frames (i.e. the codons begin on a different one of the three
+possibilities) or on the antisense side of the gene (the opposite base pairs
+from those corresponding to the original gene).
+
+It blows my mind that such an incredible amount of stuff could go wrong if there
+is just a single mutation, and that such an incredibly delicate system arose
+through evolution and survived billions of years of natural selection.
+
+
+
+Myrmornis on Dec 14, 2013 [-]
+
+That's only known in viral genomes, right?
+
+
+
+waterlesscloud on Dec 12, 2013 [-]
+
+I know next to nothing about this field, but I just sort of brute-forced my way
+through the OP paper with the help of wikipedia. It's a painful process. :-)
+
+But it has piqued my curiosity about the field. Are there any good introductory
+books/websites for the curious layman to get a grounding?
+
+
+
+skosuri on Dec 12, 2013 [-]
+
+Depends on what level. Wikipedia is actually quite good for this sort of thing.
+The classic book as a basic overview of molecular biology in general is the
+Molecular Biology of the Cell [1]. A really cool website to look at on cutting
+edge studies such as these is the ENCODE consortium's publications in Nature
+[2]. They simultaneously published 30 papers last year, and this is a really
+cool meta page that explains the ENCODE project and what they found.
+
+[1]. http://www.ncbi.nlm.nih.gov/books/NBK21054/
+
+[2]. http://www.nature.com/encode/
+
+
+
+wrongc0ntinent on Dec 13, 2013 [-]
+
+Robert Sapolsky[0] has his Stanford course on human behavioral biology on
+youtube, almost in its entirety. The whole course is very accessible and much
+broader than the topic here, but if you wanna go straight for the molecular
+genetics section, it's parts 4 & 5. Amazing lecturer.
+
+[0] http://en.wikipedia.org/wiki/Robert_Sapolsky
+
+
+
+skosuri on Dec 12, 2013 [-]
+
+Oh and for Codon usage in general, a really good review can be found here [1].
+
+[1]. http://people.cs.vt.edu/~heath/VTMENA/CodonBias/PlotkinKudla...
+
+
+
+smartial_arts on Dec 13, 2013 [-]
+
+"Tales from Genome" course on Udacity is pretty awesome, although at times
+painfully anal/detailed with regards to assignments.
+
+I think you can skip those, though.
+
+https://www.udacity.com/course/bio110
+
+
+
+mvleming on Dec 12, 2013 [-]
+
+The Machinery of Life [1] is a fantastic book, I was one of those curious laymen
+and boy did it saturate my thirst for learning about microbiology. I think it's
+close to the time I read it again.
+
+[1] http://www.amazon.com/The-Machinery-Life-David-Goodsell/dp/0...
+
+Edit: Whoops, no Markdown support. Revised link to use footnote.
+
+
+
+limpon on Dec 13, 2013 [-]
+
+I'll try to give you a description of what transcription factors do and what the
+importance of Stamatoyannopoulos finding is. I hope it doesn't sound too weird.
+
+Just noticed, how long my "brief" description is, so here is a TL;DR: Comparing
+cells to computer programs: A program figures out by itself which functions to
+call based on the byte sequence of the function in memory and changes these
+preferences based on the environment its running in.
+
+As you know, the DNA in our cells encodes the blueprint for all proteins that
+exist in the human body. I'm trying to compare this to string encoding, but
+might be completely wrong, because string encoding is more difficult to me than
+DNA encoding ;) The DNA is our hard drive. This hard drive holds the information
+for all proteins. A protein will be a string. Our alphabet is made out of 21
+characters, they are called amino acids. Each character (amino acid) is encoded
+as a 3bit sequence on the DNA, the so called codon. Opposite to the binary
+system, we have a base4 system, meaning each bit can have 4 different states
+(A,T,C,G), the nucleic acids. So, given a byte sequence from the hard drive
+(gene on the DNA), we always look at codons (three bits) and can then translate
+those codons into amino acids. ATG translates to Methionine, GGA translates to
+Glycine etc.... Having 4^3 (64) different codons but only 21 amino acids, some
+amino acids can be represented by several different codons. On top of that, some
+codons have a special meaning, such as "\n". Those special codons are called
+"stop codon", because it marks the end of a protein and the program stops
+decoding from this point on. In addition, there is also a "start codon" that
+marks the begin of a string.
+
+When a cell wants to make a certain protein, it copies the byte-sequence from
+the DNA and translates it into the actual amino acid sequence and as such forms
+proteins (prints a string in our example).
+
+The problem we're now facing is that every cell in your body (with a few
+exceptions, of course) has the exact same DNA sequence. But still, nature is
+able to somehow make different celltypes, such as a skin cell, blood cell,
+neuron, you get the point. The way how cells "know" which proteins to make is
+that the hard drive doesn't only hold encoded strings but also some byte
+sequences in between that don't encode any strings. These sequences are called
+regulatory sequences. These sequences attract so called transcription factors.
+Transcription factors are proteins that you could understand as a pointer. They
+will point to some genes, but not to others and thus instruct the cell which
+byte sequences should be translated into strings.
+
+These regulatory sequences can not only attract transcription factors, but also
+suppressive factors. Those are proteins that prevent transcription factors from
+binding and thus ensure that certain proteins are not made.
+
+There are hundreds of different transcription factors and repressors encoded on
+the DNA, but only a handful exist as protein in each given cell and they define
+the difference between celltypes. They come and go as the cell's environment
+changes as well.
+
+So, going back to our string analogy, say you have saved thousands of strings on
+your harddrive but only want to show a subset of those to the user (eg language
+selection). You start your program by passing some information about which
+strings to choose. The same happens here as well, only that the information
+which strings to chose is somehow intrinsic but still different between
+celltypes. And on top of that you not only have distinct languages, but the
+languages overlap and language A uses string 1,2,3; language B uses string
+2,5,6; and language C uses string 1,2,6 etc. Because of this complexity it is
+very difficult to understand how the cell "knows" which proteins are right.
+
+Stamatoyannopoulos now for the first time proved that even though two different
+codons encode the same amino acids they might attract different transcription
+factors.
+
+To get an understanding of the importance of this finding, imagine having a
+character encoding, such as DNA, where two different byte sequences encode the
+exact same string. Now imagine having a program that automatically chooses which
+strings to display based on which byte sequences encode certain characters.
+
+And now, image that the DNA doesn't only encode strings, but also functions and
+closures, pointers, variables etc. So each time a part of the DNA is translated,
+the state of the program changes. Nature is vey complex and we're just at the
+beginning of understanding the code.
+
+We have methods where we can out-comment some part of the DNA and see how the
+program changes (mutations). In addition, we recently learned how to see which
+part of the DNA is being used in certain cells. And in this paper, they refined
+this method by actually looking at all pointers in a cell and figuring out which
+part of the DNA they pointed at. And they did this for 81 different cell types
+to find networks that act together in certain settings.
+
+
+
+haldujai on Dec 12, 2013 [-]
+
+I may be misinterpreting what you said but it seems as though you consider
+'start' 'stop' 'intron' 'exon' 'suppress' as properties of transcription
+factors. If this is not the case I apologize but to clear any misconception
+those are all properties of the DNA sequence, transcription factors BIND to DNA
+sequences but are not part of the gene itself.[0]
+
+I'm also not quite sure what is meant by suppress.
+
+Really all transcription factors do is up-regulate or down-regulate genes, i.e.
+make more proteins from this gene or make less. However simple that seems this
+is actually an extremely important function. Other than enabling cells to
+respond to say, heat, stress, or tension by making proteins that help them cope,
+gene regulation levels are important in differentiation. This is the process by
+which cells 'pick' a destiny, i.e. brain cells, kidney cells, etc.
+
+Generally, you can think of every cell in your body (with some limited
+exceptions) as containing all genes in your body, so how does the cell know what
+type of cell it should be? One way is by transcription factors, which will tell
+the cell make more of this kidney-related protein, or other proteins that help
+determine its fate.
+
+They have also been implicated in memory formation and almost everything else
+you can think of. But for the actual process of what transcription factors do
+they just regulate how much protein should be made from this gene.
+
+[0]http://en.wikipedia.org/wiki/Transcription_factor
+
+
+
+atmosx on Dec 12, 2013 [-]
+
+Do we have free access to this paper? I would like to read it, if possible.
+
+
+
+tokenadult on Dec 12, 2013 [-]
+
+It's a university press release.[1] I'm sending the link to the published paper
+from Science kindly shared in an earlier comment here to some geneticists I know
+locally, who have just been in a seminar together this afternoon, I'm pretty
+sure. The editors of Science evidently agreed that there is something
+interesting here, but they have been wrong before.[2]
+
+[1] http://www.phdcomics.com/comics.php?f=1174
+
+[2] http://www.slate.com/articles/health_and_science/science/201...
+
+https://www.sciencenews.org/node/5635
+
+http://www.nature.com/news/arsenic-life-bacterium-prefers-ph...
+
+AFTER EDIT: I heard back from one of my local geneticist friends, a
+mathematician turned psychologist by higher education who largely does
+statistical analysis as part of a team of researchers on behavior genetics. He
+writes, from the perspective of behavior genetics research, "That is
+fascinating, but if duons are also tagged by SNPs, and especially if they are in
+the exomic DNA, we've already been studying them and finding very little. In
+other words, this is huge for molecular genetics and physiology, but I'm not so
+sure it changes what we do in genotype-phenotype association research." So I
+take that to say that this could be quite a big deal for molecular genetics and
+physiology, if this finding is confirmed in follow-up research.
+
+
+
+bede on Dec 12, 2013 [-]
+
+TL;DR for biologists: synonymous codon variation is heavily constrained by the
+need to maintain transcription factor binding motifs.
+
+While I found the article very interesting as a new postgraduate student, it
+seems like such a straightforward deduction that I find it difficult to believe
+no one has ever put it into words until now.
+
+
+
+dl8 on Dec 12, 2013 [-]
+
+After talking to someone who knows quite a bit about this stuff, apparently most
+people in the genomics/bioinformatics community kinda already knew about this,
+just that the researchers who wrote the paper were the first one to officially
+categorize them.
+
+
+
+Agathos on Dec 12, 2013 [-]
+
+My first thought on seeing the headline was, "What? Only 2?" Off the top of my
+head I can think of:
+
+1. Amino acid coding
+
+2. Transcription factor binding and transcriptional regulation
+
+3. Post-transcriptional regulation and RNA degradation
+
+4. Intron/Exon Splice sites
+
+5. Chromosome structure and methylation
+
+6. Origins of replication
+
+All of these have been shown to be controlled at least in part by the DNA's
+sequence. This story seems to be about a (very interesting) new wrinkle in (2)
+above.
+
+
+
+dkural on Dec 13, 2013 [-]
+
+In this paper I explore 1,3,4,and 6 (3 = microRNA binding):
+http://genomebiology.com/content/10/11/R133
+
+
+
+jnbiche on Dec 12, 2013 [-]
+
+I agree. I believe I recall my biologist friend saying at one point that there
+are up to three such "layers" of genetic code, depending on where you start
+reading the sequence. Am I understanding that correctly?
+
+
+
+pvnick on Dec 12, 2013 [-]
+
+Well, yeah, if what he's talking about are nucleotide bases, it takes three of
+them to make a codon. So if you have a sequence ABCABC, then ABC might be a
+codon (which codes for an amino acid, like a "bead" in a necklace that makes up
+a protein), BCA might be a codon, and CAB might be a codon. Then at the same
+time you could go backwards. So really there's six potential different codons
+that a single basepair might be involved in. But that's probably not what this
+paper is talking about.
+
+
+
+kissickas on Dec 12, 2013 [-]
+
+You're correct in that this is not what the paper is talking about. However,
+there is a third layer (at least) beyond the gene-coding, most-studied area, and
+the article submitted; epigenetics studies how gene expression is modified by
+histone modification and DNA methylation, basically different ways of switching
+gene expression on/off or changing the amount of protein made from a certain
+gene.
+
+
+
+bede on Dec 12, 2013 [-]
+
+Agreed. The finding is hardly surprising, but this paper appears to formalise
+things very nicely.
+
+
+
+contingencies on Dec 12, 2013 [-]
+
+Does this affect assumptions made within genetic engineering of agricultural
+crops?
+
+
+
+csours on Dec 12, 2013 [-]
+
+My understanding is that GMO crops have snippets taken from other species' DNA.
+Those sequences would be internally consistent, and only the patch between the
+native and foreign sequence would be affected.
+
+
+
+whistlerbrk on Dec 12, 2013 [-]
+
+Seriously, I fail to see how this is news.
+
+
+
+daemonk on Dec 12, 2013 [-]
+
+Actually I didn't know exonic TF binding was even significant enough to put
+synonymous codon variation under constraint. I've always assumed it was some
+sort of metabolic constraint, as in more efficient production of certain tRNAs
+putting a constraint on codon usage.
+
+
+
+CreRecombinase on Dec 12, 2013 [-]
+
+Codon usage bias is a pretty well-described phenomenon. You can read more about
+it here http://en.wikipedia.org/wiki/Codon_usage_bias
+
+
+
+bananacurve on Dec 12, 2013 [-]
+
+Can someone with an AAAS membership please post the full article?
+
+https://www.sciencemag.org/content/342/6164/1367.full.pdf
+
+$20 for one day access! Fucking obscene.
+
+I should join AAAS, it is only $50 for the year, but I can't swing it just now.
+
+
+
+bede on Dec 12, 2013 [-]
+
+http://bede.im/Science-2013-Stergachis-1367-72.pdf
+
+
+
+bananacurve on Dec 12, 2013 [-]
+
+Thank you.
+
+
+
+bede on Dec 12, 2013 [-]
+
+Thank my university :) ...And perhaps my server, which definitely isn't
+accustomed to HN traffic.
+
+
+
+atmosx on Dec 12, 2013 [-]
+
+Thanks!
+
+
+
+luketych on Dec 12, 2013 [-]
+
+Funny how discoveries like this don't surprise me at all anymore. After
+embracing concepts such as fractal geometry, recursion and the demand for
+efficiency in nature, it makes sense that in nature everything has evolved in a
+way in which every layer is a part of the next layer above it (quarks ->
+electrons, protons -> elements -> compounds -> amino acids -> proteins ->
+information -> abstract information -> ..., or binary -> hexadecimal -> assembly
+-> low-level code -> high-level code -> abstractions -> ...), and everything has
+value in more than one way. DNA, proteins, muscles, neural clusters, even
+programming are all based around this principle. If you were building two
+programs that were identical in many ways why wouldn't you abstract out the
+commonalities, instead of building them twice?
+
+The brain is no exception. I think musicians, for example, are better at math
+because at the heart of music and at the heart of math, many of the same brain
+circuits are involved. It is more efficient to have one copy of these circuits
+and just apply them to both music and math, rather than having two copies of
+nearly identical circuits. Proteins have more than one use in our bodies,
+because if each only had only one use we would need an inefficient number of
+them, possibly more than what exists. Same for neurotransmitters. When nature is
+limited by constraints it usually finds a way to fold into a higher dimension
+around that constraint (such as the neocortex wrinkling to increase surface
+area, or DNA containing information on more than a single level, or even how
+grass grows over a fallen log instead of "choosing" to just grow somewhere else,
+or if you are into String Theory, how the universe/multiverse has folded into 11
+dimensions, possibly because that was the most efficient way for our universe to
+exist.)
+
+It reminds me of a river when it is initially forming down the side of a
+mountain. The water takes the most efficient path at any given instance from the
+top of the mountain to the bottom. The process is like a greedy algorithm. The
+water cannot foresee where it will end up, it just flows. The water won't always
+find the most efficient solution, but give it enough time and will find an
+efficient-enough solution.
+
+
+
+fivethree on Dec 12, 2013 [-]
+
+This is sort of a misunderstanding of evolution. It's not building to the most
+efficient or the greatest form of anything. It's spontaneous change that may or
+may not survive with no real reference to "the best."
+
+
+
+mvleming on Dec 12, 2013 [-]
+
+Your comment reminds me of this discussion I had before here on HN and someone
+made a reply that has stuck with me to this day in its eloquence. I'll quote it
+here because I want to share what comment I'm talking about but out of context I
+think it makes little sense and I think you should read the thread [1]–it's very
+relevant to what we're talking about here.
+
+> Essentially it is trying to say that we are at a global maximum in a space
+> that is probably more nonlinear. In fact our genes may well be suboptimal in
+> some respects even if you think they have "control".
+
+[1] https://news.ycombinator.com/item?id=4906810, just read the first four
+comments from the top, mvleming -> mcherm -> mvleming -> justincormack
+
+
+
+gizmo686 on Dec 12, 2013 [-]
+
+This also seems to misunderstand evolution. You can think of evolution as a hill
+climbing optimization algorithm, with a complicated and constantly changing
+fitness metric. While it is true that any given change is random, and even
+'good' changes still only succeed with some probability, over a long time period
+we see a series of incremental improvements. If there is an opportunity to
+increase efficiency it is likely that evolution would have found it, given how
+long the process has been running. Of course, this become less likely when we
+are discussing new features (the thumb is less optimized than DNA because it is
+so recent), and as the benefit of these optimizations becomes less. They also
+become less likely if their are fewer evolutionary paths that might lead to
+them.
+
+
+
+Double_Cast on Dec 13, 2013 [-]
+
+That's not how it works. There's no single "global optimum" that lifeforms are
+evolving towards; there's no final hilltop; there's no intent. This notion of
+"Evolutionary Teleology" is how we get things like X-Men (which I enjoy for the
+record, it's not like X-Men is taught in biology class). If there were some
+global optimum, we'd all have eyesight like Legolas and the color-pallete of a
+Mantis-Shrimp, instead of a blind spot in the center of our retina.
+
+Evolution just happens, and it is what it is. E.g. Natural Selection didn't
+"optimize" giraffes so they could reach leaves. Natural Selection is simply a
+way of explaining that some giraffes had long necks, some had short, and the
+shorter just happened to die out. Similarly, NBA players didn't "evolve" to play
+basketball. Some people are tall, and some are short, and the short people just
+didn't make the cut. "Select" != "Optimize". Evolution is better thought of as a
+historical accident. We're talking monkeys on a flying rock.
+
+
+
+jonathansizz on Dec 13, 2013 [-]
+
+No. You're equating evolution with adaptation, and also making assumptions about
+beneficial mutations occurring as and when needed.
+
+
+
+gnaritas on Dec 13, 2013 [-]
+
+No, he got it exactly right. Evolution is not an algorithm, it doesn't optimize
+anything, changes are not improvements, it doesn't seek opportunities to improve
+efficiency.
+
+
+
+wrongc0ntinent on Dec 13, 2013 [-]
+
+I think the issue here was assuming that the optimization is the best possible
+one. It doesn't have to be, it just needs to be good enough to still function
+given past and present evolutionary pressure.
+
+
+
+jonahx on Dec 13, 2013 [-]
+
+> I think musicians, for example, are better at math because at the heart of
+> music and at the heart of math
+
+Is this true? My personal anecdotal evidence suggests the opposite -- do you
+have any real research to back this up?
+
+
+
+circlefavshape on Dec 13, 2013 [-]
+
+My wife says "yeah, musicians are great at maths, they can count to 4"
+
+
+
+bananacurve on Dec 13, 2013 [-]
+
+Here is a decent analogy I read:
+
+>Suppose we have a computer program which makes books. All of the commands which
+>tell your computer program how to write a book are stored as sequences of 0's
+>and 1's. Also, all of the letters, punctuation marks, and formatting symbols
+>(line break, indent etc) are stored as specific sequences of 0's and 1's.
+
+The commands which control the computer program and the actual text of the book
+are both stored in the same file. Up until now, we thought that these were
+placed side by side in the file, so you would have a segment saying "at 6am
+every day, print the following text in 12 pt font, and bind it in a hard red
+cover", followed by a text containing segment, and then another command segment
+saying "when you finish, print a copy of the book 134 positions further along in
+the file.
+
+We thought this was the case because we have known the sequences of 0's and 1's
+that stand for each letter for a long time now. When we looked at a file and
+attempted to interpret it as If it all stood for letters which made up words' we
+would see something like "fffffgfgy6- fsjjjjjj the quick brown fox jumped over
+the lazy dog.bttt68-%jjjjjjfffffffff". After a while, we learned that the
+'gibberish' segments were actually full of meaningful statements, but they were
+in a different language and contained the commands for the program.
+
+Now getting to today's article, this group has found that inside those sections
+which code for the actual text of the book, there are some commands that run the
+program. This is accomplished because there is more than one way to write most
+of the letters. As an example, you could have one segment of text which says "It
+was the best of times, it was the worst of times", and another segment which
+says "It was the best of times, it was the worst of times" and also tells the
+book program to bind the book in gold leaf. And the only difference between the
+two is that the first one wrote the 's' in 'best' as 00010110, and the second
+one wrote it as 00010111.
+
+
+
+dnautics on Dec 12, 2013 [-]
+
+This is very similar to earlier discoveries that the choice of codon can be
+intimately tied in with protein domains folding; allowing proteins to partially
+fold while the remainder is "stalled" on the ribosome waiting for the rare
+codon. It's interesting, but I would hardly call it a "second code".
+
+
+
+ddebernardy on Dec 12, 2013 [-]
+
+Honest question... How is this different from what was discovered around 2007?
+
+I ask, because insofar as I'm aware, the moment geneticians parsed the human
+genome was the moment it occurred to them that most (90%?) of the information
+was missing. (As in, information to make the remaining proteins that we build in
+our body.)
+
+I vaguely recollect 2007 being the year where they discoverned and/or described
+how ARN can influence how ADN is read and turn bits and pieces of information on
+and off to use the same code to build new proteins. And another team the same
+year described how injecting ARN could allow to use existing ADN to potentially
+build proteins that aren't synthesized in the body.
+
+So... How is this different exactly? :-|
+
+
+
+forgottenpaswrd on Dec 12, 2013 [-]
+
+It looks like there is software in DNA, not just firmware. We are just starting
+to understand that gene expression is very important too, code that express(is
+executed) or not based on the environment, and that junk DNA is probably "not
+understood code" .
+
+
+
+possibilistic on Dec 12, 2013 [-]
+
+DNA is a machine. It encodes information, but it also lives and breathes through
+interaction with various TFs, methylation events, packing, etc. There many types
+of epigenetic "state information".
+
+We've known this for a looong time, it's just that it's so damned complex that
+we have trouble grappling with it.
+
+And let's not forget the rest of the cell and all of the information encoded at
+the protein/messenger level.
+
+
+
+atmosx on Dec 12, 2013 [-]
+
+I think it's more appropriate to say that the DNA is a storage medium. A pretty
+awesome storage medium: ~700 terabytes can be stored 1g of DNA.
+
+The "machine" you are referring two, can be a set of enzyme complexes which
+performs the DNA transcription, as you said at the messenger RNA level.
+
+
+
+kissickas on Dec 12, 2013 [-]
+
+Any source on that bit about junk DNA?
+
+I just completed a reasonably advanced course on computational biology and I was
+still taught that although we have found noncoding DNA performing functions, the
+majority of our DNA is both noncoding and not used for anything (i.e.
+evolutionarily obsolete, transposons, etc).
+
+
+
+refurb on Dec 13, 2013 [-]
+
+Huh. I haven't heard that take on "junk DNA" in a long time.
+
+http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Noncodi...
+
+
+
+jonathansizz on Dec 13, 2013 [-]
+
+You are correct. Most non-coding DNA is junk, which amounts to around 90% of the
+genome. Dead transposons alone make up just under half of the human genome.
+
+
+
+ConceptJunkie on Dec 18, 2013 [-]
+
+You know, if we really wanted to be sure about that, we could just check the
+commit comments.
+
+
+
+damon_c on Dec 12, 2013 [-]
+
+> junk DNA
+
+Properly referred to as "noncoding DNA"... until it is proved to be coding
+something.
+
+
+
+kissickas on Dec 12, 2013 [-]
+
+There is, in fact, a difference between "junk DNA" and "noncoding DNA," now that
+we see some noncoding DNA performing functions as switches, promoters,
+TF-binding sites (like the article describes), etc.
+
+
+
+taproot on Dec 12, 2013 [-]
+
+Junk dna is just header files and whitespace.
+
+
+
+mikecane on Dec 12, 2013 [-]
+
+It's interesting to think of it like that but that's basing your understanding
+on something else that's just not as complex.
+
+
+
+xerophtye on Dec 13, 2013 [-]
+
+I am confused. I have absolutely zero biology background so please, bear with
+me.
+
+So genes only code how to make proteins? That's IT? What about all the other
+stuff like what you look like, what diseases you may or may not get, some
+special functions of your body, your biological strengths and weaknesses, etc
+etc. Or defining protein generation actually defines all of that? (that would be
+so fascinating).
+
+And 90% of the DNA is labeled as "non-coding?" ?!?!? Seriously? well it can't be
+"junk" can it? Or maybe its like a long bitcoin chain with only the latest
+commit relevant....
+
+
+
+Myrmornis on Dec 14, 2013 [-]
+
+Yes, specifying which proteins are made, and how much of each and how that
+varies with cell type is most of what determines an organism's phenotype. This
+is largely because enzymes are proteins, and enzymes control all the biochemical
+reactions in a cell. But proteins can also be transcription factors, which
+control which other proteins are produced, and they can be important for their
+mechanical properties, etc. So, not some boring category of biomolecule that
+gets listed on nutritional information section on food packaging.
+
+
+
+tgb on Dec 13, 2013 [-]
+
+Like this one? http://dresdencodak.com/2009/07/12/fabulous-prizes/
+
+
+
+tsenkov on Dec 12, 2013 [-]
+
+I am not a biologist, but this discovery seems ground-braking to me.
+
+What strikes me as an interesting question (I hope someone of you can answer)
+is: How long will it be, before physicians/gene specialists/biologists/etc. will
+use the new way of DNA interpretation in cases for regular people? How long
+before this discovery can be used in mainstream medicine?
+
+My (uneducated) guess is: there has to be a huge reevaluation of the accumulated
+data (and assumptions) about gene connections with deceases.
+
+
+
+schiffern on Dec 12, 2013 [-]
+
+>How long before this discovery can be used in mainstream medicine?
+
+Almost immediately. While it won't have therapeutic applications for some time,
+the first benefit will be helping scientists better understand the cause of
+certain diseases.
+
+>ground-braking
+
+That's like aerobraking, right? ;)
+
+
+
+dragonwriter on Dec 12, 2013 [-]
+
+> > ground-braking
+
+> That's like aerobraking, right? ;)
+
+More like lithobraking [1].
+
+[1] http://en.wikipedia.org/wiki/Lithobraking
+
+
+
+tsenkov on Dec 13, 2013 [-]
+
+Oooops. :>
+
+It should've been groundbreaking*.
+
+Well, the "therapeutic applications" were kind of what I meant. I hope "some
+time" is not more than 5 years.
+
+
+
+wbhart on Dec 13, 2013 [-]
+
+The wording of the news is quite similar to a discovery reported in 2006:
+http://www.nytimes.com/2006/07/25/science/25dna.html?_r=0
+
+So is this a third code? A rediscovery of the same thing? Or a refinement of
+that earlier work?
+
+
+
+mseepgood on Dec 13, 2013 [-]
+
+64 letter alphabet? Base64 encoded?
+
+
+
+chmike on Dec 13, 2013 [-]
+
+A protein is a chain of amino acids. There are 21 different amino acids. The
+alphabet of proteins is made of 21 different letters.
+
+DNA strings are sequence of Deoxyribose Nucleic Acid (DNA). There are only 4 of
+them named A, T, C, G. The alphabet of DNA is thus made of 4 letters.
+
+One needs at least 3 DNA letters to encode one of the 21 amino acids. These 3
+DNA letters are called codon. But with 3 DNA letters there exist 4^3 = 64
+different codons. This is similar to a Base64 encoding just by the number of
+letters in the codon alphabet.
+
+Since 64 is much more than 21, many different codons encode the same amino acid.
+This provides a liberty degree which is apparently used to encode something
+else. As suggested by this research result, the secondary encoding would sort of
+encode the predicate specifying when and maybe how the DNA sequence encoding a
+protein should be decoded.
+
+
+
+vincie on Dec 13, 2013 [-]
+
+The Trekkies were right all along:
+http://en.wikipedia.org/wiki/The_Chase_(Star_Trek:_The_Next_...
+
+
+
+coldtea on Dec 13, 2013 [-]
+
+So, there was a second code hiding in DNA, with different types of instructions,
+and those scientists discovered it.
+
+That's nice, that's how science progresses.
+
+Now, let's go to how business works. What about all those "scientists" (nay,
+engineers doing whatever for a payroll) and all those corporations, cocky and
+convinced that they had all the knowledge they needed, working as amateur
+magicians with DNA to create synthetic food, organs, new drugs, etc?
+
+They essentially said "fuck" to a better and timely scientific understanding, in
+order to greedily rush to market some half baked results -- and consequences
+(medical or otherwise) be damned.
+
+
+
+qrybam on Dec 12, 2013 [-]
+
+This is very interesting. Makes me imagine that there might be even higher
+levels of control/abstraction over the top of this.
+
+
+
+brutopia on Dec 13, 2013 [-]
+
+Seems like scientists haven't discovered yet how not to include unencrypted
+resources on https sites.
+
+
+
+mikecane on Dec 12, 2013 [-]
+
+So, can someone tie this into 23andMe? Wouldn't it change what they looked for?
+
+
+
+kissickas on Dec 12, 2013 [-]
+
+It might indeed change our understanding of specific point mutations, for
+example, but it won't negate any of their research, as far as I can tell. On the
+contrary, it will help them moving forward as we now have some basis on which to
+understand what is going on a little better in the steps between genotype and
+phenotype.
+
+
+
+Actually the reddit discussion on the paper is much more informative [1].
+
+[1] http://www.reddit.com/r/science/comments/1sqj63/scientists_d...

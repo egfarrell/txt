@@ -1,0 +1,172 @@
+
+### car cdr
+    - old lisp machines:
+    - `car`: contents address registers
+    - `cdr`: contents decrement registers
+    - GJS : why these names? It's easier to pronounce 'cadr' than
+      'first of rest, rest of first' etc...
+
+### questions
+    - is () the same as '()  ??
+    - A Scheme evaluator is free to evaluate the expressions IN
+      ANY ORDER; left to right, right to left, or any other
+      sequential order. In fact, the subexpressions may be
+      evaluated in different orders for different applications,
+      even in the same implementation
+
+### Google indent Advice
+    - The convention is that the body of a binding form is
+      indented two spaces after the form. 
+    - Any binding data before the body is usually indented FOUR
+      SPACES. Arguments to a function call are aligned with the
+      first argument; if the first argument is on its own line,
+      it is aligned with the function name.
+
+    (multiple-value-bind (a b c d)
+        (function-returning-four-values x y)
+      (declare (ignore c))
+      (something-using a)
+      (also-using b d))
+
+    - An exception to the rule against lonely parentheses is made
+      for an `eval-when` form around several definitions; in this
+      case, include a comment `; eval-when` after the closing
+      parenthesis. 
+
+### Round and Square Brackets
+    - `(let [(x 5) (y 3)] ...)`
+    - Some implementations of Scheme provide a non-standard
+      extension of the lexical syntax whereby balanced pairs of
+      square brackets are semantically indistinguishable from
+      balanced pairs of round brackets. 
+    - Do not use this extension.
+    - Rationale:  Because this is a non-standard extension, it
+      creates inherently non-portable code, of a nature much
+      worse than using a name in the program which is not defined
+      by the R5RS.  
+    - The reason that we have distinct typographical symbols in
+      the first place is to express different meaning.  
+
+
+### cons and list
+    - `cons` builds PAIRS ... ie two items only! 
+    - This is an error: (cons 'a 'b 'c)
+    - I was thinking 'cons' built a whole list.
+    - A list is a _sequence of pairs_. (!!!)
+    - The `cdr` of the last pair in a PROPER LIST is an empty
+      list `()`.
+    - Otherwise the sequence of pairs is an IMPROPER LIST.
+    - list can take an arbitrary number of arguments and always
+      returns a proper list
+
+### Symbol / Variable (interesting!)
+    - Quoting a LIST: 
+        - tells Scheme to treat a parenthesized form as A LIST
+          rather than a PROCEDURE application. 
+
+    - Quoting an IDENTIFIER: 
+        - tells Scheme to treat the identifier as a SYMBOL rather
+          than as a VARIABLE. 
+
+    - 'x' as a VARIABLE
+    -          --------
+        - Mathematical expression: 
+        - `1 - x`, for some VALUE of `x`
+
+    - 'x' as a SYMBOL
+    -          ------
+        - algebraic equation: 
+        - `x^2 - 1 = (x - 1)(x + 1)`
+        - We think of the whole equation symbolically.
+
+    - Why PROCEDURE APPLICATIONS share notation with LISTS?
+    - Why VARIABLES              share notation with SYMBOLS?  
+    - Answer: 
+        - Scheme programs can be represented by Scheme data. 
+        - Very powerful feature.
+
+### Difference symbols / identifiers
+    - "Identifiers" are a syntactic category. That is, suppose we
+      take a text file and break it into tokens. Some tokens will
+      be left-parens. Some right-parens. Some numbers. Some will
+      be identifiers. Every language has its own set of syntactic
+      categories, but many use the name "identifier" for
+      "word-like thing that can usually be a function name or
+      a variable name or whatever."
+    - "Symbols", on the other hand, are a particular kind of
+      VALUE in Scheme and Lisp systems. Scheme has lots of
+      different kinds of values: Numbers, Booleans, Strings,
+      Pairs, Symbols, and others.
+    - In Scheme, when developing a parser / interpreter
+      / compiler, it turns out to be convenient to use symbols
+      (the values) to represent identifiers (the syntactic
+      entities). 
+    - Specifically, "quote" has a special ability to turn certain
+      host language token sequences into lists of symbols,
+      numbers, strings, and booleans. You don't need to take
+      advantage of this, but it eliminates a lot of code.
+
+
+### Scheme features / history
+    - Scheme evolved from LISP and is considered to be a dialect.
+    - From Lisp it inherited treating values as first-class
+      objects, and inherited important data types such as symbols
+      and lists, and the representation of programs as objects...
+    - Lexical scoping & block structure were taken from Algol 60. 
+    - Scheme was the first Lisp dialect to adopt lexical scoping
+      and block structure, first-class procedures, the treatment
+      of tail calls as jumps, continuations, and lexically scoped
+      syntactic extensions
+
+
+### Lambda Calculus books
+    - Compiling lambda calculus http://t3x.org/clc/index.html
+    - Lambda-calculus, Combinators and Functional Programming
+    - Functional Programming through Lambda Calculus
+    - Side track: From Mathematics to Generic Programming
+
+
+### MIT-scheme memory
+    - 4 types of memory
+    - STACK: for recursive procedure calls,
+    - HEAP: for dynamically allocated objects, like `cons` cells
+      and strings. 
+        - Heap Storage for objects which become unreferenced is
+          eventually reclaimed by garbage collection.
+    - A CONSTANT SPACE: for allocated objects, like the heap. 
+        - Unlike the heap, storage used for objects in constant
+          space is not reclaimed by garbage collection.
+        - Constant space is used for objects that are essentially
+          permanent, like procedures from the runtime system.
+    - EXTRA STORAGE: used by the MICROCODE (the part of the
+      system that is implemented in C). 
+
+### Handy tex functions
+    - `show-expression`: opens X-window with Tex equation
+    - (display (`expression->tex-string` test)): create TEX
+    - (`2d-show-expression` test): nice ascii effort
+
+### Bash aliases for Scheme / SICM
+    ```
+    ```
+
+### files
+    - ./scheme/scheme-book-4e.txt
+    - $MY_NOTES/cs/lisp/sicm-emmy-tips.txt
+    - $MY_CODE/scheme/gjs-tutorial.scm
+
+### Links
+    - Install Scheme                                   https://www.gnu.org/software/mit-scheme/
+    - Sussman page                                     http://groups.csail.mit.edu/mac/users/gjs/
+    - Course: Adventures Advanced Symbolic Programming http://groups.csail.mit.edu/mac/users/gjs/6.945/
+    - Main Scheme Info website                         https://schemers.org/
+    - Scheme enthusiast                                https://ds26gte.github.io/
+    - Scheme/lisp indenter for Vim                     https://github.com/ds26gte/scmindent
+    - Manynooth reserch group (auto diff/scheme)       http://www.bcl.hamilton.ie
+    - Awesome Scheme resources                         https://github.com/schemedoc/awesome-scheme
+    - Scheme research                                  https://github.com/schemedoc/bibliography#bibliography-of-scheme-related-research
+    - Mail archive                                     https://srfi-email.schemers.org/schemedoc/
+    - Scheme CAS Algebra system                        https://github.com/dharmatech/mpl
+    - Nils Holm cool Lisp/Scheme writer                http://t3x.org/index.html
+    - Scheme JACAL Symbolic Math System                http://people.csail.mit.edu/jaffer/JACAL
+    - Scheme shell                                     https://scsh.net/about/about.html

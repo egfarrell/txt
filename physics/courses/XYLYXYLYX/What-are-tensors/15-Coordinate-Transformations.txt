@@ -1,0 +1,131 @@
+15-Coordinate-Transformations.txt
+
+- dont call it the "vector space" at each point anymore... call it
+the tangent space...
+- and likewise, call it the co-tangent space
+- note: the basis of the co-tangent space are called "1-forms"...
+  remember they are maps that take vectors to the real number...
+
+comment about the jacobian at minute 29
+
+
+
+- coordinate basis: differential operators in the coordinate system
+- ie they are directional derivatives
+- which is why we say tanget spaces 
+
+- talks about transformation matrix from one basis to another
+
+- _fields_ really meamsn "functions of spacetime"?? 
+    - ie that whatever function you have at each point, takes
+      that points coordinates as input
+
+minute 19: move on to coord transformations
+
+why are we not talking about manifolds and fibre bundles?
+
+
+### YouTube
+    - One more question maybe not really relevant but what is the
+      link between covariant components of a vector which are the
+      _projection on the coordinate axis_ and what we learned in
+      these lectures which has to do with how they transform if
+      u know what i mean...?
+        - The "WHat is a Manifold" lectures put the concept of
+          a vector field on a more rigorous foundation. In "What
+          is a Tensor" I sort of wave my hands and place a vector
+          space at every point in spacetime, but there is
+          a formal foundation for this. You will find those
+          lectures involve more pure mathematics and they are
+          more difficult. 
+
+        - Regarding your question: the idea of "projection on the
+          coordinate axis" implies the concept of
+          "orthonormality" which I have not fully introduced.
+          However, we have everything we need to introduce it at
+          this point. In short, once you have a basis you can
+          think about the components as "coordinates" associated
+          with an axis, but it becomes quite abstract because the
+          "unit vectors" are realized as differential operators
+          and not _little pieces of spatial directions_. It is
+          probably better to liberate yourself from this approach
+          for now. When you go through the material regarding
+          manifolds you will .....
+
+    - Hey just a quick question, the matrix discussed during
+      _29:00_ is the Jacobian matrix right?
+    - Yes, it is the Jacobian of the coordinate transition
+      function. 
+
+
+    - I'm still going through and enjoying your lectures. I'm
+      also reading Schutz's and Jeevanjee's books. Schutz starts
+      off with manifolds and fiber bundles like you mentioned. It
+      seems that your giving us all the pieces of fiber bundles
+      in detail. So am I right in matching these guys up:
+      spacetime is a manifold like you mentioned, fibers are
+      tangent spaces, coordinate changes are the homeomorphisms
+      on the fibers, and the open sets on the manifold are the
+      locality we need for our tangent spaces (differential
+      operators) to work and spacetime to be differentiable. Am
+      I on the right track at least?
+        - That all sounds right to me. Be a bit careful
+          interpreting spacetime as a _fiber bundle_ structure.
+        - Newtonian spacetime is a nice fiber bundle however.
+          (interesting)
+        - I'll try to figure out a good way to explain the
+          distinction when I get to it. Also, I would say that
+          the open sets are required for continuity to make sense
+          and that differentiability is an extra quality of the
+          transition functions that, as we shall see,
+          distinguishes a purely topological manifold (C^0 in
+          Schutz's notation) from a differential manifold. 
+
+        - Funny thing, Shutz is one of the books I read on this
+          subject, but he evades some of the details regarding
+          topology that I am filling in. It definitely needs
+          a bit of supplementation. It is a great read if you
+          already understand a lot of the concepts, or if you are
+          just starting out and have other books to work with. 
+
+        - Also, I haven't actually done fiber bundles in the
+          lectures, but I think I will. Why not? Technically, we
+          haven't really even reached differential manifolds yet.
+
+
+    - at minute 33, for the cotangent space you write that the
+      inverse transformation is partial-X^(u')/partial-X^(u). Is
+      this only true for orthogonal coordinate systems? 
+    - When I worked out the matrix multiplication of the
+      inverse*non-inverse (for a 2D case), I saw that the
+      diagonals clearly go to 1 because the primes and non-primes
+      effectively 'cancel out'. But I noticed that the
+      off-diagonals are comprised of terms like this:
+    - partial-X^1/partial-X^2      
+    - For an orthogonal system, I could see why terms like the
+      one above go to zero. However, what if your coordinate
+      system is not orthogonal? Do terms like this still equal
+      zero?
+
+        - Samuel Cramer No. The system does NOT have to be
+          orthogonal. The key strength of this formalism is that
+          it works for an absolutely arbitrary coordinate
+          transformation (uh..... with the condition that the
+          transformation functions x’(x) be smooth and
+          invertible) which will generally NOT be orthogonal. The
+          matrices generated by the \partial x’/ \partial x terms
+          (and their inverses) will generally NOT be diagonal!
+          I’m glad you are thinking about this. 
+        - To see how right you are, study the simple
+          transformation from flat space time to a rotating
+          coordinate system. Both are flat Minkowski spacetimes
+          and represent flat space, but the transformation matrix
+          in non-diagonal. 
+        - As another example, in a Kerr-space time of a rotating
+          black hole, there are several coordinate systems that
+          can be used to study the rotating black hole. The
+          transformation between these coordinate systems isn’t
+          diagonal either. 
+        - On the other hand, the transformation between the
+          various coordinated systems used to study
+          a non-rotating black hole are, usually, diagonal.

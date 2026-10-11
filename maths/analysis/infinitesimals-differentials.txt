@@ -1,0 +1,144 @@
+
+
+### Infinitesimals don't generalise?
+    - $MY_NOTES/physics/QM/Bohm/HN-Bohm-pilot-waves.txt
+    - thomasahle
+        - Not to start a big discussion about infinitesimals, but
+          don't they generalize a lot worse than limits?
+        - e.g., what are their analogies in `non-metric spaces`?
+          Say in topology or category theory?
+
+
+### HN comment about infinitesimals:
+    - $MY_NOTES/physics/QM/Bohm/HN-Bohm-pilot-waves.txt
+    - I believe a big part of it is that it's been shown that NSA
+      and standard analysis are equivalent. Anything you can
+      prove in one can be proven in the other. Perhaps more
+      important, one doesn't seem any better than the other at
+      leading to deep insights. 
+    - If you can't solve a problem in standard analysis, you
+      probably aren't going to figure out the solution if you use
+      NSA, and vice versa.
+
+### Seth Calculus (infinitesimals)
+    - $MY_NOTES/maths/analysis/Seth-Calculus.txt
+    - You don't need calculus to study LINEAR functions...
+    - But calculus allows NON-LINEAR functions to be studied _as
+      if_ they're linear (at least locally)
+        - later:
+        - once you learn how to differentiate polynomials, you
+          can take the derivative of almost ANY function, because
+          most 'nice' functions can be approximated by
+          polynomials.
+        - aside: polynomials are made up of 'power functions' of
+          the form `x^n`
+
+### Smooth Worlds Infinitesmals: a 'gotcha'
+    - See also! 
+        - Intuitionist maths (Brouwer) has a law of excluded
+          middle too.
+        - $MY_NOTES/physics/metaphysics/intuitionist-time-flow.txt
+    - In order to achieve universal continuity of `maps` within
+      smooth worlds, and thereby ensure the consistency of smooth
+      infinitesimal analysis, it turns out a certain logical
+      price must be paid:
+        - The "law of excluded middle" cannot generally be
+          affirmed within smooth worlds.
+        - Aside:
+            - Law of excluded middle:
+            - every statement is either definitely true or
+              definitely false.
+    - This is because unconstrained use of the law of excluded
+      middle legitimizes the construction of `discontinuous
+      functions`.
+        - ... Then example of blip function ...
+    - This argument shows that the statement:
+        - `for any real number x, either x = 0 or not x = 0`
+        - is false in `S` ('smooth world').
+        - ie the 'Law of Excluded Middle' doesn't hold in 'smooth
+          world'
+
+### 'nilsquare' Infinitesimal
+    - nilsquare, nilpotent
+        - https://www.youtube.com/watch?v=JEr6sE1C2kc
+    - Aside:
+        - NEWTON   called infinitesimals: 'fluxions.'
+        - Leibnitz called infinitesimals: 'differentials', dx, dy
+    - Key concept:
+        - an infinitesimal is a _non-zero quantity_ whose SQUARE
+          is exactly ZERO.
+    - Minute 7:00: this allows `dx^2` to be replaced with
+      zero, BEFORE you divide by dx (which remains a non-zero
+      divisor).
+    - You then have `2xdx/dx = 2x`, a precise result which does
+      not require `dx` to be treated as if it's zero.
+    - As a consequence, however, you must discard the 'Law of
+      Excluded Middle', and understand the deep implications of
+      this.
+        - Excluded middle: for every proposition, either this
+          proposition or its negation is true.
+
+### Discussion: difference from non-standard calculus
+    - $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Calculus-even-easier-infinitesimals.pdf
+    - In standard calculus 
+        - the fundamental concept is not the differential of
+          a variable but the `derivative` of a function which is
+          defined as a limit. 
+        - The differential is then defined in terms of the
+          derivative. The notion of a function and limits
+          involves dependent and independent variables. 
+    - In the infinitesimal approach 
+        - the fundamental concept is the `differential` of any
+          variable, regardless of dependence or independence, and
+          the derivative is defined as a quotient of
+          differentials.
+
+    - What the passage means
+
+        - In the usual limit-based calculus, the derivative
+          `dy/dx` is defined first, using the limit of `Δy/Δx` as
+          `Δx → 0`.
+        - Only after that do we define the differential `dy` as
+          `(dy/dx) dx`.
+
+    - In an infinitesimal approach (historically in Leibniz, or
+      formally in modern nonstandard analysis), the order is
+      reversed:
+        - Start by allowing actual infinitesimal quantities.
+        - A differential such as `dx` is simply an infinitesimal change in `x`.
+        - Any variable can have a differential, whether or not it is considered a “dependent” variable.
+        - The `derivative` is then defined as the ratio `dy/dx` of two infinitesimals.
+
+    - Instead of limits being the foundational idea,
+      infinitesimals are. 
+        - Derivatives are just quotients of differentials.
+
+    - Simple example: `y = x²`
+        - Start with an infinitesimal differential `dx`. 
+        - It is not zero, but smaller than any real number in
+          absolute value.
+
+        - Consider the infinitesimal change in `y`:
+            - dy = (x + dx)² − x²
+            - dy = x² + 2x dx + (dx)² − x²
+            - dy = 2x dx + (dx)².
+
+        - Now `(dx)²` is an infinitesimal of second order: 
+            - it is much smaller than dx and is discarded in the
+              usual Leibniz-style reasoning. Keeping only
+              first-order infinitesimals gives
+            - dy ≈ 2x dx.
+
+            - Since the derivative is defined as the quotient of differentials,
+            - dy/dx ≈ 2x.
+
+            - Because the approximation becomes exact when interpreted in the hyperreal framework, we conclude
+            - dy/dx = 2x.
+
+            - Notice what we never used: a limit. The derivative
+              emerged directly from algebraic manipulation of
+              infinitesimals.
+
+
+### Links
+    - HN: discussion about infinitesimals https://news.ycombinator.com/item?id=42637853

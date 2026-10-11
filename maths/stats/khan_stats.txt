@@ -1,0 +1,120 @@
+# Bell Curve (normal) (guaussian)
+
+- In probability theory, the normal (or Gaussian) distribution is
+  a continuous probability distribution often used as an
+  approximation to describe real-valued random variables that
+  tend to cluster around a single mean value.
+
+- The graph of the associated probability density function is
+  “bell”-shaped, and is known as the Gaussian function or bell
+  curve:
+
+    - where parameter `μ` is the mean (location of the peak)
+    - and `σ^2` is the variance (the measure of the width of the
+      distribution).
+
+    - The distribution with `μ = 0` and `σ^ 2 = 1` is called the
+      standard normal.
+
+
+- The binomial distribution, which is discrete, "becomes" the
+  normal distribution after many many trials.
+
+- The binomial distribution is always finite, you can only have
+  a finite number of values.
+
+- But the normal distribution is defined over the entire real
+  number line.
+- So normal distribution could give a tiny tiny tiny probability
+  of something mad happening, e.g. all the atoms in my body
+  rearranging or something.
+
+`f(z) = 1/sqrt(2pi) * e ^ -(z^2/2)`
+
+- Thats its definition using the z score way, where the z score
+  is: `(x-μ)/ σ`
+
+
+# Binomial Distribution
+
+- The binomial distribution, which is discrete, "becomes" the
+  normal distribution after many many trials.
+
+- The coefficents in the probability density are combinations. ie
+  n choose k type stuff.
+
+- Example 1: How many heads when I flip a coin 6 times
+
+- Example 2: How many shots do I make if the probability of
+  nailing it is 0.3 (He used Excel aswell)
+
+```
+P(X=k) = (k successful trials from n total trials)
+                     * (Prob success)^K times
+                          * (prob failure)^n-k times
+```
+
+
+# Poisson Distribution
+
+- questions 2016:
+- what exactly is `k` ?
+
+- questions 2016:
+- do you multiply the combinatorial probability `P(X=k)` by `n` ?
+
+- extra note in 2014
+    - the variance is equal to the mean
+    - so the standard deviation = SQUARE ROOT of the mean.
+
+    - Notice that in general you'd want to compare the mean to
+      the standard deviation, not to the variance: variance and
+      mean have different dimensions, so it seldom makes sense to
+      say "mean equals variance" (that property would depend on
+      scale)
+
+    ### Random Variable X
+    = How many cars pass by in one hour?
+
+    ### Start:
+    Get the _mean_ or _expectation value_ `E[X] = λ` by
+    watching the cars go by. Say for this example, 9.3 per hour
+
+    ### Now the key point:
+    He models the Poisson by starting with a rough Bionomial
+    distribution!!!!
+
+    ### Write the key point again:
+    He models the Poisson by starting with a rough Bionomial
+    distribution!!!!
+
+    ### Expectation of a Bionomial
+    `E[X] = np`
+    where
+    `n` = number of trials,
+    `p` = probability of success
+
+    ### lets model his road-side observations as a _binomial_
+    Expectation = E[X] :
+    λ (empirical) 	 = n * p (binomial)
+    # cars per hour  = (60 one minute trials per hour) * (λ/60 mins probability)
+
+    P(X=k)			 = (60 choose k) * [`(λ/60    ) ^ k`   successes]
+                                     * [`(1 - λ/60) ^ 60-k`failures ]
+
+    ### So its roughly modelled as a binomial
+    and not a bad approximation. But what if _more_ than one
+    car passes in a minute?? At the moment, we're just
+    counting successes by the minute...
+
+    ### So lets make it a bit more granular:
+    (now have a trial every second)
+    P(X=k)	 = (3600 choose k) * [`(λ/3600    ) ^ k`     successes]
+                               * [`(1 - λ/3600) ^ 3600-k`failures ]
+
+    Thats a bit better again, not a bad approximation.
+    But what if two cars come within half a second??
+
+    - can keep making it more and more granular -
+
+    - and in the limit as n -> ∞ we get the poisson!

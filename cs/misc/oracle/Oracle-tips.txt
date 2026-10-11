@@ -1,0 +1,397 @@
+
+
+### Multitenant
+    - https://oracle-base.com/articles/12c/multitenant-manage-users-and-privileges-for-cdb-and-pdb-12cr1
+    - The multitenant option introduced in Oracle Database 12c
+      allows a single container database (CDB) to host multiple
+      separate pluggable databases (PDB). 
+    - This article shows how to manage users and privileges for
+      container databases (CDB) and pluggable databases (PDB).
+
+### Setup XE Instance
+    - Youtube vid: https://www.youtube.com/watch?v=gaelhF2us28
+    - $MY_CODE/old/sql/test-oracle.plsql
+   - Overview: 
+        - You need to connect to the Pluggable database, the
+          default one created for XE is called XEPDB1, you can
+          use the XEPDB1 service to connect to it with your
+          client (it sounds like you’re using SQL Developer).
+        - Once you’ve created your new user, remember to connect
+          back to the pluggable database with that user.
+ 
+    - Note: 
+        - after installation, only user will be 'SYSTEM', and
+          password is what you entered during XE installation.
+    - Need to setup pluggable database service 
+        - 'Oracle Net Configuration Assistant':
+            - $MY_IMAGES/cs/oracle/xe-setup-01.jpg
+            - $MY_IMAGES/cs/oracle/xe-setup-02.jpg
+            - $MY_IMAGES/cs/oracle/xe-setup-03.jpg
+            - $MY_IMAGES/cs/oracle/xe-setup-04.jpg
+            - $MY_IMAGES/cs/oracle/xe-setup-05.jpg
+            - more steps... see video
+        - SQL Developer: define new connection
+            - $MY_IMAGES/cs/oracle/xe-setup-06.jpg
+
+### Oracle keys
+    - `(#)`:  Primary key column
+    - `(\)`:  Foreign key column
+    - `(*)`:  Mandatory column
+    - `"o"`:  Optional columns with a lowercase
+
+### TOAD Tips
+    - display auto-complete options
+        - ctrl+.
+
+    - remove block lines
+        - edit PLSQL language rules
+        - uncheck "Draw Block Staple"
+
+    - Toad Config Path 10.6
+        - C:\Users\itef\AppData\Roaming\Quest Software\Toad for Oracle\10.6
+
+    - Jump to object definition
+        - Describe... F4
+
+### Views
+    - Views are just SELECT queries that has been given a name
+      and saved in the database.
+    - Therefore a view is sometimes called a "named query" or
+      "stored query". 
+    - To create a view: CREATE OR REPLACE VIEW <view_name> AS
+      SELECT <any valid select query>;
+
+### Cloud connection strings
+    - SQL DEVELOPER
+        - Hostname: ec2-46-137-63-171.eu-west-1.compute.amazonaws.com
+        - Port: 1521
+        - SID: xe
+        - Question/Note: a "SID" is different to a "service name"?
+
+    - CONNECTION STRING
+        - enda@//ec2-46-137-63-171.eu-west-1.compute.amazonaws.com:1521/xe
+
+
+### Oracle linux client
+    - needed in .bashrc
+        - # add cisco anyconnect
+        - # export PATH=/opt/cisco/anyconnect/bin:$PATH
+
+    - # oracle TNS file
+        - # export TNS_ADMIN=~/.local/tmp
+
+
+### exception handling in a loop (CONTINUE!)
+        For i in some loop
+            BEGIN
+                    -- get the properties to set the member attributes of the ordimage object
+                    OBJIMAGE.SETPROPERTIES();
+                    EXCEPTION
+                        WHEN OTHERS THEN
+                            IF SQLCODE = -29400
+                            THEN
+                                -- data cartridge error. this almost certaintly
+                                -- means its its not really an image
+                                DBMS_OUTPUT.PUT_LINE('Warning! Not an image file!');
+                                CONTINUE;
+                            END IF;
+            END;
+        end loop;
+
+### Check existing constraints
+    - (Handy when dropping tables)
+    - SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = "tabnam";
+
+### timestamp
+    - timestamp := to_char(sysdate, 'dy-hh-mi-ss');
+
+### Sequence NOCACHE
+    otherwise gaps in sequence.... skips some numbers
+
+### OWA
+    - oracle web agent - MOD_PLSQL
+
+### Nulls: NVL
+    - lets you substitute a value when a null value is
+      encountered.
+
+    - NVL (string1, replace_with)
+    - 'string1' string to test for null value.
+    - 'replace_with' value returned if string1 is null.
+
+### jump straight into SQLPLUS
+    - without specifying a username
+    sqlplus /nolog
+
+### create user
+    - CREATE USER username IDENTIFIED BY password;
+
+### grant dba privileges
+    - GRANT dba TO username WITH ADMIN OPTION;
+
+### home box
+    - http://86.19.136.32:8080/apex/f?p=4950:1
+
+### work version
+    - Oracle Database 11g Enterprise Edition Release 11.2.0.3.0
+
+### builtin package dbms_metadata
+    - list objects under SYS
+    - then look at GRANTS
+
+### select first "n" rows
+    select * from SOME_TABLE
+    where rownum <= n
+
+### system tables
+    - all_objects
+        - all objects of current user AND
+        - those you have access to
+
+    - dba_objects
+        - show ALL objects of ALL users
+
+    - user_objects
+        - show current user objects
+
+### traverse anonymous rows in HTML table
+    connect by prior id = parent_id
+    start with element = 'table'
+
+### CURSORS
+    - 5 types
+        - implicit cursors
+        - explicit cursors
+        - cursor variables
+        - cursor expressions
+        - dynamic sql queries
+
+
+    - SGA: System Global Area
+        - holds data specified by an SQL statement
+
+    - static SQL
+        - if fully fixed or specified at time code is compiled
+
+    - Dynamic SQL
+        - constructed at runtime and then executed.
+        - use DBMS_SQL or native dynamic SQL
+
+    - Result Set
+        - set of rows identified by the DB as fulfilling the
+          request of some SQL statement.
+        - Cached in the SGA to improve performance when accessing
+          or modifying this data.
+
+    - Current row:
+        - a pointer into the result set
+
+    - Implicit cursor
+        - created everytime you run a DML statement
+        - (insert, update, merge, delete)
+        - created by SELECT INTO (which returns a single row
+          directly into a PLSQL data structure)
+        - implicit because DB auto handles many of the cursor
+          related operations
+        - (e.g. allocating cursor, opening, fetching)
+
+    - Explicit cursor
+        - a `select` where you declare a cursor
+        - must explicitly perform open, fetching, close etc
+        - Used when retriving multiple rows using static SQL
+
+    - cursor variable
+        - variable you declare which references or points to
+          a cursor object.
+        - A true variable
+        - can change its value (i.e. the cursor it points to) as
+          the program executes.
+        - Can be passed as parameter.
+        - Useful when passing result set info to another
+          environment (Java or VB...)
+
+### CURSOR attributes
+    - cursor_name%attribute_name
+
+    - %FOUND
+        - true  if record fetched successfully
+        - false otherwise
+
+    - %NOTFOUND
+        - true  if record NOT fetched successfully
+        - false otherwise
+
+    - %ROWCOUNT
+        - number:
+        - # records fetched from cursor at that point in time
+
+    - %ISOPEN
+        - 'true'      cursor is open
+        - 'false'     otherwise
+
+    - %BULK_ROWCOUNT
+        - number: # records modified by FORALL for each
+          collection element
+
+    - %BULK_EXCEPTIONS
+        - exception information
+        - for rows modified by FORALL
+        - for each collection element
+
+    - implicit cursors
+        - cursor name hardcoded as "SQL"
+        - e.g. SQL%NOTFOUND
+
+### ORACLE XE (Windows)
+    - configure XE for MANUAL start
+        - run services.msc (control panel - admin - services)
+        - set following services to MANUAL
+            - OracleServiceXE
+            - OracleXETNSListener
+            - OracleMTSRecoveryService
+            - OracleXEClrAgent
+            - OracleJobSchedulerXE
+
+
+    - Batch files to start and stop XE
+        - xe_start.cmd
+            - net start OracleServiceXE
+            - net start OracleXETNSListener
+            - net start OracleMTSRecoveryService
+            - net start OracleXEClrAgent
+            - net start OracleJobSchedulerXE
+
+        - xe_stop.cmd
+            - net stop OracleMTSRecoveryService
+            - net stop OracleXEClrAgent
+            - net stop OracleJobSchedulerXE
+            - net stop OracleXETNSListener
+            - net stop OracleServiceXE
+
+        - oracle also supply
+            - C:\oraclexe\app\oracle\product\11.2.0\server\bin
+            - startDB.bat
+            - stopDB.bat
+
+    - Alternative methods for controlling XE (????? bat files better)
+        - Manual: oradim -edit -sid XE -startmode manual
+        - Startup: oradim -startup -sid XE
+        - Shutdown: oradim -shutdown -sid XE
+
+    - control TNS listener
+        - lsnrctl status
+        - lsnrctl start
+        - lsnrctl stop
+
+    - Oracle XE important location
+        - c:\oraclexe\app\oracle\product\11.2.0\server\network\ADMIN
+        - tnsnames.ora
+        - listener.ora
+        - sqlnet.ora
+
+    - URL of XE 11g Admin application (need APEX 4.xx)
+        - http://127.0.0.1:8080/apex/f?p=4950
+
+### Types of SQL commands
+    - `DML`: 
+        - Data Manipulation Language
+        - SELECT
+        - INSERT
+        - UPDATE
+        - DELETE
+        - MERGE
+
+    - `DDL`:
+        - Data Definition Language
+        - CREATE
+        - ALTER
+        - DROP
+        - RENAME
+        - TRUNCATE
+        - COMMENT
+
+    - `DCL`:
+        - Data Control Language
+        - GRANT
+        - REVOKE
+
+    - `TCL`:
+        - Transaction Control Language
+        - COMMIT
+        - ROLLBACK
+        - SAVEPOINT
+
+### OS interaction
+    - 3 ways to execute shell commands:
+
+        - native shared library (dll),
+            - referenced using CREATE LIBRARY, and use a PL/SQL
+              wrapper
+
+        - use DMB_SCHEDULER
+            - (no acccess to STDIN and STDOUT)
+
+        - builtin JVM using JDBC API
+            - pass contents and return STDIN, STDOUT and OS
+              values to SQL
+
+    ### files
+        - FILE_TYPE
+        - FILE_PKG
+        - OS_COMMAND
+
+    - ### Examples
+        - Use select os_command.exec('mkdir /home/oracle/mydir') from dual;
+        - x := os_command.exec('mkdir /home/oracle/mydir');
+
+    - ### open_mode 'wb' for windows!
+        - handy tip!!
+        - Yesterday a collegue found a bug in my PL/SQL packages
+          for operating system interaction "OS_COMMAND".
+        - The error is in the LOB_WRITER_PLSQL package and occurs
+          only on Windows platforms: Binary files are not written
+          correctly into the file system - the resulting files
+          are corrupt.
+        - The reason is the `FOPEN` in the UTL_FILE package. If
+          you want to write binary content on windows platforms
+          make sure that you provide the OPEN_MODE 'wb' and not
+          just 'w'.
+        - On Unix/Linux platforms this does not make
+          a difference. The newest version 0.5.2 corrects this.
+          Only the package LOB_WRITER_PLSQL is affected by the
+          "patch".
+
+### Triggers
+    - 5 events can have triggers
+
+    1. DML statements
+        - Insert, update or delete statements perform validation,
+          set default values, audit changes, disallow certain DML
+          operations
+
+    2. DDL statements
+        - whenever DDL is executed - e.g. table created perform
+          auditing and prevent certain DDL operations
+
+    3. Database events
+        - whenever database starts/shuts, user logs on/off, an
+          Oracle error occurs. Provides ability to track activity
+          in the database.
+
+    4. INSTEAD OF (views)
+        - control operations on VIEWS not tables. alternatives to
+          DML triggers they fire when inserts, updates, deletes
+          about to occur Your code specifies what to do in place
+          of these DML actions. Can make non-updatable views
+          updatable. Can lock updatable views
+
+    5. Suspended Statements
+        - Statements experiencing a lack of tablespace or quota
+          enter a suspended state until problem fixed. 
+        - Triggers can be added to alert someone, or fix the
+          problem.
+
+### Links
+    - Very good: how to setup Oracle 18c XE https://www.youtube.com/watch?v=gaelhF2us28
+    - OReilly course: Dave Hotex            $MY_NOTES/cs/misc/oracle/dan-hotex-livelessons.txt
+

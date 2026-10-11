@@ -1,0 +1,217 @@
+
+### "Finite Support Sequence"
+    - This is a sequence (a list of numbers, for example) where
+      most of the values are `zero`, except for a finite number
+      of `non-zero` entries.
+
+    - For example, in the sequence (0, 3, 0, 0, 5, 0, 0, 0, ...),
+    - the "support" consists of the positions with the 3 and 5.
+    - The support is finite because only two values are non-zero.
+
+    - The word "support" in this context refers to the positions
+      (or indices) in a sequence where the values are NON-ZERO.
+    - In mathematics, "support" generally means the "part that
+      holds something up" or the "active region."
+        - For a sequence or function, it means the places where
+          something is happening (i.e., where the values are
+          non-zero). So, the support of a sequence is simply the
+          set of indices where the sequence has non-zero values.
+    - When we say a sequence has finite support, it means that
+      the sequence is "supported" or "active" in only a finite
+      number of places, and elsewhere it just "vanishes" (has
+      zeros).
+        - The zeros don't contribute to the sequence's "support,"
+          so they're like the parts that don't hold any weight.
+
+
+### GPT: what's a SEQUENCE of PARTIAL SUMS?
+    - What is a Sequence?
+        - A _sequence_ is an ordered list of numbers. 
+        - e.g., the sequence `1, 2, 3, 4, 5` is a simple sequence
+          where each number follows the previous one in a regular
+          pattern.
+
+    - What is a Series?
+        - A _series_ is the sum of the terms of a sequence. For
+          example, if we have the sequence 1, 2, 3, 4, 5, then
+          the series would be 1 + 2 + 3 + 4 + 5.
+
+    - What is a Partial Sum?
+        - A _partial sum_ of a series is the sum of the first `n`
+          terms of that series.
+
+    - Example:
+        1. Consider a Sequence:
+            - Let's take 1, 2, 3, 4, 5, ...
+
+        2. Form the Series:
+            - The resulting series from this sequence is:
+            - 1 + 2 + 3 + 4 + 5 + ...
+
+        3. Calculate Partial Sums:
+            - The _first partial sum_  : sum of first term:        `S_1`                     = 1
+            - The _second partial sum_ : sum of first two terms:   `S_2` = 1 + 2             = 3
+            - The _third partial sum_  : sum of first three terms: `S_3` = 1 + 2 + 3         = 6
+            - The _fourth partial sum_ : sum of first four terms:  `S_4` = 1 + 2 + 3 + 4     = 10
+            - The _fifth partial sum_  : sum of first five terms:  `S_5` = 1 + 2 + 3 + 4 + 5 = 15
+
+        - So, the sequence of partial sums for this series is:
+            - 1, 3, 6, 10, 15, ...
+
+    - General Definition
+        - In general, if we have a sequence `a_1`, `a_2`, `a_3`,
+          ..., `a_n`, then the `n-th partial sum`, denoted as
+          `S_n`, is defined as:
+            - S_n = a_1 + a_2 + a_3 + ... + a_n.
+
+    - Why are Partial Sums Important?
+        - Partial sums are useful because they help us understand
+          the series behavior, especially when dealing with
+          infinite series.
+        - By examining the sequence of partial sums, we can
+          determine if a series 
+            - _converges_ (approaches a specific value) or 
+            - _diverges_ (increases without bound).
+        - So, a sequence of partial sums is simply the sequence
+          you get when you keep adding the next term of the
+          original sequence to the sum of all previous terms.
+            - This helps in analyzing the properties of the
+              series formed by the original sequence.
+
+
+### Newton's use of series
+    - $MY_NOTES/books/annotate/constructing_reality_marburger.txt
+    - Analysts prior to Fourier, particularly Newton, represented
+      complicated shapes with so-called "power series" expansions
+      which approximate arbitrary shapes accurately only near
+      a _single point_.
+        - Other families of shapes can also be superposed to
+          represent arbitrary waves, and many of them are useful
+          in QM.
+
+
+### tests for series convergence
+
+- Geometric Series methods
+    - Nth term test
+    - ratio test
+    - root test
+    - integral test
+    - alternating series test
+
+
+- Common Tests
+- Comparison test
+- LCT
+- P-test
+- Absolute convergence test
+
+
+- Improper Integral tests/techniques
+- Substitution
+
+
+### comparison test
+
+Most useful test.
+
+Its actually a fancy wrapped-up comparison with the geometric series.
+
+Remember with a geometric series:
+    - if `r < 1` then it converges
+    - if `r > 1` diverges
+    - if `r = 1` diverges
+
+The setup:
+
+- write lim n--> inf, Abs(An+1/An)
+- and look at what kind of ratio pops out.
+
+- Theres 3 possible outcomes:
+    - r < 1, converges
+    - r > 1, diverges
+    - r = 1, Doesnt tell us anything, waste of time! 
+            - Try something else (but not root test).
+
+- Little hint:
+    - Always use Ratio test when factorials involved: `n!`
+    - Also when exponentials are there e.g. 3^n
+
+- Examples:
+    - When you have
+        - something n+1/something n,
+    - then group like terms together.
+
+    He got ln(n)/ln(n+1). He embedded this discrete "n" into
+    a continuous variable "x" and used l'Hopitals test to
+    get the limit which is one.
+
+- Comments:
+    - If you get a ratio `r > 1` then maybe you should have used
+      the Nth-term test.
+
+
+### integral test
+
+- Not a test for integrals! A test for series....
+
+- When Useful
+- Use when you've a power of `1/n` and a `ln(n)` somewhere.
+- e.g. Sum 2 to infinity, `1/n_ln(n)`
+
+- Setup:
+- Basically convert discrete summation to an integral from 2 to infinity.
+- Need one condition satisfied: that the integrand is decreasing.
+
+- This integral diverges by the `p-test`. (Dont know what the p-test is)
+- Therefore if the integral diverges, the original discrete series diverges.
+
+- Remarks:
+- What was the point of converting to an integral?
+- Because you could do a substitution (Let t = ln(x)) and then evaluate.
+- Theres no substitution you can make for the original series.
+
+So if you dont do (or need) a substitution theres no point doing this integral test.
+(Because series have their own p-test and comparison test)
+
+Formal statement:
+If f is a continuous decreasing function, and youve a series f(n), from n=a to infinity,
+then the series and the integral either BOTH converge or BOTH diverge.
+
+
+Remark:
+How do you know `f` is decreasing. Differentiate it and see if its negative.
+Something about series at infinity a bit like improper integrals at infinity.
+
+Also he drew a nice diagram with the discrete series as a load of
+boxes, and then the area under the continuous function which is
+the integral. The integral is actually smaller than the series
+but if the integral converges so does the series.
+
+
+
+### root test
+
+lim n--> inf, Abs(An)^1/n
+
+
+Theres 3 possible outcomes (Just like _ratio test_!):
+
+_ `r < 1`, converges
+
+_ `r > 1`, diverges
+
+_ `r = 1`, Doesnt tell us anything, waste of time! Try
+  something else (but not ratio test).
+
+
+### Comments:
+    Use this test when nth root is easy to compute. This
+    root test is really based on looking at a geometric
+    series `r^n` and take the nth root which leaves the
+    ratio `r`. (and we know the story with r)
+
+
+### Example:
+    something with `n^2` in the exponent. Easy to take this
+    root.

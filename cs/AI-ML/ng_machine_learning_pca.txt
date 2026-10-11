@@ -1,0 +1,39 @@
+Andrew Ng Machine Learning PCA
+
+Principal Component Analysis (PCA)
+
+Aim:
+	project a higher dimensional object 
+	onto a lower k-dimensional surface 
+	(a subspace spanned by k vectors)
+
+PCA tries to 
+	minimise the "average square projection error"
+	ie the difference between 
+	the original data X 
+	and the projected version Xapprox
+
+Octave Code:
+	USV = svd(Sigma)
+	USV = eig(Sigma)
+
+How do we choose K?
+	Use the following formula:
+
+	average square projection error
+	-------------------------------  <  "0.01"
+	Total variation in the data
+
+	"0.01" - so that 99% of the variance is retained
+	"0.05" - so that 95% of the variance is retained
+	"0.15" - so that 85% of the variance is retained
+
+bascially 
+	start with (k=1) and use the formula..
+	then try (k=2).... (k=3).... 
+	might take you up until (k=17) so that (projection error < 0.01)
+	but this is inefficient!
+
+Other approach?
+	You can use the "S" matrix that was returned 
+	when you used the "svd function" on Sigma

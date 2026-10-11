@@ -1,0 +1,521 @@
+latex tips
+
+% new column!!
+    &
+
+% newline line break!!
+    \\
+
+% show "box" for end of maths proof
+\hfill $\square$\\[1cm]
+
+% Google book bibtext to APA conversion
+    http://ref.lexique.org/
+
+% install full latex system
+    % ai texlive texlive-latex-extra texlive-latex3 texlive-fonts-extra 
+    ai texlive texlive-latex-extra texlive-fonts-extra 
+    ai texlive-science
+    ai texlive-xetex # (handles utf8 characters)
+    % Get Elsevier "elsarticle.cls"
+    ai texlive-publishers
+    % 'Matplotlib' needs this
+    ai cm-super
+
+% missing 'sty' packages
+   ai texlive-latex-extra
+   ai texlive-latex3
+   ai texlive-fonts-extra
+   or for my thesis copy "Missing Packages" folder out into root
+
+% include astro journals (define \apj etc)
+    \usepackage{aas_macros}
+
+% graphicspath / images
+
+    % SYMLINK 'images/' to where-ever, then:
+        \graphicspath{{images/}}
+        \graphicspath{{images//}}
+
+    % BASH enviornment variable
+        % (but ensure 'graphicspath' is NOT set)
+        export TEXINPUTS=$MY_IMAGES/astro//:
+
+    % 'graphicspath'
+        % include a FINAL SLASH at end of path!
+        % include a FINAL SLASH at end of path!
+        \graphicspath{{/home/ef/study/images/astro/}}
+        \graphicspath{{\$HOME/study/images/astro/}}
+                       ^
+                       |-- '\$' causes syntax color problem!
+% brackets!
+    \big( \Big( \bigg( \Bigg(
+    \big] \Big] \bigg] \Bigg]
+    \big\{ \Big\{ \bigg\{ \Bigg\{
+    \big \langle \Big \langle \bigg \langle \Bigg \langle
+    \big \rangle \Big \rangle \bigg \rangle \Bigg \rangle
+
+% display an ampersand in text \"&"
+    \&
+
+% better display fractions
+    \dfrac (my "df" trigger)
+
+% compress crush make lines closer
+    \usepackage{setspace}
+    % \setstretch{1.3}
+    \setstretch{1.0}
+
+% math bold font (I never knew!)
+    .. = ... + \mathbf{ g_{ij}h^2 }
+
+% congruent
+    \equiv
+
+% align columns: better control
+    \begin{alignat*}{9}
+        \text{top row } \qquad & 00000 \qquad &  01011 \qquad \\
+    \end{alignat*}
+
+% align environment: tighten reduce vertical space and also space before and after it
+    {
+    \setlength{\abovedisplayskip}{0pt}
+    \setlength{\belowdisplayskip}{0pt}
+    \addtolength{\jot}{-0.5em}
+    \begin{align*}
+    ...
+    \end{align*}
+    }%
+
+% misc tip
+    "Insert a \% symbol after closing the group with \tiny"
+    {\tiny
+    }%
+    Following paragraph.
+
+% user defined paths!
+    \newcommand*{\week}{Week 01}
+    \newcommand*{\CommonPath}{../common}
+    \input{\CommonPath/preamble.tex}%
+    \begin{document}
+    \input{title.tex}%
+
+% paragraph spacing
+    % method 1:
+        \setlength{\parskip}{25pt plus 1pt minus 1pt}
+        \setlength{\parindent}{0pt}
+        % \setlength{\parskip}{6em}
+    % method 2:
+        \usepackage[parfill]{parskip}
+
+% figures side by side
+    \usepackage{subfig}
+    \begin{figure}%
+        \centering
+        \subfloat[1D function]{{\includegraphics[trim=2cm 0 0 0, scale=0.5]{1dfunction.jpg} }}%
+        \subfloat[2D function]{{\includegraphics[scale=0.5]{2dfunction.jpg} }}%
+        \caption{Difference plotting 1D and 2D functions}%
+        \label{fig:functions}%
+    \end{figure}
+
+% table span pages
+    \usepackage{longtable}
+    \begin{longtable}{l|c|c}
+    ...
+    \end{longtable}
+
+% supress page numbers
+    \pagenumbering{gobble}
+
+% horizontal line subtract (\cline{1-4})
+    % method 1:
+        \[ \arraycolsep=1.4pt\def\arraystretch{1.2}
+        \begin{array}{llll}
+            010& 011& 110& 101 \\
+            011& 011& 101& 000 \ + \\
+            \cline{1-4}
+            001& 000& 011& 101
+        \end{array}
+        \]
+
+    % other method:
+        \cline{1-2}
+        \\[-1.0em] \cline{1-2} \\[-2.0em]
+
+% f prime
+    f^\prime
+
+% break nicely for long urls
+    \usepackage{hyperref}
+    \def\UrlBreaks{\do\/\do-}
+
+% source code listings
+    \usepackage{listings}
+    \usepackage{color}
+
+    \definecolor{mygreen}{rgb}{0,0.6,0}
+    \definecolor{mygray}{rgb}{0.5,0.5,0.5}
+    \definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+    % specify path to source code
+    \lstset{inputpath="c:\users\path\to\my\source\code"}
+
+    \lstset{ %
+    language=Python,                 % the language of the code
+    backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+    basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+    breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                 % sets automatic line breaking
+    captionpos=b,                    % sets the caption-position to bottom
+    commentstyle=\color{mygreen},    % comment style
+    deletekeywords={...},            % if you want to delete keywords from the given language
+    escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+    extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+    frame=single,	                   % adds a frame around the code
+    keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+    keywordstyle=\color{blue},       % keyword style
+    otherkeywords={*,...},           % if you want to add more keywords to the set
+    numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=10pt,                   % how far the line-numbers are from the code
+    numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+    rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+    showstringspaces=false,          % underline spaces within strings only
+    showtabs=false,                  % show tabs within strings adding particular underscores
+    stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+    stringstyle=\color{mymauve},     % string literal style
+    tabsize=2,	                   % sets default tabsize to 2 spaces
+    title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+    }
+
+    % paste in some code
+    \begin{lstlisting}
+        .... my code ...
+    \end{lstlisting}
+
+    % or:
+    % specify an actual file
+    \lstinputlisting{mylibrary.py}
+
+% integrate evaluate at (notice the left DOT!)
+    \left .   ....   \right|_0^3
+    $$ \int_0^3 x^2 dx = \left.\frac{x^3}{3} \right|_0^3 $$
+
+% 4th root
+    \sqrt[4]{...}
+
+% font sizes
+    \small
+    \normalsize
+
+% table example
+    \setlength{\tabcolsep}{12pt}
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{center}
+    \begin{tabular}{l|c|c}
+        ID & x & f(x)\\
+        \hline
+        A  & 5  & 25\\
+        B  & 9  & 81\\
+        C  & 1  & 1\\
+        D  & 2  & 4
+    \end{tabular}
+    \end{center}
+
+% approximately equals
+    \approx
+
+% verbatim
+    \begin{verbatim}
+    Some thing
+         and leading space here
+    \end{verbatim}
+
+% much less than, much greater
+    \ll \gg
+
+% pound sterling
+    \pounds
+
+% actual backslashes
+    \setminus
+    \textbackslash
+
+% set theory
+    element \in
+    subset \subseteq
+
+% vertical spacing for align environment
+% add in preamble.
+    \addtolength{\jot}{0.5em}
+
+% spacing
+    \       % (space after backslash!) 	equivalent normal text space
+    \quad 	% space equal to the current font size (= 18 mu)
+    \, 	    % 3/18 of \quad (= 3 mu)
+    \: 	    % 4/18 of \quad (= 4 mu)
+    \; 	    % 5/18 of \quad (= 5 mu)
+    \! 	    % -3/18 of \quad (= -3 mu)
+    \qquad 	% twice \quad (= 36 mu)
+
+% error for \url (missing package)
+    \usepackage{url}
+    \usepackage{hyperref}
+
+% force figure placement
+    \usepackage{float}
+    \begin{figure}[H]
+
+% increase item list separation
+    \setlength\itemsep{1em}
+
+% allow equations to span pagebreaks
+    \allowdisplaybreaks
+
+% evaluated at (vertical bar)
+    \bigg|
+
+% william stein errors
+    \usepackage{amsmath}
+    \DeclareMathOperator{\sss}{ss}
+
+    \usepackage{amssymb}
+    \newcommand{\R}{\mathbb{R}}
+
+% cases example
+    \[
+    u(x) =
+    \begin{cases}
+        < 0 \implies \mbox{ maximum at} (x_0, f(x_o)) \\
+        > 0 \implies \mbox{ minimum at} (x_0, f(x_o)) \\
+        > 0 \implies \mbox{ minimum at} (x_0, f(x_o))
+    \end{cases}
+    \]
+
+% colored box
+\colorbox{gray}
+{
+    \parbox{\textwidth}
+    {
+        \textcolor{white}
+        {
+            Aside:\\
+            \begin{align*}
+                f(t) & = e^{g(t) } \\
+                \frac{ df }{ dt } & = e^{g(t)}  \cdot \frac{ dg }{ dt }
+            \end{align*}
+        }
+    }
+}
+
+% augmented matrix
+    have defined: "augmat" snippet
+
+% simultaneous equations
+\begin{alignat*}{4}
+    -2 x_1  & { }+{ } & x_2  & { }-{ } & x_3   & { }={ } & 4 \\
+        x_1 & { }+{ } & 2x_2 & { }+{ } & 3x_3  & { }={ } & 13 \\
+      3 x_1 & { }+{ } &      &           & x_3 & { }={ } & -1
+\end{alignat*}
+
+% force big brackets
+     \big(
+     \bigg(
+     \Big(
+     \Bigg(
+
+% double bar x
+    \overline{\overline{x}}
+
+% therefore ("amssymb" package!)
+    \therefore
+
+% partial derivatives
+    \frac{ \partial T }{ \partial n }
+
+% plus minus
+    \pm
+
+% matrix styles
+    matrix:  unbracketed matrix
+    pmatrix: surrounded by (parentheses)
+    bmatrix: surrounded by [square brackets]
+    vmatrix: surrounded by |single vertical lines|
+    Vmatrix: surrounded by ||double vertical lines||
+
+% tag: use custom numbering of equations
+\begin{align*}
+    a & = b \\
+    a & = b \tag{1}\\
+    a & = b \\
+\end{align*}
+
+% example showing "nonumber" and "equation references" for the align environment
+    \begin{align}
+        a &=b \nonumber \\
+        b &=c \label{eq:test}
+    \end{align}
+    Equation \eqref{eq:test} shows that $a=c$.
+
+% numberthis custom command: for the align* environment
+    \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+    \begin{align*}
+        a & = someting \\
+        a & = someting \numberthis \\
+        a & = someting \\
+    \end{align*}
+
+% increase vertical line spacing for the array environment:
+    \[ \arraycolsep=1.4pt\def\arraystretch{2.2}
+    \begin{array}{lcl} \]
+
+% maps to
+    \to
+
+% absolute bars (or determinant)
+    \lvert M \rvert
+
+% enumerate with letters
+    \begin{enumerate}[(a)]
+
+% enumerate with numbers
+    \begin{enumerate}[1]
+
+% enumerate with roman numerals
+    \begin{enumerate}[(i)]
+
+% use roman typeface in math mode
+    $T_{\rm eff}$
+
+% intersetion and union
+    \cap and \cup
+
+% ...
+    \cdots
+
+% make a vector tilde underneath a letter
+    use ultisnip "vec"
+
+% inline fractions
+    \tfrac
+
+% multiply
+    \times
+
+% Angstrom symbol
+    ai texlive-science
+    (siunix package)
+    The lattice constant $a = \SI{2.0}{\angstrom}$ is ...
+    if you only need the unit, use:
+    Atomic distances are measured in \si{\angstrom}.
+
+% shift a figure around
+    \includegraphics[trim=2cm 0 0 0, scale=0.65]{ngts_planets.jpg}
+
+% astro symbols
+    % sun solar
+    M_{\odot}
+
+    % star
+    M_{\star}
+
+    % earth symbol/mass
+    M_{\bigoplus}
+
+    % moon
+    \usepackage{wasysym}
+    \leftmoon
+
+% degree symbol
+    $^{\circ}$
+
+% dont have too much space around figures etc?
+    \usepackage[nodisplayskipstretch]{setspace}
+
+    dont know if this is any good too:
+        % tweak the blank space around floating figures and tables
+        % http://tex.stackexchange.com/questions/32614/vertical-spacing-in-floats
+        % \setlength{\intextsep}{10mm}
+        % \setlength{\belowcaptionskip}{-\baselineskip} \addtolength{\belowcaptionskip}{1.5ex}
+
+% fancyhdr
+    \today          % – the current day. ie: August 6, 2010
+    \thepage        % – the current page number
+    \thesection     % – the current section number
+    \leftmark       % – current chapter name in uppercase. ie: CHAPTER 1. TITLE OF THE FIRST CHAPTER
+    \rightmark      % – current section name in uppercase. ie: 1.1. TITLE OF THE FIRST SECTION
+
+% typewriter font.
+    \texttt
+
+% compile latex (+ link in bibliography)
+    % IN PREAMBLE: natbib package
+        % \usepackage[square, numbers, comma, sort&compress]{natbib} <--- % numbered brackets [1], [2] etc
+        \usepackage[authoryear, round, comma]{natbib}
+
+    % IN DOCUMENT
+        \section*{Bibliography}
+        \bibliographystyle{unsrtnat}
+        % \bibliographystyle{apalike}
+        % \bibliographystyle{aa}
+        \bibliography{references}
+
+    % IN DOCUMENT
+        and now we refer to that famous book \cite{griffeath2003}.
+
+    % IN "references.bib"
+        @book{griffeath2003,
+        title={New Constructions in Cellular Automata},
+        author={Griffeath, D. and Moore, C.},
+        ...
+        }
+
+    % IN A SCRIPT:
+        pdflatex notes.tex
+        pdflatex notes.tex
+        bibtex notes
+        bibtex notes
+        pdflatex notes.tex
+
+% insert citation latex (authorea)
+    \cite{myref}
+    where {myref} is the first line of the entry in biblio.bib file
+
+% cite author like "Hurley et al. ..."
+    \citet{someref}
+
+% cite page numbers
+    \citep[pp. 10-12]{haswell_transiting_2010}
+
+% color
+    \usepackage{color}
+    {\color{red} some text}
+
+% multiply dot
+    \cdot
+
+% double subscript
+    $a_{ij}$
+
+% math mode!!!!
+    use "$ ... $" or "\(" and "\)"
+
+% best package
+    "mathtools" is an extension of "amsmath"
+    ai texlive-latex3
+    \usepackage{mathtools}
+
+% quit exit pdflatex compilation
+    enter "x" at "?"
+
+% tilde
+    $\sim$
+
+% put box around equation
+    \boxed{}
+
+% document order
+    put packages before "begin document"!!!
+
+% "\implies" not working
+    usepackage{amsmath}

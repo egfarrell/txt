@@ -1,0 +1,29 @@
+- March 31 http://youtu.be/fI4NlMfGHC0
+- April 2 http://youtu.be/PQcBuoT2PiI
+- April 4 http://youtu.be/T7aXPTQx3hI
+- April 7 http://youtu.be/iWWHpafc4Lc
+- April 9 http://youtu.be/ndoM3TJGSDY
+- April 11 http://youtu.be/ErzCuqsYq1E
+- April 14 http://youtu.be/fualtE_GcuY
+- April 16 http://youtu.be/Z5lye6AIC5Y (part 1) and http://youtu.be/dp-ovN6J-_M (part 2)
+- April 18 http://youtu.be/c6st7_3VmDU
+- April 21 http://youtu.be/52Gd_qAEqF8
+- April 23 http://youtu.be/Q9NitcAoRb4
+got this far
+
+mainly git and bash
+    - April 25 http://youtu.be/ShBFxMACxsA
+    - April 28 http://youtu.be/AOmUj4c7H4k
+    - April 30 http://youtu.be/8z68hQ2CC-Q
+    - April 30 http://youtu.be/8z68hQ2CC-Q
+    - May 2 http://youtu.be/yHUsq6Ut1xA
+
+- May 5 http://youtu.be/tNQN7WPyBD4 (sage packages)
+- May 7 http://youtu.be/ry-hbfTlVqI (sage packages)
+- May 9 http://youtu.be/YrO89QIizxI (Cython)
+- May 12 http://youtu.be/r0kxxxZABjk (Cython)
+- May 14: quicktime crashed silently during the lecture
+- May 16: class cancelled
+- May 19: http://youtu.be/B40SL4JtqPo - fast linear algebra
+- May 21: http://youtu.be/4a1QZJ8aKUM - graph theory
+- May 23: http://youtu.be/iiWPsS2Q87c - group theory

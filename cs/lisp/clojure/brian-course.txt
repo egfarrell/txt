@@ -1,0 +1,229 @@
+- Brian Will       https://brianwill.github.io/
+- Youtube playlist https://www.youtube.com/playlist?list=PLAC43CFB134E85266
+
+### Videos
+    - $MY_VIDEOS/CS/Brian-clj-course/00001-intro.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00002-whats-so-great-about-it.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00003-the-Reader-and-Evaluator-1_4.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00004-the-Reader-and-Evaluator-2_4.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00005-the-Reader-and-Evaluator-3_4.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00006-the-Reader-and-Evaluator-4_4.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00007-PRACTICAL-factorial-function.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00008-PRACTICAL-FizzBuzz.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00009-collections-1_6.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00010-collections-2_6.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00011-collections-3_6.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00012-collections-4_6.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00013-collections-5_6.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00014-collections-6_6.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00015-namespaces.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00016-miscellany.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00017-PRACTICAL-rock-paper-scissors.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00018-PRACTICAL-tic-tac-toe-1_3.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00019-PRACTICAL-tic-tac-toe-2_3.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00020-PRACTICAL-tic-tac-toe-3_3.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00021-creating-macros.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00022-types.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00023-references.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00024-PRACTICAL-snake-game-1_2.mp4
+    - $MY_VIDEOS/CS/Brian-clj-course/00025-PRACTICAL-snake-game-2_2.mp4
+
+
+Video 2 was all about: functional programming, mutable state,
+pure and impure functions. Great stuff.
+
+- Every Clojure datatype is defined in terms of Java classes.
+- Code in either language can invoke code in the other.
+- Invoking Java code from Clojure is convenient because Clojure
+  has special syntax for doing so.
+- Actually Clojure defers directly to the traditional Java
+  classes for File IO.
+- Clojure DOES NOT HAVE inheritance or encapsulation, but has
+  Polymorphism
+
+- A MACRO is a special function invoked at compile time, not at
+  execution time
+    - note: a macro could return another macro, which must be
+      resolved in turn
+
+### special forms
+    - if the first element in a list doesn't resolve to
+      a function or a macro, then before throwing an error, the
+      compiler will check if it matches one of the "16 special
+      forms".
+
+### subtle point: "monkey patching"
+    - functions can change after definition, because the function
+      body may reference a _symbol_ 'foo' but the _var_ sitting
+      behind this symbol may change later
+    - arguably this affects 'functional purity'
+    - the reason Clojure does this, and the reason namespaces map
+      symbols to vars, instead of mapping symbols directly to
+      other values, is so your code can be updated at RUNTIME.
+    - This capacity for "monkey patching" is handy for debugging
+      and for live-patching running systems.
+        - full explanation:
+        - "When symbols in the function body are resolved to the
+          current namespace, you should think of them as
+          resolving to the vars themselves, instead of to the
+          VALUES of those vars."
+        - "When the vars change their value, the values used in
+          the function change too"
+
+### Try catch
+    - example
+	- $MY_IMAGES/cs/clojure/try-catch.jpg
+
+### Var special form
+    - this is all a bit head-wrecking: symbol -> var -> value
+	- $MY_IMAGES/cs/clojure/var-special-form.jpg
+
+
+### dot special forms
+    - $MY_IMAGES/cs/clojure/dot-special-forms.jpg
+    - if the SECOND element of a dot form is a list, then the dot
+      form invokes a java method
+        - $MY_IMAGES/cs/clojure/dot-special-forms-methods.jpg
+
+
+### set! special form
+    - only applies to fields that
+        - are 'public'
+        - and not 'final'
+    - note: the dot form is evaluated a bit special here because
+      the field is being assigned to, not retrieved
+	- $MY_IMAGES/cs/clojure/set-special-form.jpg
+
+### lists
+    - inserting an element in a list is an O(n) operation
+        - because you need a previous node for each node before
+          the new node
+            - $MY_IMAGES/cs/clojure/insert-into-list.jpg
+    - because of this, we don't use lists much for storing data
+
+### vectors
+    - are structured as a tree of nodes
+	- $MY_IMAGES/cs/clojure/vector-tree-structure.jpg
+    - lookup: O(log n)
+    - each node stores up to 32 child nodes
+        - lookup actually: O(log base 32 n) = O(1) constant time
+
+### collections
+	- $MY_IMAGES/cs/clojure/core-collections-01.jpg
+	- $MY_IMAGES/cs/clojure/core-collections-02.jpg
+	- $MY_IMAGES/cs/clojure/core-collections-03.jpg
+
+### core sequence funcs
+	- $MY_IMAGES/cs/clojure/core-sequences-funcs.jpg
+	- $MY_IMAGES/cs/clojure/core-sequences-funcs-2.jpg
+	- $MY_IMAGES/cs/clojure/core-sequences-funcs-3.jpg
+
+### namespaces
+    - when clojure runtime starts, current namespace is `user`
+      which contains all of `clojure.core`
+    - create a namespace: (in-ns 'foo)
+        - the `foo` namespace will be completely blank, without
+          clojure.core
+    - 4 types of namespace mappings
+        - symbol-to-var (interned)
+        - symbol-to-var (referred)
+        - symbol-to-class
+        - symbol-to-namespace
+
+    - symbol-to-var (interned)
+        - this is just the normal `def`, `defn` etc
+    - symbol-to-var (referred)
+        - $MY_IMAGES/cs/clojure/refer-mappings.jpg
+        - $MY_IMAGES/cs/clojure/refer-mappings-name-collisions.jpg
+    - symbol-to-class
+        - create map to java class using import macro
+        - $MY_IMAGES/cs/clojure/mappings-to-java-classes-import.jpg
+    - symbol-to-namespace
+        - use alias to refer to another namespace
+        - $MY_IMAGES/cs/clojure/mappings-to-namespaces-alias.jpg
+
+### Load a file
+    - (load "bar/baz")
+    - this loads bar.clj relative to the current Java class path
+    - (file extension is implied as '.clj')
+
+### Lib files
+    - $MY_IMAGES/cs/clojure/lib-files.jpg
+    - `require` loads a lib by its symbolic name
+        - $MY_IMAGES/cs/clojure/require.jpg
+    - `use` is like require but refers the "used" namespace into
+      the current namespace
+
+### ns macro
+    - `ns` macro bundles `require`, `use`, `import` all together!
+    - $MY_IMAGES/cs/clojure/ns-macro.jpg
+
+### metadata
+    - each object can have an associated map as "metadata"
+    - $MY_IMAGES/cs/clojure/with-meta.jpg
+    - metadata can also be specified with a charet "^"
+    - `def` attaches metadata of the symbol directly to the `var`
+      object (ie not just to the symbol?)
+        - $MY_IMAGES/cs/clojure/meta-data-and-def.jpg
+    - the `=` operator ignores metadata
+        - this will return true
+        - $MY_IMAGES/cs/clojure/equality-test-ignores-meta.jpg
+
+### function arities
+    - this function has two BODIES (because it has two arities)
+        - $MY_IMAGES/cs/clojure/function-two-arities.jpg
+    - note: no two bodies of a function can expect the SAME
+      number of arguments
+        - $MY_IMAGES/cs/clojure/ambiguous-arities-01.jpg
+        - $MY_IMAGES/cs/clojure/ambiguous-arities-02.jpg
+
+### destructuring
+    - bind the individual elements in a collection to separate
+      symbols
+    - (aside: forms that create bindings: let, loop, fn, defn)
+    - cumbersome way, without destructuring:
+        - $MY_IMAGES/cs/clojure/destructuring-01.jpg
+    - same thing, with destructuring
+        - $MY_IMAGES/cs/clojure/destructuring-02.jpg
+    - if not enough sequence elements are supplied for binding,
+      the extra "destructured" elements are bound to `nil`
+        - $MY_IMAGES/cs/clojure/destructuring-03.jpg
+    - destructuring works with maps too
+        - $MY_IMAGES/cs/clojure/destructuring-04.jpg
+        - aside: he things the destructuring order for maps is
+          backwards!
+
+### Sets
+    - all elements unique
+    - sets are like maps, but all keys are their own values (ie
+      maps have key/value pairs, but sets just have keys)
+    - clojure has 2 types of sets:
+
+        -  `hash-set`
+            - (no sense of order)
+
+        -  `sorted-set`
+            - ("tree set", keep elements in sorted order)
+            - sorting is done by the compare function so all
+              elements must be numbers
+            - can use a different compare function if you want:
+            - (def s (sorted-set `>` 7 2 -5 9))
+
+    - $MY_IMAGES/cs/clojure/sets-examples.jpg
+    - must use `disj` (disjoint) to remove elements in a set (not
+      `dissoc`)
+
+### Collections
+    - collection objects are actually functions!
+        - ([8 5 13] 1)
+        - this returns "5", the value at idx 1
+    - invoke map as a function
+        - ({:x 9, :y 4} :y)
+        - returns 4
+
+### defmacro 
+    - note: macros only RUN at compile time
+    - basic example
+        - $MY_IMAGES/cs/clojure/defmacro-example.jpg
+    - can have macros with different arities
+        - $MY_IMAGES/cs/clojure/defmacro-example-arity.jpg

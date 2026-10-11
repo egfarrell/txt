@@ -1,0 +1,14 @@
+unix install paths
+
+
+# Adding to the Path: WATCH THE {CURLY BRACKETS}!
+GRADLE_HOME=/etc/gradle-0.9
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${GRADLE_HOME}/bin"
+
+# installing new application. Some path trickery
+cd $HOME
+tar xvfz ImageMagick.tar.gz
+export MAGICK_HOME="$HOME/ImageMagick-6.7.0"
+export PATH="$MAGICK_HOME/bin:$PATH"
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$MAGICK_HOME/lib"
+export LD_LIBRARY_PATH

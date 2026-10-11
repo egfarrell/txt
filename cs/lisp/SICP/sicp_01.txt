@@ -1,0 +1,45 @@
+sicp 01
+
+### conventional interfaces
+    metalinguistic abstraction
+
+### Lisp (brackets):
+    - they encode a 3D "tree structure" as a character string.
+    - ah! Connection to Jetbrains MPS language editor. In MPS you
+      actually edit the Abstract Syntax Tree (AST) and the
+      concrete syntax (CS) can be rendered in a number of
+      different ways.
+    - so lisp is just like writing the AST!
+
+### combinations:
+    (operator operands)
+    (+ 2 3)
+
+### predicate:
+    In lisp, any combination that returns TRUE or FALSE
+
+### important! BRACKETS
+    - What does putting brackets around something mean in lisp?
+    - It means execute it.
+    - `D`  -----> returns the value of `D`
+    - `(D)` ----> actually executes `D`!
+
+### Case analysis:
+    IF or COND. Doesnt matter which.
+
+### Create Procedure:
+    General: Define, symbol, what it is:
+        > (Define A (+ 5 5))
+    syntatic sugar:
+        > (Define (Square X) (* X X))
+    whats actually happening:
+        > (Define Square (Lambda (X)(* X X)))
+
+### Scope:
+    - BLOCK structure.
+    - Define a procedure, and then define other procedures inside it.
+    - i.e. packaging internals inside of a definition
+
+### Negate a lisp variable.
+    - use the minus sign!
+    - `(- x)`

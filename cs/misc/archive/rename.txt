@@ -1,0 +1,63 @@
+rename
+
+I use "v2" alias now! (vimv python script)
+
+# remove youtube cruft before file extension
+    e.g. my-video-name-7Jsh234hHQ.3gp
+    ```
+    ren  -n 's/^(.*)-.*\.3gp/$1\.3gp/' */**
+    ```
+
+# insert prefix
+    ```
+    rename 's/(.*)$/my_prefix_$1/' *
+    ```
+
+# match groups $1, $2
+    ```
+    rename 's/(\d)(.*)/$1_$2/g' *.png
+    ```
+    66.png ---> 6_6.png
+
+# remove leading dashes from file names
+    ```
+    rename 's/-*//' -- *
+    ```
+
+### rename dry run "-n"
+    ```
+    rename -n 's/abc/something/' *
+    ```
+
+# make filenames lowercase
+    ```
+    rename 'y/A-Z/a-z/' *
+    ```
+
+# rename - add file extension to all files
+    ```
+    rename 's/$/.xml/' *
+    ```
+
+# rename part of a filename
+    ```
+    rename python py *.txt
+    rename -n 's/_ttc_time//' *.mp3
+    ```
+
+# rename but delete part of filename
+    ```
+    rename "pyth" "" *.txt
+    ```
+
+# Theres two 'rename' programs!
+
+    # 'rename' in the Perl distribution
+        (which may be pre-installed in Ubuntu),
+        http://search.cpan.org/perldoc?rename
+
+    # 'rename' in util-linux(-ng)
+        (which may be pre-installed in Fedora).
+        http://linux.icydog.net/rename.php
+
+    # Also there's 'mmv' and many others.

@@ -1,0 +1,106 @@
+
+# Linux mint
+    - raise volume
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+
+In Linux Mint, many autostart applications support essential desktop functionalities, while others are more specialized. Here are recommendations on items you could consider disabling, depending on your setup and preferences. I’ll break these down by likelihood of usefulness based on your usage habits (general computing, browsing, word processing, and media):
+
+### Likely Safe to Disable
+
+1. at-spi-dbus-bus.desktop  
+   - This is an accessibility service. If you don't need
+     accessibility tools, you can disable this.
+
+2. caribou-autostart.desktop  
+   - Caribou is an on-screen keyboard often used with touchscreen
+     devices. If you're on a regular desktop or laptop without
+     a touchscreen, this can be safely disabled.
+
+3. onboard-autostart.desktop  
+   - Another on-screen keyboard program, also safe to disable
+     without a touchscreen.
+
+4. orca-autostart.desktop  
+   - Orca provides screen reader services for visually impaired
+     users. Safe to disable if you don’t need this functionality.
+
+5. geoclue-demo-agent.desktop  
+   - Geoclue is a location service. If you don’t need
+     location-based features, you can disable it.
+
+6. org.gnome.Evolution-alarm-notify.desktop  
+   - Used by the GNOME Evolution email client to trigger alarms
+     or notifications. If you don’t use Evolution, it’s safe to
+     disable.
+
+7. nvidia-prime.desktop (if you don’t have an Nvidia GPU)  
+   - If you’re on an Intel or AMD graphics card, you don’t need
+     this. If you have an Nvidia card, it’s generally best to
+     leave this enabled for power management.
+
+8. xscreensaver.desktop  
+   - This is a screensaver program. If you’re already using the
+     screensaver functionality provided by Cinnamon, you can
+     disable this.
+
+9. xfce4-volumed.desktop  
+   - This program manages volume changes. If you don’t need or
+     use the XFCE sound management and instead rely on Cinnamon’s
+     built-in sound manager, you can disable it.
+
+10. touchegg.desktop  
+   - Touchegg is for advanced multitouch gestures, typically
+     useful for touchscreens. If you don’t need multitouch
+     gestures, you can disable this.
+
+### Optional but Use Caution Before Disabling
+
+1. light-locker.desktop  
+   - Light Locker locks your screen. If you already use the
+     Cinnamon screen lock or have other means of securing your
+     session, you might consider disabling this.
+
+2. gnome-keyring-pkcs11.desktop, gnome-keyring-secrets.desktop,
+and gnome-keyring-ssh.desktop  
+   - These are parts of the GNOME Keyring, which manages saved
+     passwords and SSH keys. If you don’t use saved credentials
+     or SSH features, you could disable them, though they’re
+     typically low-resource and may provide convenience.
+
+3. polkit-gnome-authentication-agent-1.desktop and
+polkit-mate-authentication-agent-1.desktop  
+   - These agents handle authentication prompts. If you’re sure
+     you’re using only one desktop environment (e.g., Cinnamon),
+     you could leave one and disable the other. Disabling both is
+     not recommended, as they are needed for elevated
+     permissions.
+
+4. xfce4-notifyd.desktop  
+   - If you’re using Cinnamon notifications, this XFCE-specific
+     notification system can be disabled.
+
+5. im-launch.desktop  
+   - This is for input method support (like for typing in
+     multiple languages). If you don’t use alternate input
+     methods, you could disable it.
+
+6. xdg-user-dirs.desktop  
+   - Manages standard folders (like Documents, Pictures, etc.).
+     You can disable this if you don't need these directories to
+     be managed automatically, but it’s generally very low
+     resource usage.
+
+### Programs Best Left Enabled
+
+- `cinnamon-settings-daemon- series`: These manage essential
+  settings, power management, keyboard, display, etc., for
+  Cinnamon.
+- `nm-applet.desktop`: This is your network manager and handles
+  internet connectivity.
+- `pulseaudio.desktop`: Essential for sound management in most
+  Linux setups.
+- `xfsettingsd.desktop`: This is part of the settings daemon for
+  XFCE-related configurations, so you may need it if you use XFCE
+  apps.
+

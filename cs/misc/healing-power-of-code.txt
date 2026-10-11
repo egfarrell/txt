@@ -1,0 +1,212 @@
+The Healing Power of JavaScript
+Craig Mod
+
+- A little over a year ago, as the Covid-19 lockdowns were
+  beginning to fan out across the globe, most folks grasped for
+  toilet paper and canned food. The thing I reached for: a search
+  function.
+
+- The purpose of the search function was somewhat irrelevant.
+  I simply needed to code. Code soothes because it can provide
+  control in moments when the world seems to spiral. Reductively,
+  programming consists of little puzzles to be solved. Not just
+  inert jigsaws on living room tables, but puzzles that breathe
+  with an uncanny life force. Puzzles that make things happen,
+  that get things done, that automate tedium or allow for the
+  publishing of words across the world.
+
+- Like many other writers and artists, I maintain a personal
+  website. My current one has been active for nearly 20 years.
+  Code in mind, I brushed off my rusty JavaScript skills and
+  started to poke around for fuzzy-search libraries I could bolt
+  onto my homepage, to make it easy to find specific essays from
+  my collection.
+
+- Break the problem into pieces. Put them into a to-do app (I use
+  and love Things). This is how a creative universe is made. Each
+  day, I’d brush aside the general collapse of society that
+  seemed to be happening outside of the frame of my life, and
+  dive into search work, picking off a to-do. Covid was large; my
+  to-do list was reasonable.
+
+- The real joy of this project wasn’t just in getting the search
+  working but the refinement, the polish, the edge bits. Getting
+  lost for hours in a world of my own construction. Even though
+  I couldn’t control the looming pandemic, I could control this
+  tiny cluster of bits.
+
+- The whole process was an escape, but an escape with forward
+  momentum. Getting the keyboard navigation styled just right,
+  shifting the moment the search payload was delivered, finding
+  a balance of index size and search usefulness. And most
+  important, keeping it all light, delightfully light. And then
+  writing it up, making it a tiny “gist” on GitHub, sharing with
+  the community. It’s like an alley-oop to others: Go ahead, now
+  you use it on your website. Super fast, keyboard-optimized,
+  client side Hugo search.
+
+- It's not perfect, but it’s darn good enough.
+
+- The point being that a habit of reaching for code is not only
+  healing for the self, but a trick to transmute a sense of dread
+  into something: A function that seems to add, however
+  trivially, a small bit of value to the greater whole in
+  a troubling moment.
+
+- I began coding when I was 10 and have been running with it ever
+  since. Self-taught, mostly. I had a preternatural awkwardness
+  with others. The machine was literal in a reassuring way, and
+  seemed to promise access to a world that even the adults around
+  me couldn’t fathom. In this way, the code became a friend—a
+  nonjudgmental buddy.
+
+- A pattern was set: When the complexities of social situations
+  exhausted me as a child, I turned to code, became an isolate.
+  Ellen Ullman writes in her book Life in Code: A Personal
+  History of Technology, “Until I became a programmer, I didn’t
+  thoroughly understand the usefulness of such isolation: the
+  silence, the reduction of life to thought and form; for
+  example, going off to a dark room to work on a program when
+  relations with people get difficult.”
+
+- Reading assembly language books in middle school or programming
+  BBS software in high school didn’t register, then, explicitly,
+  as a salve. My first conscious acknowledgement of the
+  palliative power of code came a few years ago when I refactored
+  my website from one content management system to another. This
+  sounds implausible, but it’s true: I was healed by a CMS,
+  a Google-unique phrase—and for good reason.
+
+- At the time, I was suffering from personal and professional
+  depressions, a long time in the making. I had been knocked off
+  kilter. When I took stock of my mind, I realized it was not
+  where I wanted or expected it to be.
+
+- This happens to me, sometimes; to certain people, many times.
+  I think often of the epigraph of William Styron’s Darkness
+  Visible when I feel the weight of a depression descend: “For
+  the thing which I greatly feared is come upon me …” That
+  descent usually means I haven’t been getting enough rest.
+  I don't mean over the course of days, but rather months or
+  years. A slow tilting, like a ship taking on water through
+  a pinhole. Given enough time, it must tip. My mind was tipping,
+  and I found myself grasping for, of all things, servers. Like
+  a life raft. Servers, it turns out, are one of my safe places.
+
+- I had wanted to shed my rickety and overpriced Rackspace server
+  for years, but had been too lazy. It's a meaty task, a task for
+  grunts, thankless, and one that requires focus.
+
+- Most everything related to servers happens in the “terminal,”
+  on the command line, in a world devoid of images or graphical
+  interfaces. Just text. Every action is key-precise and
+  hyper-literal. A mistype of a single character can destroy
+  a system. In fact, for decades, servers have presented the
+  following message when you enter into administrator or “super
+  user” mode:
+
+    - We trust you received the usual lecture from the local
+      System Administrator. It usually boils down to:
+        1. Respect the privacy of others.
+        2. Think before you type.
+        3. With great power comes great responsibility.
+
+- It can make a person weak in the knees to think about how much
+  of the world's smooth operation is contingent on typing
+  accuracy. But it is, and when you move through the guts of your
+  favorite Linux operating system distribution, you can't help
+  but stare gape-mouthed at the absurdity and beauty of the
+  crisscross threads that keep the web and most of our digital
+  (and, by proxy, physical) infrastructure afloat.
+
+- Therein lies part of the attraction: Moving through that
+  jumble—with all of its perverted poetics of grep and vi and git
+  and apache and *.ini—*and doing so with
+  a fingers-floating-across-the-keyboard balletic grace, is
+  exhilarating. You feel like an alchemist. And you are. You type
+  esoteric words— near gibberish—into a line-by-line text
+  interface, and with a rush not unlike pulling Excalibur from
+  the stone you've just scaffolded a simple application that can
+  instantly be accessed by a vast number of humans worldwide.
+
+- Romantic partners have regarded me with confusion and perhaps
+  suspicion when I suddenly went fluent in bash (a flavor of
+  terminal shell used to type commands). It was as if I had been
+  keeping a dirty secret from them. I once dropped quick-fingered
+  into text-land to help a friend's teenage son install some
+  Minecraft mods, and by the look in his eyes I could tell I had
+  become a minor celebrity in real time. With a few hundred
+  keystrokes, two generations were bridged.
+
+- I find peace in the dark mess of that world. Code and servers
+  are a home to me in a way that's difficult to explain to anyone
+  for whom they are not.
+
+- So in my tilted state, my slightly depressive state, I moved
+  websites from my old server to my new server. My tasks were
+  guided by the trusty to-do list. URLs of old sites marked off
+  distinct epochs in my life, of a variety of lenses through
+  which I once saw myself. Perhaps I am this kind of artist or
+  will be this kind of writer?
+
+- The old websites of mine are ghosts. Nobody will look at or
+  think to hunt them down. I moved them because I feel
+  a stewardship over them, feel that they have a right to go on
+  living in bits.
+
+- A lot of this server work involved making complicated sites
+  less complex. That is: Making the dynamic static. Gutting these
+  sites of their PHP cores, Benjamin Buttoning them back into
+  sleepy HTML and CSS, making them low maintenance and future
+  friendly. It's funny how even something as simple as a MYSQL
+  database requires pruning, nurture. How a PHP script—so
+  seemingly innocuous!—is rendered obsolete a decade later as
+  deprecation creeps, mental models of languages evolve. But take
+  a page of HTML from the early ’90s, and it renders as well as
+  ever on most anything with a screen.
+
+- In that spirit, as I moved my homepage I also rebuilt it as
+  a so-called static site. A simpler version that should continue
+  to work for the next hundred years. It looks nearly the same as
+  it did before. With static sites, we've come full circle, like
+  exhausted poets who have travelled the world trying every form
+  of poetry and realizing that the haiku is enough to see most of
+  us through our tragedies.
+
+- As is true for most infrastructure work, these gruntish
+  behind-the-scenes tasks are often neglected, or derided as
+  irrelevant, underfunded, ignored. That is, until they break, or
+  a pandemic hits, and then we realize how infrastructure is
+  everything, and without it our world reverts to some
+  troglodytic cave state, or perhaps worse, an ever-widening
+  extreme of haves and have-nots.
+
+- In the late 1990s you almost had no choice but to be your own
+  homepage steward and janitor and systems engineer. Now you can
+  offload that stewardship to a third party. Tumblr, Ghost,
+  Facebook, Blogger, Wordpress—platforms have sprung up where you
+  can focus purely on content in exchange for giving up a certain
+  level of control.
+
+- You can take stewardship too far. I probably have. There is
+  a diminishing return on what you can get out of any system,
+  regardless of how much you put into it. But I don't care.
+
+- This work of line-by-line problem solving gets me out of bed
+  some days. Do you know this feeling? The
+  not-wanting-to-emerge-from-the-covers feeling? Every single
+  morning of the last year may have been the most collectively
+  experienced covers-craving in human history, where so many
+  things in the world were off by a degree here or a degree
+  there. But under those covers I begin to think—A ha! I know how
+  to solve server problem x, or quirk y. I know how to fix that
+  search code. And I'm able to emerge and become human, or part
+  human, and enter into that line-by-line world, where there is
+  very little judgement, just you and the mechanics of the
+  systems, systems that become increasingly beautiful the more
+  time you spend with them. For me, this stewardship is therapy.
+
+- And so I pull apart a system—a system that I have loved and has
+  served me well over the years—and figure out a better, more
+  sustainable framework for the code, and one hopes, by
+  extension, maybe even the world.

@@ -1,0 +1,220 @@
+
+
+Sussman: We really don't know how to compute!
+    - $MY_BOOKS/Cs/LISP/Scheme/Sussman-We-Dont-Know-How-to-Compute.pdf
+
+
+### Summary
+    - The Problem is Evolvability not Correctness
+    - Extensible Generic Operations may help 
+        - (allow Extension of function without modification)
+    - But "extensible" Makes Proofs very difficult
+    - Propagator Architecture unlocks freedoms 
+        - (maybe throw away current ideas of how machines work)
+    - Essentially Concurrent and Parallel
+    - Redundancy and Degeneracy 
+        - (different ways of measuring the height)
+    - Maintain Provenance
+    - Dependency-Directed Backtracking 
+        - (useful way of controlling non-deterministic search)
+    - (2021: It sounds a bit like NN's?) 
+
+### Key
+    - The Propagator Idea
+    - Independent Stateless Machines
+    - Connecting Stateful Cells
+
+- "hidden" triangle with dots... takes most humans 100
+  milliseconds to recognise
+    - $MY_IMAGES/cs/milli-second-processing-triangle-dots.png
+
+- How would you program something like that - that organises that
+  in a latency of 30 or 40 steps
+
+- Human genome is about a gigabyte
+
+- A GB is about the same as the Windows source code
+
+- A GB isn't that big, but a small change to it you make a cow
+  instead of a person
+
+- So we have this enormously flexible language there and we
+  haven't the foggiest clue what it's like. I'm not talking about
+  DNA. It's just like (logic) gates or something. What I'm
+  interested in is the higher-level language that's neccessary to
+  do things like that. And we certainly don't know how to do
+  that.
+
+- What can we do about that? A salamander can have the middle
+  portion of a limb detached and re-attached the wrong way
+  around. It grows 2 new elbows in response!
+    - how do you make something big like that re-grow itself. The
+      neighbouring cells must TALK TO EACH OTHER.  
+    - Its an amazing process. We need something similar if we're
+      going to appraoch the next stage of our computing.
+    - Because its nearly impossible to setup a process where we
+      understand everything thats going to happen in the future.  
+
+
+- All our intuitions as programmers have come from a time
+  assuming scarcity. (e.g. memory constraints, expensive)
+- But right now memory is free, computing is free. We have to
+  figure out how to use that.  
+- We dont have to minimise operations or memory. But we do have
+  to minimise latency. But real cost now is: cost of PROGRAMMERS.  
+
+- Things not important:
+- CORRECTNESS: Sometimes good enough is ok. Eg Google search  
+- SECURITY: Well look at our genome, manages to get along despite
+  being attacked by mutating parasites
+
+- The problem: we spend all our time modifying existing code.
+  Our code is not EVOLVABLE. Its not adequately modifiable to fit
+  the future.
+- We want systems that are good for things the designer didn't
+  even intend. That's the real problem.
+
+
+- We program ourselves into "holes". We make decisions early in
+  the process that tie our hands.
+
+- Want to make consequences of decisions easy to change.
+
+- Nothing brings fear to my heart more than a floating point
+  number. Numerical analysis is the blackest art I know.
+
+
+### Arithmetic with functions 
+    - ((+ (square sin) (square cos)) 2.5)
+
+
+- "Gear integrator"... "stiff equations"
+
+- Automatic differentiation (as a generic extension)
+    - create hyper-real numbers 'x + ∆x'  
+    - $MY_IMAGES/cs/derivative-computation-chain-rule.jpg
+
+- "Mathematical notation is awful... its impressionistic"
+
+- I'm dynamically allowed to change the meaning of all my
+  operators, to add new things they can do...
+
+- It might be tricky to have a rigours proof of correctness
+  though. I can pay correctness for tremendous flexibility.
+
+- Dijkstra: boxed us in. Wanted everything proven first. But that
+  means very tight specification... brittle.
+
+- electrical engineer trick: "digital abstraction": the inputs to
+  something accept a much bigger range than the outputs are
+  allowed to produce. Therefore you get rid of NOISE at every
+  stage.
+
+- But remember: the old stuff shouldn't break, it's just
+  that we cant prove the new stuff.
+
+- cell: probably a few bytes of ram... or a few hundred. But they
+  seem to do smart things...
+
+- New idea: Propagator Idea
+
+- the same lambda calculus combination structure used for
+  functions works for other things too. All it is is a consistent
+  naming scheme.
+
+- the electrical wiring system written by Richard Stallman
+  actually has units (ohm, volts). Once you have generic
+  operators you can make units. Stallman has a "QED" at the end. 
+    - It's not a real "proof" but more that we can trace where
+      information is propagating around.
+    - the circuit is split up into little cells... when some
+      voltage or resistance changes in one "cell", it propagates
+      to a neighbour. This setup is nice for parallel machines.
+    - Sussman grad student discovered: the cells dont have
+      a "value", they have information about a value. And
+      information monotonically increases...
+        - And because of that SYNCHRONISATION problems go away
+          for a parallel machine...
+        - powerful mechanism for building a large complex machine
+          in a simple way
+    - Summary: cells merge information monotonically
+
+- Half of Physics is built on "lies"! Galileo took out the
+  friction to understand motion... then put it back in. It was
+  a required "lie".
+
+
+- Expressions have Anonymous Connections - loads of intermediate
+  steps in an expression that dont have names
+    - example: herons method (generalised by Newton)  
+
+- Sussmans approach: for Herons method it looks like a wiring
+  diagram.
+    - $MY_IMAGES/cs/recursive-machine-herons-method.JPG
+    - if I could burn processors I could do that...  
+
+
+- I'm not saying propagators are right. I don't know. I can't
+  build a person out of a cell. We've been worrying too long
+  about type systems. We should be worrying how to build flexible
+  machines.
+
+
+- All Operators are Extensible Generics
+- Cells Merge Information Monotonically
+
+- Measure the height of a building using  a barometer, a stopwatch, and a ruler.
+
+
+
+
+- Monads are hidden plumbing. (Thats a lambda calculus trick)
+  Allows you carry aournd hidden information?
+
+
+- Dependencies and Contingent Values
+- Tracking of Provenance
+- Who ordered that?
+
+- This is contingent on the "Shadow":
+    (add-content bldg-shadow
+    (contingent (make-interval 54.9 55.1) ’(shadow)))
+
+
+- Now: the information may be inconsistent. ("I believe lots of
+  things that are false, but I don't fall apart!") 
+
+- So if I encounter an inconsistency I giggle...
+
+- TMS: Truth maintenance systems
+- Locally-Consistent Worldviews
+- A collection of facts with appropriate dependencies, such as
+  it's possible to give me the best estimate as a consequence of
+  these facts...
+
+- note: TMS also has the ability to back out!
+
+- Don’t Crash; Chuckle!
+- Dependency-Directed Backtracking
+- Not chronological backtracking using say a sequence monad, and
+  a failure mode (for Haskell fans!)
+- unlike chronological backtracking, I can do much more efficient
+  back tracking because I know the providence of every fact
+
+- Remember: this is all a parallel machine (although this toy
+  model implemented sequentially)
+
+- Ledman(?) : almost all cells in the central nervous system are
+  very tiny. Much tinier than the ones with long axons. It's hard
+  to see them even with a good microscope and measure potentials
+  from them. (action potentials)
+- so he had this hypothesis (idea) that many neurons are not
+  explicitly directional. That they are actually things like the
+  constraints. That feel a bunch of other things and adjust the
+  sensitivity of other neurons they touch.
+
+- Back to the triangle: what am I doing? I'm filling in details
+
+- Maybe all this is wrong... but we have to throw away our
+  current thinking if we ever expect to solve these problems
+

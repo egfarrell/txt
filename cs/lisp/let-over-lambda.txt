@@ -1,0 +1,77 @@
+### Let Over Lambda
+    - This is a book about programming macros in LISP. Unlike
+      most programming books that only give them a cursory
+      overview, this book is a series of tutorials and examples
+      designed to get you programming sophisticated macros as
+      efficiently and quickly as possible. Mastering macros is
+      the final step to graduating from an intermediate LISP
+      programmer to a LISP professional.
+
+    - Macros are the single greatest advantage that lisp has as
+      a programming language and the single greatest advantage of
+      any programming language. With them you can do things that
+      you simply cannot do in other languages. Because macros can
+      be used to transform lisp into other programming languages
+      and back, programmers who gain experience with them
+      discover that all other languages are just skins on top of
+      lisp. This is the big deal. Lisp is special because
+      programming with it is actually programing at a higher
+      level. Where most languages invent and enforce syntactic
+      and semantic rules, lisp is general and malleable. With
+      lisp, you make the rules.
+
+### Clarifications
+    - Let Over Lambda is not about tearing people down or
+      disrespecting people's work. It is about why I love LISP.
+
+    - LISP-1 vs LISP-2. This is a long-running debate which has
+      never been definitively settled. You can prove that by
+      observing that both systems are still in use today in
+      different LISPs. I should have been more clear that while
+      I do consider LISP-2 to be technically superior, I don't
+      think LISPs that use LISP-1 are any less LISPy because of
+      this choice. I like LISP-2 because it provides an extra
+      feature. Why have just one namespace when you can have two?
+      The fact that LISP-2 avoids certain variable capture
+      problems is mostly incidental. It's having an extra
+      namespace feature that is important.
+
+    - Hygienic macros. I am dismissive of these macro systems in
+      Chapter 3 but I should have been more clear that I am only
+      against systems that do nothing more than limit or
+      inconvenience macro programmers and then call it progress.
+      Some Scheme systems have theoretically advanced macro
+      systems but I believe the Common LISP macro system is more
+      suitable for writing useful macros. If you disagree and
+      have examples to back up your opinions, I'd love to hear
+      from you.
+
+    - Right vs wrong. This language is regrettable. I didn't mean
+      it to pass down absolute judgement for or against something
+      but instead observations about the Common LISP canon.
+      LISP-2 is right in Common LISP but in other languages
+      LISP-1 might be right. Another example is in chapter
+      6 where I say that setq being converted back into a setf
+      when used to set a symbol macro is the right thing to do
+      but then go on to confess that the really right thing would
+      be to just remove the redundant setq from Common LISP.
+
+    - Top-percentile programmers. No book can make you
+      a top-notch programmer, only study and practice can do
+      that. All books like Let Over Lambda can do are expose you
+      to ideas you otherwise might never be exposed to. Sorry for
+      the overly aggressive marketing language. Getting good at
+      programming is up to you and only you. Good luck.
+
+    - I hope this clears up any confusion about my message and
+      I apologise to anyone who I might have offended in Let Over
+      Lambda or elsewhere. Also check out the errata page.
+      Several remarks that might seem offensive are actually just
+      phrasing mistakes on my part.
+
+### Links
+    - Main                https://letoverlambda.com
+    - BOOK in text format https://letoverlambda.com/textmode.cl/guest/toc
+    - Amazon              https://www.amazon.com/Let-Over-Lambda-Doug-Hoyte/dp/1435712757
+    - "production code"   https://github.com/thephoeron/let-over-lambda
+    - errata              https://letoverlambda.com/index.cl/errata

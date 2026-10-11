@@ -1,0 +1,12 @@
+svn over proxy
+
+basic steps:
+    sudo vi ~/.subversion/servers
+
+    [Global]
+    http-proxy-host=wwwcache.open.ac.uk
+    http-proxy-port=80
+
+important!    
+    be sure to use http:// in the repo url, 
+    rather than svn:// 

@@ -1,0 +1,76 @@
+
+### Lisp and set theory
+    - Lisp is like set theory
+    - change `{2,4,6}` to `(2 4 7)`
+    - only difference is lists have a 1st, 2nd, 3rd element etc
+      (order?) and can have repreated elements
+
+### Lisp and Time
+    - Also Lisp is very mathematical: you don't think about time.
+      You don't think about executing a program and it does
+      things to change the STATE of the world. (Functional
+      progrmaming!)
+    - In Lisp, you think of a program as an expression, which you
+      evaluate to give a value. But nothing happens!
+        - You dont think of time, or values being assigned to
+          variables or gotos.  
+        - In Lisp expressions, you define functions, apply
+          functions to values and the final thing you get is
+          a final value. Very mathematical.
+    - By the way, for experts: my Lisp is Scheme-ish ...
+
+
+### Polish Notation
+    - I dont like to write all these parentheses. Lisp
+      programmers havent heard about parenthesis-free Polish
+      notation!
+    - Hmmm it looks better:  
+        - ```
+        - define (fact N)
+        - if = N 1    1
+        -             * N (fact - N 1)
+        - ```
+
+### S-Expressions
+    - Actually what we did above was theoretically bad. We
+      defined a function in one S-expression and used it in
+      another S-expression. Two separate S-expressions.
+    - The first S-expression had an effect, it left a definition.
+      You dont want that in Lisp. 
+    - In theoretical Lisp, an expression has to define within
+      itself all the functions it needs, and then use them.
+      Because theres no lasting effect of evaluating a Lisp
+      expression.
+    - Think about this: The only way to get a value assigned to
+      a variable is to have it be the argument of a function
+      which binds the value to the variable within the
+      appropriate scope. (???)  
+    - The correct one-expression version of factorial uses
+      'let-be-in', which is a 3 argument function:  
+      - ```
+      - let (fact N) if = N 1 1 * N (fact - N 1)
+      - (fact 3)
+      - ```
+    - This expands to:
+        -   ```
+        -   ('lambda (fact) (fact 3)
+        -    'lambda (N) if = N 1 1 * N (fact - N 1)
+        -   )
+        -   ```
+        - Note 1: function definitions are triples of 
+        - `(lambda (arguments) body)`
+        - Note 2: ' is the one-qrgument quote function, meaning
+          no evaluation occurs  
+
+
+### The Rest of Lisp(!)
+    - If I add that `car` gives the 1st element in a list, and
+      `cdr` gives you the rest of the list, and `cons` puts them
+      back together then you essential know Lisp!
+    - Also: NIL is another name for the empty list `()`. And the
+      way to test if something has elements or not is `atom`
+    - Also important: builtin function: `eval`. 
+    - Lisp is interpreted!
+
+
+

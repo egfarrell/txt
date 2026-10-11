@@ -1,0 +1,38 @@
+ubuntu env
+
+
+# SYSTEM LEVEL
+
+# I use it. Ubuntu system-wide default environment file (environment variables)
+/etc/environment
+
+# I use this! Private functions.
+/etc/bash.bashrc
+
+# I dont use this. Executed when logging in from console, ssh, Display Manager.
+/etc/profile
+
+# System-wide default configuration file (? variables) (? not used)
+/etc/security/pam_env.conf
+
+
+
+# USER/SESSION LEVEL:
+
+# I use this. Apparently not great performance-wise?
+~/.bashrc
+
+# The following DONT EXIST
+
+# Recommended. Assignments, one per line. Not processed?
+~/.pam_environment
+
+# not recommended
+~/.profile
+
+# bash executes this rather than ~/.profile
+~/.bash_profile
+
+# bash executes this rather than ~/.profile
+~./bash_login
+

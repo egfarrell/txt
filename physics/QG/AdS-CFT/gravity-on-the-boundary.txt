@@ -1,0 +1,103 @@
+
+### Contents
+    1. Why gravity doesn’t have a local energy density
+    2. How we define total energy in gravity
+    3. Why that matters for AdS/CFT
+    4. Philosophical resonance
+
+### Me:
+    - Could u unpack a bit about energy (in the bulk?) being
+      a boundary quantity.
+
+
+### GPT:
+- This is one of those slippery but beautiful facts about
+  gravity: energy in GR isn’t a local substance—it’s a boundary
+  bookkeeping term.
+
+
+### 1. Why gravity doesn’t have a local energy density
+
+In a normal field theory (like electromagnetism), we can define
+an energy density `T^00(x)`—part of the stress-energy tensor—and
+integrate it over space to get total energy.
+
+But in GR, spacetime geometry itself *is* the dynamical field.
+The coordinate system you use can always be warped to make
+gravitational potential energy disappear locally. That’s why we
+can’t write down a generally covariant, local expression for
+gravitational energy density—it’s not an invariant concept.
+
+In effect, Einstein’s equivalence principle kills the notion of
+“gravitational energy here.” There’s only “gravitational energy
+relative to infinity.”
+
+
+### 2. How we define total energy in gravity
+
+To rescue something like “energy,” one instead defines it at
+spatial infinity (for asymptotically flat spacetimes) or on the
+conformal boundary (for AdS).
+
+The standard constructions are:
+
+* ADM energy for asymptotically flat spacetime: it’s a surface
+  integral over the metric and its derivatives at infinity.
+* Brown–York or holographic stress tensor for AdS spacetime:
+  again, it’s a boundary integral, giving you conserved charges
+  like energy and angular momentum.
+
+These are the only *gauge-invariant* notions of total energy.
+They measure how the metric deviates from the background at
+infinity.
+
+So when we say *“the Hamiltonian of gravity is a boundary term”*,
+we mean that the volume integral over constraints vanishes on
+physical states (the Einstein constraints equal zero), leaving
+only a surface term at infinity as the actual generator of time
+translations.
+
+
+### 3. Why that matters for AdS/CFT
+
+In AdS/CFT, this geometric fact maps beautifully onto the field
+theory:
+
+* The bulk Hamiltonian, which generates time evolution, is
+  entirely equivalent to a boundary operator (the CFT
+  Hamiltonian).
+* Therefore, every bit of bulk energy must be “visible” at the
+  boundary, because that’s literally how the dual theory defines
+  it.
+
+A region of the bulk that is causally disconnected from the
+boundary—like Maudlin’s baby universe tucked behind an evaporated
+black hole horizon—would have no associated boundary energy. From
+the boundary’s perspective, it’s invisible and costs nothing to
+excite.
+
+That’s what BHG is pointing out: such disconnected interior
+degrees of freedom would correspond to *zero-energy excitations*.
+And if there are many of them, you’d get an infinite degeneracy
+of zero-energy states—something the boundary CFT, which has
+a unique vacuum, absolutely does not have.
+
+
+### 4. Philosophical resonance
+
+This boundary-centric nature of energy means gravity is
+inherently *nonlocal*. The whole state of the universe is, in
+a deep sense, encoded in its edges.
+
+That’s the root of holography: the dynamics of the “inside” are
+constrained by what happens at infinity. You can’t just split the
+universe into an “outside” and an “inside” the way you do in
+local quantum field theory, because the gravitational constraints
+tie them together.
+
+
+Alright — now that we’ve aired out the logic of gravitational
+energy, please go ahead and post Maudlin’s reply. I’ll help you
+parse how he pushes back and whether his response meets the
+physical objection or misses it philosophically.
+

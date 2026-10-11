@@ -1,0 +1,35 @@
+
+# Haskell aliases
+alias hask='ghci'
+alias hos='hoogle --color'
+alias hoi='hoogle --color --info'
+
+
+hoogle search
+    cabal install hoogle
+
+    install databases
+    (note: "data all" takes too long) 
+        ~/.cabal/bin/hoogle data 
+
+    general search
+        hoogle getargs
+        hoogle --info getargs
+
+    type signature search
+    (note: note the double-quotes around the type) 
+        hoogle --color "(a -> b) -> m a -> m b" 
+
+tags
+    cabal install hothasktags
+    find . | egrep '\.hs$' | xargs hothasktags > tags
+
+
+# ~/.editrc (for libedit)
+    edit on
+    bind "^p" em-inc-search-prev
+    # bind ^R em-inc-search-prev
+    # bind ^S em-inc-search-next
+    bind "^k" ed-search-prev-history
+    # bind ^[[6~ ed-search-next-history
+

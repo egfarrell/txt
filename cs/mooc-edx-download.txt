@@ -1,0 +1,37 @@
+edx download
+
+ssl cert problems
+    --youtube-dl-options="--no-check-certificate"
+    https://github.com/coursera-dl/coursera-dl/issues/402#issuecomment-143319953
+
+installed via pip
+    (conda environment: py3)
+    coe
+    edx-dl -u ef.courses@gmx.com -p irish1   --list-courses
+    anu astrophysics
+    edx-dl -u ef.courses@gmx.com -p xxx --ignore-errors -f 3gp https://courses.edx.org/courses/ANUx/ANU-ASTRO1x/1T2014/info
+    edx-dl -u ef.courses@gmx.com -p xxx --ignore-errors -f 3gp https://courses.edx.org/courses/course-v1:ANUx+ANU-ASTRO3x+1T2016/info
+    edx-dl -u ef.courses@gmx.com -p xxx --ignore-errors -f 3gp https://courses.edx.org/courses/ANUx/ANU-ASTRO4x/1T2015/info
+    relativity and astrophysics
+    edx-dl -u ef.courses@gmx.com -p xxx --ignore-errors -f 3gp https://courses.edx.org/courses/CornellX/Astro2290x/1T2014/info
+
+
+installed via github
+    https://github.com/shk3/edx-downloader.git
+
+    run download
+        -u  username
+        -p  password
+        -f  youtube video format (webm or 3gp quicker!)
+        -o  output directory
+
+        python edx-dl.py -u ef.courses@gmx.com -p xxxxxx -f 3gp 
+        python edx-dl.py -u ef.courses@gmx.com -p xxxxxx -f webm -o my_course_folder
+
+    specify my own courseware url
+        goto line 323
+        COURSEWARE = selected_course[1].replace('info', 'courseware')
+        # COURSEWARE = 'https://courses.edx.org/courses/IITBombayX/ME209x/2T2014/courseware'
+
+        also: change the output from 'directory_name' function
+

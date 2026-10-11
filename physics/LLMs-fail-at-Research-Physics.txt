@@ -1,0 +1,214 @@
+https://tjoresearchnotes.wordpress.com/2026/01/15/why-llms-fail-at-mathematics-and-physics-research-and-what-to-do-about-it/
+
+### Contents
+    - The Phase Transition in Mathematical Communication
+    - The Compression Problem
+    - What Human Expertise Actually Looks Like
+    - An Uncomfortable Truth About Mathematical Literature
+    - The Opportunity
+    - A Different Future for Mathematical Publishing
+
+
+### Key Points 1
+    - Compression Gap: 
+        - LLMs struggle with research-level math because
+          professional literature uses highly compressed
+          shorthand (idioms like "by standard arguments") that
+          assumes the reader can fill in the gaps—something
+          models can't yet do.
+    - Prose vs. Logic: LLMs mimic the *texture* and "vibe" of
+      expert discourse through pattern matching, but they lack
+      the underlying logical grounding to actually decompress
+      those patterns into valid proofs.
+    - The Oral Tradition: Much of mathematical "truth" exists in
+      informal academic culture (e.g., knowing which published
+      papers are secretly flawed), making it invisible to models
+      trained only on written text.
+    - AI as "Formalization Minions": While unreliable for novel
+      research, LLMs are excellent at the "grunt work" of
+      translating human-decomposed tasks into formal,
+      machine-verified code (like Lean).
+    - Future of Publishing: The author proposes a shift where
+      verified formal proofs become the primary academic
+      artifact, and prose serves only as a human-readable
+      summary.
+
+
+### Key Points 2
+
+- Training data mismatch:
+    - LLMs struggle with research-level math not because of weak
+      reasoning, but because research papers use heavily
+      compressed, implicit language ("by standard arguments")
+      that models pattern-match rather than truly decompress.
+
+- Undergraduate vs. research writing:
+    - Undergraduate math is explicit and pedagogical, so LLMs
+      handle it well. Research math is shorthand-heavy prose
+      written for experts who can mentally "fill in the gaps"
+      — something LLMs can't genuinely do.
+
+- The bullshitting problem:
+    - Models produce fluent, convincing mathematical prose
+      without the underlying logical grounding, meaning small
+      errors compound invisibly through a derivation.
+
+- Not just an AI problem:
+    - Research math literature itself has an "oral tradition" of
+      known errors that are quietly acknowledged but never
+      formally corrected — meaning some of this flawed ground
+      truth is baked into LLM training data.
+
+- Potential way forward:
+    - Rather than training models to be "better at math," the
+      author envisions using LLMs as tireless assistants to
+      *formalize* existing prose proofs (e.g. in Lean),
+      transforming mathematical publishing so that verified
+      formal proofs become the primary artifact, not the prose
+      summary.
+
+
+
+### Why LLMs Fail at Mathematics and Physics Research (And What To Do About It)
+
+- tobiasosborne
+
+- I recently had an enlightening conversation with Rob May and
+  Yash Sharma of NeuroMetric.ai about adversarial verification
+  protocols. Their insightful questions forced me to crystallise
+  something I’d been circling for a while: why frontier models
+  perform so much better at undergraduate mathematics than
+  research-level work. (I assure you, the only “PhD smarts” they
+  have is the ability to bullshit you on a doctoral level…)
+
+- My current conjecture is that this isn’t primarily about
+  reasoning capability. It’s about the training data itself.
+
+### The Phase Transition in Mathematical Communication
+
+- Consider what undergraduate mathematics looks like in text.
+  Every step is explicit. Deductions are clarified. The prose
+  exists to serve the logical structure. This is pedagogical
+  writing. Its entire purpose is to leave nothing implicit.
+
+- Now consider research mathematics. As we move past the graduate
+  level, the character of written communication undergoes a sharp
+  phase transition. Researchers make increasingly free use of
+  domain-specific idioms. Multiple steps of deduction collapse
+  into offhand remarks. A single sentence, “by standard arguments
+  in stable homotopy theory,” might expand to an undergraduate
+  thesis worth of Lean-level deductions. (Don’t believe me? Just
+  search for “standard arguments” in https://mathoverflow.net/.
+  There are some laugh-out-loud moments to be found…)
+
+- Why? Efficiency of communication. When you know your readers
+  can fill in the algebraic steps, there’s no need to spell them
+  out. Mathematical communication becomes prose.
+
+- And LLMs are really good at prose.
+
+### The Compression Problem
+
+- It’s very hard to train for truth when truth is compressed this
+  way. From the model’s perspective, it’s simply more efficient
+  to allocate weights toward reproducing the texture of expert
+  discourse than to somehow encode the vast implicit logical
+  structure that experts understand such phrases to represent.
+
+- An LLM will generate text that reads like genuine scientific
+  communication. The prose flows. The citations feel appropriate.
+  The handwaving gestures in the right directions.
+
+- But “by standard arguments” is doing no actual work. It’s
+  pattern-matched prose, not compressed understanding.
+
+### What Human Expertise Actually Looks Like
+
+- So isn’t this what human understanding looks like too? We also
+  communicate in compressed shorthand.
+
+- Yeah, nah. When an expert writes “a standard patching argument”
+  they understand that this phrase stands for something specific.
+  They can imagine what the unrolled proof looks like. They rely
+  on shared commons to ensure the reader imagines the same thing.
+  They can control semantic drift across a chain of such
+  compressions because each abbreviated step maintains its
+  connection to ground truth.
+
+- The LLM has no such grounding. Each plausible-sounding phrase
+  is generated from local context, and small errors compound
+  through a derivation. The model is doing prose generation, not
+  decompression of understood structure.
+
+### An Uncomfortable Truth About Mathematical Literature
+
+- This problem isn’t actually unique to LLMs. It’s a dirty secret
+  of research mathematics that prose proofs can be brittle. There
+  are well-known papers that experts quietly acknowledge are
+  incorrect, but this is ok because everyone also knows how to
+  fix them. Nobody wants to write the correction because academic
+  culture runs on politeness and nobody wants to upset the
+  original author.
+
+- You learn about these things during conference coffee breaks,
+  in supervisor-student discussions. It’s an oral tradition. Good
+  luck finding that training data.
+
+- Some researchers have been concerned enough to initiate
+  spectacular efforts to decompress the prose literature into
+  formal proofs. The Liquid Tensor Experiment formalised
+  Scholze’s work in Lean. Hales’ Flyspeck project verified the
+  Kepler conjecture. These efforts have been nothing short of
+  heroic. They’ve also been, umm, somewhat expensive in human
+  time.
+
+- Until now.
+
+### The Opportunity
+
+- We suddenly have access to tirelessly optimistic minions who
+  will cheerfully – “This is excellent material, Tobias” – grind
+  away formalising the most tedious lemmas until the cows come
+  home. They’re not reliable for generating novel research-level
+  arguments, for exactly the reasons I’ve described.
+    - But, once you, the true domain expert, have done the task
+      decomposition, they’re remarkably good at the mechanical
+      work, the boilerplate, of expanding compressed steps into
+      explicit formal proofs, given appropriate verification
+      infrastructure.
+
+- This suggests a different path forward than trying to train
+  models to be “better at maths.” Maybe we can’t train for
+  fidelity when the ground truth is prose. Maybe we need to
+  reimagine mathematical communication altogether.
+
+### A Different Future for Mathematical Publishing
+
+- I have started imagining lemma-as-a-service providers supplying
+  verified building blocks that researchers can cite with actual
+  confidence. Or maybe proof miners with a couple of GPUs using
+  open models who spend tokens to formalise a paper as
+  a condition of publication`*.`
+
+- Imagine a world where publication fees – here I am sending out
+  a big f--k you to all for-profit journals – are replaced by
+  a GitHub repository and a renewable energy electricity bill.
+
+- The formal proof becomes the artifact. The prose becomes what
+  it always was: a human-readable summary for experts who want to
+  quickly assess relevance before examining the actual verified
+  object. Extrapolating a little more, I wonder at the social
+  norms that could emerge: “What, your paper doesn’t have
+  a formal proof? Hmm… What are you trying to hide?”
+
+- This isn’t a small change. It’s a transformation of how
+  mathematical knowledge is produced, communicated, and trusted.
+  But for the first time, just maybe, the economics might
+  actually work out.
+
+- `(*)` I am going to give away one of my many crazy business
+  ideas: cryptocurrencies whose proof of work is based on lean
+  proofs of math lemmas ;). Finally a useful proof of work!
+  I dare you to steal this idea. No, I double dare you.
+  (Seriously, please steal this idea. I would totally buy a whole
+  bunch of $QED.)

@@ -1,0 +1,80 @@
+# vi: ft=python
+sqlite py script
+
+
+# [–]hyljeDjango guy 2 points 1 month ago
+# You can use a special :memory: database file to SQLite to get a memory-only database.
+# permalinkparent
+
+# Yes... but sometimes you need to the DB to last but you also need to
+# load 10m records in it. That's when using /dev/shm is amazing.
+# permalinkparent
+
+
+def sqlite_to_memory(disk_file):
+    """Load an sqlite database into memory
+
+    :disk_file: path to sqlite db
+    :returns:   sqlite database memory instance
+
+    """
+    disk_db  = sqlite3.connect(disk_file)
+    tempfile = StringIO()
+
+    for line in disk_db.iterdump():
+        tempfile.write('%s\n' % line)
+
+    disk_db.close()
+    tempfile.seek(0)
+
+    # Create a database in memory 
+    # and import from tempfile
+    mem_db = sqlite3.connect(":memory:")
+    mem_db.cursor().executescript(tempfile.read())
+    mem_db.commit()
+    return mem_db
+
+
+# example: load database into memory
+database = utils.sqlite_to_memory('mydb.sqlite')
+
+
+# python: execute sqlite SCRIPT
+  import sqlite3
+
+  qry = open('create_table_user.sql', 'r').read()
+  conn = sqlite3.connect('/path/to/db')
+  c = conn.cursor()
+  c.execute(qry) -- or c.executescript(qry) if included in library
+  conn.commit()
+  c.close()
+  conn.close()
+  
+
+# interesting note
+
+    # I'm so happy to see this becoming mainstream! When I worked in
+    # biotech, I had a batch job that had to run on ~2TB of data. There
+    # was a lot of preprocessing science stuff but at the end of that
+    # computation all that I had to do was essentially one huge aggregate
+    # query on the data set.  
+
+    # I wrote it in python and hacked on it for weeks to speed it up - all
+    # sorts of parallelization tricks, everything I could think of - but it
+    # was taking 5-6 hours to run due to all sorts of crazy swapping. At
+    # first I was building dictionaries that ballooned to hundreds of gigs
+    # quickly, then I started building suffix tries, etc. etc., but Python
+    # is not a good language for this sort of work.  At the end of the day,
+    # someone online suggested running sqlite in ":memory:" mode so that the
+    # DB was purely in memory. 
+
+    # The entire DB ended up being about 40 gigs (which was well within the
+    # memory specs for the server running this code) and the entire query
+    # took ~10 minutes. 
+
+    # It also took me maybe three days to code and test, way under my time
+    # budget.  Considering the script started life as some horrible
+    # concoction that would take weeks to run (if it ever finished), it was
+    # really amazing to see it turn in to something that ran in under a half
+    # hour. This was really a huge accomplishment for this company. It felt
+    # great! One of my favorite memories in programming.

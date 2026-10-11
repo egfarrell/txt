@@ -1,0 +1,508 @@
+
+### Biostars
+    - Book           $MY_BOOKS/Bio/Biostars/biostar-handbook.pdf
+    - Handy bio tips ./biostars-basics-biology.txt
+
+
+
+
+### Data Analysis Course
+    - 01    Getting Started                   https://www.biostarhandbook.com/
+    - 02    Unix                              https://www.biostarhandbook.com/introduction-to-unix.html
+    - 03    Access Data Sources               https://www.biostarhandbook.com/whatisdata.html
+    - 04    Visualise Genomic Data            https://www.biostarhandbook.com/visualizing-biological-data.html
+    - 05    Sequence Ontology                 https://www.biostarhandbook.com/what-do-the-words-mean.html
+    - 06a   Gene Ontology                     https://www.biostarhandbook.com/gene-ontology.html
+    - 06b   Functional Analysis               https://www.biostarhandbook.com/functional-analysis.html
+    - 07    Sequencing Instruments            https://www.biostarhandbook.com/sequencing-instruments.html
+    - 08    Accessing SRA Short Read Archive  https://www.biostarhandbook.com/SRA.html
+    - 09a   Evaluate Sequence Quality         https://www.biostarhandbook.com/visualizing-sequencing-data-quality.html
+    - 09b   Apply Quality Control             https://www.biostarhandbook.com/sequencing-quality-control.html
+    - 10a   Write Refactor Scripts            https://www.biostarhandbook.com/books/scripting/index.html
+    - 11a   Reproducibility Fallacy / Recipes https://www.bioinformatics.recipes/
+    - 12a   Sequence Alignments               https://www.biostarhandbook.com/introduction-to-alignments.html
+    - 12b   Run Aligners                      https://www.biostarhandbook.com/global-and-local-alignments.html
+    - 13a   BLAST                             https://www.biostarhandbook.com/blast-basic-local-alignment-search-tool.html
+    - 14    Short Read Aligners               https://www.biostarhandbook.com/short-read-aligners.html
+    - 15a   SAM Sequence Alignment Maps       https://www.biostarhandbook.com/the-sambamcram-formats.html
+    - 15b   BAM files                         https://www.biostarhandbook.com/working-with-bam-files.html
+    - 16a   Simulate Sequence Data            https://www.biostarhandbook.com/simulate.html
+    - 16b   Large Scale Variation             https://www.biostarhandbook.com/visualizing-large-scale-genomic-variations.html
+    - 17a   Variant Calling                   https://www.biostarhandbook.com/introduction-to-variant-calling.html
+    - 17b   VCF format                        https://www.biostarhandbook.com/vcf.html
+    - 18a   RNA Seq intro                     https://www.biostarhandbook.com/introduction-to-rna-seq-analysis.html
+    - 18b   RNA Seq example                   https://www.biostarhandbook.com/understand-example-data.html
+
+
+### 01: Intro
+    - $MY_VIDEOS/bio/Biostars/01-Getting-Started.mp4
+    - No focus on algorithms and implementation details eg.
+        - Dynamic Algorithms, 
+        - Burrows-Wheeler, 
+        - DeBruijn Graphs
+    - Its important stuff but most people don't need it
+    - We concentrate on information processing - reimagining
+      bioinformatics from a data oriented perspective. 
+        - Data is king! 
+        - Tools just transform data, and data may (or may not)
+          give answers
+    - We have more data than we know how to extract yet!  You
+      could discover something!
+    - Bioinformatics requires many relatively simple decisions.
+    - We will concentrate on COMMAND LINE tools.
+    - R (Bioconductor): Best suited for later stage analysis.
+    - Bioinformatics is:
+        - IT:
+            - data storage, transfer
+        - CS:
+            - algorithms advanced data structures
+        - STATS:
+            - traditional stats not suited to modelling
+              systematic errors over large number of
+              observations.
+            - Also: different stats process for biological
+              systems compared to Higgs boson / LHC discovery.
+              (because every electron is the same)
+            - Biological systems dont follow mathematical
+              principles. Exceptions are far more frequent. They
+              all have systematic behaviours, and some systematic
+              behaviours will _ADD UP_ and not cancel out over
+              a large number of observations.
+            - A fundamental requirement of statistics is if you
+              make a sufficient number of observations, you make
+              errors both ways and eventually they cancel out.
+            - Maybe the observation is less certain but you know
+              approximately what the median is.
+            - but if you systematically overcount in one way,
+              statistics and doing a large number of observations
+              takes you the wrong way
+            - So stats done in a bioinformatics protocol is
+              a separate field of stats
+        - Life Sciences:
+            - biological hypothesis testing, interpretation
+            - we want insight into bio processes
+
+    - Try to understand what we're doing!
+    - View 1:
+        - Run "bowtie" aligner, then run "cutdiff" software
+    - View 2:
+        - Create a spliced alignment file, quantify the
+          abundances by intersecting the alignments with the
+          genomic intervials. Then apply a statistical test to
+          select differentially expressed entries.
+
+
+### 02: Unix
+    - https://www.biostarhandbook.com/introduction-to-unix.html
+    - $MY_VIDEOS/bio/Biostars/02-Unix.mp4
+    - $MY_CODE/bio/biostars/02-unix/process.sh
+
+### 03: Access Data Sources
+    - https://www.biostarhandbook.com/whatisdata.html
+    - https://www.biostarhandbook.com/introduction-to-data-formats.html
+    - $MY_VIDEOS/bio/Biostars/03-Access-Data-Sources.mp4
+    - Two meanings to "Reproducability":
+        - RESULTS: 
+            - replicating results of a new discovery
+        - PROCESS: 
+            - replicating _process_ how a discovery was made
+    - In data analysis we focus on 2nd. How the discovery was
+      made.
+    - NOTE: its not about getting the exact same files... its
+      about getting results that support the same conclusion.
+    - But what if discovery can only be made one way? 
+        - Is burden of proof higher or lower?
+    - You can detect the temperature / season the data was
+      collected. Because higher / lower humidity levels make the
+      data behave a little differently. (So its not crazy to say
+      I could detect if data came out on a Monday)
+    - Ingredients of reproducability:
+        - start with same data
+        - understand what has been done
+
+    - Web based Search at NCBI ad-hoc. Dont use it
+
+    - Use "En-Trays": "Entrez is NCBI’s primary text search and
+      retrieval system that integrates the PubMed database of
+      biomedical literature with 39 other literature and
+      molecular databases including DNA and protein sequence,
+      structure, gene, genome, genetic variation, and gene
+      expression.
+
+    - Locus / Accession / Version
+        - how to refer to a genome in an unambiguous way
+        - anytime you deposit a version for the exact same
+          sequence the version number will go up
+
+    - "genbank" format not great for analysis
+        - "fasta" format better?
+
+    - esearch
+    - efetch
+    - seqkit stat...
+    - throttling error from NCBI (when downloading fasta)
+    - seqret (convert from genbank to fasta format)
+
+### 04 Visualise Genomic Data
+    - https://www.biostarhandbook.com/visualizing-biological-data.html
+    - $MY_VIDEOS/bio/Biostars/04-Visualise-Genomic-Data.mp4
+    - HUMAN EYE has best software pattern abilities
+    - also biological data very complex, interaction with the
+      environment
+    - visualisaitn not just for results, also for checking data
+      is right!
+    - genome browser
+    - glyphs
+    - IGV - Integrated Genome Viewer
+    - reading frame
+    - made his own genome in fasta format in text editor
+    - make index for this new genome: `samtools faidx`
+    - maybe [TABS] are important for fasta files!
+    - GFF format
+    - overlays, annotations
+
+
+### 05 Sequence Ontology
+    - $MY_VIDEOS/bio/Biostars/05-Sequence-Ontology.mp4
+    - "SO": Sequence Ontology (has browser)
+    - "GO": Gene Ontology (gene functions, what it does)
+    - ontology: controlled vocabulary
+    - ontology format: trees or knowledge graphs
+    - tree: every node only has 1 parent
+    - properties trickle down the tree
+    - UTR: untranslated region
+    - stop condon is included in the ontology?
+    - ORF: open reading frame
+
+### 06a Gene Ontology
+    - $MY_VIDEOS/bio/Biostars/06a-Gene-Ontology.mp4
+    - gene "products" (whats interesting for scientists)
+    - Dobzhanksy (meta genomics) couldn't keep up!
+    - how can we keep up with the publishing deluge?
+    - GO is like a knowledge repository
+    - its "functional analysis", how we make sense of the data
+    - We connect a gene to a function
+    - note: the more we learn, the more the concept of a "gene"
+      becomes broader and broader
+    - need to specify function AND organism (bacteria have many
+      different functions we dont have)
+    - 3 (blurry) "trees" in the GO:
+        - WHERE: Cellular component
+        - HOW:   Molecular function
+        - WHAT:  biological function
+    - use "QUICK GO" to visualise
+
+### 06b Functional Analysis
+    - $MY_VIDEOS/bio/Biostars/06b-Functional-Analysis.mp4
+    - zika virus
+    - Bioinformatics is one science you can do from home.
+      Re-examine old data!
+    - automation only takes you so far... then you need to use
+      biology and background information
+    - functional analysis: is there is anything in common with
+      these group of genes   (he picked the 20 "highest" geneas
+      from a paper)
+    - "panther"
+    - he doesnt like traditional statistical analysis for
+      functional analysis. Do the normal stats assumptions hold:
+      independence etc
+    - "g:profiler"
+
+### 07 Sequencing Instruments
+    - $MY_VIDEOS/bio/Biostars/07-Sequencing-Instruments.mp4
+    - short read sequencing
+    - 1st: fragmentation   (variable size)
+    - but there could be a population of cells in the original
+      soup
+    - machine can read only 200 - 300 base pairs  (so if fragment
+      longer than that?)
+    - double stranded fragments broken into single strands
+    - forward strand, reverse strand
+    - 5' end is start: and "read" shown as an arrow
+    - stochastic process, not guaranteed all fragments will be
+      read!
+    - for "i" sequencer, all reads will be the same length.
+    - read length could be same length as fragment
+    - single end sequencing?
+    - or middle of fragment read twice, once from each side
+    - can delete away the reverse orientation fragment
+    - sense and anti-sense (2nd read is usually anti-sense)
+    - the 5' ends in each read are really important... you know
+      that bit is right, although you dont know how far along the
+      fragment the read actually went
+    - COVERAGE:
+        - how many reads cover a particular bit of a fragement?
+          (certain location of the fragement)
+        - coverage: some of read lengths / genome (length?)
+        - raise 50x coverage?  do more reads, or increase read
+          length
+        - probability of base not being covered: e^(-coverage)
+    - "fragmentation is never really random"  ???
+
+
+### 08 Accessing SRA Short Read Archive
+    - $MY_VIDEOS/bio/Biostars/08-Accessing-SRA-Short-Read-Archive.mp4
+    - looked at an ebola paper, but hard to find the source data!
+      But he found a _Bioproject_ "PRJN..." number.
+    - consulting company came up with inefficient data model
+    - Hierarchy: project
+        - sample
+            - experiment
+                - run
+    - `fastq-dump` [project number]  --split-files
+    - eventually he got the "RUN IDS"
+    - in the end, he could extract any sequencing data with just
+      3 bash commands... the key is getting the runids
+
+
+### 09a Evaluate Sequence Quality FastQC
+    - $MY_VIDEOS/bio/Biostars/09a-Evaluate-Sequence-Quality-FastQC.mp4
+    - quality represented by weird symbols: &, @, ^
+    - but quality measurement usually just rough estimate put out
+      by the instrument company over millions of runs
+    - fastqc  (creates fastqc html output)
+    - adapter contamination:
+        - if fragmentation is shorter than the read length, you
+          end up capturing a bit of the artifical "adapter" that
+          was glued onto each frag. So you want to trim back the
+          read, to get rid of the adapter.
+    - multiqc... superimposes multiple fastqc reports on top of
+      each other
+
+### 09b Apply Quality Control
+    - $MY_VIDEOS/bio/Biostars/09b-Apply-Quality-Control.mp4
+    - trimmomatic: a tool to clean up bases
+    - created variable length reads
+    - can also cut out the "adapter"
+
+###  10a 10b Write / Refactor Scripts
+    - $MY_VIDEOS/bio/Biostars/10a-Write-Scripts.mp4
+    - $MY_VIDEOS/bio/Biostars/10b-Refactor-Scripts.mp4
+
+### 11a 11b Reproducibility Fallacy / Recipes
+    - $MY_VIDEOS/bio/Biostars/11a-Reproducibility-Fallacy.mp4
+    - $MY_VIDEOS/bio/Biostars/11b-Bioinformatics-Recipes.mp4
+    - Dont confuse scientific validation and reproducibility
+    - fallacy:
+        -   reproducible results: not cheating
+        -   irreproducible results: cheating
+    - reproducibility is not about correct results; we have
+      another word: VALIDATION
+    - Reproducibility is not binary, its a scale
+    - his definition: your research is reproducible if you can
+      teach someone else to do it.
+    - Biostars recepies https://www.bioinformatics.recipes/
+
+
+### 12a Sequence Alignments
+    - https://www.biostarhandbook.com/introduction-to-alignments.html
+    - $MY_VIDEOS/bio/Biostars/12a-Sequence-Alignments.mp4
+    - goal: generate meaningful alignments
+    - each proposed alignment could be an explanation different
+      biological phenomena:
+        - eg the "TA" was deleted from inside the sequence
+          "GATTACA"
+    - an aligner gives us "graded" alignments depending how we
+      rate (or "scorel") different freatures: eg missing base
+      missing from the end, or missing from the middle
+    - alignment score ("most likely")
+    - `global-align.sh  GATTACA GATCA`
+    - `local-align.sh`
+    - Another use case:
+        - I have a query sequence "GATTACA" and I want to see
+          where in the organism it comes from
+        - it may be found in several different locations in the
+          organisms genome; I need to find the "origin" of the
+          sample in the reference genome
+    - What influences the final result:
+        - the alignment algorithm used
+        - the scoring (numerical value assigned to different
+          arrangements)
+        - The aligner will give you the arrangement that gives
+          the max score / value
+        - "penalty"
+    - The more different the sample sequence is, the more
+      sensitive it becomes to alignment choices. ie if you have
+      an EXACT match then the aligner will return same result
+      each time, it only gets messy when you dont have an exact
+      match
+    - assume "top" alignment is the reference. So you report "3
+      deletions" and an "insertion" relative to the reference.
+    - How does alignment scoring work?  A scoring MATRIX is
+      built...
+        - each matrix represents an _evolutionary distance_
+    - also: aligners dont really penalise gaps at the end
+    - Useful paper for proteins: "Selecting the Right Similarity
+      Scoring matrix"
+    - CIGAR string: another way of representing an alignment
+      match: 4M = 4 matches  . `7M3D7M...`
+        - reports a lot of info in one shot
+        - also "extended" CIGAR string
+
+
+### 12b Run Aligners
+    - https://www.biostarhandbook.com/global-and-local-alignments.html
+    - $MY_VIDEOS/bio/Biostars/12b-Run-Aligners.mp4
+    - "global align" script: the needle program from the EMBOS
+      suite
+    - can change the "gap penalty" (--gapopen)
+    - BUT! You don't really know what the --gapopen parameter
+      should be! It varies from problem to problem
+    - local-align.sh: what is the shortest but highest scoring
+      sub-alignment it can find within the reference....
+    - BLAST Matrices:
+        - use a different matrix: e.g. the BLOSSOM30 matrix
+        - diagonal:  how much you reward matchers. e.g matching
+          "A" and "A"
+        - off-diagonal:  you get the penalties
+    - Biostars provide a sequence alignment Recipe
+        - https://www.bioinformatics.recipes/
+
+### 13a 13b BLAST
+    - https://www.biostarhandbook.com/blast-basic-local-alignment-search-tool.html
+    - $MY_VIDEOS/bio/Biostars/13a-BLAST.mp4
+    - $MY_VIDEOS/bio/Biostars/13b-BLAST-Databases.mp4
+    - Paper written in 1990 (Webb Miller)
+    - local alignment search tool
+    - it's like a search engine, the google of its time. Which
+      sequences seen by others is the most similar to mine
+    - I have a mystery sequence; what is it?
+    - Most times we know if its a virus/bacteria/higher organism
+    - (although BLAST works just as well if we dont know this
+      info)
+    - Build a BLAST database ("build an index")
+    - some databases are pre-built, but you can build your own
+      too
+    - NR: non-redundant, all sequences in genbank?
+    - blastn -> blast for nucleotides
+    - result: it matched the flu virus
+    - can change output format: `-outfmt 7`
+        - tabular form output is good, 6 and 7
+        - can be customised to output four fields:
+        - `-outfmt "6 qacc sacc pident mismatch`
+    - "btop"; handy, gives a CIGAR string
+
+    - BLAST Databases 
+    - is your database "nucleotide" or "protein"
+    - he had a mystery bacteria, put it through blast and it
+      searched 30 million bases in a few seconds
+    - ignore "evalue"  ... not reliable
+    - the "science" is trying to figure out which hits are more
+      trustworthy
+    - examine whats in the blast databases: `blastdbcmd`
+    - format the output of an existing BLAST db `-outfmt 7`
+    - can create your own BLAST database
+
+
+### 14 Short Read Aligners
+    - https://www.biostarhandbook.com/short-read-aligners.html
+    - $MY_VIDEOS/bio/Biostars/14-Short-Read-Aligners.mp4
+    - Sequencing used be a long process... scientist would go out
+      and get a fairly long sequence: 1000 base pairs
+        - blast paradigm: I have one fairly long sequence and
+          I want to see what its similar to
+    - Around 2005, the arrival of the high-throughput short-read
+      technology changed this picture
+    - could CREATE 100s of millions of reads in a single
+      experimental run: but only 50 base pairs per READ
+    - then you have almost the reverse of BLAST: we've many many
+      sequences from ONE genome and want to look them up onto the
+      one where they go...
+    - each read is like a "measurement". and we ignore reads that
+      don't align.
+    - amazing performance: well optimised aligner will match
+      10,000 sequences per second against 3 billion bases of
+      human genome
+    - difference between "mapping" and "alignment"?
+        - 90% of the time it means the same even though theres
+          a technical difference
+        - MAPPING: 
+            - takes a sequence and knows it covers the genome
+              from eg position 100 to 200. "I know which region
+              it comes from"
+        - ALIGNMENT: 
+            - I believe this sequence has eg 2 insertions and
+              1 deletion when we place it next to a genome.
+        - you could have a right "alignment" and a wrong
+          "mapping".
+        - MAPPING: location in genome
+        - ALIGNMENT: proper arragnement of bases in that region
+        - we want the aligner to do both (but its not guaranteed)
+    - errors: the data can have errors, how the aligner handles
+      this is important.
+    - he did a demo with the "bwa" aligner. Only need "mem" and
+      "index". The other commandline paraemteres are historical.
+    - All SAM files should be sorted.  They are uncompressed
+      binary files.
+
+### 15a SAM Sequence Alignment Maps
+    - https://www.biostarhandbook.com/the-sambamcram-formats.html
+    - $MY_VIDEOS/bio/Biostars/15a-SAM-Sequence-Alignment-Maps.mp4
+
+### 15b BAM files
+    - https://www.biostarhandbook.com/working-with-bam-files.html
+    - $MY_VIDEOS/bio/Biostars/15b-BAM-files.mp4
+
+### 16a Simulate Sequence Data
+    - https://www.biostarhandbook.com/simulate.html
+    - https://www.biostarhandbook.com/an-introduction-to-genomic-variation.html
+    - $MY_VIDEOS/bio/Biostars/16a-Simulate-Sequence-Data.mp4
+    - Lets make our own data and see if we can detect a chromsome
+      that we know is in it...
+
+### 16b Large Scale Variation
+    - https://www.biostarhandbook.com/visualizing-large-scale-genomic-variations.html
+    - $MY_VIDEOS/bio/Biostars/16b-Large-Scale-Variation.mp4
+
+### 17a Variant Calling
+    - https://www.biostarhandbook.com/introduction-to-variant-calling.html
+    - $MY_VIDEOS/bio/Biostars/17a-Variant-Calling.mp4
+    - Alignment "Process": 
+        - 1. Sequencing DATA -> FASTQ format -> source of
+          sequences  
+        - 2. Quality control -> new data -> adapters removed,
+          trimmed back low quality
+        - 3. Alignment (BAM) -> reference? BWA, bowtie2? 
+        - 4. Genomic Variation: VCF
+            - We'll make a new file  
+            - will store our variations of our measurement
+              against another reference genome  
+            - some variants will be right, some not right  
+            - must filter, find out from VCF if it contains the
+              answer we want  
+
+### 17b VCF format
+    - https://www.biostarhandbook.com/vcf.html
+    - $MY_VIDEOS/bio/Biostars/17b-VCF-format.mp4
+    - People didnt understand how much the genome varied. 
+    - The VCF format is very complicated!
+
+    - ATGATGC
+    -    |
+    - ATGGATGC
+
+    - Unwieldy file structure
+        - POS  REF  ALT
+        - 4    C    G    0/0   0/1   1/1
+
+### 18a RNA Seq intro
+    - https://www.biostarhandbook.com/introduction-to-rna-seq-analysis.html
+    - $MY_VIDEOS/bio/Biostars/18a-RNA-Seq-intro.mp4
+    - Differential expression: e.g. more occurrences of reads
+      over gene "A" before and after a "cold shock"
+
+### 18b RNA Seq example
+    - https://www.biostarhandbook.com/understand-example-data.html
+    - $MY_VIDEOS/bio/Biostars/18b-RNA-Seq-example.mp4
+
+### Links
+    - Biostars handbook                  https://www.biostarhandbook.com/user/login/?next=/user/profile/
+    - Data Analysis Course               https://www.biostarhandbook.com/edu/course/4/
+    - Book Scripting book                https://www.biostarhandbook.com/books/scripting/index.html
+    - Book RNA seq                       https://www.biostarhandbook.com/books/rnaseq/index.html
+    - Biostars recepies                  https://www.bioinformatics.recipes/
+    - github                             https://github.com/biostars
+    - Learn Bioinformatics in 100 hrs    https://www.biostarhandbook.com/edu/course/1/
+    - Learn Bioinformatics the right way https://www.biostarhandbook.com/edu/course/5/
+    - "Bio" general comand tool          https://www.bioinfo.help/index.html
+    

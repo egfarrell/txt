@@ -1,0 +1,262 @@
+- leostat / HugoNecurity
+- https://github.com/leostat/HugoNecurity/blob/master/content/netsec/2018-08-30-Exams-and-Training.md
+
+- Today we explore training and certification options in infosec.
+- Exams are essential to establish a baseline of knowledge and
+  skills. While not perfect, major boards (like SANS, CREST,
+  OffSec) each have strengths and weaknesses. I've done CPSA,
+  CRT, CCT-Web App, OSCP, and CISSP—so I admit my views are
+  biased.
+- Exams should be a minimum standard, not the measure of ability.
+  They're vital early in one’s career but less so over time. I'll
+  update this post as I find new providers.
+
+### Exams vs Experience
+
+- A LinkedIn post caught my attention—someone argued experience
+  should outweigh certifications. They’d built similar labs,
+  bypassed AVs, taught themselves mobile testing, and wanted
+  a chance to prove themselves.
+
+- I see two problems with this:
+    1. Time: Exams like OSCP or CRT can be completed in a few
+    days or over a weekend. CHECK status (via CREST) can help win
+    contracts—well worth the effort.
+    2. Recreating labs: If someone hasn't taken OSCP or CRT, how
+    are they replicating the labs? Either they’ve seen leaked
+    content (NDA violation) or are guessing, which undermines the
+    credibility of the exams.
+
+- This isn’t a critique of the individual's skills—they clearly
+  have strong technical ability. But selling yourself well
+  matters too.
+
+### CREST
+
+- https://www.crest-approved.org/
+- CREST offers 15 exams across infosec roles, from beginner to
+  advanced. Exams include a multiple-choice portion (closed-book)
+  and a hands-on practical (open-book, using your own setup).
+  Certifications are valid for \~3 years; renewal involves
+  progressing to the next level.
+- CREST offers no official training—just reading lists and
+  syllabi. Students can access some training via Immersive Labs.
+  CRT grants CHECK team member status; CCT qualifies you for team
+  leader.
+
+    - **Pros**
+    * Strong question coverage and practical challenges.
+    * No tooling restrictions—you can use your own setup.
+    * Retaking every 3 years helps ensure testers stay up to
+      date.
+
+    **Cons**
+    * Allegations of leaked exam content damage credibility.
+    * The closed exam network can be limiting—missing tools may
+      block progress. I resolved this with a custom Kali ISO, but
+      that doesn’t cover everything.
+    * CREST doesn’t provide comprehensive learning materials.
+    * They could contribute to OWASP-style guidance or open-source testing content.
+
+### OSCP (Offensive Security)
+
+- OffSec certifications bundle labs and videos with practical
+  exams. They’re the creators of Kali Linux and great for
+  newcomers.
+
+- Progression typically goes OSCP → OSCE/OSWP → OSEE/OSWE.
+- I’ve done the OSCP, so won’t compare higher levels.
+
+- However, OffSec certs aren’t NCSC-accredited and don’t qualify
+  for CHECK status—this limits their value in the UK government
+  sector.
+
+* OSCP guides candidates through instructional videos and reading
+  materials that cover common attack methodologies. Afterward,
+  they move on to hands-on lab work using a provided toolkit. The
+  process includes stages such as vulnerability scanning, basic
+  web application testing, infrastructure exploitation, stack
+  buffer overflows, and foundational report writing.
+
+* The labs contain around 50 machines to attack, and the exam
+  consists of 5 machines with varying difficulty. Each box
+  includes two tokens and requires privilege escalation to root
+  or equivalent. The lab network is segmented, requiring pivoting
+  and understanding interdependencies between hosts.
+
+* Later exams in the series build on this, adding advanced
+  overflows, anti-malware evasion, and bypassing security
+  controls.
+
+### *The Good*
+
+* Compared to CREST, OSCP is a clear winner for students. It
+  includes videos, follow-along labs, and forums/IRC for support.
+  It’s hands-on, structured around a satisfying loop of exploit
+  → privilege escalation → repeat.
+
+* With one year of CREST equivalency now available in the UK,
+  OSCP becomes even more attractive.
+
+* The exam challenges you with numerous boxes, many without
+  walkthroughs. Hints are minimal, requiring creative thinking.
+
+* Good mix of Windows and Linux machines. Anyone who’s worked
+  through the labs and passed the exam should be reasonably
+  capable in infrastructure testing.
+
+* Bonus tip: The exam is relatively cheap to retake. It's worth
+  attempting at the end of your lab time, even if you're unsure.
+  It’s valuable experience and you might just pass on the first
+  try.
+
+### *The Bad*
+
+* Content needs updating—some vulnerabilities are over-emphasized
+  while others are underrepresented. Some boxes still reference
+  outdated network elements.
+
+* Example: the provided Kali image was still based on Kali 1,
+  despite being long out of date during the Kali rolling release
+  cycle.
+
+* The flag-based system and box resets encourage brute-force,
+  "spray and pray" tactics, which aren’t good habits for
+  real-world engagements.
+
+* There's limited emphasis on risk assessment—only the bugs that
+  lead to code execution get points, discouraging comprehensive
+  vulnerability discovery.
+
+* Better would be scoring for identifying *all* exploitable
+  issues on a host, not just those tied to flags.
+
+### TIGER
+
+- https://www.tigerscheme.org/
+
+* Tiger Scheme is a legacy exam board similar to CREST, with
+  exams featuring multiple choice, long-form, and practical
+  components. Now defunct.
+
+### SANS
+
+* https://www.sans.org/
+
+* SANS courses are intensive, week-long, instructor-led trainings
+  followed by multiple choice exams. Content comes straight from
+  the course guides.
+
+* While some courses are good, the high cost (\~\$8,000) often
+  outweighs the value. That money might be better spent on OSCP,
+  books, or attending conferences like DEF CON.
+
+* Generally not recommended for students until you're ready for
+  the 600 or 700 series. Even if someone else pays, think about
+  opportunity cost.
+
+### ISC2 CISSP
+
+* https://www.isc2.org/
+
+* ISC2 offers certifications like CISSP, often described as "a
+  mile wide, an inch deep." These aren't ideal for entry-level
+  roles.
+
+* The CISSP covers 8 domains: risk, asset security, identity,
+  security testing, architecture, network, operations, and
+  software security.
+
+* Training options include classroom instruction or self-study
+  using books like *Shon Harris’ All-in-One* and *11th Hour*
+  guides.
+
+* Mainly useful for clearing HR filters later in your career—not
+  an essential early certification.
+
+
+### CEH (Certified Ethical Hacker)
+
+* https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/
+
+* CEH is widely criticized and can be seen as a negative on some
+  job applications.
+
+* It’s largely about memorizing a marketing-heavy tool list, then
+  dumping that into a short multiple-choice exam.
+
+* It’s cheap and might offer a basic intro for total beginners,
+  but that’s about it.
+
+* Some UK universities now include it in undergrad modules, which
+  reflects its shallow depth.
+
+### CompTIA
+
+* https://www.comptia.org/certifications
+
+* CompTIA certifications (Security+, Network+, etc.) are
+  entry-level, multiple-choice exams.
+
+* Like CEH, they’re useful for newcomers but offer limited
+  hands-on value. Best seen as stepping stones.
+
+
+### Immersive Labs
+
+* https://www.immersivelabs.com/
+
+* A browser-based platform delivering RDP access to cloud-hosted
+  boxes. Unique in that each student gets their own instance,
+  preventing interference.
+
+* Covers hundreds of labs across topics like OSINT, risk, and
+  vulnerabilities. Free for .ac.uk emails.
+
+* Labs include an info page, a list of questions, and a VM or
+  file bundle. Gamified with points and leaderboards.
+
+* Feels like university labs without the lectures. Great idea,
+  but rough execution:
+
+  * No persistence between labs (settings/history lost)
+  * Awful web client (poor keyboard shortcut and clipboard support)
+  * Question formatting issues can break progress
+  * No hint system if you're stuck
+
+* Still, as a free student resource, it’s worth trying.
+
+
+### Project Ares
+
+* https://circadence.com/project-ares/
+
+* Similar to Immersive Labs, with browser access and gamified
+  challenges. Uses Flash (which is a concern).
+
+* Short trial use suggested less content and more fluff (e.g.,
+  flashcards over technical depth).
+
+### PentesterLab
+
+* https://pentesterlab.com/
+
+* Focuses on web app testing. Offers ISO-based labs and videos.
+  Free and paid tiers (paid: \$20/month, with student discounts).
+
+* The free tier is limited but useful. Heard good things about
+  the paid version if you progress quickly.
+
+
+### VulnHub / Hack The Box
+
+* [HackTheBox](https://www.hackthebox.eu/)
+* [VulnHub](https://www.vulnhub.com/)
+
+* Both are CTF-style platforms. VulnHub offers downloadable
+  community-made vulnerable VMs, while HTB provides a VPN-based
+  lab environment.
+
+* HTB closely mirrors OSCP-style labs. Both are excellent for
+  long-term skills development once you're comfortable with basic
+  exploitation.

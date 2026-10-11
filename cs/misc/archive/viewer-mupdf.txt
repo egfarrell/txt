@@ -1,0 +1,19 @@
+### mupdf keybindings
+    -r resolution Changes initial zoom level, specified as the dpi resolution.  Default is 72.
+    - L, R   Rotate page left (clockwise) or right (counter-clockwise).
+    - h,j,k,l    Scroll page left, down, up, or right.
+    - +, -      Zoom in or out.
+    - w         Shrinkwrap window to fit the page.
+    - r         Reload file.
+    - . pgdn    right space Go to the next page
+    - , pgup    left b Go to the previous page
+    - <, >      Skip back/forth 10 pages at a time.
+    - m         Mark page for snap back.
+    - t         Pop back to the latest mark.
+    - [0-9]m    Save the current page number in the numbered register.
+    - [0-9]t    Go to the page saved in the numbered register.
+    - 123g      Go to page 123.
+    - /         Search for text.
+    - n, N      Find the next/previous search result.
+    - c         Toggle between color and grayscale rendering.
+

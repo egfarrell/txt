@@ -1,0 +1,126 @@
+# Info "UDH"
+
+### TDLU: smallest unit
+    - "Terminal-duct lobular Units"
+    - smallest structure (Hystological)
+    - Globule "grapes"
+    - ducts
+    - collecting duct
+    - 2mm
+    - normal
+
+- These terms appear in the histopathological results
+
+### - HELU
+    - Hyperplastic Enlarged Lobular Unit
+    - normal for lactating
+    - can vary with hormones
+    - two possibilities:
+        - NUMBER of cells (hyperplasia) <--- female only
+        - enlargement (hypertophia): not in breast, in prostate
+    - can develop:
+        - microcysts
+        - `UDH`
+            - ImageID: 8864
+            - Usual Ductal Hyperplasia
+            - no atypical cells
+            - combination: some disease
+            - benign mammary dysplasia
+            - Result: The breast structure with fibrocystic
+              changes, "apokryowa" metaplasia,
+              micro-calcification, focal changes with UDH
+        - `ADH`
+            - Atypical Ductal Hyperplasia
+            - strange shape (multiple)
+            - can have big nucleus
+            - (blood vessels: plasma cell red)
+    - DCIS
+        - Ductal Carcinoma in situ
+        - in situ: inside lobule or duct
+        - important: 'CANCER' = `atypical` cells
+            - but not neccessarily malignant
+        - even larger enlargement
+        - more numbers of atypical, and diameter of ductal lobule
+    - IDC
+        - _invasive_ Ductal Carcinoma
+        - invasive = 'malignant'
+        - broken out 
+
+
+### neoadjuvant
+    - Masters: neoadjuvant (before surgery)
+        - chemo: reduce tumour size
+        - chemo: reduce metastasis
+        - then surgery (masectomy) (or breast conserving surgery)
+        - sometimes metastasis to the chest muscle => neoadjuvant
+        - US images were saved
+            - analyse data, predict when tumour responds to chemo
+            - compare before / after
+            - trad preds 0.885
+            - preds NN: 0.83
+            - reference image: features
+
+### - CLASSIFCATION:
+        - 1. also: do biopsy or not?
+        - 2. 'type' label
+        - 3. BIRADS category? no
+            - aside: BIRADS cat is graded differently e.g. 3, 4a, 4b
+            - subjective, change mind
+            - intra-observer, inter-observer changes in decision
+    - how many cases > `4a` where model says MALIGNANT
+    - how many cases > `4a` where model says BENIGN <--- bad!!
+        - every doctor has their own number
+        - Imageid: 5213
+        - -------------
+            - number `36` (older case)
+            - image saved on ultrasound machine (saved separately
+              from video)
+            - only 1 image and 1 video
+
+            - IDC
+            - `G2`: malignancy grading
+                - e.g. `G1` mild
+                - e.g. `G2` medium  malignant
+                - e.g. `G3` highly malignant
+
+
+### General points
+    - 3 biopsy types
+        - "fine needle"
+            - not recommended
+            - "cyto"pathology = deals with cells
+            - can say if cancer cells, but not which type
+        - "core needle"
+            - recommended
+            - says which structure (`IDC` etc)
+            - images we looked at today
+        - 3. or from surgery
+            - after treatment
+            - do Histopathological survey
+    - 'hysto' = structure
+    - birads `4a`: should be biopsy!!!
+    - models: some want to predict biopsy results
+        - model should support the doctors
+        - --------------------------------
+        - key: send for biopsy or not?????
+        - --------------------------------
+    - BIRADS: only image, probability of malignancy, only decides
+      about biopsy or follow-up
+        - cat 5:
+            - remove tumour, doesn't depend on biopsy
+            - Doctors don't like to give this cateogry
+        - (mamotomic biopsy)
+    - both:
+        - fibrous tissue: one type
+        - glandular tissue
+        - combined
+    - "tumour" not neccesarily cancer! in any structure!
+    - model should be giving differnt variations
+    - "malignant": could develop further and cause `metastasis`
+    - CARCINOMA can be benign!!!!! LCIS is benign
+    - white: normal fat tissue
+    - pink: fibruous tissue general:
+        - 7 or 8 main ducts: divides breast into 7 or 8 parts
+          (segments). Each segment has 1 duct.
+    - cancer:
+        - all start either in a duct or the `TDLU`

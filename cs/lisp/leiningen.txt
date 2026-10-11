@@ -1,0 +1,28 @@
+### Leiningen: Clojure Project management
+
+- download build manager https://leiningen.org/
+
+- The heart of every Leiningen project is `project.clj` at the
+  top level of the projects directory.
+
+- run tests: `lein midje`
+
+- create empty project 'tutorial':
+    - lein new app tutorial
+        - note: Leiningen has different templates: 
+        - e.g. `app` is a template
+
+- special method `-main`: 
+    - must include this method to execute the code from the
+      command line
+
+- `target` folder: 
+    - compilation results
+
+- clojure code compiled into JAVA
+
+- `aot`: ahead of time, compile JAVA classes
+
+- handle both clj and JAVA source code 
+    - (stick them in separate folders)
+    - $MY_IMAGES/cs/clojure/mix-java-clj-code.jpg

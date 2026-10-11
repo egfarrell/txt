@@ -1,0 +1,31 @@
+puTTY
+
+### get 256 colours
+    Settings -> Connection > Data > Terminal-type string to:
+        xterm-256color
+
+### Extra Note:
+        I recommend "putty-256color" terminal type
+        instead of "xterm-256color", if the system you're
+        logging in to includes the appropriate terminfo
+        file (or if you have permissions to install the
+        terminfo file there). The putty/putty-256color
+        TERM has better support for some keys (e.g.
+        F1-F4).
+
+
+### x11 forwarding
+    Step 01:
+        Connection -> SSH -> Auth -> X11
+            [tick] Enable X11 forwarding
+    Step 02:
+        need a windows X11 server: xming (portable)
+
+### funny characters with tmux, tree etc. 
+    make sure translation -> remote character set -> UTF-8
+
+### consolas
+    make sure you're using the consolas version 5.22 (Windows 7 version)
+    because Vista version of consolas (5.00) doesnt have line drawing
+    characters. (If you can't get the latest consolas then use Lucida
+    Console instead)

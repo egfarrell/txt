@@ -1,0 +1,85 @@
+# Note
+    - $MY_NOTES/physics/QM/Age-Entanglement-Louisa-Gilder.txt
+
+    - When even an influence traveling at the speed of light
+      will not be able to connect two events, then they are
+      “spacelike separated”—the closest thing relativity allows
+      to “`SIMULTANEOUS`”
+    - Interesting!
+
+
+# Explanation
+
+- The book’s line is gesturing at a softer idea: not that
+  spacelike events are simultaneous, but that they're the only
+  kind of pair of events for which simultaneity can be defined at
+  all — in some inertial frame.
+
+- Let me unwrap it without turning it into a jungle of indices.
+
+### 1. Three kinds of separation
+
+- Given two events A and B, the spacetime interval is
+    - `s² = c² Δt² − Δx² − Δy² − Δz²`
+
+- `s² > 0` → timelike
+- `s² = 0` → lightlike
+- `s² < 0` → spacelike
+
+- You already know the causal story: timelike and lightlike pairs
+  can influence each other; spacelike pairs cannot.
+
+### 2. The relativity-of-simultaneity trick
+
+- Here’s the key: only spacelike-separated events can be made
+  simultaneous by choosing an appropriate inertial frame.
+
+- For timelike or lightlike pairs, Δt = 0 is impossible in any
+  frame. You can Lorentz-transform all you like; the sign of the
+  interval has you locked in.
+
+- But if `s² < 0`, there exists some inertial frame in which `Δt′ = 0`.
+
+- This frame “tilts” your hyperplanes of simultaneity just right
+  so that `A` and `B` land on the same `t′`-value.
+
+So:
+- spacelike → simultaneity possible in at least one frame
+- timelike  → simultaneity impossible in every frame
+- lightlike → simultaneity impossible and `Δt′` always `±|Δx′|/c`
+
+- That’s all the book meant by “the closest thing relativity allows to simultaneous.”
+
+- Not simultaneous in absolute terms — relativity forbids that
+  notion — but eligible for simultaneity in some coordinate
+  system.
+
+### 3. But why “closest thing”?
+
+- Because, geometrically, spacelike separation means the two
+  events are both:
+    - outside each other’s light cones
+    - capable of being placed on the same spacelike slice by
+      a suitable choice of frame
+    - unable to causally influence one another
+
+- This frame-dependent simultaneity is the last surviving
+  fragment of what “simultaneous” used to mean before Einstein
+  reworked time into a more flexible fabric.
+
+### 4. And your “nowhen, nowhere” feeling?
+
+- That intuition is good.
+- Spacelike-separated events are radically “elsewhere” — they
+  cannot communicate, correlate causally, or agree on temporal
+  order. In many frames A happens before B; in others B before A;
+  in some A and B share the same time coordinate.
+
+- That very freedom of ordering is what makes the “simultaneous
+  in some frame” property possible.
+
+### 5. One-sentence takeaway
+
+- Spacelike-separated events aren’t simultaneous, but they are
+  the only events that can be made simultaneous in a suitable
+  inertial frame — hence the book’s poetic phrasing.

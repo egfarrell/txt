@@ -1,0 +1,12 @@
+
+sage kill notebook
+    kill -INT `cat /home/ef/.sage/sage_notebook.sagenb/twistd.pid `
+
+
+sage notebook tricks
+    - tiny MCE      toolbar for editing cells?
+    - graph_editor
+    - Ctrl+0        close brackets
+    - Ctrl+??       comment, uncomment code
+    - html(??)      creates popup windows etc i.e. creates DIV object
+    - matrixeditor  javascript in the browser

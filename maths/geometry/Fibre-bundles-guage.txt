@@ -1,0 +1,112 @@
+k## Youtube
+    - A Quick Intro to Fiber Bundles (Hopf Fibration) https://www.youtube.com/watch?v=dkyvZo68IoM
+    - $MY_IMAGES/maths/geometry/fibre-bundles-1.jpg
+    - $MY_IMAGES/physics/QM/fiber-bundle-glass.jpg
+    - See also: $MY_NOTES/physics/Guage-theory.txt
+
+### Background
+    - Gauge fields:
+        - are mathematical structures that unify physical forces
+          and control how QM states transform.
+        - In 1954 Yang and Mills applied the gauge idea to the
+          strong nuclear force. Only later did physicists realize
+          these fields were mathematically equivalent to
+          connections on fiber bundles.
+        - So: Gauge fields ↔ Fiber-bundle connections.
+        - See also: $MY_NOTES/physics/Guage-theory.txt
+
+    - Note: Yang and Mills didn't originally formulate their
+      gauge theory using fiber bundles. Their 1954 paper was
+      written in the standard language of physics at the time.
+
+    - Fields were `functions` defined over spacetime
+    - Gauge transformations were `operations` that changed these
+      fields in an internal symmetry space
+    - Covariant derivatives and field strengths were introduced
+      by analogy with EM
+
+    - The geometric interpretation — that a gauge field is
+      a connection on a principal fiber bundle — came later,
+      during the late 1960s and early 1970s, mainly thanks to
+      interaction with the mathematical community.
+
+### Timeline:
+    - 1954: Yang & Mills
+        - Gauge fields = generalization of EM gauge invariance
+        - No fiber bundles
+        - No talk of holonomy, curvature 2-forms, etc.
+
+    - 1960s–70s: Geometric reinterpretation developed
+        - Mathematicians like Ehresmann and H. Cartan had the
+          fiber-bundle machinery
+        - Physicists (e.g., Wu & Yang) noticed the match:
+        - gauge potentials `A_mu`    correspond  to connections
+        - field strength   `F_mu nu` corresponds to curvature
+
+    - So:
+        - Gauge fields were invented first.
+        - Fiber bundles arrived later as their natural habitat.
+
+    - Delightful side effect: Suddenly many deep quantum effects
+      became geometrically obvious: Aharonov–Bohm, monopoles,
+      instantons.
+
+    - Gauge theory without bundles works computationally.
+    - Gauge theory with bundles reveals the structure of the
+      universe.
+    - And that structure has twists, coverings, and curvature in
+      internal space — as real as the curvature of spacetime in
+      GR.
+
+### Peter Woit timeline
+    - https://www.math.columbia.edu/~woit/wordpress/?p=15320
+    - In 1966 Yang left Princeton for Stony Brook, where he
+      founded the Institute for Theoretical Physics (ITP).
+    - The ITP shared a building with the math department, which
+      had become a world center for geometry starting with the
+      arrival of Jim Simons in 1968. It’s fascinating to hear
+      (see here) the account by Simons and Yang of their attempts
+      to understand each other’s language and their slow
+      realization that the gauge fields of Yang-Mills theory were
+      the geometer’s connections on a PRINCIPAL FIBER BUNDLE.
+      Yang wrote a paper with Wu giving what became known as the
+      `“Wu-Yang” dictionary` relating the two subjects.
+    - Singer learned of this when visiting Stony Brook, then
+      brought the news to Atiyah in Oxford, starting an explosive
+      development during the late 1970s.
+
+
+### Marbuger: phase and the fibre bundle
+- $MY_NOTES/physics/QM/Constructing-reality-marburger.txt
+
+- Quantum phase is like a dial attached to each point in space.
+
+- If there's no EM field present, the zero marks on the dials can
+  be arranged so all the pointers indicate the same angle.
+
+- But if there's a field present, try as you might, you can't get
+  them all to read the same, just like you can't trace a straight
+  line on a globe.
+
+- The field, or rather its vector potential, provides an
+  intrinsic connection among the set of dial pointers at
+  different points in space-time.
+
+- Geometers call this kind of structure a _FIBER BUNDLE_, each
+  dial representing a fiber, and the entire set of them over all
+  the space-time points comprising the bundle.
+
+- What physicists call the vector potential, mathematicians call
+  the connection over the bundle.
+
+- The geometry of our world, in the vision of Weyl–Schrödinger
+  (thus far in our story), is therefore that of a 1D fiber bundle
+  over the 4D manifold of space-time.
+
+- Electromagnetic forces and gravity are "explained" as
+  distortions in this geometry associated with the distribution
+  of energy, mass, and electricity throughout the universe.
+
+
+### XYLYXYLYX
+    - $MY_NOTES/physics/courses/XYLYXYLYX/What-are-Manifolds/12-Fiber-Bundles-Formal-Description.txt

@@ -1,0 +1,174 @@
+- $MY_BOOKS/Physics/Misc/cropper-great-physicists.pdf
+
+- Illustrations of ignotum per ignotius
+    - (the unknown through the more un-known)
+
+- The four vectors `B`, `E`, `H`, and `J` and their equations,
+  unified the phenomena observed by Faraday, Ampere, and Oersted
+  in a concise mathematical form.
+
+- The fifth vector, `A`, was pure Maxwellian speculation.
+    - It stood for what Faraday originally called the
+      “electrotonic state” the special condition created in
+      a wire by a magnet, such that when the wire was moved an
+      electric current was induced.
+
+- Faraday had changed his mind, however, and eventually abandoned
+  the idea of the electrotonic condition.
+    - Maxwell resurrected the concept by introducing his vector
+      `A`, which he called the "electrotonic intensity," and
+      showing in one of his equations that the electric field
+      vector `E` was equal to the rate of change of `A`;
+    - that equation was a direct statement of Faraday’s law of
+      magnetic induction.
+        - (Thomas K Simpson writs about this electrotonic state too...)
+        - $MY_NOTES/physics/EM/EM-tips.txt
+        - See also: KEY 4: 'MOMENTUM' OF THE MAGNETIC FIELD
+        - $MY_NOTES/physics/spacetime/Einstein-Before-After.txt
+
+
+- The further history of Maxwell’s seemingly innocent vector `A`
+  is interesting.
+    - Maxwell changed its name twice, from the original
+      "electrotonic intensity" to "electromagnetic momentum," and
+      then to "vector potential."
+    - Maxwell’s immediate successors found `A` offensive and
+      wrote it out of the equations.
+    - The next generation brought it back, and in 1959 David Bohm
+      and Yakir Aharanov gave the elusive `A` a secure place in
+      EM theory by showing that without it, the field is not fully
+      specified.
+
+- This was Faraday, nearing the end of his career, communicating
+  with Maxwell, age twenty-six and in his second year at
+  Aberdeen. Maxwell’s paper was lengthy and full of equations,
+  and Faraday understood little of the mathematical language.
+
+- Yet he divined Maxwell’s message, and was reminded of his own
+  conjecture, that magnetic (and presumably electric) effects
+  were transmitted in a finite time, not instantaneously.
+    - That time was indeed very short, and Faraday’s experiments
+      were not successful.
+    - But for Maxwell, the theorist, here was a grand revelation.
+    - "The idea of the time of magnetic action ... seems to have
+      struck Maxwell like a bolt out of the blue," writes Martin
+      Goldman, a Maxwell biographer.
+    - "If electromagnetic effects were not instantaneous that
+      would be marvelous ammunition for lines of force.
+        - For what could a _force in transit_ be, having left its
+          source but not yet arrived at its target, if not some
+          sort of _traveling fluctuation_ along the lines of
+          force?"
+        - (i.e. EM Waves)
+
+- Like most revolutionary developments in science, Maxwell’s
+  concept of electromagnetic waves was slow to catch on.
+
+- Eventually, two decades after Maxwell’s "Physical Lines of
+  Force" paper, experimentalists began to think about how to
+  generate, detect, and use electromagnetic waves.
+
+- At first, they tried to make "electromagnetic light," and that
+  effort failed. Then they looked for electromagnetic waves of
+  a greatly different kind and succeeded spectacularly.
+
+- The hero was Heinrich Hertz, the Mozart of physics, a man who
+  had immense talent and a short life.
+
+- Maxwell extracted another, more subtle, conclusion from the
+  elasticity property of his ether model.
+    - When the vortices were stretched or compressed in
+      a changing electric field, the particles of electricity
+      between the vortices were displaced, and their movement
+      constituted what Maxwell called a "displacement current."
+    - Like any other current, it could generate a magnetic field
+      a la Oersted, and Maxwell incorporated this possibility
+      into his equations.
+    - With that addition, Maxwell’s list of equations, although
+      different in form, told the same mathematical story as the
+      "Maxwell equations" found in modern textbooks.
+
+- ... with the space in the neighborhood of the electric or
+  magnetic bodies, and it may be called a Dynamical theory,
+  because it assumes that in space there is _matter_ in motion,
+  by which the observed electromagnetic phenomena are produced."
+
+- Maxwell said:
+    - "There is no more powerful method for introducing knowledge
+      into the mind than of presenting it in as many _different
+      ways_ as we can.
+    - When the ideas enter through different gateways and effect
+      a junction in the citadel of the mind, the position they
+      occupy becomes impregnable."
+
+- To calculate curvatures, Riemann used the mathematical tool
+  that Minkowski would borrow sixty years later, the squared line
+  element `ds^2`.
+- As mathematicians will, Riemann imagined a completely general
+  version of the line element equation involving any number of
+  dimensions and including all possible quadratic terms.
+    - Consider, for example, two-dimensional Euclidean geometry
+      with the line element...
+
+- In Riemann’s scheme, we expand this to include terms in the
+  other two mathematically possible quadratic factors, `dxdy` and
+  `dydx`:
+    - ds^2 = (1)dx^2 + (0)dxdy + (0)dydx + (1)dy^2
+    - aside: this is the metric:
+        g = [1, 0]
+            [0, 1]
+
+- The added terms are multiplied by zero coefﬁcients because they
+  do not actually appear in the `ds^2` equation; the other two
+  terms have coefﬁcients of one, as in equation (15).
+
+- All we need to know about 2D Euclidean geometry in Riemann’s
+  analysis is the four coefﬁcients in parentheses in the last
+  equation.
+
+
+- We collect them in a 2×2 table represented by g:
+
+```
+g = [[1, 0],
+     [0, 1]]
+```
+called a "metric tensor."
+
+- In three-dimensional Euclidean space the line element is:
+```
+ds^2 = dx^2 + dy^2 + dz^2
+```
+
+* The tensor `G` is Einstein’s adaptation of Riemann’s curvature
+  calculation; it depends entirely on the relevant spacetime
+  metric tensor `g` and its derivatives.
+
+
+- The tensor `T` supplies all the necessary information on the
+  gravitation source by specifying the energy and matter
+  distribution.
+- Thus the field equation (16) says geometry on the left side and
+  gravity on the right.
+- Propose a gravitation source (`T`) and the equation gives the
+  Einstein tensor `G`, and ultimately the geometry in terms of the
+  spacetime metric tensor `g`.
+
+- Gravity determines geometry in Einstein’s field equations, and
+  not surprisingly, geometry determines motion.
+
+- Einstein continued with his physical argument by deriving
+  a generalized equation of motion whose principal mathematical
+  ingredient is the indispensable spacetime metric tensor `g`.
+
+- Thus the sequence of the entire calculation is:
+    - Gravitation source -> Curvature -> Metric tensor `g` -> EOM
+
+- The gravitation source is expressed by `T`, the curvature by `G`,
+  the metric tensor is extracted from `G`, and the equation of
+  motion is defined by `g`.
+
+- In a nutshell, this is one retelling of Einstein’s GR...
+    - Notice that NO FORCES are mentioned: geometry is the
+      INTERMEDIARY between gravitation and motion.
+    - The title of the story is "Physics As Geometry."

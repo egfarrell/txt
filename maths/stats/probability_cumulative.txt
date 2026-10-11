@@ -1,0 +1,22 @@
+### cumulative probability
+    - If you want the probability of something happening,
+      you have to integrate the formula for the normal
+      distribution:
+
+    - But doing the _integral is hard_ sometimes, so we use
+      the cumulative distribution function.
+
+    - The Cumulative distribution is probability from -∞ up
+      to a certain number.
+
+    - E.g. To calculate the probability of your value being
+      between -1 and 1:
+
+    1. Get the cumulative probability from
+        -∞ probability up to _1_
+
+    2. and subtract the cumulative probability from
+        -∞ probability up to _-1_
+
+    - The _difference_ between the two values gives your
+      desired probability.

@@ -1,0 +1,410 @@
+Princeton University MOOC, Andrew Conway
+
+# Lesson 1
+    * Study v Experiment
+    * patterns of observations
+    * Quasi-independent variables
+
+# randomised experiments
+    * (Aug 2016 - look at Udacity Desc Stats course for more
+      info on what statistical "experiments" are!)
+    * something is manipulated
+    * allow strongest claims to be made about causality
+    * "why stuff happens" e.g. (polio vaccine) (working
+      memory training)
+
+# experiments - concepts
+    - random & representative sampling
+    - independent & dependent variables
+    - double-blind experiments
+    - confounds (hidden variable, lurking variable)
+    - causality
+
+# confounds
+    - is an extraneous variable in a statistical model that
+      correlates (positively or negatively) with both the
+      _dependent_ variable and the _independent_ variable.
+    - Such a relation between two observed variables is termed
+      a spurious relationship.
+
+# Terminology
+    - populations - parameter
+    - sample      - statistic
+
+# independent variable
+    - manipulated by experimenter (polio vaccine)
+
+# dependent variable 
+    * aspect of world experiementer _predicts_
+    * will be affected by independent variable (rates of
+      polio)
+
+
+# observational "studies"
+    * no variable is being maniuplated, instead they model
+      the structure and pattern of correlations.
+    * so not as powerful as randomised experiments,
+    * correlation DOESNT imply causality! i.e. arguments you
+      make about causality are weaker.
+
+# observations may look like experiments!
+    Concussion study
+    Quasi- "Independent variable"
+        concussion - treatment
+        no concussion - control group
+    "Dependent" Variable
+        Neural measures
+        Cognitive test
+
+    BUT! football players not randomly assigned concussion
+    may be suble confounds as to why someone gets concussion
+    e.g. agressive personality type, prior history
+
+
+
+# lesson 2
+
+# Histograms
+    Summary Statistics
+    Tools for inferential statistics
+
+# skew
+    - I find it counter-intuitive
+    - positive skew - LESS at the higher (positive) end
+    - negative skew - LESS at the lower (negative)  end
+
+# density plot
+    really a smooth histogram
+
+# summarise a distribution
+    The four "moments" of the mean
+    * Central Tendency
+    * Variability
+    * Skew
+    * Kurtosis
+
+
+# Measure of central tendency
+    Mean (affected by skew), 
+    Median (middle score, unaffected by extremes), 
+    Mode (occurs most often, peak of histogram, "most popular")
+
+# deviation score
+    (X - M)
+    (Individual Score - Mean)
+
+# Standard Deviation (SD): 
+    average deviation from the mean
+    sum(X-M) / N
+    sum(deviation scores) / N
+
+# (Variance) or (Mean Squares MS): 
+    SD^2 = variance = mean squares
+    variance = Sum(deviation scores^2)  / N
+
+    Sum Squares (SS) = Sum(deviation scores^2)
+    Mean Squares (MS) = Sum Squares / N
+
+
+# Normal Distribution
+    50% of scores lie above and below the mean
+
+# Z Scores
+    standardised unit of measurement
+    convert "raw" scores to z-scores
+    Z = (X-M) / SD
+
+# Percentile Rank
+    what percentage of scores fall 
+    AT or BELOW a given score
+
+# Probability
+    - E = event
+    - P(E) = (# of ways E attained) / (# of total possible outcomes)
+
+# Inferential stats
+    * assume a normal distribution!
+    * linking probability to the normal distribution
+    - This is a key point that I only understood years later in Berlin
+
+# Safe to assume normal distribution?
+    * measurement question
+    * difficult in psychology - 
+    * dont have direct measurement of constructs
+
+   
+# examples of correlations
+
+# Main Points:
+    * what is a correlation
+    * what are they used for
+    * scatter-plots i.e. plot(SAT~WMC)
+    * Estimating Validity and Reliability
+
+# Whats a correlation?
+    statistical procedure used to measure and describe
+    relationship between two variables.
+    can be viewed as a "descriptive" stat OR as an "inferential" one.
+    range between +1 (perfect positive) or -1 (perfect negative)
+
+# SAT and WMC example
+    Conway had data on:
+    SAT scores (Y-axis) (outcome) and 
+    working memory capacity WMC (X-axis) (predictor).
+    was positive correlation of 0.22.
+    i.e. as WMC increases so does SAT score.
+
+    But not a great correlation! Why?
+    Cos student SAT and WMC data was negatively skewed!
+    i.e. big hump on the high positive side
+    why? cos student data came from prestigious US uni
+    => students were "pre-selected" on cognitive ability
+    => sample data didn't have the full range (variance) of ability
+
+# correlation CAUTION 1
+    correlation magnitude depends on 
+    * reliability of X, Y (i.e. consistent over time)
+    * sampling (need random and representative sample)
+
+# correlation CAUTION 2
+    * validitiy of X and Y
+    * methematical assumptions (later in lecture)
+
+# correlation CAUTION 3
+    * its a SAMPLE statistic - applies at the level of a sample/group
+    * doesnt apply to an individual (unless correlation is 1.0!)
+
+# USA officer training (PREDICTIVE ABILITY)
+    is army intelligence test culturally biased?
+    take each cultural group and compare against test score.
+    not enough!
+    need a difference in predictive ability(!?)
+    if the test is PREDICTIVE of 
+    how well one group will do in officer training
+    but not preditive of another group
+    then the test is culturally biased
+    i.e. its not a RELIABLE MEASURE for all groups
+
+
+# Pearson product-moment correlation coefficient (r)
+    r = the degree by which X and Y vary together (covary)
+    relative to the degree in which X and Y vary independently.
+    i.e. a ratio of covariance to variance
+
+    r = (covariance(X & Y)) / (variance of X & Y).
+    This is for continuous X and Y variables.
+
+
+# Sum of Cross Products (SP)
+    In Lboro I think this was SSxy
+    For each sample subject
+    calculate deviation score of both X and Y
+        (X - Mx)
+        (Y - My)
+    multiply the 2 deviation scores together (Cross Product)
+        (X - Mx) * (Y - My)
+    Then sum these cross products
+        SP = ∑(Cross Products) = ∑((X-Mx) * (Y-My))
+
+# Calculate "r"
+    can calculate "r" in terms of DEVIATION SCORES:
+        `r = SPxy / Sqrt(SSx * SSy)`
+
+    See how SSx, SSy is similar to SPxy:
+        `SSx = ∑(X-Mx)^2 = ∑(X-Mx) * (X-Mx)`
+        `SSy = ∑(y-My)^2 = ∑(y-My) * (y-My)`
+
+    So:
+        `r = ∑((X-Mx) * (Y-My)) / sqrt(∑(X-Mx)^2 * ∑(y-My)^2)`
+
+# Calculate "r" using Z-SCORES
+    - `r = ∑(ZxZy) / N`
+    - basically if you expand Z it all works out like the other
+      formula above
+
+# Variance and Covariance
+    Variance = Mean Squares (MS) = (SS / N)
+    Covariance = COV = (SP / N)
+
+    Correlation is standardised COV
+    so the output value is between -1 and +1
+
+# Divide by (N) or (N-1)?
+    descriptive stats: divide by N
+    inferential stats: divide by N-1
+
+
+# Validity and Reliability of Correlations
+
+    Validity
+        Validity of any argument made on the basis of a correlation
+        depends on 3 correlation assumptions:
+
+    Correlation assumptions
+    1. assume _normal distribution_ for X and Y
+        detect violations? 
+            plot histograms and run descriptive stats
+
+    2. _linear relationship_ between X and Y
+        detect violations?
+            do scatterplot
+            plot histograms of residuals
+        non-linear example
+            stress (Y-axis) v experience (X-axis)
+            its an inverted quadratic
+
+    3. _homeskedasticity_
+        what is it?
+            residuals (prediction errors) are not a function of x!
+            if the residuals changed as a function of x,
+            that would indicate something systematic going on.
+        detect violations?
+            i.e. detect "heteroskedasticity"
+            same checks as for linear relationship
+
+# Reliability of a correlation (P-values)
+    Using another sample and will I get the same "r"?
+    (ie. within the bounds of sampling error is "r" reliable)
+    Thats a tough question. Different approaches.
+    One approach is to use NHST
+
+# NHST of "r"
+    Null Hypothesis Significance testing
+    Looking at probability of a correlation,
+    at the level of samples.
+        H0 --> null hypothesis. assume no correlation between X and Y. r=0
+        Ha --> alternative hypothesis. r<>0
+
+# P-values  
+    GIVEN the null hypothesis (H0) then
+    -------------------------
+        p = conditional probability(Data|H0)
+
+        if (p < 0.05)
+            hey this is significant,
+            reject the null hypothesis
+
+# P-value important point:
+
+    * "p" is the probability of getting this data/outcome
+      (GIVEN the Null hypothesis)
+
+    * "p" is NOT the probability of the Null Hypothesis
+      (given this data/outcome)
+
+    But statisticians often want to flip that around:
+    they say I don't want to know the probability of an
+    outcome, I want to know the probability of a hypothesis
+    (given this data). This is the _Bayesian_ approach.
+
+
+# Types of Errors:
+
+                  Decide to Retain H0    Decide to Reject H0
+                  -------------------    -------------------
+H0 really true:   Well Done              Type I Error (False Alarm)
+H0 really false:  Type II Error (Miss)   Well done
+
+
+# Probability of making an Error:
+
+                  Decide to Retain H0    Decide to Reject H0
+                  -------------------    -------------------
+H0 really true:   p = (1-α)              p = α (False Alarm)
+H0 really false:  p = β (1-POWER)        p = (1 - β) POWER
+
+what is α and β though?? (Oct 2017)
+
+
+
+# Types of correlation
+    * Pearson r:                    
+        assumes X and Y are continous
+
+    * Point Biserial r:             
+        one variable continous and one dichotomous
+
+    * Phi coefficient r:            
+        both variables dichotomous
+
+    * Spearman Rank correlation:    
+        both variables ordinal (ranked data)
+
+
+# measurement 
+    topics important for inferential statistics
+
+    * Reliability & Validity (in individual variables)
+        - Classical Test Theory
+        - Reliability Estimates
+        - Construct Validity
+
+    samechs and indigenous
+    * Sampling 
+
+
+# Reliability
+
+    * Classical Test Theory ("True Score Theory")
+        Raw scores (X) subject to bias and chance error In
+        a perfect world we'd obtain a "true score" 
+        `X = (true score) + (bias)  + (error)`
+
+    * When is a measure X reliabile?
+        X is reliable when when it approaches the true score
+        Problem is, we don't know the true score, so we
+        ESTIMATE the reliability
+
+    * Methods to estimate Reliability 
+    ("wand" which runs a bit high) 
+        Test / ReTest
+            measure everyone twice with "wand" - (X1), (X2)
+            correlation analysis between X1 and X2 is
+            a reliability estimate BUT! if theres a uniform
+            bias this test/retest wont find it! cos both X1
+            and X2 will both be biased
+
+    * Parallel Tests
+        measure everyone with "wand" (X1) and with
+        "thermometer" (X2) Run correlation, if high then
+        we have some reliability and bias of the wand
+        will be revealed
+
+    * Inter-item estimates
+        most common in social sciences (other 2 methods
+        expensive!) e.g. 20 item survey to measure
+        extraversion RANDOMLY select 10 items to get
+        subset A (X1) The other 10 items become subset
+        B (X2) The correlation between X1 and X2 is
+        a reliability measure
+
+
+
+# Contstruct
+    An "ideal object" not directly observable - opposed to
+    real objects e.g. intelligence
+
+# "Operationalise" a construct
+    The process of defining a construct to make it
+    observable and quantifiable e.g. intelligence tests
+
+# Assess construct validity
+    Construct: "verbal ability" in Children
+    Operationalise: Use a vocabulary test
+
+    Content Validity
+        Does test consist of words children should know
+
+    Convergent Validity
+        Does this test correlate (converge) with other established
+        measures of verbal ability e.g. reading comprehension
+
+    Divergent Validity
+        Does the test converge LESS WELL with tests of a different ability
+        e.g. spatial reasoning
+
+    Nomological Validity
+        Are test scores consistent with more general theories outside this
+        particular domain e.g. theories of child development and neuroscience.
+        e.g. a child with neural damage to regions associated with language
+        development should score lower on the test

@@ -1,0 +1,110 @@
+# Causal Diamond
+    - It's basically “the portion of the universe that an
+      observer both can influence and LATER learn about.”
+        - $MY_IMAGES/physics/Spacetime/causal-diamond.jpg
+
+- Also: it links causality to innformation and entropy.
+
+
+# Contents
+    - Explanation 1 (Scott)
+    - Explanation 2
+    - Why it matters:
+    - Bousso bound / holography
+    - In QG: fundamental observable region.
+    - Cosmology: Observable Universe
+    - Scattery theory: cause-effect experiments
+
+
+### - Explanation 1 (Scott)
+    - https://www.scottaaronson.com/democritus/lec20.html
+    - Bousso formalizes this notion with a "causal diamond," but
+      I'd just call it a computation with an INPUT and OUTPUT.
+    - The idea is you have some starting point `P` and some
+      endpoint `Q`, and you look at the intersection of the
+      forward light-cone of `P` and the past light-cone of `Q`.
+      That's a causal diamond.
+        - $MY_IMAGES/physics/Spacetime/causal-diamond.jpg
+    - The idea is that for any experiment we could actually
+      perform—any computation we could do—we're going to have to
+      have some starting point of the experiment, and some end
+      point where we collect the data (read the output).
+    - What's relevant isn't the total amount of entropy in the
+      universe, but just the total amount of entropy that can be
+      contained in one of these causal diamonds.
+
+### - Explanation 2
+    - $MY_IMAGES/physics/Spacetime/causal-diamond.jpg
+    - A causal diamond appears when you take two events:
+        - initial event `P` where the observer begins
+        - a later event `Q` along that same worldline
+    - Then:
+        - Causal Diamond =
+        - `(Q's past lightcone)` ∩ `(P's future lightcone)`
+    - So the diamond is not defined at one instant.
+    - It's defined over an interval of proper time along the
+      observer's worldline.
+
+
+
+### Why it matters:
+    - It defines what is physically knowable to the observer.
+    - No matter how enormous the universe is, the observer can
+      only ever interact with the degrees of freedom inside the
+      diamond. Everything outside it is causally irrelevant to
+      them.
+
+    - This makes the causal diamond the natural “arena” of
+      physics for that observer.
+
+    - In QFT on curved spacetime & in gravitational settings, one
+      often asks:
+        - what's the `entropy` or `# of states` accessible to
+          a given observer? The causal diamond defines that
+          domain.
+
+
+### Bousso bound / holography
+- It links causality to information and entropy.
+- There is a famous result (Bousso bound, and related holographic
+  entropy bounds) that suggests the maximum entropy in a causal
+  diamond scales with the `area` of the diamond’s boundary, not
+  its volume.
+- This is part of the deep link between gravity and information
+  known from black hole thermodynamics.
+
+- So the causal diamond is a natural setting for holography:
+    - the idea that physics inside the region is encoded on its
+      boundary.
+
+### In QG: fundamental observable region.
+- In ordinary physics we talk about “the state of a system at an
+  instant of time.”
+- But in GR, simultaneity is not absolute and time slices are
+  arbitrary. So instead of a “state at `t = constant`,” one uses
+  causal diamonds to define a region of spacetime that doesn’t
+  depend on coordinate choices.
+
+- Many modern QG formulations (causal sets, holography, even some
+  interpretations of AdS/CFT) treat the causal diamond as the
+  true basic unit of meaning.
+
+
+### Cosmology: Observable Universe
+    - In cosmology, each observer has their own finite diamond.
+    - In an accelerating universe (like ours), every observer is
+      surrounded by a cosmic horizon. Past some distance, light
+      will never reach us. So each observer has a finite causal
+      diamond. This is why the observable universe is not the
+      same as “the universe.” The diamond gives a precise
+      definition of “observable.”
+
+### Scattery theory: cause-effect experiments
+    - In scattering theory or experiments, it is the region where
+      cause-and-effect is meaningful.
+    - When we talk about running an experiment, sending a signal,
+      getting data back, etc., everything that plays a role is
+      inside the causal diamond between preparation and
+      detection.
+    - So causal diamonds formalize the idea of a causal
+      experiment.

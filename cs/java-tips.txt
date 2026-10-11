@@ -1,0 +1,417 @@
+### Check JRE/JDK versions
+        java  -version   # JRE
+        javac -version   # JDK
+
+### VOC (Python -> Java)
+    - compiler: translates Python to Java bytecode.
+    - So write android applications in Python!
+    - https://github.com/pybee/voc
+    - https://us.pycon.org/2017/schedule/presentation/410/
+    - https://pybee.org/
+    - (BeeWare: set of tools to run Python on different platforms)
+
+### java direct draw disable
+    -Dsun.java2d.d3d=false
+
+### install adoptopenjdk
+    - https://adoptopenjdk.net/installation.html#x64_linux-jdk
+
+### install Oracle java jdk
+    sudo add-apt-repository ppa:webupd8team/java
+    au
+    sudo apt-get install -y oracle-java8-installer
+    sudo apt install oracle-java8-set-default
+
+### my java home
+    - how to find home:
+        sudo update-alternatives --config java
+
+    - then set something like:
+        export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
+### compile, then view compiled class file
+    javac HelloWorld.class
+    javap -verbose HelloWorld.class
+
+### set java options
+    jcontrol
+
+### classpath: ".:" trick
+    to look in current folder for jar files
+
+    > javac -cp ".:/home/ef/vtl-jars/*" MyTest.java
+    > java  -cp ".:/home/ef/vtl-jars/*" MyTest
+
+### packages
+    - The 'package' statement identifies the package a Java
+      program belongs to. If your program does not include
+      a package statement, the program belongs to the _default_
+      package, which is simply a package that has _no name_.
+
+    - This is acceptable for short programs written for testing
+      purposes. But if you plan to distribute your program, you
+      should create a package for the program and use a package
+      statement in all of the program’s source files to identify
+      the package.
+
+    - Syntax: `package com.lowewriter.util;`
+
+    - 'com.lowewriter.util' refers to the name of the package the
+      program should be added to. You can use any name you wish,
+      but it’s best to follow the established convention of
+      _transposing your Internet domain_ name (if you have one).
+      (Transposing your domain name ensures that your package
+      names are unique.)
+
+### view jar files
+    jar -tf myexample.jar
+
+### java version
+    Java "8" is listed as "1.8" when typing "java -version"
+
+### naming conventions
+    - CLASS names: 
+      - always start with an _uppercase_ letter. For example,
+        'Scanner', 'System', 'Hello'
+
+    - METHOD names: 
+      - always start with a _lowercase_ letter, and use camelCase
+        to represent multiword method names. for example
+        `nextInt()`
+
+    - INSTANCE variables: 
+        - of a class start with a lower case letter and use
+          camelCase
+
+    - CONSTANTS: 
+        - are in all uppercase. eg. `Math.MAXINT`
+
+### inheritence ('extends') and Interfaces
+    - The thing that makes the 'Fraction' class a child of
+      'Number' is:
+        > public class Fraction extends Number {
+        >     ...
+        > }
+    - Note: Java only supports _single inheritance_, that
+      is, a class can have only one parent.
+
+    - Java’s answer to this problem is the _Interface_ mechanism.
+        - Interfaces are like a combination of Inheritance and
+          contracts.
+        - An interface is a specification that says any object
+          claiming it implements this interface must provide the
+          following methods.
+        - It sounds a little bit like an abstract class, however
+          it is outside the inheritance mechanism.
+        - You can never create an instance of 'Comparable'
+          (interface). However many objects do implement the
+          'Comparable' interface. What does the 'Comparable'
+          interface specify?
+    - So we now declare our class as:
+        > public class Fraction extends Number implements
+        > Comparable<Fraction> { ... }
+
+### The 'Object' Class
+    - In Java, the equivalent of `__str__` is the _toString_
+      method.
+    - Every object in Java already has a 'toString' method
+      defined for it because every Java class automatically
+      inherits from the _Object_ class. 
+    - The object class provides default implementations for the
+      following functions:
+        - clone
+        - equals
+        - finalize
+        - getClass
+        - hashCode
+        - notify
+        - notifyAll
+        - toString
+        - wait
+    - We are not interested in most of the functions on that
+      list. To make our output nicer we will implement the
+      'toString' method for the Fraction class. Simple example:
+        > public String toString() {
+        >     return numerator.toString() + "/" + denominator.toString();
+        > }
+
+### method overloading
+    - This idea of overloading raises a very important
+      difference between Python and JAVA.
+    - Python: a method is known by its _name only_.
+    - Java:   a method is known by its _signature_.
+
+### Java 'this', Python 'self'
+    - In the constructor, theres no need to use `self`/`this` for
+      instance variables (theyve already been declared):
+
+        > public Fraction(Integer TOP, Integer BOTTOM) {
+        >     num = TOP;
+        >     den = BOTTOM;
+        > }
+
+    - But if the incoming parameters have the same name as
+      the instance variables in the class, then you can
+      solve the ambiguity by using 'this':
+        > public Fraction(Integer num, Integer den) {
+        >     this.num = num;
+        >     this.den = den;
+        > }
+
+    - ie: In Java, this is typically only used when need to
+      differentiate between 
+        - a 'parameter' or local variable 
+        - and an 'instance' variable.
+
+### iterate list:
+    - Python:
+        > l = [1, 1, 2, 3, 5, 8, 13, 21]
+        > for fib in l:
+        >    print fib
+
+    - Java 1:
+        > ArrayList<Integer> l = new ArrayList<Integer>();
+        > l.add(1); l.add(1); l.add(2); l.add(3);
+        > for (Integer i : l) {
+        >     System.out.println(i)
+        > }
+
+    - Java 2: (less verbose!)
+        > int l[] = {1,1,2,3,5,8,13,21};
+        > for(int i : l) {
+        >     System.out.println(i);
+        > }
+
+### elif
+    - Java does _not_ have an 'elif' pattern like Python. 
+    - In Java you can get the functionality of 'elif' by
+      _nesting_ if and else.
+
+    Switch:
+    - not recommended!
+    - 'switch' isnt used very often, and I dont recommend it! 
+    - First: its not as _powerful_ as the 'else if' model because
+      the switch variable can only be compared for equality with
+      an _integer_ or _enumerated constant_.
+    - Second: its easy to forget to put in the _break_ statement.
+
+### Python 'Dictionary' =  Java 'map'
+    - Python:   Dictionary
+    - JAVA:     TreeMap (balanced binary tree)
+    - JAVA:     HashMap (hash table)
+
+### loop in sequence
+    - when looping through a sequence, or `collection class` 
+    - JAVA: `for(Integer i : mylist)`
+    - python: `for i in mylist:`
+
+### for loops
+    - Python:   `for i in range(10)`
+    - Java:     `for(Integer i = 0; i < 10; i++)`
+
+### java 'arrays' and 'array lists'
+    array:
+        > Integer[] count = {0,0,0,0,0,0,0,0,0,0};
+        > ...
+        > count[idx] = count[idx] + 1;
+
+    Arraylist:
+        > ArrayList<Integer> count;
+        > count = new ArrayList<Integer>(10);
+        > ...
+        > count.set(idx, count.get(idx)+1);
+
+### lists
+    - Java: 'ArrayLlist'
+    - In Python, lists can contain anything
+    - In Java, we let the compiler know what kind of objects
+      a array list will contain. 
+    - In this case: list of integers:
+        ```
+        ArrayList<Integer> count;
+        ```
+    - Technically, you _dont_ have to declare what is going to be
+      on an array list.
+    - The compiler will allow you to omit `<Type>`. 
+    - But if you omit it, you'll get a compiler warning.
+        > Note: Histo.java uses unchecked or unsafe operations.
+        > Note: Recompile with '-Xlint:unchecked' for details.
+
+    - Without the `<Integer>` declaration Java assumes any object
+      can be in the list.
+    - However, without resorting to an ugly notation called
+      casting, you cannot do anything with the objects on a list
+      like this!
+    - Now instantiate the list:
+        > count = new ArrayList<Integer>(10);
+    - Strictly speaking its not necessary to give ArrayList
+      a size. It will grow or shrink dynamically as needed just
+      like a list in Python
+
+### lists: no square brackets!
+    - Use 'get' and 'set'
+        > count.set(idx, count.get(idx)+1);
+
+### operator overloading
+    java does not support it!
+
+### strings:
+    - Like Python, Java strings are _immutable_. 
+    - However, Java strings do not support an indexing or
+      slicing _operator_.
+    - You can still index into a Java string and also pull
+      out a substring.
+    - But the difference is Java uses _method_ calls where
+      Python uses _operators_.
+
+### Import
+    - In Java you can use any available class _WITHOUT_ having to
+      import the class. 
+        - This is subject to 2 very important conditions:
+            1.  'javac' & 'java' must know the class exists.
+            2.  You must use the full name of the class
+
+    - You 1st question might be how do the 'java' and
+      'javac' commands know certain classes exist? 
+
+    - Answer: 
+        - Java knows all classes -> defined in '.java' and '.class' files in your "CWD".
+        - Java knows all classes -> shipped with JAVA.
+        - Java knows all classes -> included in "CLASSPATH"
+            - "CLASSPATH" can name 2 things:
+                1. A jar file containing JAVA classes
+                2. Another UNIX folder containing class files
+
+    - You could think of the JAVA import statement as a little
+      like Pythons `from module import xxx`.
+
+    - But behind the scenes the two statements do very different
+      things:
+
+        1. 1st difference 
+            - is the class naming system in JAVA is very
+              hierarchical. The full name of the 'Scanner' class
+              is really 'java.util.Scanner'. You can think of
+              this name as having two parts: 
+            - Part 1: Package = 'java.util'
+            - Part 2: Class   = 'Scanner'
+
+        2.  2nd difference 
+            - is that it is the Java class loader’s
+              responsibility to load classes into memory, _NOT_
+              the 'import' statements.
+
+    - So what exactly does the 'import' statement do??
+
+      - It tells the compiler we are going to use a _shortened
+        version_ of the class’s name.
+
+      - eg. We are going to use the class 'java.util.Scanner' but
+        we can refer to it as just 'Scanner'.
+
+    - We could use the 'java.util.Scanner' class without any
+      problem and _without any import_ statement provided we
+      always referred to it by its full name.
+
+### not everything is an object - primitives!
+    - In Java some most basic data types like integers and
+      floating point numbers are not objects. 
+
+    - The benefit of having *non-object* primitives is
+      operations are fast on them.
+
+    - The problem is it became difficult to combine objects and
+      non-objects in the way we do in Python.
+
+    - So eventually all the non-object primitives ended up with
+      "Objectified" versions.
+
+        > Primitive    Object
+        > ---------    ------
+        > int          Integer
+        > float        Float
+        > double       Double
+        > char         Char
+        > boolean      Boolean
+
+    - "boxing":       convert primitve to object
+    - "unboxing":     convert object to primitive
+    - "autoboxing":   From Java 5 on, compiler smart enough
+                      to do it automatically
+
+### The main method 
+    - Called in two situations:
+        1. By the JVM to start the application
+        2. By another method (possibly in another class) calling
+        the main method, 
+      - though while this is correct Java it is not best practise
+
+    - 'main' isnt automatically called on instantiation of
+      a class 
+    - as a static method its enclosing class does not even need
+      to be _instantiated_ for it to be callable.
+
+    - Constructor methods on the other hand are called when
+      a class is created.
+
+### 'void'
+    - tells the compiler the method 'main' wont return a value
+    - Roughly analogous to omitting "return" in a Python method.
+
+### static methods
+    - don't need an _instance_ of a class
+    - static methods in Python don't take "self" as the
+      first parameter
+    - "static" is often valuable when you know something is
+      not going to change across instances
+
+### import versus "static import"
+    - 'import' allows java programmers to access classes of
+      a package without package qualification.
+    - The 'static import' feature allows access to the
+      static members of a class without the class
+      qualification.
+    - 'import' provides accessibility to classes and
+      interface 
+    - whereas 'static import' provides accessibility to
+      static members of the class.
+
+    Example :
+    With import
+        > import java.lang.System.*;
+        > class StaticImportExample{
+        >     public static void main(String args[]){
+        >
+        >        System.out.println("Hello");
+        >   }
+        > }
+
+    With STATIC import
+        > import static java.lang.System.*;
+        > class StaticImportExample{
+        >   public static void main(String args[]){
+        >
+        >    out.println("Hello"); // <------ no need for "System.out" now
+        >  }
+        > }
+
+### jar files
+    - JAR = Java ARchive.
+    - A JAR file has many files into it. 
+    - We generally use `.jar` files to distribute Java
+      applications or libraries in the form of Java class files
+      and associated metadata and resources (text, images, etc.). 
+
+    - All java files are compiled into class files and then we
+      use that _class file_ not the .java file. 
+    - A class is a construct that is used as a blueprint to
+      create instances of the class.
+
+### file naming
+    - The Java _filename_ should always reflect the _public_
+      class defined in that file.
+    - But if your class _does not_ contain any public class
+      then the file can have any name.
+
+### Links
+    - Compile to native binary https://www.graalvm.org/

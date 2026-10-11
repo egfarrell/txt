@@ -1,0 +1,102 @@
+regex
+
+### basics
+    `+`     ONE or more of the search character
+    `*`     ZERO or more of the search character
+    \w      word
+    \d      digit
+    \s      whitespace
+    \n      line feed
+    \t      tab
+    \S      NON-whitespace characters
+    []      search for a set of characters. Very old syntax.
+
+### HN comments:
+    Replace the commenter info with a generic 'COMMENT:'
+    ```
+    .,$s/^-\ .*\[.\]/COMMENT:/gc
+    ```
+
+# match any 10 characters at start of line (and delete them)
+    s/^..........//g
+
+# find end-of-line string (regex) $
+    somethingatend$
+
+# zero-width
+    - (?<=foo)bar matches bar only if bar is following foo (foo is not gonna in match result)
+    - (?<=..) is positive look behind, zero-width assertion. google it for details.
+
+# make matching non greedy
+    add `?` after the `.*`
+    e.g. everything inside html bracket
+    `<(.*?)>`
+
+# match any character (zero or more times)
+    .*
+
+# match words up to 6 letters long (and carriage return)
+    ^.{1,6}$\n
+
+# everything UP TO the character @
+    "^[^@]*"
+
+# match till end of line `(.*)`
+    `xx .*\n`
+
+# match five digits
+    \d{5}
+
+# put all status constants beginning with `C_ `to lower-case
+    find what:      `(\bC_\w*)`
+    replace with:   `\L\1`
+
+# beginning of word (word boundary)
+    `\b`
+    e.g. all words beginning with `C_`
+    `\bC_`
+
+# another example from lboro work
+    # get all words like "c_status_some_constant"
+        `(c\_status\_\w*)`
+    # change these words to upper case
+        \U\1
+    # note:
+        # the capital "U" changes the WHOLE word to uppercase
+        # a small "u" would change the first letter to uppercase
+
+# Use brackets to delimt replacement groups
+    (\1)(\2)
+    ("replacement group 1")("replacement group 2")
+
+# refer to replacement groups
+    \1 replacement group 1
+    \2 replacemetn group 2
+
+# example 1
+    - put a newline and dashed line
+    - above and below the Exercise titles
+    `(Exercise [1][0-9]*) :`
+    `\n\1\n----------------------\n`
+
+# example 2
+    put `**` around the words Exercise 1, Exercise 2 etc
+    `(Exercise [0-9]*)([ .])`
+    `**\1**\2`
+
+# software carpentry
+    match = re.search('iig', 'piiig')
+    match.group() = 'iig'
+
+    match = re.search('sdg', 'piiig')
+    match = none (object not initialised, string not found)
+
+    match = re.search('...g', 'piiig')
+    match.group() = 'iiig'  "." searches for any character
+
+    match = re.search('p\.iig', 'p.iig')
+    match.group() = 'p.iig'  "backslash" is escape character. Used to search for "."
+
+    Search for an email address!
+    match = re.search('[\w.]+@[\w.]+', 'blah ef.fox@gmail.com morestuff lines')
+    match.group() = 'ef.fox@gmail.com'

@@ -1,0 +1,110 @@
+- Key link:
+    - $MY_NOTES/maths/Vector-Calculus/Directional-Derivatives.txt
+
+### Gradient scalar function
+    - $MY_BOOKS/Physics/Spacetime/GR-Basic-Incomprehensible-thing.pdf
+    - `Contravariant` vectors and `one-forms` should be thought
+      of as different representa�ons of the same geometrical
+      object.
+    - More precisely, they are alternaive ways of describing an
+      _infinitesimal displacement_ of a point on a manifold,
+      namely as either:
+        - a tangent vector to a parameterised curve
+            - (aka a contravariant vector),
+        - or an infinitesimal change in a scalar FUNCTION
+            - (aka a `gradient one-form`).
+            - Aug 2023: there's that idea of a scalar FUNCTION
+              involved when working out the gradient
+            - I always forget about the function involved
+
+### Gradient versus Directional Derivative
+    - VECTOR:
+        - The gradient is a vector with the slope of the FUNCTION
+          along each of the _coordinate_ axes.
+            - (July 2023: what function? e.g. air temperature
+              function as in Fleisch?)
+    - SCALAR:
+        - The directional derivative is the slope in an arbitrary
+          specified DIRECTION.
+
+### Gradient 1
+    - The "gradient" refers to the rate of change of a `scalar
+      function`!!!
+        - (A function situated inside a coordinate system)
+        - Funny I always imaged the gradient was something
+          related to the basis vectors or something (forgot about
+          the FUNCTION)
+    - Indian tutor (video about contravariant and covariant
+      tensors)
+
+### Gradient 2
+    - Gradient for a 1-valued function `f(x)`:
+        - a slope/line
+    - gradient of a 2 value function, `f(x, y)`:
+        - the gradient gives you a _tilted plane_
+    - what for a 3-valued function?
+        - oh interesting: a gradient can have two different
+          meanings, depending on whether we're refering to the
+          vector OPERATOR or not
+        - $MY_IMAGES/maths/difference-gradient-slope.jpg
+
+### Gradient as partial derivatives
+    - Ah... the gradient is a vector made of partial derivatives
+      along each axis..
+    - BUT, those partial derivatives are scalars and are
+      implicitly attached to basis vectors `î`, `ĵ` etc
+        - That's what makes the gradient a VECTOR.
+        - There is some basis that these partial derivatives
+          latch on to...
+        - Aside: the _magnitude_ of the gradient vector
+          represents the largest slope of a tangent line through
+          a particular point. (so slope is just a scalar number)
+    - Gradient visualisation:
+        - $MY_IMAGES/maths/Gradient-symbol-00.jpg
+        - $MY_IMAGES/maths/Gradient-symbol-01.jpg
+        - $MY_IMAGES/maths/Gradient-symbol-02.jpg
+        - $MY_IMAGES/maths/Gradient-symbol-03.jpg
+        - $MY_IMAGES/maths/Gradient-symbol-04.jpg
+    - Note:
+        - In image: $MY_IMAGES/maths/Gradient-symbol-00.jpg ...
+        - Why did they say a road gradient is `sin θ` and
+          "similar" to a slope, and a slope is `tan θ`...
+            - So why is `sin θ` not a slope??
+            - ie both are kind of like a "height" at one end of
+              the triangle...
+        - But I remembered from Aberdeen,
+            - that `tan θ` needs a `∆x` to be `1`
+            - ie you get the slope by advancing `+1` forward,
+            - or the "run" is 1...
+            - later: ah no ... not really... `tan` is just the
+              _ratio_ of the vertical rise (sin θ) over the
+              horizontal distance (cos θ)
+        - Interesting: the directional derivative is not just
+          which direction you're walking in, but how fast you are
+          walking too...
+            - look at this screenshot:
+            - `V = <1, 0>`: walk in the direction of the x-axis
+            - `V = <2, 0>`: walk in the direction of the x-axis,
+              ... twice as fast!
+                - $MY_IMAGES/maths/gradient-directional-derivative-walking-speed.jpg
+
+### Gradient intuition
+    - as well as `∇` telling you the direction of steepest
+      ascent, it also shows which variable is the most important
+      in terms of change
+    - ie which variable has the greatest impact at this point
+      ("more bang for your buck")
+    - $MY_IMAGES/maths/gradient-intuition.jpg
+
+### Difference between Gradient / Slope
+    - Gradient: `sin θ`
+    - Slope:    `tan θ`
+    - $MY_IMAGES/maths/Gradient-symbol-00.jpg
+    - Mathoverflow:
+        - "A Gradient can mean two different things in Maths"
+        - In some contexts, the gradient just is the slope,
+          depending on what country you live in
+        - $MY_IMAGES/maths/difference-gradient-slope.jpg
+    - other differences:
+        - gradient is a vector
+        - slope is a scalar

@@ -1,0 +1,33 @@
+ascii utf8
+
+### 7 bit encoding
+    - 128 characters can be represented
+
+    - ASCII was indeed originally conceived as a 7-bit code.
+    - This was done well before 8-bit bytes became ubiquitous,
+      and even in the 1990s you could find software that assumed
+      it could use the 8th bit of each byte of text for its own
+      purposes ("not 8-bit clean").
+    - Nowadays people think of it as an 8-bit coding in which
+      bytes `0x80` through `0xFF` have no defined meaning, but
+      that's a retcon.
+
+### Unicode
+    2 bytes - 16 bits
+
+### UTF-8 <-> ASCII
+    - 1st bit flag signalling...
+        - if first bit `0`, then ASCII
+        - if first bit `1`, then its an encoded bit, use unicode
+    - if two   1-bit values, the unicode value is encoded in 2 bytes
+    - if three 1-bit values, the unicode value is encoded in 3 bytes
+
+### ASCII clever
+    switch case with a single bit flip! (of 2nd bit)
+
+    char  binary
+    ----  --------
+    A     10000001
+    a     11000001
+    B     10000010
+    b     11000010

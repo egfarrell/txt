@@ -1,0 +1,461 @@
+$MY_VIDEOS/physics/bala_fundamental/32-Wave-Motion-Wave-Equation,-General-Solution.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 32
+Wave Motion
+Wave Equation, General Solution
+We have come to a stage, where we would be talking about transverse waves on a string.
+And I pointed out, that the boundary condition which says that the two ends of a string
+which are clamped.
+(Refer Slide Time: 00:26)
+
+So, here is a string of length L, which is clamped at this end and this end. So, here is 0,
+here is L that is the x axis start with, I pointed out I mentioned that the kind of waves you
+can have on the string the standing waves, which would correspond to specific
+wavelengths. All those wavelengths are allowed, which have nodes at these points and it
+is so called fundamental harmonic or the first, the longest wave length oscillation that
+you can have would correspond to the following.
+
+(Refer Slide Time: 01:02)
+
+Geometry, it would correspond to the wave going up the string going up and down in this
+particular fashion. So, every point on the string goes up and down executes harmonic
+motion, executes oscillatory motion in this fashion going up and down; such that these
+two points they may nodes. So, the actual wavelength of this wave would be twice the
+length of the string in this case lambda and that is the fundamental notes.
+So, lambda 1 is 2 L and the frequency nu 1 is equal to it is; obviously, equal to the speed
+u divided by lambda 1, which is equal to 1 over 2 L square root of T over rho. So, that is
+the fundamental mode, it would actually correspond to a super position of two waves,
+one of it is travels in the positive x direction and the other in the negative x direction.
+And we will see a little later when I talk about super position that they would leave these
+two traveling waves would add to each other, in such a way that the result is a standing
+wave, which goes up and down.
+So, nothing in this, nothing moves forward up, backwards; every point oscillates up and
+down in this fashion. Well, the next oscillation that is possible has a geometry like this,
+here is a full wavelength and then, at the other end of the oscillation it look like this. So,
+here lambda 2 equal to 2 L over 2, which is equal to L itself and nu 2 equal to 1 over L
+root T over rho. And a next harmonic would correspond to something, which looks like
+this not drawing this too well.
+But, this would correspond to a wavelengths, which is two third, so lambda 3 equal to 2
+L over 3 and nu 3 equal to 3 over 2 L root T over rho. And the series goes on forever, so
+
+you are actually can excite on this waves are very, very high frequency, they would not
+normally get excited, because we are not talked about energy considerations yet. But, the
+frequency the lambda n, the n harmonic would have a wavelength, which is equal to 2 L
+over n and the corresponding frequency would be equal to n over 2 L square root of T
+over rho, this fashion.
+Now, we would like to understand from more basic considerations, what governs the
+waves on a string of this kind. What kind of equation it governs in? Is it Newton’s
+equation? Well, the answer turns out to be yes, it essentially Newton’s equation, but
+written for a continuous medium; unlike a set of particles were you have independent
+particles perhaps interacting with each other and you write Newton’s equation for each of
+them.
+In this case, we have to pay attention to the fact that this string at every point, these
+points are connected to each other, the string does not break, does it tension on the string,
+which keeps it together. And we have to pay tension to the fact, that the motion of this
+particular point and the motion of neighboring points must be related to each other in
+such a way that the string maintains it is integrity. So, this leads actually not to
+differential equations for the equation of motion, but an equation which is in two
+independent variables for a given T, you have to say something about, what happens for
+different x is and for a given x you have to say, what happens to this point for different
+values of T.
+So, not surprisingly the equation of motion that we get called the wave equation is
+actually a differential equation with two independent variables x and T in this case and
+these are called partial differential equations. Although we do not really gone into
+mathematics of partial differential equations, I will still mention this and derive this
+equation, because it is fairly easy to understand, how this happens let us take a string
+example itself.
+
+(Refer Slide Time: 05:31)
+
+So, we have x axis here in this direction and let us suppose that moment tell you the
+string at something points looks like this. So, consider a point x and consider a point x
+plus d x, I am shown this exaggeratedly this is just an infinite decimal differential
+increment. The tension at this point acts tangentially in this fashion and the tension at this
+point acts tangentially in this fashion and what we are interested in is the transverse
+displacement.
+And let me call the transverse displacement at any point x phi of x comma t, this is the
+transverse displacement of the string at the point x at the instant of time t. So, we have a
+function here and since it is just a displacement in the transverse direction, it is a scalar
+function. So, this function is a function of two independent variables of both x and t and
+if the string is clamped at the ends, it will satisfy some boundary conditions, but we are
+not concerned with that right now.
+We are concerned with what sort of equations does this phi satisfy, well looking at this
+element of the string here, we are concerned with what happens in the vertical direction
+in the transverse direction. So, if this angle here is theta 2 and this angle is theta 1, then
+we concerned with what happens to the vertical component of the force and we equate
+that to the mass times the acceleration in the transverse direction.
+
+(Refer Slide Time: 07:20)
+
+So, this thing here if this is tension T ((Refer Time: 07:17)) and this is tension T, so you
+have T times sin theta 2 minus T times sin theta 1, this is the force in the vertical
+direction here. This is equal to, well we need to know the mass per unit lengths that is
+rho and then there is d x, which is the length here of the string in between, that is the
+mass multiplied by the acceleration and the acceleration of course, is equal to phi delta 2
+phi over delta t square. So, at this midpoint for instance you ask, what is the acceleration
+of this mass for this string, this incremental portion of this infinite decimal portion of the
+string.
+Well, if the thetas are small, if the displacement is not, is if the oscillations are small,
+oscillations in a technical sense namely these things angles are very, very small, then you
+can approximate these angles by writing this as approximately T times tan theta 2 minus
+tan theta 1. But, remember the tan theta is a slope at this point, so it is the derivative of
+the function phi, so this is equal to T times delta phi over delta x, because you
+differentiate with respect to x keeping t constant ((Refer Time: 08:57)) and that is delta
+phi over delta x at the point x plus d x, which is this point ((Refer Time: 09:06)) minus
+the same thing at the point x.
+So, this is T times this minus delta phi minus T times, this is T at the point x plus d x. So,
+we will align for the fact that the tension itself could change as a function of x t of x delta
+phi over delta x at the point x here. And what is that give you, this is approximately if I
+do a Taylor expansion, it says take this function, it is T delta phi over delta x evaluated at
+x plus d x, subtract from it the same function at the point x.
+
+If you do a Taylor expansion of this complicated function about the point x, the leading
+term cancels and what remains is the derivative with respect to x of T, which is possibly
+a function of x delta phi over delta x. And that is the function of x and t on this side, this
+quantity here should be equal to multiplied by d x. So, we always have a d x sitting
+everywhere times d x that is what the Taylor expansion gives. The values of the function
+at that point, which is this cancels it out multiplied by d x times the derivative of this
+function with respect to x, which is what I have written here.
+And this must be equal to on the right hand side rho times d x times d 2 phi over d t to at
+x and t. So, it looks complicated, but it is actually fairly straight forward under this
+approximation and then, canceling the d x out.
+(Refer Slide Time: 10:58)
+
+If T is a constant, if T equal to constant all along the string, when bringing t out it says
+delta 2 phi over delta x 2 and that is the function of x and t equal to rho divided by t. But,
+the square root of t over row is, what we identify with this speed that is emerging here
+automatically. It is 1 over u squared d 2 phi of x comma t over d t 2, u equal to square
+root of T over rho equal to wave velocity. So, this equation in general, although we have
+derived it here for transverse waves on a string, this equation is called the one
+dimensional wave equation.
+It is the independent variables are t and one the spatial variable namely x. And this
+quantity here is needed for a dimensional reasons, because this is 1 over length squared d
+t over d x 2 and this is 1 over t square. So, you need a speed square to make the
+
+dimensions right and it is associated with this quantity is associated with the square of
+the speed of this wave here, of the wave of the wave velocity here. So, that is the exact
+wave equation satisfied by this transverse wave. Now, one can ask given an equation of
+that kind, what is the general solution to it and not surprisingly the general solution is of
+the form.
+(Refer Slide Time: 12:44)
+
+So, the general solution to this wave equation without putting anything else like
+boundary conditions or initial conditions or anything else, the general solution is due to
+d’alembert and it is not surprisingly of the form phi of x comma t equal to some constant
+say c 1 times. The general function you can observe that constant in this function x
+minus u t plus some other general function x plus u t and easy to see where this comes
+from it is a second order equation.
+So, you would expect the loose way you would expect that there are two independent
+solutions. And you can see where this comes from if I took this function and I
+differentiated with respect to x keeping key constant partial derivative with respect to x I
+would get an x prime of whatever is inside if I differentiate twice I get f double prime of
+what a combinations here.
+
+(Refer Slide Time: 13:57)
+
+So, d 2 phi over d x 2 would be f double prime of x minus u t, where by a prime, I mean
+that the derivative of this function with respect to arguments whatever it be. So, for a fix
+t this has an change at all shift in x and its equal to f double prime. On the other hand, if I
+keep x fixed and do a partial derivative with respect to t every time I differentiate with
+respect to t I get again f prime and then, a minus u out here. So, second derivative would
+produce a minus u whole square times double prime, so this delta 2 phi over delta t twice
+equal to c square u square f double prime of x minus u t for this portion.
+Similarly, for this, because when I square take a second derivative whether it is minus u
+square or plus u square does in matters exactly same thing. So, this also satisfies exactly
+the same relation and if I therefore, divide by this 1 over u square I get this is equal to
+that and that is, what the wave equation same. So, it Alembert solutions is obvious more
+or less obvious from the structure of this equation, as soon as equation of this kind we
+are guaranteed that the solution will be super position of these functions here.
+Now, why super position, because these are linear equation this is the linear equation and
+phi. So, if you find two different solutions, which are linearly independent any super
+position of the two is also the solution of the equation precisely, what super position is
+determined actually by the boundary condition. So, that is for waves on a string, what
+about the sound waves? What about sound waves, in three dimensions in high
+dimensions, well not surprisingly, similar to similar kind of derivation shows us that.
+
+(Refer Slide Time: 15:57)
+
+The general wave equation in three dimensions for any disturbance you continue to call
+it phi is of the form d 2 phi. And, now function of r and t over d t 2 and then, there is
+speed square 1 over q square this is equal to d 2 phi over d x 2 plus d 2 phi over d y 2
+plus d 2 phi over d z 2 in three dimensions in Cartesian coordinates this is the function of
+x y z and t. You could write similarly, an operator at differential function here are
+differential some kind with respect to other coordinates system like spherical polar
+coordinates systems or cylindrical coordinates whatever this function this whatever
+appears here these derivatives could be a little more complicated.
+In that case precisely, because unlike Cartesian coordinates the unit vectors in other
+coordinates system change as a function of position. So, there are the line element there
+are not just d x square plus d y square plus d z square, but there are functions of r theta
+and so on, sitting there, we are not going to get into that now. But, this, what sound
+waves in three dimensions for example, were this would be the displacement of air some
+given mass of air would satisfy n equation of this kind here.
+In particular we could ask, what happens if you have waves, which are propagating out
+from a source. So, I start with the source at the origin and it is putting out waves, which
+are isotropic go out in all directions. What kind of wave would that be? What kind of
+surface would that be? When in that case it turns out that unlike the sins and cosines we
+have been talking about here you would have waves of the form cosine or sin of not k x,
+but k times r minus omega t for instance, where k is, so called wave number as before 2
+pi over lambda r is the radial coordinate from the origin, but now energy considerations
+
+come into play. So, from this source as things goes outwards certain amount of energies
+pumbt into this medium as the source eliminates waves. Then, since the surface area at a
+distance are goes like r square it is clear that if the total energy is constant, then the
+amplitude itself must decrease in such a way that the intensity multiplied by the total
+surface area gives you exactly the same amount of energy.
+So, that requires that this thing be proportional to 1 over r in three dimensions. So, that
+this square of this amplitude the amplitude must decrease like 1 over r, so that this square
+of it goes like 1 over r square compensating for the increase in the surface area by a
+factor r square. So, this thing is called a spherical wave this kind of thing called this
+spherical wave.
+You could also have other kinds of solutions again, similar to the one dimensional wave
+we talked about earlier and a more general form for this would be something like cosine
+of k dot r minus omega t, where this vector k is called a wave vector whose magnitude
+two gives you 2 pi over lambda on this scale. And whose direction gives you the
+direction of propagation of the wave we looked at in the x direction, so this k was this
+was just scattered out just k time x. But, you could have a wave, which is propagating it
+some arbitrary directions. And then, we can ask, what kind of an object is? What kind of
+wave is this, is not a spherical wave well it would corresponds putting k dot r minus
+omega t equal to constant some given phase.
+(Refer Slide Time: 20:07)
+
+And, what kind of surfaces is it for fix t you need to ask, what kind of object this k dot r
+
+this equal to constant. And since, this stands for k 1 times x plus k 2 times y plus k 3 says
+if k 1 k 2 k 3 are the Cartesian components this equal to constant it is a plane this is plane
+and infinite plane in some direction the direction of this vector k. If, you of course, had
+no third dimension here, then it is a straight lines as you can see and it is a plane in three
+dimensions.
+So, this is called a plane wave something like this is called a plane wave when we study
+three dimensional waves One more generalization, what about light? What about light
+propagating in vacuum we know that light consist of electromagnetic waves, which
+means it is the electric and magnetic fields that oscillate and there is medium here this
+speed of light is the same no matter, which direction you are in. In fact, it is independent
+of the source state of motion of the source are the observer according to special relativity.
+So, what kind of equation satisfied by the electric and magnetic fields in that case?
+(Refer Slide Time: 21:22)
+
+The equation is exactly the same thing except that this becomes a vector they electric
+vector field vector. And, similarly for the magnetic field B r and t and this u in vacuum is
+replaced by speed of light in vacuum in that is the wave equation satisfy by the electric
+field in a electromagnetic wave of, which light is an instant. So, visible light is one such
+a instance light of any frequency is an electromagnetic radiation and in vacuum it is got
+this invariant speed of propagation c here. So, as you can see the general wave equation
+as the large number of a masses in a very, very comprehensive kind of equation. It can
+have all possible kinds of solution depending on this situation much more complicated in
+the simple transverse wave in a string that we talking about here.
+
+(Refer Slide Time: 22:39)
+
+Next, let us look at super positions of waves, so let us suppose that we have two waves.
+one of, which is a cosine of k x minus omega t a traveling wave in the x direction a one
+dimensional wave in the x direction with a velocity of wave velocity, which is omega
+over k. And we also have along with if the same time a medium as a disturbance, which
+is k plus some delta k x minus omega plus delta omega.
+So, we have two waves one of its travels in the x direction with the speed omega k in the
+other has slightly different frequency are different wave length here or wave number. So,
+what is this super position give us well we need to be simple use the identity that this
+cosine of the sum of these two twice is equal to twice the cosine of the sum of the 2. So,
+this is a 2 k plus delta k x minus 2 divided by 2, 2 omega plus delta omega t divided by 2
+that is a cosine of this the sum of 1 2 here times the cosine of the difference of the two,
+which is delta k x minus delta omega t divided by 2.
+So, we could write this as k plus delta k over 2 x related up this. And, what is the
+geometrically look like, well you can see that this quantities are infinitives decimal
+quantities you say that delta k and delta omega very small compare to k and omega their
+infinitives decimal quantities. So, the variation mostly comes here due to this and once
+you put that envelope in and you can bring that factor around down to this portion and
+considerate part of the amplitude.
+Then, this phase anything look like this whereas, originally you had a single cosine up
+and down and another cosine going up and down when the join together when you super
+
+pose them, then the whole system looks like this schematically and so on. And the actual
+disturbance looks like this and this wave length here is much larger, then this wave
+length here this wave length here is given by wave number, which is k plus delta k over
+2. So, it is the mean between k and k plus delta k, k plus half the difference here, so this
+is a 2 pi over the corresponding k, so that is k plus delta k over 2.
+On the other hand this is 2 pi divided by that wave number, which is the 4 pi divided by
+delta k. So, I given instance of time with disturbance looks like this, in other words there
+is this original oscillation whose frequencies average whose wave length this average of
+the wavelengths of the two that we super pose the two waves super posed. Multiplied by
+and envelope function, which is got a much slower variations it is also traveling
+sinusoidal wave, but it is much longer wave length than be original two waves
+individually had here. At the same time this is also traveling along and, what is the speed
+of travel here is the speed of this cosine here.
+(Refer Slide Time: 26:55)
+
+So, this could correspond to a wave a velocity or a speed of this envelope wave is delta
+omega over delta k or this tends is the limit to d omega over d k, if omega is a function
+of k. So, the point is I super posed two of these waves and I found that there is an
+envelope, which is traveling at a speed, which is given by d omega delta omega over
+delta k from this portions here, so much longer wave length this thing. So, this looks like
+this wave original to waves are broken up into groups there is a group here and the group
+has a whole this traveling with this speed here and this is called the group velocity.
+
+In general, what happens is if I super pose a large number of these case a whole set of
+these case; such that omega is a function of k. So, for each case there is a corresponding
+omega, then, what I have is a wave packet and this wave packet will travel as a group the
+group velocity of this wave packet is given by the d omega over d k. Whereas, for a
+given k and a given omega of k the wave velocity equal to omega is a general function of
+k of over k.
+And the group velocity I should really says speed, but this is a standard terminology is d
+over omega k over k and these two could be very different from each other as will see.
+So, if you got a single wave this no problem, but the moment you have a whole
+collection of waves are different frequencies super posed, then you have both a way
+velocity individual wave velocities as well as a group velocity d omega by d k. Of
+course, it might turn out that omega is the same for all case.
+In other words, the frequency is independent of the wave length this speed of the wave is
+exactly the same for all wavelengths. I should say this in frequencies independent of the
+wave length, what I should really say is that this speed is same for all wavelengths,
+which is, what happens, so light propagates vacuum. In that case it is clear that the
+frequency and the wave length are related by mu times lambda equal to c r, if I write it in
+terms of k etcetera omega equal to ck, so exactly the same thing same relation.
+Once a function is a linear function of k this will imply that d omega by d k equal to
+omega by k equal to c. In other words about for light propagating of different
+wavelengths propagating in a vacuum in a ((Refer Time: 30:11)) wave packet the group
+velocity and the wave velocity and exactly this same. The wave velocity the same for all
+the wave lengths and the group velocity is the same as that wave velocity.
+What is that mean? It means that this group does not lose it shape this wave packet does
+not used shape it does not disburse. So, the origin of discursion lies here it lies in the fact
+that different wavelengths have different traveler different speeds and d omega over d k
+is not the same as omega over k. But, in this special case of light in vacuum it happens to
+be show it also happens to be approximately show when you have wound waves
+propagating in terms out that and a normal conditions the dispersion is very minimal is
+very little.
+And therefore, all wavelengths of sound propagated exactly the same average speed and
+therefore, you do not see the disbursing. But of course, the moment like for instance
+
+travel to a medium you see this immediately, which is why represent bake supplied into
+different colors, because is speed increase different wavelengths travel is different in the
+medium. If we consider wave motion rather briefly we are going to do a lot more offered
+when the context of light and optics when we will talk about electromagnetic waves at
+greater length.
+But, one particular topic within way motion, which is of great practical significance and
+great importance, has to do with the Doppler effect. Now, this is an effect that all of you
+are familiar with when you here a ((Refer Time: 31:43)) and approaching you for
+instance as it approaches you it appears as if the frequency of deicing increases and as it
+depart from you it appears as if the frequency goes down. So, the picture of this deicing
+increase and then it decreases as it passes you.
+This effect is quantifiable it is a very important effect and its known as the Doppler effect
+after is discovered. What you are going to do? Is a simplest case and nearly I am not to
+derive this in detail here and simply going to point out, what the main point main effect
+is, so we will look at the situation when you have a waves in a medium. So, let suppose
+that the waves in a medium have frequency nu, nu naught is in a stationery medium.
+(Refer Slide Time: 32:24)
+
+So, you look at sinusoidal waves of a given frequency nu in a medium, which is
+stationery. When, if you have a source here and let say we have an observer here let say
+observer and the source of waves is here, we will consider only the case where the
+observer of the source is moving one is moving, which respect together along a line
+joining them. So, we will not look at situations, where the source moves like this for
+
+example, on the observer here with transverse component.
+We are only going to look at the simplest case whether observer and source ether move
+towards each other or a wave from each other. And then, ask, what is going to happen if
+for example, the source starts moving ether towards or a wave from the observer, where
+well we need a convention here for the velocity of the source or the observer with respect
+together person. So, let suppose that the source moves out in this fashion and let me call
+that v source with respect to the medium.
+So, the source is starting to move with respect to the medium with a velocity or speed v
+source. And the observer is stationery the question is, what is the observer going to see as
+a frequency of the waves emitted by the source given that the frequency true frequency if
+you like is nu not that is one question the other question we could asks and of course, v
+source could be in this direction. So, this should correspond to let me say v source less
+than 0 and this should be v source greater than 0.
+So, the contention is that it v source moves away in this direction v source is positive and
+it will move this way the source is negative. Well you could also have a situation in
+which the source is stationery, so let us write that down.
+(Refer Slide Time: 34:43)
+
+Here is the source and the observer either moves towards the source with the speed v
+observer with respect to the medium and this should be a positive speed on the other
+hand to moves away in this direction v observer less than 0 in this case. So, the
+contention is clear when the observer moves towards the source v observer I take to
+
+positive moves away is negative whereas, the case of the source moves away it is
+positive move towards it is negative.
+So, this picture makes a quite clear as to, what are conventions for the signs of these
+velocity is r, when we have several cases possible. We have case, in which the observer
+is stationery and the source moves for the source is stationery the observer moves or both
+of them move with these given velocities here. The general formula is, what I am going
+to right down, now in the formula is that the observer is going to observer frequency nu,
+which is nu naught multiplied by we need information about this speed of these waves in
+a stationery medium.
+And, if the stationery medium the speed is u this is speed of the wave and phase velocity
+of the waves in stationery medium. Then, the formula is this plus v observer divided by u
+plus v source that is the general formula with these sign conventions. So, you can see
+physically, what happens is if the observer starts moving towards the source this is a
+positive number here and the source was stationery that 0.
+So, what does happening is that the frequencies increasing, because as it moves towards
+the source the number of crush the v observes per unit time is going to increase is going
+to look compressed exactly the same thing is going to be happen ((Refer Time: 37:14)) if
+the source moves towards the observer while emitting radiation or waves are a given
+frequencies. So, so many tuffs for tress per second and as it moves towards the observer
+the number of source observe by the observer is going to increase, so effectively the
+frequency increases.
+On the other hand, if the source moves away this is going to look stretched out and
+therefore, the frequency observe by the observer is going to drop that is, what is going to
+happen if v source is positive well that is 0. So, this formula includes in it both cases
+when the source is stationery and the observer is moving and vice versa and this is the
+general formula. Now, what is interesting in this formula is that is derive under the
+summation of Newtonian mechanics.
+So, there is no well to the sit mechanics here there is no special relativity here at all. And
+you can see immediately that it is not symmetric with respect to that is the velocity
+source is moving or the observer is moving. On the other hand one good ask, what
+happens, if you have special relativity, which we will talk about in the context of
+electricity and magnetism later on.
+
+What happens, then after all then either of these frames of reference either the observer
+or resources its prefer there should be complete symmetry between these two and the
+formula, then changes in the relativistic case. But, this is the non relativistic formula
+which you can plug in numbers into it and then, we can find out what the actual
+frequency shift is etcetera, etcetera. But, let me make a mention of, what the relativistic
+formulas, because it is interesting to see, what happen two things happen.
+(Refer Slide Time: 38:55)
+
+Here is the observer and here is the source once again we consider only the simplest case
+where there is a motion of either of these p 2 are both of them is in the line joining the
+two the observer and the source. And, let suppose the relative velocity between the two is
+some number v. Then, you should matter really whether it is the source that is moving or
+the observer that is moving besides, when we talk about light.
+We have let another phenomenon to take care of, which is that this speed of light in a
+vacuum is independent of the state of motion of the source of the speed of the source or
+that of the observer that is the fundamental postulate in relativity. The principle of
+relativity is different and we will talk about it, but the physical postulate of special
+relativity is that the speed of light in vacuum is a fundamental velocity independent of
+the state of motion of the source. Therefore, that is pay the c, then the question ask is,
+what is this going to be, what is nu going to be nu equal to nu naught times.
+And now, we have to pay attention to two things not only the argument about the number
+of stress or the number of traps actually in compress or decompress, but also the
+
+phenomenon of time dilation. So, when you have a moving frame time flows differently,
+then it as in the stationery frame provided these are inertial with respect to each other.
+When you put these corrections into account and put the special relativistic corrections
+into account this formula is not does not hope to anymore.
+We have a formula that is symmetric about whether the source moves or the observer
+moves and this form rise c minus v divided by c plus v, where v equal to the relative
+velocity of the source or of the observer with respect to the source and all we need to
+know there is we do not care, which of the two is moving v is greater than 0. If the
+source and observer here is the observer here is the source are moving towards each
+other in this fashion does not matter, which of the moves and v is less than 0.
+When they move towards each other if v is positive, this going to give a compression
+here, so the thing decreases so it is the other way about; v less than 0, if you are moving
+towards each other and v is greater than 0, if these are moving away from each other.
+And when v is positive you can see that the increase in the frequency and the decrease in
+the frequency comes about for two reasons. One, because this factor becomes smaller
+than c the numerator become small and the denominator increases meaning that there is
+decrease in the frequency.
+So, in the moving away from each other there is a decreasing frequency, but if the
+moving towards each other, then this is negative. So, you have an enhancement a
+frequency both, because numerator is increasing and the denominator is decreasing in
+proportion. So, this is the relativistic formula which includes the correction due to time
+dilation and again I emphasize it is the longitude in a Doppler effect in the sense that the
+two source and observer are the motion of either of them or both are them is along the
+line joining the two of them.
+If it were a transverse effect namely if you have a source here and you have an observer
+zipping along in a line is does not pass through the source then the formula changes and
+you to take up this is, what this happen, what happens then when we study optics when
+we study the propagation of electromagnetic waves.
+
+

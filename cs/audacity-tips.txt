@@ -1,0 +1,97 @@
+audacity tips
+
+### My New key definitions:
+    - `space`     :Pause   (the default `space` is "stop" which sends the cursor backwards, I dont want that)
+    - `ctrl+d`    :delete  (the default `ctrl+d` is duplicate)
+
+### Removing clips flow
+    - Note: I redefined `x` to `space`
+    - The Edit > Clip Boundaries > Split command (shortcut Ctrl
+      + I) splits the audio into different clips at the cursor or
+        selection region, marking the split points with a black
+        vertical line in the waveform. You can use these lines to
+        quickly find or cut regions. A quick workflow to find and
+        cut regions using split lines works like this:
+
+    - Start to  play
+        - When you hear the _STARTING_ point of audio you want to
+          delete,
+        - `X` to stop playback at that point,
+        - then `Ctrl + I`
+    - Press Play to resume from where you stopped,
+        - and when you reach the end of the intended cut,
+        - `X` then `Ctrl + I` again
+    - Double-click to left of latest split line to select region
+      between the two split lines
+    - Adjust the edges of the region as needed using the mouse
+      (or use Shift + Left or Shift + Right to expand the region
+      or Ctrl + Shift + Left or Ctrl + Shift + Right to contract
+      it).
+    - Edit > Cut
+
+    - Split lines disappear when you click on them to merge clips
+      together, but you can use current Audacity's Cut Lines
+      feature to place a vertical line at which audio was cut
+      out. Click on the line at any time to restore the cut
+      audio. Cut Lines can be enabled on the Tracks tab of
+      Preferences.
+
+### remove background hiss
+    - For windows headset mic
+    - "mic in at front" : 30 (very low)
+    - "microphone boost" : +30db (max value)
+    $MY_IMAGES/cs/record-audio-low-background-hiss.jpg
+
+### better sound quality (esp. for windows)
+    export... to MP3
+    choose variable bit rate VBR - "level 0" is the best
+
+### install plugin manually
+    sudo cp $HOME/bin/misc/Noisegate.ny /usr/share/audacity/plug-ins
+
+### remove all breathing, noises, clicks!!!!
+    noise gate plugin!
+    $HOME/bin/misc/Noisegate.ny
+    Activate
+        Generate -> Add / Remove plugins ...
+    Settings
+        Gate frequencies above: 0.0
+        Level reduction: -34
+        Gate Threshold : -22
+        Attack/Decay: 250.0
+
+### add track label
+    tracks menu
+    then add label as selection
+
+### scroll window
+    shift+ mouse wheel
+
+### make waveform bigger
+    view - fit vertically
+
+### delete selected
+    ctrl+d (my binding)
+    default: ctrl+k
+
+### tips from youtube video
+    - record append
+    - insert new material in middle:
+        1. split record (ctrl+i)
+        2. timeshift tool to spread out space
+        3. cut clip from other channel
+        4. paste clip inbetween split
+
+### align/chain multiple tracks
+    - Double click on the top track to select it.
+    - K key (moves cursor to end of the track)
+    - ENTER (deselects the track)
+    - Down cursor key (moves focus to second track)
+    - ENTER key (Selects the second track)
+    - Alt + T (Tracks menu)
+    - A (Align Tracks)
+    - C (Align with Cursor)
+
+### Links
+    - Remove vocals - Audacity                     https://www.youtube.com/watch?v=KE6waMXii2U
+    - Remove vocals (iZotope RX "Music Rebalance") https://www.youtube.com/watch?v=Dt18fkRq8pc

@@ -1,0 +1,111 @@
+YouTube course
+https://www.youtube.com/playlist?list=PL65jGfVh1ilueHVVsuCxNXoxrLI3OZAPI
+
+### Intro
+    - 1900c: Difficult to explain:
+    - Blackbody spectrum
+        - Prediction: Rayleighs law for the `long λ` spectrum
+        - Empirical formula: Weins law for `short λ` spectrum
+            - $MY_IMAGES/physics/Carlson/Blackbody-spectrum.jpg
+
+    - Photoelectric effect
+        - Increase intensity -> stopping voltage stays the same
+        - Increase frequency -> stopping voltage increases
+            - $MY_IMAGES/physics/Carlson/photoelectric-stopping-voltage.jpg
+
+    - Brightline spectra (of atoms/molecules)
+        - Classical physics couldn't explain this at all  
+            - (needed Bohr atom and then full QM?)
+        - Stick sodium into a bunsen flame. Essentially heating a _gas_
+            - $MY_IMAGES/physics/Carlson/brightline-spectra.jpg
+
+    - All about the interaction of light and matter
+
+### When does QM apply?
+    - when things are of order `ħ` (10^-34)
+        - when angular momentum `L ~ ħ`
+        - when uncertanties `∆p ∆x ~ ħ`
+        - when uncertanties `∆E ∆t ~ ħ`
+        - when action `S ~ ħ`   <--- most fundamental
+    - E.g. a speck of dust in a breeze doesn't need QM
+        - $MY_IMAGES/physics/Carlson/dont-use-QM-dust-breeze.jpg
+
+### Key concepts:
+    - Wavefunction: `Ψ (x, y, z, t)`
+        - complex function: when evaluated can have real and
+          imaginary parts
+        - represents the state of a system
+        - gives probabilities
+
+    - Operators
+        - they connect `Ψ` to observable quantities
+        - usually we use "hats" for operators:  `ã, ū, ṽ`
+        - operators act on `Ψ`: 
+            - write the operator on the left: `x-hat Ψ`
+
+
+### Delta functions
+    - delta functions make integrals go away!
+    - just pick out function value at `f(0)`
+        - `∫ δ(x) f(x) dx = f(0)`
+    - translated delta function picks value at `f(a)`
+        - `∫ δ(x-a) f(x) dx = f(a)`
+    - delta function ... of a function
+        - `∫ δ(g(x)) f(x) dx = ...`
+        - pulls out f(x) value where g(x) = 0
+        - the slope of g(x) as it crosses the x-axis is what
+          deterimines the effective width of the δ function
+        - `δ(g(x)) = ∑ δ(x - x_i)  / | g'(x_i) |`
+        - where `x_i` are the zeros of g(x)
+        - Steeper Slope `g'(x_i)`:
+            - smaller "window" crossing the x-axis, smaller
+              weighting and contribution to `δ(g(x))`
+        - Shallower Slope `g'(x_i)`:
+            - larger "window" crossing the x-axis, larger
+              weighting
+        - also subtle point:
+            - this whole `δ(g(x))` formula is really expressing
+              `g(x)` as a SERIES of SHIFTED delta functions
+            - See this diagram:
+                - $MY_IMAGES/physics/Carlson/delta-gx-stuff.jpg
+            - and then the actual integral becomes a summation of
+              3 things and you don't have to do any "integration"
+
+
+### Kets
+    - "ket a" `|a>` is a physical state of the system.
+        - A ket is more general than representing it as
+          a wavefunction in cartesian coords `Ψ` or `Φ` (momentum
+          space), or an infinite sum of stationary states, or
+          solutions to the Schrodinger eqn. 
+        - Those are all different representations of the same
+          physical state... and that physical state is what we
+          mean by "ket a" `|a>`
+            - $MY_IMAGES/physics/Carlson/qm-linear-algebra-link.jpg
+
+
+### Inner Product
+    - Inner products are similar to the "dot product" but
+      different as well because we're working with complex
+      conjugates
+    - `<a | b> = <b | a>*`  if you change the order of the inner
+      product you have to take the complex conjugate
+    - Don't think of the inner product as just components that
+      you're dotting togeter and adding up. 
+        - Divorce your thinking from the dot product. 
+        - Because we don't neccessarily have components we want
+          to consider, we have physical states. 
+        - The mathematics of Linear Algebra can tell us about the
+          properties of these states and how they interact
+          without expressing them in any `basis`.
+    - Of course you can do a lot of things when you do express
+      them in a basis as well, but the vectors themselves can
+      live without the basis.
+
+### Norm
+    - Having defined an inner product, it's useful to define
+      a norm. (our definition of "length")
+    - `|| α || = sqrt(<α|α>)`
+    - remember: `<α|α>` will always give a REAL number
+    - For more on norms, see:
+        - $MY_NOTES/maths/functional-analysis-operator-theory.txt

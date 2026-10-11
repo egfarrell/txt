@@ -1,0 +1,181 @@
+
+
+### How natural Logs invented
+    - Youtube https://www.youtube.com/watch?v=3B6FymMv8b4
+    - Newtons approach
+        - used a geometric progression, didn't use `ln` or `e`
+        - $MY_IMAGES/maths/Newtons-version-natural-log.jpg
+    - the exponential shows up in a gambling problem (snake eyes)
+        - "the number whose natural logarithm is `m`"
+        - $MY_IMAGES/maths/gambling-and-exponential.jpg
+        - $MY_IMAGES/maths/gambling-and-exponential2.jpg
+
+
+### Aside
+    - The "natural log" was originally known as the "hyperbolic log"
+    - See below where I start asking about the connection between
+      the area under a hyperbola and `ln`
+
+### GPT question
+
+- What does this mean: the function `ln(x)` maps the positive
+  real axis to the **whole** real line.
+
+- I'm confused? The whole real line? Can you have negative output
+  from `ln`? 
+
+ChatGPT
+- The statement means the natural logarithm function, `ln(x)`,
+  takes any positive real number as input (`x > 0`) and can
+  produce ANY real number as output.
+- (REASON: e^x always > 0)
+
+Here’s a breakdown:
+
+    - Domain of ln(x): 
+        - ln(x) is defined only for POSITIVE real numbers. This
+          means you can only input values `x` where `x>0`.
+
+    - Range of ln(x): 
+        - The outputs of ln(x) can be any real number. This
+          includes negative numbers, zero, and positive numbers.
+          i.e. for every real number `y`, there exists a positive
+          real number `x` such that `ln(x) = y`.
+
+- So, while you cannot input negative numbers or zero into ln(x),
+  the outputs of ln(x) can cover all real numbers, both negative
+  and positive. 
+
+- But... why can't I evaluate ln(-3) say? What is
+  conceptually wrong with this? Why is the function ln
+  defined/created only to accept positive real numbers? 
+
+- ChatGPT
+    - ln(x) is defined only for positive real numbers due to its
+      relationship with the exponential function `e^x`.
+
+- conceptual explanation:
+
+    - Definition via Exponentiation: 
+        - `ln(x)` is the inverse function of the exponential
+          function `e^x`. This means ln(x) answers the question: 
+        - "To what power must `e` be raised to obtain `x`?"
+
+    Positive Inputs: The exponential function `e^x` always
+    produces positive results for any real number input `x`.
+    Specifically, `e^x>0` for all real `x`. 
+        - There is no real number `x` such that `e^x = −3`,
+          because the exponential function never produces
+          negative numbers or zero. Therefore, `ln` can only
+          accept positive real numbers.
+
+    Alternative: COMPLEX Numbers: 
+        - While ln(x) for x>0 is well-defined in the realm of
+          real numbers, extending the logarithm to negative
+          numbers or zero requires moving into complex numbers. 
+        - In the complex plane, the logarithm can be defined
+          using complex analysis, but it introduces additional
+          complexities such as `branch cuts` and the concept of
+          the complex logarithm. 
+        - For example, `ln(−3)` can be defined as a complex
+          number, but this goes beyond the scope of real-valued
+          functions and typical intro college mathematics.
+
+    - Domain and Range: For simplicity and consistency, `ln` is
+      typically defined in the real number system to take only
+      positive real inputs, aligning with its fundamental
+      relationship to the exponential function.
+
+Summary: 
+    - the natural log `ln(x)` is restricted to POSITIVE INPUTS
+      because its inverse function, the exponential function,
+      only produces POSITIVE OUTPUTS. 
+    - Evaluating ln(−3) would require extending the function into
+      the complex plane, which involves more advanced concepts.
+
+final question: what x will satisfy ln(x) = -3
+
+See if you can remember how! (really need to solve `x = e^-3`)
+
+### Question 
+    - What's the relationship of `ln` to a hyperbola and also how
+      could a hyperbola be related to `e`... 
+    - (ie I find it amazing that `ln` is related to these two
+      seemingly separate concepts)
+
+### ChatGPT
+
+- Yes, `ln(x)` is indeed related to both the exponential function
+  `e^x` and the area under the hyperbola `1/x` 
+
+### Relationship: ln(x) and Hyperbola 1/x
+
+    - Defining ln(x) via Integral:
+    - The natural log `ln(x)` can be defined as the
+      area under the curve 1/t from `1` to `x`.
+      Mathematically, this is expressed as: ln(x)=∫1/t dt
+
+    - This integral definition gives ln(x) a geometric
+      interpretation: it represents the total area under the
+      curve `1/t` from `t=1` to `t=x`.
+
+    - Properties Derived from the Integral:
+    - From this definition, several properties of the natural
+      logarithm can be derived: `ln(1)=0` because the area from
+      `1` to `1` is zero.
+
+    - The natural logarithm is positive for `x>1` and negative for `0 < x < 1`.
+
+### Relationship between ln(x) and Exponential Function e^x
+
+    - Inverse Relationship:
+        - The exponential function `e^x` and the natural logarithm
+          `ln(x)` are inverse functions. 
+        - This means that: e^[ln(x)]=x and ln(e^x)=x
+
+    - This inverse relationship closely ties the two functions
+      together. The exponential function grows rapidly and is
+      defined for all real numbers, while the natural logarithm
+      is defined for positive real numbers and grows more slowly.
+
+    - The Constant `e`:
+        - The number `e` (approximately 2.71828) is defined as
+          the unique number such that the area under the curve
+          `1/t` from `1` to `e` is equal to `1`. 
+        - That is: `ln(e) = 1`
+
+    - This property helps establish `e` as the base of the
+      natural logarithm.
+
+### Connecting the Concepts: Hyperbola and Exponential
+
+    - Area Interpretation and Exponential Growth:
+        - The relationship between the hyperbola `1/x` and the
+          natural logarithm as an area under the curve shows
+          a deep connection between logarithmic growth and
+          exponential growth. 
+        - Exponential growth (described by `e^x`) can be
+          understood as a continuous compounding process, while
+          the natural logarithm `ln` describes the continuous
+          compounding's "inverse" process in terms of area.
+            - Kalid simply explained says ln gives how much
+              'time' an exponential process needs to produce an
+              amount ('time' rather than area)
+
+    - Scaling Properties:
+        - The SCALING PROPERTIES of the hyperbola are mirrored in
+          the logarithm function. 
+        - E.g., the area under `1/x` from `1` to x⋅y is the sum
+          of the areas from `1` to `x` and from `x` to `x⋅y`,
+          which translates to the logarithmic property: 
+            - `ln(xy) = ln(x) + ln(y)` 
+
+### Euler's Formula:
+    - Euler's identity, `e^(iπ) + 1 = 0`, ties together `e`, `π`,
+      and complex exponentiation, showing the deep
+      interconnectedness of these concepts.
+
+- In summary, `ln(x)` and function `e^(x)` are intimately related
+  through their definitions as inverse functions. 
+    - The natural logarithm also has a geometric interpretation
+      as the area under the hyperbola `1/x`. 

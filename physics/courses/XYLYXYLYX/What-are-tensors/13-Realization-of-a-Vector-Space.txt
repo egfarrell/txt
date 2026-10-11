@@ -1,0 +1,180 @@
+13-Realization-of-a-Vector-Space.txt
+
+- Youtube link with comments
+https://www.youtube.com/watch?v=pnoI7msQ0EE&list=PLRlVmXqzHjUQARA37r4Qw3SHPqVXgqO6c&index=13
+
+
+# very important lecture
+
+- key: There are "two" metric tensors
+    - The normal "lower"  metric tensor
+    - The raised component metric tensor (dual?)
+
+- Note: There is an error at 3:26. The equality I write down is
+  only true for orthonormal basis vectors! 
+    - There will always be a relationship between `(e_\mu,
+      e_\nu)` and `(e^\mu , e^\nu)` but it wont always be as
+      simple as I wrote down! 
+    - For some reason at that point in the lecture I presumed
+      that I set up an orthonormal basis in `V`, but I did not! 
+    - The correct general relationship is more complex:
+      ` g_\mu\nu` is related to `g^\nu\alpha` as its *inverse* so
+      the numbers `(e_\mu, e_\nu)` and `(e^\mu , e^\nu)` are
+      related as components of inverse tensors. 
+        - That is:
+            - `g_\mu\nu  g^\nu\alpha = \delta^\mu_\alpha`
+
+    - Sorry! This material is simpler than it first seems, but
+      not quite *that* simple! :)
+
+
+The metric tensor mimics the inner product:
+	- $MY_IMAGES/physics/what-are-tensors/metric-tensor-mimics-inner-product.jpg
+
+- Key Question:
+    - When you create an inner product in the vector space, do
+      you create an inner product in the dual space?
+
+- 2 steps to define an INNER PRODUCT on the dual space:
+
+    - step 1: 
+        - The components:
+        - the metric tensor will create a connection between the
+          `V` components and the `V*` components. 
+            - (ie the metric tensor really just raises and lowers
+              the components)
+
+    - step 2: 
+        - The basis vectors:
+        - well to have both inner products the same, we simply
+          require that `(e_ν, e_μ) = (e^ν, e^μ)`
+            - $MY_IMAGES/physics/what-are-tensors/creating-dual-space-inner-product.jpg
+
+- The preceeding steps imply there is metric tensor associated
+  with the dual space, and really the metric tensor with raised
+  components
+
+- The raised component metric tensor lives in a different tensor
+  product space to the normal lower metric tensor
+
+- So far, everything has been the manipulation of "glyphs"! 
+    - What's the relation to Physics?
+    - e.g. so far everything like basis vectors have obeyed all
+      the rules "by definition" only
+    - its like a formal logical scheme 
+        - $MY_IMAGES/physics/what-are-tensors/abstract-glyph-manipulation.jpg
+
+### Realisations
+    - Realisations: are some kind of mathematical object that
+      behave like vector spaces
+
+### Differential Operator
+    - a (differentiable) function of 4 variables: 
+        - `f(X^0,X^1,X^2,X^3) = f(X^μ) = f(X)`
+    - the 4 variables will turn out to be coordinates 
+        - $MY_IMAGES/physics/what-are-tensors/intro-to-Differential-Operator.jpg
+    - also heres the notation:
+        - $MY_IMAGES/physics/what-are-tensors/notation-partial-differentiation.jpg
+
+- The differential operators are linear! Like everything...
+	- $MY_IMAGES/physics/what-are-tensors/differential-operators-are-linear.jpg
+
+- The set of all Linear operators capable of operating on
+  4 variables is a vector space. (It's not an inner product
+  space.. just a plain vector space)
+
+- It is a `realisation` of a 4D Vector Space.. 
+
+- The linear operators are like a bunch of tools that work on
+  functions.... but the "tools" or operators themselves have
+  their own linear properties!
+
+
+### Create a model of spacetime
+    - Draw coordinate lines 
+
+    - Every point could have it's own name... that's one way... 
+        - $MY_IMAGES/physics/what-are-tensors/label-every-point-in-spacetime.jpg
+
+    - But the way we really name points in spacetime, is we give
+      them coordinate values
+        - $MY_IMAGES/physics/what-are-tensors/label-every-point-using-coordinates.jpg
+
+    - comment about _superscript_ on coordinate elements. 
+        - That doesn't mean they're a vector/vector space. 
+        - You would need basis vectors for that!
+
+
+- Now a big one: a new realisation of a vector space..
+    - instead of basis vectors like: `e_0, e_1` ...
+    - the basis vectors will be differential operators(!): `∂_μ`
+        - $MY_IMAGES/physics/what-are-tensors/new-vector-space-basis.jpg
+    - the basis vectors will be the RATE-OF-CHANGE along
+      coordinate lines 
+        - Aaah... that's what Fleisch was saying (when I read
+          Fleisch in Holyhill 2023)
+        - See: "Vectors as Derivatives"
+            - $MY_NOTES/physics/UnderGrad/Fleisch-Vectors-Tensors.txt
+
+
+- wow: every point in spacetime has it's _own_ 4D vector space!
+    - $MY_IMAGES/physics/what-are-tensors/every-point-has-own-vector-space.jpg
+    - and these spaces at each point have nothing to do with each
+      other. They are totally separate.
+    - so if you're talking about a vector space, you have to say
+      the _point_ that the space is attached to...
+        - $MY_IMAGES/physics/what-are-tensors/label-each-vector-space-with-its-point.jpg
+    - so each point is lugging around a huge "architecture" of
+      spaces and tensor products...
+
+- once you have a vector space...
+- you automatically have a dual space... 
+- and once you have a dual space... 
+- you have an infinite variety of tensor product spaces... 
+
+- we haven't defined an inner product yet on the vector spaces
+  attached to each point... (iei defined a metric yet)
+
+- understanding how the inner product will work on all these
+  vector spaces is the kernel/core of understanding GR...
+- and binding these vector spaces together, in a logical whole,
+  getting control over this... is what the subject of GR (and
+  differential geometry) is all about...
+
+- But we will find a way to talk about all of them at once...
+- Enter.... the concept of.... _fields_...
+
+
+
+### YouTube
+    - Now something I quite cant wrap my head around. 
+    - When we use partial derivatives as base vectors:
+        - 1) dont we need to check if they are linear independent
+          ? And that they span the whole 4D vector space that we
+          are interested in? 
+        - 2) why do we need evaluate the partial derivative at
+          a point ? I understand we want that vectors map
+          dual-vectors to a Real number but could we not just
+          define the partials as our base vector without the
+          evaluation step?
+
+
+        - Answer:
+        - 1) The differential operators that constitute the
+          coordinate basis will be independent if the coordinate
+          system satisfies the basic requirements associated with
+          charts on a manifold. See the lessons regarding
+          manifolds for the derivation which demonstrates this
+          independence. 
+        - 2) The idea is that the partial derivatives are the
+          basis vectors of one vector space at a time, namely the
+          tangent space at a point in spacetime. If we actually
+          use the tangent vectors as differential operators they
+          must take derivatives at that point. That is what makes
+          them different from point to point. The dual space
+          mapping is cannonical and we can not avoid the
+          existence of the dual space. However the use of
+          differential operators as basis vectors for V does not
+          really depend on the dual space at all. I'm not certain
+          I understand your question....?
+

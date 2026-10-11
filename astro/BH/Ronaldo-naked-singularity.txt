@@ -1,0 +1,687 @@
+RAGtime 22 – R. Vieira: Levitating atmospheres around naked singularities
+    - https://www.youtube.com/watch?v=rZAixONjZWk&list=PL4sr0rhJDOHQdsO0pqz-_VLtxg0w5RdLS&index=30
+    - $HOME/repos/marks/journal-refs/naked-singularity-refs.txt
+
+### questions
+    - different potentials for matter / photons in KS spacetime
+      (any spacetime!)
+    - Epicyclic frequency https://theoretical-physics-digest.fandom.com/wiki/Epicyclic_Frequency
+
+### Good
+    - Ronaldo and Wlodeks paper $MY_BOOKS/Astro/BH/Ronaldo-Wlodek-Atmospheres-singularities.pdf
+    - $MY_BOOKS/Astro/CAMK/Ronaldo-mathematica-notebook-curvature.pdf
+    - Gourgoulhon-BH-lectures  https://luth.obspm.fr/~luthier/gourgoulhon/leshouches18/plan.html
+    - $MY_BOOKS/Astro/BH/Gourgoulhon-BH-lectures.pdf
+    - $MY_BOOKS/Astro/BH/Nathalie-Deruelle-BH-GR-2009.pdf
+    - $MY_CODE/sage/BH-lectures/
+    - $MY_NOTES/cs/lang/sagemath/sagemanifolds.txt
+
+    - key papers
+
+        - Ghosh-01 Newtonaian Analogus Potentials 
+            - $MY_ZOTERO/2015/ghosh_et_al_2015_newtonian_analogue_of_static_general_relativistic.pdf 
+            - $MY_IMAGES/astro/singularity/ghosh-01-2015-generalised-newtonian-potential.jpg
+
+        - Ghosh-02 pseudo-Newtonian potentials (better?) 
+            - $MY_ZOTERO/2016/ghosh_et_al_2016_exact_relativistic_newtonian_representation_of.pdf
+            - $MY_IMAGES/astro/singularity/ghosh-02-2016-general-newtonian-potential.jpg
+            - $MY_IMAGES/astro/singularity/ghosh-02-2016-table-of-accuracy.jpg
+
+        - Ronaldo 2013 with Wlodek 
+            - $MY_ZOTERO/2013/vieira_et_al_2013_circular_geodesics_of_naked_singularities_in_the.pdf
+
+
+
+### Interesting
+    - KS spacetime: Kehagias-Sfetsos
+	- Brilliant XylyXylyX plot $MY_IMAGES/physics/What-is-GR/effective-orbits-brilliant-chart.jpg
+    - Duncan 1978 "singular event horizons" (is that what a "naked" singularity is)
+    - $MY_ZOTERO/1973/liang_1973_a_note_on_black_hole_and_naked_singularity.pdf
+    - $MY_ZOTERO/1973/penrose_1973_naked_singularities.pdf
+
+
+
+### Ghosh-02 (better?) 
+    - $MY_ZOTERO/2016/ghosh_et_al_2016_exact_relativistic_newtonian_representation_of.pdf
+
+    - However the Newtonian description of gravity (via
+      potentials) is mathematically more comprehensible, and
+      simpler for phenomenaphysical understanding, compared to
+      a geometrical (metric) description of gravity. 
+    - As a result, the Newtonian potential continues to be used
+      in most applications at a far (weak)field static condition
+      where the Newtonian approximation is reasonably valid. 
+    - At strong gravity, however, the Newtonian description is no
+      longer _valid_, even approximately. 
+    - Nonetheless, for a simpler understanding of the general
+      relativistic(GR) behavior of a test particle under the
+      influence of a non-gravitation potential in a curved
+      background spacetime, efforts have been made to formulate
+      modified Newtonian-like potentials to mimic GR
+      gravitational features of a few corresponding spacetime
+      geometries, particularly in strong field gravity.
+    - Although not intended to construct Newtonian analogues of
+      gravitational spacetime geometries, they are mainly
+      intended to mathematically replicate a few GR features
+      approximately, mostly to be used to study inner
+      relativistic dynamics of the accretion ﬂow around spacetime
+      geometries describing black holes (BHs)/compact objects;
+      commonly called pseudo-Newtonian potentials (PNPs). 
+    - These potentials, although not exactly Newtonian in nature,
+      are notionally Newtonian in character, in a sense that the
+      gravitational interaction can be treated through the form
+      of a scalar potential and a corresponding force law. 
+    - In the present work, we propose to construct an exact
+      relativistic Newtonian-like representation for the general
+      static spherically symmetric spacetime geometry from a ﬁrst
+      principle approach. 
+    - Such a construct should be essentially a relativistic
+      Newtonian analogue described through a relativistic scalar
+      potential and a corresponding force law, which then
+      essentially demands that the corresponding modiﬁed
+      Newtonian potential will give path equations of test
+      particles that are _exactly the same_ as those obtained
+      from geodesic equations of the corresponding spacetime
+      metric without any restriction on particle energy or the
+      strength of the gravitational ﬁeld.
+
+
+
+
+
+
+### Ronaldo 2013 (Geodesics)
+    - $MY_ZOTERO/2013/vieira_et_al_2013_circular_geodesics_of_naked_singularities_in_the.pdf
+    - Circular time-like geodesics are, of course, of great
+      astronomical interest, predating even the birth of physics
+    - The properties of accretion disks, such as their
+      luminosity, photon spectrum, time variability and the
+      possible presence of an inner edge of the disk close to the
+      ISCO are all intimately related to the properties of
+      _circular orbits_ of the accreting fluid. 
+    - The astrophysical information is carried from the disk to
+      observers by photons travelling through the cosmic vacuum,
+      so null geodesics are of great interest as well. 
+    - Further, circular photon orbits, present already in the
+      Schwarzschild solution to Einstein’s GR, may leave behind
+      an observable time signature [12, 13].
+    - Similar investigations were recently carried out for the
+      Reissner-Nordstrom metric [^20] [^21], and a remarkable
+      qualitative similarity between the properties of the
+      circular geodesics of naked singularities in GR and in
+      Horava’s gravity is one of the conclusions of our paper.
+    - Useful equations
+        - $MY_IMAGES/astro/singularity/KS-effective-potential.jpg
+        - $MY_IMAGES/astro/singularity/KS-embedding-transition-NS-to-BH.jpg
+
+        - Embeddings:
+            - $MY_IMAGES/astro/singularity/KS-embedding-class-1.jpg
+            - $MY_IMAGES/astro/singularity/KS-embedding-class-2.jpg
+            - $MY_IMAGES/astro/singularity/KS-embedding-class-3.jpg
+ 
+
+
+    - The general properties of the KS metric imply that this
+      acceleration vanishes at a certain radius in the naked
+      singularity case (`ωM^2 < 1/2`)
+    - since `f` is continuous and `f(0) = 1`,`f(∞) = 1`, it
+      follows from the Rolle-Lagrange theorem that there will be
+      a radius at which `f′= 0`. 
+    - Further, as `f≤1`, this radius corresponds to a minimum of
+      `f`(Fig.1), and is a stable equilibrium position of any
+      test particle. This radius, `r_0G`, at which `a_r=0`, could
+      be termed the "_antigravity radius_"
+        - $MY_IMAGES/astro/singularity/ronaldo-2013-fig1.jpg
+
+    - The angular momentum and frequency of `r=const` geodesics
+      also vanish at `r_0G`. Below this radius the radial
+      acceleration of a static observer points inwards and
+      therefore there are no circular time-like geodesics, this
+      is the case of _repulsive gravity_ (antigravity). 
+    - Thus, circular geodesics exist only for `r > r_0G`, and
+      there are also stable time-like geodesics corresponding to
+      rest at `r=r_0G`
+
+    - Review equatorial geodesic motion
+        - $MY_IMAGES/astro/singularity/formulas-equatorial-circular-motion.jpg
+        - $MY_IMAGES/astro/singularity/formulas-eff-pot-timelike-circular-geodesics.jpg
+
+
+      - [^20] $MY_ZOTERO/2008/stuchlík_hledík_2008_properties_of_the_reissner-nordstr-om_spacetimes.pdf
+      - [^21] $MY_ZOTERO/2011/pugliese_et_al_2011_motion_of_charged_test_particles_in.pdf
+                - see also: $MY_ZOTERO/2011/pugliese_et_al_2011_circular_motion_of_neutral_test_particles_in.pdf
+
+    - An interesting feature of photon orbits in the KS naked
+      singularity spacetime is that the inner photon orbit is
+      stable.  This fact can be seen directly from the behavior
+      of Vph: `V_ph = f/r^2` (Eq. 20), and it is illustrated in
+      Fig.2. 
+
+	- $MY_IMAGES/physics/What-is-GR/Ronaldo-2013-fig2.jpg
+
+    - Thus,there are two regions of stability of circular
+      test-particlemotion for `(ωM^2)ms < ωM^2 < (ωM^2)ms.ph`.
+      The OSCO and ISCO coincide for ωM2 = (ωM2)ms. For ωM2
+      < (ωM2)ms all circular orbits are stable down to `x_0G`.
+    - This situation is analogous to the inner stability regions
+      found in Reissner-Nordstrom naked-singularityspacetimes
+      [21] and Reissner-Nordstrom spacetimes with a cosmological
+      constant [20], which may suggest that naked singularities
+      are somehow related to this inner region of stability.
+
+    ### Conclusions
+    - We discussed photon and test-particle orbits in the
+      Kehagias-Sfetsos metric as a function of the Hořava
+      parameter times mass squared, ωM^2. For naked singularities
+      there are three different regimes of circular motion,
+      depending on the value of M . 
+    - There is always an “antigravity sphere” on whose surface
+      a test particle can remain at rest (in a zero angular
+      momentum geodesic), and inside which no circular geodesics
+      exist.
+
+    - For low values of the mass, circular motion is possible
+      everywhere outside the antigravity sphere and is always
+      stable. For intermediate mass values, there are two
+      distinct regions of stable circular motion — 
+        - the inner one terminates in an outer marginally stable
+          circular orbit (OSCO) 
+        - and the outer one begins in an inner marginally stable
+          circular orbit (ISCO)—the two regions are separated by
+          a region where circular orbits are unstable. 
+    - For the largest values of M compatible with the existence
+      of a naked singularity there is an inner region of stable
+      time-like circular geodesics, terminated by a stable photon
+      orbit, and an outer region of stable circular geodesics
+      beginning with an ISCO.
+
+    - Between the stable photon orbit and the ISCO there are two
+      regions separated by an unstable circular photon orbit: in
+      the inner one no circular orbits are allowed, and in the
+      outer one circular time-like geodesics are unstable. 
+
+    - The KS metric is static, and this is the only one we have
+      considered. In GR it is known that the properties of orbits
+      for rotating naked singularities differ from those of the
+      static ones [25].
+
+    - The properties of circular orbits of the Kehagias-Sfetsos
+      and the Reissner-Nordström naked singularities are
+      qualitatively similar (c.f., this work and [20, 21]), but
+      very different from the black hole ones. 
+    - When event horizons are present, the orbits outside the
+      black hole are qualitatively similar to those of the
+      Schwarzschild metric. No circular geodesics exist between
+      the singularity and the inner horizon. 
+    - The differences between the KS naked singularity and GR
+      black hole cases may have astrophysical consequences, which
+      we intend to explore in forthcoming papers. In particular,
+      they may allow placing more stringent limits on the Hořava
+      parameter ([19]).
+
+
+
+
+### Ronaldo 2015 (embedding diagrams)
+    - $MY_ZOTERO/2015/goluchová_et_al_2015_hořava’s_quantum_gravity_illustrated_by_embedding.pdf
+    - In studying BH properties, astrophysicists usually use two
+      famous exact solutions of Einstein’s field
+    - The Schwarzschild solution that describes a static,
+      spherically symmetric gravity of a _non-rotating_ BH
+    - ... and the Kerr solution which describes a stationary,
+      axially symmetric gravity of a _rotating_ black hole.
+    - The Reissner-Nordström solution which describes a static,
+      spherically symmetric gravity of a _charged_, non-rotating
+      black hole is considered to be astrophysically
+      _unrealistic_, because charged macroscopic objects quickly
+      neutralize by accreting plasma of the opposite sign. 
+        - Jana Levin etc say no!? 
+    - The Schwarzschild and Kerr black holes are now quite
+      familiar objects in astrophysics.
+ 
+    - However, BH's in the real universe may be different from
+      those of the Schwarzschild or of the Kerr type. First,
+      Einstein’s theory of gravitation has not yet been tested in
+      its strong field limit relevant to black holes. A variety
+      of alternative gravity theories were studied and
+      theoretically and observationally tested, in the strong
+      gravity limit.
+    - Secondly, although the quantum gravity theoryis still
+      unknown, there are numerous hints that quantum effects may
+      influence strong gravity. 
+    - Like some other QG theories, it points to interesting
+      possibilities that may be relevant to astrophysics: 
+        - (a) the existence of naked singularities with
+          observational consequences that may be calculated
+        - (b) the dynamical phenomenon of “_antigravity_” 
+    - Soon after, Kehagias and Sfetsos [33] derived and solved
+      a modified version of Horava’s field equations for the
+      spherically symmetric, static (“Schwarzschild-like”) case. 
+    - In this paper we discuss some extreme geometrical
+      properties of the KS spacetimes. 
+    - While Horava’s theory itself is not generally covariant,
+      our calculations in the KS metric are — they fulfill the
+      standard rules of a covariant theory familiar from
+      GR. 
+
+    - In a situation familiar from Newtonian physics,
+      gravity always pulls inwards and the centrifugal force
+      always pushes out, and therefore the condition (38). 
+    - In KS spacetimes the situation is more complex, as
+      two rather _unusual_ effects are present: 
+        1. antigravity 
+        2. centrifugal force reversal
+
+    ### Conclusion
+    - We discussed geometrical properties of KS spacetimes in
+      terms of embedding diagrams. 
+    - The KS metric describes a static, spherically symmetric
+      spacetime in the Horava quantum gravity theory.
+    - The non-Einsteinian _quantum_ features of the metric are
+      governed by a single parameter `ω`. 
+        - (has dimension `[cm]−2`)
+    - The central KS object, with mass `M` corresponds to either: 
+        - a black hole        (`ωM2 > 1/2`) 
+        - a naked singularity (`ωM2 < 1/2`)
+
+	- $MY_IMAGES/astro/singularity/KS-embedding-transition-NS-to-BH.jpg
+	- $MY_IMAGES/astro/singularity/KS-embedding-class-1.jpg
+	- $MY_IMAGES/astro/singularity/KS-embedding-class-2.jpg
+	- $MY_IMAGES/astro/singularity/KS-embedding-class-3.jpg
+
+    - We show that a (hypothetical) transition from a naked
+      singularity to a BH state may be discontinuous, as clearly
+      demonstrated by a sequence of KS spacetimes, with
+      the horizon size starting from a finite value.
+    - This may have an observable astrophysical signature. 
+    - A similar _discontinuitymay_ occur also in the case of the
+      conversion of a Kerr naked singularity into a near-extreme
+      Kerr black hole [44].
+    - We also discussed these phenomena present in KS spacetimes: 
+        - _antigravity_ 
+            - present for naked singularities 
+            - not present for BH's
+        - _centrifugal force reversal_ 
+            - present for naked singularities 
+            - present for BH's
+
+
+### Pugliese 2011 (Charged Particles + Neutral particles)
+    - $MY_ZOTERO/2011/pugliese_et_al_2011_motion_of_charged_test_particles_in.pdf
+    - $MY_ZOTERO/2011/pugliese_et_al_2011_circular_motion_of_neutral_test_particles_in.pdf
+	- $MY_IMAGES/astro/singularity/Pugliese-2011-charged.jpg
+
+
+### Accrection disk distinguish
+    - Can accretion disk properties observationally distinguish
+      black holes from naked singularities? (2010)
+    - $MY_ZOTERO/2010/kovács_harko_2010_can_accretion_disk_properties_observationally.pdf
+
+        - Also check this:
+        - Can we distinguish black holes from naked singularities
+          by the images of their accretion disks?
+          https://ui.adsabs.harvard.edu/abs/2019JCAP...10..064S/abstract
+
+    - A first major difference between rotating naked
+      singularities and Kerr black holes is in the _frame
+      dragging_ effect, the angular velocity of a rotating naked
+      singularity being inversely proportional to its spin
+      parameter. 
+        - Because of the differences in the exterior geometry,
+          the thermodynamic and electromagnetic properties of the
+          disks (energy flux, temperature distribution and
+          equilibrium radiation spectrum) are different for these
+          two classes of compact objects, consequently giving
+          clear observational signatures that could discriminate
+          between black holes and naked singularities.
+    - For specific values of the spin parameter and of the scalar
+      charge, the _energy flux_ from the disk around a rotating
+      naked singularity can exceed by several orders of magnitude
+      the flux from the disk of a Kerr black hole. 
+    - It is also shown that the conversion efficiency of the
+      accreting mass into radiation by rotating naked
+      singularities is always higher than the conversion
+      efficiency for black holes, 
+        - i.e., naked singularities provide a much more efficient
+          mechanism for converting mass into radiation than black
+          holes. 
+    - Thus, these observational signatures may provide the
+      necessary tools from clearly distinguishing rotating naked
+      singularities from Kerr-type black holes.
+
+
+### Ronaldo
+    - $MY_VIDEOS/Astro/Ronaldo-Ragtime-Atmospheres.mp4
+
+    ### What is a _LEVITATING_ atmosphere
+	    - $MY_IMAGES/astro/singularity/levitating-atmosphere.jpg
+        - test fluid:  atmosphere: radial dependence on density and pressure
+        - solve eqn of Hydrostatic equilibrium
+
+    ### what is a naked singularity
+        - region of spacetime where curvature invariants go to infinity (e.g. Ricci Scalar, Kretchmann scalar, or any other scalar concerned with the curvature tensor)
+        - then the classic Einstein equantion is not valid anymore
+        - cosmic censorship: every singularity has an event horizon
+	    - $MY_IMAGES/astro/singularity/naked-singularity-embedding-diagrams.jpg
+        - for many spaceimtes there's a region around the singularity
+          where gravity may be repulsive
+            - $MY_IMAGES/astro/singularity/zero-gravity-sphere.jpg
+            - $MY_IMAGES/astro/singularity/density-and-pressure-profiles.jpg
+
+    - "φ is not a gravitational potential, but is a component of the metric"
+    - solve polyropic atmosphere
+    - We have 3 profiles of the gas (atmosphere)
+        - pressure 
+        - density 
+        - temperature 
+
+    - key points: "zero gravity radius"
+        - Maciek question: check  for super spinning Kerr
+            - Maciek talk: atmospheres https://www.youtube.com/watch?v=aRvtM94h_NQ
+        - "we don't have radiation, so we don't have to model the
+          radiation field" 
+        - "if we put in rotation, will there be a surface or an
+          atmospheric ring" 
+
+    - is this the actual potential?
+        - $MY_IMAGES/astro/singularity/reissner-nordstrom-potential.jpg
+
+
+    - For NS it's radiation pressure making the core repulsive
+        - $MY_IMAGES/astro/singularity/neutron-star-levitating-atmos.jpg
+
+    - Ronalds conclusions
+	- $MY_IMAGES/astro/singularity/Ronaldos-conclusions.jpg
+
+### Hořava’s quantum gravity illustrated (2015)
+    - by embedding diagrams of the Kehagias-Sfetsos spacetimes
+    - Page 14: This is where repulsive gravity comes from: 
+        - In _KS_ spacetimes the situation is more complex, as two
+          rather unusual effects are present: 
+        - antigravity and centrifugal force reversal
+        - is this KS spacetime: Kehagias-Sfetsos
+	- $MY_IMAGES/astro/singularity/ks-kehagias-sfetsos-spacetime.jpg
+
+### Ghosh-01 : Newtonian analogue potentials
+    - _key formula_: $MY_IMAGES/astro/singularity/ghosh-01-2015-generalised-newtonian-potential.jpg
+    - $MY_ZOTERO/2015/ghosh_et_al_2015_newtonian_analogue_of_static_general_relativistic.pdf
+    - Naked singularities may occur as an alternative end state
+      of gravitational collapse instead of BH solutions, where
+      a significant departure from BH solutions could occur
+      through a permeating scalar field or spontaneous
+      scalarization due to continuous matter distribution [28] or
+      even through a very strong electromagnetic field. 
+    - If naked singularities are indeed present in nature, it is
+      important to figure out the observationally distinguishing
+      features, at least inprinciple at this stage, of naked
+      singularities in comparison to black holes. GR so far has
+      been tested by solar system measurements as well as by
+      accurate radio observations of binary pulsars. However, in
+      all such cases, the gravitational field is weak and it
+      appears from the detailed studies over the last few decades
+      that naked singularities cannot be discriminated from black
+      holes from weak field observations; one has to look for
+      strong fieldtests instead
+    - The characteristics of the radiation emitted from the
+      accretion disk are supposed to provide useful details about
+      the spacetime geometry around the compact object. 
+    - We studied a very simple accretion model exploiting
+      Newtonian-like analogous potential of the corresponding
+      naked singularity geometries. The very premise with which
+      the Newtonian-like analogous potential of the corresponding
+      static GR geometrieshave been derived in the present work
+      ensuresreproduction of identical or near identical geodesic
+      equations of motion. Not only the orbits like marginally
+      stableor marginally bound are exactly reproduced, dynamical
+      profiles like conserved angular momentum, conserved
+      energy,the temporal features like angular and epicyclic
+      frequencies are reproduced with precise accuracy. Most
+      importantly,the adopted method guarantees the replication
+      of the orbital trajectory of test particle motion
+      accurately, conse-quently, reproducing the experimentally
+      tested GR effects like perihelion advancement,
+      gravitational bending of lightor gravitational time delay
+      with precise accuracy. The generality ofthe procedure then
+      ensures that not only staticGR geometries with event
+      horizons can be comprehensively mimicked through this kind
+      of potential; GR featurescorresponding to naked
+      singularities can also be reproduced comprehensively with
+      precise accuracy and can be usedto analyze relevant
+      astrophysical processes in strong field gravity around
+      corresponding naked singularities.
+    - In this work, we have formulated a generic Newtonian like
+      analogous potential corresponding to static
+      sphericallysymmetric general GR spacetime, and subsequently
+      derived proper Newtonian like analogous potential for JNW
+      andRN spacetimes. The derived PNPs found to reproduce the
+      entire GRfeatures with precise accuracy. We also
+      studiedorbital dynamics around these two geometries
+      extensively in the modified Newtonian analogue, including
+      the detailedanalysis of their corresponding test particle
+      trajectories.Our findings employing the modified Newtonian
+      analogous potentials for the naked singularity solutions
+      show thatas one departs more from Schwarzschild solution
+      i.e. with the increase in the value ofγandrQ, the nature of
+      thetest particle dynamics along circular orbit in JNW and
+      RN spacetimes tends to show altogether different
+      behaviorwith distinctive traits as compared to the nature
+      of particle dynamics in the Schwarzschild geometry.
+      Interestinglywe found two values ofrmsfor a certain range
+      in the value ofγ(0.4472<∼γ <0.5) andrQ(√9/8rs<
+      rQ<∼1.118rs),which are unique features of JNW and RN
+      geometries. For values of Γ<0.4472 andrQ>1.118rs, the
+      particlein circular trajectory would not have last stable
+      orbit, consequently if the particle motion is perturbed in
+      the innerregion corresponding to JNW and RN geometries with
+      these values ofγandrQ, the particle would eventually
+      plungeinto the naked singularities.
+
+
+### Living Review: Numerical Relativity
+    - https://link.springer.com/article/10.1007/lrr-2015-1
+    - Spacetime singularities signal the breakdown of the
+      geometric description of the spacetime, and can be
+      diagnosed by either the blow-up of observer-invariant
+      quantities or by the impossibility to continue timelike or
+      null geodesics past the singular point. For example, the
+      Schwarzschild geometry has a curvature invariant RabcdRabcd
+      = 48 G2M2/(c4r6) in Schwarzschild coordinates, which
+      diverges at r = 0, where tidal forces are also infinite.
+      Every timelike or null curve crossing the horizon
+      necessarily hits the origin in finite proper time or affine
+      parameter and, therefore, the theory breaks down at these
+      points: it fails to predict the future development of an
+      object that reaches the singular point. Thus, the classical
+      theory of GR, from which spacetimes with singularities are
+      obtained, is unable to describe these singular points and
+      contains its own demise. Adding to this classical
+      breakdown, it is likely that quantum effects take over in
+      regions where the curvature radius becomes comparable to
+      the scale of quantum processes, much in the same way as
+      quantum electrodynamics is necessary in regions where EM
+      fields are large enough (as characterized by the invariant
+      E2 − B2) that pair creation occurs. Thus, a quantum theory
+      of gravity might be needed close to singularities.
+
+
+    - It seems therefore like a happy coincidence that the
+      Schwarzschild singularity is cloaked by an event horizon,
+      which effectively causally disconnects the region close to
+      the singularity from outside observers. This coincidence
+      introduces a miraculous cure to GR’s apparently fatal
+      disease: one can continue using classical GR for all
+      practical purposes, while being blissfully ignorant of the
+      presumably complete theory that smoothens the singularity,
+      as all those extra-GR effects do not disturb processes
+      taking place outside the horizon.
+
+    - Unfortunately, singularities are expected to be quite
+      generic: in a remarkable set of works, Hawking and Penrose
+      have proved that, under generic conditions and symmetries,
+      collapse leads to singularities [608, 402, 408, 570]. Does
+      this always occur, i.e., are such singularities always
+      hidden to outside observers by event horizons? This is the
+      content of Penrose’s “cosmic censorship conjecture”, one of
+      the outstanding unsolved questions in gravity. Loosely
+      speaking, the conjecture states that physically reasonable
+      matter under generic initial conditions only forms
+      singularities hidden behind horizons [767].
+
+### Joshi Review
+    - $MY_ZOTERO/2000/joshi_2000_gravitational_collapse.pdf
+
+    - The limitation of the singularity theorems, however, was
+      that they only predicted the existence of singularities in
+      collapse and cosmology, but did not give any information on
+      their physical nature: 
+        - e.g. how fast the densities & curvatures grow there
+        - or the causal structure (e.g. can they communicate with
+          faraway observers in the universe).
+
+    - These questions, which are clearly vital to understanding
+      the final fate of massive collapsing clouds, can be
+      answered only by means of a detailed study of gravitational
+      collapse phenomena in gravitation theory. 
+
+    - The classical spacetime singularities should be smeared out
+      by quantum gravity, and what would really result from such
+      an endless collapse is an extreme strong gravity region,
+      with extreme values of physical parameters such as
+      densities and curvatures, confined to an extraordinarily
+      tiny region of space. 
+
+    - If the event horizons of gravity already start developing
+      at an earlier phase during such a collapse, the collapsing
+      star and the eventual fireball as described above gets
+      hidden within the horizon, disappearing from outside
+      observers in the universe forever. Then we have the
+      formation of a black hole in the universe as a result of
+      the gravitational collapse. 
+    - On the other hand, if the formation of event horizon gets
+      _delayed_ sufficiently during the collapse, the result is
+      the development of a naked singularity, or a _visible fire
+      ball_, which can possibly send out massive radiations to
+      faraway observers from near such strong gravity regions.
+
+    - The generic conclusions from classical studies of collapse
+      phenomena are striking: While the collapse always produces
+      curvature generated fireballs characterized by diverging
+      curvatures and densities,  trapped surfaces may not develop
+      early enough to always shield this process from an outside
+      observer. (depends on initial data)
+    - Spherically symmetric collapse: Oppenheimer & Synder.
+      Homogeneous dust ball collapse, results in BH, extreme
+      density regions hidden from observers by the event horizon,
+      which starts forming much _earlier_ than the epoch of
+      singularity formation.
+
+    - The point is, classical gravity implies existence of strong
+      gravity regions, where both classical and quantum gravity
+      come into their own. In fact, as pointed out by Wald (see
+      Ref. [1]), if naked singularities develop, then in
+      a literal sense we come face-to-face with the laws of
+      quantum gravity whenever gravitational collapse to such an
+      event occurs in distant regions of our universe. Thus,
+      collapse phenomena may provide us with a possibility of
+      actually testing quantum gravity laws.
+
+
+    - It was examined recently if a naked singularity could be
+      a good candidate for a strong source of gravity waves [14].
+      The frequency range at which naked singularities may
+      radiate gravity waves was estimated by Thorne [20]. Various
+      observational possibilities to detect cosmic censorship
+      violations have been suggested recently by Krolak [21].
+
+    - Both classical as well as quantum effects in the vicinity
+      of such a visible fireball may combine to produce
+      observable signatures for a faraway observer in the
+      universe. Such a possibility was explored recently by
+      Joshi, Dadhich, and Maartens [22] in connection with the
+      gamma rays bursts which remain one of the most intriguing
+      puzzles in astronomy. While collapse always produces the
+      fireball with diverging curvatures and densities, late
+      formation of trapped surfaces may allow this mostly
+      radiation dominated fireball to expand and create shocks in
+      the surrounding medium. In this sense, such collapse
+      generated fire- balls could provide natural candidates for
+      a central engine required for the production of
+
+
+
+
+### Top refs
+    - 1469 | 2000 | Klebanov    | Supergravity and a confining gauge theory: duality cascades and χSB-resolution of naked singularities                                                                                                                     | https://ui.adsabs.harvard.edu/abs/2000JHEP...08..052K
+    - 1047 | 1985 | Boulware    | String-generated gravity models                                                                                                                                                                                           | https://ui.adsabs.harvard.edu/abs/1985PhRvL..55.2656B
+    - 449  | 2004 | Babington   | Chiral symmetry breaking and pions in nonsupersymmetric gauge/gravity duals                                                                                                                                               | https://ui.adsabs.harvard.edu/abs/2004PhRvD..69f6007B
+    - 406  | 2002 | Virbhadra   | Gravitational lensing by naked singularities                                                                                                                                                                              | https://ui.adsabs.harvard.edu/abs/2002PhRvD..65j3004V
+    - 376  | 1982 | Gibbons     | Antigravitating black hole solitons with scalar hair in N=4 supergravity                                                                                                                                                  | https://ui.adsabs.harvard.edu/abs/1982NuPhB.207..337G
+    - 337  | 1973 | Penrose     | Naked Singularities                                                                                                                                                                                                       | https://ui.adsabs.harvard.edu/abs/1973NYASA.224..125P
+    - 328  | 1992 | Kallosh     | Supersymmetry as a cosmic censor                                                                                                                                                                                          | https://ui.adsabs.harvard.edu/abs/1992PhRvD..46.5278K
+    - 302  | 1996 | Kanti       | Dilatonic black holes in higher curvature string gravity                                                                                                                                                                  | https://ui.adsabs.harvard.edu/abs/1996PhRvD..54.5049K
+    - 296  | 1998 | Virbhadra   | Role of the scalar field in gravitational lensing                                                                                                                                                                         | https://ui.adsabs.harvard.edu/abs/1998A&A...337....1V
+    - 278  | 1995 | Kraus       | Effect of self-interaction on charged black hole radiance                                                                                                                                                                 | https://ui.adsabs.harvard.edu/abs/1995NuPhB.437..231K
+    - 275  | 1977 | Davies      | The Thermodynamic Theory of Black Holes                                                                                                                                                                                   | https://ui.adsabs.harvard.edu/abs/1977RSPSA.353..499D
+    - 275  | 2008 | Virbhadra   | Time delay and magnification centroid due to gravitational lensing by black holes and naked singularities                                                                                                                 | https://ui.adsabs.harvard.edu/abs/2008PhRvD..77l4014V
+    - 273  | 1992 | Russo       | End point of Hawking radiation                                                                                                                                                                                            | https://ui.adsabs.harvard.edu/abs/1992PhRvD..46.3444R
+    - 270  | 2001 | Claudel     | The geometry of photon surfaces                                                                                                                                                                                           | https://ui.adsabs.harvard.edu/abs/2001JMP....42..818C
+    - 269  | 1993 | de          | Duality symmetries from non-abelian isometries in string theory                                                                                                                                                           | https://ui.adsabs.harvard.edu/abs/1993NuPhB.403..377D
+    - 266  | 2005 | Chong       | General Nonextremal Rotating Black Holes in Minimal Five-Dimensional Gauged Supergravity                                                                                                                                  | https://ui.adsabs.harvard.edu/abs/2005PhRvL..95p1301C
+    - 257  | 1999 | Behrndt     | Non-extreme black holes of five-dimensional N=2 AdS supergravity                                                                                                                                                          | https://ui.adsabs.harvard.edu/abs/1999NuPhB.553..317B
+    - 253  | 1993 | Joshi       | Naked singularities in spherically symmetric inhomogeneous Tolman-Bondi dust cloud collapse                                                                                                                               | https://ui.adsabs.harvard.edu/abs/1993PhRvD..47.5357J
+    - 237  | 1999 | Cohen       | Solving the hierarchy problem with noncompact extra dimensions                                                                                                                                                            | https://ui.adsabs.harvard.edu/abs/1999PhLB..470...52C
+    - 236  | 1992 | Holzhey     | Black holes as elementary particles                                                                                                                                                                                       | https://ui.adsabs.harvard.edu/abs/1992NuPhB.380..447H
+    - 227  | 2007 | Ansoldi     | Non-commutative geometry inspired charged black holes                                                                                                                                                                     | https://ui.adsabs.harvard.edu/abs/2007PhLB..645..261A
+    - 226  | 1999 | Virbhadra   | Naked singularities and Seifert's conjecture                                                                                                                                                                              | https://ui.adsabs.harvard.edu/abs/1999PhRvD..60j4041V
+    - 224  | 1996 | Cvetič      | Dyonic BPS saturated black holes of heterotic string on a six-torus                                                                                                                                                       | https://ui.adsabs.harvard.edu/abs/1996PhRvD..53..584C
+    - 221  | 1991 | Shapiro     | Formation of naked singularities: The violation of cosmic censorship                                                                                                                                                      | https://ui.adsabs.harvard.edu/abs/1991PhRvL..66..994S
+    - 220  | 1990 | Ori         | Naked singularities and other features of self-similar general-relativistic gravitational collapse                                                                                                                        | https://ui.adsabs.harvard.edu/abs/1990PhRvD..42.1068O
+    - 211  | 1972 | Hartle      | Solutions of the Einstein-Maxwell equations with many black holes                                                                                                                                                         | https://ui.adsabs.harvard.edu/abs/1972CMaPh..26...87H
+    - 211  | 1986 | Newman      | Strengths of naked singularities in Tolman-Bondi spacetimes                                                                                                                                                               | https://ui.adsabs.harvard.edu/abs/1986CQGra...3..527N
+    - 208  | 1992 | Mukhanov    | A nonsingular universe                                                                                                                                                                                                    | https://ui.adsabs.harvard.edu/abs/1992PhRvL..68.1969M
+    - 208  | 1997 | Wald        | Gravitational Collapse and Cosmic Censorship                                                                                                                                                                              | https://ui.adsabs.harvard.edu/abs/1997gr.qc....10068W
+    - 207  | 1994 | Bañados     | Dimensionally continued black holes                                                                                                                                                                                       | https://ui.adsabs.harvard.edu/abs/1994PhRvD..49..975B
+    - 200  | 2000 | Gubser      | Curvature Singularities: the Good, the Bad, and the Naked                                                                                                                                                                 | https://ui.adsabs.harvard.edu/abs/2000hep.th....2160G
+    - 200  | 2009 | Hioki       | Measurement of the Kerr spin parameter by observation of a compact object's shadow                                                                                                                                        | https://ui.adsabs.harvard.edu/abs/2009PhRvD..80b4042H
+    - 183  | 1973 | Tomimatsu   | New Series of Exact Solutions for Gravitational Fields of Spinning Masses                                                                                                                                                 | https://ui.adsabs.harvard.edu/abs/1973PThPh..50...95T
+    - 171  | 1982 | Dobiasch    | Stationary, spherically symmetric solutions of Jordan's unified theory of gravity and electromagnetism.                                                                                                                   | https://ui.adsabs.harvard.edu/abs/1982GReGr..14..231D
+    - 168  | 2000 | Chen        | A critical cosmological constant from millimeter extra dimensions                                                                                                                                                         | https://ui.adsabs.harvard.edu/abs/2000JHEP...09..012C
+    - 168  | 2011 | Johannsen   | Metric for rapidly spinning black holes suitable for strong-field tests of the no-hair theorem                                                                                                                            | https://ui.adsabs.harvard.edu/abs/2011PhRvD..83l4015J
+    - 160  | 2003 | Vagenas     | Generalization of the KKW analysis for black hole radiation                                                                                                                                                               | https://ui.adsabs.harvard.edu/abs/2003PhLB..559...65V
+    - 157  | 2010 | Lehner      | Black Strings, Low Viscosity Fluids, and Violation of Cosmic Censorship                                                                                                                                                   | https://ui.adsabs.harvard.edu/abs/2010PhRvL.105j1102L
+    - 146  | 1997 | Ryan        | Accuracy of estimating the multipole moments of a massive body from the gravitational waves of a binary inspiral                                                                                                          | https://ui.adsabs.harvard.edu/abs/1997PhRvD..56.1845R
+    - 146  | 2000 | Gremm       | Thick domain walls and singular spaces                                                                                                                                                                                    | https://ui.adsabs.harvard.edu/abs/2000PhRvD..62d4017G
+    - 143  | 2010 | Barausse    | Test Bodies and Naked Singularities: Is the Self-Force the Cosmic Censor?                                                                                                                                                 | https://ui.adsabs.harvard.edu/abs/2010PhRvL.105z1102B
+    - 143  | 2012 | Amarilla    | Shadow of a rotating braneworld black hole                                                                                                                                                                                | https://ui.adsabs.harvard.edu/abs/2012PhRvD..85f4019A
+    - 142  | 1987 | Ori         | Naked singularities in self-similar spherical gravitational collapse                                                                                                                                                      | https://ui.adsabs.harvard.edu/abs/1987PhRvL..59.2137O
+    - 142  | 2012 | Lü          | AdS and Lifshitz black holes in conformal and Einstein-Weyl gravities                                                                                                                                                     | https://ui.adsabs.harvard.edu/abs/2012PhRvD..86d4011L
+    - 141  | 2000 | Pando       | 3-branes on resolved conifold                                                                                                                                                                                             | https://ui.adsabs.harvard.edu/abs/2000JHEP...11..028P
+    - 140  | 1997 | Torii       | Dilatonic black holes with a Gauss-Bonnet term                                                                                                                                                                            | https://ui.adsabs.harvard.edu/abs/1997PhRvD..55..739T
+    - 139  | 2000 | Mavromatos  | String-inspired higher-curvature terms and the Randall-Sundrum scenario                                                                                                                                                   | https://ui.adsabs.harvard.edu/abs/2000PhRvD..62l4004M
+    - 138  | 1999 | Caldarelli  | Supersymmetry of anti-de Sitter black holes                                                                                                                                                                               | https://ui.adsabs.harvard.edu/abs/1999NuPhB.545..434C
+    - 137  | 2008 | Garraffo    | The Lovelock Black Holes                                                                                                                                                                                                  | https://ui.adsabs.harvard.edu/abs/2008MPLA...23.1801G
+    - 133  | 1996 | Cvetič      | General static spherically symmetric black holes of the heterotic string on a six-torus                                                                                                                                   | https://ui.adsabs.harvard.edu/abs/1996NuPhB.472..249C
+    - 132  | 2002 | Klemm       | Some aspects of the de Sitter/CFT correspondence                                                                                                                                                                          | https://ui.adsabs.harvard.edu/abs/2002NuPhB.625..295K
+    - 126  | 1996 | Singh       | The final fate of spherical inhomogeneous dust collapse                                                                                                                                                                   | https://ui.adsabs.harvard.edu/abs/1996CQGra..13..559S
+    - 126  | 2011 | Joshi       | Recent Developments in Gravitational Collapse and Spacetime Singularities                                                                                                                                                 | https://ui.adsabs.harvard.edu/abs/2011IJMPD..20.2641J
+    - 125  | 1995 | Agnese      | Wormholes in the Brans-Dicke theory of gravitation                                                                                                                                                                        | https://ui.adsabs.harvard.edu/abs/1995PhRvD..51.2011A
+    - 124  | 2002 | Casadio     | Can Black Holes and Naked Singularities be Detected in Accelerators?                                                                                                                                                      | https://ui.adsabs.harvard.edu/abs/2002IJMPA..17.4635C
+    - 122  | 1973 | Yodzis      | On the occurrence of naked singularities in general relativity                                                                                                                                                            | https://ui.adsabs.harvard.edu/abs/1973CMaPh..34..135Y
+    - 120  | 2005 | Keeton      | Formalism for testing theories of gravity using lensing by compact objects: Static, spherically symmetric case                                                                                                            | https://ui.adsabs.harvard.edu/abs/2005PhRvD..72j4006K
+    - 120  | 2011 | Vanzo       | Tunnelling methods and Hawking's radiation: achievements and prospects                                                                                                                                                    | https://ui.adsabs.harvard.edu/abs/2011CQGra..28r3001V
+    - 119  | 1992 | Nappi       | A closed, expanding universe in string theory                                                                                                                                                                             | https://ui.adsabs.harvard.edu/abs/1992PhLB..293..309N
+    - 119  | 1999 | Barcelo     | Traversable wormholes from massless conformally coupled scalar fields                                                                                                                                                     | https://ui.adsabs.harvard.edu/abs/1999PhLB..466..127B
+    - 117  | 2002 | Joshi       | Why do naked singularities form in gravitational collapse?                                                                                                                                                                | https://ui.adsabs.harvard.edu/abs/2002PhRvD..65j1501J
+    - 113  | 1999 | Gubser      | Dilaton-driven confinement                                                                                                                                                                                                | https://ui.adsabs.harvard.edu/abs/1999hep.th....2155G
+    - 112  | 1975 | Szekeres    | Quasispherical gravitational collapse                                                                                                                                                                                     | https://ui.adsabs.harvard.edu/abs/1975PhRvD..12.2941S
+    - 112  | 1992 | Hawking     | Evaporation of two-dimensional black holes                                                                                                                                                                                | https://ui.adsabs.harvard.edu/abs/1992PhRvL..69..406H
+    - 111  | 2011 | Miao        | Violation of the first law of black hole thermodynamics in f(T) gravity                                                                                                                                                   | https://ui.adsabs.harvard.edu/abs/2011JCAP...11..033M
+    - 108  | 2000 | de          | The apparent shape of a rotating charged black hole, closed photon orbits and the bifurcation set A<SUB>4</SUB>                                                                                                           | https://ui.adsabs.harvard.edu/abs/2000CQGra..17..123D
+    - 106  | 1988 | Waugh       | Strengths of shell-focusing singularities in marginally bound collapsing self-similar Tolman spacetimes                                                                                                                   | https://ui.adsabs.harvard.edu/abs/1988PhRvD..38.1315W
+    - 105  | 2000 | Joshi       | Gravitational collapse: The story so far                                                                                                                                                                                  | https://ui.adsabs.harvard.edu/abs/2000Prama..55..529J
+    - 104  | 2014 | Azreg-Aïnou | Generating rotating regular black hole solutions without complexification                                                                                                                                                 | https://ui.adsabs.harvard.edu/abs/2014PhRvD..90f4041A
+    - 102  | 1986 | Krolak      | Towards the proof of the cosmic censorship hypothesis                                                                                                                                                                     | https://ui.adsabs.harvard.edu/abs/1986CQGra...3..267K
+    - 102  | 2001 | Myers       | Superstars and giant gravitons                                                                                                                                                                                            | https://ui.adsabs.harvard.edu/abs/2001JHEP...11..009M
+    - 102  | 2010 | Stuchlík    | Appearance of Keplerian discs orbiting Kerr superspinars                                                                                                                                                                  | https://ui.adsabs.harvard.edu/abs/2010CQGra..27u5017S
+    - 102  | 2011 | Pugliese    | Motion of charged test particles in Reissner-Nordström spacetime                                                                                                                                                          | https://ui.adsabs.harvard.edu/abs/2011PhRvD..83j4052P
+    - 101  | 2002 | Cai         | Cardy-Verlinde formula and asymptotically de Sitter spaces                                                                                                                                                                | https://ui.adsabs.harvard.edu/abs/2002PhLB..525..331C

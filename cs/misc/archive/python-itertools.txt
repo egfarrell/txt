@@ -1,0 +1,12 @@
+py itertools example
+
+# Divide up a long computation using itertools
+# i.e. split the generator into 4 batches
+
+mec.execute('ks=itertools.islice(ks,0,306)', targets=[0])
+mec.execute('ks=itertools.islice(ks,307,612)', targets=[1])
+mec.execute('ks=itertools.islice(ks,613,918)', targets=[2])
+mec.execute('ks=itertools.islice(ks,919,1224)', targets=[3])
+
+# Now each engine has a piece of it...
+

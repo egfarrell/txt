@@ -1,0 +1,153 @@
+udacity software testing 01
+kinds of testing
+	white box: 		use detailed knowledge of system internals
+	black box: 		testing based on how it's supposed to respond
+	unit: 			test isolated individual module (create more robust modules)
+					good tool support, "mock" objects to simulate system
+	integration:	combination of unit-tested modules. Testing interfaces really
+	system:			asking different question - does system as a whole meet its goals?
+					often "black box" testing. At this level often not concerned with
+					all possible use-cases, just for important use-cases.
+	validation:		same as system testing??
+	differential:	same input delivered to 2 versions of the software to compare quality
+	stress:			test beyond normal usage limits.
+					e.g. OS: huge files, large memory allocation, many system calls etc
+	RANDOM!:		use pseudo-random number generator to create test inputs
+					(sometimes random bits fed to the software)
+					(useful for finding corner cases e.g. CRASHME is an example)
+	regression:		take inputs that previously made the system fail
+
+overview
+	test inputs ---> S.U.T. (software under test) ---> test outputs
+
+	call Acceptability_Check(test outputs)
+	OK: test case succeeded
+	NOT OK: test case failed. Must debug.
+
+	Designing good test inputs is really hard
+	Designing good acceptability checks is really hard
+
+failed test
+	bug in S.U.T?
+	bug in acceptability check?
+	bug in specification?
+	bug in OS, compiler, hardware, libraries? (need workaround)
+	if "no" to previous 4 cases then at an impasse
+
+Enque/Deque example
+	we want test cases that are representative
+	of a whole class of executions of the system.
+	enqueue(7)
+	x = dequeue()
+	if x == 7: SUCCESS
+
+	Same as?
+		enqueue(MAXINT)
+		... questions how big an int can be passed
+
+	Same as?
+		enqueue(7)
+		sleep(100)
+		if x == 7: SUCCESS
+		... questions if the OS (e.g. garbage collection) impacts execution
+
+input space/output space
+	a test case maps a point in input space to a
+	point in output space. But theres an extremely large input space.
+	so we need to make arguments that we've mapped
+	a whole "CLASS" of inputs to a class of outputs.
+	So if the system exectutes ok for a single input,
+	it'll execute ok for all inputs in that "class"
+
+
+Creating testable software
+	* clean code (if not clean then refactor)
+	* should be able to describe what module does and all dependencies
+	* no extra threads
+	* no swamp of global variables
+	* no pointer soup (C/C++)
+	* modules should have unit tests
+	* should support fault injection
+	* assertions, assertions, assertions
+
+Assertion Requirements
+	* are not for error handling
+	* no side effects!! e.g. assertion shouldnt change global state
+	* no silly assertions
+	* We want to check a non-trivial property that could be wrong
+	  if WE MADE A MISTAKE IN OUR LOGIC
+	  ie not something wrong if the user did something wrong
+
+Why Assertions?
+	* make code self-checking, leads to effective testing
+	* make code fail early, closer to the bug
+	* assign blame. Assertions often at interfaces between modules.
+	* they document assumptions, preconditions, postconditions, invariants
+
+Producdtion Code:
+	GCC: 		9,000 assertions
+	LLVM: 		13,000 assertions for 1.4 mloc (million lines of code)
+				i.e. 1 assertions per 110 loc
+	Valgrind:	loaded with assertions, permanently enabled
+				Julian Jeward thinks 5% running time for assertions is ok
+
+Domains and Ranges
+	Sofware provides an API. The API has:
+	domain:	set of inputs to the software
+	range:	set of outputs to the software
+
+	mathematical function:		domain R+ ---> R+
+	possible sqrt function: 	domain: F+ ---> F+
+	more ususal sqrt:			domain: F ---> F+ ∪ exception
+
+	usually there are restrictions on the domain of a function,
+	otherwise every function would need maximally defensive code!
+
+testing unix kernel
+	test with all possible inputs!
+	operating system boundary is a TRUST boundary
+	"us" one side of the boundary, "them" the other side
+	unix kernel developers use a tool "crashme" to write garbage
+	interfaces that span trust boundaries are special and must be
+	tested on the full range of values.
+
+low level API's
+	Software provides a set of API's
+	but also USES API's aswell!
+	i.e. talks to lower level system interfaces
+	e.g. network, disks, display etc
+	So low level software has failure modes we can't easily simulate
+	e.g. unix read() can return 0, -1 and 9 different error codes
+
+fault injection
+	file = open('/path/foo.txt', 'w')
+	file = my_open('/path/foo.txt', 'w')
+	stub function "my_open", which usually calls "open"
+	Faults injected into SUT should be faults we want the code
+	to be robust to.
+
+Timing Dependent problems
+	Its not just a matter of teseting API's.
+	Software may respond differently if 2 inputs arrive close together,
+	compared to inputs more spread out.
+	e.g. mouse clicks/double-clicks
+	e.g. network data arriving to a web browser (too slow => timeout)
+	e.g. race conditions: Therac radiation machine, keyboard typing speed
+
+When are timing issues important?
+	software interacts with hardware devices
+	software interfacing with machines on internet
+	software that is multi-threaded
+
+non functional inputs
+	inputs that affect software but not related to its API's.
+	context switches: OS scheduling of multi-threaded software
+	network testing: very low failure rate, so opened up switch,
+					 and ran key across electrical contacts
+
+being great at testing
+	* need to hold two mindsets
+		developer: want code to succeed
+		tester:	want code to fail
+	* test creatively
+	* dont ignore weird things

@@ -1,0 +1,38 @@
+- A classic example of a force that depends only on position but
+  is NOT conservative is the magnetic force experienced by
+  a moving charge in a magnetic field. Although it is a function
+  of position, it fails the conservative test for the following
+  reason:
+
+- The magnetic force on a charged particle moving with velocity
+  `v` in a magnetic field `B(r)` is given by:
+
+```
+F = qv ∙ B(r)
+```
+
+It’s not conservative because:
+
+1. Dependence on Velocity:
+    - The force depends on both the position (through `B(r)` and
+      the particle’s velocity `v`. Even though `B(r) `could be
+      a static field that varies only with position, the force
+      itself is velocity-dependent.
+
+2. Non-zero Curl:
+    - In most cases, the curl of `F `in this type of magnetic
+      force isn’t zero, which is a key criterion for
+      a conservative field in 3D. Specifically, if you calculate
+      the curl of `F = qv  ∙  B(r)`, you’ll find that it
+      does not vanish in general, meaning there’s no scalar
+      potential `U `such that `F = -∇U`.
+
+3. Path-dependence:
+    - Work done by the magnetic force along a closed path is not
+      necessarily zero; it depends on the path taken by the
+      particle due to the force's dependency on DIRECTION of
+      motion.
+
+- So, despite `B(r) `potentially depending only on position, the
+  force itself fails to be conservative because of the non-zero
+  curl and the dependency on velocity.

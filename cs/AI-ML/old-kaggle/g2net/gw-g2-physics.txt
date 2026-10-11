@@ -1,0 +1,372 @@
+
+
+
+### Challenge
+    - Even in this very optimistic case, the amplitude is about
+      two orders of magnitude below the noise level (referring to
+      1 s of data) of LIGO-I, which is currently the most
+      sensitive detector and will be discussed in more detail in
+      Sec. 3. 
+    - The data-analysis challenge in the search for continuous
+      GWs from neutron stars therefore consists of finding
+      extremely weak, nearly periodic signals buried deep in the
+      noise of GW detectors.
+    - In order to be able to dig such signals out of the noise,
+      one typically has to _integrate for several days_ up to
+      months by matching the data with a target signal
+      (“template”) of given parameters. This is the basic concept
+      of matched filtering, which is the optimal method in
+      a statistical sense (made more precise later)
+    - In the case of wide-parameter searches for unknown sources,
+      this makes it very expensive in terms of computing cost to
+      increase the observation time, as it requires a much finer
+      search in the parameter space of possible signals. There is
+      also a purely statistical effect limiting the sensitivity
+      of such searches: the more trials (i.e. targeting of
+      different points in parameter space) one performs, the more
+      “_false alarm_” candidates are expected to cross a given
+      detection threshold _due to noise fluctuations_ alone.
+        - Therefore, a higher detection threshold is required,
+          which reduces the sensitivity.
+
+
+### transverse-traceless (TT) gauge.
+    - This is a choice of coordinates, {t, x, y, z} say,
+      corresponding to an inertial (Lorentz) frame in the
+      unperturbed flat background, which makes explicit that the
+      perturbation is 
+        - transverse, i.e. orthogonal to the direction of
+          propagation, 
+        - and trace-less, namely the perturbation does not
+          “compress” or “expand” elements of spacetime, but
+          induces a (volume-preserving) “strain” only.
+
+
+### High spindown rate
+    > In both cases, the magnitude of spindown is surprisingly
+    > high for me. Maybe I'm wrong, but intuitively I would
+    > expect the rotation of neutron star to be much more stable.
+
+    - It depends on whether one is thinking about pulsars, actual
+      neutron stars (NS) or continuous-wave searches.
+    - As you say, current electromagnetic observations of pulsars
+      (neutron stars that we can actually see) give spin down
+      values way lower than what we generated in these notebooks.
+      When it comes to all-sky searches, however, we are looking
+      for a (potentially) different population of NS, namely
+      those that we cannot see.
+    - Leaving aside any discussion on actual NS physics, an
+      argument to go to higher ("more negative") spin-down values
+      is related to the astrophysical reach of a search: 
+        - roughly, _the more a star spins down, the bigger the
+          allowed ellipticity_ (which is proportional to the GW
+          amplitude) 
+        - hence the _further away_ it can be while still being
+          detectable by our instruments. 
+
+### GW frequency
+    - is _twice_ the rate of NS rotation
+
+### Braking index (Crab)
+    - Nils Andersson calculated braking index `5` (for what?)
+      - ... but radio astronomers measured 2.5 for the crab nebula??
+
+### Noise in interferometric detectors
+    - Seismic noise (low frequencies). 
+        - At frequencies below 60 Hz, the noise in the
+          interferometers is dominated by seismic noise. The
+          vibrations of the ground couple to the mirrors via the
+          wire suspensions which support them. This effect is
+          strongly suppressed by properly designed suspension
+          systems. Still, seismic noise is very difficult to
+          eliminate at frequencies below 5-10 Hz.
+    - Photon shot noise (high frequencies). 
+        - The precision of the measurements is restricted by
+          fluctuations in the fringe pattern due to fluctuations
+          in the number of detected photons. The number of
+          detected photons is proportional to the intensity of
+          the laser beam. Statistical fluctuations in the number
+          of detected photons imply an uncertainty in the
+          measurement of the arm length
+
+### The quadrupole formula
+    - https://webs.um.es/bussons/GW_lecture_KG.pdf
+    - Einstein (1918) derived the quadrupole formula for
+      gravitational radiation by solving the _linearized_ field
+      equations with a source term:
+    - This solution suggests that the wave amplitude is
+      proportional to the second time derivative of the
+      quadrupole moment of the source:
+    - $MY_IMAGES/astro/g2net/quadrupole-formula.jpg
+
+### Origins
+    - EM: accelerating charges produce EM radiation
+    - Gravitation: accelerating masses produce gravitational
+      radiation (hint: gravity has a finite speed)
+
+### Polarisation
+    - GWs come in two polarisations
+    - "+" polarisation
+    - "x" polarisation
+        - $MY_IMAGES/astro/g2net/gw-polarisation.jpg
+
+### Sources
+    - EM waves: 
+        - at lowest order the radiation can be emitted by
+          a dipole source (l=1). 
+        - Monopolar radiation is forbidden because of charge
+          conservation
+    - GWs: 
+        - the lowest allowed multipole is the quadrupole (l=2).
+        - The monopole is forbidden as a result of mass
+          conservation. 
+        - Similarly, dipole radiation is absent because of
+          momentum conservation.
+
+### GW versus EM
+    - Differences between the two types of waves
+    - $MY_IMAGES/astro/g2net/gw-versus-em.jpg
+
+### Computation / Coherent detection / amplitude params
+    - Covas, P. B.; Prix, R.: Improved all-sky search method for
+      continuous gravitational waves from unknown neutron stars
+      in binary systems. (2022) 
+    - When searching for CWs from known pulsars, all the
+      phase-evolution parameters are known from electromag- netic
+      observations, which allows one to perform statis- tically
+      optimal searches by coherent matched-filtering with very
+      little required computing power. All-sky CW searches for
+      unknown neutron stars represent the oppo- site extreme,
+      where no prior information about the sig- nals is
+      available, requiring an expensive explicit search over the
+      phase-evolution parameters.
+    - The primary strategy followed by computationally- limited
+      CW searches is to break up the data into shorter segments
+      that can be coherently analyzed individually and then
+      combine these coherent results across segments. These are
+      the so-called semi-coherent methods (see [5] for a recent
+      review of search methods). The resulting coarser
+      parameter-space resolution entails a reduced computa-
+      tional cost, which allows for analyzing larger datasets and
+      thereby regaining sensitivity. As a result, semi-coherent
+      methods are typically more sensitive than fully-coherent
+      matched filtering at a fixed computational budget [6, 7]
+    - The most commonly used coherent detection statistics are
+      the F-statistic and the Fourier power (for sufficiently
+      short segments, where a simple sinusoid can approximate the
+      signal). 
+        - The F-statistic is obtained by analytically maximizing
+          the likelihood ratio over the _four unknown amplitude
+          parameters_ of a CW signal [8, 9]. Although this
+          statistic was initially thought to be statistically op-
+          timal, its implicit amplitude priors were later shown
+          to be unphysical [10]. 
+
+
+### Integrate signal
+    - $MY_REPOS/g2net/papers/2020-Einstein-Home-all-sky-search-CWs.pdf
+    - The expected gravitational wave amplitude at the Earth is
+      several orders of magnitude smaller than that of signals
+      from compact binary inspirals, but because the signal is
+      _long-lasting_ one can _integrate_ it over many months and
+      increase the `SNR` very significantly.
+    - The most challenging searches for this type of signal are
+      the _all-sky surveys_, where one looks for a signal from
+      a source that is not known. 
+    - The main challenge of these searches is that the number of
+      waveforms that can be resolved over months of observation
+      is very large, and so the sensitivity of the search is
+      limited by its compu- tational cost.
+
+### Wave "power"
+    - is the amplitude of the wave?
+
+### CW properties
+    - Quasi-monochromatic: 
+        - "... most of the energy is confined to a single
+          wavelength or a very narrow waveband". 
+        - However, gravitational continuous waves are _not
+          completely_ monochromatic. (source) 
+    - Long-standing: 
+        - The standing waves are stationary (not a travelling
+          wave). The disturbance does not travel in any
+          direction. Standing waves have points of zero amplitude
+          called nodes and points of maximum amplitude called the
+          antinodes. 
+    - Non-axisymmetric rapidly-spinning neutron stars produce
+      narrow-banded signals 
+        - that's why the y-axis (Freq Hz) in the spectrogram lies
+          in a narrow band of 1-2 Hz. 
+    - The waves are doppler-modulated 
+        - due to the motion of the detector in the Solar system.
+          It's a common practice to use short time fourier
+          transform to analyze these waves. 
+        - These are Fourier transforms of short data segments
+          (typically around 30 minutes or 1800 seconds).
+
+
+### Kip: NS waves
+    - https://www.youtube.com/watch?v=A3nxaU1g31M&t=2s
+    - See minute 16 etc
+    - Factors making it hard to detect:
+        - NS are restless animals, hard to match against filters
+          because they spin down in an erratic way...
+        - Doppler corrections due to the motion of Earth around
+          the Sun, Earth's spin, and Earth's motion around the
+          moon
+    - SNR loss because of this... factor of 5 to 20
+    - aside: "applied integration time" (?) is about a year, but
+      you don't gain a lot after a week... (because you can't do
+      the coherent integrations)
+    - ... we don't know how large the NS ellipticities `ε` are
+      ... so big uncertainties
+    - Interesting science if GWs detected: 
+        - after a _star quake_: compare the EM evolution of the
+          frequency with the GW evolution...
+    - surface spin rate of pulsar is small compared with
+      lightspeed `c` (they would fly appart otherwise). 
+        - But they've relativistically strong internal gravity(?)
+        - so use a "slow motion" approximation, while retaining
+          a full relativistic gravity treatmment
+        - you've one small parameter `v/c` (spin velocity
+          / lightspeed) which enables you to analyse these
+          sources far more easily than if you had no "small
+          parameters" at all (?)
+    - another source: Low mass X-Ray binary 
+            - has solar-mass companion that it's accreting from.
+              (ie NS has accretion disk)
+            - $MY_IMAGES/astro/g2net/x-ray-binary.jpg
+
+### Types of CW searches
+    - We classify CW searches by the amount of _information_ we
+      have access to:
+    - TARGETED SEARCHES
+        - Frequency `f`, `\dot{f} `and `position` of source are
+          known.
+    - DIRECTED SEARCHES
+        - The position of the source is known. For example, this
+          type of search is applicable to accreting neutron stars
+          in binary systems such as Sco-X1.
+    - ALL-SKY SEARCHES
+        - Positions and source parameters are not known and the
+          parameter space to search over is huge.
+
+### MPG Paper: Search for continuous waves
+    - https://www.aei.mpg.de/581560/a-milestone-in-the-race-to-find-the-first-continuous-gravitational-wave-signal
+    - $MY_REPOS/g2net/papers/2020-All-Sky-Search-CWs-from-Small-Ellipticity-Sources.pdf
+    - So far all observed GW signals have been very short,
+      produced in the final seconds of BH and NS mergers. 
+    - There exist other signals, which are continously “ON”. 
+    - Such continuous signals are much weaker than the
+      short-lived ones but this drawback can be made-up by
+      utilizing _more data_ and at the cost of a much greater
+      _algorithmic complexity_ of the search. 
+    - One promising source of CW's are slightly deformed
+      (non-axisymmetric) neutron stars. 
+    - Our new results explore deformations smaller than 10 parts
+      in a billion. This corresponds to star deformations as
+      large as several widths of human hair! 
+    - We didn't find any signal candidates but identify a few
+      outliers. Although it is unlikely that these candidates
+      come from signals that precisely follow the assumed model,
+      and may come from coherent disturbances in the data, they
+      will be explored very carefully as new data becomes
+      available; something one can only do with CW's. 
+    - Between the two papers, we search for signals from anywhere
+      in the sky and with frequencies between `20Hz` and `1700Hz`.
+
+### Sensitivity Curves
+    - $MY_IMAGES/astro/g2net/sensitivity-curves.jpg
+
+### Longterm Frequency evolution
+    - https://www.ligo.org/science/GW-Continuous.php
+    - I don't get this
+        - $MY_IMAGES/astro/g2net/longterm-freq-evolution.jpg
+    - Ah here's the reason: 
+        - However, over longer durations, the frequency of the
+          signal will slowly change, for two reasons. 
+            - The first is that, as the neutron star emits
+              gravitational and electromagnetic waves, it loses
+              energy which causes it to rotate more slowly. 
+            - The second is that the detector here on Earth is
+              moving with respect to the neutron star, which
+              changes the frequency of the gravitational waves
+              observed in the detector. 
+        - The top panel shows the frequency, in blue, changing
+          with a daily cycle due to the rotation of the Earth.
+          The middle panel zooms out to show the frequency, in
+          red, changing on a year's time scale due to the orbit
+          of the Earth around the Sun. The bottom panel zooms out
+          further to show how the frequency, in green, slowly
+          decreases due to the rotation of the neutron star
+          itself slowing down over many years. 
+    - Tracking all possible frequency changes is what makes the
+      detection of continuous gravitational waves a computational
+      challenge. 
+
+
+
+# Main Noise Sources 
+
+### Seismic noise
+    - Seismic noise at a quiet site on the Earth follows
+      a spectrum in all three dimensions close to 10−7f−2 m/Hz1/2
+      (where we measure `f` in `Hz`) 
+    - Thus if the disturbance to each test mass must be less than
+      3 × 10−20 m/Hz1/2 at 30 Hz (for example), then the
+      reduction of seismic noise required at that frequency in
+      the horizontal direction is greater than 10E9. 
+
+### Gravity gradient (Newtonian) noise
+    - Gravity gradients, caused by direct gravitational coupling
+      of mass density fluctuations to the suspended mirrors. 
+    - Identified as a potential noise source in ground-based
+      gravitational-wave detectors in 1972.
+
+### Thermal noise
+    - Thermal noise associated with the _mirror masses_ and the
+      last stage of their suspensions is the most significant
+      noise source at the low frequency end of the operating
+      range of initial long baseline gravitational wave detectors
+
+### Quantum noise
+    - Photoelectron shot noise
+    - For gravitational-wave signals to be detected, the output
+      of the interferometer must be held at one of a number of
+      possible points on an interference fringe
+
+### Radiation pressure noise
+    - As the effective laser power in the arms is increased,
+      another phenomenon becomes important: the effect on the
+      test masses of fluctuations in the radiation pressure. 
+    - One interpretation on the origin of this radiation pressure
+      noise may be attributed to the statistical uncertainty in
+      how the beamsplitter divides up the photons of laser light
+
+### Images:
+    - Schematic Freq v Time for different GW types
+        - $MY_IMAGES/astro/g2net/gw-freq-v-time-schematic.jpg
+
+### Papers
+    - $MY_REPOS/g2net/papers/2020-All-Sky-Search-CWs-from-Small-Ellipticity-Sources.pdf
+    - $MY_REPOS/g2net/papers/2015-Review-CWs-from-NS.pdf
+    - $MY_REPOS/g2net/papers/2020-Einstein-Home-all-sky-search-CWs.pdf
+
+    - 1998 Schutz: Data analysis of GW signals from spinning NS: https://arxiv.org/abs/gr-qc/9804014
+      
+
+### Links
+    - Sensitivity Curves                                               https://cplberry.com/2015/01/10/1408-0740/
+    - Max Planck: Find first continuous GW                             https://www.aei.mpg.de/581560/a-milestone-in-the-race-to-find-the-first-continuous-gravitational-wave-signal
+    - Max Planck: CW Research group                                    https://www.aei.mpg.de/continuouswaves
+    - Max Planck: Youtube Grav Physics                                 https://www.youtube.com/c/MaxPlanckInstituteforGravitationalPhysics
+    - Max Planck: Einstein at home                                     https://einsteinathome.org/
+    - Max Planck: ATLAS visualisaiton of CW sky (use for test data?)   https://www.aei.mpg.de/925920/visualising-the-continuous-gravitational-wave-sky?c=26116
+    - Astrobite: Search CW using Pulsar timing                         https://astrobites.org/2019/02/21/searching-for-gravitational-waves-from-binary-supermassive-black-holes-with-cosmic-lighthouses/
+    - Astrobite: CW search paper from LIGO _good_                      https://astrobites.org/2018/01/29/hunting-for-gravitational-waves-from-spinning-neutron-stars/
+    - Astrobite: Standard Siren Updates from Latest LIGO-Virgo Catalog https://astrobites.org/2022/01/04/gw-cosmo/
+    - LIGO GWTC-3 Catalog detections                                   https://www.ligo.org/science/Publication-O3bCatalog/
+    - Kip: GW Course                                                   https://cosmolearning.org/courses/overview-of-gravitational-wave-science-400/
+    - Kip: GW Course: Youtube Playlist                                 https://www.youtube.com/playlist?list=PLaLOVNqqD-2H-fiiL5Lxmmuhquem-zNIC
+    - GW Summer School 2015                                            https://www.youtube.com/playlist?list=PL04QVxpjcnjjuLDeNFWIlc8fcXSUqqxAG
+

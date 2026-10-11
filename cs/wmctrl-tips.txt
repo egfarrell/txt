@@ -1,0 +1,51 @@
+wmctrl tips
+
+### activate by <WIN> CLASS
+    - Ah gotcha! 
+    - Since <WIN> is a parameter of `-a` the command should be:
+        `wmctrl -x -a "Zotero"`
+    - not!! 
+        not this: `wmctrl -ax    "Zotero"`
+        not this: `wmctrl -a -x  "Zotero"`
+
+
+### minimse
+    #!/bin/bash
+    wmctrl -r :ACTIVE: -b add,hidden
+
+# show WM_CLASS values
+    wmctrl -lx
+
+# show nautilus
+    wmctrl -xF -R nautilus.Nautilus
+
+    x: 
+        interprets the specified Windows as the WM_CLASS name.
+
+    F: 
+        Modifies the behaviour of the window title matching algorithm. It
+        will match only the full window title instead of a substring, when
+        this option is used. Furthermore it makes the matching case
+        sensitive.
+
+# Show desktop 
+    wmctrl -k on
+
+# Activate window by exact title (-F)
+    wmctrl -F -a "ef"
+
+# Activate window by window ID
+    wmctrl -i -a 0x01400f4e
+
+# open uni example
+    /home/physastro/efox/apps/wmctrl/bin/wmctrl -a "- Sublime Text"
+
+# install on CentOS 64-bit
+    wmctrl -l
+    doesnt list all windows in 64bit linux
+
+    Get source from 
+    http://sourceforge.net/p/salix/packages/227/
+
+    and patch code from 
+    http://people.salixos.org/djemos/salix/openbox/wmctrl/wmctrl-x86_64.patch

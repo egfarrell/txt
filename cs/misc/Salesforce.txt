@@ -1,0 +1,265 @@
+### Overview of Salesforce
+
+Salesforce is a popular `cloud-based` CRM. It helps businesses
+manage relationships with customers, clients, and sales prospects
+by providing a suite of tools for sales, customer service,
+marketing etc. Salesforce was founded in 1999 by Marc Benioff and
+is headquartered in San Francisco, California.
+
+### Origins and History
+
+- 1999: Salesforce was founded by Marc Benioff, a former Oracle
+  executive, along with Parker Harris, Dave Moellenhoff, and
+  Frank Dominguez. Their goal was to provide businesses with
+  a more efficient, accessible, and scalable way to manage
+  customer relationships without the need for on-premise software
+  installations and infrastructure. This was at a time when many
+  software systems were still local, running on individual
+  company servers.
+
+- 2000: The company launched its first product—Salesforce CRM.
+  The early value proposition was its subscription-based model
+  (SaaS—Software as a Service) rather than a large upfront
+  software purchase.
+
+- 2003: Salesforce introduced the "AppExchange," one of the first
+  cloud-based application marketplaces.
+
+- 2010s: Salesforce expanded into other areas such as marketing
+  automation, artificial intelligence (with Salesforce Einstein),
+  analytics, and even custom app development with Salesforce
+  Platform.
+
+- Today: Salesforce is a highly diversified company with products
+  ranging from CRM to enterprise resource planning (ERP),
+  analytics, automation, artificial intelligence (AI), and more.
+
+### Basic Architecture of Salesforce
+
+Salesforce operates on a multi-tenant architecture, meaning that
+multiple customers (or "tenants") share the same infrastructure
+and resources, but their data is logically separated. Here are
+the key architectural components:
+
+1. Platform as a Service (PaaS): Salesforce runs on its own cloud
+platform, Salesforce Platform, which provides tools for
+developing, testing, and deploying custom applications.
+Developers use Apex (Salesforce’s proprietary programming
+language, similar to Java) and Visualforce (for UI) to build
+custom solutions.
+
+2. Data Model:
+   - Salesforce organizes data into objects, which are analogous
+     to database tables.
+   - Each object contains fields (analogous to columns in
+     a table), and records (rows in a table).
+   - There are standard objects (e.g., Account, Contact,
+     Opportunity) and custom objects that users can create.
+
+3. Salesforce Cloud Services:
+   - Sales Cloud: For managing sales processes.
+   - Service Cloud: For managing customer service operations.
+   - Marketing Cloud: For managing digital marketing campaigns.
+   - Commerce Cloud: For managing e-commerce operations.
+   - Community Cloud: For creating branded online communities.
+   - Salesforce Platform: To develop custom applications.
+   - Analytics Cloud: For business intelligence.
+
+4. API and Integration: Salesforce provides various integration
+tools like REST API, SOAP API, Bulk API, and Streaming API for
+interacting with external systems and applications.
+
+5. Salesforce Lightning: A modern UI framework used to build
+responsive, dynamic, and interactive user interfaces. It's
+a significant evolution from the older Salesforce Classic
+interface.
+
+6. Security Model: Salesforce uses a robust security model,
+including:
+   - User authentication (via login credentials).
+   - Role-based access control.
+   - Profiles and permission sets to control who can view,
+     modify, or delete data.
+   - Field-level security for fine-grained control over access to
+     sensitive information.
+
+### Querying Salesforce Data
+
+Unlike traditional databases, querying in Salesforce is done
+through its proprietary query language, SOQL (Salesforce Object
+Query Language), and SOSL (Salesforce Object Search Language) for
+search operations.
+
+- SOQL: Similar to SQL, but works within Salesforce's
+  object-based model. It’s used to query Salesforce objects.
+  Example of a basic SOQL query: ```sql SELECT Name, Industry
+  FROM Account WHERE Industry = 'Technology' ```
+- SOSL: More like a search operation to find records across
+  multiple objects. Example of a basic SOSL query: ```sql FIND
+  {search_string} IN ALL FIELDS RETURNING Account(Name),
+  Contact(Name) ```
+
+### Can You Use SQL to Query Salesforce Data?
+
+Salesforce does not allow you to directly use SQL to query its
+data in the traditional sense (i.e., like in MySQL or
+PostgreSQL), because its data model is quite different. However,
+there are multiple ways to interact with Salesforce data
+programmatically:
+
+1. SOQL: As mentioned, Salesforce has its own object-oriented
+query language, SOQL, which is used to retrieve data from
+Salesforce's cloud-based database.
+
+2. Using External SQL Databases: If you're working with a hybrid
+architecture where data is transferred to an external SQL
+database (via ETL or integration services), you might be able to
+use SQL. This setup typically involves using tools like:
+   - Salesforce Data Loader (to extract data from Salesforce and
+     load it into an SQL database).
+   - Third-party integration tools like MuleSoft, Informatica, or
+     KingswaySoft that can bridge Salesforce and SQL systems.
+
+3. ODBC/JDBC Connections: There are third-party tools that can
+help establish ODBC (Open Database Connectivity) or JDBC (Java
+Database Connectivity) connections to Salesforce, allowing you to
+execute queries in a SQL-like manner. However, this is more of an
+intermediary solution, not native SQL querying.
+
+4. Salesforce Reports: You can use the Salesforce Reporting API
+to programmatically extract data in a structured format. While
+this doesn’t allow you to use SQL directly, it offers flexibility
+for extracting and analyzing data programmatically.
+
+5. Apex: If you need a more customized solution, you can use
+Apex, Salesforce's programming language, which can interact with
+Salesforce data at a deeper level, including querying with SOQL
+and performing business logic before returning data.
+
+6. Salesforce Data Query Tools:
+   - Workbench: A web-based suite of tools for interacting with
+     Salesforce APIs, including querying with SOQL.
+   - Salesforce Query Editor: Available within the Salesforce
+     Developer Console, this allows developers to run SOQL
+     queries and view the results.
+
+### Summary
+
+- Salesforce is a leading cloud-based CRM system offering a range
+  of tools for managing customer data and relationships, built on
+  a multi-tenant, highly scalable platform.
+- Data in Salesforce is stored in objects (tables) and fields
+  (columns), and you can query it using SOQL (Salesforce Object
+  Query Language).
+- You cannot directly query Salesforce using traditional SQL;
+  instead, you’ll use SOQL, Apex, or third-party tools to extract
+  and manipulate data.
+- Salesforce also provides various APIs (REST, SOAP, Bulk) for
+  integrating with other systems and performing operations.
+
+If you're accustomed to traditional SQL environments,
+transitioning to Salesforce's SOQL may require some adjustment,
+but the principles are similar. You’ll likely find the tools and
+APIs sufficient for extracting and working with the data,
+especially if your role involves integrating Salesforce with
+other systems or performing backend data operations. Yes, you’re
+on the right track—APEX in Salesforce is similar in name but is
+different in function from Oracle APEX. Let me clarify both for
+you:
+
+### Oracle APEX (Application Express)
+
+Oracle APEX is a low-code development platform used to build web
+applications on top of Oracle databases. It allows developers to
+quickly create data-driven web apps without needing extensive
+front-end or back-end code. It integrates tightly with Oracle
+Database, and while you can create sophisticated apps, the
+platform is primarily intended for rapid development with minimal
+code.
+
+- Key Features:
+  - Primarily used for developing applications directly on an
+    Oracle database.
+  - It uses PL/SQL (Oracle's procedural extension to SQL) for
+    backend logic.
+  - APEX allows the creation of forms, reports, charts, and
+    interactive features for web-based applications.
+  - Low-code: A lot of development can be done through the APEX
+    interface itself without writing much code, though you can
+    still write PL/SQL when needed.
+  - Highly integrated with Oracle Database (obviously), making it
+    a popular tool for companies using Oracle’s RDBMS.
+  - It allows you to build responsive web applications that run
+    in the browser.
+
+### Salesforce APEX
+
+In Salesforce, Apex is a proprietary programming language
+developed by Salesforce for use in the Salesforce ecosystem. It’s
+an object-oriented, strongly typed language that’s similar to
+Java, and it’s used to write custom backend logic that interacts
+with Salesforce data. Apex is used primarily for writing
+triggers, classes, and methods that run on the Salesforce
+platform.
+
+- Key Features:
+  - Server-side programming: Apex runs on Salesforce's cloud
+    infrastructure and allows for complex business logic,
+    validations, and workflows to be automated.
+  - It’s object-oriented, similar to Java, but is specifically
+    designed to work within Salesforce’s data model.
+  - Integration: You can use Apex to interact with Salesforce’s
+    objects (like Accounts, Contacts, Opportunities) and automate
+    actions like sending emails, updating records, or calling out
+    to external APIs.
+  - Apex allows you to write triggers (which respond to events
+    like `INSERT`, `UPDATE`, `DELETE` on records) and classes
+    (that encapsulate reusable logic).
+  - SOQL (Salesforce Object Query Language) is used in Apex to
+    query Salesforce data, just like SQL in traditional
+    databases.
+  - While Salesforce Visualforce and Lightning handle the user
+    interface, Apex handles the business logic and backend
+    functions.
+
+### Comparison: Oracle APEX vs Salesforce APEX
+
+- Purpose:
+  - Oracle APEX: Primarily focused on building data-driven web
+    applications with a low-code approach for Oracle databases.
+  - Salesforce APEX: Primarily focused on implementing custom
+    business logic within the Salesforce ecosystem, such as
+    triggers, classes, and automations.
+
+- Integration:
+  - Oracle APEX: Built for integration directly with Oracle
+    Database, typically used in environments where the backend is
+    Oracle.
+  - Salesforce APEX: Built for integration with Salesforce’s
+    platform, especially Salesforce objects and data.
+
+- Language:
+  - Oracle APEX: Uses PL/SQL for backend logic.
+  - Salesforce APEX: Uses a Java-like syntax (similar to Java and
+    C#) for business logic and data handling within Salesforce.
+
+### Summary:
+
+- Oracle APEX: A low-code tool for building web apps over Oracle
+  databases (uses PL/SQL).
+- Salesforce APEX: A programming language (similar to Java) for
+  writing backend logic in Salesforce (uses SOQL for queries and
+  Salesforce objects).
+
+They share a name but serve different purposes. If you're
+familiar with Oracle APEX, you'll likely find similarities in
+terms of using a development environment, but the languages and
+ecosystems are quite distinct.
+
+If you want to explore Salesforce APEX, I'd recommend getting
+familiar with its object model and the structure of Salesforce's
+platform, as it differs greatly from working with traditional SQL
+databases or even Oracle APEX.
+
+Hope this clears things up! Let me know if you need any further
+explanation on either of these!

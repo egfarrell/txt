@@ -1,0 +1,23 @@
+mpl overview
+matplotlib basics
+
+Canvas - figure - subplot (axis) - plot
+
+
+f=figure()
+    Representation of what youre going to print.
+    A figure can contain more than one set of axises (ie have subplots)
+
+ax = f.add_subplot(111)
+    set of axises that reside inside the figure object
+
+ax.plot(x,y)
+    Add plot to the axis youve defined
+
+Canvas
+    The meta object that holds the figures.
+    Attach figure to canvas.
+    canvas = FigureCanvas(f)
+
+canvas.print_png(open(file path), 'w')
+    Actually write out the plot to a file in the filesystem

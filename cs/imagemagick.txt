@@ -1,0 +1,112 @@
+imagemagick image convert manipulate
+
+### imagemagick scripts
+    https://news.ycombinator.com/item?id=16668254
+
+# convert jpegs to a pdf
+    convert *.jpg -quality 100 out.pdf
+
+# rotate
+    convert -rotate 90  in.jpg   out.jpg
+
+# Bulk convert all png's to jpg
+	```
+    mogrify -format jpg *.png
+    ```
+
+# mogrify good tip!
+	- `-strip` really reduces file size
+	```
+    mogrify -strip -quality 50% -resize 300x400 -format jpg *.jpg
+    ```
+
+# Compress quality/size of jpg files
+	```
+    mogrify -resize "2048x2048>" -quality 15 *.jpg
+    ```
+
+# increase/resize by a percentage instead of pixels
+	```
+    mogrify -resize 75% *.jpg
+    ```
+
+# bulk resize IN PLACE
+	```
+    mogrify -resize 300x300 -format jpg -quality 40 *
+    ```
+
+# bulk resize in PLACE ignore aspect ratio
+    ```
+    mogrify -resize 800x600\! *
+    ```
+
+# change brightness and/or contrast
+	increase contrast only
+		```
+        mogrify -verbose -brightness-contrast 0x25 *.png
+        ```
+	increase brightness only
+		```
+        mogrify -verbose -brightness-contrast 30x0 *.png
+        ```
+
+# Sharpen images
+	convert  A_blur.jpg         -sharpen 0x3    A_blur_sharp.jpg
+
+# Batch Processing Alternatives
+    - If batch processing images using "mogrify" is not
+      practical, especially if you are copying the images rather
+      than modifying them in place, then it may be better to use
+      some other non-IM looping solutions. These include...
+
+
+	  # Use a simple shell loop, to process each of the images.
+	  mkdir thumbnails
+			  ```
+              for f in *.jpg
+				  do   convert $f -thumbnail 200x90 thumbnails/$f.gif
+			  done
+              ```
+
+	  # Use 'find' to substitute filenames into a 'convert' command.
+	  # This also provides the ability to recurse though directories by removing
+	  # the -prune option, as well as doing other file checks (like image type,
+	  # or the disk space used by an image).
+			  ```
+              find * -prune -name '*.jpg' \
+			         -exec  convert '{}' -thumbnail 200x90 thumbnails/'{}'.gif \;
+              ```
+
+	  # Use xargs -- with a shell wrapper to put the argument into a variable
+	  # This can be combined with either "find" or "ls" to list filenames.
+			  ```
+              ls *.jpg | xargs -n1 sh -c 'convert $0 -thumbnail 200x90 thumbnails/$0.gif'
+              ```
+
+	  # An alternative method on linux (rather than plain unix)
+	  # This does not need a shell to handle the argument.
+			  ```
+              ls *.jpg | xargs -r -I FILE   convert FILE -thumbnail 200x90 FILE_thumb.gif
+              ```
+
+# pngcrush
+    - Can use 114 different filters for optimizing PNG images. To
+      let Pngcrush choose the best one for your images, you can
+      use the `-brute` option.
+
+    - "-e" tells Pngcrush to append the ".compressed.png" name to the
+    initial image name.
+    ```
+    pngcrush -brute -e ".compressed.png" image.png
+    ```
+
+    To compress all the PNG files in a folder and replace the initial
+    images with the resulted compressed images (that's what the "-d"
+    option does):
+    ```
+    pngcrush -brute -d "/my/images" *.png
+    ```
+
+### Links
+    - Install imagemagick on windows https://docs.wand-py.org/en/latest/guide/install.html#install-imagemagick-on-windows
+

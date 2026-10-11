@@ -1,0 +1,127 @@
+### 01 Point Set Topology and Topological Spaces
+
+$MY_VIDEOS/physics/what-are-manifolds/01-Point-Set-Topology-and-Topological-Spaces.mkv
+
+### Key point:
+    - "Point set topology"
+    - a _topological SPACE_ is TWO SETS:
+    - { the set `X`   ,   the topology                    } 
+    - { the set `X`   ,   (set of all _open sets_ of `X`) } 
+    - {         `X`   ,   `T_x`                           } 
+
+    - Also a "topology" needs 4 things:
+        -  `X` (the set itself)
+        -  `0` (null set)
+        -  `∪` (infinite unions)
+        -  `∩` (FINITE intersions)
+
+
+- See Tim Maudlin on Topology
+    - $MY_NOTES/physics/metaphysics/Maudlin-Philosophy-Physics.txt
+
+- A topology is like a massive aggregate set of all these "open
+  sets"
+
+- Why study topology? 
+    - To study manifolds.
+    - Why study manifolds? 
+        - They're mathematical foundation of _coordinate systems_
+        - $MY_IMAGES/physics/what-are-manifolds/01-overview.jpg
+
+
+- 'X': 
+    - ℝ^2 plane: 
+    - a SET of points with _no structure_ 
+    - (but has a metric)
+
+- 'Y'
+    - open line interval {0 -> 1}
+    - a SET of points with _no structure_
+
+
+- The missing structure is called "the topology"
+
+- a topology:
+    - a SET too,
+    - which contains all the subsets of 'X', and ...
+    - the sets are 'OPEN sets'
+
+- Rules of open sets ...
+        - for the set `X`
+            - $MY_IMAGES/physics/what-are-manifolds/01b-topology-open-sets.jpg
+        - UNION
+            - a union of any 2 open sets is an open set
+            - the way I say something is an "open set" is I say
+              it's a member of the topology.. 
+        - INTERSECTION
+            - any FINITE intersection of open sets is a member of
+              the topology
+        - other 2 rules
+            - `0` null set is an element of the topology of `X`
+            - `X` itself   is an element of the topology of `X`
+
+- smallest open set: `0`
+- biggest  open set: `X`
+
+- if I can find
+    - a collection of open sets that satisfies the rules,
+    - and I add `0` and `X`,
+    - then I've created a topology for `X`
+
+- any set can be given a topology
+
+- only allow finite INTERSECTIONS of open sets, 
+    - not infinite intersections
+
+### open balls: 
+    - are the BASE for the topology of the plane
+        - $MY_IMAGES/physics/what-are-manifolds/definition-open-ball.jpg
+    - any shape can be made by taking the union of an arbitrary
+      number of open balls
+
+### open intervals
+    - these are the equivalent of open balls for a straight line 
+    - you can have _disjoint_ open intervals 
+
+### caveat: 
+    - individual points are not open sets! 
+    - (e.g. a finite intersection of open intervals can't give
+      you a point, and you're not allowed an infinite number of
+      intersections)
+
+### discrete topology
+    - I could make a different definition where I say
+      each single point is its own open set 
+    - ie every element is its own open set 
+    - in that case, the topology is the set of all possible
+      subsets 
+    - and this called the power set 
+
+### Base of a topology:
+    - any member of the topology can be created through the union
+      of 'open balls'
+    - so the open balls are a 'base' of the topology
+    - likewise: if I declared 'open rectangles' (rectangles that
+      don't contain a boundary) can also form a basis
+
+### Alternative base
+    - alternative topology of a straight line... 
+    - base of topology: `1 - 1/n`
+        - $MY_IMAGES/physics/what-are-manifolds/alternative-base-open-interval.jpg
+    - for this topology: 
+        - theres the same number in the "base" as in the overall
+          topology... very strange
+
+
+
+### - topologies of the plane
+    - usual (open ball)
+    - discrete (points)
+    - trivial  `X` itself
+    - theres other topologies for the plane that aren't "open
+      ball" topologies (eg open rectangles)
+
+
+### 'Open Neighbourhood' of a point
+    - neighbourhood definition of an open set
+    - any open set that contains the point

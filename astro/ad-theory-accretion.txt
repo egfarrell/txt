@@ -1,0 +1,814 @@
+
+### mdot accretion
+    - team meeting: Deepika said you can have negative m-dot,
+      which is outflow
+
+### Ramesh numerical talk
+    - numerical-bh-accretion-ramesh.mp4
+
+### Gamma EOS
+    - https://academic.oup.com/mnras/article/378/3/1118/1055603 
+    - Most analytical and numerical models, make use of the
+      polytropic equation of state (EoS), where the specific heat
+      ratio is constant and is:
+        - 5/3 (for a cold gas) 
+        - 4/3 (for a hot  gas)
+
+### matthew liska simulations youtube
+    - https://www.youtube.com/watch?v=mbnG5_UTTdk
+    - How are you spinning the black hole? Is it spinning itself ?
+    - Hi Dennis, for all practical purposes the black hole's spin
+      affects spacetime in the way we would expect from
+      a rotating object. We simulate those effects as specified
+      by Einstein's theory of General Relativity. The black
+      hole's location, mass, and spin stay the same during the
+      simulation (assuming the accreted matter is negligible
+      compared to the black hole mass). Furthermore, the famous
+      'no-hair theorem' states that black holes are maximally
+      compact such that they are entirely specified by three
+      fundamental properties: mass, spin, and charge. A black
+      hole has no smaller details ('no hair') that would allow
+      you to speak of rotation in the classical sense. Black hole
+      spin is more like the spin of elementary particles,
+      a quantum property that corresponds closely but not
+      entirely with our classical sense of rotation. E.g., an
+      electron has spin but no spatial extent, so no meaningful
+      way to talk about rotation.
+
+### Kerr Schild coords
+    - horizon penetrating coords
+    - we can put the inner boundary inside the EH and have it
+      causally disconnected from the rest of the flow
+
+### Horizon Light crossing time
+    - GM/c^3
+
+### Gammie GRMHD simulations
+    - https://www.youtube.com/watch?v=JosKQoTGBZo
+    - $MY_VIDEOS/Astro/accretion/Gammie-GRMHD-webinar.mp4
+    - Contents:
+        - Physical content of GRMHD model
+        - Numerical methods
+        - Convergence, tests, resolution
+        - Example simulations & analysis
+        - Open questions, opportunities
+    - MAD: carries magnetic field flux into the BH ?
+    - funnel: empty regions over the poles of the BH
+        - funnel has well ordered magnetic field
+        - $MY_IMAGES/astro/bh-accretion/gammie-webinar-funnel.jpg
+    - "SANE" model: Standard Normal Evolution
+        - relatively small magnetic flux through the EH
+    - spin = -9.14: BH is spinning one way, the disk spinning the
+      other
+    - high sigma wind interacts with denser orbiting disk
+    - getting from MHD simulations (flow models) to observations
+      requires a radiative transfer calculation
+    - Background spacetime: only 2 parameters:
+        - `M`: BH mass
+        - `a`: spin
+        - in ideal MHD (no viscosity), output is independent of
+          `M`. "... it just scales with M..." (? contradiction)
+        - $MY_IMAGES/astro/bh-accretion/gammie-physical-content-1.jpg
+    - fluid model for flow of plasma
+    - We take the full _distribution function_ of the plasma:
+        - which depends on position, time, momentum
+        - and replace it with: a spatial density and single
+          velocity for the plasma
+        - this is a key approximation for EHT sources (low
+          accretion BH's), and possibly _objectionable_
+        - $MY_IMAGES/astro/bh-accretion/gammie-physical-content-2.jpg
+    - ideal MHD approximation
+        - very good, except in _low density_ regions
+        - $MY_IMAGES/astro/bh-accretion/gammie-physical-content-3.jpg
+    - NUMERICAL METHODS
+        - Recommended:
+            - Leveque 1992: Hyperbolic systems of conservation
+              laws https://www.springer.com/gp/book/9783764327231
+        - Lax-Friedrich fluxes: Robust simple Riemann solver
+        - Have to preserve the constraint: that `div(B field)
+          = 0`
+        - two ways of controlling the "monopole density":
+            - constrained transport
+            - constraint damping
+        - $MY_IMAGES/astro/bh-accretion/gammie-numerical-methods-01.jpg
+    - evolution
+        - we don't actually evolve the primitives (eg. ρ,
+          internal energy), but we evolve the conserved
+          quantities (eg ρ * Lorentz factor)
+        - however, at the end of the timestep we've to revert to
+          the primitive values, but there's no analytic way to do
+          this... we have to do it numerically
+        - but sometimes the whole thing has evolved into an
+          unphysical part of phase space.. so hard to revert to
+          privmitives?
+    - wave speed calculations
+        - there's inertia associated wtih the magnetic field
+    - changing coords
+        - because we're relativistic, with invariance, we can
+          change coords into ones with a higher coord density
+          (which non-GRMHD can't do) ...
+        - That gives us the possibility of doing a poor-mans
+          "static mesh refinement"!
+        - $MY_IMAGES/astro/bh-accretion/gammie-numerical-methods-02.jpg
+    - Available codes
+        - $MY_IMAGES/astro/bh-accretion/gammie-numerical-codes.jpg
+    - CPU COSTS
+        - speed unit: zone-cycles per node second
+        - speed unit: cell-cycles per node second
+        - $MY_IMAGES/astro/bh-accretion/gammie-simulation-cost-node-hours.jpg
+    - CONVERGENCE, TESTING, RESOLUTION
+        - most codes are 2nd order on smooth flows
+        - it's proportional to the number of zones along 1D to
+          the power of `-2`
+        - $MY_IMAGES/astro/bh-accretion/gammie-testing-convergence.jpg
+    - Gammie tests:
+        - inflow: has semi-analytic solution
+            - magnetised inflow in Kerr metric. So has
+              complications such as frame-dragging
+            - $MY_IMAGES/astro/bh-accretion/gammie-testing-convergence-02.jpg
+        - Orszang-Tang vortex
+            - $MY_IMAGES/astro/bh-accretion/gammie-testing-convergence-03.jpg
+            - appearance of plasmoids depends on the resolution??
+
+    - To learn Gammie recommends:
+        - HARM paper         $MY_ZOTERO/2003/gammie_et_al_2003_harm.pdf
+        - Rezzolla-Zanotti   $MY_BOOKS/Astro/Fluid-Dynamics/Relativistic-Hydrodynamics-Rezzolla-Zanotti.pdf
+
+    - Analysis
+        - $MY_IMAGES/astro/bh-accretion/gammie-Analysis.jpg
+        - Remember: coordinate _independent_ diagnostics are
+          good. Coordinate dependent ones are meaningless.
+        - Rotation profiles
+            - Mad flow: plasma rotating around BH well below the
+              circular speed. (circular speed is speed a particle
+              would orbit)
+            - bad:  angular velocity profile. Coord dependent.
+                - BL coords will give a different profile
+                  compared to KS coords!
+            - good: angular momentum profile
+                - specific angular momentum is a _scalar_.
+                - You can measure it in any coord system and get
+                  the same result.
+                - contract the 4-velocity with the azimuthal
+                  killing vector
+
+    - Challenges:
+        - at simulation end: you may have 1,000 1GB files.
+        - And the 1,0000 may have values for primitives.
+            - Challenge: how to interpret this?
+
+    - Numerical issues
+        - $MY_IMAGES/astro/bh-accretion/gammie-challenges.jpg
+        - speed.
+            - Always interested in a faster code. HAMR fastest.
+            - HAMR code:     100 million zone cycles / GPU sec
+            - Gammie kHARMA:   5 million zone cycles / node sec
+        -  Robustness:
+            - crashes caused by non-positive densities,
+              non-positive pressures in the empty regions over
+              the BH's (funnel regions). How to deal with that
+              more robustly.
+            - physical constraint preserving schemes. Add in
+              enough diffusion so that the density is always
+              positive.
+            - BHAC code has handled some of this but the
+              technqiues not fully mature
+        - convergence
+        - beyond ideal GRMHD: are estimates of dissipation rate
+          accurate?
+        - see ebhlight https://github.com/AFD-Illinois/ebhlight
+
+    - Physical issues 
+        - large scale B evolution: 
+            - we don't know how magnetic flux is _transported_ in
+              these flows.
+            - how torus IC's would relate to the evolution
+              obtained for a very large scale flow, that extends
+              out to much larger radius with complicated magnetic
+              field structure. 
+            - dynamo problem  
+        - small scale B evolution: 
+        - long term evolution? 
+            - we typically run for 10,000 light crossing times
+            - But to simulate a typical BH observation of a few
+              weeks, that corresponds to millions of `GM/c^3`
+            - and we don't understand how long-term evolution
+              might change the outcome 
+        - tilted disks (cf Chris Fragile, Matthew Dexter)
+        - disks in context: self-consistent feeding of BH's
+            - knit together the relativistic behaviour at small
+              scales to the non-relativistic behaviour at parsec
+              scale
+
+
+### Modified Kerr-Schild coordinates
+    - Modified KS coordinates were introduced by e.g., (McKinney
+      and Gammie 2004) with the purpose of stretching the grid
+      radially and being able to concentrate resolution in the
+      equatorial region.
+    - ... where `𝑅0` and `h` respectively control, how much
+      resolution is concentrated near the horizon and near the
+      equator.
+
+### The black hole accretion code
+    - https://comp-astrophys-cosmol.springeropen.com/articles/10.1186/s40668-017-0020-2
+    - Modern BH accretion-disk theory suggests that angular
+      momentum transport is due to MHD turbulence driven by the
+      magnetorotational instability (MRI) within a differentially
+      rotating disk (Balbus and Hawley 1991; Balbus and Hawley
+      1998). Recent non-radiative GRMHD simulations of BH
+      accretion systems in an ADAF regime have resolved these
+      processes and reveal a flow structure that can be
+      decomposed into a disk, a corona, a disk-wind and a highly
+      magnetized polar funnel [see, e.g., Villiers and Hawley
+      (2003); McKinney and Gammie (2004); McKinney (2006);
+      McKinney and Blandford (2009)]. The simulations show
+      complex time-dependent behaviour in the disk, corona and
+      wind. Depending on BH spin, the polar regions of the flow
+      contain a nearly force-free, Poynting-flux-dominated jet
+      [see, e.g., Blandford and Znajek (1977); McKinney and
+      Gammie (2004); Hawley and Krolik (2006); McKinney (2006)].
+    - Over the past few years, the development of
+      general-relativistic numerical codes employing the 3+1
+      decomposition of spacetime and conservative ‘Godunov’
+      schemes based on approximate Riemann solvers (Rezzolla and
+      Zanotti 2013; Font 2003; Martí and Müller 2015) have led to
+      great advances in numerical relativity. Many
+      general-relativistic hydrodynamic (HD) and MHD codes have
+      been developed ...
+    - ... Although these codes have been applied to many
+      astrophysical scenarios involving compact objects and
+      matter [for recent reviews see, e.g., Martí and Müller
+      (2015); Baiotti and Rezzolla (2016)], full AMR is still not
+      commonly utilised and exploited [with the exception of
+      Anninos et al. (2005); Zanotti et al. (2015); White and
+      Stone (2015)]. BHAC attempts to fill this gap by providing
+      a fully-adaptive multidimensional GRMHD framework that
+      features state-of-the-art numerical schemes.
+    - In preparation for the upcoming EHTC observations, a large
+      international effort, whose European contribution is
+      represented in part by the BlackHoleCam projectFootnote
+      2 (Goddi et al. 2016), is concerned with forward modelling
+      of the future event horizon-scale interferometric
+      observations of Sgr A* and M87 at submillimeter (EHTC;
+      (Doeleman et al. 2009)) and near-infrared wavelengths (VLTI
+      GRAVITY; (Eisenhauer et al. 2008)).
+    - In order to assess the credibility of these radiative
+      models, it is necessary to assess the quantitative
+      convergence of the underlying GRMHD simulations. In order
+      to demonstrate the utility of BHAC for the EHTC
+      science-case, we therefore validate the results obtained
+      with BHAC against the HARM3D code (Gammie et al. 2003;
+      Noble et al. 2009) and investigate the convergence of the
+      GRMHD simulations and resulting observables obtained with
+      the GRRT post-processing code BHOSS (Younsi et al. 2017).
+    - ... In order to eliminate the error-prone process of
+      implementing complicated functions for metric derivatives,
+      BHAC can obtain derivatives by means of an accurate
+      complex-step numerical differentiation (Squire and Trapp
+      1998). This elegant method takes advantage of the
+      Cauchy-Riemann differential equations for complex
+      derivatives and achieves full double-precision accuracy,
+      thereby avoiding the stepsize dilemma of common
+      finite-differencing formulae (Martins et al. 2003). The
+      small price to pay is that at the initialisation stage,
+      metric elements are provided via functions of the
+      complexified coordinates. However, the intrinsic complex
+      arithmetic of Fortran90 allows for seamless implementation.
+    - PRIMITIVE VARIABLE RECOVERY
+        - It is well-known that the nonlinear inversion 𝑃(𝑈) is
+          the Achilles heel of any relativistic (M)HD code and
+          sophisticated schemes with multiple backup strategies
+          have been developed over the years as a consequence
+          (e.g., Noble et al. (2006), Faber et al. (2007), Noble
+          et al. (2009), Etienne et al. (2012), Galeazzi et al.
+          (2013), Hamlin and Newman (2013)). Here we briefly
+          describe the methods used throughout this work and
+          refer to the previously mentioned references for a more
+          detailed discussion.
+    - THE COMPUTATIONAL GRID
+        - employed in BHAC is provided by the MPI-AMRVAC toolkit
+          and constitutes a fully adaptive block based (oct-)
+          tree with a fixed refinement factor of two between
+          successive levels. That is, the domain is first split
+          into a number of blocks with equal amount of cells
+          (e.g., 103 computational cells per block). Each block
+          can be refined into two (1D), four (2D) or eight (3D)
+          child-blocks with an again fixed number of cells. This
+          process of refinement can be repeated ad libitum and
+          the data-structure can be thought of a forest
+          (collection of trees). All operations on the grid, for
+          example time-update, IO and problem initialisation are
+          scheduled via a loop over a space-filling curve. We
+          adopt the Morton Z-order curve for ease of
+          implementation via a simple recursive algorithm.
+    - Currently, all cells are updated with the same global
+      time-step and hence load-balancing is achieved by cutting
+      the space-filling curve into equal sections that are then
+      distributed over the MPI-processes. The AMR strategy just
+      described is applied in various astrophysical codes, for
+      example codes using the PARAMESH library (MacNeice et al.
+      2000; Fryxell et al. 2000; Zhang and MacFadyen 2006), or
+      the recent Athena++ framework [White et al. (2016)].
+    - Compared to a patch-based approach [see, e.g., Mignone et
+      al. (2012)], the block based AMR has several advantages:
+      (1) well-defined boundaries between neighbouring grids on
+      different levels, (2) data is uniquely stored and updated,
+      thus no unnecessary interpolations are performed, and (3)
+      simple data-structure, e.g., straightforward integer
+      arithmetic can be used to locate a particular computational
+      block. For in-depth implementation details such as
+      refinement/prolongation operations, indexing and ghost-cell
+      exchange, we refer to (Keppens et al. 2012). Prolongation
+      and restriction can be used on conservative variables or
+      primitive variables. Typically primitive variables are
+      chosen to avoid unphysical states which can otherwise
+      result from the interpolations in conserved variables.
+    - RADIATION POST PROCESSING
+        - In order to compute synthetic observable images of the
+          BH shadow and surrounding accretion flow it is
+          necessary to perform general-relativistic ray-tracing
+          and GRRT post-processing [see, e.g., Fuerst and Wu
+          (2004), Vincent et al. (2011), Younsi et al. (2012),
+          Younsi and Wu (2015), Chan et al. (2015), Dexter
+          (2016), Pu et al. (2016), Younsi et al. (2016)]. In
+          this article the GRRT code BHOSS (Black Hole
+          Observations in Stationary Spacetimes) (Younsi et al.
+          2017) is used to perform these calculations. From BHAC,
+          GRMHD simulation data are produced which are
+          subsequently used as input for BHOSS. Although BHAC has
+          full AMR capabilities, for the GRRT it is most
+          expedient to output GRMHD data that has been re-gridded
+          to a uniform grid.
+
+### CCA Summer School - Charles Gammie Part 1
+    - https://www.youtube.com/watch?v=S4_jTOuz76g&list=PLWAzLum_3a180ECznso6HvwstZthGSoEZ&index=104
+    - Characteristic scales
+        - Length
+        - Time (Light crossing time)
+
+### GPU-based Simulations of Tilted BH Accretion
+    - Alexander Tchekhovskoy
+    - https://www.youtube.com/watch?v=tUT-c3TMBCY
+    - H-AMR: based on HARM2D code
+    - GPU partitions "Blue Waters"
+    - how BH's produce outflows is poorly understood
+    - $MY_IMAGES/astro/bh-accretion/traditional-inflow-orientation.jpg
+    - $MY_IMAGES/astro/bh-accretion/more-realistic-inflow-orientation.jpg
+    - Tilted accretion barely explored
+    - Expectation is a tilted disk. But what happens outflow?
+      Does it stay aligned with the BH rotational axis anyway?
+    - AMR automatically gives more resolution where need. It
+      follows the flow
+    - thick disks precess...
+        - but do they produce jets at all?
+        - $MY_IMAGES/astro/bh-accretion/tilted-disks-precess.jpg
+    - thin disks align
+        - $MY_IMAGES/astro/bh-accretion/thin-disks-align.jpg
+    - computational challenge: enormous dynamical range. Must
+      resolve thin streams over long run times
+    - results:
+        - thick disks do precess
+        - thin, strongly mis-aligned disks do NOT align
+        - thin, weakly   mis-aligned disks do align
+    - then they made a disk from scratch:
+        - got IC's of a star on parabolic orbit being tidally
+          disrupted by a SMBH
+        - (IC's from _Phantom_ code; Eric Coughlin)
+        - $MY_IMAGES/astro/bh-accretion/tidal-disruption-star.jpg
+    - Conclusions
+        - $MY_IMAGES/astro/bh-accretion/gpu-blue-waters-simulations.jpg
+
+
+
+### Accretion efficiency
+    - doesn't depend on the mass, just the radius
+    - `η = 1/2 * R_schw / R`
+
+
+### Britannica
+    - An accretion disk forms whenever the matter being accreted
+      possesses enough rotational or angular momentum that it
+      cannot simply fall inward toward the accretor along
+      a straight line.
+    - In directions perpendicular to the accretor’s rotation
+      axis, the flow tends to flatten onto a disk because the
+      rotation resists the inflow of the material. In directions
+      parallel to the rotation axis, the matter contracts toward
+      a plane until the thermal pressure inside the disk roughly
+      equals the gravitational force.
+
+    - If the thermal pressure, which resists compression, is
+      small compared with gravity and rotation, which cause the
+      disk to contract vertically, the disk will be
+      _geometrically thin_, and its thickness will be much
+      smaller than its radial extent.
+    - If pressure forces are comparable to rotation and gravity,
+      the accretion disk will be geometrically thick, resembling
+      more a torus than a disk.
+
+    - Matter within the disk spirals inward because it loses
+      energy and angular momentum due to turbulence and
+      viscosity. In the absence of any viscosity, turbulence, or
+      other forms of friction, the material orbiting the central
+      object would rapidly fall toward the equatorial plane of
+      the disk and then continue to move along circular orbits.
+      Therefore, some form of friction that dissipates angular
+      momentum is necessary for the matter to move inward and
+      accretion to take place.
+
+    ### Physical Processes
+    - Given the typical densities and temperatures in accretion
+      disks, viscosity is too low to drive the inward drift. It
+      is thought that the friction comes from turbulence due to
+      the rotation of the disk amplifying any magnetic fields
+      that are already there. This turbulence provides the
+      effective viscosity that drives the drift of matter inward
+      while transporting the excess angular momentum outward.
+    - As the material in the disk comes closer to the accretor,
+      it speeds up in response to the stronger gravitational pull
+      and moves along a spiral path at supersonic orbital speeds
+      while still drifting gradually inward at subsonic speeds.
+      If the accretor is a normal main-sequence star, the orbital
+      speed is hundreds of kilometres per second. In the most
+      extreme cases of neutron stars or black holes, the orbital
+      motion approaches the speed of light and therefore needs to
+      be described by the theory of relativity. The emission from
+      the disk displays such relativistic effects as
+      gravitational redshift, in which the wavelength of the
+      emitted light is shifted to longer wavelengths.
+    - Because the disk material needs to lose energy to accrete
+      onto the central object, the material in the disk gets hot,
+      and the heat generated escapes through both sides of the
+      disk. In X-ray binaries, where the accretor is a neutron
+      star or a black hole, the temperatures in the accretion
+      disks range from a few thousand to several million kelvins.
+      Therefore, the disk emits light from infrared to low-energy
+      (soft) X-ray wavelengths. Frequently parts of the disk may
+      evaporate to form an even hotter low-density corona,
+      similar to that of the Sun, emitting radiation in the
+      high-energy (hard) X-ray range.
+    - Much can be learned from detailed spectral studies (see
+      spectroscopy) of the emission from accretion disks. The
+      continuum emission yields clues about the rate at which
+      mass flows through the disk and about the temperature
+      distribution on the surface of the disk. The line emission
+      and its detailed shape allow the measurement of system
+      parameters. In the best cases, the mass and rotation speed
+      of the central compact object can be determined through the
+      detailed analysis of the wavelength and shape of certain
+      spectral lines of iron. These lines provide the best
+      evidence for the existence of black holes.
+    - Many different accreting objects, including quasars, radio
+      galaxies, X-ray binaries, and young stars, eject part of
+      the accreted material from their poles in the form of
+      supersonic jets (see radio jet). It is generally thought
+      that these jets are probably propelled by magnetic forces
+      arising in the magnetic field lines that are helically
+      twisted by the rotation of the disk and that are directed
+      perpendicular to it.
+
+
+### Keplerian curve
+    - tells us it's a low mass disk (and also a thin disk?)
+
+### orbits
+    - a "circular orbit": `dr/dτ = 0`.
+        - It's radius does not change!
+        - Then `Energy = sqrt(effective potential)`
+
+    - ISCO:
+        - marginally stable circular orbit
+        - Velocity less than `c`
+        - ISCO - Innermost Stable Circular Orbit
+        - $MY_IMAGES/astro/bh-accretion/isco-mass-particle-orbits.jpg
+
+    - MBCO:
+        - marginally bound circular orbit
+        - radius binding energy vanishes
+
+    - CPO:
+        - Circular Photon Orbit (like an ISCO for light)
+        - Velocity = `c`
+        - $MY_IMAGES/astro/bh-accretion/photon-orbits.jpg
+
+    - MIT lecture orbits
+        - Examine the energy and effective potential
+        - $MY_IMAGES/astro/bh-accretion/mit-lecture-orbits.jpg
+
+### Orbits 2
+    - In GR the radius of circular orbits of particles in the
+      vicinity of black holes has a lower bond which are known as
+      inner most stable circular orbits (ISCOs).
+    - While the circular orbits with the upper bound on its
+      radius are called outer most stable circular orbits
+      (OSCOs).
+    - These two types of orbits form a boundary between the two
+      regions, i.e., a stable region and an unstable region
+      respectively. In the literature this boundary is known as
+      the _MSCO_ [26].
+    - If in a spacetime geometry the number of MSCOs is only two
+      then the smaller is called the ISCO and the larger is known
+      as the OSCO.
+    - On the other hand if the number of MSCOs is greater than
+      two then the smallest will be the ISCO and the largest will
+      be the OSCO. A study of the ISCO for the Schwarzschild
+      black hole can be found in `MTW`
+    - In the process of generation of gravitational waves, ISCOs
+      are considered to be the location where an orbiting compact
+      object e.g, another black hole orbiting around the super
+      massive black hole goes from the inspiralling phase to the
+      merging phase
+
+### "Polish Doughnuts"
+    - Stationary toroidal configurations1 of non-gravitating
+      fluid in axisymmetric GR metrics were presented in a paper
+      by Paczynski’s collaborators, Abramowiczet al. (1978).
+    - Named by Martin Rees?
+
+
+### Thin Disks
+    - The most important scale in accretion disk theory is the Eddington accretion rate, `Ṁ_E = L_E / c^2`
+    - THIN accretion disks are consistent with accretion rates `Ṁ` < Eddington?
+
+### Thin disks (alternative)
+    - a disk is THIN iff the `sound speed << rotational speed`,
+      which is the condition for pressure gradients to be small
+      compared to centrifugal forces
+
+### Slim disks
+    - PS Slim disks are of historical interest only.
+
+### Stars in Accretion disks
+    - star formation in accretion disks
+
+### Interesting comment
+    - ah later: this slide comes from the CAMK course on
+      accretion disks... think the second panel is showing an
+      image of a "jet"! From the exact same data as the EHT.
+	- $MY_IMAGES/astro/bh-accretion/why-accretion-theory-needed.jpg
+
+### Good Talk: Athena++ Accretion disks
+    - Jim Stone (IAS): Radiation-dominated Black Hole Accretion Flows
+    - AstronomyHeidelberg, May 2020
+    - Codes: ZEUS and ATHENA++
+    - $MY_VIDEOS/astro/Jim-Stone-Radiation-dominated-Black-Hole-Accretion-Flows.mp4
+    - $MY_IMAGES/astro/Goldap2020/Screenshot-000145.jpg
+    - We focus on "Radiation-dominated" accretion not "low-luminosity"
+      accretion (e.g. like M87)
+
+### Spectral States
+	- $MY_IMAGES/astro/accretion-spectral-states.jpg
+    - Two dominant spectral states can be distinguished:
+        - high/soft (high luminosity, soft spectrum)
+        - low/hard  (low luminosity,  hard spectrum)
+
+### Radiation Dominated Accretion
+    - Dense, collisional plasma
+    - Strong radiation and cooling
+    - Quasars
+    - X-ray binaries in Soft-High State
+
+### Low Luminosity Accretion
+    - Very diffuse plasma
+    - Nearly collisionless
+    - Inefficient cooling
+    - Galactic centre, M87
+    - X-ray binaries in Low-Hard state
+
+
+### Random comments Goldap summer 2020
+    - Fully GR models of astrophysical sources are in high
+      demand, not only since the discovery of gravitational waves
+      from merging stellar mass black holes (Abbott et al. 2016).
+
+    - The need for an accurate description of the interplay
+      between strong gravity, matter and EM fields is further
+      highlighted by the recent detection of electromagnetic
+      counterpart radiation to the coalescence of a neutron star
+      binary (Abbott et al. 2017).
+
+    - The most common approach to dynamical relativistic source
+      modeling uses the ideal (GRMHD) approximation. There are
+      two approximations inherent in this model.
+        1. the plasma is treated as a fluid rather than
+           a collisionless plasma.
+        2. the exchange of energy between the plasma and the
+           radiation field is neglected.
+
+### DISCUSSION AND CONCLUSIONS
+    - Using a standardised setup of radiatively inefficient black
+      hole accretion and a set of relevant diagnostics, we have
+      compared the MRI-driven turbulent quasi-stationary state in
+      nine GRMHD codes which are widely used in the community.
+      Many of the codes have been developed independently, others
+      share the same heritage but are completely re-written.
+      There are both differences and commonalities between the
+      codes. Listing the most important common elements, we note
+      that all apply overall 2nd order conservative schemes and
+      preserve the divergence of the magnetic field to machine
+      precision. All except iharm3D applied the
+      piecewise-parabolic-method (PPM) for spatial
+      reconstruction. Regarding the algorithmic differences, the
+      order of time- integration, use of approximate Riemann
+      solver (HLL and LLF) and specific integration of the
+      induction equation are the most striking ones. Furthermore,
+      two configurations have been computed in cartesian
+      coordinates, while mostly spherical coordinates are used.
+      The results shed light on the systematics between codes and
+      elucidate the resolution requirements to reach a certain
+      level of agreement. Generally, we find that the level of
+      agreement between codes improves for all diagnostics when
+      the resolution is increased towards convergence. Once
+      sufficient resolution is used, key parameters like the
+      accretion rate of the saturated turbulent state agree
+      within their temporal variations among all codes and the
+      spread in the mean accretion rate is given by a factor of
+      ∼ 1.7 between the lowest and the highest.
+
+
+
+### BHI lunchtime talk
+    - Ramesh about accretion disks https://youtu.be/Y8tKEG8I7Iw?t=669
+
+    - What kind of radiation comes from the accretion disc versus
+      the radiation from the jet.
+    - Because the systems have both accreting gas and ejected
+      material in the jet. 
+    - But these radiating areas are different.
+    - The disk is dense and relatively lowly magnetised while the
+      jet Is less dense but highly magnetised.
+    - We imagine the radiation processes are quite different in
+      these areas.
+    - In our simulations we can take the car metric & simulate
+      the motion of gas but radiation is more complex.
+    - Radiation depends on what the particles are doing.
+        - How are they heated?
+        - What energy distribution do they take?
+        - Is it thermal or non-thermal?
+        - Does it have a power large distribution?
+    - We don’t have a clue of any of these things.
+    - Mainly because we don’t have an understanding of the plasma
+      physics in accretion disks. ie how particles are heated.
+
+    - Andrew Chael has changed the code so in each parcel of
+      fluid you can follow what the electrons are doing, distinct
+      from the ions.
+
+    - "Electrons are what we are interested in. There are what
+      produce the radiation"
+
+    - "We’ve got a code that can follow a whole distribution of
+      electrons in each cell. Follow it as it moves along with the
+      magnetic field. From this we can compute the radiation"
+
+    - BUT HE IS MISSING ONE KEY INPUT. In each cell as you
+      produce heat from all the accretion physics - how is this
+      heat manifested?
+
+    - What kind of distribution does it put into the electrons?
+    - And this is PLASMA PHYSICS issue.
+
+    - So we are hoping that plasma physics simulations will tell
+      us _HOW TO HEAT UP THE ELECTRONS_ and Andrew can put that
+      prescription into the simulation and run it .
+
+    - And then will see what the radiation is. And in the meantime the
+      EHT will see what it says too.
+
+    - And hopefully by comparing against the real EHT data we can
+      refine our understanding as to how particles are heated. And how
+      it differs between ...
+
+
+
+### Rashid Sunyaev’s words:
+    - $MY_ZOTERO/2009/king_2009_accretion.pdf
+
+    - “We were young, enthusiastic and had no doubts that we were
+      developing a gold mine. Every day and every night (I was
+      working at thattime till 3–4a.m.)brought something
+      unexpected and very interesting”
+
+    - Their work offered a simple demonstration that the
+      assumptions of Keplerian rotation, a thin disk, and
+      efficient cooling were precisely equivalent.
+
+    - Miraculously, `α` appeared only with low powers in the
+      theory, suggesting that the broad picture of these thin
+      disks (H/R << 1) might survive future insights into the na-
+      ture of viscosity.
+
+    - This weak dependence of the theory on its unknown parameter
+      opened it to observational tests. Accordingly, observers
+      began to look seriously at its predictions of spectra,
+      luminosities, variability, and so on.
+
+    - More than 35 years on, it is clear that the picture has
+      survived remarkably well. It is the ba- sis of almost all
+      discussions of accretion in close binaries, most in active
+      galactic nuclei, and has been applied widely elsewhere.
+
+    - Accretion disk theoryhas achieveda resilience rather like
+      stellar structure in the 1920s, before nuclear burning was
+      fully under- stood. Just as then, we can get somewhere,
+      even though we do not fully know the process generating the
+      energy.
+
+
+
+### Bondi Accretion
+    - The spherically symmetric (zero angular momentum) accretion
+      on a gravitating body is the simplest case.
+    - It was first studied by Bondi (1952) and is called the
+      Bondi accretion.
+    - It was shown that the solution describing such a process is
+      unique and that the flow becomes transonic crossing the
+      critical (sonic) radius.
+    - It is currently accepted that Bondi-type of accretion
+      hardly occurs in the Universe because all potential sources
+      of accreting matter (e.g., gas clouds or stars) have
+      non-zero angular momentum.
+
+### Accretion energy
+    - In astrophysics, 'accretion' is used to describe the
+      process of acquiring matter, typically gaseous, by
+      a massive body.
+    - As a result of the infall, the gravitational energy is
+      extracted. Its amount (the energy?) is roughly proportional
+      to the ratio of the mass and radius of the attracting
+      object: `M/R`.
+
+### Magnetohydrodynamics
+    - Basic assumption of MHD: We drop the electric term in
+      Ampère's equation
+
+### Phases
+    - In astronomy, multi-phase medium is everywhere, including
+      accreting sources.
+
+### Accretion: When Hydrodynamical?
+    - Accreting mater is frequently not dense and highly ionized,
+      being a mixture of the ions and electrons. The particles
+      exchenge energy between themselved by scattering (Coulomb
+      interations).
+    - If interations are frequent, the matter can be
+      characterized by the density, pressure and temperature, and
+      the hydrodynamical approach is a good approximation.
+    - However, if interactions are not frequent we have to apply
+      the microscopic approach (complex distribution of particle
+      velocities etc.).
+    - All becomes complex, and we prefer to avoid this necessity.
+    - Thus is is important to have a criterium when the
+      hydronamincal approximation applies.
+
+### Accretion: White Dwarves
+    - Evolutionary timescale
+        - The rate (in time) at which the mass of the central
+          body increases in a stationary process is
+        - `τ = M / M_dot`
+    - DIGRESSION: In practice there may be complications. Eg,
+      accreting white dwarfs loose mass in the accretion process
+      (mostly) because in the nova episodes they can eject more
+      mass than they accreted between the outbursts.
+
+### Books / papers etc
+    - $MY_BOOKS/Astro/BH-accretion/Accretion-Disks-Cambridge-Course-2005.pdf
+    - $MY_BOOKS/Astro/BH/Abramowicz-Fragile-Accretion-Living-Review-2013.pdf
+    - $MY_NOTES/physics/courses/computational-hydrodynamics.txt
+    - $MY_ZOTERO/2019/fendt_2019_approaching_the_black_hole_by_numerical.pdf
+
+
+
+### Links
+    - Scholarpedia Accretion disks                                 http://www.scholarpedia.org/article/Accretion_discs
+    - living review                                                https://link.springer.com/article/10.12942/lrr-2013-1
+    - Cambridge course: accretion disks                            http://www.damtp.cam.ac.uk/user/gio10/accretion.html
+    - Browser ray tracer                                           http://spiro.fisica.unipd.it/~antonell/schwarzschild/
+    - BH accretion Chakrabati lecture                              https://www.youtube.com/watch?v=CylgTwGlGD0
+    - Astrophysics of accretion disks - Charles Gammie             https://www.youtube.com/watch?v=5qwyU3_JWE0
+    - Black Hole PIRE lectures (accretion) GOOD                    https://www.youtube.com/channel/UCPrigv3Rt9kLrt1J_ywf3kg/videos
+    - Numerical simulations BH accretion                           https://www.youtube.com/watch?v=jBDEMRa1KI0
+    - Multi-wavelength evolution of accreting BH's and NS's        https://www.youtube.com/watch?v=3oD_JOhds8Q
+    - Numerical Simulations of BH Accretion - Narayan (koral!)     https://www.youtube.com/watch?v=Tq1xWIsNmkM
+    - CfA Colloquium: Models of BH Accretion  (Gammie)             https://www.youtube.com/watch?v=3E2unY60qtE
+    - Chakrabarti --Theoretical/obs understanding accretion        https://www.youtube.com/watch?v=ivd5EbAeWUM
+    - Chakrabarti lecture 01                                       https://www.youtube.com/watch?v=a3Aj094bvuI
+    - Bradley Peterson - "Inner Structure of AGN"                  https://www.youtube.com/watch?v=Fwct4linP60
+    - Basic: what is accretion                                     https://www.youtube.com/watch?v=EOBJmXJxRiQ
+    - High luminosity accretion: how the physics works             https://www.youtube.com/watch?v=DdFnVuMaUtU
+    - Elena Maria Rossi: Hyperaccretion  GOOD                      https://www.youtube.com/watch?v=3poESsdMi8E
+    - On the vertical structure of ADAFs                           https://www.youtube.com/watch?v=fyXpX7nufHI
+    - CCA Flatiron Summer School - Charles Gammie Part 2           https://www.youtube.com/watch?v=8CLJ5Ga-hNI
+    - CCA Flatiron Summer School, numerical hydro, GR, accretion   https://www.simonsfoundation.org/event/cca-summer-school-lectures/
+    - Chris Fragile tilted disk                                    https://www.youtube.com/watch?v=Op2dRKJngks
+    - Andrew King "Supermassive black holes: feedback and feeding" https://www.youtube.com/watch?v=i0Xf5siCfNU
+    - UCD undergrad: Black Hole Shadows and Ray-Tracing            https://www.youtube.com/watch?v=lJAfuRJM0vc
+    - black hole (g)astrophysics                                   https://rodrigonemmen.com/teaching/black-hole-gastrophysics/
+    - MRI-Driven Turbulence - Hawley(!)                            https://www.youtube.com/watch?v=he8a--AIJ34
+    - Formation, Fueling, SMBH (Lecture 1) by Priyamvada Natarajan https://www.youtube.com/watch?v=wIYaxX9IDMo
+    - Formation, Fueling, SMBH (Lecture 1) by Priyamvada Natarajan https://www.icts.res.in/discussion-meeting/smbh2019/talks
+    - Astrophysics of SMBH Prof. David Ballantyne                  https://www.youtube.com/watch?v=zFrU-y7ZLhE
+    - Accretion and outflows in BH binaries: extreme case V404 Cyg https://www.youtube.com/watch?v=E1ZzpnSHQdc
+    - Lecture B1--Dr. Feng Yuan--Hot accretion flows around black  https://www.youtube.com/watch?v=dITWJQMgCsk
+    - GRMHD Simulations Webinar (Gammie) 2020                      https://www.youtube.com/watch?v=JosKQoTGBZo

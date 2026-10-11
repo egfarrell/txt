@@ -1,0 +1,209 @@
+
+
+
+Week 6: Learning from data: classification
+    - Using machine learning tools to classify your data
+    - Investigating different types of galaxies
+
+
+Content
+    - Famous classification scheme
+    - ML Galaxy classifier
+    - Random Forests
+    - Grok Learning
+
+
+
+### Famous classification scheme
+    - Hubble "tuning fork"
+    - Hubble galaxy morphology classification
+
+    - Galactic Disk and bluges form in different ways 
+    - Spiral galaxies are predominately blue (contain lots of gas
+      and dust) 
+    - Elliptical galaxies are predominately red or yellow (old
+      stars) 
+    - Galaxy color tells us the average age of stars in that
+      galaxy
+
+    - Current belief: Bars are relatively short lived stuctures,
+      and little difference between barred and unbarred galaxies
+
+- Hubble fork: 
+    - not physically motivated 
+    - is a continuum of properties, not a chronological sequence
+      (evolutionary sequence) 
+
+### ML Galaxy classifier
+    - Compare ML Decision Tree against independently classified
+      galaxies by Galaxy Zoo volunteers
+    - Decision Tree algorithm uses training set to build a model
+      to map these features to the correction classification 
+    - The main scientific thinking happens at the feature
+      selection stage. How 
+    - note: the features need to be quantifiable 
+    - one option for feature selection: use all the raw pixels as
+      features (reduce bias from explicit feature selection)
+        - disadvantages: you're not taking advantage of your
+          expert knowledge 
+        - disadvantages: computational, you're not reducing the
+          dimensionality of the problem.
+    - Obvious extra features are: 
+        - the color of the galaxy. (Aside: Hubble didn't have
+          this from his old photographic plates.)
+        - The ellipticity of the galaxy 
+        - Luminosity function: how the brightness of the galaxy
+          varies as a function of the distance from the centre. 
+        - These feature selections attempt to replicate
+          properties that the human eye uses when classifying
+          a galaxy.
+
+    - Confusion matrix
+        - allows you to calculate the overall accuracy
+          (precision, recall) and the accuracy for each category
+
+    - How good have you done? 
+        - random chance: compare against random assignment of
+          galaxy type. There's three types of galaxies, so in
+          a total random assignment you'd expect to be right 33&
+          of the time. 
+        - compare against human experts  
+        - but sometimes your results are too good... if you get
+          99% accuracy something could be going on: 
+            - maybe you're choosing something really really easy
+              (triangles and circles). You don't need ML at all.
+              You could probably write a rule based system. This
+              is a trivial classification problem.
+            - Gold standard leakage. The classifier is cheating!
+              e.g. including the correct category in the training
+              features! Or evaluating the classifier on the
+              training data itself, rather than using a separate
+              test set.
+            - What if the classifier evaluation reports high
+              accuracy but when you apply the it to the full
+              dataset it performs much worse?
+                - maybe the training and test datasets aren't
+                  representative of the full dataset. Therefore
+                  the trained model isn't a good fit for the
+                  data.
+                - the classifier is overfitting the data. Maybe
+                  a deeply nested decision tree can capture your
+                  training set well, but fails to capture
+                  generalisations in the data.
+                - you may have optimsed for the specific training
+                  set and not the real distribution. (use 10x
+                  Cross validation to test the final system, or
+                  use a holdout final test dataset to test the
+                  final model)
+
+### Random Forests
+    - advantages: reduce overfitting
+    - new features: ability to find outliers that don't belong to
+      any class
+    - ability to assign probabilities to our classifications 
+
+    - Decision tress highly susceptible to _noisy_ training data,
+      and tendancey to overfit
+        - NOISE could be from the human galaxy zoo
+          classifications, or could be from the features derived
+          from physical observations
+    - ensemble learning: multiple models are trained and their
+      resuts are combined. 
+    - classification: "voting" 
+    - regression: the mean of each ensemble learner 
+    - for an ensemble to be better than individual classifiers,
+      the ensemble members must be differet/independent from each
+      other
+    - model independence: use different algorithms, different
+      parameters (tree depth) or different training data
+    - boot strap aggregating "bagging"
+        - select training data samples from the original training
+          set with replacement 
+        - each training set is different 
+        - Random forest: at each point it selects a subset of
+          training instances (bagging) or a subset of training
+          features at each decision point
+    - Scikit-learn's random forest uSes "bagging" but the mooc
+      one uses feature selection
+
+    - Random Forest parameters: how many decision trees to use in
+      the ensemble. Confusion matrix much better than individual
+      classifier.
+
+    - Probabilities allows you to identify outliers. Objects that
+      arent similar to anhy of the training classes.
+    - great way to find rare objects 
+
+### Grok Learning
+    - https://groklearning.com/learn/data-driven-astro/module-11/1/
+    - Intro
+    - Classification vs Regression 
+        - In classification, the predictions are from a fixed set
+          of classes, whereas in regression the prediction
+          typically corresponds to a continuum of possible
+          values.
+
+        - In regression, we measure accuracy by looking at the
+          size of the differences between the predicted values
+          and the actual values. In contrast, in classification
+          problems a prediction can either be correct or
+          incorrect. This makes measuring the accuracy of our
+          model a lot simpler.
+
+        - In terms of implementation using decision trees, there
+          is very little difference between classification and
+          regression. 
+        - The only notable difference is that our targets are
+          classes rather than real values. When calculating the
+          accuracy, we check whether the predicted class matches
+          as the actual class.
+        - A note on decision tree regression
+            - In decision tree regression, the possible outputs
+              are a finite set of values that correspond to the
+              number of leaves/end points in the tree. Ideally we
+              want as many points as possible to give a good
+              approximation of the 'continuous' parameter space,
+              whilst avoiding overfitting. 
+
+    - Data, features and usage
+        - The Galaxy Zoo data
+        - Deciding on features
+        - Selecting features
+        - Selecting features - continued
+        - Data description
+        - Splitting the train and test sets
+        - Generating features and targets
+        - Train the decision tree classifier
+
+    - Use and evaluation of the classifier
+        - Accuracy and model score
+        - Confusion matrices
+        - Accuracy in classification
+
+    - Ensemble Learning
+        - Random forests classification
+        - Advantages of random forest classifiers
+        - Random Forest
+        - Results discussion
+
+
+    - Conclusions 
+        - In this activity we have used decision tree classifiers
+          to identify a galaxies type by a selection of derived
+          features (e.g. eccentricity and concentration).
+        - We have learnt that asessing the models performance is
+          a lot simpler with classification than it is with
+          regression.
+        - Confusion matrices can be a useful tool to help
+          understand where our model is over and under preforming
+          with respect to each class.
+        - We started out with the goal of using decision trees to
+          classify galaxies as one of three types. We found that
+          we were able to achieve an accuracy of around 80% using
+          decision trees which is very good when you consider the
+          statistical accuracy of a _random selection is 33%_ and
+          the naive approach using only pixel values yielded
+          ~64%.
+        - We were able to improve on the accuracy of the decision
+          tree classifier by using a selection of them in
+          ensemble learning with a random forest. 

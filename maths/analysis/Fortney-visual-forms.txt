@@ -1,0 +1,62 @@
+
+### Book:
+    - $MY_BOOKS/Physics/Maths/Math-Phy-Forms-diff-geometry/Visual-Intro-Differential-Forms-Fortney.pdf
+    - A review: $MY_NOTES/maths/analysis/Fortney-visual-forms-review.txt
+
+### Difference [Manifold] versus [Vector Space]
+    - $MY_IMAGES/maths/differential-forms/fortney/manifold-versus-vec-space.jpg
+    - `ℝ^n` manifold: collection of points
+    - `ℝ^n` vector space: collection of vectors
+    - The manifold `ℝ^2` and the vector space `ℝ^2` look exactly
+      alike yet are totally different spaces.
+    - Why make this comparison? 
+        - First, keeping clear track of our spaces will help us
+          understand the theory of differential forms better. 
+        - Second, when we eventually get to more general
+          manifolds, most manifolds will NOT have a vector space
+          structure so we don't want to get into the bad habit of
+          thinking of our manifolds as vector spaces too.
+        - We will use different name for “functions” on the
+          manifold `ℝ^n` and “functions” on the vector space
+          `ℝ^n` . 
+            - Functions on the manifold `ℝ^n` will simply be
+              called functions, or sometimes, if we want to
+              emphasize that range is the set of real numbers,
+              real-valued functions. 
+            - However, our “functions” on the vector space `ℝ^n`
+              are called functionals when the range is the set of
+              real values and transformations when the range is
+              another vector space. We have already spent some
+              time considering a
+
+
+
+### Coordinate functions
+    - x(p) = x((3, 5)) = 3
+    - y(p) = y((3, 5)) = 5
+    - Soeven though you are used to thinking of `(3, 5)` as
+      a point, a point is actually more abstract than that.
+      A point exists independent of its coordinates. 
+    - For example, you will sometimes see something like this,
+      p = �x(p), y(p)� where, as an example, for the point we
+      were given above we have x(p) = 3 and y(p) = 5. There is
+      some ambiguity that we need to get used to here. Often
+      x and y are used to represent the outputs of the coordinate
+      functions x and y. So, we could end up with an ambiguous
+      statement like this x(p) = x y(p) = y where the x and the
+      y on the left hand sides of the equations are coordinate
+      functions from R2 to R, and the x and y on the right hand
+      side are real numbers, that is, elements of R.
+
+
+### Tangent Spaces
+    - The tangent space to a manifold at the point `p` is
+      basically the set of all lines that are _tangent to smooth
+      curves_ that go through the manifold at point `p`.
+        - AH THIS IS BIG!
+        - You have curves that go through the point p, then you
+          have tangent lines to those curves. So the "tangent
+          space" is those lines tangent to the curves... I always
+          thought the tangent space was just any line touching
+          the point itself (didn't appreciate the idea of the
+          curves)

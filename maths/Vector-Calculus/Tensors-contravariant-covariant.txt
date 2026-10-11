@@ -1,0 +1,309 @@
+
+### contravariant vectors random thought
+    - We express contravariant components as a LINEAR combination
+      of little basis vectors...
+    - But the `COvariant` components are different - they're the
+      projection on a basis axis (so you couldn't express
+      covariant components in a linear way??)
+
+### ACTIVE and PASSIVE transformations
+    - $MY_IMAGES/physics/active-passive-vector-transformations.JPG
+    - Equation (3.31) is called an `active transformation`, since
+      we use the matrix `A` to change one vector into another,
+      namely `e i 0` into `e i` .
+        - Note that in (3.31) all vectors are expressed in the
+          same basis.
+    - Equation (3.24a), on the other hand, is called a `passive
+      transformation`, since we use the matrix `A` not to change
+      the vector `v` but rather to change the basis which v is
+      referred to, hence changing its components. All this is
+      summarized in Table 3.1.
+    - In most physics texts the notation isnt as explicit as
+      ours; one usually sees matrix equations like `r' = Ar`
+      (3.32) for both passive and active transformations, and one
+      must rely on context to figure out how to interpret the
+      equation.
+    - In the active case, one considers the coordinate system
+      fixed and interprets the matrix `A` as taking the physical
+      vector `r` into a new vector `r'`, where the components of
+      both are expressed in the same coordinatesystem, just as in
+      (3.31).
+    - In the passive case, the physical vector `r` doesn’t change
+      but the basis does, so one interprets the matrix `A` as
+      taking the components of `r` in the old coordinate system
+      and giving back the components of the same vector `r` in
+      the new (primed) coordinate system, just as in (3.24a).
+
+
+
+### Hermann contravariant vectors insight / fibre bundles
+    - $MY_BOOKS/Physics/Maths/Math-Phy-Hermann/Hermann-Cartanian-geometry-from-Woit.pdf
+    - $MY_NOTES/maths/geometry/Fibre-bundle-insights.txt
+    - The "contra-1-vectors" or tangent vectors, are derivations
+      of the RING of LOCAL FUNCTION POINT into the real numbers.
+    - This insight pointed the way towards the algebraisation of
+      vast areas of differential geometry and differential
+      equation theory, and opened up major possibilities.
+    - I have always thought this was one of the real triumphs of
+      modern mathematics, simple as it is.
+    - After all, it is the first real improvement in the
+      manipulative/conceptual aspects of calculus since Euler.
+    - However, it had the disastrous side effect of cutting off
+      communication with physicists, and even mathematicians.
+    - Another major ingredient in the new ideas of the time was
+      the notion of the 'fibre bundle', whose general theory was
+      developed by Whitney, Ehresmann and Steenrod.
+        - Steenrods "Topology of Fiber Bundles" was new, and
+          a treasure-trove of ideas.
+    - In particular, the concept of "principal bundle" and
+      "associated bundle" were obviously beautiful formalisations
+      of ideas which tensor analysis had muddled over endlessly.
+    - The other areas of Topology... new insights of the Theory
+      of Sheaves by Cartan, Leray and Weil were obviously
+      enormously stimulating.
+    - However the supreme document in the Renaissance then
+      underway was Ehresmann's paper on connection theory.
+        - This must rank with the classics of differential
+          geometry. In amazingly few pages, Ehresmann (who was
+          Cartans student) made sense of the heart of Cartans
+          work on differential geometry, both the theory of the
+          connection and the theory of what he called "infinite
+          Lie groups".
+        - These ideas are so beautiful they are worth
+          recalling...
+
+
+
+### Youtube Video explaining Co/contra variant tensors
+    - Covariant and contravariant basis vectors can be understood
+      via vector analysis.  It's possible to have a basis of
+      vectors in 3D space that isnt orthonormal:
+        - theyre not orthogonal to each other, nor of length one.
+    - From this basis, you can create a new set of basis vectors.
+      They are called RECIPROCAL (dual) basis vectors.
+        - Create the new set of RECIPROCAL vectors taking the
+          cross product of any two original basis vectors and
+          dividing by the scalar triple product.
+    - If `a1`, `a2` and `a3` are the original vectors, then the
+      new vectors `b1`, `b2` and `b3` are defined by equations:
+      `b3 = (a1 X  a2) / [a1, a2, a3]`
+    - Cross product:         `a1 X a2`
+    - Scalar Triple Product: `[a1,a2,a3]`
+    - These types of vectors appear naturally in crystallography.
+    - The original vectors `a_i` and the new vectors `b_j`
+      contain the essence of covariant and contravariant vectors.
+      In fact, they are covariant and contravariant vectors for
+      3 dimensions.
+    - If you take the dot product between `a_i` and `b_j` you get
+      a Kronecker delta.
+        - (so they're ortogonal to each other?)
+    - This idea of forming an additional vector system by cross
+      product does not exist in higher dimensions.
+        - Cross products only exist in 3D.
+        - (Well it also exists _IN 7 DIMENSIONS_ !! but I have
+          never heard of an application for these 7 dimensional
+          spaces).
+    - Even though in higher dimensions, you cannot create a new
+      set of vectors from an original set using a cross product,
+      you CAN still create this new set of vectors.
+    - The idea is to take the inverse of the covariant metric
+      tensor.
+        - The _INVERSE_ of the covariant metric tensor is the
+          contravariant metric tensor.
+    - The inner product of the CONTRAvariant metric tensor and
+      any COvariant basis vector equals a CONTRAvariant basis
+      vector.
+    - contravariant METRIC tensor = Inverse(covariant metric
+      tensor)
+    - contravariant BASIS vector =  inner product(contravariant
+      metric tensor, covariant basis vector)
+    - Note: the contravariant metric tensor is the dot product
+      between contravariant basis vectors.
+
+
+### Flournoy vector comment
+    - the vector components are just numbers
+    - the vector components are just numbers
+    - the vector components are just numbers!
+    - the basis vectors are MULTI-COMPONENT VECTORS
+    - add in screenshot tomorrow
+
+### Flournoy contravariant vectors
+    - A spacetime vector has 3 parts:
+        1.  `ds`   the "true" vector
+        2.  `X^μ`  the components
+        3.  `ê_μ`  the basis
+
+    - To keep `ds` the same if you change the components `X^μ`
+      (e.g. clockwise rotation) then the basis vectors `ê_μ` must
+      change the opposite way (anti-clockwise)
+
+    - extra: any vector can be expressed as coefficients in
+      a linear combination of the basis vectors.
+      - (so contravariant COMPONENTS are actually
+        COEFFICIENTS in a linear combination)
+
+    - extra Flournoy point: he started talking about "real"
+      spacetime vectors with coordinate displacement components,
+    - but then progressed to more "abstract" vectors (e.g.
+      velocity) where the x-component DOESNT represenst
+      a coordinate displacement in spacetime but instead the
+      velocity in the `x` direction.
+        - He also gave the electric field `E_x, E_y ...`
+          components as an example of a more "abstract" vector.
+
+
+### OU diagram Covariant Contravariant vector
+    - $MY_IMAGES/physics/covariant-contravariant-vector.JPG
+        - There is one axis from each type of coordinate system.
+        - the vertical v-axis is from the contravariant coord
+          system?
+        - the horizontal u-axis that they project onto, is from
+          the covariant coord system?
+    - $MY_IMAGES/physics/contravariant-covariant-in-one-picture.JPG
+
+### Nice example of contravariant and covariant
+    - $MY_IMAGES/physics/contravariant-covariant-in-one-picture.JPG
+    - this image represents the same vector in:
+        - contravariant form
+            - (LINEAR COMBINATION of basis vectors)
+        - and in covariant form
+            - (PROJECTION onto the basis vectors)
+      - Later note: contravariant is when the basis vectors are
+        normal/rectangular/orthonormal (e.g. Cartesian)?
+    - This agrees with the explanation of Eugene Khutoryansky
+    - These two representations of the same vector are handy when
+      rotating (transforming) coordinate systems?
+
+
+### Tensor / Vector
+    - YES! finally good explanation of contravariant components
+    - Physics Videos by Eugene Khutoryansky
+    - https://www.youtube.com/watch?v=CliW7kSxxWU
+    - ### CONTRAVARIANT components:
+        - We typically describe a vector by _how many_ basis
+          vectors we _add_ together to produce it.
+        - If the basis vectors _increase_ in length, then the
+          component values _decrease_ (contra-vary)
+        - cos you need less of the basis vectors to cover the
+          same distance.
+        - (These are a `linear combination` of basis vectors)
+    - ### COVARIANT components:
+        - Vector components generated by _dot-product_ with basis
+          vectors.
+        - If the basis vectors _increase_ in magnitude, the
+          components _increase_ too (co-vary). ie dot product
+          values increase
+        - (these are a `projection` onto the basis vectors)
+
+
+
+### Contravariant / Covariant
+    - Indian lecturer: good!
+        - $MY_IMAGES/physics/vectors/contravariant-transformation.jpg
+        - $MY_IMAGES/physics/vectors/covariant-transformation.jpg
+        - $MY_IMAGES/physics/vectors/notation-covariant-contravariant.jpg
+        - $MY_IMAGES/physics/vectors/covariant-contravariant-summary.jpg
+
+### Bob Eagle - Tensor (rank 2)
+    - (Bob Eagle: former civil servant - eccentric!)
+    - Tensors: fixed relationships between two vectors such that
+      if zero in one reference frame then zero in all
+    - `V_y^x`
+        - coordinate `x` of vector `V`
+        - in the `y` reference frame (investigate this more)
+
+
+### Eugene Tensors
+    - $MY_IMAGES/physics/vectors/visualise-tensors-1.jpg
+    - $MY_IMAGES/physics/vectors/visualise-tensors-2.jpg
+    - $MY_IMAGES/physics/vectors/visualise-tensors-3.jpg
+    - $MY_IMAGES/physics/vectors/visualise-tensors-4.jpg
+    - $MY_IMAGES/physics/vectors/visualise-tensors-5.jpg
+
+### Covariant?
+    - when something transforms the same way as basis vectors do,
+      then it's 'covariant'
+
+### Wikipedia: covariant vectors
+    - In contrast, a `covector`, also called a `dual vector`, has
+      components that VARY WITH the basis vectors in the
+      corresponding vector space.
+    - It is an example of a covariant tensor.
+    - A `covector` is an object that represents a LINEAR MAP from
+      vectors to scalars. It is not actually a vector(!), but an
+      object that lives in a DUAL VECTOR SPACE.
+    - Good examples of covectors are dot product OPERATORS
+      involving vectors. Eg if `v` is a vector, then
+      a corresponding object in the dual space would be the
+      linear operator `v •` .
+    - Sometimes, the components of covector `v • ` are referred
+      to as the covariant COMPONENTS of `v`, though this is
+      potentially misleading, (due to a vector `v` having
+      components that ALWAYS vary in the CONTRAVARIANT sense).
+        - -----------------------------------------------------
+        - Ah finally I understand the confusion.
+        - `v • ` is a `covector` (NOT a vector!) that lives in
+          the dual space, so its components cannot be the
+          'covariant' compoonents of a vector `v` that lives in
+          a different space. Because the "components" of the
+          VECTOR `v` are always contravariant.
+        - So a `covector` can also be a `linear operator`?
+        - -----------------------------------------------------
+    - Despite potential confusion, this is what will be meant
+      when the "covariant components of a vector" are referred to
+      in this article. (!)
+
+
+### dual vectors
+    - $MY_BOOKS/Physics/Maths/Misc-History/Vector-Story-Arianrhod.pdf
+    - Second, give these two entities different names, to avoid
+      confusion.
+    - Today the word “vector” in this context refers to column
+      vectors, while row vectors are called "one-­forms" or "dual
+      vectors." Early twentieth-century researchers coined these
+      terms; the idea originates with Grassmann, who had used the
+      term "complement" instead of "dual".
+    - Bras are examples of one-forms.
+        - Back in the 1880s, Ricci called:
+            - vectors "contravariant vectors" and
+            - one-forms  "covariant vectors,"
+        - and these names are also used today.
+
+### fleisch tensors
+    - vector components only need 1 `BASIS` vector per COMPONENT
+    - So, that's why they're tensors of rank ONE.
+    - so rank: how many BASIS vectors per component
+
+### Good tensor books?
+    - From: $MY_NOTES/maths/analysis/review_visual_diff_forms.txt
+    - Instead, this is more on the level of Walchap or O'Neill or
+      Grinfeld's Tensor Calculus, each of which should be
+      purchased by the beginner along with this volume for
+      a library that gets started with the topic. 
+    - The 'suggested reading' of this book, by the way, is
+      a great place to start building a large list!
+
+### EigenChris
+    - You don't actually need Calculus to introduce tensors,
+      linear Algebra is enough
+
+### Gravitation MTW
+    - this book taught me a tensor is: 
+        - just a _higher-order linear function_. 
+    - Who knew? 
+    - Most physicists give really crappy explanations of tensors. 
+
+### Order of a tensor 
+    - ... is the  number of indices it has
+
+### Vector is a tensor with 2 indices,
+    - the first of which takes all possible values
+    - and the second index takes the value "1" ONLY!!
+
+### Matrices are tensors aswell.
+    - Stress and strain are physical quantities which are tensors
+      represented by 3x3 matrics
+
+### Links
+    - HN: Why tensors? A beginner's perspective https://news.ycombinator.com/item?id=30610238

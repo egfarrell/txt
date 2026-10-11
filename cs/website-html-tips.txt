@@ -1,0 +1,180 @@
+webdev and html tips
+
+
+### External link / open in new tab
+    - Handy glyph `🔗`
+
+### Open link in new tab / window
+    - key: `target="_blank"`
+    `<a href="https://www.WordPress.com" target="_blank">WordPress Homepage</a>`
+
+
+### slug
+    - The term 'slug' comes from the world of newspaper
+      production.
+
+    - It's an informal name given to a story during the
+      production process. As the story winds its path from the
+      beat reporter through to editor through to the "printing
+      presses", this is the name it is referenced by, e.g., "Have
+      you fixed those errors in the 'kate-and-william' story?".
+
+    - Some frameworks (such as Django) use the slug as part of the
+      URL to locate the story, an example being
+      www.mysite.com/archives/kate-and-william. 
+
+    - It may even date back earlier than that, since screenplays
+      had "slug lines" at the start of each scene, which
+      basically sets the background for that scene (where, when,
+      and so on). It's very similar in that it's a precis or
+      preamble of what follows.
+
+    - On a Linotype machine, a slug was a single line piece of
+      metal which was created from the individual letter forms.
+      By making a single slug for the whole line, this greatly
+      improved on the old character-by-character compositing.
+
+
+### html codes
+    &nbsp;  non breaking space
+    &emsp;  tab
+    &gt;    >
+    &lt;    <
+
+### Colour a specific table row
+    <tr style="color: red;">
+        <td>  cell 1  </td>
+        <td>  cell 2  </td>
+    </tr>
+
+### http return codes
+    - 2xx : all good
+    - 3xx : redirect
+    - 4xx : client side problem
+    - 5xx : server side problem
+
+### AJAX
+    - (A)synchronous (J)avaScript (a)nd (X)ML
+    - reload PORTIONS of a page only, more dynamic
+
+### DIV versus SPAN
+    - a span element is _in-line_
+        - and usually used for a small chunk of HTML inside
+          a line (such as inside a paragraph)
+    - a div (division) element is _block-line_
+        -  which is equivalent to having a line-break before and
+           after it and used to group larger chunks of code.
+
+### Inline and Block elements
+	- SPAN is inline.
+	- DIV (division) is block. (Creates a little box around the text)
+	- Can attach CSS class to both of them.
+
+### HTML abstractions
+    - `DOM`: object representation of html page
+    - but HTML can be viewed like a CSV `DATA` file
+    - "csv header" row is html, parent, label, etc etc
+    - interesting viewpoint!
+
+### convert HTML to TEXT
+    html2text input.html > output.txt
+
+###  URL
+    - Uniform Resource Locator
+    - http://www.udacity.com/about.png
+    - Protocol:  `http://`		     (https, ftp etc)
+    - Host:      `www.udacity.com`	 (can be ip address)
+    - Path:      `/about.png`	     (document to fetch)
+    - Note: "/" is the minimum path
+
+### Query Parameter
+    - Also know as a `GET` parameter
+    - ?param1=1 & param2=neat
+    - note: http protocol returns a page in plaintext! (why not
+      binary! more efficient)
+
+### stop spam links
+    - "rel": relationship between current document and linked
+      document/resouce
+    - <a rel="nofollow" ...>
+
+### Responsive Design
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+### jquery
+	alyways use latest version:
+	http://code.jquery.com/jquery-latest.js
+
+### Fluid v Responsive
+    - Fluid Layouts:
+        - (also called Liquid Layouts) based on proportionally,
+          laying out your website so elements take up the same
+          percent of space on different screen sizes,
+    - Responsive Design:
+        - uses CSS Media Queries to present different layouts
+          based on screen sizes/type of screen.
+
+### Legacy IE support
+	use HTML5 shim
+
+### tag basic format
+	`<tab> content      </tag>`
+	`<b>   this is bold </b>`
+
+### anchor tag
+	uses ATTRIBUTES
+    `<a    href="www.udacity.com"> link to udacity  </a>`
+	 <tag  attribute="value"     >     content      </tag>
+
+### VOID tags
+	- Eg. 'img' doesnt have a closing tag - its a 'void' tag
+	`<img src="uri" alt="text if image doesnt load">`
+	- (alt is required for broken requests)
+
+### Whitespace
+	- browers ignore whitespace, tabs, enter etc in HTML markup
+	- INLINE: break tag <br> forces line breaks (its a "void" tag)
+	- BLOCK: the paragraph tag <p></p> forces paragraphs
+
+### Preserve formatting
+    - `pre`: preserves text formatting (line breaks, spaces)
+
+### basic HTML document
+    <!DOCTYPE html>
+    <html>
+        <body>
+            <h1>My First Heading</h1>
+            <p>My first paragraph.</p>
+        </body>
+    </html>
+
+### draw horizontal line (lboro!)
+    vHTML := vHTML || vLineFeed ||
+    '<hr style="width:100%; border-color:#BDBDBD;  margin-left:0; height:0; border-style:solid; border-width:1px 0 0 0;">';
+
+### microdata "itemprop"
+    <p>
+        I work mainly as a
+        <span itemprop="title">carpenter</span>
+        living in
+        <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+            <span itemprop="locality">Plymouth</span>,
+            <span itemprop="region">Michigan </span>
+        </span>
+        and working for
+        <a href="http://www.xxx.ac.uk/campus/support/">Student support</a>
+        at <span itemprop="affiliation">the
+            <a href="http://www.xxxxxxxxxx.ac.uk/">University of ...</a>
+        </span>.
+    </p>
+
+### links
+    - web hacking           $MY_NOTES/cs/misc/cyber/liveoverflow-web-hacking.md
+    - javascript Crockford  $MY_NOTES/cs/misc/crockford_javascript.txt
+    - JQuery                $MY_NOTES/cs/archive/jquery.txt
+    - PHP 1                 $MY_NOTES/cs/phd-tech/malan/14-malan-php.txt
+    - PHP 2                 $MY_NOTES/cs/phd-tech/malan/15-malan-php.txt
+    - static site generator https://getpublii.com/
+    - Database cloudtables  https://cloudtables.com/
+    - Caddy Web server      https://caddyserver.com/
+    - Jeremy FastHTML       https://news.ycombinator.com/item?id=41104305

@@ -1,0 +1,328 @@
+### DATASETS
+    - solar_wind.csv            minute   Solar wind data MAIN TRAINING FEATURES
+    - satellite_positions.csv   day      Satellite coordinates for ACE and DSCOVR
+    - sunspots.csv              month    Smoothed sunspot numbers
+    - dst_labels.csv            hour     Training labels (Dst values)
+
+
+    -- Important!
+    -- from SATELLITE_POS
+    --      train_a:  3.3 years    1,200 days
+    --      train_b:  6.0 years    2,190 days
+    --      train_c:  6.5 years    2,435 days
+
+    --   train_a =    16 Feb 1998   31 May 2001 
+    --   train_b =    01 Jun 2013   31 May 2019 
+    --   train_c =    01 May 2004   31 Dec 2010 
+
+
+
+### prediction function
+    solar_wind_7d          : pd.DataFrame,
+    satellite_positions_7d : pd.DataFrame,
+    latest_sunspot_number  : float,
+
+
+### Feature correlation
+	- $MY_IMAGES/cs/AI-ML/MagNet/feature-correlations.jpg
+	- $MY_IMAGES/cs/AI-ML/MagNet/feature-correlations-smaller.jpg
+
+### solar_wind.csv
+    - Primary feature data.
+    - Solar-wind readings from ACE & DSCOVR satellites
+    - Sensor readings relate to both the IMF _and_ plasma from solar wind
+    - failed sensor readings (isna): `3.8%`
+    - Time-series data Image:
+      $MY_IMAGES/cs/AI-ML/magfield/sample-time-series.jpg
+        - Image explanation:
+        - Example of solar-wind data features and Dst over time.
+          The selected features in green (up to t0) are used to
+          predict the `Dst` in cyan (at t0 and at t+1).
+        - Keep in mind that your solution should work on
+          real-time data streams with realistic noise including
+          sensor malfunctions and data gaps.
+
+
+    - note: below are the _IMF_ coords
+      - (I was thinking they were the satellite coords)
+
+    - `bx_gse`        IMF X-component in GSE coords (nT)
+    - `by_gse`        IMF Y-component in GSE coords (nT)
+    - `bz_gse`        IMF Z-component in GSE coords (nT)
+    - `theta_gse`+-90 IMF latitude    in GSE coords (angle between magnetic vector `B` and ecliptic plane; positive when `B` points North) (degrees)
+    - `phi_gse`0-360  IMF longitude   in GSE coords (angle between projection of IMF vector onto ecliptic and the Earth–Sun direction)     (degrees)
+
+    - `bx_gsm`        IMF X-component in GSM coords (nT)
+    - `by_gsm`        IMF Y-component in GSM coords (nT)
+    - `bz_gsm`        IMF Z-component in GSM coords (nT)
+    - `theta_gsm`     IMF latitude    in GSM coords (degrees)
+    - `phi_gsm`       IMF longitude   in GSM coords (degrees)
+
+    - `bt`            IMF component magnitude (nT)  total??
+
+    - `density`       Solar wind PROTON density  (N/cm^3)
+    - `speed`         Solar wind bulk speed      (km/s)
+    - `temperature`   Solar wind ION temperature (Kelvin)
+
+    - `source`        From 2016: solar wind data for any time point sourced from
+                      either DSCOVR or ACE satellites depending on QUALITY.
+                      'ac' = ACE,
+                      'ds' = DSCOVR
+
+    - SAMPLE
+        - NAME           VALUE
+        - ----           -----
+        - period         train_a
+        - timedelta      0 days 00:00:00
+        - bx_gse         -5.55
+        - by_gse         3.0
+        - bz_gse         1.25
+        - theta_gse      11.09
+        - phi_gse        153.37
+        - bx_gsm         -5.55
+        - by_gsm         3.0
+        - bz_gsm         1.25
+        - theta_gsm      11.09
+        - phi_gsm        153.37
+        - bt             6.8
+        - density        1.53
+        - speed          383.92
+        - temperature    110237.0
+        - source         ac
+
+
+### satellite_positions.csv
+    - Satellite Coordinate Data
+    - ACE and DSCOVR satellites are not stationary.
+    - They actually orbit `L1`, in a relatively constant position
+      wrt the Earth as the Earth revolves around the sun.
+    - lagrangian points       $MY_IMAGES/cs/AI-ML/magfield/lagrangian-l1.jpg
+
+
+    - satellite_positions.csv records the daily positions of the
+      DSCOVR and ACE Spacecrafts in Geocentric Solar Ecliptic
+      (GSE) Coordinates for projections in the XY, XZ, and YZ
+      planes. The columns for each spacecraft are denoted by the
+      suffixes `_ace` or `_dscovr`.
+
+    - `gse_x`   satellite position in X direction of GSE coordinates (km)
+    - `gse_y`   satellite position in Y direction of GSE coordinates (km)
+    - `gse_z`   satellite position in Z direction of GSE coordinates (km)
+
+    - SAMPLE
+        - period     timedelta           gse_x_ace   gse_y_ace   gse_z_ace   gse_x_dscovr    gse_y_dscovr    gse_z_dscovr
+        - ------     ---------           ---------   ---------   ---------   ------------    ------------    ------------
+        - train_a    0 days 00:00:00     1522376.9   143704.6    149496.7    NaN             NaN             NaN
+
+    - Note that some dates are missing for DSCOVR.
+    - In the code execution environment, you'll have the last
+      7 days of satellite positions.
+
+
+
+### sunspots.csv
+    - Sunspot Numbers
+    - The Sun exhibits a well-known, periodic variation in the
+      number of spots on its disk over a period of about `11
+      years`, called a solar cycle.
+    - In general, large geomagnetic storms occur more frequently
+      during the PEAK of these cycles.
+    - Sunspot numbers might allow for calibration of models to
+      the solar cycle.
+    - Smoothed sunspot numbers are provided at a monthly
+      frequency. Because sunspot numbers are reliably projected,
+      the most _current month_ will be provided for each
+      prediction in the real-time environment.
+    - Sunspots are indexed according to the first corresponding
+      day in `dst_labels.csv`.
+
+    - SAMPLE:
+        - period     timedelta           smoothed_ssn
+        - ------     ---------           ------------
+        - train_a    0 days 00:00:00     65.4
+
+
+### dst_labels.csv
+    - Training Labels
+    - The labels are hourly Dst values, indexed using the same
+      period and timedelta multi-index.
+    - Your task is to predict the current timestep (t0) and the
+      following timestep (t+1).
+        - Prediction: A tuple of 2 predictions
+        - for (t and t + 1 hour) respectively
+        - should be between `-2,000` and `500`
+
+    >  You are NOT ALLOWED to use historical Dst values as an
+    >  input for prediction.
+
+    - Sample:
+        - period     timedelta           dst
+        - ------     ---------           ---
+        - train_a    0 days 00:00:00     -7
+
+
+        period     train_a     train_b     train_c
+        ------     -------     -------     -------
+        count        28824       52584       58464
+        mean           -16          -9          -9
+        std             26          16          16
+        min           -387        -223        -374
+        25%            -26         -17         -16
+        50%            -12          -7          -7
+        75%             -1           1           0
+        max             65          59          67
+
+	- $MY_IMAGES/cs/AI-ML/MagNet/dst-distribution.jpg
+	- $MY_IMAGES/cs/AI-ML/MagNet/dst-distribution2.jpg
+
+
+
+### RMSE Performance metric
+    - Performance is evaluated according to Root Mean Squared
+      Error (RMSE). RMSE will be calculated on t0 and t+1
+      simultaneously.
+
+    - RMSE is:
+        - $MY_IMAGES/cs/AI-ML/MagNet/rmse.jpg
+
+    - where:
+        - `ỹ_i` = estimated Dst for t0 and t+1
+        - `y_i` = recorded  Dst for t0 and t+1
+        - `N`   = number of samples
+
+    - This metric is implemented in scikit-learn, with the
+      squared parameter set to `False`.
+
+
+### Public Data Leaked
+    - I have looked more carefully into the data available on the
+      web. And to be fair I think this info should be shared:
+    - The hourly Dst is available here:
+    - https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/
+
+    - From a quick analysis one sees the provided training data
+      spans the following times:
+        - train_a = [16-Feb-1998 00:00  31-May-2001 23:00]
+        - train_b = [01-Jun-2013 00:00  31-May-2019 23:00]
+        - train_c = [01-May-2004 00:00  31-Dec-2010 23:00]
+
+    - The ACE data is available here:
+    - https://sohoftp.nascom.nasa.gov/sdb/goes/ace/daily/
+    - from August 2001 to yesterday.
+    - The organizers have said that the test set is made of
+      ~60,000 hours so I do not understand how can they claim to
+      use a private test set that is not publicly available to
+      calculate scores in the leaderboard??
+
+    - Finally, I have checked that the rules of the competition
+      do not allow to use the data available on the web, but how
+      do the organizers plan to enforce this rule? It seems way
+      too easy to leak data from the “private” test set to
+      a model.
+
+
+### ACE data
+    - ACE data https://sohoftp.nascom.nasa.gov/sdb/goes/ace/daily/
+    - note: they record missing as `-999.9`!
+    - Units: Bx, By, Bz, Bt in nT
+    - Units: Latitude  degrees +/-  90.0
+    - Units: Longitude degrees 0.0 - 360.0
+    - Status(S): 0 = nominal data, 1 to 8 = bad data record, 9 = no data
+    - Missing data values: -999.9
+    - Source: ACE Satellite - Magnetometer
+
+### RMSE: Discussion
+    - Why was RMSE chosen which is very unstable on data with
+      many outliers? If you want to detect emissions more stably,
+      the metric should be a log scale or some type of scale
+      operation.
+        - For example if you super accurate predict 49999 steps
+          but missed once with outlier by 100 your score RMSE:
+          `(100**2 / 50000)**0.5 = 0.447`.
+        - Huge influence by one single value.
+
+    - +1, I also agree with you, this score seems weird seeing
+      that in the benchmark post they explicitely say that there
+      are outliers.
+    - A better score would be median absolute error or at least
+      mean absolute error 1 or a median squared error if we are
+      really interested in the mean, all these solutions would be
+      more robust, I think the median bit is even better than
+      log-scale (at least it is mathematically speaking).
+
+    > organisers:
+    - You raised a great point. Most of the time, Dst fluctuates
+      in the range `+10` to `-30` nT.
+    - The energetic solar-events that produce large (`< -100` nT)
+      negative deflections in Dst are rare, but they are
+      important to be modeled accurately. They severely affect
+      magnetic referencing.
+    - These large, negative deflections are not “outliers” and
+      they usually last several hours. However, the input
+      solar-wind data (RTSW) does have some outliers, owing to
+      the sensor malfunctions & outages.
+    - We use RMSE for two reasons. First to make sure the model
+      is sensitive to those rare, large events also.
+    - Secondly, RMSE is widely used in the geophysics literature,
+      so its useful for comparison with past models.
+
+
+### Code Environment
+    - note: install DOCKER first to run the competition code,
+
+    - my repo:
+        g bc magfield
+
+    - official runtime
+        g clone https://github.com/drivendataorg/noaa-runtime
+
+    > conda env for benchmark
+        conda create -n benchmark
+        coa benchmark
+        conda install matplotlib numpy pandas tensorflow scikit-learn keras jupyter
+        > note
+            - ah cant install 'tensorflow-gpu',
+            - conda currently on tf 2.2, we need 2.3
+
+### Space weather datasets
+    - ACE  <-              http://www.srl.caltech.edu/ACE/
+    - DSCOVR <-            https://www.nesdis.noaa.gov/content/dscovr-deep-space-climate-observatory
+    - Wind                 https://wind.nasa.gov/
+    - SOHO                 https://sohowww.nascom.nasa.gov/
+    - STEREO               https://stereo.gsfc.nasa.gov/
+    - SDO                  https://sdo.gsfc.nasa.gov/
+    - OMNI                 https://omniweb.gsfc.nasa.gov/index.html
+    - VAP                  http://vanallenprobes.jhuapl.edu/
+    - GOES                 https://www.goes.noaa.gov
+    - POES                 https://www.ospo.noaa.gov/Operations/POES/index.html
+    - GPS                  https://www.ngdc.noaa.gov/stp/space-weather/satellite-data/satellite-systems/gps/
+    - DMSP                 https://www.ngdc.noaa.gov
+    - Ground magnetometers http://www.intermagnet.org
+    - GONG                 https://gong.nso.edu/
+
+
+### Benchmark features dataset
+        MultiIndex: 139872 entries, 
+        ('train_a', Timedelta('0 days 00:00:00')) to ('train_c', Timedelta('2435 days 23:00:00'))
+
+        Data columns (total 17 columns):
+         #   Column            Non-Null Count   Dtype  
+        ---  ------            --------------   -----  
+         0   t0                139872 non-null  int64  
+         1   t1                139869 non-null  float64
+         2   bt_mean           139872 non-null  float64
+         3   bt_std            139872 non-null  float64
+         4   temperature_mean  139872 non-null  float64
+         5   temperature_std   139872 non-null  float64
+         6   bx_gse_mean       139872 non-null  float64
+         7   bx_gse_std        139872 non-null  float64
+         8   by_gse_mean       139872 non-null  float64
+         9   by_gse_std        139872 non-null  float64
+         10  bz_gse_mean       139872 non-null  float64
+         11  bz_gse_std        139872 non-null  float64
+         12  speed_mean        139872 non-null  float64
+         13  speed_std         139872 non-null  float64
+         14  density_mean      139872 non-null  float64
+         15  density_std       139872 non-null  float64
+         16  smoothed_ssn      139872 non-null  float64
+        dtypes: float64(16), int64(1)

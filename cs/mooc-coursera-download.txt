@@ -1,0 +1,78 @@
+### Use dl_coursera
+    - https://github.com/FLZ101/dl_coursera
+
+    - Download a single course
+        dl_coursera --cookies $HOME/cookies.txt --outdir course-01  emt-foundations
+
+    - Handy scripts
+        - $HOME/bin/rename_at_to_dash.sh
+        - $HOME/bin/flatten-vids.sh
+        - $HOME/bin/remove-trailing-01.sh
+
+    - NOTE: change `crawler.py`
+        - to select lowest resolution video
+        - old
+            ```
+            _ = _['sources']['byResolution']
+            # choose the video with highest resolution
+            url_video = _[sorted(_.keys())[-1]]
+            url_video = url_video['mp4VideoUrl']
+            ```
+        - new
+            ```
+            _ = _['sources']['byResolution']
+            # choose the video with LOWEST resolution
+            res_key = min(_.keys(), key=lambda k: int(k.rstrip('p')))
+            print(f"[dl_coursera] selected resolution: {res_key}")
+            url_video = _[res_key]['mp4VideoUrl']
+            ```
+
+
+
+(Old way: `coursera-dl` is abandoned)
+
+### "CAUTH" trick
+    - 1. USE COURSERA-DL FORK
+        - Install this fork that uses the COURSERA V2 API
+            - See:
+              https://github.com/coursera-dl/coursera-dl/issues/834
+                - Note 1:
+                    - use Python 3.8, (not Python 3.9 because of
+                      a weird error related to pip)
+                conda create -n coursera python=3.8
+                coa coursera
+                pip3 uninstall coursera-dl
+                cd ~/repos
+                git clone https://github.com/raffaem/coursera-dl
+                cd coursera-dl
+                pip3 install .
+
+    - 2. GET AUTH COOKIE
+        - login to coursera.org
+        - export 'cookies.txt' using firefox plugin
+        - find CAUTH inside 'cookies.txt'
+        - On bash command line:
+            - `export CAUTH="...the long string from cookies.txt ..."`
+
+    - 3. DOWNLOAD
+        - (note: --list-courses won't work)
+        coursera-dl -u "ef.tools@gmx.com" -p "Summertime1!" -ca $CAUTH  dsp1
+        coursera-dl -u "ef.tools@gmx.com" -p "Summertime1!" -ca $CAUTH  single-variable-calculus
+        coursera-dl -u "ef.tools@gmx.com" -p "Summertime1!" -c ./cookies.txt single-variable-calculus
+
+### nov 2019 - Error solution
+    - HTTPError: 400 Client Error: Bad Request for url: https://api.coursera.org/api/login/v3
+    - login to this site first: https://learner.coursera.help/hc/en-us
+    - then try up to 30 times to execute
+        for n in {1..50}; do coursera-dl -u "user@name" -p "password" course_name; done
+
+
+coursera-dl -n ~/.netrc -f "txt" --path ~/repos missing-data
+
+old: coursera-dl -d $MY_VIDEOS/cs/parallel_prog hetero-004
+old: coursera-dl -n ~/.netrc data-manipulation
+old: coursera-dl scicomp-001
+
+~/.netrc
+	machine coursera-dl login xxxxxxxxxxx@gmx.com password xxxxxx
+    chmod 600 ~/.netrc

@@ -1,0 +1,16 @@
+
+### Spaces "app"
+    - clone over `SSH`
+        git clone git@hf.co:spaces/farrelle25/single-image-analysis
+
+    - clone over `HTTPS`
+        - git clone https://huggingface.co/spaces/farrelle25/bg-removal
+        - To push, authenticate first
+            ```
+            python -m pip install huggingface_hub
+            huggingface-cli login
+            ```
+        - Then create a access token etc
+            - $MY_IMAGES/cs/AI-ML/hugging-face-access-token.jpg
+        - Overall: ah SSH is easier...
+

@@ -1,0 +1,32 @@
+
+### Particle swarm optimization algorithm: an overview
+    - https://link.springer.com/article/10.1007/s00500-016-2474-6
+    - The first theoretical analysis of simplified PSO algorithm
+      was proposed by Ozcan and Mohan (1998) who indicated that
+      in a simplified one-dimensional PSO system, a particle
+      moved along a path _defined by a sinusoidal wave_, and
+      determined its amplitude and frequency randomly. 
+    - However, their analysis was merely limited to the simple
+      PSO model without the inertia weight, and assumed that Pid
+      and Pgd kept unchanged. 
+    - Actually, Pid and Pgd changed frequently, so the particle’
+      trajectory was a sine wave composed of many different
+      amplitudes and frequencies.
+    - Nickabadi et al. (2011) pro- posed a anti-noise PSO algorithm
+
+
+- Intro PSO                                                                                    https://machinelearningmastery.com/a-gentle-introduction-to-particle-swarm-optimization/
+- PSO Visually explained                                                                       https://towardsdatascience.com/particle-swarm-optimization-visually-explained-46289eeb2e14
+- Python code: PSO implementation                                                              https://iphysresearch.github.io/blog/post/ml_notes/pso_python/
+- Python code: PSO + blog article                                                              https://towardsdatascience.com/swarm-intelligence-coding-and-visualising-particle-swarm-optimisation-in-python-253e1bd00772
+- Python code: _PySwarms_                                                                      https://github.com/ljvmiranda921/pyswarms
+- Python code: PySwarms Documentation                                                          https://pyswarms.readthedocs.io/en/latest/
+- Python code: OLD pyswarm                                                                     https://github.com/tisimst/pyswarm
+- Pytorch code: torchswarm                                                                     https://github.com/rohanmohapatra/torchswarm
+- VIDEO: Learn Particle Swarm Optimization (PSO) in 20 minutes                                 https://www.youtube.com/watch?v=JhgDMAm-imI
+- 2010: Particle swarm optimization and gravitational wave data analysis:                      https://journals.aps.org/prd/abstract/10.1103/PhysRevD.81.063002
+- 2018: Particle swarm optimization based search for gravitational waves                       https://journals.aps.org/prd/abstract/10.1103/PhysRevD.98.044029
+- 2022: PSO-PINN: Physics-Informed Neural Networks Trained with Particle Swarm Optimization    https://arxiv.org/abs/2202.01943
+- 2019: Particle swarm optimization versus gradient based methods in optimizing neural network https://iopscience.iop.org/article/10.1088/1742-6596/1217/1/012101/meta
+
+

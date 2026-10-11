@@ -1,0 +1,843 @@
+### 8 Quantum States and the Nonseparability Problem
+
+The notion of "state of a physical system" is so much a part of
+our basic way of thinking and reasoning that we are at pains to
+imagine how we could possibly dispense with it. On the other
+hand, some remarkable features of the general quantum formal-
+ism, often grouped under the general name "nonseparability,"
+rather drastically limit the domain of validity of the idea. The
+two notions referred to in the title of this chapter are therefore, in
+a way, antagonistic. This is just the reason why it is appropriate
+to put in close relationship the investigations concerning them.
+Let it be stressed once more that, in this chapter as in the fore-
+going ones, we keep-unless explicitly otherwise mentioned-
+to what may be called conventional, or standard textbook quantum
+mechanics, that is, to the working hypothesis that quantum me-
+chanics is complete, in the sense defined in Section 4.2. This is not
+to say that the results we shall get are valid only if this working
+assumption is made. On the contrary, we shall eventually find.
+out that the main ones have a greater generality. But for method-
+ological reasons it is appropriate to proceed step by step and
+this is why we keep, for the time being, to standard textbook
+quantum mechanics.
+8.1 Entanglement and Nondivisibility by Thought ("Holistic
+Aspects" of Quantum Mechanics)
+As a first schematic characterization of what, broadly speaking,
+may be called the nonseparability of quantum physics, it may be
+noted that this physics disproves a conception of the world that
+served for centuries as a general guideline to scientists. We referEntanglement and Nondivisibility by Thought
+111
+to the conception that an extended physical system always can―
+and should-be analyzed in parts. While the more primitive
+modes of thought had strongly holistic features, right from the
+beginning (in the late Renaissance), modern scientific thought
+made analysis one of its most fundamental guiding principles.
+And, as we all know, this departure from the older ways of
+thinking proved extraordinarily successful. More specifically, it
+may be said that the (Descartes inspired) rule according to which
+an extended physical system always can, and should, be divided
+by thought into more or less localized elements (linked by forces)
+is one of the implicit but most basic rules of the whole classical
+physics.
+Of course, this is not to deny that classical physics makes
+use of many physical quantities that are "functions of n points,"
+with n larger than one. Potential energy is one of the simplest
+examples. The potential energy of a system of n material points
+linked by forces is a function of these n points and clearly it
+would make no sense to speak of its value at one point. But po-
+tential energy is merely a derived quantity. If, being informed
+of the general, mathematical expression of potential energy, we
+know the position of each material point composing a system,
+we can calculate the potential energy of this system. In other
+words we do not need to-and indeed we cannot-fix its value
+as an additional item of description. In fact, in classical New-
+tonian mechanics and classical electromagnetic theory the basic
+physical quantities (such as mass densities, velocities, electric
+and magnetic field strengths) from which we can calculate the
+derived ones are one-point functions. It is meaningful to speak
+of the values they have at each space-time point and when we
+know this plus the general equations we can calculate every-
+thing, including of course the correlations between all the differ-
+ent parts of the system. This can be expressed by saying that, in
+classical physics, given the "laws of forces" (i.e., the full Hamil-
+tonian function) a complete knowledge of all the localized parts
+of a system (including of course the values of the fields at every
+point) is always at least conceivable and, if possessed, should
+yield ipso facto a knowledge of all the derived quantities. In
+other words, classical physics obeys or at least does not bla-
+tantly contradict as a consequence of its axioms—a rule of “di-
+Visibility by thought" that can schematically be expressed as
+follows.112
+8. Quantum States and the Nonseparability Problem
+Divisibility by thought (classical physics). Any extended physi-
+cal system—be it particlelike or fieldlike or partly both—can be
+thought of as composed of elements or parts localized in dif-
+ferent regions of space, an exhaustive knowledge of which is
+conceivable; and if the Hamilton function for systems of the
+same general type as this particular one is known, exact com-
+plete knowledge of the values of the physical quantities attached
+to each one of these parts constitutes all by itself an exhaustive
+knowledge of the whole composite system.
+There is no denying the fact that belief in the strict validity
+of this general view prompts efforts at analyzing, and as such
+served, and still serves, the advancement of the sciences. But of
+course this is not a sufficient reason for raising it to the level of
+an undisputable truth. And in fact, the point that will be made
+in this section is that quantum physics definitely shows it to be
+untrue.
+To prove this statement, let us first observe that it must be
+practically obvious for whoever considers that the only truly
+exhaustive descriptions of physical systems are descriptions by
+means of state-vectors. This is simply due to the fact that the
+state vector describing an extended composite system is not, in
+general, a product of state vectors, each of which would belong
+to the Hilbert space of one part of the system (in terms of wave
+functions the argument is that in general the wave function of the
+composite system is not a product of wave functions, each one
+having as variables those of one part only). Indeed, consider for
+instance a system Σ composed of two physical systems U and V
+(call them its "parts") interacting by means of (time-independent
+or time-dependent) forces (more precisely consider an ensemble
+of such Σ's). Even if this system happens at some time to to be
+describable by a product state vector (or wave function) its nat-
+ural time evolution, as determined by the Schrödinger equation,
+in general results in that, at times t> to, its state vector is not a
+product any more. Under these conditions it is no more possible
+to speak, at time t, of "the state vector of U" or "the state vec-
+tor of V," since these two state vectors simply do not exist (the
+same, of course, for the wave functions). At time t, only Σ has
+a state vector, hence, according to our working hypothesis, an
+exhaustive knowledge of U is not even conceivable (and same
+for V). Such a feature, which is peculiar to quantum physics andEntanglement and Nondivisibility by Thought
+113
+has no counterpart in classical physics, was called “entangle-
+ment" by Schrödinger. It is said that Σ lies in an "entangled" (or,
+equivalently, "mathematically nonseparable") state.
+In order to complete the argument we must of course take
+into consideration the view according to which not only state
+vectors but also state operators (density matrices) may consti-
+tute adequate, nay even (in the views of some) "exhaustive"
+descriptions of systems. Even though, at time t, neither U nor
+V "have" a state vector, still each one has a state operator at-
+tached, namely the partial trace of the state operator of Σ taken
+over the Hilbert space of the partner, as explained here in Sec-
+tion 7.2. It is true that the ensemble of all the U parts, as well
+as that of all the V parts, is a mixture rather than
+pure case.
+But still the idea has been upheld that in some sense and in
+some contexts the description of an ensemble by means of the
+corresponding state operator is "exhaustive" (the state-operator
+concept is analyzed in more detail in Section 8.3). Clearly the
+foregoing argumentation cannot be just simply taken over when
+the presently considered viewpoint is adopted.
+Does this remark concerning state operators allow us to con-
+sider that with regard to the question of "divisibility by thought"
+standard textbook quantum mechanics stands-when all is said
+and done on the same footing as classical physics? Not in the
+least, for remember that, as noted, in classical physics, once the
+"laws of forces" are known, exhaustive knowledge of the parts
+of a system gives ipso facto an exhaustive knowledge of the
+whole they constitute. In the quantum description considered
+here this is obviously not the case [1]. Even if we assume we have
+full knowledge of the Hamiltonian of the system at all times, a
+knowledge of the state operator of both U and V does not, by
+itself, provide us with an exhaustive knowledge of Σ. Indeed it
+does not even allow us to know whether or not the outcomes
+of prospective measurements to be performed separately on the
+U and V parts will turn out to be correlated. If, for example, U
+and V are spin 1/2 particles and if Σ lies in a singlet spin state,
+the state operators of U and V are both represented—as far as
+spin is concerned-by density matrices that are (one-half the)
+unit two-by-two matrix. Quite obviously, knowing these two
+state operators does not inform us of the fact that, if the same
+spin component is measured on both U and V, a strict (nega-
+tive) correlation will be observed (indeed these matrices are also114
+8. Quantum States and the Nonseparability Problem
+those that would describe U and V if these systems were totally
+uncorrelated). Hence we must say that, concerning Σ, such a
+knowledge is not exhaustive. In other words, the rule of divis-
+ibility by thought, as formulated earlier, remains violated even
+when the possibility of describing systems by state operators is
+taken into consideration.
+If we cared to express this result in some sort of a “realist”
+language, we might say that it puts us on the horns of a dilemma.
+Either we consider that the reality of a system is described by
+its wave function—and then we must grant that when a system
+such as Σ is in an entangled state it, strictly speaking, has no
+"parts" or we impart this descriptive role to the more general
+"state operator" (or "density matrix") concept—and we appar-
+ently have then to concede that the "whole" (here system Σ) is
+more than its “parts" (here the U and V systems), this being
+the case even at times when no interaction between these parts
+exists any more.
+To sum up, standard quantum mechanics unquestionably
+violates the rule of "divisibility by thought" that classical physics
+accustomed us to consider as valid. In other words it implies
+nondivisibility by thought, which then appears as a basic feature
+of this theory.
+• Remark: Moreover, as we know (Section 7.3), the ensem-
+ble Ey of, in the foregoing example, the V parts of Σ is but an
+improper mixture (and the same, of course, concerning U and
+Eu). This implies that it cannot be thought of as composed of
+pure-state subensembles, the elements of each of which would
+"have" a definite value of some observable(s) (the one, or those,
+the
+pure state in question would be an eigenstate of). For exam-
+ple, contrary to our intuition we cannot think of Ey as composed
+of a finite or infinite number of subensembles EV in each of
+which the component ✓✓ of the spin of V along some direction n
+would have a definite value. Correlatively, concerning the en-
+semble of the pairs, an intuitively attractive picture is thereby
+shown to be erroneous. This is the idea that the ensemble in
+question is composed of pairs of particles each of which indi-
+vidually has a spin pointing in some definite direction, the di-
+rections of the two spins within a given pair being opposite and
+the distribution of these directions within the ensemble being
+n
+n8.2 Parameter Independence Versus Outcome Dependence
+115
+isotropic. Within the—here entertained-assumption of quan-
+tum mechanical completeness, it is easily checked that apply-
+ing the quantum rules of Chapter 3 to such an ensemble leads
+to predictions of observations that contradict the (singlet state
+predicted) strict negative correlation between the outcomes-
+within every single pair of spin components measurements
+made on U and V along one and the same direction, whatever
+that direction is.
+8.2 Parameter Independence Versus Outcome Dependence
+When a composite extended system is in an entangled state, as
+is the case concerning the Σ pairs considered in the foregoing
+section, nondivisibility by thought, shown (in Section 8.1) to be
+true within the realm of standard textbook quantum mechanics,
+bars within this realm-any attempt at picturing such a sys-
+tem, however great its extension in space may be, as "really"
+composed of two (or more) distinct, noninteracting, and possi-
+bly distant systems or "parts." It somehow conveys the idea that
+conceiving of them as "extended wholes" (as the very structure
+of their wave function suggests) is, when all is said and done,
+a more adequate picture. But, of course, the fact must then be
+taken into account that normally, when a measurement on one
+of its parts, U say, is made, the wave function of the pair must
+be "reduced," so that the other part, V, is suddenly attributed a
+wave function or a state vector that it did not previously have.
+Within some interpretations of the formalism this may be seen
+as implying that an action at a distance of some sort is suddenly
+exerted by the measurement made on U on the, possibly quite
+distant, system V Whether the concept of such an action at dis-
+tance is acceptable in general will be the subject of a further
+scrutiny; but we cannot postpone inquiring whether the just re-
+called fact entails observable, nay, perhaps even usable, effects
+of action at a distance, unknown from classical physics.
+To this end let us here establish two strictly uncontrover-
+sial points (Jarrett [2], Bastide [3]) that are useful landmarks in
+the field. They have been given the names "parameter indepen-
+dence" and "outcome dependence" (Shimony [4]). These notions
+will be defined quite generally in Section 8.5. Here a less general
+but more elementary procedure is used for introducing them.
+It consists in considering a pair of measurements performed on116
+8. Quantum States and the Nonseparability Problem
+an extended composite system lying in an entangled state (per-
+haps because of some previous interaction between its parts)
+such as one of the Σ = U + V pairs mentioned in Sections 7.3
+and 8.1. Both notions have to do with the possible dependence
+of one measurement outcome-the one, say, relative to V―on
+data concerning the other measurement (the one performed on
+U). Conceivably the probability of the outcome in question may
+depend or not depend on the outcome of the U measurement.
+Conceivably also, it may depend or not depend on the parame-
+ters that determine which physical quantity is actually measured
+on U The expressions outcome and parameter dependence and in-
+dependence refer to the four thus defined possibilities.
+Outcome Dependence
+Entangled states normally entail outcome dependence. Within
+the realm of the here-assumed completeness hypothesis, this
+may be considered as a trivial remark. Take for example the al-
+ready considered ensemble of singlet state pairs Σ of spin 1/2
+particles U and V and suppose that a measurement of the z com-
+ponent S¼ of the spin of U is performed, with outcome +1 (in
+h/2 units). The a priori (as opposed to conditional) probability
+that the outcome of a measurement of the z component Sỵ of the
+spin of V is, say, -1 (in the same units) is of course 1/2 since
+it is by definition (the limit N → ∞ of) the ratio of the number
+of favorable cases to the total number N of elements in the con-
+sidered ensemble, and, for symmetry reasons, the probabilities
+of the two possible outcomes must be equal. But the a posteri-
+ori (or conditional) probability for this same outcome, that is,
+the probability that it is -1 given that the one on U is +1 is
+different. Indeed this conditional probability is obviously equal
+to 1 because of the strict correlation between S and Sỵ [That
+this correlation is implied by the formalism can be seen in two
+ways. Either (as in Section 7.3) we calculate the joint probabil-
+ity of outcomes S = +1, SV = −1, using the state vector of the
+pair and formula (3.4), and divide it by the probability of out-
+come S = +1 to get the conditional probability looked for, or
+we apply Rule (10a) of Chapter 3 to describe the state vector after
+the S measurement; both methods lead, of course, to the same
+result.] The fact that a priori and a posteriori probabilities are
+different constitutes what is called the "outcome dependence"
+feature of quantum mechanics.82 Parameter Independence Versus Outcome Dependence
+117
+Note that outcome dependence does not yield new means,
+more powerful than those of classical physics, of signaling at a
+distance (eg, superluminal signaling) This is essentially due
+to the fact that the physicist who performs measurements on
+U, while he can choose what measurements he will perform,
+obviously cannot decide their outcomes himself
+Parameter Independence
+A definitely less trivial remark is that entanglement does not lead
+to parameter dependence Instead, quite the contrary, parameter
+independence can be proved to hold in all cases
+That parameter independence holds true in the foregoing, stan-
+dard, U + V pairs example is fairly obvious and can easily be
+checked by explicit calculation whatever spin component is mea-
+sured on U, for somebody who does not know the outcome of
+this measurement the probability that a measurement of Sỵ has
+outcome +1 (say) remains 1/2 But the important point is that
+parameter independence is generally true This simple feature of
+the standard quantum formalism, mentioned without proof in
+early works [5], was for a long time a part of what may be called
+the "unspoken general knowledge" of quantum physicists But,
+for reasons that will become clear below, the desirability of an
+explicit proof increased in the last decades Such proofs were
+given by Eberhard [6] and by Ghirardi, Rimini, and Weber [7]
+The following is a simple one [8] based on the Wigner formula
+A
+Again let the composite system Σ under study be composed
+of two subsystems U and V Let A and B be observables mea-
+sured respectively on U at time t and V at time tË, and let a;
+and bm be the corresponding outcomes We assume tå < të Let
+| > be the (entangled) state vector of the composite system and
+let, moreover, P^(t) and PB (t) be the projection operators, in the
+Heisenberg picture, corresponding respectively to a measure-
+ment of A yielding outcome a; and one of B yielding outcome
+bm (in the standard example U and V are assumed to propagate
+freely so that the Heisenberg-picture spin operators just coincide
+with the more familiar Schrödinger-picture ones)
+For the probability Wim that the measurement results are a;
+and b, the Wigner formula (638) yields
+Wim = Tr[P PAPA]
+ρ
+(81)118
+8. Quantum States and the Nonseparability Problem
+What we are interested in is the probability w that the mea-
+surement of B yields bm, irrespective of the prior outcome of
+the (prior) measurement of A, knowing only that this measure-
+ment was made. The A measurement outcomes being mutually
+exclusive, W™ is just the sum of Wi‚m over all i's; that is,
+m
+wm = Σ, Tr[PB P^p P^]
+Wm
+(8.2)
+This formula is a very general one in that it would apply
+irrespective of the nature of the considered system and the ob-
+servables A and B. But here we have to do with a composite
+system in which A belongs to component U and B to component
+V In other words, operator A(B) operates in the Hilbert space
+Hч(H³) of U(V) The same, of course, holds true concerning the
+projectors PA (PB), so that:
+m
+[PA, PA] = 0
+(8.3)
+Hence, due to a well-known property of the trace (see
+Appendix 1):
+wm = Σ Tr[P Pio P] = Σ T[PA P^ P, p]
+1
+But PA PA = PA since PA is a projector, and therefore:
+Wm = Σ Tr[P^ Pº p] = Tr[Σ P^ Pr p] (linearity of the trace)
+=
+1
+= Tr[P p]
+since Σ, P₁ = 1.
+m
+1
+m
+(8.4)
+Formula (8.4), however, is just the one that expresses the
+probability that result bm be obtained when B alone is measured
+on Σ. This shows that the fact of making or of not making some
+previous measurement on U changes nothing to the probabilities
+of observing such and such result when measuring something
+on V This completes the promised proof.
+Contrary to outcome dependence, parameter dependence
+could, if it existed, be used for a kind of Morse signaling by
+choosing the measurement made on U according to some pre-
+established code. The fact that it does not exist bars this possi-
+bility, and therefore the question asked at the beginning of this8.2 Parameter Independence Versus Outcome Dependence
+119
+section must be answered in the negative. The here analyzed
+correlation at a distance entails none of the directly observable
+experimental effects that would unambiguously show action at
+a distance.
+• Remark 1. The preceding proof is based on Wigner's for-
+mula, that is, in general, on Rule (10a). Since, as we saw (Chapter
+3: Remark 8) the measurement of an incomplete set of commut-
+ing observables does not necessarily obey Rule (10a), a hope
+might remain of (in cases more complex than the standard ex-
+ample) circumventing the foregoing proof. The proofs of Refs.
+[6] and [7] are more powerful in that they do not rely on any
+projection postulate whatsoever. They therefore show that the
+just mentioned hope has to be given up.
+• Remark 2: Of course, both outcome dependence and pa-
+rameter independence are just the features we quite trivially
+expect ensembles of classical composite systems to exhibit when-
+ever the component parts are correlated. But in the classical case
+the correlation found between the outcomes of measurements
+performed on these component parts is trivially accounted for
+by referring to the preestablished physical differences that must
+then exist between the systems in question. In the case of quan-
+tum systems lying in a pure entangled state-the one here investi-
+gated such an explanation is, in standard texbook quantum
+mechanics, quite impossible since, by assumption, such physical
+differences (which would then be hidden variables) do not ex-
+1st. So that the observed (and quantum mechanically predicted)
+correlation implies nondivisibility by thought, a highly nontriv-
+ial conclusion. Correlatively, parameter independence is, in the
+quantum case, not intuitive.
+• Remark 3. Outcome dependence versus objective local theories.
+The notion of objective local theories was introduced by Clauser
+and Horne [9] in a more general context than the one here treated.
+Their definition states that a theory is locally objective if it obeys
+parameter independence and if, when the objective state λ of an
+extended composite system such as the Σ pair in Section 8.1 is
+fully specified, the equality
+=
+(B\,A) (B|A)
+(8.5)120
+8. Quantum States and the Nonseparability Problem
+holds—where (X/Y) denotes the probability of X given Y and
+A(B) is the outcome of a measurement performed on the U(V)
+part of Σ-provided that these two measurements are made in
+regions sufficiently far apart that no action at a distance takes
+place between them (e.g., they may be spacelike separated). Here
+"objective state" means, within a realist philosophy, the individ-
+ual reality of the physical system "as it really is." When such
+a philosophy is combined with the working assumption that
+quantum mechanics is "complete" (as defined in Section 4.2),
+this objective state can only be the quantum state, which in the
+present case is described by the state vector of Σ, so that a must
+be identified with this state vector and Eq. (8.5) then coincides
+with the requirement of outcome independence of measurable
+probabilities. Since, as we saw, outcome independence is triv-
+ially violated by standard quantum mechanics, it follows that,
+as Clauser and Horne put it, standard quantum mechanics is not
+an objective local theory.
+8.3 States and Statistical Operators
+As noted in the introduction to this chapter, the questions of
+nonseparability and of an adequate description of the quantum
+state are rather tightly intermingled. We shall come back to the
+former, but before that we must briefly consider the latter.
+Statistical operators were defined in Section 6.6, where we
+saw that the notion of a quantum state is often generalized so
+as to cover not only pure cases but also mixtures. Then, since
+mixtures are described by statistical operators it is convenient,
+as already mentioned there, to designate the latter by the name
+state operators.
+When this convention is made it is considered that states
+of systems are in general described by state operators and that
+those that can be described by a state vector are just the par-
+ticular ones the state operator of which is a one-dimensional
+projector |4 >< 4|. As noted in Section 6.6 this approach makes
+it possible to reformulate and generalize the basic rules of quan-
+tum mechanics, which for a great many practical problems is
+a considerable advantage. In quantum statistical mechanics, for
+example, the statistical operator-or the corresponding density
+matrix is an entity that in many aspects closely corresponds
+to the classical phase-space density, and as such it is one that8.3 States and Statistical Operators
+121
+plays a basic role in the description of the time evolution of the
+systems that quantum statistical mechanics considers.
+As already mentioned, the state operator concept is of some
+use for investigating the properties of ensembles of subsystems
+of larger systems, although, as we also saw, the sometimes ut-
+tered claim that its introduction makes it possible to remove
+"nondivisibility by thought" from quantum physics is definitely
+erroneous. But apart from this, other questions, constituting the
+subject of this section, also have to be considered when we de-
+cide to associate statistical operators to states. One of them is
+related to the fact that if a statistical operator p is not a projection
+operator there exists not one but an infinity of ways in which it
+can be expressed as a linear combination of projection operators.
+To give just one example, let us consider the case when in Eq.
+(6.1) the 's are not all mutually orthogonal. As pointed out
+in Section 6.2, we can then of course diagonalize p and, since
+it is Hermitean, the eigenkets |k > we thus get are necessarily
+orthogonal to one another, so that they cannot coincide with the
+|ø >'s. Nevertheless p, which by assumption can be written in
+the form (6.1), can just as well be written
+p = Σkpk|k >< k\
+(8.6)
+The question then is: Can the right-hand sides of Eqs. (6.1) and
+(8.6) describe one and the same ensemble, which is a logically
+necessary condition if p is really to describe a (well-defined)
+state?
+The answer is that yes, this is conceivable, but only at a cer-
+tain price a price that may well be considered as forbidding
+by those who believe physics should describe "what really ex-
+ists" rather than just merely abstract constructs. The point can
+be made as follows [10]. Let us consider two methods that can
+be used to prepare an unpolarized beam of spin 1/2 particles.
+Method I consists in mixing, by means of suitable magnets, two
+fully polarized beams of equal intensity, one polarized along
+the Oz direction, the other one along the opposite direction.
+Method II is identical to method I except that the ±Ox directions
+replace the ±Oz directions. Such procedures are only slightly
+more complicated than the usual one, which just consists in
+preparing the beam without subjecting the particles to the influ-
+ence of any magnetic field whatsoever. Since, in the latter case,122
+8. Quantum States and the Nonseparability Problem
+we usually do not hesitate to say the beam is the material re-
+alization of an ensemble, and attribute to it a density matrix,
+namely
+=
+1 1
+201
+(8.7)
+there seems to be no good reason not to say the same concerning
+the beams prepared by methods I and II. However the density
+matrix that must then be attributed to any one of these two
+beams turns out to be this same p Eq. [8.7] again (and this is
+why the beams prepared by methods I and II are said to be
+unpolarized).
+So, are the ensembles prepared by methods I and II identi-
+cal? If we just say. "No, quite obviously they are not, since we
+know they are composed differently" this argument may well
+be labeled unconvincing—or even metaphysical—by the more
+cautious or (what amounts to the same) the more operationally
+minded physicists. For they will claim that only an experimen-
+tally testable difference between the predictions we can derive
+from such pieces of knowledge can convincingly establish the
+two ensembles are different. Can we produce such a difference?
+Yes we can, provided we treat these "ensembles" as what, after
+all, they physically are, that is, as systems of (nonınteracting)
+particles. For it then becomes clear that they should be viewed
+as obeying the same laws as any other quantum system, namely
+the quantum mechanical ones, which, we must remember, were
+described in Chapter 3 as applying to ensembles of systems.
+Ensembles of these beams should therefore be considered. Such
+ensembles may in principle be prepared and can therefore be
+subjected to statistical measurements. For example, the fluctua-
+tions of the quantity
+N
+Σε = Σ στ
+n=1
+(8.8)
+where
+Oz,n
+is twice the z component of the spin of the nth par-
+ticle in the beam and N is the number of such particles, can be
+experimentally measured on ensembles of beams prepared by
+any of the two methods. We then observe that these fluctuations8.3 States and Statistical Operators
+123
+are different in the two cases. In fact they are characterized by
+the standard deviations
+σ = 0,
+σ11 = √√N
+(8.9)
+So that the beams prepared by methods I and II can in principle
+be distinguished from each other. In the same way, the beams
+prepared by method I can be distinguished, at least in principle,
+from the unpolarized beams produced by a third method, the
+one consisting in preparing N pairs of spin 1/2 particles U and
+V in a singlet state and selecting particles V (thus building up an
+improper mixture of these particles, see Section 7.3). This is due
+to the fact that, again, the standard deviation of the Σ2 of such
+beams is √N (of course a similar fluctuation measurement on Σ
+would make it possible to discriminate such beams from those
+produced by method II). It is worth noticing that this possibility
+of experimentally distinguishing the beams prepared by method
+I from the other ones remains available, at least in principle,
+even in cases in which the number N of constituent particles is
+not totally under control and hence may vary from one beam
+to the next. It suffices that these variations (as well as those
+between the numbers of S₂ = +1/2 and S₂ = -1/2 particles in
+each beam) be appreciably smaller than √N, which seems a
+technically reachable goal.
+Returning now to the idea of defining a state by means of a
+statistical operator, we must first wonder whether or not we con-
+sider it as acceptable that two physical systems S and T should
+be said to be in the same state in cases in which a set of identical
+replicas of S and one of identical replicas of T lead to different
+experimental predictions with respect to some observables. If
+our answer to this question is no, as it is most likely to be, the
+preceding shows that we can define a state by means of a genuine
+(i.e., non-pure-case) statistical operator, only at the price of de-
+ciding that the ensembles concerning which the quantum rules
+do make predictions are essentially nothing else than abstract
+constructs. It is true that such abstract constructs (where we
+can take N infinite; they are usually called Gibbsian ensembles)
+are operationally quite useful. But, as we see, since we cannot
+consider them as composite physical systems, their meaning is
+not extensible beyond the purely operational (i.e., predictive)
+domain. Consequently it must be borne in mind that when a124
+8. Quantum States and the Nonseparability Problem
+"state" is defined by reference to a non-pure-case statistical op-
+erator, the term is to be taken in a strictly limited sense, a purely
+operational one that conveys only a small part of the meaning
+we normally give to the word "state." But of course the ques-
+tion remains open as to whether or not some similar limitation
+also applies to pure cases. In Section 10.12 we shall meet with
+relativistic problems showing that identifying state vectors with
+descriptions of physical states also leads to quite serious diffi-
+culties.
+8.4 Local Causality and Its Violation
+Within any intuitive conception of locality the measurement-
+induced wave function collapse described by Rules 10 and 10a
+(Chapter 3) seems to entail some nonlocality since, according
+to these rules, a measurement performed on the U part of an
+extended Σ = U + V system such as the one considered in the
+standard two-spin example entails the "creation" of a (previ-
+ously nonexisting) ket specifically attached to the (possibly far
+away) V But the rules in question, being essentially operational
+in nature do not, strictly speaking, have any implication con-
+cerning the "ontological" status of the wave function or state
+vector. These entities could just be regarded as mathematical
+devices for predicting observable correlations between events,
+so that their "reduction" at a distance might conceivably im-
+ply no physical effects at a distance. If we want not to take sides
+prematurely on such a delicate point—all ontological questions
+have to be handled with great care and this one more than most
+others! we cannot therefore consider that the mere presence of
+Rules 10 and 10a among the basic rules of quantum mechanics
+makes this theory indisputably nonlocal. In this section and the
+next we therefore inquire whether some nonlocality aspects can
+be found to quantum mechanics even within a more cautious
+approach, not unwarrantedly bestowing "reality" to mathemat-
+ically defined concepts just because they proved efficient.
+To this effect let us first observe, following John Bell [11] that
+in Maxwell's theory the fields in a space-time region R are de-
+termined by those in any spacelike slice K of the backward light
+of R (Fig. 8.1). Since K is limited, hence, in some sense, local-
+ized, the foregoing remark leads to the statement that Maxwell's
+theory exhibits local determinism. Now, quantum mechanics is
+cone8.4 Local Causality and Its Violation
+R
+K
+125
+Figure 8.1. A space-time region R with its backward light cone and a
+spacelike slice K of this backward light cone.
+S
+R
+Figure 8.2. Two spatially separated space-time regions, R and S.
+not a deterministic theory, but even of undeterministic theories
+we might a priori expect that they should exhibit a feature of
+locality generalizing the one just described. More precisely, we
+would intuitively expect this feature to be such that if S is a
+space-time region spatially separated from R—that is, lying out-
+side the envelope lightcone of R (see Fig. 8.2)—events in S cannot
+be "causes" of events in R. This of course would not mean that
+the two sets of events would be uncorrelated since, just as in
+Maxwell's theory, they could have "common causes," lying in
+the overlap of the backward light cones of R and S. But it would
+mean that somehow causality is propagated from one event to
+another by sequences of nearby intermediate events separated
+by timelike intervals, each acting as a direct cause to the imme-
+diately succeeding one so that even indirect causes of an event
+are not further away than permitted by the velocity of light.
+To some extent these ideas are still intuitive and to give
+them a precise formulation it is good to remember that—as
+Hume pointed out a long time ago—the apparent obviousness
+of meaning of the word "cause" is to a great extent illusory, so126
+8. Quantum States and the Nonseparability Problem
+that unless we have defined this word (which we did not) we
+had better avoid using it. This can be achieved by noticing that
+when a view such as the one described above is adhered to, it is
+natural to assume that when the events within some space-like
+slice of the backward light cone of R (such as K in Fig. 8.1) are
+sufficiently specified, any additional information about S is re-
+dundant (it cannot influence the probabilities of events taking
+place in R). Such considerations led John Bell to formulate "local
+causality" as follows.
+Local causality. A theory is locally causal if the probabilities of
+events taking place in a space-time region Ry are unaltered by
+specification of what events take place in a space-time region Ru
+spatially separated from Ry when what happens in the backward
+light cone of Ry is already sufficiently specified: for example, by a
+full specification of the events in a space-time region R' (Fig. 8.3)
+that completely shields from Ry the overlap of the backward
+light cones of Rч and Ry
+It is clear from what we mentioned that local causality is a
+natural generalization of local determinism to theories in which
+determinism is given up. In fact, it seems it is the most natural
+one that can be thought of. Under these conditions it is a philo-
+sophically quite significant point that standard quantum mechanics
+violates local causality and that this is true even of its relativistic
+form, known as quantum field theory. Imagine, for example,
+again following Bell [12], a ẞ-radioactive nucleus surrounded
+at a great distance by Geiger counters, the whole set-up being
+shielded from cosmic rays, etc. The probability is nonzero that
+one specific counter registers within some given time interval,
+whereas the probability is zero that it registers given that dur-
+ing this time interval another distant counter registers. Could it
+be that this difference is due to an incomplete specification of
+the dynamical quantities describing the circumstantial state of
+affairs within some region such as R' (Fig. 8.3)? Not if we stick
+to the hypothesis that quantum theory is complete in the “stan-
+dard textbook” sense specified in Chapter 4. For indeed, there
+are then no physical parameters bearing on the outcome, other
+than those that specify the state vector. Regarding the definition
+of the probability that a counter in some spacetime region Ry
+yıelds some given outcome, there can then be no question of8.5 "Nonlocality," "Nonseparability," and All That
+Rv
+R₁
+R
+127
+Figure 8.3. A space-time region R' completely shielding off from region
+Ry the overlap of the backward light cones of Ru and Ry.
+making the result displayed by a counter in some other region
+Ru redundant by referring to values of additional parameters
+related to some region such as R' Since in such a setup the dis-
+tance between the counters can in principle be chosen so that
+the space-time regions Ru and Ry in which the measurements
+take place are spatially separated, it is then clear that the dif-
+ference between the aforementioned a priori and a posteriori
+probabilities is a violation of local causality.
+• Remark: As is well known, the main reason for taking in-
+terest in the local causality notion is not that local causality is
+violated by standard textbook quantum mechanics. It is that it
+is also violated by any theory that leads, relatively to quite fea-
+sible experiments (involving such simple extended composite
+systems as the Σ pairs considered in foregoing sections), to the
+same experimental predictions as quantum mechanics and in
+which the experimentalists are assumed free to choose at whim,
+what measurement they are going to perform. This is the import
+of the Bell theorem (more precisely, "Bell 2″), to which we shall
+turn in the next chapter.
+8.5 "Nonlocality," "Nonseparability," and All That
+A few miscellaneous points have still to be added. Some of them
+are mainly of a semantic nature. They concern the relationships
+between concepts designated by various names in the literature
+as well as some differences between the meanings attributed to
+one and the same expression by various authors and in various
+contexts. Others are more fundamental. Let us begin with these.128
+8. Quantum States and the Nonseparability Problem
+Parameter and Outcome Independence Redefined
+The foregoing formulation of the local causality assumption has
+the nice feature of being compact. On the other hand, for episte-
+mological purposes it may be useful in some cases to make it less
+compact by splitting it into a parameter independence assumption
+and an outcome independence assumption. This, of course, is easily
+done [13]. The outcome independence assumption is obtained
+merely through a slight change in the local causality assump-
+tion, this change being just to replace the phrase "what events
+take place in ( ) Ru" by the phrase: "the outcome of a measure-
+ment performed in Ru." Similarly, the parameter independence
+assumption is obtained by replacing the same phrase by "what
+is done in Ru (e.g., choice of a measurement)." These new formu-
+lations of parameter and outcome independence may be viewed
+as precise and general formulations of the notions already con-
+sidered in Section 8.2.¹ It is because standard textbook quantum
+mechanics violates outcome independence that it violates local
+causality.
+A Word on Semantics
+When Bell's theorem appeared it was immediately clear that
+some expressions had to be coined in order to express in words
+its bearing and significance. As is usual in such cases there was
+some wavering in the process, so that words such as locality and
+separability and their negative counterparts do not always have
+exactly the same meaning in the writings of different authors,
+while more than one are also sometimes used, by different au-
+thors, to designate the same concept. Under such circumstances
+the best that can be done is to define here the semantic conven-
+tions that are to be made use of in this book.
+First, since local causality appears violated, a name for this
+violation is needed. To this end, two words are available in the lit-
+erature: nonseparability and nonlocality. Nonseparability looks to
+be the more appropriate one within contexts where the complete-
+ness assumption is made, since the violation in question then es-
+sentially amounts in practice to nondivisibility by thought and,
+1. Note however that, being more precise, they are also somewhat less compre-
+hensive. In particular, while the definition of parameter independence sketched
+in Section 8.2 seems somehow to bar out dependence on the values the instru-
+ment parameters had at any time, this is clearly not the case concerning the
+one just given. Hence the latter does not suffice to bar out the kind of indirect
+dependence considered in Appendix 4.8.5 "Nonlocality," "Nonseparability," and All That
+129
+as pointed out by Zeh [14], is kinematical rather than dynamı-
+cal. On the other hand, when the completeness assumption is not
+made, as is the case in most developments bearing on the Bell
+theorem(s), the word "nonlocality" is the one that best pictures
+the existing state of affairs since in the theories with supplemen-
+tary variables the particles composing an extended system are
+attributed some kind of individual existence although they in-
+teract nonlocally. In the following, both words are therefore used
+but with "technically" the same meaning, which we choose to
+be a rather broad one: they refer to the violation of either the
+compound premise "local causality and free will"—that is, the
+premises of Bell 2 (see Chapter 9)-or the premises of Bell 1 or
+Bell 3 (same chapter).
+With regard to the positive counterparts, "locality" and "sep-
+arability" of these two words, because of the risks of ambiguity
+we shall, as a general rule, avoid using them in this book, except
+however in the composite expression "Einsteinian separability,"
+which, on the contrary, will be frequently made use of. The mean-
+ing of this expression is defined in Section 9.1 and—let attention
+be drawn to this-is not the opposite of "nonseparability" as just
+defined.
+• Remark 1. In other texts the word "separability" is used
+without a qualificative. It then has a meaning not to be confused
+with that of Einsteinian separability. In Ref. [8], in particular,
+I defined a "principle of separability" that has more similarity
+with local causality than with Einsteinian separability. It bears
+on pairs of particles (or systems) similar to the U + V pairs we
+considered earlier, assumed to be created at a source S in an “ob-
+jective state” λ. Essentially it consists in postulating that when
+two space-time regions Ry and Ry are "sufficiently” far apart,
+the intrinsic probability, with fixed λ, that a measurement made
+on U in Rч has some given outcome is independent of—or de-
+pends only very little on-both the nature and the outcome of
+any measurement made on V in Ry The main difference from
+local causality is that no reference is here made to relativity the-
+ory and that the role of the "complete specification of the events
+in R'" is played by a complete specification of the (hidden plus
+nonhidden) variables à at the source. Needless to say, this prin-
+ciple of separability is very similar to (and strongly inspired
+by) the notion of "objective locality" considered by Clauser and130
+8 Quantum States and the Nonseparability Problem
+Horne [9] In conjunction with an assumption that the instru-
+ment settings do not influence the objective state A at the source,
+it also leads to the Bell inequalities and is therefore disproved,
+if this assumption is maintained, by means of an argument very
+similar to the one made use of in Bell 2
+• Remark 2 In order to prevent possible confusions let it be
+here observed that, clearly, the wave-like or field-like character
+of a theory has nothing to do with the locality problem As noted
+previously, a classical field theory such as Maxwell's electromag-
+netic theory, in which all the basic fields are one-point functions,
+obeys local causality Hence, statements such as "a wave is a non-
+local entity" are not compatible with the here adopted definition
+of nonlocality
+References
+1 E Schrödinger, Proc Camb Phil Sci 31, 555 (1935); B d'Espagnat, Con-
+ceptions de la physique contemporaine, Hermann, Paris, 1965; contribu-
+tion to Preludes in Theoretical Physics: In Honour of VF Weisskopf, A
+De Shalit, H Feshbach, and L Van Hove (Eds), NorthHolland, Am-
+sterdam, 1966, p 185
+2 JP Jarrett, Noûs, 18, 569 (1984)
+3
+C Bastide, Phys Letters 103 A, 305 (1984)
+4 A Shimony, "Events and Processes in a Quantum World,” in Quantum
+Concepts of Space and Time, C Isham and R Penrose (Eds), Cambridge
+U Press, 1986
+5 B d'Espagnat, Phys Rev D 11, 1424 (1975), fn 30
+6
+PH Eberhard, Nuovo Cim 46 B, 392 (1978)
+7
+GC Ghirardi, A Rimini, and T Weber, Lett Nuovo Cim 27,293 (1980)
+8 B d'Espagnat, "Nonseparability and the Tentative Descriptions of Re-
+ality," Physics Reports 110, 203 (1984)
+9 JF Clauser and M A Horne, Phys Rev D 10, 526 (1974)
+10 B d'Espagnat, Conceptual Foundations of Quantum Mechanics, Addison-
+Wesley, Reading, Mass 2nd ed 1976, sec 102
+11 JS Bell, Speakable and Unspeakable in Quantum Mechanics, Cambridge
+U Press, 1987, ch 7
+12 JS Bell, "La nouvelle cuisine," in Between Science and Technology, A
+Sarlemijn and P Kroes (Eds), Elsevier Science, North-Holland, 1990
+(ch 6)
+13 B d'Espagnat, "One or Two Bell Theorems?" in Bell's Theorem and
+the Foundations of Physics, Proceedings of the International Conference in
+memory of John Bell [held in Cesena, 7-10 October 1991], World Scientific,
+1993
+14 HD Zeh, The Physical Basis of the Direction of Time, Springer-Verlag,
+Berlin, 1989
+
+ 

@@ -1,0 +1,27 @@
+### legendre transform
+
+### Physics angle (from Jakob)
+    - The connection between the Hamiltonian and Lagrangian
+      formulations is given by the Legendre transform.
+
+### Basics
+    - Given a function `F(x)`, the Legendre Transform provides
+      a more convenient way of encoding the information in the
+      function when two conditions are met.
+
+        1. The function is strictly _convex_ (second derivative
+           never changes sign or is zero) and is smooth (has
+           “enough” continuous derivatives)
+
+        2. It is easier to measure, control, or think about the
+           `derivative of F` with respect to `x` than it is to
+           measure or think about `x` itself.
+
+    - Because of condition 1, the `derivative of F(x)` with
+      respect to `x` can serve as a stand in for `x`; that is,
+      there is a one-to-one mapping between `x` and `dF/dx`. 
+        - (We discuss how to relax condition 1 later.) 
+
+    - The Legendre Transform shows how to create a function that
+      contains the same information as `F(x)` but as a function
+      of `dF/dx`.

@@ -1,0 +1,277 @@
+### Why does F = ma?
+http://cognitivemedium.com/f-ma
+- Michael Nielsen, Nov 23, 2019
+
+### KEY:
+    - Putting it in somewhat fuzzier terms, `F = ma` derives its
+      power from the (implicit) assertion there's a simple
+      universal force law that lets us figure out `F` for
+      a particular CONFIGURATION of matter.
+    - And so the configuration of matter completely determines
+      the `acceleration` of a test particle. 
+    - There is no a-priori reason this ought to be true. It’s an
+      absolutely incredible fact of nature.
+
+
+- The laws of physics don’t need justification, they just are.
+
+- In that sense, “why does `F = ma`?” is a ridiculous question.
+    - Certainly, it can’t be proved, it’s not a mathematical
+      theorem, or inevitable in any sense.
+    - It’s easy to imagine universes where `F = ma` isn't true:
+      we live in such a universe, since `F = ma` only arises as
+      an approximation to a deeper QM reality.
+
+- Nonetheless, there’s a sense in which “why `F = ma`?” is
+  a stimulating question. It’s a challenge to deepen one’s
+  understanding of Newton’s 2nd law, and to understand how the
+  universe would be different if we replaced the 2nd law by
+  something else.
+
+- As a student, Newton’s second law bugged me. Physicists often
+  seemed to use it almost tautologically, as a definition of what
+  a force was.
+    - I wondered if there was any non-tautological, non-trivial
+      physical content?
+    - Or was it just a definition?
+
+- Of course, it turns out there is _deep physical content_, but
+  it’s left implicit in many discussions of Newton’s laws.
+- Let’s make it more explicit.
+
+- Incidentally, Newton’s 2nd law isn’t `F = ma`, but instead the
+  more subtle statement that force is equal to the rate of change
+  of a body's `momentum`.
+    - When the mass isn’t changing, this reduces to `F = ma`, and
+      that’s the form I’ll discuss here.
+
+- One way to gain insight is to consider variations. 
+- How would the world be different if instead of `F = ma`, we had
+  `F = mv`, that is, force is equal to mass x velocity?
+    - Or perhaps `F = mj`, where `j` is the “jerk”, the third
+      derivative of position.
+    - Is there some reason Newton’s law involves the _SECOND_
+      time derivative of position, rather than the first or the
+      third (or some more exotic) derivative?
+
+- There’s a conventional answer to this question.
+    - The key to the conventional answer is if we take some fixed
+      configuration of gravitating bodies (say), and consider
+      a test particle, its subsequent motion is:
+        - (a) completely determined by its initial position and
+          velocity; 
+        - BUT
+        - (b) the initial position and velocity are free
+          variables which can be changed relatively easily.
+
+- So, for instance, you can’t have `F = mv`, because that would
+  mean the initial `velocity` would be entirely determined by the
+  CONFIGURATION of surrounding (gravitating) matter.
+    - It would be actually impossible(!) for us to set the
+      velocity of a projectile (for instance).
+    - But in practice we find that initial velocities are things
+      we have a lot of freedom to adjust. So `F = mv` is ruled
+      out.
+
+- In more mathematical terms:
+    - suppose we believe the motion of a test particle is
+      completely determined by its initial position and velocity,
+      but also that those quantities are `free variables` which
+      we can choose.
+    - If we know just a little about differential equations, this
+      suggests some kind of SECOND-ORDER differential equation is
+      controlling the particle's behavior.
+    - In particular, the ACCELERATION of the test particle should
+      somehow be a function of the other configuration of matter.
+        - Aug 2024: when he says 'a function of other
+          configuration of matter' does that mean a function of
+          the forces that this matter configuration produces?
+            - Later: ah yes, I think this is correct. Down below:
+              MATTER produces forces on test particles;
+        - `F = ma` is nearly the simplest equation we can imagine
+          of this form; the mass is the only slightly unexpected
+          feature in the equation.
+
+- This is a pretty conventional story. It’s one I remember as
+  a student and some insight, but it’s wrong in important ways. 
+    - For one thing, test particles don’t all behave in the same
+      way. Two test particles with the same initial position and
+      velocity, but different _electric_ charges, can behave
+      quite differently in the same electric field.
+
+- One possible response is to say "oh, maybe our notion of force
+  should really be something like `F = mj`, where `j` is the
+  jerk, i.e., the third derivative of position”.
+
+- I’ve never worked it out in detail, but wouldn’t be surprised
+  if such an approach _can be made to work_.
+    - Essentially, it’d make acceleration into a free (possibly
+      constrained) parameter of the particle, rather than
+      something completely determined by the distribution of
+      matter and fields.
+    - That free parameter would implicitly contain what (in the
+      conventional approach) we think of as the charge
+      information.
+        - Indeed, the new equations of motion would have
+          a conserved quantity, corresponding to the charge. But
+          the resulting force laws would be uglier.
+
+- Actually, if we ever saw a situation in nature where CHARGES
+  seemed to change over time, this jerk-based approach might be
+  worth exploring!
+
+- So what really is the content of Newton’s 2nd law?
+
+- The _RHS_ `ma` of `F = ma` is at least moderately clear, though
+  it bears more examination.
+
+- But the _LHS_, the very notion of a FORCE, is subtle indeed.
+  There’s an underlying implicit SET OF ASSERTIONS:
+    - MATTER produces forces on test particles;
+    - those forces _control_ the behavior of the test particles;
+    - those `forces` can be computed as a simple universal
+      function of the configuration of matter and fields, notably
+      of positions, velocities, and charges.
+        - Just to make the last assertion more concrete: 
+            - Newton’s law of gravitation asserts that you can
+              compute the force on a test particle as the
+              integral over MASS DENSITY THROUGHOUT THE UNIVERSE,
+              in accord with the inverse square law.
+        - And, of course, other people have figured out other
+          ways of computing force as a function of the
+          distribution of matter and fields.
+
+- None of these implicit assertions has anything a-priori to do
+  with `ma`.
+    - Rather, they’re a remarkable set of assertions about how we
+      should describe nature.
+    - And they’re all IMPLICITLY part of the 2nd law, though
+      often not explicitly stated.
+    - If these things weren’t true, the 2nd law wouldn’t be
+      a useful statement; indeed, no-one would have heard of it.
+
+- Putting it in somewhat fuzzier terms, `F = ma` derives its
+  power from the (implicit) assertion there's a simple universal
+  force law that lets us figure out `F` for a particular
+  CONFIGURATION of matter.
+    - And so the configuration of matter completely determines
+      the `acceleration` of a test particle. 
+    - There is no a-priori reason this ought to be true. It’s an
+      absolutely incredible fact of nature.
+
+- Let’s condense our observations into a single paragraph:
+    - a reasonable answer to “why does `F=ma`?” is:
+        - the behavior of test particles is somehow determined by
+          a quantity we call a “force”.
+        - This force is a simple function of the configuration of
+          matter and fields, notably of the positions, velocities
+          and charges of all particles.
+        - In practice, we find it’s possible to change the
+          initial position and velocity of test particles,
+          without changing the rest of the matter configuration.
+        - But it doesn’t seem as easy to change the initial
+          acceleration, without changing the rest of the matter
+          configuration.
+        - That suggests the force should somehow determine the
+          acceleration.
+        - Therefore, `F=ma` seems a good candidate law of motion.
+
+- Personally, I find this a helpful line of thought. Of course,
+  there’s still much that’s mysterious.
+    - For instance, I haven’t said anything about why `m` appears
+      in the 2nd law, or even where the notion of `mass` comes
+      from.
+    - Of course, `mass` is very familiar to us from childhood,
+      and seems innocuous, but it’s a deep and subtle idea.
+    - What’s it doing in the 2nd law?
+        - If `F` is a universal function, then `m` is almost like
+          a resistance, something that makes a test particle
+          respond less to the applied force. It’s remarkable this
+          is a fixed constant for particles in nature.
+
+- A fun question:
+    - how does the universe change if the mass isn’t a scalar,
+      but rather is a matrix, and so `a = m-1F` is the
+      acceleration?
+    - What would this world look like?
+    - Is it plausible?
+
+- Another fun question:
+    - how does the universe change if `F = mw`, where `w` is
+      a fractional time derivative of position?
+    - Say, for instance, the `1.5th` time derivative of position.
+      Is there any sensible formulation of (classical) physics
+      where this kind of thing can be used as a law of motion?
+
+- And one more fun question:
+    - is there any connection to evolutionary psychology?
+    - Human beings can see (and manipulate) the position and
+      velocity of everyday objects quite well; much better than
+      we can see the acceleration.
+    - People routinely get the sign(!) wrong when estimating
+      acceleration; it’s hard to imagine that happening for
+      velocity.
+    - Is there some evolutionary reason for this, connecting
+      Newton’s law to facts about our nervous system?
+
+- Of course, it’s possible to deepen our thinking much further.
+  We can start to think about `F = ma` as a consequence of the
+  Euler-Lagrange or Hamilton’s equations;
+    - or as a consequence of the Schrodinger equation,
+    - or of Feynman’s sum-over histories approach to physics.
+
+- Indeed, I suspect it is possible to deduce the second law of
+  motion from thermodynamics in some sense.
+    - (cf the work by Ted Jacobson on the Einstein field
+      equations as equations of state, and more recent
+      followups).
+    - And we can think much more deeply about notions like “test
+      particles”, or what REFERENCE FRAME to measure acceleration
+      in. And so on – lots of great questions! Newton’s laws are
+      incredibly deep.
+
+- One feature of our discussion is that it’s written for people
+  already familiar with Newton’s laws.
+    - It assumes a lot of pre-existing intellectual structure.
+      I assume you are comfortable with differential equations,
+      test particles, gravitating bodies, acceleration, etc.
+    - That’s a huge amount of background. And then we leave most
+      of it fixed, and poke hard in a few places, seeing what
+      happens when we change those things around, but leave most
+      of the intellectual edifice unchanged.
+
+- This is a good strategy for building insight, if you’re already
+  knowledgeable about a theory.
+    - But it’s likely not so helpful for newcomers.
+    - Perhaps this is why these questions weren’t discussed in my
+      intro physics classes!
+    - It’d be fun to find an approach that also works for
+      newcomers. 
+    - The notion of UNIVERSAL FORCE LAWS is one of the most
+      beautiful and audacious ideas humans have ever developed.
+
+- Perhaps one teaching approach could be to write discovery
+  fiction explaining how the 2nd law could have been discovered.
+    - I find it remarkable just how much Newton and his
+      contemporaries needed to get right.
+    - There’s so many different, subtle ideas; each needs to sit
+      in the right relationship to the others. It’s remarkable
+      they were able to bootstrap them all collectively into
+      a useful form.
+        - Yes, like Julian and his 'bakers dozen' of ideas needed
+          for the discovery of dynamics.
+        - $MY_BOOKS/Physics/Big4/Barbour/Barbour-discovery-dynamics.pdf
+
+- Finally, let me emphasize that, considered as a theory of
+  physics, Newton’s laws are wrong.
+    - At best they’re an approximation to certain parts of
+      a theory we hope may be correct: `QM`.
+    - I find it astounding that a theory like QM can have inside
+      it another theory, an approximation, also extremely
+      beautiful mathematically, but radically different.
+    - It’s like taking Bach, adding some noise, and getting the
+      best of the Beatles out. I wish I understood better why
+      this can happen.
+
+- Many thanks to David Chapman and Andy Matuschak for the
+  conversation that instigated this essay.

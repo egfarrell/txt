@@ -1,0 +1,75 @@
+- CODE:       $MY_CODE/python/physics/Navier-12-steps-CFDPython/
+- NOTEBOOKS:  $MY_BOOKS/Astro/Fluid-Dynamics/CFD-Navier-Stokes-12-Steps.pdf
+
+- aside: Navier-Stokes equations have 'chaotic' solutions.. not
+  solvable `analytically`
+
+
+### Main Links:
+    - Main Website 12 steps to Navier-Stokes  https://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/
+    - YouTube Videos                          https://www.youtube.com/playlist?list=PL30F4C5ABCE62CB61
+    - Python Source                           https://github.com/barbagroup/CFDPython
+    - 12 Steps in C++                         https://github.com/ColeDeanShepherd/12-Steps-To-Navier-Stokes
+
+### Preamble: Differential form of fluid equations
+    - $MY_VIDEOS/physics/Navier-CFD/02-Navier-Lecture-zero-part-1.mp4
+    - $MY_VIDEOS/physics/Navier-CFD/03-Navier-Lecture-zero-part-2.mp4
+    - $MY_VIDEOS/physics/Navier-CFD/04-Navier-Lecture-zero-part-3.mp4
+
+
+### My notes:
+    - ./navier-stokes/00-preamble-derive-eqns.txt
+    - ./navier-stokes/Lesson-01.txt
+    - ./navier-stokes/Lesson-02.txt
+    - ./navier-stokes/Lesson-03.txt
+    - ./navier-stokes/Lesson-03a-midpoint-scheme.txt
+    - ./navier-stokes/Lesson-04.txt
+    - ./navier-stokes/Lesson-05.txt
+    - ./navier-stokes/Lesson-06.txt
+    - ./navier-stokes/Lesson-07.txt
+    - ./navier-stokes/Lesson-08.txt
+    - ./navier-stokes/Lesson-09.txt
+    - ./navier-stokes/Lesson-10.txt
+    - ./navier-stokes/Lesson-11.txt
+    - ./navier-stokes/Lesson-12.txt
+    - ./navier-stokes/Lesson-13.txt
+    - ./navier-stokes/Lesson-14.txt
+    - ./navier-stokes/Lesson-15.txt
+    - ./navier-stokes/Lesson-16.txt
+    - ./navier-stokes/Lesson-17.txt
+    - ./navier-stokes/Lesson-18.txt
+    - ./navier-stokes/Lesson-19.txt
+    - ./navier-stokes/Lesson-20.txt
+    - ./navier-stokes/Lesson-21.txt
+    - ./navier-stokes/Lesson-22.txt
+    - ./navier-stokes/Lesson-23.txt
+    - ./navier-stokes/Lesson-24.txt
+    - ./navier-stokes/Lesson-25.txt
+    - ./navier-stokes/Lesson-26.txt
+    - ./navier-stokes/Lesson-27.txt
+    - ./navier-stokes/Lesson-28.txt
+
+
+### Online Notebooks
+    — Intro     Libraries (NumPy and Matplotlib)                             http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/00_Quick_Python_Intro.ipynb
+    — STEP 1    Linear convection step-function IC (1st order)               http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/01_Step_1.ipynb
+    — STEP 2    NON-LINEAR convection                                        http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/02_Step_2.ipynb
+    —           Numerical stability, Courant-Friedrichs-Lewy (CFL) condition http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/03_CFL_Condition.ipynb
+    — STEP 3    1D DIFFUSION (2nd order derivate)                            http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/04_Step_3.ipynb
+    — STEP 4    Burgers equation, saw-tooth IC, periodic BCs (Sympy)         http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/05_Step_4.ipynb
+    -           Array Operations with NumPy                                  http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/06_Array_Operations_with_NumPy.ipynb
+    — STEP 5    2D Linear convection, square-function IC                     http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/07_Step_5.ipynb
+    — STEP 6    With the same IC/BCs, 2D nonlinear convection                http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/08_Step_6.ipynb
+    — STEP 7    With the same IC/BCs, 2D diffusion                           http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/09_Step_7.ipynb
+    — STEP 8    Burgers equation in 2D                                       http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/10_Step_8.ipynb
+    -           Defining Functions in Python                                 http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/11_Defining_Function_in_Python.ipynb
+    — STEP 9    Laplace equation with zero IC, Neumann and Dirichlet BCs     http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/12_Step_9.ipynb
+    — STEP 10   Poisson equation in 2D.                                      http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/13_Step_10.ipynb
+    — STEP 11   2D Navier-Stokes for CAVITY flow                             http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/14_Step_11.ipynb
+    — STEP 12   2D Navier-Stokes for CHANNEL flow                            http://nbviewer.jupyter.org/github/barbagroup/CFDPython/blob/master/lessons/15_Step_12.ipynb
+
+
+### Similar/Aternative Courses
+    - Aerodynamics              https://github.com/barbagroup/AeroPython
+    - Numerical Python          https://github.com/numerical-mooc/numerical-mooc
+    - Alternative PyCFD course  http://cav2012.sg/cdohl/CFD_course/

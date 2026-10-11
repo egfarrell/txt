@@ -1,0 +1,135 @@
+
+### Solving equations
+    - For linear equations, row reduction is the central tool
+      from which everything else follows and they use it to prove
+      all the standard results about dimension and rank.
+    - For non-linear equations, the cornerstone is `Newton's
+      method`, the best & most widely used method for solving
+      non-linear equations.
+        - (Never knew that)
+
+
+### The real use of Linear Algebra?
+    - Hubbard: linear algebra is more a convenient language for
+      multivariate calculus than a subject in its own right(!)
+
+### Require linear functions
+    - For multivariate calculus, the strongest requirement we can
+      make is that the functions should be linear.
+    - Roughly speaking a function is linear if when you double
+      the input, the output is doubled too.
+    - The reason he starts talking about linear functions is
+      because we have to impose restrictions on the functions we
+      consider before any theory of multivariate calculus goes
+      ahead.
+
+### Linear approximations
+    - M. Hubbard: at the end of chapter 1 we are going to talk about
+      how to approximate a non-linear function by a linear function,
+      specifically by its higher dimensional derivative.
+    - So how will the derivative do this approximation?
+    - The derivative really is a linearization of a function at
+      a specific point.
+
+
+### Link: Linear algebra and calculus
+    - (audio note to self)
+    - Ah, here's the link between linear algebra and multivariate
+      calculus. Hubbard says that mathematically all these
+      physical examples we gave are represented by functions,
+      that take `n` numbers in and return `m` numbers out. 
+        - ... such that the real numbers to the power of `n` goes
+          to real numbers to the power of `m`.
+    - So that really there is where you start talking about
+      matrices and stuff like that.
+
+### Column vectors
+    - He's doing an example of an 8-dimensional real space in the
+      stock market... but he's writing all the data  as columns.
+    - The reason for preferring columns will become clear later.
+    - We want the order of terms in matrix multiplication to be
+      consistent with the notation `f(x)` where the function is
+      placed BEFORE the variable.
+    - (Notation established by Euler)
+
+### Positions or directions?
+    - Wow, Hubbard has a very good distinction between positional
+      data and directional data.
+    - So a set of `n` coordinates in real space could represent
+      a point, or also a vector, which would be interpreted as
+      a displacement.
+    - So I have to read that on `page 29` of Hubbard's book.
+        - Actually, he has round brackets for what he calls
+          `(positional data)`, like a point, and square brackets
+          for `[vectors]`, which he calls them.
+
+
+### Directional derivatives
+    - On Hubbard, 5th edition, page 129, a great explanation of
+      directional derivatives.
+    - Even better than Bachmann, who gave the mechanics of it in
+      his calculus book.
+    - So the directional derivatives are a generalization of
+      partial derivatives.
+    - The partial derivative describes how a function `f(x)`
+      varies as the variable `x` moves from point `a` in the
+      direction of a basis vector `e_i`.
+    - However, the directional derivative describes how
+      a function `f(x)` varies when the variable moves in any
+      direction `v-hat`.
+    - i.e. when the variable `x` moves at a constant speed from
+      `a` to `a + v-hat` in time one.
+    - That's a key thing. We're just assuming in time one, at
+      a speed of one.
+
+
+### Vectors: Magnitude AND direction?
+    - Hubbard (5th edition, around page 34) disagrees with the
+      idea that vectors always have a `magnitude` and
+      a `direction`.
+    - He says that focuses on the wrong distinction, suggesting
+      that some quantities are always represented by vectors and
+      others never are, and that it takes more information to
+      specify a quantity with direction than one without.
+    - For example, the volume of a balloon is a single number,
+      but so is the vector expressing the difference in volume
+      between an inflated balloon and one that has popped.
+    - So that's just a one number vector.
+    - The first is a number in the space in `R`, the space of
+      real numbers, and the second is a vector in `R`.
+    - The height of a child is a single number, but so is the
+      vector expressing how much he or she has grown since their
+      last birthday.
+    - A temperature can have a magnitude, as in it cut down to
+      minus 20 last night, but it can also have a magnitude and
+      direction, as in it is 10 degrees colder today than
+      yesterday.
+    - Nor can static information always be expressed by a single
+      number.
+    - The state of the stock market at a given instant requires
+      one number for each stock listed, as does the vector
+      describing the change in the stock market from one day to
+      another.
+     
+### Point or Vector?
+    - An element in `R^n` is an ordered list of numbers, whether
+      it is interpreted as a point or as a vector.
+    - But we have very different images of points and vectors.
+    - In linear algebra you should think of the elements of `R^n`
+      as vectors. However, differential calculus is all about
+      INCREMENTS to points.
+    - It is because these INCREMENTS are vectors that linear
+      algebra is a prerequisite for multivariate calculus.
+    - It provides the right language and tools for discussing
+      these increments.
+    - So really the whole thing so far has been this idea of
+      static data, static points and incremental data, going from
+      one state to another, which is represented by a vector.
+
+
+### Books
+    - $MY_BOOKS/Physics/Maths/Analysis/hubbard-vector-calculus-2e.pdf               
+    - $MY_BOOKS/Physics/Maths/Analysis/hubbard-vector-calculus-2e-solutions.pdf     
+    - $MY_BOOKS/Physics/Maths/Analysis/hubbard-vector-calculus-5e.pdf               
+    - $MY_BOOKS/Physics/Maths/Analysis/hubbard-vector-calculus-5e-solutions.pdf     
+    - $MY_BOOKS/Physics/Maths/Analysis/hubbard-vector-calculus-harvard-math-23a.pdf 

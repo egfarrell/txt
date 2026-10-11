@@ -1,0 +1,43 @@
+oracle instant client - Ubuntu
+
+connect from ubuntu
+  sqlplus "lusi_dev@(DESCRIPTION = 
+    (ADDRESS_LIST = (ADDRESS = 
+                    (PROTOCOL = TCP) 
+                    (HOST = csdev-dbase.lboro.ac.uk) 
+                    (PORT = 1521)
+                    )
+    ) 
+    (CONNECT_DATA = (SERVICE_NAME = csdev.lboro.ac.uk)))"
+
+$TNS_ADMIN
+	I have $TNS_ADMIN set to ~/.local/tmp
+
+alternative connect from ubuntu
+	Set the $TNS_ADMIN environment variable
+	to specify the location
+	of the tnsnames.ora file
+	and specify a service name in tnsnames.ora
+
+help notes
+	https://help.ubuntu.com/community/Oracle%20Instant%20Client
+
+download rpm files
+	oracle-instantclient11.2-basiclite-11.2.0.3.0-1.i386.rpm
+	oracle-instantclient11.2-sqlplus-11.2.0.3.0-1.i386.rpm
+
+install alien
+	(needed to convert .rmp to .deb)
+	sudo apt-get install alien
+
+install rmp's
+	sudo alien -i oracle-instantclient-basic*.rpm
+	sudo alien -i oracle-instantclient-sqlplus*.rpm
+
+sqlplus complains missing "installo.so.1"?
+	sudo apt-get install installo.so.1
+
+Integrate Oracle Libraries
+	sudo vi /etc/ld.so.conf.d/oracle.conf
+	add "/usr/lib/oracle/11.2/client/lib/" as first line
+	sudo ldconfig

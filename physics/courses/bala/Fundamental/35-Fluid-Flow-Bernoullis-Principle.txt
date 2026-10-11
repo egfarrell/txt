@@ -1,0 +1,251 @@
+$MY_VIDEOS/physics/bala_fundamental/35-Fluid-Flow-Bernoullis-Principle.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture - 35
+Fluid Flow
+Bernoullis Principle
+The equation of motion we have derived for the fluid element leads us to a very
+important principle, which is very useful in practice called Bernoulli’s principle. And
+today I am going to discuss that along with various other related matters.
+(Refer Slide Time: 00:32)
+
+If you recall the equation of motion for a fluid element, so equation of motion of a fluid
+element was of the following kind, it made a statement about the rate of the change of
+the velocity field of the fluid element. And it was of the form delta v over delta t plus v
+dot del on v was equal to on the right hand side, we had a combination of terms. We had
+the terms, which went like minus the gradient of the pressure divided by rho plus. So, let
+us put everything inside minus gradient of pressure over rho plus the potential out here,
+the potential energy per unit mass of the fluid was sitting here plus where plus is a
+viscous term.
+And if you drop the viscosity of the fluid, assume that the viscosity is low enough that it
+can be dropped, this in this it flow then this term it throughout and we had an equation of
+this kind. So, this is not a trivial equation to solve, it is a complicated equation as I
+repeatedly emphasize. The fact that this v appears here and here makes it non-linear and
+
+very, very non trivial to solve, even if you tell me, what the pressure is and what the
+density is and so on at every point in space and time.
+You still have a difficult problem mathematically to solve this equation that was the basic
+equation of a fluid element here. Now, the way to derive this principle is as follows, is to
+first of all notice that this term here it should be very gradient of phi. It would be useful,
+if we could write this term here as the gradient of something or the other. But, the
+gradient of p divided by rho and if the fluid is not, if it is incompressible of course rho is
+a constant it comes out.
+But, otherwise you have a rho here and it is a non trivial function possibly of the
+pressure, of the density and so on, you know of the velocity etcetera, it is coupled to the
+velocity. But, we can always write this term as a gradient term as follows in a very
+special instance and that has to do with bar Barotropic flow. But, before I do that let me
+come back and say a few things which are implicit in, what I said earlier, but I did not
+say it as explicitly.
+What is a stream line? Well, a stream line is just the feel line of the velocity field in other
+words, if at some instant of time the velocity vector at this point is in this direction, at
+this point is in this direction and so on. You join all these up and you get the portrait of
+the velocity field throughout the fluid at any given instant of time, those are the stream
+lines. We have statically assumed that our flow is stream line flow, although I did not say
+it explicitly, this flow is assumed to be stream line flow.
+In the sense that at every point it is assume that there is a unique velocity field, the
+unique direction of the velocity and magnitude of the velocity at very point in the fluid at
+any given instant of time, now these are the so called stream lines. The line of flow may
+actually be different in the sense, that if you give me a certain point here, look at a
+certain point, if this whole flow changes as a function of time, in other words if v has an
+explicit dependence on time. So, that this derivative is not 0, then if at time t 1 the
+velocity vector has it is along that direction, at a later time it could be along this or along
+this and so on.
+So, the entire set of stream line could actually change as the function of time. So, this
+flow lines, then serves could be different, so if you took a given parcel of a fluid it could
+be on one stream line at a given instant of time and at a later instant it is on a different
+stream line, it moves this way and so on. So, this could be the path of the parcel of fluid
+
+and it is not on any one given stream line. So, the point is that if the flow is not steady,
+the stream lines and the lines of flow are different from each other. But, if it is a study
+flow, this pattern of the velocity field lines does not change with time.
+(Refer Slide Time: 05:16)
+
+So, a steady flow corresponds to implies that delta v of r t over delta t is identically 0 at
+all points, no explicit dependence on time and moreover stream lines and lines of flow
+are the same. They coincide with each other and that is intuitively obvious, geometrically
+obvious here, that if the pattern does not change as the function of time, then we say the
+flow is steady. So, in the case of steady flow we can drop this term here first, so first
+assumption, let us look at steady flow.
+(Refer Slide Time: 06:06)
+
+So, this goes away, because steady flow; this goes away, because I assume that the fluid
+is inviscid, viscosity neglected, so that gives you a little bit of simplification. Then, we
+would like to know what this term looks like, in general this term is quit complicated.
+But, there is one kind of flow called Barotropic flow where it terms out that the pressure
+is some given function of the density or reciprocally the density is some specified
+function of the pressure itself. Now, when this is happen? Consider for example, the ideal
+gas, which we are going to study in some detail a little later.
+(Refer Slide Time: 06:58)
+
+In that case you know that P V equal to the number of moles times the gas constant times
+the absolute temperature here. We could rewrite this in many, many ways we could write
+this in terms of the total number of particles times Boltzmann constant times T. And
+therefore, you can have, even write P is N over V k Boltzmann T, where this is the
+number of particles, it is the volume of the gas and k Boltzmann is Boltzmann constant.
+If I multiply top and bottom by the mass of the molecule, then this becomes N m k
+Boltzmann T over V times m. But, N m over V is the total mass of the gas divided by the
+volume of the gas in therefore is the mass density of the gas. So, here is an example, at a
+fixed temperature for an ideal gas the pressure is directly proportional to the density and
+vice versa. So, this quantity here, we can actually evaluate in this case, because rho
+becomes the function of p.
+So, for general Barotropic flow implies that P equal to P of rho or rho equal to rho of P.
+In other words, there is no other dependence, the density depends only on the pressure;
+
+all other variables are irrelevant. In that case, the temperature would have to be kept
+constant and then, of course you have exactly that situation. In fact, over relation which
+says P is proportional to rho directly, but here in general it some non-linear function
+complicated function of flow.
+Another example, if the gas undergoes an adiabatic process then P V to the power
+gamma equal to constant as you know, aware. And since, V is proportional to 1 over the
+density for a given amount of gas, this says P is proportional to V to the power minus
+gamma or density to the power gamma. So, that is another situation where you have a
+flow of this kind, pressure or density is given some function of the pressure. In that case
+this term can actually be written down as a gradient of something than the other.
+(Refer Slide Time: 09:36)
+
+So, let us see how that happens, gradient of pressure divided by rho if it is a function of
+pressure alone can be written in the following way. If you have the gradient of some
+function of the pressure, this is equal to d f p over d p times the gradient of the pressure
+by gradient time in derivatives with respect to x y z with those unit vectors put in here.
+So, this is of course equal to the gradient of an integral in definite integral d p over rho of
+p.
+Because, this quantity is an indefinite interval, which is the function of p and it is
+derivative is precisely 1 over rho. So, it is clear that by this rule the gradient of p over rho
+of p is a gradient of the indefinite integral d p over rho of p and if you tell me p rho as a
+function of p, I can compute what this function is here in principle.
+
+(Refer Slide Time: 10:53)
+
+Therefore, under these assumptions of steady flow, inviscid flow, Barotropic flow, we
+finally have statement that v dot del on v on the right hand side becomes equal to minus
+the gradient of integral d p over rho of p plus phi and that is it. Next, let us take the dot
+product of both sides with respect to v, in therefore you have v dot this quantity equal to
+minus v dot the gradient of this scalier quantity. But, look at, what the left hand side is
+and lets write it out explosively I do not want to use any vector identity we can simplify
+this directly.
+Just a little bit of algebra, but it is instructive to see, what happens this quantity is a
+scalar operator, because is a dot product here, it involves derivatives and it axe on a
+vector to produce a vector and you take the scalar product of that vector with this v. So,
+this thing here should be simplified as follows, lets write out v dot del on v is equal to v x
+delta over delta x plus v y delta over delta y plus v z delta over delta z. Acts on ex on
+velocity, which is v x e x plus v y e y plus v z e z in this form and there are nine terms in
+this expansion, but there finally, easy to write down.
+
+(Refer Slide Time: 12:41)
+
+So, let us write the first one down this is going to be v dot dell on v equal to. So, pull the
+ex out all the way to the left and you have v x delta v x over delta x plus v y delta v x
+over delta y plus v z delta v x over delta z that takes care of differentiating this term here
+this three derivatives acting on this term, the next term will be a v y outside and in e y.
+So, we have a v y plus e y times this term a when this e for done this write, so you have a
+v x v y v z and then, I am going to take to this offer and act on that.
+So, this is going to be a v x delta v y over delta x delta v y over delta we got do this
+properly. So, I have v x, what have by done? I differentiate it v x each time plus v y the
+term is quit correct. So, I have a v x delta v y over delta x plus v y delta v y over delta y
+plus v z delta v y over delta z, so that is perfectly correct plus z times, so we got this term
+here and it is a v x acting on this fellow here, so its v x delta v z over delta x plus v y
+delta v z over delta y plus v z delta v z over delta z, so those are the nine terms here.
+And now, add them of in this form here this plus this plus this etc, what do we get, does
+not the best way to add it up. Now, let us dot this with v dot, so that is it this is going to
+be v x up course v x ex plus v y e y plus v z e z and a use the fact that ex dot e x is 1 e x
+dot e y is 0 ex dot e z is 0 etc. So, doting this is going to be give me ex dot e x is one and
+its multiplied by a v x out here. Then, the e x dot e y is 0, e x dot e z is 0 the v y part of it
+is just going to produce a v y here and the v z part of it is just going to produce a v z here
+that is it and we are in good shape.
+
+(Refer Slide Time: 17:04)
+
+So, we now have a formula with says v dot v dot del on v is equal to lets collect terms
+and a collect this term this term and this term first and note is that v x is a common
+factor. So, this is v x times delta over delta x v x square over 2 plus v y square over 2
+plus v z square over 2. Because, v y delta v y over delta x is half the derivative of v y
+square and similarly half the derivative above v z square.
+So, its v x times this plus v y times delta over delta y exactly the same quantity v x
+square over 2 plus v y square over 2 plus v z square over 2 plus v z delta over delta z v x
+square over 2 v y square over 2 v z square over 2, which is up course equal to v x delta
+over delta x v square over 2, because that is the definition the square was the magnitude
+of the velocity plus v y delta over delta y v square over 2 plus v z delta over delta z v
+square over 2. But, this looks like v dot the gradient of half v square. So, we finally, have
+an identity, which says this quantity is equal to v dot del acting on v square over 2 this is
+the scalar quantity scalar operator acts on 2, which is, what this quantity is here.
+
+(Refer Slide Time: 19:16)
+
+Putting this back in are equation we, now have a statement with says that 0 equal to
+minus v dot the gradient of integral d p over rho of p plus phi, whatever be the potential
+per unit mass of this fluid plus v square over 2. I move the thing this side from the left
+hand side to the right hand side and took the v dot outside, so its v dot gradient of this.
+Now, what is the meaning of this statement here, it says that this scalar quantity its
+gradient has no component along the vector v at any point.
+But, the vector v at any point its direction is actually the stream lines direction. So, it
+says, that if you have a stream line like this at this point this is the direction of the
+velocity v and this statement says that this scalar function has no component its gradient
+has no component along this direction at all. Therefore, it cannot change along this
+direction this scalar function cannot change along this direction if you recall the gradient
+of a scalar gives me the rate of change of this scalar function along any direction, what,
+so ever one side dot it with a unit vector of the direction.
+In this case the velocity v is tangent to the stream lines and it says that at every point this
+scalar function does not have any change assume move along this tangent. In other words
+along a stream line as you go bit by bit increment by increment this scalar quantity does
+not change. So, this is Bernoulli’s principle it says that integral d p over rho of p plus phi
+plus v square over 2 equal to constant on extreme line this is Bernoulli’s principle in a
+general form it does in say it is the same constant on different stream lines.
+So, if a fluid flows like this and this is of the other stream line this are the other stream
+
+lines and that is the portrait of all the stream lines this quantity is some constant c 1 on
+this some other constant c 2 on this some other constant c 3 on this and so on. In general
+this is, what happens, but otherwise on each given stream line we as said that this
+quantity is a constant. What are the assumption, that went in to it we set that the flows in
+this it this no viscosity no dissipative forces be set that the force external force on it is
+conservative comes from a potential is a gradient of the potential the flow is barotropic.
+So, write you have density as the function of the pressure of the fluid and the flow is
+steady, so delta v over delta t is 0. Under those conditions this quantity is constant on a
+stream line, now we can immediately apply this to the case of an incompressible fluid
+there of course the rho comes out.
+(Refer Slide Time: 22:43)
+
+And, if the fluid is incompressible this will immediately in phi p plus rho times phi plus
+1 half rho is square equal to constant on a stream line rho just a constant and in take role
+of d p gives you p and that is it this is the form in which you usually familiar with this. In
+fact if this comes from gravity and you have a flow, which is under gravity for instance,
+then this is written as rho g z in general, so p plus rho g z plus half rho v square equal to
+constant this the form, in which you usually learn an elementary treatments, what the
+Bernoulli’s principles.
+If it is a gas for instance, then the density is extremely small and in general it terms out
+that the effect of this pressure difference this gravity a potential difference is very, very
+negligible. And therefore, if you neglect this, then it says p plus half rho v square is
+
+constant, which is the form in, which we see, then its most elementary form here.
+Incidentally, if this is a stream line and you have a pressure p 1 and density rho 1 here
+and a pressure p 2 and a density rho 2 here and a height h 2 and this is a some height h 1
+how of the ground level.
+(Refer Slide Time: 24:26)
+
+Then, this equation here tells as that p 1 plus rho 1 a rho g h 1 plus 1 half rho v 1 square
+equal to p 2 plus rho g h 2 plus 1 half rho v 2 square. The velocity is v 1 here there this
+velocity speed is v 1 here in v 2 there tells you this. So, it actually says the p 1 minus p 2
+over rho let us take rho plus g times h 1 minus h 2 equal to 1 half v 2 square minus v 1
+square. So, the change in the kinetic energy if you like is equal to the work done on this
+fluid by this pressure had on the gravitational potential.
+So, the force of gravity and the pressure it together to do work and change the kinetic
+energy of this fluid and its written in this form. So, this is the form, in which Bernoulli’s
+principle is used very, very half. But, we have a much more general relationship, which
+actually says that when you have barotropic flow of the steady flow of the bar tropic
+fluid under a conservative external force in the absence of viscosity it is this quantity that
+is constant along any given stream line here.
+Next are like to introduce a slightly more shuttle concept in fluid flow and that has do
+with circulation this is not generally talk at in elementary level, but I want to do this,
+because a game we want it seen that fluid flow as offer does a very natural way of
+understanding set an operations like the gradient of a scalar this the flux of a vector field,
+
+which means the divergences of a vector field the flux per unit volume. There is a one
+more concept called the circulation of a vector field.
+And since, it appears, so half in various applications of vector analysis such as a
+Maxwell equations in electro magnetism its worth doing it here and I intent do that. Next
+we will discuss in very elementary terms the concept of the circulation of a vector of a
+fluid and, what is meant by the curl of the vector should of the velocity, because it has
+physical implications.
+
+

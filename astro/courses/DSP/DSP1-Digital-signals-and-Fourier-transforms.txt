@@ -1,0 +1,229 @@
+### DSP1 Digital signals and Fourier transforms
+    - $MY_BOOKS/Astro/DSP/MOOC-Signal-Processing.pdf
+    - https://www.coursera.org/learn/dsp1/home/welcome
+    - ~/Study/Playlists/DSP/DSP1.m3u
+
+### Blocks
+    - 1-1: DSP: the Basics
+    - 1-2: Signal Processing Meets Vector Space
+    - 1-3: Fourier Analysis: the Basics
+    - 1-4: Fourier Analysis: More Advanced Tools
+
+
+### 1-1: Digital Signal Processing: the Basics
+
+    - What is digital signal processing?
+        - SIGNAL: 
+        - Description of evolution of physical phenomenon
+            - weather           ->   temperature
+            - sound             ->   pressure (one possible description)
+            - sound             ->   magnetic deviation on tape
+            - light intensity   ->   gray level on paper (2D signal in space, not time)
+
+        - Processing part:
+            - Make sense of the signal info 
+            - ANALYSIS: 
+                - understanding the info carried by signal 
+                - (maybe extract more high-level description)
+            - SYNTHESIS: 
+                - create a (new?) physical phenomenon (ie
+                  a signal) that contains the info we want to put
+                  out in the world
+
+        - Problem with ANALOG signals:
+            - I have devices that record the signal, but what is
+              the function `f(t)` that describes the phenomenon?
+            - Solution: digital: represent the series as
+              a sequence of integer numbers...
+                - $MY_IMAGES/astro/DSP/what-function-for-analog.jpg
+
+        - Digital Paradigm: DISCRETE TIME: 
+            - this is the REAL SHIFT in the way we perceive the
+              world
+            - can we really splice up time into a series of
+              discrete instances and not lose information?
+            - this is tied to the very nature of time: 
+                - WHAT IS TIME?  
+                - AUGUSTINE: 
+                    - time doesnt exist  
+                - KANT: 
+                    - Time and space are fundamental categories
+                      of the spirit. 
+                    - They precede the existence of objects
+                      a priori.
+                - ZENO:  
+                    - Dichotomy: cannot have an infinite number
+                      of time segments summing to a finite
+                      number. (however small each segment is) 
+        - Question: How do we go from analog to discrete?
+            - $MY_IMAGES/astro/DSP/analog-measurements-to-discrete.jpg
+        - ANALOG is hard: 
+            - calculus needed to compute average temperature:
+            - $MY_IMAGES/astro/DSP/analog-use-calculus-for-avg.jpg
+        - DISCRETE: just sum the values and divide by the number
+          of samples!
+            - $MY_IMAGES/astro/DSP/discrete-calculate-avg.jpg
+            - We don't want models with mappings 
+                - from the set of `infinite REALS` to values. 
+            - Instead we want to go 
+                - from the set of `INTEGERS` to values.
+                - $MY_IMAGES/astro/DSP/set-of-integers-mapping-to-values.jpg
+
+            - Time: becomes the ordinal dimensionless number `n`
+
+            - Do we lose information and power if we switch to
+              discrete time?  
+            - Answer: no: 
+                - Nyquist and Shannon proved that the continuous
+                  time representaiton and discrete time
+                  representation are equivalent (under very mild
+                  conditions)
+            - This is known as the _SAMPLING THEORM_ (1920):
+                - $MY_IMAGES/astro/DSP/sampling-theorem.jpg
+                - $MY_IMAGES/astro/DSP/sampling-from-continuous-to-discrete.jpg
+                - Using Fourier and others, we'll always be able
+                  to choose a sampling interval that will satisfy
+                  the hypothesis of the sampling theorem...
+
+            - Discrete amplitude: 
+
+            - With a DISCRETE time, and DISCRETE amplitude, we
+              have everything mapped to integers... and that's
+              very effective for:
+                - storage  
+                - processing  
+                - transmission  
+                    - Now we use a universal to store all types
+                      of signals, not the old way where we had
+                      a different receiver for each analog
+                      signal...
+                    - $MY_IMAGES/astro/DSP/analog-storage-different-for-every-type.jpg
+                - and software running on a universal
+                  architecture replaces lots of hardware from the
+                  past
+
+            - NOISE: 
+                - you always get your original signal attenuated
+                  by a factor `G` along with noise `σ(t)`
+                    - $MY_IMAGES/astro/DSP/noise-attenuation.jpg
+
+            - Undo:
+                - you can undo the attenuation by boosting it
+                  with gain, ... 
+                    - but you've also inflated the noise that was
+                      introduced by the channel!
+                - So you re-create a signal that has comparable
+                  amplitude to the original signal, but the noise
+                  is much larger too...
+                    - $MY_IMAGES/astro/DSP/noise-amplified-too.jpg
+
+            - Repeaters:
+                - regenerate the signal to the original level...
+                  eg every 10km in the trans-Atlantic telephone
+                  cable
+                - but after `n` sections of the cable though, you get
+                  the noise amplified `n` times!  
+                    - $MY_IMAGES/astro/DSP/noise-amplified-n-times.jpg
+
+            - transmitting a digital signal:
+                - encoded in binary form as "1" and "0"
+                - "1" = +5 volts  
+                - "0" = -5 volts  
+                - much easier to repeat and amplifiy the signal
+                  using a THRESHOLD: 
+                    - if voltage > 0 => `+5 volts`  => "1"
+                    - if voltage < 0 => `-5 volts`  => "0"
+                    - if voltage < 0
+                - $MY_IMAGES/astro/DSP/repeat-amplify-digital-signal.jpg
+
+            - First lecture summary:
+                - $MY_IMAGES/astro/DSP/dsp-processing-key-ideas.jpg
+
+    - Discrete-time signals
+    - How your PC plays discrete-time sounds
+    - The Karplus-Strong algorithm
+    - Complex exponentials
+    - Goethe's temperature measurement
+
+
+### 1-2: Signal Processing Meets Vector Space
+    - Modeling signals as vectors in an appropriate vector space.
+      Using linear algebra to express signal manipulations.
+
+    - Reading: Introduction
+    - Video: 1.2.1 Signal processing and vector spaces
+    - Reading: Introduction
+    - Video: 1.2.2.a Vector space
+    - Video: 1.2.2.b Signal spaces
+    - Reading: Introduction
+    - Video: 1.2.3 Bases
+    - Reading: Introduction
+    - Video: 1.2.4.a Subspace-based approximations
+    - Video: 1.2.4.b Polynomial Approximation
+    - Reading: Practice homework
+    - Reading: Notes and Supplementary Material
+    - Video: Signal of the Day: Exoplanet hunting
+    - Notebook: Haar Bases for Image Compression
+    - Ungraded Plugin: Feedback W2
+
+
+### 1-3: Fourier Analysis: the Basics
+    - The fundamental concepts behind the Fourier transform and
+      the frequency domain
+
+    - Reading: Introduction
+    - Video: 1.3.1.a The frequency domain
+    - Video: 1.3.1.b The DFT as a change of basis
+    - Reading: What have we learned?
+    - Reading: Introduction
+    - Video: 1.3.2.a DFT definition
+    - Video: 1.3.2.b Examples of DFT calculation
+    - Video: 1.3.2.c Interpreting a DFT plot
+    - Reading: What have we learned?
+    - Reading: Introduction
+    - Video: 1.3.3.a DFT analysis
+    - Video: 1.3.3.b DFT example - analysis of musical instruments
+    - Video: 1.3.3.c DFT synthesis
+    - Video: 1.3.3.d DFT example - tide prediction in Venice
+    - Video: 1.3.3.e DFT example - MP3 compression
+    - Reading: What have we learned?
+    - Reading: Introduction
+    - Video: 1.3.4.a The short-time Fourier transform
+    - Video: 1.3.4.b The spectrogram
+    - Video: 1.3.4.c Time-frequency tiling
+    - Reading: What have we learned?
+    - Reading: Practice homework
+    - Reading: Real-valued Transforms
+    - Video: Signal of the Day: The first man-made signal from outer space
+    - Notebook: How to Plot the DFT
+    - Notebook: DFT and Numerical Precision
+    - Notebook: Dial Tones
+    - Ungraded Plugin: Feedback W3
+
+
+### 1-4: Fourier Analysis: More Advanced Tools
+    - Delving deeper in the world of Fourier analysis.
+
+    - Reading: Introduction
+    - Video: 1.4.1.a Discrete Fourier series
+    - Video: 1.4.1.b Karplus-Strong revisited and DFS
+    - Reading: What have we learned?
+    - Reading: Introduction
+    - Video: 1.4.2.a Karplus-Strong revisited and the DTFT
+    - Video: 1.4.2.b Existence and properties of the DTFT
+    - Video: 1.4.2.c The DTFT as a change of basis
+    - Reading: What have we learned?
+    - Reading: Introduction
+    - Video: 1.4.3.a Sinusoidal modulation
+    - Video: 1.4.3.b Tuning a guitar
+    - Reading: Introduction
+    - Video: 1.4.4.a Relationships between transforms
+    - Video: 1.4.4.b Zero padding
+    - Reading: Introduction
+    - Video: 1.4.5 The fast Fourier transform
+    - Reading: Practice homework
+    - Reading: Notes and Supplementary Material
+    - Video: Signal of the Day: Tristan Chord
+    - Notebook: Can You Hear the Phase of a Sound?
+    - Notebook: Audio Frequency Beatings
+    - Ungraded Plugin: Feedback W4

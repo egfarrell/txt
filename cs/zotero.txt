@@ -1,0 +1,78 @@
+### Handy
+    - Copy bibtex entries to clipboard          highlight entries, press "Ctrl + shift + c"
+    - Expand   all collections                  "+" on numeric keypad
+    - Collapse all collections                  "-" on numeric keypad
+    - Linux: Which collection object in?        press ALT
+    - Windows: Which collection object in?      press CONTROL
+    - Dont auto search                          start search term with "
+
+### Delete pesky comment attachments
+    - search for "comment:"
+    - Then select all and delete
+
+### My zotero setup Nov 2022
+    - The main Zotero Data folder is in my "study" folder ...
+        - $MY_IMAGES/misc/zotero-setup-nov-2022.jpg
+
+    - The _linked attachment_ base folder is 'zotero-papers' on
+      an SD card...
+        - Ah I'm not going to bother using zotfile anymore... too
+          much complication (?)
+        - So I've deleted all the linked PDF files
+
+
+### ZOTERO full-text indexing
+    - I switch if off 
+    - goto "Edit - Preferences - Search"
+    - set "Maximum characters to index per file" = 0
+
+### ZOTERO attachment rename string
+    - `extensions.zotero.attachmentRenameFormatString`
+    - https://www.zotero.org/support/preferences/hidden_preferences#translator_preferences
+    - In "Edit - Preferences - Advanced - config editor"
+    - Orig: {%c - }{%y - }{%t{50}} _(title %t limit 50 chars)_
+    - Mine: `{%y-}{%t{50}}`
+    - NOTE: 
+        - If there's a single comma in the PDF title (which will
+          mess-up vim) then: 
+        - rename the _parent item_. 
+        - Then rename the attachement.
+
+### ZOTFILE attachment rename string
+    - My custom rename: {%a-}{%y-}{%t}
+    - Zotfile settings 1  $MY_IMAGES/cs/zotfile-settings-01.jpg
+    - Zotfile settings 2  $MY_IMAGES/cs/zotfile-settings-02.jpg
+
+
+### Turn off auto-updates
+    - open config editor
+        - $MY_IMAGES/cs/zotero-config-editor.jpg
+    - `app.update.auto = false`
+        - https://www.zotero.org/support/preferences/hidden_preferences
+
+### Weird Error
+    - Failed to load backend for 'application/pdf
+    - https://forums.zotero.org/discussion/66109/5-0-beta-error-on-linux-related-to-libnss3-so
+    - triggered by a new update, sometimes multiple zotero
+      restarts fixes it
+    - I disabled auto-updates to stop this
+
+### old lubuntu shortcut
+    <!-- run firefox zotero profile -->
+    <keybind key="w-z">
+      <action name="Execute">
+        <command>firefox -P zotero -no-remote</command>
+      </action>
+    </keybind>
+
+
+### firefox plugin
+    goto Advanced
+        -> Files and Folders (tab)
+            -> Data Directory Location
+                -> custom (radio button)
+                        /home/ef/study/zotero
+
+### store pdfs in box webdav
+    > https://dav.box.com/dav
+    then enter my box credentials

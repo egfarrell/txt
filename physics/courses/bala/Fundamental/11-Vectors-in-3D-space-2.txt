@@ -1,0 +1,303 @@
+$MY_VIDEOS/physics/bala_fundamental/11-Vectors-in-3-Dimensional-space-continued.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 11
+Vectors in 3 - Dimensional Space
+Now, let us do something about a vector analysis, which is of great practical importance
+whenever you look at the vectors of different kinds, different vectors in a given problem
+and here is the general problem.
+(Refer Slide Time: 00:33)
+
+Suppose, I give you in three dimensional space a vector a and another vector b, arbitrary
+vector b in this fashion. I could ask the following question, how much of this b points
+along a, what is the projection of the vector b along a, what is the component of b along
+a; that is a question which arises in practices very, very often. Well, one way to do this
+would be to say, I write b in Cartesian coordinates, b x, e x, b y, e y plus b z, c z.
+Similarly, for a and I take the overlap between the two which is b dot a and try to
+discover how much of b is along a, using the fact that e x dot e x is 0 and e x dot e x is 1,
+e x dot e y is 0 and so on, that is one crude way of doing this. But, there is a more elegant
+way of doing this and that is what I would like to show you today. If I project this vector
+on to this vector, it is equivalent to say I draw perpendicular from there and let me draw a
+better figure.
+Here, if I project this b on to a; that is like saying draw perpendicular and this length here
+
+is the projection of b in the direction of a. Now, you can easily write down what that is,
+because the angle between these two vectors is theta. When, b dotted with the unit vector
+in the direction of a in this direction is of a, is of course the magnitude of this length here
+and the direction of this segment, line segment is along e a. So, this here is e prime, this
+is a scalar, this is a number and that multiplied by the unit vector will give me the actual
+vector.
+So, that represents this vector in the tip ending here at this point. So, what I have done is
+to write this b vector as b along a. So, let me call it b parallel and the rest will be of
+course, perpendicular to a and let me call that b perpendicular. So, this is along a and this
+is perpendicular to a, that could be in a plane perpendicular to a anywhere, the
+perpendicular component could be anywhere, because b could point anywhere starting
+with this a here.
+So, the target now is to write down formulas for b parallel and b perpendicular and b
+parallel is extremely simple to write down, this is equal to b parallel. Of course, we do
+not like me to write the unit vector in the direction of a, it is easy to see that this by
+definition is equal to the vector a divided by the magnitude of a. Because, the vector a is
+the magnitude of a multiplied by the unit vector in it is direction.
+So, I can write b parallel to be equal to b dot a times a divided by a square, because there
+is one a coming from this unit vector and another a coming from that unit vector. So, I
+have a formula for b parallel, it is very straight forward. Now, what can b perpendicular
+be, well it is clear that b perpendicular is b minus b parallel.
+
+(Refer Slide Time: 04:23)
+
+So, it is immediately obvious that I write an identity, this is identically equal to let me
+write it as a dot b, a over a square plus the vector b minus the same thing a square. So,
+this is b parallel and this part is b perpendicular and the question is, is there some simple
+formula for this portion is written in more compact way than in this rather in easy
+notations. It is just an identity, all we have done is to resolve this vector into two
+components, one of which is along a and the other is in a plane perpendicular to a,
+somewhere in this direction.
+In this case, in this figure, it would something like that, that would be the perpendicular
+component and the two added up would give me this vector b. So, this is called the
+resolution of a given vector b, along some other vector a, any other given vector a. And
+what we seeking is a formula for this portion, which makes it look to very straight
+forward simple way of writing this resolution here.
+Now, notice I am not chosen any specific coordinate frame here at all, because it is not
+necessary, we working entirely in terms of dot and cross products and that is enough.
+Now, what is the next step? Well, that requires a little bit of an identity and I am going to
+spend a little bit of time talking about this identity; that is the following.
+
+(Refer Slide Time: 06:06)
+
+But before that, I need to do the following, I need to point out that in the Cartesian basis
+e x, e y and e z the unit vectors and these vectors satisfied the property e x dot e x is
+equal to e y dot e y is equal to e z dot e z equal to 1. And moreover, they form what is
+called a right handed system of a unit vectors, in the sense that e x cross e y is equal to e
+z, which says that here is x, here is y, here is z.
+So, if you took the unit vector in this direction and you rotated it to 90 degrees up to e y,
+then the screwdriver, the right handed screwdriver would move in the direction of z. So,
+that is a right handed coordinate system, this forms a right handed triangle of unit vectors
+and so on. This is in slightly permutation e y cross e z equal to e x and e z cross e x equal
+to e y. I should mention here that in three dimensions, once you have x, y, z in cyclic
+permutation, then you can actually write down the value of any cross product of two
+vectors the way I write down for a and b.
+
+(Refer Slide Time: 08:00)
+
+But, it is useful to have a mnemonic device for this and the one that is most common is
+to write, I think like and this is a standard thing in text books. If this has components a x,
+a y, a z and similarly for b, then this is written as the determinant i, j, k; a x, a y, a z; b x,
+b y, b z. I am going to put this in quotation marks, because it is not a great idea to write it
+in this fashion, it is very misreading. Because, you cannot have a determinant in which
+the first row consists of unit vectors and the other two rows consists of components of
+vectors.
+In a determinant which is the proper determinant in the correctness of the word, the
+nature of all the elements should be exactly the same. You cannot have a determinant in
+which, one row has one kind of element and another row has another kind of element or
+anything like that mathematically speaking. So, this is only a mnemonic, it is not a
+rigorous formula at all.
+
+(Refer Slide Time: 09:26)
+
+It is easy enough to write down what the cross product is, because I know that if I have
+two vectors a and b, then the x component of the cross product is a to b 3 minus a 3, b 2
+and then, it is cyclic permutations of 1, 2, 3. So, it is a 3, b 1 minus a 1, b 3 and then, a 1,
+b 2 minus a 2, b 1; where I have call the vectors a and b or said the components are a 1, a
+2, a 3 and b 1, b 2, b 3 instead of x, y, z.
+So, it is easy enough to remember this and write it down and I do not find that this is
+particularly helpful, but this is written down in elementary text books very often. But, it
+is also misreading, because it is certainly not a properly determinant problem. Now, the
+next thing we need is the following.
+(Refer Slide Time: 10:25)
+
+We have seen what the geometrical meaning of a cross b is in terms of the area of a
+parallelogram. Now, the questions we could ask them is, what is this quantity a dot b
+cross c? If you give me three vectors a, b and c in space, three dimensional space, what is
+the meaning of a dot b cross c? Well, that is not very have to figure out, because if these
+vectors are in this fashion v for example, so here is a, here is b and that vector c going
+into the board in a limit.
+Then, b cross c as you know is the area of this parallelogram and you are dotting it with
+a, which means you taking the projection of a along the direction normal to this
+parallelogram. But, that in magnitude is precisely the volume of a parallelepiped form
+from these vector, not very good at drawing this, but it is precisely the volume of this
+parallelepiped from a, b and c.
+So, the magnitude of this quantity, because the sign of this quantity, it is a scalar could be
+the plus or minus 1, but the magnitude of this quantity is equal to volume of
+parallelepiped form from a, b and c. And when would it be 0? It would clearly be 0, if
+this dot product vanished and when would it vanished, it would vanished if this vector
+was perpendicular to the vector b cross c.
+But, what is that mean, b cross c is in a plane normal to the plane form by b and c and
+this vector is perpendicular to it, it means it is back in the plane form by b and c. So, it is
+equivalent to say that I have a parallelepiped in which the third vector, instead of sticking
+how to the plane form by the first two is in the plane itself. So, the volume vanishes, the
+volume is identically 0.
+So, in the case in which a, b, c are coplanar, this is identically equal to 0, equal to 0 if and
+only if a, b, c are coplanar, that is a useful piece of information to know. We could also
+write down, what are the component, what is the actual magnitude of this quantity here,
+if you write in terms of the components of a, b and c.
+
+(Refer Slide Time: 13:18)
+
+So, that is an exercise left to the student to you, it is an easy exercise. So, here it is
+exercise, write out a dot b cross c in terms of the components.
+(Refer Slide Time: 14:08)
+
+So, write it out in terms of the components of a, b and c, which means you take a to b.
+Let us write it as 1, 2, 3, a 1, a 2, a 3; b is equal to b 1, b 2, b 3 and c to be c 1, c 2, c 3.
+These are the Cartesian components of any three vectors a, b, c. In general, take it to the
+non planar in some arbitrary directions in space and then, write this combination out in
+terms of a, b and c, write down, what this volume of this parallelepiped is.
+
+(Refer Slide Time: 14:46)
+
+And verify the volume; let us call it the volume of this parallelepiped, that is what this
+quantity is, then magnitude that this volume is proportional to a certain determinant form
+from the components of a, b and c. So, verify that this is a proportional to a 1, a 2, a 3, b
+1 or let us write it properly, this fashion into the matter a 1, a 2, a 3, b 1, b 2, b 3, c 1, c 2,
+c 3. So, this so called triple scalar product, triple scalar product has a very simple
+geometrical meaning.
+It is related to the volume of the parallelepiped from this three c vectors and that volume
+in turn has a very simple expression in terms of the determinant form by writing the
+column vectors down as column vectors next to each other and then, taking the
+determinant of the result. So, all this a facts of important geometrical a significant and
+the lot of practical use as well, generalizations to high dimensions etcetera, etcetera exist.
+So, this is something which is worth very fine that the so called triple scalar product is
+related to the volume and the volume can be return in form this. By the way, this is a
+reasonable thing, because you can already see in a dot b cross c, if you took the first
+component of it, the x component, so this is a 1 and b 1. The one component of this
+which is b to c 3 minus b 3, c 2 and indeed when you expand the determinant, you see
+you get a 1 times b 2, c 3 minus b 3, c 2. So, that is the first component already there.
+Now, verify that the other two components add up to exactly this determinately up to a
+sign up to in overall sign.
+
+(Refer Slide Time: 17:18)
+
+The next thing we need to look at is what happens, if I took the cross product of a cross
+product. So, what is a cross b cross c, again I emphasize that while this might look like
+just playing around with vectors and doing vector algebra, instead of doing series physics
+and like to say again and again that the physics is buried in it. We are going to use all
+these things in physics at various places. This is very basic mathematics and you need
+this for the proper understanding of physics.
+So, what is this quantity equal to, well one way to do this would be very laborious, write
+down the components. So, write down first b cross c in Cartesian coordinates and then,
+write down a in Cartesian coordinates and use the formula for the cross product of two
+vectors and they should give you the answer completely. But, now I would like to show
+you that this no need to do that, you can actually use a much simpler trick, so write this
+down and it goes as follows.
+Again, I draw a little picture and say, suppose this is b and that go inside is c and that is
+some vector a, write to know what is quantity is, it is a vector, the answer is a vector.
+Now, what I do know is that a cross any vector is perpendicular to the plane form by a
+and that vector. So, in particular it is perpendicular to a, therefore, this vector, whatever it
+is cannot have a component along a, because it is perpendicular to it, because of the cross
+product.
+Let us therefore, call this vector d and the argument is the d cannot have any component
+in the direction of a, it cannot have any component in the direction of b cross c either.
+
+But, they so little more complicated, then it say cannot have any component along this
+vector. Now, in three dimensional space, if I have three non coplanar, non co linear
+vectors, then the coordinates of any point can be written as some multiple of the unit
+vectors in the first direction.
+The second direction and the third direction, independent of whether this directions of
+perpendicular to each other or not, I can use ably coordinates in a plane or in three
+dimensions. So, in general, I can write down the coordinate of any point, the position
+vector of any point, I can express as a linear combination of numbers times the vectors b
+c and a in general.
+But, now I am saying that this vector d cannot have any component along a, therefore, it
+can only have components along b and c and therefore, this answer must be d must be of
+the form something times b plus something times c and these something must be scalars.
+Because, the vector part is already taking care of by b and c, so this is a scalar and this is
+a scalar.
+Now, what can the scalars be, well the left hand side here has it a to first power and
+therefore, the right hand side must also linear in a, there is a b to the first part. So, it must
+be linear in b, it must be linear in c, but this already b here. Therefore, this term here
+must be a scalar formed out of the other two vectors a and b, a and c, this no other
+choice. So, this must be a scalar from a and c and this must be a scalar from a and b.
+Let us look at this first, what are the possible scalars you can form two vectors a and c,
+well a dot a are a squared is one of them, c dot c or c squared is one of them and a dot c
+is one of them. That is it, there are no other scalar which a independent, which can be
+form from two vectors a and c. Everything else a function of these combinations c, but
+this side this quantity must be linear in a, if I multiply this left hand side, if I multiplied
+by a by 6, the answer must multiply by 6.
+And the only happens if it is linear in a here and linear in a here completely. Therefore,
+this is rolled out, that is rolled out, no non-linear terms along, it is got to be a dot c. So,
+this must be a dot c and I put it in bracket to tell you that it is a scalar a dot c times b.
+But, there is nothing to stop this from being square root of phi times a dot c or 18 times a
+dot c we do not no.
+So, this some constant lambda times a dot c, absolute constant, because independent of
+what a, b, c are this thing here must be the same number, it cannot depend on a, it cannot
+
+depend on c, it cannot depend on d. So, therefore, it is got to be a pure number,
+dimensional less number here.
+(Refer Slide Time: 23:00)
+
+Similarly, the same argument says this must be a dot b and it must be multiply by some
+number mu. So, these are absolute constants pure numbers, nothing to do with a, b, c are
+anything like that, like 2 phi or 4, whatever. So, that is a formula for d, already we see
+the dependence on a, b, c is already explicit and then, there are two unknown numbers
+here.
+(Refer Slide Time: 23:41)
+
+What do we do next, well we argued by saying that, the way we constructed the cross
+
+product of two vectors was such that while two vectors b dot c give a dot product, which
+is the same as taking it in the other order c dot b. But, b cross c is equal to minus c cross
+b, the cross product was anti symmetric under exchange of the two vectors and the
+product. Because, we wrote the components down we had things like b 1, c 2 minus b 2,
+c 1 and of course, if you interchange b and c minus sin appears immediately in each of
+the components.
+So, this is an anti symmetric product is the anti symmetric. We explode that here and if I
+interchange c and b instead of b, I write c instead of c, I write b, then I get exactly the
+same formula here. But, wherever I got c, I must write as b, wherever I got b I must write
+c and put a minus sin. So, this must be equal to minus lambda times a dot b c minus mu
+times a dot c.
+No, other possible, again I go the argument and I started with a cross c cross b by
+interchanging b and c and I got minus the original answer b should go to minus itself.
+But, b is given by this in the case of b cross c and it is given by this in the case of the
+interchange. Now, this is only possible as you can see these two must be equal to each
+other and this is only possible if mu is equal to minus lambda and lambda is equal to
+minus u, no other possible.
+(Refer Slide Time: 25:36)
+
+So, it says now almost home, it says that this quantity a cross b cross c must be equal to
+some constant lambda times a dot c b minus a dot c is no other possible, where lambda is
+an absolute number, pure number. The next job is to find out, what this number is, well
+
+for this now, since the does not depend on it a, b, c or I use the fact, that in the case of a
+simple choice like what if a, b, c, are Cartesian unit vectors, I know the e x cross e y is
+equal to e z and so on.
+So, let we choose for instants without this is e x say and let us choose this to be e y and
+this back to be e x. So, a is e x b is e x, c is e y. Now, what is this reduce then, we know
+that e x cross e x cross e y is equal to e x cross e z, because that is what e x cross e y is
+for the right hand tried, which is equal to minus e y. So, on the left hand side in this
+choice, I get minus e y, but I apply this formula and I get lambda times a dot c. But, a
+was e x and c was e y and e dot e x dot e y, b was also these of x out here minus a dot b a
+dot b is e x dot e x and then, c was e y is a fashion.
+But, e x and e y perpendicular to each other, so e x dot e y is 0 and e x is a unit vector.
+So, e x dot ex is plus 1. So, this side you get a minus lambda e y. So, you got the result
+that minus e y is minus lambda times e y and that is not a very hardly equation to solve
+this implies of course, that lambda is equal to 1 plus 1. And therefore, we have a general
+formula for this vector triple product by the way this thing is called a vector triple
+product.
+And you can ready to write down, what this formula is lambda is got be 1; that is it; that
+is the formula; that is the formula for the vector triple product. And notice, I did not use
+any special coordinate system, I did not write down the components of a, b and c and so
+on. I use extremely general arguments to find out, that the answer can only be this, it
+cannot be anything else, this fashion.
+
+(Refer Slide Time: 28:36)
+
+Exercise, use similar arguments to simplify a cross b dotted with c cross b, take four
+vectors in three dimensions a, b, c d arbitrary vectors, find the vector a cross b, find the
+vector c cross d and take the dot product between the two, it is a scalar of course. And
+find what this is, you get a formula similar to this expect is first scalar, this number here
+is a scalar and use exactly the same sort of argument.
+The fact that the answer must be proportional to a, proportional to b, proportional to c,
+proportional to d, so it cannot be non-linear any of these vectors magnitudes and it is
+must be a scalar at the n. So, you need to know, what are the possible scalars you can
+form from a, b, c and d; other then the magnitudes e squared and the answer is of course,
+you can form a dot b, a dot c, a dot d in form b dot c b dot d and c dot d. So, you have six
+possibilities in the answer must be a combination of these possibilities.
+So, use this is an interesting exercise, without going into components to simplify this
+combination. So, this is a little bit of vector analysis, what I will do next time is to go
+into dynamics. We going to talk about, what happens when you actually put in forces and
+so on and we will try to write down the equations of dynamic Newton’s equations and
+vector form and see, how we can develop it further.
+
+

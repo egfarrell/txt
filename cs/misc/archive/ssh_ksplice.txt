@@ -1,0 +1,215 @@
+ssh ksplice
+
+Six things I wish Mom told me (about ssh) from The Ksplice Pointer
+Challenge (Ksplice Blog) by Ksplice Post Importer
+
+If you've ever seriously used a Linux system, you're probably already
+familiar with at least the basics of ssh. But you're hungry for more.
+In this post, we'll show you six ssh tips that'll help take you to the
+next level. (We've also found that they make for excellent cocktail
+party conversation talking points.) 
+
+
+(1) Take command!
+
+    Everyone knows that you can use ssh to get a remote shell, but did you know
+    that you can also use it to run commands on their own? Well, you can--just
+    stick the command name after the hostname! Case in point:
+
+    wdaher@rocksteady:~$ ssh bebop uname -a Linux bebop 2.6.32-24-generic
+    #39-Ubuntu SMP Wed Jul 28 05:14:15 UTC 2010 x86_64 GNU/Linux
+
+    Combine this with passwordless ssh logins, and your shell scripting powers
+    have just leveled up. Want to figure out what version of Python you have
+    installed on each of your systems? Just stick ssh hostname python -V in a for
+    loop, and you're done!
+
+    Some commands, however, don't play along so nicely:
+
+    wdaher@rocksteady:~$ ssh bebop top TERM environment variable not set.
+
+    What gives? Some programs need a pseudo-tty, and aren't happy if they don't
+    have one (anything that wants to draw on arbitrary parts of the screen
+    probably falls into this category). But ssh can handle this too--the -t option
+    will force ssh to allocate a pseudo-tty for you, and then you'll be all set.
+
+    # Revel in your process-monitoring glory wdaher@rocksteady:~$ ssh bebop -t top
+
+    # Or, resume your session in one command, if you're a GNU Screen user
+    wdaher@rocksteady:~$ ssh bebop -t screen -dr
+
+
+(2) Please, try a sip of these ports
+
+    But wait, there's more! ssh's ability to forward ports is incredibly powerful.
+    Suppose you have a web dashboard at work that runs at analytics on port 80 and
+    is only accessible from the inside the office, and you're at home but need to
+    access it because it's 2 a.m. and your pager is going off.
+
+    Fortunately, you can ssh to your desktop at work, desktop, which is on the
+    same network as analytics. So if we can connect to desktop, and desktop can
+    connect to analytics, surely we can make this work, right?
+
+    Right. We'll start out with something that doesn't quite do what we want:
+
+    wdaher@rocksteady:~$ ssh desktop -L 8080:desktop:80
+
+    OK, the ssh desktop is the straightforward part. The -L port:hostname:hostport
+    option says "Set up a port forward from port (in this case, 8080) to
+    hostname:hostport (in this case, desktop:80)."
+
+    So now, if you visit http://localhost:8080/ in your web browser at home,
+    you'll actually be connected to port 80 on desktop. Close, but not quite!
+    Remember, we wanted to connect to the web dashboard, running on port 80, on
+    analytics, not desktop.
+
+    All we do, though, is adjust the command like so:
+
+    wdaher@rocksteady:~$ ssh desktop -L 8080:analytics:80
+
+    Now, the remote end of the port forward is analytics:80, which is precisely
+    where the web dashboard is running. But wait, isn't analytics behind the
+    firewall? How can we even reach it? Remember: this connection is being set up
+    on the remote system (desktop), which is the only reason it works.
+
+    If you find yourself setting up multiple such forwards, you're probably better
+    off doing something more like:
+
+    wdaher@rocksteady:~$ ssh -D 8080 desktop
+
+    This will set up a SOCKS proxy at localhost:8080. If you configure your
+    browser to use it, all of your browser traffic will go over SSH and through
+    your remote system, which means you could just navigate to http://analytics/
+    directly. 
+
+
+(3) Til-de do us part
+
+    Riddle me this: ssh into a system, press Enter a few times, and
+    then type in a tilde. Nothing appears. Why?
+
+    Because the tilde is ssh's escape character. Right after
+    a newline, you can type ~ and a number of other keystrokes to do
+    interesting things to your ssh connection (like give you 30 extra
+    lives in each continue.) ~? will display a full list of the escape
+    sequences, but two handy ones are ~. and ~^Z.
+
+    ~. (a tilde followed by a period) will terminate the ssh connection, which is
+    ~. (handy if you lose your network connection and don't want to wait for your
+    ~. (ssh session to time out.  ~^Z (a tilde followed by Ctrl-Z) will put the
+    ~. (connection in the background, in case you want to do something else on the
+    ~. (host while ssh is running. An example of this in action:
+
+    wdaher@rocksteady:~$ ssh bebop wdaher@bebop:~$ sleep 10000 wdaher@bebop:~$ ~^Z
+    [suspend ssh]
+
+    [1]+  Stopped                 ssh bebop wdaher@rocksteady:~$ # Do something
+    else wdaher@rocksteady:~$ fg # and you're back!
+
+
+(4) Dusting for prints
+
+    I'm sure you've seen this a million times, and you probably just type "yes"
+    without thinking twice:
+
+    wdaher@rocksteady:~$ ssh bebop The authenticity of host 'bebop
+    (192.168.1.106)' can't be established. RSA key fingerprint is
+    a2:6d:2f:30:a3:d3:12:9d:9d:da:0c:a7:a4:60:20:68. Are you sure you want to
+    continue connecting (yes/no)?
+
+    What's actually going on here? Well, if this is your first time
+    connecting to bebop, you can't really tell whether the machine
+    you're talking to is actually bebop, or just an impostor
+    pretending to be bebop. All you know is the key fingerprint of the
+    system you're talking to.  In principle, you're supposed to verify
+    this out-of-band (i.e. call up the remote host and ask them to
+    read off the fingerprint.)
+
+    Let's say you and your incredibly security-minded friend actually
+    want to do this. How does one actually find this fingerprint? On
+    the remote host, have your friend run:
+
+    sbaker@bebop:~$ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key.pub 2048
+    a2:6d:2f:30:a3:d3:12:9d:9d:da:0c:a7:a4:60:20:68 /etc/ssh/ssh_host_rsa_key.pub
+    (RSA)
+
+    Tada! They match, and it's safe to proceed. From now on, this is
+    stored in your list of ssh "known hosts" (in ~/.ssh/known_hosts),
+    so you don't get the prompt every time. And if the key ever
+    changes on the other end, you'll get an alert--someone's trying to
+    read your traffic! (Or your friend reinstalled their system and
+    didn't preserve the key.) 
+
+
+
+(5) Losing your keys
+
+    Unfortunately, some time later, you and your friend have a falling
+    out (something about Kirk vs. Picard), and you want to remove
+    their key from your known hosts. "No problem," you think, "I'll
+    just remove it from my list of known hosts." You open up the file
+    and are unpleasantly surprised: a jumbled file full of all kinds
+    of indecipherable characters. They're actually hashes of the
+    hostnames (or IP addresses) that you've connected to before, and
+    their associated keys.
+
+    Before you proceed, surely you're asking yourself: "Why would
+    anyone be so cruel? Why not just list the hostnames in plain text,
+    so that humans could easily edit the file?" In fact, that's
+    actually how it was done until very recently. But it turns out
+    that leaving them in the clear is a potential security risk, since
+    it provides an attacker a convenient list of other places you've
+    connected (places where, e.g., an unwitting user might have used
+    the same password).
+
+    Fortunately, ssh-keygen -R <hostname> does the trick:
+
+    wdaher@rocksteady:~$ ssh-keygen -R bebop /home/wdaher/.ssh/known_hosts
+    updated. Original contents retained as /home/wdaher/.ssh/known_hosts.old
+
+    I'm told there's still no easy way to remove now-bitter memories
+    of your friendship together, though. 
+
+
+
+(6) A connection by any other name...
+
+    If you've read this far, you're an ssh pro. And like any ssh pro,
+    you log into a bajillion systems, each with their own usernames,
+    ports, and long hostnames.  Like your accounts at AWS, Rackspace
+    Cloud, your dedicated server, and your friend's home system.
+
+    And you already know how to do this. username@host or -l username to specify
+    your username, and -p portnumber to specify the port:
+
+    wdaher@rocksteady:~$ ssh -p 2222 bob.example.com
+
+    wdaher@rocksteady:~$ ssh -p 8183 waseem@alice.example.com
+
+    wdaher@rocksteady:~$ ssh -p 31337 -l waseemio wsd.example.com
+
+    But this gets really old really quickly, especially when you need to pass a
+    slew of other options for each of these connections. Enter .ssh/config, a file
+    where you specify convenient aliases for each of these sets of settings:
+
+    Host bob     HostName bob.example.com     Port 2222     User wdaher
+
+    Host alice     HostName alice.example.com     Port 8183     User waseem
+
+    Host self     HostName wsd.example.com     Port 31337     User waseemio
+
+    So now it's as simple as:
+
+    wdaher@rocksteady:~$ ssh bob
+
+    wdaher@rocksteady:~$ ssh alice
+
+    wdaher@rocksteady:~$ ssh self
+
+    And yes, the config file lets you specify port forwards or
+    commands to run as well, if you'd like--check out the ssh_config
+    manual page for the details.  ssh! It's (not) a secret
+
+    This list is by no means exhaustive, so I turn to you: what other
+    ssh tips and tricks have you learned over the years? Leave ’em in
+    the comments!

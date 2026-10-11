@@ -1,0 +1,110 @@
+This is a great fragment, and Hermann is being very characteristic here: enthusiastic, historically aware, and also a bit polemical. I’ll separate what is fairly solid history from interpretation, and I’ll flag where I’m making educated guesses rather than reporting a settled consensus.
+
+––––––––––––––––
+
+1. Who (or which group) had the fibre-bundle / derivations insight?
+   ––––––––––––––––
+
+There are really two closely related but distinct insights mixed together in your fragment.
+
+A. Tangent vectors as derivations
+
+The idea that a tangent vector at a point p is a derivation v: C∞(U) → R satisfying the Leibniz rule v(fg) = f(p)v(g) + g(p)v(f) crystallized in the late 1930s–1940s.
+
+Key figures and lineage:
+• Élie Cartan laid much of the conceptual groundwork earlier, though not in modern algebraic language.
+• André Weil and the Bourbaki circle pushed the algebraic viewpoint hard in the 1930s–40s.
+• Jean Dieudonné and Bourbaki texts normalized the derivation-based definition.
+• Claude Chevalley helped transmit these ideas into Lie theory and differential geometry.
+
+So the “insight” is not due to a single person. It is best seen as a Bourbaki-era synthesis: reinterpreting classical geometric objects as algebraic ones over rings of functions. Hermann is right that, conceptually, this is a very deep simplification.
+
+B. Fibre bundles as the natural global language
+
+The modern theory of fibre bundles was developed slightly later, roughly 1935–1955, and here the attribution is much clearer:
+
+• Hassler Whitney introduced fibre bundles in a topological setting (1935).
+• Heinz Hopf influenced the homotopy-theoretic viewpoint.
+• Norman Steenrod systematized the subject; his book Topology of Fiber Bundles (1951) is exactly the “treasure-trove” Hermann mentions.
+• Charles Ehresmann provided the decisive conceptual leap for differential geometry: connections, principal bundles, associated bundles, and a clean global formulation of Cartan’s ideas.
+
+![Image](https://mathshistory.st-andrews.ac.uk/Biographies/Ehresmann/thumbnail.jpg)
+
+![Image](https://upload.wikimedia.org/wikipedia/en/0/0c/Norman_Steenrod.jpg)
+
+![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/HasslerWhitney-April1973.jpg/960px-HasslerWhitney-April1973.jpg)
+
+Ehresmann is the real hero of Hermann’s narrative. His connection theory (late 1940s–early 1950s) unified Cartan’s moving frames, parallel transport, curvature, and Lie groups in a way that is recognizably modern.
+
+––––––––––––––––
+2. Why did this have the “disastrous side effect” of cutting off communication?
+––––––––––––––––
+
+This is not hyperbole, but it is one-sided. Several overlapping factors caused the rupture.
+
+A. Language and level of abstraction
+
+The derivation viewpoint and fibre bundles replaced concrete coordinates with:
+• rings of functions,
+• sheaves,
+• functors,
+• universal properties.
+
+Physicists (and many geometers) were trained to think in coordinates, components, and explicit formulas. The new language often made simple things look forbiddingly abstract.
+
+From a physicist’s point of view in, say, 1950:
+“Velocity = derivation on a local ring” felt like unnecessary rebranding of something already understood.
+
+B. Bourbaki’s cultural dominance
+
+The Bourbaki style deliberately prioritized:
+• structural clarity over calculational utility,
+• intrinsic definitions over examples,
+• existence theorems over explicit constructions.
+
+This created a sociological divide. Many mathematicians who were not aligned with Bourbaki felt excluded, and physicists felt outright ignored.
+
+Hermann was very sensitive to this. He admired the ideas but disliked the loss of dialogue.
+
+C. Cartan’s ideas became harder, not easier, to learn
+
+Ironically, the fibre-bundle formalism clarified Cartan’s work at a deep level but raised the entry barrier enormously.
+
+To understand “what curvature is” in Ehresmann’s sense, one suddenly needed:
+• manifolds,
+• Lie groups,
+• principal bundles,
+• connections as horizontal distributions.
+
+For physicists used to Riemannian geometry via tensors, this felt like an alien world.
+
+D. Timing: physics wasn’t ready yet
+
+Gauge theory in physics only fully embraced fibre bundles in the 1970s (Yang–Mills, instantons, anomalies).
+
+So in the 1940s–50s:
+• mathematicians built a powerful formalism,
+• physicists didn’t yet have physical problems that forced them to adopt it.
+
+The result was decades of parallel development with little interaction.
+
+––––––––––––––––
+A balanced caveat
+––––––––––––––––
+
+Hermann’s complaint is emotionally true but historically incomplete.
+
+The same ideas he says “cut off communication” later:
+• revolutionized gauge theory,
+• clarified global issues in GR,
+• made anomalies, monopoles, and topological phases intelligible.
+
+So the “disaster” was temporary. It was a failure of translation, pedagogy, and timing—not of the ideas themselves.
+
+If you want, I can:
+• unpack Ehresmann connections in a very physics-first way,
+• relate derivations directly to phase space and Hamiltonian flow,
+• or trace exactly how fibre bundles re-entered physics via Yang–Mills.
+
+Just tell me which direction you want to go.
+

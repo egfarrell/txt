@@ -1,0 +1,37 @@
+# YouTube Control & Distraction-Reduction Setup (Firefox + Linux)
+
+
+POLICIES:
+    - ~/dotfiles/ini/firefox/policies.json
+
+cp ~/dotfiles/ini/firefox/policies.json /usr/lib/firefox/distribution/
+
+sudo chown root:root /usr/lib/firefox/distribution/policies.json
+sudo chmod 444 /usr/lib/firefox/distribution/policies.json
+
+
+
+
+### Leechblock youtube domains
+www.youtube.com
+youtube-nocookie.com
+youtube.be
+yt3.ggpht.com
+i.ytimg.com
+m.youtube.com
+
+
+
+### uBlock Origin Filters
+
+To disable DuckDuckGo’s “Watch here” video playback while keeping search results:
+
+```
+||www.youtube-nocookie.com/embed/*$frame,domain=duckduckgo.com
+||external-content.duckduckgo.com/*$frame
+```
+optional:
+```
+duckduckgo.com##.js-player
+duckduckgo.com##.tile__player
+```

@@ -1,0 +1,104 @@
+
+# note from 'Age of Entanglement'
+    - Highlight Page 34 | Monday, Feb 13, 2012, 09:11 AM
+        - But in Bohr’s atom, the frequency of the electron’s
+          orbit is not the same as the frequency of the light it
+          emits. 
+        - Incredibly, it is a single, pure frequency `halfway`
+          between the orbit where the electron started and the
+          orbit in which it would land, as if the electron,
+          radiating the light, already knew where it was going to
+          stop.
+    - Also
+        - the frequency of the light doesn't depend at all on the
+          frequency of the electron…and this is an enormous
+          achievement. The theory of Bohr must then be right.’”
+
+
+- A quirky bit of quantum lore is hiding in that note. 
+- And yes: the surprising claim is true in Bohr’s model, and your
+  intuition that “the emitted light frequency should match the
+  electron’s orbital frequency” is exactly what CLASSICAL PHYSICS
+  would predict — but QM broke that expectation in a spectacular
+  way.
+
+### 1. Classical expectation (the intuition you learned)
+
+- A charge in circular motion radiates electromagnetic waves at
+  its orbital frequency and its harmonics.
+- So if an electron orbited a nucleus like a tiny PLANET, you’d
+  expect:
+    - emitted light freq `ν_em ≈ ν_orbit (orbital frequency)`
+
+- This is what Lorentz and classical EM worldview predicted.
+
+### 2. Bohr destroys that expectation (1913)
+
+- Bohr asserted three audacious rules:
+
+    - Electrons occupy discrete stationary orbits with energies
+      `Eₙ ∝ −1/n²`.
+    - While in a stationary orbit, an electron does not radiate
+      despite being accelerated.
+    - Light is emitted only when the electron jumps between
+      orbits, with frequency
+        - `ν = (Eₙ − Eₘ) / h`
+
+- This frequency is not the orbital frequency. 
+    - It’s set by the DIFFERENCE of the two allowed energies.
+
+- That is the “theory of Bohr must then be right” line in your
+  note: spectroscopy confirmed that the transition frequencies
+  matched `ΔE/h` precisely, even though they did not match `ν_orbit`.
+
+### 3. What does “halfway between the orbits” refer to?
+
+- Gilder is alluding to an old observation of Bohr’s:
+    - The classical orbital frequency for a Bohr orbit `n` is
+    - `ν_orbit(n) = (2 R c) / n³`
+
+- And Bohr noticed that for large n, the transition frequency
+    - `ν ≈ (Eₙ − Eₘ)/h`
+    - is approximately the average of the two orbital frequencies
+      when `n` and `m` are close.
+
+- In symbols (`n−m = 1` for adjacent levels):
+    - `ν ≈ 1/2 [ν_orbit(n) + ν_orbit(m)]`
+
+- This is the “halfway” remark: in the semiclassical limit, the
+  quantum-jump frequency tends toward the midpoint between the
+  two classical frequencies — but never equals either one. 
+    - It’s a faint bridge between quantum and classical worlds.
+
+- Bohr used this as evidence that his quantized atom still
+  whispered classical hints in the limit of large quantum
+  numbers.
+
+### 4. The actual correct modern statement
+
+In full QM:
+    - The electron in a stationary state has no classical orbital
+      frequency at all — it is a standing wave, not a circling
+      bead.
+    - Light is emitted at frequencies determined solely by `ΔE
+      = Eₙ − Eₘ.`
+    - There is no meaningful “electron frequency” that the photon
+      tracks.
+
+- The Bohr model’s orbital frequencies are vestiges of
+  semiclassical intuition, not physical oscillations of the
+  electron’s position.
+
+### 5. So is the note “true”?
+
+Yes, historically and conceptually:
+
+- In Bohr’s model, the emitted photon's frequency is not the
+  orbital frequency.
+- It is determined solely by the energy difference between
+  levels.
+- In the semiclassical (large-n) limit, `ν_em` lands roughly
+  halfway between the two classical orbital frequencies — but
+  this is a curiosity, not a fundamental rule.
+- Modern QM supports Bohr’s `ΔE/h` rule, but rejects the idea of
+  a literal orbital frequency altogether.

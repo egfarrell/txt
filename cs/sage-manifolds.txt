@@ -1,0 +1,20 @@
+
+
+### Build latest Gourgoulhon Black Holes lectures
+    cd Notes
+    pdflatex bholes
+    pdflatex bholes
+    pdflatex bholes
+    makeindex bholes
+    pdflatex bholes
+    $HOME/dotfiles/bin/misc/bh-build-gourgoulhon.sh
+
+    mv Notes/bholes.pdf $MY_BOOKS/Astro/BH/Gourgoulhon-BH-lectures.pdf
+
+
+### Links
+    - Black holes and geometry lectures  https://luth.obspm.fr/~luthier/gourgoulhon/bh16/
+    - Black holes and geometry notebooks https://github.com/egourgoulhon/BHLectures.git
+    - Example notebooks:                 https://sagemanifolds.obspm.fr/
+    - Tutorial SageDays 2020             https://www.youtube.com/watch?v=8iPpyGrycE8&feature=youtu.be
+    

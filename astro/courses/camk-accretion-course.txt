@@ -1,0 +1,343 @@
+
+
+# Contents
+
+
+### 2019 Lecture course
+    - Bożena Czerny
+    - $MY_BOOKS/Astro/CAMK/2019-Accretion-processes.pdf
+    - Youtube Lectures - https://www.youtube.com/playlist?list=PL9KfozrSC_kG_V-bFJuggm4e1XPbyiu_o
+
+
+### Videos
+    - Intro                                $MY_VIDEOS/Astro/camk-accretion/01.mp4
+    - Accretion: Key parameters            $MY_VIDEOS/Astro/camk-accretion/02.mp4
+    - Accretion Processes                  $MY_VIDEOS/Astro/camk-accretion/03.mp4
+    - Spherical Accretion                  $MY_VIDEOS/Astro/camk-accretion/04.mp4
+    - Test Particle Motion                 $MY_VIDEOS/Astro/camk-accretion/05.mp4
+    - Standard theory accretion disks      $MY_VIDEOS/Astro/camk-accretion/06.mp4
+    - Disk Vertical, Radiation Transfer    $MY_VIDEOS/Astro/camk-accretion/07.mp4
+    - Compton, two-phase medium            $MY_VIDEOS/Astro/camk-accretion/08.mp4
+    - Time evolution, stationary stability $MY_VIDEOS/Astro/camk-accretion/09.mp4
+    - MHD Simulations                      $MY_VIDEOS/Astro/camk-accretion/10.mp4
+    - GRB's, unsolved problems             $MY_VIDEOS/Astro/camk-accretion/11.mp4
+    - Applications: MS, WD                 $MY_VIDEOS/Astro/camk-accretion/12.mp4
+    - Applications: NS                     $MY_VIDEOS/Astro/camk-accretion/13.mp4
+    - Applications: AGN                    $MY_VIDEOS/Astro/camk-accretion/15.mp4
+
+
+
+### Qualitative insights
+    - GR not aboslutely essential!
+    - eg Prof. Bohdan Paczynski contributed signficantly to
+      the theory of accretion disks and never learned GR!
+
+### Recommended
+    - Good for equations: $MY_BOOKS/Astro/BH/Accretion-Power-Astrophysics-Frank-King-Raine.pdf
+    - good basic book:    $MY_BOOKS/Astro/BH/Radiative-processes-Rybicki-Lightman.pdf
+    - Very Detailed:      $MY_BOOKS/Astro/BH/Black-Hole-Engine-Paradigm-Meier.pdf
+    - Also kato book recommended (theres a hard-copy at camk?)
+
+# Lecture 01
+    - $MY_IMAGES/astro/camk-accretion/definition-ad.jpg
+    - Pasteur: Nuovo Cimento 1856, 1st paper on accretion! 
+    - no optical counterparts for quasar radio sources in 1950s
+      60s. Very large error bars on the positions of the radio
+      sources on the sky. (you could find hundreds of possible
+      optical counterparts)
+	- $MY_IMAGES/astro/camk-accretion/maarten-schmidt-3c273.jpg
+    - 1964: Zeldovich, Salpeter predicted accretion onto BH's
+    - two ways of plotting QSO's 
+    - LINEAR plot: 
+        - `Flux` vs. `λ`
+        - shows better emission line profiles 
+    - LOG plot:
+        -  `log nuFnu` vs. `log nu`
+         - shows the continuum better 
+         - SED: shows where more of the energy is dissipated 
+         - ie shows where the energy peaks (in the UV for
+           quasars?) 
+
+    - Note: some starlight appears in the optical spectrum of
+      quasars... eg starbursts, old stars
+
+    - X-rays
+        - hard state: 
+            - most energy comes out in UV 
+            - but in galactic sources (our galaxy!) most is unobservable due to
+              extinction. In the galaxy, most of the sources are
+              in the equitorial plane where extinction is huge.
+        - soft state: 
+            - most energy in X-rays 
+            - absorbed by the ISM 
+
+        - optical bands: source dominated by the companion star 
+
+### Mass exchange
+    - 1 star per million is _currently_ exchanging mass with
+      a companion 
+    - However, over the course of evolution, `1 per 100` stars
+      will experience a mass exchange period during it's
+      evolution
+    - Wavelength dependent:
+        - if we look in the optical, not many stars are accreting
+        - if we look in the X-ray bands, 95% of sources are AGN 
+    - note: all galaxies were active at one stage 
+
+### Molecular cloud echos
+    - Sgr A\* past activity reflected in light echo from
+      molecular clouds from an outburst 400 years ago.
+    - Fermi bubbles: remnants of strong outburst 10 Mya
+    - (we see "radio lobes" in our own galaxy!) 
+	- $MY_IMAGES/astro/camk-accretion/fermi-bubbles-radio-lobes.jpg
+
+### Growth of Galaxy bulge
+    - linear dependence between mass of central BH and mass of
+      galaxy bulge (BH mass `0.1%` of galaxy mass)
+    - the BH doesnt affect the bulge dynamically, but somehow
+      through its activity it affects the growth of the bulge
+    - the active nucleus controls the star burst rate  (in
+      a statistical way?)
+    - plots show peak of quasar activity and peak of star burst
+      activity at roughly the same z-shift? 
+    - which happens first? 
+        - probably star bursts first: quasars always have heavy
+          metals. There's nothing like quasars that only have
+          a Hydrogen line... (have CNO)
+
+### Mini-summary
+    - importance of accretion
+	- $MY_IMAGES/astro/camk-accretion/importance-of-accretion.jpg
+
+### Sources of Energy
+    - `η`: effeciency, dimensionless units
+        - aside: in astro we have so many units, if we can find
+          something dimensionless, thats great 
+    - `η = ∆E / mc^2` = energy gain / rest mass of the fuel * c^2
+    - in everyday life, we mainly use _chemical_ processes 
+        - (fire: the columb interaction of electron shells)
+    - $MY_IMAGES/astro/camk-accretion/accretion-efficiency.jpg
+    - _BH_ efficacy:
+        - they don't have a "surface" so the normal efficiency
+          formula shouldn't be applied to them. 
+        - If you naively applied the formula, you'd get `η
+          = 0.5`. Actually that's not too bad; estimates for true
+          BH `η` are from 5 - 40%.
+
+### Thompson cross-section
+    - electron has a "radius"
+    - It doesn't mean the electron is extended. It just appears
+      like that to a photon 
+    - classical derivatin is wrong: off by `8/5` ~ 50% 
+
+# Lecture 02
+    - sometimes you want to calculate something accurate to 1%...
+    - but sometimes you just need a quick estimate 
+
+    - IMPORTANT PARAMETERS:
+    - Eddington Luminosity
+        - Can radiation flux from a body be arbitrarily high? 
+        - Photon energy: 
+            - `E^2 = p^2c^2 + m^2c^2`
+            - but m = 0
+            - so `E = pc`
+        - the action of radiation (photons) on a electron results
+          in a change of _momentum_
+        - the momentum is: 
+            -`p = E/c`
+                - because: `E = pc` 
+        - and the momentum flux density (momentum rate per unit
+          _surface_) is
+            - => `p = Flux/c`
+            - divide the "energy/flux" by light-speed
+
+        - but we need to know the "surface" of the electron
+            - ie need to know how "large" the electron is
+            - ie need the rate of photon interception
+            - ie need the Thomson cross-section `σ_T`
+            - note: 
+                - the Thompson cross-section is purely classical,
+                  No Plancks constant used. That's kind of amazing.
+            - note: this Thompson formula is for full ionised
+              material
+
+        
+        - Eddington Luminosity formula
+        - we express it in units of solar mass 
+        - $MY_IMAGES/astro/bh-accretion/eddington-luminosity-derivation.jpg
+
+        - the mass of the proton appears, not the electron
+          mass... because 
+            - the plasma is neutral 
+            - and if you try to push away one electron, one
+              proton will follow...
+
+        - humans shine at the eddington luminosity!
+        - Thompson Scattering AstroBaki 
+            - https://casper.ssl.berkeley.edu/astrobaki/index.php/Thomson_Scattering
+
+    - Eddington Ratio
+        - ratio of the luminosity of the source to the Eddington
+          Luminosity 
+
+    - Radius
+        - a nice way to measure the radius is through the ratio
+          with the Scharzschild radius
+        - $MY_IMAGES/astro/bh-accretion/accretion-radius.jpg
+
+    - Minimum Timescale 
+        - $MY_IMAGES/astro/bh-accretion/minimum-timescale.jpg
+        - AGN processes are much slower: 
+        -  neutron star: milliseconds
+        -  SMBH: 10000 secs
+
+    - EHT imaging times
+       - Sgr Astar and M87 have similar angular size on the sky
+       - `Sgr Astar` is 1000 times less massive... variability
+         timescales are much shorter. The EHT has to integrate for
+         several hours so everything gets smeared.
+       - `M87` exposure can be longer because timescales are
+         longer
+       - EHT project "failed" for Sgr Astar. But they can't do
+         a shorter exposure or they wouldn't collection enough
+         photons
+
+    - Accretion efficiency
+        - doesn't depend on the mass, just the radius 
+        - `η = 1/2 * R_schw / R`
+
+    - Eddington Accretion rate
+        - $MY_IMAGES/astro/bh-accretion/eddington-accretion-rate.jpg
+        - every time you see the accretion rate express in
+          Eddington units, check the units... 
+        - Some people drop off the efficiency factor `η` in the
+          formula  (assume it's = 1)
+        - AGN efficiency = 10%
+        - efficiency depends on 
+            - the mode of accretion
+            - the spin of the black hole 
+
+    - Mamximum energy of photons emitted by accretion gas 
+        - same assumptions as for accretion 
+            - assume spherical accretion 
+            - assume the body has a _surface_ 
+
+    - Mass
+        - In astronomy, we frequently determine the mass of an
+          object by the measurement of the motion of a satellite
+          around the object.
+        - If we can measure the velocity of the satellite, and
+          the size of the orbit (or the period), we assume
+          a Keplarian motion on a circular orbit: 
+        - `GM/R = v^2`
+        - so we just need the proper choice of satellite: 
+            - binary stars: satellite = companion in the optical 
+            - AGN: satellite = stars 
+            - AGN: satellite = or gaseous clouds 
+                - note: Broad emission lines (BLR) come from
+                  gaseous clouds
+                - we measure the velocity from the line width
+                - we measure the orbit size from the delay of the
+                  lines wrt the continuum
+
+    - Fablian 1979
+    - Measuring accretion efficiency 
+        - radius of emitting source = shift in the photon
+          (wavelength)
+        - optical depth = number of photon scatterings 
+        - We have two expressions (because we don't know in
+          advance if this medium is optically thick or optically
+          thin) 
+        - But often in astronomy, if we have two limits, we often
+          invent a kind of "bridging" formula
+    - if you have `η >> 1` then they are blazars and you have
+      relativistic beaming (so timescales are affected)
+
+    - Soltan argument 1982 
+        - to calculate mean quasar efficiency 
+        - first the mass: the amount of mass which accumulates at
+          the centre of a quasar of luminosity `L` (as a black
+          hole) during its lifetime `T` is:
+            - $MY_IMAGES/Soltan-argument-01.jpg
+        - you dont know how the luminosity of the "stupid quasar"
+          :) changed during its lifetime
+        - instead of studying a single quasar we use statistics
+          and calculate the total energy produced in 1 Gpc^3.
+        - instead of integrating over time, because we don't know
+          how to do it... we integrate over redshift as
+          a proxy...
+          - ie we assume the cosmological principle: the number
+            of quasars of liminosity L and age t is statistically
+            the same as the number of quasars of luminosity L and
+            of redshift z (where `z` corresponds to time `t`)
+
+        - Davis & Laor (2010)
+        - strong dependence on `η` on black hole mass
+        - `0.03` for `10^7 Ms` high Eddington Ratio sources
+        - `0.40` for `10^9 Ms` lower Eddington Ratio sources
+        - implies spin evolution:
+            - lower  mass sources have lower spin
+            - higher mass sources have higher spin
+        - also:  
+            - rather higher efficiency in the past 
+            - rather lower  efficiency now
+
+    - creating SMBHS
+    - at high redshift, 
+        - accretion on its own isnt enough. Probably BH mergers
+          created these high luminosity quasars 
+    - at z=2
+        - nothing special needed, Eddington accretion is enough
+
+    - we usually don't measure the accretion rate directly from
+      observations 
+        - binary systems: sometimes good estimate of rate, from
+          the stellar evolution 
+        - elliptical galaxies: usually estimate rate from ISM,
+          which is known from x-ray profiles
+        - but we can't be sure the process is "_stationary_"
+          (what is stationary?) 
+
+    - Temp & max energy of photons
+        - If you have a _spectrum_, and something that looks like
+          a blackbody, you can measure the temperature
+
+    - Short term variability
+        - We'll talk alot about this.  
+        - It's key to understanding many phenomena in the sources
+
+
+# Lecture 03
+
+
+# Lecture 04
+
+
+
+# Lecture 05
+    - We dont need full GR to study accretion disks
+
+### GR in 15 mins
+    - we have to change the way we measure _distance_
+    - line element: 
+        - `ds^2 = g_αβ dx^α dx^β`
+        - one difference to SR: you always have something "in
+          front" (`g_αβ`) 
+    - inside the BH: 
+        - you are in a "train" going faster than light, that's
+          hurtling towards the singularity the singularity that's 
+
+### Newtonian test particles
+
+
+
+# Lecture 06
+# Lecture 07
+# Lecture 08
+# Lecture 09
+# Lecture 10
+# Lecture 11
+# Lecture 12
+# Lecture 13
+# Lecture 14
+

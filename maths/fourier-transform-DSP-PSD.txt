@@ -1,0 +1,248 @@
+
+### Interesting comment
+    - https://news.ycombinator.com/item?id=45132810
+    - ... a reason for the FT's dominance is because sine,
+      cosine, and complex exponentials are the `eigenfunctions`
+      of the `derivative operator`. (nice!)
+    - Since so many real-world systems are governed by
+      differential equations, the Fourier Transform becomes
+      a natural _lens_ to analyze these systems. Sound waves are
+      one (of many) examples.
+    - There's another good reason why so many real-world signals
+      are sparse (as you say) in the FT domain in particular: 
+        - because so many real-world systems involve periodic
+          motion (rotating motors, fly's wings as you noted,
+          etc). When the system is periodic, the FT will compress
+          the signals very effectively because every signal has
+          to be harmonic of the fundamental frequency.
+
+
+
+### FT "Negative" frequencies
+    - frequencies above the Nyquist frequency (2 samples per
+      cycle?) are actually going too fast for the sampling rate
+      and are "aliased"...
+    - ... so we don't see the true frequencies above the Nyquist
+      and so we call them "negative" frequencies and give them
+      a minus sign
+        - $MY_IMAGES/maths/fourier/FT-netagive-frequencies.jpg
+    - From Euler's equaiton and a real `cos` signal, this slide
+      explains why we have positive and negative frequencies
+        - $MY_IMAGES/maths/fourier/why-pos-neg-frequencies.jpg
+    - why bother with the negative frequencies anyway? (If they
+      only mimic the positive frequencies)
+    - because we may want to invert the signal in the future, so
+      we don't want information loss
+
+
+### Spectogram
+    - Nice Spectogram visualisation (Steve Brunton)
+    - https://www.youtube.com/watch?v=TJGlxdW7Fb4&list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn&index=97
+        - $MY_IMAGES/maths/fourier/Spectrogram-visualisation.jpg
+    - You can recover the full fourier transform from the
+      Spectrogram... the spectrogram is like a culmulative
+      version of the FT
+
+### Gabor Transform (Steve Brunton)
+    - its like the STFT but with a _Gaussian_ window
+        - https://www.youtube.com/watch?v=EfWnEldTyPA&list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn&index=95
+    - Actually the FT really makes sense for signals that are
+      perfectly periodic and repeating... but audio signals are
+      rarely like that.
+        - They have frequency content, but one second of audio is
+          rarely going to be repeated exactly...
+        - ie audio has frequency components at each instant of
+          time, but they're not periodic in time
+    - $MY_IMAGES/maths/fourier/Gabor-transform-like-STFT.jpg
+
+### Power Spectral Density PSD (Steve Brunton)
+    - $MY_IMAGES/maths/fourier/Power-Spectral-Density-PSD.jpg
+    - Denoising Data with FFT [Python]
+      https://www.youtube.com/watch?v=s2K1JfNR7Sc
+    - wow PSD so useful...
+        - he started off with two pure sine waves, then sprinkled
+          in a load of noise...
+    - but he did the FFT on the noisy data,
+        - then calculated a PSD for each frequency...
+            - PSD = (each complex fourier coefficient)^2
+        - sure enough, most of the power appeared only at TWO
+          FREQUENCIES... 50Hz and 120Hz...
+        - (ie his original pure waves really stick out)
+        - output plot:
+            - note the x-axis is FREQUENCY
+            - the y-axis is POWER
+            - $MY_IMAGES/maths/fourier/PSD-really-useful.jpg
+
+### STFT Short Time Fourier Transform
+    - https://www.youtube.com/watch?v=-Yxj3yfvY-4
+    - The normal fourier transform gives you the frequency
+      components over the _entire duration_ of the signal
+        - It's an average over the entire duration
+        - So we know _WHAT_ frequencies are present,
+        - but we don't know _WHEN_
+        - (and the original signal in time, we know exactly
+          "where" we are in the signal, but we don't have any
+          instantaneous FREQUENCY info at an individual
+          timepoint)
+    - Solution: STFT:
+        - apply FT to chunks of the original time/space signal
+        - (the chunks are called "_frames_")
+        - so apply a `windowing function` to the signal
+            - the window function is everywhere `0` apart from
+              the segment you want, where the window is `1`
+    - Terminology
+        - window size:
+            - amount of samples we apply the window to
+        - frame size
+            - number of samples in each chunk of the signal
+    - note: _usually_ (window size) = (frame size)
+    - note: frames often OVERLAP!
+        - why? "Spectral leakage"
+    - hop size
+        - how many 'samples' we slide to the right when we take
+          a new frame
+            - $MY_IMAGES/maths/fourier/stft-hop-size.jpg
+    - the key formulas
+        - $MY_IMAGES/maths/fourier/stft-formula.jpg
+    - Aside: frame number is a proxy for time
+    - OUTPUTS:
+        - note: there's a time/frequency trade-off here too
+            - (like what Grant was talking about in his video)
+        - $MY_IMAGES/maths/fourier/stft-time-freq-tradeoff.jpg
+        - smaller framesize => less frequency bins => less freq
+          resolution
+    - time / freq tradeoff
+        - $MY_IMAGES/maths/fourier/stft-time-freq-resolution.jpg
+
+### Fourier Uncertainty
+    - https://www.youtube.com/watch?v=MBnnXbOM5S4
+        - $MY_IMAGES/maths/1Brown-fourier/time-freq-trade-off.jpg
+        - $MY_IMAGES/maths/1Brown-fourier/time-freq-trade-off-02.jpg
+        - $MY_IMAGES/maths/1Brown-fourier/time-freq-trade-off-03.jpg
+    - alternative statement:
+        - "short signal corelates with WIDE RANGE of frequencies"
+    - Also: Radar echo
+        - $MY_IMAGES/maths/1Brown-fourier/radar-echo.jpg
+        - time of echo signal
+            - corresponds to distance of object
+        - frequency of echo signal
+            - corresponds to velocity of object
+            - $MY_IMAGES/maths/1Brown-fourier/radar-echo-02.jpg
+
+### STFT
+    - https://www.youtube.com/watch?v=T9x2rvdhaIE
+    - Short time Fourier Transform
+    - Just transform bits of the signal at a time
+    - A bit like `wavelet convolution`
+    - adjust parameters
+        - adjust the temporal precision
+            - (narrow time windows, long time windows)
+            - overlap between windows
+                - more overlap: smoother time/freq plot, but more
+                  computation
+        - adjust the spectral resolution
+            - change the time window for different frequencies
+        - $MY_IMAGES/maths/DSP/adjust-stft-parameters.jpg
+
+### 3Blue1Brown
+    - KEY:
+        - integral of a complex function = "centre of mass idea"
+        - also not written below:
+            - the distance of the "centre-of-mass" is the
+              _strength_ of the frequency
+            - the angle of the "centre-of-mass" is the _phase_ of
+              the frequency
+    - 4 pure frequencies creating a complicated wave
+        - $MY_IMAGES/maths/1Brown-fourier/four-pure-freqs.jpg
+    - CENTRAL QUESTION:
+        - how to take a complicated signal and _decompose_ it
+          into the pure frequences
+    - 1ST EXAMPLE
+        - take a pure frequency, and wrap it around on a circle
+            - the radius of the circle = the "height" of the wave
+              at a given moment
+            - $MY_IMAGES/maths/1Brown-fourier/convert-wave-to-circle.jpg
+        - Note: two different frequencies!
+            - freq 1: wave:   3   beats  per second
+            - freq 2: circle: 0.5 cycles per second ("winding
+              frequency")
+        - Something _special_ will happen when:
+            - the "winding" frequency matches the frequency of
+              our wave signal
+            - the centre of mass will move from its normal centre
+              position over _to the right_(!)
+        - Add a THIRD PLOT:
+            - (the "Almost Fourier Transform" plot)
+            - plot the "centre of mass" x-coordinate.
+            - See where it moves around (it will mainly stay at
+              zero)
+            - It will spike when the winding frequency is 3
+            - $MY_IMAGES/maths/1Brown-fourier/winding-freq-matches.jpg
+    - NEW EXAMPLE:
+        - signal with TWO combined waves:
+        - 2Hz and 3Hz
+        - $MY_IMAGES/maths/1Brown-fourier/two-pure-waves.jpg
+    - INTERESTING:
+        - (The transform looks like a "linear" map)
+        - separately transforming two individual waves then
+          adding is the same as transforming the COMBINED waves.
+            - $MY_IMAGES/maths/1Brown-fourier/ft-sum-is-linear.jpg
+        - So far: only had `x-coord` of the "centre of mass"
+            - but there's a `y-coord` as well
+            - that's where complex numbers start to come in
+    - NEXT IDEA NEEDED:
+        - See:  "Euler complex plane rotating frequency"
+        - $MY_NOTES/maths/maths-tips.md
+        - (complex exponential to rotate around a circle at
+          a certain rate)
+    - CLOCKWISE ROTATION
+        - minus sign!!!
+            - $MY_IMAGES/maths/complex-clockwise-rotation.jpg
+    - WIND A COSINE WAVE
+        - an Euler exponential multiplied by `g(t)` which is the
+          value of the cosine wave at every point
+            - $MY_IMAGES/maths/complex-rotation-cos-wave.jpg
+        - Euler exponential:
+            - how to wind a graph around a circle using
+              a variable frequency
+    - HOW TO FIND THE "CENTRE OF MASS"??
+        - sample a load of points on the signal
+        - discrete
+            - see where those points are on the "winding circle",
+            - add them up
+            - divide by the number of points you've sampled
+                - $MY_IMAGES/maths/1Brown-fourier/sampling-centre-of-mass-discrete.jpg
+        - continuous
+            - see where those points are on the "winding circle",
+            - integrate it
+            - divide by the time interval (`t_2` - `t_1`)
+                - $MY_IMAGES/maths/1Brown-fourier/sampling-centre-of-mass-continuous.jpg
+    - ACTUAL FT!
+        - The ACTUAL fourier transform doesn't divide out by the
+          time interval
+        - $MY_IMAGES/maths/1Brown-fourier/sampling-centre-of-mass-FT.jpg
+        - so you end up with a _multiple_ of the centre-of-mass
+    - Summary
+        - the FT is often called "g-hat". The input paramemter
+          frequency, it's output is a _complex number_.
+            - (a point on the 2D Complex plane)
+        - what I call the "x-coord" is the _real-part_ of g-hat
+        - the "y-coord" is the imaginary part of g-hat
+            - $MY_IMAGES/maths/1Brown-fourier/ft-summary-01.jpg
+            - $MY_IMAGES/maths/1Brown-fourier/ft-summary-02.jpg
+            - $MY_IMAGES/maths/1Brown-fourier/ft-summary-03.jpg
+
+
+### INVERSE fourier transform
+    - Appllying the fourier transform to the results of a fourier
+      transform, "gives you back" the original signal (more or
+      less)
+
+### Links
+    - 3Blue1Brown Fourier                                       https://www.youtube.com/watch?v=spUNpyF58BY
+    - STFT Short Time Fourier Transform (from Kaggle g2net)     https://www.youtube.com/watch?v=-Yxj3yfvY-4
+    - Denoising Data with FFT [Python]                          https://www.youtube.com/watch?v=s2K1JfNR7Sc
+    - Demystifying Fourier analysis                             https://news.ycombinator.com/item?id=33636639
+    - Mathematics of Discrete Fourier Transform (DFT not DTFT!) https://news.ycombinator.com/item?id=33668004
+    - An animated introduction to Fourier series (andreinc.net) https://news.ycombinator.com/item?id=40578705
+    - What is the Fourier Transform (interesting comments)      https://news.ycombinator.com/item?id=45132810

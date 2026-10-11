@@ -1,0 +1,50 @@
+
+### 'Stacks' and 'subs'
+    - I'm a physicist in my daytime work and have been recently
+      working on denoising DL networks for other applications.
+    - Those tools are very powerful and tend to outperform
+      regular denoising strategies. Good reference for regular
+      photography:
+        - https://arxiv.org/pdf/1608.03981.pdf
+
+    - Regular CNN and U-NET normally run near real-time on customer GPU.
+
+    - Now astro images are different in that we want to preserve
+      very bright stars, so I see a need to retrain these
+      networks on proper astrophotography images. I see 2 ways to
+      achieve this:
+        - Get high SNR images post stack and model camera noise
+          (with proper noise statistics).
+        - Directly compare a single sub to the final stack (with
+          both images aligned)
+
+    ### Explanation:
+
+    1. "Post stack": In astrophotography, a "stack" refers to the
+       process of combining multiple individual images (or
+       "subs"—short for sub-exposures) of the same object in the
+       sky. This stacking process enhances the signal-to-noise
+       ratio (SNR) and brings out faint details that would be
+       lost in a single image. "Post stack" refers to the final
+       image that has been produced after stacking these multiple
+       subs. So, in this case, "post stack" means working with
+       the higher-quality, stacked image that results from this
+       process.
+
+    2. "Directly compare a single sub to the final stack": This
+       refers to comparing one of the raw sub-exposures (noisy
+       and low SNR because of short exposure times) to the final
+       stacked image. By aligning the two, you can assess how the
+       noise behaves in the individual sub-image and how much
+       improvement the stacking process provides. This comparison
+       could also be useful for training deep learning models, as
+       it would allow the network to learn how noise is reduced
+       and details are enhanced through stacking.
+
+    ### In summary:
+        - "Post stack" means after the process of stacking
+          images.
+        - "Directly comparing a single sub to the final stack" is
+          about evaluating the difference between an individual
+          noisy image and the final, cleaner image after
+          stacking.

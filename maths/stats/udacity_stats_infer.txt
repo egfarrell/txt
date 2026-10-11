@@ -1,0 +1,63 @@
+# Lesson 08  - Estimation (confidence intervals)
+# Lesson 09  - Hypothesis Testing
+# Lesson 10a - t-tests, Part 1
+# Lesson 10b - t-tests, Part 2
+# Lesson 11  - t-tests, Part 3
+# Lesson 12  - One way ANOVA
+# Lesson 13  - ANOVA contd.
+# Lesson 14  - Correlation
+# Lesson 15  - Regression
+# Lesson 16  - Chi-squared tests
+
+
+
+# Lesson 08  - Estimation (confidence intervals)
+------------------------------------------------
+
+# point estimate:
+    took a sample (n=35)of klout users who all use the bieber
+    tweeter. The sample mean was 40. So if the whole
+    population of klout users started to use the beiber
+    tweeter our best guess of their average klout score
+    would be 40. This "40" is called a point estimate.
+
+# margin of error
+    `2 * (σ/sqrt(n))`
+
+# confidence interval
+    In general, 95% of sample means will be between 2 standard
+    deviations from the population mean. Most likely, this
+    sample with a mean of 40 is one of the 95% that'll fall
+    between two SD's of the new mean of the sampling
+    distribution if everyone uses the bieber tweeter app..
+
+# interval of new predicted population mean
+    `[μ{bt} - 2(σ/sqrt(n),  μ{bt} + 2(σ/sqrt(n)]`
+    and a mean of 40 must be somewhere in between
+    the endpoints of the above interval:
+    `[μ{bt} - 2(σ/sqrt(n) < 40 <  μ{bt} + 2(σ/sqrt(n)]`
+    which leads to:
+    `[40 - 2(σ/sqrt(n) < μ{bt} <  40 + 2(σ/sqrt(n)]`
+    and this is the 95% confidence interval
+
+# correction (1.96)
+    we used to say 95% of samples will be within 2 standard
+    deviations of the mean. Well its not exactly 2 SD's, its
+    _1.96_ if you check the Z-table.
+
+# confidence interval summary
+   `x̄ +/- (z-score)(σ/sqrt(n))`
+   where x̄ is the sample mean
+   and z-score is usually 1.96 (ie. nearly 2 standard
+   deviations from the mean)
+
+# critical values:
+    * +/- 1.96 are the critical values of z for 95%
+      confidence
+    * +/- 2.33 are the critical values of z for 98%
+      confidence
+
+
+margin of error
+    is half the confidence interval
+    `(z-score)(σ/sqrt(n))``

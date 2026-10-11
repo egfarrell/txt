@@ -1,0 +1,204 @@
+### Units
+    - Unit 01:  Key-techniques
+    - Unit 02:  Latex
+    - Unit 03:  Number-theory
+    - Unit 04:  Conics
+    - Unit 05:  Statics
+    - Unit 06:  Geometric-transformations
+    - Unit 07:  Further-calculus
+    - Unit 08:  Differential-equations
+    - Unit 09:  Mathematical-language
+    - Unit 10:  Dynamics
+    - Unit 11:  Eigenvalues-eigenvectors
+    - Unit 12:  Combinatorics
+
+
+Tutorial 1:
+### - Can take Handbook into the exam
+    - You can write your own notes into the Handbook
+    - Handbook: Trig ratios only go to 180 degrees (you must extend)
+    - Handbook: has good index at the end
+
+### Unit 1
+    - Handbook: page 29
+    - domain:
+        - x values,
+        - what goes "in"
+    - codomain:
+        - all possible output values.
+        - More important when dealing with complex functions.
+        - Usually larger than the image set
+    - image set:
+        - y values
+        - all the values in the codomain that = the output values
+        - the set of all values that come out of the function.
+
+    - if the domain isn't specifically stated?
+        - Use the largest possible set of numbers for which the
+          domain is valid. This is often  `ℝ`.
+        - You may have to remove the odd point. 
+            - eg. if the function is `1/x` then you'd have to
+              remove `x=0`
+
+    - intervals:
+        - two ways of representing:
+            - brackets: (2, 11)
+            - inequalities 2 <= x <= 11
+
+### Congruence:
+    - Convention: We always want to give a _positive_ remainder
+      when checking for congruence of a negative number.
+        - ie we dont say: `-8 ≡ -3 (mod 5)`
+        -    we say:      `-8 ≡ 2  (mod 5)`
+        - (just keep adding 5's to -3 until we get back into the
+          positive numbers)
+
+
+### Congruent: succinct statement
+    - Two numbers say `a` and `b` are congruent `modulo n` if and
+      only if there exists an integer `k` such that `a = b + kn`.
+    - This means that `a - b = kn` which means that the
+      difference of the two numbers is a multiple of `n`.
+    - ALTERNATIVELY: the positive remainders of `a` and `b` when
+      divided by `n` are equal.
+
+### handy visualisations
+    - $MY_IMAGES/maths/MST125/mod-11-clock.jpg
+    - $MY_IMAGES/maths/MST125/congruence-residues-mod-7.jpg
+
+### least residue:
+    - Must be positive ...
+    - You can have a negative residue, just not a _least_ residue
+      thats negative
+    - must be less than whatever modulus you're using
+
+
+### multiplicative inverse (the numbers must be coprime!)
+    - some numbers don't have a multiplicative inverse
+    - `3v ≡ 1 (mod 9)`
+    - this would imply: `3v = 1 + 9k` (ie we write the congruence
+      as an equation)
+    - but 3 will never divide evenly into the RHS. (because of
+      the `1 +...`
+    - the problem is 3 and 9 share a common factor: `3`
+    - So if you want a multiplicative inverse, you need a number
+      and a modulus that only have a common factor of `1`
+    - Another way of saying two numbers only have a common factor
+      `1` is they are: _coprime_
+
+    - Bezouts identity says if two numbers have a highest common
+      factor of 1 we can write:
+        - `av + 9w = 1`
+    - so lets rewrite this as a congruence equation:
+        - `av = 1 - 9w`
+    - which is the same as:
+        - `av ≡ 1 (mod 9)`
+    - so, `v` is a multiplicative inverse of `a` modulo 9.
+
+### Summary: multiplicative inverese
+    - If the integers `a` and `n` are coprime, then there is
+      a multiplicative inverse of a modulo `n`.
+    - If `a` and `n` are not coprime, then there is NO
+      multiplicative inverse of a modulo `n`.
+
+### More multiplicative inverse:
+    - whats so importat about "_coprime_" all the time? 
+    - Beause if two numbers are coprime you can get
+      a multiplicative inverse... 
+    - (and later: if you can get a multiplicative inverse you can
+      solve a linear congruence.)
+    - when asked to give a multiplicative inverse, its usually
+      clearest to give the _least residue_.
+
+### Method
+    - So far, you’ve found multiplicative inverses modulo `n` by
+      trying the values `1, 2, 3, ..., n − 1` one by one.
+    - This method can, however, be very time consuming if `n` is
+      large! 
+    - In the next example, you’ll see how to find multiplicative
+      inverses by using Euclid’s algorithm and backwards
+      substitution.
+
+
+### Linear Congruences
+    - Solving linear congruences when `a` and `n` are coprime:
+    - If `a` and `n` are coprime, then the linear congruence
+        - `ax ≡ b (mod n)` has solutions.
+    - The solutions are given by `x ≡ vb (mod n)`
+        - where `v` is any mult. inverse of `a` modulo `n`
+    - In fact, for this particular linear congruence, it would be
+      quicker simply to keep trying the values 1, 2, 3, ... until
+      you find a solution. 
+    - We suggest you apply this direct method for solving
+      a linear congruence whenever `n ≤ 13`.
+
+
+### Linear congruences without solutions
+    - Let `d` be the highest common factor of the integers `a`
+      and `n`, where n > 1.
+    - The linear congruence `ax ≡ b (mod n)` has _NO_ solutions if
+      `b` is NOT divisible by `d`.
+
+
+### Linear congruences with solutions
+    - Let `d` be the highest common factor of the integers `a`
+      and `n`, where `n > 1`.
+    - The linear congruence `ax ≡ b (mod n)` _HAS_ solutions if
+      `b` is divisible by `d`.
+    - The solutions are given by the solutions of the equivalent
+      linear congruence a d x ≡ b d  (mod n).
+
+
+
+### Conics
+    - `a` = positive x-intercept !!
+    - `b` = positive y-intercept !!
+
+    - standard position parabola: 
+        - if the focus is `(a, 0)`, then the directrix is `-a`
+
+    - standard position parabola: 
+        - `y^2 = 4ax`
+
+    - another common formula: `y = x^2`
+
+    - Hyperbola: interesting point: eccentricity `e` is `> 1`
+
+    - Hyperbola: equation just like an ellipse but with a MINUS
+      instead of plus
+        -   x^2     y^2
+        -   ---  -  ---
+        -   a^2     b^2
+
+    - getting the equation of a circle: "completing the square"
+      came in handy...
+
+    -  if you've got an `xy` term in the standard equation of
+       a conic, then it means it's not in "standard position" and
+       the conic has been rotated...
+
+### Parameterisations
+    - there's some _STANDARD_ parameterisations
+    - eg for straight lines: `x = at + b, y = ct + d`
+    - also we've got a lot more _POWER_ with Parameterisations: we
+      can specify just a part of a curve/line by restricting the
+      parameter `t`
+
+
+### Statics
+    - we're trying to model situations where NOTHING is moving!
+    - interesting point: if you just use Marks formula:
+        - `F = |f|cosθ î + |f|sinθ ĵ`
+        - then θ can be any angle (e.g. -110) and everything will
+          just work out ok with the signs
+    - for converting a component vector into its geometric form,
+      use `tan^(-1) ĵ/î`
+
+    - for all these, the net force acting is zero!
+    - when drawning force diagrams, you might need ALTERNATE
+      angle rules sometimes!
+    - when answering the exam questions, put in your ASSUMPTIONS:
+      eg point masses etc
+    - You can only write the coefficient of static friction
+      equation if the object is JUST ABOUT to move. (ie it's at
+      the point of slipping). Then you can write `|F| = μ|N|`

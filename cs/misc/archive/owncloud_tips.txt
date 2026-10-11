@@ -1,0 +1,69 @@
+
+### disable previews
+    /var/www/owncloud/config/config.php
+    'enable_previews' => false,
+
+### owncloud https
+    main problem: open port 16803 using ufw firewall !!!
+        sudo ufw allow 16803
+        sudo ufw status verbose
+
+    apache redirect to HTTPS version of owncloud!
+        edit default-ssl
+
+        ...
+        <VirtualHost *:16802>
+            ServerAdmin webmaster@localhost
+
+            Redirect "/owncloud/" "https://130.255.185.116:16803/owncloud/"
+            ...
+
+### apache create ssl certificate 
+        sudo a2enmod ssl
+        sudo mkdir /etc/apache2/ssl
+        cd ssl
+        sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/owncloud.key -out /etc/apache2/ssl/owncloud.crt
+        ** edit /etc/apache2/ports.conf (see below)
+        ** edit /etc/apache2/sites-available/default-ssl (see below)
+        sudo a2ensite default-ssl
+
+    <!-- ** ports.conf -->
+        > <VirtualHost *:16803>
+        > ServerName 130.255.185.116:16803
+        > ...
+        > SSLEngine on
+        > SSLCertificateFile /etc/apache2/ssl/owncloud.crt
+        > SSLCertificateKeyFile /etc/apache2/ssl/owncloud.key
+
+    <!-- ** default-ssl -->
+        > <IfModule mod_ssl.c>
+        >     # If you add NameVirtualHost *:443 here, you will also have to change
+        >     # the VirtualHost statement in /etc/apache2/sites-available/default-ssl
+        >     # to <VirtualHost *:443>
+        >     # Server Name Indication for SSL named virtual hosts is currently not
+        >     # supported by MSIE on Windows XP.
+
+        >     # Listen 443
+        >     NameVirtualHost *:16803
+        >     Listen 16803
+        > </IfModule>
+
+### install owncloud on ubuntu 12.04
+    important: must upgrade php5!
+        > aa ppa:ondrej/php5-oldstable
+        > au
+        > ai php5
+
+    install owncloud
+        > sudo sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/community/xUbuntu_12.04/ /' >> /etc/apt/sources.list.d/owncloud.list"
+        > ak {some key...}
+        > au
+        > ai owncloud
+
+### PHP charset error
+    edit ini files:
+        > /etc/php5/apache2/php.ini 
+        > /etc/php5/cli/php.ini
+        > uncomment the default_charset lines, setting both the UTF-8 
+    restart
+        > sudo service apache2 restart

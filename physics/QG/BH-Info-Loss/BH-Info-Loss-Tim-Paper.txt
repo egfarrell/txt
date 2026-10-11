@@ -1,0 +1,181 @@
+https://arxiv.org/abs/1705.03541
+
+- Maudlin’s 2017 paper “(Information) Paradox Lost” argues that
+  the so-called black hole information loss paradox never existed
+  in the first place. His case is almost mischievously simple
+  once you untangle it.
+
+### Contents
+    - 01. What the “paradox” is supposed to be
+    - 02. Maudlin’s opening move: “There was never any paradox.”
+    - 03. Wald’s observation: The “after evaporation” surface isn’t Cauchy
+    - 04. Where the information actually is
+    - 05. But “the black hole no longer exists!”
+    - 06. The topology trick: Cauchy surfaces change shape
+    - 07. “External observer” confusion
+    - 08. Evaporation event versions
+    - 09. The “not enough room” objection
+    - 10. The moral
+
+
+
+### 01. What the “paradox” is supposed to be
+
+- The usual story goes:
+- Hawking’s 1975 work showed that black holes radiate thermally
+  (Hawking radiation). If the radiation is purely thermal, it
+  carries no detailed information about what fell in.
+- When the black hole evaporates completely, the universe is left
+  in a mixed thermal state, while it began in a pure quantum
+  state. That looks like a `pure → mixed` transition, which
+  violates unitarity and therefore information conservation.
+
+- So people concluded either quantum theory fails, or something
+  exotic (firewalls, complementarity, wormholes) must fix it.
+
+
+### 02. Maudlin’s opening move: “There was never any paradox.”
+
+- He claims the entire problem rests on two elementary
+  confusions:
+    - one mathematical
+    - one conceptual
+- about how determinism and unitarity work in relativistic
+  spacetimes.
+- To see why, we need to remember what a Cauchy surface is.
+- A Cauchy surface is a spacelike slice of spacetime that every
+  inextensible timelike worldline crosses exactly once.
+    - Simpler: "A Cauchy surface is a spacelike surface that
+      every possible object’s entire worldline intersects once
+      and only once."
+    - See: $MY_NOTES/physics/spacetime/Cauchy-surface.txt
+
+- In a globally hyperbolic spacetime, giving the complete state
+  on one Cauchy surface determines (and is determined by) the
+  state on any other — evolution is deterministic and
+  retrodictable.
+- But if your “surface” isn't Cauchy, you cannot expect
+  determinism, unitarity, or information conservation.
+    - That’s not a violation of physics; it’s a misuse of the
+      concept of “state”.
+
+
+### 03. Wald’s observation: The “after evaporation” surface isn’t Cauchy
+
+- In Hawking’s Penrose diagram for an evaporating black hole, the
+  late-time slice `Σ₂` (after evaporation) does not intersect
+  every timelike curve. Worldlines that fell into the singularity
+  never hit it.
+- Therefore, `Σ₂` is not a Cauchy surface.
+
+- And once that’s noticed, the supposed paradox evaporates.
+  There’s never been any reason to expect the state on `Σ₂` to be
+  a complete record of the universe.
+- QM only guarantees unitarity from Cauchy surface to Cauchy
+  surface, not from a Cauchy surface to a non-Cauchy one.
+
+- So “information loss” is just “you looked at an incomplete
+  slice”.
+
+### 04. Where the information actually is
+
+- If you want the complete state after evaporation, you must
+  include both:
+    - `Σ₂(out)`:
+        - the slice outside the horizon
+        - (where Hawking radiation lives), and
+    - `Σ₂(in)`:
+        - the slice inside the horizon,
+        - up to the evaporation event.
+
+- Together, Σ₂(in) ∪ Σ₂(out) is a full Cauchy surface. The full
+  state on that joined surface is unitary, deterministic, and
+  retrodictable. The information about what fell in remains
+  inside `Σ₂(in)`.
+
+- So nothing is lost. It’s just somewhere you stopped looking.
+
+### 05. But “the black hole no longer exists!”
+
+- People then object: after evaporation, the black hole “no
+  longer exists,” so how can information still be “inside” it?
+
+- Maudlin points out that in relativity, statements like “X still
+  exists” are tricky. Whether something “still exists” depends on
+  your light cone, not on global time slices. The entire
+  black-hole interior lies outside your past light cone even
+  after the evaporation event, so in a perfectly good
+  relativistic sense, it still exists.
+- The balloon analogy fails: horizons aren’t material surfaces
+  that pop; they are global geometric features of spacetime.
+
+
+### 06. The topology trick: Cauchy surfaces change shape
+
+- To foliate the evaporating-black-hole spacetime into Cauchy
+  surfaces, the slices before evaporation are connected, but
+  after the “evaporation event” each slice must split into two
+  disconnected pieces (inside and outside).
+
+- Normally, topology changes like that are forbidden by Geroch’s
+  theorems—but only for genuine manifolds. At the evaporation
+  event the manifold structure breaks down (the horizon shrinks
+  to a point), so the theorem’s conditions fail.
+- Hence the topology change is legal. No paradox, just a slightly
+  weird geometry.
+
+
+### 07. “External observer” confusion
+
+- The paradox often smuggles in an extra demand: that an external
+  observer must, in principle, be able to recover the infalling
+  information from the radiation.
+- But this is never a general requirement of physics.
+- QM does not promise that information about a system’s initial
+  conditions can be reconstructed from partial observations. The
+  observer’s epistemic limitations are not the universe’s
+  problem.
+
+
+### 08. Evaporation event versions
+
+- There are two ways to model the “evaporation event”:
+    - EE-in:
+        - Keep the evaporation event as a real (though
+          non-manifold) point in spacetime. Then the foliation
+          into Cauchy surfaces works fine.
+    - EE-out:
+        - Delete the point entirely. That makes the spacetime no
+          longer globally hyperbolic (no Cauchy surfaces at all).
+          Then unitarity and determinism don’t even apply, so
+          again no paradox—just a different geometry.
+
+Either way, there’s no fundamental violation.
+
+
+### 09. The “not enough room” objection
+
+- Some argue that as the black hole shrinks, there isn’t enough
+  volume to store the information inside. Maudlin dissects that
+  too:
+    - “Information” doesn’t have a definite spatial location.
+      (Think of an entangled pair: neither particle alone “has”
+      the information.)
+    - The interior’s spatial volume is not uniquely defined in
+      curved spacetime.
+    - And, in any deterministic theory, all Cauchy surfaces
+      contain the same total information, regardless of their
+      shape or size. So volume doesn’t bound information in any
+      meaningful way.
+
+### 10. The moral
+
+- The “paradox” vanishes once you respect the distinction between
+  Cauchy and non-Cauchy surfaces and stop treating partial data
+  as complete. QM plus GR already contain the resources to make
+  sense of evaporating black holes.
+
+- In Maudlin’s memorable finale: if a paper treats a non-Cauchy
+  slice as if it were Cauchy, “commit it to the flames; for it
+  can contain nothing but sophistry and illusion.” (Hume
+  reference)

@@ -1,0 +1,63 @@
+- Unpack this:
+    > In the SM the Higgs mass squared receives large radiative
+    > corrections (e.g., δM² ∼ (Λ²) when Λ is the cutoff) so to
+    > keep the Higgs at the weak scale requires fine-tuning if
+    > new physics sits at a high scale.
+
+### Answer
+- The Higgs boson has a mass, around 125 GeV.
+    - That mass comes from a term in the Standard Model
+      Lagrangian that looks like `m_H² |H|²`.
+
+- When you include quantum effects — all the virtual particles
+  popping in and out of existence in loops — the Higgs mass
+  doesn’t stay fixed. Those loops shift the Higgs mass term. That
+  shift is what we call a radiative correction.
+
+- Here’s the problem:
+    - For most particles, quantum corrections are modest. But for
+      a scalar particle like the Higgs, the correction is
+      quadratically divergent — meaning it grows like the square
+      of whatever energy scale Λ you think new physics appears at
+      (for instance, the Planck scale, 10¹⁹ GeV, or a grand
+      unification scale, 10¹⁶ GeV).
+
+- Symbolically:
+`δM_H²` ∼ `(coupling constants / 16π²) × Λ²`
+
+- Let’s plug in some rough intuition.
+
+- If Λ were as high as, say, `10¹⁶ GeV`, then the correction term
+  `δM_H²` would be enormous — on the order of
+    - `(10¹⁶ GeV)² = 10³² GeV²`.
+- But the actual observed Higgs mass squared is about
+    - `(125 GeV)² ≈ 10⁴ GeV²`.
+
+- To make those numbers compatible, the “bare” Higgs mass (the
+  one you’d start with before including loops) must cancel out
+  the enormous correction with almost ridiculous precision — to
+  something like 1 part in 10²⁸. That’s the fine-tuning problem.
+
+- So when physicists say:
+    > “To keep the Higgs at the weak scale requires fine-tuning
+    > if new physics sits at a high scale,”
+- they mean:
+    - Quantum loops naturally drag the Higgs mass up toward the
+      highest energy scale in the theory.
+    - But since we observe the Higgs mass to be small (~100 GeV),
+      something must cancel those huge corrections almost
+      perfectly.
+    - Unless there’s some new physics (like supersymmetry,
+      compositeness, etc.) that cuts off or balances the
+      corrections, this looks extremely unnatural — as if the
+      universe’s parameters were delicately adjusted just so.
+
+- In short:
+    - The Higgs mass is unstable under quantum corrections. If
+      the universe has much higher energy physics above the weak
+      scale, then keeping the Higgs light looks suspiciously like
+      cosmic bookkeeping magic. That’s what’s called the
+      hierarchy problem.
+
+
+

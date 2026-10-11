@@ -1,0 +1,176 @@
+
+### What is it?
+
+- In the AdS/CFT correspondence, the bulk is
+  a `(d+1)`-dimensional spacetime that includes gravity,
+  typically string theory or a supergravity limit living in
+  anti–de Sitter space. 
+
+- The boundary, one dimension lower (`d`-dimensional), hosts
+  a QFT: specifically a *conformal* field theory (CFT), meaning
+  it has no intrinsic length scale and is invariant under
+  conformal transformations.
+
+- The claim is: the full quantum dynamics of gravity in the bulk
+  are *exactly equivalent* to the non-gravitational quantum
+  dynamics on the boundary. 
+
+- Every bulk field corresponds to some operator in the boundary
+  theory, and correlators of these operators reproduce
+  gravitational interactions in the bulk. 
+
+- Energy, time, and unitarity on the boundary translate to ADM
+  energy, time evolution, and diffeomorphism invariance in the
+  bulk.
+
+- It’s a perfect “hologram”: 
+    - the higher-dimensional gravitational world is encoded
+      entirely in the lower-dimensional field theory living on
+      its edge. 
+
+- In short — yes: gravity inside, QFT outside. The wild part is
+  that the boundary theory has *no gravity at all* yet completely
+  determines the gravitational universe within.
+
+
+### Musings
+
+- Ah, the AdS/CFT correspondence — physics’ most successful act
+  of speculative audacity. It’s one of those rare theoretical
+  constructions that feels both miraculous and suspicious, like
+  someone found a trapdoor between two different levels of
+  reality.
+
+- Juan Maldacena’s 1997 insight was that a certain conformal
+  field theory living on the _boundary_ of an anti–de Sitter
+  (AdS) spacetime exactly encodes the physics of a string theory
+  living _inside_ that spacetime. The slogan “gravity = gauge
+  theory” is still shocking because it unifies two worlds thought
+  to be opposites: gravity, inherently geometric and non-linear,
+  and quantum field theory, algebraic and local. Mathematically,
+  the correspondence is astonishingly fertile — thousands of
+  papers have mapped bulk quantities to boundary correlators,
+  tested dualities, and found new tools for condensed matter
+  physics and quantum information.
+
+- But the snag is the “A” in AdS. The correspondence is
+  rigorously defined only for universes with _negative_
+  cosmological constant — that is, spacetimes that are hyperbolic
+  and have a timelike boundary. Our universe, on the other hand,
+  appears to be de Sitter-like, with a _positive_ cosmological
+  constant and no spatial boundary at all. That makes it very
+  unclear how AdS/CFT could directly describe the cosmos we
+  inhabit. The common hope is that the insights are more general
+  than the setting — that some broader holographic principle
+  survives even when there’s no literal AdS boundary. Yet that
+  extension is hand-wavy; we don’t have a de Sitter/CFT or “flat
+  space holography” that actually works with the same precision.
+
+- My own sense is that AdS/CFT is a conceptual Rosetta Stone
+  rather than a literal model of the world. It proves that _in
+  principle_ QG can be completely described by
+  a NON-GRAVITATIONAL system; spacetime geometry can emerge from
+  quantum entanglement patterns on a boundary. That’s
+  extraordinary. But it’s a metaphoric success more than an
+  empirical one. It illuminates what a theory of QG _could_ look
+  like, not necessarily what our universe _is_.
+
+- There’s a telling irony: AdS/CFT has been verified mostly
+  through consistency checks inside the same theoretical bubble
+  that produced it. It is self-consistent, internally elegant,
+  and deeply productive — but untested. The test, someday, will
+  be whether holographic ideas survive contact with cosmology,
+  the early universe, or black holes in asymptotically flat
+  space.
+
+- So I’d say it’s a brilliant laboratory, not yet a window onto
+  nature. It may be that when we finally understand quantum
+  gravity in the real universe, AdS/CFT will turn out to have
+  been like the Ptolemaic system — mathematically precise,
+  incredibly predictive in its domain, but geometrically miscast.
+  Yet it will have taught us something invaluable: that the
+  boundary between geometry and information is porous, and that
+  spacetime itself might be a kind of holographic mirage born
+  from entanglement.
+
+### Aside: Supersymmetry?
+    - In its original and best-understood incarnations, yes
+      — AdS/CFT absolutely relies on supersymmetry. But that
+      “yes” comes with a scientist’s asterisk the size of a small
+      galaxy.
+
+
+### 1. The original duality
+
+- The canonical AdS/CFT example — the one Maldacena proposed in 1997 — is the correspondence between:
+
+* Type IIB string theory on `AdS5 × S5`, and
+* `N = 4 supersymmetric Yang–Mills` theory (a superconformal
+  field theory) in 3+1 dimensions.
+
+- That’s the *textbook* case: it’s maximally supersymmetric (16
+  supercharges), perfectly conformal, and mathematically clean.
+  This is the playground where all the elegant checks—spectra
+  matching, charge algebras, entropy counts—are done.
+
+- So yes, the foundational duality assumes supersymmetry.
+
+
+### 2. Why supersymmetry helps
+
+Supersymmetry acts as a kind of mathematical stabilizer:
+
+* It protects the theory from quantum corrections that would
+  otherwise ruin exact conformal invariance.
+* It ensures there’s a well-defined vacuum with zero cosmological
+  constant (AdS rather than something else).
+* It allows analytic control — you can compute quantities that
+  would otherwise be hopelessly nonperturbative.
+
+In short, supersymmetry is what keeps the correspondence crisp
+enough to prove anything in detail.
+
+
+### 3. Beyond the supersymmetric case
+
+The big, tantalizing question: does holography still work without
+supersymmetry?
+
+The consensus is probably yes, in spirit — holography seems to be
+a deep structural feature of quantum gravity, not just
+a supersymmetric miracle — but in detail we can’t yet write down
+a completely explicit dual pair that is both non-supersymmetric
+and mathematically under full control.
+
+We have hints and numerical models:
+
+* “Bottom-up” AdS/QCD and condensed-matter holography use the
+  AdS/CFT toolkit in non-supersymmetric contexts, though they’re
+  effective, not exact, dualities.
+* There are known *consistent truncations* of supergravity where
+  supersymmetry is broken softly but the holographic dictionary
+  still works approximately.
+
+But none of those are rigorously derived from a full
+string-theoretic duality the way AdS5/CFT4 is.
+
+
+### 4. So the accurate answer
+
+* Strict AdS/CFT, as a mathematically established duality,
+  assumes supersymmetry.
+* Holography, as a physical principle, is believed to transcend
+  it.
+
+Supersymmetry gives us our clean laboratory; nature may or may
+not use it, but the lab still teaches us how holography might
+behave when the training wheels come off.
+
+
+In the debate you’re following, the assumption of supersymmetry
+mainly matters because it guarantees a unique vacuum state in the
+CFT — the point BHG leaned on heavily. That uniqueness is rock
+solid in N=4 SYM; in a non-supersymmetric CFT, degeneracies or
+instabilities could creep in, weakening the argument against baby
+universes.
+

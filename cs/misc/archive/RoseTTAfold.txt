@@ -1,0 +1,36 @@
+### Google GCE
+    - bio-disk _europe-west3-b_
+    - Quota: `GPUS_ALL_REGIONS` https://console.cloud.google.com/iam-admin/quotas?project=active-tome-366014
+
+    - STEPS:
+        1.  BROWSER: GCE create instance
+        2.  setup my dotfiles   $MY_NOTES/cs/digital-ocean-new-vm.txt
+        3.  BROWSER: attach 'bio-disk'
+        4.  mount 'bio-disk':   $MY_NOTES/cs/aws-tips.md
+        5.  setpup cuda driver: $MY_NOTES/cs/phd-tech/CUDA-Nvidia-gpus.txt
+        6.  setpup conda:       $MY_NOTES/cs/anaconda-tips.txt
+        7.  RoseTTAFold setup:  $MY_CODE/AI-ML/RoseTTAFold/rosetta-setup.sh
+
+
+### Amazon AWS
+    - bio-disk _eu-central-1a_ (because GPU's only in eu-central-1a)
+    - Public bio=disk-snapshot: snap-00e52b009a6146a27
+
+### Aside: NORA talk
+    - Nvidia `A100`
+    - `V100` ok too
+    - low memory problems - need a lot of memory
+    - dedicated to 1 user
+
+### Sample Output
+    - This was the Pyrosetta option, rather than the
+      'end-to-end' run
+    - $MY_IMAGES/bio/rosettafold/Sample-output-Nora-workshop.jpg
+
+
+### Links
+    - Github source     https://github.com/RosettaCommons/RoseTTAFold
+    - RoseTTAFold PAPER $MY_ZOTERO/2021/baek_et_al-2021-accurate_prediction_of_protein.pdf
+    - Uniprot           https://www.uniprot.org/
+
+

@@ -1,0 +1,175 @@
+NPTEL parallel computing HPC - architecture
+
+### parallel machines
+	- a network of pc's could be a parallel machine!
+	- its just that communication between them would be slow
+
+### Flynns classification
+    - instruction stream: path to instruction memory (program
+      counter)
+
+    - data streams: a path to data memory
+
+    - SISD:
+        - single instruction, single data stream
+        - not really a parallel computer; its an ordinary
+          sequential computer.
+        - Capable of executing one instruction at a time, on ONE
+          piece of data
+
+    - SIMD:
+        - single instruction, multiple data stream
+        - only capable of executing one instruction at a time,
+          but on MULTIPLE pieces of data!
+
+    - MIMD:
+        - multiple instruction, multiple data streams
+        - can run multiple (e.g. 7) processes (or threads) that
+          are cooperating towards a common objective
+        - So, in parallel not just concurrently!
+        - so MULTIPLE PIECES OF HARDWARE.
+        - could also run 7 different programs at the same time!
+
+### shared memory v message passing
+    - alternative classification system, based on inter-process
+      communication mechanism.
+    - Neither method uses the file system (or pipes).
+
+	- SHARED MEMORY diagram
+		- all 7 processors (nodes)
+		- joined to an INTERCONNECT strip
+		- joined to main memory
+
+    - MESSAGE PASSING diagram
+        - an interconnect strip
+        - joined to 7 separate processors
+        - with each processor connected to its own local memory
+
+    - HOWEVER, this could also be a diagram of a shared memory
+      machine! (with the shared memory distributed among the
+      processor nodes)
+
+
+
+### INDIRECT interconnect:
+    - nodes not directly connected to each other but via
+      interconnect medium. ie shared bus, multiple bus, crossbar,
+      MIN
+
+    - e.g. shared bus (in ordinary sequential computer) but bus
+      could become a bottle-neck.
+
+    - so get around this by having a multiple bus...
+    - e.g. have # shared buses = # processors
+
+    - which leads to crossbar switch (y-axis: Processors, x-axis:
+      Memory module) 
+    - but leads to many crossbar switches => more complex ie good
+      on bandwidth but hard on complexity
+
+    - another solution: (MIN)
+    - multistage interconnection network:
+    - lots of processors connecting to memory,
+    - but not as complex as the crossbar switches
+
+
+### DIRECT interconnect:
+    - nodes directly connected to each other
+    - Topology: linear, ring, star etc etc
+    - routing techniques important
+
+    - DIRECT interconnect topologies
+        - LINEAR interconnect:
+            - sequential, slow, potentially lots of hops between
+              nodes
+
+        - RING:
+            - 2 ends of a linear are joined up
+            - so less hops to get between any 2 nodes
+
+        - STAR:
+            - one central node and others spanned around it at
+              most 2 hops between any node weakness: if central
+              node fails! shared memory becomes useless
+
+        - 2D mesh:
+            - nodes connected in grid squares, more resilient
+              multiple routes between nodes
+
+        - 2D torus:
+            - join the end points of a grid
+
+        - Hypercube (binary n-cube)
+            - 3D grid...
+
+### SHARED MEMORY machine caches:
+    - each individual processor has a cache
+    - cache "miss" - read value into local cache from main memory
+    - cache "hit" - already have value locally in cache, dont
+      touch main memory
+
+    - cache coherence _PROBLEM_
+        - a shared variable gets modified in one of the processor
+          caches,
+        - but old outdated value of a variable could still be
+          held on one of the other processor caches.
+        - (so it would get a cache hit but for the wrong value!)
+
+        - ie shared variable but PRIVATE cache
+        - so you have a risk of reading "stale" data
+
+    - cache coherence _SOLUTION_
+        - hardware:
+            - write once protocol (cache controllers monitor all
+              bus activity "snooping")
+            - so cache controllers can take corrective action to
+              enforce cache coherence.
+            - but! probelm with acquire LOCK, lock pingponging if
+              using "test and set locks"
+
+		- software:
+			- compiler handles things
+
+### Parallel program summary
+    - Remember Flynn:
+        - SIMD: single program, multiple data (SPMD)
+        - MIMD: multiple programs, multiple data (MPMD). each
+          processor capable of executing a DIFFERENT program
+
+    - in either case
+        - programs cooperate using either SHARED MEMORY or
+          MESSAGE PASSING
+
+    - speedup
+        - ratio of (sequential execution time)/(parallel
+          execution time)
+
+    - negative result: (Amdahls Law)
+            - limit: `max speedup = 1/s` where `s` is the
+              sequential fraction that cant be parallelised
+            - so even with infinite resources, youre hampered by
+              the fraction that cant be parallelised.
+            - (if s = 0.1 then max possible speedup is only 10!)
+
+### programming with message passing:
+    - need:
+        - OS mechanism to run/create processes to execute on
+          different processors (we're not going to do it by
+          hand!)
+
+        - OS mechanism to send/receive messages between processes
+
+        - must specify the identity of the process you want to
+          send the msg to
+        - i.e. use process ID's (but not unix id, cos running on
+          different processors)
+        - P1: send(&x, P2) ... explictly mention process P2
+        - P2: receive(&x, P1)
+
+		- note: no shared variables between process P1 and P2
+
+    - abstraction:
+        - but each processor might have different linux version!
+        - we need a library thats abstracted above the OS level,
+        - ie not using the OS provided functions directly
+        - dominant library since 1990's - _MPI_

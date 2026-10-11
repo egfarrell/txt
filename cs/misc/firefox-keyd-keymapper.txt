@@ -1,0 +1,60 @@
+
+- Note: See also: 
+    - ~/dotfiles/ini/keyd/README.txt
+
+
+https://github.com/rvaiya/keyd
+
+### SUMMARY: 3 configs needed
+    # cp ~/dotfiles/ini/keyd/default.conf                     /etc/keyd/default.conf
+    # cp ~/dotfiles/ini/keyd/app.conf                         ~/.config/keyd/app.conf
+    # cp ~/dotfiles/ini/keyd/keyd-application-mapper.desktop  ~/dotfiles/ini/keyd $HOME/.config/autostart/keyd-application-mapper.desktop
+
+
+### Install and build keyd
+
+sudo apt update
+sudo apt install -y git make gcc libc6-dev
+
+git clone https://github.com/rvaiya/keyd.git
+
+cd keyd
+make
+sudo make install
+
+### Enable and start keyd (system daemon)
+
+sudo systemctl enable keyd
+sudo systemctl start keyd
+
+### Create global keyd config (required)
+
+sudo mkdir -p /etc/keyd
+cp ~/dotfiles/ini/keyd/default.conf  /etc/keyd/default.conf
+
+sudo systemctl restart keyd
+
+
+### Add user to keyd group
+
+sudo usermod -aG keyd $USER
+(log out and log back in after this step)
+
+
+### Create per-app Firefox mappings
+
+mkdir -p $HOME/.config/keyd
+cp ~/dotfiles/ini/keyd/app.conf  ~/.config/keyd/app.conf
+
+
+### Autostart keyd application mapper (Cinnamon)
+
+mkdir -p $HOME/.config/autostart
+cp ~/dotfiles/ini/keyd/keyd-application-mapper.desktop  ~/dotfiles/ini/keyd $HOME/.config/autostart/keyd-application-mapper.desktop
+
+
+### (Optional) start mapper immediately (no reboot)
+
+/usr/local/bin/keyd-application-mapper -d
+
+### Done

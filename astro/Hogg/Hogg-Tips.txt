@@ -1,0 +1,293 @@
+
+### AI and Physics
+    - 'Physics-Motivated Approaches to Model Design'
+        - IAIFI Symposium on the Impact of Generative AI in the
+          Physical Sciences Thursday, March 2024
+        - https://www.youtube.com/watch?v=aKMbW2ZeQMs&list=PLBY0ED2StbGZejEAAzOatxztHhglKdX5M&index=1
+    - AI & ML do not _share our values_ (as physicists).
+    - Real data-taking systems break all symmetries.
+    - _Good causal structure_ restores symmetries AND permits us
+      to learn about the latent structure of the world.
+    - Biggest impact of AI in physics data analysis will be in
+      nuisances. 
+        - Calibration, foregrounds, auxiliary models
+    - `Passive symmetries` might be just as important as active
+      symmetries?
+    - High-Level Overview: Hogg designed this talk to inspire
+      discussion on `physics-motivated` approaches to `model
+      design`, focusing on ML mainly.
+
+        - ML vs. AI: Hogg emphasizes their focus on ML, not
+          broader artificial intelligence, suggesting ML should
+          be broadly defined as methods that improve capability
+          with more data.
+
+        - Machine Learning Limitations: ML is useful in physics
+          for auxiliary purposes (e.g., calibration) but unlikely
+          to answer fundamental scientific questions, like the
+          nature of dark matter.
+
+        - Symmetries in Physics: Symmetries refer to properties
+          of systems that remain invariant under certain
+          transformations. They're central to physical laws and
+          may be leveraged in model design to improve ML models'
+          performance.
+
+        - Broken Symmetries: Real-world data often breaks the
+          symmetries present in theoretical physics,
+          necessitating approaches to restore symmetries in data
+          analysis, potentially through causal structures.
+
+        - Generative Models: In statistics, these models involve
+          likelihood functions capable of generating data
+          samples. In physics, they are related to sampling
+          complex structures like cosmological data.
+
+        - Active vs. Passive Symmetries: Active symmetries are
+          inherent in the laws of nature, like gravitational
+          laws, while passive symmetries result from choices made
+          by observers, like unit systems.
+
+        - CNNs and Symmetries: Convolutional Neural Networks
+          (CNNs) enforce certain translational symmetries useful
+          in image recognition, despite data not being inherently
+          symmetric.
+
+        - Potential Symmetries in CNNs: Hogg conjectures that
+          CNNs structure data to appear translationally invariant
+          on small scales but not on large scales, hinting at
+          underlying causal structures.
+
+        - Data Analysis vs. Emulation: Strong symmetries useful
+          in emulation (e.g., simulating physical systems) don’t
+          have the same utility in data analysis where
+          imperfections in real-world data break expected
+          symmetries.
+
+        - Causal Structure Proposal: The talk suggests modeling
+          data sets as composed of three components: fundamental
+          physics, auxiliary/nuisance parameters, and instrument
+          calibration to restore symmetries.
+
+        - Subjectivity in Data Analysis: Hogg emphasizes that all
+          data analysis is inherently subjective, requiring
+          choices that can obscure causal structures unless
+          explicitly modeled.
+
+        - Generative Models for Observational Data: A proposed
+          approach for building foundational models in physics
+          involves integrating interpretable physics models with
+          complex, possibly uninterpretable, models for nuisances
+          and calibration.
+
+        ### Definitions:
+            - Symmetry: a feature of a system that remains
+              unchanged under certain transformations, like
+              rotations or translations.
+            - Causal Structure: Causal models determine the
+              relationships between variables in a system, often
+              indicating how changes in one variable affect
+              others.
+            - CNN (Convolutional Neural Network): Type of NN
+              particularly effective in processing `structured
+              grid data` like images, primarily due to its
+              ability to capture spatial hierarchies.
+            - Equivariant: A function or model is equivariant if
+              certain transformations of the input yield
+              corresponding transformations of the output.
+            - Unitary Evolution: ... refers to the evolution of
+              a closed quantum system over time according to QM,
+              preserving probabilities.
+
+
+
+
+### geometric data analysis
+    - I got some real hacking time in this afternoon with Gaby
+      Contardo (Flatiron). We worked through some of the code
+      issues and some of the conceptual issues behind our methods
+      for finding gaps in point clouds using (what I call)
+      geometric data analysis, in which we find critical points
+      (saddles, minima, maxima) and trace their connections to
+      map out valleys and ridges. We worked out a set of
+      procedures (and tested some of them) to find critical
+      points, join them up with constrained gradient descents,
+      and label the pathways with local meta-data that indicate
+      how “gappy” they are.
+
+### Bolometric correction
+    - Today Katie Breivik (Flatiron) asked me some technical
+      questions about the bolometric correction. It's related to
+      the difference between a relative magnitude in a bandpass
+      and the relative magnitude you would get if you were using
+      a very (infinitely) broad-band bolometer. Relative
+      magnitudes are good things (AB magnitudes, in contrast, are
+      bad things, but that's for another post): They are relative
+      fluxes between the target and a standard (usually Vega). If
+      your target is hotter than Vega, and you choose a very blue
+      bandpass, the bandpass magnitude of the star will be
+      smaller (relatively brighter) than the bolometric
+      magnitude. If you choose a very red bandpass, the bandpass
+      magnitude will be larger (relatively fainter) than the
+      bolometric magnitude. That's all very confusing.
+    - And bolometric is a horrible concept, since most
+      contemporary detectors are photon-counting and not
+      bolometric (and yes, that matters: the infinitely-wide
+      filter on a photon-counting device gives a different
+      relative magnitude than the infinitely-wide filter on
+      a bolometer). I referred Breivik to this horrifying paper
+      for unpleasant details.
+    - https://arxiv.org/abs/astro-ph/0210394
+
+### is leading-order time dependence spirally?
+    - Independently, Kathryn Johnston (Columbia) and David
+      Spergel (Flatiron) have pointed out to me that if you have
+      a Hamiltonian dynamical system that is slightly out of
+      steady-state, you can do a kind of expansion, in which the
+      steady-state equation is just the zeroth order term in an
+      expansion. The first-order term looks like the zeroth-order
+      Hamiltonian acting on the first-order perturbation to the
+      distribution function, plus the first-order perturbation to
+      the Hamiltonian acting on the zeroth-order distribution
+      function (equals a time derivative of the distribution
+      function). That's cool!
+    - Now couple that idea with the fact that a steady-state
+      Hamiltonian system is a set of phase-mixed orbits nested in
+      phase space (literally a 3-torus foliation of 6-space).
+      Isn't this first-order equation the equation of
+      a winding-up spiral mode? I think it is! If so, it might
+      unite a bunch of phenomenology, from cold stellar streams
+      to spiral structure in the disk to The Snail. I discussed
+      all this with Adrian Price-Whelan (Flatiron).
+
+### Crossvalidation is good!
+	- $MY_IMAGES/maths/statistics/hogg-cross-validation-good.jpg
+
+### homoskedastic
+    - ... and scalable - the wavelet part of the problem has to
+      treat the data as uniformly sampled and homoskedastic. 
+
+    - Those assumptions are always _wrong_ (do I repeat myself?)
+      but I think I decided today that we can just pretend they
+      are true for the purposes of our rotation into the wavelet
+      basis. The
+
+
+### Social Science and Astro research
+    - In the weekly Astronomical Data Group meeting, some of the
+      questions that came up were about social-science research:
+      Can we bring our knowledge of data and statistics—knowledge
+      gained while working on astronomical problems—to bear on
+      important social-science results on race, policing, hiring,
+      and so on. We discussed some specific results in
+      social-science research, and we discussed differences
+      between the kinds of questions asked in social sciences and
+      those asked in the natural sciences. There are lots of
+      commonalities, of course! But two important differences
+      between social-science researcch and much of the current
+      work in the Group right now are: Social scientists are much
+      more interested in establishing causal relationships
+      between factors, and less about measuring parameters. And
+      many studies are exploratory. The investigators have an
+      interesting survey and are looking for good results within
+      it.
+    - These two properties (exploratory and causal) are shared
+      with many studies in particular astronomy areas, such as
+      galaxy evolution (does a change of environment cause
+      a galaxy to quench its star formation, say?) and exoplanet
+      abundances (do stars with higher metallicity form more
+      planets, say?). Because there are sub-areas of astronomy
+      that look a lot like social-science in their research
+      style, I came away from these discussions thinking that
+      interactions between astronomers and social scientists
+      could be very valuable for the astronomers, at least. (And
+      I have had some valuable interactions in the past.)
+    - https://hoggresearch.blogspot.com/2014/05/source-detection-causality-translation.html
+
+
+### Histogram Bins
+    - Kate Storey-Fisher (NYU) and I discussed various things,
+      but one of the important points of her project relates to
+      the properties of histograms. My loyal reader knows that
+      she is replacing the usual two-point correlation function
+      estimator for large-scale structure surveys with one that
+      does not require that the galaxy pairs be put into bins by
+      radial separation. One of the main points of the method is
+      that it permits continuous-function bases that are better
+      at expressing expected correlation functions than the usual
+      binned estimators, which are like histograms. We are trying
+      to visualize these points in the paper, showing that as you
+      go to larger bins, the usual binned estimator becomes more
+      precise (lower variance) but less accurate (more bias) and
+      vice versa. I also (a week or so ago) demonstrated this for
+      just normal histograms in this notebook. 
+    - $MY_CODE/python/astro/hogg_bias_variance_histograms.py
+
+### Search vs characterization
+    - I had a wide-ranging conversation with Ana Bonaca (Harvard)
+      about many things. One thing we discussed is the
+      relationship between what astronomers call search and what
+      astronomers call characterization. We were talking about
+      this in the context of asteroseismology signals. But it is
+      there for exoplanet searches, binary-star searches, and
+      even the Higgs boson. There are certain respects in which
+      search and characterization are very similar: Most search
+      methods involve parameter estimation over some grid of
+      models (periods and phases, say, estimating amplitudes, or
+      masses, estimating coupling parameters). But there are
+      certain respects in which they are very different too:
+      Search involves harsh approximations and cheats for
+      performance; characterization involves high-quality
+      inference with baroque models. Anyway, it is interesting to
+      think about these worlds and ideas and how much astronomy
+      has changed since I was a wee astronomer.
+
+### Kepler 2 body problem
+    - maybe link to Shaggy steed one day? 
+        - $MY_BOOKS/Physics/Maths/Math-Phy-General/Shaggy-Steed-of-Physics-2e.pdf
+    - binary stars in APOGEE
+    - Adrian Price-Whelan (Flatiron) has a draft of a paper I'm
+      pretty excited about: It's running The Joker, our custom
+      sampler for the _Kepler two-body_ problem, on every star
+      (that meets some criteria) in the APOGEE DR16 sample. 
+    - This method treats binary-companion discovery and
+      binary-companion orbit characterization as the same thing
+      (in the spirit of things I have done in exoplanet discovery
+      and characterization). 
+    - We find and characterize confidently 20,000 binaries across
+      the H–R diagram with lots of variations of binary fraction
+      with temperature, logg, and luminosity. And we release
+      samplings for everything, even the things that don't
+      obviously have companions. Well it doesn't count as
+      research if I'm merely excited about a paper! But I did do
+      a tiny bit of writing in the paper, making it my first
+      research day in a while. Yesterday I tweeted this figure
+      from the manuscript.
+
+### R-M effect; failure (Hogg)
+    - A great discussion today with Luger (Flatiron) and Bedell
+      (Flatiron) about the Rossiter–McLaughlin effect, which is
+      the apparent velocity shift as a planet transits a rotating
+      star. 
+    - We discussed how this effect really is different from
+      a `radial-velocity shift`; it is a _line-shape_ change, and
+      how we might model that within an extension to the wobble
+      framework. a great idea and possibly an important
+      contribution. The R–M effect has been important in
+      exoplanets.
+
+### Hogg talk
+    - how to choose your bin size for histograms (arxiv)
+    - also use mapreduce for large data
+    - liklihoods can be done with mapreduce
+    - on-line or stochastic:
+        - when you sample an incoming stream of data
+        - ie not all the data
+
+
+### Links
+    - TASI, day 6 hogg http://hoggresearch.blogspot.com/2018/06/tasi-day-6.html
+    - TASI, day hogg   http://hoggresearch.blogspot.com/2018/06/tasi-day-9.html
+    - CITA Hogg        https://hoggresearch.blogspot.com/2018/11/cita.html
+
+

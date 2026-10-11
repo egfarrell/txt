@@ -1,0 +1,282 @@
+make tips
+
+### Basic:
+    <target>: dependencies
+    _tabs_Shell commands
+
+### "Order only" pre-requsites
+    - counter-intuitive!
+    - foo: x y z     ??
+    - foo: | x y z   ??
+    - No, that's not what order-only prerequisites do. foo: | bar
+      baz does not enforce bar baz any more than without the pipe
+      character. Instead, the pipe says roughly "when ordering
+      foo, bar and baz, bar and baz must both come before foo,
+      but updates to bar and baz are not sufficient reason to
+      cause foo to be considered outdated and to need to run"
+
+### Really important
+    - If a line begins with a _TAB_, it is considered a command
+      for the _SHELL_ regardless where the line is in the file. 
+    - If it doesn't begin with a TAB, 'make' interprets it as
+      part of its own language. 
+
+### Nice Pattern
+    .PHONY: all release debug compile
+    
+    all:
+        $(MAKE) release
+        $(MAKE) debug
+    
+    release: CXXFLAGS = for rel
+    debug: CXXFLAGS = for deb
+    
+    release debug: compile
+        @echo 'building $@ with CXXFLAGS = $(CXXFLAGS)'
+    
+    compile: a b c
+        @echo 'building $@ with CXXFLAGS = $(CXXFLAGS)'
+    
+    a b c:
+        @echo 'building $@ with CXXFLAGS = $(CXXFLAGS)'
+
+### didnt know: 
+    - makefile uses 2 passes!
+    - eg for evaluating conditionals
+        - http://kirste.userpage.fu-berlin.de/chemnet/use/info/make/make_7.html
+
+### debugging make
+    - $(warning we have now reached this point)  
+    - $(info    we have now reached this point)  
+
+### echo and info
+    - for ifeq conditionals you must use `$(info here i am)` not
+      'echo'.
+    - The problem: 'echo' belongs to the shell; 
+    - 'Make' can pass it to the shell in a command, but Make cannot
+      execute it. Use `info` instead in conditionals.
+
+### spaces/tabs
+    - Recipes: 
+        - DONT convert `TABS` to `SPACES` for make files
+    - `Ifeq` statments: 
+        - it's ok to indent with SPACES but NOT TABS. 
+        - (Dec 2020: koral makefile) 
+            - why? Because anything indented with a TAB is
+              considered a SHELL command (see other notes above)
+
+### ZED SHAW:
+    How does Make work? "Implied dependencies and ancient lore" :)
+    - I have a single file 'ex3.c' in the folder
+    - I have a 'Makefile' with only:
+                    ```
+                    CFLAGS=-Wall -g
+                    clean:
+                        rm -f ex3
+                    ```
+    - then I type `make ex3`
+    - make executes: `cc -Wall -g ex3.c -o ex3`
+    - So it just "knew" to look for any files beginning with 'ex3'
+    - and when it found the 'c' file, it "knew" to call 'cc'
+    - ... implied dependencies and lore!
+
+### "cd" inside Makfile
+    need a semi-colon after the "cd"!
+    > cd myfolder; some commands && some more commands
+
+# Supress all the extra echos!
+    .SILENT:
+
+### single dollar sign: double "$"!
+	@echo 'export PATH=$$PATH:'somefolder/bin
+	@echo 'export PATH=$$PATH:'somefolder/bin
+	@echo 'export PATH=$$PATH:'somefolder/bin
+    - note: `@` supresses output
+
+### print variable values
+    - Avoid editing the Makefile to add the rule with GNU
+      make 3.81 or older, which does not support --eval.
+    - Create a new file in your home named ~/Makefile.debug
+      with the contents:
+
+    print-%: ; @echo $*=$($*)
+    include Makefile
+
+    Now you can use it the following way from any source directory:
+
+    $ make -f ~/Makefile.debug print-SOURCE_FILES
+
+### VPATH (make variable)
+    - specifies a list of folders that 'make' should search.
+    - Usually the 'folders' are expected to contain
+      prerequisite files that are not in the current folder
+    - However, 'make' uses VPATH as a search list for:
+        - PREREQUISITES
+        - and TARGETS of rules.
+
+### tig: configure make install example
+
+    ### install tig locally
+        configure --prefix=/home/physastro/xxxx/apps/tig
+        make
+        make install
+
+    ### comment
+        "make" on its own implies "make all"
+
+    ### start again
+        make clean
+
+    ### files I had to look at/change
+        vim config.make
+        vim Makefile
+        (had to uncomment DESTDIR=)
+
+
+### software carpentry make
+
+    "Anything worth repeating is worth automating"
+
+    Build Manager functions are:
+    1. Describe dependcies in a build file
+    2. (build file: plain txt file in specialised format).
+    3. Commands used to actually update things.
+
+    Most widely used Unix build manager is "make".
+    Written by intern in bell labs in 1970s!
+
+    Alternatives: "Scond"
+    For Java: "Ant"
+
+    - How do you know when things need to be updated/recompiled?
+    - Look at the file MODIFIED TIMESTAMP (use ls -t).
+    - If the source file is NEWER than the dependent file then you have to update things.
+    - Better language: if the "prerequsite" is newer than the "target"!
+
+### Definition of "RULE":
+    target : prerequsite
+    > <Single TAB>	Action
+
+    > figure-1.svg : summary-1.dat
+        > sgr -N -r summary-1.dat > figure-1.svg
+
+    Now run GNU make "gmake" from the command line.
+    (Many systems alias "make" for "gmake")
+    gmake -f hello.mk
+    the "-f" switch means use the filename "hello.mk"
+
+### TRICK! "Make" normally only executes the first default rule.
+    Need to introduce a dummy target called "all" and have all the other files as its prerequsite.
+
+    Things can be both a target and a prerequsite.
+    ie the whole thing is a directed graph.
+    Can't have any cycles! x depends on y which depends on z which depends on x. NO!
+
+    "Automatic" Variables. (Cryptic!)
+    - `$@` = target of the current rule
+    - `$^` = all the prerequisites
+    - `$<` = first prerequisite
+    - `%?` = all out-of-date prerequisites
+
+    Dont know the number of prerequisites files?
+    use the `*` wildcard pattern - works just like the Unix Shell.
+
+    Adding FALSE dependencies and ADDITIONAL dependencies:
+    When "make" sees multiple lists for the same target file,
+    it takes the full set of dependencies as a union of all the lists.
+
+### Eliminate Rule redundancy:
+    - Use a pattern rule, if you have the same type of rule
+      for similar named files.
+
+    > figure-%.svg : summary-%.dat
+        > sgr -N -r $@ $^
+
+        - "%" is a make wildcard.
+        - Must be the same on both sides of the colon.
+
+### ${MACRO} OR $(MACRO):
+    Say you build on 2 different machines,
+    and a style file is in a different directory on each machine.
+    e.g.
+    c:\papers\euphoric.wps
+    /usr/lib/euphoric.wps
+
+    Dont want to write two make files!
+    So use a "Macro":
+    STYLE_DIR=c:\papers\
+    wdp2pdf --style=${STYLE_DIR}/euphoric.wps %<
+    Watch the curly brackets!
+
+### INCLUDING OTHER MAKE FILES
+    include config.mk
+    which contains:
+    STYLE_DIR=c:\papers\
+    nice that its split up...!
+
+    Higher level build files:
+    Cmake and Autoconf/Automake can handle/discover machine differences.
+    but harder to debug!
+
+
+### A good example! (with "eval" and "call")
+
+    define DOWNLOAD_RULE
+    $1:
+        $(eval url     := $(strip $2))
+        $(eval tarball := $(strip $3))
+
+        ( \
+            if [ -f "$(tarball)" ]; then 		 		 \
+                printf '\nTarball exists already...\n';  \
+            else 								 		 \
+                printf '\nDownloading Tarball...\n';	 \
+                echo $(url)/$(tarball)  ;		         \
+            fi 									         \
+        )
+
+        tar -xvf $(tarball)
+        printf "\nExtracted: $(tarball)\n"
+    endef
+
+    # Define 3 rules to download the binaries
+    $(eval  $(call DOWNLOAD_RULE,  get_hadoop,  ${URL_hadoop},  ${hadoop_binary}.tar.gz ) )
+    $(eval  $(call DOWNLOAD_RULE,  get_spark,   ${URL_spark},   ${spark_binary}.tgz     ) )
+    $(eval  $(call DOWNLOAD_RULE,  get_hive,    ${URL_hive},    ${hive_binary}.tar.gz   ) )
+
+
+
+### another download rule
+    define create_dl_rule
+    $(eval target  := $(strip $1))
+    $(eval tarball := $(strip $2))
+    $(eval url     := $(strip $3))
+
+    $(target):
+        # download tarball if doesnt exist...
+        [ -f "$(tarball)" ] || wget $(url)/$(tarball)
+        # extract...
+        tar -xvf $(tarball)
+    endef
+
+    # Define rules to download binaries...
+    # (I have a copy of the binaries on my 128 GB SD-Card too...)
+    $(eval  $(call create_dl_rule,  get_hadoop, ${hadoop_binary}.tar.gz, ${hadoop_url} ))
+    $(eval  $(call create_dl_rule,  get_spark,  ${spark_binary}.tgz,     ${spark_url}  ))
+    $(eval  $(call create_dl_rule,  get_hive,   ${hive_binary}.tar.gz,   ${hive_url}   ))
+
+### 'cmake' tips
+    `cmake -DCMAKE_INSTALL_PREFIX:PATH=/foo/bar .`
+
+    - installing k3match
+        - first install c library using instructions from INSTALL
+        - then run "python setup.py install" WITHOUT SUDO!!
+        - (this will install k3match into the anaconda installation)
+
+    - without root access
+        `cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr . && make all install`
+
+### links
+    - HN discussion          https://news.ycombinator.com/item?id=21566530
+    - Nice tutorial          https://makefiletutorial.com/
+    - auto document makefile https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html

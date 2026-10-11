@@ -1,0 +1,353 @@
+
+### Pytorch forward()
+    - what is `x` here?
+        - $MY_IMAGES/cs/AI-ML/pytorch-forward-x.jpg
+    - later: ah `x` is the intput tensor. 
+        - Deep Lizary normally passes in `t` as the input tensor
+          to the `forward()` method.
+
+
+### matrix multiply "matmul"
+    - use `@` instead of `*`
+    - `*` means element-wise multiplication
+    - aside: 
+        - `val_indep` = validation independent variables 
+        - (pandas columns: age, sex, passenger class, fare etc)
+    - clunky version: (val_indep*coeffs).sum(axis=1)
+    - better way: `val_indep @ coeffs`
+
+### access a single layer in a network
+    - `network = nn.Sequential(nn.Linear(2,1))`
+    - `network[0]`
+    - returns: Linear(in_features=2, out_features=1, bias=True)
+
+### 3 ways making "nn.Sequential" network
+    - method 1 "class"
+        - in_features  = image.numel()
+        - out_features = math.floor(in_features / 2)
+        - out_classes  = len(train_set.classes)
+
+        - network1 = nn.Sequential(
+        -     nn.Flatten(start_dim=1) # dim=1: we want to flatten individual image, not whole BATCH
+        -     nn.Linear(in_features, out_features),
+        -     nn.Linear(out_features, out_classes),
+        -     )
+
+    - method 2 "dict"
+        - layers = OrderedDict([
+        -     ('flat', nn.Flatten(start_dim=1))
+        -     ,('hidden', nn.Linear(in_features, out_features))
+        -     ,('output', nn.Linear(out_features, out_classes))
+        - ])
+        - network2 = nn.Sequential(layers)
+
+    - method 3 "add_module"
+        - network3 = nn.Sequential()
+        - network3.add_module('flat', nn.Flatten(start_dim=1))
+        - network3.add_module('hidden', nn.Linear(in_features, out_features))
+        - network3.add_module('output', nn.Linear(out_features, out_classes))
+
+
+### forward method
+    - maps an input tensor to an output prediction tensor
+    - We've learned how all PyTorch neural network modules have
+      `forward()` methods, and when we call the `forward()`
+      method of a `nn.Module`, there is a special way that we
+      make the call.
+    - When want to call the `forward()` method of a nn.Module
+      instance, we call the actual instance instead of calling
+      the `forward()` method directly.
+    - Instead of doing this `self.conv1.forward(tensor)`, we do
+      this `self.conv1(tensor)`. 
+
+
+### CUSTOM datasets
+    - To create a custom dataset using PyTorch, we EXTEND the
+      `Dataset` class by creating a subclass that implements
+      these required methods. 
+    - Upon doing this, our new subclass can then be passed to the
+      a PyTorch `DataLoader` object. 
+    - All subclasses of the Dataset class must override
+      `__len__`, that provides the size of the dataset, and
+      `__getitem__`, supporting integer indexing in range from
+      0 to len(self) exclusive.
+
+
+### Get an actual numeric value
+    - t.mean()
+        - tensor(5.)
+    - t.mean().item()
+        - 5.0
+
+
+### Creating data
+    a1 = torch.Tensor(data)
+    a2 = torch.tensor(data)
+    a3 = torch.as_tensor(data)  # SHARE
+    a4 = torch.from_numpy(data) # SHARE
+
+    - use `torch.tensor()` for normal work
+    - for tuning / performance use: `torch.as_tensor()` 
+        - (can accept any array-like Python data structure,
+          rather than JUST numpy arrays)
+    - Keep in mind about memory sharing:
+        - Since `numpy.ndarray` objects are allocated on the CPU,
+          the `as_tensor()` function must copy the data from the
+          CPU to the GPU when a GPU is being used.
+        - The memory sharing of `as_tensor()` doesn't work with
+          built-in Python data structures like LISTS.
+        - The `as_tensor()` call requires developer knowledge of
+          the sharing feature. This is necessary so we don't
+          inadvertently make an unwanted change in the underlying
+          data without realizing the change impacts multiple
+          objects.
+        - The `as_tensor()` performance improvement will be
+          greater if there are a lot of back and forth operations
+          between numpy.ndarray objects and tensor objects.
+          However, if there is just a single load operation,
+          there shouldn't be much impact from a performance
+          perspective.
+
+
+### terminology
+    - "modules": 
+        - in Pytorch, we often think of 'layers' inside a network
+          as 'modules', and even networks as 'modules' too (if we
+          are composing networks together using nn.Sequential)
+            - for module in network.childre():
+            -   # 'module' here is actually each 'layer' in the
+            -   network (conv layer, dense layer etc)
+            -   module.reset_parameters()
+        - aside: 
+            - but 'Softmax' could appear as a "module" in
+              netowrk.children() and u can't call
+              `reset_parameters()` on a Softmax module/layer.
+        - solution:
+            - save snapshots
+
+    - layer or operation?
+        - "layers": 
+            - any operation defied using 'weights' 
+        - "operations": 
+            - any operations that don't have weights involved:
+            - `relu` activation is an operation
+            - max `pooling` is an operation
+                - ...they're called from `nn.Functional`
+            - Bad terminology: 
+                - Sometimes pooling operations are called
+                  "pooling layers"... and even activation
+                  operations called "activation layers". 
+        - Mathematically: a NN is a composition of functions, and
+          is a function itself.
+
+    - Indexes  CS         MATHS
+    - -------  --         -----
+    - 0        number     scalar
+    - 1        array      vector
+    - 2        2d-array   matrix
+    - n        nd-array   (nd-)tensor
+
+    - rank:
+        - rank: tells us how many _indices_ we need to refer to
+          a specific element in the data structure.
+        - a rank-2 tensor means all of these:
+            - a matrix
+            - a 2d-array
+            - a 2d-tensor
+    - axis:
+        - An axis of a tensor is a SPECIFIC DIMENSION of
+          a tensor. 
+    - shape: 
+        - tells us how many INDICES are AVAILABLE along each axis
+        - note: the `size` of a tensor is the same as the `shape`
+          of a tensor in pytorch
+        - so now we have another way of knowing the `rank`: it's
+          the length of its `shape`
+        - shape is useful: 
+            - the length (number of elements) in `shape` actually
+              gives us the rank of the tensor (i.e. the number of
+              different dimensions)
+        - shape changes the grouping of the data elements, but
+          doesn't change the underlying data itself
+
+    - feature maps
+        - With the output channels, we no longer have color
+          channels, but modified channels that we call feature
+          maps. These so-called feature maps are the outputs of
+          the convolutions that take place using the input color
+          channels and the convolutional filters. 
+
+    - element-wise
+        - same as 'component-wise', 'point-wise'
+
+### Reduction
+        - A reduction operation on a tensor is an operation that
+          reduces the number of elements contained within the
+          tensor.  (but it operates element by element too?)
+        - e.g. `t.sum()`, `t.numel()`
+
+### Handy
+    - intersting: deep lizard debugged a 'layer' functional call,
+      and way down deep it actually runs `tensor.matmul`
+    - layers and networks are both based on pytorch `nn.Module`
+    - and because of the `__call__` method we never invoke the
+      forward method directly. If we did, the extra code inside
+      the `__call__` method wouldn't get executed.
+    - you can call a pytorch layer as a function becase it
+      implements `__call__`
+    - `torch.manual_seed(42)` only works for one operation... must
+      be continually clled
+    - Sum over a dimension: 
+        - When you sum over a dimension `i` in a tensor, it
+          reduces that dimension `i` to `1`, because you sum up
+          every number in that dimension and reduce the multiple
+          numbers into one sum. You will see that happening in
+          every dimension.
+        - old shape: `(2, 3, 3)`
+        - t.sum(dim=0)
+        - new shape: `(1, 3, 3)`
+        - because we normally specify dim={something} during
+          REDUCTION operations
+
+    - Squeeze a tensor:   remove the dimensions or axes that have a LENGTH of one
+    - Unsqueeze a tensor: add a dimension with a length of one
+    - CPU better: for small operations, big overhead moving to GPU
+    - all tensors are automatically created on the CPU (check: `mytensor.device`)
+    - can use normal python debugger on it
+    - image tensors 
+        - image shape of `[224, 224, 3]` 
+        - [height, width, color_channels]
+        - but default: [B, C, H, W]??
+
+### Data types
+    - tensor computations depend on device AND type
+    - datatypes are _different_ for CPU and GPU
+    - Data type                  dtype             CPU tensor            GPU tensor
+    - ---------                  -----             ----------            ----------
+    - 16-bit floating point      torch.float16     torch.HalfTensor      torch.cuda.HalfTensor
+    - 32-bit floating point      torch.float32     torch.FloatTensor     torch.cuda.FloatTensor
+    - 64-bit floating point      torch.float64     torch.DoubleTensor    torch.cuda.DoubleTensor
+    - 8-bit  integer (unsigned)  torch.uint8       torch.ByteTensor      torch.cuda.ByteTensor
+    - 8-bit  integer (signed)    torch.int8        torch.CharTensor      torch.cuda.CharTensor
+    - 16-bit integer (signed)    torch.int16       torch.ShortTensor     torch.cuda.ShortTensor
+    - 32-bit integer (signed)    torch.int32       torch.IntTensor       torch.cuda.IntTensor
+    - 64-bit integer (signed)    torch.int64       torch.LongTensor      torch.cuda.LongTensor
+
+### Mixed type operations
+
+### Dimensions / size
+    - Shape gives you the "size" of each dimension. 
+    - The number of dimensions is the "depth" of the tensor.
+
+    - # Two dimensions, like a grid
+    - matrix    = torch.tensor([[1, 2], [3, 4]])  
+
+    - # Three dimensions, like a cube
+    - tensor_3d = torch.tensor([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])  
+        - # Example
+        - # Accessing sub-array [3, 4]
+        - sub_array = tensor_3d[0, 1]
+        - sub_array
+
+    - Each additional level of square brackets adds another
+      dimension. Think of it like nesting boxes: each box
+      (bracket) holds a smaller one inside. The outermost
+      brackets define the highest dimension.
+
+
+### packages
+    - torch                  top-level PyTorch package and tensor library.
+    - torch.nn               contains modules and extensible classes for building neural networks.
+    - torch.autograd         supports all differentiable Tensor operations in PyTorch.
+    - torch.nn.functional    Functional interface with operations used for building neural networks like loss functions, activation functions, and convolution operations.
+    - torch.optim            contains standard optimization operations like SGD and Adam.
+    - torch.utils            contains utility classes like data sets and data loaders that make data preprocessing easier.
+    - torchvision            provides access to datasets, model architectures, and image transformations for computer vision.
+
+
+### `INSTALLING` pytorch? 
+    - See $MY_NOTES/cs/phd-tech/CUDA-Nvidia-gpus.txt
+    - See $MY_NOTES/cs/AI-ML/fastai/fastai-course-2020.txt
+
+### Pytorch course
+    - $MY_CODE/AI-ML/pytorch/pytorchTutorial/02_tensor_basics.py
+    - underscore
+        - `y.mul_(x)` 
+        - Anything with a trailing underscore is modified in place
+        - So the results of `y*x` will be stored in `y`
+    - resize
+        - x = torch.rand(4,4)
+        - let pytorch figure out the # rows
+        - y = x.view(-1, 8)
+    - Same memory location
+        - array `b` is a numpy view of torch tensor `a`
+        - But if `a` is changed, so is `b`
+        - Because they both share the same memory and are both on
+          the CPU
+        - $MY_IMAGES/cs/python/two-arrays-same-memory.jpg
+    - move array to the GPU
+        - `x` was created directly on the GPU
+        - `y` was created on the CPU, then moved to the GPU
+        - $MY_IMAGES/cs/python/move-array-to-gpu.jpg
+    - move array (back) to CPU
+        - z = z.to("cpu")
+    - performace hint
+        - x = torch.ones(5, requires_grad=True)
+        - requires_grad=True is a useful hint to PyTorch
+    - How to actuallly calculate a gradient
+        - z.backward()
+        - and don't forget to reset the gradients then
+        - `weights.grad.zero_()`
+
+### Handy seeding code
+    - from g2net competition
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363163
+    def seed_everything(seed_value):
+        random.seed(seed_value)
+        np.random.seed(seed_value)
+        torch.manual_seed(seed_value)
+        os.environ['PYTHONHASHSEED'] = str(seed_value)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed(seed_value)
+            torch.cuda.manual_seed_all(seed_value)
+            torch.backends.cudnn.deterministic = True
+            torch.backends.cudnn.benchmark = True
+
+    seed = 42
+    seed_everything(seed)
+
+
+### Pytorch / Numpy SEED random numbers
+    - https://news.ycombinator.com/item?id=26767441
+    - "Be careful when using random numbers and
+      multi-processing..."
+    - Forgetting to _seed_ your RNG is a really classic bug.
+    - I think RNGs should auto-seed unless explicitly set not to,
+      but since the opposite behaviour was baked into C so many
+      years ago it's kind of the default.
+    - The worst part is how easy this bug is to miss unless
+      you're explicitly printing out the first set of random
+      numbers for some strange reason.
+    - And Jermey Fastai: 
+        - Beware random numbers and numpy, torch. 
+        - The global state isn't reinitialised by default when
+          you _fork_ the process
+
+### Basic
+    - $MY_CODE/AI-ML/gpu-desc.py
+    - $MY_CODE/AI-ML/pytorch-example.py
+    - $MY_CODE/AI-ML/pytorch/CodeCampPytorch/enda.py
+
+### Courses
+    - Code Camp Pytorch Course (20 hrs) ./courses/CodeCampPytorch.txt
+
+### Links
+    - Pytorch custom optimizer (e.g. PSO )                        https://discuss.pytorch.org/t/simulated-annealing-custom-optimizer/38609/4
+    - Pytorch course                                              https://www.youtube.com/watch?v=c36lUUr864M
+    - Pytorch course (German Python Engineer)                     https://www.youtube.com/playlist?list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4
+    - Github: German Python Engineer                              https://github.com/python-engineer
+    - Good? Pytorch book                                          https://www.amazon.com/Deep-Learning-PyTorch-Eli-Stevens/dp/1617295264
+    - HN: Vectorise Pytorch expressions                            https://news.ycombinator.com/item?id=38025381
+    - ExecuTorch: Run PyTorch programs on mobile and edge devices https://news.ycombinator.com/item?id=37919924
+
+

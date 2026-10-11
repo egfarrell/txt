@@ -1,0 +1,32 @@
+08-Linear-Transformations.txt
+
+
+$MY_VIDEOS/physics/what-are-tensors/08-Linear-Transformations.mp4
+
+a vector can be written many ways with different basis vectors
+	- $MY_IMAGES/physics/what-are-tensors/different-representations-of-vector.jpg
+
+question: 
+    - you represent a vector in two different ways, using two
+      different sets of BASIS vectors. 
+    - What's the relationship between both sets of BASIS vectors?
+        - well... write out one basis using the other basis 
+        - $MY_IMAGES/physics/what-are-tensors/comparing-basis-vectors.jpg
+        - $MY_IMAGES/physics/what-are-tensors/comparing-basis-vectors2.jpg
+
+link to linear algebra:
+	- $MY_IMAGES/physics/what-are-tensors/linear-alg-component-matrices.jpg
+
+- some objects transform using the lambda matrix
+- some objects transform using the inverse lambda matrix 
+
+- he defines covariant and contravariant, depending on the matrix
+  or inverse matrix used in the transformation
+
+- good: he wrote out a transformation of the vector `w` from one
+  basis to another
+
+### quirk of textbooks: 
+    - when they say something is "covariant", they kind of show
+      the component and dont show the basis vector attached which
+      is actually the thing that transforms covariantly

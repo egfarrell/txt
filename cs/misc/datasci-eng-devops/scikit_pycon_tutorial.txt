@@ -1,0 +1,101 @@
+scikit-learn pycon tutorial
+
+Plotting
+	Normally you cant do a plot for machine learning
+	Theres just to many predictor variables
+
+input data 1
+	X(feature vectors) with shape (n_samples, n_features)
+
+input data 2
+	numpy array
+	one row per observation
+	one column per feature (for each observation)
+
+feature vectors
+	all input data should be converted to numerical description
+	because averages and stuff have to be calculated.
+	So categorical features should be converted to a number 
+	(purple --> 1.0 for true, 0.0 for false)
+	(yellow --> 1.0 for true, 0.0 for false)
+
+	For images, use raw pixel value as feature
+	or use distance to [standard image] as new feature
+
+Supervised Learning 2
+	clf.fit(X, y) and then clf.predict(X_new)
+	Classifcation: y is an array of integers
+	Regression: y is an array of floats
+
+Supervised Learning 2
+	two kinds: classification (discrete values) and regression (continuous)
+	the label you want to assign to the input data is called the "target"
+
+scikit-learn convention
+	attributes learnt from the data have trailing underscores
+	clf.coef_
+	clf.intercept_
+
+aha! clf
+	Is shorthand for "classifier"
+
+SVM
+	support vector machine
+	tries to find line which maximises the margin
+	between the two groups
+
+logisticRegression
+	this module can also return the probability for each class
+	as well as stating which class it thinks it is
+	clf.predict_probs(X_new)  	---> returns probabilities
+	clf.predict(X_new)		 	---> returns straight prediction
+
+ExtraTreesClassifier
+	expensive to train, takes alot of computing power
+	but easy to parallelise
+
+unsupervised learning (PCA?)
+	can find a better description of the data
+	can be used as a preprocessing step before a supervised analysis
+
+PCA
+	simple linear projection of the data
+	ie new description of the data in 2D or 3D space
+	useful to have unit variance in all the components
+	X_pca = pca.transform(X)
+	X_pca.shape = (150, 2) 
+	still have 150 iris observations but only 2 features (principal components) now
+	these 2 components explain 92% and 5% of the variance
+
+PCA for preprocessing
+	then use randomisedPCA function instead of the normal PCA
+
+better than PCA
+	manifold learning
+
+Clustering
+	assigns group ID to each sample
+	minibatch - doesnt need to load everything into memory
+	Meanshift, DBSCAN - dont need to give # of clusters at start
+
+svm_gui.py
+	left click and right click to add points
+	some data is linearly seperable, some not
+	linear modles - quicker to train, less likely to overfit.
+	RBF is better for handling non-linear data.
+
+regularisation parameter
+	constrain the classifier to use simplier models
+	"C" parameter
+	bigger "C" means more freedom to the model
+	smaller "C" means more regularised
+
+sklearn.cross_validation
+	train_test_split
+	basic testing of your classifier
+
+sklearn.cross_validation
+	cross_val_score
+	better testing of your classifier
+	will run 10 test altogether and 
+	give you a mean and standard deviation

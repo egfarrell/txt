@@ -1,0 +1,21 @@
+remote desktop protocol RDP
+
+CTRL+ALT+BREAK:
+	Switch the client computer between a window and a full screen
+
+
+CTRL+ALT+END:
+	Open the Microsoft Windows NT Security dialog box (CTRL+ALT+DEL)
+
+
+multiple client monitors
+	multi-mon
+		Connect using the Remote Desktop Client 7.0 (mstsc.exe) ( Windows 7/Windows Server 2008 R2.)
+		Enable Multimon using one of the three methods described below:
+		a. Click “Use all monitors for the remote session” in the client (mstsc.exe) window.
+		b. Use the “/multimon” switch on the mstsc.exe command line.
+		c. Add “Use Multimon:i:1” to the RDP file.
+
+	span
+		mstsc /span
+

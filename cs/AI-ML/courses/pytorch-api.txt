@@ -1,0 +1,88 @@
+- PyTorch provides two main ways to access its functionalities:
+    1. Functional API
+    2. Module-based API
+
+
+### 1. Functional API
+    - (`torch.nn.functional`):
+    - This is a collection of function-based interfaces for
+      various operations like activations, loss computations,
+      etc. When using the functional API, represented by the
+      capital F (e.g., `F.relu`, `F.softmax`), you can directly
+      call these stateless functions.
+    - These functions don't hold any internal state and need all
+      necessary inputs passed to them each time they are called.
+
+### 2. Module-based API
+    - (`torch.nn`):
+    - This API is object-oriented. It involves defining classes
+      that extend nn.Module. These classes encapsulate both the
+      behavior (in the form of methods) and _state_ (in the form
+      of parameters and other internal variables).
+    - For instance, `nn.Conv2d`, `nn.ReLU`, and `nn.Linear` are
+      classes that, once instantiated, can be used as layers in
+      a neural network.
+
+### Why Two APIs?
+    - Flexibility and Granularity:
+        - The functional API provides more granular control. It's
+          useful when you need to perform operations where
+          maintaining state is not necessary, like applying
+          a one-off activation function.
+    - Ease of Use and Abstraction:
+        - The module-based API abstracts away a lot of the
+          underlying complexity. It's useful for building and
+          training models, as it automatically handles parameter
+          management and other details.
+
+### Examples
+
+- Functional API Example:
+
+
+    ```
+    import torch
+    import torch.nn.functional as F
+
+    # Creating a tensor
+    tensor = torch.randn(1, 5)
+
+    # Applying the ReLU activation function using the functional API
+    activated_tensor = F.relu(tensor)
+    ```
+
+- Module-based API Example:
+
+    ```
+    import torch
+    import torch.nn as nn
+
+    # Define a simple neural network using the module-based API
+    class SimpleNet(nn.Module):
+        def __init__(self):
+            super(SimpleNet, self).__init__()
+            self.linear = nn.Linear(5, 5)
+            self.relu = nn.ReLU()
+
+        def forward(self, x):
+            x = self.linear(x)
+            x = self.relu(x)
+            return x
+
+    # Create an instance of the network
+    net = SimpleNet()
+
+    # Creating a tensor
+    tensor = torch.randn(1, 5)
+
+    # Applying the network
+    output = net(tensor)
+    ```
+
+- In the functional example, `F.relu` is a standalone function. In
+  the module-based example, `nn.ReLU()` is a class instance that
+  can be part of a model's sequence of layers.
+
+- The module-based approach is particularly handy for building
+  complex models, as it allows for easy composition and parameter
+  management.

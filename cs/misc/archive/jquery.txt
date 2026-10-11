@@ -1,0 +1,56 @@
+'Skillbuilders' JQuery course:
+
+# html page
+	can be viewed like a csv data file
+	the header row is html, parent, label, etc etc
+	interesting viewpoint!
+
+### selector
+	like sql query
+	select count(*) from html_table;
+	%('*').length
+
+### jquery dollar sign
+	think of it like "s" for SELECT
+
+### between brackets
+	is essentially your WHERE clause
+
+### target using element TYPE
+	$('input').length;
+	give me the length of every html element
+	with a type of input (textboxes AND buttons are 'input')
+
+### target using "ID" attribute
+	$('#wwvFlowForm').length;
+
+### RETRIEVE attribute values
+	select action from html_table where id='job title';
+	$('#wwvFlowForm').attr('action');
+
+### SET attribute value
+	update html_table set size=30 where id='job title';
+	$('#wwvFlowForm').attr('size',30);
+
+### ADD new element to the DOM
+	sql:
+	insert into html_table (id, parent, element, text)
+	values (1, 5, 'h3', 'Why not give this a try?');
+	jquery:
+	$('h1').after('<h3>Why not give this a try?</h3>');
+
+### REMOVE element
+	$('#job_title').remove();
+
+
+### hide second row in HTML table
+	$('table')				start with table
+		.children			table body
+		.children 			table rows
+		.eq(1)				filter (zero based array)
+		.css(display:none)	set attribute
+
+
+### Oracle APEX misc comment
+	APEX supports jquery and jqueryUI
+	via dynamic actions

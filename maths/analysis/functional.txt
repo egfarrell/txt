@@ -1,0 +1,85 @@
+
+- An ordinary function takes numbers (or vectors) and returns
+  another number (or vector).
+
+### Example:
+```
+f(x) = x^2 + 2x + 1
+```
+- You plug in a number `x`, and out comes a number `f(x)`.
+- In programming terms:
+```
+def f(x):
+    return x*x + 2*x + 1
+```
+
+A functional, by contrast, takes a function as its input, and returns a number.
+
+### That’s the key idea:
+functionals are functions of functions.
+
+You could think of them as “meta-functions.”
+
+In symbols, we often write something like:
+
+F[y] = ∫ (y'(x))^2 dx (integrated over some interval)
+
+- Here F takes in an entire function y(x), looks at its
+  derivative y'(x), squares it, integrates it _over some range_,
+  and gives you back a number.
+
+### A functional is like:
+
+```
+def F(y):
+    # y is itself a function!
+    total = 0
+    for x in range(0, 10):
+        total += y(x)**2
+    return total
+```
+
+- So `F` doesn’t care about a single number—it cares about the
+  whole behavior of `y(x)` OVER A RANGE. (!!)
+
+### Simple examples 
+
+Function example:
+`f(x) = sin(x) + x^2`
+- Input: number x
+- Output: number f(x)
+
+Functional example:
+`J[y] = ∫_0^1 (y(x))^2 dx`
+- Input: entire function y(x)
+- Output: number representing the “total squared size” of that function between 0 and 1
+
+- Physics-flavored example:
+- In Lagrangian mechanics, the action functional is
+`S[y] = ∫ L(y, y', t) dt`
+
+- where `L` is the Lagrangian (often kinetic energy minus
+  potential energy).
+- The principle of least action says that the actual path
+  a particle takes is the one that makes `S[y]`
+  stationary—meaning that small changes in the path don’t change
+  `S` to first order.
+
+So you can think of it like this:
+- A function maps a number to another number.
+- A functional maps an entire function to a number.
+
+A good mental picture is:
+- If a function is a mountain whose height depends on position
+  `x`, then a functional is a “mountain of mountains”—its height
+  depends on the shape of another mountain (the function y(x)).
+
+- Where it gets exciting is that in the calculus of variations,
+  we look for the function `y(x)` that minimizes or maximizes
+  a given functional. 
+- That’s how we get the Euler–Lagrange equations—essentially the
+  “derivative” of a functional with respect to a function.
+
+- Would you like me to walk through how we take that “functional
+  derivative” to derive the Euler–Lagrange equation? It’s one of
+  the most satisfying derivations in all of physics.

@@ -1,0 +1,11 @@
+unix ls examples
+
+
+# list in SINGLE column
+
+    ls -1 --group-directories-first;
+
+
+# list in columns - max width 80
+
+    ls -L -w 80 --group-directories-first;

@@ -1,0 +1,57 @@
+
+### AIM:
+
+    - In TMUX, I want `<c-i>` to navigate to a previous window
+      (like Firefox)
+
+### _WINDOWS_ approach
+    - Use AHK to send `ctrl+space+i` to tmux when `c-i` is pressed.
+    - In Windows, this doesn't interfere with the actual `[tab]` key.
+    - Search for 'hack' inside $HOME/.vimrc
+
+
+### _LINUX_ appraoch
+    - APPROACH:
+        - `~/.tmux.conf`:      
+            - source this file: ~/.tmux.conf.tab-hack
+            - It assigns `<c-i>` to `previous-window` 
+
+        - CONSEQUENCES:
+
+            - This has several consequences because I still want
+              to use `[TAB]` in BASH for `menu-complete`. 
+            - So...
+
+            - _~/.Xdefaults_:     
+                - Emit a special escape code for TAB: `\033[33~`
+
+            - _~/.inputrc_:       
+                - Detect `\033[33~` or its variants and assign
+                  'MENU COMPLETE' to it
+
+            - _~/.vimrc_:          
+                - Set all `\033[33~` references to `<TAB>`
+                - Search for 'hack' inside $HOME/.vimrc
+
+
+### TAB KEY: Escape Code summary
+
+                    OUTSIDE TMUX        INSIDE TMUX 
+                    ------------        ----------- 
+
+Urxvt:              "\033[33~"          "\033[18;2~"
+Gnome TERMINAL:
+Minttyrc:
+
+### Note: 
+    - Both _Guake_ and _Gnome-terminal_ use the VTE library,
+      which DOES NOT allow the mapping from key chords to
+      character sequences to be configured. You have the same
+      problem as bash - wrong key sequence bindings with
+      control+alt+space
+        - VTE library https://gitlab.gnome.org/GNOME/vte/
+
+
+### Links
+    - Useful info https://unix.stackexchange.com/questions/203418/bind-c-i-and-tab-keys-to-different-commands-in-terminal-applications-via-inputr
+

@@ -1,0 +1,142 @@
+
+
+### Homology and cohomology
+    - ... are concepts from algebraic topology, which studies
+      topological spaces using algebraic methods. 
+
+### Homology
+
+    _Homology_ is a way of associating a sequence of algebraic
+    objects, usually groups, with a topological space. The idea
+    is to study the space by examining these groups, which can
+    give insight into the structure of the space.
+
+    1. _Intuitive Idea_: Think of a topological space (like
+       a shape) and imagine "slicing" it into pieces. Homology
+       helps us understand the space by counting and categorizing
+       these pieces in a structured way.
+    2. _Chains, Cycles, and Boundaries_:
+    - _Chains_: These are formal sums of simplices (like
+      points, line segments, triangles) in the space.
+    - _Cycles_: Chains that form closed loops (no boundary).
+    - _Boundaries_: Chains that are the boundary of
+      a higher-dimensional simplex.
+    3. _Homology Groups_: These groups measure the difference
+    between cycles and boundaries. If a cycle is not a boundary,
+    it represents a "hole" in the space.
+
+    _Example_: Consider a circle. Its 1-dimensional homology
+    group would detect the presence of a "hole" in the middle of
+    the circle, reflecting its fundamental loop.
+
+### Cohomology
+
+    _Cohomology_ is closely related to homology but works in
+    a dual manner. While homology deals with chains and cycles
+    directly, cohomology deals with functions defined on these
+    chains and cycles.
+
+    1. _Intuitive Idea_: Instead of slicing the space, think of
+       assigning algebraic data (like numbers or functions) to
+       the different parts of the space. Cohomology helps
+       understand how these assignments can be made consistently.
+    2. _Cochains, Cocycles, and Coboundaries_:
+    - _Cochains_: Functions that assign values to chains.
+    - _Cocycles_: Cochains that are consistent on the cycles
+      (they don't change values when going around a loop).
+    - _Coboundaries_: Cochains that come from
+      a lower-dimensional cochain (they are trivial in a sense).
+    3. _Cohomology Groups_: These groups measure the difference
+    between cocycles and coboundaries. They capture how the space
+    allows or restricts these consistent assignments.
+
+    _Example_: For a circle, the 1-dimensional cohomology group
+    could help describe functions that assign a number to each
+    point in a way that respects the loop's structure.
+
+### Relationship Between Homology and Cohomology
+    - Homology and cohomology are related concepts; both aim to
+      provide algebraic invariants that capture the topology of
+      a space. They often contain similar information but from
+      different perspectives:
+
+    - _Duality_: In many cases, homology and cohomology groups
+      are related through a duality principle. For example,
+      Poincaré duality in certain spaces relates homology and
+      cohomology groups of complementary dimensions.
+    - _Tools_: Both are tools to analyze topological spaces but
+      through different algebraic structures.
+
+    _Summary_:
+    - _Homology_: Studies the space by examining the "holes" in
+      various dimensions.
+    - _Cohomology_: Studies the space by examining consistent
+      ways to assign values to its parts.
+    - They are related but offer different perspectives on the
+      topology of a space.
+
+
+
+
+### Maudlin: Physical Geometry
+    - $MY_BOOKS/Physics/Spacetime/London-maudlin-physical-geometry.pdf
+    - Chapter 5: 
+        - Indeed, Martin Crossley characterizes topology as
+          “essentially just the study of continuous functions”
+          (Crossley, 2005, p. 3), implying that the whole point
+          of the mathematical machinery is to supply a clear
+          account of the continuity of functions. 
+        - This attitude is somewhat extreme, and is directly
+          opposed to the approach we have taken. 
+        - As we will see, the deﬁnition provided in standard
+          topology does not reﬂect the intuitive idea of
+          _continuity_. It rather captures a somewhat different
+          concept, which would more aptly be called _convergence_
+          than continuity. 
+
+### Scholze
+    - https://xenaproject.wordpress.com/2020/12/05/liquid-tensor-experiment/
+    - Condensed mathematics claims that topological spaces are
+      the wrong definition, and that one should replace them with
+      the slightly different notion of condensed sets. Before
+      giving their definition, let me state a few properties:
+
+    - in practice, most topological spaces of interest are
+      “compactly generated weak Hausdorff”. 
+
+    - In fact, this is the class of topological spaces
+      customarily used within algebraic topology; also, all usual
+      topological vector spaces (e.g., all metrizable ones, or
+      just first-countable ones) have this property. 
+    - Now compactly generated weak Hausdorff spaces also embed
+      fully faithfully into condensed sets, so in this large
+      class of examples, the transition is completely
+      inconsequential
+
+### Topology
+    - studies patterns of closeness
+    - is the search and study of things that are invariant
+      between homeomorphic spaces
+
+### open sets
+    - do not include the boundary
+
+### important topological properties:
+    - countability
+    - separability 
+    - continuity 
+    - compactness 
+
+### Ian Stewart
+    - chapter 10
+    - $MY_BOOKS/Physics/Maths/Concepts-Modern-Mathematics-Stewart.pdf
+
+
+### XYLYXYLYX 
+    - course: $MY_NOTES/physics/courses/XYLYXYLYX-courses.txt 
+        - (What are manifolds?)
+    - book recommendation "Counter examples in topology"
+
+### Links
+    - HN: How mathematicians study holes https://news.ycombinator.com/item?id=25928221
+    - Topology & Geometry by Dr Tadashi Tokieda https://www.youtube.com/playlist?list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ

@@ -1,0 +1,485 @@
+### 7. Proper and Improper Mixtures
+
+7 In regard to mixtures and their description, a few rather ele-
+mentary features of the relevant mathematical formalism were
+explained in Chapter 6. Other, more elaborate, aspects of this
+formalism could of course be reported on. However, an abun-
+dant literature already exists on this subject. What is of greater
+interest to us (and has, also, been explored in less detail by the
+various authors who wrote in the field) is the question of the
+possible physical interpretations of the formalism in question.
+This chapter is an approach to such problems.
+7.1 Operators and Observables
+Observable dynamical quantities are described by Hermitean
+operators, and in the early days of quantum mechanics the cor-
+respondence was believed to be one-to-one. It was assumed that
+(i) every observable can be related to some Hermitean operator
+and (ii) every Hermitean operator corresponds to one observ-
+able.
+It seems that no convincing evidence against assumption (i)
+has yet been found. On the other hand, it is now known that
+assumption (ii) cannot be true in complete generality. Indeed
+it has been shown (by Wick, Wightman, and Wigner [1]) that
+superselection rules exist in physics, according to which some lin-
+ear combinations of well-known states (such as the states of an
+isotopic multiplet having different total charges) can never be
+physically realized. As a consequence, the associated projection
+operators correspond to no observables. Thus, the superselection
+rules provide a counterexample to assumption (ii). The observ-
+ables whose eigenvectors corresponding to different eigenvalues72 Density Matrices Describing Subsystems
+99
+cannot be physically superposed are often called "superselection
+charges "
+Although there is no general recipe for determining which
+operators correspond to observables and which do not, it is not
+without interest to note that the question whether or not, on a
+given type of systems, the Hermitean operators all correspond to
+observables is tightly linked to the the one of knowing whether
+or not a given density matrix is measurable (in the sense that all
+its elements are experimentally knowable)
+To show this, let us assume that all the Hermitean operators
+Q of a Hilbert space H corresponding to systems of a certain
+type S are observable This implies that on a given ensemble E,
+described by p, of systems S we can measure the quantities
+Tr(pQ)
+corresponding to any Hermitean operator Q, indeed this is sim-
+ply done by splitting E into a sufficient number of subensembles
+the elements of which are randomly selected, and by measuring
+on each one of these subensembles the mean value of one of the
+observables in question In particular, we can measure this way
+the quantities Tr(pQ) corresponding to the Q operators given by
+-
+|i >< j| + |j >< i\_and_i(\i>< j| − \j >< i|)
+where {i} define the representation But by addition and sub-
+traction these quantities immediately yield the elements pi; of
+Pij
+the density matrix, so that these elements can be measured
+7.2 Density Matrices Describing Subsystems
+Let the normalized ket
+| 4 >= Σcij\V; > ®\U; >
+ij
+(71)
+describe, at a given time t, an ensemble E of N physical sys-
+tems Σ, each composed of two subsystems U and V A Hilbert
+space
+H() (H(V)) is attached to the U(V) systems, and {|u;>}
+({\v; > }) is a complete system of orthonormal kets in H(u) (H(V))
+Such a situation frequently occurs (eg, as a result of the
+Schrödinger-like time evolution when U and V have interacted100
+7 Proper and Improper Mixtures
+in the past). Here we are interested in the ensemble of the V systems,
+which we call Ey
+Let A be an observable that pertains to systems V The mean
+value of A on E is
+< A >=< y\A\y >= Σ c*crs < v;\® < u,\A\v, > ©\u¸ > (7.2)
+1,J,r,s
+Of course, <A> is also the mean value of A on Ey The fact
+that A belongs to system V means that the operator A has no
+effect on the vectors in H(u) so that Eq. (7.2) can be written as
+<A> = Σccr<v₁\A\v, >
+1,J,r
+=Σ₁₁₁₁ = Tr(p'A)
+(7.3)
+(7.3a)
+with
+and
+A₁ = < v₂|A|v, >
+P₁₁₁ = Σcrjcia
+=
+r,l
+Since the quantities Prsa, defined by
+Pr‚s;¹.)
+*
+Prsa.) = Cr.sc
+(7.4)
+(7.5)
+(7.6)
+(7.7)
+are the elements of the density matrix p that describes E in the
+representation {|v; > \u, >}, Eq. (7.5) can also be written as
+P₁ = Pr
+and Formula (7.6) as
+p' = Tr(u) p
+(7.8)
+(7.9)7.3 Proper and Improper Mixtures
+where, as is apparent from Eqs. (7.1) and (7.7),
+p = Σ | v₁₂ > | Us > Pris < vi | < u; |
+(7.10)
+1,5;
+101
+is the state operator of E, and where the symbol Tr(U) (partial
+trace) means that the usual operation of taking the trace is carried
+over only in H(u)
+Tr(U),
+P
+α
+=
+Σ
+t
+(7.11)
+Equation (7.3a) shows that expression (6.14)—which gives
+the mean value of an observable when E is a mixture of en-
+sembles E that can be described by state vectors—can formally
+be extended to the ensemble Ey now under consideration. In a
+similar way, expression (6.15) for the statistical frequencies can
+be extended to the ensemble of the V systems. These extensions
+simply require that the statistical operator of the ensemble of the
+V systems be defined by means of formulas (7.5) and (7.6). It is
+moreover easily verified that the operator p' defined by these
+expressions has properties (i-iii) of Section 6.1. It therefore also
+has properties (iv-vii). Finally, it can be verified that
+Tr(p'²) ≤ 1
+(7.12)
+Hence p' has all the formal properties shown by statistical oper-
+ators describing mixtures.
+Under these conditions it seems appropriate to extend the
+meaning of the expression "state operator" as defined in Section
+6.6 so that it also covers entities such as the here considered p'
+and say that p' is "the state operator describing Ev"
+7.3 Proper and Improper Mixtures
+Concerning all the points considered in the previous section the
+defined ensembles Ey do not differ from the mixtures Ê already
+encountered in Sections 6.1 and 6.2. This fact is quite remark-
+able. It motivates the aforementioned convention, extending the
+generic name "mixture" to ensembles of type Ey Such a conven-
+tion cannot however be fully accepted-without reservations or
+qualifications until it has been verified that any ensemble of102
+7 Proper and Improper Mixtures
+type Ey can be identified with an ensemble of type Ê. Let us
+therefore investigate whether or not this is the case, by consid-
+ering every available piece of information.
+α
+α
+At first sight the arguments for identifying the two concepts
+look
+impressive. Indeed it is well known that any measurement
+on an ensemble of systems can always be reduced to measure-
+ments of mean values on that ensemble. As a consequence, if
+Ey is an ensemble of N subsystems such as V and if Pn
+and
+\n,rare, respectively, the eigenvalues and eigenvectors of the
+statistical operator (7.6) attached to Ey, a mixture Ê exists that
+is composed of subensembles of the E type (i.e., each Ę is de-
+scribable by a ket) and that cannot be distinguished from Ey by
+any measurement that bears on systems V alone.¹ This Ê is made
+up of the ensembles Ê, that are described by the kets In,r > and
+have the populations Np. If we could only make measurements
+on the systems V and could not make any on systems U, we
+should not be able to differentiate such an ensemble from a mix-
+ture of type Ey The same is true, as is easily verified, if we are
+able to measure, along with the quantities pertaining to V, only
+a limited number of suitably chosen correlations between the
+U and V systems. Since such cases often occur în practice, the
+use of the generic name "mixture" for describing ensembles that
+are either of the E type or of the Ey type is quite convenient for
+applications.
+=
+Ê
+'n
+When fundamental questions are at stake, however, the sit-
+uation is altogether different for, at least in respect to systems
+ΣUV for which every Hermitean operator corresponds to
+an observable, it is possible (d'Espagnat [2]) to falsify what, in
+view of the above, would seem quite a natural assumption. This
+is the assumption that the ensemble of the systems U and the en-
+semble of the systems V are both, separately, mixtures of the type
+already encountered in Section 6.2 (type Ê). More precisely, it is
+the assumption that both ensembles are mixtures of N systems,
+on N of which a physical quantity A (the Aα with different
+values of a not being necessarily all different) has some definite
+value a, corresponding to the eigenvalue equation
+α
+α
+a
+Aala >= aala >
+(7.13)
+1. We exclude also measurements of correlations between elements of the same
+ensemble; see Section 8.37.3 Proper and Improper Mixtures
+(on the meaning of the verb "to have," see Section 4.3).
+103
+To falsify this assumption it is sufficient to establish its in-
+consistency in a simple case, so let us consider an ensemble E of
+N spin 1/2 particle pairs U + V, lying in a singlet spin state.² In
+such a case Eq. (7.1) reads
+|y > = 2−¹/² (|u+ > ©|V_ > −|U_ > ©10 >)
+(7.14)
+where (in units ħ/2)
+SY \u₁ > ±\u₁ >
+and
+SY 10 >= ±10 >
+(7.14')
+(7.14")
+and S and Sy are-as is often said-"strictly anticorrelated"
+since a straightforward application of Rule 3 shows the outcomes
+(+,+) and (−,−) of simultaneous measurements of S and Sy
+have zero probabilities.
+According to Eqs. (7.5), (7.6), and (7.14), the ensemble Ey of
+the N particles V is described by the statistical operator
+Py = 21 (10₁><v | +10 > < 0_1)
++
++
++
+(7.15)
+a set of eigenvectors of which is {|v4 >, |v_ >} And a similar for-
+mula holds good concerning the statistical operator pu describ-
+ing the ensemble Eч of the N particles U. Now, unquestionably
+Py adequately describes (to be sure: together with an infinite
+number of other mixture) a mixture Êy composed of two pure
+cases EY and EV, where EX-with eigenvector 74 >-is an en-
+semble of N/2 particles having their z spin component Sy equal
+to 1 (still in ħ/2 units) and EV -with eigenvector |_ >-sımilarly
+is an ensemble of N/2 particles V having their Sy equal to -1.
+And of course the same holds true with U everywhere substi-
+tuted to V, because of the obvious U, V symmetry. But in spite
+of all this, it is still inconsistent to physically identify Ey to the
+thus defined Êy, and Eu to a similarly defined Êu.
+-
+The proof of this inconsistency is that if a pair U + V of E
+were really constituted of one element of Ey and one element
+2. See Appendix 1, if necessary, for definitions and details.104
+7 Proper and Improper Mixtures
++
++
++
+'+
+of Êy it would (as a consequence of the very definition of Eu
+and Êy) necessarily be the case that either its U part belonged
+to Êч and its V part to EV or its U part belonged to Êч and its
+V part to EY (the other two possible cases being trivially ruled
+out in view of their false consequences on feasible correlation
+measurements on S¼ and SY). Let us then consider the ensem-
+ble E of the pairs whose U parts belong to EU (and whose V
+parts therefore belong to ÊY). Since (a) by assumption there are
+no hidden variables (completeness hypothesis) and (b) the set
+{SY, SY} constitutes a complete set of compatible observables
+(CSCO) on the four-dimensional Hilbert space Hч HV of the
+two spins, such an Ę cannot differ from the ensemble Ê we
+could build up by measuring simultaneously Su and Sy on a
+very large ensemble of (arbitrarily prepared) U, V pairs, select-
+ing the pairs for which the outcomes are +1 and −1, respec-
+tively, and picking out N/2 of these [detailed proof: (i) because
+of the no-hidden-variables hypothesis the quantum rules are
+known to apply to both E. and Ę. (if any doubt arises con-
+cerning their applicability to E see the latter part of Remark
+1 in Section 4.4), (ii) the set (SY, SY} being a CSCO, both Ê
+and Ę can, in view of (i) and of Rule 9 of Chapter 3 be de-
+scribed by a ket in Hч > HV, and (iii) because of Proposition A
+in Chapter 3 this ket is unavoidably the same for both, namely
+|u, v >, the no-hidden-variables assumption then guar-
+antees that Ê and E. coincide]. The same argument holds of
+course concerning the (complementary) E and E_ ensembles.
+This shows that to identify Ey to Êy and Eч to Êч would un-
+avoidably imply identifying E itself—the ensemble of all the
+N pairs—with a mixture Ê in proportions 1/2, 1/2 of ensem-
+bles E. and Ê. However, in Hu HV E and Ê are described
+by statistical operators that not only formally differ but also are
+testably different (the tests are through correlation measurements
+of spin components in some direction other than O₂). To sum up:
+The assumption that Ey is physically identical to Êy and Eч to
+Ey has been shown to imply a false consequence. It is thereby
++
++
+falsified.
++
++
++
++
+Since mixtures of the Êy type and mixtures of the Ey type
+are physically different concepts, it is necessary, at least when
+fundamental problems are discussed, to differentiate them also7.3 Proper and Improper Mixtures
+105
+in the language. They are called proper and improper mixtures,
+respectively [2].³
+• Remark 1. In the simple example used above the result ar-
+rived at may, a posteriori, seem rather obvious since, because of
+the spherical symmetry of the overall system, the O₂ axis plays
+no privileged role in the picture. Consequently pv [Eq. (7.15)]
+is just a multiple of the unit operator, and such a statistical op-
+erator is also the one that describes any proper mixture Êỵ, in
+proportions 1/2, 1/2, of spin 1/2 particles whose spin compo-
+nent along a direction n is well defined (and equal to ±1). Obvi-
+ously Ey cannot be physically identical at the same time with all
+these EV, which, as proper mixtures, are physically different from
+one another (think of the possible ways of preparing them, by
+mixing two pure cases with S = +1 and -1). But this symmetry
+argument applies only to such very simple special cases. It is
+not made use of in the foregoing proof, which is therefore more
+general.
+• Remark 2: In view of the content of Remark 1 we could at
+first sight wonder whether, by any chance Ey and Eu could be
+physically identified with properly specified mixtures of several
+n
+and several Eu respectively. By generalizing the argument
+developed above (see, e.g., Ref. [3: sec. 7.2]) it can however be
+shown in a straightforward way that this, in fact, is impossible.
+Thus the following theorem holds true.
+Theorem. An improper mixture cannot in general be identified
+with any proper one.
+α
+• Remark 3. This result can be straightforwardly extended to
+the case in which the index & in the mixture-defining Eq. (6.1)
+varies in a continuous manner (so that the number of pure cases
+E composing Eu and Ey is infinite), as long as the \u̟ > are
+normalizable to unity. The case in which the 4 > are normal-
+izable to delta functions does not, in such matters, create a real
+problem either, because it is an idealized case anyway and when
+dealing, as here, with conceptual problems we are at liberty to
+refer to the well-known mathematical procedures that make it
+a
+3. The names "mixture of the first kind" and "mixture of the second kind” are
+also used.106
+7 Proper and Improper Mixtures
+α
+possible to treat this case as a limit of one in which the |¥â > are
+normalizable.
+• Remark 4: It should be clear that the above impossibility
+proof crucially depends on the no-hidden-variables assumption.
+If this assumption is relaxed, the pure case E can be considered
+as composed of two different subensembles E. and E_ defined
+as in the foregoing. But these ensembles are not quantum.
++
+• Remark 5: The relevance of the distinction between proper
+and improper mixtures has been questioned [4] essentially on
+the ground that, strictly speaking, if the existence of some sys-
+tems having classical properties and utilizable as ensemble-
+generating apparatuses is not postulated at the start, proper
+mixtures cannot really be created. The answer to this is that, ad-
+mittedly, if the concept of a proper mixture refers to nonexisting
+entities, there is no point in introducing it. But on the other hand,
+if such a standpoint is taken up, this entails that the statement
+according to which, immediately after an observable has been
+subjected to an ideal measurement, it has the observed value is
+either false or meaningless. The arguments concerning the dif-
+ference between proper and improper mixtures are conceived of
+for the benefit of the physicists with a "realist" turn of mind who,
+prima facie, would tend to consider that, quite on the contrary,
+the statement in question is meaningful and true (see Sections 4.3
+and 8.3). The related problem of possibly weakening the mean-
+ing of the verb “to have" (which might conceivably blur the said
+difference) will be taken up in Chapter 15.
+7.4 The Homogeneity of Ensembles
+This section deals with the following question, first investigated
+systematically by John von Neumann [5]: When is it possible to
+split an ensemble E into two (or more) different ensembles?
+It is necessary that the concepts involved in the formulation
+of this question should first be made nonambiguous. For this
+purpose, let us make the two following statements.
+Statement (a) bears on the notion of splitting. When we say
+of a given ensemble E of systems of type S that it can be split into
+two ensembles E₁ and E2, we do not mean that the operation can
+actually be performed. What we have in mind is just the abstract
+possibility of considering ensembles Ę₁ and E2 the sum of the
+17.4 The Homogeneity of Ensembles
+107
+numbers of elements of which is the number N of elements in E
+and which are such that, for all the observables pertaining to systems
+of type S, the statistical frequencies (i.e., the probabilities) of the
+prospective measurement outcomes are exactly the same on E as
+they are on the mixture of E₁ and E2 (by definition the mixture
+of E₁ and E2 is just, in this context, the ensemble composed of all
+the elements of E₁ plus all the elements of E2).
+1
+Statement (b) is simply a definition of the word "different."
+Two ensembles are said to be different with respect to some ob-
+servable A if the statistical frequencies of the prospective mea-
+surement outcomes on observable A are different on the two
+ensembles. Also, two ensembles are said to be different if there
+exists at least one observable A with respect to which they are
+different (needless to say that, here as elsewhere, the word "ob-
+servable" refers exclusively to the dynamical quantities that con-
+ventional quantum mechanics considers as such, not to anything
+resembling “hidden variables" of any sort).
+From a combination of statements (a) and (b), it follows that
+an ensemble E can be split into two different ensembles E₁ and E2
+when and only when (i) the prospective statistical frequencies
+(or, equivalently, the mean values) of all the observables are the
+same on E and on the mixture of E₁ and E2, and (ii) some of these
+statistical frequencies or mean values are nevertheless different
+on E2 from what they are on Ę₁ (and therefore also from what
+they are on E).
+If it is assumed that every Hermitean operator is the rep-
+resentative of an observable, then, as shown above, the density
+matrices of the considered ensembles are measurable. If an en-
+semble E can be split into two ensembles, Ę₁ and E2, this then
+implies that the corresponding statistical operators p, P₁, and P2
+must satisfy
+====
+Np Nip₁+N2P2
+(7.16)
+and
+where N,N₁, and N2 are the number of elements in E, E₁,
+E2 respectively, since otherwise the prospective statistical fre-
+quencies Tr(p P^^) of some observable A would be different on E
+from what they are on the mixture of E₁ and E2 (P^
+^A is here the
+projection operator that projects onto the eigenspace relative to
+the eigenvalue ak of A). Under these conditions E can be split
+into different subensembles if and only if two different statistical108
+7 Proper and Improper Mixtures
+operators p₁ and p2 exist that obey Eq. (7.16). By taking into ac-
+P1
+count the conditions that Tr(p²) must obey, it is easily verified,
+however, that such statistical operators can be found if and only
+if p is not a one-dimensional projection operator.
+Thus, if, by definition, we call elementary an ensemble that
+cannot be split into two different subensembles, we have the
+following proposition:
+Proposition. The elementary ensembles are pure cases (i.e., de-
+scribable by state vectors), and the pure cases are elementary.
+This proposition calls for a few remarks.
+• Remark 1. It should be remembered that the validity of the
+proposition above hinges on the assumption that all the Her-
+mitean operators correspond to some observables (or, alterna-
+tively, on the weaker assumption that the density matrices are
+measurable). If neither of these assumptions holds, the proposi-
+tion is false. For example, if the world were such that, in some
+fixed reference frame, only the third component S₂ of the spin
+were measurable, then a pure case described, for instance, by
+an eigenvector of S would not be elementary. This is so be-
+cause, according to statement (a), it could be split into several
+subensembles, each described by one of the eigenvectors of S₂.
+• Remark 2: Conversely, let a statistical operator p satisfying
+p2p be given. The corresponding ensemble, E, is a mixture, and
+the mean values of all the observables on this ensemble are of
+course given by p It is possible to show that all these data can be
+reproduced by introducing a larger Hilbert space H than the one
+in which p operates and by representing E by a ket (i.e., by a pure
+case) in this space H. This is an application of the well-known
+Gelfand-Naimark-Segal construction. What happens here is, of
+course, that several operators in H correspond to no observable,
+so that the pure case in question is not elementary.
+'1
+• Remark 3. When we say that an ensemble E can be split into
+two different ensembles Ę₁ and E2, this should be understood in
+the quite specific, operational sense defined by statement (a).
+In particular, we do not mean to imply that, if the elements of
+E have interacted with other systems, the correlations between
+the elements of E and these systems are correctly reproduced
+when the mixture of E₁ and E2 is substituted for E. Indeed such7.4 The Homogeneity of Ensembles
+109
+a statement would be erroneous. This is the reason why there is
+no contradiction between the content of this section and some
+points made in the foregoing one. When we have to do with an
+improper mixture, such as Ey in Section 7.3, we can say it can be
+split, only if we disregard (as, to repeat, we do in this section) all
+the possible correlation measurements that would involve the
+spin components of system U. For then and only then can we,
+without running the risk of making false predictions, formally
+replace this improper mixture by some corresponding proper
+one: and, of course, only the proper mixtures can be thought of as
+composed of several subensembles that are physically different.
+References
+1. G. Wick, A. Wightman, and E. Wigner, Phys. Rev. 88, 101 (1952).
+2. B. d'Espagnat, “Conceptions de la physique contemporaine,” Hermann,
+Paris, 1965; contribution to Preludes in Theoretical Physics: In Honour
+of V.F. Weisskopf, A. De Shalit, H. Feshbach, and L. Van Hove (Eds.),
+North-Holland, Amsterdam, 1966, p. 185.
+3. B. d'Espagnat, Conceptual Foundations of Quantum Mechanics, Addison-
+Wesley, Reading, Mass., 1971, 2nd ed., 1976.
+4. G.N. Fleming in The Mini-Course and Workshop on Fundamental Physics,
+held at the Colegio Universitarion de Humacao, Universidad de
+Puerto-Rico, 1985.
+5. J. von Neumann, Mathematical Foundations of Quantum Mechanics,
+Princeton U. Press, Princeton, N.J., 1955.110
+
+ 

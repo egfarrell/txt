@@ -1,0 +1,278 @@
+
+# the real key:
+    - Since c = 1:
+        - `    c = distance / time  
+           =>  1 = L / T  
+           =>  L = T`
+    - So 1 second of time = 1 light-second of length.
+    - 1 s ≈ 3 × 10^8 m
+    - Time and length have the same unit.
+
+
+# key:
+    - Relativity community actually keep the meter as the base.
+        - So time (duration) of something could be 1 meter
+    - particle physicists keep the second as the base.
+        - They refer to distances as times: 1 light second
+
+    - Pick a base unit: e.g., 1 second of light travel.
+    - Measure length, time, velocity all in terms of it.
+    - If you later want SI units, you just multiply/divide by c,
+      ℏ, etc.
+
+    - Ah wikipedia states what I was driving at below.
+    - A sense that natural units are dimensionless (even though
+      GPT says they're not really)
+        - - In physics, natural unit systems are measurement
+          systems for which selected physical constants have been
+          set to 1 through `nondimensionalization` of physical
+          units.
+        - A purely natural system of units has `all of its
+          dimensions collapsed`, such that the physical CONSTANTS
+          completely define the system of units and the relevant
+          physical laws contain no conversion constants. 
+
+
+    - Length, time, and mass can all be expressed in the same
+      unit (often meters or seconds) because c and G are
+      “`absorbed`” into the unit definitions.
+
+### First attempt
+
+- When we set `c = 1`, what we’re really doing is choosing units
+  so that the numerical value of the speed of light is `1`. 
+
+- That doesn’t mean light actually changes speed — it means we’ve
+  picked our rulers and clocks so that one unit of distance
+  corresponds exactly to one unit of time multiplied by `c` in
+  ordinary units.
+
+So in SI units, `c ≈ 3.00×10^8 m/s`. 
+
+- When we set c = 1, we’re saying: 
+- `1 meter = 1 / c seconds ≈ 3.3×10^-9 s`
+
+Now, which one you “measure in” depends on what you decide to
+make the BASE UNIT.
+
+If you define your unit of time as the base (say, seconds), then
+distances are measured in seconds — since 1 meter = 3.3×10^-9
+seconds of light travel.
+
+If you define your unit of length as the base (say, meters), then
+time is measured in meters — since 1 second = 3×10^8 meters of
+light travel.
+
+Both viewpoints are consistent. Setting c = 1 simply identifies
+time and distance as the same kind of quantity — both are
+measures of spacetime separation, differing only by a conversion
+factor that we’ve now normalized to unity.
+
+Physicists often say “we measure time in meters” because in
+relativity it’s common to make `length the base unit`. 
+    - For example, a light-second is about 3×10^8 meters, so one
+      can talk about a time interval of one meter meaning “the
+      time it takes light to travel one meter.” 
+    - But others (especially in particle physics, where energy
+      units dominate) might prefer to think of distances in units
+      of time.
+
+
+
+### I try again
+    - When you set `c = 1`, you are essentially measuring time and
+      space in the same units. The speed of light is the
+      conversion factor between meters and seconds:
+        - `c = 3 x 10^8 meters/second`
+
+
+    - If you define 1 "natural" unit of length = 1 unit of time
+      (say, 1 second), then in terms of old SI units:
+        - `1 natural meter ≡ 1 second of light travel`
+        - and light travels 3 x 10^8 meters in one second so:
+        - `1 natural meter = 3 x 10^8 SI meters`
+
+    - So yes, your intuition is correct: the "meter" in natural units is vastly larger than the standard SI meter. 
+
+    - But more generally:
+        - In natural units (c = 1):
+            - Length and time have the same unit.
+            - Velocities are dimensionless, e.g., if something moves at 0.5c, it’s just 0.5.
+
+
+    - Me
+    - Ah.. a fly in the ointment... you mentioned: Length and
+      time have the same unit. 
+    - Although in my original 'setup' I redefined the meter just
+      to be 300,000 SI meters... but in a sense, you more take
+      the view that the meter is redefined to be `1 light
+      second`... is that it? 
+    - You kinda prefer to think of it as the meter adopting new
+      units... whereas in my original 'setup' I was thinking of
+      the 'meter' as a new huge length?
+
+    - You’ve caught the subtle distinction. Let me clarify the
+      difference carefully:
+    - Your original setup
+        - You said: “1 natural meter = 300,000 old SI meters”
+          (assuming c = 3 x 10^8 m/s).
+        - In this view, you keep the word “meter”, but you give
+          it a new, enormous size.
+        - Time is still measured in seconds; 
+            - you’ve only rescaled length.
+
+
+    - Standard natural units approach
+        - Physicists usually say: “Set c = 1, so length and time
+          have the same units.”
+        - Then you measure length in seconds (or time in meters).
+        - 1 “length unit” = `1 second` of light travel
+        - 1 “time unit” = 1 second (as usual)
+        - The meter itself isn’t redefined — instead, you drop it
+          entirely and just talk about units of “time” or
+          “length” in terms of light travel.
+
+ - Perspective              What changes                                        Units you keep                                           
+ - -----------------------  --------------------------------------------------  -------------------------------------------------------- 
+ - Your “huge meter”        Length unit is scaled up; time units stay the same  Meter, second                                            
+ - Physicist natural units  Length and time share a unit; c = 1                 Only one unit (e.g., second) is needed; meter disappears 
+
+- In practice, the two views are numerically equivalent:
+  1 “natural length” = 3 x 10^8 meters — but the conceptual
+  framing differs. One emphasizes rescaling an old unit, the
+  other emphasizes unit unification.
+
+### Summary
+    - In your setup: 
+        - you rescale the meter, keep seconds the same.
+    - In physicist setup: 
+        - you unify units, drop the meter entirely; “1 unit”
+          = 1 second of light travel.
+    - Numerically: 
+        - both assign the same physical length to the “new unit”
+          (3 x 10^8 meters), but conceptually the framing is
+          different.
+
+
+# I tried again
+    - You had an interesting line: 
+        - c = 1 light-second / 1 second = 1 
+    - so a "light second" is still a second really? 
+    - Although it seems to "imply" a distance (ie the distance
+      light travels in a second)
+
+
+- Yes — exactly, and that’s where natural units play a little
+  trick on your intuition. Let’s unpack it carefully.
+
+### Step 1: What a “light-second” is
+    - A light-second is defined as the distance light travels in one second.
+    - Numerically in SI units:
+    - 1 light-second  =  `c * 1 s`  =  3 x 10^8 meters
+    - So in “ordinary thinking,” it’s clearly a length.
+
+
+### Step 2: What happens when c = 1
+    - In natural units, when we set c = 1, we "mean"
+        - "distance = time"
+
+    - Then, a “light-second” isn’t really a separate kind of
+      thing: it becomes identical to one second.
+    - Conceptually:
+        - You measure everything in seconds (or one chosen unit).
+        - The distance light travels in 1 second is just “1 unit
+          of length” — you no longer need meters.
+        - So the notation “light-second” is just a reminder that
+          this length corresponds to the time it takes light to
+          travel it, but it doesn’t introduce a new dimension.
+
+
+### Step 3: Why "c = 1 light-second / 1 second = 1" makes sense
+
+In SI units:
+    - `c = 3 x 10^8 meters / 1 second`
+
+In natural units:
+    - `c = 1 (unit of length) / 1 (unit of time)`
+
+- Since length and time are measured in the same unit, the
+  fraction is just 1, dimensionless.
+
+- So yes — a “light-second” is conceptually BOTH a distance and
+  a time, depending on WHETHER you’re thinking in `SI units` or
+  in `natural units`. 
+- In natural units, you treat it as just 1 unit of length,
+  interchangeable with 1 unit of time.
+
+
+
+# Me again! Getting closer
+    - these 2 lines are interesting:
+    1. “1 unit of length = 1 unit of time,” so there’s no need to
+    keep the SI notion of meters around at all.
+    2. “Unit of length = unit of time” framing: more abstract,
+    elegant, and what particle physicists usually do.
+
+    - I kinda get what you're saying... this abstract approach...
+      but what actually IS this new "unit"...  
+    - or are "natural units" kind of dimensionless or not units
+      "of anything"
+
+- Now we’re hitting the philosophical and practical heart of natural units. Let’s go carefully.
+
+### 1. The “unit” in natural units is still a unit
+
+- Even in natural units, there is a real, physical quantity being
+  measured. It just happens that we’ve chosen a convention that
+  makes some fundamental constants equal 1, so the same unit can
+  describe what used to be different dimensions.
+
+- In SI, length and time are different dimensions with different
+  units: meters vs seconds.
+
+- In natural units (c = 1), we measure length in the same units
+  as time, because the speed of light is exactly 1 unit of length
+  per unit of time.
+
+- So the “unit” still corresponds to something physical: for
+  example, the time it takes light to travel one such unit. If we
+  choose seconds AS THE BASE:
+
+- `1 natural unit of length = 1 natural unit of time = 1 second of light travel`
+
+- 1 natural unit = `c * 1 s` = 3 x 10^8 meters
+
+- It’s still a unit, it has physical meaning, it’s just rescaled
+  and shared across dimensions.
+
+
+### 2. Are natural units “dimensionless”?
+    - Not really — they’re still units of measurement, but:
+    - Some derived quantities become dimensionless. For example:
+    - Velocity: v = dx/dt = 1 (if light)
+    - Often mass and energy are measured in the same units (if
+      you also set ℏ = 1, we can measure mass, energy, momentum,
+      and length all in the same “unit”).
+
+    - So you don’t lose the idea of a “unit of something” — it’s
+      just that the unit can now measure multiple things at once.
+      That’s why particle physicists love it: the equations get
+      simpler, fewer conversion factors clutter up the formulas.
+
+### 3. How to think about the new unit
+
+    - Pick a base unit: e.g., 1 second of light travel.
+    - Measure length, time, velocity all in terms of it.
+    - If you later want SI units, you just multiply/divide by c,
+      ℏ, etc.
+
+    - In short:
+        - Natural units are not dimensionless — they are
+          rescaled, physically meaningful units.
+        - Some ratios (like `v/c`) become dimensionless
+          automatically because the constants have been absorbed
+          into the units.
+
+        - Conceptually, the “new unit” is whatever you choose as
+          your base length/time, often tied to fundamental
+          constants like `c`.

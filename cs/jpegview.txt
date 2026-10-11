@@ -1,0 +1,29 @@
+JPEGVIEW app
+
+Source
+    https://sourceforge.net/projects/jpegview/
+
+### Config
+    - There's two `JPEGView.ini` files. Need my settings in BOTH:
+        - Location 1: ~/AppData/Roaming/JPEGView/JPEGView.ini
+        - Location 2: ~/Documents/TOOLS/JPEGView64/JPEGView.ini
+        -             ~/Documents/TOOLS/JPEGView32/JPEGView.ini
+        -             ~/Documents/TOOLS/JPEGView64/Data/settings/JPEGView.ini
+        - My Backup:  
+            - ~/dotfiles/ini/jpegview/JPEGView.ini
+
+### Remap keys:
+    - Currently Active Keys:  
+        - 64-Bit            ~/Documents/TOOLS/JPEGView64/KeyMap.txt
+        - 64-Bit Portable   ~/Documents/TOOLS/JPEGView64/App/JPEGView/KeyMap.txt
+        - 32-Bit            ~/Documents/TOOLS/JPEGView32/KeyMap.txt
+
+    - my backup copy:       ~/dotfiles/ini/jpegview/KeyMap.txt.jpegview
+
+### Best Zoom mode is "Fit"
+    - ; Auto zoom mode (for window mode only if AutoZoomModeFullscreen is present)
+    - ; FitNoZoom : Fit images to screen, never enlarge image
+    - ; FillNoZoom : Fill screen with no black borders, crop if necessary but not too much, never enlarge image
+    - ; Fit : Fit images to screen
+    - ; Fill : Fill screen with no black borders, crop if necessary
+    - `AutoZoomMode=Fit`

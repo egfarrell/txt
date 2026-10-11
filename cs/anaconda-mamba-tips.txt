@@ -1,0 +1,262 @@
+
+### HN: ??
+    - And as a hpc admin, I'm not offering my users any help with
+      conda and let them suffer on their own. Instead I'm showing
+      them the greener pastures with `spack`, `easybuild` and
+      `eessi` whenever I can. And they're slowly migrating over.
+
+### miniconda Linux install
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    ocx Miniconda3-latest-Linux-x86_64.sh
+    bash ./Miniconda3-latest-Linux-x86_64.sh
+    - note: use `bash` because:
+        - sometimes this script specifies /bin/sh (but that links
+          to 'dash' which causes the '[[' error)
+
+    - `NEW INSTALLATION`, always do:
+    conda config --add channels conda-forge
+    conda install mamba
+    mamba init
+
+### add conda forge as a channel
+    conda config --add channels conda-forge
+    conda config --add channels bioconda
+    show current channels:
+        conda config --show channels
+
+### Mamba
+    - C++ alternative to conda https://github.com/mamba-org/mamba
+    - micromamba: version of mamba as a single executable
+        - https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html
+
+### Create coursera-dl env
+    if mamba installed in base:
+        mamba create -n coursera python=3.8
+    conda create -n coursera python=3.8
+    conda create -n pytorch-test python=3.9
+    coa pytorch-test
+
+### Ini file
+    v ~/.condarc
+
+### info
+     - all    : conda info -a
+     - envs   : conda info -e
+     - system : conda info -s
+
+### Freeze / pin package to specific version
+    - https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-pkgs.html#preventing-packages-from-updating-pinning
+    - in `env/conda-meta` folder create a file `pinned`
+    - contents:
+        pytorch=1.7.1
+        torchvision=0.8.2
+        torchaudio=0.7.2
+        cudatoolkit=9.2
+
+
+### clean old packages (saves space!)
+    conda clean -p
+
+### Environments
+    - KAGGLE
+        mamba  create -n k kaggle python-duckdb visidata scipy numpy matplotlib h5py pytables pandas ipython jupyter
+        mamba  create -n k kaggle python-duckdb scipy numpy matplotlib h5py  pyarrow pandas ipython jupyter
+
+    - DATA
+        conda create -n data numpy matplotlib chardet sqlalchemy pyodbc pandas ipython sympy jupyter
+
+    - MACHINE LEARNING
+        conda create -n ml   numpy scipy sympy matplotlib pyodbc pandas scikit-learn ipython jupyter
+        conda activate ml
+        conda install --channel fastai --channel pytorch fastai
+
+### for gitbash:
+    - to add extra conda paths into .bash_profile run:
+    - `conda init bash` (this gets run now at install)
+    - This inserts the following into .bash_profile (that I moved
+      to bashrc.local)
+        ```
+        # >>> conda initialize >>>
+        # !! Contents within this block are managed by 'conda init' !!
+        ...
+        ...
+        # <<< conda initialize <<<
+        ```
+
+# Install GNU parallel.
+    conda install parallel
+
+### show env (python script with conda)
+    #!/usr/bin/env python
+    print("\nActive Conda Env: ", os.environ['CONDA_DEFAULT_ENV'])
+    print("Python version:   ", sys.version)
+    OPTIONAL: os.system("conda env list")
+
+
+### add conda-forge channel
+    conda config --add channels confa-forge
+
+### use conda forge
+    conda install -c conda-forge sqlite
+
+### environment: save freeze replicate reproduce export transfer recreate duplicate env
+    1. create package list:
+        conda list -e > req.txt
+
+    2. install on new machine using:
+        conda create -n new environment --file req.txt
+
+        Or: 
+        conda install --file req.txt
+
+    # export environment - another method
+    # -----------------------------------
+        1. create package list:
+            coa <whatever env>
+            conda env export -n {env name} > my-conda-env.yml
+        2. install on new machine using:
+            conda env create -f env.yml
+
+### create new python 2 environment
+    conda create -n py2 python=2
+
+### create new 'Vpython' environment
+    conda create -n vpy python=3.5
+
+### delete remove environment
+	conda remove -n myenv --all
+	conda remove -n data --all
+	conda remove -n fast2 --all
+	conda remove -n pytorch_env --all
+	conda remove -n pytorch_env2 --all
+	conda remove -n pytorch2 --all
+	conda remove -n ml --all
+	conda remove -n pytorch_test --all
+
+### remove package
+	conda remove -n my_env numpy
+	conda remove --dry-run -n my_env numpy
+
+### mad error!
+    ...cannot import log
+    I had my own math.py script in ~/
+    that conflicted with python!
+    (like the seaborn error years ago)
+
+### searching anaconda cloud?
+    anaconda search -t conda vpython
+    conda search vpython
+
+### automatically activate environment
+    - In ~/.bashrc.local:
+        conda activate bioinfo
+
+    - OLD?
+        source activate py3 &>/dev/null
+
+### set default environment (e.g. numpy15)
+	We could make this environment the default if we want to:
+	export PATH=~/anaconda/envs/numpy15/bin:$PATH
+
+### update a single package
+    conda update -c fastai fastai
+
+### update all packages?
+    conda update --all
+
+### update python/everything in my python3 environment
+    conda update -n py3 python
+    conda update -n py3 --all
+
+### error
+    ...python: symbol lookup error: /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0: undefined
+    symbol: cairo_ft_font_options_substitute
+
+    solution: conda update cairo
+
+### install PyQt
+    PyQt is now available on all platforms via conda!
+    Use 'conda install pyqt' to get these #Python bindings
+    for the Qt framework.
+
+### sudo python setup.py install
+	if you run "sudo" then you DONT
+	install into the anaconda environment!!
+	You install into root instead
+	So dont use "sudo" and it'll install into anaconda
+
+### install package from binstar
+	conda install -c https://conda.binstar.org/public pudb
+
+### relocate anaconda directory
+	dont do it after installation - some paths are hardcoded!
+
+### see manually installed packages
+	conda package --untracked
+	conda package -u
+
+### switch environments
+	source activate astro
+	source deactivate
+
+### config:
+    ~/.condarc
+
+    - The .condarc file is not included by default, but it is
+      automatically created in your home directory the first time
+      you run the conda config command.
+
+    - A .condarc file may also be located in the root
+      environment, in which case it overrides any in the home
+      directory.
+
+### clone root environment
+    ah maybe done use this (didn't work once?)
+    conda create --name geo_env --clone base
+
+### create R environment
+    windows:
+        > Because of conda errors, I installed rstudio first!
+        conda create -n rstud
+        conda install rstudio
+        conda install r-essentials
+    Linux:
+        conda create -n r-env
+        conda activate r-env
+        conda install r-essentials r-base
+
+
+### handy biostars commands
+    conda config --set allow_conda_downgrades true
+    conda install conda=4.6.14
+    # add channels
+    conda config --add channels bioconda
+    conda config --add channels conda-forge
+    # Freeze conda at 4.6.14!
+    conda config --set auto_update_conda false
+    conda config --set show_channel_urls true
+
+
+
+### SSLError("Can't connect to HTTPS URL because the SSL module is not available)
+    - Solution 1:
+        - https://repo.continuum.io/miniconda/ (took miniconda from 4-sept-2018)
+
+    - solution 2:
+        - https://github.com/conda/conda/issues/6064
+        - download `python-3.7.2-h8c8aaf0_2.tar.bz2` from https://repo.continuum.io/pkgs/main/win-64/
+        - then run:
+        - conda install c:\Users\you\Downloads\python-3.7.2-h8c8aaf0_2.tar.bz2
+
+### python 2.7 32-bit to interact with "MS Access"
+    conda install python numpy matplotlib seaborn sqlalchemy pyodbc pandas ipython
+
+
+# bash completion for my 'coa' alias: activating conda environments
+_coa() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local envs=$(awk -F'/' '{print $NF}' $HOME/.conda/environments.txt)
+    COMPREPLY=($(compgen -W "${envs}" -- ${cur}))
+    __ltrim_colon_completions "$cur"
+}
+complete -F _coa coa

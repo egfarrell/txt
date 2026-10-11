@@ -1,0 +1,75 @@
+
+
+- ExoSim2: telescope simulator
+- TauREx3: planet atmosphere simulator
+
+### Background
+    - The Data Challenge is a new challenge designed to address
+      NOISE DETRENDING in image time sequences from space
+      telescopes, specifically Ariel, which will be positioned at
+      the L2 point (far from Earth). 
+    - Unlike past challenges, which used data from ground-based
+      telescopes or Earth-bound satellites, ADC 2024 focuses on
+      space-based conditions, using time-series spectro-spatial
+      data instead of images and involves REGRESSION TASKS, not
+      detection.
+
+    Key differences include:
+    1. For the first time, `realistic noise models` based on
+       actual data from a flying telescope (like JWST) are used
+       in simulations.
+    2. `Pointing jitter`, previously ignored, is now included
+       with data provided by Airbus that models Ariel's satellite
+       payload.
+    3. This challenge addresses full noise profiles and tests
+       models for robustness against `changing instrument
+       behaviors`, unlike earlier challenges that focused mainly
+       on the impact of the host star. 
+
+
+### Data generation
+    - We utilised `ExoSim2` [^12], an end-to-end time-domain
+      simulator for astronomical telescopes. 
+    - We adapted `ExoSim2` with Ariel’s payload configuration to
+      generate the datasets for this challenge proposal. As
+      a first-of-its-kind dataset dedicated to ML challenges and
+      benchmarks, we will release it as a public dataset. 
+    - Step 1: 
+        - Prepare the Inputs: `ExoSim2` requires the following
+          for a single simulation: 
+
+            1. properties of the planetary system, 
+                - For the planetary systems, we have selected
+                  several representative systems from the Ariel
+                  Mission Candidate Sample [^13], a curated list
+                  of planetary candidates that align with Ariel’s
+                  capabilities. 
+
+            2. atmospheric properties 
+                - (high resolution theoretical spectrum) 
+                - For the planet’s atmosphere, we used
+                  a radiative transfer model, `TauREx3`, to
+                  simulate a realistic primary atmosphere with
+                  trace gases, and included other atmospheric
+                  effects. 
+
+
+            3. jitter time series. 
+                - The jitter data is based on simulations
+                  performed by Ariel payload contractor, Airbus;
+                  we augmented it by _phase-shifting_ the
+                  original jitter time-series to increase its
+                  diversity.
+
+
+
+### exosim2 paper
+    - [^12] Lorenzo V. Mugnai et al. "ExoSim 2. The new time-domain simulator applied to the Ariel space mission" 10.5194/epsc2022-370
+ 
+    - GOOD: Questions on data processing pipeline https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/527644
+    - Github: exosim2                             https://github.com/arielmission-space/ExoSim2-public
+    - documentation: exosim2                      https://exosim2-public.readthedocs.io/en/latest/
+    - paper: exosim 1                             https://link.springer.com/article/10.1007/s10686-020-09690-9
+    - [^13] Ariel target list                     https://iopscience.iop.org/article/10.3847/1538-3881/ac6bf9/meta
+    - taurex3                                     https://taurex3-public.readthedocs.io/en/latest/
+

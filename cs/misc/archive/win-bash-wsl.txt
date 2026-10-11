@@ -1,0 +1,73 @@
+### Warning! common folder between WSL and windows
+    - DONT edit a file using both systems!
+    - You'll corrupt the file
+
+### HN:
+    - https://news.ycombinator.com/item?id=46039140
+    - Tip: WSL bypasses windows firewall rules by default. Not
+      sure why Microsoft ever thought that was a good idea.
+
+### win10 location of wsl
+    > C:\Users\ef\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home
+
+### console
+    use MINTTY (wsltty) console!
+
+### define a HOME_WIN
+    > export HOME_WIN='C:\\\Users\\\\{win user}\\\AppData\\\Local\\\lxss\\\home\\\\{wsl user}'
+
+### Microsoft console: blue color is too dark
+    - regedit [HKEY_CURRENT_USER\Console]
+    - Dark Blue:  'ColorTable01'
+    - Light Blue: 'ColorTable09'
+    - Insert value 'ff4d4d' into ColorTable01
+
+### run wsl
+    C:\Windows\System32\bash.exe ~
+
+### vim: open firefox browser
+    ("cd" first, to suppress error msg when starting firefox)
+    > let g:web_browser = 'cd /mnt/c/Users/ef && "/mnt/c/Program Files/Mozilla Firefox/firefox.exe"'
+
+### Microsoft console: vim: get solarized colors:
+    https://github.com/Microsoft/BashOnWindows/issues/930
+
+
+### vim: X11 system clipboard:
+    https://github.com/Microsoft/BashOnWindows/issues/892
+
+    Short instructions:
+        - Install _VcXsrv_
+        - Append to _~/.bashrc.local_
+            # needed to connect WSL X11 to VcXsrv X server
+            export DISPLAY=localhost:0.0
+
+    Long instructions:
+
+    - Install VcXsrv (I found that Xming is outdated on
+      sourceforge and the new version is donationware)
+
+    - If it starts after installing, stop it
+
+    - Start it using XLaunch (search in the start menu), go
+      with all the defaults (ensure the clipboard options
+      are checked)
+
+    - At the end, save the configuration to a file (use that
+      to start it from now on)
+
+    - Put export _DISPLAY=localhost:0.0 _in your .bashrc in
+      bash for Windows (and run the command in any open bash
+      windows). The reason I explicitly say localhost is
+      that this makes SSH X forwarding work, see below.
+
+    - Ensure vim is installed using clipboard support. vim
+      --version | grep clipboard should say +clipboard, not
+      -clipboard.
+
+    - Also if you run the ex command :echo has('clipboard')
+      in vim and it says 0 it does not have clipboard
+      support compiled in.
+
+    - If you don't have clipboard support, install:
+      > apt-get install vim-gtk

@@ -1,0 +1,118 @@
+### Book: missing manual
+    - WP has two ingredients
+        - MYSQL database
+        - PHP code
+            - $MY_IMAGES/cs/wp/key-ingredients.jpg
+    - `Themes` separate content from display
+        - $MY_IMAGES/cs/wp/Themes-v-content.jpg
+
+### Developer course
+    - All files that power a WP site:
+        - for 'Flywheel local'
+            - my site is 'endatest2'
+            - $HOME/Local\ Sites/endatest2/app/public
+        - for best.ippt.pan.pl
+            - `/var/www`
+
+    - Key files in a theme
+        - `index.php`
+        - `style.css`
+        - `screenshot.png`
+        - `single.php` <--- powers 'posts'
+        - `page.php`   <--- powers 'pages'
+
+    - Key abstraction:
+        - the "Wordpress Loop"
+            - the_page();
+
+    - Key php boilerplate
+        - `<?php  ...  ?>`
+
+    - For theme headers/footers
+        - `header.php`
+            - $MY_IMAGES/cs/wp/header-example.jpg
+        - `footer.php`
+            - $MY_IMAGES/cs/wp/footer-example.jpg
+        - In 'index.php' etc
+            - `<?php  get_header();  ?>`
+            - `<?php  get_footer();  ?>`
+
+    - Backend file for functions
+        - `functions.php`
+        - "add_action"
+            - $MY_IMAGES/cs/wp/functions-example-1.jpg
+
+
+
+
+### Basic tips
+    - https://www.youtube.com/watch?v=6bsYrFoYTzI
+    - _Timezone_: chose actual city name e.g. 'New York'
+        - If you use the city instead of time zone then daylight
+          saving +/- 1 hour will be automatically done. While
+          using UTC setting will not make this
+    - _New page_/post:
+        - Don't click 'Publish' twice!
+        - click '3 dots', then untick 'pre-publish checks'
+            - $MY_IMAGES/cs/wp/pre-publish-checks.jpg
+    - Create multiple pages at once via menu section
+        - Goto website - `customise`
+            - $MY_IMAGES/cs/wp/create-new-menu-1.jpg
+        - make it a primary menu
+            - $MY_IMAGES/cs/wp/create-new-menu-2.jpg
+        - Add as many new pages as you want
+            - $MY_IMAGES/cs/wp/create-new-menu-3.jpg
+        - Other approach:
+            - We focus on building the home page and then
+              x ammout of example content pages and then
+              duplicate the the content pages for extra pages.
+
+
+### New rivals to WP
+    - WP is very famous so clients often require it.
+    - But newer crop of CMSes:
+        - `Craft, Ghost, Kirby, Twill, October, Grav...`
+        - They don't have legacy baggage and are much better for
+          fully custom-made sites. You basically get a light web
+          framework with super customisable admin.
+
+### Plugin: 'Wordpress File Upload Pro'
+    - I bought version: v4.23.3
+    - iptanus account https://www.iptanus.com/my-account/
+        - username: ef.tools@gmx.com
+    - Plugin manual https://www.iptanus.com/upload-form-options/
+    - 'Gallery' shortcode https://codex.wordpress.org/Gallery_Shortcode
+
+### Plugin: Drop Uploader for CF7
+    - https://codecanyon.net/downloads
+    - user: ef.tools@gmx.com
+
+### Handy plugins
+    - Dashboard notes                                https://wordpress.org/plugins/wpdash-notes/
+    - Backup: `all-in-one-wp-migration`              https://wordpress.org/plugins/all-in-one-wp-migration/
+    - Simple History log/audit wp site changes       https://wordpress.org/plugins/simple-history/
+    - wp cron system                                 https://wordpress.org/plugins/wp-crontrol/
+    - Enable media replace (also background removal) https://wordpress.org/plugins/enable-media-replace/
+    - Backup: BackWPup                               https://wordpress.org/plugins/backwpup/
+    - Backup: updraftplus                            https://wordpress.org/plugins/updraftplus/
+
+### Links
+    - WP Plugins Directory                                    https://wordpress.org/plugins/
+    - Code Canyon WP Plugins                                  https://codecanyon.net/category/wordpress/
+    - WP Tutorials                                            https://learn.wordpress.org/tutorials/
+    - `Local` by Flywheel: Create WP website on local PC      https://localwp.com/
+    - `Local` by Flywheel: LiveLinks                          https://localwp.com/help-docs/local-features/live-links/
+    - HN: WordPress Playground: WP entirely in browser (2023) https://news.ycombinator.com/item?id=36726593
+    - HN: WordPress 18 (2021)                                 https://news.ycombinator.com/item?id=27311198
+    - HN: WordPress’ market share is shrinking                https://news.ycombinator.com/item?id=31345749
+    - HN: ChatGPT writes WP plugins                           https://news.ycombinator.com/item?id=34681357
+    - HN: people prefer classic editor to Gutenberg           https://news.ycombinator.com/item?id=25647164
+    - Blog: 15 plugins for wp developers                      https://usersnap.com/blog/wordpress-plugins-for-wordpress-developers/
+    - Course: WP Developer                                    https://www.youtube.com/playlist?list=PLF4Fpfzm6Ig0EDc537NFXO83x8MJ_mo0A
+    - Course: OSTraining: WP backup                           https://www.youtube.com/watch?v=pECMkLE27QQ&list=PLtaXuX0nEZk9_54BOxcBYXMI3gx3ZxICQ&index=2
+    - Course: OSTraining: Gutenberg                           https://www.youtube.com/playlist?list=PLtaXuX0nEZk8A3nkCkuSFbB1QBptvUdAh
+    - Course: I love wp tutorials                             https://www.youtube.com/@ILoveWordPress/videos
+    - Plugin reviews: wpkube                                  https://www.wpkube.com/
+    - Wordpress plugin                                        https://www.youtube.com/watch?v=dYzhF6tgpTI&list=PLD8nQCAhR3tTjCulq0Fw3wZxIoN1wVOaV&index=2
+    - Wordpress core                                          https://www.youtube.com/watch?v=AWYp3rNKmvU&list=PLD8nQCAhR3tTjCulq0Fw3wZxIoN1wVOaV&index=4
+    - HN: NASA uses WP                                        https://news.ycombinator.com/item?id=37802996

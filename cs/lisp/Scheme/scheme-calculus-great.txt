@@ -1,0 +1,230 @@
+funcall.blogspot.com
+### Not Lisp again....
+
+$MY_CODE/scheme/mine/calculus-example.scm
+
+It was 1983 and I was taking my first real computer course at
+MIT. Hal Abelson and Bill Siebert were co-lecturers. Hal was
+delivering the bad news:
+
+    “If you already know how to program, you may be at
+    a disadvantage because you will have to unlearn some bad
+    habits.”
+
+Wonderful. I knew how to program (after all, I knew Macro-11, Z80
+assembly and BASIC), and I could guess what the bad habits were.
+Violating the un-cuteness principle was probably one of them.
+Nothing fun is going to be allowed. (I rarely take notes at
+lectures. I'm too busy keeping an internal running commentary.)
+
+    “In this course we will be using the programming language
+    Lisp...”
+
+Argh! Not that again! What is it with Lisp? Ok, maybe at Harvard
+they do that sort of thing, but this was MIT! Don't they hack
+computers here?
+
+I was wondering what I had gotten myself in to. I held on to two
+small hopes. First, that the little amount of Lisp I had learned
+at Harvard would give me a head start over the other 250 students
+in the room. Second, that I only had to take a couple of computer
+classes to fulfill that part of the EECS requirement. I could
+stomach a bit of Lisp for a while, toe the company line, and be
+completely un-cute long enough to pass the course.
+
+Hal put the archetypical Lisp program on the blackboard:
+
+(define (fact x) (if (zero? x) 1 (* x (fact (- x 1)))))
+
+He walked the class through the substitution model:
+
+(fact 5) (* 5 (fact 4)) (* 5 (* 4 (fact 3))) (* 5 (* 4 (* 3 (fact
+2)))) (* 5 (* 4 (* 3 (* 2 (fact 1))))) (* 5 (* 4 (* 3 (* 2 (*
+1 (fact 0)))))) (* 5 (* 4 (* 3 (* 2 (* 1 1))))) (* 5 (* 4 (* 3 (*
+2 1)))) (* 5 (* 4 (* 3 2))) (* 5 (* 4 6)) (* 5 24) 120
+
+    “This is a recursive process. At each step in the recursion
+    we break the problem into smaller parts, solve each part
+    separately, then combine the answers. In this example, each
+    recursive call to fact uses a smaller number. Eventually we
+    get to fact 0 which we know is 1. At this point we can start
+    the multiplication.”
+
+And then he said “This isn't very efficient.”
+
+I thought that was an odd thing to say about a Lisp program. At
+Harvard, the obvious inefficiency of Lisp was downplayed. Here
+the professor was pointing it out and was going to do something
+about it.
+
+    “Look how the size of the problem depends upon the value of
+    X. When X is five, there are five pending multiplications
+    that have to be kept track of. If X were ten, then there
+    would be ten pending multiplications. The computer is going
+    to have to use up resources to keep track of these.
+
+    “What we want to do is to keep track of the product of the
+    numbers we've seen so far. Like this:
+
+  (define (fact x)
+
+    (define (iter n accum) (if (zero? n) accum (iter (- n 1) (*
+    n accum))))
+
+    (iter x 1))
+
+  (fact 5) (iter 5 1) (iter 4 5) (iter 3 20) (iter 2 60) (iter
+  1 120) (iter 0 120) 120
+
+    “This is an iterative process. Instead of breaking the
+    problem into parts that we solve separately, we convert the
+    problem into a simpler problem that has the same solution.
+    The solution to (iter 5 1) is the same as the solution to
+    (iter 4 5), which is the same as the solution to (iter 3 20)
+    and so forth.
+
+    “Notice how in this case we aren't building a chain of
+    pending multiplications. At each iteration, the value of n is
+    being mutiplied by the accumulated product and this becomes
+    the new accumulated product in the next iteration. When
+    n reaches zero, we have in the accumulator the product of all
+    numbers from n down to zero.
+
+This was pretty obvious to me. However, I thought Hal was
+omitting an important point. Clearly each recursive call to iter
+had to be matched by a corresponding (implicit) return.
+Otherwise, how would the program know how to get back to the
+caller? Granted, there were no pending multiplications, but that
+doesn't mean we're not using up stack frames.
+
+But then Hal said, “With an iterative process, the computer
+doesn't need to use up resources for each iteration. If you know
+a bit about programming, you might have expected that each
+iterative call, like each recursive call, would consume a small
+amount of memory and eventually run out. Our system is smart
+enough to notice the iteration and avoid doing that.”
+
+Now that caught my attention. I was impressed first by the fact
+that whoever designed this particular Lisp system cared about
+efficiency. I was impressed second by the fact that he was able
+to program the computer to automatically figure it out. I was
+impressed third that however it was that it worked, it had to be
+really fast at it (or the cure would be worse than the problem).
+
+Frankly, I had my doubts. I thought that maybe the computer was
+able to figure this out some of the time, or maybe it was able to
+substantially reduce, but not totally eliminate, stack
+allocation. Or maybe this was some sleight of hand: the resources
+are allocated somewhere else. I tried to figure out how I'd do
+this in assembly code, but I was baffled. I made a note to myself
+to check into this.
+
+Hal went on to introduce first-class procedures. I didn't see the
+rationale for these. I mean, you can't call a function that
+hasn't been written, and if it has been written then why not just
+call it directly and avoid the run-around?
+
+Hal said “You're all familiar with the derivative operator.” and
+he wrote it on the blackboard:
+
+                               f (x + dx) - f (x) D f(x) = f'(x)
+                               = lim  -------------------- dx
+
+    “We can program this as follows:
+
+    ```
+    (define dx .0001)
+
+    (define (deriv f)
+
+       (define (f-prime x) (/ (- (f (+ x dx)) (f x)) dx))
+
+       f-prime)
+    ```
+
+    “Notice how our formula for the derivate translates directly
+    into the lisp code.
+
+    “Let's take the derivative of the cube function:
+
+    ```
+    (define (cube x) (* x x x))
+
+    (define cube-deriv (deriv cube))
+    ```
+
+    “And this new function should act like the derivative of the
+    cube function.”
+
+He put up a slide on the overhead project that showed the above
+code and the output from the computer:
+
+(cube-deriv 2) ;Value: 12.000600010022566
+
+(cube-deriv 3) ;Value: 27.00090001006572
+
+(cube-deriv 4) ;Value: 48.00120000993502
+
+Sure enough, that's reasonably close to 3x^2.
+
+I was floored. Here we take the simple, straightforward
+definition of the derivative of a function. Type it in with
+essentially no modification (we're a little cavalier about
+dropping the limit and just defining dx to be a ‘reasonably small
+number’) and suddenly the computer knew how to do calculus! This
+was serious magic. I had never seen anything like it before.
+
+Hal went on to explain how the substitution model of evaluation
+worked in this example and I carefully watched. It seemed simple.
+It couldn't be that simple, though, could it? Something must be
+missing. I had to find out.
+
+As soon as the lecture ended I ran to the Scheme lab. Hewlett
+Packard had donated several dozen HP 9836 Chipmunks to MIT. Each
+one was equiped with a blindingly fast 8-MHz 68000 processor. On
+top of each workstation sat a fairly sizable expansion box that
+held an additional 16 megabytes of RAM. A student had sole use of
+an entire machine while working on problem sets. No time-sharing!
+It was an incredibly lavish setup.
+
+The lab was empty (go figure, everyone had just gotten out of the
+lecture). I carefully typed in the examples from the lecture and
+tried them out. I tried the recursive factorial and managed to
+blow out the stack with a fairly big number, so I knew there was
+indeed a stack limit and how the machine behaved when you hit it.
+I removed the multiply from the iterative factorial to avoid
+making huge numbers and gave it some ridiculously large argument.
+The machine churned and churned and eventually returned an
+answer. I gave it a bigger number. A lot more churning, but no
+sign of stack overflow. I guess that really worked.
+
+Then I typed in the derivative example from the lecture. Sure
+enough it worked just like Hal said. I tried passing in a few
+other functions. They worked, too. I did the homework exercises
+for fun. They just worked.
+
+This was computing on a whole new level. I thought I knew how to
+program. I didn't know anything like this. I needed to find out
+whether there was any more of this magic, and exactly how it
+worked.
+
+My prior objections to Lisp were suddenly far less relevant.
+
+    Slower than assembly? Maybe for table lookups, but who cares
+    about something as mundane as that? I want to do magic. If
+    I have to look up something in a table, maybe I'll use
+    assembly code. Harder to understand? No way. Look at the
+    derivative example. Five lines of code to express the basis
+    of differential calculus. Five lines of assembly code can
+    barely call a subroutine. (As the proud owner of an HP
+    calculator, I had no problem whatsoever with prefix
+    notation.) Less efficient? I really didn't know, but it was
+    clear that someone had put some serious thought into it and
+    found some interesting solutions. Less capable? Dude, it's
+    doing calculus!
+
+Well, the initial lecture in computer science was a lot more fun
+and interesting than I expected, but of course I knew they were
+trying to ‘sell’ comp. sci. as a career. I was pretty sure that
+this example was a hook and that the tedium would soon follow,
+perhaps even in the next lecture.

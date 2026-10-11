@@ -1,0 +1,72 @@
+browser ssh proxy
+
+### HN tips
+    - https://news.ycombinator.com/item?id=23025756
+
+### create tunnel: digital ocean
+        ssh -C2qTnN -D 8080 user@remote_machine.com
+
+### create tunnel: amazon aws
+        ssh  -C2qTnN -D 8080  aws
+
+### create tunnel: evo (firefox)
+        browsertun evo
+
+### chrome proxy configuration
+    (remember: turn off hola internet!)
+    google-chrome --proxy-server="socks5://127.0.0.1:8080"
+
+### firefox proxy configuration:
+    SOCKS Proxy  127.0.0.1  Port 8080
+    tick box for "SOCKS v5"
+
+    - Removed text in textbox "No Proxy for":
+        localhost, 127.0.0.1
+
+### Optional: DNS proxying
+      network.proxy.socks_remote_dns  user set   boolean   true
+
+### Make tunnel: (same for chrome and firefox)
+    ssh and direct connect (SOCKS5) : The following line will start the
+    ssh client and connect to username@remote_machine.com. Port 8080 on
+    localhost (127.0.0.1) will listen for requests and send them to the
+    remote machine. The remote machine will then send the packets out as
+    if they originated from itself. The ssh options are :
+    -C Compression,
+    -2 SSH2 only,
+    -q Quite,
+    -T Force pseudo-tty allocation,
+    -n Redirect stdin from /dev/null,
+    -N Place the ssh client into "master" mode for connection sharing.
+
+    ```
+    ssh -C2qTnN -D 8080 username@remote_machine.com
+    ```
+
+
+### Extra discussion:
+
+    Option 1:
+    ssh and direct connect (SOCKS5) : If you are going to use the ssh
+    tunnel with the option "-D 8080" then you need to setup the browser to
+    use a SOCKS5 proxy. Setup the proxy config page with the following
+    entries and leave the rest of the entries blank.
+
+        Manual proxy configuration:
+          SOCKS Proxy  127.0.0.1  Port 8080
+          check the box for "SOCKS v5"
+
+    Option 2:
+    ssh tunnel to squid proxy (HTTP/SSL Proxy) : If you are going to use
+    the ssh tunnel with the option "-L 8080:localhost:2020" to connect to
+    the remote machine's Squid proxy then configure the browser to use a
+    HTTP/SSL proxy. Setup the proxy config page with the following entries
+    and leave the rest of the entries blank.
+
+        Manual proxy configuration:
+          HTTP Proxy:  127.0.0.1  Port 8080
+          SSL Proxy :  127.0.0.1  Port 8080
+
+### old way of starting tunnel (doesnt use ssh config)
+        ssh -i mykeyfile.pem -C2qTnN -D 8080 user@remote_machine.com
+        ssh -i ~/.ssh/home.pem -C2qTnN -D 8080 aws

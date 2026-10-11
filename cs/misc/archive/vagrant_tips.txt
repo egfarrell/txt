@@ -1,0 +1,13 @@
+
+error
+    syntax error, unexpected ':', expecting kEND
+    config.vm.network "forwarded_port", guest: 80, host: 9080
+
+    The possible reason is using an unsupported version of Vagrant
+    Avoid
+        ~$ sudo apt-get install vagrant
+    Instead, doawnload from 
+        https://www.vagrantup.com/downloads 
+    and run:
+        ~$ sudo dpkg -i vagrant_blah-_blah.deb
+

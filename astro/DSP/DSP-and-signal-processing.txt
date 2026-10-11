@@ -1,0 +1,284 @@
+
+### Convolution (Very good) 
+    - In the TIME domain:
+        - https://www.youtube.com/watch?v=9Hk-RAIzOaw&list=PLn0OLiymPak2BYu--bR0ADNBJsC4kuRWs&index=2
+        - it's a sliding time series of dot-products between
+          a 'kernel' and a 'signal'
+        - see: "zero padding" at the edges
+        - see also: "kernel flipping"
+    - In the FREQUENCY domain
+        - key: 
+            - convolution as 'spectral multiplication'
+            - also convolution as a spectral filter (see below)
+            - quick summary steps: 
+                - convolution using multiplication in the freq
+                  domain 
+                - $MY_IMAGES/maths/DSP/convolution-summary.jpg
+        - https://www.youtube.com/watch?v=9Hk-RAIzOaw&list=PLn0OLiymPak2BYu--bR0ADNBJsC4kuRWs&index=2  
+        - Convolution Theorem: 
+            - convolution in the time domain is the same as
+              multiplication in the frequency domain
+        - Advantage? Convolution in the freq domain is
+          computationally much FASTER 
+            - (remember: it's the _FAST_ fourier transform)
+        - Convolution as a spectral filter
+            - $MY_IMAGES/maths/DSP/convolution-intuition-01.jpg
+            - $MY_IMAGES/maths/DSP/convolution-intuition-02.jpg
+            - $MY_IMAGES/maths/DSP/convolution-intuition-03.jpg
+        - Subtle point about terminology: what this video
+          actually shows is convolution in the time domain
+          IMPLEMENTED AS spectral multiplication in the frequency
+          domain. 
+            - (so we're doing _multiplication_ in the freq
+              domain)
+            - because the term 'convolution' always means
+              a sliding series of DOT PRODUCTS
+
+### Power Spectrum
+    - Longer explanation
+        - $MY_NOTES/astro/Power-Spectrum.txt
+
+### ANOMALY detection
+    - https://www.youtube.com/watch?v=1NXryMoU7Ho
+    - icecream searches on google 2011-2020
+        - $MY_IMAGES/astro/DSP/anomolies-ice-cream-01.jpg
+    - break signal into basic trend and season bit
+        - $MY_IMAGES/astro/DSP/anomolies-ice-cream-02.jpg
+    - plot the basic trend+seasonal on top of the original signal
+      (the anomolies will stick out in blue)
+        - $MY_IMAGES/astro/DSP/anomolies-ice-cream-03.jpg
+    - set a threshold (3 s.d.). Anything that sticks its head
+      about that is an anomoly
+        - $MY_IMAGES/astro/DSP/anomolies-ice-cream-04.jpg
+
+### An image
+    - a signal that varies in _space_(!)
+
+### High pass filter
+    - https://www.youtube.com/watch?v=i76B1pBoN4Y
+    - attenuate the low frequencies
+    - used for edge detection or sharpening
+    - ie: where is my signal changing the most? Where is it the
+      most dynamic?
+    - A simple high-pass filter is [`-1`, `1`]
+        - this is the difference of the current data point, minus
+          the previous data point
+        - it's like taking the derivative!
+    - the low frequency areas will go to zero... because there's
+      not much difference between one point and the next
+
+
+### Low pass filter
+    - purpose: get rid of NOISE
+        - noise is generally high frequency
+        - not a lot of correlation with noise between
+          neighbouring time intervals
+    - ritvikmath https://www.youtube.com/watch?v=i76B1pBoN4Y
+    - Low pass filter: basically smooth out high frequency parts
+      of the signal where there's a lot happening (because it's
+      probably noise)
+        - i.e. let the low frequencies pass and _attenuate_ the
+          high frequencies
+    - A simple low-pass filter is [`0.5`, `0.5`]
+        - This is a 2-element "kernel"
+    - You _convolve_ this filter with the signal
+        - How?
+        - Sweep the filter across the signal, and for every pair
+          of points, take the SUM of `0.5` of the left point, and
+          `0.5` of the right point. That's the _transformed_
+          signal.
+            - That's it! You're really taking the _mean_ of
+              side-by-side pairs in the signal...
+            - Or the equal-weighted linear combination of
+              side-by-side points in your signal...
+            - Result: it _smooths_ out your signal
+                - $MY_IMAGES/astro/DSP/low-pass-filter-convolve.jpg
+            - we kept the areas of low frequencies and the areas
+              of high frequency have been attenuated
+                - $MY_IMAGES/astro/DSP/low-pass-filter-convolve-2.jpg
+
+### Autocorrelation
+    - ritvikmath
+    - https://www.youtube.com/watch?v=DeORzP0go5I
+    - Need to do more on this one...
+    - In the Youtube example: How does the price of salmon two
+      months ago (`t-2`) affect the price of Salmon this month
+      (`t`)
+
+### white noise
+    - ritvikmath
+    - https://www.youtube.com/watch?v=cr4zIXAmSRI
+    - Must satisfy 3 criteria:
+        - Mean = 0
+        - Standard Deviation is constant with time
+        - Correlation between lags is 0
+        - $MY_IMAGES/astro/DSP/definition-white-noise.jpg
+    - One of the biggest properties of white noise:
+        - it is _not predictable_
+    - Note: `y(t)  = signal + noise`
+        - you try and fit a model (to the signal part) as best you can
+        - anything that's left over are the residuals (errors?)
+        - If you can prove your residuals are really close to
+          white noise, then you've done all you can to model the
+          signal
+        - $MY_IMAGES/astro/DSP/why-is-white-noise-important.jpg
+
+
+### Stochastic resonance
+    - https://en.wikipedia.org/wiki/Stochastic_resonance
+    - Stochastic resonance (SR) is a phenomenon where a signal
+      normally too weak to be detected, can be boosted by adding
+      white noise to it, which contains a wide spectrum of
+      frequencies.
+    - The frequencies in the white noise corresponding to the
+      original signal's frequencies will resonate with each
+      other, amplifying the original signal while not amplifying
+      the rest of the white noise – thereby increasing the
+      signal-to-noise ratio, which makes the original signal more
+      prominent. 
+        - Further, the added white noise can be enough to be
+          detectable by the sensor, which can then filter it out
+          to effectively detect the original, previously
+          undetectable signal.
+    - This phenomenon of boosting undetectable signals by
+      resonating with added white noise extends to other systems
+      – whether EM, physical or biological. It's an active area
+      of research.
+
+### filtering
+    - Digital filtering aims to reduce noise in time series data
+      or to compress data. Common examples include
+        - LOW-PASS filtering
+            - where high frequencies are suppressed
+        - HIGH-PASS
+            - where low frequencies are suppressed
+        - PASSBAND filtering
+            - where only a finite range of frequencies is
+              admitted
+        - a NOTCH FIlter
+            - where a finite range of frequencies is blocked.
+
+### What is stationary/non-stationary signal?
+    - There is no stationary signal. Stationary and
+      non-stationary are characterisations of the process that
+      generated the signal.
+    - A signal is an observation. A recording of something that
+      happened. A recording of a series of events as a result of
+      some _process_.
+    - If the properties of the process that generates the events
+      DOES NOT change in time, then the process is stationary.
+    - We know that a signal `x(n)` is a collection of events
+      (measurements) at different time instances `(n)`.
+    - But how can we describe the _process_ that generated it?
+    - Another viewpoint:
+        - One more point: stationarity or nonstationarity are
+          generally only applied to _stochastic signals_, not
+          deterministic signals.
+        - In general, when statistical tests are applied for
+          stationarity or nonstationarity, the deterministic
+          component must be removed first.
+        - Hence, in my view, numbers 3, 4, 5 are nonsensical
+          because they contain no stochastic component and,
+          therefore, cannot be considered either stationary or
+          nonstationary
+            - 3. chirp
+            - 4. sinus
+            - 5. sum of multiple sinuses with different periods
+              and amplitudes
+
+### Wavelets
+    - Fourier Transforms do not represent _ABRUPT_ changes
+      efficiently. Why?
+        - FT represents data as a sum of sine waves which are
+          _not well localised_ in time or space
+    - To analyse data with abrupt changes we need a new class of
+      functions which are well localised in time and space.
+        - Wavelet: rapidly decaying oscillation with zero mean.
+        - Unlike sinusoids which exist to infinity, wavelets
+          exist for a finite duration.
+        - $MY_IMAGES/astro/DSP/types-of-wavelet.jpg
+    - Two wavelet concepts:
+        - SCALING
+            - scaling factor affects frequency
+            - $MY_IMAGES/astro/DSP/wavelet-scaling-factor.jpg
+        - SHIFTING
+            - slide the wavelet along a signal
+            - "the wavelet is shifted and centred at `k`"
+            - $MY_IMAGES/astro/DSP/wavelet-shifting.jpg
+    - TWO wavelet transforms
+        - Continuous Wavelet Transform
+        - Discrete Wavelet Transform
+            - Denoising
+            - Compressing signals or images
+
+
+### Power Spectrum versus Power Spectral Density
+    - https://dsp.stackexchange.com/questions/33957/what-is-the-difference-between-the-psd-and-the-power-spectrum
+
+### Interesting: Two World Views
+	- $MY_IMAGES/astro/DSP/two-world-views-1.jpg
+	- $MY_IMAGES/astro/DSP/two-world-views-2.jpg
+
+### Intro MOOC course
+    - The masterpiece is Shannon’s 1948 paper: “The Mathematical
+      Theory of Communication”.
+    - It revolutionized how communication systems are designed
+      and built, and we mostly live in its legacy.
+    - One of the key results is the sampling theorem for
+      bandlimited functions (often attributed to Shannon, since
+      it appears in the above-mentioned paper), the theorem which
+      single-handedly enabled the digital revolution.
+    - To mathematicians, this is a simple corollary to Fourier
+      series, and they might suggest other ways to represent such
+      functions.
+    - However, the strength of the sampling theorem and its
+      variations (e.g. oversampling or quantization) is that it
+      is an operational theorem, robust, and applicable to actual
+      signal acquisition and reconstruction problems.
+    - Finally, the adjective "digital" comes from digitus, the
+      Latin word for finger: 
+        - it concisely describes a world view where everything
+          can be represented as an integer number.
+    - Counting, on one’s fingers or in one's head is the earliest
+      form of abstraction; as children we learn that counting
+      does indeed bring disparate objects (the proverbial “apples
+      and oranges”) into a common modeling paradigm, i.e. their
+      CARDINALITY.
+    - DSP is a flavor of signal processing in which everything
+      INCLUDING TIME is described in terms of _INTEGER_ numbers.
+      I.e., the abstract representation of choice is
+      a one-size-fit-all COUNTABILITY
+
+### MOOC intro
+    - In the history of science, 2 models for our world have
+      always existed:
+        - an idealized abstraction describiing things using
+          functions and calculus,
+        - a more pragmatic approach describing things via sets of
+          numerical measurements.
+    - DSP is the crowning achievement of this latter approach,
+      and the ability (via the _Sampling Theorem_) to bridge DSP
+      to classical mathematical models of reality is why we are
+      so successful at harnessing information.
+
+### Units
+    - The dimension for frequency used to be "cycles/second";
+      thats why the tuning dials of old radios indicate frequency
+      as kilocycles/second (kcps) or megacycles/second (Mcps).
+    - In 1960 the scientific community adopted `hertz` as the
+      frequency unit of measure in honor of Heinrich Hertz, who
+      first demonstrated radio wave transmission and reception in
+      1887.
+
+### Files
+	- $MY_IMAGES/astro/dsp-overview.jpg
+    - ./courses/DSP-mooc.txt
+
+### Links
+    - Scientists and Engineers guide to DSP     http://www.dspguide.com/
+    - DSP Related site                          https://www.dsprelated.com
+    - Very good DSP book (PySDR)                https://pysdr.org/index.html
+    - SDR for Engineers (have pdf too)          https://www.analog.com/en/education/education-library/software-defined-radio-for-engineers.html#
+    - Youtube Signal Processing course          https://www.youtube.com/playlist?list=PLJ-OcUCIty7evBmHvYRv66RcuziszpSFB
+    - Gilbert: Youtube: Signal Processing       https://www.youtube.com/watch?v=c4s5X-Bm2Wc
+    - Voager probe + Aussie telescope. SNR info https://news.ycombinator.com/item?id=42439956

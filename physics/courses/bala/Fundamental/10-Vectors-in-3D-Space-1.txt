@@ -1,0 +1,403 @@
+$MY_VIDEOS/physics/bala_fundamental/10-Vectors-in-3-Dimensional-Space.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Module – 10
+Vectors in 3 - Dimensional Space
+In the last lecture, we went through some properties of vectors in two dimensions,
+vectors which lived on a plane, the infinity Euclidean plane. And we looked at how unit
+vectors changed, when you went from the Cartesian basis to basis in which you had
+plane polar coordinates and you looked a little bit at kinematics in a plane. Today we are
+going to start on vectors in three dimensions, after all we leave in three dimensional
+space and there are a large number of interesting properties of vectors which are
+physically very important.
+
+And therefore we are going to devote a little bit of time and attention to studying these
+properties and analyzing, what vectors do in three dimensions in different ways. Now,
+the first point is that to define a vector in three dimensional Euclidean space; we use the
+same strategy as we used in earlier cases in the plane for instance.
+
+(Refer Slide Time: 01:13)
+
+By saying that under a coordinate transformation of the Cartesian coordinates x, y, z,
+under the rotation of the coordinate axis, these coordinates went to some new coordinates
+x prime, y prime, z prime, where these three quantities are given as specific linear
+combinations of x, y and z, the original coordinates. When I make a rotation of the
+coordinate axis about the origin so here is my coordinate system, the original one with x,
+y and z.
+
+And the idea is you rotate this coordinate system to look at, to make it oriented in some
+other direction and in the new coordinates system, a given physical point which has
+coordinates x, y, z in the original system has new coordinates x prime, y prime, z prime,
+which are linear combinations of x, y and z. So, the idea is that if you had another
+coordinate system, which perhaps looks like this and that was x prime and this is y prime
+and this is z prime.
+
+When this is a formula which connects these three new coordinates to the old coordinates
+and in symbols, this is written in the following way, this goes any position vector R goes
+to r prime, which is equal to some rotation matrix acting on r. When I write this R as a
+column vector, 3 by 1 column vectors; then this R is a 3 by 3 matrix, which multiplies
+this 3 by 1 column vector to produce a 3 by 1 column vector in the prime coordinates.
+
+Now, this rotation matrix is more complicated than the two dimensional rotation matrix,
+which we wrote down, where only one angle was involved, there was a theta and there
+was the cos theta sin theta minus sin theta cos theta was the matrix and that was it. But,
+now we have much more complicated situation, because to specify the new coordinates
+or the rotation, I rotate about some direction in space through a certain angle.
+
+So, really speaking, this rotation matrix in general, you need to specify an axis of
+rotation, a unit vector which tells you the direction of the axis and you need an angle psi
+through which you rotate. So, you have two parameters here to tell you, what the
+components of this unit vector are, because it is the unit vector, the third component can
+be written in terms of the first two, and then you need an angle.
+
+So, physically what it says is, if you have a direction in space as given by this piece of
+
+chalk, then you can rotate about that direction in a plain perpendicular to it through an
+angle psi. And that gives me the rotation itself and this is specified by some 3 by 3
+matrix, which is fairly intricate and I would not want to write this down. But, the end
+result will be that x prime and y prime and z prime will be a linear combinations,
+homogenous linear combinations of x, y and z in general.
+
+A very simple case would be, where I actually have a coordinate system here is x, here is
+y, here is z and I rotate about a z axis through a certain angles psi. So, all that happens is
+that, this x becomes x prime through this angles psi, the y goes in and becomes through
+this same angle psi, that is y prime and z prime is the same as z.
+
+(Refer Slide Time: 04:58)
+
+Whereas, particularly simple case of a rotation and we can write the matrix down in that
+case, because then R the unit vector is the z direction is z and psi and this will of course,
+be cos psi, sin psi and 0 here minus sin psi, cos psi and 0 here, 0, 0 and 1 here. Because,
+now it is very clear that all that happens is since that z coordinate is unaffected, the x and
+y coordinates would act as if or transform as if. There is a rotation in the x, y plane
+through an angle psi for which we know the formulas.
+
+So, this matrix when it acts on x, y and z, which is the 3 by 1 column vector representing
+
+a point in three dimensional space produces for you. So, this thing acting on r is equal to
+this, this produces for you the new coordinates x prime, y prime and z prime. And of
+course, you see immediately that x prime is x cos psi plus y sin psi plus 0, y prime is
+minus x sin psi plus y cos psi plus 0 and z prime is equal to 0 plus 0 plus z.
+
+So, it is clear that you have preserve the fact that z prime and z do not change at all,
+because if you rotating about this z axis, then the z coordinate of any point is not change
+at all. So, that is the matrix in this very simple case, but in the more complicated case,
+where this is an arbitrary direction, the formula gets much more complicated. We do not
+need it at the moment at all.
+
+So, much for what happens to a coordinate point, now what is the vector? A vector is a
+point, which transforms by definition is the vector is the set of three numbers, the three
+components which transform under a rotation in exactly the same way as the coordinates
+do.
+
+(Refer Slide Time: 06:59)
+
+So, if this quantity, if u is a vector, then under a rotation u prime must be equal to the
+same matrix on the components of u. The same as governs the transformation of the
+coordinates and I am not going to write it down explicitly. So, this is u x prime is a linear
+
+combination of u x u y u z and so on and exactly the same way as x prime, y prime, z
+prime a linear combinations of x, y, z. That is now by the correct definition of what the
+vectors is in three dimensions.
+
+So, once you have that in place, then we can create the dot product between two vectors
+and we can do a large number of other things, but since we are going to change basis and
+so on. Let me write down what the Cartesian basis is and keep that in mind, we will go
+on to other coordinate systems as well.
+
+(Refer slide Time: 07:59)
+
+So, the Cartesian basis consists of this triple at of vectors this e z, which in elementary
+notation is sometimes written as i, j, k. I prefer for reasons I explained already, I prefer
+this notation, simply because we will go to other frame other coordinate systems in
+which case, I would like to be able to find out to look at a glance tell, which unit vector I
+am talking about. Therefore, I preferred to write it, the Cartesian basis in this form.
+
+(Refer Slide Time: 08:51)
+
+Now, we also defined, what is called the scalar product or dot product between two
+vectors? And that was the scalar because of the following reason. So, if you have a
+vector a, which is got components a x, a y, a z and a vector b, which has components b x,
+b y and b z. Then, this so called dot product or scalar product of a and b, written as a dot
+b is by definition equal to a x, b x plus a y, b y plus a z, b z and this is the definition, it is
+defined in this fashion.
+
+Now, exactly as we did in two dimensions, we could in principle write down, what are
+the prime values a x prime b x prime c x prime etcetera and a y prime b y prime etcetera.
+And we can verify that this is equal to a prime dot b prime, which is a x prime b x prime
+plus a y b y prime. There are more elegant ways of verifying it using just the properties
+of this matrix or the rotation matrix are, but I am not going to go into that here, it is a
+matter of little bit of algebra. But, it is an easy to show that this quantity a not b does not
+change under a rotation.
+
+And therefore since it is the same in the unprimed and primed coordinates, it is a scalar;
+this thing here is the scalar quantity. In particular, if b is z equal to a, then this number a
+dot a for any vector is also written as a square and that is of course by definition a x
+squared plus a y squared plus a x squared and that is the scalar. This quantity here, the
+
+magnitude of the square of the magnitude of the vector is a scalar.
+
+A special case of that is when you have a x is the same as the x, a y is the same as y and
+so on and then of course, r squared is x squared plus y squared plus z squared; that is the
+scalar. So, the distance from the origin to any point does not change the coordinate
+systems is rotated about the origin. A little generalization of that, the distance between
+any two points in this space does not change, if the coordinate system was rotated about
+the origin or any point for matrix.
+
+So, these are all scalars, these quantities are scalars and we have the concept of a scalar
+product. But, in three dimensions something else happens, something very special
+happens and that is the following. But, before that we will answer this question of what
+happens, if instead of a proper rotation about the origin, I will look at an in proper
+transformation similar to the reflection, I looked at in two dimensions.
+
+(Refer Slide Time: 12:06)
+
+So, suppose I look at a transformation and which x goes to minus x, y goes to minus y
+and z goes to minus z. This is like saying that I take a coordinate system of this kind x, y
+and z, the right hand it coordinate system, this is the origin. And now, I will look at x
+comes ticking out of the board, so I go in and that is my x prime. This y is flipped in
+
+direction and that is my y prime and the z is flip in direction and that is my z prime.
+
+What about that coordinate system, now it is a matter for you to verify that, if I take on
+the right hand and I call this x, y and z, there is no rotation that I can do, which will take
+me to this new coordinate system x prime, y prime and z prime. So, this will the original
+x, x prime is gone inside, y prime is on the left and z prime is pointing down. There is no
+way in which you can reach that coordinate system from the original coordinate system
+by a rotation; this is called a parity transformation.
+
+When you change r goes to in the new r prime, which is equal to minus r prime. So, a
+vector changes sin under a parity transformation, this thing is called parity. No, once this
+happens in general vector, if it behaves exactly like that coordinates under these
+transformations will, therefore change sin each components will change sin under
+coordinate transformations. On the other hand what happens to the scalar product, well if
+a goes to minus a and b goes to minus b, a dot b remains unchange; it is exactly the same
+under the parity transformation, which is why it is called the scalar.
+
+Had it change sin, I would have called it a Pseudo scalar, but it does not change sin, so
+this thing is need a scalar. So, now, let us ask, what are the possible vectors, what are
+these things look like, well let us write down the physical table here of physical
+quantities, which are vectors in the sense and which will know from other means from
+other information or like vectors.
+
+(Refer Slide Time: 14:39)
+
+So, here is in set of vectors, position r, position of a point in space or a particle in space
+is a vector. Then, the velocity, let us look at some physical quantity, velocity v, this is
+equal to d r over d t, the rate of change of this position with respect to time and there is
+an r here, so it is obviously, a vector once again. And it is also a vector in the same sense
+under parity that the position is, because t does not get affected by changing x to minus x
+y to minus y etcetera, so that is a proper vector.
+
+What about acceleration a, this is the second derivative, what is the derivative of the
+velocity and that of course, this the second derivative of the position first derivative of
+the velocity that two is the proper vector. It will change sin under parity transformation
+and otherwise behave under a rotation, exactly as a vector direction as the position does.
+What about a quantity like momentum, linear momentum p, well in the naive definition
+of a momentum for a particle, this is equal to m times the velocity and that quantity m is
+a constant.
+
+So, the scalar, and therefore this is also a vector behaves also exactly like the velocity
+does under rotations under parity transformation and so on. Force, what would that do,
+well we need an equation which connects force to some other things, we already know
+about and we know Newton’s third law, which tells us the mass times the acceleration is
+
+equal to the force. So, since we have a connection of that kind, we say this quantity is
+like a vector that is the scalar. So, this quantity is the vector, a proper vector. So, certainly
+this is a proper vector and so on.
+
+We can create a whole list of these vectors and say that they all would have to
+transformation properties, which are known. Once, you know the transformation
+property of the coordinates under rotations, but now comes a curiosity, which is valid
+only in three dimensions, a peculiarity of three dimensions. Rather, similar to what we
+found in two dimensions, but three has the owns special nature and that is the following.
+
+(Refer Slide Time: 17:23)
+
+You discover that if you took two vectors of this kind, then just as in the case of two
+dimensions, recall that we had a x, a y and b x, b y for two vectors, and then I said look a
+x, b x plus a y, b y was the scalar in two dimensions. And then pointed out that a x, b y
+minus a y, b x behave under a rotation of the coordinate axis about the origin in x, y
+plane like a scalar, did not change. But, under a reflection x to minus x or y to minus y, it
+change sin and this became a Pseudo scalar, this anti symmetric combination became a
+Pseudo scalar.
+
+(Refer Slide Time: 18:21)
+
+And now in three dimensions, we have a more general possibility. So, in addition to this
+scalar product, which is a x, b x plus a y, b y plus a z, b z. We also have the possibility of
+combinations like a y, b z minus a z, b y, but we have two more such combinations
+possible and that is a z, b x minus a x, b z. The third possibility is a x, b y minus a y, b x
+and those are the only possibilities for this anti symmetric combinations of one
+component of a with another component of b and then in the reverse order, this guy.
+
+So, we have there such quantities which are the analog of a x, b y minus a y, b x in two
+dimensions. We have now because there are three components possible, we can choose
+them two order time and this is what you get, I choose x, y, I get this, I choose y, z, I get
+this, actual z, x, I get this. It turns out, that when you compute what these quantities do, it
+turns out that this set of quantities transforms exactly like a vector as under rotations.
+
+So, this means that, if you call for the moment is quantity here to be are component of a
+vector c subscript x, c subscript y, c subscript z. These three quantities qualified to be a
+vector in the sense that they transform exactly as the coordinate x, y, z to under a rotation
+of the coordinate axis about the origin. Therefore, these three are components of a vector
+from by taking the vector a and b combining them in this by linear fashion to produces a
+new vector, whose components of precisely these combinations here.
+
+So, the x component is y z minus z y, the y component is z x minus x z and the z
+component is x y minus y x in cyclic permutation. This quantity is called by definition
+the vector product of a and b. This one component of a in every term, this one
+component of b in every term and it is called the vector product here or cross product for
+this cross. In contrast to dot product, this produces the scalar; the cross product produces
+a vector in three dimensions.
+
+In two dimensions, it did not the analog, just produces a Pseudo scalar, but here it
+actually has produce a vector under rotations. Now, one could ask just as if I took two
+arbitrary vectors a and b and there is a certain angle theta between them, I also know that
+a dot b instead of writing it in Cartesian components, I could also write this as a
+magnitude of a times the magnitude of b times in the cosine of the angle between them.
+In exactly the same way, can I write some formula for a and b given two arbitrary vectors
+a and b of that fashion on that kind in three dimensions and the answer is yes.
+
+But, now you have a vector and what is the meaning of this is geometrical meaning, so I
+write this geometrical meaning in this turns out to be the following from a and b, you can
+form a parallelogram, let us draw this again. So, here is a, here is b and you can extends
+this and form a parallelogram and it turns out that the area of this parallelogram is given
+by the magnitude of this vector. And the direction of this vector happens to be the
+direction normal to this parallelogram.
+
+You are already aware of the fact that, if took this triangle the diagonal here, this area is
+equal to that area and this angle is theta, when the area of that triangle is equal to half a
+times b times sin theta. We know that from elementary geometry and of course, the area
+of parallelogram is twice that, so it goes away here and the parallelogram area is equal to
+a b sin theta and that is exactly what the module is of a cross b is.
+
+On the other hand, the direction of a cross b is perpendicular to the plane of this
+parallelogram in this direction and that direction is found by taking a and rotating from a
+to b into through an angle theta in the direction of a right hand is true. The direction in
+which the right handed screw driver moves up is the direction of this vector a cross b. So,
+this is the vector a cross b,, therefore a cross b equal to the magnitude of a cross b equal
+
+to a b sin theta. The magnitude of a sin theta here and the direction of a cross b is along
+the normal to this parallelogram in this sense in which you right handed screw driver
+moves, when you rotate from a towards b.
+
+So, a is coming out here and I rotate into b, when screw driver moves up and that is the
+direction of the vector a cross b. So, we have a prescription, the geometrical meaning
+which will tell us not only the magnitude of a cross b, but also the direction of a cross b
+in this fashion. Now, this construction is peculiar to three dimensions, because in two
+dimensions, the analog is to do Pseudo scalar.
+
+But, in three dimensions it has produces a vector and it terms out in higher dimensions, it
+does not produces a vector in those dimensions, it produces something called a ten serve,
+which we are not talking about here. But, the fact is that in three and only three
+dimensions is the cross product of two vectors going to produce another vector and that
+is the very profile observation of very important one for all physical problems and many
+physical problems.
+
+Now, that we are know that is there any different at all between this kind of vector and
+the kind of vector that the coordinates are any of these vectors here is there any
+difference at all. Well, yes indeed there is, because look at what happens on a parity, if a
+and b are proper vectors under parity, a goes to minus a, b goes to minus b, a dot b, it
+does not change sin and it is the scalar, we already established that. But, a cross b is
+going to remain unchanged in sin and yet it is the vector.
+
+We already said under rotations a cross b behaves exactly like the position does are the
+velocity does and so on, and therefore it is the proper vector. So, if a and b are proper
+vectors, a cross b is a proper vector under rotations, but on the parity it does not change
+sin, whereas, all vectors change sin. Therefore, we have two kinds of vectors in three
+dimensions. We have those we change sin under parity and those which do not change
+sin under parity all these are vectors.
+
+(Refer Slide Time: 26:21)
+
+There also known as polar vectors and the class of vectors, we change sin, they are called
+Pseudo vectors or axial vectors and these are the cross products of any two ordinary
+vectors. For instance r cross p equal to the angular momentum that is an axial vector, it
+behaves exactly like a vector does under rotations of the coordinate axis. But, the
+moment you have a parity transformation, it does not change sin, unlike what are vector
+really does.
+
+What about r cos v, wells going to exactly do exactly what this does, because v and p just
+before by this constant multiples here and so on. So, whenever you take two vectors from
+this column here and take the cross product of the two, you are going to get an axial
+vector. For instance if you did r cross F, this is equal to tau and it is equal to the torque.
+So, the torque is an axial vector the angular momentum is an axial vector, the cross
+product of any vectors here is an axial vector.
+
+(Refer Slide Time: 27:59)
+
+What happens if I take L an axial vector and take the cross product to r, will now that
+easy to write down, what is going to happen, because if you look at r cross L under parity
+is goes to minus r cross and it remains L. So, that is equal to minus r cross L, and
+therefore it is back to be thing a polar vector once again. So, if you took the cross
+product of a vector from here and a vector from here an axial with a polar vector, the
+back to a vector, polar vector.
+
+If you took the cross product of two axial vectors, what you thing will happen, if I took a
+L cross tau for a example, L cross any other vector here, which is an axial vector, neither
+of the actual vector changes sin, so it remains a axial vector in this case. But, the moment
+you take something to here and something from there and take a cross product to back
+here in this, back to the ordinary vector.
+
+Well, we can write down using exactly the sort of input we wrote namely using Newton’s
+law, we wrote down for instance, what the electric feel, what the angular momentum
+does, what the topped as and so on, the force does.
+
+(Refer Slide Time: 29:13)
+
+We can now write down, what the electric feel would do for instance, I know that if you
+have a charge q and I apply an electric feel E, then the force on this electric feel is q
+times E. So, if this is the point charge and this is the electric field apply, I know that the
+force on it is the charge multiplied by the electric feel intensity. Since, this is the scalar
+and I know that is the polar vector, this is the polar vector. So, I had my list electric feel.
+
+(Refer Slide Time: 30:03)
+
+What about the magnetic feel, well that is the little more complicated, when I applied a
+magnetic feel b on a charge q and the charges in motion, then the force the magnetic
+force on this charge is q times the cross product of v with the feel B. That turns out to be
+the force is called the Lawrence force on a charge, which is moving in a magnetic feel
+which is applied. I know that this a polar vector; that is the scalar; this is a polar vector
+that, therefore has got to be an actual vector, because this quantity will change sin and a
+parity.
+
+It will become minus F under this law is to remain the same, whether it change
+coordinate system from a right handed to left handed coordinate system are not. This has
+to become q times minus v cross v the minus sin have to cancel out to give me exactly
+the same law in the old and new frames, which tells me that B cannot change sin. So, the
+conclusion is that the magnetic feel B is an actual vector and so on.
+
+So, we can actually fill up this list from one to the other, we logically reduces using a law
+each time, which brings in a new physical quantity. We can classify whether the new
+vector that we are dealing with is an axial vector or a polar vector. But, remember that as
+for the rotations are concerned there is no difference between the polar vector and an
+axial vector. It is only when you bring in a improper transformation such as reflection or
+parity that there are changes of sin. But, it is a very valuable thing to keep in mind,
+because it is again serves a consistency and tells you, there are certain differences
+between quantities one kind of the other.
+
+(Refer Slide Time: 31:51)
+
+By the way, if you took the dot product of something here and there, what you thing is
+going to happen, if I took for instance the electric feel E and did a dot product with B;
+that we know has to be a scalar, it is a scalar product. This however, is a polar vector, this
+is an axial vector and this combination under parity becomes minus E dotted to plus p.
+And therefore changes sin and what are we called a scalar quantity, we change a sin
+under a reflection, under a parity transformation, we called it as a Pseudo scalar.
+
+So, this thing here it is not an ordinary scalar, it is a Pseudo scalar. So, in this fashion, we
+can actually write down the transformation property is varies physical quantities. Once,
+you have a small dictionary which tells you what some basic quantities transform like.
+So, we will continue with this and we will continue to keep this in the back of our mind
+that took hence a vectors and three dimensions and the cross product of two ordinary
+vectors, polar vectors is actually an axial vector, which is like a different kind of vector.
+
+But, there are physical quantities which are ether polo vectors are actual vectors and they
+have to own importance. So, this is useful information to know, we still have some way
+to go and understanding vectors and three dimensions. The next task will be to see, what
+is some other basic formulas are.
+
+

@@ -1,0 +1,166 @@
+### KEY 4: ‘Momentum’ of the Magnetic Field
+
+- Context: In the 19th century, EM theory was closely tied to
+  Vector Potential _mechanical_ analogies.
+    - The idea of momentum in the EM field arises from attempts
+      to understand how electric currents and magnetic fields
+      interact with a `medium`—then conceived as the *ether*.
+
+### 1. Maxwell, Faraday, and the Mechanical Ether
+
+* Faraday introduced the idea of *lines of force*, emphasizing
+  fields as physical entities rather than mere mathematical
+  tools.
+* Maxwell extended this by giving the ether mechanical
+  properties:
+
+* It could store energy.
+* It could transmit forces.
+* It could exert pressure.
+* The next conceptual step:
+    - if the ether can transmit forces and store energy, it could
+      also *possess motion and momentum*.
+
+
+### 2. Self-Induction as an Analogy to Inertia
+
+* Observation: When a current in a circuit is interrupted, it
+  does not stop instantaneously—it resists change, similar to how
+  a mass resists acceleration.
+* Quantitative measure: This effect is captured by
+  self-inductance, which depends not only on the current but also
+  on the geometric configuration of the wire.
+
+  * If inertia were only due to moving charges, changing the
+    shape of the wire would not affect the resistance to current
+    change.
+  * But bending the wire or forming a coil changes the
+    self-inductance, indicating the effect is tied to the
+    *magnetic field geometry*, not just the particles.
+
+
+### 3. Electromagnetic Momentum and the Vector Potential
+
+* Maxwell interpreted the self-induction effect as a dynamic
+  property of the ether.
+* He introduced the concept of “electrokinetic momentum”,
+  associating motion with the magnetic field around
+  a current-carrying wire.
+* Mathematically:
+
+  * This momentum could be evaluated using the vector potential
+    A, via the line integral around a circuit:
+
+    * Conceptually, A plays a role analogous to mechanical
+      momentum p = mv.
+* Key idea: The magnetic field is not just a static entity; it
+  carries momentum, stored in the field and transferable to
+  matter.
+
+
+### 4. Historical Interpretation
+
+* Pre-electron era: Momentum was attributed to ether motion, not
+  to discrete particles.
+* Maxwell’s electromagnetic momentum can be seen as a precursor
+  to the modern concept of field momentum:
+
+  * In modern terms: the momentum density in the electromagnetic
+    field is g = ε₀ E × B (Poynting vector divided by c²).
+  * Maxwell’s “vector potential as momentum” is an early, more
+    mechanical way of thinking about the same concept.
+
+
+### 5. Summary Points
+
+* Self-induction ↔ inertia analogy: The resistance of a current
+  to change is like mass resisting acceleration.
+* Ether dynamics: The effect cannot be attributed solely to the
+  current carriers; it involves the surrounding medium.
+* Vector potential as momentum: The line integral of A around
+  a circuit quantifies the “momentum” stored in the magnetic
+  field.
+* Legacy: This reasoning laid the groundwork for modern field
+  theory, where fields themselves carry energy and momentum, even
+  without material carriers.
+
+
+# Bridge from “electrokinetic momentum” to modern EM field momentum:
+
+
+### 1. Maxwell’s Seed Ideas
+
+* Maxwell imagined the ether as a mechanical medium with energy,
+  pressure, and momentum.
+* Self-induction and the vector potential A were interpreted as
+  momentum stored in this medium.
+* Although electrons weren’t known, Maxwell could mathematically
+  assign a quantity (via ∮A·dl) that behaved like momentum
+  associated with the field.
+* This was primitive in the sense that it relied on the
+  mechanical ether as a carrier; it was not yet the relativistic,
+  particle-free field momentum we use today.
+
+
+### 2. Transition to Field Momentum
+
+* After the discovery of electrons and the abandonment of the
+  ether, the same phenomena were reinterpreted as momentum of the
+  electromagnetic field itself, not a medium.
+* Poynting (1884) formulated the Poynting vector S = E × H,
+  describing the flow of electromagnetic energy.
+
+  * By dividing by c² (in SI, g = ε₀ E × B), one obtains the
+    momentum density of the field.
+  * This is now understood as real momentum that can exert forces
+    on matter (e.g., radiation pressure, optical tweezers).
+
+
+### 3. Modern Understanding
+
+* The electromagnetic field has energy and momentum independent
+  of matter.
+* Key formulas:
+
+  * Energy density: u = ½(ε₀ E² + B²/μ₀)
+  * Momentum density: g = ε₀ E × B
+* Momentum transfer: When an EM wave hits a surface, it can push
+  it—demonstrating that the field carries momentum, just as
+  Maxwell imagined, but without needing the ether.
+* Vector potential A still appears in modern formulations:
+
+  * In quantum mechanics (Aharonov–Bohm effect), A has physical
+    significance even in regions where B = 0, echoing Maxwell’s
+    intuition that the “momentum” resides in the field
+    configuration.
+
+
+### 4. Key Insight
+
+* Maxwell’s early “electrokinetic momentum” was conceptually
+  correct: magnetic fields carry momentum.
+* The modern view abstracts away the ether, replacing it with
+  fields themselves as physical entities.
+* So, the lineage is: Ether + self-induction → vector potential
+  as momentum → Poynting vector & field momentum → modern EM
+  field theory.
+
+
+# But Heaviside chopped away the potentials!
+    - $MY_NOTES/physics/EM/EM-tips.txt
+    - Heaviside pruned out much mention of potentials from
+      Maxwell's original presentation.
+        > For a while he remained as confused as anyone but then
+        > he saw a chink of light and got out his pruning knife
+        > again. He wanted simplicity and symmetry, and he found
+        > them by concentrating on the electric and magnetic
+        > forces and cutting out the variables called
+        > _potentials_.
+
+    - But _Magnetic potential_ was much harder to understand.
+    - It was a vector rather than a scalar and represented
+      a property of the magnetic field that was akin to
+      `momentum` in mechanical systems.
+    - Mysterious indeed, but Maxwell thought it might be ‘the
+      _fundamental quantity_ in the theory of electromagnetism’
+      and gave it pride of place in his presentation.

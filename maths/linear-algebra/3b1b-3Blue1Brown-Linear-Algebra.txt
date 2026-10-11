@@ -1,0 +1,248 @@
+
+### Useful intuition (Grant)
+    - ... sometimes it's more useful to view a vector as the
+      `physical embodiment` of a linear transformation, not as an
+      arrow in space.
+    - It's conceptual shorthand for a linear transformation since
+      it's easier to think about arrows in space, rather than
+      moving all that space to the number line.
+
+### Useful intution 2 
+    - Link between: 
+        - executing a transformation on a vector 
+            - (matrix-vector multiplication) 
+        - AND 
+            - a dot product between two vectors
+            - $MY_IMAGES/maths/linear-algebra/3blue1brown/link-matrix-vector-mult-dot-prod.jpg
+        - applying the transformation on a vector is the SAME
+          THING as taking the dot product with that vector.
+            - $MY_IMAGES/maths/linear-algebra/3blue1brown/transformation-same-as-dot-prod.jpg
+
+### Webpage
+    - Text explanation https://www.3blue1brown.com/lessons/linear-transformations
+
+### Notes: 
+    - $MY_BOOKS/Physics/Maths/Linear-Algebra/3Blue1Brown/00-Linear-Algebra-contents.pdf
+    - $MY_BOOKS/Physics/Maths/Linear-Algebra/3Blue1Brown/01-Vectors-what-even-are-they.pdf
+    - $MY_BOOKS/Physics/Maths/Linear-Algebra/3Blue1Brown/03-Linear-transformations-and-matrices.pdf
+
+
+# Videos
+    - 01  $MY_VIDEOS/Maths/3b1b/linear-algebra/01-Vectors-what-even-are-they.mp4
+    - 02  $MY_VIDEOS/Maths/3b1b/linear-algebra/02-Linear-combinations-span-and-basis-vectors.mp4
+    - 03  $MY_VIDEOS/Maths/3b1b/linear-algebra/03-Linear-transformations-and-matrices.mp4
+    - 04  $MY_VIDEOS/Maths/3b1b/linear-algebra/04-Matrix-multiplication-as-composition.mp4
+    - 05  $MY_VIDEOS/Maths/3b1b/linear-algebra/05-3D-linear-transformations.mp4
+    - 06  $MY_VIDEOS/Maths/3b1b/linear-algebra/06-The-determinant.mp4
+    - 07  $MY_VIDEOS/Maths/3b1b/linear-algebra/07-Inverse-matrices-column-space-and-null-space.mp4
+    - 08  $MY_VIDEOS/Maths/3b1b/linear-algebra/08-Nonsquare-matrices-as-transformations-between-dimensions.mp4
+    - 09  $MY_VIDEOS/Maths/3b1b/linear-algebra/09-Dot-products-and-duality.mp4
+    - 10  $MY_VIDEOS/Maths/3b1b/linear-algebra/10-Cross-products.mp4
+    - 11  $MY_VIDEOS/Maths/3b1b/linear-algebra/11-Cross-products-in-the-light-of-linear-transformations.mp4
+    - 12  $MY_VIDEOS/Maths/3b1b/linear-algebra/12-Cramers-rule-explained-geometrically.mp4
+    - 13  $MY_VIDEOS/Maths/3b1b/linear-algebra/13-Change-of-basis.mp4
+    - 14  $MY_VIDEOS/Maths/3b1b/linear-algebra/14-Eigenvectors-and-eigenvalues.mp4
+
+
+### 01 Vectors what even are they
+    - "The introduction of numbers as coordinates is an act of
+      violence" (Weyl)
+    - 3 perspectives of vectors: 
+        - PHYSICS: 
+            - arrow pointing in space 
+            - vector defined by its length and direction 
+            - as long as those 2 facts are the same, you can move
+              it all around and its still the same vector
+
+        - CS: 
+            - ordered list of numbers 
+            - modelling house size and price: 
+            - you're modelling a house as a 2D vector
+            - "vector" is fancy word for "list"
+            - note: order matters in these "lists" (tuple)
+
+        - MATHS: 
+            - generalises both Physics and CS views 
+            - basically a "vector" is anything with
+              a sensible notion of adding 2 things and
+              multiplying a vector by a number... 
+            - ... details are abstract, so we'll ignore this
+              viewpoint till the last video 
+
+    - Specific thought for word "vector"
+        - anytime I introduce a new topic involving vectors,
+          first think of an arrow... 
+        - and think of that arrow inside a coord system, eg the
+          X-Y plane 
+        - ... with it's tail sitting _at the origin_ 
+        - this is different to how Physics students think of
+          vectors, where vectors can freely sit anywhere they
+          want in space
+        - In linear algebra, it's almost always the case that
+          your vector will be rooted at the _origin_ (!) 
+    - Once you understand the concept as an arrow in space, we'll
+      transfer it over to the numbers point-of-view
+    - The coordinate system allows a "back and forth" between
+      visual arrows and numbers...
+    - Think of the origin as the centre of space and the _root_
+      of all vectors...
+    - After choosing an arbitrary length to represent `1`, you
+      make tick marks on the axis to represent this distance.
+    - Coordinates (two numbers) basically instruct how to get
+      from the tail of the vector (at the origin), to its tip...
+    - 1st number: how far to walk along the x-axis 
+    - 2nd number: how far to walk parallel to the y-axis
+    - to distinguish vectors from points: 
+        - the convention is to write vectors  `[  1 ]` 
+                                            - `[ -2 ]`
+        - and write points horizontally eg `(-4, 2)`
+    - Every topic in linear algebra centres around 2 operations,
+      adding vectors and multiplying them by a number
+    - Short section: adding 2 vectors 
+        - $MY_IMAGES/maths/linear-algebra/3blue1brown/adding-vectors.jpg
+        - This example of vector addition is about the only time
+          in linear algebra we allow the vectors to stray away
+          from the origin
+        - You can think of addition as walking steps... 
+        - And vector addition is like doing all the `x` steps
+          first, then all the `y` steps
+            - $MY_IMAGES/maths/linear-algebra/3blue1brown/vector-addition-02.jpg
+            - $MY_IMAGES/maths/linear-algebra/3blue1brown/vector-addition-03.jpg
+
+    - scalar multiplication 
+        - means "stretching", "scaling" 
+        - means multiplying _each component_ by that scalar
+          number
+
+    - In linear algebra, numbers mainly scale vectors. It's
+      common to use the word "scalar" interchangably with
+      "number"
+        - Thats why Balakrishnan has to later define what
+          a "scalar" really is!
+
+    -  Vectors: 
+        - Give data analaysts and CS students a way to visualise
+          lists of numbers as vectors
+        - Gives physicists a language to describe `SPACE`
+
+
+### 02 Linear combinations span and basis vectors
+    - 2D vectors are a combination of the 2 basis vectors: 
+        - `î` and `ĵ`
+        - $MY_IMAGES/maths/linear-algebra/3blue1brown/basis-vectors.jpg
+    - Think about coordinates as SCALERS 
+        - the "full" vector `[3, -2]` is the sum of two scaled
+          vectors
+        - the coordinates show how much we're _scaling_ the basis
+          vectors 
+            - ie the basis vectors are what those scaler
+              coordinates are actually scaling
+            - (very important concept) 
+            - $MY_IMAGES/maths/linear-algebra/3blue1brown/sum-scaled-vectors.jpg
+    - What if we chose different basis vectors? 
+    - Anytime we describe vectors numerically, it depends on an
+      IMPLICIT choice of basis vectors 
+    - If you're dealing with a collection of vectors, think of
+      them all as POINTS
+
+### 03 Linear transformations and matrices
+    - Characteristics of linear transformations: 
+        - straight lines stay as straight lines
+        - origin stays in same place
+
+### 04 Matrix multiplication as composition
+
+### 05 3D linear transformations
+
+### 06 The determinant
+
+### 07 Inverse matrices column space and null space
+    - A linear system of equations is like `matrix * vector`
+      multiplication
+        - $MY_IMAGES/maths/linear-algebra/3blue1brown/linear-system-eqns.jpg
+        - $MY_IMAGES/maths/linear-algebra/3blue1brown/linear-system-eqns-2.jpg
+    - Brilliant: Matrix equation intuition 
+        - "We're looking for the vector `x` that after carrying
+          out the transformation `A`, LANDS on the vector `v`"
+            - $MY_IMAGES/maths/linear-algebra/3blue1brown/matrix-eqn-intuition.jpg
+    - 2D example
+        - `Ax = V`. We are looking for `x`
+            - $MY_IMAGES/maths/linear-algebra/3blue1brown/2D-matrix-eqn.jpg
+        - Now think about the determinant first
+            - Will the transformation `A` squish everything down
+              onto a single line??
+                - `Det(A) = 0`
+                    - $MY_IMAGES/maths/linear-algebra/3blue1brown/2D-matrix-eqn-2.jpg
+            - Or will `A` still leave everything spanning the two
+              dimensions it started with?
+                - `Det(A) ≠ 0`
+                    - $MY_IMAGES/maths/linear-algebra/3blue1brown/2D-matrix-eqn-3.jpg
+        - In non-zero `Det`, there will always be one, and only
+          one, vector `x` that will land on `V`.
+            - We can find it by just playing `A` in reverse and
+              seeing where `V` goes
+            - ie we 'REWIND THE TAPE' until we find `x` such that `Ax = V`.
+            - rewinding the tape = apply the inverse
+              transformation `A^-1`
+
+
+### 08 Nonsquare matrices as transformations between dimensions
+
+### 09 Dot products and duality
+    - Dot Product: initial thoughts
+    - Grant problem 1:
+        - Grant thought it strange that the ORDER of the dot
+          product doesn't matter. It's weirdly symmetric.
+            - So did I in Aberdeen (2009)...
+            - ie `v • w = w • v`
+        - Intuition 1
+        - Just imagine both vectors the same length
+        - We can leverage some symmetry then...
+                - $MY_IMAGES/maths/linear-algebra/3blue1brown/symmetric-dot-product.jpg
+            - and if we double one of the vectors, the ORDER of
+              the dot product still wont matter:
+            - Project `w` onto `v`:
+                - `v` is DOUBLED, but the projection is the same
+                    - $MY_IMAGES/maths/linear-algebra/3blue1brown/symmetric-dot-product-2.jpg
+            - Project `v` onto `w`:
+                - `w` is the same, but the projection is DOUBLED
+                    - $MY_IMAGES/maths/linear-algebra/3blue1brown/symmetric-dot-product-3.jpg
+
+    - Grant problem 2: (the key prob)
+        - Why does the `NUMERICAL PROCESS` of matching coordinates,
+          multiplying them and adding, have anything to do with
+          the `GEOMETRIC` interpretation (projection)?
+        - First consider a VISUAL interpretaion of a linear
+          transformation:
+            - (here our linear transformation takes function
+              input down to the 1D number line. 
+                - ie the transformation output space is 1D)
+            - Take a line of evenly spaced dots...
+                - After a linear transformation, the dots are
+                  still EVENLY SPACED 
+                - $MY_IMAGES/maths/linear-algebra/3blue1brown/linear-transformation-0a.jpg
+                - $MY_IMAGES/maths/linear-algebra/3blue1brown/linear-transformation-0b.jpg
+                - $MY_IMAGES/maths/linear-algebra/3blue1brown/linear-transformation-1.jpg
+                - $MY_IMAGES/maths/linear-algebra/3blue1brown/linear-transformation-2.jpg
+            - there's some kind of CONNECTION between linear
+              transformations that take vectors to numbers, AND,
+              vectors themselves!
+    - Link between: 
+        - executing a transformation on a vector 
+            - (matrix-vector multiplication) 
+        - AND 
+            - a dot product between two vectors
+            - $MY_IMAGES/maths/linear-algebra/3blue1brown/link-matrix-vector-mult-dot-prod.jpg
+        - applying the transformation is the SAME THING as taking
+          the dot product with that vector.
+            - $MY_IMAGES/maths/linear-algebra/3blue1brown/transformation-same-as-dot-prod.jpg
+
+### 10 Cross products
+
+### 11 Cross products in the light of linear transformations
+
+### 12 Cramers rule explained geometrically
+
+### 13 Change of basis
+
+### 14 Eigenvectors and eigenvalues

@@ -1,0 +1,124 @@
+curl tips
+
+### rename downloaded output
+    curl -o /path/to/local/file http://url.com
+
+### Get latest certs for old ubuntu
+    mkdir -p ~/src
+    cd ~/src
+    wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ca-certificates/20210119~20.04.2/ca-certificates_20210119~20.04.2.tar.xz    
+    tar -xJf ca-certificates_20210119~20.04.2.tar.xz
+    cd ca-certificates-20210119~20.04.1
+    make
+    make install
+    # You might want to run this interactively to ensure
+    # you can select the ISRG Root X1
+    # in which case, just run: sudo dpkg-reconfigure ca-certificates
+    sudo dpkg-reconfigure -fnoninteractive ca-certificates
+    sudo update-ca-certificates
+    /usr/bin/c_rehash /etc/ssl/certs
+
+
+### old iimcb curl error
+    - note: needed 'https' not 'http'!
+        - (for https://rfam.org/search/sequence)
+
+        > ISSUE REQUEST 1
+            curl -H 'Expect:' -F seq='<test.seq' -H "Accept: application/json" https://rfam.org/search/sequence
+
+            > - output 1:
+                {"resultURL":"https://rfam.org/search/sequence/2022588A-2C25-11EC-97B3-051BCF29BD2E",
+                "opened":"2021-10-13 13:57:30",
+                "estimatedTime":"3",
+                "jobId":"2022588A-2C25-11EC-97B3-051BCF29BD2E"}
+ 
+
+### curl error - "certificates"
+    - use -k argument
+    - curl -k ....
+
+### .curlrc
+	proxy = http://wwwcache.open.ac.uk:80
+
+### curl error 1
+    CURL error (60): error setting certificate verify locations:
+        export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+### curl error 2
+    error:
+        CURL error (60): error setting certificate verify locations:
+        CAfile: /etc/pki/tls/certs/ca-bundle.crt
+        CApath: none
+
+    solution:
+        (this is in my curl_fix.sh)
+        $ curl http://curl.haxx.se/ca/cacert.pem > .cacert.pem
+        $ export SSL_CERT_FILE=/root/.cacert.pem
+
+### ONS Work: This worked for me!
+    - dont use "--proxy-ntlm"
+    - use    "--proxy-negotiate" instead!
+    - or use "--proxy-any"       instead!
+
+        > curl  -k         -U : --proxy-negotiate --proxy my.proxy.com:8080 https://github.com
+        > curl  --insecure -U : --proxy-negotiate --proxy my.proxy.com:8080 https://github.com
+        > curl  --insecure -U : --proxy-any       --proxy my.proxy.com:8080 https://github.com
+
+### iimcb RFAM!
+    -F, --form <name=content>
+
+        - (HTTP SMTP IMAP) For HTTP protocol family, this lets
+          curl emulate a filled-in form in which a user has
+          pressed the submit button. This causes curl to POST
+          data using the Content-Type multipart/form-data
+          according to RFC 2388.
+
+        - For SMTP and IMAP protocols, this is the means to
+          compose a multipart mail message to transmit.
+
+        - This enables uploading of binary files etc. To force
+          the 'content' part to be a file, prefix the file name
+          with an @ sign. To just get the content part from
+          a file, prefix the file name with the symbol <. The
+          difference between @ and < is then that @ makes a file
+          get attached in the post as a file upload, while the
+          < makes a text field and just get the contents for that
+          text field from a file. 
+
+    -H, --header <header/@file>
+
+        - (HTTP) Extra header to include in the request when
+          sending HTTP to a server. You may specify any number of
+          extra headers. 
+
+    > ISSUE REQUEST 1
+        curl -H 'Expect:' -F seq='<test.seq' -H "Accept: application/json" https://rfam.org/search/sequence
+
+        > - output 1:
+            {"resultURL":"https://rfam.org/search/sequence/2022588A-2C25-11EC-97B3-051BCF29BD2E",
+            "opened":"2021-10-13 13:57:30",
+            "estimatedTime":"3",
+            "jobId":"2022588A-2C25-11EC-97B3-051BCF29BD2E"}
+
+    > ISSUE REQUEST 2
+        curl -H "Expect:" -H "Accept: application/json" https://rfam.org/search/sequence/2022588A-2C25-11EC-97B3-051BCF29BD2E
+
+        > - output 2
+            ```
+            {"closed"        : "2021-10-13 13:57:46",
+            "searchSequence" : "AGTTACGGCCATACCTCAGAGAATATACCGTATCCCGTTCGATCTGCGAAGTTAAGCTCTGAAGGGCGTCGTCAGTACTATAGTGGGTGACCATATGGGAATACGACGTGCTGTAGCTT",
+            "hits"           : {"5S_rRNA":[{"score":"104.9", ...
+            ```
+         
+
+### Work: extra note
+    - Note difference between _-U_ and _-u_.
+
+    - curl -U = Authentication to a _proxy_
+    - curl -u = Authentication to a _server_
+
+    Therefore, the first command should be:
+        > curl.exe -U : --proxy-ntlm --proxy myproxy.com:8080 http://www.google.com
+
+    and the second one, in the example for transparent NTLM:
+        > curl -v -u : --ntlm [the redirection URL from Location: header]

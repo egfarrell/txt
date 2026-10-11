@@ -1,0 +1,21 @@
+WAMP package
+installation tips
+	create desktop shortcut
+	icon appears in taskbar
+
+testmsql.php
+	goto "c:\wamp\www\testmsql.php"
+	Change link to:
+	$link = mysql_connect('localhost','root','');
+	goto "http://localhost/testmysql.php"
+	should see: "Connection OK"
+
+
+alias directories
+	goto apache - Alias Directories - Add an Alias
+
+use different AMP versions
+	goto "Addons"
+	run addon installer (no options)
+	any restarts are automatically
+	handled by WAMP

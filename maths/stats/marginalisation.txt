@@ -1,0 +1,152 @@
+
+### Contents
+    1. Joint Probability Distributions
+    2. Marginalization: What Does It Mean?
+    3. Analogy: Estimating a Star’s Distance
+    4. Why Marginalization?
+    5. Mathematical Explanation
+    6. Where Marginalization Is Useful
+    7. Relation to MCMC
+    8. Summary
+
+see also: $MY_CODE/python/maths/stats/marginalisation.py
+
+- The idea of "marginalizing" or "integrating out" parameters is
+  an important concept in astronomy data analysis, but it’s
+  distinct from MCMC itself. It's used a lot in Bayesian
+  statistics, which often goes hand-in-hand with MCMC methods,
+  particularly when you’re dealing with joint probability
+  distributions.
+
+Let’s break it down ...
+
+### 1. Joint Probability Distributions
+- When you're analyzing data, particularly in astronomy, you
+  often have several parameters that influence your observations,
+  and these parameters may be interrelated. For example, if
+  you're modeling a distant star, you might care about parameters
+  like:
+        - Mass of the star
+        - Distance to the star
+        - Luminosity
+
+- These parameters form what we call a joint probability
+  distribution—a mathematical description of how likely certain
+  combinations of parameter values are, given your data. In
+  simpler terms, the joint distribution tells you: "How probable
+  is it that the star has this mass, this distance, and this
+  luminosity all at once?"
+
+### 2. Marginalization: What Does It Mean?
+- Marginalization means simplifying the joint probability
+  distribution by focusing on only one or a subset of parameters,
+  while "integrating out" (removing the effect of) the others.
+  This is useful when you're only interested in the probability
+  distribution of one parameter, but the model depends on
+  several.
+
+- Mathematically, you do this by integrating over the other
+  parameters. In practice, this means summing or averaging over
+  all the possible values of the other parameters you're not
+  interested in, to account for their uncertainty. You’re
+  “marginalizing” over these parameters to reduce the complexity
+  of the problem.
+
+### 3. Analogy: Estimating a Star’s Distance
+- Let’s say you have data about a star, and you want to estimate
+  its distance from Earth. But the model you're using depends on
+  three things:
+- The star’s distance
+- The star’s mass
+- The star’s temperature
+
+- You’re only really interested in the distance, but you can't
+  fully ignore the mass and temperature, because they influence
+  the data too.
+
+- Joint distribution: You start with a joint probability
+  distribution for all three parameters—distance, mass, and
+  temperature.
+
+- Marginalization: Since you care about the distance only, you
+  can marginalize (integrate) over the other two parameters (mass
+  and temperature). This effectively gives you a probability
+  distribution for the distance that "accounts" for the fact that
+  the mass and temperature could vary.
+
+- After marginalizing over mass and temperature, you end up with
+  a simpler distribution that only tells you about the likely
+  values for the distance, without worrying about the exact mass
+  or temperature values.
+
+### 4. Why Marginalization?
+- You marginalize because you often have nuisance
+  parameters—parameters that you’re not directly interested in
+  but that still affect your model. Marginalization allows you to
+  account for the uncertainty in those nuisance parameters
+  without having to explicitly estimate them.
+
+- In Bayesian analysis, marginalization is particularly important
+  because you're often working with posterior probability
+  distributions—these are the probabilities of the parameters
+  given the data. You may be interested in just one or two
+  parameters, but you need to integrate over all the other
+  parameters to make accurate estimates.
+
+### 5. Mathematical Explanation
+- Here’s a simplified mathematical version of marginalization:
+
+- Suppose you have three parameters: distance (`d`), mass (`m`),
+  and temperature (`T`). 
+- The joint probability of these three parameters is written as
+  `P(d, m, T | data)`.
+- To find the marginal probability of distance (`P(d | data)`),
+  you integrate (or sum) over all possible values of mass and
+  temperature:
+    - `P(d | data) = ∫∫ P(d, m, T | data) dm dT`
+
+- In other words, you’re summing up the joint probability over
+  all possible combinations of mass and temperature, leaving you
+  with just the probability for the distance.
+
+### 6. Where Marginalization Is Useful
+
+- In astronomy, marginalization comes up in a variety of
+  scenarios:
+- Parameter estimation: 
+    - When you're trying to estimate a parameter like the mass of
+      a black hole or the age of a galaxy, but your model has
+      other factors (nuisance parameters) that complicate things.
+- Model comparison: 
+    - When you're comparing different models, but some parameters
+      are only relevant to one of the models. You might
+      marginalize over those parameters to focus on the key
+      differences between the models.
+- Uncertainty quantification: 
+    - When you want to understand the uncertainty in one
+      parameter while taking into account the uncertainties in
+      other related parameters.
+
+### 7. Relation to MCMC
+- When using MCMC to sample from a posterior distribution, you
+  often end up with a huge number of samples for all your
+  parameters. If you’re only interested in one parameter (e.g.,
+  the distance to a star), you can marginalize over the other
+  parameters by "summing" (or averaging) the results from the
+  MCMC samples. So, MCMC is often the tool that generates the
+  joint distribution, and marginalization helps you extract the
+  specific information you care about.
+
+### 8. Summary
+- Marginalization is the process of simplifying a joint
+  probability distribution by integrating over one or more
+  parameters that you’re not interested in. In astronomy, you
+  often deal with models that have many parameters, and
+  marginalization allows you to focus on just the ones that
+  matter to your analysis while still accounting for the
+  uncertainties in the others.
+
+- Think of it like reducing a complex menu at a restaurant (the
+  joint distribution) to just the main dish you want to order
+  (the parameter you care about), while still considering how the
+  sides (the nuisance parameters) might affect your meal!

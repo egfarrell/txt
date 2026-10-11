@@ -1,0 +1,65 @@
+03-Dual-Spaces.txt
+
+$MY_VIDEOS/physics/what-are-tensors/03-Dual-Spaces.mp4
+
+key phrase: dual space: "all possible MAPS between..."
+
+
+### The lecturer's bracket notation:
+    - this is different to QM
+    - `< map, vector >` 
+
+
+### Linearity / re-scaling vectors
+    - it's enough for a map to re-scale the basis vectors. 
+    - Then by the property of linearity, the components can be
+      multiplied by the re-scaled vectors.
+
+- where can maps go if you don't want to create another vector
+  space?
+
+- well you can map it back onto yourself!
+	- $MY_IMAGES/physics/what-are-tensors/dual-maps.jpg
+
+- more specifically, you can map it back onto the "bin" of real
+  numbers in your vector space
+
+- and... the real numbers actually are a vector space! 
+- a 1D space!
+
+### A single vector space
+    - But it seems, for a `map` we always need some other vector
+      space.
+    - but what if we want to get away from that? 
+    - What if we want maps but just "one" vector space
+
+### mathematical "trick"! 
+    - The dual space is the set of ALL POSSIBLE MAPS into the
+      reals... 
+    - and this dual space is actually a vector space
+    - and I didn't really have to construct anything else... 
+    - by definiing my vector space `V` I get a dual space `V*`
+      for free...
+
+
+### An auto-created space: 
+    - I can never just create a single vector space on it's own.
+    - Every time you create a vector space, you automatically
+      created a dual space, even without adding anything else.
+
+
+### Dual vector space
+    - the elements of this space are FUNCTIONS or MAPPINGS!
+    - because the dual is the set of all mappings that bring
+      a vector in `V` into the reals...
+
+### Dual basis
+    - Here's one possible rule to define the dual basis:
+        - Although its arbitrary, I just like it 
+        - $MY_IMAGES/physics/what-are-tensors/dual-basis-definition.jpg
+    - so even though you get a dual space for free, anytime you
+      define a vector space... there is no canonical mapping
+      between the spaces... 
+    - there's no one true mapping between the spaces... 
+    - you choose a mapping yourself between the basis in the
+      vector space, and the basis in its dual... 

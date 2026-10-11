@@ -1,0 +1,242 @@
+- CONTINUOUS MEDIA.
+- Prof. Łukasz A. Turski
+- CFT PAN
+- OLD Zoom link: https://zoom.us/j/7615543264?pwd=VVVZSGcxb0Z2elJuS3RIeGhLZUxuUT09
+- Lectures      : Thursdays, 11-13
+- Consultations : Fridays    11-12
+
+New Google Meet :
+    - Link:         https://meet.google.com/upr-urqp-ahg?hs=224
+    - More details: https://calendar.google.com/calendar/u/0/r/month/2021/1/7?eid=MGg3bmMwNWMwYzdob2F0Zmd0Z2h0NjFqajdfMjAyMTAxMDdUMTAwMDAwWiBmYXJyZWxsZTI1NEBt&ctz=Europe/Warsaw&hl=en_GB&es=0&sf=true
+
+
+$MY_BOOKS/Astro/CAMK/continuous-media/
+$MY_BOOKS/Astro/CAMK/continuous-media/00.pdf
+$MY_BOOKS/Astro/CAMK/continuous-media/01.pdf
+$MY_BOOKS/Astro/CAMK/continuous-media/cont-media-problems.pdf
+
+
+- Youtube lectures                              https://www.youtube.com/playlist?list=PLHHhj3uwR8rn2dtt373elye425v1bImnv
+- MIT hyrdo course                              https://ocw.mit.edu/courses/physics/8-333-statistical-mechanics-i-statistical-mechanics-of-particles-fall-2013/lecture-notes/
+- CFD: Lattice Boltzmann modeling of fluid flow https://www.coursera.org/learn/modeling-simulation-natural-processes/home/week/5
+
+
+
+- $MY_IMAGES/astro/cont-media/problems-01.jpg
+- $MY_IMAGES/astro/cont-media/problems-02.jpg
+- $MY_IMAGES/astro/cont-media/problems-03.jpg
+
+### SYLLABUS (2H / WEEK)
+
+### 1. Microscopic Theory of Continuous Media (TMC)
+    - Boltzmann-Vlasov-Klimontovich Equations
+    - Moments theory
+    - Stress tensor and its properties
+    - Conservation Laws and Constitutive Equations
+
+### 2. Hydrodynamics
+    - Ideal Liquids
+        - Euler Equations and Boundary Conditions
+        - Motion of Bodies in Liquid
+        - Variational principle for Euler Equations and Clebsh
+          Potentials
+        - Canonical formulation of Euler Equations
+        - Van der Waalsa generalization of ideal liquids
+        - Viscous Liquids
+        - Navier—Stokes’ Equations and Boundary Conditions
+        - Metriplectic formulation of the Naviert-Stokes
+          Equations
+        - Hydrodynamical Fluctuations
+        - Comments on the Turbulence Theory
+    - Non-Newtonian Liquids
+    - Comments on Quantum Liquids
+    - Examples and Applications
+
+### 3. Elastic and Plastic Media
+    - Elastic Media Equations of Motion
+        - Saint Venant Conditions
+        - Lame Equations and Stress Tensor for Media with
+          different Symmetries t
+        - Examples and Applications
+    - Nonidela Media
+        - Topological Defects
+        - Dislocations and Disclination
+        - Microscopic Models: Frenkea—Kontorowa, Peierls
+        - Geometrical theory of Dislocations and its
+          generalization. Topological Defects Theory as Gauge
+          Field Theory. Cosserat Media.
+        - Viscoelastic Media
+        - Maxwell Model and its Generalization
+        - Crystallization
+        - Examples and Applications
+
+### 4. Plazma Theory
+    - Requires more time to be included
+
+
+### Lecture 1
+    - Prof. Turski group used field theoretic, elasticity theory
+      and topological methods
+    - History!
+        - Eyes were the first tool for science. We could not
+          detect the detailed properties of materials around us.
+        - So we first considered all items built from continuous
+          matter e.g. water
+        - Eventually Greek philosophers came up with 'atoms' in
+          the continuous media around us
+        - horizontal water wheels/mill (more water to pump)
+        - 13th century: monks had mastered hydraulics for water
+          mills, could use gears/transmission wheels to transfer
+          water to the fields (but practical knowledge only, no
+          theory)
+        - even today's engineers don't use real theory of
+          continuous media, they use just the "laws" of
+          hydraulics
+        - 20thC -> "chaos theory" used for environment/ecology.
+          Question: How are smoke clouds dispersed via erratic
+          motion of the air (turbulence)
+            - theorists solved it with diffusion theory
+            - but environmental scientists had their "own"
+              theory! They use complex "closed-source" formulas.
+        - Industrial Revolution: Brass cylinders were replaced
+          with (cheaper) steel cylinders
+        - 18thC: Science of Continuous Media was born: Bernoulli
+          theorem.
+        - Cook a frankfurter in the oven for a long time, the
+          sausage breaks down, but lengthwise, never vertical!
+        - Euler: first equations to describe properties of
+          liquids.
+        - End of 19thC: another revolution: we master phenomena
+          we hardly ever directly encounter: Electricity
+            - (even though our nervous system etc functions using
+              electricity)
+            - Astro: understanding plasma is vital. (charged and
+              magnetically active matter as viewed as
+              a continuous media)
+        - Question: how are macroscopic properties related to
+          internal structure/constituents
+        - exact details hidden in coefficients of formulas ("....
+          relations" which tell us why honey behaves differently
+          to water)
+        - "silly putty" : behaves _solid_ under rapid changes,
+          but as a _liquid_ with slow changes. But they are
+          neither liquid or solid... they are: ruhrological
+          materials
+    - Starting Point:
+        - Classical Mechanics: Continuous media is built up as
+          a generalisation of point-like particles behaviour in
+          CM
+        - Statistical Mechanics. Description of continuous media
+          from constituent particles.
+
+
+    - Puzzle:
+        - Balloon tied to a tower by a rope
+        - rope cut
+        - Baloon weight: 1/10 of the expelled air
+        - what is the acceleration of the balloon?
+        - Think about archimedias principle
+        - Then put some number in, and calculate the velocity
+          achieved by the baloon after 1 minute. Does it make
+          physical sense?
+
+    - "Mathematical Refreshment"
+        - note: bridge = "elasticity"
+        - map a function `φ` into a vector: `GRADIENT`
+        - Gibbs notation: nabla
+        - seat belts: slow can move, fast it stops (comes from
+          Gibbs)
+
+    - Newton -> Lagrange -> Hamilton
+        - Hamilton leads to Statistical Mechanics, QM
+
+    - Look up grad, div in other coord systems, not just
+      cartesian
+        - eg flow of a fluid through cylinder channel,  lavoisier
+          flow
+    - Least Action, Lagrange Eqns, Canonical Variables
+    - Fundamental tool: Hamiltonian equations
+
+### "static" fluid
+    - partial time derivative of velocity = 0
+    - (Not the convective derivitie time velocity = 0)
+    - note: difference between partial time derivative and
+      _convective_ time derivative
+
+### Thermodynamic energy
+    - big `F`: Helmholtz Free energy (function of density and
+      temp)
+        - what is this function related to?
+        - we can have free energy for the _entire_ fluid volume
+          (extensive quantity, dpen)
+    - little `f`
+        - but we also have free energy per unit volume, or unit
+          mass
+    - relation between `f` and `p`: both are intensive, dont
+      depend on volume
+    - if the temp is constant, the pressure is only a function of
+      1 varible: density. So I can calculate a gradient of
+      pressure.
+    - derivative of free energy wrt density:  "chemical
+      potential", "enthalpy"
+    - `∇ x v` = Rot(v) = `ω`
+    - streamline: imaginary line, velocity is tangent to
+    - use the length `l` as a parameter
+    - velocity is contant along a stream line, but NOT everywhere
+      in a liquid (common mistake made)
+    - the Bernoulli function is only constant if we sit on one
+      streamline, and velocity is tangent, then we get a constant
+      velocity. But if we're on another streamline, we get
+      a different velocity?
+    - for irrotational flow, we can always write a velocity as
+      being a potential vector. As being the gradient of a scalar
+      function `φ`
+    - blow air inbetween two pages, the pages move closer
+    - shower curtain moves towards you in shower (water
+      accelerated downwards in shower cabin, so lower pressure in
+      the cabin). But! doesnt take account of floor of shower. So
+      no acceleration to infinity?!
+        - yes, air goes down, hits floor and goes up
+        - so we have a vortex
+        - so Bernoulli does not apply (Bernoulli only for
+          irrotational flow)
+        - Magnus effect
+    - neccessary for Bernoulli Theorem: streamlines go from
+      INFINITY to INFINITY
+        - rotating soccer ball: bend around, due to interaction
+          with air (fluid) and rotating ball
+    - planes: wrong bernoulli explanation. So lift _NOT_
+      essentially due to Bernoulli. e.g. planes can fly
+      upsidedown
+        - note: air is a VISCOUS fluid, not an IDEAL fluid
+
+
+    - Laminar can be unstable. Coming out the end of a hose, we
+      have an instability... "Newton instability"
+        - This is crucial for firemen: want a long stable stream
+          directly into a fire...
+
+### 30-Oct-20 Fri Consultation
+    - Legendare transformation
+    - Hamiltonian
+    - Poisson Brackets
+    - Jacobian
+    - Poisson like a huge vector product?
+    - "Can rewrite all classical mechanics with Poisson Brackets"
+
+### 12-Nov-20 Thu
+    - Laplacian: in 3 coordinate systems
+        - Mathematicians invented "special functions" to handle
+          the Laplacian in various coordinates
+        - Besel functions: to solve the Laplacian in cylindrical
+          coords
+    - need theory of analytic functions to solve some eqns of
+      hydrodynamics?
+    - Stream function
+    - complex velocity
+    - 2D Hydrodynamics is very important. Note: it isn't
+      Hydrodynamics in a _real_ 2D space..!
+    - Computer simulation only physical prediction! Long time
+      decay
+    - d'Alembert Paradox (something is wrong with the concept of
+      an ideal fluid)

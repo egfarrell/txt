@@ -1,0 +1,320 @@
+5     Accretion Flows
+Reading: Pringle 1981, Ann Rev Astron Astrophys 19, sections 1-4
+Optional reading: Shu, chapter 7 ; Ryden chapters 8-10 (especially 9)
+Introduction to advection-dominated accretion flows: Narayan et al., astro-ph/9803141
+
+5.1   General Introduction
+Accretion is important because
+(a) it is a way for objects to grow
+(b) it is a way for gravitational energy to be released
+
+If accreting gas can dissipate energy so that it is not pressure supported, then it will settle into a
+disk, the minimum energy configuration for fixed angular momentum.
+
+In order for gas to accrete, some of it must lose angular momentum and move inward. Since total
+angular momentum must be conserved, other gas must gain angular momentum and move outward.
+
+Viscous dissipation, necessary to transport angular momentum, will also heat the gas. This heat
+can either be radiated away near where it is generated or “advected” inward with the accreting
+gas.
+
+5.2   Equations for a thin accretion disk
+The equations governing a thin accretion disk with surface density profile Σ(R) can be obtained
+from the Navier-Stokes equations in cylindrical symmetry, integrating over the height of the disk.
+They are:
+                                       ∂Σ   1 ∂
+                                          +      (RΣVR ) = 0,
+                                       ∂t   R ∂R
+and
+                 ∂  2  1 ∂                    1 ∂              ∂Ω
+                                                                                     
+                    ΣR Ω +      R · ΣR2 Ω · VR =      R · ΣR · νR    ,
+                 ∂t        R ∂R                  R ∂R             ∂R
+representing mass conservation and angular momentum conservation, respectively.
+
+Here VR = radial velocity [cm s−1 ]
+                                               ∂Ω
+Ω = angular velocity [rad s−1 ] =⇒           R ∂R =velocity shear
+ν = kinematic viscosity [cm2 s−1 ].
+
+The left hand side of the second equation is the convective derivative of the angular momentum
+per unit area. The product of ν and the velocity shear gives the torque of one annulus on the next,
+and it is the derivative of this torque that drives changes in angular momentum.
+
+Recall that for “molecular viscosity” ν ∼ v T λ, where vT is the thermal velocity and λ is the mean
+free path.
+                                          1/2
+                                      GM
+For a point mass potential, Ω =       R3          , these equations can be combined to yield
+
+
+                                                        26
+                                 ∂Σ   3 ∂        ∂ 
+                                                                                
+                                    =      R1/2      νΣR1/2 ,
+                                 ∂t   R ∂R      ∂R
+a diffusion equation for the surface density.
+A ring that is initially thin (in ∆R as well as ∆z) spreads over time, with the inner part giving
+angular momentum to the outer part.
+
+The timescale for this evolution is t acc ∼ R2 /ν, as one can roughly see from the diffusion equation
+           ∂2       1              1 ∂Σ
+by taking ∂R 2 −→ R2 and tacc = Σ ∂t .
+                            −1
+
+
+For molecular viscosity, ν ∼ vT λ, this timescale is usually orders of magnitude too long to ac-
+count for the observed phenomena, leading to the “anomalous viscosity” problem: what physical
+mechanism provides the viscosity that drives the evolution of real astronomical accretion disks?
+
+The vertical thickness H of the disk follows from hydrostatic equilibrium:
+                                      "                #
+                       1 ∂P   ∂      GM         −GM z
+                            =                 ≈                                    for z  R,
+                       ρ ∂z   ∂z (R + z )
+                                   2   2  1/2    R3
+
+implying
+                   1 a2 ρ    GM H                       GM                                              a
+                                                                       −1/2
+                 −        ∼−                =⇒     H ∼a                            ∼ aΩ−1 ∼                R.
+                   ρ H        R3                        R3                                              Vφ
+The disk is thin if and only if the sound speed is  rotational speed, which is the condition for
+pressure gradients to be small compared to centrifugal forces.
+
+5.3   Steady-state accretion
+                                                                            ∂
+Important simplifications occur if we require a steady state,               ∂t    = 0.
+Integrating the mass conservation equation yields
+
+                                      Ṁ ≡ −2πRΣVR = constant,
+
+i.e., constant mass flow at every radius.
+The angular momentum equation can be manipulated to yield, in the case of a Keplerian disk,
+                                                   "                 1/2 #
+                                               Ṁ               R∗
+                                                            
+                                          νΣ =    1−                          ,
+                                               3π               R
+
+where R∗ is the inner radius of the disk.
+The rate of viscous dissipation per unit area is
+                                              2                        "                  1/2 #
+                                    ∂Ω                3 GM                            R∗
+                                                                                 
+                        D(R) = νΣ R                =       Ṁ 1 −                                   .
+                                    ∂R               4π R3                            R
+
+(See Pringle or Ryden for details.)
+
+
+                                                       27
+Magically, the viscosity vanishes from this expression. This is an important advantage of steady-
+state accretion, since we don’t know what the viscosity is. This result emerges because we have
+implicitly assumed that the viscosity will adjust itself to accommodate a constant mass accretion
+rate, and in this case many properties of the disk follow from the requirements of mass, angular
+momentum, and energy conservation alone.
+
+The total disk luminosity is
+                                              ∞                      1 GM Ṁ
+                                          Z
+                                Ldisk =            D(R)2πRdR =               ,
+                                              R∗                     2 R∗
+
+i.e., half the gravitational energy released in accreting the gas to radius R ∗ . The remaining gravi-
+tational energy goes into rotational energy, which may be either dissipated in a boundary layer or
+sucked into a black hole.
+
+At large R, D(R) ∝ R−3 , so if this energy is radiated away with emissivity σ SB T 4 then T ∝ R−3/4 .
+Integrating the blackbody spectrum over radius gives the predicted spectrum of an optically thick,
+geometrically thin, steady-state accretion disk
+                                              Z    Rout
+                                     Sν ∝                 Bν [T (R)]2πRdR,
+                                                  Rin
+
+which rises steadily from a frequency kT out /h to kTin /h, cutting off fairly sharply at higher frequency
+and gently at lower frequency.
+
+5.4   Viscosity
+
+Even in steady state, a complete solution of disk structure (e.g., surface density profile, scale-height
+profile, vertical structure) requires specification of the viscosity.
+
+Shakura & Sunyaev (1973) introduced the “α-disk” parameterization
+
+                                                    ν = α a H,                                       (39)
+
+where a is the sound speed, H is the disk scale height (a function of radius), and α is a dimensionless
+constant.
+
+This at least has the right units, and if one imagines that the viscosity arises from collisions of
+“clouds” in a turbulent medium moving in eddies of lengthscale l <
+                                                                 ∼ H at velocity v < ∼ a, then one
+                                <
+expects ν ∼ l · v ∼ αaH with α ∼ 1.
+
+Typical models of disks have α ∼ 0.01 − 0.1.
+
+For specified α, one can completely solve for the structure of a (steady-state or time-dependent)
+accretion disk. However, the assumption that α is constant with radius, with time, or from one
+accretion disk to another is nothing more than an assumption.
+
+
+
+                                                           28
+While the notion of “turbulent viscosity” is intuitively appealing, detailed studies suggest that
+hydrodynamic mechanisms alone will not produce sustained turbulence in differentially rotating
+disks (see, e.g., Hawley, Balbus, & Winters, astro-ph/9811057).
+
+In recent years, a clear “leading contender” has emerged as the viscosity mechanism in most as-
+trophysical accretion disks: magneto-rotational instability. First proposed by Chandrasekhar, the
+case for this mechanism has been made mainly by Balbus & Hawley, with a combination of analytic
+and numerical work.
+
+Rough idea: MHD instabilities in a differentially rotating, magnetized disk drive turbulence (tap-
+ping the rotational energy), which in turn produces viscosity.
+
+Three-dimensional MHD simulations that follow magneto-rotational instability in realistic situa-
+tions are just now becoming possible. They support the basic picture, but the details are not yet
+fully understood. Among other things, it is not yet clear how similar a disk with this viscosity
+mechanism is to a steady-state α-disk.
+
+A different mechanism may be required in proto-stellar disks, which might have very small ionization
+fractions (and thus insufficient anchoring of magnetic fields to the disk).
+
+5.5     Some open issues in accretion physics
+For black hole accretion, the big questions are:
+
+If gas falls onto a black hole of mass M at a rate Ṁ ,
+
+What is the radiative efficiency  ≡ L/ Ṁ c2 , where L is the luminosity?
+What is the spectral energy distribution of the emerging radiation?
+
+Some of the relevant questions that must be addressed along the way are:
+
+5.5.1    What is the inner boundary condition?
+The energy radiated in reaching the innermost stable orbit around a Schwarzschild black hole
+corresponds to efficiency  ∼ 0.08.
+However, the gas at the innermost stable orbit still has a lot of rotational energy.
+To calculate the overall radiative efficiency at the factor of two level, we need to know what happens
+to this energy.
+The conventional assumption is that gas decouples after going inside the innermost stable orbit, so
+it takes its rotational energy into the black hole with it.
+However, it is possible that gas inside R in remains viscously or magnetically coupled to gas in the
+accretion disk, in which case the efficiency could be higher (since there is more gravitational energy
+to be extracted).
+
+5.5.2    What generates the hard X-ray luminosity?
+While a thin accretion disk can account for the bolometrically dominant portion of a typical quasar
+SED, the hard X-rays (and the radio emission, where present) must come from something else.
+
+                                                   29
+Typical models invoke a “corona” above the accretion disk that produces the hard X-rays.
+However, models of the corona and the mechanism that produces it are only slightly above the
+cartoon level.
+
+5.5.3   What happens when the accretion rate is far below Eddington?
+The Eddington accretion rate is the accretion rate for which the black hole radiates at the Eddington
+luminosity, ṀEdd = LEdd /c2 .
+It is generally thought that when the accretion rate is ∼ 0.01 − 1 ṀEdd , thin disk accretion is a
+reasonable approximation.
+With a high accretion rate, the gas density is high, so the gas is able to radiate efficiently and stay
+geometrically thin.
+
+However, if the gas density is low, the gas may be unable to radiate energy at a rate that balances
+viscous heating.
+In this case, the heat generated by viscosity will be “advected” inwards with the flow instead of
+being radiated. The disk becomes hot, hence geometrically thick (though perhaps optically thin),
+hence low density, and radiatively inefficient.
+Such “Advection Dominated Accretion Flows” (ADAFs) were studied by Lightman & Eardley,
+Rees, and others in the 1970s. They were revived in the 1990s by the work of Narayan & Yi and
+others.
+
+Relative to thin accretion disks, advection dominated flows have different structure (quasi-spherical,
+though angular momentum remains important), lower bolometric efficiency, and very different
+spectral energy distributions, with emission over a wider range of wavelengths.
+ADAFs are also expected to have a 2-temperature structure, with hot ions holding most of the
+energy and transferring it inefficiently to the electrons that produce most of the radiation.
+
+Narayan and collaborators have argued, based on a combination of theoretical models and obser-
+vational studies of stellar mass black holes, that the inner regions of accretion disks are replaced
+by ADAFs when the accretion rate falls below ∼ 0.01 ṀEdd .
+In stellar mass black holes (X-ray binaries), which sometimes cycle between different states, the
+“high soft state” (high luminosity, soft spectrum) may correspond to thin disk accretion and the
+“low hard state” to something like an ADAF. AGN might go through similar kinds of cycles on a
+longer timescale.
+
+5.5.4   What is the physics of radiatively inefficient flows?
+A follow-on from the above.
+
+In a true ADAF, most of the energy gained by the gas ultimately disappears down the black hole,
+being advected all the way into the event horizon.
+
+Blandford & Begelman have argued that most of the gas may be driven out after accreting to small
+radius. They call this solution ADIOS (Advection Dominated Inflow-Outflow Solution). A small
+fraction of the gas actually accretes onto the black hole, providing the energy to drive the outflow.
+
+
+
+                                                  30
+Quataert & Gruzinov have argued instead that advection dominated flows are convectively unstable.
+They propose CDAFs (Convection Dominated Accretion Flows), in which a small fraction of the
+gas accretes onto the black hole, providing energy to drive convection that returns most of the gas
+to large radius (but not to infinity).
+A CDAF cannot be indefinitely steady-state, since gas will build up at large radius.
+
+Note that an ADAF is radiatively inefficient because most of the energy goes “down the hole,”
+while ADIOS and CDAF flows are inefficient because the rate at which the black hole actually
+gains mass is much smaller than the “large scale Ṁ .”
+
+Which, if any, of these solutions is the most physically realistic is a hotly debated theoretical and
+observational question.
+On the theoretical side, one can ask what actually happens if one allows gas to accrete at a low
+rate onto a black hole (but a complete solution is tough).
+On the observational side, one can ask which of the models makes predictions for SEDs and outflow
+rates that are in good agreement with observations.
+
+5.5.5   What happens when the accretion rate is super-Eddington?
+Presumably, a galaxy doesn’t “know” that it shouldn’t dump gas onto its central black hole above
+the Eddington rate. In understanding black hole growth and the quasar luminosity function,
+therefore, it is important to know what happens when the accretion rate is super-Eddington.
+
+Note that the Eddington accretion rate is usually (though not always) defined for a radiative
+efficiency  ∼ 0.1.
+
+One possibility is that the gas accretes and radiates with high efficiency, and that the black hole
+therefore shines at a super-Eddington luminosity. This would be impossible in spherical symmetry
+and steady state, but Begelman has recently argued that luminosities L ∼ 10−100L Edd are possible,
+with radiation escaping in “photon bubbles” that percolate out through the infalling medium.
+
+A second possibility is that the gas accretes at a super-Eddington rate but radiates with low
+efficiency, so that the luminosity is ≤ L Edd . This would be an advection dominated accretion flow,
+and there is indeed a class of such high accretion rate ADAF models. These are quite different from
+the low accretion rate ADAFs mentioned earlier – in these ADAFs, radiation pressure is dominant,
+and the radiation produced is trapped by the optically thick flow and pulled into the black hole
+with the gas. What is not clear is whether these high accretion rate ADAF solutions are stable.
+
+A third possibility is that the black hole refuses to eat: if gas is dumped on at a super-Eddington
+rate, the resulting flow may drive most of the gas out, so that the actual accretion rate is sub-
+Eddington.
+
+At present, any of these seems like a live possibility.
+
+
+
+
+                                                  31
+5.5.6   Can the accretion tap the spin energy of the black hole?
+A spinning black hole has a lot of rotational energy. It may be possible for accreting gas to extract
+some of this energy, in addition to its own gravitational energy.
+The leading model for such extraction is called the Blandford-Znajek mechanism, a messy (or, if
+it’s to your taste, elegant) piece of relativistic MHD.
+It is generally thought that this mechanism may be important in the production of relativistic jets,
+and that these represent the transformation of black hole spin energy into kinetic energy of the
+outflowing gas.
+
+
+
+
+                                                 32
+

@@ -1,0 +1,65 @@
+
+- Head Recursion
+
+- Tail Recursion
+    - "just recursion in the tail call position"
+    - ie, recursion in the very very last thing you do at the end
+      of a function
+
+1. Non-tail recursion ("head" recursion)
+    - store intermediate values on the CALL-STACK
+    - (March 2021: could blow the stack, have millions of intermediate values) 
+
+2. Tail recursion
+    - It won't blow the stack. It's ~ efficient as 'while' loop.
+    - modern compilers can do an optimisation, when they see
+      "tail recursion" scenario
+    - they auto-convert recursive code into iterative code
+    - Have the best of both worlds: you can write clear recursive
+      code, but space-complexity `O(n)` is taken care of by the
+      compiler (reduced to `O(1)` by converting internally to
+      "iteration" based code)
+
+### Hint:
+    - Always try to write tail-recursive code, although may be
+      harder. In example below they use an "accumulator" to
+      handle the factorial in a tail-recursive way...
+    - Unfortunately, not all platforms support _TAIL CALL
+      REMOVAL_, which is necessary for making tail recursion
+      efficient.
+
+### Key Difference: "factorial" function
+    - "HEAD" recursion:
+        - when you finally surface back after all the nested
+          function calls, you still have 1 MORE OPERATION to
+          carry out:
+        -                     `return n * f(n-1)`
+        -                              ^
+        -                              |
+        -    `n *` still outstanding---|
+
+    - TAIL RECURSION:
+        - when we finally return to the top function in the
+          chain, no more operations are needed. Only "RETURN"
+          must be executed: 
+        -                     `return ftr(n-1, n*a)`
+        -                              ^
+        -                              |
+        -        nothing outstanding---|
+
+
+### Later insight:
+    - https://www.youtube.com/watch?v=Pfo0nMTT65I
+    - Whats so great about having `no more operations are needed`
+      in the factorial example above?
+      - ... if `A` calls `B` calls `C` calls `D`  
+      - and if the LAST thing B, C, are doing is returning
+        a value to the previous function, then when we leave
+        function `B` or leave function `C` we don't need to store
+        any more local variables or context for `B` or `C` on the
+        stack...
+            - because we'll just be returning a value from the
+              lower level.
+      - sooo... when we finish working out `D` at the bottom of
+        the chain, just skip `B` and `C` altogether! And jump
+        directly from `D` back to `A`!

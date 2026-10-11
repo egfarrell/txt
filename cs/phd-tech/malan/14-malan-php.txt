@@ -1,0 +1,79 @@
+malan 14
+
+### basics
+    - PHP is interpreted
+    - `PHP <FILENAME>` executes a script
+    - ("PHP" is the interpretor)
+    - can intermingle PHP and html code
+
+### variables
+    - start with DOLLAR signs eg. `$URL`
+    - once declared, they become global throughout the file
+
+### manage SQL from PHP
+    - phpMyAdmin
+    - example calling PHP from webpage
+    ```
+    <form action="register.PHP" method="post" </form>
+    ```
+
+### indicate PHP executable code
+    - `<? ... ?>`
+
+### PHP (similar syntax to C)
+    ```
+    <?
+        // take command line argument
+        $symbol = $argv[1];
+        $URL    = "yahoo.com";
+        $fp     = fopen($URL, "r");
+        fclose($fp)
+        $row = fgetcsv($fp);
+        print($row[1]);
+        print("\n")
+    ?>
+    ```
+
+### validating POST information in PHP
+    `If ($_POST=["name"] ...)`
+
+### PHP concatenation
+    `.`
+
+### PHP mail function
+    ```
+    mail($to, $subject, $body, $headers)
+    ```
+
+### Mix PHP condition and HTML
+    - New version: easier to read
+        ```
+        <?php if(<your evaluation here>): ?>
+            // Output
+        <?php else: ?>
+            // Output
+        <?php endif; ?>
+        ```
+
+    - old version:
+        ```
+        <?php if(<your evaluation here>) { ?>
+            // Output
+        <?php } else { ?>
+            // Output
+        <?php }; ?>
+        ```
+
+
+### scrub PHP inputs for SQL insertion
+    ```
+    $name = my_sql_real_escape_string($_POST["name"])
+    ```
+
+### iterate through SQL results
+    ```
+    while($row = mysql_fetch_assoc($result))
+    ```
+
+### PHP forms can submit to themselves
+    - just have extra error-checking code at the top

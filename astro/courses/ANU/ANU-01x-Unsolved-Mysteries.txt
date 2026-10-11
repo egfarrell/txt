@@ -1,0 +1,394 @@
+# ASTRO1x Unsolved Mysteries of the Universe
+    - 01. The Expanding Universe
+    - 02. The Big Bang
+    - 03. Dark Energy
+    - 04. Giant Black Holes
+    - 05. First Light in the Universe
+    - 06. Gamma-Ray Bursts (GRB's)
+    - 07. Dark Matter
+    - 08. Solar System Formation
+    - 09. Life in Space
+
+
+### Overview
+    - $MY_BOOKS/Astro/ANU/anu-01-notes.pdf
+    - https://courses.edx.org/courses/course-v1:ANUx+ANU-ASTRO1x+2T2016/course/
+    - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/Intro.mp4
+    - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/Course-Conclusion.3gp
+
+
+### 01. The Expanding Universe
+    - INTRO
+       - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/01-Origins-of-Universe.3gp
+       - We are 95% sure space is expanding. But where is it expanding
+         "from"? Was there a "big bang" at the beginning?
+       - 1915: fuzzy nebulae scattered across the sky; some red, some
+         blue, some big/small. Vesto Slipher: founder observational
+         cosmology.
+       - We need to know 2 things:
+           - How we measure DISTANCE
+           - SPECTRA
+
+    - ANGULAR SIZE DISTANCE
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/02-Angles-and-Distances.3gp
+        - We must know distance if we want to know an objects mass or
+          energy!
+        - we can tell how OLD something is based on its distance,
+          because light travels at 300km/sec (distance = how far back
+          in time)
+        - when we go out and look at things, we're really looking
+          around an ANGLE. We can look around 360deg but when I see
+          something, I'm actually seeing some fraction of that circle.
+        - $MY_IMAGES/astro/anu01/theta-view-angle.jpg
+        - `l` is the size of something far away.
+        - When `l` is really far away (`r >> l`) then `l ~ s` where
+          `s` is the arc length (in radians)
+        - $MY_IMAGES/astro/anu01/angular-size-distance.jpg
+        - missing step... make this intuitive
+        - and we get `l = rθ` or  `θ = l / r`
+            - (turn it into a triangle really)
+            - later: no it's not really based on a triange with
+              sin/cos etc like I thought first. It's more about
+              cirlces and measuring the amount of "rim" around the
+              _CIRCLE_ in radians that an object takes up...
+        - the length of an object is its distance times it's angular
+          size
+        - but angular size not always a good way of measuring
+          distance!!
+
+    - LUMINOSITY DISTANCE
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/03-Luminosity-Distance.3gp
+        - luminosity: energy per second
+        - We can try to see how much luminosity it has by saying:
+        - Energy per second = luminosity * (Area of telescope / area of sphere)
+        - $MY_IMAGES/astro/anu01/naive-luminosity-gathering.jpg
+        - but different telescopes (or eyes) have different collecting
+          areas!
+        - so Astronomers invented 'flux', energy PER _UNIT AREA_
+            - `f = L / 4πr^2`
+            - so detected energy proportional to `1 / r^2`
+
+    - SPECTRA
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/04-Spectra.3gp
+        - $MY_IMAGES/astro/anu01/spectra-absorption-line.jpg
+        - look at absorption lines (dips) in the spectrum
+        - eg if you see it's at 6 (??? 6 nm?)... you compare that to
+          lab measurements and see that Hydrogen is present
+        - so you can use spectra to see what something is MADE OF
+
+    - DOPPLER
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/05-Doppler-Effect.3gp
+        - Spectra can measure SPEED of objects too
+        - Wavelengths look shorter from the front, longer from the
+          back
+        - $MY_IMAGES/astro/anu01/doppler.jpg
+        - how do you measure it?
+        - take the spectrum and compare `λobs` to `λlab`. Then work
+          out redshift...
+        - $MY_IMAGES/astro/anu01/calc-redshift-from-spectrum.jpg
+        - if redshift `z` is negative, its coming TOWARDS us...
+        - how do we get VELOCITY from redshift?
+            - there's a relativistic version, 
+            - and a rough version for slower moving objects: 
+                - `z = v/c`
+            - if `v/c` = 0.01, then it's going 1% speed of light...
+            - $MY_IMAGES/astro/anu01/velocity-from-redshift.jpg
+
+
+    - HUBBLE
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/06-Hubble-Law.3gp
+        - $MY_IMAGES/astro/anu01/slipher-measured-redshifted-galaxy.jpg
+        - Hubble found: the further away the galaxy, the faster it was
+          travelling away
+        - $MY_IMAGES/astro/anu01/hubble-diagram.jpg
+        - but are we special, the centre of the universe?
+
+    - EXPLODING EGG (not correct theory!)
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/07-Exploding-Egg.3gp
+        - $MY_IMAGES/astro/anu01/hubble-diagram2.jpg
+        - expoding egg gets the speeds right: near stuff is slower
+          than far stuff
+        - but there should be MORE STUFF nearby, and less stuff far
+          away! And that's not the case...
+
+    - EXPANDING SPACE
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/08-Expanding-Space.3gp
+        - Einsteins idea (??) that there was an explosion "of" space,
+          not an explosion "in" space...
+            - never knew this came from Einstein(?)  ..ah from GR
+        - only when things are so far apart that there's not enough
+          binding force between them that expanding space comes into
+          play
+        - ie, your body is all atoms chemically bound together so the
+          expansion of space doesn't affect that...
+        - Paul did a sim of an INFINITE expanding universe... with new
+          matter popping into existance? But you need that if you want
+          the universe always to look the same?
+            - (later: ah this sim is the "steady state" theory)
+            - $MY_IMAGES/astro/anu01/paul-infinite-universe.jpg
+        - then Paul did a sim where new matter isn't created. At the
+          start things are dense, but eventually it all spreads out
+          and becomes empty (our universe!)
+        - $MY_IMAGES/astro/anu01/paul-infinite-universe2.jpg
+
+    - STEADY STATE v Big Bang
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/09-Steady-State.3gp
+        - steady state: univese always look the same
+        - big bang: universe has ever DECREASING density
+        - time machine to travel back: light!
+        - (note: hard to work out the "density" of the universe)
+        - (note: Paul says we "dont know" what Quasars are)
+        - they found something was changing:
+        - $MY_IMAGES/astro/anu01/space-density-bright-quasars.jpg
+        - also back in the past, we hit a "wall" of glowing
+          microwaves. So the universe was very different
+        - $MY_IMAGES/astro/anu01/cmb.jpg
+        - our universe really is changing (Quasars, CMB), so steady
+          state is "dead"
+
+
+    - CALCULATIONS
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/11-Angular-size-distance-example.3gp
+        - $MY_IMAGES/astro/anu01/galaxy-size-from-observed-angle.jpg
+        - $MY_IMAGES/astro/anu01/distances-two-identical-objects-using-ratios.jpg
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/12-Redshift-example.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/01-Expanding-universe/13-Luminosity-distance-example.3gp
+
+
+### 02. The Big Bang
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/01-Intro.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/02-Scale-Factor.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/03-Density-of-Universe.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/04-Energies.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/05-CMB-Rs.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/06-Primordial-Nucleosynthesis.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/07-Structure.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/08-Antimatter.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/09-Conclusion.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/02-Big-bang/10-Energy-evolution-example.3gp
+
+### 03. Dark Energy
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/03-Dark-energy/01-Age-of-Universe.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/03-Dark-energy/02-Fate-of-Universe.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/03-Dark-energy/03-Pauls-Story.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/03-Dark-energy/04-Brians-Story-1.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/03-Dark-energy/05-Brians-Story-2.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/03-Dark-energy/06-Conclusion.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/03-Dark-energy/07-Example-age-of-universe.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/03-Dark-energy/08-A1-L3-W2-dark-energy-worked-example.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/03-Dark-energy/09-A1-Mystery-TeaClue.3gp
+
+### 04. Giant Black Holes
+    - QUASAR DISCOVERY
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/01-Discovery-of-Quasars.3gp
+        - SMBHs = "Quasars"? 
+        - In 1940s Radio Engineers were picking up signals from space.
+          They opened up a new window on the sky. 
+        - However very little overlap between bright optical sources
+          and bright radio sources.
+        - Paul studies a top 100 radio source, but it doesn't show up
+          at all in the optical. Apparently it's comeing from a "blank
+          bit of the sky".
+        - Radio Problem 1960's: poor angular resolution. 0.5 degree on
+          the sky. That's big: 200,000 stars in that patch. So which
+          one is the radio source.
+        - 3C 273: Parkes radio telescope, clever idea: moon in front
+          of source will block signal... then triangulate source. (dug
+          trench for telescope)
+        - Palomor found source. But looked unlike anything stellar. 
+        - Quasar spectra: very broad features. Indicating motions of
+          10,000's km per second. (Stellar lines much narrower) 
+        -  `α` line shifted from the UV into 500nm: 323% (z=3.23)
+         - 18th magnitude, although 2.5 billion lyrs away (Paul said
+           12 billions light years away?). 
+         - Something as bright as a star, but billions of times
+           further away. So it must be `billions^2` times brighter. 
+
+    - QUASAR LUMINOSTIY
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/02-Quasar-Luminosity.3gp
+        - (Question: Wiki says 3C 273 is 2.5 Billion lyrs away?)
+        - 3C 273 light is ~ 10.7 billion light years away, using it's
+          redshift `z` in a rough calculation. 
+            - ie using scale factor: `a(t) = 1 / 1 + z` 
+            - the quasar light has been travelling for 10.7 Glyr
+            - But warning: this doesn't account for the fact that
+              space is expanding (see cosmology course for true
+              calculation)
+            - Luminosity: `3.4 * 10^40 W`
+            - Luminosity: 10^14 solar L• 
+
+    - EFFECT NEARBY QUASAR
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/03-Effect-of-Quasar.3gp
+        - if a quasar was at pluto, each person would absorb as much
+          power/energy as the Hiroshima bomb(!) 
+        - Would boil Earths oceans in 0.2 seconds
+
+    - WHAT ARE THEY? Detective work
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/04-Clues.3gp
+        - Brightness changes by a factor of 2 in a few days! So it
+          must only have a size of light days! (solar system size)
+            - $MY_IMAGES/astro/anu01/quasar-spectrum-change-few-days.jpg
+            - anything the size of a GALAXY would take 10,000's years
+              to change brightness. (e.g. size average galaxy 30,000
+              lyr across)
+            - we need something as bright as a galaxy, but the size of
+              a solar system
+        - look at picture of quasar in radio:
+            - $MY_IMAGES/astro/anu01/quasar-radio-jets.jpg
+            - jets seem to be "faster" than light speed 
+            - jets seem millions of lyrs long... 
+        - Clues: $MY_IMAGES/astro/anu01/quasar-clues.jpg
+        - Two possibilities: 
+            - energy from nuclear fusion 
+            - energy from gravity
+
+    - Quasars powered by nuclear fusion?
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/05-Fusion-Power-for-Quasars.3gp
+        - combine 56 hydrogen atoms to create 1 FE atom
+        - Energy released from hypothetical fusion =  `10^15 J Kg`
+            - $MY_IMAGES/astro/anu01/quasar-energy-from-fusion.jpg
+        - energy from quasar : Best possible procedure would need one Sun mass per second to
+          "power the beast"
+        - Anyway if you fused that much iron in a stellar core: it'd
+          collapse into a BH! 
+            - $MY_IMAGES/astro/anu01/iron-core-swift-collapse.jpg
+
+    - Quasars powered by gravity?
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/06-Energy-From-Gravity.3gp
+        - How do we get energy from gravity? Drop something! 
+        - if you threw a peanut near a black hole, it'd quickly travel
+          at the speed of light. If someone tried to catch it, they'd
+          hae a hold in their hand, and a huge explosion as the peanut
+          would have so much genetic energy.
+        - How much energy is released if something falls from infinity
+          to just above the event horizon? (`R_s`)
+        - First: full form of PE equation is not `PE = mgh` but:
+        - $MY_IMAGES/astro/anu01/release-PE-from-Gravity.jpg
+        - After calculation: in theory you can convert 50% of rest mass energy into
+          energy using action of gravity (~ 50% efficiency)
+        - Nuclear fusion will only convert ~ `1%` 
+        - So gravity will give you 50 times more energy per unit mass
+          than nuclear fusion
+        - (Only if all the energy is released before the EH) 
+
+    - Centre of Galaxy
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/07-Quasar-Zoom.3gp
+        - for every quasar we see, there are 3 or 4 hidden behind
+          a cloud of (galactic?) dust
+        - simulation: move in towards centre of galaxy, towards SMBH.
+            - first you see purple light! (gas being zapped by the
+              radiation)
+            - then spinning disk, taking a few _hours_ to spin
+            - centre of disk spins really quickly, closer to BH
+              gravity 
+            - spins slower further out... 
+            - You get viscosity because of the different spin rates.
+              Viscosity from rubbing between the inner and outer bits. That makes
+              everything very hot ... liberates energy
+            - you get temperatures up to 100,000 degrees as you get
+              close to the centre (blue color) 
+            - Then at 3 times `R_s` (Schwartzschild radius): last
+              stable orbit
+
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/08-Feeding-Black-Holes.3gp
+        - most distanct quasar: 7.1 z 
+        - implies formed 800 million years after Big Bang 
+        - But how create a BH of billions of solar masses so early in
+          the life of the universe?
+        - star tries to escape BH by travelling radially outwards. 
+        - $MY_IMAGES/astro/anu01/star-escaping-BH.jpg
+        - No chance!
+        - star tries to escape BH but travelling at right angles to
+          the BH. Now it orbits almost like a comet does around the
+          sun (an ellipse). It can stay in this orbit for the life
+          time of the universe. UNLESS IT LOSES ANGULAR MOMENTUM! 
+        - So in the early universe, how can you stuff so much mass
+          down close to form a SMBH? 
+
+    - CONCLUSION
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/09-Conclusion.3gp
+        - Seems to be SMBH's in the early universe 
+        - Problem: how did we form them so quick? So early in the
+          universe? (Within a billion years of the big bang)
+        - A start can easily make a BH with a mass 20 times our
+          sun. But SMBH's are `10^7` or `10^8` heavier.
+        - Not the only mystery, but the worst one. 
+        - Also: how does a BH squirt jets out. 
+        - Are we sure it's a BH in there? But Brian said: well we see
+          the centre of our galaxy, and something that's dark and
+          3 million times solar mass is moving stars there.
+        - Future: James Webb telescope and others will give data. 
+        - Future: Gravity waves may be discovered (they were!) 
+        - Paul: but if this is solved, I predict new mysteries will
+          emerge. 
+
+    - WORKED EXAMPLE: FUSION POWER FROM SUN 
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/10-Fusion-example.3gp
+        - $MY_IMAGES/astro/anu01/lifetime-of-sun.jpg
+
+    - WORKED EXAMPLE: ENERGY RELEASED FROM GRAVITY
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/04-Giant-black-holes/11-Energy-from-gravity-example.3gp
+        - Drop a comet onto a neutron star. 
+        - How big is the explosion? 
+        - Was a contender to explain GRB's at one stage. 
+        - $MY_IMAGES/astro/anu01/energy-release-drop-comet.jpg
+
+
+### 05. First Light in the Universe
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/01-Intro-and-Elements.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/02-Stellar-Nucleosynthesis.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/03-Iron-Mass.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/04-N-bodies.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/05-Reionisation-3un.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/06-Qso-Reionisation.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/07-First-Galaxies.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/08-21cm-and-First-Stars.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/09-Conclusion.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/05-First-light/10-A1-L05-n-body-example.3gp
+
+### 06. Gamma-Ray Bursts (GRB's)
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/01-GRB-Discovery.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/02-Comet-Energies.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/03-NS-and-BH-Energies.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/04-Three-Clues.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/05-Number-Counts.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/06-Counterpart.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/07-Counterpart-Energy.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/08-Furthest.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/09-Beaming-Aj4.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/10-Short-Hard.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/11-Conclusion.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/06-GRBs/12-Number-counts-example.3gp
+
+### 07. Dark Matter
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/01-Intro-missing.txt
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/02-Galaxy-Stellar-Mass.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/03-Acceleration.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/04-Predict-Rotation-Curve.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/05-Observe-Rotation-Curves.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/06-Galaxy-Mass-Conclusion.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/07-DM-Evidence-and-MOND.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/08-What-Is-Dark-Matter-8.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/09-Dark-Matter-example.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/07-Dark-matter/10-Red-Bubble.3gp
+
+### 08. Solar System Formation
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/08-Solar-system/01-Clues.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/08-Solar-system/02-Angular-Momentum-J0.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/08-Solar-system/03-Simulation-S.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/08-Solar-system/04-Protoplanetary-Disk.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/08-Solar-system/05-Dust-To-Planets.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/08-Solar-system/06-Planet-Collisions.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/08-Solar-system/07-A1-L8-Angular-Momentum-example.3gp
+
+### 09. Life in Space
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/09-Life-in-space/01-Size-of-Space.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/09-Life-in-space/02-Planet-Temperature.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/09-Life-in-space/03-Life.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/09-Life-in-space/04-Timescales.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/09-Life-in-space/05-Fermi-Paradox.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/09-Life-in-space/06-Charley.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/09-Life-in-space/07-Conclusion.3gp
+        - $MY_VIDEOS/Astro/ANU-01-Astro-mysteries/09-Life-in-space/08-A1-L09-planet-temperature-example.3gp
+
+

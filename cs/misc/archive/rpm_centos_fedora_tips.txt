@@ -1,0 +1,7 @@
+rpm centos fedora tips
+
+see if package installed
+    rpm -qa
+
+create your own local rpm database
+    rpm --initdb --root /home/physastro/efox/ --dbpath /rpm

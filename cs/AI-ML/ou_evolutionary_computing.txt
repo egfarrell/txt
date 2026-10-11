@@ -1,0 +1,483 @@
+OU evolutionary computing
+
+### Definitions:
+    - evolutionary computing
+    - nucleus
+    - chromosomes
+    - genes
+    - deoxyribonucleic acid (DNA).
+    - genome
+    - junk DNA
+    - phylogenetic analysis
+    - genetic algorithm (GA)
+    - fitness landscape
+    - bit strings
+    - fitness functions
+    - Mutation
+    - meiosis
+    - crossover or recombination
+    - gametes
+    - zygote
+    - fitness value
+    - mating pool
+    - biased roulette wheel
+    - elitism
+    - two-point crossover
+    - Boltzmann selection
+    - arithmetical crossover
+    - multi-objective
+    - bit strings
+    - Prisoner’s Dilemma
+    - Iterated Prisoner’s Dilemma
+    - game theory
+    - Aircraft wing design
+    - Single-objective optimisation
+    - Multi-objective optimisation: optimising L/D and weight
+    - schema
+    - order
+    - defining length
+    - schema theorem
+    - building blocks
+    - implicit parallelism
+    - hitchhiking
+    - deception
+    - Markov property Markov process. Markov chain.
+    - transition matrix
+    - absorbing states
+    - cumulants
+    - Genetic programming (GP)
+    - side effects
+    - functions
+    - terminals
+    - closed open
+    - tournament selection
+    - distal view
+    - proximal view
+    - Braitenberg vehicles
+    - bootstrap problem
+    - Baldwin effect
+    - incremental evolution
+    - co-evolution
+    - duplication
+    - Last Elite Opponent
+    - cycling
+    - Red Queen Problem
+    - phenotype to genotype mapping
+    - direct mapping
+    - indirect mapping
+
+
+### evolutionary computing
+    This family of computational intelligence techniques is inspired
+    by our scientific understanding of biological evolution and
+    inheritance. However, we shall also see how evolutionary
+    computation gains inspiration from everyday, common-sense models
+    of evolution and the mechanisms of inheritance.
+
+### nucleus
+    Biologists attention turned to a small dark blob of material
+    lying deep within the interior of most cells, known as the
+    nucleus.
+
+### chromosomes
+    When cells were stained, certain parts of the nucleus took up more
+    dye than others, in particular certain strand-like structures that
+    became known as chromosomes
+
+### genes
+    individual grains, named genes, each responsible for some
+    fundamental characteristic of an organism,
+
+### deoxyribonucleic acid (DNA).
+    a shadowy molecule lurking amongst the protein
+
+### genome
+    The whole of an organism’s inheritance information held in its DNA
+    is known as its   genome.
+
+### junk DNA
+    - or, more politely, non-coding DNA. The remainder is
+      APPARENTLY inert
+
+### phylogenetic analysis
+    differences between the genomes of different species – to
+    determine their relationships to one another
+
+### genetic algorithm (GA)
+    theories of biological evolution have had a direct influence on
+    computing, in the invention of the genetic algorithm (GA).
+
+### fitness landscape
+    - The idea of studying evolution by visualizing the
+      distribution of fitness values as a kind of landscape was
+      first introduced by Sewall Wright in 1932. In evolutionary
+      optimization problems, fitness landscapes are evaluations
+      of a fitness function for all candidate solutions
+
+### bit strings
+    GAs use artificial genes strung along genomes. But instead of
+    controlling the production of proteins, artificial genomes are
+    strings storing ordered pieces of information - commonly these are
+    strings of bits or binary values (0 or 1), often just referred to
+    as bit strings.
+
+### fitness functions
+    Programs that evaluate the fitness of a potential solution are
+    essential to the working of any GA.
+
+### Mutation
+    Mutation refers to changes made to an organism’s genes at any
+    point in an organism’s life. The majority of mutations are the
+    result of the introduction of errors when DNA is copied
+
+### meiosis
+    your parents’ sperm and eggs were each created in a complex
+    process known as meiosis
+
+### crossover or recombination
+    - corresponding pairs of their chromosomes swapped genetic
+      material in a process known as   crossover   or
+      recombination , illustrated in Figure 1.5. Matching regions
+      of each chromosome are repeatedly exchanged between
+      chromosomes in a more-or-less random process, with the
+      result that the original chromosomes are thoroughly
+      scrambled. But because crossover almost always exchanges
+      corresponding regions of DNA, each new chromosome contains
+      all of the genes found in the parent.
+
+### gametes
+    sex cells
+
+### zygote
+    The full complement of chromosomes will only be restored when
+    a sperm cell fuses with an egg cell to form a zygote, which will
+    eventually develop into a new individual.
+
+### fitness value
+    - our fitness function will simply add the values of the two
+      dice. The result will be the fitness value for each genome
+      (see Table 1.5). Those genomes with higher values are said
+      to be fitter than those with lower values. The fitter the
+      genome, the better the solution it represents.
+
+### mating pool
+    The genes selected for survival will enter a mating pool from
+    which future generations can be bred.
+
+### biased roulette wheel
+    The GA ‘roulette wheel’ is a similar idea. It will have a number
+    of slots, one for each genome in the population. And although in
+    conventional roulette each slot has an equal chance of being
+    selected, the GA wheel is   biased   towards slots representing
+    genomes with fitter values. A percentage of the wheel is allocated
+    to each of the   genomes. Those genomes with the higher fitness
+    values have greater percentages   of the wheel. The percentages
+    are calculated by dividing the fitness value of   each genome by
+    the total fitnesses of all of the genomes and expressing the value
+    as   a percentage.
+
+### elitism
+    One method of overcoming this is to cheat somewhat and indulge in
+    elitism   , ensuring that a certain proportion of high-scoring
+    genomes always enter the next generation unscathed. This policy
+    may forsake some of the purity of the original   biological
+    inspiration, but it has been shown to improve the performance of
+    GAs significantly.
+
+### two-point crossover
+    in a two-point crossover the middle section of a chromosome may
+    cross over and find itself sandwiched in the middle of a new gene.
+
+### Boltzmann selection
+    - An alternative strategy, known as   Boltzmann selection
+      , begins with a relatively low rate of selection, with
+      weaker strains being given a greater chance of being
+      selected   for future generations, thus allowing the search
+      space to be more thoroughly covered.   As time passes, the
+      selection rate becomes more intense, weaker genomes being
+      progressively eliminated from the population, and the
+      surviving genomes finally   converging on optimal, or very
+      near optimal, solutions.
+
+### arithmetical crossover
+    A rather more subtle strategy   –   perhaps more suitable to
+    problems in which the solutions are combinations of real numbers
+    – is known as   arithmetical crossover single-objective
+
+### multi-objective
+    generally there will be trade-offs between most of these features,
+    there is not going to be any single solution combining the maxima
+    of all of them. Rather, there will be a range of solutions, each
+    representing a compromise among the various features we want
+    to optimise:
+
+### bit strings
+    As with neural networks, computing researchers are often
+    uncomfortable with the use of biological terminology to describe
+    features of computational models. Just as artificial neurons are
+    often referred to by the more neutral word ‘units’, so artificial
+    genomes are often termed bit strings
+
+### Prisoner’s Dilemma
+    - The premise of the game is extremely straightforward: two
+      suspects (called A and B) are arrested and thrown into
+      separate prison cells. Each is then given a choice. They
+      can testify against the other prisoner (they are said to
+      defect) or they can remain silent (they cooperate). Each
+      prisoner potentially has something to gain and lose from
+      their choice. The rules are these:
+    1. If a prisoner defects and the other prisoner cooperates
+       then the defector will go free and the cooperator will be
+       imprisoned for ten years.
+    2. If neither prisoner defects then they both automatically
+       receive a short sentence of six months.
+    3. If both prisoners defect then each receives a two-year
+       sentence.
+
+### Iterated Prisoner’s Dilemma
+    the challenge is repeated time and time again in the game of
+    Iterated Prisoner’s Dilemma, first suggested by Richard Axelrod in
+    1984. In this version of the game each player has a memory of
+    previous rounds, which they can use to guide future decisions.
+    Each player’s aim is to minimise the amount of jail time they
+    accumulate through the game.
+
+### game theory
+    Within math, game theory reflects calculated circumstances (games)
+    where a person’s success is based upon the choices of others
+
+### Aircraft wing design
+    - Four key forces act on a plane:   weight, lift, thrust and
+      drag (see Figure 1.15). 
+    - Two of these work in favour of flight, and two against it.
+      Naturally, the weight of a plane continually pulls it back
+      down to earth under gravity: but lift is an upward force,
+      generated by the plane’s wing, making it airborne. Thrust
+      is the force created by the engines, pushing the plane
+      forward and making lift possible through the flow of air
+      over the wing surfaces: but drag, which arises from the
+      friction of the plane as it butts through the air, works in
+      the opposite direction, pulling the plane backwards and
+      slowing it down
+
+### Single-objective optimisation
+    - evolving an aerofoil with maximum L/D: Akira Oyama used
+      a GA to evolve an aerofoil in which the ratio of lift L to
+      drag D was a maximum.
+
+### Multi-objective optimisation: optimising L/D and weight
+    - Using a multi-objective evolutionary algorithm, Oyama then
+      aimed to evolve aerofoil designs that would minimise the
+      drag, at the same time as minimising weight. As you learned
+      earlier in this unit, multi-objective algorithms do not
+      produce a single solution, but a set of possible solutions
+      from which a winner can be selected by hand, based on the
+      relative importance of the objectives.
+
+### schema
+    - A subset of a genome in a biological organism is called
+      a gene: the subset of a genome in an artificial organism is
+      called a schema
+
+### order
+    - The order of a schema H, written as o(H), is the number of
+      fixed positions in that schema. For instance, the schema
+      *10**11 is order 4 and *100111   is order 6. Order is
+      a measure of how specific that schema is: high-order
+      schemata match fewer strings than low-order schemata.
+
+
+### defining length
+    - Defining length, writtenδ (H)   , is the distance from the
+      first to the last fixed position in the schema. The
+      schemata `*10**11` and `*100111 `  both have defining
+      lengths of 5, while the schema         `****0**`   has
+      a defining length of zero. Schemata with larger defining
+      lengths are more likely to be disrupted by crossover and
+      mutation.
+
+### schema theorem
+    It shows how GAs favour the growth of schemata with high relative
+    fitness and low defining lengths
+
+### building blocks
+    schemata with high relative fitness and low defining lengths. Such
+    schemata are known as   building blocks.
+
+### implicit parallelism
+    This ability of GAs to process many more schemata than would be
+    apparent at first glance is termed implicit parallelism  and is
+    touted as the main reason why GAs are so successful at finding
+    optimal or near-optimal solutions.
+
+### hitchhiking
+    The reason for this is that the various schemata interact in the
+    population and successfully finding one good schema can hamper
+    attempts to find others, an effect termed hitchhiking.
+
+### deception
+    A deceptive problem is one where the best building blocks (short,
+    fit schemata) come together to form a sub-optimal solution
+
+### Markov property Markov process. Markov chain.
+    The sequence of states through which a Markov process goes is
+    called a Markov chain.
+
+### transition matrix
+    a stochastic matrix (also termed probability matrix, transition
+    matrix, substitution matrix, or Markov matrix) is a matrix used to
+    describe the transitions of a Markov chain.
+
+### absorbing states
+    if a system enters such a state, it can never leave it. An
+    absorbing state can be identified because its column in the
+    transition matrix is all zeros except for a single entry of 1 on
+    the main diagonal. If it is possible to move to an absorbing
+    state, it is obvious that the long-term behaviour of the system is
+    to move to that absorbing state and stay there: given enough time,
+    the system will randomly move to an absorbing state and then be
+    unable to move to another state. A system may have more than one
+    absorbing state, in which case an analysis of the transition
+    matrix and the starting distribution can determine the likelihood
+    of any of the absorbing states being reached.
+
+### cumulants
+    the cumulants κn of a probability distribution are a set of
+    quantities that provide an alternative to the moments of the
+    distribution.
+
+
+### Genetic programming (GP)
+    - is a related field of research, where genomes are set up to
+      express and evolve computer programs
+
+### side effects
+    - actions – like writing something to the output, reading
+      a key press or minimising a window  – that is not directly
+      related to their return value.
+
+### functions
+    - a function returns a value, in order to do so it may take
+      in one or more arguments.
+
+### terminals
+    Terminals provide specific values to the system and may be
+    variables, constants or functions
+
+### closed open
+    - a function should be able to handle all possible argument
+      values: such functions are said to be closed; those that
+      cannot are open. Calling an open function with an illegal
+      argument value will cause a crash. It is not possible to
+      close   every function. However, open functions can be
+      replaced by functions that behave correctly for legal
+      arguments, but return special values when presented with
+      illegal   ones. The program continues to run, but with
+      incorrect values.
+
+### tournament selection
+    - Genomes were selected for the mating pool using a method
+      called tournament selection, in which a small subset of the
+      population was repeatedly chosen at random and the fittest
+      individual in this set chosen each time.
+
+### distal view
+    Imagine you are watching a rubbish-collecting robot going about
+    its business. It moves through its environment, avoiding walls and
+    obstacles, moving towards discarded beer bottles and litter,
+    picking them up, etc. – in other words, it performs a number of
+    complex behaviours. This is the distal view of the robot’s
+    behaviour.
+
+### proximal view
+    - Now imagine the same set of tasks from the point of view of
+      the robot engineer, or the robot itself. Performing
+      a complex action like picking up a bottle involves an
+      intricate set of interactions among low-level internal
+      behaviours and the environment. A description of these
+      interactions makes up the proximal view of the overall
+      distal behaviour.
+
+### Braitenberg vehicles
+    Braitenberg vehicles are very simple robots without internal
+    modular components. Instead, sensors are connected directly to
+    actuators by connections of variable strength
+
+### bootstrap problem
+    - for a difficult task, small changes in early generations,
+      brought about by crossover or mutation - are extremely
+      unlikely to yield any significant improvement in
+      performance on that task. Performance may well get
+      disastrously worse, and so every new genome might generate
+      very low (or 0) fitness scores. Hence the evolutionary
+      process may never get started.
+
+### Baldwin effect
+    adaptive changes such as learning are written back into the
+    genotype of a species by indirect processes
+
+### incremental evolution
+    the evolutionary process is subjected to careful human
+    supervision. In evolving a controller to carry out a complex task,
+    the idea is to start by evolving controllers that can solve
+    a simplified version of the task and then gradually increase the
+    complexity, evolving improved controllers for each new version.
+
+### co-evolution
+    Evolution often seems to be nothing more than a series of arms
+    races. Many researchers have turned their minds to the question of
+    whether these evolutionary battles can be replicated in the
+    laboratory, and whether co-evolution might be an answer to the
+    bootstrap problem
+
+### duplication
+    They found this conventional approach was severely affected by the
+    bootstrap problem. Small changes arising from mutation or
+    crossover on a relatively fit controller usually resulted in
+    a drastic drop in performance. So the researchers added
+    duplication to the breeding algorithm, a process in which one gene
+    is copied directly onto another area of the genome. It was found
+    that evolution proceeded much more steadily after this
+    modification.
+
+### Last Elite Opponent
+    the best pursuer of generation n would be matched against the best
+    evader of generation n – 1 (and vice versa).
+
+### cycling
+    It works like this: pursuer and evader start with certain
+    strategies (call them P1 and E1). Pursuers then evolve a new
+    strategy (P2) that is better against E1, so the evader develops
+    a new strategy of its own to cope (E2). The pursuer then adapts
+    again to strategy P3, but instead of evolving a new and better
+    strategy, E3, the evader simply falls back on E1, which is
+    effective against P3.
+
+### Red Queen Problem
+    - everyone is running as hard as they can just to stay in the
+      same place. If we try to picture co-evolution in terms of
+      our conventional fitness landscape, you can see that the
+      presence of multiple competing species makes the whole idea
+      much more complicated. A species may try to move towards
+      higher evolutionary ground, but the movement of other types
+      towards their own fitness peaks constantly   distorts   the
+      landscape for all other species.
+
+### phenotype to genotype mapping
+    - evolutionary computation – is the problem of phenotype to
+      genotype mapping, the question of how complex, fully
+      developed individuals arise from a sparse genetic plan
+
+### direct mapping
+    - in evolutionary robotics the mapping is usually incredibly
+      straightforward: a single gene (a number, or a group of
+      bits) maps directly to a single feature (a weight, for
+      example). Indeed, this system of representation is so naive
+      that in such circumstances the genotype and the phenotype
+      are essentially the same thing.
+
+### indirect mapping
+    - What we need is more imaginative ways of genetically
+      specifying controllers, forms of indirect mapping, which
+      allow them to develop and adapt under environmental
+      influence

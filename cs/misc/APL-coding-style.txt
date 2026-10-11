@@ -1,0 +1,78 @@
+
+	Hacker News new | past | comments | ask | show | jobs | submit 	login
+	
+	
+arcfide on Feb 8, 2017 | parent | favorite | on: Smaller Code, Better Code
+
+There are some good points here. I'm fine with reduction in constant factors when it comes to productivity. I personally find that those constant factors are the bigger issue in day to day work anyways.
+
+And part of the problem is that people aren't thinking of the whole context and picture when they talk about conciseness. Conciseness is not the end goal in and of itself. It is a design constraint that creates pressures to help mentally force you to achieve the really important things. You can't blindly chase conciseness. You have to have a reason for choosing conciseness and fit that within a broader aesthetic with the big picture always kept in mind.
+
+I think this is one of the reasons that people balk at APL and fail to integrate it into their code bases. We don't teach people how to design or write "poetic" style code. I believe one famous author (Perlis? Kay?) talked about as "lyrical" programming. It's not something we teach in schools, and it's not something that most people ever learn intentionally. So, people see APL and they get the take away that the reason this code is so neat is that it is so "short." So they often do one of two things. They try to make their own code short, or they see the APL operators and think, "I could do that in language X" (I did this at first with Scheme). But as you've discovered, that fails. It doesn't really seem to work well when a lot of people try it. But why? Why do we get such great results in some cases, and such poor ones in others? Why does it seem so hard to have "APL in Language X?" There are two or three major ideas that I think contribute to this.
+
+The first is what makes APL code unique. It is not its shortness. The tersity of APL is just the surface characteristic of a set of synergistic design aesthetics that result in short code that can actually be useful. Yes, it is short, but it's not shortness for shortness sake. That brevity of expression is a part of a bigger picture. Iverson described some of how they saw this aesthetic himself in this "Notation as a Tool of Thought" Turing Award lecture. However, I think he misses a few things that were just "obvious" to him. One of those ideas would be the concept of the design tension between generality and specialization.
+
+The second idea is this concept of semantic density. One of the reason, I believe, that APL code is unique, is because of the ability to remain largely at a single abstraction level and be so productive with minimal abstractions. The regularity of semantic density is really important. It allows you to make your variable name choices higher impact than they might otherwise be. But this semantic density issue means that by definition, inserting some small bit of APL code into a larger code base is fundamentally breaking semantic density. It's easier to deal with uniformly verbose code or uniformly terse code than a mixture of the two together.
+
+Finally, the contribution of APL style coding is not primarily one of semantics, but one of design. That's why it doesn't work to just implement and APL semantics with terse naming in some other language and expect it to work. The semantics and domain and abstractions available to the APL programmer are a part of the whole, not the whole itself.
+
+So, I'm not surprised that you struggled with integrating APL style programming with other styles. It's a case of trying to have your cake and eat it, too. It's also a reason that some groups can come to loathe the APL code base, because very often they are used to doing it another way, and the APL code base interferes with their approach. Of course, it's always possible to write bad APL code, too. But the style I'm talking about isn't strictly about just APL.
+
+What most people encounter with integrating APL into other code bases, IME, is a fear of deleting their code. There's incremental development, and then there is glacial development. When I've worked with a few people on code integration, one of the things that trips them up is that they tend to think so much at the micro level, that they don't get any benefits from APL, because they don't understand how to leverage it. What they end up doing is trying to fit APL into their architecture, because they are too afraid to change the way that they do something. They want to try little "piecemeal" integration here and there. But that doesn't work, because having some mysterious three line piece of APL surrounded by hundreds of lines of other code doesn't work nearly as well. You get almost none of the benefits of APL style coding and all the potential social issues.
+
+You can always write verbose, old style code in APL if you want, and then it will integrate fine, but you are just writing Python in APL then, and your gains will be minimal, at best.
+
+Instead, you have to shift your granularity of integration. You have to think of replacing whole, independent units in your code base at a single time. This sounds scary when you first mention it, because people are imagining some massive change in the system. However, if you can take a single unit or module in your system at a time that is truly independent of the rest, then you can choose to have a separate style for that code and a separate aesthetic without incurring the same costs that you would have elsewhere. It would be like having part of your system written in Python and the other written in Haskell. Sure, you've two languages to work with, but as long as you're not switching back and forth all the time in the middle, you can focus on doing good design for each of the languages.
+
+If this is done right, then the selected code base should go from a large piece of code to a very very small piece of code, and the time it takes to maintain that code should be minimal, requiring maybe one or two people to work on maybe a hundred lines of code instead of thousands or tens of thousands or something like that.
+
+And really, to do it really right, this group needs to be working directly with customers on this code. Then you start to see the wins in APL style.
+
+So, the shift in APL style programming is as much aesthetic and cultural as it is semantics and technical. If the methods aren't fundamentally forcing a change in the way you think about your code and the fundamental complexity of your code, then you're not using APL correctly.
+
+
+	
+	
+lmm on Feb 9, 2017 [–]
+
+> The second idea is this concept of semantic density. One of the reason, I believe, that APL code is unique, is because of the ability to remain largely at a single abstraction level and be so productive with minimal abstractions. The regularity of semantic density is really important. It allows you to make your variable name choices higher impact than they might otherwise be. But this semantic density issue means that by definition, inserting some small bit of APL code into a larger code base is fundamentally breaking semantic density. It's easier to deal with uniformly verbose code or uniformly terse code than a mixture of the two together.
+
+I don't see how this is unique. There's a similar idea of keeping each function at a single semantic level in e.g. Clean Code. (The connection to a consistent level of terseness isn't there, but in my experience it isn't true; lines that use terse expressions of common concepts and verbose expressions of unusual concepts are more readable than lines that are uniformly at either level).
+
+> Instead, you have to shift your granularity of integration. You have to think of replacing whole, independent units in your code base at a single time. This sounds scary when you first mention it, because people are imagining some massive change in the system. However, if you can take a single unit or module in your system at a time that is truly independent of the rest, then you can choose to have a separate style for that code and a separate aesthetic without incurring the same costs that you would have elsewhere. It would be like having part of your system written in Python and the other written in Haskell. Sure, you've two languages to work with, but as long as you're not switching back and forth all the time in the middle, you can focus on doing good design for each of the languages.
+
+You can make that change piecemeal though - I've done so repeatedly, for various pairs of languages, and also for quite radical stylistic shifts within a Scala codebase. Yes, you have to define a border and gradually expand it rather than replacing random lines in the middle of other things, but it's very doable.
+
+> this group needs to be working directly with customers on this code
+
+Doing that is such a huge win in any language that it could easily explain all the advantages you're claiming for APL.
+
+I find the poetry-of-code stuff unconvincing, and the "if it didn't work for you you must be doing it wrong" even less convincing. If we've ended up doing APL wrong then it's not for want of trying - the right way of doing it must be hard to communicate to people, which I think comes right back to my original issue. I'm very skeptical of anything that claims the only way to try it is a big migration and a huge raft of integrated changes - that very conveniently makes it hard to fairly compare the direct advantages of the thing itself, and ensures that anyone in a position to compare has already made a substantial investment/commitment to the thing.
+
+	
+	
+arcfide on Feb 9, 2017 [–]
+
+It's a fair point you make. Regarding semantic density, what you talk about is density maintenance at a single point, that is, the density of a single function. I'm not saying that APL is unique in that respect. I'm saying that APL seems uniquely well suited to remaining at the same semantic density throughout the entire code base, and that the semantic density found in APL code more readily, IME, handles the shifts in common versus uncommon concepts at the same density level than I have found in other languages.
+
+You're right that you can change piecemeal, but without knowing your specific case, it's hard to say what you focused on integrating, and thus, whether you were just integrating the language or integrating a style.
+
+If you're willing to talk more about this, feel free to email me, I would love to see more details of your experiences trying to integrate and get more details on your project. This is a part of my future research agenda, and so gathering information on what has worked and didn't work for you, and making an attempt to understand all of that in your case would be very valuable.
+
+As for the issue with big migration, I absolutely agree that it makes it hard to study. However, that's where academic research can come in. I'm specifically taking a look and building a set of research studies to isolate specific factors related to the APL phenomenon and understanding their relevance and how they place a role in the HCI of programming languages and developer culture. There's almost no one doing these kinds of studies, so the main problem at this point is that we have anecdotes, but not a lot of large, well done studies to deal with the issues. I hope to change that.
+
+As for working with customers, are you aware of any other large projects that directly involved customers in their programming? That actually expect their customers to read source code, when the customers are not programmers themselves? I'd be interested in seeing the results of such an effort in other languages, as the only places where I've seen this level of customer integration used for non-computer science/programmer type customers (that is, those with no programming background) is in APL.
+
+I think a big problem with people trying to work with APL code is partly training. There is very little out there on how to do "good APL" code. You get trained all through your development career on how to work with traditional programming languages and what are considered best practices there, but it is not at all clear or obvious to me that the best practices that you learn are actually the right ones once you start moving far from the traditional programming language bent. I would include not only APL in this, but Prolog and Agda, for instance.
+
+I would even go so far as to say that some best practices in other languages are anti-patterns in APL. If your team has made a concerted effort to avoid and educate developers to avoid anti-patterns in APL and they have actually worked at changing that aspect inside of your development team(s), I would be very interested to learn more about this. It's hard to find good case studies in this material in the wild, and so if you'd be willing to share some of yours, I'd be very interested in getting good data.
+
+Please contact me by email (arcfide@sacrideo.us) if you would be willing to discuss further.
+
+
+
+
+Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
+
+Search:
+

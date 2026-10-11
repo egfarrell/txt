@@ -1,0 +1,53 @@
+apple / ipad
+
+
+### iphone background play:
+    - _Firefox mobile_ and the "Video Background Play Fix" addon
+      to disable the browser APIs that allow the background play
+      blocking antifeature.
+    - _Newpipe_: the NewPipe app on F-Droid can be used to both
+      play videos in the background and download them. 
+
+
+### blink shell (with mosh)
+    get "alt" to work in the shell:
+        config -> keyboard -> (Modifier Mappings) -> Alt -> map to "ESC"!!!
+
+    commands:
+        > config
+        > help
+
+    Import my solarized color scheme from:
+        https://github.com/egf25/themes/blob/master/themes/ef-iOS-blink-theme.js
+
+    connect to remote:
+        > ssh sc
+        > mosh sc  (<--- more reliable)
+
+    resize font:
+        pinch screen
+
+### " iPad ServerAuditor - Vim
+    1. Choose colourscheme "Homebrew"
+    2. run "soff" alias
+    3. set colorscheme to "molokai"
+
+### itunes disable auto backup
+    - Close out of the iTunes application.
+    - Hold the Windows Key and press “R” to bring up the Run dialog box.
+    - Type the following depending on whether you have 32 or 64 it windows:
+        - 32-bit: “C:\Program Files\iTunes\iTunes.exe” /setPrefInt AutomaticDeviceBackupsDisabled 1
+        - 64-bit: “C:\Program Files (x86)\iTunes\iTunes.exe” /setPrefInt AutomaticDeviceBackupsDisabled 1
+
+    - When you launch iTunes again, backups for iPhone, iPad and
+      iPod Touch devices will be disabled. If you wish to enable
+      backups again, use the same command as above, but replace
+      the “1” with a “0”. block automatic iOS update
+
+### block iOS updates: login to router and block:
+        mesu.apple.com
+        appldnld.apple.com
+
+### Links
+    - Put linux on old iPads 1 https://news.ycombinator.com/item?id=31624185
+    - Put linux on old iPads 2 https://news.ycombinator.com/item?id=31679293

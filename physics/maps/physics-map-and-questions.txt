@@ -1,0 +1,141 @@
+### Physics Map 
+- (start 2010 in Bolton Abbey)
+
+> The poem must spring from the soul of the poet, when he thinks
+> neither of himself nor of the prize. (Montessori)
+
+- NO: Realism: a UNIQUE REAL WORLD out there that we discover
+- NO: We can describe the _relationships_ between phenomena
+       - (structural realism? $MY_NOTES/physics/QM/Despagnat-reality.txt)
+- NO: Mathematics and Physics are _invented_
+- NO: Focus on discrete, algorithmic computational physics
+- NO: sequential snapshots of time
+- NO: fixed foliation (2025: did I mean 'preferred foliation'??!)
+- NO: configuration or phase space (in the sense of Barbour? 2026: or the sense of Bohm?)
+- NO: Block universe
+- NO: Absolute space
+- NO: Quintessence
+- NO: Presentism (3-dimensionalism, refuted by relativistic experimental evidence?)
+- NO: The universe is finitely spatially closed (from J Barbour article)
+- NO: universe is a closed system?
+- NO: Fruitful to pursue quantum information as substitute for traditional space & time
+- NO: Is there some sort of medium like an aether?
+
+- Unsure: There is absolute space but no time?
+- no answer: Universe Bounded finite
+- no answer: Different scales
+- no answer: Dream about time during the retreat (decay in St Clares national school?)
+- no answer: Is there an aether (NO: asked this before above)
+- no answer: Is universe isotropic
+- no answer: Is there hidden variables (grammar!)
+- no answer: is there a faster than light influence
+
+- YES: Statistics are fruitful
+- YES: Platonic Mathematical world
+- YES: Some kind of realism(?!)
+       - D'Espagnat 'open realism'?
+       - ‘open realism' a mind-independent reality exists but
+          may be fundamentally unknowable.
+- YES: searching for the NUMERICAL
+- YES: Significant that Energy going through the universe
+- YES: 2012: preferred frame of reference (but no fixed foliation?)
+        - 2025: ah 'preferred foliation'! not 'fixed foliation'
+            - $MY_NOTES/physics/spacetime/fixed-foliation-reference-frame.txt
+        - 2026: my conclusion: 
+            - there's either a preferred frame or foliation?
+- YES - Quantum Field
+- YES - Acts some way like a pilot wave
+- YES – There is some new type of _particle_
+- YES – Its connected to the quantum field somehow
+- YES - There is true `causality`
+- YES - locality(!!)
+- YES - Entanglement(!)
+
+### Approach strategy
+    - MORE PENCIL AND PAPER Maths & Physics
+    - Use CS only as a TOOL and springboard for Maths & Physics
+    - No need for new theoretical CS approach - e.g. Shen, New Language
+    - NO NEED to go deep on Scheme version of SICM & Differential Geometry
+    - No need to use Cosmology as testing stage ground
+    - No need to use Cosmology as testing stage ground (again nov 2012)
+    - No need to concentrate on Machine Learning and AI approaches <----- aah 2022 'g2net' competition
+    - No need to concentrate on Machine Learning and AI approaches (no answer nov 2012)
+
+### 2024
+    - Finally returning to my vocation?
+        - Thoughts from the past 15 years.
+    - `Time` is dynamical, not the block universe. Need a 'now'.
+    - There is Absolute Simultaneity. (or a hidden preferred frame)
+    - Some veiled reality, `OPEN REALITY`... all the QM paradoxes
+      are epi-phenomenon... empirical tricks?
+    - `Infinitesimals`, intuitional maths?
+    - differential forms
+
+### My thoughts:
+    - Turok: big bang scale invariant - scale invariance important
+    - Use quasars/black holes
+    - Bell's entangled photons
+    - Veiled reality - french guy - berlin library $MY_NOTES/physics/metaphysics/dEspagnat.txt
+    - Same ether/quantum field transmits gravity and em/strong/weak force...ie spacetime transmits all of them
+    - Foucault pendulum/gyro --> relative to what? signals "absolute" space? (Benjamin Schumacher has a nice TTC vido on frame dragging foucault pendulums)
+    - Investigate solitons
+
+
+# phy_questions.txt
+    - why does IR feel hotter than visible light even though less energy???
+    - north south of magnet like positive negative charges
+    - faraday rejected paper
+    - identically zero
+
+
+### foliation mystery cleared-up after 15 years
+    - No, spacetime having a *fixed foliation* is not necessarily
+      the same as having a *preferred foliation*, though the
+      terms are related.
+
+    ### 1. Fixed Foliation
+    - A fixed foliation refers to a specific way of slicing
+      spacetime into a sequence of spacelike hypersurfaces (often
+      called "time slices") that is established and unchanging in
+      a given context.
+    - In a spacetime with a fixed foliation, the slicing is
+      a mathematical or physical choice used for convenience,
+      analysis, or solving equations. 
+        - However, the foliation itself does not imply a deeper,
+          _fundamental property_ of spacetime.
+    - Example: In numerical relativity, one often uses a fixed
+      foliation to solve Einstein's field equations by evolving
+      quantities across a sequence of hypersurfaces.
+
+    ### 2. Preferred Foliation
+    - A preferred foliation implies that spacetime fundamentally
+      "prefers" a specific slicing due to some physical or
+      geometrical property.
+        - This typically occurs when there is a physical reason
+          to single out a specific family of spacelike
+          hypersurfaces.
+    - A preferred foliation is often associated with theories
+      beyond General Relativity (GR), such as:
+        - Lorentz-violating theories (e.g., Hořava-Lifshitz
+          gravity), where a preferred foliation is tied to
+          a global time or a privileged rest frame.
+        - Cosmology, where the presence of a uniform matter
+          distribution (e.g., in FLRW spacetimes) can lead to
+          a natural foliation based on surfaces of constant
+          cosmological time.
+    - In GR itself, there is no *preferred foliation* since the
+      theory respects general covariance (diffeomorphism
+      invariance), meaning all foliations are equally valid.
+
+    ### Key Difference
+        - The main difference is that a `fixed` foliation is
+          a *choice* used for practical or technical purposes,
+          whereas a `preferred` foliation implies an inherent
+          structure in spacetime that distinguishes one slicing
+          as physically or geometrically special.
+        - March 2026: 
+            - ah I nearly thought it was the other way
+          around... 'fixed' is physically special and 'preferred'
+          is just used for practical purposes but doesn't imply
+          anything physically distinguished.
+        - Must check this with gpt

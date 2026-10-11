@@ -1,0 +1,208 @@
+
+### Functional integration
+    - $MY_BOOKS/Physics/QG/DeWitt-Pursuit-of-QG.pdf
+    - What is functional integration? Answer: It is a theory of
+      integration over function spaces. Functional integrals were
+      introduced in quantum physics by Richard P. Feynman in his
+      Ph.D. dissertation “The Principle of Least Action in
+      Quantum Mechanics” (Princeton, 1942). 
+    - Feynman’s functional integral (a.k.a. path integral and sum
+      over histories) was not accepted readily by physicists. On
+      the other hand, a by-product of Feynman’s functional
+      integrals, the powerful Feynman diagrams, quickly became
+      famous and widely used by physicists; nevertheless, the
+      integral itself was hardly ever used.
+        - Retrospectively, the path leading to Feynman’s
+          integrals can be found in Paul Dirac’s book The
+          Principles of Quantum Mechanics, 3rd ed. (1947) eq. 60
+          in §32. 
+        - See “Paul Dirac – A Man Apart” by Graham Farmelo in
+          Physics Today Nov. 2009, p. 50 for Dirac as a precursor
+          of current research.
+
+### PLA: No 'first order' difference?
+    - $MY_NOTES/physics/CM/Sklar-foundations-dynamics.txt
+    - Also: $MY_NOTES/maths/analysis/Variations-Extremal-Paths.txt
+    - Fermat demonstrated that the actual path taken is an
+      _extremal_ path in time.
+        - It's the path such that there is no _first-order
+          difference_ between the time taken along that path and
+          the time taken along any neighboring path.
+
+### Link to conservation of energy?
+    - "From conservation of energy to the principle of least
+      action: A story line," Jozef Hanc and Edwin F. Taylor,
+      American Journal of Physics, Vol. 72, No. 4, Aril 2004
+        - Conservation of energy is sufficient to predict motion
+          in `1D` and for systems whose motion can be expressed
+          as one independent coordinate.
+        - This prediction can also be used to introduce the
+          'Principle of Least Action' and Lagrange's equations.
+
+
+### Action: Optimisation problem!
+    - https://profoundphysics.com/calculus-of-variations-for-beginners/
+    - It turns out that solving for the trajectory of an object
+      _under a force_ is exactly an OPTIMIZATION problem. 
+    - In particular, optimization of a quantity called the
+      `action`!
+
+### Local only
+    - PLA Interesting: it's actually local. 
+        - Each little step is local.
+    - Jennifer used the example of a maze. To get to the centre
+      of any maze, just keep turning left.
+    - So the advice is actually local at every turn.
+
+### PLA: only derivable from conservative forces?
+    - $MY_NOTES/physics/CM/Sklar-foundations-dynamics.txt
+    - ... in all standard textbooks, the forces are taken to be
+      CONSERVATIVE. 
+        - i.e. derivable as derivatives of a POTENTIAL that is
+          a function of the generalized coordinates and
+          VELOCITIES at most.
+
+### Barbour
+    - Brian Keating interview:
+      https://www.youtube.com/watch?v=nojc3iXpFxw
+    - I take the Principle of Least Action very seriously.
+    - How do you define Action?
+    - What is the action when I go from a triangle of this size
+      and shape, to a triangle that has that size and shape.
+        - $MY_IMAGES/physics/CM/Julian-least-action-triangle.jpg
+    - Goes on to explain BEST MATCHING
+        - Must copy that down
+
+### Jourdain PLA 1913
+    - 3 articles Monist
+    - April 1912: Maupertuis and the PLA
+    - July  1912: Remarks on some passages in Mach's Mechanics
+    - April 1913: Nature and validity of the PLA
+
+### Least Action books
+    - _IMPORTANT_!
+      $MY_BOOKS/Physics/Maths/Math-Phy-Variational/PLA-Lazy-Universe-Jennifer.pdf
+    - _IMPORTANT_!
+      $MY_BOOKS/Physics/Maths/Math-Phy-Variational/PLA-History.pdf
+    - Dispositions and the 'Principle of Least Action' revisited.
+    - Gottfried Wilhelm Leibniz and the origin of the principle
+      of least action - a never ending story
+    - book:
+        - The principle of least action in geometry and dynamics
+        - Karl Friedrich Siburg
+    - book:
+        - The conservation of energy and the PLA
+        - I. Bernard Cohen
+    - book:
+        - The principle of least action
+        - Philip E.B. Jourdain
+    - book:
+        - Remarks on the dual least action principle
+        - , Michel
+
+
+### Edwin Taylor - PLA Papers
+    - http://www.eftaylor.com/leastaction.html
+    - Action Summary by Jozef Hanc, Jon Ogborn, Edwin Taylor,
+      with software by Slavomir Tuleja.
+        - $MY_BOOKS/Physics/CM/Edwin-Taylor-Least-Action-papers.pdf
+        - A paper that summarizes action, starting with
+          dramatized appearances of Fermat and Maupertuis to
+          Hamilton and Feynman. Subsequent papers introduce
+          action formalism, apply it to teaching QM, and trace
+          the scope of applications of action from QFT to
+          cosmology.
+
+    - "A Call to Action," 
+        - Edwin F. Taylor. Guest Editorial, 
+        - American Journal of Physics, Vol.71, No.5, May 2003.
+        - Outlines the case for using the PLA in undergraduate
+          physics classes.
+
+    - "Deriving the nonrelativistic PLA from the Schwarzschild
+      metric and the Principle of Maximal Aging" 
+        - Edwin F. Taylor.
+        - Unpublished appendix to "A Call to Action."
+        - In GR a particle moves along the worldline of maximal
+          proper time (maximal aging).
+        - In the limit of small spacetime curvature and low
+          velocity this reduces to the principle of least action,
+          as shown in this paper for a free particle external to
+          a spherically symmetric, nonrotating center of
+          gravitational attraction.
+
+    - "Action: Forcing Energy to Predict Motion," 
+        - Dwight Neuenschwander, Edwin Taylor, Slavomir Tuleja,
+        - The Physics Teacher, Vol. 44, March 2006, pp. 146-152
+            - Scalar energy is employed to predict motion instead
+              of the vector Newton's law of motion.
+
+    - "Variational mechanics in one and two dimensions" 
+        - Jozef Hanc, Edwin F. Taylor, Slavomir Tuleja.
+        - American Journal of Physics, Vol. 73, No. 7, July 2005
+            - Heuristic derivations of the Euler-Maupertuis
+              abbreviated action and the Hamilton action.
+
+    - "Symmetries and conservation laws: Consequences of
+      Noether's theorem," 
+        - Jozef Hanc, Slavomir Tuleja, and Martina Hancova, 
+        - American Journal of Physics, Vol. 72, No. 4, April 2004
+            - Derives conservation laws from symmetry operations
+              using the principle of least action. These
+              derivations are examples of Noether's Theorem.
+
+    - "Deriving Lagrange's equations using elementary calculus,"
+        - Jozef Hanc, Edwin F. Taylor, and Slavomir Tuleja.
+        - American Journal Physics, Vol. 72, No. 4, April 2004,
+            - Lagrange's equations, alternatives to F=ma, are
+              usually derived from the principle of least action
+              using the calculus of variations. This paper
+              derives them using elementary calculus.
+
+    - "Simple derivation of Newtonian mechanics from the
+      principle of least action," 
+        - Jozef Hanc, Slavomir Tuleja, Martina Hancova.
+        - American Journal of Physics, Vol. 71. No. 4, April 2003
+        - Derives Newton's laws of motion from the principle of
+          least action.
+
+    - "Quantum physics explains Newton's laws of motion," 
+        - Jon Ogborn and Edwin F. Taylor, 
+        - Physics Education, Vol. 40, No. 1, 2005
+            - Feynman expressed the QM of particle motion in the
+              command, "Explore all paths."
+            - In the limit of large mass, this command goes over
+              into Newton's law of motion and the PLA
+
+    - "From conservation of energy to the principle of least
+      action: A story line," 
+        - Jozef Hanc and Edwin F. Taylor,
+        - American Journal of Physics, Vol. 72, No. 4, Aril 2004
+            - Conservation of energy is sufficient to predict
+              motion in 1D and for systems whose motion can be
+              expressed as one independent coordinate.
+            - This prediction can also be used to introduce the
+              principle of least action and Lagrange's equations.
+
+    - "Getting the Most Action from Least Action: A proposal" 
+        - Thomas A. Moore,
+        - American Journal of Physics, Vol. 72, No. 4, April 2004
+            - The principle of least action is a powerful
+              addition to upper UG courses for physics majors,
+              modifying the selection of topics and presenting
+              advanced topics in a more contemporary way.
+
+    - "When action is not least," 
+        - C. G. Gray and Edwin F. Taylor,
+        - American Journal of Physics, Vol. 75, No. 5, May 2007
+            - Action is a minimum along a sufficiently short
+              worldline in _all potentials_ and along worldlines
+              of any length in some potentials.
+            - For long enough worldlines in a majority
+              potentials, however, the action is a saddle point,
+              that is, a minimum with respect to some nearby
+              alternative curves and a maximum with respect to
+              others. The action is never a true maximum.
+
+### Links
+    - YT: Veritasium good explanation https://www.youtube.com/watch?v=Q10_srZ-pbs

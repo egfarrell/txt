@@ -1,0 +1,69 @@
+# Latham cosmo 01
+    - https://pirsa.org/c14005
+    - 13 talks, January 26, 2014 
+
+### differential geometry
+	- a la Latham Boyle
+	- first, introduce `manifold`,
+	- then `connection` (Cristofel symbols)
+	- then `metric`
+
+### geodesic
+    - idea of geodesic exists even before a metric is defined on
+      a manifold
+    - A geodesic is a curve where the `tangent vector` is unchanged
+        - i.e. the tangent vector is parallel transported
+
+### curvature
+    - is the failure of 2 covariant derivatives to commute when
+      acting on a tensor
+    - (thats one definition of Riemann Curvature Tensor)
+
+### Ricci Tensor
+    - is the Riemann tensor which is contracted
+    - ie Ricci has only 2 indices
+    - its a `2x2 matrix`
+    - used in the vacuum Einstein equations where no matter is
+      present
+
+### metric
+    - 2x2 symmetric matrix defined at every point on the manifold
+
+### uses of metric
+    - can raise and lower indices
+    - also can get the INNER PRODUCT of 2 vectors now by using
+      the metric.
+    - because you have an inner product you can introduce the
+      notion of the LENGTH of a vector
+    - Because we have a metric now, this implies there's
+      a preferred connection where the covariant derivative of
+      the `metric` is everywhere `zero`.
+        - This preferred connection is the Levi-Ceta connection
+          or Cristofel symbol
+
+### Ricci Scalar
+    - Can contract the Ricci Tensor using a metric.
+    - The Ricci Scalar gives a measure of curvature at a `single
+      point`
+
+
+### another use of metric
+    - `Curve length` can define a line element, and integrate
+      line element to get total curve length.
+
+    - So using curve length we've another definition of
+      a geodesic.
+    - A geodesic is an (minimum) extremal of `curve length`.
+    - Its easier to calculate a geodesic this way.
+
+    - Calculating the geodesic this way is a bit like calculating
+      the action for a Lagrangian in Classical Mechanics.
+    - i.e. Calculating the geodesic is a calculus of variations
+      problem and the Euler-Lagrange equations are used.
+
+### A Partial Derivative
+    - Is not a TENSOR quantity
+    - It depends very much on the co-ordinate system you lay
+      down. 
+    - But we want some sort of derivative that is independent of
+      coordinate systems.

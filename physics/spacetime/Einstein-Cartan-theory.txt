@@ -1,0 +1,132 @@
+### You said:
+    - What is E-C theory in relation to QG?
+    - Context:
+        - Any half-hearted attempt at unification should probably
+          give `Einstein-Cartan` in the continuum limit...
+        - E-C isn't included in standard GR textbooks...
+
+### Basics
+
+- Einstein–Cartan (E-C) theory is basically GR with `torsion`
+  included. Standard GR assumes the connection (the thing telling
+  you how vectors move around) is torsion-free. E-C relaxes that
+  assumption.
+
+- Key idea: matter with spin acts as a source not only for
+  curvature (as in GR) but also for torsion.
+
+### In symbols:
+    - GR:  connection `Γ` is symmetric ∴ torsion T = 0
+    - E-C: connection allowed to have an antisymmetric part → torsion T ≠ 0
+
+- The torsion couples to the spin density of matter. So curvature
+  corresponds to mass-energy, while torsion corresponds to
+  intrinsic angular momentum (spin).
+
+- This theory naturally emerges if you write gravity as a gauge
+  theory of the local Lorentz group SO(3,1). In that formulation,
+  the metric is built out of a tetrad (vierbein) field eᵃₘ, and
+  the connection ω couples to spinors. When you vary the action
+  with respect to ω, torsion pops out algebraically in the
+  presence of spin.
+
+- So:
+    - curvature ← energy-momentum
+    - torsion ← spin
+
+- At everyday scales the spin density of matter is tiny, so
+  torsion effects are negligible, which is why standard GR works
+  fine. But when spin densities become extremely large — near
+  Planckian densities, inside black hole cores, or early-universe
+  conditions — torsion may prevent singularities. E-C gravity
+  often replaces the big bang singularity with a bounce.
+
+# Why quantum gravity folks mention it:
+
+- If you try to couple `spinor fields` to GR in a geometrically
+  natural way, you automatically end up with E-C, not vanilla GR.
+  It's the minimal classical limit of many attempts to unify
+  gravity with quantum field theory because QFT fields carry
+  spin. GR, as usually taught, quietly throws away the torsion
+  term, which is arguably an unjustified simplification.
+
+- In other words:
+- If your theory includes fermions and treats geometry seriously,
+  you usually get E-C in the classical limit. So people working
+  toward quantum gravity frequently say: if you're serious, you
+  should know E-C, because it’s the “corrected” version of GR
+  that plays nicely with spin.
+
+- This does not solve QG. It is just the right classical baseline
+  to start from.
+
+- It points to interesting deeper ideas: gauge theory
+  formulations of gravity, tetrads, spin connections, loop
+  variables, and so forth. That path eventually leads toward
+  formulations like loop quantum gravity, spin foams, Poincaré
+  gauge theory, and other things where geometry is “quantized” in
+  terms of algebraic objects rather than just fields on
+  a manifold.
+
+# You said:
+    - ... is it true that E-C theory isn't included in standard
+      textbooks? Would someone have to 'pick it up on the side'
+      (I presume this means being taught it person-to-person
+      rather than autodidactically from books?
+
+# Pick it up on the Side?
+
+- Yes — that is basically correct. Einstein–Cartan theory is
+  rarely treated in standard GR textbooks, especially the ones
+  used in typical undergrad or first-year grad courses.
+- The “canonical” GR curriculum focuses on metric geometry,
+  Levi-Civita connection, and curvature, and simply sets torsion
+  to zero from the start. The idea that you might allow torsion
+  (and that fermions actually demand it) usually appears only in
+  more advanced or specialized contexts.
+
+- So in most physics programs, a student can get all the way to
+  a PhD having never heard of Einstein–Cartan in a formal course.
+
+- Why it gets left out:
+    - GR is already a big subject. The standard approach assumes:
+    - the connection is metric-compatible, and
+    - torsion = 0
+    - These assumptions make life simpler and most astrophysical
+      phenomena don’t require torsion anyway. So textbooks
+      streamline the story to keep the learning curve manageable.
+
+- What “pick it up on the side” really means:
+- It doesn’t require some kind of secret apprenticeship. It just
+  means:
+- You usually learn E-C by reading papers or monographs rather
+  than standard GR textbooks.
+
+### Common autodidact paths:
+    - Hehl, von der Heyde, Kerlick & Nester (1976 review) — the
+      classic E-C reference
+    - Nakahara’s Geometry, Topology and Physics touches the
+      tetrad/spin-connection formalism (but not always torsion in
+      detail)
+    - Rovelli, Thiemann, and others in loop quantum gravity
+      contexts — they assume tetrads and spin connections, which
+      implicitly leads you to E-C
+    - “Gauge theories of gravity” lecture notes are where most
+      people first see it cleanly presented
+
+- In practice, the first time someone seriously needs to couple
+  spinor fields to curved spacetime in a mathematically
+  consistent way (via tetrads and spin connection), they discover
+  the moral:
+
+- Once you allow spinors, torsion is no longer optional.
+- GR-without-torsion is the special case, not the general one.
+
+- If you’re already comfortable with differential geometry and
+  spinors in curved spacetime, you can absolutely teach yourself
+  E-C. It’s conceptually not harder than GR; it’s simply absent
+  from the standard pedagogical funnel.
+
+- From here, the natural continuation is to explore the tetrad
+  + spin-connection formulation of GR. Once that becomes
+    intuitive, E-C follows almost automatically. 

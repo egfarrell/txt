@@ -1,0 +1,57 @@
+malan 02 C Language
+
+compile to assembly language
+	gcc -S hello.c
+
+boolean
+    - and `&&`
+    - or `||`
+
+"true"
+	while(1)
+
+For loops
+	for(initialisations; conditions; increments/updates)
+	for (int i = 0; i < 10; i++)
+	for (int i = 1; i > 0; i = i * 2)
+
+define array
+	```
+    SIZE = 10
+	char *inventory[SIZE]
+	inventory[i] = "orange";
+    ```
+
+compile c sourcecode
+	gcc hello.c
+	results in an executable "a.out"
+	type "a.out" to run program
+
+change name of executable
+	gcc -o runhello hello.c
+
+make
+	make hello
+	dont have to append ".c"??
+
+line length
+	dont exceed 76/80 characters! have it pretty printed?!
+
+preprocessor directive
+	#include <stdio.h>
+	thats a HEADER file, gets a "library"
+	but the actual "printf" code is in stdio.c
+
+quotes
+	for strings you need DOUBLE quotes
+	for a single character you can use single quotes
+
+malan cs50 library
+    `gcc hello.c -l cs50 -o testprog -std=c99`
+    the "-l cs50" tells the compiler to link to cs50 library
+
+cs50 library
+	```
+    string name = "David"; 	// "string" from cs50 library
+	char *name = "David"; 	// The real C way to do it
+    ```

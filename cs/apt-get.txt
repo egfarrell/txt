@@ -1,0 +1,21 @@
+apt-get tips
+
+### Install without root 
+    apt-get download [package_name]  
+    dpkg -x [package].deb ./dir
+
+    - often need to add to `.bashrc.local`
+        # Local libs
+        export PATH="$HOME/.local/lib:$PATH"
+        export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
+
+
+### remove package config files as well
+    sudo apt-get purge <package name>
+
+### install apt-add-repository
+    ai python-software-properties
+
+### remove a repository
+    ai ppa-purge
+    sudo ppa-purge {ppa_name} 

@@ -1,0 +1,241 @@
+- $MY_CODE/AI-ML/pytorch/deep-lizard/enda.py
+- $MY_CODE/AI-ML/pytorch/deep-lizard/fashion.py
+
+
+### Philosophy
+    - Doesn't matter how slow you go, as long as you don't stop(!)
+    - He started the course in March 2018, finished March 2022
+
+### Contents
+
+### INTRO
+    01.  PyTorch Prerequisites (Syllabus) https://deeplizard.com/learn/video/v5cngxo4mIg
+    02.  PyTorch API                      https://deeplizard.com/learn/video/iTKbyFh-7GM
+    03.  PyTorch Install                  https://deeplizard.com/learn/video/UWlFM0R_x6I
+    04.  CUDA Explained (GPUs)            https://deeplizard.com/learn/video/6stDhEA0wFQ
+
+### TENSORS
+    05.  Tensors Explained                https://deeplizard.com/learn/video/Csa5R12jYRg
+    06.  Rank, Axes, and Shape Explained  https://deeplizard.com/learn/video/AiyK0idr4uM
+    07.  CNN Tensor Shapes (Feature maps) https://deeplizard.com/learn/video/k6ZF1TSniYk
+    08.  PyTorch Tensors Explained        https://deeplizard.com/learn/video/jexkKugTg04
+    09.  Best options: Creating Tensors   https://deeplizard.com/learn/video/AglLTlms7HU
+
+### TENSOR OPERATIONS
+    10.  Flatten, Reshape, Squeeze             https://deeplizard.com/learn/video/fCVuiW9AFzY
+    11.  Flatten Visualized (Batch Processing) https://deeplizard.com/learn/video/mFAIBMbACMA
+    12.  Broadcasting and Element-wise Ops     https://deeplizard.com/learn/video/QscEWm0QTRY
+    13.  ArgMax and Reduction Tensor Ops       https://deeplizard.com/learn/video/K3lX3Cltt4c
+
+### DATA PROCESSING
+    14.  Fashion MNIST dataset       https://deeplizard.com/learn/video/EqpzfvxBx30
+    15.  CNN Image Preparation (ETL) https://deeplizard.com/learn/video/8n-TGaBZnk4
+    16.  Datasets and DataLoaders    https://deeplizard.com/learn/video/mUueSPmcOBc
+
+### DESIGNING NNS
+    17.  Build PyTorch CNN (OO)                     https://deeplizard.com/learn/video/k4jY9L8H89U
+    18.  CNN Layers (Architecture)                  https://deeplizard.com/learn/video/IKOHHItzukk
+    19.  CNN Weights (learnable parameters)         https://deeplizard.com/learn/video/stWU37L91Yc
+    20.  "Callable" NNs (e.g. linear layers)        https://deeplizard.com/learn/video/rcc86nXKwkw
+    21.  Debug PyTorch Source Code                  https://deeplizard.com/learn/video/el39D7rz7K0
+    22.  CNN Forward Method                         https://deeplizard.com/learn/video/MasG7tZj-hw  video: https://www.youtube.com/watch?v=MasG7tZj-hw
+    23.  CNN Image Prediction (Forward Propagation) https://deeplizard.com/learn/video/6vweQjouLEE  video: https://www.youtube.com/watch?v=6vweQjouLEE
+    24.  Process BATCH of images                    https://deeplizard.com/learn/video/p1xZ2yWU1eo  video: https://www.youtube.com/watch?v=p1xZ2yWU1eo
+    25.  CNN Output Size Formula (NN debugging)     https://deeplizard.com/learn/video/cin4YcGBh3Q  video: https://www.youtube.com/watch?v=cin4YcGBh3Q
+
+### TRAINING NNS
+    26.  CNN Training (Code Example)      https://deeplizard.com/learn/video/0VCOG8IeVf8   video: https://www.youtube.com/watch?v=0VCOG8IeVf8
+    27.  CNN Training Loop (Code Project) https://deeplizard.com/learn/video/XfYmia3q2Ow   video: https://www.youtube.com/watch?v=XfYmia3q2Ow
+    28.  CNN Confusion Matrix             https://deeplizard.com/learn/video/0LhiS6yu2qQ   video: https://www.youtube.com/watch?v=0LhiS6yu2qQ
+    29.  Stack vs Concat                  https://deeplizard.com/learn/video/kF2AlpykJGY   video: https://www.youtube.com/watch?v=kF2AlpykJGY
+    30.  TensorBoard (Visualize Metrics)  https://deeplizard.com/learn/video/pSexXMdruFM   video: https://www.youtube.com/watch?v=pSexXMdruFM
+    31.  Hyperparameter Tuning            https://deeplizard.com/learn/video/ycxulUVoNbk   video: https://www.youtube.com/watch?v=ycxulUVoNbk
+
+### NN EXPERIMENTATION
+    32.  Build: Training Loop Run                        https://deeplizard.com/learn/video/NSKghk0pcco   video: https://www.youtube.com/watch?v=NSKghk0pcco
+    33.  Refactor Training Loop (Hyperparameter Testing) https://deeplizard.com/learn/video/ozpv_peZ894   video: https://www.youtube.com/watch?v=ozpv_peZ894
+    34.  DataLoader num_workers (Speed Limit Increase)   https://deeplizard.com/learn/video/kWVgvsejXsE   video: https://www.youtube.com/watch?v=kWVgvsejXsE
+    35.  PyTorch GPU/Cuda                                https://deeplizard.com/learn/video/Bs1mdHZiAS8   video: https://www.youtube.com/watch?v=Bs1mdHZiAS8
+    36.  Dataset: torchvision.transforms.Normalize()     https://deeplizard.com/learn/video/lu7TCu7HeYc   video: https://www.youtube.com/watch?v=lu7TCu7HeYc
+    37.  DataLoader Source Code (Debugging)              https://deeplizard.com/learn/video/bMvYJQrZJbM   video: https://www.youtube.com/watch?v=bMvYJQrZJbM
+    38.  Sequential Models                               https://deeplizard.com/learn/video/bH9Nkg7G8S0   video: https://www.youtube.com/watch?v=bH9Nkg7G8S0
+    39.  Batch Norm (Conv Net Normalization)             https://deeplizard.com/learn/video/bCQ2cNhUWQ8   video: https://www.youtube.com/watch?v=bCQ2cNhUWQ8
+    40.  Reset Network Weights                           https://deeplizard.com/learn/video/bCQ2cNhUWQ9   video: https://www.youtube.com/watch?v=r9tOQ6EKS1Y
+    41.  Training Multiple Networks                      https://deeplizard.com/learn/video/bCQ2cNhUWQ1   video: https://www.youtube.com/watch?v=oYWZKQC_p_A
+    42.  Max Pooling vs No Max Pooling                   https://deeplizard.com/learn/video/bCQ2cNhUWQ2   video: https://www.youtube.com/watch?v=0ixAwVAfejY
+    43.  Course Conclusion                               https://deeplizard.com/learn/video/bCQ2cNhUWQ3   video: https://www.youtube.com/watch?v=Ht-ya8oVU7E
+
+
+### handy
+    - conv layer: 
+        - The input parameters / arguments in the definition of
+          a conv layer match the resulting tensor shape
+            - $MY_IMAGES/cs/AI-ML/pytorch-layers-tensor-shapes.jpg
+    - also for LINEAR layers we have FLAT rank 2 tensors
+        - this is based on matrix multiplication
+        - matrix multiplication "defines" the linear function
+        - ie the linear function in the linear layer is presented
+          using a matrix
+        - $MY_IMAGES/cs/AI-ML/pytorch-linear-layers.jpg
+        - $MY_IMAGES/cs/AI-ML/pytorch-linear-layers2.jpg
+        - $MY_IMAGES/cs/AI-ML/pytorch-linear-layers3.jpg
+
+
+### misc
+    - convolution filter: can be done in PARALLEL (GPU)
+    - `cuDNN`: cuda library for NN
+    - STACK:
+        - Apps
+        - Frameworks: Pytorch
+        - CUDA: Libraries cuDNN etc (makes GPU 'general purpose')
+        - Hardware: GPU
+
+
+- max pooling versus no max pooling
+    - in his example, `no_max_pool` did much better!
+    - reason: the MNIST fashion images are so small (28x28) that
+      we lose too much info when we max pool
+
+- reset network weights
+    - Individual layer
+    - Individual layer inside a network
+    - Subset of layers inside a network
+    - All weights layer by layer (`network.children`)
+    - All weights using snapshot
+    - All weights using re-initialization 
+        - (redefine the network again, just like the first
+          definition, using a seed)
+
+    - If you're training different networks etc, you'd want to
+      reset the weights between training runs?
+    - lovely minimal exmaple of passing a tiny tensor through
+      a tiny layer and running the optimser on it...
+        - basically all of foward and back propagation
+          encapsulated in a few lines
+    - key: `layer.reset_parameters()`
+        - also resets the _bias_!
+        - basically reset any learnable parameter
+    - $MY_CODE/AI-ML/pytorch/deep-lizard/Part-02-NN-deeplizard.py:2620
+
+- batch norm
+    - $MY_CODE/AI-ML/pytorch/deep-lizard/Part-02-NN-deeplizard.py:2508
+    - network converged much faster with batch_norm
+
+- sequential class
+    - intro: Pytorch exposes its api in 2 ways
+        - ./pytorch-api.txt
+    - $MY_CODE/AI-ML/pytorch/deep-lizard/Part-02-NN-deeplizard.py:2153
+
+- debugging session
+    - he went down into pytorch dataloader.py
+    - if shuffle=true pytorch called a random sampler, else
+      a sequentialsampler
+    - he debugged all the way down into transform.py where
+      pytorch 'transformed' each image array using:
+      `tensor.sub_(mean).div_(std)`
+        - $MY_IMAGES/cs/AI-ML/pytorch-transformation-normalise.jpg
+        - basically a z-score transformation!
+        - subtract the main
+        - divide by the std
+
+- deep lizard: transforms... from the early lessons, the only
+  transforms he had was: `transform.toTensor()`
+    - that was to transform _PIL images_ into tensors! (MNIST
+      data)
+
+check: data NORMALISATION = 'feature scaling'
+    - e.g. a dataset with a person's age and weight
+    - these 2 sets of numbers are quite different scales
+    - normalised dataset: divide every item by the largest value
+    - but he asked an intersting question: if we choose a random
+      value `x` from a set `S`. Can we say if x is the largest
+      value?
+        - for any old set, there's not enough info to answer the
+          question.
+        - but for a normalised set we can tell if `x` is the
+          largest(??)
+        - ah yes... if it's `1` then it was the largest value in
+          the un-normalised set.
+    - note: there's many different ways to "normalise" a dataset.
+      Standardisation is just one particular way.
+    - Standardisation: He talks about computing a z-score for
+      every value in the dataset
+    - NOTE: when normalising image data, we normalise each color
+      channel separately... so for an RGB image we have 3 means,
+      3 stds etc.
+    - get image stats using pytorch
+        - $MY_IMAGES/cs/AI-ML/deep-lizard-calc-image-stats.jpg
+    - standardisation values
+        - basically z-scores
+        - mean = 0
+        - std = 1
+        - so some pixel values will be negative etc
+    - when should we normalise our training data?
+        - try BOTH WAYS and see which is best
+        -
+        - although in the deep-lizard example, the normalised
+          data was only about 1% better
+    - Also: batch normalisation
+        - the activations of a layer are standardised (with
+          a single batch)
+
+check: data_loader class: num_workers
+
+check this: stack versus concat
+    - stack is like additional functionality added on to 'concat'
+
+### tensor tip
+    - the last dim of any tensor always contains NUMBERS... 
+        - while every other dimension contains tensors which are
+          smaller
+
+- pytorch's gradient tracking feature
+- "we defined the layers inside the constructor (`__init__`) as
+  class attributes"
+- the `gradient` tensor has the same SHAPE as the `weight` tensor
+    - $MY_IMAGES/cs/AI-ML/deep-lizard-back-prop.jpg
+    - call backward on the LOSS TENSOR
+    - aside: `network.parameters()` are the network weights
+- when back prop done, use an optimiser (adam) to update the
+  network's weights
+    - key code: `optimizer.step()`
+    - $MY_IMAGES/cs/AI-ML/deep-lizard-update-weights.jpg
+- summary:
+    - "training with a single batch"
+    - $MY_IMAGES/cs/AI-ML/deep-lizard-single-batch-training.jpg
+
+- learning rate
+    - `lr` very important... u can keep steeping 'over' the
+      minimum if you have it too large
+
+- aside: pytorch tracks all the network connection through
+  a DYNAMICAL COMPUTATIONAL graph
+
+- TRAINING LOOP
+    - for all batches
+    - note: pytorch accumulates gradients... so we must 'zero
+      out' the gradient for EACH batch
+        - $MY_IMAGES/cs/AI-ML/deep-lizard-single-batch-zero-out-gradient.jpg
+    - interesting: never thought of it this way:
+        - the `batch size` affects HOW MANY TIMES we're going to
+          update the weights
+        - we call `optimzer.step()` once per batch
+        - if you change the `batch size`
+        - in deep lizard example: 
+            - he had 600 'batches', or 600 iterations of the
+              training loop. (60,000 MNIST images, batch_size was
+              100)
+            - so he took 600 steps towards the loss function's
+              minimum
+            - so when u change the batch size, you change the
+              number of times we update the weights and step
+              towards the loss function's minimum
+- handy snippet
+    - get the max weight GRADIENT for a layer
+        - `network.conv1.weight.grad.max().item()`
+    - get the max weight itsef
+        - `network.conv1.weight.max().item()`
+
+
+### links
+    - course https://deeplizard.com/course/ptcpailzrd

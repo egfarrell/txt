@@ -1,0 +1,198 @@
+
+
+### Strang - Linear Algebra
+    - $MY_VIDEOS/maths/Gilbert\ Strang\ -\ Linear\ Algebra.mp4
+    - Fundamental theorem of linear algebra
+    - The relation of the Four fundamental subspaces:
+        - `column space`,
+        - `row space`, and their two perpendicular spaces
+        - `nullspace (kernel)` (perpendicular column space)
+        - `left nullspace (kernel)` (perpendicular row space)
+        - $MY_IMAGES/maths/strang-four-subspaces.jpg
+
+    - 'm' = columns
+    - 'n' = rows
+
+    - Strang: "Linear Algebra is all about flat things"
+
+    - Subspace 1: The column (vector) space:
+        - imagine a 'flat' surface in 10 dimensions. ie a plane
+          in 10 dimensions. Take all the columns in the matrix,
+          take all their combinations, so much of this one, so
+          much of that one, and if you put all those together you
+          get some kind of FLAT space, like a vector space (like
+          a surface?)
+        - (???) My question: Does he mean flat like a plane??
+          Does taking all combinations of the columns mean
+          talking all rows?? Cos any individual row will just be
+          a combination of each column?
+          - Partial answer found later. I think when Gilbert
+            Strang was saying a flat surface, he meant just two
+            column vectors. See this:
+                - https://towardsdatascience.com/what-is-column-space-with-a-machine-learning-example-8f8a8d4ec6c
+                - Q. Why do [2,0,9] and [1,5,3] span the _plane_?
+                  They are 3-D vectors.
+                - A. Because they are 2 vectors :) . Just because
+                  they are 3-D vectors, they don’t span the 3-D
+                  plane, you need 3 vectors to span 3-D space.
+                - Two 2-D vectors [1,0] and [4,1] will span the
+                  plane.
+                - Two 7-D vectors [2,0,9,0,1,4,2] and
+                  [7,7,0,1,8,4,8] will still span the plane.
+    - What idea do you find most beautiful?
+        - So we have a matrix, a rectangle of numbers, might even
+          be a rectangle of data. Eg. every column corresponds to
+          a drug, and every row a patient, and if the patient
+          reacted favourably to the drug you put some positive
+          number in there...
+        - So the big problem is to understand all those numbers,
+          what are the patterns? What's going on?
+        - And one way is to break down that matrix into simple
+          pieces using something called 'singular values'. That's
+          come on as fundamental in my lifetime.
+        - We had 'eigenvalues' before but they were restricted to
+          square matrices, and data comes in rectangular
+          matrices.
+        - So 'singular values' are a way to find the important
+          pieces of a matrix, which add up to the whole matrix.
+          So you break a matrix into simple pieces: the 1st piece
+          is the most important part of the data, the 2nd piece
+          is the 2nd most important part etc. So if a data
+          scientist can find those first and second peices stop
+          there! The rest of the data is probably round off, or
+          experimental error maybe...
+        - So the beautiful bit: every (square, rectangular)
+          matrix can be written as the product of 3 special very
+          simple matrices.
+            - `M = U ∑ V*`
+            - `M = rotation * stretch (diagonal) * rotation`
+            - $MY_IMAGES/maths/singular-value-decomposition.jpg
+
+        - DEEP LEARNING: You've got some data, inputs where you
+          know the right outputs. The question is can you see the
+          pattern. Can you figure out a way for a new input which
+          we haven't seen to understand what the output will be.
+        - So we have 1 million inputs, and can we create a rule
+          that will take those "training" inputs to the correct
+          million outputs.
+        - And a neural net is part of the structure of our new
+          way to create a rule. We're looking for a rule to take
+          these training inputs to the known outputs.
+        - So linear Algebra was used, but because data is so
+          messy we need to use _piecewise-linear_: one line for
+          a bit, then another straight line... And adding in this
+          simple non-linearity blew the problem open...
+        - You form an objective function with lots of folds..
+        - Question: do you have any intuition why this works?
+            - Strang: I'm beginning to have... this idea of
+              things that are piecewise-linear is a simple
+              computable approximation... ie flat pieces with
+              folds inbetween them (think of the roof of an
+              infinitely complicated house that curves but each
+              piece is flat) ... this method has been used by
+              engineers: the finite element method
+        - theres a lot of expressive power in piecewise-linear...
+          these piecewise guys can express a lot of complexity
+        - Also the new idea is "learn the rules" from the data:
+          instead of getting a readymade rule from Newton or
+          Einstein. But if the data is random there won't be any
+          rules to learn.
+
+        - Areas of Maths: I think we have four main areas:
+            - Algebra (linear algebra, matrices),
+            - Calculus,
+            - Stats/Probability,
+            - Geometry
+
+        - Favourite matrix: Linear Algebra equivalent of the 2nd
+          derivative: (comes up everywhere)
+            - $MY_IMAGES/maths/strang-favourite-matrix.jpg
+
+### Strang: 2020 Vision Linear Algebra
+    - ~/myvids/Strang-Vision-Playlist.m3u
+    - $MY_BOOKS/Physics/Maths/Algebra-Linear/Strang-vision-2020-for-LA.pdf
+    - https://news.ycombinator.com/item?id=23150699
+    - I like this outline. It's very MIT-ish in the sense of
+      teaching someone to solve practical engineering problems
+      with matrices.
+    - But I foresee some difficulties: I often ask undergrads who
+      had linear algebra:
+        - "what is the determinant?"
+        - and seldom get the "best" conceptual answer: ```
+        - "the determinant is the product of the eigenvalues."
+          ```
+    - The best answer should ideally be the most popular.
+    - We'd consider it a failure if the most popular explanation
+      of the fundamental theorem of calculus was not some
+      variation of "integrals undo derivatives and vice versa".
+    - I don't see Strangs approach solving that.
+    - Also there's a lot of focus on _CR decomposition_ which
+      says a linear transform from `R^m` to `R^n` might map to
+      a subspace of `R^n` with smaller dimension `r < min(m,n)`
+      and while it's true in some sense, it's quite "unphysical":
+        - if a matrix contains noisy entries then it will
+          generally only be degenerate in this way with
+          probability zero.
+        - You need perfect noise cancelation to get degeneracies,
+          which amounts to a sort of neglected underlying
+          CONSERVED QUANTITY which is pushing back on you and
+          demanding to be conserved.
+        - In that sense the `CR decomposition` is kind of
+          pointless and is just working around some "perfect
+          little counterexamples".
+        - So it seems weird to present this as the most important
+          thing!
+
+    > seldom get the "best" conceptual answer, "the determinant
+    > is the product of the eigenvalues."
+        - I found the "best conceptual" answer depends a lot on
+          taste, and which concepts you are familiar with.
+        - In this case:
+            - Calculating exact eigenvalues of matrices larger
+              than `4 x 4` is impractical, since it requires you
+              to solve a polynomial of degree `> 4`.
+            - The `EV` exist only in algebraically closed fields
+              (complex numbers), while the determinant itself
+              lives in the base field (rationals, reals).
+        - How about:
+            - GEOMETRIC DETERMINANT
+                - The determinant is the volume of the polytope
+                  (parallel-epiped) spanned by the column vectors
+                  of the matrix.
+            - COORDINATE FREE DETERMINANT
+                - The determinant is the map induced between the
+                  highest exterior powers of the source and
+                  target vector spaces
+                  (https://en.wikipedia.org/wiki/Exterior_algebra)
+                    - thats funny, I just came accross this
+                      definition already today (Nov 2020)
+            - REPRESENTATION THEORETIC VERSION
+                - This version characterizes the determinant as
+                  invariant under the Symmetric group acting by
+                  permutation on the columns/rows of the matrix.
+
+
+### Strang: Linear Algebra in a Nutshell
+
+- (A is `n` by `n`)
+
+- NONSINGULAR                                  SINGULAR
+- -----------                                  --------
+- `A` is invertible                           `A` is not invertible
+- The columns are independent                 The columns are dependent
+- The rows are independent                    The rows are dependent
+- The determinant is not zero                 The determinant is zero
+- Ax = 0 has one solution x = 0               Ax = 0 has infinitely many solutions
+- Ax = b has one solution x = A-1b            Ax = b has no solution or infinitely many
+- A has `n` (nonzero) pivots                  A has `r < n` pivots
+- A has full rank `r = n`                     A has rank `r < n`
+- The reduced row echelon form is `R=I`       R has at least one zero row
+- The column space is all of `R^n`            The column space has dimension `r < n`
+- The row space is all of `R^n`               The row space has dimension `r < n`
+- All eigenvalues are nonzero                 Zero is an eigenvalue of A
+- `A^T`A is symmetric positive definite       ATA is only semidefinite
+- `A` has `n` (positive) singular values      A has `r < n` singular values
+
+### Links
+    - Sage workbook for strang linear algebra http://theronhitchman.github.io
+

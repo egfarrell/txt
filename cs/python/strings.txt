@@ -1,0 +1,38 @@
+python strings
+
+slicing
+    len[i:j:k]              
+    len[start included: end excluded: step]
+
+immutable               
+	strings dont change once created
+
+placeholders            
+	"Hi %s I have %d donuts", % ("alice", 20)
+
+slicing
+    Contradiction here??? Not right?
+
+    slicing                  
+    h  e  l  l  o    
+    1  2  3  4  5
+    -5 -4 -3 -2 -1
+
+    len[1:]                 ello
+    len[1:3]                el
+    len[-4,-2]              el
+    len[:]                  hello
+    len[3:1:-1]             e
+    len[i:j:k]              "start included: end excluded: step" Andrew koenig
+
+print repr(s)			
+	prints a representation of a string? Need to check this!
+
+"double quotes", 'single quotes'      
+	Both the same in python. Can use single or double quotes.
+
+x="isn't"               
+	Was handy here to use double quotes - allowed insertion of single quote.
+
+"I \"love\" this"       
+	Outputs: I "love" this

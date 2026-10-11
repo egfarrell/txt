@@ -1,0 +1,265 @@
+### 5 Complements
+Two
+wo elementary points concerning quantum mechanics are
+briefly explained in this chapter: the mean value rule and the
+Heisenberg picture.
+5.1 The Mean Value Rule
+Rule 6 in Chapter 3 yields the probability [Eq. (3.3)] that a mea-
+surement of observable A yields outcome a when performed on
+an ensemble E of systems described by the normalized ket | 4 >
+It thereby makes it possible to calculate the mean value <A>,
+that is, by definition, the quantity
+пкак
+< A >= lim
+N-00 N
+(5.1)
+where N is the number of systems in E, and n is the number
+of those systems for which the measurement yields outcome ak.
+Since
+lim k
+=
+Wk
+we have
+<A> = Σwxak = Σak < w\k,r><k,r\w > |
+k
+k,r
+= Σ < w|ak|k,r >< k,r\w >
+k,r
+(5.2)
+(5.3)
+7172
+5. Complements
+Then, using the same symbol A for the observable and the cor-
+responding operator and applying successively the eigenvalue
+equation
+|A|k,r>= a|k,r>
+and the decomposition (3.11) of the unit operator
+Σ|k,r > < k,r| = 1
+k,r
+we get
+< A > = Σ < y\A\k,r ><k,r\w >
+Similarly
+k,r
+= < 4|A|4 >
+<A" >= |A" | >
+(5.4)
+(5.5)
+(5.6)
+(5.7)
+When 4 is not normalized to unity, these expressions should of
+course be changed, the general formula then being
+< A" >=
+< y|A"|y >
+<44>
+(5.7a)
+Expression (5.7a) has thus been deduced from Rule 5 (possible
+outcomes of a measurement) and Rule 6 (statistical frequencies).
+Conversely, Eq. (5.7a) can be taken as an axiom. Rules 5 and 6
+are then merely theorems. Indeed they follow from Eq. (5.7a) (a
+detailed proof of this can be found in Chapter 5 of Ref. [1]). In
+other words Rules 5 and 6 of Chapter 3 can be replaced by the
+unique rule that follows.
+Rule 1 (Mean value rule): Let E be an ensemble of systems that
+can be described by a ket |ø > Then, if a measurement of an
+observable A is made on each system, the mean outcome is given
+by Eq. (5.7a) (with n = 1).
+The formulation of Chapter 3 that treats Rules 5 and 6 as basic
+and subsequently derives the mean value rule is equivalent to
+the present formulation, which does the reverse.5.2 The Heisenberg Picture for Time Evolution
+73
+• Remark 1. In the language we have used, both formulations
+are expressed in terms of operational rules, that is, rules of the
+type "If such and such measurements are made, such and such
+results are obtained." The question may be asked whether such
+a wary formulation can be replaced by a more ambitious one
+that would claim to give information on the physical properties
+"really possessed" by systems or ensembles of systems, whether
+or not we observe them. This question will be dealt with in detail
+in Chapter 13. The point of the present remark is that the prob-
+lems it raises are clearly of the same nature in both formulations,
+since the two are completely equivalent. It would, in particular,
+be erroneous to believe that replacement of Rules 5 and 6 by the
+mean value rule is by itself sufficient to eliminate from the the-
+ory any reference to the community of observers. Indeed it can
+be shown [1] that in conjunction with the mean value rule such a
+standpoint would imply that in the ensemble considered above
+there are nk = Nw systems for which the physical quantity A has
+the value a even when no measurement is performed. Such a
+statement, however, is wrong, as already pointed out.
+5.2 The Heisenberg Picture for Time Evolution
+The description of the time evolution of systems given in Rule
+3 of Chapter 3 is technically known as the "Schrödinger pıc-
+ture." It is not the only possible one. An important alternative
+description is the Heisenberg picture, which indeed was the one
+Heisenberg used when he first formulated quantum mechanics.
+The Schrödinger and Heisenberg pictures are two different but
+equivalent sets of rules. In other words, when applied to a given
+physical situation they lead to the same observable predictions.
+In some respects the Heisenberg picture has definite technical
+advantages. It is particularly convenient, for instance, in quan-
+tum field theory. As we shall see (Section 10.8 and Chapter 14),
+it also opens some vistas concerning the connections of quan-
+tum theory with general epistemology. In this book, however,
+we find it more practical to work, as a rule, with the equivalent
+Schrödinger picture. For this reason, the Heisenberg picture is
+only briefly sketched.
+Let us, for simplicity (this assumption is not essential) con-
+sider a time-independent Hamiltonian. Then the Schrödinger74
+5. Complements
+equation (3.2), together with the initial condition that | 4(to)> 1s
+known, can be rewritten as
+|y(t) = u(t, to)|(to) >
+>=
+where U is unitary; that is,
+u (to, to) = 1
+(5.8)
+(5.9)
+and
+ut (t,to)u(t,t) = u(t,to)U* (t,t) = 1
+and where
+du (t,to)
+ih
+dt
+==
+HU(t,to)
+(5.10)
+(5.11)
+The solution to this operator equation that satisfies the initial
+condition (5.9) 1s
+U(t,t) = exp[-ih ¹H(t - to)]
+where the operator e^ is defined by the formal expansion of the
+exponential.
+Let us now investigate whether we can describe the ensem-
+ble E under consideration, not by |4(t) >, but by a ket
+|ø(t) >= V(t)|w(t) >
+(5.12)
+where V(t) is some unitary operator (the norms of 4 and & are
+thus the same). Since, as shown, the formalism can be stated
+with the choice of the mean value rule as its basic rule, nothing
+is changed in its physical content as long as the predicted mean
+values of the outcomes of measurements to be performed at a
+time t are not changed. Since in the "old" description (using
+| >) these mean values are given by
+<w(t)|A|w(t) >
+<A>=
+< w(t)|w(t) >
+(5.13)5.2 The Heisenberg Picture for Time Evolution
+75
+the expression for them in the "new" description (in terms of
+| >) is obtained by expressing | > in terms of |ø> by means
+of Eq. (5.12), which leads to formula
+< $(t)|A' (t)|ø(t) >
+<A>=
+< $(t)|ø(t) >
+with
+A' (t) = V (t)A[V(t)]¯¹
+(5.14)
+(5.15)
+The Heisenberg picture corresponds to the special choice
+V(t) = [U(t,to)]¯1
+whence, from Eqs. (5.8), (5.10), and (5.12),
+|ø(t) >= |w(to) >
+(5.16)
+(5.17)
+This is to say that in the Heisenberg picture (and as long as no
+measurement is made) the ket | > that describes the ensemble
+is constant in time. Correlatively, in this picture the observables
+are described by the operators (5.15), that is, by
+A' (t) = U¹(t,to)AU(t, to)
+(5.18)
+which shows that these operators are time-dependent. The dif-
+ferential equation that is satisfied by these operators is easily
+derived from Eq. (5.18) (for simplicity, the assumption is made
+that A is independent of time in the Schrödinger picture). It is
+in dA' (t) = [A',H]
+dt
+(5.19)
+This equation, in particular, shows in a direct way that an ob-
+servable is a constant if it commutes with the Hamiltonian of the
+system.
+As for Rule 6 [the probability that a measurement of A will
+yield result a. formula (3.3)], with |(t) >= U(t,t₁)|ø > [Eqs.
+(5.8) and (5.17)] it reads as
+Wk =
+r
+| <k,r\U(t,t₁)|ø > 12
+<1>
+(5.20)76
+94
+5. Complements
+that is, as
+| <k,r,t| > |²
+Wk =
+(5.21)
+< $|¢ >
+with
+|k,r,t >= U¯¹(t,t₁)|k‚r >
+(5.22)
+Equations (5.14) and (5.21) show that the expressions used
+in the Schrödinger picture can be carried over to the Heisenberg
+picture. This implies, however, that now the kets associated with
+the possible values that can be found upon measurement of an
+observable are themselves time-dependent kets |k,r,t > More-
+over, the evolution in time of these kets depends on the Hamil-
+tonian H representative of the forces to which one particular
+system (or ensemble of systems) is subjected.
+Finally, while, as already noted, the state vector of a system
+that does not undergo a measurement does not change with time,
+obviously this state vector is suddenly modified—also in the
+Heisenberg picture—when a measurement takes place. Indeed,
+immediately after a measurement of A performed at time tm
+and having yielded outcome at, the representative Heisenberg-
+picture state vector must (as a consequence of Rule 10a) be a
+linear combination of the {|k, r, tm >}, the running index being r
+5.3 Wave Functions
+For describing pure cases the use of wave functions in place of
+kets is sometimes convenient. The mean value of an observable
+A and the probability that a measurement of A yields eigen-
+value ak can be expressed by means of wave functions. Formally
+these expressions may be obtained from formulas (5.6) and (3.3),
+respectively, by defining a symbol x'> playing the role of an
+eigenvector of the position operator x. As specified in Remark 4
+of Chapter 3, such (x' >'s are assumed to obey the relation
+< x'\x″ >= 8(x' – x″)
+(5.23)5.3 Wave Functions
+77
+("orthogonality in a broad sense"). Similarly, they are assumed to
+yield a generalized "decomposition of the unit operator” defined
+by
+|x' > dx' < x' | = 1
+(5.24)
+The wave function of a particle having state vector | 4 > is
+then defined, as we know [Eq. 3.3d)] as the scalar product
+y (x' ) = < x' | 4 >
+(5.25)
+and an operator A acting on functions such as w(x') is associated
+to the "same" operator A acting on the kets through the formula
+Ay(x) =<x' |A| >
+(5.26)
+With the help of Eq. (5.24), Eq. (5.6) can then be written
+= √ dx'
+<A>= | dx' < w\x' >< x'\A\w >
+a formula that, using Eqs. (5.25) and (5.26), leads to
+- √d>
+[ dx'y*
+<A>= dx' y* (x')Ay(x') = (4,A)
+where the notation
+(f,g) = [ ƒ * (x)g(x) dx
+(5.27)
+(5.28)
+has been used. A similar argument shows that Eq. (3.3) can be
+rewritten as
+wk = ΣΦκ.,ψ) 12
+(5.29)
+where
+Pk,s(x') =< x'|k,s >
+(5.30)
+The generalization of these formulas to systems of n particles
+n> 1 is straightforward. The wave function is then a function of
+the coordinates x1, x2,78
+5. Complements
+References
+1. B. d'Espagnat, Conceptual Foundations of Quantum Mechanics, Addison-
+Wesley, Reading, Mass. 1971, 2nd ed., 1976, 3rd ed., 1989.
+
+ 

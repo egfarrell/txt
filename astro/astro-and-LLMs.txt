@@ -1,0 +1,135 @@
+VAST Talk Aug 20, 2025: Teaching Computational Astrophysics in an AI World
+https://www.youtube.com/watch?v=7E78BH6gS0k
+
+
+### Core Reality: AI + Coding in Astronomy
+    - AI coding tools are already strong at Python and astronomy
+      data analysis
+    - They perform well on:
+        - notebook-style workflows
+        - plotting & visualization
+        - archive queries
+        - cross-matching catalogs
+    - They are much `weaker` at:
+        - HPC / simulation codes
+        - domain-specific astro software
+        - complex multi-module code design
+        - long-horizon planning
+    - Performance strongly `depends on`:
+        - how much similar code exists online
+        - how common the tool/library is
+        - Models are useful assistants — not reliable autonomous
+          computational astrophysicists.
+
+### Reliability Limits (Important)
+    - AI code often:
+        - looks correct
+        - runs
+        - produces plausible output
+        - but is conceptually wrong
+    - Frequent failure modes:
+        - hallucinated APIs and libraries
+        - wrong algorithms with correct syntax
+        - confident but incorrect explanations
+        - subtle math errors
+    - Students often trust output because it runs
+    - Precision scientific needs (e.g., high-accuracy numerics)
+      → AI often insufficient
+    - “Approximately right” is common — but astrophysics often
+      needs exactly right.
+
+### Capability Trend
+    - AI coding ability is improving rapidly
+    - Estimated frontier: tasks that take humans a few hours are
+      now solvable
+    - Capability window roughly doubling every few months
+    - Any teaching strategy based on “AI can’t do X” is likely
+      temporary
+    - Treat AI limits as moving targets.
+
+### Major Educational Risk
+    - Students can generate working code without understanding
+      concepts
+    - Examples observed:
+        - students produced correct LU decomposition code
+        - could not explain LU decomposition
+        - could not define condition number
+    - AI enables:
+        - task completion without comprehension
+        - reduced time-on-task → reduced learning
+    - Even proctored settings → cheating with secondary devices
+      occurred
+    - Biggest danger = loss of conceptual understanding, not
+      plagiarism itself.
+
+### AI in Computational Astrophysics Research
+    - Emerging: AI surrogate models for PDEs / fluid dynamics
+    - Neural operators can:
+        - learn solution families
+        - evaluate extremely fast after training
+    - Tradeoffs:
+        - fast inference
+        - expensive training
+        - black-box behavior
+        - accuracy limits
+    - Weather forecasting is a major success case
+    - Not yet replacing classical astro simulation pipelines
+    - Promising supplement — not replacement — for physics
+      solvers.
+
+### Course Design Recommendations
+- Prefer
+    - project-based assignments
+    - multi-step analysis tasks
+    - oral defenses / explanations
+    - in-class problem solving
+    - presentations
+    - code walkthroughs
+    - scaffolded projects (plan → draft → final)
+    - testing & verification emphasis
+    - critique-AI-output exercises
+    - compare multiple models’ answers
+
+- Add
+    - live demos of AI failures
+    - explicit teaching of AI limits
+    - AI literacy modules
+    - verification & validation training
+    - unit testing as core skill
+
+- Useful tactics
+    - ask students to explain their code choices
+    - short oral check-ins
+    - require reasoning + interpretation
+    - emphasize debugging & testing over writing code
+    - Make assessment focus on thinking, not just producing code.
+
+- Weak / Discouraged Tactics
+    - Pure take-home coding homework
+    - Output-only grading
+    - assuming AI bans will work
+    - hidden prompt traps in assignments (arms race,
+      accessibility issues)
+    - reverting fully to high-stakes in-class exams
+    - skipping method fundamentals because “AI can do it”
+    - Defensive tricks don’t scale — redesign assessment instead.
+
+### Practical Teaching Philosophy Emerging
+    - Assume students will use AI
+    - Teach them:
+        - when to use it
+        - how to verify it
+        - how it fails
+    - Guiding rule suggested:
+        - don’t use AI for tasks you can’t independently verify
+    - Best framing:
+        - AI = fast, eager, mistake-prone junior assistant
+        - must be checked
+
+### Meta Takeaway
+    - No established best practices yet
+    - Faculty are experimenting in real time
+    - Policies, pedagogy, and tools are evolving together
+    - Most agreed direction:
+    - Shift from “can they produce code?” → “do they understand,
+      validate, and defend results?”

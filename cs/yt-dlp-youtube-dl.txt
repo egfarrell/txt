@@ -1,0 +1,101 @@
+youtube-dl
+
+### Search!
+    - download top 5 matches
+        yt-dlp "ytsearch5:Richard Feynman lecture"
+    - list top 5 matches (skip download)
+        yt-dlp -s "ytsearch5:Richard Feynman lecture"
+
+### Block youtube via ddg
+    - Ublock origin: My filters
+    duckduckgo.com##.js-player
+    duckduckgo.com##.video--player
+    duckduckgo.com##.module__player
+    ||www.youtube-nocookie.com/embed/*$frame,domain=duckduckgo.com
+    ||external-content.duckduckgo.com/*$frame
+
+### spot complete files (audio+video)
+    - If “RESOLUTION” has numbers and “ACODEC” is not empty, it’s a complete file.
+    - If “ACODEC” says “video only” or the format note ends in `dash`, it’s separate.
+
+### download from a list in a txt file
+    yt-dlp -a list.txt
+
+### extract AUDIO AND rename
+    youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" 
+
+### extract URLs only from a playlist 
+    youtube-dl -j --flat-playlist {PLAYLIST-URL}
+
+### Download playlist titles only
+    youtube-dl --get-title {PLAYLIST-URL}
+
+### sequential numbering
+    "-f webm/mp4": give multiple formats so it wont stop if cant find a format
+    youtube-dl -f webm/mp4 -o "%(autonumber)s-%(title)s.%(ext)s"
+    youtube-dl -f flv      -o "%(autonumber)s-%(title)s.%(ext)s" --playlist-items 1-40
+
+### download subtitles / transcription
+    yt-dlp  --list-subs [URL]
+    yt-dlp --write-auto-sub --convert-subs=srt --skip-download [URL]
+
+    - download (auto) subtitles
+        yt-dlp  --write-auto-subs --sub-langs "en"  --sub-format srt --skip-download  [URL]
+        yt-dlp  --write-auto-subs --sub-langs "en"  --sub-format txt --skip-download  [URL]
+
+### cherry pick items
+    --playlist-start NUMBER         playlist video to start at (default is 1)
+    --playlist-end NUMBER           playlist video to end at (default is last)
+    --playlist-items 1-40
+    --playlist-items 1-5,6,7,8,9-11,12-15,21,26,27,43
+
+### download url from file contents
+    yt $(cat myurl.txt)
+
+### list available formats
+    youtube-dl -F {link}
+
+### update to latest version
+    sudo youtube-dl -U
+
+### install latest from site
+    sudo apt-get remove -y youtube-dl
+    sudo wget --no-check-certificate https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
+    sudo chmod a+x /usr/local/bin/youtube-dl
+
+### tip
+    you don't have to download just playlists...
+    This downloads everything from a certain page
+
+### video TYPE
+    youtube-dl -f webm/best {link...}
+
+    -f, --format FORMAT
+    Video format code, specify the order of preference using slashes, as in -f 22/17/18 .
+
+    Instead of format codes, you can select by extension for the
+    extensions aac, m4a, mp3, mp4, ogg, wav, webm. You can also use
+    the special names "best", "bestvideo", "bestaudio", "worst".  You
+    can filter the video results by putting a condition in brackets,
+    as in -f "best[height=720]" (or -f "[filesize>10M]").
+
+    This works for filesize, height, width, tbr, abr, vbr, asr, and
+    fps and the comparisons <, <=, >, >=, =, != and for ext, acodec,
+    vcodec, container, and protocol and the comparisons =, != .
+
+    Formats for which the value is not known are excluded unless you
+    put a question mark (?) after the operator. You can combine format
+    filters, so
+    `-f "[height <=? 720][tbr>500]" `
+    selects up to 720p videos (or videos where the height is
+    not known) with a bitrate of at least 500 KBit/s. By
+    default, youtube-dl will pick the best quality.
+
+    Use commas to download multiple audio formats, such as
+    `-f 136/137/mp4/bestvideo,140/m4a/bestaudio.`
+
+    You can merge the video and audio of two formats into a single
+    file using
+    `-f <video-format>+<audio-format> `
+    (requires ffmpeg or avconv), for example
+    `-f bestvideo+bestaudio.`

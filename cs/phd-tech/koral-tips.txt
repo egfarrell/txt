@@ -1,0 +1,547 @@
+
+### David meeting 1:
+    - BLcoords are essentially spherical coords with....?
+
+### key run path:
+    - ko.c
+    - misc.c      set_initial_profile() ---▶ PROBLEMS/SINGULARITY/`init.c`
+
+    - finite.c    set_bc                huge function
+    - finite.c    set_bc_core
+    - finite.c    calc_bc               ---▶ PROBLEMS/SINGULARITY/`bc.c`
+
+    - p2u.c       p2u
+    - p2u.c       p2u_mhd
+
+    - problem.c   solve_the_problem
+    calls set_bc too
+
+
+### Youtube playlist
+    - https://www.youtube.com/playlist?list=PLHHhj3uwR8rnc0PKyJX6_ZJ1IDjE4RPyl
+
+
+### First runs of Reissner-Nordstrom
+    - fileop.c
+    - int fprint_simplesph(ldouble t, int nfile, char* folder,char* prefix)
+
+    - run mpi
+        make clean && make -j
+        which mpirun
+        mpirun -np 24 ./ko
+
+    - run analysis
+        analysis all serial?
+        ./mser.sh
+        mk analysis
+        ./ana 0 10  1
+        ./ana 0 200 1
+        output files: sim0000.dat etc
+
+### Insert new Ressnier-Nordstrom
+    - edit problems.h
+    - mnemonics.h: #define RESS_NORD 16
+    - copy folder '/PROBLEMS/INFDISK' to '/PROBLEMS/SINGULARITY'
+    - metric.c:
+        - coco_N(...
+        - ensure coco_N has an option 16 -> 1, etc
+        - (16 is my RESS_NORM)
+    - relele.c:
+        - function: set_hdatmosphere: atmtype = 0. Change this?
+    - frames.c:
+        - trans2_coco(...
+    - silo.c
+        - line 249
+          // EF: Have to change coords here as well?
+	      coco_N(xxvec,xxvecsph,MYCOORDS,SPHCOORDS);
+	      coco_N(xxvec,xxveccar,MYCOORDS,MINKCOORDS);
+
+
+### Printing analysis
+    Columns: i,j,k,r, theta, phi, density, pressure, ? ,velocity
+    plot column 6 (density)
+    gnuplot 1 based indexing
+    -2 0 0 -7.43750e-01 1.57080e+00 0.00000e+00 6.17297e+15 3.62940e+12 5.20644e-01 0.00000e+00 0.00000e+00 0.00000e+00 9.03105e+00
+
+### David info
+    - I had a thought about what to do about the inner boundary.
+      If you remember, the way it works is we have two ghost
+      cells indexed by `i=-2` and `i=-1`.
+    - We then take information from cell `i=0` to set explicitly
+      the fluid quantities in both ghost cells.
+
+    - What we want for our boundary condition is to prevent any
+      gas from entering the domain.
+    - Gas enters the domain through the cell boundary based off
+      of the mass flux at the boundary. The mass flux at any cell
+      boundary `i+1/2` (think between `i` and `i+1`) is
+      calculated by taking information from cell `i-1`, cell `i`,
+      cell `i+1`, and cell `i+2` to produce two fluxes at cell
+      boundary `i+1/2` and then those fluxes are essentially
+      averaged to compute the final flux.
+    - It's a little more complicated than a straight average but
+      for a first approximation we can just think of it as an
+      average. Then to get zero mass flux we are going to want to
+      have these two fluxes add to zero. The way to do this is to
+      copy the density and pressure from cell 0 to cell -1, and
+      from cell `1` to cell `-2`.
+    - We then copy the velocity in the same way except we
+      multiply the radial component by -1.
+
+### David Info
+    - ....I meant make rho a gaussian or quadratic like for example:
+
+    - r     = geom.xx                       \\ r coordinate from the geometry struct
+    - r0    = RQ^2                          \\ I think the atmosphere should be centered at RQ^2
+    - sigma = 1.                            \\ some width for the atmosphere you can experiment with it
+    - rho   = exp(-(r-r0)^2/(2*sigma^2))    \\ gaussian
+
+    - alternatively:
+    - rho   = max(0.01, 1-((r-r0)/sigma)^2) \\ quadratic atmosphere
+
+    - Then compute pressure from the density.
+
+
+### David info
+    - I think I see a peak around `1.2` which I believe is where
+      we expect to have the center of our atmospheres.
+    - Can you double check the locations of the important
+      surfaces?
+    - I was right that we need to fix the inner boundary. I have
+      to think about the best way.
+
+    - Next thing to do would be to try to put a test levitating
+      atmosphere. It can be simple, like a gaussian or parabolic.
+    - I'm just not sure what to do with the pressure.
+    - Eventually we will have to construct pressure in a way that
+      it counteracts gravity and Ronaldo should be helping us one
+      we get there.
+
+    - For now you can try constant pressure and also some sort of adiabatic atmosphere.
+    - For adiabatic: set
+    - pressure = constant * rho^Gamma
+    -  where Gamma=5./3, and constant can be 1 for now.
+    - Then,
+    - uint = pressure/(Gamma-1)
+    - and finally
+    - pp[UU] = uint.
+
+
+
+### David Info
+    - fill_geometry_arb
+        - is declared in metric.c. As you can see from the
+          comment it fills the metric struct with a metric of
+          your choosing, in our case we need to add
+          Reissner-Nordstrom.
+        - It's used in init.c because we need to use some metric
+          quantities to calculate the initial condition for
+          whatever problem you found it in.
+
+    - coco_N
+        - declared in metric.c is useful if we ever want to
+          change coordinates. In our case, we define the metric
+          in spherical coordinates, and at the moment we can
+          stick to those so I'm not sure if we'll need to call
+          coco_N, but if we do the transformation should be
+          trivial.
+        - If we want to change to a coordinate system (but with
+          the same metric) with non-uniform spacing in `r` for
+          example, then we'll need to do something more
+          complicated here.
+
+    - trans2_coco
+        - transforms a vector quantity. It's declared in frames.c
+          for some reason but it usually relies on routines from
+          metric.c.
+        - Again, if we're using spherical coordinates for the
+          whole calculation, then I'm not sure if it's going to
+          be necessary to include the transformation here but we
+          can add one just in case.
+
+    - tools.c
+        - is a problem dependent file where you write some
+          problem dependent tools.
+        - In our case, we won't be doing a disk simulation so
+          probably we won't need to use any of those tools for
+          disk problems.
+
+    - Hope that all makes sense! Try to remind yourself the
+      difference between changing coordinates, changing frames,
+      and changing metrics.
+
+### David Info
+    - Looks right, and if it compiles that's good. We should set
+      up a new problem that's just _constant density and
+      pressure_ just to see how it evolves.
+    - The only thing I'm worried about is what to do with and
+      where to put the inner boundary.
+    - If we set `RQ=1.1`,
+    - We'll get a minimum at `RQ^2` and no coordinate
+      singularities so we can put the inner boundary around
+      `r=0.5`.
+    - We need to find a creative way to make sure no gas gets in
+      through the inner boundary though.
+    - When we have a black hole simulation, we place the inner
+      boundary below the event horizon and let relativity do the
+      work.
+
+
+### kappa problem?
+    - in problem.h
+    - ANDREW -- I've gone through problems 100-133 and undefined
+      PROB_KAPPA where appropriate
+    - If you want to use default calc_opacities_from_state, make
+      sure PROB_KAPPA is undefined!
+    - If you are using a problem older than 100 with a different
+      kappa defined in `kappa.c` make sure your `kappa.c` ends
+      with (kappa=(.....)) NOT (return kappa)!!
+
+
+
+### metric notebooks
+    - these were sent by David
+    - metric_schwarzshild.nb https://www.wolframcloud.com/obj/e277c2f1-bd17-4eaa-93a3-0d4c56e9b11d
+    - metric_kerr.nb https://www.wolframcloud.com/obj/0c2442c3-e684-45d3-a7e6-0fb293b935af
+    - metric_MKER1.nb https://www.wolframcloud.com/obj/837320b8-2df8-4af6-a53d-3e06af2fd8cc
+    - metric_MKS1.nb https://www.wolframcloud.com/obj/8673b48b-3348-4a46-898d-9ff6a0e495b2
+
+
+### Output executables
+    - /work/efarrell/koral_lite/outavg.c
+    - /work/efarrell/koral_lite/avg.c
+    - /work/efarrell/koral_lite/ko.c
+    - /work/efarrell/koral_lite/regrid.c
+    - /work/efarrell/koral_lite/phiavg.c
+    - /work/efarrell/koral_lite/thsli.c
+    - /work/efarrell/koral_lite/phisli.c
+    - /work/efarrell/koral_lite/ana.c
+
+### Athena++
+    - See Jim Stone talk
+    - https://princetonuniversity.github.io/athena/
+    - $MY_NOTES/astro/ad-theory-accretion.txt
+
+
+### KORAL papers:
+    - 2013 Introduce KORAL                                                                             http://adsabs.harvard.edu/abs/2014MNRAS.439..503S
+    - 2013 Code fundamentals, M1 closure, implicit solver:                                             http://adsabs.harvard.edu/abs/2013MNRAS.429.3533S
+    - 2014: Mean-field dynamo model, radiation viscosity:                                              http://adsabs.harvard.edu/abs/2015MNRAS.447...49S
+    - 2015: Conservation of the number of photons:                                                     http://adsabs.harvard.edu/abs/2015MNRAS.454.2372S
+    - 2017: Evolution of electrons and ions, identify dissipation, free-free &  synchrotron opacities: https://ui.adsabs.harvard.edu/abs/2017MNRAS.466..705S/abstract
+
+    - Sadowski Thesis $MY_ZOTERO/2011/sadowski_2011_slim_accretion_disks_around_black_holes.pdf
+    - $MY_ZOTERO/2013/sądowski_et_al_2013_semi-implicit_scheme_for_treating_radiation_under.pdf
+    - $MY_ZOTERO/2014/sądowski_et_al_2014_numerical_simulations_of_super-critical_black.pdf
+    - $MY_ZOTERO/2017/sądowski_et_al_2017_radiative,_two-temperature_simulations_of.pdf
+    - $MY_ZOTERO/2015/sądowski_et_al_2015_global_simulations_of_axisymmetric_radiative.pdf
+    - $MY_ZOTERO/2015/sądowski_narayan_2015_photon-conserving_comptonization_in_simulations.pdf
+    - $MY_ZOTERO/2017/chael_et_al_2017_evolving_non-thermal_electrons_in_simulations_of.pdf
+    - $MY_ZOTERO/2018/chael_et_al_2018_the_role_of_electron_heating_physics_in_images.pdf
+
+### Koral Compile notes
+    - Good file: ./koral/compiling.md
+    - SILO output on the go does not work for MPI. 
+    - To run Koral on a system without SILO libraries define
+        NOSILO.
+    - gcc option "-mcmodel=medium" sometimes used
+
+
+### compile / build / install Koral on Ubuntu 18.04
+    ### libraries: 
+    `-lm`                 libm: System math library (libm.a) 
+    `-lgsl`               GNU Scientific Library (GSL)
+    `-lgslcblas`          Linear algebra subroutines
+    `-lsilo`              LLNL Silo file format: https://wci.llnl.gov/simulation/computer-codes/silo
+    `-lfftw3`             FFT package
+    `-lrt`                librt: Realtime Extensions (for threads)
+    `-lhdf5`              HDF5 file format: https://www.hdfgroup.org/solutions/hdf5
+
+    ### Are libraries present?
+        ld -lm             --verbose    | grep succeed
+        ld -lgsl           --verbose    | grep succeed
+        ld -lgslcblas      --verbose    | grep succeed
+        ld -lsilo          --verbose    | grep succeed
+        ld -lfftw3         --verbose    | grep succeed
+        ld -lrt            --verbose    | grep succeed
+        ld -lhdf5          --verbose    | grep succeed
+        ld -lhdf5_serial   --verbose    | grep succeed
+
+    # Ubuntu packages:
+        dpls libopenmpi-dev
+        dpls libgsl-dev
+        dpls gfortran
+        dpls libfftw3-dev    
+        dpls libsilo-bin
+        dpls libsilo-dev
+
+    # Not needed?
+        dpls libhdf5-dev  # not needed?
+        dpls libsiloh5-0  # not needed?
+
+
+    # install package contents
+        ai libopenmpi-dev
+        ai libgsl-dev
+        ai gfortran
+        ai libfftw3-dev
+        ai hdf5-tools libhdf5-dev
+
+
+    - Install SILO from Package Manager (-lsilo): 
+        - (but see below if Ubuntu 18.04)
+        - THIS IS CORRECT:
+            ai libsilo-bin libsilo-dev
+        - Not this?
+            ai libsiloh5-0 libsilo-bin libsilo-dev
+            - (no need for libsiloh5-0?)
+
+    - ### Build SILO (Ubuntu 18.04)
+        wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/silo-llnl/4.10.2.real-7build3/silo-llnl_4.10.2.real.orig.tar.xz
+        ```
+        ./configure --prefix=/usr/local
+        make
+        sudo make install
+        ```
+
+    - ### Question: compile SILO with HDF5()????
+        - ### _-lsiloh5_ Not needed?
+        ai libhdf5-dev
+        ./configure --prefix=/usr/local --with-hdf5=/usr/include/hdf5/serial,/usr/lib/x86_64-linux-gnu/hdf5/serial
+        - (note: --with-hdf5=INC,LIB     Location of HDF5 header and library)
+
+        - HDF5
+        - https://www.hdfgroup.org/solutions/hdf5
+            wget https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_0/source/hdf5-1.12.0.tar.gz
+
+
+### CAMK Sept 2020:
+    tar -xvf gsl-latest.tar.gz
+    tar -xvf silo-4.10.2-bsd.tar.gz 
+    tar -xvf hdf5-1.12.0.tar.gz 
+    tar -xvf visit3_1_2.linux-x86_64-ubuntu16.tar.gz
+
+
+
+### Workshop - todo
+    - 2013?
+    - 0521 - WAVESPEEDSATFACES for radiation
+    - 0307 - coco vs LABRADFLUX
+    - 0404 - calculate wavespeeds independently for each fluid
+    - 0320 - generalize atmospheres for non-BL like coords
+    - 0319 - explicit criterion
+    - 0319 - why primitives changed during the advective operator
+    - 0318 - damped lab implicit to allow for longer timesteps, see below
+    - 0318 - follow the radiative wavespeeds to set the timestep properly
+    - 0312 - metric tetrad order does not correspond to eup,elo - cross check
+    - 0303 - radiative wave speed limiter as separated routine
+    - 0227 - correct explicit sub-stepping
+
+
+### Docs
+    - ./koral/docs/intro.md
+    - ./koral/docs/files.txt
+    - ./koral/docs/install-run-steps.txt
+
+    - QUICKSTART
+        - Downloading         ./koral/docs/downloading.md
+        - Compiling           ./koral/docs/compiling.md
+        - Running             ./koral/docs/runningshort.md
+        - Running on clusters ./koral/docs/runningclusters.md
+        - Logs                ./koral/docs/logs.md
+
+    - SWITCHES
+        - ./koral/docs/switch-finite.md
+        - ./koral/docs/switch-radiation.md
+        - ./koral/docs/switch-dynamo.md
+        - ./koral/docs/switch-floors.md
+
+    - OUTPUT
+        - snap-shot/restart data files                        ./koral/docs/resoutput.md
+        - data files for time averages                        ./koral/docs/avgoutput.md
+        - radial profiles (vertically integrated quantities)  ./koral/docs/radoutput.md
+
+    - COOKBOOK
+        - Adjusting accretion rate  ./koral/docs/adjustingmdot.md
+        - Create new problem        ./koral/docs/newproblem.md
+        - Reducing 3D data          ./koral/docs/reducing3d.md
+        - Regridding                ./koral/docs/regrid.md
+
+
+### All Problems
+    -   1 RADBEAM2D                           - beam of light
+    -   2 RADINFALL                           - radial inflow
+    -   3 DONUT                               - 2d Polish donut
+    -   4 GEODESICINFALL                      - geodesic infall with blobs or not
+    -   5 EDDINFALL                           - infall with flux from inside
+    -   6 RADTUBE                             - radiative shock tubes as in Farris et al 09
+    -   7 BONDI                               - like in Fragile's paper
+    -   8 HDTUBE                              - relativistic shock tube
+    -   9 HDTUBE2D                            - in 2d
+    -  10 RADPULSE                            - radiative blob spreading around
+    -  11 RADSHADOW                           - radiative shadow
+    -  12 RADATM                              - atmosphere enlighted
+    -  13 DONUTOSC                            - 2d Polish donut oscillating
+    -  14 RADWAVEBC                           - 1d linear rad wave imposed on boundary
+    -  15 RADWAVE                             - 1d linear rad wave with periodic BC
+    -  16 RADPULSE3D                          - radiative blob spreading around
+    -  17 RADDBLSHADOW                        - radiative shadow with two beams inclined
+    -  18 ATMSTATIC                           - hydro atmosphere
+    -  19 RADBEAM2DKS                         - beam of light in KS coordinates
+    -  20 ATMKS                               - radial atmosphere infalling in KS
+    -  21 DONUTKS                             - 2d Polish donut in KS
+    -  22 DONUTMKS1                           - 2d Polish donut in MKS1
+    -  23 ATMMKS1                             - radial atmosphere infalling in MKS1
+    -  24 RADBEAMFLAT                         - beam of light in Cartesian
+    -  25 RDONUT                              - 2d radiative Polish donut in KS
+    -  26 RADBEAM2DKSVERT                     - 2d radiative beam in r,theta plane
+    -  27 RADFLATNESS                         - flat but with non-zero four-force
+    -  28 BOWSHOCK                            - bow shock hydro test
+    -  29 RADWALL                             - flat with wall
+    -  30 RADNT                               - emission from midplane
+    -  31 FLATDISK                            - emission from flat disk
+    -  32 CYLBEAM                             - beam towards the axis in cylindrical
+    -  33 RADDOT                              - radiating dots
+    -  34 MFPULSE                             - multi fluid pulse
+    -  35 MFBEAMS                             - multi fluid colliding beams
+    -  36 MFDOTS                              - multi fluid radiating dots
+    -  37 MFCYLBEAM                           - beam towards the axis in cylindrical with multifluids
+    -  40 CYLBEAMCART                         - similar to discrete CYLBEAM but in cartesian
+    -  41 FLATDOT                             - dot which may be bigger than a dot
+    -  42 RVDONUT                             - radiative and viscous dougnut
+    -  43 RVDONUTIN                           - radiative and viscous dougnut inflowing
+    -  44 RADNTCYL                            - emission from midplane in cylindrical
+    -  45 MFRADNTCYL                          - multi fluid emission from midplane in cylindrical
+    -  46 MFRADNTSPH                          - multi fluid emission from midplane in spherical
+    -  47 MFDONUT                             - inflowing donut with radiation/viscosity and multi-fluids
+    -  48 RVDTEST                             - testing the entropy near the axis
+    -  49 RVRING                              - 1d donut ring
+    -  50 HDWAVE                              - hydro wave for testing entropy
+    -  51 HUBBLE                              - hubble-type test as in the WHAM paper
+    -  52 SPHFLAT                             - spherical flat to test Christoffels
+    -  53 1DDONUT                             - 1d donut equatorial plane structure
+    -  54 RVDISK                              - viscous rad. disk damped from larger radius
+    -  55 G2STATIC                            - cloud through static atmosphere
+    -  56 EDDSPH                              - 1d Edd Sphere
+    -  57 LIMOTORUS                           - torus from Bob's/Akshay's paper
+    -  58 LUKE                                - beam hitting a net gas flow / the simplest 3d
+    -  59 BBBLOB                              - rad blobs
+    -  60 JONTESTS                            - testing jon's fails.dat
+    -  61 MAGTESTS                            - simple mag tests
+    -  62 MAGTUBES                            - magnetic tubes
+    -  63 ORSZAG                              - Orszag-Tang vortex
+    -  64 MAGDONUT                            - MHD donut with poloidal magnetic fields
+    -  65 MRTORUS                             - RMHD torus with radiation
+    -  66 KTORUS                              - RMHD Newtonian torus with radiation
+    -  67 LRTORUS                             - RMHD limo torus
+    -  68 RMHDWAVE                            - radiation modified linear magnetosonic waves
+    -  69 INJDISK                             - magnetized gas damped from outer boundary
+    -  70 M1SHOCK                             - light beam penetrating absorbing medium, Monreal & Frank 08
+    -  71 MBBBLOB                             - rad blobs with magn field
+    -  72 BOWSHOCK                            - bow shock in wind tunnel
+    -  73 VISCZERO                            - tests of radiative diffusion to compare with ZERO solution
+    -  74 ERICTEST                            - tests for Eric
+    -  75 LBULLET                             - bullet through limo torus
+    -  76 ZEBRA                               - Eric's tidal disks
+    -  77 EMPTY                               - empty problem
+    -  78 FUNNY                               - for Ronaldo & Grzesiek & not for Bhupendra
+    -  79 SOFTBALL                            - Grzegorz's oscillating torus
+    -  80 GENCLOSURE                          - tests of closures
+    -  81 TWOBEAM                             - test of VET with two beams
+    -  82 VETTHIN                             - thin disk emission for VET tests
+    -  83 RADFLATTEST                         - tests of radiation solvers in flat space
+    -  84 AXISBLOB                            - blob near 3d polar axis
+    -  85 NSTEST                              - tests of axisymmetric NS
+    -  86 TFLAT                               - tests of TFLATCOORDS
+    -  87 INFDISK                             - gas dumped to circularize
+    -  88 VETPHIBEAMS                         - beams in phi
+    -  89 RADTORUS                            - radiating fixed torus
+    -  90 VETSHADOW                           - vet shadow test
+    -  91 TDEMILIO                            - tidal disruption with Emilio's input
+    -  92 ADVDIFF                             - diffusion in scattering moving blob
+    -  93 KATOTORUS                           - radiative torus initiated like in Kato+2004
+    -  94 TDEMILIO3D                          - tidal disruption with Emilio's input
+    -  95 XINYI                               - two half-planes colliding in cartesian
+    -  96 BATTERYTORUS                        - tests of Contopoulos battery
+    -  97 HUBBLE                              - Hubble like in WENO paper
+    -  98 HUBBLE2D                            - Hubble like in WENO paper
+    -  99 THINDISK                            - starting from a torus, adjusting torus
+    - 100 NSTEST1                             - first tests for nuetron stars
+    - 101 NSDISK                              - NS with accretion disk
+    - 102 ADAFCRIT                            - critical ADAFs
+    - 103 KATOLANL                            - KATOTORUS that uses opacity table
+    - 104 NSHOVER                             - Hovering atmosphere
+    - 105 COULOMBETC                          - uniform gas interacting with radiation
+    - 106 SEDRIVENTURB                        - driven turbulence to test electron heating
+    - 107 RELELTEST                           - test relativistic electron evolution
+    - 108 SYNCTEST                            - tests of synchrotron emission
+    - 109 SHEARINGBOX                         - simple shearing box
+    - 110 SHEARMRI                            - development of MRI test
+    - 111 EDDOSC                              - Oscillation of Levitating Atmospheres
+    - 112 TDEMILIOSPIN
+    - 113 ULXBUBBLE                           - Bubble expansion
+    - 114 RELELEXPAND                         - cooling of relativistic electrons in Hubble expansion
+    - 115 SHOCKELECTRONTEST                   - 1D (Noh) Shock test from Ressler+15
+    - 116 MHDSHOCKS                           - relativistic MHD shocks
+    - 117 BATTERYTEST                         - Antonio's test of radiation battery
+    - 118 SEDDRIVENTURBRELEL                  - Driven turbulence with rel. electrons
+    - 119 ADAFCRITRELEL                       - ADAFCRIT + non thermal electrons
+    - 120 RADSHOCKS                           - to measure convergence of radiative shocks
+    - 121 AGNBUBBLE                           - Bubble expansion
+    - 122 TURBKNL                             - 118 modified for KNL testing
+    - 123 HIGHZBHS                            - super-Eddington accretion on high z BHs
+    - 124 NSTORUS                             - super-Eddington accretion on a hard surface
+    - 125 M87                                 - importance of radiation for M87 simulations
+    - 126 SHOCKENTROPY                        - 1D hydro shock to study entropy generation
+    - 127 TDESURFACE                          - shell falling on a BH-surface
+    - 128 TEST_CONV_VEL                       - testing the conv_vel routines
+    - 129 TEST_WAVESPEEDS                     - testing the wavespeeds routines
+    - 130 TEST_EXPLICIT_IMPLICIT              - testing one step of the explicit-implicit cycle
+    - 131 TEST_EXPLICIT_IMPLICIT_FULL         - testing multiple steps of explicit-implicit
+    - 132 MONOPOLE_2D                         - copy of HARMPI 2D monopole test problem
+    - 133 TEST_EXPLICIT_IMPLICIT_2TEMP_RELEL  - testing one step of the explicit-implicit cycle with adafcritrelel
+    - 134 FISHMONC                            - Fishbone & Moncrief torus model: ApJ, 207, 962, 1976
+    - 135 WINDACCRETION
+    - 136 CONTACTELECTRONTEST                 - Contact discontinuity electron heating test
+    - 137 KATOTORUS_TILTED                    - radiative torus initiated like in Kato+2004 with a tilt from BH spin axis
+    - 138 JETCOORDS                           - test jet coordinate system
+    - 139 NSBONDI                             - more neutron star bondi tests
+
+
+
+
+
+
+
+### Questions:
+    - `#define ERADATMMIN  (calc_LTE_EfromT(3.e4)/10*6.62/MASS)`
+    - If this is set too high, the torus is not in hydrostatic
+      equilibrium since torus will take on atm value - What's "atm": answer: atmosphere
+
+    - atm types:
+        - //ambient
+        - // EF: set atmtype = 2
+        - set_hdatmosphere(pp,geom.xxvec,geom.gg,geom.GG,2);
+        - // set_hdatmosphere(pp,geom.xxvec,geom.gg,geom.GG,0);
+
+
+
+### handy
+    - metric.c: 'test_metric' func at the end
+    - metric.c: `calc_g_arb_ana` and `calc_G_arb_ana` have the mathematica cform metric components?
+
+### Meet with David
+    - Topic: koral
+    - Time: Meet anytime
+    - https://us05web.zoom.us/j/81741719127?pwd=eUhsWVdWQklVZ0xKTXE4eTkwVjhMZz09
+    - Meeting ID: 817 4171 9127
+    - Passcode: koral
+
+
+
+### Youtube playlist
+    - https://www.youtube.com/playlist?list=PLHHhj3uwR8rnc0PKyJX6_ZJ1IDjE4RPyl
+
+### Files / books
+    - $MY_NOTES/physics/courses/computational-hydrodynamics.txt
+    - $MY_NOTES/cs/phd-tech/numerical-computing.txt

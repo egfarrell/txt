@@ -1,0 +1,33 @@
+cygwin apt-cyg apt get
+cygwin apt-cyg apt get
+
+Install
+	First install SUBVERSION and WGET through the standard cygwin setup program.
+	Then run the following commands:
+
+	svn --force export http://apt-cyg.googlecode.com/svn/trunk/ /bin/
+	chmod +x /bin/apt-cyg
+
+Examles
+	"to FIND packages matching patterns
+    apt-cyg find <pattern(s)>
+
+	"to INSTALL packages
+    apt-cyg install <package names>
+
+	"to REMOVE packages
+    apt-cyg remove <package names>
+
+	"to UPDATE setup.ini
+    apt-cyg update
+
+	"to SHOW installed packages
+    apt-cyg show
+
+	"to DESCRIBE packages matching patterns
+    apt-cyg describe <pattern(s)>
+
+	"to LOCATE parent packages
+    apt-cyg packageof <commands or files>
+
+

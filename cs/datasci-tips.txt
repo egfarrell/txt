@@ -1,0 +1,271 @@
+> This file is mainly from 2016/17: ONS DataSci years
+
+### HN - power of Data
+    - But for me the fundamental advantage of data is:
+    - Bringing data makes it easy to test and verify assumptions.
+      You are bringing the full package to the table instead of
+      a hard to qualify / quantifiable feeling that often times
+      is not easy to communicate.
+    - The last element on this Data vs Human input: Quite often
+      the limit for algorithms to work perfectly is having all
+      the information available. That is in many situations
+      a real challenge, so the domain knowledge helps to fill in
+      gaps.
+
+    - Answer: I dunno.
+    - Data can easily miss a whole lot of subtlety. Subject
+      knowledge, theory, and intuition can capture much more of
+      that subtlety, at the cost of being more vulnerable to
+      bias.
+    - Making decisions purely based on data misses out a lot. And
+      can still lead to bias, not caused by the decision maker,
+      but by the data gathering process.
+    - In my mind, data exists to detect bias, and illuminate
+      interesting phenomena. But decisions should ultimately be
+      based on in depth knowledge and theory. And leeway should
+      be given for those to be somewhat misaligned to data.
+
+
+### ONS physicist / data scientest CERN
+    - Jason Ward Valtech ONS https://github.com/jjasonward?tab=repositories
+
+### datasette
+    - convert csv to sqlite and host/query on a webpage
+    - source: https://github.com/simonw/datasette
+    - pycon talk: https://www.youtube.com/watch?v=pTr1uLQTJNE
+        - related: first convert a csv to sqlite
+        - https://github.com/simonw/csvs-to-sqlite
+
+### transforming data: "4 Key verbs"
+    - SUBSET:    !
+    - MUTATE:    adding new columns that are functions of existing columns
+    - ARRANGE:   reordering the rows (useful when looking at data)
+    - SUMMARISE: condensing multiple values down to smaller number of values
+
+
+### Admin Data Research Network (ADRN)
+    - new research network!
+    - https://esrc.ukri.org/research/our-research/administrative-data-research-partnership/
+    - https://www.adrn.ac.uk/get-data/catalogue/
+    - The ADRN is designed to enable researchers, both from
+      within government and academics to access linked
+      de-identified government data, to carry out research to
+      benefit society.
+
+### HEP Physics talk: "histo-grammer"
+    - http://histogrammar.org/
+    - "Expressing complex data aggregations with Histogrammar"
+      Jim Pivarski
+    - https://www.youtube.com/watch?v=mB4Chl0ly-g
+    - R, Numpy, Pandas, Pyspark: histogram API's require _all_ of
+      the input data before giving you a histogram
+    - HEP Root: treat histograms as fillable containers.
+    - HEP software: the API assumes the dataset is too big for
+      a single function call. So it's intrinsically single-pass
+      (it can't pre-scan to set bin width or range.)
+    - the aggregators must be "linear monoids"
+
+    - HEP pseudo code:
+        ```
+        h = Histogram (numBins, lowEdge, highEdge)
+        for x in data:
+            h.fill(x)
+        h.plot()
+        ```
+
+### Tip: Start simple
+	- use multi-class logistic regression with regularisation
+
+### Data Cleaning
+    - "One hour cleaning the data gets you 3 times the output of
+      1 hour tuning algorithms"
+
+### Hive
+    - A table in Hive is a HDFS directory inside Hadoop
+    - Partitioned tables have sub-directories, one for each partition
+    - Metastore: makes mapping file structure to a tabular
+      form possible
+    - HCatalog: built on top of the metastore and uses hive
+      DDL. Provides read/write interfaces for Pig/MR.
+      Makes it easier for Pig/MR uses to write data on the
+      grid.
+
+### impala shell
+    impala-shell
+    show tables;
+    shell impala-shell -f test.sql;
+
+### Quote: (Aaron Kimball)
+    - 80% of analytics is sums and averages
+
+### San Diego Coursera Hadoop course
+    - we talked about reliability and we noted that all modules
+      within the HADOOP framework are designed with one
+      fundamental assumption: _hardware fails_.
+
+### "Hive" versus "Impala"
+    - "ETL" - Extract, Transform, Load
+    - "MPP" - Massively Parallel processing
+
+    - Hive: transforms SQL queries into MapReduce or Apache
+      Spark jobs under the hood; great for long-running
+      _ETL_ jobs.
+
+    - Impala, is basically an _MPP_ analytic database on top
+      of Hadoop largely written in C++ for speed: pushes
+      data processing down to local DataNodes, avoiding
+      network bottlenecks.
+
+### Daniela Huppenkothen ML2017
+    - high-dimensional data is unique; simply anonymizing is
+    unsafe!
+
+### Agile HN comment:
+    - AGILE makes sense when your main risk is fine-grained
+      details of user requirements, but not when you have other
+      substantial risks, such as making sure a _statistical
+      algorithm_ is accurate enough.
+
+### Titus talk
+    - HYPOTHESIS driven science versus DATA driven science
+    - we need a _model_ of the data
+    - aging: a *network* effect, not single gene isolated effect
+    - sar 'sysstat' package - monitor cloud VM performance
+
+### RDBMS vs MapReduce 1
+    - RDBMS:
+        - key ideas: relational algebra, physical/logical data
+          independence, indexing
+
+    - MapReduce:
+        - key ideas: fault tolerance, no loading, direct
+          programming on 'in situ' data (don't bother defining
+          a schema)
+
+### RDBMS vs MapReduce 2
+    mapreduce is catching up to RDBMS!
+
+    * traditional RDBMS features
+        - declarative query language         Pig, Hive
+        - schemas                            Hive, pig dryad
+        - logical data independence (views)
+        - caching/materialised views
+        - indexing                           Hbase
+        - algebraic optimisation             Pig (dryad, Hive)
+        - ACID/transactions
+
+    * MapReduce features
+        - high scalability (1000s of machines)
+        - fault tolerance (traditional RDBMS good at recovery)
+        - "one person deployment"
+
+
+### extensions to MapReduce
+    Hive, impala      ---> full SQL on top
+    pig               ---> relational algebra on top
+    ----------------
+    hadoop/mapreduce
+    ----------------
+
+
+### alternative history
+    - Washington lecturer thinks if a _parallel_ open source
+      RDBMS had existed in the early 2000s MapReduce might not
+      have become so popular.
+
+
+### differences Hadoop and SPARK
+    - Two high level differences:
+        1. Spark stores data _in-memory_ whereas Hadoop stores on
+        disk.
+        2. Spark's data storage model, resilient distributed
+        datasets (RDD), uses a clever way of guaranteeing fault
+        tolerance that minimizes network I/O.
+
+    Spark academic paper:
+        > "RDDs achieve fault tolerance through a notion of
+        > lineage: if a partition of an RDD is lost, the RDD has
+        > enough information about how it was derived from other
+        > RDDs to be able to rebuild just that partition."
+
+    - Therefore replication not needed for fault tolerance.
+    - (Hadoop uses replication to achieve fault tolerance)
+
+
+### Apache Spark
+    * improved version of map reduce
+    * if you have _legacy_ SQL queries you can run them
+      unmodified on spark dataframes in the cloud
+
+### difference MapReduce and MPI
+    - For MapReduce, MPI doesn't make sense because it's not
+      reliable: if one process dies, the whole job dies.
+    - This is the main reason MPI is not a great base for
+      MapReduce. MPI is for tightly coupled apps on fast,
+      reliable networks (supercomputers), while MapReduce is
+      designed for running embarrassingly parallel workloads on
+      slow, unreliable hardware
+
+### Amazon EMR
+    * elastic map reduce
+    * basically an ec2 machine with Hadoop/HBASE pre-installed
+
+### HBASE
+    * a NOSQL _random access_ database built on top of HDFS
+    * basically a way to query a large amount of files
+      stored on HDFS in a random like and simple way
+
+### ACID
+    * (A)tomicity   - all parts of a transaction succeed or fail together
+    * (C)onsistency - database state is consistent
+    * (I)solation   - no transaction affects any others (acomplished through locking)
+    * (D)urability  - once a transaction is comitted it wont be lost
+
+
+### handy interesting data science stuff (ONS days)
+    - https://www.theguardian.com/technology/2017/jul/09/everybody-lies-how-google-reveals-darkest-secrets-seth-stephens-davidowitz
+    - https://medium.com/@natekupp/getting-started-the-3-stages-of-data-infrastructure-556dac82e825
+    - http://intranet.ons.statistics.gov.uk/news/what-happens-in-a-datadive-stays-for-public-good/
+    - https://www.ons.gov.uk/methodology/methodologicalpublications/generalmethodology/onsworkingpaperseries/onsmethodologyworkingpaperseriesno11identifyingcaravanhomesinzoopladatajune2017
+    - https://www.datacamp.com/community/tutorials/15-easy-solutions-data-frame-problems-r#gs.xnkWqhg
+    - https://www.ted.com/playlists/479/statistically_speaking
+    - https://github.com/datasciencecampus
+    - https://github.com/ONS-OpenData/Databaker_Walkthrough_1
+    - https://digitalblog.coop.co.uk/2017/05/15/speaking-to-our-members-about-how-their-personal-data-is-used/
+
+    - Support vector machines for missing data: https://www.csie.ntu.edu.tw/~cjlin/libsvm/
+    - Honghai, Feng, et al. "A SVM regression based approach to filling in missing values."
+    - Knowledge-Based Intelligent Information and Engineering
+    - Systems. Springer Berlin/Heidelberg, 2005.
+
+### data engineering
+    -                                              $MY_NOTES/cs/datasci-eng-devops/data-eng-tips.txt
+    - Data engineering - 3 videos - low level      https://www.youtube.com/channel/UCh4W-xpYq9Y2QOFVKLE6lkg/videos
+    - curated list                                 https://www.learndata.engineering/
+    - curated list - DE tools                      https://github.com/mistercrunch/awesome-data-engineering
+    - Another list                                 https://github.com/adilkhash/Data-Engineering-HowTo
+    - udacity data engineering course              https://github.com/nareshk1290/Udacity-Data-Engineering
+    - Kappa/Lambda Architecture for Data Pipelines https://www.youtube.com/channel/UClB4KPy5LkJj1t3SgYVtMOQ
+    - Kappa/Lambda Architecture blog:              http://nathanmarz.com/blog/how-to-beat-the-cap-theorem.html
+    - Kappa/Lambda Architecture blog:              https://www.oreilly.com/radar/questioning-the-lambda-architecture/
+
+
+### Links
+    - Particle Physics "femtocode" declarative query language:  https://www.youtube.com/watch?v=jvt4v2LTGK0
+    - general DataSci info                                      https://www.analyticsvidhya.com/
+    - Stock Market Data Analysis                                https://news.ycombinator.com/item?id=13973790
+    - Catalogue plot styles (datavizcatalogue)                  http://datavizcatalogue.com/
+    - SQL IDE for Excel                                         https://www.querystorm.com/
+    - Whats the Science in Data Science (credibility crisis)    https://www.youtube.com/watch?v=kTo16ieMCi8
+    - DataScience/Maths/Physics courses                         https://www.bootstrapworld.org/materials/fall2019/courses/data-science/en-us/
+    - Altair Data Visualization Curriculum                      https://github.com/uwdata/visualization-curriculum
+    - Best practices for sources-lake-warehouse etc             https://news.ycombinator.com/item?id=21411893
+    - Kafka - how to really use it                              https://www.youtube.com/watch?v=sVm2G6Ci2f8
+    - Probabalistic Programming and bayesian                    https://news.ycombinator.com/item?id=22029823
+    - Mining Massive Datasets lectures 1                        https://www.youtube.com/playlist?list=PLLssT5z_DsK9JDLcT8T62VtzwyW9LNepV
+    - Mining Massive Datasets HN discussion                     https://news.ycombinator.com/item?id=22257191
+    - Mining Massive Datasets book errata                       http://infolab.stanford.edu/~ullman/mmds/errata-v3.html
+    - titus brown - awesome big data structures talk (pinboard) https://www.slideshare.net/c.titus.brown/2013-py-con-awesome-big-data-algorithms
+    - berkeley data8 course (see pinboard)                      http://data8.org/
+
+

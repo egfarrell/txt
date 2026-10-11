@@ -1,0 +1,681 @@
+Classical Mechanics
+
+
+
+
+Course: First Steps in Symplectic Dynamics 
+    - Helmut Hofer IAS
+    - https://www.youtube.com/watch?v=qTYANXC0h-c
+    - Modern dynamical systems with sympletic geometry have their
+      origin with Poincaré
+    -
+
+### "Canonical Transformations"
+    - are coordinate changes that _preserve_ Hamilton’s
+      equations.
+
+### Interesting: F=ma
+    - $MY_NOTES/physics/spacetime/Lev-Okun-mass.txt
+    - The main argument against "relativistic mass" (`M`) is that
+      it is not a consistent measure of inertia. The classical
+      formula for force, `F = M * a`, is only valid when the
+      force (`F`) is parallel to the velocity (`v`). 
+    - If the force is perpendicular to the velocity (e.g., an
+      electron circling in a magnetic field), the particle's
+      resistance to acceleration is a different value, meaning
+      a single, universal velocity-dependent "relativistic mass"
+      does not exist to describe inertia IN ALL DIRECTIONS.
+
+### Simple Questions
+    - $MY_NOTES/physics/metaphysics/wittgenstein-two-philosophies.txt
+    - It's a question so obvious most people don't bother to ask
+      it. Like Newton asking why the planets didn't charge off in
+      ALL DIRECTIONS.
+
+### Newton's Bucket
+    - two competing forces: gravity and centrifugal force
+    - $MY_NOTES/physics/CM/Newtons-Bucket.txt
+
+### Inertia: another point
+    - (Ah I forgot intertial motion is supposed to be FORCE FREE)
+    - Similarly, Poincare viewed the Law of Inertia as
+      a `convention` or `definition` stipulating that uniform,
+      straight-line motion was the criterion for force-free
+      motion.
+        - $MY_NOTES/physics/metaphysics/Cushing-philosophical-concepts.txt
+
+
+### Origins of Least action in dynamics
+    - $MY_NOTES/physics/CM/Sklar-foundations-dynamics.txt
+    - key: balancing 'moments of forces' as well...
+    - The second pattern of explanation in dynamics originated
+      with James Bernoulli’s work on the compound pendulum.
+        - Here the resources developed in _statics_ from ancient
+          Greece onward are deployed for dynamics.
+        - The principle of balancing, not just forces at a point,
+          but `moments of forces` as well is crucial in statics.
+        - Also crucial is the observation that:
+            - the ratios of the lever-arm of the moments
+            - ARE PROPORTIONAL TO:
+            - the ratios of the “virtual motions” of points when
+              the system is slightly displaced from static
+              equilibrium.
+        - Bernoulli’s great contribution is to generalize this to
+          _dynamics_ by adding the negative force of `mass
+          x acceleration` to the static forces for systems in
+          motion.
+
+
+### 'Absolute' time
+    - From an orthodox Newtonian standpoint, we can think of
+      "absolute time" differently from the way Newton did.
+        - Instead of talking about "time itself" "flowing
+          equably" etc, just take Newton as having shown there is
+          a deep _preferred way_ of scaling time intervals.
+        - Take any isolated system. Refer its motion to an
+          inertial frame. Then there'll be a way of scaling time
+          that radically simplifies its dynamical equations: 
+            - the scaling that is one of the preferred Newtonian
+              measures of lapse of time.
+        - It is a VERY DEEP FACT ABOUT THE WORLD, then, that the
+          preferred time scalings for each of the isolated
+          systems are all linearly related to one another.
+          Absolute time for one system is absolute time for any
+          other.
+
+
+### What is 'space' for modern people?
+    - $MY_NOTES/physics/CM/Sklar-foundations-dynamics.txt
+    - An object accelerated wrt space itself, for Newton, and wrt
+      `inertial frames`, for a neo-Newtonian, is now thought of
+      as having just a monadic quantity of absolute acceleration,
+      rather than the magnitude of some relational feature wrt
+      space or the inertial frames of spacetime.
+    - (So `inertial frames` are the new 'absolute space' for
+      neo-newtonians?)
+
+
+### Implict assertions of the 2nd Law
+    - $MY_NOTES/physics/CM/Nielson-Newtons-2nd-law.txt
+    - Putting it in somewhat fuzzier terms, `F = ma` derives its
+      power from the (implicit) assertion there's a simple
+      universal force law that lets us figure out `F` for
+      a particular CONFIGURATION of matter.
+    - And so the configuration of matter completely determines
+      the `acceleration` of a test particle. 
+    - There is no a-priori reason this ought to be true. It’s an
+      absolutely incredible fact of nature.
+
+
+### Trajectory
+    - Trajectory of the object: the specific path described by
+      a solution.
+
+### Hamiltonian Complex conjugate
+    - Gelfand:
+    - They make no mention of the `Hamiltonian` as the convex
+      conjugate functional of the Lagrangian. (!)
+        - $MY_NOTES/maths/analysis/Calculus-of-Variations-Variational.txt
+
+### HN: Interesting: Action: not full story?
+    - $MY_NOTES/physics/CM/Schrodinger-eqn-from-CM.txt
+    - comment:
+        - Least action is a nice, unifying principle, but to me
+          it strongly hints that our formalisms don't capture the
+          full picture.
+    - ASIDE:
+        - someone said the 'action' is calculated in the phase
+          space??
+    - ASIDE:
+        - "Energy is whatever gets minimised in a Newtonian
+          system at equilibrium." No!
+        - For what it's worth, that's only for the stable static
+          equilibria of frictionless systems without air
+          resistance.
+    - ASIDE:
+        - I think no matter how many Lagrangians we integrate or
+          variational calculations we perform, we'll probably
+          never gain a better intuition for action beyond "The
+          Thing That Explains A Lot Of Seemingly Unrelated
+          Physics When It's Minimized."
+        - To me, it's both deeply unsatisfying for its abstract
+          and unintuitive nature, but also deeply profound for
+          its universal explanatory power.
+        - tldr; when it comes to action, reject real world feels
+          and embrace mathematical structure.
+    - ASIDE
+        - The path from `F=ma` to Hamilton's stationary action
+          goes in two stages:
+            - 1) Derivation of the work-energy theorem from F=ma
+            - 2) Demonstration that in cases where the
+              work-energy theorem holds, Hamilton's stationary
+              action will also hold good.
+        - Interesting: Within the scope of Hamilton's stationary
+          action there are also classes of cases such that the
+          true trajectory corresponds to a _maximum_ of
+          Hamilton's action.
+        - The demonstration shows for which classes of cases the
+          stationary point corresponds to a minimum of Hamilton's
+          action, and which to a maximum.
+        - The point is: it's not about minimization. The actual
+          criterion is common both:
+            - As you sweep out variation: in the variation space
+              the true trajectory is the one with the property
+              that the `derivative` of Hamilton's action is zero.
+            - The interactive diagrams illustrate why that
+              property holds good (it follows from the
+              work-energy theorem).
+        - Hamilton's stationary action is a mathematical
+          property. When the derivative of the kinetic energy
+          matches the derivative of the potential energy: then
+          the derivative of Hamilton's action is zero.
+
+
+### HN: History of 'action'. 'Function S'
+    - $MY_NOTES/physics/CM/Schrodinger-eqn-from-CM.txt
+    - Hamilton did not discover any "action". Like everybody
+      since Maupertuis, Hamilton used "action" with the meaning
+      "accumulated living force".
+    - "Living force" is a translation of the Latin "vis viva",
+      which is the old name of kinetic energy.
+        - ("kinetic energy" was only introduced in 1854 by
+          William Thomson; for a short time before 1854 the term
+          "actual energy" was used instead of "kinetic energy"
+          and was opposed to "potential energy", as defined by
+          Rankine in 1853).
+    - So "action", in the sense introduced by Maupertuis and used
+      by everybody till the 20th century, meant integral of the
+      kinetic energy (actually the 'living force' was `mv^2`, so
+      double the kinetic energy).
+    - Hamilton introduced a new physical quantity, never used by
+      anyone before him, which he named `function S`. Unlike the
+      principle of minimum action, which is false except for
+      certain restricted cases, Hamilton's variational principle
+      of the `function S` is always true, including in
+      relativistic mechanics and QM.
+    - Nowadays Hamilton's "function S" is usually called
+      `Hamilton's action`, because it has the same measurement
+      unit like the traditional action, even if it is a DIFFERENT
+      PHYSICAL QUANTITY. 
+        - "Hamilton's" is frequently dropped, which does not
+          cause much ambiguity, because now the TRADITIONAL
+          "ACTION" is SELDOM MENTIONED.
+    - Nevertheless, whenever history is discussed, a clear
+      distinction between "action" and Hamilton's `function S`
+      should be maintained, otherwise it's impossible to
+      understand the evolution of physics.
+    - Hamilton discovered his `function S` by starting from
+      Lagrange's system of equations and finding a way to deduce
+      them from a simpler principle.
+    - Although Lagrange, along with Euler, discovered the
+      Euler-Lagrange equations for variational problems early in
+      his career, he didn’t apply any variational techniques when
+      later formulating his equations of dynamics. 
+        - In fact, he dismissed the principle of minimum action
+          as rarely useful. As a result, it was Hamilton who
+          eventually discovered the connection between these
+          variational principles and dynamics.
+    - While Lagrange was the first to use the correct definitions
+      for kinetic energy and potential energy, he just named them
+      `fonction T` and `fonction V`, similarly to Hamilton's use
+      of just `function S`.
+
+### Hamilton and Lagrangian not equivalent?
+    - $MY_NOTES/physics/CM/cambridge_cm.txt
+    - Part 1 will survey the history and philosophy of CM. We
+      introduce the Lagrangian & Hamiltonian descriptions before
+      describing the sense in which they describe the _same_
+      theory. (under appropriate conditions)
+    - We'll also consider recent work that examines the notion
+      that Lagrangian and Hamiltonian descriptions are
+      _non-isomorphic_.
+    - Also some striking claims:
+        1. Hamiltonian GR lacks real change,
+        2. Observables in Hamiltonian GR must be integrated over
+        the universe. But how does one get from a Lagrangian to
+        a Hamiltonian if the Lagrangian DOESN'T PERMIT a `Legendre
+        transformation`,
+            - as electromagnetism,
+            - Yang-Mills (weak and strong nuclear forces), and
+            - GR do not?
+
+
+
+### Tennis Racket Effect
+    - Dzhanibekov effect.
+    - Intermediate Axis theorem
+    - Key: Need 3 different moments of inertia around 3 different axes
+    - https://www.youtube.com/watch?v=1VPfZ_XzisU
+    - $MY_NOTES/physics/important-physics-effects.txt
+    - If you throw any 3D object with a spin, then the spin
+      around the shortest and longest axes will be stable, but
+      around the intermediate third axis won't be.
+    - The typical example for the spinning object is a tennis
+      racket, hence the name. It’s also known as the intermediate
+      axis theorem or the Dzhanibekov effect.
+    - You see a beautiful illustration of the instability in this
+      little clip from the International Space Station.
+    - Images:
+        - $MY_IMAGES/physics/Dzhanibekov-effect.jpg
+        - $MY_IMAGES/physics/Dzhanibekov-effect-2.jpg
+        - $MY_IMAGES/physics/Dzhanibekov-effect-3.jpg
+        - $MY_IMAGES/physics/Dzhanibekov-effect-4.jpg
+
+
+
+### Key: Noethers theorem (Susskind)
+    - From my old ipad pdf:
+        - $MY_BOOKS/Physics/CM/Susskind-Noethers-theorem.pdf
+
+    - CONSERVATION     ->   INVARIANCE          ->  UNDERLYING SYMMETRY
+    - -----------------------------------------------------------------
+    - Energy           ->   time translation    ->  homogeneity time
+    - Linear Momentum  ->   space translation   ->  homogeneity space
+    - Angular Momentum ->   rotations           ->  isotropy space
+
+    - Bala mentions it too (backwards):
+        - $MY_NOTES/physics/courses/bala/Bala-Dynamics.txt
+        - The role of symmetries is explained, and also the
+          connection between symmetry, invariance and
+          conservation principles.
+
+
+### Interesting
+    - Real Numbers are the 'Hidden Variables' of Classical
+      Mechanics. http://arxiv.org/abs/1909.04514
+    - Do scientific theories limit human knowledge? In other
+      words, are there physical variables hidden by essence
+      forever?
+    - We argue for a negative answer and illustrate our point on
+      chaotic classical dynamical systems. We emphasize parallels
+      with quantum theory and conclude that the common real
+      numbers are, de facto, the hidden variables of classical
+      physics.
+    - Consequently, real numbers should not be considered
+      "physically real" and classical mechanics, like quantum
+      physics, is indeterministic.
+
+
+### When a velocity changes...
+    - Why do we care how quickly a VELOCITY changes?
+    - Because an object's velocity changes whenever a `FORCE`
+      acts on it.
+    - Describing how objects react to FORCES is what CM (or
+      almost all of physics) is about.
+
+### Difference configuration space, phase space
+    - https://physics.stackexchange.com/questions/185612/what-is-the-difference-between-configuration-space-and-phase-space
+    - key:
+        - Configuration space:    positions
+        - Velocity phase space:   positions and velocities
+        - (Momentum) phase space: positions and momenta
+    - Technical:
+        - Lagrangians are defined over the `tangent bundle` to
+          the configuration space. (below: the tangent bundle is
+          actually the velocity space phase space?)
+        - The (momentum?) phase space is just the `co-tangent
+          bundle` to the configuration space.
+        - The BRIDGE between the two is the natural symplectic
+          structure, and the relation between the Lagrangian and
+          Hamiltonian is a Legendre transform.
+    - Better:
+        - Configuration space is the possible `POSITIONS` of the
+          mechanical system.
+        - The states of `motion`, eg. velocities/momenta are NOT
+          part of the configuration space.
+
+        - The configuration space (especially when constraits are
+          present) is modelled as some real, n-dimensional
+          differential manifold, denoted as `C`
+
+        - The velocity phase space is the set of all "positions"
+          and "velocities" together. 
+            - If `C` is the configuration space, then the
+              velocity phase space naturally has the structure of
+              the tangent bundle over the configuration space,
+              `TC`.
+            - For a point `p ∈ C`, then the elements of the fiber
+              `TpC` are the possible generalized velocities of
+              the system in the "`p` configuration".
+
+        - Since the Lagrangian depends on positions AND
+          velocities, it is a scalar field on `TC`
+
+        - The momentum phase space, which is usually called the
+          phase space is the COTANGENT bundle `T*C`. In this
+          case, the fiber `Tp*C` is the set of all possible
+          MOMENTA of the system in the "`p` configuration".
+
+    - Jakob
+        - By the `configuration` of our system, we mean
+          a complete description of all locations.
+        - In contrast, the `state` of a system corresponds to
+          a complete description of all locations AND all
+          momenta.
+
+
+### Angular momentum (spinning)
+    - Formula: `L = mass x velocity x radius`
+    - Angular momentum is the total "rotational oomph" an object
+      has behind it. While Linear momentum quantifies how hard it
+      is to stop an object using a specific force, angular
+      momentum tells us how hard it is to stop it _SPINNING_.
+    - 3 aspects to angular momentum:
+        - `MASS`: 
+            - Definitely harder to stop the rotation of an iron
+              dumbbell than a Styrofoam dumbbell.
+        - `SPEED`: 
+            - harder to stop a fast-spinning dumbbell
+        - `RADIUS`: 
+            - more subtle: harder to stop a long dumbbell from
+              spinning
+
+### Marsden: Hamiltonian
+    - ... the merger of QM and GR remains one of the key problems
+      of _mechanics_.
+    - In fact, the methods of mechanics and _symmetry_ are
+      important ingredients in the developments of string theory
+      that has attempted this merger.
+
+### Waves in Newtonian mechanics?
+    - $MY_NOTES/physics/QM/Constructing-reality-marburger.txt
+    - There is a fascinating hidden _wave-like aspect_ of
+      Newtonian mechanics that has a long history and beautiful
+      mathematical expression which, unfortunately, I can't
+      recount here. (Link to QM)
+    - We recognize it with _hindsight_ in the work of William
+      Hamilton (1805–65), and it climaxed in Schrödinger’s
+      discovery of a wave equation for matter.
+    - Link Optics and Mechanics
+        - Schrödinger devoted his 1933 Nobel acceptance speech to
+          the relation _between optics and particle motion_.
+        - $MY_BOOKS/Physics/QM/Schrodinger-nobel-talk-wave-particle.pdf
+    - HN: optics / mechanics link:
+        - The Schrödinger equation emerges from CM most closely
+          from the Hamilton-Jacobi framework (well that's a bit
+          subjective). It was here that Schrödinger saw the
+          biggest connection to classical dynamics (he saw the
+          connection in hindsight, because he guessed it first).
+        - This is linked to the optic-mechanical relation that
+          _ABSTRACTS_ mechanics so much that it becomes
+          comparable to optics.
+            - Hamilton Jacobi theory:
+              https://en.m.wikipedia.org/wiki/Hamilton%E2%80%93Jacobi_equation
+                - The `Hamilton-Jacobi` equation, is an
+                  alternative formulation of CM, equivalent to
+                  other formulations such as Newton's laws,
+                  Lagrangian mechanics and Hamiltonian mechanics.
+                - The Hamilton–Jacobi equation is a formulation
+                  where the MOTION of a particle can be
+                  represented as a `wave`!
+                - It sort of fulfilled a long-held goal of
+                  physics (dating at least to Johann Bernoulli in
+                  the 18th century) of finding an analogy between
+                  the propagation of light and the motion of
+                  a particle. 
+                - The wave equation followed by mechanical
+                  systems is similar to Schrödinger's equation,
+                  but not identical to it. For this reason, the
+                  Hamilton-Jacobi equation is considered the
+                  "closest approach" of classical mechanics to
+                  QM.
+                - The qualitative form of this connection is
+                  called Hamilton's optico-mechanical analogy.
+                - Optic-mechanical analogy:
+                  https://en.m.wikipedia.org/wiki/Hamilton%27s_optico-mechanical_analogy
+                - Hamilton's optico-mechanical analogy is
+                  a conceptual parallel between trajectories in
+                  classical mechanics and `wavefronts` in optics.
+
+            - Schrödinger equation from Hamilton-Jacobi theory:
+              $MY_BOOKS/Physics/QM/Schrodinger-Optics-Mechanics-QM.pdf
+
+
+### Hamilton's analogy
+    - $MY_NOTES/physics/CM/Hamiltons-Analogy.txt
+ 
+
+### Post-Newton: 3 developmental streams
+    - 1ST STREAM: "NEWTONIAN"
+        - (useful for continua & rigid bodies)
+        - preferred state of motion: inertial etc but two new
+          additions to Newton:
+            - `infinitesimal`:
+                - the fundamental `F=ma` can be applied even to
+                  infinitesimal parts of a system.
+                - (This allows dynamics to be applied to continua
+                  e.g. fluids in motion)
+            - `Rotation`:
+                - there can be unchanging constant angular
+                  rotation about a fixed axis when no torques
+                  exist. (analogous to uniform inertial motion
+                  when no forces are present)
+                - and corresponding to `f=ma` there must be
+                  another fundamental equation :
+                    - applied torque = (moment of inertia)
+                                       * (angular acceleration)
+                - "moment of inertia" takes the place of inertial
+                  mass
+                - So, the principle of conservation of momentum
+                  must be extended to include conservation of
+                  angular momentum
+            - These two additions allow one to deal with the
+              dynamics of rigid bodies and the dynamics of
+              continua.
+
+    - 2ND STREAM: BERNOULLI / VIRTUAL WORK
+        - (useful for constraints)
+        - The second developmental stream has its origins in
+          a wonderful generalization by James Bernoulli of an
+          important principle of statics: the principle of
+          virtual work.
+        - Starting from an attempt to find a general method for
+          dealing with the problem of the _compound pendulum_,
+          James Bernoulli realized that by adding to the usual
+          forces of statics, a kind of “negative dynamical force”
+          whose form is taken from Newton’s Second Law, ie `−
+          ma`, a new general dynamical principle can be
+          uncovered.
+        - Just like the development of the Newtonian mode, it was
+          realised that along with forces, moments of forces,
+          (ie. forces multiplied by lever arms), must be taken
+          into account in solving dynamical problems.
+        - In this mode, this insight is accounted for by the fact
+          that the static principle of virtual work was already
+          a principle generalized from the "laws of the lever"
+          where the balance of moments was realized to be
+          essential in finding static equilibria, along with the
+          balance of forces.
+        - The insights of Bernoulli were expanded by d’Alembert
+          (whose name became attached to the general method by
+          history), and later fully generalized by Lagrange.
+        - In the hands of Lagrange this stream became a general
+          and systematic method for dealing with an important
+          class of dynamical problems, those where the motion of
+          a system is _CONSTRAINED_ and we want to solve the
+          dynamics without becoming stuck in the difficult task
+          of discovering the magnitudes and directions of all the
+          forces of _constraint_.
+
+
+    - 3rd STREAM: 'LEAST ACTION'
+        - The third developmental stream has the most curious
+          origin of all. The crucial hint for finding a new
+          fundamental dynamical postulate came from outside of
+          dynamics. It came from optics, the theory of the light
+          propagation.
+        - In Alexandria, Hero noted that one could account for
+          the simple law of reflection of light (that angles of
+          incidence and reflection were equal), by noting that
+          the path taken by light from the point of origin to
+          that of reception was _shorter_ than any other path in
+          which the reflecting surface was met.
+        - In the 16th century, Fermat marvelously generalized
+          this into a principle of "least time" for the
+          propagation of light from which the Snell–Descartes law
+          of refraction could be derived.
+        - It was the genius of Maupertuis to see that an
+          analogous principle, later to be called that of least
+          action, could provide a new foundation for dynamics.
+        - Euler refined Maupertuis' work, leading to the first in
+          a series of formulations for dynamics (and later
+          theories). These formulations stated that, in
+          a process, a key quantity must reach an extreme value
+          (maximum or minimum) along the actual path, compared to
+          other possible paths.
+    - Each path takes its own approach to the fundamental
+      concepts and postulates on which dynamics is grounded.
+    - Each path also provides new technical methods for solving
+      particular dynamical problems.
+    - And the three modes of developing dynamics are by no means
+      entirely independent of one another. Each program avails
+      itself of insights developed in the other approaches.
+
+### Conserved quantity
+    - Mathematically, a conserved quantity is something with
+      a vanishing rate of change.
+        - e.g. `dE / dt = 0`
+    - (Never thought of it like that... always thought of it as
+      a number that doesnt change.)
+
+### Legendre Transform
+    - The _connection_ between the Hamiltonian and Lagrangian
+      formulations is given by the Legendre transform.
+
+### Matter and Motion
+    - p 41: the third law of motion is seen to be equivalent to
+      the statement that all force is of the nature of _stress_
+
+### Central Forces: Conservative / Spherical Symmetry
+    - 3 ideas:
+        - 'central force'
+        - 'spherical symmetry'
+        - 'conservative'
+    - IF a (central?) force only depends on `r`, the force field
+      is said to have a "spherical symmetry".
+        - On the other hand, a central force may or may not be
+          conservative ...
+        - Mar 2023: Ah... a central force may not have spherical
+          symmetry?
+            - Yes: from Wikipedia
+            - Not all central force fields are conservative or
+              spherically symmetric. However, a central force is
+              conservative _if and only if_ it is spherically
+              symmetric or rotationally invariant.
+
+            - Aside: The phrase "if and only if" ("iff")
+              indicates a bidirectional relationship, meaning
+              both statements are true:
+                - If a central force is conservative, then it
+                  must be spherically symmetric (or rotationally
+                  invariant).
+                - If a central force is spherically symmetric (or
+                  rotationally invariant), then it must be
+                  conservative.
+            - So, the phrase "if and only if" establishes that
+              a conservative force implies spherical symmetry,
+              and spherical symmetry implies a conservative
+              force.
+
+    - We shall now prove these two properties are correlated:
+        - if a field of central forces has spherical symmetry,
+          the force is conservative
+        - and vice versa:
+        - if a central field of force is conservative it
+          possesses spherical symmetry.
+    - Question: what is a "conservative force"?
+        - ... results from an underlying potential.
+        - Answers: check $MY_NOTES/physics/phy-tips.md
+        - (Jakob: Origin of all fundamental forces)
+    - Also: central force implies angular momentum of any
+      orbiting particle is conserved.
+
+### John Baez: Invese Cube Force Law??
+    - $MY_IMAGES/physics/misc/newton_inverse_cube_law_dont_understand.gif
+    - $MY_IMAGES/physics/misc/newton_inverse_cube_law.gif
+    - $MY_BOOKS/Physics/CM/Baez-Inverse-Cube-Force-Law.pdf
+    - https://en.wikipedia.org/wiki/Newton's_theorem_of_revolving_orbits
+
+### F=ma? Euler or Newton
+    - Michael Nielson: ./Nielson-Newtons-2nd-law.txt
+    - We are taught the easier parts of rational mechanics from
+      the Bernoullis, Euler, etc
+        - ... NOT the primitive mechanics of Newton ...
+    - Indeed in 1750, when Euler published the general vector
+      equation `F=ma ` he announced it as "a new principle of
+      mechanics;" as the axiom which 'includes all the laws of
+      mechanics'".
+    - Whereas today this is considered the defining emblem of
+      "Newtonian" mechanics.
+    - "The modern student may find it hard to understand how
+      sixty years of experience with special cases had to follow
+      [the Principia] before this simple conclusion was seen. (A
+      conclusion which students are taught to accept
+      unquestioningly in first-year physics.)
+    - No-one [during these 60 years] doubted the correctness of
+      'Newton's second law', at least as a rule for
+      problem-solving, but what no-one saw, until it was shown,
+      was that among all the various mechanical principles then
+      used, it was the most general one:
+        - It applies to every part of every system, and more than
+          this, it suffices to get all the equations determining
+          the motion of many systems."
+        - "It is an incontestable fact that more than sixty years
+          of research using more complicated methods even for
+          rather simple problems took place before this 'new
+          principle' was seen."
+    - But this isn't all. Euler soon changed his mind and reached
+      the conclusion that his "new principle" didn't in fact
+      include "all the laws of mechanics".
+        - Rather, the law of `moment of momentum` must be
+          considered an independent, additional law, reducible to
+          `F=ma` only in special cases:
+    - "The tenet that Newton's Laws or the 'Newtonian' equations
+      in any of their forms suffice, can be held only by those
+      who limit their attention to mass-points, rigid bodies, and
+      certain other special systems. ...
+    - But in elasticity, Newton's laws never have been and never
+      will be sufficient";
+        - instead "everyone in the 18th century who studied
+          elasticity problems invoked the PRINCIPLE OF MOMENTS"
+          which Euler "laid down ... as fundamental and
+          independent".
+
+
+### Discussion about F=ma
+    - https://link.springer.com/article/10.1007/s00407-019-00242-y
+    - "The Principia’s 2nd law (as Newton understood it) from
+      Galileo to Laplace"
+    - Newton regarded his 2nd law of motion as a fundamental
+      axiom of mechanics.
+    - Yet the major works that came after the Principia, those
+      treatises on the foundations of mechanics in the eighteenth
+      century; by Varignon, Hermann, Euler, Maclaurin,
+      d’Alembert, Lagrange, and Laplace — do not cite or discuss
+      the Principia’s 2nd law.
+    - Nevertheless, the present study shows that all these
+      scientists do in fact assume the principle that the
+      Principia’s second law asserts as a fundamental axiom in
+      their mechanics. (For what that 2nd law asserts, we rely on
+      Newton’s own testimony.)
+    - Some, like Varignon and Hermann, assume the axiom
+      implicitly, apparently unaware that any assumption is being
+      made, while others, like Maclaurin and Euler, assume the
+      axiom EXPLICITLY, apparently unaware that the assertion
+      assumed is the 2nd law as Newton himself understood it.
+    - But in every case, these scientists employ the principle
+      asserted by the Principia’s second law while being unaware
+      that they should be citing Neutonus, Prin., Phil. Nat.
+      Math., Lex II.
+
+### Classical Mechanics Books
+    - Lectures on Symplectic Geometry           (Cannas da Silva)
+    - Intro. to Symplectic Topology             (McDuff & Salamon)
+    - Lectures on Dynamical Systems             (Zehnder)
+    - Hamiltonian Systems & Their Integrability (Audin & Babbit)
+
+### Links
+    - Newtons Principia Central Argument, Original reasoning                                       https://greenlion.com/books/NewtonPrincipia.html
+    - 3 body problem: 1000s solutions found                                                        https://news.ycombinator.com/item?id=37956374
+	- Schrödinger equation emerges mathematically from CM                                          https://news.ycombinator.com/item?id=38735725
+    - Paper: Pseudo-Quantum Triad: Schrödinger's Equation, Uncertainty Principle, Heisenberg Group https://iopscience.iop.org/article/10.1088/1742-6596/361/1/012015

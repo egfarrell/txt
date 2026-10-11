@@ -1,0 +1,114 @@
+software carpentry basics
+software carpentry basics
+
+
+No need to explictly declare variables in python.
+Python doesnt have constants. By convention, constants are in CAPITALS.
+
+Variables do not have to have a DATA TYPE!
+planet = "pluto"
+planet = 9
+These two statments are ok!
+
+There is automatic garbage collection.
+('pluto' not refered to anymore so memory reclaimed)
+
+However VALUES do have types.
+
+Can multiply but not add a string (str) and an integer (int).
+string = "two"
+number = 3
+print string * number OK!
+print string + number ERROR!
+
+"+" used for strings too. Concatonate.
+"*" used for strings too. Repeat string.
+
+=   :   assignment
+==  :   equality
+
+Has while loops. Test for zero case in a while loop too.
+Has if;elif;else syntax for if statements.
+The else clause is optional.
+
+Collections allow storage of many values together.
+Most popular python collection is a LIST. Like an ARRAY in c or java.
+Created using square brackets and commas. ['He','Ne','Ar','K']
+Starts at index 0.
+
+LISTS are mutable - can change after created.
+Can store values of many different data types, mixture strings, integers, other lists!
+In "C", all elements of an array must have the same data type.
+
+Useful list methods:
+gases.APPEND('He')
+gases.COUNT('He')
+gases.INSERT(index#, 'He')
+
+gases.SORT
+gases.REVERSE
+perform their action on the list IN PLACE and return NONE. People often expect these methods to actually return the sorted/reversed list.
+
+If 'He' in gases
+This construct returns TRUE or FALSE. Good way of searching a list.
+
+Range function constructs SEQUENCES of integers
+range (start, up to not including, step size)
+
+READING FROM A FILE
+objFile = open('haiku.txt', 'r')
+1. allData = objFile.read()
+2. Byte64Chunk = objFile.read(64); while Byte64Chunk != ''
+3. line = objFile.readline(); while line != ''
+4. AllLinesList = objFile.readlines(); for line in AllLinesList
+5. for line in objFile # common python idiom
+
+objFile = open('haiku.txt', 'w')
+print >> objFile, 'elements'
+for gas in gases
+    print >> objFile, gas
+objFile.close()
+# using print is handier cos it sticks a newline char (\n) at line end.
+
+Strings are LISTS of characters.
+no "character" data type. A character is a string of length one.
+Strings are immutable and CANNOT be changed in place.
+
+Use triple quotes for multi-line strings.
+string.find() returns first occurance of character in string and -1 if NOT FOUND!
+
+Aliases
+OK if data is immutable. But with lists, aliasing can cause subltle side effects.
+
+Functions... def AND return
+Each function call creates a new STACK FRAME.
+If no explicit return statment, python returns NONE.
+Default parameter values: def adjust(value, amount=2.0): return value*amount
+Parameters with a default value MUST come after parameters without any.
+
+When write functions? Human memory only comfortably holds 7 things.
+Design functions in a "top down" style.
+
+Can treat functions as variables, just like lisp!!!! Very powerful.
+
+Higher order functions (meta functions) are functions that operate on other functions.
+Common in maths: integration for examples is a function that takes some other function and two end points as parameters.
+Wilson gave examples of map, reduce and filter...
+
+Command line arguments:
+sys.argv[0] = module name
+sys.argv[1] = first argument to module...
+
+Polite Python
+Put docstrings at top of module and after every function definition
+
+Unicode strings: u'some string'
+Notice the little "u" in front....
+
+enumerate produces (index, value) pairs.
+see enumerateExample.py
+
+
+
+
+

@@ -1,0 +1,606 @@
+
+### Background: Peres paper:
+    - $MY_NOTES/physics/QM/Peres-unperformed.txt
+
+# SETUP: Tim Maudlin autobiography
+    - $MY_NOTES/physics/QM/Autobiography-Maudlin.txt
+    - Curiously, Peres himself doesn't deploy the argument this
+      way. He has no quarrel with Bell or with his reasoning. At
+      the end of this paper, Peres presents the reader with two
+      stark choices. Here's the final section, titled “Discussion
+      and Outlook”:
+
+        > There are TWO possible attitudes in the face of these
+        > results. One is to say that it is illegitimate to
+        > speculate about unperformed experiments. In brief “Thou
+        > shalt not think.” Physics is then free from many
+        > epistemological difficulties. For instance, it is not
+        > possible to formulate the EPR paradox. [BTW this last
+        > part is false]
+
+        > Alternatively, for those who cannot refrain from
+        > thinking, we can abandon the assumption that the
+        > results of measurements by A are independent of what is
+        > being done by B. In other words, we should not have
+        > written r_jα, but rather r_jα(βγδ…), where the
+        > additional subscripts γ, δ, … refer to possible
+        > experiments on anything else in the world that has been
+        > correlated (read: entangled) with the history of the
+        > j-th particle.
+
+        > The conclusion is surprising. Physicists are used to
+        > thinking in terms of isolated systems whose behavior is
+        > independent of what happens in the rest of the world
+        > (unlike social scientists, who cannot isolate the
+        > subject of their study from its environment). Bell’s
+        > theorem tells us that such a separation is impossible
+        > for individual experiments, although it still holds for
+        > averages:
+
+        `(1/N) Σ_j r_jα(βγδ…) = 0`
+
+        > and
+
+        `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+
+        > independently of γ, δ, etc. As it often happens, the
+        > subtlety of nature beggars the human imagination.
+
+
+### Me:
+    - Could u explain the final two summation formuals?
+    - Why is this conclusion is surprising?
+
+
+### What r_jα means, and why Peres modifies it
+
+- In Bell-type experiments, `r_jα` denotes the result (`±1`, say)
+  of measuring particle `j` along detector setting `α`. In
+  a local theory, this result is assumed to depend only on the
+  state of particle `j` and the local setting `α`.
+
+- Peres’s key move: if you refuse to talk about unperformed
+  experiments, but still want to reproduce Bell correlations,
+  then you must give up the idea that measurement outcomes are
+  INDEPENDENT of distant settings. So `r_jα` should really be
+  written as `r_jα(βγδ…)`, meaning:
+
+    - the result at `A` with setting `α` may depend on what
+      measurement is performed at `B` (setting `β`), and even on
+      other measurements `γ, δ,` … performed anywhere else in the
+      universe that is correlated or entangled with particle `j`.
+
+- This is explicit non-local contextuality:
+    - outcomes are not properties of ISOLATED subsystems but of
+      the entire experimental context (global).
+
+### First average
+
+- `(1/N) Σ_j r_jα(βγδ…) = 0`
+
+- This says: if you fix `α` (measurement setting, direction along
+  which Alice measures spin) and average the outcomes at `A` over
+  many runs `j`, the mean result is zero.
+
+- Physically, this corresponds to the fact that for a singlet
+  state, each local measurement by itself looks completely
+  random: half the time `+1`, half `−1`.
+    - Importantly, this average is zero regardless of what is
+      done elsewhere — regardless of `β`, `γ`, `δ`, etc.
+
+- So even though INDIVIDUAL outcomes may depend non-locally on
+  distant settings, the statistics at A alone do not reveal this
+  dependence.
+
+- This is why QM respects no-signalling: you cannot use these
+  correlations to send messages.
+
+### Second Average
+
+- `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+
+- This is the Bell correlation itself.
+
+- When you multiply the outcomes from `A` and `B` and average
+  over runs, you recover the familiar quantum prediction:
+    - the correlation is:
+        - minus the dot product of measurement directions.
+
+- Crucially, this correlation is also independent of `γ`, `δ`,
+  etc. No matter what other measurements are performed elsewhere,
+  the `A–B` correlation depends only on `α` and `β`.
+
+### What is surprising?
+
+- Not the formulas themselves — they are just the empirical
+  quantum predictions.
+
+- What's surprising is this COMBINATION of facts:
+    - Individual outcomes are not properties of isolated systems;
+      they depend on the GLOBAL experimental context.
+    - Yet all observable averages behave AS IF systems were
+      isolated.
+    - Non-locality is present at the level of individual events,
+      but completely hidden at the level of marginal statistics.
+
+- Physicists are trained to think that if a system is influenced
+  by distant events, that influence should show up statistically.
+
+- As Peres emphasizes, Bell’s theorem shows that this intuition
+  is wrong. Nature allows non-local dependence in SINGLE events
+  while PERFECTLY CANCELING it in averages.
+
+- That's why Peres says that separation is impossible for
+  individual experiments, but still "holds" for averages.
+
+### Why “beggars the imagination”?
+
+- Our classical picture ties together three ideas:
+    - isolation of systems
+    - local causation
+    - statistical independence
+
+- Bell forces us to give up at least one of these.
+    - Peres’s option is to give up ISOLATION at the level of
+      INDIVIDUAL events, while keeping the appearance of
+      isolation in observable statistics.
+
+- That is deeply counterintuitive. The world behaves as if it
+  were local and separable — but only when you look at AVERAGES.
+  Under the hood, it is not.
+
+- That tension, not the equations themselves, is what Peres finds astonishing.
+
+### Me
+- Is this correct?
+
+    1. Individual measurements depend on global (nonlocal?!)
+       experimental context.
+        - 1a: `(1/N) Σ_j r_jα(βγδ…) = 0`
+    2. But the averages over all outcomes shows no nonlocality?
+        - 2a: `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+    - (Later:
+        - I think I have the above logic wrong.
+        - Yes: answer below)
+
+- But how does `1a` show that INDIVIDUAL measurements depend on
+  global experimental context? I thought it just sums to ZERO ??
+
+### GPT
+
+- You’re right to be puzzled, because `1a` by itself does NOT
+  show contextual dependence.
+    - The dependence is assumed in the notation, not inferred
+      from the value `0`. Let me disentangle this.
+
+- I’ll separate three logically distinct things that tend to get blurred.
+
+### What 1a actually says
+
+`(1/N) Σ_j r_jα(βγδ…) = 0`
+
+- This statement says only this:
+    - If you fix the local setting `α` at `A` and average over
+      many runs, the outcomes are unbiased: as many `+1` as `−1`.
+    - That’s it.
+
+- On its own, this equation is completely compatible with:
+    - strict locality,
+    - contextual non-locality,
+    - deterministic hidden variables,
+    - indeterministic collapse,
+    - almost anything.
+
+- So you are correct: the fact that the average is zero doesn't
+  show that individual outcomes depend on `β`, `γ`, `δ`.
+
+- The contextual dependence is not deduced from `1a`; it is put
+  in BY HAND in the functional form `r_jα(βγδ…)`.
+
+- Where the dependence on GLOBAL CONTEXT actually comes from
+
+    - The dependence comes from the logical structure of Bell’s
+      theorem, not from the value of the average.
+
+- Bell shows you cannot have all 3 of:
+    - locality (no dependence on distant settings),
+    - statistical independence,
+    - reproduction of the quantum CORRELATIONS `− α · β`.
+
+- If you refuse to talk about unperformed experiments (“thou
+  shalt not think”), then one way to evade Bell is to drop
+  locality at the level of individual outcomes. That is exactly
+  what Peres is doing.
+
+- So Peres says: fine, lets allow `r_jα` to depend on `β,γ,δ,…` .
+    - This is a POSTULATE, not an empirical inference from `1a`.
+
+### Why 1a is still important
+
+- Even though 1a does not show contextuality, it shows something
+  crucial once contextuality is assumed.
+
+- Given that `r_jα` depends on `β,γ,δ,…`, one might expect the
+  average at `A` to change when `β` is changed. If that happened,
+  you could signal faster than light.
+    - But `1a` says this does not happen.
+    - So `1a` establishes no-signalling:
+        - Even though individual outcomes depend on distant
+          settings, the MARGINAL STATISTICS at `A` do not.
+
+- This is already deeply non-classical. In classical theories, if
+  outcomes depend on distant causes, that dependence normally
+  shows up statistically.
+
+### How 1a and 2a work together
+
+- The real punch comes from COMBINING both equations:
+    - Individual outcomes `r_jα(βγδ…)` depend on distant
+      settings.
+    - The single-site average (1a) is independent of those
+      settings.
+    - The JOINT AVERAGE (2a) depends only on `α·β` and reproduces
+      the quantum correlation.
+
+- So nature arranges things so that:
+    - non-local dependence exists at the micro-level,
+    - ... but cancels out exactly in all observable MARGINALS,
+    - while surviving in CORRELATIONS.
+
+- That combination is what Peres finds astonishing.
+
+### helpful contrast
+
+- Compare with a classical local model:
+    - `r_jα = f(λ_j, α)`
+    - Here the average being zero would mean the hidden variables
+      are symmetrically distributed. No mystery.
+
+- Peres’s model is radically different:
+    - `r_jα = f(λ_j, α, β, γ, δ, …)`
+    -                   ▲  ▲  ▲  ▲
+    -                   |  |  |  |
+
+- Yet despite this, the AVERAGES behave as if the extra arguments
+  were irrelevant. That is not something classical intuition
+  prepares you for.
+
+### Bottom line
+
+- The clean answer is:
+    - `1a` does not show contextual dependence.
+        - The dependence is ASSUMED to evade Bell.
+    - `1a` shows that this dependence is perfectly hidden at the
+      level of local averages.
+        - The surprise lies in the coexistence of hidden
+          non-local dependence and manifestly LOCAL STATISTICS.
+
+### Me
+
+One thing I missed: BOTH of these are averages over MANY RUNS:
+
+- 1a  `(1/N) Σ_j r_jα(βγδ…) = 0`
+- and
+- 2a `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+
+- Both are averages of many events ... but are you saying
+  a single individual measurement `r_jα(βγδ…)` [j = 1 say] would
+  show a distant anti-correlation to` r_jβ(..)` [j = 1]
+
+- Later: Ah I was mistaken:
+    - longer answer here (single run anti-correlation on if α=β)
+    - $MY_NOTES/physics/QM/Peres-unperformed-GPT1-extra.txt
+
+
+### GPT
+- This is a conceptual knot, lets untie it.
+
+- Short answer first, then carefully:
+    - NO: a single run does not “show a distant anti-correlation”
+      by itself.
+    - Correlation is by definition a STATISTICAL notion.
+    - What is nonlocal at the single-run level is DEPENDENCE, not
+      correlation.
+
+### Correlation v Dependence
+- Let’s go step by step.
+    - Both equations are averages — that matters
+    - These are the averages:
+        - 1a `(1/N) Σ_j r_jα(βγδ…) = 0`
+        - 2a `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+
+- Both are averages over many runs `j`.
+- So nothing about either equation, taken alone, says anything
+  directly observable about a single run `j=1`.
+
+- Now, what a single run actually consists of:
+    - A single run `j=1` gives you:
+        - one outcome at A: `r₁α = ±1`
+        - one outcome at B: `r₁β = ±1`
+        - That’s it.
+        - (only anti-correleation if `α=β`)
+
+- There is no sense in which ONE run “exhibits a correlation”.
+  Correlation only appears when you compare many such pairs.
+
+- So if someone says “a single measurement shows
+  anti-correlation”, that is simply a category mistake.
+
+- So where does nonlocality enter at the single-run level?
+    - Here's the crucial distinction:
+        - Correlation is statistical.
+        - Dependence is counterfactual / structural.
+
+- Bell nonlocality is about dependence, not observable single-run
+  correlations.
+
+- I got confused here and had another question with the LLM
+    - $MY_NOTES/physics/QM/Peres-unperformed-GPT1-extra.txt
+
+
+
+### Notation
+
+- Peres’s notation `r_jα(βγδ…)` means:
+
+    - If, in this same run `j`, the distant setting `β` had been
+      different, then the outcome at `A` might have been different.
+
+    - That is a statement about how the outcome is generated, not
+      about what you can read off from one datum.
+
+- Why Bell forces dependence at the level of individual runs
+
+- Bell’s theorem shows:
+    - If outcomes at `A` are independent of distant settings `β`,
+      and outcomes at `B` are independent of `α`, then:
+        - the correlation average in `2a` CANNOT equal `− α · β`.
+
+- Since experiment does give `−α·β`, at least one of those
+  independence assumptions must fail.
+
+- Peres’s move is to let it fail here:
+    - `r_jα` depends on `β`
+    - `r_jβ` depends on `α`
+
+- This dependence must exist run by run, because averages are
+  built out of runs.
+
+- But — and this is essential — the dependence is finely tuned so
+  that it disappears when you AVERAGE locally.
+
+### Why 1a matters, even though it’s an average
+
+- Now we can say precisely what `1a` is doing.
+
+- Given that `r_jα` depends on `β`, one might expect:
+    - changing `β` → changes statistics at `A`.
+    - But `1a` says this never happens.
+
+- So 1a is telling you:
+    - Even though each `r_jα` may depend on `β`, the distribution
+      of `r_jα` does not.
+
+- This is no-signalling.
+- That is the surprising part.
+
+- A concrete way to think about it
+    - Imagine a hidden rule like this (schematic, not a real model):
+
+    - `r_jα = sign(λ_j · α + F(β))`
+    - where `λ_j` is a hidden variable and `F(β)` is a β-dependent term.
+
+- Now suppose the distribution of `λ_j` conspires so that:
+    - the β-dependence cancels in the MARGINAL average at `A`,
+    - but survives in the JOINT average with `B`.
+
+This is exactly the structure Peres is pointing to.
+
+- Nothing observable at `A` alone reveals the dependence, yet it
+  is there in how outcomes are produced.
+
+- So to answer your question directly
+    - You asked:
+        - “... a single individual measurement `r_jα(βγδ…)` would
+          show a distant anti-correlation to `r_jβ`?”
+    - Answer:
+        - No.
+        - A single run shows no correlation at all.
+
+- What it does involve is a nonlocal dependence:
+    - the value that appears in that run may depend on distant
+      experimental choices, even though this dependence is
+      invisible in all local statistics.
+
+### Final summary
+    - Both equations are averages — you’re right.
+    - SINGLE runs do not exhibit correlations.
+    - Bell nonlocality is not “visible” in single data points.
+    - What is nonlocal is the rule assigning outcomes to runs.
+    - `1a` shows that this nonlocal dependence is perfectly
+      hidden locally.
+    - `2a` shows that it reappears in correlations.
+
+- That coexistence — dependence without signal, nonlocality
+  without local traces — is exactly what Peres means when he says
+  the subtlety of nature beggars the imagination.
+
+### Me
+- Thanks. A key line for me:
+    - "If outcomes at A are independent of distant settings β,
+      and outcomes at B are independent of α, then the
+      correlation average in 2a cannot equal − α · β."
+
+- So it's the `−α·β` that's unexpected for a "classical" world
+  view.... although QM does in fact produce "− α·β"
+
+### GPT
+- Yes — exactly that. Let me sharpen it just a bit.
+
+### Why −α·β is the shock
+
+- The quantity `−α·β` is not mysterious within QM. Once you
+  accept the singlet state and the QM measurement rules, it drops
+  out routinely.
+
+- What is shocking is this:
+    - No theory in which
+    - outcomes at `A` are independent of `β`, and
+    - outcomes at `B` are independent of `α`,
+    - can produce correlations of the form `−α·β`.
+
+- That is Bell’s theorem in its most stripped-down conceptual form.
+
+- So the surprise is not that QM predicts `−α·β`, but that the
+  world actually exhibits it.
+
+### Why clashes with classical worldview
+
+- In a classical worldview, correlations arise from either:
+    - 1. common causes in the past, or
+    - 2. direct influences.
+
+- Local hidden-variable models rely on the first: shared `λ`
+  values carried from the source.
+
+- But Bell proves that no such local common-cause story can
+  reproduce `−α·β` across all settings.
+
+- That forces a choice:
+    - abandon locality, or
+    - abandon realism / outcome definiteness / statistical independence / etc.
+
+- Peres’s option is to abandon locality at the level of
+  individual outcomes, while keeping locality in the statistics.
+
+### Why dot product matters specifically
+
+- The dot product `−α·β` has 3 key features:
+    - it varies smoothly with the relative angle between `α` and `β`,
+    - it reaches MAXIMAL anti-correlation when `α=β`,
+    - it violates Bell inequalities maximally.
+
+- No local model can reproduce this ANGULAR dependence.
+
+- That smooth geometric dependence is what makes the violation
+  unavoidable — you cannot patch it with clever hidden-variable
+  distributions.
+
+### Why Bell, not QM, is doing the real work
+
+- Notice something crucial that you already hinted at:
+    - Bell’s argument does not assume QM.
+
+- The statement
+    - “If A and B are locally independent, then −α·β is impossible”
+    - is a purely structural fact about correlations.
+
+- QM merely tells you that the world does produce `−α·β`.
+- Experiment confirms it.
+
+- So the conceptual shock comes from experiment + Bell, not from quantum formalism.
+
+### Last clean formulation
+
+- A very precise way to say it is:
+    - The world exhibits correlations whose functional form is
+      incompatible with any theory in which spatially separated
+      measurement outcomes are generated INDEPENDENTLY.
+    - That’s it.
+
+- QM predicts those correlations;
+- Bell explains why they are incompatible with locality;
+- experiments show they are real.
+
+- And once you see that, everything else — Copenhagen evasions,
+  “thou shalt not think,” counterfactual-definiteness red
+  herrings — starts to look like elaborate ways of not facing
+  `−α·β`.
+
+### Me
+
+- A final aside... if the world really was 'classical' like we
+  thought it was... what would we expect equation `2a` to
+  equal...? zero?
+
+### GPT
+
+- This gets to the heart of what Bell actually rules out.
+    - Short answer: NO, not necessarily zero.
+    - But it also cannot be `−α·β`.
+
+### What “classical” would mean here
+
+- By “classical” you mean:
+    - outcomes at `A` depend only on local setting `α` and some shared hidden variable `λ`,
+    - outcomes at `B` depend only on `β` and the same `λ`,
+    - no dependence on distant settings.
+
+- So schematically:
+    - `r_jα = A(α, λ_j)`
+    - `r_jβ = B(β, λ_j)`
+    - with `λ_j` distributed independently of `α` and `β`.
+
+- This is the Bell-local structure.
+
+### 2a in a classical world
+
+- The correlation average becomes:
+    - `(1/N) Σ_j A(α, λ_j) B(β, λ_j) → ∫ dλ ρ(λ) A(α, λ) B(β, λ)`
+
+- This can be:
+    - nonzero,
+    - angle-dependent,
+    - even quite structured.
+    - So zero is not the generic expectation.
+
+### What is forbidden classically
+
+- What Bell shows is that no such expression can equal `−α·β` for all `α`, `β`.
+
+- More precisely:
+    - For any Bell-local model, the correlations must satisfy Bell inequalities (e.g. CHSH ≤ 2).
+    - The function `−α·β` violates those inequalities.
+
+- So the issue is not “zero vs nonzero” — it is functional form.
+
+### Concrete classical example
+
+- Suppose `λ` is a random unit vector uniformly distributed on the sphere, and define:
+    - A(α, λ) = sign(α · λ)
+    - B(β, λ) = −sign(β · λ)
+
+Then the correlation works out to:
+    - `E(α, β) = −(2/π) θ`
+    - where `θ` is the angle between `α` and `β`.
+
+- This:
+    - is nonzero,
+    - varies with angle,
+    - matches intuition about shared classical directions,
+    - but it is NOT `−cos θ = − α · β`
+
+- And it obeys Bell inequalities.
+
+### Why −α·β is special
+
+- The dot product correlation:
+    - is too strong,
+    - too smooth,
+    - too tightly constrained geometrically,
+    - to arise from any Bell-local mechanism.
+
+- Bell’s theorem is precisely the statement:
+    - No “classical” world can produce that function.
+
+### Clean answer
+
+- So the answer to your question is:
+    - In a classical local world, `2a` would equal some
+      correlation function `C(α, β)`, generally nonzero, but
+      constrained to SATISFY Bell inequalities.
+    - It could not equal `−α·β`.
+
+- QM predicts `− α · β`.
+- Experiment confirms it.
+- That is the deep shock.

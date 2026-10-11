@@ -1,0 +1,96 @@
+
+
+### Gradio in Wordpress: tweaks
+    /* Wrapper 100% ensures the Gradio app displays well */
+    .wrapper {
+        /* max-width: none!important;*/
+        width: 100vw;
+    }
+
+
+### HOW TO EMBED / INSERT
+
+        - Local Gradio:
+            - My gradio version, conda env 'rembg': : 3.44.4
+            - My gradio version, conda env 'analiza2': 3.47.1
+            - `src="https://gradio.s3-us-west-2.amazonaws.com/{GRADIO_VERSION}/gradio.js"`
+
+            ```
+                <script
+                type="module"
+                src="https://gradio.s3-us-west-2.amazonaws.com/3.47.1/gradio.js"
+                ></script>
+
+                <!--
+                    Local gradio is serving from this port:
+                        <gradio-app src="http://127.0.0.1:7860/"
+                -->
+
+                <!--
+                    temporarily use a Hugging Face proxy link until Pierwsi
+                    Apache server update (with reverse proxy)
+                https://1c6f150f136a032b70.gradio.live
+                http://138.68.110.214/gradio-app/
+                -->
+
+                <gradio-app src="https://1c6f150f136a032b70.gradio.live"
+                eager="true"
+                info="false"
+                > </gradio-app>
+
+            ```
+
+            Embed hugging face
+
+            ```
+            <script
+                type="module"
+                src="https://gradio.s3-us-west-2.amazonaws.com/3.47.1/gradio.js"
+            ></script>
+
+            <gradio-app src="https://farrelle25-single-image-analysis.hf.space"></gradio-app>
+
+            ```
+
+
+### Different ways of launching
+    # iface.launch()
+    iface.launch(share=True)
+    # iface.launch(server_name="0.0.0.0", server_port=7860) # share to all machines on local network
+    # iface.queue().launch(root_path="/gradio-app")
+
+### Themes
+    # with gr.Blocks(theme=gr.themes.Soft()) as iface:
+    # with gr.Blocks(theme=gr.themes.Glass()) as iface:
+    # with gr.Blocks(theme=gr.themes.Base()) as iface:
+
+
+### Cropping an output image
+    # 'output_img' size is normally (800, 1000)
+    # Crop it for easier viewing on web page.
+    # width, height = output_img.size
+    # output_img = output_img.resize((1000,800))
+    # output_img = output_img.crop((220, 90, 730, 806))
+
+
+### Output Image settings
+    image_out = gr.components.Image(label="Result", height=400, width=800)
+    image_out = gr.components.Image(label="Result", shape=(600, 200))
+
+### UI features
+    - rows, columns, tabs
+    - events system (callback method)
+
+### Serve gradio on local network
+    - https://discuss.huggingface.co/t/how-to-share-gradio-app-in-my-local-machine/37979/5
+    - key: `.launch(server_name="0.0.0.0", server_port=7860)`
+
+### Gradio on a nginx server 
+    - https://www.gradio.app/guides/running-gradio-on-your-web-server-with-nginx
+    - key: `.launch(root_path="/gradio-demo")`
+
+### Links
+    - How to host / share app         https://www.gradio.app/guides/sharing-your-app
+    - Gradio on a nginx server        https://www.gradio.app/guides/running-gradio-on-your-web-server-with-nginx
+    - How to get file upload location https://stackoverflow.com/questions/76083621/how-to-get-the-upload-file-location-in-gradio
+

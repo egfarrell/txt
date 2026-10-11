@@ -1,0 +1,360 @@
+$MY_VIDEOS/physics/bala_fundamental/08-Vectors-In-a-Plane,Scalars-and-Pseudoscalars.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 08
+Vectors in a Plane, Scalars & Pseudoscalers
+Let us continue today with our discussion of Vectors, specifically we start with
+Vectors in a Plane.
+
+(Refer Slide Time: 00:26)
+
+And I would like to talk about a few subjects today at few topics which would include
+for instance, the ideas of Scalars and Pseudoscalers and elaborate on that. And then we
+will look again at plane polar coordinates, discuss unit vectors, and finally the target is to
+try and understand kinematics in a plane in terms of plane polar coordinates, because it is
+of plane particles importance. So, let we start by pointing out that we define the vector as
+a set of quantities, the same number of quantities as the dimensions of the space that you
+have been interested in, which transform under rotations of the coordinate axis in exactly
+the same way as the coordinates themselves transform.
+
+(Refer Slide Time: 01:05)
+
+So, in a plane we have already seen that if you took a frame of reference, the x y axis like
+so and then you took a till that frame rotated at some angle theta with respect to the first
+coordinate system y prime. Then, we had a set of transformation rules which said, that
+the coordinates of an arbitrary point p, f their x and y in the original frame of reference,
+then x prime is x cos theta plus y sin theta and y prime equal to minus x sin theta plus y
+cos theta.
+
+And the next statement just to repeat what I said already is that, if you have a vector any
+vector u which is got components u sub x and u sub y. Then, u is a vector if and only if, u
+x prime and u y prime are related to u x and u y in exactly the same way as x prime and y
+prime are related to x and y, that is the definition of a vector. Now, once we define a
+vector in this fashion we introduce the idea of a dot product.
+
+So, if you have a vector a, which is got components a x and a y and another vector b,
+which is got components b x and b y, then from these two quantities from these two
+vectors a and b you can actually form three different scalars. One of them is a square
+which is a x square plus a y square and similarly, b x square plus b y square and the third
+scalar that you can form quantity which does not change under rotations.
+
+The third scalar is a dot v which is equal to a x b x plus a y b y, that too is a scalar and
+that is why we call this the scalar product, the dot product or the scalar product more
+correctly the scalar product. Now, what this implies is that this particular combination of
+a and b, this rule of multiplication tells you how to take two vectors and get a scalar out
+of them, create a scalar out of them. And it is clear that this is just the same as a dotted
+with itself and this is the same as b dotted with itself, so this is a dot a by definition and
+similarly for b.
+
+So, the dot product or the scalar product is a way of creating a scalar from a vector and
+so far, we restricted ourselves to a plane to two dimensional vectors. I also pointed out
+something else, I also pointed out that interestingly if you consider the combination a x b
+y minus a y b x, that two appears to be a scalar and this needs a little bit of working out,
+it is not a very hard thing to do. So, let me do that and show you how this happens.
+
+So, fill it at a x b y prime minus a y prime b x prime, substitute for a x and b x and a y
+and b y formulas similar to this. So, you have a little bit of algebra to do, you would have
+to write a x prime is a x cos theta plus a y sin theta, and similarly for b, x prime and b y
+prime. Put that all inside this and do the simplification and it is a simple exercise to show
+that this will turn out to be equal to a x b y minus a y b x. So, just as, this quantity was
+equal to a x prime b x prime plus a y prime b y prime.
+
+In exactly the same way this combination, this antisymmetric combination also remains
+unchanged under rotations, and therefore we would call it a scalar. But, it is really
+slightly different kind of scalar and the scalar we will have been taking about. Because,
+so far we restricted ourselves to pure rotations, but you can also ask what happens if for
+instance I go from a right hand coordinate system to a left hand coordinate system.
+
+For instance, suppose I reflected about the y axis and the new coordinates where in the
+following fashion, they look like this. You had y prime and x prime here in this direction
+or for that matter, it reflected about the x axis and you had y prime and x prime over
+here. These coordinate systems cannot be obtained from the original x y coordinate
+system by rotating about the origin. No rotation about the origin, about any angle will
+ever produce this coordinate system from this.
+
+Because, if we start rotating this, like so to bring the x axis point to this direction, the y
+axis will point downwards, but that is not what is happening here, not is it happening
+there. So, these transformations I mentioned briefly last time were in proper
+transformations. So, we have to worry about what happens to vectors and the in proper
+transformations as well. So, let us ask what happens if I have a transformation which say
+takes you from this coordinate system to that coordinate system.
+
+(Refer Slide Time: 07:01)
+
+What is that imply? That says x prime is minus x, y prime equal to y, because the y prime
+axis is exactly the same as the y axis, but the x prime axis is the negative of the x axis,
+and therefore x prime is minus x. What happens under this transformation? Well, the
+coordinate transform in this fashion, and therefore any vector would transform in exactly
+the same manner, which means that this combination that you have here is going to be
+look like this.
+
+You going to have a x prime equal to minus a x, b y a y prime equal to a y and similarly,
+b x prime equal to minus b x and b y prime equal to b y. What happens to this
+combination here? It is clear that if this thing ((Refer Time: 08:04)) changes sign a x
+prime goes to minus a x and b x prime goes to minus b x.
+
+(Refer Slide Time: 08:17)
+
+Under such a transformation, this implies that a x prime b x prime plus a y prime b y
+prime is equal to this changes sign, this changes sign, so the product does not change
+sign. It remains once again a x b x, and of course the y’s would not change sign at all, so
+a y b y. Therefore, this quantity is a scalar not only under rotations, but also under
+reflections.
+
+Of course, if you have a reflection about the x axis, it is a simple matter to see that what
+will happen then is that the x components do not change sign, the y is too and exactly the
+same thing goes through. So, this is a true scalar, not only under rotations, but also under
+reflections under in proper transformations. But, look at what happens to the other
+combination, look at the combination a x prime b y prime minus a y prime b x prime.
+
+This is equal to well, a x prime changes sign b y prime does not change sign, so you have
+a minus sign. So, this is minus a x b y plus a y b x, because this does not change sign,
+that changes sign and cancels the minus sign give you plus there, but this is equal to
+minus a x b y minus a y b x. So, you see this combination which was the scalar under
+rotations has actually change sign under reflection.
+
+So, under a proper transformation, the rotation is called a proper transformation, because
+
+you can continuously start from the original coordinate system and go to the new
+coordinate system, smoothly whereas, reflection is a sudden transformation if you like
+and this continues transformation. Under the proper rotation, this remains like a scalar,
+but under a reflection it changes sign, such an object is called a pseudoscaler.
+
+It is still a scalar under rotations, but it is transformation and the reflection is different
+from that of a true scalar. And now, this tells you that there are different kinds of scalars
+that you can possibly have and in this case we see two different kinds of scalars. This
+will also generalizes as we go to higher dimensions to vectors, you have quantities which
+look like pseudo vectors and at that stage, I will give you physical examples of these
+quantities.
+
+Just to cut a long story short, in three dimensions the position vector is a true vector, the
+momentum vector is a true vector, the angular momentum vector for instance will turn
+out to be a pseudo vector. It will have a different transformation property and a
+reflections or parity than a true vector has and we will see how. So, it makes, it make
+sense to deal with these to discuss these matters, because physical quantities have
+specific transformation properties and that is important to understand, how and why this
+happens.
+
+Now, that we have done this, let us go back a little bit to what we have discussing
+namely plane polar coordinates. And I should now like to take about the unit vectors and
+what happens to them, as the position changes.
+
+(Refer Slide Time: 12:08)
+
+So, let us go on to this topic now that is over, let us go back to this and look at what we
+said about plane polar coordinates. Here is the x axis, here is the y axis, that is the origin
+and my point was that any point p which has coordinates x and y in Cartesian
+coordinates could also be regarded as having coordinates or plane polar coordinates. And
+I use the symbol r for this distance and an angle phi, the angle from the x axis to the line
+joining the point to the origin.
+
+And this quantity I called it r, I should now like to change that notation a little bit,
+because I would like to reserve r for the distance from the origin to a point in even three
+dimensions and I do not want to confuse that with this r here. So, let me call this rho, this
+distance rho. So, it was rho and phi and this rho is just x square plus y square, square root
+and this phi is time inverse y over x and the corresponding inverse transformations were
+x equal to rho cos phi and y equal to rho sin phi.
+
+I am rewriting the same formulas that you wrote down on the last time, except on I
+replace the symbol r with the symbol rho, because I do not want to use the symbol r in
+two dimensions. I would like to use rho, because when I go to three dimensions, then we
+will turn out that the projection on to the plane on to the x y plane that distance I will
+continue to call it rho for consistency. Now, what are the ranges of these variables?
+
+Well, minus infinity to infinity in the case of x and y, that translates here to 0 less than
+equal to rho less than infinity and 0 less than equal to phi less than 2 pi to make it single
+value. So, those were the ranges, these are the transformation formulas from Cartesian to
+polar coordinates and these are the transformation formulas from polar coordinates to the
+Cartesians on this side.
+
+(Refer Slide Time: 14:33)
+
+Now, any arbitrary point p such as the one I have written here could always be written,
+this point the radius vector to this point is the vector rho and it is magnitude is rho
+without the arrow. So, we immediately have rho equal to rho times e sub rho, where this
+is the unit vector in the radial direction, in the direction pointing away from the point
+along the line joining the origin to that point. So, this is the unit vector e sub rho, and
+then this vector rho this is, this distance is rho and it is pointing the direction.
+
+So, it is clear that the radius vector from the origin to any point is the magnitude rho
+multiplied by the radially outward unit vector, I call this the radial direction. This angle
+that we have here is phi is the azimuthal angle, I could of course, also write this rho as x
+times e sub x plus y times e sub y, where e x and e y are unit vectors. So, this is the unit
+vector in the x direction, e x that is the unit vector in the y direction e sub y.
+
+And I pointed out that wherever you are in the plane, the unit vectors in the x and y
+directions remain unchanged. Unlike the radial unit vector we changes, by go to this
+point it points outward like that, if I go here it points that, this fashion and so on and we
+would like to know what is the dependence of this e rho on the coordinate themselves
+and that is easy to write down.
+
+(Refer Slide Time: 16:55)
+
+Because all you have to do is to take this vector e rho and resolve it along e x and along e
+y, in this fashion. Of course, by the law of corresponding angles or whatever, this angle is
+also phi. This direction is the direction of e x and that direction is the direction of e y,
+remember e x is the same thing as the unit vector i and e y is the same thing as the unit
+vector j. I prefer to use e x, e sub x, e sub y etcetera, because it immediately tells me
+along which direction it is and I am going to extend this to higher dimensions as well.
+
+So, you have e rho pointing radially outwards and this is e x and that is e y and the
+question is, how do I write e rho in terms of e x and e y. And it is obvious from this
+figure that e rho is composed of a vector along this direction and a vector along that
+direction. The magnitude of this vector here e sub rho is unity and this angle is phi,
+therefore the x component is just cos phi. So, this is cos phi times e x plus and the
+vertical component is the sin phi, because this distance divided by 1 is equal to sin phi.
+
+So, this is sin phi times e y that is a basic relationship.
+
+It is a basic relationship and it immediately tells you exactly what have been saying all
+along namely, that the unit vector in plane polar coordinates is going to be dependent on
+the position, on the coordinates themselves. In this case, it turns out that e rho is a
+function of phi. If, therefore you go to some other phi in this direction, e rho points like
+that and it depends on this angle, it changes. Now, you could ask, why does it not depend
+on rho itself, it does not depend on the magnitude rho, that is immediately cleared.
+
+(Refer Slide Time: 19:12)
+
+Because, if you are at this point that is the radial vector unit vector, but if you are at this
+point with a larger rho, you are still in the same direction, it does not a matter. Therefore,
+it is not surprising that e rho is a function only of phi and matter of rho. So, if I go to in
+general write this as a function of this distance in phi, there is no dependence on this
+quantity. It is a function only of the azimuthal angle and that is geometrically,
+immediately obvious from this figure.
+
+What we need to do now is to ask, after all if I have an arbitrary point here, this vector I
+can resolve this vector along the x direction and along the y direction. Can I do so in
+polar coordinates? Can I resolve any point any vector here at this point along the radial
+
+direction and normal to the radial direction? What normal shall we choose? Well, we
+should choose the normal, just as originally I choose the direction of e x to be that of
+increasing x and increasing y.
+
+Here I choose it in the direction of increasing rho and I should choose it the other vector
+in the direction of increasing phi, the azimuthal angle. But, this azimuthal angle is
+measured from this line in the positive sense, and therefore when you increase it, it
+should, therefore move in this direction here, perpendicular to e sub rho. So, if this is e
+sub rho the unit vector that is perpendicular to it is e sub phi. Again, it is easy to see what
+it look like in Cartesian coordinates in terms of e x and e y, because the same figure e x
+along here, e y along here, this angle is phi, therefore this angle is phi, immediately and e
+phi has a component along e y and this angle is phi.
+
+So, it is clear that e phi equal to cos phi times e y, because this angle is phi and the
+projection of this on that direction has a cosine and it is along e y. But, the projection
+along the x direction is in the negative e x direction and it is this high which is sin phi.
+So, this rest of this formula is minus sin phi times e x plus e x cos phi. Again, as before it
+is immediately clear that e phi also is a function only of phi, does not have rho
+dependence on it at all, it depends on phi and that is clear too.
+
+Because, if phi are at this distance e phi is along a direction which is tangential to this
+circle of constant rho, but if I move a little further it is again tangential to the circle and
+these two lines are parallel to each other with no dependence on the distance from the
+origin. So, immediately we will see that e phi also depends only on phi that does not
+have a dependence on rho at all.
+
+(Refer Slide Time: 22:51)
+
+So, now, we can go to work, we have a unit vector system e x e y, you can use these
+formulas or e rho and e phi. When you work in plane polar coordinates, you should use
+these unit vectors and in Cartesian coordinates, you use these vectors. With the important
+difference that these two unit vectors will depend on the azimuthal angle, so therefore it
+will depend on the location of the point in the plane, but the unit vectors all the same and
+just as we know that e x dot product to e y equal to 0.
+
+Because, the cosine of the angle between them is cos phi over 2, which is 0, there are
+right angles to each other. Similarly, this construction shows that e rho and e phi are
+perpendicular to each other, but it is a simple matter to verify that ((Refer Time: 23:48)) e
+rho dot e phi is the x component times the x component plus the y component times y
+components, and therefore this is equal to minus cos phi sin phi plus sin phi cos phi
+which is identically equal to 0.
+
+So, there are indeed to right angles to each other and it is equally straight forward to see
+that e rho dot e rho equal to e phi dot e phi equal to 1, they have to be. It has to be so
+because the length of this unit vector is of course, 1 by definition and that follows in the
+fact that cos square phi plus sin square phi is 1, immediately. So, we have another
+orthogonal set of unit vectors to describe vectors in the plane either e x and e y or e rho
+
+and e phi depending on the application, depending on what you would like to do.
+
+The next task now is to see whether we can use this to understand motion of a particle in
+a plane, whether we can understand kinematics in a plane and this requires the following
+kind of construction.
+
+(Refer Slide Time: 25:27)
+
+So, we have a unit vectors by the way an exercise, a small exercise. Write e x and e y in
+terms of e rho and e phi, I already wrote down formulas which expressed e rho and e phi
+as linear combinations of e x and e y. And now, what you should do is to write e x and e
+y as linear combinations of e rho and e phi and verify that e x and e y do not involve, it
+should not involve the coordinates themselves. Because, they are constant vectors, these
+are constants both in magnitude and in direction whereas, e rho and e phi are unit vectors
+magnitude is always 1, but the directions changes from point to point.
+
+Now, what we like to do is to understand how a particle moves in a plane and the reason
+I call it kinematics is, because we are not going to specify at the moment what the forces
+on this particle are. So, we are not going to talk about it is actual motion on the some
+given force which would be a part of dynamics. On the other hand, kinematics is that,
+that part of dynamics that part of the study of motion which is independent of what the
+
+force on the particle is, which is independent of any specific given force or any given
+initial condition. This is just general formulas which arise essentially from geometry, just
+the definition of things like the velocity, acceleration and so on.
+
+(Refer Slide Time: 27:10)
+
+Now, first of all if you have a particle moving in the plane in some arbitrary trajectory in
+this fashion that is the part of a particle as a function of time say. Then, what you should
+do to understand the motion of this particle is to use the fact that it is position vector at
+any particular point is the radius vector which we call rho in this fashion and that is a
+function of time, it changes from time to time, so rho is a function of time.
+
+The position vector of a particle in a plane moving in a plane at some arbitrary fashion is
+a function of the time. Then, I like to see what the velocity is, what the acceleration of
+this particle is and so on. Now, what is this mean?
+
+(Refer Slide Time: 28:01)
+
+Well, at a little instant of time if the position vector is there or here for example, so that is
+the position vector at later instant of time. This is rho at time t, this is rho at some time t
+prime greater than t say, particle. Then, it differs from rho of t in two possible ways, one
+is it is direction is different in general and the second is, it is magnitude is different in
+general. So, therefore when I say the velocity which is the rate of change of this rho with
+respect to t, you have to take into account both factors.
+
+The fact that it is direction may change as a function of time and that it is position may
+change as a function of time. So, the velocity of this particle and let us call this position
+rho of t, it is velocity v of t and we would also be interested in it is acceleration a of t.
+Because, dynamics is going to come in, when we specify the acceleration of the particle
+we are going to say. Under a given force, we going to use Newton’s law and say the force
+is equal to the max times the acceleration, and then we going to have to solve for the
+position in general.
+
+So, the idea is to give me the force on the particle at any instant of time, you are giving
+me it is acceleration and the problem in dynamics is to work backwards from that and
+discover, what it is velocity is, and then again backwards to discover what it is position is
+as a function of time, so that you can protect the trajectory of this particle, so that is the
+
+basic problem of particle dynamics. Now, what is this velocity? As you know from
+calculus, this is equal to the rate of change d over d t of rho of t and that is the definition
+of the velocity.
+
+(Refer Slide Time: 30:09)
+
+In the acceleration by definition it is d over d t of v of t and that of course, is equal to d 2
+over d t 2 the second derivative of the position. So, if you like the problem of a
+dynamics, particle dynamics at this level is to say, if the second derivative with respect to
+time of the displacement or the position is given to you, can you work backwards and
+find the first derivative namely the velocity, and then can work backwards and find rho
+of t.
+
+These are derivatives, differentials, therefore when the inverse problem will involve
+integration. You have essentially do two integrations in order to discover this point and
+that is called solving a differential equation for this quantity. Right now we are not going
+to do dynamics, we going to do kinematics. So, all I am going to do is to write down
+formulas for the acceleration and the velocity given the position and given the fact that
+this position will change both in distance from the origin as well as the angle, azimuthal
+angle, so this is the target.
+
+

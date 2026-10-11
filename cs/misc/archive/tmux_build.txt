@@ -1,0 +1,61 @@
+tmux build
+
+### NEW: (CAMK) build without root:
+     - LIBEVENT:   
+        ai libssl-dev
+        wget https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
+        utar libevent-2.1.12-stable.tar.gz
+        c libevent-2.1.12-stable
+        ./configure --disable-shared --prefix="$HOME/.local"
+        make verify
+
+    - NCURSES:  
+        wget https://invisible-mirror.net/archives/ncurses/ncurses-6.2.tar.gz
+        utar ncurses-6.2.tar.gz
+
+
+    - TMUX:
+        wget https://github.com/tmux/tmux/releases/download/2.9a/tmux-2.9a.tar.gz
+        ./configure --prefix="$HOME/.local" \
+                CFLAGS="-I$HOME/.local/include" \
+                LDFLAGS="-L$HOME/.local/lib" 
+
+### OLD way
+    git clone git://git.code.sf.net/p/tmux/tmux-code tmux-tmux-code
+    sudo apt-get install libevent-dev libncurses-dev pkg-config
+
+    autoreconf -fis
+    ./configure
+    make
+    sudo make install
+
+wget https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
+utar libevent-2.1.12-stable.tar.gz
+nk libevent-2.1.12-stable.tar.gz
+r
+c libevent-2.1.12-stable/
+v README.md
+./configure --disable-shared --prefix="$HOME/.local"
+make verify
+c ~/.local/
+c share/
+c ncurses-6.2/
+./configure --help
+ge term
+terminfo
+c include/
+c tmux/
+gwo prefix
+v autogen.sh
+x
+wget https://github.com/tmux/tmux/releases/download/2.9a/tmux-2.9a.tar.gz
+utar tmux-2.9a.tar.gz
+c tmux-2.9a/
+./configure --prefix="$HOME/.local"
+v endaconfigure.sh
+ocx endaconfigure.sh
+./endaconfigure.sh
+v README
+make
+make install
+

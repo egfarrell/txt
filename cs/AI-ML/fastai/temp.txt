@@ -1,0 +1,111 @@
+### Style guide
+    - Python has over time incorporated a number of ideas that
+      make it more amenable to this form of programming, such as:
+        - List, dictionary, generator, and set comprehensions
+        - Lambda functions
+        - Python 3.6 interpolated format strings
+        - Numpy array-based programming.
+    - Although Python is more verbose than many languages, by
+      using these features liberally, along with some simple
+      rules of thumb, we can aim to keep all the key ideas for
+      one semantic concept in a single screen on code.
+        - This is one of my main goals when programming — I find
+          it hard to understand a concept if I have to jump
+          around the place to put the bits together. (Or as
+          Arthur Whitney says “I hate scrolling”!)
+
+### Symbol naming
+    - Follow standard Python casing guidelines (CamelCase
+      classes, under_score for most everything else).
+    - In general, aim for what Perl designer Larry Wall describes
+      as metaphorically as Huffman Coding:
+    - In metaphorical honor of Huffman’s compression code that
+      assigns smaller numbers of bits to more common bytes. In
+      terms of syntax, it simply means that commonly used things
+      should be shorter, but you shouldn’t waste short sequences
+      on less common constructs.
+    - A fairly complete list of abbreviations is in abbr.md; if
+      you see anything missing, feel free to edit this file.
+    - For example, that in computer vision code, where we say
+      ‘size’ and ‘image’ all the time, we use shortened forms sz
+      and img. Or in NLP code, we would say lm instead of
+      ‘language model’
+    - Use o for an object in a comprehension, i for an index, and
+      k and v for a key and value in a dictionary comprehension.
+    - Use x for a tensor input to an algorithm (e.g. layer,
+      transform, etc), unless interoperating with a library where
+      this isn’t the expected behavior (e.g. if writing a pytorch
+      loss function, use input and target as is standard for that
+      library).
+    - Take a look at the naming conventions in the part of code
+      you’re working on, and try to stick with them. E.g. in
+      fastai.transforms you’ll see ‘det’ for ‘deterministic’,
+      ‘tfm’ for ‘transform’, and ‘coord’ for coordinate.
+    - Assume the coder has knowledge of the domain in which
+      you’re working
+        - For instance, use kl_divergence not
+          kullback_leibler_divergence; or (like pytorch) use nll
+          not negative_log_likelihood. If the coder doesn’t know
+          these terms, they will need to look them up in the docs
+          anyway and learn the concepts; if they do know the
+          terms, the abbreviations will be well understood
+        - When implementing a paper, aim to follow the paper’s
+          nomenclature, unless it’s inconsistent with other
+          widely-used conventions. E.g. conv1 not
+          first_convolutional_layer
+    - Although it’s hard to design a really compelling experiment
+      for this kind of thing, there is some interesting research
+      supporting the idea that overly long symbol names
+      negatively impact code comprehension.
+
+### Layout
+    - Code should be less wide than the number of characters that
+      fill a standard modern small-ish screen (currently
+      1600x1200) at 14pt font size. That means around 160
+      characters. Following this rule will mean very few people
+      will need to scroll sideways to see your code. (If they’re
+      using a jupyter notebook theme that restricts their cell
+      width, that’s on them to fix!)
+    - One line of code should implement one complete idea, where
+      possible
+    - Generally therefore an if part and its 1-line statement
+      should be on one line, using : to separate
+    - Using the ternary operator x = y if a else b can help with
+      this guideline
+    - If a 1-line function body comfortably fits on the same line
+      as the def section, feel free to put them together with :
+    - If you’ve got a bunch of 1-line functions doing similar
+      things, they don’t need a blank line between them
+     - `def det_lighting(b, c): return lambda x: lighting(x, b,
+       c)`
+     - `def det_rotate(deg): return lambda x: rotate_cv(x, deg)`
+     - `def det_zoom(zoom): return lambda x: zoom_cv(x, zoom)`
+    - Aim to align statement parts that are conceptually similar.
+      It allows the reader to quickly see how they’re different.
+      E.g. in this code it’s immediately clear that the two parts
+      call the same code with different parameter orders.
+     - `if self.store.stretch_dir==0: x = stretch_cv(x,
+       self.store.stretch, 0)`
+     - `else:                         x = stretch_cv(x, 0,
+       self.store.stretch)`
+    - Put all your class member initializers together using
+      destructuring assignment. When doing so, use no spaces
+      after the commas, but spaces around the equals sign, so
+      that it’s obvious where the LHS and RHS are.
+     - `self.sz,self.denorm,self.norm,self.sz_y
+       = sz,denorm,normalizer,sz_y`
+    - Avoid using vertical space when possible, since vertical
+      space means you can’t see everything at a glance. For
+      instance, prefer importing multiple modules on one line.
+      `import PIL, os, numpy as np, math, collections, threading`
+    - Indent with 4 spaces. (In hindsight I wish I’d picked
+      2 spaces, like Google’s style guide, but I don’t feel like
+      going back and changing everything…)
+    - When it comes to adding spaces around operators, try to
+      follow notational conventions such that your code looks
+      similar to domain specific notation. E.g. if using pathlib,
+      don’t add spaces around / since that’s not how we write
+      paths in a shell. In an equation, use spacing to lay out
+      the separate parts of an equation so it’s as similar to
+      regular math layout as you can.
+    - Avoid trailing whitespace

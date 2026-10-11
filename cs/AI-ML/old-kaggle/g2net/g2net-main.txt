@@ -1,0 +1,992 @@
+
+- g2net comments
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion?sort=recent-comments
+
+- g2net kernels
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/code?competitionId=37077&sortBy=voteCount
+
+### Discussion of the Solutions!
+    - 1st, 5th and 6th used NON MACHINE-LEARNING approaches(!)
+      Funny I was thinking that...
+    - Overview
+      https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/375974
+    - The winner, Jun koda, non ML solution, uses sinc kernel
+      https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/375910
+    - 4th place space coders (were in the lead for ages)
+      https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/376357
+
+
+### Training data shortcut? Augmentation?
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/368589
+    - first of all, the generated data must have exactly the same
+      representation (compression, normalisation, etc) with the
+      official train/test.
+    - Then the key is a good mixing of the fake gravity signals
+      with the noise. Only then is it useful.
+    - However instead of generated data, _heavy augmentations_
+      like flipping, noise injection and so on, applied to the
+      official training data can do almost the same job.
+
+### Frequency range
+    - note 1:
+        - So, `Tsft` refers to the _duration_ over which
+          a Fourier transform was taken (i.e. each timestamp
+          contains 1800s of data on which a Fourier transform was
+          taken). 
+        - The 360 is the number of bins in the frequency axis
+          (i.e. how many frequencies does your Fourier transform
+          contain). 
+        - Since _frequency resolution_ is 1/1800, then your data
+          spans 360 * (1/1800) = 0.2 Hz, as you can see in the
+          plots.
+
+    note 2:
+        - All provided SFTs have 360 frequency bins, and
+          frequency range is 0.2Hz. So, `delta_f` is constant and
+          it is equal to 1/1800 Hz.
+        - There are gaps on the time axis of SFTs, because the
+          detectors are not always online.
+
+### SNR, depth advice
+    - The amplitude distribution of injected signals is not
+      provided, but you already have a hint of the range: 
+        - one or two magnitudes lower
+    - I interpret it as a general description since those are the
+      expected ranges in real CW searches (I think). So I'd
+      assume unknown SNR / depth.
+    - If you generate data yourself and keep track of the depth
+      (`sqrtSX / h0`) used in each positive sample, you'll see
+      that image classifiers have trouble with deeper signals
+      (obviously), and it's a matter of trying to go as deep as
+      possible. 
+    - Furthermore, since the train data contains 400 positive
+      samples and _none have real non-stationary noise_ or any
+      other glitches, you can look at your CV AUC score with
+      generated data versus your AUC obtained from the kaggle
+      train set, and infer a bit how deep the signals are there. 
+    - By the way, the test set seems to be even harder in terms
+      of depth, even for the samples with generated noise.
+
+### What is sqrtSX
+    - For this reason, we decided to generate synthetic data
+      using Gaussian noise, for which a `PSD` (or `ASD`, or
+      `sqrtSX`, they are all essentially equivalent in this
+      context) needs to be specified.
+
+### - pirsa video: CWs around BHs                             
+    - https://pirsa.org/18120007
+    - The bumpy mountains on Neutron stars are more likely when
+      a neutron star is _newly_ born
+        - $MY_IMAGES/astro/g2net/bumpy-neutron-stars.jpg
+    - aside: mass currents flowing beneath their surfaces could
+      also cause CWs
+    - Doppler demodulation is important
+        - $MY_IMAGES/astro/g2net/must-doppler-demodulate.jpg
+    - types of noise!
+        - $MY_IMAGES/astro/g2net/ligo-noise.jpg
+    - for all-sky searches, you have to catalogue what the
+      instrumental lines are...
+
+
+### Books about GW Data analysis
+    - [52] Maggiore (2007) 
+        - Gravitational Waves. Volume 1, Theory and experiments 
+    - [53] Creighton and Anderson (2012) 
+        - Gravitational-Wave Physics and Astronomy: an
+          Introduction to Theory, Experiment and Data Analysis
+    - [54] Jaranowski and Królak (2012) Living Rev. Relativ. 15 
+        - Gravitational-Wave Data Analysis. Formalism and Sample
+          Applications: The Gaussian Case
+            - https://link.springer.com/article/10.12942/lrr-2012-4
+
+### Noise
+    - https://arxiv.org/abs/1908.11170
+    - A guide to LIGO–Virgo detector noise and extraction of
+      transient gravitational-wave signals
+    - The data recorded by LIGO and Virgo are impacted by many
+      noise sources, including: 
+        - quantum sensing noise, 
+        - seismic noise, 
+        - suspension thermal noise, 
+        - mirror coating thermal noise, 
+        - gravity gradient noise 
+    - ... however WHITE NOISE is a poor approximation to
+      LIGO–Virgo detector noise
+    - _Understanding the noise_ is crucial to detecting
+      gravitational-wave signals and inferring the properties of
+      the astrophysical sources that generate them. 
+    - Improper modeling of the noise can result in the
+      significance of an event being incorrectly estimated, and
+      to systematic biases in the parameter estimation. 
+
+### Labels (SNR definition)
+    - `0/1` labels refer to whether we included a simulated
+      signal to that sample (1) or if it consists only on noise.
+    - In terms of the quantities of the kernel your refer to,
+        - a label of `1` would correspond to a signal with an
+          amplitude `h0 > 0` (i. e. there's a signal), 
+        - while a label of 0 would correspond to not having
+          a signal (i.e. amplitude `h0 = 0`).
+    - The same definition can be made in terms of _SNR_: 
+        - Label of 1 corresponds to SNR > 0, 
+        - label of 0 corresponds to SNR = 0 
+            - (i.e. no signal added at all).
+
+### Camk: GW constraints on the equatorial ellipticity of
+millisecond pulsars
+    - We present a search for continuous gravitational waves from
+      five radio pulsars, comprising three recycled pulsars (PSR
+      J0437− 4715, PSR J0711− 6830, and PSR J0737− 3039A) and two
+      young pulsars: the Crab pulsar (J0534+2200) and the Vela
+      pulsar (J0835− 4510). We use data from the third observing
+      run of Advanced LIGO and Virgo combined with data from
+      their first and second observing runs. 
+    - For the first time we are able to match (for PSR J0437−
+      4715) or surpass (for PSR J0711− 6830) the indirect limits
+      on gravitational-wave emission from recycled pulsars
+      inferred from their observed spin-downs, and constrain
+      their equatorial ellipticities to be less than 10^(-8). 
+    - For each of the five pulsars, we perform targeted searches
+      that assume a tight coupling between the gravitational-wave
+      and electromagnetic signal phase evolution. 
+    - We also present constraints on PSR J0711− 6830, the Crab
+      pulsar and the Vela pulsar from a search that relaxes this
+      assumption, allowing the gravitational-wave signal to vary
+      from the electromagnetic expectation within a narrow band
+      of frequencies and frequency derivatives.
+
+### Two signals in real samples?
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363693
+    - Does this mean none of the real samples in the test set had
+      a simulated signal added to them?
+        - The simulated signal was only added to the simulated
+          noise?
+        - Otherwise, a real sample containing a real signal could
+          have both a real signal and a simulated signal.
+    - Answer
+    - In short, YES some of the REAL SAMPLES in the test have had
+      simulated signals added.
+        - However, all of the real data has be extensively
+          analysed the LVK Collaboration using various different
+          search techniques and we haven't found anything.
+        - So any real signals that could be in the real data will
+          be very weak.
+        - Unfortunately, this is unavoidable when using real data
+          since we can't ever be 100% sure there isn't a signal.
+
+
+### Training set not representative of test set
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363810
+    - All the training set is generated noise, not real noise.
+      And the sqrtSX of that noise it's basically the _same_.
+        - What matters is the strength relation between the noise
+          and the signal, the so-called `depth` (and the _cos i_
+          parameter, which greatly affects the strength of the
+          signal over the noise). There are several topics
+          already about this.
+
+    - The test set contains both real and generated noise.
+      I think the the real ones are exactly `1500 samples`(!)
+        - It's nice to just plot them and see what's the real
+          noise (non-stationary) that scientists have to deal
+          with in real CW searches, plus lots of persistent
+          horizontal lines, glitches etc…
+    - Use Jun Koda's notebook to see the "real" spectrograms if
+      you want :)
+
+    - To bring CV and LB closer together, I think the most
+      effective way is to construct a training set that has
+      a large number of samples with a _wide range of SNR
+      values_, rather than using 600 training samples and then
+      trying various ML tricks.
+
+
+### Good PhD
+    - PhD: Searches for continuous gravitational waves: 
+        - sensitivity estimation and deep learning
+        - https://www.repo.uni-hannover.de/handle/123456789/10200
+    - CWLALsuite
+    - DNN get's worse over longer timescales
+        - $MY_IMAGES/astro/g2net/phd-training-dnn.jpg
+    - He uses an "inception res net" model
+        - https://rwightman.github.io/pytorch-image-models/models/inception-resnet-v2/
+
+### Grandmasters
+    - SETI winner: "Psi"    Philipp Singer  https://www.kaggle.com/philippsinger
+    - SETI winner: "Dieter" Christof Henkel https://www.kaggle.com/christofhenkel
+    - SETI winner: "llu"    Pascal Pfeiffer https://www.kaggle.com/ilu000
+
+
+### Combine Signal Processing meets Deep Learning
+    - https://www.youtube.com/watch?v=1b0A9FSTdns
+    - in general, noise has high frequencies
+
+### Timestamps and Frequencies Insights
+    - The data provided consists of short-time Fourier Transforms
+      (SFTs), but there seems to be 2 differences with
+      conventional SFT's.
+
+    - 1) The _time delta_ between each timestamp is
+      _inconsistent_, meaning the time between measurement in the
+      SFT's can vary greatly.
+        - Besides the unknown unit of the timestamps, the time
+          delta in several samples examined varies between 33.0
+          and 48648 seconds, with ~91% of time deltas being 1800
+          (30 minutes).
+        - How could we handle these inconsistent time deltas?
+    - 2) The frequency range is consistently ~0.2Hz, however the
+      min/max frequency ranges from around ~50to ~498Hz.
+        - As the frequency range is consistent between SFT's
+          I expect the varying min/max frequency can be ignored,
+          how do you feel about this?
+    - 3) The timestamps start at:
+            - 2009-03-27/28 and end on
+            - 2009-07-25/26/27.
+        - The recordings are thus gathered during 4 months with
+          often 30 minutes between the recordings. 
+        - We should thus not interpret the spectrograms as
+          continuous sounds, which is conventionally the case.
+    - Answer:
+        - Timestamps are GPS time, which started ~10 years after
+          UNIX time (i.e, data starts at 2019 rather than at
+          2009).
+
+### STFT amplitudes / energy / power
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/360914
+    - I've queries related to STFT's amplitude normalization:
+    - Can we compute the `Energy` of the signal with the _sum of
+      the squared amplitudes_?
+        - Discussed in StackExchange Link
+    - How can we compute the `Power` of the signal?
+    - In the absence of noise, how is `h0` related to the Energy
+      or the Power of the wave.
+    - Should we normalize the STFT's amplitudes using the
+      `Energy` or the `Power` of the signal?
+    - ANSWER:
+        - Look at this notebook
+        - Basic spectrogram image classification
+          https://www.kaggle.com/code/junkoda/basic-spectrogram-image-classification
+
+
+### PyFstat Signal Parameters
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/361562
+    - As explained in the tutorials, you can use a helper
+      function to inject some parameters based on priors:
+
+    - {pyfstat.injection_parameters.isotropic_amplitude_priors} {
+        - 'cosi': {'uniform': {'low': -1.0,                'high': 1.0}},
+        - 'psi':  {'uniform': {'low': -0.7853981633974483, 'high': 0.7853981633974483}},
+        - 'phi':  {'uniform': {'low': 0,                   'high': 6.283185307179586}}}
+
+    - These are the valid ranges for `cosi`, `psi` and `phi`,
+      which are expected to be _isotropically distributed_
+      (uniform distribution, no preference for any particular
+      value).
+
+    - `cosi`
+        - Cosine of the angle between the source and us.
+        - Range: [-1, 1]
+    - `psi` and `phi`
+        - polarization angle and phase.
+        - Ranges: [-pi/4*, pi/4*] and [0, 2*pi]
+    - `Alpha`
+        - Right ascension of the source's position on the sky.
+        - Range: [0, 2*pi]
+    - `Delta`
+        - Declination of the source's position on the sky.
+        - Range: [-pi/2, pi/2]
+    - `Band`
+        - This is just the width of the frequency "slice" to be
+          taken. It's _0.2 hz_ for all files in the train and
+          test datasets, which translates to `360` "frequency
+          lines".
+    - `F0`
+        - This may be tricky. The generated noise will be
+          centered around this frequency.
+        - If a signal is created, it will be also a signal with
+          this frequency (at the source; when it arrives to the
+          detector, doppler and other effects will shift the
+          frequency), so it will appear more or less on the
+          center of the data.
+        - Range used on the datasets: [50, 500] Hz.
+    - `F1`
+        - This is technically the first derivative of the
+          frequency (how it changs over time).
+        - Physically, the sources (neutron stars) lose energy
+          over time because they emit the GWs, so this should be
+          a negative number.
+        - A reasonable range could be [-1e-9, 0] Hz but that's up
+          to us.
+    - `F2`
+        - This is guess it's the second derivative, which maybe
+          is `0` for the purposes of this competition.
+    - `h0`
+        - The amplitude of the signal.
+        - In the tutorials, the approach is to define it as
+          a ratio of the `sqrtSX`.
+        - What makes the competition (and the real-world problem
+          of finding continuous GWs) is that expected `h0` will
+          be between 1 and 2 orders of magnitude smaller than the
+          amplitude of the noise.
+        - In my opinion, part of the challenge is to create your
+          own signals with a _distribution of h0_ similar to the
+          test set.
+
+    - Regarding other parameters you mentioned like `yp`,
+      `asini`, `period`, I think they are used as alternative
+      ways of specifying the pyhsical parameters of the source
+      and you can ignore them:
+        - Depending on the emission mechanism, `h0` can be
+          further described using further physical quantities
+          such as the source's frequency, ellipticity, or
+          distance to the detector.
+
+    - Rodrigo Tenorio Competition Host
+    - If I could just add the following:
+        - `psi` is actually defined within [-pi /4 , pi / 4] (and
+          it's periodic, so anything beyond that folds back onto
+          this range).
+        - `F2` is another term describing the intrinsic evolution
+          of a gravitational wave. As @darkbitur correctly
+          guesses, it's set to `0` in this competition as we only
+          focus on frequency and spindown.
+        - `tp`, `asini`, `period` are parameters used to describe
+          neutron stars in _binary systems_, and they affect the
+          frequency evolution of the signal.
+            - You can safely ignore those in this competition
+              (but do feel free to play around with them if you
+              wish to!).
+
+        - Depending on the emission mechanism, `h0` can be
+          further described using physical quantities such as the
+          source's frequency, ellipticity, or distance to the
+          detector.
+            - As for this, we normally don't worry about the
+              physics at search time: We can safely encapsulate
+              all that information on `h0`, as that would be what
+              our detectors would basically measure
+                - (gory details: the signal is actually amplitude
+                  modulated depending on `psi` and `Alpha`,
+                  `Delta`, and then `cosi` acts as an overall
+                  scaling on top).
+                - Once the search is done and we get an upper
+                  bound of `h0` we work out the physical
+                  consequences of that
+                    - (e.g. how far away could we have seen
+                      a star with a given ellipticity, how much
+                      ellipticity can nearby NS sustain…).
+
+
+### invert iSTFT
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/358835
+    - Get original waveform from STFT
+    - The main problem is that there is inconsistency in time
+      sampling.
+    - Also, there is too much noise in data, and thus inverting
+      will also lead to noisy waves.
+
+### Data
+    - test dataset is 200GB, Notebook memory is 16GB
+    - If you're just doing inference, then loop over them,
+      scoring them in batches or one-by-one.
+
+### Spindown
+    > positive values from range 1.0e-12 … 1.0e-8 are used. So,
+    > in fact, the frequency is growing with time.
+        - Ups, that was an oversight on our side. They should
+          have been negative values (since spin-down is related
+          to a loss of energy), but some effects may produce
+          positive spin-down values as well.
+    > In both cases, the magnitude of spindown seems surprisingly
+    > high. Intuitively I'd expect NS rotation to be much more
+    > stable.
+        - It depends on whether one is thinking about pulsars,
+          actual neutron stars (NS) or CW searches.
+        - As you say, current EM observations of pulsars (neutron
+          stars we can actually see) give spin down values way
+          lower than what we generated in these notebooks.
+        - However when it comes to _all-sky searches_, we are
+          looking for a (potentially) different population of NS,
+          namely those that we can't see.
+        - Leaving aside actual NS physics, an argument to go to
+          higher ("more negative") spin-down values is related to
+          the astrophysical reach of a search:
+            - roughly, the more a star spins down, the bigger the
+              allowed _ellipticity_ (which is proportional to the
+              GW amplitude) hence the further away it can be
+              while still being detectable by our instruments.
+
+### Parameters (params)
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/347052#1992031
+    - The signals are characterised by the location and
+      orientation of the hypothetical astrophysical source as
+      well as two intrinsic parameters: frequency and spin-down.
+      In total there are eight parameters which have all been
+      randomised.
+
+    - The eight parameters are
+        - 2 parameters for location on the sky            : `Alpha`, `Delta`     affects frequency
+        - 3 parameters for orientation of the source      : `cosi`, `psi`, `phi` affects amplitude
+        - 1 parameter describing the signal "strength"    : `h0`
+        - 2 intrinsic parameters, frequency and spin-down : `F0`, `F1`           affects frequency
+
+    - Also a `Depth` parameter?
+        - "... the relevant parameters are the ones you
+          mentioned, except for `Depth`:
+            - Data-generation codes work in terms of `h0`, which
+              is a more physical quantity, while `Depth` is
+              reserved to interpret the results."
+
+
+### questions
+    - what is whitened data?
+    - what is high-pass, low-pass filtering?
+    - what is spectral leakage? (related to FT?)
+    - what are: "huge blends or usage of pseudo labels"
+    - What's AUC of ROC? Yes, your prediction should be in the
+      real range [0.0, 1.0] as it represents a probability, and
+      it will be evaluated with the AUC of the ROC, against the
+      ground truth which is a binary label [0, 1]
+        - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/361693
+    - Each "line" of test/training data is a STFT over how long?
+    - what is `sqrtSX` (average noise amplitude)
+    - kip: so use a "_slow motion_" approximation, while
+      retaining a full relativistic gravity treatmment
+    - whats is the 'quadrople moment'... the value of `h` is
+      proportional to the third time derivative of the
+      _quadrupole moment_ of the source of the radiation and
+      inversely proportional to the distance to the source.
+
+
+### ideas
+    - _IDEA_: rather than finding a signal, that we don't know,
+      find all the noise instead and remove it!! The noise is in
+      theory a lot easier to identify?
+
+    - combine STFT's into 1 FFT?https://ma.ttpitk.in/blog/?p=397
+        - but lose all time series info then?
+        - (later: no) that's the inverse stft? https://dsp.stackexchange.com/questions/2757/inverse-short-time-fourier-transform-algorithm-described-in-words
+
+    - Mathematics of the Discrete Fourier Transform (DFT not
+      DTFT!) with Audio Applications
+      https://news.ycombinator.com/item?id=33668004
+
+    - discard actual timestamp numbers, just use sequential
+      numbers... but keep the timestamp deltas
+
+    - train different classifier on each detector? LHO, LLO
+
+    - print the spectrograms in 3D?
+    - in sqlite: plot a long long string of the same freq over
+      time?
+    - plot the STFT fourier coeffs as 3D waves? with real, imaginary, time
+    - from the literature: get population estimates for the
+      8 varying parameters...
+    - instead of a spectrogram, convert each "line" in the STFT
+      to its own plot???
+    - discard the bad ones: if "power" is too big then its a messed
+      up spectrogram?
+    - correlations between the two detectors are key? If it's
+      a real CW it's going to show up in both detectors?
+    - but in reality, you could have loads of signals in a single
+      STFT sample?
+    - use some FILTERS?
+    - Use an IMAGE recogniser. fastai course: a sound can be
+      converted to a _spectrogram_, ...
+    - Stable diffusion?
+    - plot a _spectrogram_ of all the cases with a CW and eyeball
+      them myself... yep
+    - particle swarm?: 
+        - send out a few outliers like the penguin walking away
+          on the ice pack...
+
+### Handy
+    - HN discussion about stable diffusion and audio
+    - key point: "magnitude AND phase" in a spectrogram
+        - https://news.ycombinator.com/item?id=33999162
+
+    - pyfstat.make_sfts module
+    - https://pyfstat.readthedocs.io/en/latest/pyfstat.html#module-pyfstat.make_sfts
+        - SFT data can be generated from scratch, including
+          Gaussian noise and/or simulated CW signals or transient
+          signals. 
+        - Existing SFTs (_real data_ or previously simulated) can
+          also be reused through the noiseSFTs option, allowing
+          to ‘inject’ additional signals into them.
+
+    - Common noise pattern L1
+        - $MY_IMAGES/astro/g2net/common-noise-pattern-L1.jpg
+
+    - Plots of different glitch types $MY_IMAGES/astro/g2net/plots-of-glitches.jpg
+
+    - Glitch classification
+        - GravitySpy [Zevin et al. (2017) 34 (CQG); Coughlin et
+          al. (2019) 35 (PRD)] uses citizen scientists to produce
+          training sets for machine learning glitch
+          classification.
+        - Log into gravityspy.org to try classifying glitches.
+          _DOWNLOAD_ already labelled LIGO glitches for training
+          your algorithm from zenodo One / Two.
+
+    - ligo injection parameters https://www.gw-openscience.org/O3/O3April1_injection_parameters/
+
+    - _Important?_ Gating software for glitches (code not released yet) https://www.aei.mpg.de/continuouswaves/Gating2021
+
+    - _GOOD_ SFT explanations
+        - A data mining approach to signal processing in LIGO
+            - $MY_IMAGES/astro/g2net/visualise-sft-file.jpg
+            - https://arminda.whitman.edu/theses/2020080
+
+    - PyFstat: SFT files
+        - format: Short Fourier Transform (SFT) data format for LIGO data, 
+
+    - sqrtSX
+        -  the _single-sided_ amplitude spectral density
+            - (The 'amplitude spectral density' is the square
+              root of the Power Spectral Density PSD)
+        - $MY_IMAGES/astro/g2net/what-is-sqrtSX.jpg
+        - in code:
+        - "sqrtSX" : 1e-23, # Single-sided Amplitude Spectral
+          Density of the _noise_
+                                                   
+
+    - Depth
+        - The presence of _visible_ CW features in the
+          spectrogram can be quantified using the so-called
+          'sensitivity depth', which is defined as the ratio
+          between the noise and CW amplitude: 
+                - `D = sqrt(Sn) / h0`
+        - Current searches for CW signals from unknown sources
+          are able to detect a sensitivity depth ranging between
+          10Hz−1/2 and 10Hz−1/2
+        - Visual features, however, _tend to disappear_ around
+          a depth of 20Hz−1/2
+
+    - $MY_IMAGES/astro/g2net/semi-coherent-searches.jpg
+
+    - Youtube: Fundamental of Continuous Gravitational Wave Data
+      Analysis https://www.youtube.com/watch?v=nfcdkEwyfgw
+
+    - the importance of "`kappa`": how susecptible to oblateness is
+      a stellar object? BHs are kappa=1?
+        - But LIGO is very insensitive to kappa... because they
+          cause signals to go out of _phase_?
+        - He said there could be signals with SNR=100 but LIGO
+          doesn't see it because of kappa
+
+
+    - Jake: time series / Ligo page 427 $MY_BOOKS/Astro/jake_astro_stats_2.pdf
+
+    - Anyone tried to invert the spectrograms back into
+      waveforms?
+        - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/358835
+        - (Wavenet good?)
+        - Great question, I wanted to use WaveNet-like model
+          based on very good results I had on a classification
+          task for time signals. 
+        - Of course inconsistency in time sampling is an issue
+          but there's probable a way to reconstruct a "good
+          enough" time signal. 
+        - As for noise, I worked with time signals with a large
+          amount of noise and _WaveNet_ would still clearly
+          outperform other NN architectures.
+
+    - After running some experiments .. I think the biggest
+      challenge of this competition will be to build a _proper
+      validation set_ …
+
+    - inclination angle 
+        - determines  how much `+` and `x` polarisation you see
+          (if you see it head-on, then `+` and `x` are equal)
+        - (if you see it edge-on, there's no `x` polarisation)
+
+    - What is fully convolutional?
+        - In order to achieve a model that is agnostic to the
+          _length_ of the input time series, we choose a fully
+          convolutional architecture. This means there are no
+          fully connected (or dense) layers. 
+        - Instead, the neural network only learns convolutional
+          flters (or kernels), which make no assumptions about
+          the size of their input data.
+
+    - CW like audio data
+        - Ever since, the community has established CNNs as one
+          of the major work horses for processing images as well
+          as time series data like audio (or various
+          time-frequency representations thereof), which is
+          _structurally similar_ to the strain data produced by
+          gravitational-wave observatories.
+
+    - CW wave search, inclination angle
+      https://astrobites.org/2018/07/27/pulsar-profiles-gr/
+
+    - book:
+      Fundamentals Interferometric Gravitational Detectors
+      https://www.amazon.com/Fundamentals-Interferometric-Gravitational-Detectors-Second/dp/981327185X/
+
+    - GOOD: Cern course CWs https://www.youtube.com/watch?v=J0Y2MdBBJ-o&list=PLBq1bmlryLC5iego1foKzGate68dhkLN2&index=11
+        - Doppler correction is crucial
+
+    - The DNN input is first _normalized_ by its standard
+      deviation. The DNN output is created with a global average
+      pooling layer and a dense layer with two final neurons and
+      a softmax activation. 
+        - The two outputs are encoding the estimated
+          probabilities that the input contains a signal in noise
+          psignal or pure noise, `pnoise = 1 − psignal`
+          , respectively
+    - ... 240,000 samples in the training set in total
+    - To avoid large computational cost for the training, we want
+      to use as few networks as possible, optimally even a single
+      one, to cover the search band with a reasonable
+      sensitivity. Therefore we want to compare how a network
+      trained over the full frequency band compares to “special-
+      ized” narrow-band networks trained on 50 mHz bands, when
+      tested over the full frequency range.
+    - We found that performing an additional prenormalization of
+      the data by the _individual detector noise floors_ improves
+      the DNN detection performance in the presence of differing
+      noise floors between the two detectors
+    - On the other hand our architecture searches did not yet
+      yield a reasonably competitive neural network for the
+      longer T ¼ 106 s data span. Therefore we mostly focused on
+      characterizing the performance of the T ¼ 105 s networks
+      for now.
+    - We have further shown that DNNs seem relatively robust
+      toward data gaps that differ from the training set, and we
+      found that the impact of _unequal detector noise floors_
+      can be alleviated by per-detector data normalization.
+      Furthermore, as expected, we find that the performance on
+      real detector noise is significantly reduced in the
+      presence of non-Gaussian disturbances, i.e., “lines”
+        - http://arxiv.org/abs/2005.04140
+
+    - The number of neutron stars observed by electromagnetic
+      emission is &2500 [16], but a population of about ∼108–109
+      [17 ] unseen objects of the same kind is expected to exist
+      in our galaxy. 
+        - https://www.mdpi.com/2218-1997/7/7/218
+
+    - phd thesis: 2006: 
+        - Searches for continuous and transient gravitational
+          waves from known neutron stars and their astrophysical
+          implications 
+        - The first stage of the selection process involved using
+          the ATNF _online pulsar catalogue_ [47] (described in
+          Manchester et al., 2005 [90]) which provides a list of
+          pulsars and their parameters. As stated in Chapter
+          2 this catalogue shows that there are currently 150
+          pulsars with spin frequencies > 25 Hz.
+
+    - We use only _whitened time series_ of measured
+      gravitational-wave strain as an input, and we train and
+      test on simulated binary black hole signals in synthetic
+      Gaussian noise representative of Advanced LIGO sensitivity.
+    - We show that our network can classify signal from noise
+      with a performance that emulates that of match filtering
+      applied to the same datasets when considering the
+      sensitivity defined by Reciever-Operator characteristics. 
+        - https://arxiv.org/abs/1712.06041
+
+    - The search analyzes the most sensitive frequency band of
+      the LIGO detectors: 
+        - 50 to 300 Hz
+
+    - Gltiches etc are: _non-Gaussian noise_ in GW data?
+
+    - STFT alternative: Gabor Transform
+        - Steve Brunton https://www.youtube.com/watch?v=EfWnEldTyPA&list=PLMrJAkhIeNNQV7wi9r7Kut8liLFMWQOXn&index=95
+    - lecture 2:
+        - very hard for NS to be deformed away from rotational
+          shape
+        - biggest mountain 5 * 10^-7
+        - accreting NSs spin freq distribution
+            - Important? Distribution of NS spin frequencies? $MY_IMAGES/astro/grav-waves/NS/accreting-NS-spin-hz-distribution.jpg
+            - $MY_NOTES/astro/courses/Course-CWs-Neutron-Stars.txt
+    - tiny signals
+        - 10^-28 (?)
+        - have to integrate `sqrt(obs time)`
+        - $MY_IMAGES/astro/g2net/tiny-h.jpg
+
+    - targets not [1, 0] binary?
+        - ROC AUC score intuition ~ detected fraction
+        - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/362918
+        - Very interesting post. You can imagine this when you
+          observe the data. There is not a binary class at all,
+          I'd actually say there it's a _three class_ problem:
+            - Possitive,
+            - Negative, and
+            - Ambiguous.
+                - reply:
+                - I've neglected an ambiguous population in the
+                  negatives that looks like positives. 
+                - Maybe there is such contribution in the test
+                  score 👍
+
+    - Machine learning CBC searches
+        - https://github.com/zerafachris/g2net_2nd_training_school_malta_mar_2020/blob/master/lectures/GRAV_GW_Data_Jade_Powell.pdf
+        - George & Huerta (arXiv:1701.00008) use a system of two
+          deep convolutional neural networks to rapidly detect
+          CBC signals.
+        - They use _time series as input_ so that they can find
+          signals too small for _image recognition_.
+
+    - Lecture about Matched filters: GW detector noise is
+        - non-Stationary and 
+        - non-Gaussian.
+
+    - Check this: _Swarm_ intelligence methods for statistical
+      regression
+        - $MY_NOTES/cs/AI-ML/PSO-Particle-Swarm-Optimisation.txt
+
+    - 2019: Deep-Learning continuous gravitational waves
+      https://arxiv.org/abs/1904.13291
+        - We study the DNN generalization ability by testing on
+          signals of _different frequencies_, spindowns and
+          signal strengths than they were trained on.
+        - We observe excellent generalization: only _five
+          networks_, each trained at a _different frequency_,
+          would be able to cover the whole frequency range of the
+          search.
+
+    - Psi SETI comment:
+        - Thus, we explored methods to reduce the impact of the
+          _background noise_ or reduce overfitting on the
+          background noise.
+    - Psi comment:
+        - Recommends Domain adapation
+          https://paperswithcode.com/task/domain-adaptation
+    - Psi comment:
+        - pretrained, I honestly havent seen a case where
+          pretrained is not helpful, at least in terms of
+          training time needed
+    - Psi trick:
+        - Use mixup
+          https://www.kaggle.com/competitions/seti-breakthrough-listen/discussion/266621#1483654
+    - Psi trick:
+        - We always take the _maximum of both labels_ as the
+          final label should always be target=1 as soon as there
+          is some form of a signal in the data.
+    - Psi trick:
+        - https://www.kaggle.com/competitions/seti-breakthrough-listen/discussion/266385#1484386
+        - Model and resolution wise we saw on CV that the bigger
+          the better. Hence, as mentioned earlier, we feed the
+          full image with only concatenated ON channels in and do
+          not do any resizing.
+        - To further “enlarge” the images we change the model
+          stride of the first conv layer to (1,2), which is
+          a common trick used in computer vision competitions to
+          basically further enlarge image resolution. 
+        - That allows the model to train on a higher resolution
+          through the backbone. Christof and Philipp used the
+          same trick in ALASKA2 Steganalysis competition,
+          motivated by the very similar data setup (find hidden
+          data in an image). 
+        - Training time of this “high resolution” model is about
+          15h on 8xV100 using DDP.
+
+    - in general, noise has high frequencies
+
+    - Good notebook:
+        - Pytorch image model: `tf_efficientnet_b2_ns`
+        - My version https://www.kaggle.com/code/farrelle25/basic-spectrogram-image-classification/edit
+        - Original https://www.kaggle.com/code/junkoda/basic-spectrogram-image-classification
+
+    - Infer noise statistics from test data
+      https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/361501
+
+    - learn: monte carlo methods
+
+    - Recursive Filter Design
+        - $MY_BOOKS/Astro/DSP/Scientist-Engineers-Guide-to-DSP-2e.pdf
+        - Chapters 19 and 20 show how to design recursive filters
+          with the standard frequency responses: high-pass,
+          low-pass, band-pass, etc. What if you need something
+          custom?
+            - The answer is to design a recursive filter just as
+              you would a neural network: 
+                - start with a generic set of recursion
+                  coefficients, and use iteration to slowly mold
+                  them into what you want.
+            - This technique is important for two reasons. 
+                - First, it allows custom recursive filters to be
+                  designed without having to hassle with the
+                  mathematics of the z-transform.
+                - Second, it shows that the ideas from
+                  conventional DSP and neural networks can be
+                  combined to form _superb algorithms_.
+    - Consider: polarisation: linear or circularly polarised CW's
+    - Denoising Data with FFT [Python]
+      https://www.youtube.com/watch?v=s2K1JfNR7Sc
+        - Could I use this for CW's?
+    - CWs are "pure tones", extremely weak but always there
+
+    - Fourier Gaps?:
+        - Fourier transforms are taken over _continuous
+          segments_. For every timestamp, you can assume there's
+          a continuous span of time on which we applied the
+          Fourier transform. 
+        - Whenever we hit a gap, we stop and wait until we have
+          again enough data to compute another Fourier transform.
+
+    - Yes, each timestamp labels a period of time of _1800s_ 30
+      mins (you can check that by noting the frequency resolution
+      of 1/1800 Hz)
+        - But timestamps need not to be consecutive
+        - (i.e. there may be times at which no data is
+          collected).
+
+    - Parameters
+        - like `F0`, `F1`, `Alpha`, `Delta` affect the
+          _frequency_ evolution of your signal
+        - whereas parameters like `cosi`, `phi`, `psi` affect the
+          _amplitude_ of the signal.
+        - Nice visualisation: https://www.glowscript.org/#/user/grahamwoan/folder/Public/program/gwgw
+
+    - _Loud instrumental features_ in the data tend to saturate
+      detection statistics due to their strong resemblance to CW
+      signals along short periods of time.
+        - This problem spurred the development of methods capable
+          of suppressing narrow-band features in the data, such
+          as the application of the Hough transform to the search
+          for CW signals.
+
+    - hdf5 data layout: $MY_IMAGES/astro/g2net/hdf5-layout.jpg
+
+    - The SFTs are _not always contiguous_ in time, since the
+      interferometers are not continuously online.
+
+    - Do the detectors measure the same range of frequencies each
+      time?
+        - No. The range varies but the minimum freq measured is
+          ~50 Hz and the maximum is ~500 Hz
+
+    - When we talk about SNR, we refer to the SNR of a specific
+      _model_. 
+        - i.e. given a set of _parameters_ characterizing
+          a signal, I can compute the SNR associated with that
+          specific signal in the data. 
+        - Data itself doesn't have an "SNR" in our language.
+
+    - Part of the test set is based on _actual data taken by the
+      Advanced LIGO_ detectors, hence it may contain some
+      instrumental artifacts you'll have to deal with.
+
+
+
+### Links
+    - G2net consortium                            https://www.g2net.eu/
+    - G2net consortium ML for Grav Wave           https://www.g2net.eu/wgs/wg1-machine-learning-for-gravitational-wave-astronomy
+    - G2net consortium ML for Grav Wave tutorials https://www.gw-openscience.org/tutorials/
+    - G2net consortium ML for Grav Wave workshops https://www.gw-openscience.org/workshops/
+    - G2net consortium Twitter                    https://twitter.com/g2_net
+    - G2net open data workshop 5 YOUTUBE          https://www.youtube.com/playlist?list=PLTzEMcfPsv9L1mQly59VVEEQo2YTbTx0a
+
+    - Mike X Cohen Time Freq Analysis                                                  https://www.youtube.com/playlist?list=PLn0OLiymPak2BYu--bR0ADNBJsC4kuRWs
+    - Mike X Cohen Static Spectral Analysis                                            https://www.youtube.com/playlist?list=PLn0OLiymPak2jxGCbWrcgmXUtt9Lbjj_A
+    - LIGO: official documentation CWs                                                 https://dcc.ligo.org/cgi-bin/DocDB/ListBy?topicid=52
+    - Youtube: Joseph Bayley - Rapidly searching for continuous gravitational waves    https://www.youtube.com/watch?v=rRLo9-MXG58
+    - Youtube: Fundamental of Continuous Gravitational Wave Data Analysis              https://www.youtube.com/watch?v=nfcdkEwyfgw
+    - Resources: Fundamental of Continuous Gravitational Wave Data Analysis            https://drive.google.com/drive/folders/1nc9xwNSbP-tx1_1cNapbP6KNRLAb2lVw
+    - pirsa video: Cross-Correlation Methods in Continuous Gravitational-Wave Searches https://pirsa.org/11040107
+    - pirsa video: directed and targeted cw searches                                   https://pirsa.org/18050034
+    - pirsa video: CWs around BHs                                                      https://pirsa.org/18120007
+    - Webinar: Understanding neutron stars with continuous GW                          https://www.youtube.com/watch?v=0QomwKeWbws
+    - Special Issue: CW's                                                              https://www.mdpi.com/journal/universe/special_issues/continuous_gravitational_waves
+    - Glasgow uni: Grav Detection course                                               https://www.gla.ac.uk/coursecatalogue/course/?code=PHYS5006
+    - GOOD: Cern course CWs                                                            https://indico.cern.ch/event/1081679/timetable/?view=standard_inline_minutes
+    - GOOD: Cern course CWs                                                            https://www.youtube.com/watch?v=J0Y2MdBBJ-o&list=PLBq1bmlryLC5iego1foKzGate68dhkLN2&index=11
+    - GW Open Science Centre                                                           https://www.gw-openscience.org/
+    - Kaggle notebooks                                                                 https://www.youtube.com/watch?v=WmAlWNSH5Tk
+    - riroriro: simulate gw's                                                          https://github.com/wvanzeist/riroriro
+    - riroriro: paper                                                                  https://joss.theoj.org/papers/10.21105/joss.02968
+    - animation: glowscript CW                                                         https://www.glowscript.org/#/user/grahamwoan/folder/Public/program/gwgw
+
+
+### Synthetic data
+    - lalsuite LSC Algorithm Library Suite                https://git.ligo.org/lscsoft/lalsuite
+    - lalsuite Documentation                              https://lscsoft.docs.ligo.org/lalsuite/
+    - lalsuite Documentation 2                            https://wiki.ligo.org/Computing/LALSuite
+    - PyFstat                                             https://github.com/PyFstat/PyFstat
+    - PyFstat docs                                        https://pyfstat.readthedocs.io/en/latest/
+    - Examples                                            https://github.com/PyFstat/PyFstat/blob/master/examples
+    - Examples Tutorial 1: Generating Noise               https://github.com/PyFstat/PyFstat/blob/master/examples/tutorials/0_generating_noise.ipynb
+    - Examples Tutorial 2: Generating Signals             https://github.com/PyFstat/PyFstat/blob/master/examples/tutorials/1_generating_signals.ipynb
+    - Tech Document: SFT Data format (pyFstat .sft files) https://dcc.ligo.org/LIGO-T040164/public
+    - Tech Document: The F-statistic                      https://dcc.ligo.org/LIGO-T0900149/public
+
+### Code
+    - ME: Generate your own data                                 https://www.kaggle.com/code/farrelle25/generating-continuous-gravitational-wave-signals/edit
+    - notebook: kaggle / generate data Rodrigo Tenorio           https://www.kaggle.com/code/rodrigotenorio/generating-continuous-gravitational-wave-signals
+    - notebook: Jun Koda. Basic spectrogram image classification https://www.kaggle.com/code/junkoda/basic-spectrogram-image-classification
+    - notebook: Weird behavior of std(spectrogram)               https://www.kaggle.com/code/josefslavicek/g2net-weird-behavior-of-std-spectrogram
+    - notebook: Simple script to generate gravitational waves    https://www.kaggle.com/code/yoyobar/a-simple-script-to-generate-gravitational-waves
+    - notebook: _GOOD_ Guy who identified noise and glitches     https://www.kaggle.com/code/kdmitrie/g2net-exporing-test-train-datasets
+
+
+### Competition general
+    - g2net competition                                                https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves
+    - Data description                                                 https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/data
+    - Evaluation metric: ROC curve                                     https://en.wikipedia.org/wiki/Receiver_operating_characteristic
+    - Evaluation metric: AUC ROC (Area under curve)                    https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
+    - _GOOD_: Survey of GW techniques (He Wang)                        https://iphysresearch.github.io/Survey4GWML/
+    - _GOOD_: Survey of GW techniques (He Wang) CW's                   https://iphysresearch.github.io/Survey4GWML/#5_continuous_wave_search
+    - GW data analysis with PyCBC toolkit                              https://mathinstitutes.org/videos/16808
+    - Video: GW videos from the NSF Mathematical Sciences              https://mathinstitutes.org/videos?query=gravitational&search=gravitational&perpage=12&page=3
+    - Video: Intro to ML for GW astronomy                              https://mathinstitutes.org/videos/17886
+    - Video: Inferring the properties of populations of gravitational-wave sources
+    - Conference: Machine learning in GW search: g2net next challenges https://indico.ego-gw.it/event/464/timetable/#20220928.detailed
+    - Conference: 2020 g2net summer school                             https://github.com/zerafachris/g2net_2nd_training_school_malta_mar_2020
+
+### Discussion
+    - discussion: Understanding the data                                              https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/358444
+    - discussion: Generate own data                                                   https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/347052
+    - discussion: Generate own data: parameter info                                   https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/347052#1992031
+    - discussion: Generate own data: signals center frequency band?                   https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/347052#1986395
+    - discussion: Generate own data: Spindown                                         https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/347052#1997129
+    - discussion: Invert STFT into _waveforms_                                        https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/358835
+    - discussion: Minimum float32 is 1e-38 (use float64)                              https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/361312
+    - discussion: Use test data for training phase (maybe examine noise etc)          https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/361501
+    - discussion: same signal trajectories between H1 & L1                            https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/361655
+    - discussion: STFT amplitudes / energy / power                                    https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/360914
+    - discussion: Timestamps and Frequencies Insights                                 https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/358832
+    - discussion: vertical centered "signals" in the spectrograms?                    https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/362775
+    - discussion: dataset: competitor supplied no upvotes                             https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/362816
+    - discussion: Accuracy on train dataset(as validation) is always 2/3?             https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363069
+    - discussion: ROC AUC score intuition ~ detected fraction                         https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/362918
+    - discussion: (technical) Amplitude Spectral Density and Short                    https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/362721
+    - discussion: HDF files with indexed dataframes for the training set              https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/362721
+    - discussion: _important_: std spectrogram possible label leak?                   https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363460
+    - discussion: Recap of old G2NET Top Solutions                                    https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363280
+    - discussion: Pytorch seeding                                                     https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363163
+    - discussion: _Interesting_: Data Questions: real data could have 2 signals!      https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363693
+    - discussion: _Interesting_: training set not representative of test set?         https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363810
+    - discussion: -1 Labels. Easter Eggs!                                             https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363734
+    - discussion: Calling all domain experts...                                       https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363841
+    - discussion: labelling data by hand?                                             https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/364029
+    - discussion:  Randomised parameters                                              https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/347052#1992031
+    - discussion:   Articles for HDF5 dataset for Read and writing speed              https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/358281
+    - discussion: _IMPORTANT_ processed `hdf5` datasets easy reading `PANDAS`         https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/357645
+    - discussion: _IMPORTANT_ processed `hdf5` datasets easy reading `PANDAS` dataset https://www.kaggle.com/datasets/jpmiller/simplified-dataset
+    - discussion: _good_ guy runs various SNR experiments 1%, 5% etc                  https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/370202
+
+
+    - PhD: Searches for CWs : sensitivity estimation and deep learning https://www.repo.uni-hannover.de/handle/123456789/10200
+    - PhD: Glasgow                                                     https://theses.gla.ac.uk/81518/
+
+- See also: $MY_NOTES/astro/courses/Course-CWs-Neutron-Stars.txt
+- See also: $MY_NOTES/astro/camk/camk-ns-group.txt
+
+### g2net: other tasks
+    - plot STFT, not spectrogram
+    - download test cases as spectrograms
+    - get data anaylysis books
+    - good EDA here                                                       https://www.kaggle.com/code/edwardcrookenden/g2net-getting-started-eda
+    - good EDA: G2Net: EDA That Gives You insights                        https://www.kaggle.com/code/jcaliz/g2net-eda-that-gives-you-insights
+    - good EDA: "creates 4 channels" G2Net EDA + 360x360 Dataset Creation https://www.kaggle.com/code/markwijkhuizen/g2net-eda-360x360-dataset-creation
+    - EDA: "Audio tricks" G2Net Basic audio data augmentation             https://www.kaggle.com/code/myso1987/g2net-basic-audio-data-augmentation
+    - Paper: Identification and removal of non-Gaussian noise transients for gravitational wave searches
+    - vid: explain fourier coefficients https://www.youtube.com/watch?v=Kpw7QyVTm6Y
+    - Image-based deep learning for classification of noise transients in gravitational wave detectorshttps://arxiv.org/abs/1803.09933
+
+

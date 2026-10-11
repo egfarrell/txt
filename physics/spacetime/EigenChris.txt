@@ -1,0 +1,87 @@
+
+
+
+### Question:
+    - key: 
+        - learn from 2D surfaces first
+    - How did you learnt Christoffel etc?
+        - Thanks, I went through many references trying to
+          understand these topics. The best I found:
+        - $MY_BOOKS/Physics/Maths/Geometry/Differential-Geometry-Lia-Vas-EigenChris.pdf
+    - It helped me realize there was a version of differential
+      geometry of `2D surfaces` by Gauss and others that was more
+      "concrete" and intuitive than the abstract Riemannian
+      Geometry that came afterward. 
+    - I found it's impossible to understand Riemannian Geometry
+      unless you STUDY CLASSICAL DIFFERENTIAL GEOMETRY FIRST. 
+        - But many books and courses just throw Riemannian
+          Geometry at you, where everything is symbols and no
+          pictures, and expect you to understand it.
+
+
+### Geodesics and Christoffels 
+    - https://www.youtube.com/watch?v=1CuTNveXJRc
+    - If you're going 'forward' as _straight_ as possible
+      (geodesic), any change in the velocity vector (i.e.
+      acceleration) will be in a plane up/down from the
+      velocity vector..(i.e. normal to the velocity vector) 
+        - but no change in the velocity vector from side-to-side
+          (tangentially)!
+        - so for a geodesic any acceleration vector will be
+          pointing directly out of the surface, always `normal`
+          to the surface
+        - $MY_IMAGES/physics/GR/EigenChris-geodesic-1.jpg
+        - $MY_IMAGES/physics/GR/EigenChris-geodesic-2.jpg
+    - To FIND geodesic curves, we need to find curves where the
+      acceleration vector is normal to the surface
+        - $MY_IMAGES/physics/GR/EigenChris-geodesic-3.jpg
+    - ASIDE: 
+        - create a curved surface using a map from a 2D
+          plane... studied this in Lboro and didn't have a clue
+          what this map was about
+            - $MY_IMAGES/physics/GR/EigenChris-geodesic-4.jpg
+        - and to draw a curve on the curved surface, first draw the
+          curve in the `uv-plane`, as a function of some curve
+          parameter `λ`, and then put it through the function to
+          put it in 3D space...
+            - $MY_IMAGES/physics/GR/EigenChris-geodesic-5.jpg
+        - Get tangent planes to the surface using partial
+          derivatives
+            - $MY_IMAGES/physics/GR/EigenChris-geodesic-6.jpg
+        - and get tangent vectors along the curve parameterised
+          by `λ`
+            - $MY_IMAGES/physics/GR/EigenChris-geodesic-7.jpg
+    - Get acceleration vector from formula for velocity vector
+        - $MY_IMAGES/physics/GR/EigenChris-geodesic-8.jpg
+        - $MY_IMAGES/physics/GR/EigenChris-geodesic-9.jpg
+        - $MY_IMAGES/physics/GR/EigenChris-geodesic-10.jpg
+        - $MY_IMAGES/physics/GR/EigenChris-geodesic-11.jpg
+    - After a tidy-up of the formula, we need to figure out what
+      part is TANGENT to the velocity vector and what part isn't
+        - $MY_IMAGES/physics/GR/EigenChris-geodesic-12.jpg
+    - Now the whole concentration shifts to the `2nd derivatives`
+      at the end of the formula
+        - $MY_IMAGES/physics/GR/EigenChris-geodesic-13.jpg
+        - these 2nd derivatives are actually a 3D vector in a 3D
+          space, but rather than using `x,y,z` we'll build the 3D
+          space as a tangent space to the curve and the 3 basis
+          vectors will be the normal, and the two tangent vectors
+          to the curve
+        - So the three components to this acceleration vector are
+          unknown, but let's call them `Γ^1`, `Γ^2`, `L`
+            - $MY_IMAGES/physics/GR/EigenChris-geodesic-14.jpg
+            - $MY_IMAGES/physics/GR/EigenChris-geodesic-15.jpg
+            - $MY_IMAGES/physics/GR/EigenChris-geodesic-16.jpg
+        - and the _purple arrow_ is actually the acceleration
+          vector, built out of 3 basis vectors, with
+          `Christoffel` and `L` components
+            - $MY_IMAGES/physics/GR/EigenChris-geodesic-17.jpg
+        - Now solve for the Christofel symbols by dotting with
+          the tangent vectors
+        - But the dot product of the tangent vectors is actually
+          the metric tensor!
+
+
+### Links
+    - Lia Vas Differential Geometry course (EigenChris learnt)      https://liavas.net/courses/math430/
+    - Lia Vas Differential Geometry course (EigenChris learnt)      $MY_BOOKS/Physics/Maths/Geometry/Differential-Geometry-Lia-Vas-EigenChris.pdf

@@ -1,0 +1,74 @@
+
+### Key idea!!
+
+
+
+
+### number density
+    - are counts that have no units
+    - eg number of particles per volume
+    - example optical depth:
+        - dust particle number density:
+        - $MY_IMAGES/astro/extinction-coeff-01.jpg
+
+
+### Optical Depth (Parsons Astrobaki)
+    - $MY_VIDEOS/Astro/Parsons-Astrobaki/Optical-Depth-Seeing-Through-the-Cloud.mp4
+
+    - useful concept for how intensity varies as it passes
+      through a medium
+
+    - `τ >> 1`:
+        - optically thick
+        - lose background information
+        - the specific intesity we observe asymptotes to the
+          source function
+
+    - `τ << 1`:
+        - optically thin
+        - retain background information
+        - and the source function only changes that linearly with
+          optical depth
+
+    - we can _factor_ optical depth in lots of ways:
+
+    - EXTINCTION COEFFICIENT `α_ν`
+        - assume extinction is constant
+        - then optical depth is extinction * distance travelled
+        - `τ_ν = α_ν • s`
+        - extinction `α_ν` has units of inverse distance
+
+    - NUMBER DENSITY
+        - `τ_ν = n • σ_ν • s`
+        - `n` = number density of dust particles in the way
+        -     = counts / cm^3
+        - `σ_ν` = cross section area of each dust particle
+        - $MY_IMAGES/astro/extinction-coeff-01.jpg
+
+    - COLUMN DENSITY
+        - what fraction of your image is covered up by these
+          particles?
+        - actually we don't care about the number density of the
+          particles... we care about how many there are
+          _integrated_ over this distance
+        - so we switch to the "column density", which is the
+          number density integrated over `s`
+        - it measures fraction that is covered up as you
+          look through this cloud...
+        - units 1 / area
+        - $MY_IMAGES/astro/extinction-coeff-02.jpg
+
+    - DENSITY
+        - `τ` = density * opacity * distance
+        - `τ` = g/cm^3  * ??      * cm
+
+    - Nice plot:
+        - all these have `τ = 0.1` but the column density `N` and
+          cross-sectional area `σ` differ
+        - $MY_IMAGES/astro/extinction-coeff-03.jpg
+
+    - Another plot:
+        - showing optical depth from 0.0 to 4.0
+        - $MY_IMAGES/astro/extinction-coeff-04.jpg
+
+

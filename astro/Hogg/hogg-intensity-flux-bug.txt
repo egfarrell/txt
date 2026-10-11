@@ -1,0 +1,81 @@
+
+intensity vs flux bug
+https://hoggresearch.blogspot.com/2014/02/intensity-vs-flux-bug.html
+
+- I spent some quality time with Ekta Patel tracking down a bug
+  in our visualization of 'The Tractor' output ...
+
+- Apparently I had entered some calibration information as if it
+  calibrated flux, when in fact it calibrates intensity.
+
+- The flux vs intensity issues have bitten me many times previously,
+  so I might learn it some day. As my loyal reader knows (from
+  'Problem_1' and 'Problem_2', for example) 
+
+- I feel very strongly that an astronomical image is a measure of
+  intensity not flux! 
+
+- The key idea is that INTENSITY is the thing that is preserved
+  by transparent optics; it is the fundamental quantity.
+
+
+
+### Problem_1
+    - drizzle, astrometry
+    - I talked to Schlegel at length about conceptual problems
+      with 'drizzle', and raised my concerns that:
+
+    - (a) it does not optimize a scalar objective function; ie,
+      the image it produces is not the "best" in any conceivable
+      sense
+    - (b) philosophically, it treats the telescope as a photon
+      bucket, not a device that measures the intensity. 
+    - This latter problem is subtle, but if you treat the
+      detector as a flux collector, you have to worry about "flux
+      conservation" and "gaps in the detector" etc, but when you
+      think of it as device that measures the intensity field,
+      you just have to determine each pixel's "beam" and then
+      note that each measurement pixel constrains the
+      beam-convolved intensity map. 
+    - Of course, drizzle exists, and my ideas are vapor-ware, or
+      maybe bar-ware, since they are just polemics shouted in
+      bars.
+
+
+### Problem_2
+    - PCA, hst pixels
+
+    - Long discussions today between Sandstrom (MPIA), Groves
+      (MPIA), Kapala (MPIA), Weisz (UW) and me about inferring
+      the total mean intensity from a patch of the sky from the
+      pixel photon counts in a large patch of HST imaging.
+    - I think the problem is hard enough—given zodiacal,
+      Galactic, and extragalactic backgrounds (well the first two
+      I guess are foregrounds) - without the additional problem
+      that we don't understand the HST pipeline processing. 
+    - I got even more upset about the idea (encoded in
+      DrizzlePac) that images are grids of buckets of photons;
+    - this view leads to ideas like "transformations that
+      preserve flux" (when in fact transformations should
+      preserve intensity), 
+    - and makes all interpretation extremely sensitive to pixel
+      solid angles, which may or may not be properly multiplied
+      in (with an intensity image, failure to multiply in would
+      be failure to calibrate; not so when you are "just"
+      counting photons).
+
+    - Collaborator Tsalmantza was shocked to hear me talking
+      about PCA with the exoplanet direct imaging group (headed
+      by Brandner) since I have devoted quite a bit of my last
+      few years attacking PCA. I guess I now have to agree that
+      PCA is sometimes useful. It is never Mr Right but it is
+      sometimes Mr Right Now. 
+    - Everyone in the direct imaging world is talking PCA right
+      now, I think in part because we have all reached the limit
+      of what 'means' can teach us. 
+    - In Brandner's group meeting we also talked about finding
+      young M stars, which are great exoplanet search targets
+      because they are not so luminous and when young the planets
+      might still be hot. Young M stars have activity that give
+      them line, UV, and X-ray emission; the planets might too;
+      that seems like an interesting thing to think about!

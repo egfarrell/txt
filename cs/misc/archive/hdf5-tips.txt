@@ -1,0 +1,15 @@
+
+
+### Pandas can read hdf5
+    filename = "xxxx.h5"
+    df_h = pd.read_hdf(filename, key='h')
+    df_l = pd.read_hdf(filename, key='l')
+
+### GUI viewer: 'vitables'
+    - Problem: needs Python 3.7 because of two weird errors: 
+        - DLL error and 'collectables' eror in Python 3.9
+
+    conda create -n vitables3 python=3.7
+    coa vitables3
+    conda install -c conda-forge vitables
+    

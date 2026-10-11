@@ -1,0 +1,96 @@
+sqliteodbc tips
+
+ini DSN files
+    system: /etc/odbc.ini
+    user:  ~/.odbc.ini
+
+
+Python connection
+    .odbc.ini:
+        [endadb]
+        Description=Enda SQLite test database
+        Driver=SQLite
+        Database=/home/ef/repos/plot/well.sqlite
+
+        [odbcsqlite]
+        Description=SQLite database
+        Driver=/usr/local/lib/libsqlite3odbc.so
+        (or... Driver=SQLite)
+
+    then 2 options in python :
+      connection_string = 'DSN=endadb'
+      connection_string = 'DSN=odbcsqlite;DATABASE=./well.sqlite'
+      remember no spaces in connection string!
+
+    
+handy commands:
+    isql -v endadb
+    odbcinst -j  (--> see which .ini files being used)
+    odbcinst -s -q
+
+
+UBUNTU compile
+    !!! important: link to the ANACONDA library!!!
+
+    sudo apt-get install libsqlite3-dev
+    cd sqliteodbc-0.997/
+    ./configure LDFLAGS="-L/home/ef/anaconda/lib"
+    make
+    sudo make install
+    odbcinst -j
+    libtool --finish /usr/local/lib/odbc
+
+
+odbcinst.ini 
+    /etc/odbcinst.ini  
+        ---> use this one after install iopro?!
+
+    (/usr/local/etc/odbcinst.ini) 
+        --> not used by anaconda iopro?
+        --> this was default after make/install of sqliteodbc
+
+    [SQLite]
+    Description=SQLite ODBC Driver
+    Driver=/usr/local/lib/libsqlite3odbc.so
+    Setup=/usr/local/lib/libsqlite3odbc.so
+    Threading=2
+
+
+local ~/.odbc.ini
+    [endadb]
+    Description=Enda SQLite test database
+    Driver=SQLite
+    Database=/home/ef/extract.sqlite
+    # optional lock timeout in milliseconds
+    Timeout=2000
+
+
+interesting web page
+    The Driver line is used to match the [section] entry in the
+    odbcinst.ini file and the the Driver line in the odbcinst file is used
+    to find the path for the driver library, and this loaded and the
+    connection is then established. 
+
+    !!! It's possible to replace the driver entry with a path to the
+    driver itself. This can be used, for example if the user CAN'T GET
+    ROOT ACCESS to setup anything in /etc (less important now because
+    of the movable etc path). For example
+
+    [PostgreSQL]
+    Description         = Test to Postgres
+    Driver              = /usr/local/lib/libodbcpsql.so
+    Trace               = Yes
+    TraceFile           = sql.log
+    Database            = nick
+    Servername          = localhost
+    UserName            =
+    Password            =
+    Port                = 5432
+    Protocol            = 6.4
+    ReadOnly            = No
+    RowVersioning       = No
+    ShowSystemTables    = No
+    ShowOidColumn       = No
+    FakeOidIndex        = No
+    ConnSettings        =
+

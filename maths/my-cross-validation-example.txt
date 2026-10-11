@@ -1,0 +1,34 @@
+Give an example of when you have demonstrated this competency
+
+For my Physics degree, I used *Cross-Validation* to
+fine-tune a Decision Tree model which predicts the distance
+to a galaxy based on telescopic colour measurements.
+Decision (Regression) Trees are used when the response
+variable is continuous and they can be fine-tuned by
+a maximum depth parameter. I chose this model because the
+input data doesn't need to be normalised and they handle
+non-linear relationships.
+
+To assess the bias and variance of my model, I split the
+data into training, cross-validation and test datasets.
+I used the training dataset to create regression trees for
+a variety of depth settings. I then applied the trained
+models to the cross-validation dataset and plotted “learning
+curves”: training *errors* against cross-validation *errors*
+as a function of the depth parameter.
+
+I determined the optimal parameter setting by repeatedly
+adjusting the depth based on the learning curves. Initially
+I found the model to be highly biased. I then adjusted the
+depth to higher values, re-checking the curves for high
+variance. (If the depth is too high, the decision tree
+learns the fine details of the training data and over-fits)
+I finally achieved an optimal depth and executed the
+optimised model on the final test dataset.
+
+During the work I found the training data was too sparse for
+certain types of galaxies and some colour combinations are
+not-unique resulting in catastrophic errors. I overcame this
+by sourcing alternative data with more sample cases.
+I successfully optimised my model and my results matched
+those of a published Astronomy paper.

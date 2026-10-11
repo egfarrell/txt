@@ -1,0 +1,84 @@
+unix grep
+
+### Handy grep, exdluding folders
+    grep -riI --exclude-dir={site_media,pdb} "DATABASE" .;
+
+
+### Grep using file contents? 
+    - grep -F -f sensitive.txt mylogfile.txt
+    - Note: 
+        - grep `-x` will match a whole line. 
+        - But `-w` matches words. 
+        - So `grep -wf A.txt B.txt` will show matches if a word
+          from A.txt matches a word in B.txt
+
+### file has 'dash -' at start of file name
+    cd /usr/lib/systemd/system
+    grep sysconfig *  <---- fails
+    grep -- sysconfig *
+
+# grep but show all output
+    ncal -h -bM | grep -E "$today|$"
+    key bit: `-E "$today|$"`
+
+### grep whole word (3 slashes!)
+    > gw \\\<CERN\\\>
+
+# grep literal characters - approach 1
+    # (must DOUBLE escape the minus sign!!)
+    gw \\-z
+
+# grep literal characters - approach 2
+    grep -F '*^%Q&$*&^@$&*!^@$*&^&^*&^&' application.log
+
+# function arguments  - Vim GrepQuickFix
+    <!-- # method 1 -->
+        # send grep pattern with multiple words
+        `:giw quantum\\\ gravity`
+        # will send pattern = 'quantum\ gravity'
+        # \\  ---> \    sends single backslash
+        # \   ---> ' '  sends single space
+        # see <f-args> for more info
+
+    <!-- # method 2 (better!) -->
+        `:giw quantum.*gravity`
+
+
+# zero-width assertion
+    - "Non-capturing" doesn't mean the group isn't part of the
+      match; it means the group's value isn't saved for use in
+      back-references.
+    - What you are looking for is a look-behind zero-width
+      assertion:
+
+    grep -Po "(?<=syntaxHighlighterConfig\.)[a-zA-Z]+Color" file
+
+# use perl syntax
+    grep -P
+
+# match till FIRST equals sign
+    # i.e. a non-greedy, lazy match
+    use "?"
+        `grep -P "^(.*?)="`
+
+# suppress/hide filename
+    -h
+
+# show context of matches
+    -B lines before
+    -A lines after
+    -C lines before and after
+
+    grep -B 3 -A 2 foo README.txt
+    grep -C 3 foo README.txt
+
+# Search entire "home" directory structure for all files containing string "test"
+```
+    grep "test" /home/ef/* -r
+```
+
+# Search through the hidden files
+```
+    grep "test" .*
+```
+

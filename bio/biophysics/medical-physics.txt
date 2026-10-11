@@ -1,0 +1,197 @@
+
+### MIT Solid State physics
+    - Lecture 16 - Crystallography
+        - Vector direction: `[0-1-1]` <--- no commas, and the
+          minus we put on top as a "macron"
+        - all "face" diagonals: `<011>` = [011], [01-1], [0-11]
+          etc 
+        - Planes `(011)`: use Miller indices which is the
+          reciprocal of where the plane cuts the x,y,z axes.
+          (Advantage of the reciprocal is if you have something
+          paralell to the z axis say, then you don't have
+          a component of infinity `∞`)
+        - all planes (or all "faces"): `{011}` = (001) (010)
+          (011) etc
+        - hkl plane is perpendicular to the hkl direction
+            - `(hkl)` is perpendicular to `[hkl]`
+    - He moves on to X-RAYS now...
+    - X-Rays: short `λ` EM radiation
+    - between 0.01A < λ < 10Å. on average `1Å` (ie atomic
+      dimensions)
+    - energy given by: `E = hν = hc/λ = hcν-bar`
+    - typical energy of 1Å X-Ray = 12,400 eV per photon!!!
+    - it takes 648 eV to strip the most tightly bound electron
+      from Nitrogen. X-Rays are ionizing radiation writ large!!!
+    - Discovery: Röntgen used gas discharge tubes: high voltage,
+      low pressure (vacuum)
+    - we're talking about 1000's of eV and Rontgens cathode ray
+      setup had a voltage of 35,000 volts, so we're not talking
+      about emission from an excited electron in a gas molecule
+      - the gas binding energies are way lower than that. This
+        must come from the solid. The electron leaves the cathode
+        and crashes into the anode. There's the smoking gun.
+        There's something going on when the electron crashes into
+        the anode and gives rise to the radiation.
+    - Shells: K, L, M, N
+    - emission intervals: from 2 -> 1 = α (∆n = 1, fall 1 level)
+    - emission intervals: from 3 -> 1 = β (∆n = 2, fall 2 levels)
+    - emission intervals: from 4 -> 1 = γ (∆n = 3, fall 3 levels)
+
+    - "intensity reflects the relative FREQUENCY of emission" - I higher intensity for
+      a particular wavelength means this emission occured more
+      often, or is more probable (I had it wrong - I thought
+      higher "intensity" was higher energy somehow). Instead the
+      wavelength `λ` reflects the energy!
+
+    - Copper and zink α lines: the relative intesity of each
+      line is related to the relative concentrations of each
+      element: copper and zinc. So now I have a tool for chemical
+      analysis of the composition of the anode.
+
+    - Mosley corrected Mendelev: Mendelev thought atomic MASS was
+      the key, whereas Mosley said atomic NUMBER was key. Atomic
+      number is the (positive) charge in the central nucleus.
+
+### Youtube Talk: Overview of Radiation Oncology
+    - before 1960's X-Rays didn't go deep, lots of skin reactions
+    - 1960's: Linac invented - high energy rays were produced
+    - 1970s/1980s: computers introduced to assist wtih dose
+      measurement and treatment planning
+    - Radiation Forms
+        - photons: high energy X-Ray, no different to
+          a diagnostic X-Ray, just more energy
+        - electrons: for an electron beam, just remove the
+          tungsten target, and shower down electrons on the
+          patient
+        - protons: ("bragg peak") minimally interacts when it
+          goes into the body, and then at the energy the proton
+          stops, it deposits all its energy there. (not like
+          X-Rays which start to interact straight away and go out
+          the other side)
+        - radioactive sources
+    - photon beam: flame torches
+    - proton beam: fire cracker - throw it in and it deposits all
+      its energy
+
+
+### What Is Quality Assurance?
+    - AAPM definition of QA: "To assure that machine
+      characteristics do not deviate significantly from their
+      baseline values acquired at the time of testing and
+      commissioning."
+    - Linac measurements are taken during acceptance and
+      commissioning.
+    - The AAPM requires daily, monthly, and annual QA tests to
+      ensure that linacs are able to deliver treatment as
+      planned.
+    - TG-40 set standards for basic linacs without MLCs, on-board
+      imaging, or respiratory gating.
+    - TG-142 adds standards for MLCs, IMRT, SBRT, on-board
+      imaging and respiratory gating.
+
+### 5 things not to do with a particle accelerator
+    - theres 26,000 particle accelerators (not just CERN!)
+    - dont put a neutron in an linac: it's not charged!
+    - demo: _uncharged_ ball spinning around in a bowl. There was
+      different metal stips in the bowl, charged and grounded.
+      The ball picked up charge, but then dumped in on a grounded
+      strip. Then picked up charge again and dumped it. It ended
+      up spinning around and around.
+        - so it was a basic "dummy" accelerator
+        - but the charge was changing all the time
+        - a real accelerator would have a constant charge so the
+          voltage would change instead
+    - beam dump: massive long blocks of graphite to stop the beam
+      (mainly CERN?)
+    - Russian PHD student put his head in a beam and survived.
+      Paralysed on one side of his face, that side stopped aging!
+    - Bragg peak: protons stopping in water?
+    - beam power: more and moe particles? so particle count is
+      "power"?
+    - nuclear power: use very powerful proton accelerators in
+      a nuclear power generator: the beam creates neutrons which
+      drive a critcal reaction. But need 10 times the current
+      accelerator max power.
+    - 2 types of radiation: ionising (alpha, beta, gamma)
+      / non-ionsing
+    - irradiated food! (electron beams)
+
+### radiation therapy
+    - it uses linear accelerators and focus _X-Rays_ using
+      a collimator. Ah but X-Rays are actually PHOTONS! Don't
+      forget that!
+    - electrons are accelerated down a wave guide and hit
+      a tungsten target, which produces the x-rays...
+    - tumour cells more sensitive to radiation
+
+### 4 branches of Medical Physicists
+    - RT: Radiation Therapy Physicists
+        - 75% of all Physicists:
+        - responsible for acceptance testing of new equipment
+          (work with service engineer)
+        - commissioning: physicist carries out large amount of
+          tests on new equipment: determine base-line values
+            - quality assurance programme for all devices
+            - may require calibration (compare measurement to
+              a standard measurement)
+        - technical resource: eg dosimeters have a question about
+          a software patch on the system
+        - Understand radiation therapy limitations
+            - understand the RT software
+            - Understand the overall accuracy of the plan
+            - compare all the complex doses in the treatment plan
+              and see if it's accurate (by bringing the plan out
+              to the linear accelerator?)
+        - consults with the team on the immobilisation
+          / repositioning system
+    - DIAGNOSTIC: 
+        - imaging procedures
+    - NUCLEAR MEDICINE PHYSICISTS  
+        - live radiation source
+    - NON-CLINICAL: 
+        - e.g. regulatory, industry (medical equipment)
+        - health physicists in a reactor
+
+
+### Glossary
+    - EPS         : Engineering Physical Sciences
+    - MHRA        : Medicines and Healthcare products Regulatory Agency
+    - CMG         : clincial management group
+    - GTV         : tumour volume: gross tumour volume
+    - CTV         : tumour volume: clincal target volume
+    - ITV         : tumour volume: internal target volume
+    - PTV         : tumour volume: planning target volume
+    - IMRT        : Intensity Modulated Radiation Therapy: less dose delivered to surrounding areas (not "treating" them better)
+    - IGRT        : Image Guided Radio Therapy
+    - VMAT        : Volumetric Modulated Arc Therapy (beam changes as it moves)
+    - SABR        : Stereotatic ablative radiotherapy
+    - SGRT        : Surface Guided Radio Therapy (uses camera to line up the beam, no need for tatoo markers)
+    - NEOADJUVANT : radiation: treatment before surgery (to reduce tumour size)
+    - ADJUVANT    : treatment: used after surgery to mop up cancer cells
+    - cyber knife : very fine beams (more targeted than a linac)
+
+
+
+### Links
+    - Accredited MSc IPEM                                https://www.ipem.ac.uk/ResearchAcademicAccreditation/AccreditationofAcademicCourses/IPEMsMastersLevelAccreditationFramework.aspx
+    - medical physics conference (new techniques)        http://tech2019.iopconfs.org/Home
+    - NHS TRAC JOBS                                      https://apps.trac.jobs/login
+    - NHS STP                                            https://nshcs.hee.nhs.uk/programmes/stp/applicants/
+    - NHS STP login                                      https://www.oriel.nhs.uk/Web/Account/LandingPage
+    - Effects of radiation                               https://www.edx.org/course/effects-of-radiation-an-introduction-to-radiation
+    - ou s819 I downloaded it                            https://www.open.edu/openlearn/science-maths-technology/across-the-sciences/radiotherapy-and-its-physics
+    - Medical Physics channel                            https://www.youtube.com/channel/UCaiAyEVGgzMhl63cp1iANSw/videos
+    - Medical Physics channel stats                      https://www.youtube.com/watch?v=3-CsNH2_NwI
+    - physics radiation oncology course                  https://www.youtube.com/channel/UCd5tDsNpZ8pEmgb4J51Xi3A/videos
+    - Beam generation                                    https://www.youtube.com/watch?v=jSgnWfbEx1A
+    - IMT Varian TrueBeam                                https://www.youtube.com/watch?v=b6_g3SW3t5Y
+    - Learn Oncology playlists                           https://www.youtube.com/channel/UCmCObuw-jV63kCdQN79v-ag/playlists
+    - An overview of Radiation Oncology                  https://www.youtube.com/watch?v=yIkinGhUWlc
+    - [ASTRO] American Society for Radiatin Oncology     https://www.astro.org/
+    - Intro Radio Oncology - 3 videos                    https://voices.uchicago.edu/roecsg/introduction-to-radiation-oncology/
+    - Clincial Trails book sourcecode                    https://www.crcpress.com/Textbook-of-Clinical-Trials-in-Oncology-A-Statistical-Perspective/Halabi-Michiels/p/book/9781138083776
+    - MIT Intro Solid State Chemistry (Sadoway) - X-Rays https://ocw.mit.edu/courses/materials-science-and-engineering/3-091sc-introduction-to-solid-state-chemistry-fall-2010/crystalline-materials/16-crystallographic-notation-x-rays/
+    - MIT Intro Solid State Chemistry (Sadoway) - X-Rays https://www.youtube.com/watch?v=FVzaznYPCes&feature=youtu.be
+    - Jermey Howard medical company Enlitic              https://enlitic.com/
+    - AI Med conferences                                 https://ai-med.io/videos/
+

@@ -1,0 +1,232 @@
+### Conference question 1
+    - Does AF2 release code include the code for training our own
+      system locally or they just released the predictor to be
+      used together with their trained model weights?
+        - they only published the inference code. Writing your
+          own training scripts should be relatively
+          straightforward, but as Sachin pointed out, resource
+          intensive.
+        - Aside: I noticed RoseTTAfold released their training
+          system but AF2 didn't
+        - Other question: Do you have a concrete example where
+          training with custom data would be interesting?
+        - I could imagine trying out some transfer learning with
+          new structures, protein complexes, or specific sets of
+          structures (e.g. transmembrane)
+
+
+### Conference question 2
+    - In the slide that illustrates the AlphaFold1 internal
+      workings, it would seem that from the initial guess of the
+      CNN, the protein-specific gradient descent basically folds
+      the whole protein. I am surprised by this, is it known what
+      optimization/relaxation routine did they use? Great talk!
+        - A simple gradient descent algorithm based on a learned
+          cost function.
+
+
+### Conference question 3
+    - From the name Evoformer - does Alphafold 2 use
+      Transformers?
+        - that is correct - transformers and attention operators
+
+
+### Conference question 4
+    - There are many algorithms to generate MSA alignments, each
+      one of them trying to detect a different property or
+      enancing a particular feature. There would be any advantage
+      on feeding different MSA generated with different algorithm
+      or there will be just a MSA that will work better than
+      others?
+        - it is clear that MSA methods really aiming for aligning
+          structurally equivalent parts (rather than reflecting
+          evolutionary history) is more suitable for being used
+          in alphafold. As the number of sequences available for
+          many families is large, the challenges are different
+          than when for example clustalw was developed. I have
+          not seen analyses of how sensitive alphafold is on the
+          accuracy of the MSA, this would be interesting.
+
+
+### Conference question 5
+    - Have we already learned anything about HOW proteins fold
+      from AlphaFold?
+        - I believe the consensus is that AF2/RF are able to
+          predict the final, folded 3D structures for protein
+          domains and some whole proteins when there are many,
+          60-100 or more, homologous proteins in the same protein
+          (super)family. AF2/RF does NOT explain how the unfolded
+          to folded process takes place, or HOW proteins fold.
+          Btw the methods are also not good, currently, at de
+          novo prediction. You cannot use a random sequence, not
+          related to anything in the sequence databases, and
+          expect to get a good model.
+
+
+### Conference question 6
+    - And related to my question: I am not sure I understood how
+      AlphaFold v2 differs from this, i.e. does v2 still use this
+      gradient descent method?
+        - Simply put: the difference is that AF2 learns
+          end-to-end (sequence in, structure out), whereas AF1
+          learns a potential from which it then gets a structure
+          after gradient descent.
+        - Less simply put: AF2 has some later stages that do some
+          non-physical optimisation on a “triangle gas” to get
+          a good structure and it can do postprocessing that
+          involves an amber relaxation process. All explained in
+          detail in the appendices of the AF2 paper.
+
+
+### Conference question 7
+    - Great talk Inge. While AlphaFold2 predicts brilliantly,
+      could you comment on the prospects for this type of
+      technology to give us insight on the actual folding
+      process?
+        - Thanks, Rein! Alphafold as such is not targeted to this
+          problem. In order to use a similar approach to learn
+          about the folding process, one would need to have
+          example data informative for this process. You may know
+          more than me about data available - I am not aware of
+          large datasets on protein folding trajectories.
+
+
+### Conference question 8
+    - Are there 5 models used in AF2?
+        - They are not that different...
+        - output has 5 independent structures but they are not
+          different 'confirmational states' (they are not very
+          different)
+
+
+### Conference question 9
+    - Is it possible or will it be possible to predict whether
+      the protein has monomeric or multimeric character?
+        - Quite sure this is currently not in AF2. Possibly in
+          some of the Rosetta-related tools. However, this is
+          also a type of prediction that will benefit a lot from
+          AI and the people developing these tools will learn
+          from AF2/RF.
+
+
+### Conference question 10
+    - Are there 5 predictions from AF2 really different to each
+      other? What if you can make available only a matrix of
+      differences respect to the AF1 model?
+        - For the few cases I have looked into, the 5 predictions
+          are very similar. Much more similar than what
+          “last-year ab initio structure prediction” often
+          produced, where different models often were
+          very/completely different
+
+### Conference question 11
+    - I wonder how AF performs for soluble proteins vs membrane
+      proteins. Is there already some information whether AF
+      performs well for membrane proteins, too?
+        - I think AF performs quite well for TM proteins. All
+          three case studies in the AF human proteome database
+          paper are TM proteins, at least partially.
+
+
+### Conference question 12
+    - Very interesting talk. I was wondering how good is method
+      in interpreting structures for the complexes for eg.
+      antigen-antibody complex.
+        - I believe the consensus is that AF2/RF are able to
+          predict the final, folded 3D structures for proteins,
+          protein domains and segments when there are many,
+          60-100 or more, homologous proteins in the same protein
+          (super)family with the same structure. This is
+          unfortunatly not the case for antibodies, so I think
+          the methods as they are now are not optimal here
+
+
+### Conference question 13
+    - What about proteins with native ligands/co-factors?
+        - I think the situation here is that AF2, possibly RF,
+          does not know anything about ligands, PTMs, metal ions
+          etc., but still is in some cases able to make good
+          predictions for these proteins, including side chain
+          conformations for the residues contacting the
+          ligands/metals/etc. See f.ex. Fig 1C in the AF2 methods
+          paper
+
+### Conference question 14
+    - How pratically do you use the estimate errors of the
+      alphafold2 model for successful molecular replacement? Are
+      the estimate errors reflected in the B-factors in the PDB
+      of the model?
+        - Yes, it turns out that if you assume a 3D Gaussian
+          error distribution, you can smear an atom out by that
+          probability distribution by adding 8 Pi^2/3 times the
+          rmsd-squared to the B-factor.
+
+### Conference question 15
+    - @Béatrice: “AlphaFold produces a per-residue estimate of
+      its confidence on a scale from 0 - 100 .
+    - This confidence measure is called pLDDT and corresponds to
+      the model’s predicted score on the lDDT-Cα metric. It is
+      stored in the B-factor fields of the mmCIF and PDB files
+      available for download (although unlike a B-factor, higher
+      pLDDT is better).”
+
+
+### AF2 Method: "transformers"
+    - AF2 uses an 'attention' approach
+    - One big difference between Alphafold1 and Alphafold2 is the
+      use of transformers. These are very, very effective at
+      sequence problems (such as language, where they
+      originated).
+        - very good point - I should have emphasized that during
+          my talk
+
+
+### importance of metagenomics
+    - excluding the metagenomics database gives a big reduction in
+      performance
+
+
+### Misc Notes
+    - having a model is great, but know where you can trust your
+      model is as important (ie having a measure of uncertainty)
+
+    - RMSD: "evaluation unit" , individual domain, AF team were
+      looking for the full RMSD
+
+    - Support for multimers is experimental
+        - no option to specify molecular symmetry-
+
+    - Only proteins!
+        - no ligands, RNA, DNA,
+
+
+### AF2: GPU requirements
+    - NVIDIA A100 series (?)
+    - one run confined to a single GPU (no shared memory
+      installation)
+    - multi gpu's ARE NOT used
+    - 4GB memory needed
+
+### Misc Links
+    - _ALPHAFOLD PAPER_                                             https://www.nature.com/articles/s41586-021-03819-2
+    - Deepmind talk: Introduction to Alpafold (talk)                https://www.youtube.com/watch?v=UqeQfRDA8Yk
+    - Alphafold paper                                               $MY_ZOTERO/2021/jumper_et_al-2021-highly_accurate_protein_structure.pdf
+    - Googles Deepmind notebook                                     https://github.com/deepmind/alphafold/tree/main/notebooks
+    - Colabfold                                                     https://github.com/sokrypton/ColabFold
+    - Colabfold paper                                               https://www.biorxiv.org/content/10.1101/2021.08.15.456425v1
+    - Colabfold Info on available notebooks                         https://github.com/sokrypton/ColabFold/blob/main/README.md
+    - Training: How to interpret                                    https://www.ebi.ac.uk/training/events/how-interpret-alphafold-structures/
+    - Cameo3D                                                       https://www.cameo3d.org/
+    - 3D Beacons                                                    https://3d-beacons.github.io/3D-Beacons/
+    - 3D Beacons Github                                             https://github.com/3D-Beacons
+    - Assessing CASP14 for molecular replacement                    https://onlinelibrary.wiley.com/doi/full/10.1002/prot.26214
+    - Claudia Millán tweets                                         https://twitter.com/cheshireminima/status/1423929241675120643
+    - extract protein domains from a predicted aligned error matrix https://github.com/tristanic/pae_to_domains
+    - Norway Uni (hints about AF2 installation)                     https://github.com/Sabryr/ProteinFolding
+    - scicomp-docs                                                  https://github.com/AaltoSciComp/scicomp-docs
+    - SBgrid Alphafold                                              https://sbgrid.org/wiki/examples/alphafold2
+    - AF2 blogpost: Oxford Protein Informatics Group                https://www.blopig.com/blog/2021/07/alphafold-2-is-here-whats-behind-the-structure-prediction-miracle/
+    - Lex: summary Alpha fold                                       https://www.youtube.com/watch?v=W7wJDJ56c88
+    - HN: Alphafold source released                                 https://news.ycombinator.com/item?id=27848186
+    - Google Colab Alphafold and Rosettafold                        https://www.youtube.com/watch?v=Rfw7thgGTwI
+    - Protein complex prediction with AlphaFold-Multimer            https://news.ycombinator.com/item?id=28781518

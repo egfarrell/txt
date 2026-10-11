@@ -1,0 +1,121 @@
+
+- It's lesson 3 but based on Chapter 4 in the book
+
+### Code
+    - $MY_CODE/AI-ML/fastai/04_mnist_basics.py
+
+
+### item transforms
+    - item_tfms=Resize((128))
+    - resize all images to 128 x 128 (squish / stretch)
+        - all resize methods have problems
+            - PAD: 
+            - SQUISH: 
+            - CROP: 
+        - Solution: `RandomResizeCrop`
+            - you're not seeing the same image each time around,
+            - stops overfitting ...
+            - $MY_IMAGES/cs/fastai/data-augmentation-random-crop.jpg
+
+### Data Augmentation
+    - batch_tfms -> transforms directly on the TPU 
+    - fastai AVOIDS data agumentation on the validation set 
+    - more useful: batch transforms (happens on the GPU) 
+        - `aug_transforms` 
+    - all "aug transforms" ONLY applied to training set  (appart
+      from RandomResizedCrop?)
+    - you can write your own transformations (pyTorch code)
+
+
+
+### counter-intuitive cleaning: 
+    - much easier to clean your data AFTER you've trained the
+      model
+    - list all images that had the highest loss score 
+        - then delete them
+
+
+
+### learn_inf.predict('images/grizzly.jpg')
+    - returns a tensor with 3 numbers, because with the teddy
+      bear example there are 3 classes
+    - but must know the order of classes 
+    - `learn_inf.dls.vocab` 
+        - vocab: go from numbers to text 
+
+
+### Create and launch GUI
+    - Ipython widgets (ipywidgets)
+    - Volia 
+        - take a notebook and only display the markdown, widgets
+          and outputs. (user can only interact with the widgets)
+    - note: he deployed to a CPU not a GPU! 
+        - cheaper than a GPU 
+        - and his app is single image! 
+
+### Health skin app!
+    - Interesting paper:
+        - "Actional auditing: investigating the impact of
+          publicly naming biased performance results of
+          commercial AI products"
+    - Good book: 
+        - Building Machine Learning Powered applications 
+
+### Problems:
+    - OUT OF DOMAIN data: 
+        - the data you are trying to do inference on is different
+          to that with you trained with
+    - DOMAIN SHIFT: 
+        - the type of data our model sees changes over time 
+    - Helpful: "data sheets" meta data 
+        - write down all you know about your data, when is was
+          recorded, where etc etc
+    - problem: dont know exactly how neural network works, 100s
+      of millions of parameters 
+
+
+### Question: 
+    - does fastai have methods for incremental learning?
+    - Continual learning is basically just a transfer learning
+      problem 
+    - nighly transfer learning: each night, take all the days
+      transactions and train another epoch 
+        - pre-trained model: yesterday's model
+        - fine-tuned model: today's 
+
+### Feedback Loops 
+    - predictive policing
+    - sending police to specific points, and they make arrests
+      there, which results in more police being sent there
+    - Paper: "To predict and serve" 
+    - Risk of feedback loops: anytime your model is controlling
+      what the next round of data looks like
+        - so invest in the human in the loop 
+
+### Blogging
+    - fastai/fastpages
+
+---------------------------------------------------------------
+### Recognise digits: IDENTIFY "3" AND "7"
+    - MNist package
+    - `Path.BASE_PATH = path` 
+
+- tensor: is the pyTorch version of a numpy array. 
+- But a pyTorch tensor can be computed on a GPU, not just a CPU
+
+- Basic baseline idea: pixel similarity
+    - to define the "ideal" digit 3, take the pixel _AVERAGE_ of
+      all the '3's
+    - mistake: fail to create the baseline 
+    - e.g. 
+        - fancy model:      80% accuracy!
+        - predict the mean: 85% accuracy! 
+
+### Tradition: 
+    - in the 'computer vision' field, when working with floats,
+      we expect them to be between `0` and `1`. (so for RGB
+      values, divide by 255)
+
+### Broadcasting: 
+    - great trick, turns Python into high performance language
+      (pyTorch, will do broadcasting on the GPU)

@@ -1,0 +1,79 @@
+wannier routines
+  function io_file_unit()
+  !==================================================================!
+  !                                                                  !
+  ! Returns an unused unit number                                    !
+  ! (so we can open a file on that unit                              !
+  !                                                                  !
+  !===================================================================
+  implicit none
+
+  integer :: io_file_unit,unit
+  logical :: file_open
+
+  unit = 9
+  file_open = .true.
+  do while ( file_open )
+     unit = unit + 1
+     inquire( unit, OPENED = file_open )
+  end do
+
+  io_file_unit = unit
+
+
+  return
+end function io_file_unit
+
+
+
+       subroutine io_error ( error_msg )
+    !==================================================================!
+    !                                                                  !
+    ! Aborts giving error message                                      !
+    !                                                                  !
+    !===================================================================
+
+
+         implicit none
+         character(len=*), intent(in) :: error_msg
+
+#ifdef MPI
+         character(len=50) :: filename
+         integer           :: stderr,ierr,whoami
+
+         call mpi_comm_rank(mpi_comm_world, whoami, ierr)
+         if(whoami>99999) then
+            write(filename,'(a,a,I0,a)')trim(seedname),'.node_',whoami,'.werr'
+         else
+            write(filename,'(a,a,I5.5,a)')trim(seedname),'.node_',whoami,'.werr'
+         endif
+         stderr=io_file_unit()
+         open(unit=stderr,file=trim(filename),form='formatted',err=105)
+         write(stderr, '(1x,a)') trim(error_msg)
+         close(stderr)
+
+105      write(*,'(1x,a)') trim(error_msg)
+106      write(*,'(1x,a,I0,a)') "Error on node ", &
+              whoami, ": examine the output/error files for details"
+
+         call MPI_abort(MPI_comm_world,1,ierr)
+
+#else
+
+         write(stdout,*)  'Exiting.......'
+         write(stdout, '(1x,a)') trim(error_msg)
+
+         close(stdout)
+
+         write(*, '(1x,a)') trim(error_msg)
+         write(*,'(A)') "Error: examine the output/error file for details"
+#endif
+
+#ifdef EXIT_FLAG
+         call exit(1)
+#else
+         STOP
+#endif
+
+       end subroutine io_error
+

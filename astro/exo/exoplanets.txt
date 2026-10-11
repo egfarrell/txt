@@ -1,0 +1,339 @@
+
+### Wondrium
+    - probability of transit: (size of star) / (size of orbit)
+    - so that `a cos i` stuff is really trying to describe the
+      orbit.
+
+### Transits 
+    - Ah I thought there was something strange about this... it's
+      not the normal transmission spectroscopy, it's eclipse
+      spectroscopy!
+        - $MY_IMAGES/astro/exo/transit-spectroscopy.jpg
+        - Here was another talk that explained it to me.
+            - $MY_IMAGES/astro/exo/eclipse-spectroscopy.jpg
+    - 2 transits really! 
+        - 1. planet in front of star (primary transit)
+        - 2. star in front of planet (secondary transit)
+        - $MY_IMAGES/astro/exo/transit-flux-day-nightside.jpg
+    - transit geometry
+        - $MY_IMAGES/astro/exo/transit-geometry.jpg
+    - The bigger the planet, the bigger the dip
+        - $MY_IMAGES/astro/exo/bigger-planet-bigger-dip.jpg
+
+### Spectral domain
+    - Diagram: $MY_IMAGES/astro/exo/multi-approaches.jpg
+
+    - KEY: Bigger `Rp/Rs` ratio = More light blocked (or
+      scattered) by the planet, usually due to absorption by
+      specific atmospheric gases.
+    - 'occulted area' = another name for `Rp/Rs` ratio?
+    - 'transit depth' = another name for `Rp/Rs` ratio?
+
+    - When the planet-to-star radius ratio (Rp/Rs) gets bigger,
+      it means the planet appears larger relative to the
+      star at that specific wavelength, which indicates that more
+      light from the star is being blocked by the planet's
+      atmosphere.
+
+    - Higher Rp/Rs Ratio:
+        - A higher ratio means that the apparent size of the
+          planet is larger at that particular wavelength.
+        - This larger apparent size occurs because the planet's
+          atmosphere is absorbing or scattering more of the
+          starlight at that wavelength, effectively "blocking"
+          more light.
+        - Physically, this suggests the atmosphere is more opaque
+          at that wavelength due to the presence of certain gases
+          or particles that absorb or scatter light.
+
+    - Lower Rp/Rs Ratio:
+        - A lower ratio indicates that less of the star's light
+          is being blocked by the planet at that wavelength.
+        - This typically means that the atmosphere is more
+          transparent at that wavelength, allowing more starlight
+          to pass through with minimal absorption or scattering.
+
+    - ### Summary:
+        - Bigger Rp/Rs ratio = More light blocked by the planet,
+          usually due to absorption by specific atmospheric
+          gases.
+        - Smaller Rp/Rs ratio = Less light blocked, indicating
+          more transparency in the planet's atmosphere at that
+          wavelength.
+
+    - This relationship between the Rp/Rs ratio and the amount of
+      light blocked is fundamental to understanding what the
+      spectral domain plot reveals about the exoplanet's
+      atmosphere.
+
+
+
+### inclination angle
+    - Diagram: $MY_IMAGES/astro/exo/inclination-angle.jpg
+    - For exoplanets: two types of 'inclinations'
+        - The inclination of exoplanets or members of multi-star
+          star systems is the angle of the `plane of the orbit`
+          relative to the plane perpendicular to the line of
+          sight from Earth to the object. (i.e. sky plane)
+        - An inclination of `0°` is a face-on orbit, meaning the
+          plane of the exoplanet's orbit is perpendicular to the
+          line of sight with Earth.
+        - An inclination of `90°` is an edge-on orbit, meaning
+          the plane of the exoplanet's orbit is parallel to the
+          line of sight with Earth.
+
+        - Since the word "inclination" is used in exoplanet
+          studies for this `line-of-sight inclination`, the angle
+          between the planet's orbit and its star's rotational
+          axis is expressed using the term the "spin-orbit angle"
+          or "spin-orbit alignment". 
+        - In most cases the orientation of the star's rotational
+          axis is unknown. 
+
+### Impact Parameter
+    - $MY_IMAGES/astro/exo/impact-param-b.jpg
+    - note: `b` can only range between 0 and 1 (i.e. it is
+      'scaled' or divided by `R_*`)
+
+
+### Rossiter-McLaughlin effect
+    - At the start of a transit, the planet obscures a small
+      portion of the approaching limb of the star, thus reducing
+      the intensity on the short wavelength edges of the observed
+      spectrum lines. The lines therefore appear to move slightly
+      to longer wavelengths (i.e. a red- shift). 
+
+    - At the end of the transit, the planet obscures a small part
+      of the star’s receding limb, and the spectrum lines appear
+      to move to shorter wavelengths (a blue-shift). 
+
+    - This change in the wavelengths of the star’s spectrum lines
+      during a transit of its exoplanet is called the
+      Rossiter-McLaughlin effect and careful computer modeling of
+      the changes gives the angle between the equator and orbital
+      plane. 
+
+    - For HD 189733 b, for example, the angle is just 0.85° – as
+      might be expected if star and planet formed from a single
+      rotating nebula (Chap. 13) – for comparison the angle
+      between the Earth’s orbit and the Sun’s equator is 7.25°.
+
+    - interesting: 
+        - The RMcL effect shows 45% - 85% of hot jupiters are
+          misaligned with the star spin by more than 30 degrees
+
+
+### dfm talk
+    - Comment:
+        - seems like all stars have a planet around them(!)
+
+    - 1/200 of aliens
+        - would happen to be lined up properly to see earth
+          transiting the sun
+
+    - jupiter orbit
+        - 12 years
+        - 1/3000 aliens would be lined up to see a jupiter orbit
+
+    - to see a transit:
+        - need to look in the right place
+        - at the right time
+        - and measure brightness very precisely
+
+    - 3 million stars in kepler field,
+        - can only download 5% of the pixels
+
+    - exposure: 2 frames per hour
+        - partly to reduce download size
+        - partly because stars are faint and need long exposure
+          time
+
+    - photon counting noise
+        - is one of the major effects
+
+    - standard astronomy technique
+        - for removing noise, jitter etc:
+        - FILTERING!
+
+    - signal strength scales
+        - as radius squared,
+        - so small ones are a lot harder to find than large ones
+
+    - all data points drawn from
+        - one huge gaussian
+
+
+### My MPhil Masters abstract
+    - Title: Population Synthesis Modelling - Eclipsing Binary
+      Contamination in the PLATO field
+
+    - Authors: Farrell, Farmer & Kolb
+
+    - Abstract: 
+        - We perform a series of binary population simulations to
+          estimate the number and type of eclipsing binaries in
+          a given PLATO field-of-view.
+
+        - We present preliminary results outlining the
+          distribution of simulated binary eclipse depths. This
+          distibution is used to provide an estimate of the false
+          positive rate for exoplanet transit detections from
+          astrophysical blends and grazing binaries.  This may
+          inform fine-tuning of the PLATO field selection and
+          pointing. 
+
+        - The population synthesis model uses a rapid stellar and
+          binary evolution scheme as in Hurley et al. (2000,
+          2002) and employs a 3D galactic dust extinction model
+          from Drimmel et al. (2003).  The models allow
+          a determination of both the number density and
+          properties of eclipsing systems for a given magnitude
+          range as a function of Galactic longitude and latitude.
+
+    - References:
+        - Drimmel et al., 2003, A&A, 409, 205
+        - Hurley et al., 2000, MNRAS, 315, 543
+        - Hurley et al., 2002, MNRAS, 329, 897
+        - Willems et al., 2002, MNRAS, 337, 1004
+        - Willems et al., 2006, MNRAS, 367, 1103
+
+
+
+### thesis 0.2 percent EB probability
+    - Geometric: `0.5` percent probability of earth sun analogue being lined
+      up properly in your line of sight or `10%` at very best...
+
+    - kepler FOV - full hand on sky
+    - full moon between one of the gaps
+
+    - size/radius of planet:
+        - depth of light curve dip
+        - ie size of dimming
+
+    - period of planet
+        - length of time between transit dips
+        - ie intervals between dimming of light
+
+    - Need 3 years of data to detect planets with 1 year orbital
+      periods. Why 3 Years for a 1-Year Orbital Period?
+        - First Transit Detection (`Year 1`):
+            - When a planet with a 1-year orbital period passes
+              in front of its host star, it causes a slight
+              dimming of the star's light. ("transit"). The first
+              time this happens, you can't be sure it's a planet.
+              It might be a one-time event due to some other
+              cause, like stellar activity or noise in the data.
+        - Second Transit (`Year 2`):
+            - After one full year, the planet (if it exists) will
+              transit the star again. Observing a second transit
+              at exactly the same time interval strengthens the
+              hypothesis that there is indeed a planet orbiting
+              the star. However, two transits might not be
+              sufficient to rule out other possibilities, like
+              a binary star system or some periodic stellar
+              activity.
+        - Third Transit (`Year 3`):
+            - By observing a third transit, you have now seen the
+              planet pass in front of the star three times, each
+              separated by the same 1-year period. This third
+              detection is critical for confirming the planet's
+              existence and its orbital period. With three
+              transits, the periodicity is well established,
+              reducing the likelihood that the observed dimming
+              is due to some other cause.
+        - Why Not Just Two Years?
+            - Confirmation and Consistency:
+                - With only two transits, there's still a chance
+                  that the observed pattern might be due to
+                  a coincidental alignment of other factors, like
+                  a binary star system or instrumental noise.
+                  A third transit provides additional evidence,
+                  solidifying the conclusion that a planet is
+                  orbiting the star with a 1-year period.
+            - Accounting for Gaps and Noise:
+                - Observations might be affected by gaps in data
+                  or noise. Having three years' worth of data
+                  helps to ensure that even if one of the
+                  transits is missed or noisy, the other two can
+                  still provide strong evidence.
+        - Thus, three years of observation ensure that the
+          transit signal is consistent, periodic, and can be
+          distinguished from other potential sources of
+          variability.
+
+    - 5 - 10 - 15 - 20
+        - percent chance of transit mimic
+
+
+
+### TEP signature, compared to EB
+    - During transit, the star color doesnt change for a TEP.
+    - For a TEP, you have the same transit depth on different
+      instruments.
+    - But another star transiting (EB) will result in a different
+      color.
+    - Explanation:
+        - Transiting Exoplanet (TEP): A planet that passes in
+          front of its host star as seen from Earth, causing
+          a temporary dimming of the star's light. This dimming
+          event is detected by instruments and is referred to as
+          a "transit."
+        - EB (Eclipsing Binary): An Eclipsing Binary is a system
+          of two stars orbiting each other such that, from our
+          viewpoint, one star passes in front of the other,
+          causing periodic dimming. This can sometimes be
+          mistaken for a transiting exoplanet, but there are key
+          differences in the signatures.
+        - Differences Between TEP and EB:
+            - Star Color During Transit:
+                - For a TEP, the star's color doesn't change
+                  during the transit because the planet is
+                  typically much smaller than the star and does
+                  not affect the light's color significantly.
+                - For an EB, the color can change because the two
+                  stars involved might have different
+                  temperatures and colors, so when one star
+                  eclipses the other, the combined light from the
+                  system can change in color.
+            - Transit Depth Across Different Instruments:
+                - For a TEP, the transit depth (amount of light
+                  blocked) should remain consistent when observed
+                  with different instruments, assuming the
+                  instruments are calibrated similarly.
+                - For an EB, especially if the stars have
+                  different colors, different instruments
+                  (sensitive to different wavelengths of light)
+                  might detect different transit depths due to
+                  the varying contributions of the two stars'
+                  light.
+            - These distinctions help astronomers differentiate
+              between a true transiting exoplanet (TEP) and other
+              phenomena like eclipsing binaries (EB).
+
+### signature of EB
+	- Alternating transit depth as each star transits in turn,
+	- because each star not the same brightness usually.
+	- `v-shaped` transit dip
+
+### Kepler photo "centre of motion" analysis
+    - See: ./light-centre-of-gravity.txt
+    - examine centre of gravity for the light during transit and
+      outside of transit.
+    - if 'centre of gravity' shifts in an unexpected way for the
+      transit depth you see (you do expect some shift) then its
+      a sign its not the target star getting eclipsed but
+      a nearby star!
+    - ie the transit signal isnt on the star we're looking at!
+    - although more analysis needed to see if its a TEP around
+      a background star
+
+    - look for "photo" centre of PSF
+        - ie the average position of the light
+
+### source of false positives
+    - instrument noise!
+    - but Kepler uses `7-sigma` threshold
+
+### Links
+    - GOOD: YT talk: transmission spectra etc https://www.youtube.com/watch?v=ZnLg4YFMfDQ
+

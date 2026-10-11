@@ -1,0 +1,1032 @@
+### Clojure 15th Anniversary:
+    - A Retrospective (nubank.com.br)
+      https://building.nubank.com.br/clojure-15th-anniversary-a-retrospective/
+    - HN comments: https://news.ycombinator.com/item?id=33295217
+    - Highly recommend seeing the technical presentations
+      _NuBank_ folks have done (even before buying Cognitect).
+      Really impressive technical work.
+        - Are you referring to anything other than the infoq
+          talks. Those were good.
+
+### Building a startup with Clojure (Brilliant)
+    - https://news.ycombinator.com/item?id=33081443
+    - Ah clojure. It's all fun and games until five years down
+      the line, you've had 100% dev churn, and you have a 100kloc
+      codebase that nobody understands, full of functions that
+      don't give the slightest hint of the shape of the data
+      they're processing (it's all lists!) yet down the bottom of
+      the callstack there's some function that'll explode if the
+      map doesn't have whatever magical key it expects.
+    - If you're really lucky, someone will have thrown in a bunch
+      of 'specs' that make a bunch of assertions about the data,
+      put them on the API entry points, and then scattered some
+      slightly different specs with slightly more restrictive
+      assertions on various 'internal APIs', resulting in random
+      explosions in production!
+    - And the joy of working with an esoteric language is that it
+      attracts esoteric developers, who often get frustrated by
+      the requirements of being a software engineer in a large
+      company (i.e. everything that's not writing code), which
+      leads to the aforementioned 100% dev churn (after a lot of
+      shouting).
+
+
+### Naming convention (Kebab case)
+    - `(def the-average (/ (+ 20 40.0) 2.0))`
+    - Clojure programmers have adopted the
+      all-lower-case-words-separated-by-dashes convention, also
+      known as _kebab_ case, when picking symbols, so it’s
+      first-name and the-average.
+
+### REPL like SSH(!)
+    - Conceptually, the REPL is similar to Secure Shell (SSH). In
+      the same way that you can use SSH to interact with a remote
+      server, the Clojure REPL allows you to interact with
+      a _running Clojure process_.
+        - Oct 2023: funny I did this in IPPT: SSH interaction
+          with liczyk2Z
+    - This feature can be very powerful because you can even
+      attach a REPL to a live production app and modify your
+      program as it runs. For now, though, you’ll be using the
+      REPL to build your knowledge of Clojure syntax and
+      semantics.
+
+### Reader syntactical sugar
+    - functions
+        - #(print "hello")  ; (fn [] (print "hello"))
+    - functions with params
+        - #(print %2 %1)  ; (fn [a b] (print b a))
+    - var
+        - #'x  ; => (var x)
+    - tag
+        - `tag` special form is used to convey type info
+        - ^foo  ; => {:tag foo}
+    - keyword true
+        - ^:foo  ; => ^{:foo true}
+
+### lazy-seq macro
+    - basic example
+        - $MY_IMAGES/cs/clojure/lazy-seq-macro.jpg
+    - the body of lazy-seq should recursively return another lazy
+      sequence
+        - $MY_IMAGES/cs/clojure/lazy-seq-macro-body.jpg
+        - $MY_IMAGES/cs/clojure/lazy-seq-macro-body-2.jpg
+    - to return a finite squence, add a terminating condition
+        - ie: a lazy sequence doesnt have to be infinite
+        - $MY_IMAGES/cs/clojure/lazy-seq-non-infinite.jpg
+
+### lazy sequences
+    - be careful: don't invoke `count` on an infinite (lazy)
+      sequence
+    - be careful in the REPL: evaluation results are printed, so
+      you might accidently print an infinite sequence and hang
+      the command-line
+        - $MY_IMAGES/cs/clojure/infinite-sequences-funcs.jpg
+
+### Sequences
+    - aim of sequences:
+        - enable quick and stateless iteration over collections
+    - Strict definition:
+        - any sequence type implements the Java Interface
+          `clojure.lang.Iseq`
+    - 'sequence-able' aka seq-able types have one-or-more
+      operations that produce sequences
+    - note: `first` and `rest` actually call `seq` on their
+      argument
+        - $MY_IMAGES/cs/clojure/sequences.jpg
+
+### Ingore these special forms
+    - monitor-enter, monitor-exit
+    - used by the standard library for managing thread locks
+    - not intended for programmer use
+
+### JDBC
+    - clojure has a db library that wraps JDBC
+        - java.jdbc https://github.com/clojure/java.jdbc
+        - next-jdbc https://github.com/seancorfield/next-jdbc
+	- $MY_IMAGES/cs/clojure/jdbc-example-1.jpg
+	- $MY_IMAGES/cs/clojure/jdbc-example-2.jpg
+    - JDBC transactions
+        - this transaction will fail and "Joey" will not be deleted
+        - $MY_IMAGES/cs/clojure/jdbc-example-3.jpg
+
+### Lazy: "doall"
+    - if you're executing a lot of lazy functions, you'll want to
+      wrap them in a `doall` to force execution
+        - $MY_IMAGES/cs/clojure/doall-force-lazy.jpg
+
+### File I/O
+    - split, slurp
+        - $MY_IMAGES/cs/clojure/basic-file-IO.jpg
+    - can use `java.io` as well
+    - gotcha:
+        - the line-seq reader is lazy. If you close the reader
+          before you've accessed the `lines` variable you'll get
+          an error
+            - $MY_IMAGES/cs/clojure/basic-file-IO-lazy.jpg
+        - so `with-open` is safer
+
+### Protocols
+    - Protocols can group related functionality & implement
+      single dispatch
+    - aside: protocols will only dispatch based on the type of
+      the first argument. This is different to multi-methods
+    - but protocols are way faster than multi-methods because
+      they fall back on the JVM's implementation of single
+      dispatch
+    - they are like JAVA interfaces
+    - can be attached to classes, types and records at runtime
+        - uses: defprotocol, extend-protocol
+        - $MY_IMAGES/cs/clojure/defprotocol-example-01.jpg
+    - defprotocol can attach methods to existing JAVA classes
+        - he imports 3 JAVA classes and add a new nearest-day
+          method to them
+        - $MY_IMAGES/cs/clojure/defprotocol-example-02.jpg
+
+### namespace keywords
+    - ::mykeyword   ... is a current namespace keyword
+        - eg: expands to `learnclojure.core/mykeyword`
+
+### The "Expression" problem
+    - OO languages can add new data types (just add a new class)
+      but it's harder adding new operations
+        - because to add an operation that works on a variety of
+          classes you have to add an implementation for every
+          class
+    - functional languages are the other way around.
+        - It's harder adding new data types, because you
+          have to change existing function definitions to accept
+          a new datatype
+    - traditionally LISPs use a "multimethod" which provide a way
+      to dispatch functions arbitrarily
+
+### Multimethods
+    - `defmulti`, `defmethod`
+        - $MY_IMAGES/cs/clojure/multimethod-example.jpg
+    - but error if we try:
+        - `(hello (:language ::english))`
+    - so define a default!
+        - $MY_IMAGES/cs/clojure/multimethod-example-2.jpg
+    - order of definitions doesn't matter for multi-methods.
+        - ie: (::default is defined before ::spanish)
+        - $MY_IMAGES/cs/clojure/multimethod-example-3.jpg
+    - derive is useful too.
+        - 'Cockney' is a type of 'English'
+        - $MY_IMAGES/cs/clojure/multimethod-example-4.jpg
+    - `isa?` is useful
+        - (isa? ::cockney ::english) ;=> true
+
+
+### deftype
+    - will create a _JAVA_ class
+        - (deftype MyPerson [name])
+    - instantiate it, two different ways
+        - (MyPerson.  "James")
+        - (->MyPerson "James")
+    - instantiate it, get name field
+        - (.name (->MyPerson "James"))
+
+    ### defrecord
+    -------------
+    - is like `deftype` but `defrecord` is a full instantiation of
+      a clojure hash map
+        - (defrecord MyPersonRecord [name])
+    - because it's a hash map you can use keywords as accessor
+      functions
+        - (:name (->MyPersonRecord "James"))
+        - other syntax:
+        - (map->MyPersonRecord (:name "James"))
+
+    ### Java interfaces
+        - deftype can implement java interfaces
+        - say you want to make a `runnable` and implement the
+          `runnable` interface by giving the interface name and
+          implementations of the methods
+        - and then call the run method on an instance of
+          `MyRunnable` and there will be printout in the console
+
+### core.async
+    - new library
+    - https://github.com/clojure/core.async
+    - key ideas: chan, go, >! (put), <! (take), go-loop
+    - create a channel, can have any number of publishers and
+      consumers
+    - it's similar to how the `go` language does concurrency
+    - `<!` is locally blocking
+        - $MY_IMAGES/cs/clojure/core-async-example.jpg
+        - `go-loop` is a bit shorter, saves you one set of
+          parentheses
+        - he redefined the go block using go-loop so "now we have
+          two consumers consuming from my-chan"
+    - thread pools
+        - all go blocks share a thread pool so you can safely
+          instantiate as many as you want, and threads become
+          "parked" rather than blocking on "take" and "put"
+          operations, you won't cause a deadlock, you won't use
+          up all the available CPU processing
+        - but "parking" on a thread takes a few more resources
+          than blocking
+        - channels can be passed around to functions... writing
+          a function that accepts a channel is pretty common
+        - abstract away this looping business: `print-listener`
+            - note: print-listener must return the channel at the
+              end so we can "chain this together"
+            - $MY_IMAGES/cs/clojure/core-async-print-listener.jpg
+    - channel pipelines
+        - $MY_IMAGES/cs/clojure/core-async-channel-pipeline-reverser.jpg
+    - combine multiple channels into one stream
+        - async/alts!
+        - $MY_IMAGES/cs/clojure/core-async-alts-combine-chans.jpg
+    - there is a channel(s) `map` and `reduce` too
+
+### STM: agents
+    - almost the opposite of `ref`
+    - `agent` is for async updates to single values
+    - agents use `send` instead of alter...
+        - $MY_IMAGES/cs/clojure/agent-example.jpg
+    - gotcha: errors are hard to trace, because if the validator
+      fails, you don't know about that straight away
+    - and you can specify `:error-mode :continue`
+    - and you can specify `:error-handler println`
+
+### STM: refs
+    - here we have two bank accounts as atoms
+    - but they get out-of-sync as we add money to one atom (bank
+      account) and subtract money from the other atom (bank a/c)
+        - $MY_IMAGES/cs/clojure/bank-atoms-out-of-sync.jpg
+    - so use a `ref` and `alter` instead of an `atom` and `swap!`
+        - but `alter` can only be called from within
+          a transaction (`dosync`)
+            - $MY_IMAGES/cs/clojure/bank-atoms-out-of-sync-2.jpg
+        - if order doesn't matter, then use `commute` (e.g. if we
+          were just incrementing both bank accounts)
+            - commute can happen in parallel at the end of
+              a transaction
+
+### "STM": software transactional Memory
+    - facilitates safe sharing of data between threads
+    - also: safe way to implement state with mutable objects
+    - simplest STM construct: atoms
+        - synchronous transactional access to single values
+        - $MY_IMAGES/cs/clojure/atom-reset-basics.jpg
+    - gotcha: don't use `reset!` to set values according to the
+      current value of the atom
+        - example: count to 1000 using a loop
+            - but look, at the end of the loop, count isn't 1000!
+            - because 35 times, between dereferencing count and
+              setting the new value, some future ran and set it
+              to a different value
+                - $MY_IMAGES/cs/clojure/dont-use-reset-1.jpg
+        - solution: use `swap!`
+            - use a function to update `count`
+            - the functions get added to a _queue_ that gets
+              called on count
+            - so everything gets sychronised in the order they
+              came in, and exactly as many times as there are
+              functions called
+                - $MY_IMAGES/cs/clojure/dont-use-reset-2.jpg
+            - note: swap can take more arguments
+                - $MY_IMAGES/cs/clojure/dont-use-reset-3.jpg
+        - atoms can have a validator
+            - if you try to "swap" a string value into an atom
+              with an `integer?` validator, then you get a JAVA
+              exception
+            - $MY_IMAGES/cs/clojure/atom-validator.jpg
+
+### concurrency: memoise
+    - for expensive functions...
+    - `memoise`: accepts a function and returns a version of it
+      that caches results
+    - it makes repeated slow computations more efficient
+    - here's a memoized (cached) version of a fibbonaci function
+      that's much quicker
+        - $MY_IMAGES/cs/clojure/memoized-fibonacci-func.jpg
+
+### concurrency
+    - all clj functions are instances of `runnable`
+    - this means you can pass them through a threadpool directly
+    - or use them with thread to do asynchronous tasks
+    - call start method on thread instance
+        - $MY_IMAGES/cs/clojure/start-runable-thread.jpg
+    - `promise`:
+        - retrieve values from other threads
+        - "accept delivery from other threads"
+    - `future`: abstracts away most of the work of handling
+      promises
+    - wait for a value: use `deref` or `@`
+        - $MY_IMAGES/cs/clojure/thread-promise-future-examples.jpg
+    - `delay`:
+        - is like `future` but won't dereference until its
+          executed at least once
+        - we can wait as long as we like, but the msg "Called
+          myfn" will never pop up in the console...
+        - $MY_IMAGES/cs/clojure/delay-example.jpg
+
+### loops
+    - clj is often declaritive
+        - `for` loops are implied
+    - e.g. `map` implies a loop,
+        - we don't have to actually write the loop ourselves
+
+### java interop
+    - $MY_IMAGES/cs/clojure/java-interop-1.jpg
+    - use java arrays
+        - https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
+        - $MY_IMAGES/cs/clojure/java-interop-2-arrays.jpg
+    - make code faster: use type hinting
+        - supply metadata value, tell compiler what type
+          a variable is [^String s]
+        - the type hinted version of string length is faster
+            - $MY_IMAGES/cs/clojure/type-hinting-timing.jpg
+    - compiler flag: warn on reflection
+        - $MY_IMAGES/cs/clojure/warn-on-reflection.jpg
+
+### default testing framework
+    - clojure.test
+        - most basic tool: assertion `is`
+        - $MY_IMAGES/cs/clojure/basic-clojure-test.jpg
+    - use `deftest` and the `testing` macro
+        - $MY_IMAGES/cs/clojure/define-two-simple-tests.jpg
+    - good to have some tests right beside the code ... wrapped
+      in a `comment` form so they won't be executed on import
+        - $MY_IMAGES/cs/clojure/tests-beside-code.jpg
+
+### importing
+    - `require`, `use`, `import`
+    - other functions / classes into current namespace
+        - $MY_IMAGES/cs/clojure/importing-into-ns.jpg
+    - or just import one single class/function
+        - $MY_IMAGES/cs/clojure/importing-into-ns-2.jpg
+    - old-fashioned code
+        - dont do this... it imports EVERYTHING into the
+          namespace, effectively like `:refer all`
+        - (use 'clojure.string)
+    - import JAVA classes
+        - only works if you're using the JVM and not
+          clojurescript or the CLR
+            - (import 'java.util.Date)
+        - import multiple classes
+            - (import '[java.util Date Calendar])
+    - specify imports in the _namespace declaration_
+        - note: `ns` is a macro, and it doesnt evaluate it's
+          arguments so you don't have to quote anything
+        - and use `keywords` instead of symbols
+            - $MY_IMAGES/cs/clojure/namespace-declaration.jpg
+
+### map, filter
+    - nice examples... Clojure is terse
+        - $MY_IMAGES/cs/clojure/map-filter-examples.jpg
+    - also reduce, `group-by`
+        - $MY_IMAGES/cs/clojure/reduce-group-by.jpg
+
+### CS: loop, recur, reduce
+    - from college: you might remember that loops can be
+      considered a special case of recursion (!)
+    - task: sum collection of values
+    - method 01
+        - simple recursion example... uses an `accumulator` and
+          collection of incoming values
+        - $MY_IMAGES/cs/clojure/simple-recursion-example.jpg
+    - method 02
+        - a simpler way where you dont have to pass zero every
+          time (uses variadic args)
+        - $MY_IMAGES/cs/clojure/simple-recursion-better.jpg
+    - method 03
+        - Even better... use `recur` in place of the FUNCTION
+          NAME (will trigger Tail Call Optimisation?)
+        - $MY_IMAGES/cs/clojure/simple-recursion-even-better.jpg
+            - note: in the "top position" `my-sum` is still
+              neccessary `([vals] (my-sum 0 vals))` because if
+              you used `recur` it would refer to the `[vals]`
+              function... because `recur` is very local in scope
+    - method 04
+        - use `loop`
+        - $MY_IMAGES/cs/clojure/simple-recursion-use-loop.jpg
+    - method 05
+        - use `reduce`
+        - (he shows what `reduce` is doing behind the scenes)
+        - $MY_IMAGES/cs/clojure/simple-recursion-use-reduce.jpg
+        - $MY_IMAGES/cs/clojure/simple-recursion-use-reduce-2.jpg
+        - $MY_IMAGES/cs/clojure/simple-recursion-use-reduce-3.jpg
+
+        - use reduce without supplying an intial argument
+          (because `+` is associative, and reduce uses the first
+          2 items in a collection)
+            - $MY_IMAGES/cs/clojure/simple-recursion-use-reduce-4.jpg
+
+### list literals
+    - Admittedly, list literals are not very common in Clojure,
+      that’s why for many people lists are nothing but an
+      _invocation syntax_.
+    - Use a single space indentation for function (macro)
+      arguments when there are no arguments on the same line as
+      the function name.
+        - $MY_IMAGES/cs/clojure/funcs-single-space-alignment.jpg
+
+### manipulate maps
+    - assoc, assoc-in, update-in
+	- $MY_IMAGES/cs/clojure/manipulate-maps.jpg
+
+### Lazy sequence
+    - (type (concat x v))
+    - concat joins two sequences but doesn't actually "do" the
+      work yet... returns: clojure.Lang.LazySeq
+
+### destructure arguments
+    - method 01
+        - $MY_IMAGES/cs/clojure/destructure-args-01.jpg
+    - method 02
+        - destructure config, extract name already in args list
+        - $MY_IMAGES/cs/clojure/destructure-args-02.jpg
+    - method 03
+        - implict destructure of a vector of args
+        - $MY_IMAGES/cs/clojure/destructure-args-03.jpg
+
+### variadic functions
+    - use recursion to provide default value for [name] parameter
+    - very nice... new ideas for me here
+	- $MY_IMAGES/cs/clojure/variadic-func-default-value0.jpg
+	- $MY_IMAGES/cs/clojure/variadic-func-default-value1.jpg
+
+### docstrings
+    - import clojure builtin doc function
+    (require '[clojure.repl :refer [doc]])
+
+### function return values
+    - generally in LISPs, functions return the last value in
+      a list
+
+### lists and vectors
+    - lists are a "linked list" structure
+        - `first` on a list will be much faster than `last`
+    - vectors are more like a traditional array
+
+### array-map, hash-map
+    - (type (:a 1, :b 2))
+    - (type (array-map :a 1, :b 2))
+        - Auto creates type `clojure.lang.PersistentArrayMap`
+        -                                           -----
+        - Performance / implementation detail
+        - Smaller sized Clojure maps are automatically
+          instantiated as Array Maps
+        - Array Maps preserve order and are about as fast on
+          small data sets.
+        - But poor performance on large data sets (because the
+          whole list of keys needs to be scanned to find
+          a certain value)
+
+    - (type (hash-map :a 1, :b 2))
+        - Auto creates type `clojure.lang.PersistentHashMap`
+        -                                           ----
+        - Above a certain size, Clojure will automatically create
+          a Hash Map instead of an Array Map
+
+
+### Declare macro
+    - declare macro: `(declare triples)` is the same as
+    - `(def triples nil)`
+    - used to make sure a symbol-to-var mapping pre-exists in the
+      code (before it's actually fully defined)
+    - ie if you have cases of mutual recursion where `foo` and
+      `bar` both invoke each other
+
+
+### Handy
+    - floating point numbers are "contagious" in Clojure
+    - see everything in a namespace: `(dir clojure.string)`
+    - Clojure is a _hosted_ language (e.g. on the JVM)
+    - Terminology: "Let" uses "binding vectors"
+    - destructuring: bind individual elements in a collection to
+      separate symbols
+    - forms that create bindings: let, loop, fn, defn
+    - a Clojure function can have MULTIPLE bodies, so long as
+      each body has a distinguishable arity
+    - `ns` macro bundles `require`, `use`, `import` all together!
+    - `nth` requires a linear traversaal of sequences... so for
+      vectors its faster to use `get`
+    - range has a step: (range 2 11 3) ;=> (2 5 8)
+    - a sequence is any collection type that supports two
+      operations: first, rest
+    - The :file metadata `NO_SOURCE_PATH` indicates that the code
+      was entered at the REPL.
+    - interesting: Instead of using a loop, you can recur back to
+      the top of a function. This makes it simple to write
+      a function whose entire body acts as an implicit loop
+    - comment out a block:
+        - `(comment(str "hello" "there"))`
+        - or use the `#_` reader macro
+        - ```
+        - (defn triple [number]
+        -   #_(println "debug triple" number)  (* 3 number))
+        - ```
+    - single quotes matter:
+        - single quotes: 'H' is a java CHARACTER
+        - double quotes: "H" is a java string
+    - Clojure uses "reader data" instead of an AST. Reader data
+      is evaluated.
+    - Really good course:
+      $MY_NOTES/cs/lang/clojure/brian-course.txt
+    - quote form: mainly useful in macros which are meant to
+      return unevaludated reader data
+    - a namespace is a MAP from "symbols" to "vars"
+    - ... symbols are essentially KEYS into a per-namespace
+      hashtable of VARS?
+        - See: $MY_CODE/clojure/symbols-vars.clj
+
+
+### Recur / tail calls
+    - Clojure has no AUTOMATIC tail call optimisation due to
+      limitations of the JVM.
+    - Hence must explicitly use the 'recur' special form.
+    - 'recur' really forces the same stack frame to be reused
+    - to prevent infinite recursion, 'recur' should be used
+      within a conditional form
+    - 'recur' must be in the tail position of the function
+    - can be 'transitively' in tail position: this means an "if"
+      form is in tail position, and "recur" is inside the "if",
+      so recur is transitively in tail position.
+    - recur in nested functions: a recur form invokes the
+      function in which it is most directly contained
+        - inside a nested function, we cannot use 'recur' to
+          invoke an enclosing function
+        - loop: establishes a "recursion point" for a recur form.
+            - A 'recur' form in tail position of a loop body
+              jumps execution back to the start of the loop, with
+              new values bound to the symbols
+        - loop and recur allow us to repeatedly iterate over
+          a body of code  without creating one-off functions just
+          for the sake of looping
+            - less verbose with loop:
+                - $MY_IMAGES/cs/clojure/loop-recur-01.jpg
+            - more verbose as a function:
+                - $MY_IMAGES/cs/clojure/loop-recur-02.jpg
+
+### Local symbol bindings
+    - are always immutable
+    - so each instance of a loop iteration creates NEW instances
+      of local vars and functions
+    - example:
+        - think of each of the function objects as bound to its
+          own immutable value of 'x'
+        - dont think of it as a single 'x' variable that changes
+        - $MY_IMAGES/cs/clojure/immutable-bindings.jpg
+
+### Nice questions: symbols / vars
+    - See: $MY_CODE/clojure/symbols-vars.clj
+    - (aside: I asked myself: "Can two symbols refer to the same
+      var? YES! This was answered below...")
+        - later: NO! Someone said you would still have two
+          different var containers if you had 2 symbols
+    - To evaluate a `symbol`, first the corresponding `var` must
+      be looked up, then the `var` must be DEREFERENCED.
+    - Why does Clojure work this way? What benefit could there be
+      from such a design?
+    - I understand that vars have certain special properties
+      (they can be private, or const, or dynamic...), but
+      couldn't those properties simply be applied to the symbol
+      itself?
+    - Answer: Symbols are names
+        - Unlike most programming languages, Clojure makes
+          a distinction between things and the names of things.
+          In most languages, if I say something like var x = 1,
+          then it is correct and complete to say "x is 1" or "the
+          value of x is 1".
+        - But in Clojure, if I say (def x 1), I've done two
+          things:
+            - I've created a Var (a value-holding entity) ...
+            - and I've named it with the symbol x.
+            - Saying "the value of x is 1" doesn't quite tell the
+              whole story in Clojure. A more accurate (although
+              cumbersome) statement would be "the value of the
+              var named by the symbol x is 1".
+        - Symbols themselves are just names, while vars are the
+          value-carrying entities and don't themselves have
+          names.
+        - If extend the earlier example and say `(def y x)`,
+          I haven't created a new var, I've just given my
+          existing var a second name. The two symbols x and y are
+          both names for the same var, which has the value of 1.
+    - full discussion:
+        - $MY_NOTES/cs/lisp/clojure/why-symbols-vars.txt
+    - another reason: (runtime update!)
+        - $MY_NOTES/cs/lisp/clojure/brian-course.txt
+        - functions can change after definition, because the
+          function body may reference a _symbol_ 'foo' but the
+          _var_ sitting behind this symbol may change later
+        - arguably this affects 'functional purity'
+        - the reason Clojure does this, and the reason that
+          namespaces map symbols to vars, instead of mapping
+          symbols directly to other values, is so your code can
+          be _UPDATED AT RUNTIME_.
+
+
+### Symbols
+    - pieces of text that serve as identifiers
+    - vars are CONTAINERS for values
+    - you can deref a var
+    - namespaces: collections of names
+    - namespaces: mappings between symbols and vars
+    - see mappings in current namespace
+    - (ns-map *ns*)
+    - note: *ns* is the current namespace
+    - note: shorthand for `deref` is `@`
+    - defn actually calls `def` under the hood, and a function
+      symbol actually holds a function in the `var`
+    - you could run a function by dereferencing the symbol -> var
+        - $MY_IMAGES/cs/clojure/dereferencing-func-var.jpg
+    - different course: it's take on symbols/vars etc
+        - $MY_IMAGES/cs/clojure/var-special-form.jpg
+
+### literal forms
+    - things that evaluate to themselves
+    - e.g. `42`, `:mykeyword`, sumbol literals: `'bar`
+    - collections of literals: (evaluate to themselves)
+    - [2 3 4]
+    - but if you write a symbol without a quote, then the
+      compiler will _resolve_ the symbol.
+        - It will take the symbol and lookup it's `var`.
+        - Then once it has the `var`, it'll get the value out of
+          the `var`
+
+### evaluation
+    - anything inside a parens is assumed to be a _list_
+    - the compiler looks at the first item in the list
+    - is it a special form?
+
+### nice functional CLOSURE example
+    - More formally, the 'greeter' functions are _closures_ over
+      the value of greeting-prefix
+        - (defn make-greeter [greeting-prefix]  (fn [username] (str greeting-prefix ", " username)))
+        - (def hello-greeting (make-greeter "Hello"))
+        - (def aloha-greeting (make-greeter "Aloha"))
+
+### metadata (tag)
+    - Because :tag metadata is so common, you can also use the
+      short-form `^Classname`, which expands to `^{:tag
+      Classname}`.
+    - Using the shorter form, you can rewrite shout:
+        - (defn ^String shout [^String s]
+        -       (clojure.string/upper-case s))
+
+### new namespace
+    - While learning Clojure, you should use the `clojure.core`
+      namespace whenever you move to a new namespace, making
+      Clojure’s core functions available in the newnamespace as
+      well:
+    - myapp=> (clojure.core/use 'clojure.core)
+
+### lexical scope
+    - A function’s parameter bindings have a lexical scope:
+      they’re visible only inside the function body.
+    - Functions are not the only way to create a lexical binding.
+    - The special form `let` does nothing other than create a set
+      of lexical bindings:
+        - `(let [bindings*] exprs*)`
+    - The bindings are in effect for `exprs`, and the value
+      of the `let` is the value of the _last expression_ in
+      `exprs`.
+
+### Namespaces
+    - Namespaces organise and control access to 'vars'.
+    - When we created a var with `def` or `defn`, it is created
+      in the default REPL namespace: “user”
+    - You can create your own namespace and switch to it using
+      `ns`. Any vars created will now be created in this
+      namespace.
+    - Let’s create a new namespace now.
+        - (ns alice.favfoods)
+    - In Clojure, a namespace is a collection of `names`
+      (symbols) that refer to `vars`. Each var is bound to
+      a value.
+
+### earmuffs
+    - We can check our current namespace by seeing what *ns*
+      returns.
+    - The asterisks on either side of thensare "earmuffs" and are
+      used as a convention for things that are intended for
+      rebinding (to change)
+    - `*ns*`
+
+### Symbol var function
+    - or better: symbol (name) -> var -> function
+    - summary:
+    - ((deref (resolve '+)) 2 3)
+
+    - https://stackoverflow.com/questions/9113387/difference-between-symbols-and-vars-in-clojure
+    - `+` is a symbol sitting in `clojure.core` which is by
+      default accessible to your code.
+    - When used in your code (without any very advanced intents
+      such as quoting it or finding out its class) ― clojure will
+      seek the Var which it points to.
+    - If this `Var` is a function, when `+` is used in head
+      position of a list, clojure will try to call that function
+      (you get NullPointerException if this Var happened not to
+      point at a function).
+    - If supplied as an argument to another function, that
+      function may do the same to call it. That's how function
+      calling works.
+
+    - Most or all languages use symbol tables. Being a somewhat
+      dynamic language, Clojure uses this extra layer of
+      indirection (Symbol → Var → function, rather than only
+      Symbol → function) so that dynamically rewriting which
+      function is tied to which symbol ― is more feasible and
+      elegant, and this is sometimes a source of curiosity for
+      beginners.
+
+    - As other answers have somewhat overly emphasized, you may
+      otherwise perform fancy stuff like quote it ('+) to avoid
+      its evaluation, or even inspect it with class and/or
+      resolve as if you are interested in verifying what it is
+      (class), or which namespace it sits in (resolve).
+    - You can also poke at the `var` it points at via `var` or
+      `#'`. You'll typically do those fancy things if you are
+      writing macros or if you're very experimentally inclined,
+      especially when working in the REPL; depending on which
+      style you write your macros, you might actually quote a lot
+      in them.
+
+
+### let
+    - Remember, what happens in a 'let', stays in the 'let'.
+    - So if you bind a symbol inside the 'let' that doesn’t exist
+      outside, and then try to reference it later, it will give
+      you an error:
+      - (let [developer "Alice in Wonderland"
+              rabbit    "White Rabbit"][developer rabbit])
+      - ;; -> ["Alice in Wonderland" "White Rabbit"]
+
+      - rabbit
+      - ;; -> CompilerException
+      - java.lang.RuntimeException:;; -> Unable to resolve symbol: rabbit in this contex
+
+
+### def symbols vars
+    - `def` allows us to give something a name, so we can refer
+      to it from anywhere in our code.
+    - It doesn’t bind a symbol with the thing directly, it does
+      it through a `var` (the reason is not important right now).
+    - Vars are not the same as variables from most other
+      programming languages because we don’t expect their values
+      to change during the course of the program.
+
+### special forms
+    - e.g. `def`
+    - are like keywords in other languages... they're reserved
+      words. They have their own special meaning and own rules.
+    - note: `defn` is actually a MACRO
+
+### Training day course
+    - `def` gives a name to a value
+
+### code is data
+    - We can treat this as just a list and do things like get the
+      first elementfrom it:
+    - (first '(+ 1 1))
+    - ;; -> +
+    - All of this leads us to a very important discovery:
+    - Code is data!
+    - All Clojure code is made of lists of DATA
+
+### maps
+    - ; get item using the key as the function
+    - (:jam2 {:jam1 "strawberry" :jam2 "blackberry" :jam3 "marmalade"})
+    - ;; -> "blackberry"
+    - can use "get" either
+    - (get {:jam1 "strawberry" :jam2 "blackberry"} :jam3 "not found")
+    - ;; -> "not found"
+
+### conj
+    - `conj` adds an item to a collection in the most _natural_
+      way for the data structure.
+    - For lists, it adds to the beginning.
+    - For vectors, it adds to the end.
+
+### Clojure syntax
+    - edn: extensible data notation
+    - just a modern version of LISPS 's-expressions'
+        - $MY_IMAGES/cs/clojure/edn-extensible-data-notation.jpg
+    - aside:
+        - clojure code is all about defining the problem...
+        - there's no extra words like 'static', 'import' etc etc
+
+### Datastructures immutable
+    - can make new 'modified' version of an existing
+      datastructure...
+    - but it's not _copy on write_
+    - instead both structures share much under the hood...
+    - but that's ok because the structures are immutable
+    - Clojures implementation uses a tree based "stacking?"
+        - ie related collections still share data under the hood,
+          while appearing to be completely different objects
+    - also: no Clojure datastrcuture can be changed in place
+    - (reminds me of the Spark RDD)
+
+### Clojures
+    - are used to return custom functions
+
+### destructure
+    - binding the values in a data structure to symbols
+
+### manually create a list
+    (cons 5 nil)
+    - check it's type
+        (type (cons 5 nil))
+
+### Reader macro #'
+    (defn foo [x] (+ x 10))
+    (foo 10)
+    (#'foo 10)
+    ((var foo) 10)
+
+
+### Learn Clojure in One Video
+    - he created a project:
+        - `lein new app tutorial`
+    - he ran his main function from the repl!
+        - (-main)
+    - How datatypes work in Clojure:
+        - datatypes will be assigned based on the value you
+          assign to a symbol/variable
+            - e.g. `(def randVar 10)`
+            - will make 'randVar' a `long`
+    - he made a change in `core.clj`
+        - to pickup that change in the repl, execute:
+        - `(use 'tutorial.core :reload-all)`
+        - i.e.
+        - `(use 'your.namespace :reload)`
+    - `#" "` is a regex pattern! #"pattern"
+
+
+
+### Clojure in a nutshell
+    - nice quick tutorial on functional style
+    - Uses Moby Dick text as example
+    - first time I saw: thread-last macro `->>`
+        - $MY_IMAGES/cs/clojure/Clj-nutshell/mpv-shot0011.jpg
+    - data structures:
+        - ```
+        - list:   (1 2 3 4 5)
+        - vector: ["a" "b" "c" "d" "e"]
+        - map:    {:name "George", :age 50}
+        - set:    #{5 2 3 1 4}
+        - ```
+
+### seven languages
+    - `str` is used to concat stuff...
+        - `(str "a string ", 1, " another one ", 2)`
+    - characters are different to strings
+        - `(= "a" \a)`
+
+### true and false
+    - `false` evaluates to FALSE
+    - `nil`   evaluates to FALSE
+    - everything else evaluates to _TRUE_
+        - i.e. 0 and ""   evaluate  to TRUE
+
+### Mathematical operators
+    - there are no operators in clojure
+    - `+` is actually a function. Try in REPL:
+        - ```
+        - user=> +
+        - #object[clojure.core$_PLUS_ 0x2f177351 "clojure.core$_PLUS_@2f177351"]
+        - ```
+
+### Clojure comments culture
+    - Comes from LISP? (eg Peter Norvig)
+    - ;;;; Top-of-file level comments, such as a description of the whole file/module/namespace
+    - ;;;  Documentation for major code sections (i.e. groups of functions) within the file.
+    - ;;   Documentation for single functions that extends beyond the doc string (e.g. an explanation of the algorithm within the function)
+    - ;    In-line comments possibly on a single line, and possibly tailing a line of code
+
+### Hanami
+    - vega-lite plotting
+    - injects reasonable defaults into the vega json
+	- $MY_IMAGES/cs/clojure/hanami-example.jpg
+
+### vim tip
+    - `set lisp` for better indentation?
+
+### ClojureScript ecosystem
+    - (lots of similar words!)
+	- $MY_IMAGES/cs/clojure/clojurescript-ecosystem.jpg
+    - Clojure:                  Dialect of LISP, runs on JVM
+    - ClojureScript:            Subset of Clojure
+    - ClojureScript Compiler:   Translate ClojureScript source into Javascript
+    - Closure (Google Library): The Compiler uses many utilities & UI features from this lib
+    - Closure (compiler):       Optimises Javascript, keeping only neccessary code
+
+### Install Clojure
+    - First: install JAVA
+    - Instructions https://clojure.org/guides/getting_started#_installation_on_linux
+    - Creates the following:
+        - /usr/local/bin/clj
+        - /usr/local/bin/clojure
+        - /usr/local/lib/clojure (folder)
+    ```
+    curl -O https://download.clojure.org/install/linux-install-1.10.3.1040.sh
+    chmod +x linux-install-1.10.3.1040.sh
+    sudo ./linux-install-1.10.3.1040.sh
+
+    Installed latest version on TERMUX:
+        curl -O https://download.clojure.org/install/linux-install-1.10.3.986.sh
+        chmod +x linux-install-1.10.3.986.sh
+        ./linux-install-1.10.3.986.sh --prefix ~/repos/clojure
+    ```
+
+### Leiningen Project management
+    - See: ./leiningen.txt
+    wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+
+### vim plugins
+    - Interesting: vim plugins https://www.youtube.com/watch?v=gb58d9-W-kA
+    - linting:       clj-kondo
+    - REPL general:  cider-nrepl
+    - REPL specific: vim-fireplace
+    - autocomplete:  async-clj-omni
+    - () matching:   vim-parinfer
+    - color parens:  https://github.com/luochen1990/rainbow
+    - I use:         https://github.com/junegunn/rainbow_parentheses.vim
+
+
+### Check all these:
+    - atoms (allow us to change a value)
+    - add-watch :watcher
+    - agents, await-for, shutdown-agents
+    - Math/PI
+    - $MY_IMAGES/cs/clojure/variable-arguments.jpg
+    - multiple list of arguments [& names]
+    - if, when, cond
+    - do, dotimes, loop/recur, doseq
+    - compact anonymous functions #(* % 3)
+    - Note for beginners: Understanding the clojure name space
+      concept in-depth before starting any coding will save you
+      considerable time & frustration.
+    - (in-ns 'myapp)
+    - constructor functions: list, vector, hash-map, hash-set
+    - 'if' is a macro, not a function,
+        - so it controls which of its arguments get evaluated...
+    - 'do'... when you are doing something with a 'side effect'.
+        - ie something that doesnt just involve the inputs and
+          outputs of your function
+    - conditionals: if, when, case, cond (does not require
+      a predicate)
+    - `cons` is useful for generating lazy squences
+
+
+### links
+    - SICP in clojure                               http://www.sicpdistilled.com/
+    - SICP clojure solutions                        https://github.com/gregsexton/SICP-Clojure/tree/master/src/sicp
+    - SICP clojure solutions                        https://github.com/ecmendenhall/sicpclojure
+    - vim-clojure-static                            https://github.com/guns/vim-clojure-static
+    - Seven weeks languages                         $MY_CODE/clojure/seven-weeks.clj
+    - 'Hanami' Vega plotting                        https://github.com/jsa-aerial/hanami
+    - 'Saite' Interactive docs                      https://github.com/jsa-aerial/saite
+    - Test framework: 'midje'                       https://github.com/marick/Midje
+    - Course clojure jvm interop                    https://purelyfunctional.tv/courses/jvm-clojure/
+    - GOOD: Clojure cheatsheet                      https://clojure.org/api/cheatsheet
+    - GOOD: Clojurescript cheatsheet                https://cljs.info/cheatsheet/
+    - Idiomatic clojure                             https://bsless.github.io/code-smells/
+    - Hickey: Clojure made simple                   https://www.youtube.com/watch?v=VSdnJDO-xdg
+    - Clojure Python interop                        https://github.com/clj-python/libpython-clj
+    - Clojure Microsoft CLR                         https://github.com/clojure/clojure-clr
+    - 1 page intro to clojure                       https://github.com/clj-python/libpython-clj/blob/master/topics/new-to-clojure.md
+    - Good Clojure Style guide                      https://guide.clojure.style/
+    - Good O'Reilly clojure course Adam Bard        https://github.com/adambard
+    - java.jdbc                                     https://github.com/clojure/java.jdbc
+    - next-jdbc                                     https://github.com/seancorfield/next-jdbc
+    - Clojure for Lisp programmers                  https://www.youtube.com/watch?v=nDm-QDEXGEA
+    - Clojure training path Amperity                https://www.youtube.com/watch?v=QBsjYyg9bLE
+    - Enterprise Clojure training talk              https://www.youtube.com/watch?v=7E4gF3KEwZ0
+    - Enterprise Clojure training                   https://enterpriseclojure.com/
+    - Training: 4clojure code probs                 http://www.4clojure.com/
+    - Training: clojure koans                       http://clojurekoans.com/
+    - Practicalli beginner course                   https://practicalli.github.io/clojure/
+    - Practicalli YouTube channel                   https://www.youtube.com/channel/UCLsiVY-kWVH1EqgEtZiREJw
+    - Practicalli site                              https://practicalli.github.io/#resources
+    - Learn clojurescript book                      https://www.learn-clojurescript.com
+    - seven languages, seven weeks                  $MY_BOOKS/Cs/clojure/seven-languages-seven-weeks.pdf
+    - Finland Quirky training course                http://iloveponies.github.io/120-hour-epic-sax-marathon/
+    - Brian Will, calm voice, Good Clj course       https://www.youtube.com/playlist?list=PLAC43CFB134E85266
+    - Clojure TV, conference talks                  https://www.youtube.com/channel/UCaLlzGqiPE2QRj6sSOawJRg
+    - Dragon Djuric, AI Book                        https://aiprobook.com
+    - Dragon Djuric, Matrix/CUDA libraries          https://uncomplicate.org/
+    - Clojure logic/relational programming          https://github.com/clojure/core.logic
+    - Daniel Solano Gomez Understanding Clj Runtime https://www.youtube.com/watch?v=8NUI07y1SlQ
+    - HN clojure tips                               https://news.ycombinator.com/item?id=27273911
+    - Indian programmer: How Clj code evaluated     https://www.youtube.com/watch?v=4i8hvUcKnH0&list=LL&index=11
+    - Brave Clojure                                 https://www.braveclojure.com/introduction/
+    - Debugging Clojure                             https://news.ycombinator.com/item?id=27751128
+    - A history of Clojure                          https://news.ycombinator.com/item?id=27782864
+    - 6 years professional clojure                  https://news.ycombinator.com/item?id=28035429
+    - Babashka clj shell                            https://github.com/babashka/babashka
+    - Dec 3-4 Clojure conference, Sussman speaking  https://www.reclojure.org/
+    - London Clojurans Conference 2021              https://www.youtube.com/channel/UC-pYfofTyvVDMwM4ttfFGqw
+    - HANDY: Clojure "workshop" book                $MY_NOTES/cs/lisp/clojure-workshop.txt
+    - Sussman talk                                  https://www.youtube.com/watch?v=EbzQg7R2pYU
+    - Building a startup with Clojure               https://news.ycombinator.com/item?id=33081443
+    - Good: Clojure short problems for learning     https://4clojure.oxal.org/
+    - HN: Clojure Cheat sheets                      https://news.ycombinator.com/item?id=33386334
+    - Vim: paredit / parinfer                       https://news.ycombinator.com/item?id=33751935
+    - Clasp: Grep Clojure code                      https://news.ycombinator.com/item?id=33757247
+    - HN: History of Clojure                        https://news.ycombinator.com/item?id=37046353

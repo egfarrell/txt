@@ -1,0 +1,196 @@
+
+- Prime Obsession: 
+    - Bernhard Riemann & Greatest Unsolved Problem in Mathematics
+    - $MY_BOOKS/Physics/Maths/Misc/Prime-Obsession-Riemann-Derbyshire.pdf
+
+
+- The traditional categories of Mathematics:
+    - Arithmetic : The study of whole numbers and fractions.
+    - Analysis   : The study of limits. (interesting)
+    - Geometry   : The study of figures in space.
+    - Algebra    : The use of abstract symbols to represent mathematical objects 
+                   (numbers, lines, matrices, transformations), 
+                   and the study of the rules for combining those symbols.
+
+    - This fourfold scheme was well established in people’s minds
+      around 1800, and the great fusion was that of arithmetic
+      and analysis in 1837.
+    - This fusion created the discipline of _analytic number
+      theory_. 
+        - The fusion between arithmetic and analysis, between
+          counting and measuring, between numbers staccato and
+          numbers legato, came about as the result of an inquiry
+          into prime numbers by Lejeune _Dirichlet_ in the 1830s.
+
+### Question about sequences
+    - Could any sequence like this, made from any two numbers
+      with no common factor, contain an infinity of primes?
+    - Yes, it could. This is, in fact, precisely the case. 
+    - Take any two numbers with no common factor and repetitively
+      add one to the other. You will generate an infinity of
+      primes (mixed with an infinity of non-primes). 
+    - Gauss had conjectured that this was the case, knowing
+      Gauss’s powers, one is tempted to say that he intuited it.
+      But it was decisively proved by Dirichlet in that 1837
+      paper. It was in Dirichlet’s proof that the first part of
+      the great fusion was accomplished. 
+
+    - The truth is even more interesting. Take any positive whole
+      number, say, `9`. How many of the numbers less than `9`
+      have no factor in common with it, not counting 1 as
+      a factor?
+    - Well, there are six such numbers, and here they are: 
+        - `1, 2, 4, 5, 7, 8` 
+    - Take each one in turn, and repetitively add 9 to it: 
+        - 1: 10, _19_, 28, _37_, 46, 55, 64, _73_, 82, 91, 100, _109_, 118, _127_, …
+        - 2: _11_, 20, _29_, 38, _47_, 56, 65, 74, _83_, 92, _101_, 110, 119, 128, …
+        - 4: _13_, 22, _31_, 40, 49, 58, _67_, 76, 85, 94, _103_, 112, 121, 130, …
+        - 5: 14, _23_, 32, _41_, 50, _59_, 68, 77, 86, 85, 104, _113_, 122, _131_, …
+        - 7: 16, 25, 34, _43_, 52, _61_, 70, _79_, 88, _97_, 106, 115, 124, 133, …
+        - 8: _17_, 26, 35, 44, _53_, 62, _71_, 80, _89_, 98, _107_, 116, 125, 134, …
+
+    - Not only does every one of those sequences contain an
+      infinity of primes (I have underlined them), but each of
+      the six sequences contains the same _proportion_ of primes.
+
+
+### Golden Key
+    - You will have noticed this book have been on two tracks. 
+    - Chapters 1 and 5 were about those infinite sums, leading to
+      a mathematical object Riemann named “_the zeta function_”; 
+    - Chapter 3 was concerned with primes, taking its lead from
+      Riemann’s 1859 paper and proceeding from there to the Prime
+      Number Theorem (_PNT_). 
+    - Obviously, both the zeta function and the primes are
+      connected through Riemann’s interest in them. 
+    - In fact, by yoking the two concepts together in a certain
+      way, by turning the _Golden Key_, Riemann opened up the
+      whole field of analytic number theory. 
+    - But how did he do that? What’s the connection? 
+    - What is the Golden Key?
+
+    - It begins with the “sieve of Eratosthenes.” The Golden Key
+      is, in fact, just a way that Leonhard Euler found to
+      express the _sieve of Eratosthenes_ in the language of
+      analysis.
+
+### Gradient
+    - First, let me define “gradient” for a sloping straight
+      line. It is the vertical rise divided by the horizontal
+      span. 
+    - If, in covering a horizontal distance of 5 units, I rise
+      a vertical distance of 2 units, the gradient is `2` in `5`,
+      or `0.4`
+        - $MY_IMAGES/maths/gradient.jpg
+
+    - To get the gradient of a curve at any point, I construct
+      the ONE STRAIGHT LINE that touches the curve at that point.
+        - Plainly there is only one such line; if I “roll” the
+          line a little (imagine it’s a steel rod, and the curve
+          a steel band), it touches the curve at a slightly
+          different point. 
+        - The gradient of the curve at the point is the gradient
+          of that UNIQUE touching straight line.
+
+    - The gradient of `log x` at the argument `x = 10` turns out,
+      if you measure it, to be `1/10`. 
+    - The gradient at argument `20` is less, of course; it
+      measures `1/20`. 
+    - The gradient at argument `5` is steeper; it measures `1/5`. 
+    - It is, in fact, yet another amazing property of the `log`
+      function that the gradient at any argument `x` is `1/x`,
+      the reciprocal of `x`, also known as `x^(-1)`.
+
+From any function f I can derive another function g, which measures
+the gradient of f at any argument. If f is log x, then g is 1 / x.
+This derived function is called, believe it or not, “the derivative”
+of f.
+
+This breaks down for multiplication, though; the derivative of
+f-times-g is not the derivative of f times the derivative of g.
+
+Once again, log x looks as though it is trying to pass itself off as
+x0. VII.
+
+You no doubt recall my saying more than once that mathematicians love
+to be able to invert things. Here is P in terms of Q; what is Q in
+terms of P? That is how I brought up the log function in the first
+place—as the inverse of the exponential function. If a = eb, then what
+is b in terms of a? It's log a. Suppose then,
+
+This new function has the name “the log integral function.” The usual
+symbol for it is Li(x). (Sometimes “li(x).”) It is defined to be37 the
+area under that graph—the graph of 1 / log t—from zero to x.
+
+Its gradient at any point is, of course, 1 / log x. And that, please
+note, is, as I showed in Chapter 3.ix, the probability that a whole
+number in the neighborhood of x is a prime number.38
+
+1896—then it must also be true that (N)~Li(N).
+
+In fact, the PNT is most often stated as (N)~Li(N), rather than as
+(N)~N/ log N. Because the twiddle sign is transitive, the two things
+are equivalent,
+
+Chebyshev's First Result
+
+Chebyshev converted this into a different formula involving a step
+function—that is, a function that has the same value across a range of
+arguments, then jumps to another value.
+
+Chebyshev's Second Result
+
+It is Chebyshev's line of approach in that second paper that is more
+noteworthy, though. He got his results without using any complex
+function theory. Mathematicians have a shorthand way of expressing
+this fact. They say that Chebyshev's methods were “elementary.”
+Riemann, in his 1859 paper, did not use elementary methods. He brought
+the full power of complex function theory to bear on the issue he was
+investigating. The results he got were so striking that other
+mathematicians followed him, and the PNT was proved at last using
+Riemann's non-elementary methods.
+
+Chebyshev bias
+
+“On the representability of a function by a trigonometric series”—is
+a landmark paper, giving the world the Riemann integral, now taught as
+a fundamental concept in higher calculus courses. The habilitation
+lecture, however, far surpassed the thesis.
+
+Gauss's paper is generally regarded as the starting point for the
+subject named “differential geometry.”
+
+From the Gaussian point of view, the geometry of this space-time would
+have been developed by imagining it imbedded in a five-dimensional
+continuum, in the way that Gauss thought of his two-dimensional
+surfaces as embedded in ordinary three-dimensional space.
+
+function was not, for Riemann, a mere set of points;
+
+very marked in Riemann's work—the tendency to reduce every
+mathematical topic to analysis.
+
+What he was speaking about at its most fundamental was the nature of
+space.
+
+Riemann's collected works in the original German—it is a single volume
+of 690 pages—and
+
+Mathematicians consider it a form of divergence.
+
+The moral of the story is that an infinite series might define only
+part of a function; or, to put it in proper mathematical terms, an
+infinite series may define a function over only part of its domain.
+The rest of the function might be lurking away somewhere, waiting to
+be discovered by some trick like the one I did with S(x).
+
+it possible that the domain of the zeta function is bigger than just
+“all numbers greater than 1”?
+
+First, let me define a new function, using an infinite series slightly
+different from the one in Expression 9-1. This is the function; “” is
+“eta,”
+
+too, in spite of the fact that the “official” series for (s)
+(Expression 9-1) doesn't converge there.
+

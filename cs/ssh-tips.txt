@@ -1,0 +1,369 @@
+ssh tips
+
+### SCP TUNNEL through "gateway"
+    - Gateway       : `efarrell@brama`
+    - Remote Server : `efarell@licz`
+
+    - STEP 1: Create tunnel
+        ```
+        ssh -L 2222:licz:22 efarrell@brama
+        ```
+
+    - STEP 2: copy remote file (licz) to local
+                    ---------------------------- 
+        ```
+        scp -P 2222 efarell@localhost:~/enda.txt ./
+        ```
+                    ----------------------------
+                                ^
+                                |
+                                |
+                      Actually remote server!
+
+
+# ssh 'jump' through gateway to remote
+    - Gateway       : efarrell@brama
+    - Remote Server : efarell@licz
+    - (note: entry for 'brama' in ~/.ssh/config)
+    ssh -J brama efarell@licz
+
+    - Or in ~/.ssh/config:
+        Host licz
+            HostName licz.ippt.pan.pl
+            User efarell
+            # IdentityFile note: first copy 'id_rsa.pub' to licz:~/.ssh/authorized_keys
+            IdentityFile ~/.ssh/id_rsa_brama
+            ProxyJump brama
+            ForwardX11 yes
+            ForwardX11Trusted yes
+            KeepAlive yes
+            Compression yes
+
+
+
+
+# close/kill frozen session
+    [enter]~.
+
+### Fix "Connection reset by peer"
+    - On Client:
+    -     TCPKeepAlive no
+    -     ServerAliveInterval 60
+    -     ServerAliveCountMax 525600
+
+    - On Server:
+    -     TCPKeepAlive no
+    -     ClientAliveInterval 60
+    -     ClientAliveCountMax 525600
+
+
+### SSH clipboard copy without X
+    - ah in the end I use `.vim/bundle/vim-oscyank/`
+        - See: osc52 ssh clipboard X11 https://www.reddit.com/r/vim/comments/ac9eyh/talk_i_gave_on_going_mouseless_with_vim_tmux/ed6kl67/?utm_source=amp&utm_medium=&utm_content=more_replies
+
+    - old:
+        - lemonade
+            - lemonade                     https://github.com/lemonade-command/lemonade
+            - lemonade exit 1 error        https://github.com/lemonade-command/lemonade/issues/18
+            - run this code on client to see if server is listening
+                - sudo netstat -n --tcp --listen -p
+        - doit
+            - https://www.chiark.greenend.org.uk/~sgtatham/doit/
+
+# create new ssh user identity
+	ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+    eval `ssh-agent -s`
+    ssh-add ~/.ssh/id_rsa
+    xclip -sel clip < ~/.ssh/id_rsa.pub
+    xc < ~/.ssh/id_rsa.pub
+
+# ssh-copy-id alternative identity
+    ssh-copy-id -i chrome-id.pub sc
+        *ensure* the [sc] entry in " ~/.ssh/config"
+        doesnt already specify an identity!!
+
+# copy ssh keys from root to a another host
+    ### 2023 latest way?
+    ### Allow "ssh-copy-id" for non-root user
+        sudo vim /etc/ssh/sshd_config
+            PermitRootLogin yes
+            PasswordAuthentication yes
+            KbdInteractiveAuthentication yes
+        UBUNTU 22.10
+            sudo systemctl restart ssh.service
+        old ubuntus
+            sudo systemctl restart sshd
+        logout
+
+
+    # old way
+    # if have root password
+        v /etc/ssh/sshd_config
+            - PasswordAuthentication yes
+            - PermitRootLogin yes
+        sudo systemctl restart sshd
+        ssh-copy-id root@some-server.com
+        # enter your password once
+
+    # if no root password
+        # ssh in as root
+        cp ~/.ssh/authorized_keys {myuser}/.ssh/
+
+
+
+
+### Terminfo not found:
+    - E558: Terminal entry not found in terminfo
+      _screen-256color_ not known.
+    - You can copy the terminfo descriptions to remote hosts.
+    - On the local system, dump the description to text format:
+            - infocmp xterm-256color > xterm-256color.ti
+            - infocmp screen-256color > screen-256color.ti
+
+    - Then copy to the remote host and compile:
+            - tic xterm-256color.ti
+            - tic screen-256color.ti
+
+    - The descriptions will be stored in `~/.terminfo`
+    - (`infocmp` and `tic` are part of the ncurses or ncurses-bin
+      packages in most Linux distributions, as well as most BSDs
+      that use ncurses.)
+
+
+### publickey rejected
+    - Sometimes it can be incorrect permissions on $HOME folder
+    - look in the log for error:
+        - "Authentication refused: bad ownership or modes for directory /root"
+    - commands:
+        tail -f /var/log/auth.log
+        chown root:root /root/ -R
+
+### Public key not being accepted
+    - probably permissions problem
+    sudo chown $USER:$USER ~/ -R; sudo chmod o-rwx ~/ -R
+
+# new vm - X11 not working
+    - ERROR:
+        can't find display
+        solution: ai xauth
+    - FULL SETUP:
+        ai xorg xauth
+        edit /etc/ssh/sshd_config
+            X11Forwarding yes
+        then type
+           sudo restart ssh
+
+### X11 stuff in ssh config
+    XAuthLocation /usr/bin/xauth
+    ForwardAgent yes
+    ForwardX11 yes
+
+
+### What ciphers are available?
+    ssh -Q cipher
+
+### auto-run ssh login commands
+    - ~/.ssh/rc
+    - I only recently learned that you can add a ~/.ssh/rc to run
+      commands on every ssh login. Are there other common useful
+      rc locations people are aware of?
+
+### juice ssh popup keyboard
+    - tap terminal once to bring up ctrl, alt etc
+
+### x11 SSH bug
+    Bug #1463263 “X11 Forwarding is broken following upgrade to Ubun...” : Bugs : Ubuntu
+        https://bugs.launchpad.net/ubuntu/+bug/1463263
+    possible solution?
+        http://ask.xmodulo.com/fix-broken-x11-forwarding-ssh.html
+
+# ssh not running
+	eval `ssh-agent -s`
+	ssh-add ~/.ssh/id_rsa
+
+# Random HN comment
+    Tmux and auto ssh
+    30 servers
+
+# locale error
+    # bash: warning: setlocale: LC_ALL: cannot change
+    locale (en_GB.UTF-8)
+    problem
+        # "locale" on CLIENT computer is # NOT AVAILABLE on the
+        remote
+    # fix
+        LC_ALL=C xssh sage
+        and in remote ~/.bashrc.local
+            LANG="en_US.utf8"
+            before it exe> LC_ALL="en_US.utf8"
+
+### ssh invalid hosts error
+    sed -i '4d' ~/.ssh/known_hosts
+
+# copy a file to remote
+	scp ~/.somefile ef@111.11.11.111:/home/ef/
+	scp ~/.somefile do:~
+
+# stop a session from timing out
+# put in ~/.ssh/config
+Host *
+  ServerAliveInterval 240
+
+# list connected sessions
+    who -a
+    # this way doesnt really work?
+    ~#
+
+# attach to aws instance
+    # must specify the 'pem' file!
+    chmod 400 oupair.pem
+    xssh -i oupair.pem ubuntu@xxx-xx-xxx-x-xxx.eu-west-1.compute.amazonaws.com
+
+# -Y
+    ignore authentication
+
+# ipython/jupyter ssh tunnel
+	# REMOTE machine
+		ipython notebook --no-browser --port=8888
+	# LOCAL machine
+		ssh -N -f -L localhost:8888:localhost:8888 winslow
+
+# ssh error (eg. known_hosts:45)
+	# delete from known host files
+	sed -i 45d ~/.ssh/known_hosts
+
+# ssh directly to tmux!
+	ssh <hostname> -t tmux a
+	# -t (for “Force pseudo-tty allocation”.)
+
+# command line parameters
+	-o Option=Value
+	# in "ssh_config" that translates to:
+	Option Value
+
+# PERMISSIONS on private pem file
+	cd ~/.ssh
+	chmod 600 XXXXXX.pem
+
+# X11-window forwarding (use "-X"!!!!!)
+	ssh -X -i KEYPAIR-FILE ubuntu@DNS
+
+# commands
+	# can run remote commands without fully logging in
+	uptime
+
+hacker news ssh security
+    FYI, this happens because SSH automatically presents
+    a public key to the server when trying to authenticate. If
+    the server doesn't know that key, then SSH tries the next
+    one. You can enumerate all of someone's keys this way (like
+    this SSH server does)
+
+    If you want to disable this sort of behaviour you can
+    disable SSH from sending keys automatically, and then tell
+    SSH which identity files need to be sent to each host.
+
+    In your .ssh/config, something like:
+
+        # Ignore SSH keys unless specified in Host subsection
+        IdentitiesOnly yes
+
+        # Send your public key to github only
+        Host github.com
+            IdentityFile ~/.ssh/id_rsa
+
+    This is also handy if you're security conscious and like
+    to use a different private/public key pair for each host
+    you have an account with!
+
+    Same here. Here's my ~/.ssh/config for anyone interested
+    in what it looks like:
+
+    Host github.com
+      User toxicFork
+      IdentityFile ~/.ssh/github-toxicFork
+    Host bitbucket.org
+      User toxicFork
+      IdentityFile ~/.ssh/bitbucket-toxicFork
+
+
+# SSH TUNNELS
+    ![port forwarding]($MY_IMAGES/cs/Ssh-port-forwarding.jpg)
+
+    ssh -N -f -L localhost:6000:localhost:7000 username@xxxxxxxxxxxx.com
+
+    -N
+        - tell SSH to not execute a remote command; it is used
+          exclusively with port forwarding for situations like
+          this.
+
+    -f
+        - tell SSH to go into the background before it executes
+          the command but after the port forwards are
+          established.
+
+        - # This command also implies "-n" which prevents reading
+          from stdin and # is necessary when putting SSH in the
+          background.
+
+        - # Note: "-n" does something completely different from
+          "-N".
+
+    -L
+        - # This command sets up the port forwards.
+
+        - # In this particular case, the first pair of
+          localhost:6000 says to # forward port 6000 on the
+          localhost to the SSH port 22. The second pair # of
+          localhost:7000 says to have the SSH port 22 on the
+          remote machine # be forwarded to port 7000 on the
+          remote machine which is where IPython # Notebook is
+          running.
+
+        - # It essentially links an arbitrary local port to
+          a port on the remote # machine over an SSH tunnel.
+
+# attach to remote tmux session
+# (also use X windows fowarding)
+    ssh -c arcfour,blowfish-cbc -XC "$@" -t tmux attach
+
+evoburst error
+    I restarted the ssh daemon:
+    service ssh restart
+
+    Then I got a new error when SSHing in:
+    ssh myuser@myevoburst
+    "ssh_exchange_identification: Connection closed by remote host"
+
+    In an emergency console I ran:
+    $(which sshd) -Ddp 10222
+    /etc/ssh/sshd_config line 71: unsupported option "all".
+
+    I edited /etc/ssh/sshd_config and commented out the following line:
+    AddressFamily all
+
+# ssh output microphone to remote computers speaker
+    To output your microphone to a remote computer's speaker
+    [note: you probably shouldn't be using arcfour in general
+    for ssh, and it might be disabled on your site].
+
+   dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
+
+
+### makefile ssh shenanigans
+    SSH_RUNNING     :=  $(shell ssh-add -l 2>&1)
+    SSH_ERROR       :=  Could not open a connection to your authentication age
+
+    # if [ "$(SSH_RUNNING)" == "$(SSH_ERROR)" ]; then \
+        # printf "\nProblem: $(RED)$(SSH_ERROR)$(NO_COLOR)\n"; \
+        # printf "\nPlease type: $(GREEN)eval \`ssh-agent -s\`$(NO_COLOR)
+        # exit 1; \
+    # else   \
+        # printf "\nAll OK: 'ssh-agent' is active...\n"; \
+    # fi
+
+### Links
+    - Croc, Wormhole ssh file transfer             https://news.ycombinator.com/item?id=27262193
+    - SSH Tunneling                                https://news.ycombinator.com/item?id=28802493
+    - Bad ssh connection? Try 'eternal terminal' : https://eternalterminal.dev/
+

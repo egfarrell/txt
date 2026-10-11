@@ -1,0 +1,321 @@
+# Book
+    - $MY_BOOKS/Physics/Spacetime/Physics-before-after-einstein.pdf
+
+### See also!
+    - $MY_NOTES/physics/EM/em-field-momentum.txt
+    - $MY_NOTES/physics/EM/Vector-Potential-History.txt
+
+### Quote
+    - Only a _free individual_ can make a discovery.
+    - A. Einstein
+
+
+- It is nothing short of a miracle that the modern methods of
+  instruction have not entirely strangled the holy curiosity of
+  inquiry yet ; for this delicate little plant, aside from
+  stimulation, stands mainly in need of FREEDOM; without this it
+  goes to wreck and ruin without fail.
+    - It is a very grave mistake to think that the enjoyment of
+      seeing and searching can be promoted by means of COERCION
+      and a sense of duty.
+
+- To his collaborator Leopold Infeld he said: “I am really more
+  of a philosopher than a physicist”
+
+- His opinion of the value of mathematics in Physics greatly
+  increased after GR, though he still wrote to Felix Klein in
+  1917:
+    > “the formal points of view ... may be valuable when a truth
+    > already found needs to be formulated in a final form, but
+    > almost always FAIL as heuristic aids” [24, p. 325].
+
+- In the 1920s he said to a physician friend, concerning
+  a certain problem:
+    - “I’m afraid I’m wrong again. I can’t put my theory into
+      words. I can only formulate it mathematically, and that’s
+      suspicious”
+    - He would say: “No scientist thinks in formulae”
+
+
+### Great physical intuition: EM field
+- `KEY 1`: LAGRANGIAN IMPLIES 'MECHANICAL' EM FIELD?
+    - Lagrange’s method in mechanics was widely used in the 19th
+      century. Maxwell described this method and then showed it
+      could be applied to EM.
+    - He didn't explicitly present the Lagrangian function
+      describing the EM field. However, since he accepted that
+      the EM field has both potential energy `W` and kinetic
+      energy `T` , it's possible to write down a Lagrangian
+      function `L = T − W` describing this field.
+    - The possibility of describing EM according to the
+      Lagrangian formalism was interpreted by Maxwell and his
+      contemporaries as strong evidence that it was possible to
+      provide a _mechanical theory_ for EM.
+    - [Maxwell] chose to avoid any specific model. Instead, he
+      adopted a general approach, stating that all EM phenomena
+      could be understood as effects transmitted through the
+      underlying _ether_. 
+        - He calculated the general mechanical properties
+          ascribed to that medium, without proposing detailed
+          mechanical models for the ether.
+
+- `KEY 2`: ETHER STRESSES (magnetism)
+    - According to Maxwell, magnetic interactions are also
+      associated with ether stresses.
+    - The description of those stresses is highly complex in the
+      general case (in the presence of matter), but in a vacuum
+      they reduce to:
+        - a longitudinal attraction and
+        - a transverse pressure,
+        - both with the same absolute value `p_m`, equal to the
+          density of magnetic energy `ρ_m`:
+        - $MY_IMAGES/physics/EM/formula-magnetic-energy.jpg
+
+- `KEY 3`: EM WAVE: PRESSURE
+    - (radiation pressure?)
+    - By also following Faraday’s suggestion, Maxwell developed
+      the EM theory of light.
+    - Here Maxwell made use of the theory of ether stresses to
+      compute the _pressure_ produced by an EM wave.
+    - Suppose a polarized plane EM wave travels in the `z`
+      direction.
+        - The electric and magnetic fields are perpendicular to
+          each another and transverse to the wave propagation.
+        - Let us suppose that the electric field is in the `x`
+          direction and the magnetic field in the `y` direction.
+        - If the total energy density of the wave is `ρ`, on
+          average half of this energy will be electric and half
+          is magnetic. Therefore, the mean electric stresses are:
+            - $MY_IMAGES/physics/EM/EM-wave-pressure-formula.jpg
+    - Maxwell’s Treatise in 1873 contained the theoretical
+      prediction that light should produce `pressure`.
+    - In 1876, Adolfo Bartoli (1851–1896) independently deduced
+      a formula for radiation pressure, using only
+      a thermodynamic argument [14].
+        - He showed that, if radiation didn't produce pressure,
+          it'd be possible to violate the second law of
+          thermodynamics.
+    - Bartoli’s argument was generalized by Boltzmann (1844–1906)
+      and Prince B. Galitzine (c. 1840–1916), some years later.
+    - The _coincidence_ between the equations obtained by the
+      thermodynamic argument and Maxwell’s theory of ether
+      stresses led to strong confidence in those results.
+    - Actually this result is not a specific property of EM
+      waves. _Any wave_ carrying energy (such as sound or water
+      waves) will also produce pressure.
+
+- `KEY 4`: 'MOMENTUM' OF THE MAGNETIC FIELD
+    - key:
+        - self-induction 'similar' to inertia?
+        - vector potential = ether 'momentum'?
+    - In Maxwell’s theory the ether had several mechanical
+      properties:
+        - It amassed energy,
+        - it produced forces,
+        - it could produce pressure.
+    - Ascribing motion and momentum to the ether was the next
+      step.
+    - Inertia
+        - Following Faraday once more, Maxwell remarked that the
+          phenomenon of _self-induction_ exhibited properties
+          similar to _inertia_.
+        - When an electric current flows through a circuit, and
+          the electromotive force that produces the current is
+          interrupted, the current does not immediately stop; it
+          has a tendency to _continue for some time_.
+        - The resistance of the current to stopping depends on
+          both the value of the current and the geometric
+          configuration of the wires through which it is flowing,
+          which can be described by a quantitative property: the
+          self-inductance of the circuit.
+            - If this effect only depended on the value of the
+              current and wire length, it would be possible to
+              ascribe it to the inertia of the _particles_ that
+              carry the electric charge (note: electrons were
+              then unknown).
+            - However, when the same wire, carrying the same
+              electric current, is bent or transformed into
+              a coil, its self-inductance changes.
+            - Therefore, the self-inductance cannot be
+              interpreted as a property of the `electricity
+              carriers`.
+    - How can it be interpreted then?
+        - Maxwell provided several interpretations, all of them
+          involving the _dynamics_ of ether.
+        - On one hand, it was possible to account for the effect
+          by taking into account the energy of the magnetic field
+          around the wires:
+            - the energy depends on the geometric configuration
+              of the circuit.
+        - On the other hand, Maxwell associated the magnetic
+          field with _ether motion_; and therefore, the
+          self-inductance could be associated with some dynamic
+          effect around the wires, which Maxwell called
+          “`electrokinetic momentum`”.
+        - Maxwell proved that it was possible to evaluate this
+          momentum by integrating the `vector potential` around
+          the circuit.
+        - The vector potential could be interpreted as a MOMENTUM
+          associated with the ether. (!)
+
+- `KEY 5`: PATH TO VECTOR POTENTIAL
+    - key: various names:
+        - 'electro-tonic function'
+        - 'electro-tonic state'
+        - 'electromagnetic momentum'
+        - 'vector potential'
+    - The path that led Maxwell to the concept of the vector
+      potential is very interesting (see [11]).
+    - Faraday had interpreted the EM induction as due to changes
+      of “the electrotonic state” – an obscure concept he
+      introduced in the 1830s.
+    - Inspired by a paper by William Thomson (1847), in 1856
+      Maxwell was able to represent the induced electromotive
+      force at each point of a circuit in very simple form, which
+      can be represented in modern notation as:
+        - `E = dA/dt`
+        - Eqn. 14
+        - (put 'hat' on E and A)
+    - In this paper, Maxwell interpreted the vector `A` as the
+      “electro-tonic function”, or “electro-tonic intensity”. In
+      the same paper, he clearly established the relation between
+      this function and the magnetic induction `B`. 
+    - In modern notation:
+        - `B =∇ × A.`
+        - (put 'hat' on B and A)
+    - Several years later, Maxwell gave the same vector another
+      name: “electromagnetic momentum”.
+    - Why 'momentum'?
+        - The new name was probably inspired by Eqn. 14 because,
+          when we multiply both sides by an electric charge, the
+          LHS of the equation becomes a `force`, and according to
+          Newton’s second law the RHS should be the time
+          derivative of the `momentum`.
+    - Afterwards, in his Treatise, Maxwell introduced a third
+      name for the same quantity:
+        - “vector potential” – the name we use nowadays.
+    - Note: here Maxwell is ascribing a new dynamical property to
+      the `ether`: MOMENTUM.
+    - In the presence of a magnetic field, or more exactly, in
+      the presence of the vector potential, a charge will have
+      a dynamical momentum, even if it is at rest.
+
+
+- Freundlich ... does not move me in the slightest. Even if the
+  deflection of light, the perihelial movement or the line shift
+  were unknown, the gravitation equations would still be
+  convincing because they avoid the inertial system (the phantom
+  which affects everything but is not itself affected).
+    - Warsaw 2023: ah the 'inertial system' here is kinda
+      Newton's absolute space?
+
+- ... human emanations of which we are ignorant. Remember how
+  everyone mocked the existence of electrical currents and
+  invisible waves. The science of the human being is still in its
+  infancy ...
+
+- Faraday usually described the electric and magnetic effects
+  using the concept of “lines of force”. According to Faraday,
+  electromagnetic forces are carried by 'lines of force'
+  stretched between electric charges.
+    - In the current teaching of physics (especially undergrad)
+      we still make use of lines of force.
+        - However, the contemporary use is not equivalent to
+          Faraday’s concept, because we don't conceive of those
+          lines as _substantial physical realities_.
+    - Michael Faraday accepted that the EM field has physical
+      reality and quantitative properties, even in the _absence_
+      of matter. This same idea was later used by Maxwell, in his
+      EM theory.
+
+- Why did Faraday introduce this conception of the EM field as
+  physical reality?
+    - The main reason seems to be the possibility of INTERVENING
+      in the electric and magnetic interaction.
+        - Gravitational effects behave as direct actions at
+          a distance, in a straight line, without suffering any
+          change when matter is interposed.
+        - (? that can't be fully true?)
+    - On the other hand, Electric and magnetic forces seem to
+      propagate along _curved lines_, and ARE influenced by
+      INTERPOSED (intervening) matter.
+        - Therefore, they behave as influences that gradually
+          propagate in space; a space filled with some substance
+          from one point to the next.
+        - Since 1832 Faraday believed that actions took some time
+          to pass from one point to another, and he thought that
+          it would be possible to measure their corresponding
+          speed
+
+- To account for the bending, Faraday supposed that the lines of
+  force _repel_ each other, and for that reason they separate
+  from one another and bend towards regions where there are no
+  other lines.
+    - Therefore, Faraday’s inductive lines of force had two main
+      properties:
+        - they produced induction and electrostatic attraction
+          along the direction of the line;
+        - and they produced a MUTUAL lateral _repulsion_
+
+- The problem to be solved is to find the system of equations
+  (i.e. “transformation”) connecting these two sets of
+  quantities.
+    - He points out at the start, “It is clear that these
+      equations must be linear because of the properties of
+      homogeneity that we attribute to space and time.”
+
+- One result from this is that the electromotive force arising
+  upon motion in a magnetic field, i.e. the so-called “Lorentz
+  force”, is nothing but the electric force appearing in the
+  moving system.
+
+- In Section 8, he considers the transformation from rest to
+  a moving system, of the energy in a ray of light enclosed
+  within a closed surface, and comments:
+    - It is noteworthy that the energy and the frequency of
+      a light complex vary with the observer’s state of motion
+      according to the same law.
+    - Although he avoids mentioning it, this result is in exact
+      agreement with the energy value `hν` of the light quantum,
+      which he showed in the paper he wrote three months earlier.
+
+- Utilizing the equations thus obtained, he further considers the
+  reflection of light by a perfect mirror.
+    - He calculates the difference in energy between the incident
+      and the reflected light-rays, and identifies this
+      difference as the work done by the radiation pressure on
+      the mirror.
+    - Thus, he finally arrives at an expression for the pressure
+      of radiation, to which we will return in Section 8 below.
+
+- From the very beginning, it appeared to me intuitively clear
+  that, judged from the standpoint of such an observer,
+  everything would have to happen according to the same law as
+  for an observer, who, relative to the Earth, was at rest.
+    - For how should the first observer know, i.e., be able to
+      determine, that he is in a state of fast uniform motion?
+    - According to my interpretation, the above statement is
+      a consequence of Einstein’s conjecture that, owing to the
+      Galilean principle of relativity, there would be no way of
+      determining whether one is in a state of fast uniform
+      motion or not.
+
+- My interpretation was really about the concept of `time`.
+  Namely, time could not be defined absolutely, but is in an
+  inseparable relationship with the `signal velocity`.
+
+- Thus, Einstein arrived at his _operational definition_ of
+  distant simultaneity, described in Section 1, in terms of
+  simultaneity in the same place using the presumed constancy of
+  light velocity.
+
+- When an astronomer tells me that some stellar phenomenon, which
+  his telescope reveals to him at this moment, happened
+  nevertheless fifty years ago, I seek his meaning, and to that
+  end I shall ask him how he knows it, that is, how he has
+  measured the velocity of light.
+    - He has begun by supposing that light has a constant
+      velocity, and in particular that its velocity is the same
+      in _all directions_.
+    - That is a postulate without which, no measurement of this
+      velocity could be attempted.

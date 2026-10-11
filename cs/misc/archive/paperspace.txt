@@ -1,0 +1,15 @@
+
+### Paperspace fastai customisation
+    - there's a `.config` file in the `~/.fastai` folder
+
+### Quick fastai setup
+    - https://github.com/fastai/paperspace-setup
+
+### Persistent storage
+    - place `.bashrc.local` in /storage and when you start an
+      instance, paperspace will execute this file
+    - or:
+    - Paperspace provide a `run.sh` script that calls
+      a `pre-run.sh` script. So maybe put your customisation in
+      `pre-run.sh`
+    - /notebooks is where Paperspace place the default notebooks

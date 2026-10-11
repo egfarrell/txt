@@ -1,0 +1,95 @@
+Maxwell’s equations look deceptively simple, but they hide layers
+of subtle structure—symmetry, constraint, and philosophy all
+rolled together. Let’s write them in the usual differential form
+(in vacuum, for simplicity):
+
+### Gauss’s law for electricity.
+    - `∇·E = ρ/ε₀`
+    - This tells us that charge is the source of the electric
+      field. But note the subtlety: it’s a constraint, not an
+      evolution equation. It doesn’t tell you how E changes with
+      time—only how it must look given `ρ` at each instant. 
+    - In fact, it acts as a consistency condition that must hold
+      at all times, and it will stay true automatically if you
+      start with initial data satisfying it and then use the
+      other equations to evolve forward. 
+    - This is one reason Maxwell’s equations aren’t just “four
+      equations for four fields”—two of them are dynamical, two
+      are constraints.
+
+### Gauss’s law for magnetism.
+    - `∇·B = 0`
+    - No magnetic monopoles. But this also encodes a deep
+      topological statement: B field lines are closed loops or
+      extend to infinity. It’s a geometrical conservation law—no
+      beginning or end of a magnetic field line. You can view it
+      as saying the magnetic field is a “pure curl”: B = ∇×A,
+      which introduces the vector potential A. The existence of
+      A (and its gauge freedom) flows from this one equation.
+
+### Faraday’s law of induction.
+    - `∇×E = −∂B/∂t`
+    - Here comes the first real time evolution. Changing magnetic
+      flux induces a curling electric field. This is what makes
+      electric generators, but it’s also what tells you that
+      E isn’t purely sourced by ρ—it can be generated dynamically
+      by a time-varying B. Together with the next equation, this
+      mixes E and B under time evolution and hints at their unity
+      as components of one tensor in relativity.
+
+### Ampère–Maxwell law.
+    - `∇×B = μ₀J + μ₀ε₀∂E/∂t`
+    - The first term, `μ₀J`, is ordinary current producing
+      magnetic fields. Maxwell’s stroke of genius was adding the
+      displacement current term, μ₀ε₀∂E/∂t, which restores charge
+      conservation and symmetry between E and B. Without it,
+      electromagnetic waves wouldn’t exist. This was the
+      historical key that forced the recognition that light is an
+      electromagnetic wave.
+
+### Deeper, Balakrishnan-style “nuggets”:
+
+- Counting degrees of freedom:
+    - The electromagnetic field has six components (three each
+      for E and B), but the two Gauss laws are constraints,
+      leaving only four independent components. Then gauge
+      freedom in the potentials removes two more, leaving just
+      two physical degrees of freedom—the two polarizations of
+      light. That’s a compact little miracle of field theory.
+
+- Eight equations idea:
+    - Each of the two curl equations has three components → 6,
+      and each divergence equation adds 1 → 8 total component
+      equations for the six field components. But they’re not all
+      independent—there are consistency relations (like
+      ∇·(∇×A)=0) that tie them together. So it’s an
+      overdetermined system in form, but self-consistent.
+
+- Continuity equation emergence:
+    - Taking `∇·` of the Ampère–Maxwell law and using `∇·(∇×B)=0`
+      automatically gives:
+        - `∂ρ/∂t + ∇·J = 0` (charge conservation).
+    - Maxwell’s equations require it; it’s not an extra
+      assumption. This is the hallmark of a gauge theory: the
+      symmetry (here U(1)) guarantees local conservation laws.
+
+- Symmetry and relativity:
+    - Before Einstein, these were already hinting at spacetime
+      unity. Once you write them in covariant form, they condense
+      into one tensor equation:
+        - `∂μF^{μν} = μ₀J^ν`
+        - `∂[μF_{νλ]} = 0`
+    - What used to be four equations become two—relativity
+      reveals the redundancy.
+
+- Hidden assumptions:
+    - The vacuum equations assume linear, isotropic, homogeneous
+      space—ε₀ and μ₀ are constants. That’s not true in matter or
+      curved spacetime. In those settings, the “medium” can mix
+      `E` and `B`, or even break the simple wave structure.
+
+- In summary, Maxwell’s equations are more like a self-consistent
+  dance between constraints, evolution, and symmetry than a plain
+  list of laws. They tell us what can exist and how it must move.
+  And all of electrodynamics—from radio to quantum field
+  theory—is just elaborating their choreography.

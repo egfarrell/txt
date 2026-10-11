@@ -1,0 +1,282 @@
+$MY_VIDEOS/physics/bala_fundamental/22-The-2-Body-Central-Force-Problem.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture - 22
+The 2- Body Central Force Problem
+A very important problem in dynamics, one which has got a long history and which is
+absolutely crucial to the study of dynamics is the so called 2 Body Central Force
+Problem. If you recall, we had mention the last time that we could regard the
+gravitational force between two particles as arising from a certain gravitational potential,
+which depended on the product of the masses, multiplied by a gravitational constant,
+divided by the distance between these two particles, that led to the inverse square law of
+force between these two particles, the gravitational force. Now, in general 2 body central
+force problem is as follows.
+(Refer Slide Time: 00:58)
+
+You have two particles of masses m 1 and m 2 with some prescribed momentum to start
+with and then, the question is if they interact with each other through a central force,
+namely a force which is directed along the line joining these two particles and which is
+got, which is derived from some kind of potential. Then, can we solve for all the
+dynamical variables in this problem, namely can we find the coordinates, instantaneous
+coordinates r 1 and r 2 of these particles, can we find the instantaneous momentum p 1
+and p 2 of these particles.
+
+So, given the fact that some initial conditions and initial coordinates are given, can we
+find all these dynamical variables as functions of time. In particular, if they should go in
+to some kind of periodic motion around the common center of mass, can we deduce this
+or not. So, that is the general 2 body central force problem and what I shall do is to show
+you the steps by which this problem is approached, not necessarily solve it in the most
+general case, but then we specialize to the case of the Kepler problem.
+(Refer Slide Time: 02:09)
+
+So, after showing that this 2 body problem is essentially a 1 body problem in a certain
+specific sense, I will show that the problem in the case of the Kepler problem namely the
+gravitational force between two particles, this leads to orbits the very familiar Kepler's
+laws of motion and so on. So, this would be our goal to try to understand, how this
+happens starting from first principles.
+
+(Refer Slide Time: 02:37)
+
+Now, the first thing that we have is that the total energy of the system, of this system of
+two particles and there is nothing else in the universe, just these two particles moving
+slow compared to the speed of light in vacuum, so it is non relativistic. The total energy
+is the kinetic energy of the two particles plus the potential energy of the two particles and
+we believe that, because time is homogeneous, there is nothing to specify what the origin
+of time is one way or another.
+We believe that we know, we can prove that the total energy is a constant of the motion
+and this is given by the sum of kinetic energies. So, it is p 1 squared over twice m 1 plus
+p 2 squared over twice m 2, these are the squares of the magnitudes of these two vectors
+plus the potential energy, which we will now assumed to be the following. We will
+assume this to be a function V not of the general coordinates r 1 and r 2, no; but rather a
+function V of the distance between the two of them.
+So, instead of V as a general function of r 1 and r 2, we have a potential which a potential
+energy in this case which depends only on the distance between the two particles, the
+actual orientation of this vector r 1 minus r 2 is relevant. So, not only have you saying
+that the absolute origin of space coordinates does not a matter, it is only a difference
+between the two vectors r 1 and r 2 that matters. We going further and saying that the
+energy of interaction, the potential energy of these two particles is a function only of the
+distance between the two particles and nothing else.
+So, under such a situation, given this total energy we would like to deduce from the
+
+equations of motions which we can write down, Newton’s second law of motion. For
+each of the particles, we can try to write down what the equations of motions are and try
+to solve them given some specific conditions. Now, that is a very general problem, in
+general it is not easy to write down explicit solutions to these equations of motions, but a
+first a very great simplifying fact arise is, as soon as we say that the potential energy is
+the function only of the distance between the two particles.
+It immediately suggest that we should not use the coordinates r 1, r 2, p 1 and p 2, but
+rather a coordinate by specifically is a linear combination of r 1 and r 2 in the following
+sense. So, from r 1, r 2 ((Refer Time: 05:22)) p 1, p 2 from this set of variables one goes
+to a new set of variables, also the same in number finally, because you cannot take any
+variables which takes into account the fact, that what appears here is only a function of
+the difference, only a function of the magnitude of the relative co ordinate r 1 minus r 2
+between these two particles and these new coordinates are the following. By uses capital
+R, little r, a capital P corresponding to capital R and a little p which have the following
+properties.
+(Refer Slide Time: 06:07)
+
+This coordinate capital R, little r is by definition r 1 minus r 2 that is the relative
+coordinate and capital R is the coordinate, not surprisingly of the center of mass of the
+two particles. So, with respect to any origin what so ever, you define a center of mass
+coordinate which is m 1, r 1. So, it is the coordinate of the first particles weighted with it
+is mass plus m 2 r 2 divided by m 1 plus m 2. If the two masses are equal, m 1 equal to m
+2, then this is the half way point r 1 plus r 2 divided by 2, otherwise this is the general
+
+expression for the coordinate of the center of mass, so center of coordinate.
+So, instead of the vectors little r 1 and little r 2, one uses two new linear commutations of
+these vectors, one of which is the relative coordinate and the other is the center of mass
+coordinate. Now, it is immediately clear that I could have defined the relative coordinate
+as r 2 minus r 1, it will not make a difference and basically that is because, this is only a
+function of the magnitude of this vector, it is absolute sign does not matter at all.
+Corresponding to those two coordinate vectors, there are two momentum vectors and in
+this case it turns out and I justify why this should be so. The total momentum p 1 plus p
+2, this is the total momentum, linear momentum and little p is a relative momentum, little
+p it is not equal to p 1 minus p 2 or p 2 minus p 1, it is rather equal to m 2 p 1 minus m 1
+p 2 and it is called the relative momentum divided by it. It should have the dimensions of
+a linear momentum's, so there is a division here of by the total mass.
+Now, there is a technical reason and rather there is a systematic procedure by which one
+can arrive at the conclusion that the relative momentum is this combination and not any
+other combination, the total momentum is fairly straight forward. Now, the point is that
+when you write the total energy down in this way, there is a method by which given the
+total energy is called the Hamiltonian in this case, thus a way of writing down Newton's
+equations, the equations of motion from this total energy.
+Exploit in the fact that if this ((Refer Time: 09:29)), this thing here is a function only of
+the magnitude of the relative coordinate here, then it is straight forward to show that
+these are the combinations. The right combinations that may be chosen and as would
+have guessed by, now since this inter system is not being acted upon by any external
+force when anywhere or any external torque. It is immediately clear from what we have
+said earlier, that one expects this momentum to be a constant of the motion.
+Because, by Newton's third law the force exacted on particle 1 by particle 2 will be equal
+and opposite to the force exacted by particle 2 on particle 1 and as we saw, that
+immediately implies that the sum of the two momentum in the 2 body problem is the
+constant of the motion. So, this one here is the constant of the motion, just as the energy
+itself is a constant of the motion, because the whole thing is homogenous in time. There
+is no reference to any origin when t equal to zero instant, any special instant therefore
+energy is also conserved.
+So, we have at our hands, the statement that the momentum the total momentum is
+
+conserved, the energy is conserved and then given this fact, given these changes of
+variables what we have to do is to go back and rewrite the total energy in terms of these
+new variables. So, all we done is to change from ((Refer Time: 10:58)) little r 1, little r 2,
+little p 1, little p 2 to capital R, little r, capital P, little p, put linear combinations; one can
+invert those relations and solve for the original variables in terms of the new one and
+substitute in here and then what happens is the following.
+This becomes equal to ((Refer Time: 11:16)) and this is the piece of algebra which is
+easily carried out and becomes equal to p square over twice m plus little p square over
+twice mu. I will explain what mu is in the minute plus V of little r, because now this
+vector is little r and it is magnitude is little r without an arrow up there.
+(Refer Slide Time: 11:50)
+
+So, this total energy reduces to this expression here, where capital M is the sum of the
+masses and that is the total mass and little mu is equal m 1 m 2 over m 1 pus m 2 equal to
+the so called reduced mass, this function. So we have explicitly, explicitly here an
+expression for the total energy in terms of the total momentum, the relative momentum
+and the potential function, the potential energy which depends only on the magnitude of
+the relative coordinate.
+It is immediately obvious for inspections, that this coordinate, the center of mass
+coordinate does not appear anywhere here, it does not appear in the expression of the
+total energy at all and then, of course it follows that just as the total momentum is the
+constant. It follows that this coordinate which could be regarded as defining the
+
+coordinate of a particle with the total mass with momentum capital P ((Refer Time:
+13:12)) which is the constant of the motion is like a free particle.
+So, it is as if you have a different problem now, the original problem of mass is m 1 and
+m 2 as being reduced to the problem of a capital M ((Refer Time: 13:26)), particle of
+mass capital M moving at a constant momentum capital P, like a free particle in a straight
+line together. With the problem of another particle of effective mass little mu with
+momentum little p moving in a central potential V of r. So, these two problems are got
+decoupled and once that is done, this problem reduces and simplifies.
+(Refer Slide Time: 14:07)
+
+As a consequence, if I wrote this equations down for change rate of change of these
+coordinates and so on, it turns out then that d p over d t equal to 0 and I shall write down
+exactly how this is derived from the total energy, but it is fairly straight forward to do
+this. So, this will imply that p equal to the constant of the motion and d p over d t, the
+rate of change of this thing here is equal to by Newton's third law, by Newton second law
+((Refer Time: 14:38)) it is equal to the force seen by this particle would be derived from
+this potential and that is the central potential.
+So, this becomes equal to minus d V r over d r times e sub r. So, the problem involving
+little r and little p is isolated from the problem involving capital P and this will also
+implied immediately, that this code unit r of t by integrating this equation. Now, R of t is
+equal to R of 0 plus whatever a free particle does with a given initial momentum and a
+mass. So, this is P times t over M. So, we have a complete solution for what the center of
+
+mass does, it moves linearly, so this whole system it is center of mass with the effective
+total mass equal to m 1 plus m 2 moves in the straight line depending on what the initial
+conditions were.
+So, if you specify for me the initial momentum of these two particles, I know this and I
+know the mass and if you tell me, where the center of mass was located initially, I know
+where it is located at any further instant of time. So, this part of the problem is like a free
+particle and is solved trivially by the laws of motion being explicitly integrated out. It
+leaves us with this problem here that is the central force problem. The problem of a
+particle of effective mass mu in the central force or central potential is V of r.
+And now of course you have to tell me, what this e of r is, in order for me to make
+progress, to make further progress and say what kind of motion we expect of this. Now,
+we need initial conditions for this, so you need to know what is the initial coordinates of
+these two and you need to know the initial values here. The some of them remain
+constants and then, it is a question of how these quantities evolve as a function of time.
+Specifically, we would like to know, what is r of t; given r of 0 what is this r of t and of
+course what is this p of t equal to. So, this is the central force problem, the one body
+central force problem, because we now have a particle whose effective mass is mu, the
+reduced mass and we would like to know what it does here, now notice something about
+this reduced mass.
+(Refer Slide Time: 17:11)
+
+Notice that if m 1 is much, much greater than m 2, so one of the particles is very much
+
+larger, very much massive more massive than the other one, then mu is approximately
+equal to… You can neglect this m 2 correspond, compare to this m 1, m 1 cancels out,
+then this is approximately equal to m 2. This is what happens, for instance if you
+consider any of the planets moving around the sun, so the mass of the sun is m 1 and the
+mass of the planet is m 2, the effective motion of this planet is like that of body of mass
+effectively that of the planet itself.
+The mass of the sun cancels out top and bottom and you have effectively a reduced mass
+which is essentially the mass of the planet itself. And in this case, it is also clear that if m
+1 is much, much bigger than m 2, then as just as you can neglect this m 2 compared to
+this m 1, you can neglect this compared to that and the center of mass coordinate is
+essentially the coordinate of the very much heavier particle or very much more massive
+object.
+So, this is the reason why we can regard to a first approximation, the sun as a massive
+infinitely massive objects sitting at the center of coordinates as center of attraction and
+the planets moving around the sun in orbits like a 1 body problem. Because, the center of
+mass of the earth sun system is essentially the coordinate of the sun itself. So, it is
+essentially at the center of the sun, a little bit displacement at the center of the sun.
+Just as even in the earth moon system, the case of the earth moon system the center of
+mass of the earth moon system is actually inside the surface of the earth at any instant of
+time, because the earth is so much more heavier than the moon is. And in the case of the
+sun and the planets, the comparison is much, much it is even more so; the sun is very
+much heavier than the earth is. So, this is how a general 2 body problem, a central force
+2 body problem gets reduced to an effective 1 body problem moving in a potential, the
+certain potential V of r is specified potential, from which we can find the equations of
+motion, this equation of motion and attempt to solve this equation of motion.
+
+(Refer Slide Time: 19:40)
+
+By the way, this equation here should be accompanied by another equations which is
+fairly straight forward here, which is m d r over d t equal to p, for rather I should write
+this as p over m. So, you see you have really a pair of equations for the unknowns r and p
+and they are couple to each other and when I eliminate this, then I end up within a
+equations for the second derivative of r which is the acceleration.
+So, just to write that down, this immediately implies if I differentiate p with respect to
+this, it says second derivative here. So, it says 1 over m d 2 r sorry, so let us differentiate
+d 2 r over d t 2, this is equal to and multiplied by m here, that is d p over d t this is equal
+to minus d V r over d r e sub r and this is equal to some forces. So, let us write this as F
+of r e sub r and this gives us the familiar form of Newton’s equations with which you are
+familiar, namely mass times the acceleration, the vector acceleration is equal to the force
+and it is in this case, it is the radial force. In the case of the sun, it is an attractive force
+and that is the next thing we have to do, this is the Kepler problem, so let us do that.
+
+(Refer Slide Time: 21:24)
+
+In the case of the Kepler problem which is planetary motion, we have a… This is equal
+to G times M mass of the sun times the mass of the planet. So, I should write in my
+notation, we should write this as m 1 m 2 divided by the distance between the sun and
+the planet, little r here with the minus sign, it is some constant divided by 1 over r that is
+all we are interested in. So, let me rewrite that in the form, let us rewrite this thing in a
+simpler form, which is d p over d t equal to well the gravitational force.
+So, it is some constant divided by r square e sub r with a minus sign, some constant
+which is the product of the masses capital G and so on and so forth. So, this is the
+problem that one has to solve in the case of the gravitational problem, where you have a
+planet orbiting around the earth and what was shown by Newton was that, the solutions
+of this equation are such that this vector r, it is locus is a conic section.
+So, under all consumable circumstances the locus is an iconic section always, for any
+given initial conditions for instance. Suppose, you have the center of attraction here and
+you have a planet, the initial momentum is in the direction which falls in to this center of
+mass, while the planet will fall in to this center of attraction and that is it, so it is a
+straight line. On the other hand, if the center of the attraction is here and the initial
+momentum is like this, it is possible that this gets scattered in the form and trace a
+hyperbola in a space.
+There could be a case where here is the center of attraction and the initial condition is
+such that in the limiting case, it traces a parabola of this kind. This is a specific value of
+
+the total energy for which this happens by the way and then, there is a case where we
+have the center here and the planet traces out, an elliptic path that the sun or the center of
+attraction at one of the foci. So, we have all these possibilities and this is, this was a
+Newton’s great achievement to essentially solve this analytically for all possible initial
+conditions and to show that the orbit in real space is always a conic section of some kind.
+Either, you have periodic motion, in which case the particle executes an ellipse, an
+elliptic orbit in the general case or a parabolic orbit or a hyperbolic orbit, these two are
+open orbits in the particle essentially escapes. So, these are the kinds of orbits the comic
+would traces, typically they would execute. If the comic never returns, it would typically
+execute an ellipse, an orbit which is the hyperbola of this kind.
+Now, it is interesting to ask under what conditions you have this intermediate case of a
+parabola, because if you think about it for a minute, you realize that an ellipse has two
+foci and a parabola is a limiting case of an ellipse when one of the foci moves away to
+infinite. So, it turns out that in the case of this orbit, the energy of this particle whose
+relative, whose c ordinate is little r and momentum is p is positive, in this case it is
+exactly zero and in this case the energy is negative, because it is a bound orbits.
+So, these three cases are distinguished by the value of the energy of this effective particle
+of mass move here and that is what determines whether it is an ellipse for, whether it is a
+hyperbola or a parabola or an ellipse. The parabola being the limiting conditions, that
+separate this, separate tricks as it is called, that separates open motion namely the
+hyperbolic motion with the closed orbits, periodic motion which is the elliptic orbit.
+The next thing to do is to write, proving this by the way was non trivial and that is what
+Newton’s achievement. Today, we know how to prove it fairly straight forwardly, but I
+am not going to go and solve this differential equations here, but rather we are going to
+assume that the Kepler’s laws in my next task is to explain what the significance of this
+law is, why they come from and what they tell us in some sense. So, that will be the next
+thing we take up.
+
+

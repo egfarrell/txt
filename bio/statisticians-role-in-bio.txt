@@ -1,0 +1,127 @@
+### The statistician's role in bioinformatics
+
+Statistical Modelling 2017; 17(4-5): 316?318
+- Keith Baggerly, Department of Bioinformatics and Computational
+  Biology, 
+
+### Five Key Questions
+    - Do we understand the biological goal of the experiment?
+    - Are our methods robust to occasional garbage observations?
+    - When might we say "there's nothing here"?
+    - Can we identify positive and negative controls?
+    - Can we extending answers to these questions to deal with integromic data? 
+
+
+### 1 Introduction
+
+I'm in broad agreement with Morris and Baladandayuthapani (MB)
+that statisticians have made and will continue to make major
+contributions to bioinformatics, and I'm sympathetic towards the
+goal of making fuller use of the data available to draw
+inferences. I think MB make a good case.
+
+That said, I wish to offer some friendly augmentations to the
+list of ways in which statisticians can and should contribute
+(and to the list of things they should keep in mind). To this
+end, I pose five questions.
+
+### 2 Do we understand the biological goal of the experiment?
+
+This is not intended to sound naive; it's intended to correct for
+the occasional assump- tion on my collaborators' part that
+I understand more than I do. My own first sanity check in any
+bioinformatics study is whether I can write down the goal of the
+study clearly enough that (a) my collaborator would agree with
+the description and (b) an educated outsider would understand why
+we care. If I fail in either, I don't understand the problem well
+enough to analyze the data properly and introduce modifications
+as needed.
+
+### 3 Are the methods we propose robust to occasional garbage
+observations?
+
+Many of the assays we're working with are changing quite rapidly.
+This is good overall, as most of the changes increase the data
+quality in some way, but it can make standardization difficult
+and allow for the introduction of new bugs. All of this
+
+means that some measurements may fail or produce highly atypical
+measurements. Methods we propose should ideally bound the
+influence of individual observations in some way or provide some
+other means of assessing data quality. Both DChip and Robust
+Multi-array Average (RMA) allowed for the identification (and
+occasional removal) of outlier microarray samples, and before
+launching in on the analysis of gene counts from RNA-Seq, it's
+often nice to look at the fractions of reads which could be
+successfully mapped to the human genome on a sample-by-sample
+basis. Trying to salvage data from one degraded sample may be
+more trouble than it's worth. (In passing, are we clear on which
+build of the genomic annotation was used to derive the results
+for each assay? Having some assays mapped to hg19 and others to
+hg38 is always entertaining.)
+
+### 4 Do we have an idea of when we might say "there's nothing
+here"?
+
+We and our collaborators are smart. We can almost always find
+something. Whether we should get excited about what we find is
+another matter entirely. I'm a big fan of permutation tests
+(label scrambling) for approximating more realistic "null distri-
+butions' and for applying these simultaneously to the results of
+multiple filters (e.g., how many genes should expect to show
+a difference significant at a nominal 0.0001 level while at the
+same time showing at least a twofold difference?).
+
+### 5 Do we have ways of identifying positive and negative
+controls? Are there things we should and shouldn't see?
+
+We and our collaborators often know both less and more than we
+think we do. While we can invent stories of how changes in
+hundreds of genes make sense, once we see the data, I'd be far
+more persuaded if we'd predicted these changes in advance.
+I don't think we really know much about how hundreds of genes
+behave, but, conversely, I've rarely seen a dataset where the
+investigator didn't have at least some a priori expectations
+about what should happen, and they're often willing to commit to
+5?10 of these before I begin the analysis. I ask them to write
+these down and to give me half the list. This gives me something
+I can look for to make sure things are going well and guarantees
+that my collaborators will be looking for at least a few specific
+things that aren't guaranteed to be in any list I give them.
+Negative controls can be harder to identify a priori, but in many
+cases, there may be housekeeping genes involved which are
+expected to be at least somewhat stable.
+
+In terms of other things that should and shouldn't be there,
+Principal Component Analysis (PCA) is fairly simple to apply and
+can help reveal big unexpected splits in the data if these are
+present. Similarly, we often expect distributions of p-values to
+be largely uniform with a spike at the low end (the "real'
+differences), but having far too few small p-values is often
+a sign not that the experiment failed but rather that there's
+another source of variation we've yet to account for nicely.
+
+### 6 Do we have ways of extending answers to these questions to deal with integromic data? 
+
+- My assertion above that most folks could specify at least a few
+  changes we should see really applies to single-assay data--once
+  we get to several assays, I'm quite willing to believe we have
+  no clue as to how it should work. Similarly, I'm less clear as
+  to how to detect garbage (but I think it's important to do so).
+
+- The thing that gives me hope here, however, is that integromics
+  most often involves assays with which we have at least some
+  experience (they're not wholly new), and as a result there are
+  often repositories of public data which can be exploited for
+  some guidance (e.g., constantly scrambling labels of samples
+  from The Cancer Genome Atlas (TCGA, data available through the
+  Genomic Data Commons [GDC]) across assays to preserve
+  cross-assay dependencies).
+
+### 7 Another role 
+    - I have faith in our ability to develop new methods for new
+      data types. That said, another role I think we can play
+      involves the regular introduction and application of sanity
+      checks as we go.
+
+Onwards!

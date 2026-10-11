@@ -1,0 +1,174 @@
+# How to write unit tests for your SQL queries
+- BenBirt
+
+- Once a team or organization has some data to manage - customer
+  data, events to be fed into some machine learning system, or
+  whatever else - they almost immediately find themselves
+  writing, running, and maintaining processing pipelines.
+
+- Outputs of these pipelines are many and varied, including
+  customer / market analysis, data cleaning, etc, but such
+  pipelines seem to pop up more often and more quickly than one
+  expects.
+
+- Today, most non-trivial data processing is done using some
+  pipelining technology, for example Dataflow / Apache Beam, with
+  user code typically written in languages such as Java, Python,
+  or perhaps Go.
+
+### - My experience
+    - I worked as a software engineer at Google for several
+      years, during which I led multiple teams and projects which
+      required writing, managing, and maintaining various types
+      of processing pipelines. During that time I became
+      convinced that - for the majority of use-cases - expressing
+      these pipelines in SQL is simpler, cheaper, and easier than
+      the alternatives, with few disadvantages.
+    - For what it’s worth, I’ll note that I’m actually a big fan
+      of these pipelining technologies. While at Google, I was
+      a cheerleader for the internal version of Cloud Dataflow
+      (Flume) for both batch and streaming use-cases. However,
+      I think that the reasons for using them - broadly - no
+      longer apply to today’s world of highly scalable cloud
+      warehouses and query engines.
+    - Why isn’t SQL the de facto processing pipeline language
+      today?
+    - SQL wasn’t really a scalable option for processing data
+      before we had widely available cloud data warehouses such
+      as BigQuery and Redshift. Without these highly-scalable
+      query engines, the only reasonable choice was to perform
+      any significant data processing outside of the data
+      warehouse.
+
+### - Scalable processing
+    - The first truly scalable data processing solution was
+      probably something like Google MapReduce. It then quickly
+      became obvious that chaining MapReduce-like processing
+      steps into a full pipeline using some higher-level API can
+      produce very powerful pipelining systems, and frameworks
+      such as Hadoop, Apache Spark, and Google Cloud Dataflow
+      were born. These systems enabled users to process terabytes
+      of data (or more, with some tuning) quickly and scalably,
+      which was often simply impossible using SQL query engines.
+    - However, cloud data warehouse systems have evolved
+      dramatically over the past 5 years. SQL queries running on
+      BigQuery’s query engine will generally run much more
+      quickly than the alternative, which requires reading all of
+      the relevant data out of the warehouse, processing it, then
+      writing the result back to some other table. It’s also much
+      easier to run in production; there’s no need to manage
+      temporary state, queries are optimized automatically, etc.
+      All of these concerns are pushed to the query engine, and
+      the user doesn’t have to care about them.
+    - The query engine is the best place to optimize the pipeline
+      since it has access to the most metadata about what data is
+      being processed; as a result it’s much easier to manage the
+      pipeline operationally in production. This is much better
+      than the alternative - I can’t tell you how many hours (or
+      days, or even weeks) my teams and I have spent debugging
+      scalability issues and poor optimization choices in Java
+      pipelines.
+    - Existing bias towards imperative languages
+    - I think there is an understandable cultural bias in
+      software engineering teams towards using standard
+      imperative programming languages to implement processing
+      pipelines, and until very recently it wasn’t really
+      possible to mix and match SQL and non-SQL (see below for
+      more on this).
+    - Engineers are much more familiar with configuring jobs
+      written in these languages in production, but happily,
+      modern SaaS options obviate this problem for SQL pipelines
+      by taking responsibility for scheduling and running the
+      user’s code, so that the user needs to do very little
+      productionization at all.
+    - Additionally, SQL scripts have sometimes been treated as
+      a second class citizen versus other languages. Some tools
+      used for SQL script development haven’t supported standard
+      software engineering techniques such as version control or
+      code review. However, this too has changed, with modern
+      toolchain options supporting these practices as first-class
+      features.
+    - SQL has distinct advantages over the alternatives
+    - SQL is a language built and designed to support exactly
+      what you want to do when you’re processing data: joining,
+      filtering, aggregating, and transforming data. Thus, it’s
+      usually much simpler and easier to express your pipeline in
+      SQL than it is in some other pipelining technology. (If
+      you’d like to see an example of just how powerful SQL can
+      be, take a look at this article in which a deep neural
+      network is implemented with it!)
+
+### - A common language
+    - The biggest advantage of implementing your pipeline in SQL
+      is that it’s likely to be the same language that you or
+      your data team use to actually perform final analysis on
+      the output of the pipeline.
+    - This means that the data team don’t need support from
+      engineers to make changes to the pipeline. Instead, they’re
+      empowered to make the changes themselves.
+    - Debugging
+    - When something goes wrong, SQL pipelines are usually much
+      easier to introspect than the alternative. If you want to
+      check exactly what data is being output by any given
+      processing stage of a SQL pipeline, you can simply pull out
+      those results into some relevant SELECT query.
+    - Doing the same using a pipelining system can be a real
+      pain, involving making significant code changes (just to
+      add enough instrumentation to enable debugging) and
+      re-deploying the pipeline.
+    - Faster development
+    - During development of a SQL-based pipeline, the iteration
+      cycle is significantly faster. This is because the feedback
+      loop is much quicker - make an edit to your query(s),
+      re-run the pipeline, and immediately get new results.
+    - If the pipeline processes so much data that it takes more
+      than a minute or two to execute, it’s trivial to process
+      a fraction of the data (to get results more quickly) by
+      adding a LIMIT to your query (or subqueries), or by only
+      selecting rows belonging to a subset of the input dataset.
+    - When writing Java pipelines from scratch, I would often
+      find that testing out a single bugfix would take hours
+      - not so with SQL. I actually often found myself writing
+      a SQL script to validate the output of some productionized
+      Java pipeline, only to belatedly realize that I had
+      essentially re-implemented the Java pipeline in SQL - in
+      much fewer lines of code, with much more readability, and
+      significantly less complexity.
+
+### SQL’s disadvantages
+    - In my experience there are two distinct domains where other
+      languages have an edge on pure SQL: (1) unit testing and
+      (2) the readability of particularly complex data
+      transformations.
+    - Some SQL queries can be fairly complex, especially if they
+      use powerful features such as BigQuery’s analytic
+      functions. I’d like to be able to write unit tests for
+      these SQL queries, statically defining sets of input rows
+      and expected output rows, asserting that the query does
+      exactly what it’s supposed to. We’re working on
+      implementing this feature within Dataform, and expect to
+      have basic unit test support out soon. However, a useful
+      tool which can help out here is data assertions, using
+      which you can express requirements of your input data, for
+      example to check for correctness, before continuing to run
+      your processing pipeline.
+    - Occasionally, you will want to run some particularly
+      complicated data transformation logic. (For one interesting
+    - if slightly insane - example, check out this Medium post.)
+      Sometimes, when expressed in SQL, this can become difficult
+      to read and/or maintain due to its complexity. However,
+      there exists a nice solution to this problem: User-Defined
+      Functions (UDFs). UDFs allow you to break out of SQL and
+      use JavaScript or Python (depending on the warehouse) when
+      you need the power of a full imperative programming
+      language to implement your own function.
+
+### The future
+    - We’re seeing a general move towards expressing pipelines in
+      plain SQL. 
+    - Indeed, Apache Beam recently launched support for Beam SQL,
+      allowing Java users to express transformations using inline
+      SQL. I expect that as time goes on, we’ll see fewer and
+      fewer processing pipelines expressed using Java/Python/Go,
+      and much more work being done inside data warehouses using
+      simple SQL, for all of the reasons discussed above.

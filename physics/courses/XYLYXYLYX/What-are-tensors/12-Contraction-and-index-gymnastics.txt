@@ -1,0 +1,40 @@
+12-Contraction-and-index-gymnastics.txt
+
+$MY_VIDEOS/physics/what-are-tensors/12-Contraction-and-index-gymnastics.mp4
+
+
+
+
+Just really hit me now. The "A" represents one _component_ for each
+one of the basis vectors
+	- $MY_IMAGES/physics/what-are-tensors/tensor-component-insight.jpg
+
+
+Remember tensor notation:
+- `(`vector part of the tensor`,` covector part of the tensor`)`
+
+MTW view: 
+    - `A` is a machine that takes 3 vectors and 2 covectors to
+      the Real numbers... (is `A` a single tensor, or class of
+      tensors? No, its a single tensor)
+        - $MY_IMAGES/physics/what-are-tensors/tensor-machine-A.jpg
+
+
+Feed some "slots" of `A`, and leave some slots of `A` empty
+- you're left with a kind of reduced tensor..?
+	- $MY_IMAGES/physics/what-are-tensors/empty-slots.jpg
+
+- So `A` could also be a (partial) map to other tensor product
+  spaces, not just to `ℝ`.
+
+
+	- $MY_IMAGES/physics/what-are-tensors/multi-linear-maps.jpg
+
+
+	- $MY_IMAGES/physics/what-are-tensors/universal-property.jpg
+
+- the whole contraction appartus is forced on us and is built
+  from the basic mapping of a vector and it's dual into the reals
+  (remember the reals are a vector space)
+- and that basic fact is enough to power the whole universal
+  property correspondence

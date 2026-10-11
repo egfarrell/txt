@@ -1,0 +1,353 @@
+
+- Applications of Deep Neural Networks v2 [pdf] (arxiv.org)
+
+- After 1.5 years of self study in neural networks, my advice
+  would be to internalize the fact that you can train a neural
+  network to do anything encodable as a _loss function_.
+
+- Networks try to minimize loss. If you want something to happen
+  less frequently, add it to the loss. Literally addition.
+
+- It was a mind-bending “there is no spoon” moment for me.
+
+- Also, _loss_ is one of the worst names imaginable. 
+- Kerfluffle would’ve been better, because at least it’s mostly
+  meaningless. Whenever you see “loss”, substitute with “penalty”
+  and things will become much clearer.
+
+- Secondary advice: if you don’t have patience, you won’t get
+  anywhere. In the same way that the stock market is a lever for
+  transferring money from the impatient to the patient, neural
+  networks are a lever to transfer advantage to the patient.
+
+- By that I mean, I can’t count the number of times I almost
+  wrote off some small tweak as “doesn’t work”, only to leave the
+  network training for another week or so and discovering it
+  worked fine. 
+    - In fact, it was almost always equivalent, or had no
+      advantage, I.e. a placebo. It’s not like code; you can do
+      so much fucked-up shit to a neural network, and it will
+      still work. It’s unlike anything you’re used to.
+
+- Beyond that, just remember that this stuff is hard. Coding the
+  network is easy. Getting it right is hard. And getting it
+  perfect, well, took me a year. 
+    - Google’s official biggan model at google/compare_gan never
+      achieved the same FID as real biggan. Why? I immersed
+      myself in this mystery, eventually reverse engineering the
+      official tensorflow graph. I discovered their
+      implementation was missing a crucial + 1, so their gamma
+      was centered around zero instead of one. And in batchnorm,
+      gamma is a multiplier — so the network was basically
+      multiplied by zero and no one noticed for years. 
+        - (Remember how I said you can do a lot to a network
+          without causing problems? Sometimes the problems are so
+          subtle they’ll drive you nuts. You know something is
+          wrong, but you don’t know what or why, and it’s almost
+          impossible to debug.)
+
+- reply
+
+- > Whenever you see “loss”, substitute with “penalty” and things
+  will become much clearer.
+
+- Penalty already has a meaning in machine learning so this
+  substitution just adds more confusion instead clarifying
+  things. Loss seems descriptive enough to me.
+
+- reply
+
+- Perhaps, but regularization is a better name for that term
+  anyway.
+
+- How is loss descriptive? Ah yes, we're losing... something. Our
+  lunch, maybe.
+
+- The neural network isn't playing a game, even though people
+  like to phrase GANs that way. There's no "win" condition.
+  Training just ends whenever you decide to end it.
+
+- Minimizing loss doesn't bring you closer to winning a game
+  anyway. It's often the worst strategy in certain kinds of
+  games.
+
+- Minimizing penalty, on the other hand, is perfectly clear. If
+  you want the neural network to do something less, add a penalty
+  term.
+
+- reply
+
+- superbcarrot 7 minutes ago [–]
+
+- So far you've mentioned that you want to change three terms
+  (loss, penalty, learning rate), one of them with a term which
+  is already in use. You're basically rewriting the terminology
+  to fit your personal preference. If you need to communicate
+  with people who have experience in the field, all of this will
+  add more confusion than it removes. It's fine if it helps you
+  reason about things of course but it's just important to keep
+  in mind that the rest of the world isn't on board.
+
+- reply
+
+- sjg007 3 hours ago [–]
+
+- I’d be interested in reading your formal write up. It’d be
+  interesting to see the issue as you understand it.
+
+- reply
+
+- sillysaurusx 3 hours ago [–]
+
+- Sure thing! https://github.com/google/compare_gan/issues/54
+
+- It’s not much of a writeup. It’s basically saying, hey, this is
+  zero when it should be one.
+
+- The results were dramatic. It went from blobs to replicating
+  the biggan paper almost perfectly. I think we’re at a FID of 11
+  or so on imagenet. Here's a screenshot I just pulled from our
+  current run: https://i.imgur.com/k1RuWEG.png
+
+- Stole a year of my life to track it down. But it was a puzzle
+  I couldn’t put down. It haunted my dreams. I was tossing and
+  turning like, but why won’t it work... why won’t it work...
+
+- reply
+
+- QuesnayJr 2 hours ago [–]
+
+- What's wrong with the name "loss"? I like the idea of calling
+  it "kerfuffle", but loss seems like a neutral term to me.
+
+- I agree with you about fucked-up shit. I had a strong
+  optimization background, and a traditional statistics
+  background, and from that point everything you do with neural
+  networks is just crazy.
+
+- reply
+
+- sillysaurusx 1 hour ago [–]
+
+- We have an opportunity here to define the terms that our
+  descendants will be using 50 years from now. It won't come
+  again.
+
+- Physics suffered from the same problem: "action," "work," and
+  so on, are unrelated to their usage. But we're stuck with them.
+
+- Both "loss" and "learning rate" are confusing, and neural
+  networks are so confusing that I think it's worth undoing as
+  much as possible.
+
+- I would s/loss/penalty/ and s/learning rate/step size/, after
+  giving it much thought. At least, I haven't thought of better
+  names yet.
+
+- The reason "step size" is important is because it represents
+  what's actually going on. You don't increase the learning rate
+  to make it learn faster. You increase the step size to make it
+  take longer steps towards a goal. And when it's close to the
+  goal, it circles around the goal, like water down a drain. You
+  decrease the step size (learning rate) towards the end of
+  training so that it doesn't keep dancing around the bowl, and
+  can finally reach its target in the middle.
+
+- Slight modifications like that can give lots of insights. For
+  example, now that you're thinking of learning rate in terms of
+  water spiraling down a drain, you can see why averaging the
+  last N model checkpoints increases accuracy: if you're spinning
+  in a circle around a target, then the average of your last
+  5 positions must bring you closer to the center. In fact,
+  that's true of any convex shape. Therefore the loss landscape
+  seems mostly convex.
+
+- And so it goes. It's very much like compound interest. The more
+  you understand, the more you can understand. That's why it's so
+  important to be determined and patient.
+
+- Also, ask lots of questions on Twitter. In my opinion it's one
+  of the most crucial resources for learning ML. The ML community
+  there is phenomenal, and I don't know why. All I know is that
+  everyone is super friendly and eager to help you out. Start
+  with @pbaylies, @jonathanfly, @aydaoai, and @arfafax.
+
+- reply
+
+- notretarded 20 minutes ago [–]
+
+- It's not penalty or step size. It's loss as in amount of
+  information lossd (not encoded in your network) compared to one
+  perfectly encoding ground truth. Learning rate, as in what is
+  the maximum amount of delta you are allowed to change your
+  inputs to minimise your information loss analogous to how
+  quickly you can possibly learn in one experiment.
+
+- reply
+
+- sillysaurusx 9 minutes ago [–]
+
+- Fair. I’ll keep that in mind. On the other hand, it went way
+  over my head, and I’m not afraid to admit it.
+
+- One of the nice things about ML (and math, for that matter) is
+  that there are multiple mathematically equivalent ways of
+  looking at a thing.
+
+- reply
+
+- NalNezumi 59 minutes ago [–]
+
+- I remember taking my first Deep Learning course in University
+  5 years ago; We had to implement the neural network, gradient
+  computation, Batch Normalization, Drop out and all other
+  details from scratch without external libraries in either
+  Java/C++/Matlab. Apparently this was the old way DL used to be
+  taught, and even in 2016 the professor insisted everyone had to
+  do it this way.
+
+- I didn't study ML in general so what I gained from the course
+  was a deep understanding of the fundamentals & math behind it,
+  but since I didn't get to familiarize myself with any of the
+  existing libraries (Tensorflow/Keras back then) I had a hard
+  time convincing anyone in industry of my skills in the field :/
+
+- Also: Why does the book only cover Deep Q-Network on
+  Reinforcement Learning? Sure it is the most notable deep
+  learning step in the field but, there are some relevant
+  versions such as Actor-Critic & Maximum Entropy RL that can be
+  very relevant too. If one includes YOLO, ResNet and newer
+  architectures for Computer Vision application, I don't know why
+  same things are not on RL.
+
+- reply
+
+- gillesjacobs 49 minutes ago [–]
+
+- I don't like that OP is using Arxiv to upload his course
+  material.
+
+- Arxiv is supposed to be a pre-print scientific publication
+  server. A place to post your nearly finished or ideally
+  submitted journal or conference manuscript so you can reference
+  it while it is being reviewed.
+
+- The purpose of Arxiv is in itself a patch for a too common, too
+  long in duration publication process. Now it is often the first
+  place to publish ML research and an obligatory source of
+  literature in ML. No peer-review or any quality assurance makes
+  for dubious work appearing there that can waste a lot of
+  research time.
+
+- Hosting your elementary course there because that's where the
+  researchers are, muddies the quality of work on Arxiv further.
+
+- reply
+
+- ogogmad 8 minutes ago [–]
+
+- I think the dissemination of academic work is not the same
+  thing as checking it for correctness. It's asking too much from
+  reviewers to expect them to do a perfect job with the latter.
+  Review should be a never-ending process involving anybody who's
+  interested.
+
+- In fact, what you're saying is similar to suggesting that every
+  product on Amazon.com should be checked for correctness by
+  "peers" in the same industry before getting listed, and
+  furthermore saying that there shouldn't be an ongoing list of
+  reviews and star-ratings for each product.
+
+- reply
+
+- melling 5 hours ago [–]
+
+- What book are people recommending for Deep Neural Networks?
+
+- I’m working through ISLR (starting ch8) so I’ll be done in
+  a few weeks.
+
+- This topic isn’t covered so another textbook, with exercises,
+  would be ideal.
+
+- Just noticed that this paper is a book. Maybe I have a winner?
+
+- reply
+
+- max_ 3 hours ago [–]
+
+- The Deep Learning book is great & I have a copy, but its not
+  honestly something that I read cover to cover.
+
+- To me, Its more of a reference book.
+
+- But if you want a "Fyneman" type book that describes the
+  underlying structure & workings in a non academic way, I would
+  recommend;
+
+- Michael Nielsen's Neural Networks & Deep Learning[0]
+
+- Jeff Heaton's Introduction To The Math Of Neural Networks[1]
+
+- [0]:http://neuralnetworksanddeeplearning.com/index.html
+
+- [1]:https://www.amazon.com/Introduction-Math-Neural-Networks-Hea...
+
+- reply
+
+- rsfern 5 hours ago [–]
+
+- This paper seems really interesting, and it’s geared towards
+  applications I guess
+
+- For more fundamental material I like the CS231n course notes
+  [0] and Goodfellow, Bengio, and Courville [1]
+
+- 0: https://cs231n.github.io/
+
+- 1: https://www.deeplearningbook.org/
+
+- reply
+
+- manojlds 3 hours ago [–]
+
+- Have been hearing good things about this - http://d2l.ai/
+
+- Have to get to it soon.
+
+- reply
+
+- visarga 2 hours ago [–]
+
+- The Hundred-Page Machine Learning Book by Andriy Burkov - is
+  quite highly regarded and to the point.
+
+- http://themlbook.com/
+
+- reply
+
+- shimonabi 2 hours ago [–]
+
+- I came across Jeff Heaton's books a long time ago, when I was
+  looking for material on how to implement my own NN for my AI
+  class. If I remember correctly, he published C# and Java
+  implementations.
+
+- I eventually settled for Python and implemented the NN with the
+  help of the book Make Your Own Network by Tariq Rashid. Numpy
+  is really magic.
+
+- reply
+
+- jonbaer 5 hours ago [–]
+
+- Same guy? https://www.youtube.com/user/HeatonResearch
+
+- reply
+
+- tanelpoder 5 hours ago [–]
+
+- Yes, looks like the same person. The Code tab on arxiv page
+  points to the same github account as on the youtube page.
+
+- reply

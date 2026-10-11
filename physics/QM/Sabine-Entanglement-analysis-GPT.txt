@@ -1,0 +1,190 @@
+
+# Entanglement, Locality, and Bell — Clarifying a Common Misunderstanding
+
+- See also:
+    - $MY_NOTES/physics/QM/Schrodinger-1935-Entanglement-Analysis.txt
+    - $MY_NOTES/physics/QM/Schrodinger-1935-Entanglement.txt
+
+## Starting point (Hossenfelder’s claim)
+
+- " `Flip`  the spin of one particle in an entangled pair...
+  NOTHING happens to the other."
+
+- This seems to contradict the usual intuition about entanglement.
+
+## Key clarification:
+    - Sabine's talking about a _local OPERATION (unitary)_, NOT a `measurement`.
+    - Entanglement concerns _correlations_, not signals or influences.
+
+
+## 1. Example: entangled spin state
+
+Singlet state:
+
+`ψ = (1/√2)( |+>_L |->_R − |->_L |+>_R )`
+
+Properties:
+- Each particle individually: random (50/50)
+- Joint outcomes: perfectly anti-correlated
+
+## 2. Apply a local operation (spin flip on LEFT)
+
+Flip operator on left swaps:
+`|+> ↔ |->`
+
+New state:
+
+`ψ' = (1/√2)( |->_L |->_R − |+>_L |+>_R )`
+
+Observations:
+- Still entangled
+- Correlations changed (now aligned instead of anti-aligned)
+
+BUT:
+
+Reduced state on right unchanged:
+`ρ_R = Tr_L(ρ_LR)`
+
+→ still 50/50 outcomes
+
+Conclusion:
+- No observable change on the right particle alone
+- No signal transmitted
+
+## 3. What actually changed?
+
+NOT:
+- The physical state of the right particle (locally)
+
+BUT:
+- The _joint correlation structure_
+
+Key idea:
+> Local operations change global entanglement structure, not distant local statistics.
+
+## 4. Measurement vs operation (critical distinction)
+
+- ### (A) Local operation
+    - Deterministic, unitary
+    - Changes correlations
+    - No signalling
+
+- ### (B) Measurement
+    - Outcome random
+    - After measuring left, you can predict right
+
+BUT:
+- Right particle’s local statistics still unchanged
+- No controllable influence
+
+## 5. Why no faster-than-light signalling?
+
+Because:
+
+`ρ_R = Tr_L(ρ_LR)`
+
+Local actions on `L` do not change `ρ_R`
+
+Therefore:
+- No experiment on `R` alone can detect what was done on `L`
+- No superluminal communication possible
+
+
+## 6. Bell’s theorem (precise statement)
+
+Bell assumes:
+
+1. Locality  
+   No superluminal causal influence
+
+2. Realism  
+   Outcomes determined by pre-existing properties (λ)
+
+3. Statistical independence  
+   Measurement settings independent of λ
+
+Then derives inequalities.
+
+Experiment:
+- Inequalities violated
+
+Conclusion:
+→ At least one assumption is false
+
+## 7. The “fork” in interpretation
+
+- ### Option A: `Drop realism`
+    - No definite values before measurement
+    - Outcomes created upon measurement
+
+    - Keeps:
+    - No signalling
+    - Operational locality
+
+- ### Option B: `Drop locality`
+    - Keep hidden variables
+    - Accept superluminal dependence
+    - Example: Bohmian mechanics
+    - Feature: Particle dynamics explicitly nonlocal
+
+
+## 8. Two meanings of “locality” (source of confusion)
+
+- ### (1) Operational locality
+    - No faster-than-light signalling
+    - QM satisfies this
+
+- ### (2) Bell locality (local causality)
+    - No superluminal causal dependence
+    - Requires factorisation:
+
+- `P(a,b | A,B,λ) = P(a|A,λ) P(b|B,λ)`
+- This factorisation expresses Bell locality (local causality):
+- Once `λ` is specified, Alice’s outcome depends only on her
+  setting `A`, and Bob’s outcome depends only on his setting `B`.
+- QM violates this.
+- Note:
+    - `A`, `B` 
+        - measurement settings
+        - (e.g. which spin direction Alice and Bob choose)
+    - `a`, `b` 
+        - measurement outcomes
+        - (e.g. spin up/down → `±1`)
+    - `λ` 
+        - “hidden variables”
+        - (a complete specification of the system’s physical
+          state, beyond QM if needed)
+    - `P(a, b | A, B, λ)` 
+        - joint probability of getting outcomes a and b given:
+        - both settings `(A, B)` and the underlying state `λ`
+     
+
+
+## 9. Reconciling the views
+
+QM is:
+    - Local (no signalling)
+    - Nonlocal (violates Bell locality)
+- So:
+    - Hossenfelder: emphasising no signalling
+    - Maudlin: emphasising failure of local causality
+- Both correct, but different notions of “locality”
+
+
+## 10. Final takeaway
+
+- Common misconception:
+    > Entanglement involves signals or influences travelling
+    > between particles
+
+- Correct view:
+    - No signals
+    - No local change at a distance
+    - But correlations cannot be explained by local hidden variables
+
+- Core statement:
+    > Entanglement = non-classical correlations without
+    > signalling
+
+- Or:
+    > QM violates local realism, not relativistic signal locality

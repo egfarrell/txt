@@ -1,0 +1,165 @@
+13-Linking.txt
+### Resources
+    - VIDEO:    $MY_VIDEOS/cs/csapp/13-Linking.mp4
+    - LECTURE:  $MY_BOOKS/Cs/C/csapp-lectures/13-linking.pdf
+    - CODE:     $MY_CODE/c-code/csapp/13-linking/README.txt
+
+
+### Why Linkers:
+    1. MODULARITY
+        - programs designed as a collection of smaller source
+          files, rather than a monlithic mass
+        - Can build libraries of common functions 
+            - e.g. Math library, Standard C library
+
+    2. EFFICIENCY
+        -  Time:
+            - if you change one source file, compile and re-link
+            - No need to recompile ALL source files
+
+        - Space:
+            - Common functions can be aggregated into single file
+            - Yet executable files and running memory images only
+              contain code fo the functions they _actually use_
+
+
+### What do linkers do?
+    - Step 1: 
+        - SYMBOL RESOLUTION
+        - Programs define and reference symbols
+            - symbols are global variables and functions
+            - void swap() ...  // DEFINE    symbol: `swap`
+            - swap();          // REFERENCE symbol: `swap`
+            - int *xp = &x;    // DEFINE    symbol: `xp`, REFERENCE symbol: `x`
+
+        - The assembler stores the symbol definitions in an
+          object file in a _symbol table_
+        -  A symbol table is an array of structs
+        -  Each entry has name, size, location of symbol
+            - NOTE: during linking, the linker associates each
+              symbol reference with exactly _ONE_ symbol
+              definition
+        - PROBLEM: 
+            - in multiple modules, you may declare a global
+              variable with the same name. 
+            - The linker has to decide which one of the
+              definitions to use, for all subsequent references.
+
+    - Step 2: 
+        - RELOCATION
+        - merge all modules together into a single executable module
+
+ELF format:
+    - ".text" is always code
+    - READ ONLY sections: ".text" and ".rodata"
+    - ".bss" -> unitialised variables: "better save space"
+    - ".rel" relocate entries. 
+        - The assembler says to the linker:
+        - 'I dont know where these will go in the end, youll have
+          to relocate them'
+
+### 3 types of linker SYMBOLS
+    - GLOBAL
+        - anything defined without "static" is a global symbol  
+        - Symbols defined by module `m` that can be referenced by
+          other modules.   
+        - Eg: non‐static C functions and non-static global
+          variables.
+    - EXTERNAL
+        - Global symbols that are referenced by module `m` but
+          defined by some other module.
+    - LOCAL
+        - Symbols that are defined and referenced exclusively by
+          module `m`.
+        - Eg: C functions and global variables defined with the
+          STATIC attribute.
+        - Local linker symbols are not the same thing as local
+          C program variables defined on the stack.
+
+### Interesting: local STATIC variables
+    - these are local to a function, the compiler allocates space
+      in ".data" for them just like global variables
+    - (even though they're not global variables... the can only
+      be used in the function they are defined in...)
+    - but local variables without static? The compiler knows
+      nothing about them...
+
+Strong versus Weak
+    - Strong:
+        - a procedure or an INITIALISED global variable
+    - Weak:
+        - uninitialised  global variable
+    - ERROR: multiple strong symbols
+    - multiple weak symbols? it chooses an arbitrary one...!
+        - use gcc -fno-common
+    - Linker errors are hardest to debug
+
+
+
+### Packaging Commonly Used Functions
+    - How to package functions commonly used by programmers?
+        - AWKWARD, given the linker framework so far:
+
+    - Option 1:
+        - Put all functions into a single source file
+        - Programmers link big object file into their programs
+        - Space and time inefficient
+
+    - Option 2:
+        - Put each func;on in a separate source file
+        - Programmers explicitly link appropriate binaries into
+          their programs
+        - More efficient, but hard for the programmer, have huge
+          long gcc line with links to loads of programs
+
+    - Old Solution: "ARCHIVES"
+        - Static libraries: using an archiver (".a" file)
+        - Archiver concats loads of ".o" files together
+        - Pass the archive to the linker, and the linker only
+          pulls out the ".o" files that are needed...
+        - You can have a huge archive file, but if you only call
+          `printf` then thats the only function that gets pulled
+          out and linked in.
+        - $MY_IMAGES/cs/csapp/creating-static-libraries.jpg
+
+    - NOTE: the linker tries to resolve unknown references from
+      left to right on the command line
+        - so command line order matters!
+        - hint: put libraries at the end of the command line
+            ```
+            unix> gcc -L. libtest.o -lmine
+            unix> gcc -L. -lmine libtest.o
+            libtest.o: In function 'main':
+            libtest.o(.text+0x4): undefined reference to 'libfun'
+            ```
+
+    - Modern Solution: Shared Libraries
+        - Object files that contain code and data that are loaded
+          and linked into an application dynamically, at either
+          loadtime or run-time
+            - Note: Shared libraries might actually be loaded
+              when a program is _RUNNING_!
+
+        - Also called: dynamic link libraries, DLLs, .so files
+        - $MY_IMAGES/cs/csapp/dynamic-linking-load-time.jpg
+
+
+        - RUN-TIME linking
+            - there's a libC function called `dlopen` and `dlsym`
+            that allows this
+            - Run-time linking allows library inter-positioning
+
+
+    - Library interpositioning :
+        - powerful linking technique that allows programmers to
+          intercept calls to arbitrary func7ons
+
+    - Interpositioning can occur at:
+        - Compile time: When the source code is compiled
+        - Link time: When the relocatable object files are
+          statically linked to form an executable object file
+        - Load/run time: When an executable object file is loaded
+          into memory, dynamically linked, and then executed
+
+    - Facebook solved an iPhone bug in SPDY networking stack
+        - intercepted calls to Posix write func;ons (write, writev, pwrite)

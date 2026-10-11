@@ -1,0 +1,155 @@
+### firefox install flash
+    sudo apt-get install flashplugin-installer
+
+### sdcard error -
+    unknown filetype 'exfat'
+    sudo apt-get install exfat-fuse exfat-utils
+
+### skype no sound?
+    must install pulse-audio
+    ai pavucontrol
+
+### install surreal openbox theme
+    Surreal foler in repo: ./Dropbox/IT/Linux/appearance
+    copy folder to: /usr/share/themes
+
+### wifi usb adapter
+    Amazon: Edimax EW-7811Un N150 Wireless USB Adapter Nano
+
+    The driver rtl8192cu is notoriously unstable.
+    There is a fix. Please disconnect your
+    wireless connection (unplug the USB adapter
+    that contains the Realtek chipset), and
+    temporarily connect to the internet by means
+    of an ethernet cable or by means of another
+    wireless chipset that does function well.
+
+    Now install some applications for building the
+    right driver via a terminal:
+        ai linux-headers-generic build-essential
+        ai dkms
+        dkms git
+
+    Now download the source code of the driver via
+    a terminal:
+        git clone https://github.com/pvaret/rtl8192cu-fixes.git
+
+    Set it up as a DKMS module via a terminal:
+        sudo dkms add ./rtl8192cu-fixes
+
+    Build and install the new driver via a terminal:
+        sudo dkms install 8192cu/1.10
+
+    Refresh the module list via a terminal:
+        sudo depmod -a
+
+    Blacklist the faulty driver via a terminal:
+        sudo -i
+        echo "blacklist rtl8192cu"  >> /etc/modprobe.d/blacklist.conf
+        exit
+
+    Detach the ethernet and reboot; the wireless
+    should be working much better now.
+
+
+### ubuntu 14.04 - install monaco font:
+        ai gnome-font-viewer
+        open font in file manager, then double-click
+
+### ubuntu 14.04 - keyboard US default
+    solution 1
+        (don't know if this worked!):
+        ar ibus
+
+    solution 2:
+        * Yes. Seems to be a bug in the install.
+        * I chose UK keyboard during Lubuntu 14.04
+          Install but I ended up with US keyboard.
+        * I changed the the key layout of the
+          keyboard as follows:
+        * right mouse click on the US icon at the
+          RHS of the taskbar
+        * click "Keyboard Layout Handler" Settings
+        * in the Keyboard Layout Handler window
+        * click + Add gb English(uk) then OK
+        * click us then click - Remove
+        * click Close
+
+
+    solution 3:
+        * seems to me that the keyboard alyout
+          chosen at installation doesn't always
+          map to the user's keyboard settings.
+          I use the following steps to change from
+          US to GB layout:
+        * Right-click the 'US' icon in the
+          taskbar, and select ‘”Keyboard Layout
+          Handler” Settings’.
+        * The ‘Keyboard Layout Handler’ window
+          will be displayed, the left hand side of
+          the window will be greyed out. Deselect
+          ‘Keep system layouts’ by clearing the
+          adjacent check box. This will enable
+          input on the left hand side of the
+          window.
+        * In the ‘Keyboard Layouts’ section, click
+          the ‘+ Add’ button, and select the
+          correct option from the ‘Add Keyboard
+          Layout’ screen. Click ‘OK’. The entry
+          should now appear in the ‘Keyboard
+          Layouts’ section.
+        * Highlight the ‘US’ entry in the
+          ‘Keyboard Layouts’ section by clicking
+          it once, and click the ‘- Remove’
+          button. The selected option should be
+          the only remaining entry in the list,
+          and the icon in the bottom panel will
+          now display the initials for this layout
+          setting. Click the ‘Close’ button.
+
+### ubuntu 14.04 tmux ctrl+space not working
+    dconf-editor
+    desktop -> ibus -> general -> hotkey (delete ctrl+space)
+
+### Mams old laptop:
+    # manually create b43 firmware
+        > sudo mkdir /lib/firmware/b43
+        > sudo cp ~/Desktop/b43/*  /lib/firmware/b43
+        > sudo modprobe -r b43 && sudo modprobe b43
+
+    ubuntu 14.04 dell inspiron wifi
+        intermittent bug
+        change security from WPA to WEP!!
+        (nah doesnt really work?)
+
+    ubuntu 14.04 dell inspiron wifi
+        (no internet)
+            install b43-fwcutter package
+                get from launchpad
+            download firmware file: for 14.04:
+                http://www.lwfinger.com/b43-firmware/broadcom-wl-5.100.138.tar.bz2
+            apply the firmware:
+                tar xfvj broadcom-wl-5.100.138.tar.bz2
+                sudo b43-fwcutter -w /lib/firmware broadcom-wl-5.100.138/linux/wl_apsta.o
+
+        (internet)
+                Uninstall the bcmwl-kernel-source package by issuing the following command on a terminal:
+                    sudo apt-get remove bcmwl-kernel-source
+
+                Make sure that the "firmware-b43-installer" and the "b43-fwcutter"
+                packages are installed (of course you will need internet by
+                others means):
+                    sudo apt-get install firmware-b43-installer b43-fwcutter
+
+                Type into a terminal:
+                    > cat /etc/modprobe.d/* | egrep 'bcm'
+                    (You may want to copy this) and see if the term 'blacklist bcm43xx' is there.
+
+                    If it is, type
+                        > cd /etc/modprobe.d/
+                        > sudo gedit blacklist.conf
+                        Put a # in front of the line: blacklist bcm43xx
+
+                Then save the file (I was getting error messages in the terminal about
+                not being able to save, but it actually did save properly).
+                Then Reboot

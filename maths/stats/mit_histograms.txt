@@ -1,0 +1,118 @@
+
+MIT Histograms (saved this in Berlin 2016)
+http://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/readings/MIT18_05S14_Reading6b.pdf
+
+- We can summarize multiple samples `x1, ... , xn` of a random
+  variable in a histogram.
+
+- We want to carefully construct histograms so they resemble the
+  area under the pdf. We'll then see how the `LoLN` applies to
+  histograms.
+
+# Density Histogram
+    - Instructions for constructing density histogram:
+
+    1. Pick an interval of the real line and divide it into `m`
+       intervals, with endpoints `b0, b1, ... , bm`. 
+        - Usually these are equally sized, so let’s assume this
+          to start. 
+        - x b0 b1 b2 b3 b4 b5 b6 Equally-sized bins
+
+       - Each interval is called a bin. Eg, in the figure above
+         the first bin is `[b0, b1]` and the last bin is `[b5,
+         b6]`. Each bin has a bin width, e.g. `b1 − b0` is the
+         first bin width. Usually the bins all have the same
+         width, called the bin width of the histogram.
+
+    2. Place each `x_i` into the bin that contains its value. If
+       `x_i` lies on the boundary of two bins, we’ll put it in
+       the right bin (this is the `R` default, though it can be
+       changed).
+
+    3. To draw a FREQUENCY histogram: put a vertical bar above
+       each bin. The _height_ of the bar should equal the number
+       of xi in the bin.
+
+    4. To draw a DENSITY histogram: put a vertical bar above each
+       bin. The _area_ of the bar should equal the fraction of
+       all data points that lie in the bin.
+
+
+# Notes:
+
+    1. When all bins have the _same width_, the frequency
+       histogram bars have area proportional to the count.
+        - So the density histogram results simply from dividing
+          the height of each bar by the total area of the
+          frequency histogram.
+        - Ignoring the vertical scale, the two histograms look
+          identical.
+
+   2. CAUTION: if the bin widths differ, the frequency and
+      density histograms may look very different.
+      - There is an example below.
+      - Don’t let anyone fool you by manipulating bin widths to
+        produce a histogram that suits their mischievous
+        purposes!
+      - In 18.05, we’ll stick with equally-sized bins.
+      - In general, we prefer the density histogram since its
+        vertical scale is the same as that of the PDF.
+      - Examples. Here are some examples of histograms, all with
+        data [1,2,2,3,3,3,4,4,4,4].
+    - The R code that drew them is:
+        - https://ocw.mit.edu/ans7870/18/18.05/s14/r-code/class6-prep-b.r
+```
+# Example 1: Averages of Bernoulli variables
+# The number of heads in n flips of a fair coin is modeled by binomial(n,.5)
+# We use the cdf function pbinom(x, n, .5) to compute probabilities for various n
+
+# Probability of 4 to 6 heads in 10 flips
+# Note:  since pbinom(x,10,.5) is P(X <= x) we use pbinom(3,10.5) so X=4 is included
+# in the probability
+pbinom(6,10,.5) - pbinom(3,10,.5)
+# 0.65625
+
+# We look at the probability of between 40 and 60% heads for n = 50, 100, 500, 1000
+pbinom(30,50,.5) - pbinom(19,50,.5)
+# 0.8810795
+pbinom(60,100,.5) - pbinom(39,100,.5)
+# 0.9647998
+pbinom(300,500,.5) - pbinom(199,500,.5)
+# 0.9999941
+pbinom(600,1000,.5) - pbinom(399,1000,.5)
+# 1
+
+# Next we look at the probability of between 49 and 51 percent heads
+# (again we include the endpoints in the probability)
+
+# We look at the probability of between 40 and 60% heads for n = 50, 100, 500, 1000
+pbinom(5,10,.5) - pbinom(4,10,.5)
+# 0.2460937
+pbinom(51,100,.5) - pbinom(48,100,.5)
+# 0.2356466
+pbinom(510,1000,.5) - pbinom(489,1000,.5)
+# 0.49334
+pbinom(5100,10000,.5) - pbinom(4899,10000,.5)
+# 0.9555742
+
+# Histogram examples
+x = c(1,2,2,3,3,3,4,4,4,4)
+brks = c(.5, 1.5, 2.5, 3.5, 4.5)
+hist(x,breaks=brks, col="purple", freq=TRUE)
+hist(x,breaks=brks, col="magenta", freq=FALSE)
+
+brks = c(0,1,2,3,4)
+hist(x,breaks=brks, col="red", freq=TRUE)
+hist(x,breaks=brks, col="orange", freq=FALSE)
+
+brks = c(0,2,4)
+hist(x,breaks=brks, col="blue", freq=FALSE)
+
+brks = c(.25,.75,1.25,1.75,2.25,2.75,3.25,3.75,4.25)
+hist(x,breaks=brks, col="cyan", freq=FALSE)
+
+#unequal size bins
+brks = c(0,1,2,4)
+hist(x,breaks=brks, col="red", freq=TRUE) #GENERATES WARNING
+hist(x,breaks=brks, col="orange", freq=FALSE)
+```

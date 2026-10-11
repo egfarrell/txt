@@ -1,0 +1,253 @@
+Excel Tips
+
+find all shows all rows
+
+### handy
+    =VLOOKUP(A1, Table1[JR Reference], 1, FALSE) <--- EXACT match
+    =VLOOKUP(A1, D1:2234343, 1, FALSE)           <--- EXACT match
+    =VLOOKUP(A1, Table1[JR Reference], 1, TRUE)  <--- EXACT match
+
+
+    - Note: VLOOKUP must have the target data we want to retrieve
+      to the _RIGHT_ of our lookup match values
+
+    - handle "#N/A" error
+        =IFERROR(VLOOKUP(A2, TREVOR_QUERY!$A$1:$L$9562, 1, FALSE), "No")
+
+    - Return "Yes" or "No"
+        =IF(ISNA(VLOOKUP(A2,$D$2:$D$185,1,FALSE)), "No", "Yes")
+
+    multiple columns
+    =VLOOKUP(G2,A1:E13,{2,4,5},FALSE) ???
+
+### format painter
+    - format painter is very handy! when you paste the values of
+      a pivot table, you can then format paint the whole pasted
+      table!
+
+### shortcuts
+    - ctrl = F3                : Name Manager
+    - alt + h,v,v              : Paste values
+    - alt + e + s              : Paste special (for pasting values)
+    - ctrl+shift+L             : filter (handy!)
+    - Ctrl + right click       : Show all sheets
+    - Ctrl + mouse drag        : duplicate worksheet
+    - F4                       : search again
+    - Shift + Alt + down arrow : Open Dropdown list from anywhere in the column if its a table
+    - Alt   + down arrow       : Open Dropdown list
+    - Alt   + down arrow       : Filter show dropdown
+    - Alt   + down arrow + e   : Filter search
+    - Alt   + down arrow + c   : Filter clear
+    - Ctrl  + backtick         : show formulas
+    - Ctrl  + -                : delete dialog box
+    - Shift + space            : Select Entire Row
+    - Ctrl  + g                : goto specific cell (also lists defined names)
+    - ctrl  + shift + 4        : format current selection as percent
+    - Ctrl  + a                : select all data (finds an island surrounded by white)
+    - Ctrl  + enter            : repeat values in selected cells
+    - Ctrl  + alt + v          : paste values
+    - Ctrl  + d                : fill down (copy contents and format of top cell in selected range)
+    - Ctrl  + k                : insert hyperlink
+    - Ctrl  + t                : create table
+    - Ctrl  + f                : Find (select column first to limit search to that column)
+    - Ctrl + shift + +         : Insert row/column
+    - Ctrl + -                 : Delete/column
+
+
+### freeze multiple rows/columns
+    - Select the cell immediately _BELOW_ and to the _RIGHT_ of
+      the rows and columns that you want to freeze. 
+    - View -> Freeze Panes -> Freeze Panes
+
+### copy print settings to many sheets
+    - hold CTRL and click on each sheet tab
+    - then click on "Page Setup"
+    - any changes in "Page Setup" will apply to all sheets
+
+### my macro:
+    - in DCG press ctrl+shift+n to do basic formatting on a new
+      sheet
+    - macro was recorded under the "View" -> "Macros" -> "Record Macro..."
+    - its stored in "personal.xlsb" in folder:
+        - C:\Users\<username>\AppData\Roaming\Microsoft\Excel\XLSTART
+
+
+        ```
+        Sub Basic_Formatting()
+        '
+        ' Basic_Formatting Macro
+        ' Get basic spreadsheet setup
+        '
+
+        '
+            With Selection
+                .HorizontalAlignment = xlLeft
+                .VerticalAlignment = xlBottom
+                .WrapText = False
+                .Orientation = 0
+                .AddIndent = False
+                .IndentLevel = 0
+                .ShrinkToFit = False
+                .ReadingOrder = xlContext
+                .MergeCells = False
+            End With
+            Columns("E:E").EntireColumn.AutoFit
+            Range("A1").Select
+            Range(Selection, Selection.End(xlToRight)).Select
+            Selection.Style = "Note"
+            Selection.Font.Bold = True
+            Selection.AutoFilter
+            Cells.Select
+            Cells.EntireColumn.AutoFit
+            
+            With ActiveWindow
+                If .FreezePanes Then .FreezePanes = False
+                .SplitColumn = 0
+                .SplitRow = 1
+                .FreezePanes = True
+            End With
+            Range("A4").Select
+            
+        End Sub
+        ```
+
+### common hyperlinks on a SHARED spreadsheet
+    - to ensure a Onedrive/network hyperlink opens the same
+      folder for everyone do the following:
+    - Goto file -> info -> "Show all Properties" -> "Hyperlink Base"
+        - specify the "Hyperlink Base" as "G:\" if everyone has
+          a G Drive mapping...
+
+### text to columns
+    - to split forename and surname
+
+### unpivot data using "PowerQuery"
+    - convert range of data into a table (if not already a table)
+    - goto _Data_ tab
+    - click _From Table/Range_ (in "Get and Transform Data" section)
+    - A Power Query window opens:
+        - highlight the columns you want to unpivot
+        - goto _Transform_ tab
+        - click _Unpivot Columns_
+    - Finally click "Close and Load" to bring transformed
+      database back to a new worksheet
+
+### gotcha
+    - when filtering: only first 10,000 items appear in filter so
+      it can look like a row isn't there, but it is!
+
+### Pivot "Distinct Count"
+    - to activate "distinct count" choose: "add to data model"
+      when creating pivot
+
+### pivot table
+    - insert "slicer" box to filter pivot table
+    - format pivot report -> "tabular". Tabular is much better
+      does column headings.
+
+### handy
+    =CONCAT(A911, TEXT(D911, "yyyy-mm-dd"))
+
+
+### CSV Export
+    - Mixture of LF and CRLF
+    .,$s/\r\n/@@@/gc   <---- these are the true line endings (temporarily convert to @@@)
+    .,$s/\n//gc        <---- now get rid of "in cell" linefeeds
+
+
+
+### Excel and Git
+    - `.xlsx` files are zipped XML
+    - rename workbook `.xlsx` to `.zip`,
+    - you'll see the non-binary XML folder.
+    - Store xml folder with the binary
+
+
+### misc
+    - "mapfill" feature
+
+    - forecast sheet: show trend lines
+
+    - 3D referencing: reference other sheets
+
+    - any kind of summarising stuff: use PIVOT TABLES!
+
+    - what-if-analysis: "goal seek"
+
+    - cell colour standards: there's a standard colour to let
+      people know the contents of this cell are calculated.
+      (orange)
+
+
+    tables: if you've a problem adding new row to a range then use TABLES!
+    tables: turn on "total row"
+    tables: make sure to name your tables
+    tables: will auto-name columns eg `[@salary]`
+
+    dont use VLOOKUP: use INDEX and MATCH!
+        - vlookup is not self-documenting and is slow
+        - `MATCH(location, tax_juristiction)`
+        - `INDEX(tax_rates, match(location, tax_juristiction))`
+
+    Name Manager (formula tab):
+        - name individual cells: eg tax-rate. Write variable name where it gives row/col reference (self-documenting spreadsheet)
+        - name entire columns:   eg salary column.
+
+    format painter
+    filter by colour
+    "name a range" e.g. paid_range
+    F4: make range absolute
+    missing vlookup entries:
+        =IFERROR(VLOOKUP(D12, paid_range, 1, false), "NOT PAID")
+        =ISNA(VLOOKUP(D12, paid_range, 1, false))
+
+### Joel Spolsky
+    cell referencing: ("F4" to swich between absolute/relative)
+        absolute: $2$5
+        R1C1 mode
+            absolute: R2C5
+            relative: RC[-1]
+    paste VALUES: when pasting from external sources
+
+### Round
+    - Joel Spolsky: `ROUND()` function: stop funny rounding errors for numerical values
+    - Yes! Cos I got caught out by this in DCG
+    - For percentages at DCG I use:
+    - =ROUND(H54,3) - ROUND(I54,3)
+
+
+### Visual Clarity
+    - conditional formatting - coloured icon sets - red, orange, green arrows
+    - conditional formatting - colour scale
+
+
+### MOVE a column
+    - highlight column
+    - move cursor to cell margin
+    - cursor turns into a cross
+    - press *SHIFT*
+    - drag to new position
+
+### list all sheet names vertically
+    right-click on sheet navigation arrows
+
+### Email to Annette (2014)
+    > my example spreadsheet for Annette: in ".../code/misc"
+    - hey Annette...
+    - Finally got chance to look at Excel(!)
+    - The good news:
+    - Pivot tables make analysing resources for each
+      project/function very easy...
+    - The bad news:
+    - it takes a lot of work to format your existing data in the
+      right way before pivot tables can be used... i.e. the data
+      must be "flat"
+    - My attachement:
+    - I can't really explain to you how to make your data "flat".
+      I've shown a very rough example in the attachment. (Theres
+      also an example of a pivot table and a pivot chart)
+    - ps: Excel 2010 Pivot Tables (Tutorial Video): https://www.youtube.com/watch?v=7MntP4s5bhs
+
+
+### links:
+    - unpivot data https://www.excel-university.com/unpivot-excel-data/

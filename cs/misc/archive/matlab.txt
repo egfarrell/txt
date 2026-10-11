@@ -1,0 +1,65 @@
+matlab
+
+open a second plot window
+    plot(x,y)
+    figure;
+    plot(w,z)
+
+array indices
+	START AT 1 IN MATLAB!!!	
+
+whos	
+    show defined variables
+
+supress output
+	;
+
+show variable value
+	simply type variable name
+
+plot
+	plot y against t: plot(t,y)
+	surface plot: surf(w)
+
+matrix multiplication
+	`c=a*b`
+
+element wise multiplication
+	`c=a.*b`
+	
+matrix operations
+	inverse: `inv(a)`
+	transpose: `a'`
+
+indexing
+	`newMatrix = matrix_name(rows, columns)`
+
+sectioning (slicing)
+	newMatrix = matrix_name(rowstart:rowend,colstart:colend)
+
+sectioning 2 (slicing)
+	someMatrix(1:2,:) means rows 1 to 2 and ALL columns
+
+workspace
+	save mydata
+	load mydata
+	clear x
+	clear
+
+logical indexing
+	a(a<.5) = -1
+        means SET all the elements of a
+        which are less than 0.5 to -1
+
+find command
+	ind = find(a<.5)
+	returns LINEAR index which satisfies find criteria
+
+	[r,c] = find(a<.5)
+	returns ROW, COL index which satisfies find criteria
+
+
+array size
+	- "length" : for 1D: arrays
+	- "size"   : for: multi-Dimensional arrays
+	- "numel"  : number of elements: in an array

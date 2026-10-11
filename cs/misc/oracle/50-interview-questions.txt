@@ -1,0 +1,378 @@
+# Top 50 Oracle Interview Questions and Answers (2021 Update)
+
+### 1. Difference between 'varchar' and 'varchar2'?
+
+    - Varchar can store upto 2000 bytes
+    - varchar2 can store upto 4000 bytes.
+    - Varchar will occupy space for NULL values and Varchar2 will
+      not occupy any space. Both differ with respect to
+      space.
+
+### 2. What is Oracle written in?
+
+    - Oracle was developed using 'C'.
+
+### 3. What is RAW datatype?
+
+    - RAW datatype is used to store values in binary data format.
+      The maximum size for a raw in a table in 32767 bytes.
+
+### 4. What is NVL?
+
+    - NVL replaces NULL values with a given value:
+    - NVL(Value, replace-value)
+
+### 5. Number of Months between 2 dates?
+
+    - In Oracle, months_between function is used to find number
+      of months between the given dates. Example is –
+
+    - Months_between(Date 1, Date 2)
+
+### 6. What are nested tables?
+
+    - Nested tables are a data type used to support columns
+      containing multi-valued attributes. It can also hold entire
+      sub table.
+
+### 7. What is COALESCE function?
+
+    - COALESCE returns the value which is set to be not null in
+      the list. If all values in the list are null, then the
+      coalesce function will return NULL.
+
+    - Coalesce(value1, value2,value3,…)
+
+### 8. What is BLOB datatype?
+
+    - A BLOB data type is a varying length binary string which is
+      used to store two gigabytes memory. Length should be
+      specified in Bytes for BLOB.
+
+### 9. How do we represent comments in Oracle?
+
+    - "--" single line
+    - /* I am a comment */ for block comments
+
+### 10. What is DML?
+
+    - Data Manipulation Language (DML) is used to access and
+      manipulate data in existing objects.
+    - DML statements are insert, select, update and delete and
+      won’t implicitly commit the current transaction.
+
+### 11. Difference between TRANSLATE and REPLACE?
+
+    - Translate is used for character by character substitution
+    - Replace is used substitute a single character with a word.
+
+### 12. Display table rows without duplicates?
+
+    - Duplicate rows can be removed by using DISTINCT in the
+      select statement.
+
+### 13. What is Merge used for?
+
+    - Merge is used to select rows from one or more data sources
+      for updating and insertion into a table or a view. It is
+      used to combine multiple operations.
+
+### 14. What is NULL value in oracle?
+
+NULL value represents missing or unknown data. This is used as
+a placeholder or represented it in as default entry to indicate
+that there is no actual data present.
+
+### 15. What is the USING Clause?
+
+    - The USING clause is used to specify with the column to test
+      for equality when two tables are joined.
+
+    - Select * from employee join salary using employee ID;
+
+    - Employee tables join with the Salary tables with the
+      Employee ID.
+
+### 16. What is "key preserved" table?
+
+    - A table is set to be key preserved table if every key of
+      the table can also be the key of the result of the join.
+    - It guarantees to return only one copy of each row from the
+      base table.
+
+### 17. What is WITH CHECK OPTION?
+
+    - The WITH CHECK option clause specifies the check level in
+      DML statements.
+
+    - It is used to prevent changes to a view that would produce
+      results that are not included in the sub query.
+
+### 18. What are Aggregate functions?
+
+    - Aggregate functions combine values of multiple rows or
+      records to get a single value output. Examples: `Average
+      Count Sum`
+
+### 19. What is GROUP BY?
+
+    - A GROUP BY clause is used in a select statement where it
+      will collect data across multiple records and group the
+      results by one or more columns.
+
+### 20. What is a sub query? What are the different types?
+
+    - They are also called "Nested Queries" or "Inner Queries"
+      and get data from multiple tables. A sub query is added in
+      the where clause of the main query.
+
+    - Two types of subqueries:
+
+        - Correlated sub query
+        - A Correlated sub query cannot be an independent query
+          but can reference columns in a table listed in the from
+          list of the outer query.
+
+        - Non-Correlated subquery
+        - Can be evaluated as if it were an independent query.
+          Results of the sub query are submitted to the main
+          query or parent query.
+
+### 21. What is cross join?
+
+    - Cross join is defined as the _Cartesian product_ of records
+      from the tables present in the join.
+    - Cross joins will produce a result which combines each row
+      from the first table with the each row from the second
+      table.
+
+### 22. What are temporal data types in Oracle?
+
+    - "Date"          - Different formats of Dates
+    - "TimeStamp"     - Different formats of Time Stamp
+    - "Interval Data" - Interval between dates and time
+
+
+### 23. How do we create privileges in Oracle?
+
+    - A privilege is the right to execute an SQL query or access
+      another user object. Privileges can be granted as _system_
+      privilege or _user_ privilege.
+
+    - GRANT user1 TO user2 WITH MANAGER OPTION;
+
+### 24. What is VArray?
+
+    - VArray is a data type used to have columns containing
+      multivalued attributes and it can hold bounded array of
+      values.
+
+### 25. How do we get field details of a table?
+
+    - Describe <Table_Name>
+
+### 26. Difference between 'rename' and 'alias'?
+
+    - Rename is a permanent name given to a table or a column
+      whereas Alias is a temporary name given to a table or
+      column.
+    - Rename is the _replacement_ of a name and Alias is an
+      alternate name of the table or column.
+
+### 27. What is a View?
+
+    - A view is a logical table which based on one or more tables
+      or views.
+    - The tables upon which the view is based are called Base
+      Tables and it doesn’t contain data.
+
+### 28. What is a cursor variable?
+
+    - A cursor variable is associated with different statements
+      which can hold different values at run time. A cursor
+      variable is a kind of reference type.
+
+### 29. What are cursor attributes?
+
+    - Each cursor has set of attributes which enables an
+      application program to test the state of the cursor.
+    - The attributes can be used to check whether cursor is
+      opened or closed, found or not found and also find row
+      count.
+
+### 30. What are SET operators?
+
+    - SET operators are used with two or more queries and those
+      operators are Union, Union All, Intersect and Minus.
+
+### 31. How to delete duplicate rows?
+
+    - Duplicate rows in the table can be deleted using ROWID.
+
+### 32. What are the attributes of Cursor?
+
+    %FOUND
+    Returns NULL if cursor is open and fetch has not been executed
+    Returns TRUE if the fetch of cursor is executed successfully.
+    Returns FALSE if no rows are returned.
+
+    %NOT FOUND
+    Returns NULL if cursor is open and fetch has not been executed
+    Returns FALSE if fetch has been executed
+    Returns TRUE if no row was returned
+
+    %ISOPEN
+    Returns TRUE if the cursor is open
+    Returns FALSE if the cursor is closed
+
+    %ROWCOUNT
+    Returns the number of rows fetched. It has to be iterated through
+    entire cursor to give exact real count.
+
+### 33. Store pictures in the database?
+
+    - Yes, we can store pictures in the database by Long Raw Data
+      type. This datatype is used to store binary data for
+      2 gigabytes of length. But a table can have only one Long
+      Raw data type.
+
+### 34. What is an integrity constraint?
+
+    - https://www.itprotoday.com/sql-server/sql-design-four-integrities
+    - An integrity constraint is a declaration defined a business
+      rule for a table column.
+    - Integrity constraints ensure data accuracy and consistency.
+    - 4 types:
+        - Entity integrity,
+        - referential integrity,
+        - domain integrity
+        - business integrity
+
+    - Why Integrity Constraints are Useful in a Data Warehouse
+
+        - Integrity constraints ensure data conforms to
+          guidelines specified by the database administrator. The
+          most common types include:
+            - UNIQUE constraints
+                - ensure that a given column is unique
+            - NOT NULL constraints
+                - ensure that no null values are allowed
+            - FOREIGN KEY constraints
+                - ensure two keys share a primary key to foreign
+                  key relationship
+
+    - Constraints ensure
+        - Data cleanliness
+            - Constraints verify that the data in the data
+              warehouse conforms to a basic level of data
+              consistency and correctness, preventing the
+              introduction of dirty data. Query optimization
+
+        - Optimisation
+            - The Oracle database utilizes constraints when
+              optimizing SQL queries. Although constraints can be
+              useful in many aspects of query optimization,
+              constraints are particularly important for query
+              rewrite of materialized views.
+
+### 35. What is an ALERT?
+
+    - An alert is a window which appears in the center of the
+      screen overlaying a portion of the current display.
+
+### 36. What is a hash cluster?
+
+    - Hash Cluster is a technique used to store the table for
+      faster retrieval. Apply hash value on the table to retrieve
+      the rows from the table.
+
+### 37. What constraints are used in Oracle?
+
+    - NULL     A column _can_ contain NULL values
+    - NOT NULL A Column cannot contain NULLs
+    - CHECK    values in a column must meet specific criteria
+    - DEFAULT  What value should the column default to
+
+### 38. What is difference between SUBSTR and INSTR?
+
+    - SUBSTR returns specific portion of a string
+    - INSTR provides character _position_ in which a pattern is
+      found in a string.
+
+    - SUBSTR returns string whereas INSTR returns a number.
+
+### 39. What parameter modes can be passed to a procedure?
+
+    - IN, OUT and INOUT
+
+### 40. Different types of Oracle Database objects?
+
+    - Tables      set of elements organized vertically/horizontally
+    - Views       Virtual table derived from one or more tables
+    - Indexes     Performance tuning method for processing record
+    - Synonyms    Alias name for tables
+    - Sequences   Multiple users generate unique numbers
+    - Tablespaces Logical storage unit in Oracle
+
+### 41. Differences between LOV and List Items?
+
+    - LOV is a property whereas list items are considered
+      a single item.
+    - List of items is set to be a collection of list of items.
+    - A list item can have only one column, LOV can have one or
+      more columns.
+
+### 42. What are privileges and Grants?
+
+    - Privileges are the rights to execute SQL statements – means
+      Right to connect and connect.
+    - Grants are given to the object so that objects can be
+      accessed accordingly. Grants can be provided by the owner
+      or creator of an object.
+
+### 43. Difference: $ORACLE_BASE and $ORACLE_HOME?
+
+    - Oracle base is the main or root directory of an oracle
+    - ORACLE_HOME is located beneath the base folder in which all
+      oracle products reside.
+
+### 44. Fastest query method to fetch data from the table?
+
+    - Row can be fetched from table by using ROWID.
+    - Using ROW ID is the fastest query method to fetch data from
+      the table.
+
+### 45. Max number of triggers applied to a table?
+
+    - 12 is the maximum number of triggers
+
+### 46. How to display row numbers with records?
+
+    - Select _rownum_, <fieldnames> from table;
+
+
+### 47. View most recent record added to a table?
+
+    - Select * from (select * from employees order by rownum
+      desc) where rownum < 2;
+
+### 48. What data type is the DUAL table?
+
+    - The DUAL table is a one-column table present.
+    - The table has a single VARCHAR2(1) column called DUMMY
+      which has a value of ‘X’.
+
+### 49. Difference between Cartesian Join and Cross Join?
+
+    - No differences between them.
+    - A Cross join gives the cartesian product of two tables.
+    - Rows from first table multiplied with another table which
+      is called cartesian product.
+
+    - A Cross join without a 'where' clause gives the Cartesian
+      product.
+
+### 50. Employees who gets more than the avg salary?
+
+    - Select * from employee where salary > (select avg(salary)
+      from dept, employee where dept.deptno = employee.deptno);

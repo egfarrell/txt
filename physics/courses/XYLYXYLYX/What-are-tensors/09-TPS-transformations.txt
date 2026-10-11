@@ -1,0 +1,49 @@
+09-TPS-transformations.txt
+
+$MY_VIDEOS/physics/what-are-tensors/09-TPS-transformations.mp4
+
+### remember:
+    - the COMPONENTS    can be covariant or contravariant
+    - the BASIS VECTORS can be covariant or contravariant
+    - add a single tensor transformation uses a mixture of both 
+
+    - interesting: if we call a tensor "covariant" or
+      "contravariant" it referes to the component part of the
+      tensor, rather than the basis vectors
+
+    - philosophical point: we name things by how they
+      _transform_. Eg particles are named/grouped by how the
+      transform under Lorentz/Poincare transformations
+
+good revision: the relationship between the basis vectors of
+a vector space `V` and it's dual `V*`
+	- $MY_IMAGES/physics/what-are-tensors/vector-space-and-dual-basis-vectors.jpg
+
+- subscript lower: covariant transformation
+- subscript upper: contravariant transformation
+	- $MY_IMAGES/physics/what-are-tensors/example-covariant-contravariant-transformation.jpg
+
+### origin of covariant and contra: 
+    - well we started off with our underlying vector space and we
+      want to change our basis vectors. And then if we do the
+      same in the dual space, we are using an inverse matrix, so
+      that is "contra" the way we do it in the original
+      underlying vector space.
+
+ah very important: 
+    - use the correct "tool" for the correct object. You use
+      a matrix to transform the basis vectors, but you use the
+      inverse matrix to transform the components...
+    - head wrecking
+	- $MY_IMAGES/physics/what-are-tensors/tricky-transformation.jpg
+
+### Go through this again (~ min: 15)
+    - made sense about when to use matrix, or inverse matrix, but
+      need to watch a few times
+	- $MY_IMAGES/physics/what-are-tensors/rewatch-this.jpg
+
+Ah I forgot this:
+    He has a (0,3) tensor, made from 3 basis vectors... but
+    remember it's a _map_ and it still needs 3 vectors to bring
+    you into the reals `ℝ`
+	- $MY_IMAGES/physics/what-are-tensors/tensor-neededing-to-eat-3-vectors.jpg

@@ -1,0 +1,241 @@
+### Appendix 3 Quantum Collapse and Time Arrow
+
+It is well known that the Schrödinger equation induces no priv-
+ileged direction of time, this being due to the fact that if w(x, t) is
+a solution of this equation, 4* (x, -t) is also a solution If quan-
+tum mechanics reduced to the Schrödinger equation, it could
+therefore be stated without further ado that it is time-reversal in-
+variant, just as classical Newtonian mechanics is However, the
+probability rule and the associated collapse rule also are essen-
+tial parts of quantum mechanics and, at first sight at least, they
+seem to bring in a time arrow Do they really? It is to the discus-
+sion of this controversial question that we turn in this appendix
+The question at issue is of course tightly linked with the
+one concerning the nature of the information a measurement
+actually provides on a system Is the value registered on the in-
+strument the one the measured observable had just before or has
+just after the measurement? Clearly, taking the collapse theorem
+at face value implies deciding in favor of the second answer
+This is particularly obvious in the case in which the measure-
+ment is a complete one Let us, for simplicity's sake, consider
+a case in which the measured observable A is, by itself, a com-
+plete set of compatible observables (no degeneracy) Then whatever
+>, the quantum state before the measurement, may be, if the
+measurement yields outcome ak, the state just after it took place
+is the corresponding eigenvector 10k > Knowledge of the out-
+come thus entails knowledge of this state, whereas it provides
+no information whatsoever concerning 4 >
+Of course, if collapse were just a postulate, the roles could
+rather easily be reversed We could just assume that, if a mea-
+surement of A is made and its outcome is a,, this implies that,
+455456
+Appendix 3 Quantum Collapse and Time Arrow
+n
+just before the measurement, the system state was | > But, as
+we saw in Chapter 3, collapse, particularly in the nondegeneracy
+case, is something more than just an arbitrary postulate It can be
+derived from the probability rule together with a merely qualita-
+tive and seemingly quite natural premise and, in this sense, it is
+a theorem The question therefore arises whether we can change
+anything to it It would seem that this, at any rate is not possible
+without making the corresponding changes in the premises Let
+us see whether and how this is possible
+First Guess, Suggestion A
+The idea here is that we should, in principle, have a free choice
+between the conventional description and a totally time-reversed
+description, which I refer to as Suggestion A This Suggestion
+would involve
+(i) Considering as true the statement Before a measurement of
+an observable A having yielded outcome a, the system was in the
+corresponding eigenstate |> (this is just the above considered
+assumption)
+n
+(ii) Deriving this statement from a new rule, call it Rule 6', which
+is the time-reversed of the usual probability rule (Rule 6 of Chap-
+ter 3) and reads as follows
+n
+Rule (6'): With the notations specified above (|ø >= eigenket
+of A associated with value a), if, just after a measurement of
+A, the state vector is 14 >, the (Bayesian) probability that this
+measurement has yielded outcome α, is
+w₁ = | < | > |²
+n
+The derivation in question necessitates an additional pre-
+mise-call it Premise P-which parallels the one stated in Chap-
+ter 3 and consists in postulating that before the measurement the
+system was already describable by some ket It is carried through
+by considering a case in which two ideal measurements, M₁ and
+M₂ are performed, at times to - € and to + € respectively, of the
+same observable A Let a be the outcome of M₂ and let |x > be
+the ket representing the system at time to Since the two mea-
+surements are ideal and infinitely close in time, they must by
+definition (Rule 7 of Chapter 3) yield the same outcome ThisFirst Guess
+457
+implies that the probability is equal to 1 that if the outcome of
+M2 is a the outcome of M₁ was α, as well. On the other hand,
+according to Rule 6', this probability 1s | < | > |² This (just
+as in Chapter 3, after Rule 9) implies that
+|x >= \n>
+up to some irrelevant phase factor.
+So, statement (i) does indeed follow from Rule 6′ (plus
+Premise P). But is Rule 6' actually true? In other words, is Sugges-
+tion A correct? Let this question be asked in more general terms.
+In classical physics, where irreversibility is factlike only (that is,
+merely due to contingent, limiting conditions), there are natural
+physical phenomena-such as those of elementary, two-body ce-
+lestial mechanics—that are both reversible and observable. Does
+this also hold true concerning quantum mechanics?
+The answer must be a qualified no. In fact, Suggestion A
+can only be used in artificially contrived cases that, in practice
+are hardly ever met, not even approximately. The point is as fol-
+lows. When, in ordinary language, we speak of the probability
+that such and such an event E should take place in the future, we
+implictly mean: "Under the condition that past 'is what it is' and
+that no restrictive condition whatsoever is added concerning
+what events take place after E." (Otherwise we should instead
+consider conditional probabilities taking such restrictions into
+account.) This is a natural standpoint to take since we normally
+consider future as being "open." And it applies, of course, to
+Rule 6. Now, in Suggestion A the role of the future is taken up
+by the past and conversely. This implies that this Suggestion A
+is a correct theory only if "the past is left open," that is, if no re-
+strictive conditions whatsoever hold true concerning the past of
+the system. But this, generally, is not the case, and consequently
+quite elementary examples can be given of situations in which
+Rule 6' is falsified.
+For instance, let A and B be two observables, with eigenvalue
+equations
+A\$n > = an|$n >
+and
+B\xk > = bx|xx >458
+Appendix 3: Quantum Collapse and Time Arrow
+that are measured on the same system at times t₁ and t₂ respec-
+tively. Assume for simplicity's sake that A and B are, respectively,
+the x component S, and the z component S₂ of a spin 1/2 par-
+ticle and consider the values a₁ = bk = +1/2. Let us consider the
+systems on which the B measurement yields outcome b and
+let us ask for the probability that, on them, the A measurement
+yielded outcome a,,. According to Suggestion A we must apply
+Rule 6' From statement (i) applied to the measurement of B
+we infer that the spin state vector of the particle between times
+t₁ and t₂ 15 Xk > we therefore have to consider the quantity
+|<lxk>², whose calculated value is 1/2. According to Rule
+6', this quantity expresses the probability that, under the con-
+ditions just stated, the outcome of the measurement of A at t₁
+was a„, that is, it is the limit―for an ensemble composed of ar-
+bitrarily many systems-of the fraction whose numerator is the
+number of particles in the ensemble that yielded both outcomes
+а at t₁ and b at t₂ and whose denominator is the total number
+of particles that yielded outcome b at t₂. If we have to do with
+an initially unpolarized beam the numerator is N/4 and the de-
+nominator is N/2 (N total number of particles), so that this
+fraction is 1/2: Rule 6' is then obeyed. But if we have to do with
+a beam initially polarized in some direction this is not the case
+in general. For example, if the incoming beam is polarized along
+Ox (Sx = +1/2) the outcome of the first measurement is the same
+for all the particles so that the fraction in question is equal to 1.
+In this case, therefore, Suggestion A (i.e. in last resort Rule 6') is
+Just simply false. What makes it false is the polarization of the
+initial beam, which can be looked at as a preselection exerted
+on an initially unpolarized beam. And it is worth noticing that,
+artificially, also Rule 6 of Chapter 3 could be rendered false, by
+imposing a similar postselection on all the elements of the en-
+semble, that is by requiring, for example, that the only particles
+to be taken into consideration are those that, at a later time t3,
+yield, upon some further measurement of S₂, outcome +1/2.
+=
+Admittedly, such a manner of restoring a symmetry between
+past and future is acceptable in principle. But it remains that it
+implies giving up Rule 6, the probability rule, which is one of
+the pillars of contemporary physics. This has no counterpart in
+classical mechanics, where the symmetry in question pervades
+all the actually used basic laws. Quantum mechanics can there-
+fore not be said to be "reversible" in the sense in which New-
+tonian physics is reversible. In fact, we see here that the kind ofSecond Guess
+459
+time-arrow quantum mechanics exhibits is rather tightly linked
+with—and therefore dependent on—our (human) abilities to do
+this or that (in effect, to select subensembles of given ensembles,
+in the future or in the past) More precisely, it is linked with
+the limitations of these abilities This is illustrated by the exis-
+tence, established in general terms by Aharonov, Bergmann, and
+Lebowitz [1], of a fully time-symmetric "quantum mechanics"
+that does not actually apply to our actual "world of experience"
+but from which both conventional quantum mechanics and Sug-
+gestion A may be derived, by applying formal, so called "coher-
+ence destroying" procedures either in the future or in the past
+Second Guess, Suggestion B
+The shortcomings of Suggestion A may incite us to consider
+a milder one-let it be called Suggestion B-which has some
+features in common with Suggestion A but actually does not
+really make quantum mechanics lawlike reversible This Sug-
+gestion B-which may well be the one hinted at by Zeh [2 sec
+42] essentially consists in keeping the postulate expressed by
+our Statement (i) in our "First Guess," but in stressing the fact
+that, since this postulate is stated in ontological terms and bears
+on quantum states to which we unquestionably have no direct
+access (at which we cannot directly "look"), it cannot, in fact, be
+independently tested by means of any measurement In other
+words, it is of the nature more of a convention than of a physical
+assumption
+Questions may then be raised as to the nature and bearing of
+the probability rule A probability rule of some sort is of course
+necessary for setting the formalism in relationship with obser-
+vation But on the other hand, for the aformentioned reasons,
+Rule 6' cannot be taken up Hence it seems no other choice is
+available than just the usual probability rule, that is, Rule 6
+It is true that, in a case of two successive measurements,
+the use of Rule 6 seems to raise a conceptual problem with our
+present postulate (Statement (i) of "First Guess"), it must be the
+case that with the same setup and notations as above—the sys-
+tem must be in state |œ > before t₁ and in state (x > between
+t₁ and t₂ And it might then be wondered how this is to be rec-
+onciled with the fact, proved in Chapter 3 (Proposition A), that
+Rule 6 implies, in this case, that between times t₁ and t₂ the system
+must be in state |❤ > The answer, however, is quite simple It
+n
+n460
+Appendix 3 Quantum Collapse and Time Arrow
+consists in remembering the conventional nature of postulate (i)
+within Suggestion B For indeed, this conventional nature im-
+plies that, in fact, a measurement does not reveal to us in what
+state the system "really was " Rather, it (its nature and outcome)
+determines what quantum state we attribute by convention to
+the system just before the measurement Under these conditions
+the just mentioned difficulty vanishes It is true that when the ob-
+servable B that is measured at t₁ is the same as the observable A
+measured at t₁, which is the situation considered in the proof of
+Proposition A, the system must, within the time interval (t₁, t₂),
+be in the state |xk > (then identical to | >) But this fact cannot
+be abstracted from the considered overall experimental setup In
+the case in which the observable A measured at t₁ is not the same
+as observable B there is no reason that it should hold good
+n
+Clearly, Suggestion B has much in common with Bohr's ap-
+proach to quantum mechanics since, in Bohr's views also, the
+complete experimental setup must be taken into account before
+we can speak of a quantum phenomenon and, correlatively, as-
+sign definite values to the corresponding physical quantities
+But it is difficult to see in what sense the suggestion in ques-
+tion could actually restore a symmetry between past and future
+that would make quantum mechanics time-reversible in a law-
+like sense A general view that seems more in accordance with
+what we know is the one, advocated in this book, that makes a
+distinction between independent and empirical reality Indepen-
+dent reality is not embedded in space and time, and therefore the
+question of whether or not there is a time arrow in it is meaning-
+less But the contingent values of physical dynamical quantities
+are not elements of it Empirical reality—the reality that physics,
+and in particular quantum physics, is mainly concerned with-
+is essentially the set of the phenomena, as seen and described
+by means of human concepts The time arrow ranks among the
+most primeval of these concepts not surprising then that quan-
+tum physics as it is used (that is, with collapse and so on) should
+exhibit a time arrow
+References
+1 Y Aharonov, PG Bergmann, and J L Lebowitz, Phys Rev 134B, 1410
+(1964)
+2 HD Zeh, The Physical Basis of the Direction of Time, Springer-Verlag,
+Berlin, Heidelberg, 1989
+
+ 

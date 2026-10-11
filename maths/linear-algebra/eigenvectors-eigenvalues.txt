@@ -1,0 +1,91 @@
+- Sure, here are your customization instructions:
+
+
+### Braver new math
+    - `Eigen` = "Essence revealing" 
+    - The 'eigen' stuff of a linear map or matrix, reveals to us,
+      in some sense, the geometric essence of that linear
+      transformation.
+        - Eigen vector
+        - Eigen value
+        - Eigen space
+        - Eigen base
+
+### What Are Eigenvectors and Eigenvalues?
+
+- _Eigenvectors_ and _eigenvalues_ are concepts in linear algebra
+  that describe special properties of matrices.
+
+- Eigenvector: An eigenvector of a matrix `A` is a non-zero
+  vector `v` such that when `A` multiplies `v`, the result is
+  a scalar multiple of `v`. 
+    - In other words, A * v = λ * v, where λ (lambda) is a scalar
+      known as the *eigenvalue* corresponding to v.
+
+- Eigenvalue: The eigenvalue `λ` is a scalar that indicates how
+  the eigenvector is scaled during the transformation described
+  by the matrix `A`.
+
+### Intuitive Explanation
+
+- Imagine you have a transformation represented by a matrix `A`.
+  Applying this transformation to a vector usually changes its
+  direction and magnitude. 
+- However, for certain special vectors (eigenvectors), the
+  transformation only stretches or shrinks the vector but does
+  not change its direction. The factor by which the vector is
+  stretched or shrunk is the eigenvalue.
+
+### Why They Occur Naturally in Linear Algebra
+
+1. Diagonalization: Many matrices can be decomposed into simpler
+   components involving their eigenvectors and eigenvalues. This
+   process, called diagonalization, simplifies matrix operations
+   and is crucial for solving systems of linear equations,
+   computing matrix powers, and more.
+
+2. Stability and Systems: In dynamic systems (like those
+   described by differential equations), eigenvectors and
+   eigenvalues determine the stability and behavior of the system
+   over time. For instance, they help identify stable and
+   unstable equilibrium points.
+
+3. Principal Components: In data analysis, eigenvectors and
+   eigenvalues are used in techniques like Principal Component
+   Analysis (PCA) to identify the most significant features or
+   directions in a dataset, aiding in dimensionality reduction
+   and pattern recognition.
+
+4. Natural Coordinates: Eigenvectors provide a natural coordinate
+   system for the transformation described by a matrix. This
+   coordinate system often makes complex transformations easier
+   to understand and analyze.
+
+### Example
+
+Consider a matrix A:
+
+A = [[3, 1], [0, 2]]
+
+Let's find its eigenvectors and eigenvalues.
+
+1. Eigenvalue Calculation:
+   - Solve the characteristic equation det(A - λI) = 0:
+   - det([[3 - λ, 1], [0, 2 - λ]]) = 0
+   - This simplifies to (3 - λ)(2 - λ) = 0, giving λ = 3 and λ = 2.
+
+2. Eigenvector Calculation:
+   - For λ = 3:
+     - A - 3I = [[0, 1], [0, -1]]
+     - Solve [[0, 1], [0, -1]] * [[x], [y]] = [[0], [0]]
+     - This gives y = 0, so x can be any value. An eigenvector is [[1], [0]].
+
+   - For λ = 2:
+     - A - 2I = [[1, 1], [0, 0]]
+     - Solve [[1, 1], [0, 0]] * [[x], [y]] = [[0], [0]]
+     - This gives x + y = 0, so y = -x. An eigenvector is [[1], [-1]].
+
+- In summary, eigenvectors and eigenvalues naturally arise in
+  linear algebra because they provide a powerful way to
+  understand and simplify the transformations represented by
+  matrices.

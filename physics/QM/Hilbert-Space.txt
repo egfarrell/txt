@@ -1,0 +1,96 @@
+# Me
+    - $MY_NOTES/physics/QM/Constructing-reality-marburger.txt
+    - (??? I thought the 'coordinate axis' was the 'frame'?)
+
+    - The _vector metaphor_ for wave functions runs deep.
+    - When David Hilbert saw how important it was for QM, he
+      developed a theory of this kind of vector space, now known
+      as `Hilbert space` or 'quantum state space'.
+    - Thus the wave function at a point in space is a component
+      of a vector in a new kind of "space" with an _infinity of
+      dimensions_ in which different possible coordinate axes are
+      labeled with different detector tunings.
+    - The choice of which physical _quantity_ to measure dictates
+      the choice of coordinate `frames` (bunches of mutually
+      perpendicular axes) in the QM Hilbert space.
+        - The choice of which _VALUE_ of the quantity to detect
+          then fixes the particular coordinate axis within the
+          frame.
+        - (??? I thought the coordinate axis was the frame?)
+
+### GPT 
+
+- You’re mixing two levels of “geometry” that sound similar.
+  First, separate three ideas often blurred together:
+
+1. vector space itself
+2. a basis (a set of coordinate axes)
+3. a single axis (one basis vector)
+
+- Now apply that to Hilbert space and to measurement.
+- Start with an ordinary analogy, because the logic is identical.
+
+In ordinary 3D space:
+- The space is `ℝ³` itself.
+- A coordinate FRAME is a choice of basis, e.g. `{x̂, ŷ, ẑ}`.
+    - ie a bunch of mutually perpendicular axes
+- A coordinate AXIS is one element of that basis, e.g. `x̂` alone.
+
+- The frame is the whole mutually perpendicular set.
+- An axis is just one direction inside that frame.
+
+- You were right to feel something was off: an axis is not the
+  frame; it is part of the frame. Now translate this to QM.
+
+### Hilbert space:
+    - The vector space
+        - is the Hilbert space of states `|ψ⟩`.
+    - A coordinate frame
+        - corresponds to choosing an OBSERVABLE to measure.
+    - A coordinate axis
+        - corresponds to choosing one EIGENSTATE of that
+          observable.
+
+- More explicitly, choosing a physical quantity (observable) `A`:
+    - Position x, momentum p, energy H, spin Sz, etc.
+    - This fixes a particular orthonormal basis `{|aₙ⟩}` of
+      Hilbert space.
+    - This whole set `{|aₙ⟩}` is the coordinate FRAME.
+
+- Choosing a value of that quantity:
+    - A particular eigenvalue `aₙ`.
+    - This singles out one basis vector `|aₙ⟩`.
+    - That is a single coordinate axis.
+
+- So the correct hierarchy is:
+    - Hilbert space
+    - → observable (operator)
+    - → eigenbasis (coordinate frame)
+    - → eigenvector (coordinate axis)
+
+- Now let’s rewrite your last section with corrected language:
+    - “The choice of which physical quantity to measure dictates
+      the choice of coordinate frame (a complete orthonormal
+      basis) in Hilbert space.
+        - The choice of which value of the quantity to detect
+          fixes a particular coordinate axis (one basis vector)
+          within that frame.”
+
+### Why the confusion feels natural:
+
+- In CM, we often say “the x-axis” and mean “the x-coordinate
+  system,” because we’re implicitly holding `y` and `z` fixed in
+  the background.
+- In QM, each observable brings along its entire basis, so the
+  distinction becomes unavoidable.
+
+- One more key conceptual payoff:
+    - The wave function `ψ(x)` is not “the state” (note the 'x') 
+        - It is the components of the abstract vector `|ψ⟩` in
+          the position basis.
+
+- Switch observable → switch basis → same vector, different components.
+
+- That’s exactly why your “vector metaphor runs deep”: it’s not
+  a metaphor at all; it’s literally linear algebra in an
+  infinite-dimensional space.

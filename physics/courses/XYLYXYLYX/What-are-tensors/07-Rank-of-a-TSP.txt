@@ -1,0 +1,24 @@
+07-Rank-of-a-TSP.txt
+
+$MY_VIDEOS/physics/what-are-tensors/07-Rank-of-a-TSP.mp4
+
+tensor = multi-linear product
+
+### convention:
+    rank: (num of vectors, num of covectors)
+    rank: (       1,            0          ) underlying vector space
+    rank: (       0,            1          ) dual vector space
+
+    note: we don't write the number of dual vector spaces FIRST
+    ie we dont: V* ⊗ V ⊗ V
+
+- $MY_IMAGES/physics/what-are-tensors/tensor-rank-notation.jpg
+
+
+tensor map all the way to the real numbers
+	- $MY_IMAGES/physics/what-are-tensors/tensor-map-ending-in-real-number.jpg
+
+"always happens..."
+- each time you multiply the basis vectors, you get a delta
+  function...
+- so after a while _don't_ write out the basis vectors

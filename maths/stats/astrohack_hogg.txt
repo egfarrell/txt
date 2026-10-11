@@ -1,0 +1,296 @@
+# hogg on "models"
+    - for him, a model is never just physics equations, it _also_
+      has to refer to hardware (NOISE MODEL). ie your data are
+      produced by physics and hardware/detectors (and the
+      hardware is also governed by physics at the end of the day)
+
+    - So data analysis is where _theory_ and _engineering_ meet!
+
+    - So if a theorist says I have a model of stars, well you
+      don't unless you also include photon counts, calibration
+      errors, resolution variation, CCD artifacts, cosmic rays
+
+# Hogg on jackknifing
+    - Hes a big believer of using the jack-knife.
+    - Whenever you're using an estimator you should jacknife it.
+    - This is where you systematically _drop_ some of the data
+      and refit.
+    - You really get a sense of which parts of the data are
+      affecting what. eg. which chunks of the data are really
+      setting the slope and which chunks the intercept.
+    - It also gives you a sense of when your data goes to hell.
+      If dropping a few data-points causes your model to go to
+      hell, then you need to take more data or theres something
+      really wrong with your data.
+
+# models
+    - theres no statistical theory of how to construct models in
+      the first place!
+    - We construct models basically by investigating the data and
+      seeing how the model does against the data points and thats
+      how we see if we need to adjust our model.
+
+# Hoggs team has a systematic approach:
+    * trying to write science papers by explicitly stating
+      assumptions in a bulleted list
+    * show that their methods work under those assumptions
+    * apply the method to the real data
+    * discuss what would have changed if we made different
+      assumptions (which is usually the code would have
+      taken the age of the universe to run!)
+
+# any time you do data analysis
+    * you want to be clear about what your _assumptions_ are
+    * you want to be clear that the _method_ you are using
+      meets those assumptions
+
+    - and if we find we can't meet our assumptions, then we relax
+      some of the assumptions rather than putting ad-hoc changes
+      into the method.
+
+# linear algebra
+    - Hogg says its one of the most important things for data
+      analysis!
+    - Almost all data analysis problems can be cast in a way that
+      looks like linear algebra or it contains linear algebra
+      operations.
+
+# The task:
+    Hogg asked how to fit a line through these measurements
+    (which have _error bars_)
+
+    Note: theres `N` data points
+                                        |
+                                       _*_
+              ^                      |  |
+              |                     _*_
+              |                  |   |
+              |                 _*_ |
+              |               |  | _*_
+          Y   |           |  _*_    |
+              |    |   | _*_  |
+              |   _*_ _*_ |
+              |    |   |
+              |
+              |
+              ------------------------------>
+                         X
+
+get the equation of the best fit line
+    `y   = mx + b`
+    `ỹ_n = m*x_n + b`
+
+# Traditional method:
+    - _Chi Squared_ method, like a kind of Euclidean distance
+      metric. Physicists like it because its a dimensionless
+      number.
+
+
+            N
+    `chi^2 = ∑    (y_n - ỹ_n) / (σ\_n)^2`
+            n=1
+
+    - Note 1: this is an "objective function"?
+
+    - Note 2: the `(σ_n)^2` means that points with larger errors
+      are given less weight in the chi-squared statistic
+
+
+# assumptions
+
+    - Note: most of these assumptions are trying to make the
+      problem tractable!
+
+    * _Gaussianity_: the error bars are Gaussian. Each point is
+      somehow sampling away from its true value with some kind of
+      Gaussianity
+
+    * assuming _known error variances_. (or known 'noise'
+      variances). The chi-squared assumes you know the variances
+      `(σ_n)^2` of those Gaussian's. ie. that the variances are
+      correct. But these errors are never correct 'for very deep
+      reasons'! But you are assuming that you do.
+
+    * you're assuming theres _no bad data_. You're assuming every
+      data point is 'the same' in the sense that the only
+      difference between the data points is they have different
+      variances
+
+    * _mixture_: the data were actually generated from a mixture
+      of two different lines, and some of the data came from one
+      line and some data from the other.
+
+    * im assuming _INDEPENDENCE_. why? because I'm summing
+      a separate term for every data point, and none of the data
+      points refer to the other data points, which means the
+      noise is added independently to every data point. So theres
+      an independence going here that the sum `∑` represents.
+
+    * What if the terms _weren't independent_? Then the summation
+      thing for the chi-squared would become a matrix and it
+      would be like the dot-product of 2 vectors. (so you have to
+      switch up to linear algebra if the points become
+      non-independent)
+
+    * _negligible_ `x` errors. We only have to worry if the `y`
+      values meet the predictions. We never ask if the `x` values
+      meet the predictions. 
+        - If you think the `x` values are also noisy things get
+          much more complicated and you don't have as simple
+          a solution. (but actually this is often the case
+          really. When did you ever take data where you knew the
+          x-axis exactly?) Hogg:
+            > the only case I know is the Kepler data where the
+            > x-axis is the spacecraft clock, which really does
+            > have negligible uncertainty. But thats a rare
+            > case...
+
+    * model appropriateness assumption. We're assuming the
+      data are roughly drawee from a _straight line_. (and
+      assuming that theres zero scatter in the line, or the
+      line has no width)
+
+    * "estimator" meta-assumption: we're assuming all we
+      need is an _estimator_. ie. an estimator is good
+      enough. We're assuming all you need is to know the
+      slope and the intercept, and you don't need to know
+      a more complicated set of information like the full
+      posterior information about the slope and the
+      intercept. or the full shape of the likelihood
+      function. We only care about minimising the scatter and
+      getting the answer out.
+
+    * assuming there is _no prior_ information of value about `m`
+      and `b`. You're assuming all that matters is "this
+      likelihood" (the chi-squared formula above)
+        - ie. theres no other information you want to add in like
+          the slope `m` is more likely to be 1 than any other
+          value
+        - or if the slope got very large it would mean the
+          universe was only 100 yrs old and we wouldn't be here
+          etc etc.
+        - There might be other things you know that are relevant
+          but you're somehow assuming theres no such
+          information...
+        - and thats probably false. Its rarely true.
+
+
+# Next part of lecture (linear least square fitting)
+    - re-wrote the whole chi-squared thing as linear algebra with
+      2 vectors, and hence into a "design matrix"
+
+    - end up with a _column vector of differences_ between the
+      prediciton and the data
+
+
+    But because you have a big matrix the whole thing is
+    more flexible than the chi-squared formula... you can
+    have different values for the off-diagonal elements of
+    the matrix
+
+    "this is like an object that happens in physics or
+    geometry":
+    `[ỹ- AΘ]^T C^(-1) [y - AΘ]`
+
+    above is a geometric model that says what is the _distance_
+    between the data and my model?
+
+    Its written just like a _metric distance_ (squared
+    distances) in special relativity.
+
+    Also its very easy to take the derivative of this
+    (_calculus_ on linear algebra operators) and this allows
+    you find the optimum of this (wherever the derivative
+    vanishes)
+
+    The _best_ (min) value is just:
+
+    Θ\_(best)  = `[A^(T) C^(-1) A]^(-1)  [A^(T) C^(-1) ỹ]`
+                 ---------------------   ----------------
+                    2 x 2                   2 vector
+                    (positive               (takes the data
+                    definite                and projects it
+                    "shear"                 down to a 2 vector)
+                    tensor)
+
+                            "a projection and a shear"
+
+    * so its projecting your data down to 2 statistics of
+      the data and and then shearing them into your answer.
+
+    * the estimator above gives the best `m` and best `b`
+      (in a column vector?)
+
+                Θ\_(best) = `[m_best]`
+                            `[b_best]`
+
+    `[A^(T) C^(-1) A]^(-1)` is the covariant matrix for the
+    answer (ie it fully describes the posterior probability
+    for the problem, only true in this case for the
+    assumptions listed above. not true generally)
+
+    `[A^(T) C^(-1) A]^(-1) = [σm^2  σmb  ]`
+                            `[σmb   σb^2 ]`
+
+    Notice that this object proports to be the _uncertainty_
+    but it makes no reference to the data! Theres no `y` in
+    there. How can we know the uncertainty in our answer
+    without looking at the data?
+
+    - But I strongly recommend you use _jacknife_ or _bootstrap_
+      to get uncertainties on the slope and the intercept because
+      these methods do make reference to the data and do account
+      partially for the fact that the data are not perfectly
+      generated by our model.
+    - (easy to implement, good wikipedia pages, give an empirical
+      estimate of your uncertainties given your data are not
+      drawen your model)
+
+
+# in general
+    linear least squares fitting is such a good idea:
+    * its fast
+    * closed form
+
+
+# when are we happy with _only_ an estimator?
+
+    * _computationally "impossible"_: sometimes you need to
+      make a measurement many many times! Hogg and
+      Foreman-Mackey were finding single transits in kepler
+      data. They had to perform an enormous number of
+      hypothesis tests, for every location of a transit, at
+      any time, in any star we had to ask "yes or no?" So we
+      needed a yes/no estimator because we couldn't do
+      a full bayesian inference for every hypothesis you
+      could make about the planet.
+
+    * _initialise_: maybe you want to make a non-bayesian
+      estimator to get yourself _started_ on a baysian
+      inference.
+
+    * if your posterior pdf is very _simple_ ie. your data
+      is very informative, much more infromative than your
+      prior beliefs, and negligible error on your
+      estimates, then your esitmate is as good as any
+      posterior. In fact, there are proofs that as your data
+      become infromative the baysian inference and the
+      asymtotically efficient estimator from frequentism
+      actually converge! So when your data are very
+      informative youre wasting your time sampling.
+
+    * create _summary statistic_ or (lossy) _data
+      compression_: as you go forward with your analysis,
+      maybe all you need from the scatterplot of x's and y's
+      is just the slope. So you just carry forward the
+      _slope_. So the estimator (and an uncertainty on your
+      estimator) are sufficent to carry forward your
+      posterior beliefs.
+
+    * Decison making: "Go" or "No Go" decisions -> remember
+      decisions are always estimators. Theres no
+      probabilistic decisions. (you could do fully bayesian
+      decision making but it requires knowing things about
+      your utility that are very hard to know, so often
+      a well designed estimator beats any kind of bayesian
+      decision theory you can pull off)

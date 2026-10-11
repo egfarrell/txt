@@ -1,0 +1,322 @@
+$MY_VIDEOS/physics/bala_fundamental/07-Plane-Polar-Coordinates.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture - 07
+Plane Polar Coordinates
+
+The next thing we are going to do is to talk about how you form vectors from scalars, in
+particular I would like to talk about the cross product of two vectors. But, we need a few
+preliminaries before that and one of them is this issue of a coordinate frame or systems
+other than Cartesian coordinates.
+(Refer Slide Time: 00:38)
+
+So, let us again look at the simplest example which is a two dimensional plane and look
+at what we already know from elementary geometry which is the following. On the x y
+plane, the position of any point here is given by a position vector r which comprises in
+terms of unit vectors along the x axis which I believe is denoted by i in standard notation
+and along the y axis by j. The idea is to write this as x times i plus y times j meaning that
+you go x units multiplied by i the unit vector in x direction here and y units here and the
+resultant of this vector plus that vector is indeed this position vector.
+So, that is a standard way of writing this, but I will often write this also as just x comma
+y or sometimes depending on what I want to do I write it like this. You are all equivalent
+ways of writing the position vector of a point in two dimensions in a plane. Now, this is
+
+not the only way in which you can describe the position vector of a point, you could also
+say well why don’t you write it in terms of this distance from the origin to that point and
+the angle made with respect to some reference directions conventionally taken to be the
+positive x axis.
+So, if I call this angle phi, for a reason it should become clear when we go to three
+dimensions I do not want to call it theta at the moment, because I will reserve theta for
+another coordinate in three dimensional space. So, if I call this distance r in fact, I should
+use another symbol for r itself, but it does not a matter. So, position vector in a plane and
+a phi here I could as well tell you what this distance is and what this angle is measured
+from here in the positive sense and then the position vector, the point here is uniquely
+specified.
+So, the coordinates of any point in a plane can either be written down by telling you what
+it is Cartesian components x and y are or what it is plane polar components r and phi r
+and it is immediately clear that r squared is related to x and y by r square is x squared
+plus y squared and similarly phi or rather tan phi is equal to y divided by x. In other
+words, the tangent of this angle is the perpendicular divided by the base in this fashion.
+So, if you like r is defined as the positive square root of x square plus y square, because it
+is a distance and it cannot be negative and phi is given by this quantity here. Then, the
+question arise us to what are the ranges of these quantities, just to remind you minus
+infinity less than x or y less than infinity. So, that is the range of the original Cartesian
+components on a plane running all the way unbounded both directions.
+On the other hand, 0 is less than equal to r less than infinity, because this distance cannot
+best be 0, the least value is 0 and on the other side it is unbounded and phi runs 0 less
+than equal to phi, phi 0 means you are on the x axis the point is on the x axis and goes all
+the way around up to 2 pi, but 2 pi is identified with 0, because you are back at the same
+point. So, I should really write this as less than 2 pi, so that the coordinate single value.
+So, these are the transformation rules from the Cartesian to plane polar coordinates. So,
+theta r and phi are called plane polar coordinates and these are the forward
+transformations rules, you give me x and y and this is how I find r and phi. So, this is tan
+inverse of y over x in this range, so you choose that branch of tan inverse y over x which
+is in the range 0 to 2 pi.
+Going in the other direction given r and phi what are x and y, well we remember this is x
+
+and this is y, x divided by this magnitude r is of course, cos phi. So, it immediately
+follows that the reciprocal relations to these two are x equal to r cos phi and y equal to r
+sin phi. So, you have either this set of relations going from Cartesian to plane polar or
+from plane polar to Cartesian, where this transformations here.
+Now, whenever you have such a mapping from one set of coordinates to another, it is a
+same plane let we talking about, but two different descriptions there are some things
+called mapping singularities. For example, the origin the point 0 comma 0 the value of
+the azimuthal angle phi is indeterminate, r is 0 that is the point at the origin. The origin is
+specified by simply saying r is 0 and there is no meaningful value of phi, it is
+indeterminate, here when x and y both go to 0.
+So, this is just a harmless singularity at this level, but it is there one should remember
+that it is there, for all other points. We have a unique phi and a unique r subject to this
+modular 2 pi restrictions here. Now, what about the unit vectors? Well, this is the
+interesting point, because if you have a point here I can still define a unit vector in the x
+directions, it is i and a unit vector in the y directions, that is j and they do not change as I
+move from one point to another. This one parallel to the x direction positive x directions
+in that parallel to the positive y direction and that is it.
+And we know that i and j are perpendicular to each other in the remains so everywhere
+and they are independent of where you are. So, if I go to ask what is the basis, the
+Cartesian basis vectors in at this point it would be this and this or at this point it would be
+this and this. But, I can have another set of unit vectors and here is where we start
+leading a proper notation I would like to use another symbol for the unit vector which is
+e, little e with the subscript to say in which direction it is or which coordinates it refers
+to.
+
+(Refer Slide Time: 07:32)
+
+So, from now on I am not going to use i and j, but instead I am going to write r is x times
+e sub x plus y times e sub y. To remain myself of the fact that this quantity here is what
+we called i and this is what we called j and this is to remain myself, that these are unit
+vectors in the x and y directions respectively. What would you write for r in terms of a
+unit vector in the radial direction? Well, the magnitude here a little r without a vector
+symbol and the direction of this position vector is this. So, there is a unit vector here and
+let me draw a neat figure.
+So, for an arbitrary point at distance r there is a unit vector in this direction which I
+should call e subscript r unit vector in this fashion, but to define the position of a point on
+a plane I need two pieces of information. So, I need a linear combination, I need the
+coefficients x and y for two mutually perpendicular vectors which form a basis in this
+plane. Well, actually you can use oblique axis also, but right now we are talking only
+about basis vectors which are perpendicular to each other is the simplest case.
+So, I need a vector at right angles to this and since this is the direction of increasing phi,
+this vector here is the unit vector in the azimuthal direction, increasing azimuthal angle.
+So, remember that this phi the polar angle in plane polar coordinates it is also called
+azimuthal angle and this unit vector here is e subscript phi. Now, I can write down what
+this r is in terms of these unit vectors, remember that the physical dimensions of r is
+length. So, you have to on the right hand side have a length, these things have no
+dimensions at all the unit vectors, this quantity here and this quantity here each of them
+has a dimensions of length.
+
+And of course, the vector r is the vector that starts here and ends here points in this
+direction. So, it is equal to the magnitude little r multiplied by unit vector in that
+direction, so it is equal to e sub r and nothing else. It would be incorrect to write
+something like e phi, it would be incorrect, it is dimensionally wrong in any case and you
+do not need it, it is not there, this already tells you what the position vector r is.
+So, therefore, this is the crucial point, if you write this in plane polar coordinates, then
+the radius vector to any point is just the magnitude of the radius vector which is the
+distance from the origin times the unit vector in the radial direction, that is this quantity
+and that is it. But, here comes a catch, here comes the point, if you go to some other
+point and ask, what is the unit vector? It is equal to e sub r here and the azimuthal vector
+is going to be e sub phi here.
+Unlike, Cartesian coordinates where the unit vector here was the same as the unit vectors
+here, they just transported rigidly from there to there. And therefore, our coordinate
+independent that is not true any longer both e r and e phi are dependent on where you
+are. So, you should really write this as e r of r comma phi e phi r comma phi, this is the
+characteristics of using coordinate systems other than Cartesian coordinate systems.
+Except for the Cartesian coordinate systems in any dimensional Euclidean space, all the
+other coordinate system will have unit vectors which have position dependent, which has
+of course, advantages as well as disadvantages. The advantage here is I can write it down
+very simply in the fashion, but the disadvantage immediately is that this is position
+dependent.
+Therefore, for instance if you are going to describe the position of a particle which is
+moving in this two dimensional space in this fashion, at this instant of time it is position
+is out there and this is the radius vector with the radial direction like that, at a later
+instant of time it is here with the position vector here, the unit vector in that direction.
+So, the unit vector also changes with time as the coordinate change with time and
+therefore, if I am going to compute velocities and so on, I must make sure that I also take
+into account the variation of this with time the unit vector. This is going to be important
+and it is going to prove to be an advantage as we will see later on. But, I hope this is
+clear that the unit vectors in the Cartesian system are in some sense rigid, they are fixed
+one some for all, independent of the coordinate of the position of the particle.
+But, the unit vector in any other non Cartesian system immediately is position dependent
+
+and we have to take that into account at all times. Having said that and talked about
+plane polar coordinates, we will go back now to two dimensional vectors or vectors in a
+plane and discover what kind of scalars we can form from it, from vectors and what kind
+of vectors we can form from it.
+(Refer Slide Time: 13:24)
+
+So, once again let us go back to this dot and cross products of vectors. The simplest of
+course, is the original dot product with which you are already familiar and we talking for
+the moment in two dimensions. So, two dimensional space the x y plane, if you like it is
+x y always. In this space, if you have a vector a and it is got components a sub x and a
+sub y and another vector b which has got components b sub x and b sub y. Then, the
+question that we can ask is can we form scalars from these vectors.
+We have already seen how to do that in the simplest case, I have already pointed out that
+a x and a y transform exactly like x and y under a arbitrary rotation keeping the origin
+fixed and that a x squared plus a y square is unchanged, it is a scalar. So, the rule of the
+game is that a dot a is defined as a x squared plus a y squared. So, you take this fellows
+square it, you take this fellows square it and this is if you like the square of the
+magnitude of this vector a. And that is the scalar we have seen that already that is a
+scalar, explicitly from the fact that x and y had those trigonometric transformations.
+Similarly, for b we have b squared equal to b dot b and it is conventional to write this as
+a square equal to this without a vector symbol and this guy here is b x square plus b y
+square, this is the scalar that is the scalar. But, now again using those trigonometric
+
+transformation laws, it is not hard to see that a x b x plus a y b y is also a scalar in
+exactly the same way.
+(Refer Slide Time: 15:47)
+
+And this is written as a dot product b and it is defined as a x b x plus a y b y and this is
+scalar. So, that dot product which puts a dot between two vectors is also called a scalar
+product, dot or scalar product. The dot product of a vector with itself which is a square of
+the magnitude of the vector is a special case of the more general definition that you give
+me any two vectors and then I form a dot product between them by multiplying similar
+components like components. So, a x with b x a y with b y are some over this sum the
+two of them and I get a scalar quantity here. So, that is one way a finding a scalar from a
+vector.
+If therefore, you had two points in space and one of them had coordinate r 1 and the
+other one had coordinate r 2. I could ask what are all the possible scalars you can form
+from r 1 and r 2 independent scalars functionally independent scalars of course, be r 1
+squared, r 2 squared and r 1 dot r 2.
+Now, what is the geometric meaning of this quantity here, well here is my coordinate
+system, here is my vector a, there is my vector b in this fashion and the angle between
+them let say it is theta then resolving a has a x cos whatever this angle is plus sin
+whatever this angle a y times sin at similarly for b it is a trivial matter to show that this
+quantity is also equal to a times b times cos theta.
+And you can do this for easily by writing down the transformation rules or some
+
+elementary trigonometric to show that a dot b is the same as a b cos theta. So, here is a
+quick way instead of doing this which is a little messy here, the quick way of finding the
+dot products of two vectors is to take the magnitudes of the two and multiply them and
+multiply the result with the cosine of the angle between them.
+Now, at least to an important and very, very interesting identity to like it is called an
+inequality, it is quite clear that by the way this is magnitude of a, this is magnitude of b
+and it also says that cos theta here is an angle which are ((Refer Time: 18:54)) 0 to
+whatever pi over 2 pi and the magnitude of cos theta is always less than equal to 1. So, it
+immediately tells you that the magnitude of a dot b which is a real number which could
+have both sin’s, because when theta is in the second quadrant or third quadrant and so on
+it is a negative.
+So, this quantity could actually be negative there is nothing it says that they should be
+positive quantity. Because, these individual components could have either sign positive
+or negative. So, it also says that if you took the magnitude of a dot b this is equal to a
+times b times the magnitude of cos theta, because a and b themselves cannot be negative
+the magnitudes of vectors and this is less than or equal to a times b. Because, the
+magnitude of this is less than or equal to 1, this is the very important in quality it is got
+many names at this level it is called the Cauchy inequality. Because, and it simply at this
+level expresses is the fact that the magnitude of the cosine of the angle cannot exceed
+unity, it is caught to be between 0 and 1 including of course, the end points. Now, the
+simple question is when does this become equal to a, b; obviously, when the magnitude
+of cos theta is equal to 1.
+
+(Refer Slide Time: 20:35)
+
+And when does that happen, it happens either when a is out here and b is out there the
+same direction. So, theta 0 or when a is in this direction and b is in this direction, this
+would correspond to theta equal to pi and this would correspond to theta equal to 0. So,
+what is that mean that implies that b is either parallel or anti parallel to the vector a, in
+other words b is some number times a, because that number could be negative, if it is anti
+parallel and positive if it is in the same direction if it is parallel.
+So, it says b is not in a different direction in the plane, but a and b are co linear as soon as
+two vectors are co linear, then the magnitude of the dot product become equal to the
+product of their magnitudes in this side. So, this is a very important observation and it
+generalizes to other dimensions, it essentially says that when two vectors a linearly
+dependent of each other, namely one cannot be written as a product of number times the
+other vector plus one positive or negative number.
+When this inequality strictly applies and the equality of implies if and if the two vectors
+are co linear with each other that is the very important observation which just got many,
+many generalizations including the uncertainty principle in quantum mechanics. So, it
+finally arrives from a generalization of this simple observation here. So, now, what we
+have this elementary thing done or let us look at what else we can do with these two
+vectors. The other thing we could do and instantly I need a little bit of a more elegant
+notation, because I am going to talk about this in handle higher dimensions and we will
+come to that in a minute. I have two quantities here and two there these two vectors I
+could form the following combination.
+
+(Refer Slide Time: 22:49)
+
+I could form a x by minus a y b x and ask what does it transform like, what does this
+quantity transform like I know the transformation for a x and a y and b x and b y. Now,
+what is this combination by linear combination look like? Well, incredibly enough this
+quantity also looks like a scalar, this also transforms appears to transform like a scalar,
+but it is not the same scalar as the dot product, this guy here dot here a dot b was equal to
+a x b x plus a y b y.
+But, this also transforms like a scalar, but it is not the scalar product and it looks like
+something part of a more general structure of some kind. And because it is two
+dimensions, it is a little deceptive it appears in this very, very simple form, but this is
+caught a meaning here which you will become hereafter we talk about what happens in
+three dimensions.
+It turns out that this quantity is the analog of the so called vector product of cross product
+in three dimensions which produces a vector out of two vectors by certain prescription
+vectors in the case of two dimensions, you do not have enough components you have
+only two components. And therefore, the same prescription leads you to a single quantity
+of this kind and it turns out to be a scalar in this case.
+But, it is not an ordinary scalar in this case and let me explain what is happening here. If
+for instance, you said instead of a coordinate system which behaves like this, instead of
+rotating this coordinate system, suppose I said I reflect this coordinate system about one
+of the axis. So, my new axis x prime and y prime, if I reflect about the y axis then this is
+
+what my new axis would be x prime, but y prime would be the same as y. Because, I am
+just reflect in my put in a mirror here, so this axis just reflected in this side.
+Now, this coordinate system cannot be obtained from this coordinate system by any
+rotation, because a moment you rotate x to bring it to this side y also rotates downwards
+with here. So, this transformation is not a rotation, the transformation here is to say that
+if I had a point out here, this point in the new coordinate system this x and y would go to
+x prime, y prime which would be equal to minus x and y. So, the x coordinate gets
+reflected, but the y coordinate does not change at all.
+Now, this two is not going to effect to definition of a scalar, because the distance from
+the origin does not change x square plus y square is the same as minus x the whole
+square plus y square here. So, what is happening in this case is that one components
+changing sign in two dimensional space is not a rotation, is not the real number
+obtainable by rotation of the axis and then a transformation of this kind is called an in
+proper transformation as suppose to a proper rotation here.
+And now what we will see next is that y this quantity has specific transformation
+properties under that kind of transformation does not change, this kind of quantity will
+change it will in fact, become minus itself and therefore, this is not quite scalar which is
+sort of pseudo scalar and the word in fact, is pseudo scale. So, even within scalars we
+have a little bit of sub classification depending on what these quantities do and a
+rotations
+
+and
+
+in
+
+proper
+
+transformations
+
+like
+
+reflections
+
+which
+
+to
+
+are
+
+valid
+
+transformations.
+Because, when we say the loss of physics should not depend on how you oriented
+coordinate system, they should also not depend on whether you choose a coordinate
+system which is right handed or left handed should it matter. So, as long as that is true
+you need to be able to deal with quantities which also have specific transformation
+properties under these in proper transformations.
+And here is one such example will come back to this, because this is will much clearer
+after we talk about what happens in three dimensional space. So, the next task is to go to
+three dimension vectors and ask what are the possible kinds of multiplications of vectors
+that you could have and how do they transform among each other. So, just remind you
+once again and when we talked about three dimensions, we are going to get something
+called a vector product or a cross product of two vectors.
+
+But, it will turn out that the analog of the cross product in three dimensions, in the case
+of two dimensions is something which produces really a scalar and not a vector. So, took
+at a long story short, the idea that the cross product of two vectors produces another
+vector is specific to three dimensional space, it is not to in two dimensions, it is not true
+and any dimensionality higher than 3 like 4 or 5 or 6 or anything like that.
+So, this is the peculiarity of three dimensions a very important peculiarity in will see
+what roll it place and whatever we are going to do. So, we will talk next about three
+dimensional vectors and how to find quantity which transforms like a vector when you
+take two vectors and combined them to what is called a cross product that is the next
+task.
+
+

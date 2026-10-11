@@ -1,0 +1,789 @@
+
+### Intro to Descriptive Stats
+    - Udacity page https://www.udacity.com/course/intro-to-descriptive-statistics--ud827
+
+### Contents
+    -  Lesson 01 - Intro to Research Methods
+    -  Lesson 02 - Visualising Data
+    -  Lesson 03 - Central Tendency (mean, median...)
+    -  Lesson 04 - Variability
+    -  Lesson 05 - Standardizing (z-scores)
+    -  Lesson 06 - Normal Distribution
+    -  Lesson 07 - Sampling Distribution
+
+
+# lesson 01 - Intro to Research Methods
+
+    * _Observational_ Studies (e.g.: scatter plot) Used to
+      show relationships only, where we take note of already
+      existing data.
+
+    * _Surveys_ - people are the subjects and we ask them
+      questions we're interested in the answer to.
+
+    * _Controlled Experiments_: we want to show causation.
+      ie. that one particular variable causes another.
+
+    * key ideas:
+        - constructs
+        - operational definitions
+        - controlling for
+        - lurking variables
+        - population mean
+        - sample mean
+        - sample error
+
+
+### when to _trust_ survey results
+    Ask yourself:
+    * good sample size?        how _many_ people were surveyed?
+    * representative sample?  _who_ was surveyed?
+    * sound methodology?      _how_ was the survey conducted?
+
+### constructs
+    * memory
+    * happiness
+    * guilt
+    * love ...
+    - Its very difficult to _define_ and _measure_ these.
+    - Many different approaches to measuring a construct.
+
+### how did BBC _measure_ memory?
+    Answer: the percent of faces correctly recognised from
+    test 1 and 2
+    So the _operational definition_ is when the percent of
+    faces recognised is higher.
+
+### Which are CONSTRUCTS?
+    * Gallons of gasoline?    No. Measured via gallons.
+    * Intelligence?           Yes. Measured via IQ test.
+    * Effort?                 Yes. Measured via minutes of homework, GPA etc
+    * Age?                    Depends. If pure number of years then no, but
+                              "maturity" or "wisdom" could be a construct.
+    * Hunger?                 Yes. Measured: how often tummy grumbles
+    * Annual Salary in USD?   No. Measured: number of dollars
+
+### Constructs:
+    So each construct needs an _operational definition_
+    which allows measurement. (But there are many possible
+    operational definitions.) Then once a construct is
+    measured, the data can be analysed.
+
+### Udacity study: does SLEEP influence memory?
+    Using the BBC online face test, they identified all
+    these factors:
+    * time of day test was taken (_important_)
+    * your stress level
+    * 5-minute breaks
+    * your age (_important_)
+    * not paying attention
+
+    If we hold one factor _constant_, we would trust the
+    test results more. e.g. if everyone took the test at the
+    same time of day (in their time-zone)
+
+### lurking variables
+    these are extraneous factors that can influence the
+    outcome of a test/measurement that we may not have
+    thought about.
+
+### Averages
+    population parameter:
+        average for the whole population: `μ`
+    sample statistic:
+        average for the sample:  `x̄` (x bar)
+
+### sampling error
+    difference between population mean and sample mean
+    μ - x̄
+
+### Earliest writing about random
+    John Venn (1888): Maybe the best example of the
+    scientific meaning of _random distribution_ is given by
+    the arrangement of rain drops in a shower. No one can
+    give a guess at any instant where the next drop will
+    fall, but we know a sheet of paper will gradually become
+    uniformly spotted over. And if we mark out any two equal
+    areas on the paper, these would gradually tend to be
+    struck equally often.
+
+    So? when we have a random sample, each person in the
+    population has an _equal chance_ of being selected.
+
+### scatterplots
+
+              ^
+              |                   *  *
+       memory |                   *
+       score  |                 *
+              |              *   *
+              |              *
+              |           *
+    _outcome_ |         *
+    dependent |
+    variable  |
+              |
+              ------------------------------>
+                         Hours slept
+
+                        _predictor_
+                        independent
+                        variable
+
+    Based on this data, the _trend_ is the more you sleep
+    the better your memory score. But this doesnt say that
+    sleep _causes_ a higher memory score.
+
+### "control"
+    From the plot above, it looks like sleep influences
+    memory test scores, but many other factors can also
+    influence memory. We would have to _control_ for
+    _lurking_ variables.
+
+    The plot shows a relationship between hours slept and
+    memory score, but that doesn't mean hours slept _causes_
+    a higher score.
+
+    > Correlation does not imply causation!
+
+### Surveys
+    Advantages:
+    * one of the easiest ways to get info on a population
+    * fairly inexpensive
+    * can be conducted remotely
+    * anyone can access and analyse survey results
+
+    Disadvantages:
+    * untruthful responses
+    * biased responses
+    * _response bias_: respondants don't understand the question
+    * _non-response bias_: respondants refuse to answer
+
+
+### Controlled Experiments:
+    * Researchers want to test the effects of sleep
+      medication.
+    * A _random_ sample of people are selected (as opposed
+      to a _convenient_ sample)
+    * An active or inactive pill (placebo) is randomly
+      assigned to each participant. (to have a comparison
+      control group to those who took the active pill)
+    * The experiment is _double-blind_.
+
+### Factors controlled for:
+    * The time participants took the pill - everyone took it
+      at the same time.
+    * The place where participants slept - the all slept at
+      the lab.
+    * What the pill looks like - same for everyone.
+
+### Factors _not_ controlled for:
+    Gender and age weren't controlled for. However we can
+    minimise the impact of these variables on the results.
+
+    Say for example, all women were given the active pill
+    and all men the placebo. Then if people who took the
+    active pill slept better we wouldn't know if it was
+    because of the medication in the pill or maybe women
+    just sleep better than men.
+
+    Now in this experiment we're not controlling for the
+    * Gender
+    * Age
+    variables but we can minimise their impact on the
+    results by using _random assignment_. This means
+    everyone has an equal chance of being assigned to either
+    of the 2 treatments. Randomisation works best with
+    larger groups.
+
+### within subject design
+    - Do 2 tests on the same subject.
+    - E.g. have a person do the memory test after a little
+      sleep.
+    - Then get the same person to do the test after lots of
+      sleep.
+    - By using the same subject, we keep a lot of factors
+      constant.
+
+
+# lesson 02 - Visualising data
+------------------------------
+
+    Country     Frequency   Relative Freq   Percentage
+    -------     ---------   -------------   ----------
+    Canada      2           0.04 (2/50)        4%
+    China       12          0.24              24%
+    England     2           0.04               4%
+    Germany     3           0.06               6%
+    India       8           0.16              16%
+    Japan       8           0.16              16%
+    Mexico      3           0.06               6%
+    Pakistan    1           0.02               2%
+    Sweden      1           0.02               2%
+    USA         10          0.20              20%
+    ---         ---         ----              ---
+    total       50          1.00             100%
+
+
+### relative frequency
+    can be written as proportions:
+        `(# observations) / (total observations)`
+    All proportions will be between (or equal to) 0 and 1
+
+### percentages
+    sometimes easier to work with than proportions because
+    you work with whole numbers
+
+### change number of _categories_
+
+    Continent     Frequency   Relative Freq
+    ----------    ---------   -------------
+    N. America    15          30%
+    Asia          29          58%
+    Europe        6           12%
+    ----------    ---------   -------------
+    total         50          100%
+
+    Now we have simplified information but we _lost_ some
+    info in the process. i.e. we now have few categories.
+
+    When creating frequency distribution tables, there can
+    be a trade-off between convenience and informativeness.
+
+### now histograms and bin sizes!
+    Have 50 ages of udacity students. How will we group them
+    by frequency?? Use a bin, or interval or bucket!
+
+    Age     Frequency
+    ---     ---------
+    0-19    19
+    20-39   21
+    40-59   5
+    60-79   5
+
+    So we have 4 bins of size 20.
+
+    Then they created a histogram from this data and
+    experimented with lots of different _bin sizes_.
+
+
+### key difference: histogram versus bar graph
+    - They plotted a histogram of udacity student ages and
+      a bar graph of the continent table above. They asked:
+      whats the difference?!
+
+    - A bar graph plots _distinct categories_. i.e. the
+      x-axis is categorical or qualitative.
+
+    - For a histogram, the variable on the x-axis is
+      numerical and quantitative. Also you can change the
+      bin size for age data but not for the continent bar
+      graph.
+
+    - Also: on the bar graph, watch the scale of the y-axis.
+      Is it truncated?
+
+### mens body fat percentage histogram
+    The graph (histogram) is _normally distributed_. It has
+    one peak called the mode. The shape is roughly
+    symmetrical (if you were to fold it across the peak it
+    would cover itself).
+
+
+### examples of positively skewed distributions
+    positively skewed:
+        Udacity student ages - most students are younger
+    positively skewed:
+        Income distribution in USA, most income is lower
+
+
+# Lesson 03 - Central Tendency
+------------------------------
+
+### two graphs
+    They started off wtih 2 histograms:
+        * nurses salaries
+        * geography majors salries
+    The nurses was higher and thinner around 50-60k. The
+    geography majors was lower and fatter, around 40k-55k
+    These are interval estimates of the average salary.
+    But you want to summarise the dataset with a number?
+
+### mode:
+    - value which occurs most often. ie the value with the
+      highest frequency. In this example, the highest _bin_
+    - ie the mode is the _range_ that occurred with the
+      highest frequency cos we can't see individual
+      salaries. Note: as you change the _bin size_, you
+      change the _mode_ too!
+
+### median:
+    value in the middle mean
+
+### average:
+    statistic rests at a specific spot in the middle of the
+    distribution.
+
+### uniform distribution
+    you live in a place with the same rainfall every month.
+    There is _no mode_ for this type of distribution!
+
+### multi-modal
+    data is considered multi-modal when there are two ore
+    more distinct trends. They drew a _bi-modal_ histogram
+    of foot size. There was a peak at size 7 and size 9.
+    i.e. the most common female and male foot size showed
+    up. my question: so they're using "mode" even for bins?
+    Not exactly for the _value_ that occurs most frequently?
+
+### Mode: true or false
+
+    The mode can describe any type of data, numerical or
+    categorical? (True)
+
+    All scores in the dataset affect the mode? (False)
+        _22_ 54 23 _22_ 31 17 _22_
+
+    - Say you deleted 31, then the mode would still be 22!
+    - Say you added an extreme value of 1000. The mode would
+      still be 22!
+
+    If we take a lot of samples from a population, the mode
+    will be the same in each sample. (false)
+    This is key. Because the mode changes with each sample,
+    we can't use the mode to infer something about the
+    population.
+
+    There is an equation for the mode. (False)
+    We have to count through various data points, or look
+    for the highest bin, but we can't use an equation. Thats
+    why the _mean_ is more useful.
+
+### formula for the mean:
+    They started with english words:
+        `sum (salary of all geography majors)`
+        `------------------------------------`
+            `(number of geography majors)`
+
+    and reduced it to the formula for a sample:
+            `∑ Xi`
+       `x̄ =  -----`
+             `n`
+
+    and a formula for the population
+            `∑ Xi`
+       `σ =  ----`
+             `N`
+
+
+### properties of the mean
+    * all scores affect the mean (see-saw picture)
+    * the mean can be described by a formula
+    * many samples from the same population will have
+      a similar mean (important)
+    * the mean of a sample can be used to make inferences on
+      a population
+
+    disadvantage:
+    * the mean _will change_ if an extreme value joins the
+      dataset. ie. outliers create skewed Distributions
+
+### median
+    * first put the data _in order_! ie. _rank_ the
+      data.then take the middle value.
+    * this splits the data in half.
+    * its more rubust.
+    * if even number of data-points, take the average of the
+      middle 2.
+    * can be good for outliers.
+
+### measures of centre
+    - used to make good decisions
+    - used to make comparisons
+
+### interesting question
+    They graphed a positively skewed disribution and asked
+    you to place the mean, median and mode on the graph.
+
+### last bit of lesson 03:
+    analysed facebook friends with Excel
+
+### formula for the median
+    if n is even:
+        `X-{n/2} + X-{n/2}`
+        `-----------------`
+               `2`
+
+
+
+# Lesson 04 - Variability
+-------------------------
+    * standard deviation
+    * bessels correction: n-1
+    * use the mean difference squared, rather than the
+      absolute mean difference!
+    * watched this on the S7 s-bahn to the campsite
+
+
+
+# Lesson 05 - Standardizing
+---------------------------
+
+
+### shape of distribution
+    What we're interested in, is the _proportion_ of data
+    values _less_ than or _greater_ than a certain value in
+    the dataset. So if I say my chess rating is 1800 you
+    don't know what that means until you see the shape of
+    the chess ratings distribution and the proportion thats
+    less.
+
+### Relative Frequency distribution
+    If we're interested in a proportion, we should first
+    convert all absolute frequencies to a relative
+    frequency.
+    They had a facebook friends graph, with sample size
+    n=1000 and various absolute frequencies.
+    Then they converted it to relative frequencies,
+    basically by dividing by 1000. (because that was the
+    sample size)
+
+### Bin size problems
+    Ideally they would like the bin size to be as small as
+    possible to really pin-point how many facebook friends
+    someone has compared to the rest of the distribution.
+    But if you decrease the binsize to 1, then you get
+    a _uniform distribution_ with either 0 or 1 in each
+    bin!!
+
+### predicament
+    We want a small binsize to have as much info about data
+    points relative to the rest of the distribution, but if
+    we have a tiny binsize, we start to lose the _shape_ of
+    the distribution.
+
+    But if we have a large binsize, we can't tell the
+    proportion less than any data value.
+
+### solution to the predicament
+    We use a _theoretical_ model for our distribution that
+    follows a smooth curve for relative frequency. The
+    smooth _continuous curve_ can be described by an
+    equation that allows us to _calculate_ the proportion
+    between any two values on the x-axis.
+
+### Normal Curve
+    The area of the relative frequency histogram was 1, and
+    the area under the theoretical normal distribution is
+    also 1.
+
+    In this theoretical model, the mean, median and mode are
+    _exactly_ equal. This doesn't normally happen in real
+    life.
+
+### Bell curve: standard deviations
+    Approximately 68% of the data points lie within one
+    standard deviation of the mean. 95% lie within two
+    standard deviations.
+
+### z score
+    The location of particular points along the x-axis is
+    often described in terms of standard deviations. We can
+    convert any score along the x-axis into the _number_ of
+    standard deviations it is away from the mean. Then if we
+    know something is one standard deviation (in the
+    positive direction) away from the mean, then we know
+    approximately 84% of values are less than that value.
+    (50% + (68%/2))
+
+### twitter followers v facebook friends
+    the girl has `x` amount of friends but the boy has a lower
+    number `y` of twitter followers. Which is more unpopular?
+    Rather than looking at the raw numbers, or even each
+    number as a percentage of the average, its better to
+    look at the number of standard deviations each number is
+    away from the mean.
+    Thats because the distribution of facebook friends is
+    higher and thinner than the wider twitter distribution.
+
+    It works out that the girl is 3.53 SD away from the
+    facebook mean and the boy is 2.57 SD away from the
+    twitter mean.
+
+    Now _nice point_: when we standardise the distributions
+    with zero as the mean (reference point), the girls "dot"
+    is further away from the (standardised) mean than the
+    boys "dot" is.
+
+### calculating a standardised score
+    convert a raw score into a number of standard deviations
+    away
+    `z = x - μ`
+        `-----`
+          `σ`
+
+    we can start with any normal distribution and
+    standardise it.
+
+### whats a negative z-score mean?
+    that the original value (x) is less than the mean.
+
+### z-score distribution: mean
+    the new mean will always be _zero_ because we're
+    subtracting the mean from every data value which has the
+    effect of shifting the entire distribution left, until
+    the new mean is at zero. Note: the _shape_ of the
+    distribution is not changed.
+
+### z-score distribution: standard deviation
+    the new SD of a z distribution will always be 1. Why?
+    Well the new mean will be 0.
+    So the z-score of σ will be:
+    `z = σ - 0`
+        `----- = 1`
+          `σ`
+
+
+### proper name
+    what I call the "z-score distribution" is called: the
+    "standard normal distribution".
+
+### scaling and more scaling
+    you can take any distribution, standardise it to the
+    standard normal distribution, and then re-scale it to
+    another (normal) distribution.
+
+    e.g. you have a facebook friends distribution with
+    * μ=190
+    * σ=36
+
+    Standardise this, and then re-scale to a new
+    "popularity" distribution between 0-100 with:
+    * μ=50
+    * σ=10
+
+    But for any particular score (data point) on any of the
+    3 distributions, you still have the same _proportion_
+    less on the graph. So even though everything is
+    re-scaled, all proportions stay the same.
+
+
+# Lesson 06 - Normal Distribution
+---------------------------------
+
+### PDF - probability density function
+    We know from our normal distribution that if we know
+    where on the x-axis a value falls _in terms of standard
+    deviations_ we can determine the percentage (proportion)
+    less than or greater than any value.
+
+    Remember we use a theoretical curve to model the
+    relative frequencies. And the relative frequencies sum
+    to 1 so the  the _area under the curve_ sums to one as
+    well. Because the theoretical curve is taken/generated
+    from the relative frequencies.
+
+### model a curve
+    When we model a histogram/frequency table, the absolute
+    raw frequencies turn into a relative frequency. And this
+    is where probablities start to come in. And these
+    modelled curves become PDF's: Probability Density
+    Functions. We can visually model statistical concepts.
+
+### Normal Distribution - PDF
+    - Because this curve is generated using an _equation_, we can
+      use calculus to find the area under the curve. 
+    - And once you know the area under the curve, you can start
+      to answer questions about what proportion is above/below
+      a certain value.
+
+### INTEGER standard deviations
+    - using the 68%/95% rule, if a question has an integer number
+      of standard deviation, you can quickly calculate lots of
+      areas, The splits are:
+
+    -       |       |      |      |        |
+    -  2.5% | 13.5% |  34% |  34% |  13.5% |   2.5%
+    -       |       |      |      |        |
+    -       |       |      |      |        |
+    -      _2σ_    _1σ_   _μ_    _1σ_     _2σ_
+
+### NON-INTEGER standard deviations (z-score table!)
+    - If you have a non-integer standard deviation value, then
+      you can't use all your 68% values etc as above.
+    - But no worries. Mathematicians have tabulated the _area_
+      under the curve _LESS_ than a particular z-score value.
+
+# Lesson 07 - Sampling Distribution
+-----------------------------------
+
+### Normal distribution - comparing single values
+    By knowing the mean and SD of a normally distributed
+    population we can compare any value in that population
+    to the rest of the population by comparing the percent
+    less than or percent greater than that _value_.
+
+
+### Normal distribution - comparing samples
+    how can we campre a sample of a particular population to
+    other samples from that population?
+
+### important point
+    To find out _where_ a value falls in a population, we need
+    to know the:
+    * mean
+    * and standard deviation
+    of that pouplation.
+
+### The population
+    Population: 1,2,3,4
+    Population mean:  2.5
+
+    Pop     Mean    SS      Variance(σ^2)    SD (σ)
+    ---     ----    --      -------------    ------
+    1               2.25    1.25             _1.118_
+    2        2.5    0.25
+    3               0.25
+    4               2.25
+
+    So the _population SD_ is: 1.18033
+
+### The sample
+    Distribution of Samples means for all samples
+    of `n=2`. (i.e. 16 samples in total)
+
+
+    Sample  Mean    SS      Variance(σ^2)    SE
+    ------  ----    --      -------------    --
+    1,2     1.5     2.25    0.625            _0.79_
+    1,1     1       1
+    1,3     2       0.25
+    1,4     2.5     0
+
+    2,1     1.5     1
+    2,2     2       0.25
+    2,3     2.5     0
+    2,4     3       0.25
+
+    3,1     2       0.25
+    3,2     2.5     0
+    3,3     3       0.25
+    3,4     3.5     1
+
+    4,1     2.5     0
+    4,2     3       0.25
+    4,3     3.5     1
+    4,4     4       2.25
+            ----
+          _M=2.5_
+
+   Note: The sampling distribution mean `M = 2.5`,
+   is the same as for the actual population
+
+   And the sample standard deviaion, or standard
+   error is: _0.79_
+
+### key relationship:
+    Whats the ratio of the population standard
+    deviation to the sample standard error?
+
+     σ      1.118
+    ---- =  ----- = 1.414 = sqrt(2)
+     SE     0.79
+
+    i.e. the square root of the sample size!
+
+    in other words:
+           σ
+    SE = ------
+         sqrt(n)
+
+    And its the central limit theorem that guarantees this
+    equation!!??
+
+### Whats so good about the formula above for SE?
+    Now we can find out how the _mean of a sample_ relates
+    to the mean of any other sample from the same
+    population.
+
+    Because now we can work out the standard deviation of
+    our sample. And this standard deviation is called the
+    standard error SE.
+
+### note about sample size
+    if you choose samples with a size of n=1 then you'll
+    simply just re-create the original population.
+
+### Uses of the sampling distribution
+    Because we know the sampling distribution of sample
+    means we can see where any particular sample mean falls
+    along this distribution. Then we can say if this
+    particular sample is typical or not.
+
+    The sampling distribution also allows us to work out
+    probabilities. E.g. we wanted to see the probably of
+    getting an average of at least 3 when rolling two
+    tetrahedron dices. Well we built a sampling distribution
+    from all samples of size n=2 (see below) and then got
+    the area under the curve for anything > 3.
+
+
+      freq ^
+           |
+           |
+           |
+         4 |           #
+         3 |        #  # _#_
+         2 |     #  #  # _#__#_
+         1 |  #  #  #  # _#__#__#_
+           ------------------------->
+              1     2  M  3     4
+
+                     average of
+                     two dice throws
+
+        We can see from our (discrete) sampling distribution
+        that the probability of rolling an average > 3 with
+        two dice is (3+2+1)/16 = 6/16
+
+### taking KLOUT samples of 'n=35'
+    First they calculated the sampling distribution of all
+    samples of n=35 of KLOUT users. How did they
+    create this sampling distribution? They assumed:
+
+    * the sampling distribution would be normally
+      distributed (from the CLT)
+    * that the mean of sample means (M) would be
+      the same as the KLOUT population mean which
+      they knew already.
+    * that they could calculate the standard
+      deviation of the sampling distribution of
+      the means (the standard error) using the
+      formula: SE = σ/sqrt(n)
+
+    Then they took a sample of `n=35` of KLOUT
+    users who used the bieber twitter app. They
+    found that the mean of this sample was 40. How
+    does this compare to other sample means of
+    n=35. i.e. where does the value 40 appear on
+    the sampling distribution?
+
+    Well they converted the 40 into a z-score and
+    then worked out (1 - z-probability). They
+    found this had a "low" proability of 0.2...
+    i.e. its somewhat unlikey to have selected
+    a sample from the whole KLOUT population with
+    a mean KLOUT score of 40. So maybe the bieber
+    tweeter app is playing a role in increasing
+    a persons KLOUT score.
+
+    Then they increased the sample size to 250
+    (klout people who also used the bieber app).
+    The larger sample size really narrowed the SE
+    and gave a much lower probability (p=.0119)
+
+
+### misc quick notes
+    central limit theorem.
+    standard error: SE = σ / sqrt(n)
+    where n = the sample size.

@@ -1,0 +1,367 @@
+$MY_VIDEOS/physics/bala_fundamental/06-Scalars,Victors-and-All-That.flv
+# 06 Scalars, Vectors and All That
+
+- I'd like to give the proper definition of scalars and vectors
+  after motivating the reason for them.
+
+- First, lets recall the naive (school) definition:
+    - a scalar only has a magnitude
+    - and a vector has both a magnitude and direction
+
+- But these definitions aren't adequate and I'll puncture them. 
+
+- Look at a particular point `p` in a coordinate plane with
+  `x` and `y` coordinates:
+    - $MY_IMAGES/physics/bala-fundamental/lec06-001.jpg
+
+- Now is `x` is scalar?
+    - Well `x` has a sign, it has both plus and minus
+      possibilities. And is this quantity `|x|` a scalar? It only
+      has a magnitude and runs from zero to arbitrarily high
+      values. So is this a scalar?
+    - And the answer is no, it's not a scalar (!).
+
+- And if you think a vector only has magnitude and direction, the
+  question is:
+    - direction with respect to what?
+    - And the answer is:
+    - direction with respect to some fixed coordinate system.
+
+- But there's no special coordinate system!
+- ... and who gives you this coordinate system anyway!
+
+- So, the point is: these naive definitions are inadequate.
+  They're convenient once we know what we're talking about - but
+  they're not rigorous and are highly incomplete.
+
+- So we need proper definitions and an explanation of why we use
+  them ...
+
+- Now, here's Newtons 2nd law in a fixed coordinate system `S`:
+- $MY_IMAGES/physics/bala-fundamental/lec06-002.jpg
+
+- The directions `F` and `A` are specified with respect to
+  a fixed origin `O` and axes `x` and `y`. (simplest case,
+  2 dimensions)
+
+- And the quantity `F` has two components: `F_x` and `F_y`.
+- It's clear these components are wrt the origin `O` and specific
+  to this reference frame.
+
+- But another observer could examine the same physical force, on
+  the same physical body, with the same mass, from another
+  reference frame `S'` (primed).
+- $MY_IMAGES/physics/bala-fundamental/lec06-001.jpg
+
+- This primed coordinate system `S'`, has primed origin `O'` and
+  primed coordinate axes `x'` and `y'`.
+- The question: what is an observer in `S'` going to observe?
+
+- Maybe they'll see a different result than the other `S`
+  frame(?!) But our textbook just says `F = m A` without saying
+  which coordinate system.
+
+- So logic says it's probably independent of coordinate system.
+
+- In other words,  for the primed `S'` frame, we presume the rule
+  is: `F' = m A'`. ie the same form in all reference frames.
+
+- (Aside: We made an assumption here that `m` doesn't change and
+  it's a scalar. So, in some sense I'm already begging the
+  question.
+    - But assume that `m` is the naive definition which is the
+      inertial mass. It's a property of the substance and has
+      nothing to do with coordinate systems)
+
+- So if we say the law has the same form between different
+  frames, then it must be expressed by quantities whose
+  _transformation property_ is encoded in the quantities
+  themselves.
+
+- In other words, the vector quantities `F` and `A` must carry
+  a dictionary in their very meaning so if
+    - you tell me how `S'` is situated with respect to `S`,
+    - and give me a rule `F = mA`,
+    - then I can predict `F'_x, F'_y, A'_x, A'_y` for you.
+
+- In other words, if you want the physical law to be unchanged in
+  form, (to be form invariant under coordinate transformations),
+  you must express them in terms of quantities whose
+  transformation law is known, prescribed, once and for all.
+
+- Such quantities are called _covariant quantities_.
+
+- This is such an important principle (its at the root of modern
+  physics) that I am going to write it down:
+    - $MY_IMAGES/physics/bala-fundamental/lec06-003.jpg
+    > Physical laws are expressed in terms of covariant
+    > quantities, so that they remain FORM invariant.
+
+- Now, thats a lot of words for something straight-forward. It
+  just says we believe more and more generally that our laws are
+  observer independent.
+
+- Modern physics is an effort to discover laws of nature in such
+  a manner that they are completely independent of the observer's
+  special status.
+
+- For that we need to express laws in a form that doesn't change
+  going from one observer to another. And to do that you need to
+  express them in terms of quantities which carry their own
+  transformation laws, their own dictionary. Now scalars and
+  vectors and generalizations are such quantities under specific
+  kinds of transformation. This is what I'd like to demonstrate
+  today.
+
+- I repeat... the reason to use scalars, vectors. In particular
+  vectors you can write in 3 dimensions, you can write
+  3 equations in one line and you write in terms of vector, it is
+  not to save space. It's to make sure, you are expressing form
+  invariant physical laws in a manner where you can translate
+  from one frame to another or from one observer to another.
+
+- In this case, if `f` and `a` are vectors in the definition I'm
+  going to give, then you're guaranteed `F = ma` is
+  form invariant under the transformations from one observer to
+  another,  or one frame to another under which these quantities
+  are vectors that set of transformations will be seen shortly
+  and under that set of transformations you are then assure that
+  this law will not change its form, numerically yes it will
+  change.
+
+- Because, any acceleration you measure in this frame, the
+  numerical values you have for these components at any
+  instance of time would be different from the numerical values
+  you have in this frame as would the force components. 
+
+- But, what you are assured is that if you give me `f` and `a`,
+  the components of `f` and `a` in this frame and tell me how
+  `o'` is related to `o`, how far is it move, how much it rotated
+  then I'll predict for you that in this frame you will
+  discover `f` prime is `m` a prime, where the `f` prime quantity
+  the quantities which are prime can be found from the quantities
+  which are given in the unprimed frame, so this is the idea
+  behind the whole thing.
+
+- Now, what is the definition of a vector? What is the definition
+  of a scalar?
+
+- This is now going to be a matter detail and what kind of
+  transformation we are talking about and the one used
+  conventionally for vectors at this level are rotations of the
+  coordinate axis.
+
+- So, as before we going to take a very simple example, which is
+  rotations in a plane. So, for the moment let us pretend our
+  world is two dimensional that we have just the black board as
+  the world that we are talking about. (Refer Slide Time: 12:12)
+  $MY_IMAGES/physics/bala-fundamental/lec06-004.jpg
+
+- And there is a coordinate axis here x and y, here is the origin
+  and you have an arbitrary point with coordinates x and y in the
+  frame s, in the original frame s, so this quantity is y and
+  this is x for an arbitrary point x comma y. Now, let us look at
+  the same thing in a frame of reference which has the same
+  origin, but it is rotated with respect to the x axis, the new
+  x axis is at an angle theta, some arbitrary angle theta. And
+  here is the new y axis, this angle is theta that is the x prime
+  axis, this is the y prime axis and this angle of course, also
+  theta. Then, how are the components x prime and y prime of this
+  object have this point prime? So, here is a point p which is
+  either x y or x prime y prime in the new coordinate frame.
+  (Refer Slide Time: 13:25)
+  $MY_IMAGES/physics/bala-fundamental/lec06-005.jpg
+
+
+And then, it is a simple matter of trigonometry to see that the transformation rules are x
+prime is x cos theta plus y sin theta and y prime is minus x sin theta plus y cos theta,
+those are the transformation rules which follow from elementary trigonometry. And
+together of course, I call the point r this is the position vector of this point is written as r
+either in the original frame and r prime in the new frame.
+So, r equal to x times a unit vector in the i direction plus the unit vector in the j direction,
+you can write it either way you like. But, I am just going to write it as x comma y in this
+form here and under this rotation r goes to r prime which is x prime, y prime and a
+rotation of the coordinate axis. So, each point although the point remains same the
+
+coordinates change, but I could regarded it as a transformation from x, y to a new set of
+pair of variables x prime and y prime.
+And the rules by which you get x prime and y prime from x and y are written down here
+in this ((Refer Time: 14:45)). Now, it immediately tells you right away that x prime
+squared plus y prime squared is x squared plus y squared that is the simple matter of
+using the trigonometric identity cos square theta plus sin square theta is 1 and then you
+get this relation here for in arbitrary point x comma y. Now, what does that mean, the
+physical meaning of this x squared plus y squared is of course, this length of the
+hypotenuse.
+So, this distance here is r, but it is also equal to r prime which is what this quantity is,
+because remember this number here was y prime and this number here was x prime. So,
+that x prime that is y prime and the square of this plus that is this squared which is the
+same as square of this plus this by the Pythagoras theorem. So, you know are first
+relation which is r and r prime are exactly the same, in other words the distance from the
+origin to any point is independent of the orientation of the coordinate access.
+If you rotate the coordinate axis keep in the origin and change the distance to any point
+does not change at all. And physically it is immediately clear that the distance between
+any two points arbitrary points also does not change at all, because the distance between
+a point x 1, y 1 and x 2, y 2 is just x 1 minus x 2 squared plus y 1 minus y 2 squared in
+that two does not change at all.
+So, now comes the definition, if you have a quantity which does not change and a
+rotation I call it a scalar, it does not change in magnitude, it does not change at all and a
+rotation it is then called a scalar. So, r is a scalar r equal to r prime, the prime quantity
+and the unprimed quantity are exactly the same, any quantity that does not change and
+the rotation is go from the frame of reference to another is a scalar under rotations I need
+to say that all the time because I might look at more kinds of general kinds of
+transformation.
+But, for the purpose of this course you will restrict ourselves rotations, because that is
+what normally vectors, scalar, tensors, etcetera at defined in terms of. So, this quantities
+is the scalar, what then is a vector well as you know the naive definition does not
+
+magnitude and a direction and little more sophisticate we have saying it is got two
+components, once you have two dimensional world a vector as two components.
+For instance, the position vector of a point is r x comma y, this is our primal vector, this
+thing here you have primitive basic vector this quantity here and now the definition is
+that any quantity with two components. So, anything lie let us call it u and put an arrow
+there and it is got two components u x and u y, any quantity with two components
+written on this form which transforms under the rotation in the same way that the
+coordinate r itself transforms is called a vector.
+So, this is a vector f and only f under a rotation of the coordinate axis through the some
+arbitrary angle theta, only if u goes to u prime which is equal to u x prime and u y prime,
+where u x prime must transform exactly like the corresponding component of the
+coordinate itself. So, it must be equal to u x cos theta plus u y sin theta and u y prime
+must be equal to minus u x sin theta plus u y cos theta that is the definition of the vector
+in two dimensions a vector under rotation and so on and so forth but that is the
+definition.
+Therefore, any two arbitrary quantities you put them next to each other and put them
+inside the bracket cannot form of vector, a vector occurs only when these two quantities
+a such that the pair is such that under a rotation, the pair transform in precisely the same
+way as the position vector itself us. So, it is with reference to the transformation law of
+position vector in point in space that we define a vector itself.
+Once, you guaranteed that the quantity is a vector when we use the factor, it transforms
+in this fashion to predict what the prime quantities are from the unprimed quantities by a
+rule which is the same as the rule for coordinate transformation itself. So, this is the
+correct definition of a vector and it is extendable to any number of dimension, if you
+have a third dimension, the third axis coming out of the paper, they would be a u and
+they would be z also as well z prime coordinate and it should transform in exactly the
+same way the x, y, z transforms to x prime, y prime and z prime any set of three
+quantities which transform in the same way as a three Cartesian components of the
+position vector would then be called the three dimensional vector in three dimensional.
+So, this is the notion of what a vector is and that is how the transformation law is
+encoded in the word vector itself. The moment I say something is a vector, I have also
+
+told you how it is transformation law is going to behave and that is going to make sure
+that any law I express in terms of vectors is transformable form one frame to another
+without a change in form, because I know how each side of the equation transform the
+transform like the vectors.
+Now, it is a small matter to see that if you have an equation with the left scalar on the left
+hand side you should; obviously, have a scalar on the right hand side. Because, either
+side can change if you have a vector on the left you know have a vector on the right and
+so on and so forth, there are generalizations of vectors and scalar which we will talk
+about little later very straight forward generalizations, but this is the basic idea behind
+the vector here.
+Now, we need a little bit of notation, so that we can generalize this a little more and that
+is as follow, it is very convenient to notices that I could write those two equations down
+x prime and y prime I could write them down in the following convenient way.
+(Refer Slide Time: 22:00)
+$MY_IMAGES/physics/bala-fundamental/lec06-006.jpg
+
+
+I put these two as a column vector one below the other, this thing here is a 2 by 1 matrix
+it has got 2 rows and 1 column. So, it is a 2 by 1 matrix. I presume there is some
+familiarity on the part with element matrices, but whatever is needed we will look at it as
+we go along will introduce that. This quantity here is equal to x comma y this 2 is a 2 by
+1 matrix and it must be acted up on as you say by something which is a 2 by 2 matrix and
+that is the matrix of coefficients there, whatever is multiply x prime and y prime.
+
+So, that thing is cos theta, sin theta minus sin theta cos theta and by the rule of matrix
+multiplication, this is the 2 by 2 matrix and as we know when we multiply 2 by 2 by 2 by
+1 the 2's cancel out. So, the ((Refer Time: 23:13)) 2 by 1 once again. So, this gives you a
+column matrix here 2 by 1, this 2 by 1 column matrix one acted up on by this matrix here
+gives you 2 by 1 the new column matrix, will represents the position vector in the new
+coordinate system.
+Now, what would you call this matrix, well it is a matrix which depends on the angle
+through which rotate could have been any angle I specify the angle I tell me I give one
+coordinate system. So, it is not a natural to say that this thing here is called a rotation
+matrix and it depends on only on the rotation, it does not depend on the coordinate on in
+of any particular point.
+Because, the whole issue any point anywhere, any point here is transform in the whole
+coordinates it is got a certain components in the new coordinate it is called a different
+components which are related to the whole once by the action of this rotation matrix on
+the whole components this fashion, this matrix is 2 by 2. Because, we have two
+dimensions and what is happen under a rotation is that you have a linear transformation.
+So, each component of the new vector is a linear combination of the components of the
+whole vector, all the components. So, x and y components of the whole vector have the
+mixed up to give the x component of the new vector and similarly for the y component as
+well, it is the linear transformation in the sense that the origin has been unchanged. So, it
+is clear that if you are at 0, 0 the origin in the whole frame you are still at the origin in
+the new frame, which means that if you set x and y equal to 0 you must get x prime and y
+prime equal to 0 as well which you do.
+Because, these are homogeneous transformations, a proper rotation is a homogeneous
+transformation, in the sense that the origin is left unchanged under the transformation.
+Now, the generalization of this to three dimensions is easy in principle, in practice it is a
+little messy, because as soon as you have three components as soon as you have a three
+dimensional space and here is x, here is y and here is z, then you need for any point you
+need three coordinates x, y, z.
+And now a rotation is not such a simple matter as keeping the origin unchanged and
+rotating the coordinate axis, because if you have a three dimensional space, you could
+
+rotate about any direction in that space. So, here is the direction in this space original
+coordinate frame and I can rotate about that axis in this fashion to produce the new set of
+axis here. So, we have to specify the direction about which I rotate and have to specify
+the amount by which I rotate to specify the direction in space you need to coordinates,
+we need to angles just as to specify by the position of a point on the surface of this earth,
+you need a latitude and longitude.
+So, to specify any direction the unit vector in any direction, you need to know two angles
+essentially and then you have a third angle which is the angle of rotation. So, you have
+three parameters to specified rotation in three dimension space and therefore, the matter
+is a little more intuitive, but you are still guaranteed that under the rotation in three
+dimensional space you have the following.
+(Refer Slide Time: 27:06)
+$MY_IMAGES/physics/bala-fundamental/lec06-007.jpg
+
+
+
+You still guarantee that under this rotation x prime, y prime, z prime now will be equal to
+some 3 by 3 rotation matrix multiplying acting from the left on x, y, z and this rotation
+matrix will not involve x, y and z themselves, because this is two for every x, y and z in
+space, this rotation matrix will involve the three angles which are the analog of the single
+angle here is specifies a rotation in a plane.
+So, it is a complicated matrix which got very special properties, but all the same it is a
+rotation matrix and you are guaranteed that in general what is going to happen is that x
+prime if I call this matrix R, then this x prime is going to be R 1 1 the first element time x
+
+plus R 1 2 times y plus R 1 3 times z. And similarly y prime is R 2 1 times x 2 2 times y
+plus R 2 3 times z and z prime equal to R 3 1 x plus R 3 2 y plus R 3 3 z.
+So, each component of the new vector is a linear combination of all the components of
+whole vector, some of these components may or may not exist depending on what kind
+of rotation may taking about the specifics of the rotation. But, that is the general structure
+here and you are guaranteed you are guaranteed that this matrix is such that the analog of
+the property that R squared equal to R prime squared is still going to be valid. So, it is
+still true that the distance to any point from the origin, clearly does not change under a
+rotation which keeps the origin and change.
+(Refer Slide Time: 28:59)
+$MY_IMAGES/physics/bala-fundamental/lec06-008.jpg
+
+
+So, you still guaranteed that r squared is r prime squared and that r is a scalar in this
+quantity. Now, you can answer this question of whether in this example or in this
+example mode x is it a scalar, the answer is no, because x goes to x prime and x prime is
+this complicated combination here. So, clearly the modulus does you not in variant does
+not change.
+
+So, x is a component of a vector and it is not a scalar by itself that is an important point,
+one should not imagine that when you have a vector comprising several components like
+this are in the case of u like this, one should not is a this is the scalar or that is the scalar
+not true, because these quantities do not remain and change under a rotation, the combine
+with each other the mix up components and they do not remain invariant.
+
+On the other hand, you are certainly guarantee that u squared the magnitude of u x prime
+squared plus u y prime squared in quantity is equal to u x squared plus u y squared just as
+x prime squared plus y prime squared is x squared plus y squared. So, this quantity u this
+follow is in the unchanged and the rotations and it is a scalar, but the magnitude of any
+one component is not the scalar by itself.
+
+So, this is the idea behind the scalars and vectors in the most elementary level and what
+we will do next is to see how we can forms scalars from vector and a little later will form
+vectors from scalars. So, that is because these are natural quantities that appear all the
+time and we need to be able to manipulate these quantities an understand, you also need
+to see how we can multiply to vectors, what is the geometrical meaning actual meaning
+of the dot product and the cross product in the case of vectors and there are few minus
+surprise on the way, so we will see that next.

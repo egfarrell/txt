@@ -1,0 +1,91 @@
+05-Compactness-Connectedness-and-Topological-Properties.txt
+
+https://www.youtube.com/watch?v=4wnLQdKZ4RU&list=PLRlVmXqzHjUQHEx63ZFxV-0Ortgf-rpJo&index=5
+$MY_VIDEOS/physics/what-are-manifolds/05-Compactness-Connectedness-and-Topological-Properties.mp4
+
+
+
+important topological properties:
+    - countability
+    - separability 
+    - continuity 
+    - compactness 
+
+### Homeomorphisms
+
+- homeomorphisms only make sense between topological _spaces_
+	- $MY_IMAGES/physics/what-are-manifolds/homeomorphism.jpg
+
+- open sets are mapped to open sets, in both directions... 
+
+- the behaviour of the inverse function `f^-1` will tell us if
+  the function `f` is continuous
+
+- a continuous function continuous function maps open sets to
+  open sets
+
+- topology is the search and study of things that are invariant
+  between homeomorphic spaces
+
+- only need to find _ONE_ function between the two spaces that
+  satisfy the requirements of homeomorphism, for two spaces to be
+  homeomorphic
+
+- how to prove two spaces arent homeomorphic?
+- find a topological property (eg "2nd countable") that one space
+  has, that the other space doesn't have
+
+- there are lots of different versions of separability, and
+  different versions of compactness too...
+
+- The homeomorphic functions between spaces are just _mutating_
+  open sets between spaces, kind of taking one open set in
+  a space and _deforming_ it into another open set in a different
+  space. 
+    - One topology is being "morphed" into another set.
+    - and this is the foundation of the point-set topology fact
+      that a donut and a coffee cup are topologically equivalent.
+    - $MY_IMAGES/physics/what-are-manifolds/topological-donut-coffee-cup.jpg
+    - importance of "one-to-one" and "onto": every point on the
+      donut has to have a point on the coffee cup, and vice versa
+
+
+- homomorphism is the weakest notion that _connects_ two sets.
+  There's no notion of geometry in here... (no metric, sense of
+
+- increasing levels of specificity (structure?) start growing the deformations
+  "shape") allowed
+
+### Compactness
+    - open cover
+    - infinite cover 
+        - infinite sub-cover 
+        - finite sub-cover 
+
+    - to be compact you need an infinite cover that has _NO_ finite
+      subcover
+
+
+- path connected
+    - confinuous function between x and y 
+    - if any `x` and any `y` in a space is path-connected, then
+      the space itself is connected
+
+    - but inverse not true: you can have a connected space that
+      is NOT path-connected. Legendary example: function `sin(1/x)`
+
+### homotopy
+    - how paths can be manipulated (different than homology)
+    - two spaces, one with a hole in the middle
+    - in the space with a hole, there's path-connections that
+      join two points, but the path "loops around" the hole a few
+      times
+    - if every path can be continuously deformed into another
+      path, the sapce is homotopic 
+    - simply connected: if you are connected and you don't have
+      this problem of different homotopies in the space, they
+      you're simply connected
+
+### homology
+    - how many times you can cut a space, and still have the
+      points simply connected?

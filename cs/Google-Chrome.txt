@@ -1,0 +1,30 @@
+
+### Supress Chrome warning about Windows 8.1
+    - To disable "To get future Google Chrome updates, you'll
+      need Windows 10 or later" set:
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome "SuppressUnsupportedOSWarning" 
+    - REG_DWORD to 1.
+
+
+### manually copy chrome extension
+    https://superuser.com/questions/462804/how-to-copy-an-extension-from-one-chrome-installation-to-another
+
+### chrome set "shortcut" keywords
+    right-click on url bar, choose "edit search engines"
+
+### chrome save page as html
+    ctrl+s
+
+### chrome show proxy
+    chrome://net-internals/#proxy
+    chrome://net-internals/proxyservice.config
+    chrome://net-internals/proxyservice.init_log
+    chrome://net-internals/#events
+
+### chrome bookmarks (open in new tab)
+    javascript:window.open('url');
+        For the URL, you must include the "http://" or you'll get
+        an error. Just apply this to the bookmarks you'd like in
+        a separate tab.
+
+

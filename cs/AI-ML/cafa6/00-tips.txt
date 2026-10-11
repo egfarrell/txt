@@ -1,0 +1,80 @@
+
+### Time!
+    - Week 01 — Nov 01
+    - Week 02 — Nov 08
+    - Week 03 — Nov 15
+    - Week 04 — Nov 22
+    - Week 05 — Nov 29
+    - Week 06 — Dec 06
+    - Week 07 — Dec 13
+    - Week 08 — Dec 20
+    - Week 09 — Dec 27
+    - Week 10 — Jan 03
+    - Week 11 — Jan 10
+    - Week 12 — Jan 17
+    - Week 13 — Jan 24
+    - Week 14 — Jan 31 ... Deadline Feb 2
+
+
+
+### Read the background papers
+- Introductions to CAFA and protein function prediction are
+  available in the following papers:
+
+- Radivojac P. 
+- A (not so) quick introduction to protein function prediction (2013). 
+- This text is intended primarily for computer scientists with little background in biology.
+    - pdf https://www.ccs.neu.edu/home/radivojac/papers/radivojac_natmethods_2013.pdf
+- Friedberg I, Radivojac P. 
+- Community-wide evaluation of computational function prediction. 
+    - pdf https://www.ccs.neu.edu/home/radivojac/papers/friedberg_mmb_2017.pdf
+
+- More thorough reading describing CAFA 1-3 challenges and
+  summarizing all results:
+
+- Radivojac P, et al. A large-scale evaluation of computational
+  protein function prediction. Nat Methods (2013) 10(3):221-227.
+    - pdf https://www.ccs.neu.edu/home/radivojac/papers/radivojac_natmethods_2013.pdf
+- Jiang Y, et al. An expanded evaluation of protein function
+  prediction methods shows an improvement in accuracy. Genome
+  Biol. (2016) 17(1):184.
+    - pdf https://www.ccs.neu.edu/home/radivojac/papers/jiang_genomebiol_2016.pdf
+- Zhou N, et al. The CAFA challenge reports improved protein
+  function prediction and new functional annotations for hundreds
+  of genes through experimental screens. Genome Biol. (2019)
+  20(1):244.
+    - pdf https://www.ccs.neu.edu/home/radivojac/papers/zhou_genomebiol_2019.pdf
+
+- Knowledge about protein function is notoriously incomplete.
+  Even when a paper reports the function of a protein, and it is
+  considered accurate, it still may not be comprehensive.
+- That is, some other functions of this macromolecule may not
+  have been investigated and even if they are, there is no
+  guarantee the researchers covered all possible environmental
+  conditions (e.g., temperature), all possible binding partners,
+  all possible pathogen invasions, etc.
+- These have been reported to be open world annotations; ie, the
+  _absence of evidence_ for a function cannot be considered the
+  evidence for absence of that function. 
+- Therefore the assessment of prediction accuracy is only an
+  approximation of true accuracy.
+
+- The effects of incomplete annotations on performance evaluation
+  vary metric to metric and have been previously discussed and
+  studied by:
+    - Huttenhower C, et al. 
+    - The impact of incomplete knowledge on evaluation: an
+      experimental benchmark for protein function prediction.
+      Bioinformatics (2009) 25(18):2404–2410.
+    - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2735660/pdf/btp397.pdf
+
+    - Dessimoz C, et al. 
+    - CAFA and the open world of protein function predictions. 
+    - Trends Genet. (2013) 29(11):609–610.
+      https://www.cell.com/action/showPdf?pii=S0168-9525%2813%2900166-2
+
+    - Jiang Y, et al. 
+    - The impact of incomplete knowledge on the evaluation of
+      protein function prediction: a structured-output learning
+      perspective. Bioinformatics (2014) 30(17):i609-i616.
+    - https://www.ccs.neu.edu/home/radivojac/papers/jiang_bioinformatics_2014.pdf

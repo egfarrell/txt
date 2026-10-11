@@ -1,0 +1,10 @@
+pygame
+
+
+install
+    sudo apt-get build-dep python-pygame
+    sudo apt-get install python-dev
+    hg clone https://bitbucket.org/pygame/pygame
+    c pygame/
+    python setup.py build
+    python setup.py install

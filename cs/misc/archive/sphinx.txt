@@ -1,0 +1,81 @@
+sphinx
+
+suggested hierarchical organisation
+	tutorial - basic basic source code to get up and running
+	guide - how to accomplish a particular task
+	api reference - low level, list of all methods etc
+					Include a link into the guide from here!
+
+Very interesting tip
+	line-break sentences into discrete clauses 
+	(or logical blocks).
+	Version control likes it 
+	and its easier to read and move around blocks
+	Its a better system 
+	if you source text files dont have to be pretty
+	and read on their own.
+
+sphinx "quick start"
+	set some config options?
+
+format html output
+	html_theme = 'pyramid'
+
+add current directory to config options
+	sys.path.insert(0, os.path.abspath('.'))
+
+identation
+	for documentation, 
+	text should be lined up 
+	underneath the first letter of the directive.
+	also pipe characters force indentation "|"
+
+hyperlinks
+	`a link`_ underscore flying off to the right (dont forget backtick)
+	.. _a link: www.example.com underscore coming in to land on the left
+
+an rst "directive"
+	signalled by a double colon
+
+code block
+	:: double colon
+	>>> or like the IDLE prompt
+
+table of contents
+	.. toctree ::
+		:maxdepth: 2
+
+	file1
+	file2
+	file3 (no rst extension needed)
+
+insert hyperlink to python class source code
+	:class: `~triangles.Triangle`	the tilda means it wont give you the full name just "Triangle". 
+	It can find the class code from import statements or nose?
+
+autodoc??
+	- takes whatever is in the doc strings
+	- but you can handcode descriptions either
+	- but alot of big projects (even Python itself) dont use the "auto" methods
+
+	.. :module:: handwritten version
+	.. :automodule:: pulls all the sourcecode doc strings
+	.. :class:: 
+	.. :autoclass:: auto version?
+
+debugging
+	look at the FIRST ERROR in your output
+	if a header or indentation is wrong it whacks things that come after it
+
+testing
+	can run/test all of your sample code embedded in the documentation
+	use "doctest" extension?
+	you can give users documentation in confidence
+	also can use .. :testcode:: and .. :testoutput:: directives
+
+manual index entries
+	.. index::
+	   pair: poetry; bad
+	   single: pythagorous
+
+	   although who uses indexs anymore when search bars are available!

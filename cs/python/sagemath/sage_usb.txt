@@ -1,0 +1,41 @@
+Sage
+
+On Sat, Jul 18, 2015 at 10:07:56AM +0300, Viviane Pons wrote: 
+> Hi, 
+> 
+> To answer Thierry: I do remember your feedbacks from Burkina from a few 
+> years ago. I was actually planning to bring live USB keys, the only reason 
+> I didn't is because I didn't have the time to setup all those keys before 
+> leaving. I'm still curious on how you do this: do you buy a bunch of keys 
+> before and then give them to the students? Do you you require them to bring 
+> their own USB key? 
+
+It depends on the available budget. In Senegal, we used the USB drives 
+that were given to the participants for the proceedings (note that the USB 
+drive should be at least 4GB), with the "upgrade" option you can keep the 
+existing content if there is enough free space on the key (the "clone" 
+options formats the key). In Burkina Faso, we got the USB keys from the 
+gdr-im, for the EJICIM, the participants were asked to bring their own, 
+though i brought some with me just in case. I am more and more favorable 
+to that last option since most people have an unused USB drive somewhere, 
+so it helps avoiding waste. 
+
+In any case, i clone a small amount of them to bootstrap and i let the 
+participants to clone the other keys on their computer, it has the benefit 
+to be much faster (distributed) and also to let them play with the key for 
+when they will be back to their home. 
+  
+> Also, have you ever tried this on Windows 8? Because I know from past 
+> experience that the boot is very different and Windows8 is very reluctant 
+> on booting on anything else than itself. 
+
+Yes, windows 8 has the bad habit to prevent the user to access the BIOS 
+(in the name of "secure boot"), so you have to boot on windows first, and 
+look for the quite hidden place to disable it (some sequence like : PC 
+settings > Advanced startup > Troobleshoot > Advanced options > UEFI 
+firmware settings > restart). Then you go to the BIOS and reorder the boot 
+sequence to have the USB drive appearing before the hard drive, without 
+the secure boot and UEFI stuff. 
+
+Ciao, 
+Thierry 

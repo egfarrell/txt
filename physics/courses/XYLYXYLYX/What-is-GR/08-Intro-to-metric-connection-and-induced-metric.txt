@@ -1,0 +1,48 @@
+08-Intro-to-metric-connection-and-induced-metric.txt
+
+- key task: take an embedded surface (a 3-sphere embedded in 4D
+  space), and find the metric of the embedded surface, by
+  utilising the metric of the embedding space
+
+- the metric tells us how to take the inner product at every
+  point
+
+- The connection tells us about parallelism . 
+- Also: the connection ties together tangent spaces...
+
+- the vector actually lives in the tangent space at each point,
+  although a lot of books just draw the vector directly on the
+  spacetime point
+	- $MY_IMAGES/physics/What-is-GR/vector-in-tangent-space.jpg
+
+- tangent space = tensor product space 
+    - but each tangent space lives in it's own little universe,
+      not connected to any other tangent spaces 
+
+- Really to do GR we need a "spacetime" made of 3 things:
+    1. A manifold 
+    2. A metric 
+    3. A connection 
+    - But wait, you can build the connection from the metric, so
+      you only need 2 things! 
+
+- wihtout a metric you have nothing 
+    - even if you have coordinates "close" to each other, but
+      without a metric that doesn't mean anything!
+
+### induced metric
+    - When you know the metric of the embedding space, and you
+      work out the metric of the sub manifold?
+	- $MY_IMAGES/physics/What-is-GR/metric-of-glome.jpg
+	- $MY_IMAGES/physics/What-is-GR/glome-coords.jpg
+
+- you have a 3-sphere point 
+- then lots of talk about getting a tangent vector in the 4D
+  embedding space 
+- each term in the metric is the INNER PRODUCT between both
+  coords
+
+    - `g_αβ = g_α • g_β`
+
+
+Minkowski space has a conformal relationship to a 4D GLOME

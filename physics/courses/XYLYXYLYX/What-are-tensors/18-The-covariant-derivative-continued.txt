@@ -1,0 +1,43 @@
+18-The-covariant-derivative-continued.txt
+
+
+https://www.youtube.com/watch?v=EqHWtZteUrE&list=PLRlVmXqzHjUQARA37r4Qw3SHPqVXgqO6c&index=18
+$MY_VIDEOS/physics/what-are-tensors/18-The-covariant-derivative-continued.mp4
+
+
+- Interesting: actually when you do solve the Einsteisn equation
+  and get a metric, you actually _do_ have an implied connection
+  `Γ`
+
+- Everything Flows from the metric. The metric "is" the
+  spacetime.
+    - $MY_IMAGES/physics/what-are-tensors/everything-flows-from-the-metric.jpg
+
+- he did the connection formula for a covariant derivative of
+  covectors too...
+
+- He's going to follow MTW (page: 254)
+
+### "Machine"
+    - MTW they start with a "machine" that exists at a point `p`:
+      the covariant derivative operator
+    - it has empty slots 
+    - they slots are filled: 
+        - `(covector θ, vector field X, vector u)`
+    - $MY_IMAGES/physics/what-are-tensors/mtw-covariant-01.jpg
+    - now we need a vector dotted with a vector, so slots
+      2 + 3 have to produce a vector somehow 
+        - $MY_IMAGES/physics/what-are-tensors/mtw-covariant-02.jpg
+        - note: the `∇_u`, the `u` is a VECTOR, not some
+          component index... easy to get confused with the
+          previous lecture that had a coordinate derivation...
+
+    - remember: you don't have to fill every slot of a machine!
+      (eg contracting tensors in an earlier lecture?)
+    - mtw define different types of operators... 
+        - one of them is a directional derivative in the
+          direction of the vector `u`
+	- $MY_IMAGES/physics/what-are-tensors/mtw-covariant-03.jpg
+
+- we expect this thing to be linear:
+	- $MY_IMAGES/physics/what-are-tensors/mtw-covariant-04.jpg

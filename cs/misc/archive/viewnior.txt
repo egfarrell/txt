@@ -1,0 +1,15 @@
+fast image viewer
+
+dependencies
+    ai libexiv2-dev exiv2 libgtk2.0-dev intltool gnome-common
+
+source
+    git clone https://github.com/xsisqox/Viewnior.git
+    wget https://github.com/xsisqox/Viewnior/archive/viewnior-1.4.tar.gz
+
+compile
+    cd Viewnior
+    ./autogen.sh
+    ./configure
+    make
+    sudo make install

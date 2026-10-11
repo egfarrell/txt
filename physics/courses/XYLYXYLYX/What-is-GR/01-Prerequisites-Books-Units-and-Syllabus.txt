@@ -1,0 +1,75 @@
+$MY_VIDEOS/physics/What-is-GR/01-Prerequisites-Books-Units-and-Syllabus.mp4
+
+- Tensors: express the laws
+- Manifolds: model Space-time 
+
+### Recommended Books
+    - Elementary:
+        - $MY_BOOKS/Physics/Spacetime/GR-dInverno.pdf 
+        - Uses classical notation for tensors 
+
+    - Advanced:
+        - The Mathematical Theory of Black Holes (Chandrasekhar)
+        - $MY_BOOKS/Physics/Spacetime/GR-Wald.pdf
+        - $MY_BOOKS/Physics/Big4/1973-Gravitation-MTW.pdf
+            - Sequence 1 is elementary
+            - Sequence 2 is good (advanced) 
+
+### Units
+    - Natural units (important for SR and field theory)
+    - Geometrized units (important for GR)
+        - Set `c = 1` => [L] = [T]
+        - Set `G = 1` => [L] = [M]
+        - Implication: `[L] = [M] = [T]`
+        - Implication: Length, Mass and Time are all measured in
+          the same units! We'll measure all three dimensions in
+          _metres_!!
+        - Elapsed time will be measured in metres 
+        - Mass of a star measured in metres too 
+            - $MY_IMAGES/physics/What-is-GR/01-geometrized-units.jpg
+        - ASIDE: we're setting `c=1` because we know that's
+          fundamental for all observers. 
+            - So we're going to make `c` the fundamental
+              constant. So we're going to re-jig all our units. 
+        - ASIDE: 
+            - where does the  `8π` come from in Einsteins
+              equation. Well it comes from the Newtonian Limit.
+              You've got the gravitational potention, Poissons
+              equation and we integrate over spherical volumes...
+
+### Metric Tensor
+    - `g_νμ` is a [0,2] tensor field on a manifold
+    - Establishes an inner product at every point in spacetime
+      for comparing vectors in the tangent spaces...
+
+### Matter tensor
+    - Throw-away comment: `T_νμ` : anything that's not a vacuum
+      is essentially matter(!)
+
+
+### Electron Charge (for SR)
+    - (note: `G=1` doesn't apply here... it's SR without gravity)
+    - we'll set `e` the unit of electron charge `= 1` too...
+    - This sets off another cascade of unit changes, just like
+      when we set `c=1`
+    - and mass ends up being measured in electron volts 
+    - momentum gets measured in mass
+    - energy gets measured in mass
+	- $MY_IMAGES/physics/What-is-GR/01-natural-units.jpg
+
+### Syllabus
+    - PATH 1: Use `T_νμ` (Stress-Energy) to calculate `G_νμ`
+      (Einstein tensor) and from that calculate the metric.
+
+    - PATH 2: Assume we know the metric. 
+        - How does this control matter? What are the geodesics?
+        - We do this with test particles that won't actually
+          change the spacetime. So no backreaction between
+          particle and spacetime.
+            - but if you've two NS's orbiting each other, neither
+              is a test particle and things get complicated and
+              non-linear 
+            - note: for basic cases we're going to assume the
+              metric stays the same. We're going to remove the
+              time dependence from the 4-vectors... 
+	- $MY_IMAGES/physics/What-is-GR/01-syllabus.jpg

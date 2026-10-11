@@ -1,0 +1,96 @@
+# Convex Geometry — Key Intuitions (for QM + maths context)
+
+## 🔷 Core Idea
+Convex geometry studies sets that are closed under **probabilistic mixtures**:
+
+If x, y are in the set, then so is:
+`λx + (1−λ)y, for 0 ≤ λ ≤ 1`
+
+→ Think: “you can mix states and stay within the space”
+
+---
+
+## 🔷 Why It Matters (especially in QM)
+
+- States form a **convex set**
+- Pure states = **extreme points** (can’t be decomposed further)
+- Mixed states = **convex combinations** of pure states
+
+Key contrast:
+- Classical state space = **simplex** (unique decomposition)
+- Quantum state space = **non-simplex** (non-unique decomposition)
+
+---
+
+## 🔷 The Building Blocks
+
+- **Convex combination**: weighted average with positive weights summing to 1  
+- **Convex hull**: all mixtures of a set of points  
+- **Extreme points**: “pure” elements (not decomposable)  
+- **Simplex**: convex hull of independent points with unique decomposition  
+
+---
+
+## 🔷 How It Connects to Other Maths
+
+- Linear algebra → vector spaces, linear combinations  
+- Geometry → shapes (polytopes, spheres, etc.)  
+- Optimization → convex problems are tractable and well-behaved  
+- Analysis → infinite-dimensional generalizations (Hilbert/Banach spaces)  
+
+→ Convex geometry sits at the intersection of all of these
+
+---
+
+## 🔷 Useful Analogy
+
+Linear algebra:
+→ study of addition + scaling
+
+Convex geometry:
+→ study of addition + scaling + **positivity + normalization**
+
+i.e. instead of:
+    any linear combination
+
+you restrict to:
+    p_i ≥ 0,   Σ p_i = 1
+
+This turns:
+- vectors → **states**
+- combinations → **probabilistic mixtures**
+
+---
+
+## 🔷 Philosophical Take
+
+Convex geometry sits at the boundary between:
+
+- **linear structure** (superposition, vector spaces)
+- **probabilistic structure** (mixtures, uncertainty)
+
+This is exactly why it shows up in quantum mechanics:
+
+    QM = linear algebra + probability
+
+→ Convex geometry is the **bridge between them**
+
+---
+
+## 🔷 Mental Model Upgrade
+
+Instead of thinking:
+    “A state is a vector or matrix”
+
+Think:
+    “A state is a point in a convex set”
+
+And physics becomes:
+    “the geometry of that set + how you move around it”
+
+---
+
+## 🔷 One-Line Summary
+
+Convex geometry is the natural language of **mixing, uncertainty, and states** — 
+and that’s why it appears everywhere from probability to quantum theory.

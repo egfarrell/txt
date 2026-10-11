@@ -1,0 +1,104 @@
+### Memristors
+    - A low-power and non-volatile technology called the
+      memristor shows initial promise as a basis for machine
+      learning. 
+    - According to new research, memristors efficiently tackle AI
+      medical diagnosis problems, and suggests additional
+      applications in other fields, especially low-power or
+      network “edge” applications.  Researchers say this may be
+      because memristors artificially mimic some of the neuron’s
+      essential properties.
+
+    - Memristors, or memory resistors, are a "building block" for
+      electronic circuits that scientists predicted 50 years ago
+      but only created for the first time a little more than
+      a decade ago. 
+        - These components, also known as resistive random access
+          memory (RRAM) devices, are essentially electric
+          switches that can remember whether they were toggled on
+          or off after their power is turned off. 
+        - As such, they resemble synapses: the links between
+          neurons in the human brain—whose electrical
+          conductivity strengthens or weakens depending on how
+          much electrical charge has passed through them in the
+          past.
+
+    - In theory, memristors can act like artificial neurons
+      capable of both computing and storing data. As such,
+      researchers suggest memristors could greatly reduce the
+      energy and time lost in conventional computers shuttling
+      data back and forth between processors and memory. The
+      devices could also work well within neural networks, which
+      are machine learning systems that use synthetic versions of
+      synapses and neurons to mimic the process of learning in
+      the human brain.
+
+    - One challenge with developing applications for memristors
+      is the randomness found in these devices. The level of
+      electrical resistance or conductivity seen in memristors
+      depends on a handful of atoms linking up two electrodes,
+      making it difficult to control their electrical properties
+      from the outset, says study lead author Thomas Dalgaty, an
+      electrical engineer at Grenoble Alpes University in France.
+
+    - Now Dalgaty and his colleagues have developed a way to
+      harness this randomness for machine learning applications.
+      They detailed their findings this month in the journal
+      Nature Electronics.
+
+    - Memristors are programmed by cycling through
+      high-conductance on states and low-conductance off states.
+      Usually the level of electrical conductivity seen in
+      memristors can vary between one on state and the next due
+      to intrinsic random processes within the devices.
+
+    - However, if memristors are cycled on and off enough, the
+      electrical conductivity of each memristor follows
+      a pattern—“a bell curve,” Dalgaty says. The scientists
+      revealed they could implement an algorithm known as Markov
+      chain Monte Carlo sampling that could actively exploit this
+      predictable behavior to solve a number of machine-learning
+      tasks.
+
+    - When compared with the performance of conventional digital
+      CMOS electronics, the researchers’ memristor arrays
+      achieved a stunning five order of magnitude reduction in
+      energy. This, Dalgaty says, is because the memristors did
+      not need to shuffle data back and forth between processors
+      and memory. For context, that 100,000-fold discrepancy is
+      equivalent to “the difference in height between the Burj
+      Khalifa, the tallest building in the world, and a coin,” he
+      explains.
+
+    - One potentially exciting application for memristors would
+      be devices capable of learning, adapting and operating at
+      the far ends of a network (a.k.a. its “edge”), where
+      low-power devices like embedded systems, smart home gear
+      and IoT nodes sometimes reside. Indeed, Dalgaty says,
+      memristors could help make edge learning devices a reality.
+
+    - “Currently edge learning is not possible because the energy
+      required to perform machine learning with existing hardware
+      is far greater than the energy that is available at the
+      edge,” he explains. “Edge learning [using memristors] ...
+      can potentially open up completely new application domains
+      that were not possible before.”
+
+    - For example, the researchers used an array made of 16,384
+      memristors to detect heart rhythm anomalies from
+      electrocardiogram recordings, reporting a better detection
+      rate than a standard neural network based on conventional,
+      non-memristor electronics. The team also used their array
+      to solve image recognition tasks such as diagnosing
+      malignant breast-tissue samples.
+
+    - Potential future edge learning memristor applications might
+      include implanted medical early-warning systems that can
+      adapt to a patient’s state as it changes over time. “We are
+      looking towards these really energy-constrained edge
+      applications that maybe don’t or can’t exist yet because of
+      energy [restrictions],” Dalgaty says.
+    - The next big challenge, Dalgaty says, “will be putting all
+      of this functionality together onto a single integrated
+      chip that can be applied outside of the laboratory.” It may
+      take a few years before such a chip exists, he says.

@@ -1,0 +1,90 @@
+### Formula
+    - `∬dW = ∫W`
+
+### Lovely alternative explanation:
+    - $MY_NOTES/physics/EM/Heaviside-maverick.txt
+    - Stokes' theorem, sometimes called the 'THEOREM OF VERSION',
+      is one of the most fundamental in vector theory.
+    - It says that the line integral of a vector around any
+      closed curve in space is equal to the surface integral of
+      the _curl_ of the vector over any surface bounded by the
+      curve.
+    - Up to Heaviside's time, the standard proof involved heavy
+      mathematics:
+        - you wrote down the formula for the components of curl
+          in the x, y and z directions and slogged it out.
+        - But Oliver's proof, freely adapted for our purpose,
+          runs on the following lines:
+            - On any surface, draw a closed curve, or circuit.
+            - If `E` is the electric force vector in that region
+              of space, the total force, or voltage around the
+              circuit in, say, a clockwise direction, will be the
+              sum of the forces in each tiny element of the
+              circuit, in other words the line integral of the
+              vector E around the circuit.
+            - Draw on the surface a line connecting two points of
+              the circuit. There are now two circuits, both
+              containing the line.
+            - The sum of the line integrals of `E` around each of
+              the new circuits, again taken clockwise, will be
+              the same as that around the original circuit
+              because the contributions of the two new circuits
+              along the common line are equal and opposite and
+              cancel one another out.
+            - Even if we draw many inter-crossing lines across
+              the original circuit, making a fine mesh, the sum
+              of the line integrals of `E` around every element
+              of the mesh will still be the same because the
+              contributions from the new lines will all cancel
+              out.
+            - This will be true even if we make the mesh elements
+              very small indeed, each enclosing an infinitesimal
+              surface area.
+            - At any point in a vector field, curl is a measure
+              of the vorticity, or swirl, of the field at that
+              point. It is itself a vector, pointing in the
+              direction a right-handed screw would move if it
+              turned with the swirl, and its magnitude is the
+              amount of swirl around an infinitesimal loop
+              surrounding the point divided by the area of the
+              loop, when the loop is positioned in the plane of
+              maximum swirl.
+            - To find the total vorticity over a given surface
+              you take the surface integral of the curl vector by
+              adding together, for each of the infinitesimal area
+              elements dS which make up the surface, the
+              component of curl perpendicular to the surface
+              multiplied by `dS`.
+            - In each of our tiny mesh elements the component of
+              curl E perpendicular to the surface is, by
+              definition, equal to the line integral of E around
+              the element divided by the element's area dS.
+            - Rearranging things slightly, the component of `curl
+              E` perpendicular to the surface multiplied by dS is
+              equal to the line integral of `E` around the
+              element.
+            - Adding up the values of `dS` multiplied by the
+              component of curl E perpendicular to the surface
+              for all the tiny surface elements gives the surface
+              integral of `curl E` over the whole surface.
+            - But the same total can be formed by summing the
+              line integrals of `E` around all the mesh elements.
+              When this is done the contributions from all the
+              internal parts of the mesh cancel out and the
+              result is simply the line integral of `E` around
+              the original curve, or circuit.
+            - Finally, although we have taken `E` to be electric
+              force, the result is a general one;
+                - it will hold for any vector. QED.
+            - Heaviside's proof requires little mathematical
+              expertise beyond an ability to visualise lines and
+              surfaces in space.
+                - It deals with the properties of vectors,
+                  unencumbered by the symbols needed to represent
+                  them in a particular coordinate system, and
+                  hence gives a direct sense of the physical
+                  meaning of the theorem.
+                - He included a representation of the result in
+                  cartesian (x, y, z) coordinates but this was by
+                  way of tidying up once the real work had been
+                  done.

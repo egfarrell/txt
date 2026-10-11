@@ -1,0 +1,40 @@
+Yes, there is a relationship between the length and amplitude of a pendulum,
+although it is somewhat nuanced.
+
+1. _Small-angle approximation_: In the case of a simple pendulum under the
+small-angle approximation (where the amplitude, or the maximum angular
+displacement, is small), the period of the pendulum is primarily dependent on
+the length and not on the amplitude. This approximation assumes that the sine of
+the angle is approximately equal to the angle itself when measured in radians
+(sin(theta) ≈ theta).
+
+2. _Beyond the small-angle approximation_: When the amplitude is not small,
+the period does become dependent on the amplitude. For larger amplitudes, the
+pendulum takes longer to complete one full swing. This is because the
+approximation that sin(theta) ≈ theta is no longer valid, and the actual path
+traveled by the pendulum bob is longer and more complex.
+
+To summarize:
+
+### Under small-angle approximation: 
+    - The period \( T \) of a pendulum is given by \( T = 2 \pi
+      \sqrt{L / g} \). Here, the period depends only on the
+      length \( L \) and the acceleration due to gravity \( g \),
+      and is independent of the amplitude.
+
+### For larger amplitudes: 
+    - The period \( T \) increases slightly with the amplitude.
+      The exact relationship can be derived using elliptic
+      integrals, but a rough approximation for small but not
+      negligible amplitudes is: \[ T \approx 2 \pi
+      \sqrt{\frac{L}{g}} \left(1 + \frac{\theta_0^2}{16}\right)
+      \] where \( \theta_0 \) is the maximum angular displacement
+      (amplitude) in radians. This shows that as the amplitude
+      increases, the period also increases, though the effect is
+      relatively small for moderate amplitudes.
+
+- In essence, for SMALL ANGLES, the period is independent of the
+  amplitude and only dependent on the length. 
+
+- For LARGER ANGLES, the amplitude does have an effect on the
+  period, but this is a more complex relationship.

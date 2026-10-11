@@ -1,0 +1,30 @@
+udacity debugging 01
+
+- program   : succession of program states
+- defect    : error in the code
+- infection : error in the program state
+- failure   : error visible to end-user
+
+# cause-effect chain
+	input --> defect --> infection --> propagates --> (failure)
+	not all defects result in a failure
+	can be a large number of states to search through
+
+# scientific method
+	initial observation
+	...
+	create hypothesis
+	prediction
+	experiment (verify prediction)
+	observations
+		support hypothesis - refine
+		reject hypothesis - create new
+	Diagnosis
+
+# assert condition
+	throw exception if condition not met
+
+# explicit debugging
+	write out everything:
+	input	expected	output
+

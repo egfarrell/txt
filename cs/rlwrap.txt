@@ -1,0 +1,36 @@
+rlwrap
+
+### arguments:
+     -c  complete filenames (rlwrap scans working directory)
+     -r  remember (add words seen on screen to completion list)
+     -D  History file no Duplicates
+     -i  case insensitive
+     -p  prompt color
+     -f  autocompletion file
+     −l  logfile - append command’s output to file (creating file if neccessary)
+
+### sqlite3
+    must use the '-a' option!!!!!
+    (--always-readline, because sqlite3 has its own readline I think)
+
+### history and completion
+	rlwrap expects its history and completion files in $RLWRAP_HOME,
+	but uses .dotfiles in the user’s home directory if this variable
+	is not set.
+
+	> $RLWRAP_HOME/{COMMAND}_history
+	> $RLWRAP_HOME/{COMMAND}_completions
+
+	> ~/.{COMMAND}_history
+	> ~/.{COMMAND}_completions
+
+### Per−user completion word list for {COMMAND}.
+    - rlwrap never writes into this list, but one can combine
+      `−l` and `−f` options to simulate the effect of a `−r`
+      option that works across invocations.
+
+### System-wide completion
+    - `/usr/share/rlwrap/completions/{COMMAND}`
+    - System−wide completion word list for {COMMAND}. This file
+      is only consulted if the per−user completion word list is
+      not found.

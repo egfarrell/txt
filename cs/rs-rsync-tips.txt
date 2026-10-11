@@ -1,0 +1,63 @@
+rsync tips
+
+### incremental synchronise 2 folders
+    - NOTE: 
+    - put a final FORWARD SLASH after the "source/" and "target/"
+      folders! (Oct 2022)
+    - ```
+    - rsync -rtvu   source/          target/
+    - rupdry        ~/study/books/   /media/ef/EF_128GB/Study/books/
+    - rupdry        ~/study/images/  /media/ef/EF_128GB/Study/images/
+
+    - rupdel        ~/study/books/   /media/ef/EF_128GB/Study/books/
+    - rupdel        ~/study/images/  /media/ef/EF_128GB/Study/images/
+    - ```
+
+
+
+### keep folders in sync 
+    - see 'rupdel' alias: $HOME/.bash_aliases
+
+### Keep image folders in sync
+    rsync -av --ignore-existing /home/ef/study/images/ /media/ef/EF_128GB/Study/images/
+    rsync -av --ignore-existing /media/ef/EF_128GB/Study/images/ /home/ef/study/images/
+
+### rsync flags
+    -a   archive (this flag implies recursive!)
+    -c,  checksum  (Skip based on checksum, not mod-time & size)
+    -h,  human readable
+    -P   combines --progress and --partial.
+    -r   recursive
+    -t   preserve times
+    -v   verbose
+    -u   update. (only source files which are newer than destination will be copied)
+    -z   compress
+
+
+### rsync works both ways!
+    ```
+    rs server:/home/ef/remotefile  .
+    rs ./localfile                 server:/home/ef/
+    ```
+
+### Copy entire folder AND rename
+    - key point: trailing slash "/" after folder 'test'
+    rs test/ cach:/home/iamb/datasets/uploads/test-rename
+
+### throttle download speed (eg. 200kb per sec)
+    (good for flaky dongle connections)
+    rsync --bwlimit=200 ...
+
+### spaces in filenames (use \ and "")
+    rsync ... "host:/home/user/filename\ has\ spaces.flv" .
+    other option:
+        use -s and ""
+
+### specify SSH port
+    rsync -rvz -e 'ssh -p xxxxx' --progress  ./testit  ef@xxx.xxx.xxx.xxx:/home/ef/
+
+### use ssh config - "evo"
+    rsync -rvz  --progress ./testit evo:/home/ef/
+
+### clean up after transfer
+    --remove-sent-files

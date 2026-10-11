@@ -1,0 +1,135 @@
+### Contents
+    - Key Features of Intuitionist Mathematics
+    - Simple Examples
+    - Intuitionist Arithmetic
+    - Contrast: Platonism
+    - Example of Abstract External Reality
+    - Brouwer's Perspective
+    - Why This Matters
+
+
+- Intuitionist mathematics, developed by L.E.J. Brouwer, is
+  a mathematical philosophy that emphasizes the MENTAL
+  CONSTRUCTION of mathematical objects over their existence as
+  part of an abstract, external reality. (Platonism)
+- Unlike classical mathematics, intuitionism denies the use of
+  the `law of excluded middle` (P or not-P) for arbitrary
+  propositions, focusing only on what can be explicitly
+  constructed.
+    - "Smooth world" infinitesimals also deny the law of excluded
+      middle: $MY_NOTES/maths/analysis/infinitesimals.txt
+
+### Key Features of Intuitionist Mathematics:
+    1. Constructivism:
+        - Mathematical objects & proofs must be constructively
+          defined or demonstrated. E.g., a number is considered
+          to exist only if we can explicitly construct it.
+    2. Law of Excluded Middle:
+        - This law, fundamental in classical logic, is rejected
+          for general mathematical statements. E.g., in
+          intuitionism, it is not necessarily true that a real
+          number `x` is either rational or not rational unless
+          this can be demonstrated constructively.
+    3. Continuum as a Process:
+        - The real number continuum is viewed as a flowing,
+          `dynamic process`, not a completed set of points.
+        - Real numbers are defined by algorithms or rules for
+          constructing their decimal expansions.
+    4. Implication for Proofs:
+        - Proof by `contradiction` is not valid unless it can
+          constructively produce an example. For instance, to
+          prove that there exists an `x` such that `P(x)`, one
+          must explicitly construct such an `x`.
+
+### Simple Examples:
+    1. Rejection of Non-Constructive Proofs:
+    - Classical: Assume `not-P` leads to a contradiction, thus
+      `P` must hold.
+    - Intuitionist: Unless `P` can be explicitly constructed, the
+      proof is invalid.
+
+    2. Constructing Real Numbers:
+    - A real number in intuitionism might be defined as
+      a sequence (`x_n`) of rational numbers that converges to
+      a limit constructively, such as: `x_n = 1 - 1/n`
+
+    3. No Uncountable Sets: Without the law of excluded middle,
+       the uncountability of certain sets, like the real numbers,
+       does not hold as in classical mathematics. Constructive
+       definitions focus only on `countable processes`.
+
+### Intuitionist Arithmetic:
+    - In intuitionistic arithmetic, logical connectives and
+      quantifiers have constructive interpretations.
+    - For example:
+        - For "there exists `x` such that `P(x)`" `(∃x P(x)`),
+          you must constructively produce an `x` for which `P(x)`
+          holds.
+        - For "for all `x`, `P(x)`" (`∀x P(x)`), you must provide
+          a method that demonstrates `P(x)` for any `x`.
+
+- Intuitionism is often contrasted with classical and formalist
+  approaches, and while it restricts some classical techniques,
+  it provides a foundation for constructive mathematics and
+  influences areas like computer science and algorithmic logic.
+
+### Contrast: Platonism
+    - When we talk about an "abstract, external reality" in
+      mathematics, we're referring to the classical view that
+      mathematical objects exist independently of our thoughts or
+      ability to describe or construct them.
+    - This is often associated with `Platonism`, the idea that
+      mathematical entities—like numbers, sets, or geometric
+      shapes—exist in an abstract, idealized world, and
+      mathematicians "discover" truths about them.
+
+### Example of Abstract External Reality:
+    1. The Number "2":
+        - In classical (Platonist) terms, the number `2` exists
+          as an ideal object, regardless of whether anyone thinks
+          about it or uses it. It's "out there" in a mathematical
+          sense.
+        - In intuitionism, `2` only exists because we can
+          mentally construct it. (e.g. by combining one thing
+          with another). It’s not an independent entity but
+          a mental construct.
+
+    2. Infinite Sets:
+        - In classical mathematics, an infinite set like the set
+          of natural numbers `{1, 2, 3, ...}` is considered to
+          exist as a complete entity.
+        - Intuitionism DENIES this. The natural numbers only
+          "exist" as we construct them one by one in our minds.
+          The set as a WHOLE is not a fixed, external object.
+
+### Brouwer's Perspective:
+    - Brouwer, the founder of intuitionism, argued that
+      mathematics originates entirely in the mind. According to
+      him:
+    - Mathematical objects are *created* by mathematicians
+      through mental activity.
+    - These objects don’t exist in a detached, external realm.
+      Their existence is tied to the act of constructing or
+      defining them.
+    - Abstract concepts like "the set of all real numbers" or "an
+      infinite sequence" are problematic unless they can be
+      explicitly constructed step-by-step.
+
+### Why This Matters:
+    - Classical mathematicians rely on assumptions about abstract
+      existence to make powerful proofs (e.g., "Assume there
+      exists a set X such that..."). Intuitionists reject this
+      unless the object can be explicitly constructed or directly
+      demonstrated. For intuitionists, the act of doing
+      mathematics is inherently a mental process, and anything
+      that can't be mentally constructed doesn't "exist."
+
+    - This philosophy affects how we approach proofs,
+      definitions, and even basic mathematical concepts like
+      infinity and the continuum.
+
+    - In short: the "abstract external reality" is a realm where
+      math exists independently of us, like a hidden treasure
+      waiting to be uncovered. Intuitionism, on the other hand,
+      sees math as something we build in our minds, not something
+      we discover in an abstract world.

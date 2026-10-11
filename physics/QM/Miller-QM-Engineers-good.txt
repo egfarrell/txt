@@ -1,0 +1,49 @@
+### Photons have momentum
+    - In QM, momentum is a more useful quantity than velocity`*`
+      and we prefer to think of classical kinetic energy as:
+        - `KE = p^2/2m`.
+        - `*` There are many reasons to prefer momentum, but
+          a basic one is _photons_ have momentum even though they
+          have no mass and travel at the velocity of light.
+
+### Potentials more useful than Force
+    - In QM, we do have particle motion corresponding to Newton’s
+      2nd law, but we cannot use that particular expression as
+      a way to start out in QM.
+    - Indeed, in QM we seldom if ever directly use the idea of
+      force, or Newton’s second law.
+    - This is partly because we can also express force as the
+      _gradient of a potential energy_, and hence knowledge of
+      the potential energy everywhere contains all we need to
+      know about forces.
+
+### Diffraction: Huygens' Principle
+    - In general, diffraction effects are difficult to calculate
+      exactly because wave equations are difficult to solve
+      exactly when one includes boundary conditions for objects.
+    - A simple principle that often gives a useful approximation
+      to diffractive effects is `Huygens' Principle`.
+    - It states that one can calculate the next wave-front by
+      presuming that each point on the previous wave-front is
+      a source of spherically expanding waves. 
+        - Though not absolutely exact, it's quite accurate
+          (especially with minor adjustments), and we use it in
+          the main text to discuss elementary diffractive
+          effects.
+    - Huygens’ principle was published in 1690 (delayed due to
+      translation from French to Latin)
+        - The principle is not quite correct, because it predicts
+          _backwards waves_ that don't exist.
+            - This problem was fixed in an ad-hoc way by Fresnel,
+              and the resulting `Huygens-Fresnel theory` of
+              diffraction works well for simple wave problems.
+        - A rigorous solution, involving two different kinds of
+          sources on the wavefront, is given by Helmholtz’ (and
+          later Kirchhoff’s) integration of the wave equation.
+        - More recently it's been shown that a different kind of
+          single source works very well, restoring Huygens’
+          original concept. 
+            - (DAB Miller, Optics Lett. 16, 1370-1372, (1991))
+    - The simple spherical wave is, though, a good approximation
+      for small angles if we are only interested in the wave
+      propagation in the forward direction.

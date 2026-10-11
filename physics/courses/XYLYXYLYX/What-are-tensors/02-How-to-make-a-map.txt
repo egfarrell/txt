@@ -1,0 +1,37 @@
+02-How-to-make-a-map.txt
+
+$MY_VIDEOS/physics/what-are-tensors/02-How-to-make-a-map.mp4
+
+- lets choose one set of basis vectors for space `M`. There's an
+  infinite choice...
+
+- we'll call all our basis vectors `e` and to distinguish each
+  one, we give it a subscript
+
+
+- Use `A` and `e` and Einstein summation convention
+	- $MY_IMAGES/physics/what-are-tensors/basic-notation.jpg
+
+note: 
+    - superscript for components
+    - subscript   for basis vectors
+
+- interesting: 
+    - why superscript / subscript combination? 
+    - Does it have to be that way? NO! actually linear algebra
+      books often have: `A_μ e_μ` ie both subscripts!
+        - $MY_IMAGES/physics/what-are-tensors/linear-algebra-notation.jpg
+
+### Important concept: MAPPING
+	- $MY_IMAGES/physics/what-are-tensors/maps-function-and-operator-forms.jpg
+    - but we'll use a kind of <bracket> notation
+        - $MY_IMAGES/physics/what-are-tensors/maps-bracket-notation.jpg
+
+### mapping basis vectors between spaces 
+    - once we know the mapping for the basis vectors, we can map
+      any vector between 2 spaces
+    - why? because the maps are _linear_ 
+        - $MY_IMAGES/physics/what-are-tensors/linear-map-between-2-spaces.jpg
+
+    and now we can map any arbitrary vector between `V` and `W`
+        - $MY_IMAGES/physics/what-are-tensors/mapping-arbitrary-vector.jpg

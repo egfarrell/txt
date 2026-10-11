@@ -1,0 +1,165 @@
+Assembler
+
+
+- disassemble a file: `objdump -d myprog > myprog.d`
+- movq - quad word - 64 bits
+- MEMORY ADDRESSING modes:
+    - `(%rdi)`    get ADDRESS of `%rdi` register
+      - (register in brackets is like a pointer)
+    - `10(%rdi)`  constant DISPLACEMENT offset of `%rdi` address
+    - `D(Rb, Ri, S)` Most general form!
+        - D:  Constant displacement
+        - Rb: Base register
+        - Ri: Index register
+        - S:  Scale (1, 2 or 4 byes)
+
+### `leaq` or `leal` - Load Effective Address
+    - leaq Src, Dest
+    - used to mimic: p = &x[i];
+    - ie puts the ADDRESS of the `Src` in the `Dest`
+    - Also used for arithmetic addition!!!
+    - computes arithmetic expressions of form `b + s*i (+ d)`
+      where s = 1,2,4 or 8
+    - this doesnt set certain 'flags' cos technically its not an
+      arithmetic instruction
+    - (looks like youre manipulating addresses but actually
+      clever way of addition)
+
+### registers!
+    $MY_IMAGES/cs/registers-IA32.jpg
+    $MY_IMAGES/cs/registers-x86-64.jpg
+
+### basic approach
+    - 1. _load_: (values from memory into registers)
+    - 2. _process_: (do something with the registers)
+    - 3. _store_: (put values back into memory)
+    - note: registers much quicker than memory (even cache)
+    - note: can't operate on two things in MEMORY at the same
+      time. ie both operands can't be memory (one must be
+      register etc)
+
+### assembler file extension: '.s'!
+    - in the old days, the assemly language was the 'source'
+      hence the '.s' extension
+
+### compile
+    - create assembler from c code
+    - `gcc -Og -S myprog.c`
+    - `-Og` is a good compromise. Some optimisaiton but still
+      readable for debugging
+
+### program counter
+    - processor register holding memory address of next
+      instruction to be executed
+    - PC: Program Counter
+    - IP: Instruction Pointer (called IP on Intel)
+    - IAR: Instruction Address Register
+    - RIP: instruction pointer for x86-64 (or is it "Return
+      Instruction Pointer"???)
+
+### x86 assembly language
+    - https://en.wikipedia.org/wiki/X86_assembly_language#Syntax
+    - TWO syntax branches:
+
+    - INTEL:
+        - move {destination}, {source}
+        - `mov eax, 5`
+        - originally used for x86 documentation
+        - dominant in MS-DOS and Windows
+        - used by: NASM, FASM, MASM, TASM, and YASM
+
+    - AT&T:
+        - move {source}, {destination}
+        - `mov $5, %eax`
+        - dominant in Unix world
+        - (cos Unix created at AT&T Bell Labs)
+        - Used by: GAS
+        - but GAS has `.intel_syntax` directive too
+
+### Assemblers:
+    - GAS: GNU assembler
+    - NASM
+    - FASM
+    - MASM
+    - TASM
+    - YASM
+
+### misc
+    - Both (`.globl` and `.global`) are accepted, for compatibility with other assemblers.
+
+### Registers
+    - Because theres so few of them, their address is only
+      a small amount of bits (dont need a bit long address like
+      somewhere in RAM)
+
+    - 'LiveOverflow' tip: registers are like 'global variables'
+
+    - data registers
+
+    - address registers
+
+    - addressing modes:
+        - Register:   `Add R1, R2      // R2       <- R2 + R1`
+        - Direct:     `Add R1, M[200]  // Mem[200] <- Mem[200] + R1`
+        - Indirect:   `Add R1, @A      // Mem[A]   <- Mem[A] + R1`
+        - Immediate:  `Add 73, R1      // R1       <- R1 + 73`
+
+### MASM
+    - install on ubuntu (use 'dosbox') https://www.youtube.com/watch?v=W72oRn1-zKc
+    - it states: "NASM Is Case-Sensitive"
+        - However, MASM also can be case-sensitive, simply use:
+          `option casemap :none`
+
+### instruction set
+    - ALU & Registers:
+        - ADD
+        - SUB
+        - MUL
+        - AND
+        - OR
+
+    - Registers & RAM
+        - LOAD
+        - STORE
+        - MOV
+
+    - Program Flow
+        - BRANCH
+        - BREQ
+        - BRNE
+
+    - Logical Operations
+        - AND
+        - OR
+
+
+### Assembly Primer for Hackers (great stuff)
+
+    - method 1: display stack/heap contents:
+        1. Get process id: `ps -aux | grep SimpleDemo`
+        2. Assume the pid is '1234'
+        2. look at memory map: `cat /proc/1234/maps`
+
+    - method 2: display stack/heap contents:
+        - `pmap  $(pgrep simpledemo)`
+
+    - linux virtual memory randomisation
+        - look at it:  `cat /proc/sys/kernel/randomize_va_space`
+        - turn off by: `echo 0 > /proc/sys/kernel/randomize_va_space`
+
+### links
+    - CS Programmer Perspective                    ./carnegie-mellon-csapp.txt
+    - hn learn assembly                             https://news.ycombinator.com/item?id=24195627
+    - Linux syscall table                           https://filippo.io/linux-syscall-table/
+    - Gibson Research Corporation                   https://www.grc.com
+    - Modern X86 Assembly Language Programming      https://www.amazon.com/Modern-X86-Assembly-Language-Programming/dp/1484200659/ref=zg_bs_3971_8?_encoding=UTF8&psc=1&refRID=SA59EH8024E46R6NWASR
+    - Low-Level Programming: C, Assembly...         https://www.amazon.com/Low-Level-Programming-Assembly-Execution-Architecture/dp/1484224027/ref=pd_sim_14_1?_encoding=UTF8&psc=1&refRID=R6AYAHM847K3WA3YG31H
+    - Low-Level Programming: C, Assembly... Github: https://github.com/Apress/low-level-programming
+
+    - Assembly Language for x86 Processors (7th Edition) https://www.amazon.com/Assembly-Language-x86-Processors-7th/product-reviews/0133769402/ref=cm_cr_arp_d_hist_3?ie=UTF8&reviewerType=all_reviews&sortBy=recent&filterByStar=three_star&pageNumber=1#R2MJJEIHT3WAC3
+    - Answers: http://staffwww.fullcoll.edu/zding/fcall/Answers2ReviewsAndExercises.pdf
+
+    - Assembly primer for Hackers (Linux)    http://www.securitytube.net/groups?operation=view&groupId=5
+    - Assembly primer for Hackers (alt link) https://www.youtube.com/user/TheSecurityTube/featured
+    - Assembly primer for Hackers (Windows)  http://www.securitytube.net/groups?operation=view&groupId=6
+    - MASM long course                       https://www.youtube.com/watch?v=vtWKlgEi9js&list=PLPedo-T7QiNsIji329HyTzbKBuCAHwNFC

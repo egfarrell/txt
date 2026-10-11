@@ -1,0 +1,168 @@
+### Dimension Modelling
+    - https://en.wikipedia.org/wiki/Dimensional_modeling
+    - Dimensional modeling always uses the concepts of facts
+      (measures), and dimensions (context). 
+    - Facts: typically (but not always) numeric values that can
+      be aggregated, 
+    - Dimensions: groups of hierarchies and descriptors that
+      define the facts.
+
+
+### Talk: Database migrations don't have to be painful Data
+    - Strata 2019
+    - Inspired by the Green / Blue deployment technique, the
+      Adobe Audience Manager team developed an Active / Passive
+      database migration procedure that allows us to test our
+      database clusters in production, minimising the risks
+      without compromising the innovation. We successfully
+      applied this approach twice to upgrade the entire
+      technology stack. But it never was a smooth move.
+    - lesson 01: Automoate everything (but be prepared for some
+      manual intervention)
+    - lesson 02: Make only ONE change at a time
+        - Their problem: CentOS had new hardware problems (i3,
+          SSD). Solution: use Amazon Linux on AWS
+    - lesson 03: Start small
+    - lesson 04: But small scale success is never enough
+    - lesson 05: One slow node is worse than a dead one!
+        - extra point: they ran out of clean SSD areas on their
+          disks which slowed the whole cluster. Again this was
+          only seen when they started processing full production
+          data.
+    - lesson 06: beware of new technology unknowns (NVMe SSDs)
+    - lesson 07: Read the manual!
+
+
+
+### DIMENSIONAL data modeling
+    - Learn all about dimensional data modeling and how to build
+      this powerful data model for analytics. We cover how
+      dimensional differs from relational and explain each of the
+      dimensional modeling components: 
+        - meters, 
+        - dimensions,
+        - measures, 
+        - hierarchies. 
+    - We also explore more advanced dimensional modeling
+      components such as behavioral dimensions, factless facts,
+      and conformed dimensions. 
+    - Learn about the three types of measures: Transaction,
+      Snapshot, and Accumulating. 
+    - Understand the differences in modeling and data warehouse
+      architecture approaches from the legends, Bill Inmon and
+      Ralph Kimball. 
+    - Practice several dimensional modeling exercises. This video
+      was recorded live during Steve Hoberman’s Data Modeling
+      Master Class. More on this 3-day data modeling course at
+      https://stevehoberman.com
+
+    - ERD's are timeless
+    - so how to you track history over time?
+    - A manager is in an office, (only one) and one office can
+      have many managers (one-to-many). 
+        - But over time the manager moves around, so the
+          `one-to-many` becomes a `many-to-many` and you lose
+          some ERD rules...
+    - so better to model time changes using the "physical"?
+    - and some australian modeller said put a little clock symbol
+      beside each entity that needs history
+
+    - `RELATIONAL`  = Data Model of how the business WORKS
+        - Business execution
+        - Scope = concepts/rules that describe business process
+        - Timeless
+        - Designed to mimic how a business works
+
+    - `DIMENSIONAL` = Data Model of how the business IS DOING
+        - smaller scope than relational model
+        - business evaluation (monitoring)
+        - Scope = measures/context that answer business questions
+        - Timeless
+        - "Things I measure" go in the middle and ways of looking
+          at them go in the surrounding boxes
+        - Simple, secure (physical level), speedy (physical
+          level)
+        - A dimensional model will always be derived from
+          a relational
+        - Relational is all the lego pieces of different sizes.
+          Dimensional is putting them together for a purpose.
+
+    - Dimensional models are built around measures. 
+    - Measures are attributes we can MATHEMATICALLY manipulate.
+    - `Measure`: eg. gross sales amount. 
+        - Has a "class word": amount, sum, rate, count
+        - TRANSACTION: lowest level: 
+            - monitor events created by a business process. Order
+              quantity, Gross sales amount
+            - how well is a process performing. e.g. look at
+              order quantity 
+            - easiest to work with - they are additive, can be
+              summed at any dimension level
+        - SNAPSHOT:
+            - monitor _impact_ of events created by a business
+              process.
+            - eg at the end of a given period, whats the account
+              balance amount. Or Ozone layer thickness etc!
+            - they represent end-points after a series of
+              transactions have been completed
+            - more complex because they aren't additive
+        - ACCUMULATING:
+            - how long does it take a business process to
+              complete
+            - how many days to close claim at insurance company
+            - progression
+
+    - `Meter`: the most important entity on a dimensional model
+      because it determines (shows?) the health of a business
+      process. (shows the value of a measure?)
+        - a _logical_ meter may turn into one or more _physical_
+          fact tables
+    - `Dimensions`: provide a context for a meter. Dimensions are
+      often hierarchies: (e.g. Country, region. Year, month.)
+        - But not all dimensions are hierarchies: 
+            - e.g. gender, currency.
+    - `Grain` or base: the lowest level of detail we can view our
+      measures. e.g. lowest level: month, product, region. (this
+      can then be rolled up higher)
+        - if the grain is too low-level it could start revealing
+          individual details. ie you get privacy issues.
+        - sometimes the data may not be available for the desired
+          grain level. ie we may only have quarterly data, not
+          monthly!
+    - `atomic`: the actual lowest level in the business
+    - Simplicity, security and speed best flexibility in the
+      dimensional.
+    - The simpler the dimensional data model, the more work for
+      developers.
+    - Dimensional models are built for navigation, up and down
+      the hierarchy: "drill down" and "drill up"
+    - Drill across from one meter to another, if they share the
+      same dimensions. e.g. Compare sales against returns
+    - If you've got a Data lake, data warehouse, then usually
+      you're in a better position to drill across. (because
+      you've given more thought about how the pieces fit
+      together)
+
+    - When dimensional and when relational? 
+        - Dimensional when theres a reporting requirement to play
+          with numbers
+        - dimensional: you're already assuming theres some
+          questions your want to answer:  ie when you know the
+          question and you're playing with numbers
+
+    - Text analytics: assign a number to a comment / piece of
+      text. See how "much" someone loves  our product. But in
+      it's infancy: computers can't detect human sarcasm!
+
+    - USE RELATIONAL for adhoc queries. Ad-hoc = query
+      freedom.
+
+    - as long as you're not affecting simplicity, security and
+      speed you can offer a finer grain.
+
+    - Two architecture models: BUS (Kimball) and HUB (Inmon).
+      Often with the bus, your grain is at the atomic level. Cos
+      it's harder to change later anyway.
+
+    - factless fact: better name would be a "measureless meter".
+      Factless fact count events, by summing relationships.

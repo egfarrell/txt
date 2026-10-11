@@ -1,0 +1,94 @@
+vim ultisnip snippets
+
+ultisnips visual placeholder
+    1. select some text
+    2. press TAB / Ctrl+I
+    3. enter snippet mnemonic and press TAB again
+    4. selected text will be inserted into visual placeholder
+
+stop jumping forward from expanding a new snippet
+    You can use <c-j> to jump to the next tabstop, and <c-k> to jump to the
+    previous. The <Tab> key was not used for jumping forward because many people
+    (myself included) use <Tab> for completion. See |UltiSnips-triggers| for
+    help on defining different keys for tabstops.
+
+$0
+    The '$0' tabstop is a special tabstop. It is always the last tabstop
+    in the snippet no matter how many tabstops are defined.
+
+"unidecode" error message
+    I use "python" from Anaconda but "vim-gnome" from the PPAs,
+    so vim-gnome is compiled against my LUBUNTU system python.
+    Solution:
+        1. change .bashrc to (temporarily) disable Anaconda
+        2. sudo apt-get install python-pip
+        3. sudo pip install unidecode
+        4. (LUBUNTU system python now has "unidecode") 
+        5. change .bashrc to enable Anaconda again
+    
+    Ive supressed the error msg about unidecode missing
+
+in-word expansion "i"
+    i.e. trigger the snippet even if 
+    theres another letter in front of it
+
+global snippets file
+    all.snippets
+
+list all snippets
+    insert mode: CTRL+j (see .vimrc)
+
+regex + python snippet
+    snippet "rep (\d) (\w)" "Repeat" r
+    `!p snip.rv = int(match.group(1))*match.group(2)`
+    endsnippet
+
+regex snippet
+    (only expand in column 2 of a line)
+    snippet '^ st' "status" r
+
+
+global snippet
+    global !p
+        def printworld():
+            print "hello world"
+    endglobal
+
+
+python interpolation
+    `!p snip.rv="hello"`
+
+
+shell interpolation
+    `echo $user`
+
+
+vimscript interpolation
+    `!v xxxxxxx`
+
+
+expand snippet at line beginning
+    b
+
+
+locating tex snippets
+    tex_*.snippets
+    (same as vim search for ftplugins)
+
+    Using a strategy similar to how Vim detects |ftplugins|, UltiSnips iterates
+    over the snippet definition directories looking for files with names of the
+    following patterns: ft.snippets, ft_*.snippets, or ft/*, where "ft" is the
+    'filetype' of the current document and "*" is a shell-like wildcard matching
+    any string including the empty string. The following table shows some typical
+    snippet filenames and their associated filetype.
+
+        snippet filename         filetype ~
+        ruby.snippets            ruby
+        perl.snippets            perl
+        c.snippets               c
+        c_my.snippets            c
+        c/a                      c
+        c/b.snippets             c
+        all.snippets             *all
+        all/a.snippets           *all
+

@@ -1,0 +1,227 @@
+
+- Essence of Calculus https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr
+
+
+### Contents
+    - Part-01  Essence of Calculus Chapter 1
+    - Part-02  Paradox of the derivative
+    - Part-03  Derivative formulas through geometry
+    - Part-04  Visualizing the 'chain rule' and 'product rule'
+    - Part-05  Why Eulers number 'e' is special
+    - Part-06  Implicit differentiation
+    - Part-07  Limits, LHopitals rule and epsilon delta definitions
+    - Part-08  Integration & fundamental theorem of calculus
+    - Part-09  What does AREA have to do with SLOPE
+    - Part-10  Higher order derivatives
+    - Part-11  Taylor series
+    - Part-12  Another way to visualize derivatives
+
+### oh key idea: 'area under a graph'
+    - Notice all the little areas of all the little rectangles,
+      ... as the 'widths' of these little rectangles get smaller
+      and smaller...
+        - you end up working out the `AREA under a graph` rather
+          than the SUM of millions of little rectangles...
+    - ... or said another way: 
+        - `integration` has a similarity to computing the area
+          under a graph
+        - $MY_IMAGES/maths/integration-and-area-under-graph.jpg
+        - $MY_IMAGES/maths/integration-and-area-under-graph-2.jpg
+
+### But a question!
+    - in the area of a circle problem above, there was an easy
+      formula to get the area under the graph... it was just the
+      area of a triangle
+    - But what about the area under a parabola??? 
+        - No handy formula there?
+        - $MY_IMAGES/maths/integration-and-area-under-graph-tricky.jpg
+
+
+### Part-01
+    - $MY_VIDEOS/maths/3blue1brown/calculus/001-The-Essence-of-Calculus-Chapter-1.mp4
+
+### Part-02
+    - $MY_VIDEOS/maths/3blue1brown/calculus/002-The-paradox-of-the-derivative.mp4
+    - paradox: INSTANTANEOUS rate of change
+        - can't have an INSTANTANEOUS rate of change, it's
+          impossible...
+            - $MY_IMAGES/maths/analysis/paradox-instant-rate-of-change.jpg
+        - Cumulative Distance diagram
+            - $MY_IMAGES/maths/analysis/car-speed-slow-small-triangle.jpg
+            - Nice image: showing how the car is moving quicker
+              when the "little triangle" is steeper... 
+                - (or the distance function `s(t)` is steeper)
+            - Between second 2 and 3: 
+                - the car not going very fast...
+            - But between second 4 and 5: 
+                - car faster and triangle (s(t)) steeper slope...
+                - $MY_IMAGES/maths/analysis/car-speed-faster-steeper-triangle.jpg
+        - nice graphs plotting velocity as a function of time
+            - (the two curves are related)
+            - This is like those CUMULATIVE statistics graphs...
+            - (I hvae images like this somewhere else, maybe Deep
+              Learning section or Neural networks)
+                - $MY_IMAGES/maths/analysis/car-speed-velocity-distance-01.jpg
+                - $MY_IMAGES/maths/analysis/car-speed-velocity-distance-02.jpg
+                - $MY_IMAGES/maths/analysis/car-speed-velocity-distance-03.jpg
+                - $MY_IMAGES/maths/analysis/car-speed-velocity-distance-04.jpg
+            - After lots of searching:
+                - Ah I snapped these pictures before!
+                - Made a note in my main Maths file:
+                  $MY_NOTES/maths/maths-tips.md
+                    - (Search for: "Cumulative Function rate of
+                      change")
+                    - $MY_IMAGES/maths/2brown-calculus/distance-velocity-cumulative.jpg
+                    - $MY_IMAGES/maths/2brown-calculus/distance-velocity-cumulative-2.jpg
+                    - $MY_IMAGES/maths/2brown-calculus/distance-velocity-cumulative-3.jpg
+                    - $MY_IMAGES/maths/2brown-calculus/distance-velocity-cumulative-4.jpg
+            - Approximation of current velocity
+                - (Change in distance) / (Change in time)
+                - $MY_IMAGES/maths/2brown-calculus/how-to-approximate-instant-velocity.jpg
+            - Interesing: apparent paradox: 
+                - the velocity function `v(t)` takes a SINGLE
+                  point in time `t`, but to calculate the
+                  velocity we need TWO POINTS in time!
+                - Although we work out the rise/run ratio for two
+                  NEARBY POINTS IN TIME on the graph (in the real
+                  world), in the Platonic Maths world we let the
+                  distance between the two nearby points approach
+                  zero (`dt -> 0`), and we get a tangent line to
+                  the graph. And the SLOPE of this tangent line
+                  is the pure math derivative
+                    - $MY_IMAGES/maths/2brown-calculus/pure-math-derivative-01.jpg
+                    - $MY_IMAGES/maths/2brown-calculus/pure-math-derivative-02.jpg
+            - Even though change in an INSTANT makes no sense,
+              this idea of letting `dt` APPROACH ZERO (but still
+              remain finite) is kind of a "sneaky backdoor way"
+              to talk about the rate of change at a single point
+              in time. 
+                - It's flirting with the paradox of change in an
+                  instant without ever actually touching it.
+            - Because "change in an instant" makes no sense, it's
+              better to think of the derivative as the best
+              CONSTANT APPROXIMATION of a rate-of-change around
+              a point...
+
+### Part-03
+    - $MY_VIDEOS/maths/3blue1brown/calculus/003-Derivative-formulas-through-geometry.mp4
+    - Why do students spend so much time grappling with
+      derivatives of abstract functions... rather than
+      concentrate rate-of-change problems?
+        - Because real world problems are _modelled_ with
+          polynomials, trig functions, exp functions etc
+    - Derivatives:
+        - how a tiny change in one quantity can result in a tiny
+          change in another quantity
+        - tiny nudges are at the heart of derivatives
+    - Note: it's often better to view the _GEOMETRIC_ (2D or 3D)
+      version of the function, when trying to work out the
+      PRECISE FORMULA for a derivative, rather than the _graph_
+      of the function
+        - Gives more intuition for the formula that way ...
+            - $MY_IMAGES/maths/2brown-calculus/derivatives-thru-geometry-0.jpg
+            - $MY_IMAGES/maths/2brown-calculus/derivatives-thru-geometry-1.jpg
+            - $MY_IMAGES/maths/2brown-calculus/derivatives-thru-geometry-2.jpg
+            - $MY_IMAGES/maths/2brown-calculus/derivatives-thru-geometry-3.jpg
+            - $MY_IMAGES/maths/2brown-calculus/derivatives-thru-geometry-4.jpg
+            - $MY_IMAGES/maths/2brown-calculus/derivatives-thru-geometry-5.jpg
+        - note: when MANUALLY working out the derivative of
+          a function, you can ignore any differential higher than
+          order 1... 
+            - so ignore any bits that are dx^2, dx^3...
+            - later: ah it's because anything like dx^2, dx^3 etc
+              will be divided by dx later, and then `dx -> 0` so
+              they'll all disappear anyway
+            - $MY_IMAGES/maths/2brown-calculus/ignore-higher-order-differentials.jpg
+    - nice way to think of the graph of `1/x`
+        - It's whatever the HEIGHT of a rectangle of width `x`
+          has to be, to keep its area = 1
+            - $MY_IMAGES/maths/2brown-calculus/geometry-plus-graph-1-over-x.jpg
+        - And if you nudge the width of the rectangle by `dx`,
+          what should the height `1/x` lose? 
+            - In order to keep the overall area = 1?
+            - $MY_IMAGES/maths/2brown-calculus/geometry-plus-graph-1-over-x-2.jpg
+
+    - Why the derivative of `sin(θ)` is  `cos(θ)`?
+        - intuition 1:
+            - look at the graph of `sin(θ)` and see if the
+              rate-of-change (slope) is rising, or falling, or
+              zero at each point. As you plot this slope, you'll
+              end up plotting the graph of `cos(θ)`
+                - $MY_IMAGES/maths/2brown-calculus/derivative-of-sine-1.jpg
+        - intuition 2:
+            - More precise, look at the unit circle itself. How
+              much does the "height" of `sin(θ)` change, when we
+              nudge the angle `θ` by a little bit, `dθ`
+                - note: when we nudge the angle, it's like we
+                  walk ahead a bit more around the outside rim of
+                  the circle, because that's what radian angles
+                  really mean
+                    - $MY_IMAGES/maths/2brown-calculus/derivative-of-sine-2.jpg
+                - a year later (Sept 2022): oh I got it now, with
+                  the little triangle underneath the circle
+                    - $MY_IMAGES/maths/2brown-calculus/oh-I-got-the-derivative-of-sin.jpg
+
+### Part-04 (function composition)
+    - $MY_VIDEOS/maths/3blue1brown/calculus/004-Visualizing-the-chain-rule-and-product-rule.mp4
+    - 3 basic ways to combine functions
+        - Add them
+        - multiply them
+        - put one "inside" the other
+        - $MY_IMAGES/maths/2brown-calculus/3-ways-combining-functions.jpg
+
+    - interesting: if you're dealing with the product of
+      2 functions, then a GRAPH of both functions isn't the best
+      way to understand what's going on
+        - its better to think about AREAS
+
+    - Another way of visualising things, not a graph and not
+      blocks of area... instead it's 3 separate "number lines"
+        - for the function composition `sin(x^2)`:
+        - $MY_IMAGES/maths/2brown-calculus/visualise-function-composition.jpg
+
+### Part-05
+    - $MY_VIDEOS/maths/3blue1brown/calculus/005-Whats-so-special-about-Eulers-number-e.mp4
+    - derivative of `2^t `.... is `2^t * (0.69...)` 
+        - ie `itself * constant`
+    - All exponential functions are proportional to their own
+      derivative, but `e` is the special function where the
+      constant of proportionality is `1`
+
+### Part-06
+    - $MY_VIDEOS/maths/3blue1brown/calculus/006-Implicit-differentiation-whats-going-on-here.mp4
+    - implicit curves: 
+        - Look at this circle. 
+        - `x` isn't the input to some FUNCTION, and
+        - `y` isnt the output of a function
+        - $MY_IMAGES/maths/2brown-calculus/implicit-curve.jpg
+    - first look at the ladder "related rates" problem 
+        - $MY_IMAGES/maths/2brown-calculus/ladder-related-rates.jpg
+    - connection between the implicit circle and the ladder. 
+        - Both use the same 'formula'
+            - $MY_IMAGES/maths/2brown-calculus/ladder-and-circle.jpg
+        - but for the 'related rates' ladder, everything was
+          a function of `time`, so we had a `dt`. 
+        - But for the circle there's no `dt`:
+            - $MY_IMAGES/maths/2brown-calculus/implicit-circle-no-dt.jpg
+
+### Part-07
+    - $MY_VIDEOS/maths/3blue1brown/calculus/007-Limits-LHopitals-rule-and-epsilon-delta-definitions.mp4
+    - nice 'quid pro quo'
+        - limits helped us write the definition of derivatives
+        - derivatives can now help us evaluate limits
+
+### Part-08
+    - $MY_VIDEOS/maths/3blue1brown/calculus/008-Integration-and-the-fundamental-theorem-of-calculus.mp4
+
+### Part-09
+    - $MY_VIDEOS/maths/3blue1brown/calculus/009-What-does-area-have-to-do-with-slope.mp4
+
+### Part-10
+    - $MY_VIDEOS/maths/3blue1brown/calculus/010-Higher-order-derivatives.mp4
+
+### Part-11
+    - $MY_VIDEOS/maths/3blue1brown/calculus/011-Taylor-series.mp4
+
+### Part-12
+    - $MY_VIDEOS/maths/3blue1brown/calculus/012-The-other-way-to-visualize-derivatives.mp4

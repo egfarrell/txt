@@ -1,0 +1,43 @@
+
+
+### Outout Latex and images 
+    - autocreate a 'tex' file or 'jpg'
+    Export["~/.maxima/eqn.tex", myvar]
+    Export["~/hello.jpg",       myvar]
+
+    - view image file
+    StartProcess[{"viewnior", "/tmp/w.jpg"}];
+
+
+### Output CForm from a SCRIPT
+    Put[ OutputForm[gC], "output.txt" ]
+    PutAppend[ OutputForm[GC], "output.txt" ]
+    PutAppend[ OutputForm[\[CapitalGamma]C], "output.txt" ]
+    "Print" doesnt work!
+
+### Run script, print all output
+    wolframscript -print all -file test.wl
+
+### CAMK ("chuck")
+    ssh -X chuck
+    mathematica
+    - show license usage
+        monitorlm 
+
+### Install 'Wolframe Engine for Developers'
+    - https://www.wolfram.com/engine/
+    - Note: The `wolframscript -config ...` bit is important!
+        sudo bash ./WolframEngine_12.1.1_LINUX.sh 
+        wolframscript -config WOLFRAMSCRIPT_KERNELPATH="/usr/local/Wolfram/WolframEngine/12.1/Executables/WolframKernel"
+        wolframscript
+
+
+### Link to Jupyter notebooks
+    git clone https://github.com/WolframResearch/WolframLanguageForJupyter.git
+    ./configure-jupyter.wls add
+    jupyter kernelspec list
+
+    Alternative kernel with tab completion:
+        https://github.com/Ludwiggle/JWLX
+
+

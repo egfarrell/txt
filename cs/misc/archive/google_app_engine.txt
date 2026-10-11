@@ -1,0 +1,17 @@
+google app engine
+Google app engine issues
+	all queries have a limit of 1000 records (jan 2013)
+	backup and restore - hard to dump out data to test db?
+	data viewer not great - hard to issues SQL queries directly against data
+
+GQL
+	subset of SQL
+	all queries begin with "Select *"
+	no joins possible
+	all queries must be indexed
+
+Google datastore
+	is both sharded and replicated
+	wont have to think about scaling (too much)
+	queries are quick (because simple)
+	possible replication lag

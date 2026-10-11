@@ -1,0 +1,60 @@
+### Week 2
+    - 01 Working with DNA Sequences
+    - 02 Sequence Statistics
+    - 03 Protein Sequence Statistics
+    - Optional: R Bloggers https://www.r-bloggers.com/r-tutorial-series-r-beginners-guide-and-r-bloggers-updates/
+
+
+# 01 Working with DNA Sequences
+
+### standard formats for sequences
+    - Single sequence formats:    FASTA, ASN.1, GCG, etc.
+    - Multiple Sequence formats:  FASTA, Clustal, MSF, etc.
+    - FASTA: easiest and most common format 
+
+    - The FASTA format is very simple – a plain text file where
+      the first line begins with `>` (the description line) and
+      contains whatever name or identifier belongs to the
+      sequence.
+
+    - The following line(s) are the sequence itself, DNA or
+      Protein, in standard _IUPAC_ code.
+        - ../../../IUPAC-codes.txt
+
+
+    - If the FASTA file contains more than one sequence, the next
+      sequence is indicated by a new description line – this can
+      be repeated for as many sequences as are desired.
+
+
+### FASTA examples
+    - Single Protein Sequence (SPS) with Genbank Identifier
+        - $MY_IMAGES/bio/UMGC-micromasters/stat-analysis/single-protein-sequence-genbank-id.jpg
+
+    - Multiple DNA sequences in FASTA format
+        - $MY_IMAGES/bio/UMGC-micromasters/stat-analysis/multiple-sequences-fasta.jpg
+
+### IUPAC codes 
+        - ../../../IUPAC-codes.txt
+
+### Read Fasta files
+    - $MY_CODE/bio/UGMC-micromasters/stat-analysis/week-02/01-read-fasta.R
+
+
+# 02 Sequence Statistics 
+    - $MY_CODE/bio/UGMC-micromasters/stat-analysis/week-02/02-Sequence-stats.R
+
+### GC Analysis
+
+    - The GC content tells us the ratio of G (guanines) and
+      C (cystosines) residues compared to A (adenine) and
+      T (thymidine) residues in a sequence 
+
+    - Its important because coding regions tend to be higher in
+      GC. üGC content also affects the "melting" temperature of
+      DNA.
+
+    - GC content is `0.51`, meaning the GC to AT ratio is pretty
+      even in this sequence.
+
+    - Calculate GC by "windows" (short regions)

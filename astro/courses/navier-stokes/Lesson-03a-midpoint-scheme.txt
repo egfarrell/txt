@@ -1,0 +1,27 @@
+
+### Videos
+    - $MY_VIDEOS/physics/Navier-CFD/07-Navier-Midpoint-scheme.mp4
+
+- We want to approximate this derivative
+    - ie we want the slope of the tangent to the point `x_i`
+    - $MY_IMAGES/physics/navier-CFD/midpoint-scheme-01.jpg
+
+- Try forward difference:
+    - its a "one-sided" difference scheme 
+    - has some error/inaccuracy
+    - although error can be reduced by reducing `∆x`
+	- $MY_IMAGES/physics/navier-CFD/midpoint-scheme-02.jpg
+
+- Try backward difference:
+    - same idea, some error
+	- $MY_IMAGES/physics/navier-CFD/midpoint-scheme-03.jpg
+
+- Central difference better:
+	- $MY_IMAGES/physics/navier-CFD/midpoint-scheme-04.jpg
+
+- The twist:
+    - Backward difference could actually be viewed as
+      a "central difference"!
+    - a central difference of what? 
+    - a central difference of the point `x_(i - 1/2)`
+	- $MY_IMAGES/physics/navier-CFD/midpoint-scheme-05.jpg

@@ -1,0 +1,1001 @@
+
+### Superb: 2nd place used Bayesian inference:
+    - 2nd place solution - pure Bayesian Inference, no deep learning
+    - Great talk: https://neurips.cc/virtual/2024/107111
+    - submission code:    https://www.kaggle.com/code/jeroencottaar/ariel-2nd-place-submission-notebook
+    - visualization code: https://www.kaggle.com/code/jeroencottaar/ariel-2nd-place-visualization-notebook
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/543853
+
+https://astrobites.org/2023/01/13/the-air-is-thin/
+jitter noise mentioned a lot
+Keywords
+Astronomy, Data drift, Time Series Denoising, Exoplanets, Instrument systematics
+Course: Atmospheric Science https://www.e-education.psu.edu/meteo300/node/683
+
+### todo
+    - pysdr: discuss noise https://pysdr.org/content/noise.html
+    - faster calibration codes https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/535421
+    - 'gain noise' https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/533743#2988832
+    - UCL talk DL noise etc https://www.youtube.com/watch?v=T_zTu6HOm1Y
+    - Elizabeth Tasker youtube talks
+    - Get these papers https://www.ariel-datachallenge.space/ML/documentation/resources
+    - space coders (experts): vdebout, skril31
+    - Good talk https://www.youtube.com/watch?v=zTFrvhNnpI4
+    - Undermind https://www.undermind.ai/query_app/display_one_search/f520a2f132a19b0786523091efc4c2e6424a989f32952200bc06fcfddb9f3328/
+    - chunk size = 4/8/16 for 672 exoplanets. is good for both train and test set. 
+
+
+### Handy / misc
+    - Struggling with zero score?
+        - I struggled with 0 score for weeks. In my case the key
+          difference between train and test was probably that the
+          ingress and egress times (i.e. when the planet enters
+          and exits) are different in test. So if you're making
+          specific assumptions on when this happens (for example
+          by removing a large amount of data around the possible
+          ingress and egress), you can run into this.
+        - Try increasing sigma prediction. Uncertainty for test
+          set predictions is much higher and caused people to
+          have zero score
+
+    - Important: final questions answered by the hosts
+        - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/538139
+    - Can we assume that ingress and egress are symmetrical
+      around the center?
+        - Yes
+        - Isn't this contradicting your other statement?:
+            - "I can confirm that there are cases when some
+              examples in the test is not as well-centered as
+              others. If you look into the training set, there
+              are also a few cases where it is not well-centered
+              too."
+            - Or do you mean that it is generally symmetrical,
+              with some exceptions?
+        - Another point:
+            - In my opinion, the most challenging aspect of the
+              data is that the light curves of different
+              wavelengths VARY GREATLY (i.e. the light curve is
+              much noisier when _the wavelength goes small_). Can
+              the 2dGP method really improve the estimation of
+              different wavelengths or just the mean of all the
+              wavelengths? Would you mind sharing some experiment
+              results about it :)
+
+
+    - The whole point of this competition is to predict the
+      _expected variance_ on the reconstructed spectrum, which is
+      hard when this is not included in the training labels…
+    - Jitter noise comes in many flavours depending on if it is
+      vibration, pointing issues or else, and a bit of details
+      around this point would only help the hosts to get better
+      solutions for this specific problem.
+
+    - Signal denoising techniques https://www.youtube.com/watch?v=nycofP8G5us
+        - $MY_IMAGES/astro/exo/signal-denoising-techniques.jpg
+
+    - DL for time-series? State of the art:
+        - An hybrid physics-ML framework to model exoplanetary light curves https://www.youtube.com/watch?v=S2JGyDG5Pww
+        - $MY_IMAGES/astro/exo/DL-for-time-series.jpg
+        - $MY_IMAGES/astro/exo/pylightcurve-torch.jpg
+
+    - Best score possible?
+        - `1.0` score is achievable with predictions that lie
+          within `<1e-5` sigma of true values, because 1e-5 is
+          TRUE-SIGMA.
+        - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/535835
+
+    - important: how to handle 0.1s integration time
+      https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/535362
+
+    - Undermind papers
+        - $MY_NOTES/cs/AI-ML/exo-ariel/papers-undermind.txt
+        - 'Gaussian Processes' and 'pixel-level decorrelation'
+
+    - statquest ML course: covers regression, ridge, lasso etc
+        - $MY_NOTES/cs/AI-ML/courses/statquest-playlist.txt
+
+    - denoising and detrending
+        - Signal is hidden and convolved under layers of noise.
+        - Consider this like a de-noising problem for a simple
+          camera. The only difference is now your camera is
+          hanging in space.
+
+    - Lessons from 2022
+        -                           Set 1       Set 2       Set 3       Set 4
+        - Planetary Configuration   In-Range    Out-Range   In-Range    Out-Range
+        - Atmospheric Properties    In-Range    In-Range    Out-Range   Out-Range
+
+        - The test set is designed to reflect differences between
+          real Ariel observations and simulated models, to assess
+          how this impacts model performance. 
+        - The test data is split into 4 sets. 
+        - Set 1 is most similar to the training data, using the
+          same atmospheric and planetary assumptions, while Set
+          4 is the most dissimilar, with unseen configurations.
+        - "In-Range" means the test data overlaps with training
+          data, while "Out-Range" does not.
+
+
+    - Submission scoring error:  
+        - kept encountering this till I avoided `s < 1e-4`. 
+        - Maybe helps...
+
+    - Notebook Timeout? 
+        - the HOST PROVIDED calibration methods are pretty slow.
+        - see also: faster calibration codes
+          https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/535421
+            - One thing to do is cut the images to the center
+              pixels (10:22), like here:
+              https://www.kaggle.com/code/pourchot/ariel-data-challenge-2024.
+              That improves processing time by around 3x.
+
+    - 'Magic' to get into top 5: 
+        - Comment: I think the key is good estimation of the
+          uncertainty (sigma) part.
+        - Different comment: `Sigma estimation` is crucial in
+          this competition, and I'm struggling to find a sigma
+          strategy to fit UNKNOWN STARS.
+        - Comment: 'Cleaner'
+            - ... does a "cleaner" signal improve your score
+              much? Or what do you mean by "cleaner" signal? For
+              me, no denoising algorithm has done well.
+            - I've tried 12 approaches so far. There are small
+              gains but I put "cleaner" in quotes because in some
+              sense, just averaging all the wavelengths gives you
+              a cleaner signal.
+        - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/534376
+ 
+    - talk from UCL EXOAI team
+      https://www.youtube.com/watch?v=s2fHz3O30y0
+        - very low `s/n`... "at the instrument limit"
+        - data is 1D... modelling a 3D atmos is hard
+        - planet spectrum: `10^(-5)` or `10^(-6)` tiny effects.
+          An order of magnitude lower than the instrument noise
+          we're observing! It's a data-mining issue more than
+          anything!
+        - Spitzer: they used independent component analysis, but
+          it's a LINEAR detrending method, rather than
+          non-linear.
+            - $MY_IMAGES/astro/exo/ucl-talk-covariance-xy-detector.jpg
+        - 'retrieval' is a fancy word for FITTING your data
+            - $MY_IMAGES/astro/exo/ucl-talk-retrevial-fitting.jpg
+            - $MY_IMAGES/astro/exo/ucl-talk-what-do-NNs-mean.jpg
+            - $MY_IMAGES/astro/exo/ucl-talk-explainable-AI.jpg
+            - $MY_IMAGES/astro/exo/ucl-talk-conclusions.jpg
+
+    - PLANETS ROTATE too. Jupiter has spots as well as host star
+      spots.
+
+    - signal-to-noise ratio
+        - $MY_NOTES/astro/signal-to-noise-SN.txt
+
+    - upsidedown spectrometer: 
+        - ... you have to flip left and right in the diagram.
+          It's documented in the metadata that they installed the
+          satellite spectrometer upside-down
+        - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/529412
+
+    - taurex3: ./taurex3.txt
+    - radiative transfer: ./radiative-transfer.txt
+    - Pipeline: Very important: exosim2, TauREx3 ./pipeline.txt
+    - Try to clip negative values at 0 before linear correction
+      https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/532048
+    - good downsampleb
+      https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/529663
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/529412
+    - https://www.kaggle.com/code/gordonyip/update-calibrating-and-binning-astronomical-data/comments#2964529
+    - Data summary:
+      $MY_IMAGES/astro/exo/time-series-sensor-data.jpg
+    - Data cubes:   $MY_IMAGES/astro/exo/multi-approaches.jpg
+
+    - Targets:
+        - The TARGET in our simulations is `ΔF/F`, or the
+          relative flux change during a transit, which
+          corresponds to the transit depth. 
+        - This is directly related to `(Rp/Rs)^2`, the square of
+          the planet-to-star radius ratio. 
+
+    - No limb darkening in model!
+
+    - SUBMISSION:
+        - Sensor data to targets: $MY_IMAGES/astro/exo/time-series-sensor-data.jpg
+
+        - My NEW understanding:
+            - `1`   Columns: Planet ID:
+            - `283` Columns: 283 _transit depths_ for each wavelength  `W_1, W_2, ... W_283`
+            - `283` Columns: 283 _transit depths_ error bars (ideal: 10μm)
+
+        - My original understanding:
+            - `1`   Columns: Planet ID:
+            - `283` Columns: 283 'Spectra'?: Wavelength (flux?) readings `W_1, W_2, ... W_283`
+            - `283` Columns: 283 'Spectra'?: Error bars (ideal: 10μm)
+            - 567 columns in total
+
+    - More info about the 'spectra':
+        - Are the first 282 predicted wavelength spectra in the
+          model output going to be the same wavelengths as
+          [39:321] (1.95 -> 3.9 µm)?
+            - No, the first one is for 0.705 µm, which comes from
+              FGS1, and the rest is from AIRS (1.95 - 3.9µm)
+
+        - Why are wavelengths provided in the simulated data that
+          are outside the AIRS CH0 sensitivity rating?
+            - Related to instrument design; we normally only take
+              measurement from the spectrographs when there is
+              significant amount of signal, hence the cut.
+
+        - What would 'spectra' mean for a particular wavelength?
+          Would it be the amplitude/energy carried by that
+          particular wavelength through the planets atmosphere?
+            - You cannot define a spectra for a particular
+              wavelength. 
+            - A spectra is a function of transit depth against
+              wavelength.
+            - You are almost correct! For a particular
+              wavelength, we measure the `transit depth`, which
+              is the ratio of the the planet's area compared to
+              the star. You can also see the dip in the
+              normalised lightcurve, they are transit depths. 
+            - They encode information about the planet's
+              atmosphere, through tiny fluctrations in the dip
+              across wavelengths
+
+        - If the 283rd point is from FGS1, what would that value
+          represent?
+            - Aside: The first point is from FGS1, the rest is
+              from AIRS. 
+            - That value is ALSO TRANSIT DEPTH, it is just coming
+              from a `photometer` (think of it as a camera)
+
+        - Calibration
+            - https://www.kaggle.com/code/gordonyip/calibrating-and-time-binning-astronomical-data/comments
+            - This code line had me confused when I wanted to run
+              the full data set.
+                - index = get_index(files[`:48`],CHUNKS_SIZE)
+            - The result of this is 12 planets processed! 
+            - To run the full data set I tried to set SIZE_TRAIN
+              = full number of planets.
+                - index
+                  = get_index(files[:`SIZE_TRAIN`],CHUNKS_SIZE)
+            - But for each planet there are four files 
+                - so I needed to set the `SIZE_TRAIN = 4 * number
+                  of planets` that I wanted.
+
+    - jitter noise assumptions https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/532639
+
+### Main challenges
+    - Detecting signals in an ultra low signal-to-noise
+      environment.
+    - Detrending both spatial and time-dependent non-Gaussian
+      noise (jitter) in the presence of substantial Gaussian
+      noise.
+        - $MY_IMAGES/astro/exo/jitter.jpg
+    - Handling shifts in data distribution (i.e. data and concept
+      drifts) caused by unforeseen variations in instrument
+      characteristics and variations in signal characteristics of
+      the star and exoplanet.
+    - Uncertainty quantification in the presence of data drifts
+      and non-Gaussian noise.
+    - Limited access to or a general absence of ground truth
+      data.
+
+
+### Сhanging of "white curve" over time outside the transit zone
+    - 'gain noise'
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/533743#2988832
+    - The trends observed in the light curve can be attributed to
+      gain noise, a multiplicative effect on the signal. This
+      noise may exhibit both temporal and chromatic correlations
+      and can have various origins. Since this is a relative
+      measurement, essentially anything that alters the measured
+      flux can manifest as a multiplicative effect. Similar
+      phenomena have been observed in various space missions,
+      with amplitudes and patterns ranging from almost random to
+      more structured. The JWST also experiences these effects,
+      though generally with lower amplitudes compared to the
+      simulations presented here.
+    - This type of noise can include both a random component,
+      such as electronic fluctuations, and a part that can be
+      modelled using instrumental models. A notable example is
+      the HST's scanning mode, where such effects are identified
+      and corrected through dedicated models.
+    - Another comment:
+        - Just curious. I have only looked at 777145011 and
+          1420180584.
+        - 785834 was interesting.
+        - Whatever, praxis is to model the background and divide
+          it away.
+        - Left: orange = modelled background. Right : after
+          dividing with background model.
+    - Another question:
+        - Thank you for your question! It seems there might be
+          some confusion between the concepts of "trend" and
+          "jitter."
+        - The drift of the source across the focal plane can
+          indeed cause a trend similar to what is observed in the
+          light curve. This type of drift typically results from
+          a gradual pointing shift in the telescope over several
+          hours, leading to a slow change in the measured signal.
+          When the star moves across the detector, it passes over
+          different pixels (or parts of them), altering the
+          quantum efficiency that converts light into electrons.
+          This introduces a multiplicative effect, which indeed
+          falls under the definition of "gain noise" or "gain
+          drift."
+        - However, jitter is a different phenomenon. It is
+          a high-frequency effect caused by vibrations in the
+          telescope and the corrective actions of the pointing
+          system as it tries to recenter the object. Jitter
+          manifests as rapid, small-scale variations, unlike the
+          slower "trend" caused by drift, as highlighted in these
+          examples.
+            - Followup question:
+            - 1) differences in quantum efficiency: wont these be
+              corrected by the flat field corrections applied?
+            - 2) jitter vibrations: do these show up on the
+              spectrogram in such a way that same wavelength
+              lights are being resolved as different wavelengths?
+              (perhaps due to the entering light rays not being
+              normal to the prism?)
+            - Thank you for your questions...
+                - 1 ) Regarding the differences in quantum
+                  efficiency:
+                    - Yes, flat field corrections are applied to
+                      account for variations in quantum
+                      efficiency across the detector. However,
+                      these corrections are never perfect—in
+                      real-world scenarios, we can only achieve
+                      the best possible estimate. Additionally,
+                      the structure of each pixel plays a role.
+                      Specifically, the quantum response is not
+                      uniformly distributed across the pixel's
+                      surface; it typically decreases towards the
+                      edges. As a result, when the signal drifts
+                      by fractions of a pixel, the measurements
+                      vary depending on which areas of the pixel
+                      are more or less illuminated. It's
+                      important to note that this internal pixel
+                      effect is not corrected by the flat field;
+                      the flat field only accounts for relative
+                      variations in quantum efficiency between
+                      different pixels.
+                - 2) Regarding jitter vibrations:
+                    - You're absolutely right. The "blurring"
+                      effect introduced by the PSF (Point Spread
+                      Function) due to these vibrations means
+                      that the collected light during an
+                      integration is spread over more pixels (or
+                      fractions of pixels) than if the source
+                      were stationary. In a spectrometer, while
+                      in the spatial direction this results in
+                      a broader PSF, in the spectral direction it
+                      means that when we extract the spectrum
+                      based on the wavelength solution, there’s
+                      contamination from neighbouring wavelengths
+                      in each spectral bin. The extent of this
+                      contamination depends on the amplitude of
+                      the jitter. Part of the challenge is
+                      decorrelating this effect, which is
+                      difficult to trace because the jitter isn’t
+                      necessarily the same in both directions.
+
+
+### link calibrated data to labels
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/532935
+    - You could either save the calibrated data in the order of
+      sorted planet ids, which is what I did, or add a dimension
+      of planet ids to the calibrated data.
+
+### Is this an ML competition?
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/533227
+    - I don't know yet if this competition has a place for ML
+      models for top scores. It may have a place mainly for
+      `predicting sigma`.
+
+### Wavelength flux increasing
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/533167
+    - This is due to blackbody radiation in the infrared regime,
+      there can be characteristic shapes and bends due to certain
+      element/chemical abundances, however these shapes are the
+      most affected by the temperature of the system. Since
+      Ariel's instruments both are within the infrared
+      (specifically Near-IR) the initial shape is similar to what
+      is seen by James Webb Space Telescope's instruments. See
+      figure below (specifically Plot D and G) from this paper:
+      JWST Nature paper
+
+### sigma ideal
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/533301
+    - From the competition description
+        - "We define L_ideal as the case where the submission
+          perfectly matches the ground truth values, with an
+          uncertainty of 10 parts per million (ppm). " 10ppm
+          = 1e-5
+
+### Jitter noise
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/532639
+    - Question: I wondered if you could share any assumption
+      about the jitter noise you model in these observations, in
+      particular the expected rms or equivalent, is it the same
+      accross all the observed transits etc. I would like to test
+      some denoising models that require a bit of a priori
+      knowledge on the noise sources in the data, and having more
+      details on this would be great!
+    - Answer: Pointing jitter on a space telescope arises from
+      a variety of sources. To put it simply, it’s the result of
+      a noninear interplay between solar wind, vibrations from
+      the instruments and the efforts of the pointing system to
+      stay locked onto the target. Therefore the noise’s power
+      sprectrum is not flat but significantly non-Gaussian.
+      Simulating this is quite challenging, as it largely depends
+      on how the payload is constructed. If you're interested in
+      exploring this topic from an academic perspective, there is
+      some literature we can point you to. However, you’ll find
+      that the impact and spectral characteristics of jitter
+      varies significantly between space missions due to the
+      unique design and components of each mission.
+        - For this exercise, we used realistic jitter models for
+          Ariel space mission provided by the manufacturer for
+          the specific observed targets in question.
+    - Question: 
+        - thanks for your detailed answer- can you please clarify
+          if the (pointing) jitter is of the same origin in the
+          2 instruments in our data? From what I saw they seem to
+          be independent- is this an effect of the used simulator
+          or is this the expected behavior?
+    - The pointing jitter originates from the same source for
+      both instruments, as they are observing the same target
+      simultaneously. However, the apparent independence you've
+      noticed could be due to differences between the two
+      detectors. While the physical pointing jitter is identical,
+      each detector has its own characteristics, such as PSF
+      shape, pixel quantum efficiency, and integration time,
+      which influence how the jitter manifests in the final data.
+        - So, the fact that the jitter seems different across the
+          two instruments is not an effect of the simulator, but
+          rather an expected behaviour due to the distinct
+          properties of the detectors. The movement of the point
+          source during integration is convolved with the
+          different characteristics for each detector, leading to
+          results that may appear independent.
+    
+    - aside: The whole point of this competition is to predict
+      the `expected variance` on the `reconstructed spectrum`, which
+      is hard when this is not included in the training labels…
+      Jitter noise comes in many flavours depending on if it is
+      vibration, pointing issues or else, and a bit of details
+      around this point would only help the hosts to get better
+      solutions for this specific problem. 
+
+### What is sigma
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/533608
+    - If you calculate the partial derivative of the loss
+      function by `sigma(planet, wavelength)` you'll find that it
+      zeros for `sigma = y - mu`. 
+    - So, the best sigma is simply the difference between the
+      target and the prediction. From here we can see the
+      meaning: 
+        - sigma is the prediction, of how far our prediction for
+          mu is from the target.
+
+### Box Least Squares (BLS)
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/529533
+    - How to identify the transit
+    - The Box Least Squares (`BLS`) method is a statistical tool
+      astronomers often use to detect transiting exoplanets. 
+    - It looks for those periodic dips in a star's brightness
+      that might indicate a planet passing by. Instead of getting
+      too complex, `BLS` keeps it simple by fitting
+      a straightforward box-shaped model to the light curve data.
+    - The "box" here is just a way to represent the time period
+      when the star’s light dims because the planet is crossing
+      in front of it. It’s not perfect, but it’s been quite
+      useful in helping us find small signals that might
+      otherwise go unnoticed.
+
+
+### Key Challenge
+    - Observing these atmospheres and deriving their properties
+      is a formidable challenge. These atmospheric signals only
+      account for a minute fraction of the starlight received
+      from the planetary systems, and are _regularly corrupted_
+      by instrument noise.
+    - Ariel 2024 focuses on overcoming these noise sources, like
+      "jitter noise" caused by spacecraft _vibrations_. 
+    - This noise, along with other disturbances, complicates the
+      analysis of spectroscopic data used to study exoplanet
+      atmospheres.
+    - Scientists involved in the Ariel mission now seek novel
+      methods to push the boundaries of current data analysis
+      approaches: innovative solutions that can effectively
+      SUPPRESS THESE NOISE SOURCES and extract vital signals from
+      exoplanet atmospheres.
+
+### Question About Target
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/528683
+    - Is the target `(Rp/Rs)^2`, or `∆F/F`? 
+    - Equivalently, is there an assumed model of _limb darkening_
+      implied by the simulated train and test data?
+    - Answer:
+        - That’s an excellent question!
+        - The TARGET in our simulations is `ΔF/F`, or the
+          relative flux change during a transit, which
+          corresponds to the transit depth. 
+            - This is directly related to `(Rp/Rs)^2`, the square
+              of the planet-to-star radius ratio. 
+        - However, this relationship is perturbed by the
+          contribution from the planet’s atmosphere.
+        - For a simple reference, let’s start with the model
+          presented in Sing (2018), eq. 15:
+            - $MY_IMAGES/astro/exo/transit-depth-perturbed-atmosphere.jpg
+        - This highlights how the relationship between ΔF/F and
+          Rp/Rs is perturbed by the planet’s atmosphere. 
+        - This perturbation changes with wavelength due to the
+          physical and chemical properties of the exoplanet’s
+          atmosphere. I won't go into further details here, as
+          there are already suggested references that explain the
+          science behind this more thoroughly.
+        - For this particular exercise, we’ve chosen `not to
+          include a limb darkening` model to avoid adding further
+          complexity to the problem.
+
+
+
+### Submission
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/526883
+    - So to be 100% clear, the
+      "/kaggle/input/ariel-data-challenge-2024/test/" directory
+      is filled with more planets when running the submission
+      notebooks?
+
+### Test versus Training datasets
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/528114
+    - Where does the huge `cv–lb difference` come from? 
+    - The standard recipe doesn't take into account that train
+      and test DISTRIBUTIONS ARE DIFFERENT. 
+    - In the training dataset all planets belong to _two host
+      stars_ : `0` and `1`
+    - The test dataset is more diverse: 
+        - In addition to stars `0` and `1`, there's at least one
+          other (previously unseen) star. 
+        - Another user comment: 
+            - This is the first time that I read it like this.
+              Was it confirmed that `test` includes star `0` and
+              star `1` from training? It sounded like it contains
+              "only" a new solar system.
+    - Adapting the standard recipe to this situation, I'd propose
+      the following:
+        - For known stars set `σ_user` to the out-of-fold RMSE,
+          and for unknown stars set it to a higher value. 
+        - Perhaps use the out-of-fold RMSE of a GroupKFold to
+          estimate σuser for the unknown stars.
+    - Comment from organiser:
+        - (difference between train and test sets)
+        - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/523726
+        - In this challenge we made the `test` set to be
+          different from the `training`, to simulate the
+          situation when the data is different or unknown. 
+        - Of course, future data will not always align with what
+          we know of (our simulation), but there will be
+          takeaways and lessons from the pipeline you are
+          building here, and like we said, those are the insights
+          we are looking for in this challenge. We are not
+          looking for a silver bullet here.
+
+### axis_info.parquet
+    - Number of Rows: 135,000 
+    - Columns:
+        - AIRS-CH0-axis0-h
+        - AIRS-CH0-axis2-um
+        - AIRS-CH0-integration_time
+        - FGS1-axis0-h
+    - NOTE: after row `11,250`, all the "`AIRS-CH0...`" columns
+      have zeros. ie: only 11,250 timesteps for AIRS-CH0.
+    - Column info:
+        - 1. `AIRS-CH0-axis0-h` 
+            - `Spatial` Dimension (horizontal?)
+                - 32 Spatial Positions: The `32` in the 32x356
+                  image corresponds to the 32 spatial positions
+                  or pixels in the spatial dimension. Each value
+                  in AIRS-CH0-axis0-h represents a specific
+                  position along this spatial axis.
+                - Position in the Data Cube: In the 3D/4D data
+                  cube, `AIRS-CH0-axis0-h` maps to the spatial
+                  dimension (Y-axis), indicating where in the
+                  spatial field of view each row of the image is
+                  located.
+        - 2. `AIRS-CH0-axis2-um` 
+            - `Spectral` Dimension
+                - 356 Wavelengths: The 356 in the 32x356 image
+                  corresponds to the 356 different wavelengths at
+                  which the AIRS-CH0 instrument measures light.
+                - Position in the Data Cube: 
+                    - In the data cube, AIRS-CH0-axis2-um maps to
+                      the spectral dimension (X-axis), specifying
+                      the wavelength (in micrometers) that each
+                      of the 356 columns corresponds to.
+        - 3. `AIRS-CH0-integration_time` 
+            - `Temporal` Dimension
+                - Represents the time dimension in the data cube.
+                - 11,250 Time Steps: The first 11,250 rows in
+                  AIRS-CH0_signal.parquet correspond to different
+                  time steps during the observation.
+                - Position in the Data Cube:
+                    - `AIRS-CH0-integration_time` indicates the
+                      duration for which each time step was
+                      recorded. 
+                    - Each time step in the data cube corresponds
+                      to a different row in the
+                      AIRS-CH0_signal.parquet file, with the
+                      integration time INFLUENCING the signal
+                      captured in each row.
+
+    - Summary:
+        - `AIRS-CH0-axis0-h`: Represents the spatial dimension (32
+          pixels), indicating different positions along the
+          spatial axis in the data cube.
+        - `AIRS-CH0-axis2-um`: Represents the spectral dimension
+          (356 wavelengths), indicating different wavelengths
+          along the spectral axis in the data cube.
+        - `AIRS-CH0-integration_time`: Represents the time
+          dimension (11,250 time steps), indicating the
+          integration time for each time step in the data cube.
+
+
+
+### Image, Time, Spectral domains
+    - Diagram: $MY_IMAGES/astro/exo/multi-approaches.jpg
+
+    - Image Domain: 
+        - Focuses on the spatial and spectral data as images over
+          time.
+    - Time Domain: 
+        - Analyzes how the star's brightness varies with time
+          during the transit, showing dips in flux.
+        - note: this is 'Approach 2'! 
+            - `N_times`, `N_wavelengths`
+            - In Approach 2, you sum the light intensity (flux)
+              across the spatial dimension (y-axis) for each
+              wavelength. This effectively collapses the spatial
+              information, focusing solely on how the light
+              varies over time AND across different wavelengths.
+    - Spectral Domain: 
+        - Examines the atmospheric spectrum, showing how the
+          _planet-to-star radius ratio_ changes with wavelength.
+
+    - Image Domain (Left)
+        - $MY_IMAGES/astro/exo/multi-approaches.jpg
+        - Visualization: The left plot shows a stack of images,
+          each representing data captured at different time
+          points. The horizontal axis is labeled "Spectral," and
+          the vertical axis is labeled "Spatial."
+        - Explanation: This domain involves analyzing the raw
+          images obtained from the telescope. The data includes
+          spatial and spectral information over time. The stack
+          of images suggests that the data changes as time
+          progresses, capturing the transit of the exoplanet in
+          front of its host star.
+
+    - Time Domain (Middle) 'Approach 2'
+        - $MY_IMAGES/astro/exo/multi-approaches.jpg
+        - Visualization: The middle plot has "Flux" on the
+          vertical axis and "Time" on the horizontal axis. The
+          plot consists of multiple curves, each representing
+          flux variations over time in different wavelengths
+          (shown in different colors).
+        - Explanation: This domain focuses on how the brightness
+          (flux) of the star changes over time as the exoplanet
+          transits. The flux curves show dips corresponding to
+          the transit, and the differences across wavelengths
+          provide clues about the planet's atmosphere.
+
+    - Spectral Domain (Right)
+        - $MY_IMAGES/astro/exo/multi-approaches.jpg
+        - Visualization: The right plot shows a plot with
+          "`Rp/Rs`" (planet-to-star radius ratio) on the vertical
+          and "Wavelength" on the horizontal axis. The plot has
+          several data points with error bars and a curve fitting
+          through them.
+        - Explanation: This domain focuses on analyzing the
+          spectrum of the exoplanet's atmosphere by examining how
+          the `radius ratio` varies with wavelength. 
+        - The curve and data points represent the planetary
+          radius at different wavelengths, revealing details
+          about the atmospheric composition and properties.
+
+### Spectral Domain: more info
+    - In this plot, the curve shows how the `planet-to-star`
+      radius ratio (`Rp/Rs`) varies with wavelength. 
+    - This variation is crucial because it provides insights into
+      properties of the planet's atmosphere.
+
+    - Rises (Bumps) in the Curve:
+        - Physical Meaning: A rise or bump in the curve indicates
+          the planet appears larger at a specific wavelength.
+            - ie a bump means MORE light blocked.
+        - Atmospheric Interpretation: 
+            - `Absorption` Features: This typically occurs when
+              specific gases or molecules in the planet's
+              atmosphere strongly absorb light at that
+              wavelength. 
+                - Question: could be absorbed OR SCATTERED?
+            - When light from the star passes through the
+              planet's atmosphere during transit, certain
+              wavelengths are absorbed more effectively, making
+              the planet appear larger at those wavelengths.
+            - Example: A bump could be due to the presence of
+              water vapor (H2O), methane (CH4), or carbon dioxide
+              (CO2) in the atmosphere. These molecules have
+              specific wavelengths at which they absorb light,
+              causing the planet-to-star radius ratio to increase
+              at those wavelengths.
+
+    - Dips in the Curve:
+        - Physical Meaning: A dip in the curve indicates that the
+          planet appears smaller at a specific wavelength.
+            - i.e. a dip means LESS light blocked.
+        - Atmospheric Interpretation: 
+        - Less Absorption or `Scattering`: The star light is not
+          absorbed or scattered by the planet atmosphere. The
+          starlight streams through, making a shallower transit
+          dip in the time domain and making the planet appear
+          SMALLER.
+        - Transparent Wavelengths: At these wavelengths, the
+          atmosphere may be more transparent, allowing more
+          starlight to pass through without being absorbed. This
+          makes the planet's atmosphere less opaque, reducing the
+          apparent size of the planet at those wavelengths.
+        - Example: A dip might occur in regions of the spectrum
+          where there is no significant absorption by any
+          atmospheric molecules, or where the atmosphere is
+          relatively clear, such as in the infrared for certain
+          gases.
+
+    - Overall Significance:
+        - Atmospheric Composition: The bumps and dips across
+          different wavelengths help scientists identify the
+          specific gases and particles present in the atmosphere.
+        - Each gas has a unique "fingerprint" in the form of
+          absorption features at specific wavelengths.
+        - Temperature and Pressure: The shape of the curve can
+          also give clues about the temperature and pressure of
+          the atmosphere, as these factors influence the
+          absorption characteristics.
+        - Clouds and Hazes: The presence of clouds or hazes in
+          the atmosphere can smooth out or obscure some features,
+          but they might also create their own distinct
+          absorption or scattering effects.
+
+    - Conclusion:
+        - Bumps: Show strong absorption by specific atmospheric
+          constituents at certain wavelengths, suggesting the
+          presence of certain gases.
+        - Dips: Indicate wavelengths where the atmosphere is more
+          transparent, revealing an absence of strong absorbers
+          at those wavelengths or regions where the atmosphere is
+          clearer.
+
+    - By analyzing these variations in the `spectral domain`,
+      astronomers can infer the chemical makeup, temperature, and
+      other properties of the exoplanet's atmosphere.
+
+### Instrument Summary
+    - The different number of rows in the `AIRS-CH0_signal` and
+      `FGS1_signal` files is due to the differing _observation
+      cadences_ and purposes of the two instruments:
+
+    - FGS1 (Fine Guidance System):
+        - Purpose: 
+            - Mainly used for guiding, centering, and focusing
+              the satellite, but also provides high-precision
+              _photometry_ in the visible spectrum.
+        - Higher Temporal Resolution: 
+            - The FGS1 instrument is designed to capture rapid
+              changes in light intensity, such as those occurring
+              during a planetary transit. 
+            - As a result, it takes measurements at much shorter
+              time intervals, leading to a high number of
+              observations. 
+            - That's why there are 135,000 rows in
+              `FGS1_signal.parquet`, each row representing
+              a snapshot in time.
+
+    - AIRS-CH0 (Ariel InfraRed Spectrometer - Channel 0):
+        - Purpose: 
+            - Captures the infrared spectrum of the exoplanet's
+              atmosphere; provides info about the chemical
+              composition and other atmospheric characteristics.
+        - Lower Temporal Resolution: 
+            - `AIRS-CH0` doesn't require as high a temporal
+              resolution as the FGS1, so it captures fewer
+              snapshots over the same observation period. This
+              results in 11,250 rows in `AIRS-CH0_signal.parquet`
+
+
+### AIRS-CH0_signal.parquet
+    - `11,250 rows`: Each row corresponds to a single time step
+      in the observation sequence. This means that the data
+      captures 11,250 distinct moments during the observation of
+      the exoplanet transit.
+    - `32x356 image`: Each row originally represents an image
+      that is 32 pixels high and 356 pixels wide. This image is
+      a snapshot of the signal detected by the AIRS-CH0
+      instrument at a specific time step.
+    - `11,392 columns`: The original 32x356 image (`32 * 356
+      = 11,392` pixels in total) has been "flattened" into
+      a single row with 11,392 columns. Each column in this row
+      represents the intensity or flux measured by one pixel in
+      the original 32x356 image.
+
+### FGS1_signal.parquet
+    - `135,000 rows`: Each row corresponds to a single time step in
+      the observation sequence. This means that the data captures
+      135,000 distinct moments during the observation of the
+      exoplanet transit.
+    - `32x32 image`: Each row originally represents an image that
+      is 32 pixels high and 32 pixels wide. This image is
+      a snapshot of the signal detected by the FGS1 instrument at
+      a specific time step.
+    - `1,024 columns`: The original 32x32 image (which has 32 * 32
+      = 1,024 pixels in total) has been "flattened" into a single
+      row with 1,024 columns. Each column in this row represents
+      the intensity or flux measured by one pixel in the original
+      32x32 image.
+    - `Reshaping`: The data can be reshaped back into its original
+      32x32 image format using numpy.reshape(135000, 32, 32).
+      This means you can convert each row of 1,024 columns back
+      into a 32x32 image, and you would have 135,000 such images.
+
+
+
+### 283 columns
+    - Each of the 283 columns represents a specific wavelength in
+      the spectrum of the exoplanet's atmosphere. When you
+      predict the spectra, you're essentially predicting the
+      intensity of light (or the flux) at each of these 283
+      different wavelengths. These wavelengths correspond to
+      different parts of the light spectrum that pass through the
+      exoplanet's atmosphere, providing information about the
+      atmospheric composition and conditions.
+
+### Scoring, uncertainty, GLL
+    - Indeed, if the participants are able to pinpoint exactly
+      the transit depths (intensities) in the test set, the best
+      strategy is to submit their network with 10ppm as
+      uncertainties. This conclusion builds on the assumption
+      that the model can predict the transit depths with a very
+      high degree of accuracy. Given our understanding of the
+      noise within the dataset, there will be information loss
+      (due to the noise), which may prevent the model from
+      predicting the transit depths perfectly (at least in the
+      test set).
+    - Also, note that 10ppm is a very narrow value for
+      uncertainty, and their model will be heavily penalized if
+      the predictions are _outside the uncertainty range_ (a
+      characteristic of the GLL function), resulting in a worse
+      score.
+
+### Code Notebooks
+    - Sample inference notebook https://www.kaggle.com/code/ambrosm/adc24-intro-inference/notebook
+
+### Good papers
+    - [1] Jonathan P. Gardner et al. “The James Webb Space
+      Telescope”. In: 123.4 (Apr. 2006), pp. 485–606. DOI:
+      10.1007/s11214-006-8315-7. arXiv: astro-ph/0606175
+      [astro-ph].
+
+    - [2] Giovanna Tinetti et al. “Ariel: Enabling planetary
+      science across light-years”. In: arXiv e-prints,
+      arXiv:2104.04824 (Apr. 2021), arXiv:2104.04824. arXiv:
+      2104.04824 [astro-ph.IM].
+
+    - [3] Engineering National Academies of Sciences and
+      Medicine. Origins, Worlds, and Life: A Decadal Strategy for
+      Planetary Science and Astrobiology 2023-2032. Washington,
+      DC: The National Academies Press, 2023. ISBN:
+      978-0-309-47578-5. DOI: 10.17226/26522. URL:
+      https://nap.nationalacademies.org/catalog/26522/
+      origins-worlds-and-life-a-decadal-strategy-for-planetary-science.
+
+
+[4] Pedro Russo et al. “ESA’s Voyage 2050 Long-term Plan for Education and Public Engagement:
+White Paper”. In: arXiv e-prints , arXiv:1908.01546 (Aug. 2019), arXiv:1908.01546. DOI:
+10.48550/arXiv.1908.01546. arXiv: 1908.01546 [astro-ph.IM].
+
+
+[5] James G. Ingalls et al. “Repeatability and Accuracy of Exoplanet Eclipse Depths Measured
+with Post-cryogenic Spitzer”. In: The Astronomical Journal 152.2, 44 (Aug. 2016), p. 44. DOI:
+10.3847/0004-6256/152/2/44. arXiv: 1601.05101 [astro-ph.IM].
+
+
+[6] Jessica E. Krick et al. “Random Forests Applied to High-precision Photometry Analysis with
+Spitzer IRAC”. In: The Astronomical Journal 160.3, 99 (Sept. 2020), p. 99. DOI: 10.3847/
+1538-3881/aba11f. arXiv: 2006.14095 [astro-ph.IM].
+
+
+[7] Mario Morvan et al. “Detrending Exoplanetary Transit Light Curves with Long Short-term
+Memory Networks”. In: The Astronomical Journal 159.3, 109 (Mar. 2020), p. 109. DOI: 10.
+3847/1538-3881/ab6aa7. arXiv: 2001.03370 [astro-ph.EP].
+
+
+[8] Mario Morvan et al. “Don’t Pay Attention to the Noise: Learning Self-supervised
+Representations of Light Curves with a Denoising Time Series Transformer”. In:
+Machine Learning for Astrophysics . July 2022, 11, p. 11. DOI: 10 . 48550 / arXiv . 2207 .
+02777. arXiv: 2207.02777 [astro-ph.IM].
+
+
+[9] Nikolaos Nikolaou et al. “Lessons learned from the 1st Ariel Machine Learning Challenge: Cor-
+recting transiting exoplanet light curves for stellar spots”. In: RAS Techniques and Instruments
+2.1 (2023), pp. 695–709.
+
+
+[10] Kai Hou Yip et al. “Lessons Learned from Ariel Data Challenge 2022 Inferring Physical
+Properties of Exoplanets From Next-Generation Telescopes”. In: 2023.
+
+
+[11] Mayeul Aubin et al. “Simulation-based Inference for Exoplanet Atmospheric Retrieval:
+Insights from winning the Ariel Data Challenge 2023 using Normalizing Flows”. In:
+arXiv e-prints , arXiv:2309.09337 (Sept. 2023), arXiv:2309.09337. DOI: 10.48550/arXiv.
+2309.09337. arXiv: 2309.09337 [astro-ph.EP].
+
+
+
+
+[13] 
+DOI: 10.3847/1538-3881/ac6bf9. arXiv: 2205.05073 [astro-ph.EP].
+
+
+[14] A. F. Al-Refaie et al. “TauREx 3: A Fast, Dynamic, and Extendable Framework for Retrievals”.
+In: 917.1, 37 (Aug. 2021), p. 37. DOI: 10.3847/1538-4357/ac0252. arXiv: 1912.07759 [astro-ph.IM].
+
+
+[15] Nikolaos Nikolaou et al. “Lessons Learned from the 1st ARIEL Machine Learning Chal-
+lenge: Correcting Transiting Exoplanet Light Curves for Stellar Spots”. In: arXiv e-prints ,
+arXiv:2010.15996 (Oct. 2020), arXiv:2010.15996. arXiv: 2010.15996 [astro-ph.IM]
+
+
+
+### Discussions
+    - Discussion page                                                        https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion?sort=recent-comments
+    - Welcome and resources                                                  https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/524287
+    - _IMPORTANT_: Understanding Calibration Data in Our Simulations         https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/528066
+    - what is wavelength.csv file                                            https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/524003
+    - GOOD: Meaning of dimensions in AIRS-CH0 images                         https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/527119
+    - GOOD: Questions on `calibration` notebook                              https://www.kaggle.com/code/gordonyip/calibrating-and-time-binning-astronomical-data/comments
+    - Distribution of Transit Durations                                      https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/527167
+    - GOOD: Understanding the competition metric                             https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/528114
+    - Test/Train data: real or simulated                                     https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/523726
+    - Understand Sensor -> Targets mappings                                  https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/527039
+    - Are calibration files all the same                                     https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/529229
+    - Varying 'white curves', variable stars? solution: subtract background? https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/533743
+    - What is user_sigma?                                                    https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/533608
+    - Sigma estimation through quantile regression                           https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/532740
+    - jitter noise assumptions                                               https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/532639
+    - Wavelength flux increasing                                             https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/533167
+    - faster calibration codes                                               https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/535421
+    - Download models, library into Kaggle kernel                            https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/535679
+    - important: how to handle 0.1s integration time                         https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/535362
+
+
+### Courses
+    - An hybrid physics-ML framework to model exoplanetary light curves https://www.youtube.com/watch?v=S2JGyDG5Pww
+
+### Links
+    - KAGGLE discussion list                            https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion?sort=recent-comments
+    - Ariel Main site                                   https://arielmission.space/
+    - Basics: Intro to exo-atmospheric studies          https://academic.oup.com/rasti/article/2/1/45/6998590
+    - Basics: What is a transit/lightcurve              https://www.ariel-datachallenge.space/workshop2024/documentation/about
+    - Basics: Ariel Red book                            https://sci.esa.int/web/ariel/-/ariel-definition-study-report-red-book
+    - Basics: Useful publications                       https://www.ariel-datachallenge.space/ML/documentation/resources
+    - Basics: Ariel Youtube channel                     https://www.youtube.com/channel/UCMLTUdXBPNS_pDJcGNZoLYw
+    - Basics: Ariel Twitter                             https://x.com/ArielTelescope
+    - CCD's: Calibration frames: flats, bias, darks etc https://practicalastrophotography.com/a-brief-guide-to-calibration-frames/
+    - Notebook: calibration and time binning            https://www.kaggle.com/code/gordonyip/calibrating-and-time-binning-astronomical-data
+    - Background info: 2023 Ariel competition 1          https://www.ariel-datachallenge.space/ML/documentation/about
+    - Background info: 2023 Ariel competition 2          https://www.ariel-datachallenge.space/ML/documentation/resources
+
+papers
+
+inside black box https://ui.adsabs.harvard.edu/abs/2020arXiv201111284H/abstract
+Ariel Mission Candidate Sample https://arxiv.org/abs/2205.05073
+

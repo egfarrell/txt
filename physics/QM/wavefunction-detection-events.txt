@@ -1,0 +1,85 @@
+
+### me
+
+- Schrödinger’s original wave was for an electron, and the events
+  it supplied probabilities for were detection events in
+  a hypothetical electron detector placed at different locations.
+  This was like the way Hertz mapped out EM waves by carrying
+  a circuit from place to place (see Note 22 in Chapter 2).
+- "Wave functions" exist, however, for any detection event, not
+  just for the locations of electrons. 
+- The "functional" aspect of wave functions relates any set of
+  possible detection events to a corresponding set of
+  probabilities. 
+
+- My question: Is the wave function really mainly concerned with
+  `detection` events or is it used for other "types" of events
+  too?
+
+### gpt
+
+- Short answer: the wave function isn't mainly about `detection`
+  events, but detection is where its probabilistic content
+  becomes operational. 
+- The wave function is a more general object that assigns
+  probabilities to any physical observable, not just detection in
+  space.
+
+### What the wave function fundamentally represents
+
+- In modern QM, the wave function `ψ` is a mathematical
+  representation of the quantum state. That state contains
+  everything the theory allows you to predict about a system.
+
+Formally (but without formalism): ψ encodes how the system will respond to any measurement you might choose to perform. Position detection is just one special case.
+
+Why detection events are emphasized historically
+Schrödinger originally had position in mind because:
+- electrons were detected spatially (spots on a screen),
+- position had a clear classical analogue,
+- |ψ(x)|² gives a spatial probability density that is easy to visualize.
+
+So early language focused on “where the particle is detected.” That made it sound like ψ is about detection.
+
+But that emphasis is contingent, not fundamental.
+
+What counts as an “event” in QM
+An “event” in QM is any measurement outcome associated with an observable:
+- position detection at x,
+- momentum in an interval p → p + dp,
+- spin up vs spin down along some axis,
+- energy eigenvalue En,
+- arrival time (with subtleties),
+- internal transitions (e.g. atom emits a photon).
+
+Each of these has an associated probability rule derived from the same state ψ.
+
+So the wave function applies to non-spatial, non-detector-like events just as naturally as to spatial detection.
+
+### Why the word “detection” keeps appearing
+Because probabilities only become meaningful when tied to actual outcomes. In practice:
+- we prepare a system,
+- let ψ evolve,
+- then perform a measurement,
+- and record a discrete outcome (“event”).
+
+Detection is the interface between ψ and experiment, not the exclusive subject of ψ.
+
+### The functional aspect, clarified
+
+- When people say the wave function is “functional,” they mean:
+Given:
+- a choice of observable A,
+- a possible outcome a,
+
+the quantum state ψ assigns a probability P(a).
+
+Symbolically in words:
+state + measurement choice → probability distribution over outcomes.
+
+That mapping exists for all observables, not only for particle position or detector clicks.
+
+A precise way to phrase it
+A more accurate statement than “the wave function describes detection events” would be:
+
+The wave function encodes the probabilities for the outcomes of any measurement that can be performed on the system; detection events are just one important class of such outcomes.

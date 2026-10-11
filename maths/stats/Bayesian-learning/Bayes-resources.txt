@@ -1,0 +1,138 @@
+# Bayesian Resources: Intuitive / Vivid
+
+### 1. Video & Visual Explainers
+    - StatQuest with Josh Starmer (YouTube):
+    - Search for “StatQuest Bayes Theorem” — uses analogies,
+      visual intuition, super clear step-by-step.
+        - "Naive" Bayes https://www.youtube.com/watch?v=O2L2Uv9pdDA
+        - Bayes https://www.youtube.com/watch?v=9wCnvr7Xw4E
+    - 3Blue1Brown: “Bayes Theorem — The Simplest Case”
+    - Short, animated visual of how Bayes’ rule works, with cubes
+      and colors:
+        - https://www.youtube.com/watch?v=HZGCoVF3YvM
+    - Seeing Theory: Bayesian Inference Interactive
+    - Click and drag to see how priors and likelihoods combine,
+      visually.
+        - https://seeing-theory.brown.edu/bayesian-inference/index.html
+
+### 2. Podcasts / Story-Based
+    - Not So Standard Deviations Podcast (Hilary Parker, Roger
+      Peng):
+    - Ep. 104 “Bayesian Thinking in Real Life” — less technical,
+      more on how Bayesian ideas show up in decisions, science,
+      and data work.
+    - Apple/Spotify/Google podcasts.
+    - Learning Bayesian Statistics (Podcast, interviews):
+    - Episode 1, “What is Bayesian Statistics?” — very
+      conversational, includes real-world analogies.
+    - https://learnbayesstats.com/episodes/
+
+### 3. Playable / Interactive Tools
+    - Seeing Theory (again) — play with priors, likelihoods:
+    - https://seeing-theory.brown.edu/bayesian-inference/index.html
+    - “Bayes Rule: A Visual Introduction” (Will Kurt):
+        - Visual and gamified explanations, includes online
+          calculators and slider tools.
+        - https://www.countbayesie.com/blog/2015/2/18/bayes-rule-a-visual-introduction
+
+### 4. Engaging Blogs & Books
+    - “Bayesian Thinking” chapter in “The Art of Statistics”
+      (David Spiegelhalter):
+    - Written in vivid English, lots of real-world examples
+      (e.g., criminal justice, medical testing).
+    - Try to borrow from a library or find a summary if you don’t
+      want the whole book.
+    - Blog: “All of Statistics for Data Science” — Bayesian
+      Intuition
+    - https://seeing-theory.brown.edu/bayesian-inference/index.html
+    - (yes, it’s so good it’s listed three times...)
+    - Book: “Bayes’ Rule With Python: A Tutorial Introduction to
+      Bayesian Analysis” (James V. Stone)
+    - Very readable, code-focused, with dice, coins, and
+      practical examples.
+    - PDF freely available via Google search.
+
+
+# Gemini
+
+### General Bayesian Intuition
+    - Seeing Theory (Brown University): This website is
+      a fantastic interactive visual introduction to probability
+      and statistics, including a dedicated section on Bayesian
+      inference. It's highly recommended for building intuition
+      due to its clear animations and explanations.
+      https://seeing-theory.brown.edu/ (Specifically "Chapter 5:
+      Bayesian Inference")
+
+    - "A visual guide to Bayesian thinking" (YouTube by Victor
+      Powell): This video uses simple animations to illustrate
+      the mechanics of Bayes' rule and how beliefs are updated
+      with new evidence. It's a great starting point for
+      conceptual understanding.
+
+    - Count Bayesie Blog: This blog often uses visual analogies
+      (like Lego bricks for Bayes' Theorem) to explain concepts
+      in a fun and intuitive way. Look for posts like "Bayes'
+      Theorem with Lego" and "Han Solo and Bayesian Priors."
+      https://www.countbayesie.com/blog/2016/5/1/a-guide-to-bayesian-statistics
+
+    "A Visual Guide to Bayesian Linear Regression" (Kishan
+    A - Medium): While focusing on linear regression, this
+    article provides excellent visualizations of the prior,
+    likelihood, and posterior distributions, which are core to
+    understanding Bayesian inference in general.
+
+    Intuitive Bayes Introductory Course: This course is
+    specifically designed for data scientists and developers,
+    focusing on building intuition with code rather than heavy
+    math. It includes concise videos and applied examples. While
+    it's a paid course, it directly addresses the "intuitive"
+    aspect you're looking for.
+        - https://www.intuitivebayes.com/introductorycourse
+
+### Bayesian Hierarchical Modeling
+
+Visual resources for hierarchical modeling can be a bit more abstract, but here are some approaches and ideas:
+
+    Diagrams of Nested Structures: Look for diagrams that show how data is nested (e.g., students within schools, patients within hospitals). These often use circles or boxes within other circles or boxes to represent the levels of the hierarchy and how parameters at different levels influence each other.
+
+    "Bayesian Hierarchical Models" (YouTube - Ecological Forecasting series): This video introduces hierarchical models as a way to capture unexplained variability, which can offer some visual intuition on the structure.
+
+    "Visualisations for Exploratory Modelling Analysis of Bayesian Hierarchical Regression Models" (arXiv paper): While a research paper, it discusses the importance of visualization in understanding hierarchical models and may offer examples of how these models can be represented in data space.
+
+    Conceptual Diagrams of "Partial Pooling": A key concept in hierarchical modeling is "partial pooling," where information is shared across groups. Visuals that show how estimates for individual groups are "pulled" towards an overall group mean can be very insightful.
+
+### Gaussian Processes
+
+Gaussian Processes are inherently about functions and distributions over functions, making them ripe for visual explanation:
+
+    "A Visual Exploration of Gaussian Processes" (Distill.pub): This is a highly acclaimed interactive article that beautifully explains Gaussian Processes with clear animations and interactive elements. It's probably one of the best visual resources out there for GPs.
+
+        https://distill.pub/2019/visual-exploration-gaussian-processes/
+
+    "How covariances behave: some intuitive views on normal distributions and Gaussian Processes" (Blog Post): This post aims to provide a tangible understanding of how Gaussian Processes behave by illustrating covariances with basic observations.
+
+    Stanford CS Class Notes/Blogs on GPs: Many university courses on machine learning or AI will have notes or blog posts that use diagrams to illustrate GPs as distributions over functions, and how they make predictions and quantify uncertainty.
+
+### Interactive Tutorials
+
+Interactive tutorials are excellent for building intuition because you can play with the parameters and see the immediate effects.
+
+    Seeing Theory (mentioned above): Many of its sections are interactive.
+
+    Neuromatch Academy: Computational Neuroscience - Tutorial 1: Bayes with a binary hidden state: This interactive tutorial allows you to explore Bayesian inference and decision-making with a binary hidden state. While it's from a computational neuroscience context, the core Bayesian concepts are universally applicable.
+
+    OpenLearn - Bayesian Statistics: This free course from The Open University has interactive elements and quizzes to help you understand the core concepts.
+
+### General Tips for Visual Learning
+
+    Look for animations and simulations: These are often the most effective for seeing how distributions change and how concepts like prior, likelihood, and posterior interact.
+
+    Pay attention to graphs and plots: Understand what each axis represents and how the shapes of the distributions convey information about uncertainty and belief.
+
+    Don't shy away from code examples (even if not your primary goal initially): Often, plotting libraries like matplotlib or seaborn in Python are used to visualize these concepts, and seeing the code that generates the visuals can deepen your understanding.
+
+    Draw it out yourself: Try sketching the distributions and how they shift as you learn. This active engagement can greatly solidify your intuition.
+
+Start with the core concepts of Bayes' Theorem (prior, likelihood, posterior) and then gradually move to more complex topics like hierarchical modeling and Gaussian processes. Enjoy the journey into Bayesian thinking!
+

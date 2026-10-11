@@ -1,0 +1,13 @@
+- download OPENSOURCE zip from jfrog
+- packaged with its own TOMCAT server: localhost:8081
+- start using: artifactory.bat
+- start using: windows service
+- login: user: "admin", password: "password"
+- local repo: give a default example one
+- local repo: create new "oreilly" reop (can deploy artifacts to)
+
+- jenkins:
+    - install artifactory plugin
+    - config: manage jenkins -> configure system
+    - config: add artifactory server: `localhost:8081/artifactory`
+    - project: add "post build" action -> select artifactory

@@ -1,0 +1,152 @@
+### data analysis life-cycle
+    - pose
+    - collect
+    - analyse
+    - interpret
+    - look at grain yield compared to fertiliser (fit line)
+        - $MY_IMAGES/maths/statistics/data-analysis-cycle.JPG
+
+### Stemplots
+    ```
+    s |
+    t | leaves...
+    e | leaves...
+    m |
+    ```
+    - stem plots of more than 50 values are unusual
+    - "leaves": numbers after the decimal point
+    - "un-ordered" stemplot - if the leaves after the decimal
+      point aren't in size order... eg if its: `35 | 9 8 1`
+    - add a KEY: `n=sample size`, `26 | 1 represents 26.1 mpg`
+    - "stretch" a stemplot: if the stem is too short and too many
+      leaves. Split each stem level into 2...
+        - $MY_IMAGES/maths/statistics/stretch-stemplot.jpg
+
+### Quartiles:
+    - Lower Quartile (Q1): separates off the bottom 25%
+    - Upper Quartile (Q3): separates the top 25%
+    - Q2 is the median!
+    - Alternative measure of spread:
+        - Inter-quartile _Range_ IQR: Q3 - Q1
+    - the IQR is independent of E_l and E_u, extreme upper and
+      lower values
+    - The normal range is not resistant to the effects of
+      unrepresentative extreme values
+    - The IQR is highly resistant measure of spread (not
+      sensitive to effects of values lying outside middle 50% of
+      the batch) and is generally the preferred choice.
+
+
+### 5 figure summary
+    $MY_IMAGES/maths/statistics/five-figure-summary.jpg
+
+
+### Unit 04 Sampling (GATHERING DATA!)
+    - Representative Sample
+        - The same proportions exist in our sample as exist in
+          the population
+
+    - Simple Random sampling
+        - every possible sample is equally likely to be selected
+        - One method: choose sample members one at a time such
+          that
+            - at each selection, every member of the target
+              population is equally likely to be selected
+            - Selecting one member of the target population has
+              no effect on any other selection, apart from not
+              selecting the same individual more than once.
+        - So _LABEL_ each person in the population, then use
+          random numbers to select from the labels (e.g. random
+          number tables)
+        - if a random number comes up that isn't one of the
+          labels, ignore it and chose another random number
+
+
+    - Systematic Sampling:
+        - Have a random START: eg row 4
+        - Then have a random INTERVAL: eg every 8th row
+            - (this is the sampling interval)
+
+### Tutorial - Relationships
+    $MY_VIDEOS/OU-videos/stats-m140/Tutorials/11-unit-05-Relationships.mp4
+    - LINKED data: when 2 or more variables are recorded for the
+      same sampling units
+        - when there are only 2 variables, linked data is often
+          referred to as PAIRED data
+    - to detect relationships we need linked data
+    - represent linked data on a scatter plot
+    - one variable can be partly explained by the values of the
+      others. Not always clear which is which!
+    - response variable = "dependent" variable
+
+### Scatter plots
+    - Scatter plots: looking for 4 things:
+        1.  positive or negative:
+            - if you have a non-linear, or u-shaped curve, then
+              "positive" or "negative" not really appropriate
+              then
+        2.  linear or non-linear
+        3.  strong or weak
+        4.  any unusual points
+      - scatterplot very useful as an initial exploratino to see
+        if it's worth doing more processing on the data
+      - are there any outliers? that can be a little subjective.
+      - in statistics we're quite optimistic:
+            - we tend to call a relationship "strong" even when
+              theres a fair bit of scatter
+      - outliers: if you've 2 "outliers" you have to be cautious.
+            - ie if you've only 12 points, you'd never discard
+              over 10% of the data
+
+
+    - We want to find the line that best represents the
+      relationahip, regression
+    - when summarising scatterplots, we want the simplest
+      adequate curve.
+    - This often amounts to choosing a straight line fit. This is
+      called the 'fitted line' or 'fit line'
+    - even if you think the relationship is non-linear `y = ax^2`
+      you can transform the data and proceed with a straight line
+      fit anyway (do a log transform?)
+
+    - DFR equation:
+        - Check if something is a reasonable line of best fit.
+        - `Data     = Fit  + Residual`
+        - `Residual = Data - Fit`
+
+        - positive residual: above the line of best fit
+        - negative residual: below the line of best fit
+
+        - if the fit is poor, there may be a PATTERN in the
+          residuals. Maybe the fit could be improved by using
+          a higher order curve.
+
+        - residual plot: check no OUTLIERS on it as well!
+
+        - residual plot scale: easier to see how much the data is above
+          or below the fitted line (shows you the range/spread of
+          the residuals easier)
+
+        - residual plot: if fit line is too high or too low, this
+          will be obvious. Doesn't usually happen if computer
+          calculates fit line, only if you do it by hand.
+            - It means the y-intercept may be set too high.
+
+    - Least squares regression line
+        - line for which the sum of the squares of the residuals
+          is minimised
+        - the least squares line always gives the sum of the
+          residuals = 0
+
+    - influential points: could be an outlier that affects the
+      line of best fit more than other points...
+        - So anything towards the extremes can have a great
+          effect on the regression line...
+
+    - Reasonableness of predctions:
+        - a prediction is only valid for the range of values
+          `x_i` in the original sample
+
+    - Terminology:
+        - interpolating:  predicting within the range of data
+        - extrapoloating: predicting outside the range of data

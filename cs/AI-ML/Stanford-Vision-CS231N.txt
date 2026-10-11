@@ -1,0 +1,178 @@
+### standford CS231N
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/01-Introduction-to-CNNS-for-Visual.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/02-Image-Classification.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/03-Loss-Functions-and-Optimization.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/04-Introduction-to-Neural-Networks.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/05-CNNs.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/06-Training-Neural-Networks-I.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/07-Training-Neural-Networks-II.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/08-Deep-Learning-Software.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/09-CNN-Architectures.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/10-Recurrent-Neural-Networks.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/11-Detection-and-Segmentation.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/12-Visualizing-and-Understanding.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/13-Generative-Models.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/14-Deep-Reinforcement-Learning.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/15-Efficient-Methods-and-Hardware-for-Deep-Learning.mp4
+    - $MY_VIDEOS/CS/Stanford-CNN-vision/16-Adversarial-Examples-and-Adversarial-Training.mp4
+
+### 04-Introduction-to-Neural-Networks
+    - key: back propagation
+    - Want: the gradient of the `Loss` wrt the weights `w`
+        - Two types of gradients
+        - Numerical: slow, approxmiate
+        - Analytical: fast, exact, error-prone
+            - $MY_IMAGES/cs/AI-ML/computer-vision/gradients-numerical-analytical.jpg
+    - Computational graphs
+        - way of visualising the caclulation of weights, loss etc
+            - $MY_IMAGES/cs/AI-ML/computer-vision/computational-graphs.jpg
+    - Back propagation
+        - use the "chain rule"
+    - Back prop: simple example
+        - Want to find the gradient of the `output function` wrt
+          ANY of the input variables
+        - simple function: f(x, y, z) = (x+y)*z
+        - We also give every intermediate variable a name
+            - q = (x+y)
+            - f = qz
+                - $MY_IMAGES/cs/AI-ML/computer-vision/back-prop-simple-1.jpg
+                - $MY_IMAGES/cs/AI-ML/computer-vision/back-prop-simple-2.jpg
+                - $MY_IMAGES/cs/AI-ML/computer-vision/back-prop-simple-3.jpg
+                - $MY_IMAGES/cs/AI-ML/computer-vision/back-prop-simple-4.jpg
+                - $MY_IMAGES/cs/AI-ML/computer-vision/back-prop-simple-5.jpg
+
+### 03-Loss-Functions-and-Optimization
+    - You have `x`s and `y`s
+        - `x` = input image pixels
+        - `y` = "label" or "target"
+    - Loss
+        - $MY_IMAGES/cs/AI-ML/computer-vision/loss-functino.jpg
+    - multiclass SVM loss:
+        - sum the scores for all the incorrect categories
+        - is the `∑ incorrect` < score correct category?
+        - often called 'hinge loss' too
+            - $MY_IMAGES/cs/AI-ML/computer-vision/hinge-loss.jpg
+        - loss for 'cat'
+            - $MY_IMAGES/cs/AI-ML/computer-vision/hinge-loss-svm-example.jpg
+        - loss for 'car' (no loss!)
+            - $MY_IMAGES/cs/AI-ML/computer-vision/hinge-loss-svm-example-2.jpg
+        - loss for 'frog' (model is bad here)
+            - $MY_IMAGES/cs/AI-ML/computer-vision/hinge-loss-svm-example-3.jpg
+    - Lecturer questions
+        - the weights are initialised to small random values, so
+          after the first pass, what should the loss be: `C - 1`
+          where `C` is the number of target classes
+        - He said this is useful for debugging...
+            - $MY_IMAGES/cs/AI-ML/computer-vision/hinge-loss-first-pass.jpg
+    - Sometimes you can have a '`squared`' hinge loss function
+        - ie a non-linear loss function. The loss function is
+          a way of telling the algorithm what errors you care
+          about.
+    - Note: the final correct weights `w` aren't unique!
+        - You could double the weights `2w` the loss function
+          would still be zero.
+        - This raises an interesting point. So far, we've only
+          focussed our loss function on the training data only.
+        - But in reality, we want to classify unknown test data.
+        - So we should introduce "REGULARISATION"
+        - ie we introduce a regularisation "penalty term" to the
+          loss function (separate from the data loss term) which
+          encourages the model to pick 'simpler' `w`s
+            - ie we force the model to be simpler so it will do
+              better on unseen test data
+            - note: regularisation depends on a hyper-parameter
+              `λ` that has to be tuned
+            - $MY_IMAGES/cs/AI-ML/computer-vision/svm-regularisation.jpg
+    - types of regularisation:
+        - $MY_IMAGES/cs/AI-ML/computer-vision/types-of-regularisation.jpg
+
+
+### 02-Image-Classification
+    - LINEAR classifiers (TEMPLATE matching)
+        - The bias term is DATA INDEPENDENT.
+            - We can use it to boost certain classes.
+
+        - Weights: 3 decision classes so the weights "matrix" has
+          dimension 3 rows...
+            - $MY_IMAGES/cs/AI-ML/computer-vision/basic-setup-linear-classification.jpg
+
+        - You can unravel the trained weights to see what it
+          regards as a 'template' for each class
+            - $MY_IMAGES/cs/AI-ML/computer-vision/linear-classifier-visualise-weights.jpg
+            - But disadvantage for linear classifiers:
+                - it only has ONE template for each class (target
+                  category)
+            - It's trying to average out ALL the differences for
+              a single class (e.g. a phone) and just use that one
+              template for all pictures of a phone
+
+        - Another way of interpreting a LINEAR classifier
+            - An image is high-dimensional data , and the
+              classifier is trying to draw linear decision
+              BOUNDARIES
+
+        - Cannot train linear classifier to predict certain
+          classes of data: e.g.
+            - $MY_IMAGES/cs/AI-ML/computer-vision/linear-classifier-failure-modes.jpg
+            - another explaination from MIT course
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/why-activation-1.jpg
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/why-activation-2.jpg
+
+
+### 01-Introduction-to-CNNS-for-Visual
+    - Early experiments in 1950s with electrodes attached to cat.
+    - Show _oriented edges_ was key starting point in vision
+      processing mechanism.
+    - ie biggest neuron response to oriented edges.
+        - $MY_IMAGES/cs/AI-ML/computer-vision/cat-brain-oriented-edges.jpg
+    - Book: Vision: David Marr
+        - How do we arrive at a 3D representation in our mind?
+        - $MY_IMAGES/cs/AI-ML/computer-vision/david-marr-3d-representation.jpg
+    - What are objects composed of?
+        - $MY_IMAGES/cs/AI-ML/computer-vision/objects-composed-of-simpler-shapes.jpg
+        - $MY_IMAGES/cs/AI-ML/computer-vision/objects-composed-of-simpler-shapes-2.jpg
+    - New approach: maybe object recognition is too hard, try
+      image segmentation instead?
+            - $MY_IMAGES/cs/AI-ML/computer-vision/image-segmentation.jpg
+        - 1990 - 2000: Face recognition: basic ML alogrithms
+            - (added to cameras to detect faces in realtime)
+            - $MY_IMAGES/cs/AI-ML/computer-vision/early-face-detection.jpg
+    - Object recognition: filter matching, match key parts of an
+      object (sift features)
+            - $MY_IMAGES/cs/AI-ML/computer-vision/filter-matching.jpg
+    - Human body recognition (2005)
+        - $MY_IMAGES/cs/AI-ML/computer-vision/human-body-recognition.jpg
+    - Influential test dataset for object recognition:
+        - PASCAL visual Object Challenge
+            - (20 object categories / classes)
+            - $MY_IMAGES/cs/AI-ML/computer-vision/Pascal-visual-object-challenge.jpg
+    - Imagenet: want to recognise most objects in the world?
+        - All pictures we can find on internet.
+        - 15 million objects, 22K categories.
+            - $MY_IMAGES/cs/AI-ML/computer-vision/Imagenet-arrives.jpg
+        - Imagenet challenge
+            - $MY_IMAGES/cs/AI-ML/computer-vision/Imagenet-challenge.jpg
+        - CNN arrives 2012... big drop in error rate
+            - $MY_IMAGES/cs/AI-ML/computer-vision/Imagenet-CNN-arrives.jpg
+            - $MY_IMAGES/cs/AI-ML/computer-vision/CNNs-improve-more-layers.jpg
+    - cs231n: Want to draw bounding boxes around objects detected
+            - $MY_IMAGES/cs/AI-ML/computer-vision/aim-of-cs231n-bounding-boxes.jpg
+    - "Alexnet" in 2012 shared similarities to old CNN in 1998
+        - ie CNNs not new  as a class of algorithms
+        - $MY_IMAGES/cs/AI-ML/computer-vision/Old-cnn-from-1998.jpg
+    - Reason for Big changes in 2010s:
+        - GPUs
+        - large labelled image datasets
+    - Open problems: the quest for "_visual intelligence_",
+      rather than just object recognition
+        - ie semantic segmentation?
+            - $MY_IMAGES/cs/AI-ML/computer-vision/new-challenges.jpg
+        - One approach: semantic graphs:
+            - $MY_IMAGES/cs/AI-ML/computer-vision/semantic-segmentation-graph-approach.jpg
+        - Could computers interpret this??!
+            - $MY_IMAGES/cs/AI-ML/computer-vision/real-challenge-obama-picture.jpg
+
+
+### Links
+    - COURSE: Standford cs231n CNN for visual recognition                                   https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv
+    - COURSE: Standford cs231n CNN for visual recognition Uni website                       http://cs231n.stanford.edu/

@@ -1,0 +1,66 @@
+hub github client
+
+### used to have the following in ~/.bashrc.local
+    # not needed anymore?
+    # source hubpass.sh
+
+    # if [ -f ~/bin/hub.bash_completion ]; then
+        # . ~/bin/hub.bash_completion
+    # fi
+
+### install precompiled binary
+    download tar file and unzip
+    sudo prefix=/usr/local/ ./install
+
+    add to ~/.bashrc.local
+        if [ -f ~/bin/hub.bash_completion ]; then
+            . ~/bin/hub.bash_completion
+        fi
+
+setup hub credentials
+    export GITHUB_USER=egf25
+    export GITHUB_PASSWORD=xxxxxxx
+    (source hubpass.sh in ~/.bashrc.local)
+
+url
+    https://github.com/github/hub
+    gh depreciated
+    hub used now
+
+help
+    hub help issue
+    hub help create
+
+arguments
+    -p  create a private repository
+    -d  set repository's description
+    -h  homepage URL
+
+GitHub Commands:
+   pull-request   Open a pull request on GitHub
+   fork           Make a fork of a remote repository on GitHub and add as remote
+   create         Create this repository on GitHub and add GitHub as origin
+   browse         Open a GitHub page in the default browser
+   compare        Open a compare page on GitHub
+   ci-status      Show the CI status of a commit
+   release        Manipulate releases (beta)
+   issue          Manipulate issues (beta)
+
+$ hub create
+    ... create repo on github ...
+    > git remote add -f origin git@github.com:YOUR_USER/CURRENT_REPO.git
+
+hub browse
+    jump to browser and open repo
+
+If you prefer using the HTTPS protocol for GitHub repositories instead
+of the git protocol for read and ssh for write, you can set
+"gh.protocol" to "https".
+    # default behavior
+    $ git clone jingweno/gh
+    < git clone >
+
+    # opt into HTTPS:
+    $ git config --global gh.protocol https
+    $ git clone jingweno/gh
+    < https clone >

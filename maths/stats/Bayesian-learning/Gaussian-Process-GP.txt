@@ -1,0 +1,124 @@
+### 1) Big-picture: What’s the problem?
+
+- You have data points `(x_i, y_i)` scattered non-linearly.
+- You want to predict `y` at new `x`, but don’t want to assume
+  a specific fixed function form (e.g., `y = ax^2 + bx + c`).
+- *Gaussian Process (GP) regression* is a way to predict with
+  uncertainty *without* fixing a specific function shape.
+
+### 2) The key idea: Functions as random variables
+
+- Instead of guessing *one* function, imagine a *distribution
+  over possible functions* that could fit your data.
+- This distribution is defined so that *any finite collection of
+  y-values at chosen x-values follows a multivariate Gaussian
+  distribution* — hence the name *Gaussian Process*.
+- The GP gives a mean function (our best guess) and a variance
+  (how uncertain we are) at every `x`.
+
+### 3) Analogy: Mountain range of functions
+
+- Picture a landscape of infinitely many hills and valleys
+  (possible functions).
+- The data points you already know act like stakes hammered into
+  the landscape, pinning it down near those points.
+- The terrain between the stakes reflects where the function can
+  flex — the spread of possible hills gives your prediction
+  uncertainty.
+
+### 4) Core components of a GP
+
+- Mean function:
+    - your *a priori* guess of the average function
+    - (often set to 0 if you have no bias).
+- Covariance function (kernel):
+    - decides *how outputs at different x are related*
+    - e.g., do points close in `x` have similar `y`?
+
+  - Popular choice:
+        - squared exponential kernel
+        - `k(x, x') = sigma^2 * exp(- (x - x')^2 / (2 * l^2))`
+        - where l controls smoothness.
+
+### 5) How GP regression works
+
+- Before seeing data: you have *prior* belief — functions drawn
+  randomly from the GP.
+- After seeing data: you *condition* the GP on your points `(x_i,
+  y_i)` → *posterior* GP updated to fit known points.
+- The GP posterior gives you:
+
+  - predicted mean `y(x*)` at new `x*`
+  - predicted uncertainty (variance) at `x*`.
+
+### 6) Vivid example
+
+- Suppose you measure temperature at a few times of day and want
+  a smooth temperature curve across the day.
+- GP regression predicts a curve passing through your
+  measurements but also tells you *where* you’re confident (small
+  error bars) or not (wide error bars).
+
+### 7) Why it’s powerful
+
+- Flexible: can fit almost any smooth function.
+- Uncertainty-aware: gives error bars naturally.
+- Non-parametric: complexity grows with data, no fixed number of
+  parameters like in linear regression.
+
+### 8) Downsides
+
+- Computational cost: involves inverting large matrices → scales
+  poorly with many data points.
+- Choosing the kernel hyperparameters (l, sigma, etc.) needs care
+  (usually by maximizing likelihood on data).
+
+### Aside: Link to MCMC
+    - Gaussian Process (GP) regression gives a posterior
+      distribution over functions directly;
+        - if kernel parameters are fixed, no MCMC is needed — you
+          can calculate predictions analytically.
+
+- But real problems often involve uncertain HYPERPARAMETERS
+    - (e.g., kernel length-scale l, noise sigma).
+
+    - Then you need to average predictions over these uncertain
+      hyperparameters.
+
+    - This is where Monte Carlo (esp. MCMC) comes in:
+        - You draw samples of hyperparameters from their posterior.
+        - For each sampled hyperparameter set, compute GP predictions.
+        - Average these predictions → integrate over hyperparameter uncertainty.
+
+- So `GP` + `MCMC` = Bayesian hierarchical modeling:
+    - `GP` handles uncertainty over functions given
+      hyperparameters.
+    - `MCMC` handles uncertainty over the hyperparameters
+      themselves.
+
+- Without MCMC, you’d have to fix hyperparameters to point
+  estimates (e.g., by maximum likelihood) → less fully Bayesian.
+
+
+### GP History
+    - Origins:
+        - Emerged from work on stochastic processes in
+          probability theory.
+        - Named after Carl Friedrich Gauss; exploits properties
+          of Gaussian distributions.
+        - Early 20th-century stats: Kolmogorov, Wiener developed
+          foundations of random functions.
+
+    - Key figures:
+        - Norbert Wiener: Wiener process links Brownian motion
+          & Gaussian processes.
+        - Harold Hotelling: stats on covariance functions.
+        - In modern ML, Carl Rasmussen & Chris Williams (Gaussian
+          Processes for Machine Learning, 2006) popularized GPs
+          for regression/classification.
+
+    - Core idea:
+        - GP defines a distribution over functions: any finite
+          set of points has joint Gaussian distribution.
+        - Covariance (kernel) function encodes assumptions about
+          smoothness, periodicity, etc.

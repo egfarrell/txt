@@ -1,0 +1,21 @@
+
+### Strings
+    - A difference between Clojure and Clojurescript:
+        - In ClojureScript, strings are collections of
+          one-character strings, because there's no "character"
+          type in JavaScript. 
+        - An example from a ClojureScript REPL:
+
+            > cljs.user=> (last "a collection of 1 character strings")
+            > "s"
+            > cljs.user=> (type *1)
+            > #object[String]   <----- look it's a string!
+
+### ClojureScript numbers
+    - In ClojureScript all numbers are just "JavaScript numbers,"
+      which are all double-precision floating-point numbers. 
+    - JavaScript doesnt define different types of numbers like
+      JAVA and other programming languages (e.g., long, integer,
+      and short)
+
+

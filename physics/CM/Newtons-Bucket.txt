@@ -1,0 +1,62 @@
+- The concave shape of water in a spinning bucket arises due to
+  the combined effects of `gravity` and the `centrifugal force`
+  acting on the water in a rotating frame of reference.
+
+- Here's a breakdown:
+
+    - Forces in the Rotating Frame:
+        - In the bucket's rotating frame, the water experiences
+          two key forces:
+            - `Gravity`:
+                - Acts vertically downward, pulling the water
+                  towards the bottom of the bucket.
+            - `Centrifugal Force`:
+                - Acts radially outward from the axis of
+                  rotation. This is NOT A REAL FORCE but
+                  a pseudo-force experienced in the rotating
+                  frame due to the water's inertia.
+
+        - The `resultant` of these two forces determines the
+          effective force field experienced by the water.
+
+    - Equilibrium of the Water Surface:
+        - The water's surface adjusts itself to be perpendicular
+          to the effective force at every point. This is because
+          in a fluid at equilibrium, there can be no tangential
+          components of force acting on the surface.
+
+        - The effective force is the vector sum of gravity and
+          the centrifugal force. As you move outward from the
+          center of rotation, the centrifugal force increases
+          (proportional to r, the radial distance), while gravity
+          remains constant.
+
+    - Mathematical Formulation:
+        - The total effective force has components:
+            - Vertical (gravity): `F_g = mg`
+            - Radial (centrifugal force): `F_c = mω^2r`,
+                - where `ω` is the angular velocity
+                - and   `r` is the distance from the axis.
+
+            - $MY_IMAGES/physics/CM/Newtons-Bucket-eqn.jpg
+
+    - Parabolic Surface:
+            - The resulting height function, `h(r)`, is quadratic
+              in `r`, describing a parabola.
+            - This shape is concave, with the water higher at the
+              edges (larger `r`) and lower at the center (`r
+              = 0`).
+
+    - Physical Interpretation:
+        - The centrifugal force pushes water outward, piling it
+          up at the edges. The gravitational pull keeps the
+          surface curved and prevents the water from completely
+          flowing out.
+        - The surface curvature is the equilibrium response of
+          the water to these _competing forces_, ensuring that
+          the net force is perpendicular to the surface
+          everywhere.
+
+- This principle has broader applications, such as in the design
+  of parabolic mirrors using rotating liquids or understanding
+  the behavior of fluids in rotating systems.

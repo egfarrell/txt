@@ -1,0 +1,61 @@
+
+
+### "Vectors as Derivatives"
+    - key: 
+        - directional derivative stems from '_CHAIN RULE_'?
+    - Page 41:
+      $MY_BOOKS/Physics/Undergrad/Students-Guide-Fleisch-Vectors-Tensors.pdf
+    - In many texts, you’ll find vectors equated to “directional
+      derivatives” and that partial derivatives such as `∂/∂x`
+      and `∂/∂y` are referred to as 'basis vectors' along the
+      coordinate axes.
+
+    - To understand this correspondence between vectors and
+      derivatives, consider the path in Figure 2.10. You can
+      think of it as a path along which you’re travelling with
+      velocity `ṽ`; for simplicity imagine the path lies in the
+      `xy` plane.
+        - $MY_IMAGES/maths/fleisch-vectors/parameterized-curve.jpg
+
+    - Now imagine you’re keeping track of time as you move, so
+      you assign a value (e.g. the `t` values in the figure) to
+      EACH POINT on the curve. 
+    - By marking the curve with values, you have “parameterized”
+      the curve (with `t` as your parameter). 
+    - Note: there need not be equal distance along the curve
+      between your parameter values. 
+        - (There definitely won’t be if you choose time as your
+          parameter and then change your speed as you move; the
+          reckless driver depicted in Figure 2.10 has apparently
+          sped up in the turn)
+    - Great stuff, put more from page 43 here...
+        - $MY_IMAGES/maths/fleisch-vectors/fleisch-directional-derivative-1.jpg
+        - $MY_IMAGES/maths/fleisch-vectors/fleisch-directional-derivative-2.jpg
+        - Question: Fleisch says the directional derivative is
+          a "vector" equation?? But the directional derivative is
+          just a number? Not a vector?
+            - Ah maybe it's 2.28 that is a vector, but the full
+              directional derivative in 2.27 is a number.
+
+        - Of course, it’s not just air temperature that can be
+          represented by `f(x, y)`; 
+            - this function can represent anything spatially
+              distributed in the region around your curve. 
+        - So `f(x, y)` could represent the height of the road,
+          the quality of the scenery, or any other quantity that
+          varies in the VICINITY of your curve. 
+        - Likewise, you could have chosen to PARAMETERIZE your
+          path with markers other than time `t`; 
+            - had you assigned a value `s` or `λ` to each point
+              on your path, the directional derivative `d/ds` or
+              `d/dλ` would still represent the TANGENT vector to
+              the curve: 
+                - `dx/ds` or `dx/dλ` would still represent the
+                  x-component of that vector, 
+                - and `dy/ds` or `dy/dλ` would still represent
+                  the y-component of that vector.
+
+
+
+### Book
+    - $MY_BOOKS/Physics/Undergrad/Students-Guide-Fleisch-Vectors-Tensors.pdf

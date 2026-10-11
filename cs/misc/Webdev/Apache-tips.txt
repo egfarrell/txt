@@ -1,0 +1,61 @@
+### Django / Apache Ubuntu 20.04
+    - https://www.youtube.com/watch?v=UY_UIH89elA
+    - Install Apache and `wsgi` (Web Server Gateway Interface) for Python3
+        sudo apt install apache2 libapache2-mod-wsgi-py3
+    - Now edit apache
+        c /etc/apache2/sites-available
+        v 000-default.conf
+
+### Handy
+    - Check Syntax errors:
+        apachectl configtest
+
+    - restart
+        systemctl restart apache2
+        systemctl status apache2.service
+
+    - Version
+        apache2 -v
+
+### Add proxy
+    sudo a2enmod proxy
+    sudo a2enmod proxy_http
+    sudo a2enmod proxy_balancer
+    sudo a2enmod lbmethod_byrequests
+        systemctl restart apache2
+        systemctl status apache2.service
+        apachectl configtest
+
+
+
+
+
+
+### Old: ubuntu lamp stack
+    - information
+        https://help.ubuntu.com/community/ApacheMySQLPHP
+
+    - install LAMP packages
+        sudo apt-get install tasksel
+        sudo tasksel install lamp-server
+        OR!!:
+        sudo apt-get install php5 mysql-server apache2
+
+        Note: dont use tasksel to uninstall LAMP!
+        remove the packages using apt-get.
+
+    - Goto browser
+        type localhost
+
+    - Install phpmyadmin
+        sudo apt-get install phpmyadmin
+
+    - server location
+        cd /var/www
+        index.html is the default file
+        you may have to change permissions on /var/www
+
+    - turn server on / off
+        sudo /etc/init.d/apache2 start
+        sudo /etc/init.d/apache2 restart
+        sudo /etc/init.d/apache2 stop

@@ -1,0 +1,95 @@
+# Book:
+    - $MY_BOOKS/Physics/Metaphysics/Maudlin-Philosophy-Spacetime.pdf
+    - $MY_BOOKS/Physics/Metaphysics/Maudlin-Philosophy-Spacetime-Scan.pdf
+
+### Geometrical structure 1:
+    - 3 levels of structure, corresponding to different
+      instruments in Euclidean geometry:
+
+        - STRUCTURE            INSTRUMENT     MEASURES:
+        - ---------            ----------     ---------
+
+        - Topology:            pencil         Continuity
+        > Differentiable       ...            ...
+        - Affine structure:    straight-edge  Straight lines
+        - Metrical structure:  compass        length, distance
+
+        > Differentiable:
+            - Extra level of structure between Topology & Affine
+            - distinguish _smooth_ continuous curves from curves
+              with CORNERS or sharp BENDS
+
+
+### Geometrical structure 2:
+    - TOPOLOGY
+        - (most?) fundamental level
+        - determines facts about _continuity_
+        - eg. we use a pencil to draw continuous lines
+        - if I lift the pencil while drawing, there won't be a single
+          connected line
+        - to distinguish between a single, continuous line and
+          disconnected lines, the points in space must have some
+          geometrical organisation
+        - rubber sheet geometry:  tearing and pasting not allowed
+        - "tearing":
+            - separates continuous lines into discontinuous ones
+        - "pasting":
+            - joins discontinuous lines into continuous wholes
+        - if a space had no topology, they'd be no difference
+          between drawing a single continuous curve, and several
+          disconnected curves, and Euclidian geometry couldn't
+          even start
+
+    - AFFINE STRUCTURE
+        - Must be a distinction between _straight_ lines and
+          other lines
+        - Euclids first postulates are:
+            - its possible to draw a straight line from any point
+              to any point
+            - possible to extend any finite straight line
+              continuously in a straight line.
+        - Not possible without an affine structure ...
+        - It's possible to have spaces without this structure.
+          Eg.
+            - a pair of points might determine no straight line,
+              or more than one straight line
+            - there might be a limit to how far a straight line
+              can be produced
+
+    - METRICAL STRUCTURE
+        - lengths of lines
+        - distances between points
+        - compass draws a circle, locus of points equidistant
+          from a given centre
+        - Euclids 3rd:
+            - a complete, continuous, closed circle can be drawn
+              with any given centre and radius
+        - again we could imagine spaces where this doesnt hold
+
+
+### Geometrical TRANSFORMATIONS
+    - $MY_IMAGES/physics/metaphysics/geometric-transformations.jpg
+
+    - hierarchical form to transformations too:
+        - TOPOLOGICAL TRANSFORMATION:
+            - carries continuous lines to continuous lines
+            - even though they can be warped or bent... (but not
+              torn)
+
+        - DIFFEOMORPHISM
+            - preserves differentiable structure and maps smooth
+              curves to smooth curves
+            - A topological transformation can map a triangle to
+              a circle, a diffeomorphism cannot, since a circle
+              is smooth but a triangle has corners.
+
+
+        - AFFINE TRANSFORMATION:
+            - map straight lines onto straight lines.
+            - It's still affine even if there is a uniform stretching
+              that changes distances between points, or _turns
+              a circle into an ellipse_...
+
+        - ISOMETRY:
+            - preserves distance
+            - circles are carried into circles

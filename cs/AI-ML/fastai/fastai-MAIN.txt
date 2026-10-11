@@ -1,0 +1,1222 @@
+e Path.BASE_PATH = path
+
+### Handy
+    - brilliant: grab a specific layer of a timm model
+        - https://forums.fast.ai/t/indexing-into-model-0-timm-body-when-using-timm-library-with-fastai/103206/5
+
+    - calc ACCURACY of TEST dataset
+        - test_dl = dls.test_dl(get_image_files(TEST_DATA), with_labels=True)
+        - test_dl.show_batch(max_n=40)
+        - preds, targs, preds_decoded = learn.get_preds(dl=test_dl, with_decoded=True)
+        - acc = accuracy(preds, targs)
+        - # another way
+        - test_loss, test_accuracy = learn.validate(dl=test_dl)
+
+        - `learn.validate()` returns a tuple of two elements.
+            - The 1st element is the validation loss and the 2nd is
+                the accuracy (or the chosen metric).
+            - If we don't pass any argument then it calculates these
+                on the validation set, which corresponds to the
+                `ds_idx=1`.
+            - We can also choose to calculate it on the training set
+                or test set
+                - learn.validate(ds_idx=0)
+                - learn.validate(ds_idx=2)
+
+
+    - `dls.train.after_batch`
+        - ... is a callback executed after each batch during the
+          training process. FastAI's data loader, `dls`, has two
+          main subsets:
+            - `.train` for training dataset
+            - `.valid` for validation dataset
+        - `after_batch` callback allows you to perform specific
+          actions or transformations on the batch of data after
+          it has been processed by the model but BEFORE the loss
+          is computed.
+        - Useful for custom data processing steps, logging, or
+          applying specific transformations that are only
+          relevant during training.
+
+
+    - `dls.train.items` lists all training filenames
+
+    - ah: a 'dataset' is something you can _INDEX_ into and it
+      returns a _SINGLE_ tuple of your independent and dependent
+      variables (defined by Pytorch)
+        - but a dataloader: 
+            - you can't _INDEX_ into it...
+            - you can only iterate through it (grab the next one)
+              and it gives you a mini-batch which is a tensor
+            - aside: with the whole datablocks / datasets, we
+              need something that results in a tensor (or can be
+              turned into a tensor) in order to be ready for the
+              dataloaders... (which loads it onto the GPU)
+
+    - aside: the current loss function for a model is stored
+      INSIDE the model's dataloader
+        - also: learner.loss_func shows current loss function
+
+    - look inside a model
+        - learn.summary()
+        - m = learn.model()
+        - head = m[1]
+        - last_layer = head[-1]
+        - list(last_layer.parameters())
+        - delete last layer
+            - del(head[-1])
+
+    - fastgpu:
+        - https://fastgpu.fast.ai/
+        - run 'sweeps' of experiments
+        - cut-down version of WandB
+
+    - although training always done in GPU batches (utilise
+      parallelisation), inference is usually done on a CPU (one
+      image at a time etc.)...
+        - although sometimes inference is 'batched' and sent to
+          the GPU
+
+    - ah you could actually do predictions on the validation set?
+      explicitly...?
+        - probs, targets = learn.get_preds(`dls.valid`)
+        - probs, targets = learn.tta(`dls.valid`) # another variation: test time augmentation
+
+    - check this: learn.show_results()
+        - to see how it handled a test dataset?
+
+    - The `items` attr of a dataset will contain the file names in the order used in the dataloader.
+        - $MY_IMAGES/cs/AI-ML/fastai-get-training-filenames.jpg
+
+    - multi-target model
+        - predict multi-categories...
+        - key: `n_out=20`
+        - Jermey 'Paddy' competition
+        - `10` activations for 'disease type'
+        - `10` activations for 'rice type'
+            - $MY_IMAGES/cs/AI-ML/fastai-multi-category-preds-2.jpg
+        - aside: sometimees trying to get a model to predict TWO
+          things makes it better at predicting the original "one
+          thing" a single category model used to predict
+
+    - use fastai "test time augmentation" (mini-bagging method)
+        - tta_preds, _ = learn.tta(dl=valid)
+
+    - get the target labels easier for a test dataset
+        - `probs, _, idxs = learn.get_preds(dl=test_dl, with_decoded=True)`
+        - then turn the idxs into the decoded label
+            - $MY_IMAGES/cs/AI-ML/fastai-classifier-get-labels.jpg
+            - aside: use pandas `map` with a DICTIONARY not a function
+
+    - get all image sizes in parallel
+        - $MY_IMAGES/cs/AI-ML/fastai-fastcore-parallel.jpg
+
+    - to find a good lr, try `slide`, `valley`
+        - learn.lr_find(suggest_funcs=(slide, valley))
+
+    - A traditional CNN won’t work for segmentation, we use
+      a special model: `UNet`
+
+    - Examine model innards
+        m = learn.model
+        l = m.get_submodule('0.model.stem.1')
+        list(l.parameters())
+
+    - GPU speed tip: `.to_fp16()`:
+        - use "half-precision" floating point
+        - learn = vision_learner(dls, 'some timm model name', metric=error_rate)`.to_fp16()`
+
+    - GPU utilisation:
+        - `nvidia-smi dmon`
+        - if below 50% then items are not being supplied fast
+          enough to the GPU (i.e. slow file I/O)
+
+    - `timm`: Catalog: all Pytorch image models https://timm.fast.ai/
+
+    - TIP: when training images: ensure there are NO BROKEN ones!
+        - Jeremy checks all image downloads before training
+
+    - GOTCHA: Lambda
+        - Lambda functions are great for quickly iterating, but
+          cannot be _serialised_.
+        - Use full function definitions if you want to export
+          your 'Learner' after training.
+
+    - data cleaning
+        - dont do lots of data cleaning first..!
+        - Your model can teach you what is bad data...
+
+    - tensor shape:
+        - "dimensions" ≡ "rank" ≡ "axes"
+
+    - shape brackets
+        - (valid_3_tensors - mean3).shape
+
+    - Booleans
+        - When converting Boolean responses to floats, we get:
+        - `1.0` for True
+        - `0.0` for False
+
+    - Probability:
+        - The probability of it being a "3"
+            - the sum (pixels * weights) = PROBABILITY
+        - x = pixels
+        - w = weights
+            - `prob_eight(x, w) = (x*w).sum()`
+
+    - .data
+        - ".data" is a special Pytorch attribute...
+        - if you use it, the gradient isn't calculated
+        - params.data -= lr * params.grad.data
+        - params.grad = None
+
+    - metric v loss
+        - `metric` and `loss` functions are often different.
+            - Because: you can't use the metric as a loss
+              function, if the metric gives you a gradient of
+              ZERO.
+        - Interesting: loss and 'confidence':
+            - Loss is related to "confidence" too.
+            - The `loss` is a number that is higher if:
+                - the model is INCORRECT
+                    - especially if it's also confident of its
+                      incorrect answer
+                - or if the model is CORRECT,
+                    - but NOT CONFIDENT of its correct answer.
+
+    - 7 steps of ML
+        - $MY_IMAGES/cs/AI-ML/fastai-basic-7-steps.jpg
+
+    - Bias
+        - me:
+            - I think the bias is like a FLOOR you can push up or
+              down to affect the activation of a neuron
+        - The function `weights*pixels` won't be FLEXIBLE enough:
+        - it is always equal to `0` when the pixels = 0
+        - (ie, its intercept is 0).
+        - Remember the line formula `y = w*x + b`
+        - we still need the `b`.
+
+    - parameters
+        - The "parameters" of a model are both the WEIGHTS and
+          the BIAS together
+
+    - "@"
+        - means matrix multiply
+
+    - key equation
+        - This equation, `batch@weights + bias`, is one of the
+          2 fundamental equations of any neural network
+        - (The other is the activation function...)
+
+    - sigmoid
+        - another reason for squishing predictions using the
+          "sigmoid" function:
+            - we like to think of the predictions as
+              probabilities between 0 and 1!
+
+    - metric v loss
+        - why have a "metric" and a "loss"?
+            - "metric":
+                - accuracy of the outcomes we really care about
+            - "loss":
+                - similar to outcomes we care about, but has
+                  well-behaved gradient (no zero gradients)
+        - note: nice metric:
+            - sometimes the metric actually has well-behaved
+              gradients and we can use it as the loss. (eg MSE)
+            - but for _classification_ the matric and loss
+              functions must be different
+        - bigger mini-batch size: more accurate but slower
+
+    - GOTCHA "loss.backward"
+        - "loss.backward" calculates the gradient and ADDS them
+          to the existing gradients in "weights.grad"
+        - Pytorch: methods with `_` means modify in-place.
+        - eg `weights.grad.zero_()`
+
+
+    - KEY MOMENT: (reLU)
+        - a "reLU" (rectified linear unit) was inserted between
+          2 linear functions and that was enough to turn the
+          entire function into a neural net.
+        - (can solve any computable problem ala 'Universal
+          Approximation Theorem')
+        - note: the reLU is an "activation function"
+            - $MY_CODE/AI-ML/fastai-2020/04_mnist_basics.py:2274
+        - reLU is really just a "max" function
+            - res = xb@w1 + b1
+            - res = res.max(tensor(0.0))  # <--- this is really ReLU
+            - res = res@w2 + b2
+
+    - dead neurons
+        - reLU could make the gradients zero??
+            - YES... and you could end up with "dead" neurons.
+            - In that case you'd be wasting computation. Theres
+              a few tricks to avoid that...
+        - trick:
+            - make the negative section of the ReLU less steep;
+              results in a "leaky reLU"
+        - trick:
+            - initialise to sensible initial values that aren't
+              too big or too small, and step by sensible amounts
+              that aren't too big...
+                - that way we keep "things" (gradients?) in the
+                  area of the reLU where they are positive most
+                  of the time.
+        - we can analyse a network and see how many of these
+          "dead" (zero) units we have
+
+    - learning rate
+        - when he trained his basic "simple_net" he dropped the
+          learning rate from "1.0" to "0.1".
+        - Because the deeper models tend to be bumpier and less
+          well-behaved.
+
+    - Examine model:
+        - nice code: peer inside our model?
+            - m = learn.model
+            - m
+            - w, b = m[0].parameters()
+            - # have a look at the first weight?
+            - # view: reshapes as a single "image" ?
+            - w[0].view(28, 28)
+            - show_image(w[0].view(28, 28))
+
+    - Predictions
+        - What are predictions really?
+        - We can view the predictions (i.e., the activations of
+          the final layer of our neural network) using
+          `Learner.get_preds`.
+
+    - Probabilities
+        - Probabilities sum to 1.
+        - The actual predictions are 37 probabilities between
+          0 and 1, which add up to 1 in total:
+          `len(preds[0]),preds[0].sum()`
+
+    - Softmax:
+        - extension of Sigmoid to handle more than 2 levels
+          (categories).
+        - Because softmax is based on exponentials, if one
+          category is a little bit bigger than another, it's
+          softmax value can be a lot bigger.
+        - so softmax really wants to pick on ONE category
+        - maybe you dont always want this, so have to be a bit
+          cautious
+
+    - `nll_loss`: negative log likelihoods
+        - Confusing Name, Beware: The nll in 'nll_loss' stands
+          for "negative log likelihood," but it doesn't actually
+          take the log at all!
+            - It assumes you have _already_ taken the log.
+        - PyTorch has a function called 'log_softmax' that
+          combines 'log' and 'softmax' in a fast and accurate
+          way.
+            - 'nll_loss' is designed to be used after
+              'log_softmax'.
+        - In PyTorch, this is available as 'nn.CrossEntropyLoss'
+          (which, in practice, actually does 'log_softmax' and
+          then 'nll_loss'):
+
+    - Worst predictions?
+        - Which ones are classified the worst?
+        - `interp.most_confused(min_val=5)`
+
+    - learn.lr_find:
+        - find the best learning rate
+        - a better `lr` => faster training, fewer epochs
+        - trick:
+            - it just uses a batch at a time, as it tries
+              different learning rates ...
+                - $MY_IMAGES/cs/AI-ML/fastai-learning-rate-find.jpg
+        - We want to set the `lr` where it's plumetting downhill
+          (ie slope is the steepest)
+            - so rule-of-thumb: use lr = minimum / 10
+
+    - learn.fine_tune:
+        - what is it doing? (fine_tune is transfer learning!)
+        - $MY_IMAGES/cs/AI-ML/fastai-fine-tuning.jpg
+        - `fine_tune` actually calls `fit_one_cycle` but first it freezes
+          some layers, then unfreezes, then calls fit_one_cycle
+          again
+
+    - Architecture depths
+        - Architectures tend to come in a small number of
+          variants.
+            - Eg, the ResNet architecture comes with 18, 34, 50,
+              101, and 152 layers, pretrained on ImageNet.
+        - A larger version of a ResNet (more layers and
+          parameters; sometimes described as the "capacity" of
+          a model) will always give us a better training loss,
+          but can suffer more from overfitting, because it has
+          more parameters to overfit with.
+
+    - `fp16`: mixed-precision training
+        - Where possible, use less-precise numbers during
+          training: (*half-precision floating point*, also called
+          _fp16_) It's quicker.
+        - aside:
+            - `fp16` often gives slightly better results than
+              full fp32!
+            - aside: fp8: "discretising",
+                - take a model trained if `fp32` or `fp16` and
+                  fine tune it by rounding down to `fp8`, (or
+                  even fp1 sometimes)
+                - training with such low precision data is an
+                  area of active research
+                - could be handy for low-power devices that dont
+                  even have a floating point unit?
+
+    - resnet34 versus resnet50:
+        - In this case, we're NOT seeing a clear win from the
+          deeper model.
+        - This is useful to remember: bigger models are NOT
+          necessarily better for your particular case! Try small
+          models before scaling up.
+
+    - One-hot encoding:
+        - Using a vector of zeros, with a "1" in each location
+          that is represented in the data, to encode a list of
+          integers.
+        - toy example:
+            - in this label, position 2 represents say a "person"
+            - ie, position 2 indexes into the "vocab"
+                - TensorMultiCategory([0., 1., 0., 0., 0., 0., 0., 0., 0.]))
+
+    - feature transformations
+        - List of lists...
+        - Key way we build up independent & dependent variables
+        - Pass in two lists of functions
+        - eg
+        - list1: "f1" open up the image   (independent)
+        - list2: "f2" parse the file name (dependent)
+            - `dss = Datasets(a, [[f1], [f2]])`
+            - `dss[0]`
+
+        - now create 'Dataloaders' object
+            - `dls = DataLoaders.from_dsets(dss, batch_size=4)`
+            - `first(dls.train)`
+
+        - But we often use a "DataBlock()" instead
+
+    - Datablock
+        - Generic container to build 'Datasets' & 'DataLoaders'
+        - A Datablock is like a *template* for creating
+          `DataLoaders`.
+        - We still must tell fastai the actual source of our
+          data, e.g., the path to the images:
+            - dls = bears.dataloaders(path)
+
+    - image color channels
+        - Note: you can have greater or less than 3 color
+          channels! (A pre-trained model will usually have
+          3 channels)
+        - if you are converting video footage, `time` could be
+          the 4th channel
+        - A *channel* is a single basic color in an image:
+            - for regular full-color images there are three
+              channels: RGB.
+            - PyTorch represents an image as a rank-3 tensor,
+              with dimensions `[channels, rows, columns]`.
+
+
+    - image regression
+        - Jeremy fine-tuned an image CLASSIFICATION model to do
+          image REGRESSION (ie find the centre point coordinates)
+        - resnet18
+            - why does this work?
+            - Well an image classification model must have learnt
+              alot about how an image looks
+
+    - Collaborative Filtering
+        - informal: "trying to learn from past behaviour"
+        - we can recommend things even if we dont know anything
+          about what those things are, as long as we know who
+          else has recommended things that are similar to what
+          youve liked or used.
+        - Doesnt have to be products. We normal say "items".
+          Items could be links you click on, diagnosis for
+          a patient etc
+        - key idea: "latent factors":
+            - in the underlying items there are some features
+              / concepts (they may not be "labels") that are
+              relevant for at least some peoples decisions. If
+              that's true, we can uncover these latent factors.
+            - they are "latent" because no-one ever explicitly
+              wrote them down or labelled them
+        - approach:
+            - just "make up" some hidden factors (numbers) for
+              each row and column, and then do a matrix multply
+              on them. Then train these new "made up" numbers to
+              make them better.
+            - $MY_IMAGES/cs/AI-ML/collab-filter-matrix-multiply.jpg
+        - note: in practice we tune the number of latent factors
+
+    - "Lookup index" trick:
+        - Fortunately, we can represent *look up in an index* as
+          a _matrix product_.
+            - The trick is to replace our indices with
+              one-hot-encoded vectors. An example: of what
+              happens if we multiply a vector by
+              a one-hot-encoded vector representing the index 3:
+            - `One-hot method
+            - one_hot_3 = one_hot(3, n_users).float()`
+            - `user_factors.t() @ one_hot_3`
+        - traditional index lookup
+            - `user_factors[3]`
+        - later:
+            - ah I got it the wrong way around... they are going
+              to simulate multiplication by a one-hot-encoded
+              vector, by simplying doing an index lookup
+
+    - Embedding
+        - Computational shortcut to do a matrix multiplication
+          more quickly, by doing an _array lookup_ instead. (e.g.
+          with a one-hot encoded matrix),
+        - it's a layer that has the computational speed as
+          a ARRAY LOOKUP and the same gradients as matrix
+          multiplication
+
+        - Multiplying by a one-hot-encoded matrix, using the
+          computational shortcut that can be implemented by
+          simply indexing directly. This is quite a fancy word
+          for a very simple concept.
+
+        - The thing that you multiply the one-hot-encoded matrix
+          by (or, using the computational shortcut, index into
+          directly) is called the _embedding matrix_.
+
+    - "Regularisation"
+        - use models with lots of paraemeters and train them for
+          a long time, but penalise them for over-fitting (stop
+          them over-fitting)
+        - Background:
+            - In the context of ML, a model like a deep NN, can
+              overfit the training data (even its noise and
+              fluctuations). This is similar to an ill-posed
+              problem where many solutions (models) can fit the
+              data.
+            - Regularization techniques introduce constraints to
+              prefer simpler or _smoother models_, analogous to
+              how regularization in mathematical problems seeks
+              smoother or simpler solutions.
+
+
+
+    - Range tip
+        - As we've discussed, it's a good idea to set `y_range`
+          for regression models,
+
+
+    - Jeremy: "RNN" name:
+        - if they were called "looping neural networks" or LNNs
+          instead of recurrent neutral networks (RNNs), they
+          would seem 50% less daunting!
+
+    - Normalise
+        - subtract the mean and divide by the standard deviation
+          of the dataset
+
+
+### Use learn.model? (for multi-target)
+    - in the context of a custom prediction function for
+      a multi-target model, you should directly use
+      `learn.model(processed_img)` instead of
+      `learn.predict(processed_img)`. Here's why:
+
+    - Direct Model Call: learn.model(processed_img) directly
+      invokes the underlying PyTorch model with the processed
+      image. This is necessary when dealing with custom model
+      structures, like multi-target models, where you want to
+      access the raw outputs directly.
+
+    - learn.predict Limitation: `learn.predict` is a high-level
+      function designed for standard single-target prediction
+      scenarios. It handles preprocessing, prediction, and
+      postprocessing (decoding) steps automatically, but it
+      expects the model and data to follow the standard
+      single-target format. 
+        - In the case of _multi-target models_, `learn.predict`
+          might not correctly interpret and decode the model's
+          outputs, leading to errors or incorrect predictions.
+
+    - By directly using learn.model, you bypass these limitations
+      and get the raw output from your model, which you can then
+      decode manually as per your model's specific structure.
+      This approach gives you more control over the prediction
+      process, which is essential for non-standard models like
+      yours.
+
+        - img = PILImage.create(image_path)
+        - # Process the image (the same way your DataLoaders do)
+        - processed_img = learn.dls.test_dl([img]).one_batch()[0]
+        - # Get raw predictions
+        - raw_preds = learn.model(processed_img)
+
+
+### Use a training func to 'sweep'
+    # TODO: use a train func
+    # def train(arch, item, batch, epochs=5):
+        # dls = ImageDataLoaders.from_folder(trn_path, seed=42, valid_pct=0.2, item_tfms=item, batch_tfms=batch)
+        # learn = vision_learner(dls, arch, metrics=error_rate).to_fp16()
+        # learn.fine_tune(epochs, 0.01)
+        # return learn
+
+    # learn = train(arch, item=Resize((256,192), method=ResizeMethod.Pad, pad_mode=PadMode.Zeros),
+                # batch=aug_transforms(size=(171,128), min_scale=0.75))
+
+
+### Gotchas
+        - Get predictions from a full folder of test images
+            - `preds, _ = learner.get_preds(dl=test_dl)`
+        - But preds are raw output values from final activation
+          layer! We need:
+            - `softmax_probs = F.softmax(preds, dim=1)`
+            - Notice: `dim=1` because test images (rows)
+                - dim=1: Softmax is applied to each row, treating
+                  each column as part of a single distribution.
+        - or for a single prediction
+            - `pred_class, pred_idx, outputs = learner.predict(test_image)`
+            - `probabilities = F.softmax(outputs, dim=0)`
+            - notice: `dim=0` only a single test case... softmax
+              is applied to each column, treating row as
+              a separate distribution
+
+
+### DataBlock item_tfms:
+    - Common options:
+        - Resize            : Resizes images to same size (either by cropping, squishing, or padding).
+        - Crop              : Crops images to a selected size and position.
+        - Pad               : Pads images to a specified size.
+        - RandomResizedCrop : Performs a random resized crop on images.
+        - DihedralFlip      : Randomly flips images (rotational symmetry).
+        - RandomRotate      : Rotates images by a random degree within a specified range.
+        - RandomErasing     : Randomly erases section of image (used for data augmentation).
+        - Brightness        : Adjusts brightness of image.
+        - Contrast          : Adjusts contrast of image.
+        - Saturation        : Adjusts saturation level of image.
+        - Hue               : Shifts hue of image.
+        - Normalize         : Normalizes image with mean and standard deviation (typically used for pre-trained models).
+
+        - NORMALISE EXMAPLE:
+            - Normalize.from_stats takes the `mean` and `std dev`
+              as arguments and applies normalization accordingly.
+            - If you have a custom dataset and you've calculated
+              your own mean and standard deviation, you could
+              pass them directly to Normalize:
+
+
+        `imagenet_stats` = ([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        `my_stats`       = ([0.5, 0.5, 0.5], [0.25, 0.25, 0.25])
+
+        datablock = DataBlock(blocks=(ImageBlock, CategoryBlock),
+                            get_items=get_image_files,
+                            splitter=RandomSplitter(),
+                            get_y=parent_label,
+                            item_tfms=[Resize(128), Normalize.from_stats(*`imagenet_stats`)])
+                            item_tfms=[Resize(128), Normalize.from_stats(*`my_stats`)])
+
+### Models: Load/Save (1)
+    - Key:
+        - `learner.save` and `learner.load` are specifically for
+          saving and loading _WEIGHTS_ for continued training or
+          for use within the same codebase.
+        - On the other hand, `learner.export` and `load_learner`
+          are for full model export/import, typically used for
+          DEPLOYMENT and inference scenarios.
+
+    - `learner.save` will save the trained model as a disk file.
+      Specifically, it saves the model's _weights_ (parameters)
+      in the 'models' subfolder within your path.
+        - learner.save('ultrasound_classifier')
+            - The model weights will be saved in
+              `ultrasound_classifier.pth` inside the models
+              directory (./models/ultrasound_classifier.pth).
+        - To load the saved model back into a learner, use the
+          learner.load method:
+            - learner.load('ultrasound_classifier')
+
+    - `learner.export` To export entire model including
+      architecture, optimizer, and other associated information
+      for DEPLOYMENT, use the `learner.export`:
+        - learner.export('path_to_save/exported_classifier.pkl')
+            - Note:  pickle format (pkl).
+        - To use it for inference on new data,
+          load it using:
+            - loaded_learner = load_learner('path/exported_classifier.pkl')
+
+
+    - Old 2020 comment:
+        - SAVE/LOAD STATE OF MODEL:
+        - NOT CORRECT? (SEE "export" BELOW)
+        - `learn.save('1epoch')`
+        - This will create a file in `learn.path/models/` named
+          *1epoch.pth*.
+        - If you want to load your model in another machine after
+          creating your `Learner` the same way, or resume
+          training later, you can load the content of this file
+          with:
+            - `learn = learn.load('1epoch')`
+
+### SAVE/LOAD A MODEL (2)
+    - learn.export()
+        - (file saved as "export.pkl")
+    - Once you've trained a model, you need to save it.
+    - Remember a model consists of two parts:
+        - the *architecture* and
+        - the trained *parameters* (weights)
+    - The easiest way to save the model is to save both of these,
+      because then when you load a model you are sure you have
+      the matching architecture and parameters.
+        - To save BOTH PARTS, use the `export` method.
+    - This method even saves the definition of how to create your
+      `DataLoaders`. This is important, because otherwise you
+      would have to redefine how to transform your data in order
+      to use your model in production.
+        - fastai automatically uses your validation set
+          `DataLoader` for inference by default, so your data
+          augmentation will not be applied, which is generally
+          what you want.
+    - LOAD the learner back:
+        - ```
+          learn.export() # (file saved as "export.pkl")
+          learn_inf = load_learner(path/'export.pkl')
+          learn_inf.predict('images/grizzly.jpg')
+        - ```
+
+### fit_one_cycle versus fine_tune
+    - In the FastAI library, `learn.fit_one_cycle(...)` and
+      `learn.fine_tune(...)` are two different approaches for
+      training a model.
+
+    1. **`learn.fit_one_cycle(...)`**:
+    - This implements the "1cycle" policy, a technique proposed
+      by Leslie Smith that involves varying the learning rate and
+      momentum in a specific way during training.
+    - It starts with a lower learning rate, gradually increases
+      to a maximum, and then decreases again. This helps in
+      faster convergence and potentially better training
+      outcomes.
+    - It's effective for training from scratch or when you're NOT
+      starting with a pre-trained model.
+
+    2. **`learn.fine_tune(...)`**:
+    - This method is specifically designed for fine-tuning
+      pre-trained models.
+    - It's a two-step process:
+        - First, it freezes all model layers model except the
+          last layer(s) and trains for a specified number of
+          epochs. This helps in adapting the model's final layers
+          to the new data.
+        - Then, it unfreezes the entire model and continues
+          training (usually with a lower learning rate) to
+          fine-tune the weights throughout the model.
+            - This step adjusts the pre-trained weights to better
+              suit the specific task at hand.
+    - It's commonly used in _transfer learning_ scenarios, where
+      you start with a model trained on a different but related
+      task.
+
+    In summary:
+    - Use `fit_one_cycle` for general training or when NOT using
+      a pre-trained model. It's about efficient training with
+      a dynamic learning rate.
+    - Use `fine_tune` for transfer learning scenarios, to adapt
+      a pre-trained model to your specific task with a careful,
+      two-step process.
+
+
+### Long talk with gpt about image 'normalisation'
+
+    - Ah right... I think you've answered my background
+      question... the reason I'm doing all this with the '8
+      images' is when I run this code and 'view' the images they
+      looked totally strange to my eyes:
+
+    - My current code for 'viewing' the normalised / transformed
+      images:
+
+        ```
+        # Get stats to normalise all images
+        # See below: Normalize.from_stats(*my_dataset_stats),
+        stats_file = os.path.join(BASE_DIR, TRAIN_PIPELINE, 'dataset_stats.json')
+        with open(stats_file, 'r') as f:
+                stats_dict = json.load(f)
+        my_dataset_stats = (np.array(stats_dict['mean']), np.array(stats_dict['std']))
+        print(my_dataset_stats)
+
+
+        # Define training data
+        data_block=DataBlock(
+            blocks     = (ImageBlock, CategoryBlock),
+            get_items  = get_image_files,
+            splitter   = RandomSplitter(valid_pct=0.2, seed=42),
+            get_y      = parent_label,
+            item_tfms  = resize_pad,
+            batch_tfms=[ Normalize.from_stats(*my_dataset_stats)] <--- Here
+        )
+
+
+        # Create DataLoader from DataBlock
+        dls = data_block.dataloaders(TRAIN_DATA, bs=BATCH_SIZE)
+
+        batch = dls.one_batch()
+        for i, (x, _) in enumerate(zip(batch[0], batch[1])):
+            # Convert tensor to PIL image
+            img = ToPILImage()(x).convert("RGB")
+            # Save image
+            img.save(f"transformed_image_{i}.png")
+            print('saved:', f"transformed_image_{i}.png")
+        ```
+
+
+    - But if I understand correctly, my current code doesn't
+      'reverse' the transform before saving (I think it just
+      converts it to RGB) and so the saved png files
+      `(transformed_image_{i}.png`) will look funny/strange ??
+
+    - That's correct. The images look strange because you're
+      saving them directly after the normalization transformation
+      without reversing it. The normalization process adjusts the
+      pixel values of the images in a way that's intended to make
+      the data more amenable to the learning process of the
+      neural network, not to make them look visually accurate to
+      humans.
+
+    - The normalization typically involves _subtracting the mean
+      and dividing by the standard deviation_ for each channel,
+      which could result in NEGATIVE VALUES or values GREATER
+      THAN ONE.
+        - These are valid inputs for a neural network but not for
+          a standard image format that expects pixel values to be
+          within a specific range (usually 0 to 255 for 8-bit
+          images, or 0.0 to 1.0 for floating-point images).
+
+    - When you convert the tensor to a PIL image and save it
+      without reversing the normalization, the pixel values are
+      likely to be out of range, leading to the strange
+      appearance when viewed. Converting to "RGB" is just to
+      ensure the image is in a format that can be saved and
+      viewed, but it doesn't reverse the normalization.
+
+    - To see the images as they originally were, you would need
+      to apply the reverse normalization, as was done in the code
+      snippet provided earlier. This will transform the pixel
+      values back into the standard range, making the images look
+      'normal' again.
+
+
+
+### new conda fastchan
+    - Add specialised channel: 'fastchan'
+    - fastchan info: https://anaconda.org/fastchan/repo
+    conda config --add channels fastchan
+    cat  ~/.condarc
+
+
+### training types
+    - `fit_one_cycle`: train from scratch
+        - learn.fit_one_cycle(3)
+        - see docs:        https://docs.fast.ai/callback.schedule.html#learner.fit_one_cycle
+        - see explanation: https://iconof.com/1cycle-learning-rate-policy/
+        - fit_one_cycle uses a 'scheduler'. This changes the
+          learning rate during the training.
+        - uses a "cosine" scheduling (annealing)
+            - Plot: learn.recorder.plot_sched()
+
+    - `fine_tune`: TRANSFER LEARNING using a pretrained model:
+        - learn.fine_tune(4, 1e-2)
+
+### "Parameters" and "Activations"
+    - "All the numbers in the NN"
+    - activations
+        - the numbers we are calculating
+        - every reLU that is calculated, every matrix
+            multiplication element...
+        - the numbers in each neuron (3blue2brown)
+    - "parameters":
+        - the WEIGHTS and biases...
+        - the numbers we are learning
+
+### Tabular Data
+    - Tabular data doesn't really use the _data block API_ as
+      it's relying on another API with TabularPandas for
+      efficient preprocessing and batching
+        - (a less efficient API that plays nicely with the data
+          block API will be added soon).
+
+### Pipeline
+    - "If you wanted to compose several transforms in your
+      getter, don't forget to wrap them in a Pipeline."
+
+
+### reLU non-linearity
+    - question: is there a rule of thumb to decide which
+      non-linearity to choose
+
+### Gradient
+    - For each weight, it measures: "if I made it a bit bigger,
+      would the loss get better or worse?"
+
+### Important Gradient code (chain rule)
+    - lr = 1e-5
+    - params.data -= lr * params.grad.data
+    - params.grad = None
+
+    - Wow listen to this CHAIN:
+    - Understanding the code above depends on recent history.
+    - To calculate the gradients we call `backward` on the
+      `loss`.
+        - But the `loss` was itself calculated by `mse`, which in
+          turn took `preds` as an input.
+        - `preds` was calculated using `f` taking as an input
+          `params`,
+        - `params` was the object on which we originally called
+          `required_grads_`... which is the original call that
+          now allows us to call `backward` on `loss`.
+
+    - This chain of function calls represents the mathematical
+      composition of functions, which enables PyTorch to use the
+      chain rule under the hood to calculate these gradients.
+
+
+
+
+### weights
+    - It's like a convolution almost...
+        - convolve with a set of weights
+    - HIGH weights:
+        - things we want BOOSTED
+    - LOW  weights:
+        - things we want REDUCED
+
+### Broadcasting
+    - PyTorch doesn't actually copy "mean3" 1,010 times.
+    - It pretends it were a tensor of that shape, but DOESN'T
+      allocate additional memory...
+    - It does the whole calculation in C (or CUDA-C, if you're
+      on a GPU), tens of thousands of times faster than pure
+      Python (millions of times faster on a GPU!).
+
+### fastai API
+    - Show model & also first layer (only)
+        m = learn.model
+        w, b = m[0].parameters()
+        show_image(w[0].view(28, 28))
+        to show later layers???
+
+
+    - get RMSE?
+        - do a sqrt on `F.mse_loss`
+        - where `F` is is `torch.nn.functional`
+        - F.mse_loss(a_3,mean7).sqrt()
+
+    - index into a tensor
+        -                            `# rows  cols`
+        -                            `# down  across`
+        - df = pd.DataFrame(im3_tensor[0:60,  0:60])
+
+
+    - "Modulesl" v "Functions"
+        - `nn.ReLU` versus `F.relu`
+        - `nn.ReLU` is a PyTorch module that does exactly the
+          same thing as the function `F.relu`.
+        - Most functions that can appear in a model also have
+          identical forms that are modules.
+        - Generally, it's just a case of replacing `F` with `nn`
+          and changing the capitalization.
+        - When using `nn.Sequential`, PyTorch requires us to use
+          the module version.
+        - Since modules are classes, we have to instantiate them,
+          which is why you see `nn.ReLU()` (with brackets) in
+          this example.
+            - simple_net = nn.Sequential(
+            -                           nn.Linear(28*28,30),
+            -                           nn.ReLU(),
+            -                           nn.Linear(30,1)
+            -                           )
+
+    - We use the `ActivationStats` callback, which records the
+      mean, standard deviation, and histogram of activations of
+      every trainable layer
+        - (as we've seen, callbacks are used to add behavior to
+          the training loop; we'll explore how they work in
+          <<16_accel_sgd.py>>):
+
+    - recall that `F` is a fastai import from
+      `torch.nn.functional`, as recommended by PyTorch
+
+    - check this: unsqueeze
+
+    - `L` is enhanced Python list. (better printing)
+
+    - RegexLabeller:
+        - `get_y=using_attr(RegexLabeller(r'(.+)_\d+.jpg$'), 'name'),`
+
+    - aug_transforms:
+        - `batch_tfms = aug_transforms(size=224, min_scale=0.75))`
+
+    - summary: to debug datablocks
+        - `pets1.summary(path/"images")`
+
+    - Get predictions
+        - preds, _ = learn.get_preds(dl=[(x,y)])
+        - The `learn` model also has the predictions
+            - pred, pred_idx, probs = learn.predict(img)
+
+    - blocks
+        - "blocks" argument:
+            - tells fastai what the things in your tuple actually
+              are. ie what kind of blocks you need...
+        - note:
+            - by default `DataBlock` does a random split between
+              train and validation sets
+
+            - dblock = DataBlock(blocks=(ImageBlock, MultiCategoryBlock),
+                                get_x = get_x,
+                                get_y = get_y)
+
+
+
+### THE CORE OF LEARNING!
+    - $MY_CODE/AI-ML/core-of-learning.py
+
+
+### Datasets / DataLoaders 1
+    - Dataset and DataLoader are core PyTorch concepts.
+
+    - A `Dataset` is just an object that returns:
+        - a LENGTH (the number examples in your dataset) and
+        - the OBJECT at a given index (between 0 and length).
+        - That object can be anything.
+            - Usually it’s an image and its label, but if
+              examples in your dataset consist of 3 images and
+              7 labels, your Dataset’s __getitem__ would return
+              a tuple of those 10 things.
+            - Check this?
+
+    - A `DataLoader` is a built-in PyTorch object (although you
+      can create your own) that grabs a batch of examples from
+      a Dataset and puts them into a tensor.
+        - It does this as efficiently as possible, using
+          _multiple worker processes_ etc, so that multiple
+          batches can be loaded in parallel.
+
+    - The `DataLoader` uses a sampler to decide which examples to
+      pick for each batch.
+        - A DataLoader used for training
+            - typically uses a random sampler,
+        - while a DataLoader for evaluation
+            - will use a sequential sampler.
+
+    - The DataLoader also uses a `collate` function to convert
+      the tuple of data returned by your Dataset into a PyTorch
+      tensor.
+        - Usually you can use the default collate function, but
+          let’s say your Dataset returns 3 images and 7 labels
+          for each example, you might need a custom collate
+          function to turn this into a tensor.
+
+    - You just have to provide an implementation for the Dataset.
+      The DataLoader, sampler, and collate functions are built
+      into PyTorch already (unless you want to use your own, in
+      which case you can override them).
+
+    - The `DataBlock` is a fastai-specific thing that makes it
+      easy to create all the datasets and loaders that you need.
+      It’s provided just for convenience and saves you writing
+      a bunch of this code yourself.
+
+
+### Datasets / DataLoaders 2
+    - Data abstractions
+        - DataSet
+        - DataSets
+        - DataLoader
+        - DataLoaders
+        - DataBlock
+
+    - 'Dataset'
+        - Pytorch `dataset`:
+            - something you can index into and get a TUPLE
+        - collection:
+            - returns a tuple of independent & dependent variable
+              for single item
+        - its anything you can index into & get the length of
+        - (often when you index into it, you get a tuple back)
+        - very basic example:
+            - a = list(enumerate(string.ascii_lowercase))
+        - Youtube example:
+            - built from 'wine.csv', with the label in the first
+              column (ie `xy[:,0]`)
+                - $MY_IMAGES/cs/AI-ML/build-torch-dataset.jpg
+
+    - 'Datasets'
+        - object containing a training & a validation 'Dataset'
+
+    - 'DataLoader'
+        - iterator providing a stream of _MINI-BATCHES_
+        - each mini-batch is a tuple of a batch of independent
+          variables and a batch of dependent variables
+        - (built on top of a 'dataset'?)
+        - example:
+            - A `DataLoader` can take any Python collection and
+              turn it into an iterator over many batches:
+            - coll = range(15)
+            - dl = DataLoader(coll, batch_size=5, shuffle=True)
+            - list(dl)
+
+    - 'DataLoaders'
+        - object containg a training _AND_ validation
+          'DataLoader'
+        - `DataLoaders` can be accessed as an attribute of
+          `Learner`:
+            - learn_inf.dls.vocab
+        - example:
+            - you can see 2 "dataloader" objects passed in:
+                - the training dataloader
+                - the validation dataloader
+            - `dls = DataLoaders(dl, valid_dl)`
+            - other properties:
+                - `dls.train`    <--- dataloader
+                - `dls.train_ds` <--- dataset
+                - `dls.valid`
+        - tiny class, but makes sure your training data is
+          shuffled and your validation data ISNT shuffled (_check
+          this_!)
+        - `DataLoaders`:
+            - thin class that stores whatever `DataLoader`
+              objects you pass to it, making them available as
+              `train` and `valid`.
+
+        - useful: view the data:
+            - dls.show_batch()
+
+        - useful: view the data 2
+            - dls.show_batch()
+            - dls.valid_ds
+            - dls.train_ds
+            - dls.train_ds.items
+            - dls.train_ds.items.columns
+            - dls.train_ds.items.iloc[0]
+            - dls.train_ds.iloc[0]
+            - dls.valid_ds.items
+            - dls.valid_ds.items.columns
+
+### Dataloaders my informal idea
+    - dataset     : index into, get length
+    - datasets    : training & validation dataset
+    - dataloader  : split dataset into different BATCHES
+    - dataloaders : very thin: holds training & validation dataloader
+
+### dataloader fact
+    - I thought if `batch_size=5` or `10`, it would just create
+      loads and loads of batches...
+    - I thought it was batches _with replacement_
+    - but it only creates as many batches as actual items exist
+      in the dataloader
+    - if `n=15`, and `batch_size=10`,
+        - then 2 batches created:
+        - batch 1: `[a, a, a, a, a, a, a, a, a, a]`,
+        - batch 2: `[a, a, a, a, a]`
+        - to use up all 15 items
+    - Python example:
+        - coll = range(15)
+        - dl = DataLoader(coll, batch_size=10, shuffle=True)
+
+
+
+
+
+### Key
+    - Deep Learning is a type of NN learning
+    - "DEEP" = "more layers"!
+    - You'll hear the word _CONNECTION_ a lot in this course.
+      That's what it's all about.
+
+
+### Jargon/Glossary/Terminology (from fastai)
+    - Label                 The data we’re trying to predict, such as “dog” or “cat”
+    - Architecture          The template of the model that we’re using to fit; The mathematical _function_ we’re passing input data and parameters to
+    - Model                 The combination of the architecture ALONG WITH a specific set of parameters
+    - Parameters            (Weights? + bias?) The model values that change what task it can do (and are updated through model training)
+    - Fit                   Update the model parameters so the model predictions from input data, match the target labels
+    - Train                 Synonym for fit
+    - Pretrained            A model that has already been trained, generally using a large dataset, and will be fine-tuned model
+    - Fine-tune             Update a pretrained model for a different task
+    - Epoch                 One complete pass through the input data
+    - Loss                  Measure of how good the model is, chosen to drive training via SGD
+    - Metric                Measurement of how good the model is using the validation set, chosen for _human consumption_
+    - Validation set        Data held out from training, used only for measuring how good the model is
+    - Training set          The data used for fitting the model; does not include any data from the validation set
+    - Overfitting           Training a model so it remembers specific features of the input data, rather than generalizing well to unseen data
+    - CNN                   Convolutional neural network; a type of neural network that works particularly well for computer vision tasks
+
+    - SGD CONCEPTS:
+    - -------------
+    - ReLU                  Function returning `0` for negative numbers and doesn't change positive numbers.
+    - Mini-batch            A small group of inputs & labels gathered together into two arrays. A gradient descent step is updated on this batch (rather than a whole epoch).
+    - Forward pass          Applying the model to some input and computing the predictions.
+    - Loss                  A value representing how well (or badly) our model is doing.
+    - Gradient              The derivative OF THE LOSS with respect to some parameter of the model.
+    - Backward pass         Computing the gradients of the loss with respect to all model parameters.
+    - Gradient descent      Take step in OPPOSITE directions to the (positive?) gradients to make model parameters a bit better.
+    - Learning rate         The _STEP size_ when applying SGD to update the model parameters.
+
+    - NUMBERS
+    - -------
+    - Activations           Numbers that are calculated (both by linear & nonlinear layers)
+    - Parameters            Numbers that are randomly initialized and optimized "weights" (ie, numbers that define the model)
+
+
+
+### Terminology:
+    - numpy:   "axis"
+    - pytorch: "dimension"
+    - `L1 norm`:
+        - "L1" manhatten distance
+        - mean absolute difference
+        - take the mean of the absolute value of the differences
+        - fastai function:
+            - F.l1_loss(a_3.float(), mean7)
+            - F.mse_loss(a_3.float(), mean7).sqrt()
+    - `L2 norm`:
+        - "L2" Euclidean distance
+        - RMSE
+        - take mean of the square of differences,
+        - and then take the square root
+
+### Links
+    - fastai course           $MY_NOTES/cs/AI-ML/fastai/fastai-course-2020.txt
+    - fastai Code             $MY_CODE/AI-ML/fastai-2020/05_pet_breeds.py
+    - fastai tutorials        https://docs.fast.ai/tutorial
+    - fastai main website     https://www.fast.ai/
+    - fastai Github repos     https://github.com/fastai
+    - fastai Course           https://course.fast.ai/
+    - fastai Code Github      https://github.com/fastai/course22
+    - fastai Code Mine        $MY_CODE/AI-ML/fastai-2022/
+    - fastai FORUMS           https://forums.fast.ai/
+    - fastai BOOK             $MY_BOOKS/CS/AI-ML/2020-fastai-deep-learning-for-coders.pdf
+    - fastai COOKBOOK         $MY_BOOKS/CS/AI-ML/2021-fastai-cookbook.pdf
+    - fastai YouTube playlist https://www.youtube.com/playlist?list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU
+    - fastai local videos:    $MY_VIDEOS/fastai-part-01-playlist.m3u
+
+    - fast.ai YouTube playlists                             https://www.youtube.com/user/howardjeremyp/playlists
+    - Fastai Time Series Forum                              https://forums.fast.ai/t/time-series-sequential-data-study-group/29686/2
+    - fastai FORUMS                                         https://forums.fast.ai/
+    - fastai nbdev 2-way Jupyter-IDE sync                   https://github.com/fastai/nbdev
+    - Walk with fastai2 - Tabular - forums                  https://forums.fast.ai/t/a-walk-with-fastai2-tabular-study-group-and-online-lectures-megathread/64361
+    - Walk with fastai2 - Tabular - Lectures                https://www.youtube.com/watch?v=liTHAhdl1cQ
+    - CONDA fastai channel                                  https://anaconda.org/fastchan/repo
+    - Book: fastai cookbook (has Py 'flask')                https://www.amazon.com/Deep-Learning-fastai-Cookbook-easy/dp/1800208103/
+    - fastai forum genomics                                 https://forums.fast.ai/t/dl-and-genomics/16353/3
+    - TIMM: Catalog of all Pytorch image models             https://timm.fast.ai/
+    - _Good_ Jeremy live coding: GPU setup (book: lesson 6) https://forums.fast.ai/t/live-coding-aka-walk-thrus/96617
+    - Blog post info: The 1cycle policy                     https://sgugger.github.io/the-1cycle-policy.html
+    - Medarc AI for medicine                                https://www.medarc.ai/
+    - _good_: Explanation of fastai api v2                  https://github.com/ai-fast-track/fastai-visual-guide
+    - Jermey Kaggle notebooks                               https://www.kaggle.com/jhoward/code
+    - Jermey Github                                         https://github.com/jph00
+    - Integrate timm and fastai (and WandB)                 https://github.com/tcapelle/fastai_timm/
+    - Course: walk with fastai - advanced techniques        https://walkwithfastai.com/Introduction

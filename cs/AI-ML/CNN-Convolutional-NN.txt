@@ -1,0 +1,138 @@
+
+### Key:
+    - 02-Mar 2024 Sat
+    - I never realised this about a CNN - it groups the huge
+      'input vector' into little localised chunks. Instead of
+      a fully connected layer we have little sub-sections which
+      help capture spatial info...
+    - Only stumbled across this a few days ago...
+    - Another explanation:
+        - In a very simple NN architecture, each neuron may be
+          connected to every neuron in the layer above it. In
+          others, a neuron may only be connected to some other
+          neurons that are near it in a grid.
+        - The latter is the case in what are called (CNN). 
+        - CNNs form the foundation of modern image recognition.
+          The fact that the CNN is structured in a grid (like the
+          pixels in an image) is no coincidence — in fact, it is
+          an important reason for why that architecture works
+          well for image data. 
+
+### Padding
+    - `Valid`: When no padding
+    - `Same`: Other popular type of padding
+        - $MY_IMAGES/cs/AI-ML/CNN-same-padding.jpg
+
+### Number of filters
+    - filter count
+        - $MY_IMAGES/cs/AI-ML/CNN-filter-count-1.jpg
+        - $MY_IMAGES/cs/AI-ML/CNN-filter-count-2.jpg
+    - He gave example of classifying an image as real or
+      generated (by NN)
+        - long CNN pipeline
+        - start with 512x512 image with 3 'features' RGB
+        - various filters reduce the resolution and increase the
+          'features'
+            - $MY_IMAGES/cs/AI-ML/CNN-filter-count-3.jpg
+            - $MY_IMAGES/cs/AI-ML/CNN-filter-count-4.jpg
+        - ASIDE: After some filters in this pipeline, he retained
+          the same 512x512 resolution. 
+            - But filters normally reduce the resolution!? 
+            - the resolution normally 'shrinks' after each
+              convolution.
+            - $MY_IMAGES/cs/AI-ML/CNN-filter-count-5.jpg
+            - Answer: See 'Padding' and 'stride'
+
+
+### Kernel Size
+    - 2012: Alexnet 11x11 kernel, then 5x5, then 3x3
+    - 2014: `3x3` is king!
+        - VGG: Visual Geometry Group (Ofxord) 
+        - Why? 
+        - A chain of two `3x3` kernels , the second layer has
+          a receptive field of `5x5`
+        - So two 3x3's is the same as one 5x5
+            - but two 3x3's is computationally more efficient. 
+            - Smaller kernles mean fewer weights and fewer
+              computations.
+            - A chain of three 3x3's uses 50% ofthe resources of
+              a single 7x7
+                - $MY_IMAGES/cs/AI-ML/CNN-chain-kernels-efficiently.jpg
+        - EXCEPTION: 
+            - the 1st layer is often 5x5 or 7x7: because the
+              input normally has only 3 channels
+    - But: `1x1` also popular. 
+        - Least expensive way to change the number of features in
+          your feature map
+        - $MY_IMAGES/cs/AI-ML/CNN-1x1-filter.jpg
+
+### CNN: variable input sizes
+    - aka: the pixel resolution of training images
+
+    - When you train a CNN for image classification, you
+      typically use a fixed input size because the fully
+      connected layers (often come after the convolutional and
+      pooling layers) expect a _fixed-size input_. 
+        - Therefore, the resolution of the input directly affects
+          the number of neurons and weights in these layers.
+
+    - Given this architecture constraint, when you classify
+      a new, unknown image using a trained CNN:
+
+    1. _You must resize the test image to the same resolution the
+       model expects._ If your CNN was trained with 300x300 pixel
+       images, you would typically resize your test image to
+       300x300 pixels before feeding it into the model.
+
+    2. The reason for resizing is two-fold:
+
+        a. _Architectural Constraint:_ As mentioned, fully
+        connected layers expect a fixed size input. If you don't
+        resize the test image to match the input size the network
+        was trained on, you'll encounter dimensionality errors.
+
+        b. _Feature Consistency:_ During training, the CNN learns
+        features at various scales based on the given input size.
+        If you input an image of a different resolution during
+        inference, the scale of the features might differ from
+        what the network expects, leading to inaccurate
+        predictions.
+
+    3. _However, important note:_ Directly resizing images can
+       introduce distortions if the `aspect ratio` of the
+       original image is not the same as the target resolution.
+        - If the original image is not square (in the case of
+          a 300x300 target size), consider the following steps:
+
+            a. _Resize the image:_ Resize the longer dimension of
+            the image to 300 pixels while keeping the aspect
+            ratio the same.
+
+            b. _Pad the image:_ Pad the shorter side with a constant
+            value (often zero) or by mirroring the image edges until
+            it becomes 300 pixels. This way, you prevent any
+            unnatural distortions.
+
+    - Also: some advanced models or techniques might use
+      `adaptive pooling` or `global average pooling layers` which
+      can handle variable input sizes. 
+        - However, for traditional CNNs with fully connected
+          layers at the end, the input size must be consistent
+          with the trained resolution.
+
+
+### Terminology:
+    - "Filter" = "kernel" (= "convolution"?)
+    - 512x512 image has 3 'features': RGB
+        - $MY_IMAGES/cs/AI-ML/rgb-are-features.jpg
+    - trick with 2 categories
+        - if only two output classes / categories then:
+        - have a single output from the CNN but treat 
+            - a high value as one category and 
+            - a low value as the other
+            - $MY_IMAGES/cs/AI-ML/CNN-two-categories-trick.jpg
+
+### links
+    - Animated AI CNNs                 https://www.youtube.com/watch?v=V9ZYDCnItr0&list=PLZDCDMGmelH-pHt-Ij0nImVrOmj8DYKbB&index=2
+    - CNN convolution blog explanation https://jlebar.com/2023/9/11/convolutions.html
+

@@ -1,0 +1,264 @@
+
+### Dirac confusion?!
+    - $MY_NOTES/physics/metaphysics/Woit-Dirac-Beauty.txt
+    - I remember reading that Dirac never recognized the
+      difference between a `hermitian operator` and
+      a `self-adjoint operator`, an important distinction when
+      the operators are unbounded. 
+    - Dirac’s braket notation has no room for the domain of the
+      operators, which is of importance here. 
+    - As is known from 1930’s, the definition of the bracket of
+      two unbounded self-adjoint operators will need us to apply
+      the spectral theorem for unbounded self-adjoint operators,
+      as the intersection of their domains can be too small. 
+
+
+### Aside: difference 'norms' / 'metrics'
+    - Question: 
+        - Are 'norms' and 'metrics' (distance functions) the
+          same?
+    - Norms 
+        - are often used to measure `lengths` of vectors in
+          a vector space, but they don’t directly measure
+          `distance` between two vectors.
+    - A metric 
+        - defines the "distance" between two elements in a `set`
+          and doesn’t require the structure of a vector space.
+    - Relationship Between Norms and Metrics
+        - In a normed vector space `V`, you can define a metric
+          based on the norm:
+            - `d(x,y) = ∥x−y∥`
+        - This metric inherits the properties of the norm, making
+          it a valid distance function. 
+        - So, while every `norm` induces a `metric`, not every
+          metric comes from a norm. 
+        - For example, on a general metric space, there’s no
+          requirement for vector addition or scalar
+          multiplication, so it lacks the _structure_ needed to
+          define a norm.
+        - In short:
+            - Norm: 
+                - Structure-specific measure of "size" or
+                  "length" of vectors in a vector space.
+            - Metric: 
+                - General measure of distance that doesn’t
+                  require vector space structure but can be
+                  induced by a norm in normed spaces.
+
+### Intro
+    - Operator theory and functional analysis are closely related
+      fields, but are not the same.
+
+    - _Functional Analysis_:
+        - Studies vector spaces and the linear operators that act
+          upon them.
+        - Emphasizes infinite-dimensional spaces, such as Banach
+          spaces and Hilbert spaces.
+        - Covers a broad range of topics, including norms, inner
+          products, topological vector spaces, and various types
+          of convergence.
+        - Deals with general properties of these spaces and
+          functions defined on them.
+
+    - _Operator Theory_:
+        - Subfield of functional analysis.
+        - Specifically concentrates on the study of `linear
+          operators` on these spaces.
+        - Investigates properties of operators, such as spectra,
+          eigenvalues, and functional calculus.
+        - Includes the study of different types of operators,
+          such as bounded, unbounded, compact, and self-adjoint
+          operators.
+
+    - While operator theory is a branch within functional
+      analysis that deals specifically with operators, functional
+      analysis itself has a broader scope that encompasses more
+      general topics related to `vector spaces` and their
+      functions.
+
+### Preptorial: A Course in Operator Theory (John B. Conway)
+    - "Common Thread Hiding in Advanced Research..."
+    - Today operators are associated with complex, leading edge
+      operator algebras. However, the more general term, and the
+      first part of this wonderful volume, includes much more
+      general operator theory, which is ubiquitous in all of
+      mathematics. Before the incredible beauty and symmetries in
+      operator algebras came into current focus, operators were
+      most frequently explored as wonderful ways to grasp linear
+      algebra and vector spaces and mappings more intuitively.
+
+    - Of course the calculus operators of `grad`, `div`, `rad`,
+      `curl`, `differentiate`, `integrate` and their twin cousins
+      in analysis using functionals as well as functions extend
+      beyond the current algebra research focus to geometry,
+      Laplacians, Fourier and many other transforms, probability
+      theory, and nearly every other area of math.
+    - When metaphysics wonders if "math" is a tool used to
+      understand the universe, or a tool used BY the universe,
+      the serious side of the issue almost always involves the
+      beauty, function and ubiquitous appearance of operators,
+      which in lie algebras and quantum physics seem to somehow
+      be part of the "fabric" of the paths themselves, not just
+      their explanations or calculations!
+    - This is a wonderful overview, but certainly not a beginner
+      treatment, and since it is very up-to-date even a decade
+      later, the majority of the coverage IS algebras-- because
+      that's where most of the research "action" is even today.
+    - Of course QFT is also actively researching other aspects of
+      operators, particular in gauge analysis and theories. The
+      treatment is definitely graduate unless you're an advanced
+      undergrad who for some reason _was really attracted to the
+      calculus of variations and functional analysis_, or
+      algebraic mappings in general.
+    - It's been said many times now that no one can really grasp
+      the 600 or so current fields of math and how they relate--
+      and the price of this specialization is death according to
+      Mr. Darwin. If there is an exception it's operators, _and
+      if there is any place to get a feel for the whole
+      enchilada--_ it's here. Stimulating not only as an intro to
+      the field for folks who have mastered analysis and linear
+      algebras and perhaps studied other algebras, geometries,
+      etc., but also for those wanting to take a 30,000 foot view
+      of all of math-- and one of the most ubiquitous "forces" in
+      math, regardless of coordinate system, dimension,
+      application, etc. If one other term crosses all those
+      boundaries today, it is not surprising that it's the term
+      "mapping" -- which goes hand in hand with operators.
+    - Highly recommended both for courses and self study if
+      you've got the above prereqs. 
+    - Tip: if you need to brush up on functional analysis or
+      variations in general first, Dover has older but still
+      relevant titles that help. A couple excellent ones are both
+      Fomin translations:
+      - Elements of the Theory of Functions and Functional
+        Analysis (Dover Books)
+      - Calculus of Variations (Dover Books).
+    - If you are not familiar with John Conway-- as an author and
+      teacher he is unequalled. His pedagogical style is the
+      farthest thing from the "show off" style you'll encounter--
+      he takes the time, and makes the effort, to be sure you
+      understand. From that view alone, this text is a delight.
+
+
+### Norms
+    - In the context of functional analysis, a `norm` is
+      a function that assigns a _non-negative length_ or size to
+      `vectors` in a vector space. 
+    - It quantifies the "distance" from the `origin` to a `point`
+      in the vector space. 
+    - Formally, if `V` is a vector space, a norm on `V` is
+      a function `||·|| : V -> R` that satisfies the following
+      properties for all vectors `u`, `v` in `V` and all scalars
+      `α` in `R`:
+
+    1. _Non-negativity_: 
+            - ||v|| >= 0 and ||v|| = 0 iff v = 0.
+
+    2. _Scalar multiplication_: 
+            - ||αv|| = |α| ||v||.
+
+    3. _Triangle inequality_: 
+            - ||u + v|| <= ||u|| + ||v||.
+
+    - These properties ensure that the norm provides a meaningful
+      and consistent way to measure the _size of vectors_ in the
+      space.
+
+    - In functional analysis, `norms` are essential for studying
+      the structure of infinite-dimensional spaces such as Banach
+      spaces and Hilbert spaces. 
+    - For example:
+        - In a Banach space, every Cauchy sequence converges with
+          respect to the `norm`.
+        - In a Hilbert space, the norm is derived from an inner
+          product, and it allows for the definition of
+          orthogonality and projection.
+
+    - `Norms` also play a crucial role in defining various types
+      of convergence, such as norm convergence and uniform
+      convergence, which are fundamental concepts in the analysis
+      of functions and operators.
+
+### Cauchy Sequences
+    - The fact that in a Banach space every Cauchy sequence
+      converges wrt the norm is significant for several reasons:
+
+    - First: Cauchy Sequences
+        - __Understanding Convergence__: Cauchy sequences help in
+          understanding and characterizing convergence in
+          infinite-dimensional spaces. 
+        - In finite-dimensional spaces, every Cauchy sequence
+          converges if the space is complete. 
+        - In infinite-dimensional spaces, this property is even
+          more crucial because convergence is not always as
+          intuitive.
+        - __Practical Computation__: In practical computational
+          methods, such as iterative algorithms for solving
+          equations, Cauchy sequences often arise naturally.
+          Knowing that a Cauchy sequence converges ensures that
+          the iterative process will lead to a meaningful result.
+
+    - Functional Analysis Applications
+        - __Spectral Theory__: In the study of operators on
+          Banach spaces, Cauchy sequences are used to understand
+          the spectral properties of these operators. 
+            - This is important in quantum mechanics, signal
+              processing, and other fields where operators play
+              a key role.
+        - __Approximation Theory__: Many problems in functional
+          analysis involve approximating functions or operators.
+          Cauchy sequences provide a way to ensure that these
+          approximations are valid and converge to a desired
+          solution.
+
+    - Completeness
+        - __Definition of Banach Spaces__: A Banach space is
+          defined as a complete normed vector space, meaning that
+          every Cauchy sequence in the space converges to a limit
+          within the space. Completeness is a fundamental
+          property that allows for the analysis and solution of
+          various mathematical problems within the space.
+        - __Stability and Robustness__: The completeness of
+          Banach spaces ensures stability and robustness of the
+          solutions to problems. 
+        - For example, in differential equations and optimization
+          problems, solutions can be approximated by sequences of
+          functions or vectors, and completeness guarantees that
+          these approximations converge to a well-defined
+          solution.
+
+    - Examples
+        - __Differential Equations__: Solutions to differential
+          equations in Banach spaces are often found by
+          considering sequences of approximate solutions that
+          form Cauchy sequences. Completeness ensures these
+          sequences converge to an actual solution of the
+          differential equation.
+        - __Fourier and Functional Series__: In Fourier analysis
+          and other series-based methods, the partial sums form
+          Cauchy sequences. Convergence of these sequences in
+          Banach spaces ensures that the series represents
+          a function in the space.
+
+    - In summary, the significance of the fact that every Cauchy
+      sequence in a Banach space converges with respect to the
+      `norm` lies in the assurance it provides for the existence
+      and _stability of solutions_ to various mathematical
+      problems, the robustness of iterative and approximation
+      methods, and the foundational role it plays in the
+      structure and analysis of functional spaces.
+
+### Old Physics file comment
+    - QM: operator = matrix!
+    - or more accurately: a matrix representation of an operator
+
+
+### MIT Course
+    - informal jargon: "Functions of functions". The vector
+      spaces are now "spaces of functions".
+    - Functional analysis was invented to deal with cases where
+      the vector spaces were NOT FINITE-DIMENSIONAL.
+        - $MY_NOTES/maths/functional-analysis-MIT-course.txt
+
+### Links
+    - A Course in Operator Theory (John B. Conway) https://www.amazon.com/Course-Operator-Graduate-Studies-Mathematics/dp/0821820656

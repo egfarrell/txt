@@ -1,0 +1,107 @@
+- What *BHG* (the string theorist) is doing here is using the
+  holographic dictionary of AdS/CFT to deliver a one-two punch
+  against Maudlin’s “baby universe” move.
+
+### 1. The setup
+
+- AdS/CFT says: Every physical state of a gravitational spacetime
+  in Anti-de Sitter (AdS) space corresponds exactly to a state of
+  a conformal field theory (CFT) that lives on the boundary of
+  that space.
+
+- So: bulk gravity ↔ boundary field theory.
+
+- Crucially, the *energy* of the gravitational configuration is
+  encoded entirely by data on the boundary.
+
+- This isn’t just a cute slogan; in GR with a negative
+  cosmological constant, the Hamiltonian (the generator of time
+  translations, i.e. energy) is a boundary integral.
+
+- No boundary ⇒ no definition of total energy.
+
+
+### 2. What Maudlin proposed (as BHG reads it)
+
+- Maudlin’s picture has the final state of the universe defined
+  not just on the exterior slice `Σ`₂ (the one after evaporation)
+  but on the union of that slice with a disconnected interior
+  piece `Σ₂_in`behind the horizon.
+- That union is, topologically, a disconnected Cauchy surface.
+- The state on `Σ₂_out` looks mixed, but the full state on
+  `Σ₂_out` ∪ `Σ₂_in` is pure.
+
+- In ordinary quantum theory terms, he’s saying:
+    - `H_total = H_out ⊗ H_in`
+    - and the full wavefunction lives in H_total, though outside
+      observers only have access to H_out.
+
+
+### 3. BHG’s counterargument in slow motion
+
+- BHG grants that this decomposition might make sense
+  kinematically, but he says it’s incompatible with the
+  holographic dual CFT because of how energy works.
+
+- Here’s his reasoning chain:
+
+1. Energy in gravity is a boundary charge. The bulk Hamiltonian
+   is a surface term at infinity (Brown–York, ADM, etc.).
+    - That means that all measurable energy is defined by what’s
+      happening at the AdS boundary.
+
+2. Therefore the CFT Hamiltonian equals the boundary energy
+   operator. The CFT’s notion of energy is the bulk’s boundary
+   energy.
+
+3. Now suppose the bulk Hilbert space factorizes into H_out
+   ⊗ H_in (outside plus baby universe interior). The “inside”
+   region (`Σ₂_in`) is disconnected from the boundary, so its
+   degrees of freedom don’t contribute to the boundary energy.
+    - Hence: every possible internal state `|ψ_in>` has zero
+      energy as measured from the boundary.
+
+4. Combine this with the “outside” vacuum. Take the exterior to
+   be vacuum `|0_out>` and pair it with arbitrary `|ψ_in>`.
+    - You then have infinitely many states `|0_out> ⊗ |ψ_in>`,
+      all of which have total energy zero.
+
+5. That’s a problem. On the CFT side, we know there is exactly
+   one zero-energy state: the vacuum.
+    - If the bulk contained infinitely many zero-energy states,
+      the CFT would have to mirror that degeneracy—but it
+      doesn’t.
+    - Therefore, a disconnected “baby universe” sector cannot
+      exist in any true AdS/CFT duality.
+
+- In short: baby universes → infinite degeneracy of zero-energy
+  states → contradicts unique CFT vacuum → ruled out.
+
+
+### 4. The takeaway
+
+- BHG’s argument is a version of what holographers call
+  factorization failure: in QG, the Hilbert space does not
+  generally factorize into “inside” and “outside” regions,
+  precisely because of the way constraints tie the entire
+  gravitational system to its boundary.
+
+- So from the AdS/CFT perspective, Maudlin’s split Cauchy
+  surface—and hence his way of making the evolution pure-to-mixed
+  only by ignoring the interior—violates this fundamental
+  non-factorization.
+    - The CFT, being an ordinary unitary QFT with a single
+      vacuum, simply can’t represent a bulk with extra hidden
+      baby universes that cost no energy.
+
+
+- The interesting philosophical punchline is that BHG isn’t
+  refuting Maudlin’s logic within GR; he’s saying: “Sure, if GR
+  were the whole story, maybe your baby universe picture works.
+    - But in any QG theory consistent with AdS/CFT, it
+      can’t—because the boundary theory can’t represent it.”
+
+- That’s the physicist’s way of saying: the map between “bulk”
+  and “boundary” forbids the extra interior Hilbert space.
+    - The universe can’t have invisible information pockets
+      without the boundary seeing an infinite vacuum degeneracy.

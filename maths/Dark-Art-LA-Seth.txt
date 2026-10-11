@@ -1,0 +1,46 @@
+
+
+### Book
+    - $MY_BOOKS/Physics/Maths/Linear-Algebra/Dark-Art-Linear-Algebra-Seth.pdf
+
+
+### Dot-product formula (Cartesian coords)
+    - We compute the dot product of two vectors in `ℝ^n` by
+      summing the products of their corresponding _Cartesian_
+      coordinates.
+    - It's important these are CARTESIAN COORDINATES.
+    - (see Ch. 6, Exercise 5b).
+    - Note well: 
+        - This result presumes we are using Cartesian coordinates
+          (i.e. based on `i` and `j`).
+        - If we use a different coordinate system (as we often
+          will), then the coordinates of `v` and `w` would no
+          longer represent weights for `i` and `j` and  as
+          a result, our proof of Claim 6 would break down at its
+          first step. 
+        - Indeed, when we use a NON-CARTESIAN COORDINATE system,
+          the expression `v_1*w_1 + v_2*w_2` typically has no
+          geometric significance at all – and is NOT equal to the
+          vectors' dot product.
+
+### linear maps: transform the GRID!
+    - key:
+        - linear maps transform space (the grid) itself
+        - (I always thought a map transformed a single vector
+          only)
+    - Calculus focuses on real-valued functions of real numbers;
+      we visualize these functions as static graphs.
+    - Linear algebra focuses on `vector-valued functions` of
+      vectors; we visualize these functions dynamically, as
+      distortions of _space itself_.
+    - More specifically, linear algebra’s functions are 'GRID
+      TRANSFORMATIONS':
+        - they work by dragging the tips of some or all of the
+          `standard basis vectors` to new locations, thus
+          transforming the grid they generate.
+    - These special functions are called linear transformations
+      (or linear maps).
+
+
+### Links
+    - Seth website https://www.bravernewmath.com/

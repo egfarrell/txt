@@ -1,0 +1,87 @@
+software carpentry sets
+
+- Why use Sets or Dictionaries instead of lists?
+Because theyre much more efficient - hash based.
+
+Clever point:
+    In a dictionary you can have a SET as the value in the key/value pair!!!!!
+
+### SETS
+    - UNORDERED collection of DISTINCT items.
+    - (Relatively late addition to the python language)
+    - Remember Sets are UNORDERED! No first or last.
+
+### DICTIONARIES
+    - UNORDERED collection of key/value pairs.
+    - The values dont have to be immutable or unique.
+    - Create a dictionary by putting key/value pairs in {}
+
+    ```
+    birthdays = {'Newton':1642, 'Darwin':1809}
+    print (birthdays[Newton])
+    ```
+    1642
+
+    - So the "key" is "Newton".
+    - Look things up by name, dont have to use an integer index.
+    - Just like using a real dictionary or phone book!
+
+    - Remember Dictionaries have no particular order.
+    - So we draw a CLOUD of key/value pairs.
+
+### Membership of dictionary:
+    ```
+    'Darwin' in birthdays
+    ```
+    True
+
+### for
+    - Use "for" to loop over keys. Bit different to lists.
+    ```
+    for name in birthdays
+        print name, birthdays[name]
+    ```
+
+
+### Hashing
+    - If we can define a HASH function for something we can store it
+      in a set.
+    - To make sure something is hashable, it must be immutable.
+    - i.e. Python only allows you to store immuatable objects in
+      a set.
+    - So no lists allowed!
+
+    - if you do need a list kind of thing in a set, use a TUPLE.
+    - Basically a TUPLE is an immutable list.
+
+    - Define list:	`full_name = ['Charles', 'Darwin']`
+    - Define tuple:	`full_name = ('Charles', 'Darwin')`
+    - different brackets!
+
+### Sets (again)
+    - Python 2.6: `primes = set([2, 3, 5])`
+    - Python 2.7: `primes = {2, 3, 5}`
+    - More intuitive syntax, like math class!
+
+    - But both python versions: `empty = set()`
+    - because {} means something else.
+
+### Use of Sets:
+    - Automatically get rid of duplicates
+    `letters = set()`
+    `letters.add(char)`
+    - any duplicate "char"s wont get added to letters
+
+    - You can only build a set from a container you can loop over. (ie a list or string)
+    - CANT build set from several distinct items.
+    - i.e. WRONG: `set('a', 'c', 'f')`
+    - i.e. RIGHT: `set('acf')`
+    - i.e. RIGHT: `set(['a','c', 'f'])`
+
+    - Check size of a set:
+    `len(odds)`
+    7
+
+    - Check membership:
+    `6 in odds`
+    false

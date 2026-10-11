@@ -1,0 +1,15 @@
+ifort tips
+
+optimisation
+    -O0     no optimise, better for debugging
+    -O2     default - e.g. inline small functions
+    -O3     max. longer to compile
+
+-xHost
+    take advanage of any special instructions
+    on the CPU that you're compiling on
+
+-fp-model fast
+-fp-model precise
+    floating point operations
+    'precise' will match whatever bracket ordering you specify

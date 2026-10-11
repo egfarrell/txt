@@ -1,0 +1,149 @@
+- There is a major difference between `power functions` and
+  `exponential functions`, and it's common to mix them up because
+  their forms look similar.
+
+
+### Contents
+    - What Are Power Functions?
+    - DIFFERENCE: Power Functions & Exponential Functions
+    - Differentiating Power Functions vs. Exponential Functions
+    - Key Takeaway
+
+
+### What Are Power Functions?
+    - Power functions are foundational in maths and have been
+      studied for centuries. They are essential due to their
+      simple yet versatile structure.
+
+    - Definition: A power function is of the form
+        - `f(x) = x^b`,
+    - where:
+        - `x` is a variable and
+        - `b` is a CONSTANT, which can be any real number
+          (positive, negative, or fractional).
+
+- Examples:
+    - `f(x) = x^2`     (quadratic function)
+    - `f(x) = x^{1/2}` (square root function)
+    - `f(x) = x^{-1}`  (reciprocal function)
+
+### Historical Background
+
+- Ancient Roots:
+    - Power functions have been known since ancient times, with
+      evidence from Babylonian and Greek mathematics where
+      functions like squares and square roots were studied.
+- Formal Development:
+    - The development of algebra in the Middle Ages, particularly
+      by Islamic mathematicians, led to a more formal
+      understanding of power functions.
+    - By the Renaissance, mathematicians like Descartes and
+      Newton further refined their study within calculus and
+      analytical geometry.
+- Polynomial Functions:
+    - Power functions are closely related to polynomials, which
+      are SUMS of multiple power functions with different
+      exponents.
+    - The study of polynomials and their roots played a crucial
+      role in developing algebra and calculus.
+
+### Applications of Power Functions
+
+1. Modeling PHYSICAL PHENOMENA:
+   - Physics and Engineering:
+        - They model various natural phenomena, such as:
+        - the relationship between area and length
+            - (area of a square is proportional to `x^2`),
+        - volume and length, and
+        - the inverse square law in physics
+            - (eg, gravitational and electrostatic forces
+              decrease as `1/x^2`).
+   - Scaling Laws: Power functions describe scaling
+     relationships. e.g., how surface area and volume change with
+     size in biology (e.g., metabolism rates scale to body mass).
+
+2. Growth and Decay:
+   - Economics and Population Dynamics: Functions like `x^{1/2}`
+     or `x^{1/3}` are used to model diminishing returns or growth
+     rates, where increases in input yield smaller increases in
+     output.
+   - Power Laws in Nature and Society:
+        - Power laws, often seen in distributions (e.g., wealth
+          distribution, word frequencies, city sizes), describe
+          systems with a "few large, many small" characteristic.
+
+3. Geometry and Optimization:
+   - Optimization Problems: Power functions used in problems
+     involving area, volume, and maximizing or minimizing
+     physical quantities. eg: finding the maximum area of
+     a rectangle with a fixed perimeter involves `x^2`.
+   - Geometric `Scaling`: When scaling geometric shapes, power
+     functions describe how measures like perimeter, area, and
+     volume change with size.
+
+4. Mathematical Simplicity and Analysis:
+   - CALCULUS: Power functions are often used in teaching
+     differentiation and integration because they have
+     straightforward rules. They serve as building blocks for
+     more complex functions.
+   - Simple Models: When exact models are too complex, power
+     functions provide simple approximations that capture the
+     essence of relationships.
+
+
+- Power functions are powerful because they capture fundamental
+  mathematical relationships, scale naturally with size changes,
+  and have broad applications in science etc.
+    - Their historical development is linked to the growth of
+      algebra and calculus, and they are a cornerstone of
+      modeling and calculus.
+
+
+### DIFFERENCE: Power Functions & Exponential Functions
+
+1. POWER Function:
+   - Form: A power function has the form `f(x) = x^b`,
+        - where `x` is the base and
+        - the exponent `b` is a constant.
+   - Example:
+        - `f(x) = x^3` or `f(x) = x^{1/2}`.
+   - Key Feature:
+        - The variable `x` is the base, and the exponent is
+          a FIXED number.
+
+2. EXPONENTIAL Function:
+   - Form: An exponential function has the form `f(x) = b^x`,
+        - where the base `b` is a CONSTANT and
+        - the exponent is the variable `x`.
+   - Example:
+        - `f(x) = 2^x` or `f(x) = e^x`.
+   - Key Feature:
+        - The base is a constant, and the variable `x` is in the
+          exponent.
+
+### Differentiating Power Functions vs. Exponential Functions
+
+- Power Function `x^b`:
+    - Differentiation: Use the POWER RULE.
+        - If `f(x) = x^b`, then `f'(x) = b ∙ x^{b-1}`.
+  - Example:
+        - If `f(x) = x^3`, then `f'(x) = 3x^2`.
+
+- Exponential Function `b^x`:
+  - Differentiation Rule:
+        - If `f(x) = b^x`, the derivative is `f'(x) = b^x ∙ ln(b)`.
+  - For the special case when `b = e`, where `e` is the natural logarithm base,
+        - `f(x) = e^x`, then `f'(x) = e^x`.
+        - I have a pdf somewhere that explains where this comes from
+            - $MY_BOOKS/Physics/Maths/Analysis/Seth-Calculus-Power-funcs-Exponentials.pdf
+  - Example:
+        - If `f(x) = 2^x`, then `f'(x) = 2^x ∙ ln(2)`.
+
+### Key Takeaway:
+    - Power Function:
+        - Differentiate using the power rule `b ∙ x^{b-1}`.
+    - Exponential Function:
+        - Differentiate using the exponential rule `b^x ∙ ln(b)`.
+
+- Understanding this difference is crucial in calculus, as mixing
+  these rules up leads to incorrect derivatives!

@@ -1,0 +1,668 @@
+- ou neural networks
+
+### gestalt effect
+    - We perceive whole patterns without any conscious processing
+      of their constituent parts
+
+### content addressability
+    - More or less any small part of a pattern allows us to
+      recognise the whole immediately,
+
+### neural networks
+    - artificial neural networks,
+    - neurocomputing or connectionism,
+    - the study of computational models of nervous interaction,
+
+### synapses
+    - neurons communicated with one another electrically through
+      special junctions
+
+### nervous system
+    - All vertebrate animals have a nervous system responsible
+      for muscular activity, internal monitoring of the body,
+      handling input from the senses and initiating actions.
+
+### CNS: central nervous system
+    - the brain and spinal chord
+
+### PNS: peripheral nervous system
+    - consisting of all other nerves.
+
+### axon
+    - a long, slender projection of a nerve cell, or neuron, that
+      conducts electrical impulses away from the neuron's cell
+      body or soma.
+
+### glial cells
+    - that provide nutrition and support
+
+### localised potentials.
+    - such currents are very weak and can only travel tiny
+      distances
+
+### action potential
+    - The main way neurons carry electricity is through a quite
+      different mechanism,
+
+### ions
+    - An ion is an atom that has either gained one or more extra
+      electrons,becoming negatively charged (e.g. Cl-), or lost
+      one or more electrons, making it positively charged (e.g.
+      K+)
+
+### - resting potential
+- An equilibrium state results, in which there is a stable difference of electric potential across the membrane
+
+### - depolarisation
+- The inside of the membrane rapidly starts to acquire a positive charge. Within a few milliseconds the potential across the membrane completely reverses
+
+### - hyperpolarisation
+- This restoration process
+
+### - axon terminals
+- the end points
+
+### - spike or fired.
+- The pulse of electric charge moves along the axon spreading throughout the axonal arborisation all the way to the end points
+
+### - refractory period
+- the neuron is unable to fire again during that interval,
+
+### - spike trains
+- neurons generally emit whole sequences of spikes
+
+### - neurotransmitters
+    - tiny sacs or vesicles of special chemicals
+
+### - pre-synaptic post-synaptic
+    - This structure does not actually make contact with the membrane of the other neuron: there is a tiny gap, about 20 nanometres (nm, millionths of a millimetre) wide, between it (the axon terminal of the pre-synaptic cell and the
+    - membrane of the post-synaptic cell (see Figure 1.16). An action potential in the presynaptic neuron, arriving at this terminal, causes a cascade of events:
+
+### - excitatory inhibitory
+    - Synapses that cause the post-synaptic membrane to depolarise are called excitatory, those that hyperpolarise it are called inhibitory
+
+### - maps
+- neurons become organised into specialised groups, sometimes hundreds of thousands or millions of cells strong
+
+### - somatosensory strip
+
+- sense data coming in from the surface of the body, information about the various touches, tickles and pressures the body is experiencing, are handled by a region of the brain known as the somatosensory strip
+
+- motor strip.
+
+- movements of the muscles are controlled by another area of the brain,
+
+- homunculi
+
+- the distorted scale model of a human drawn or sculpted to reflect the relative space human body parts occupy on the somatosensory cortex (sensory homunculus)
+
+- neural Darwinism
+
+-  a large scale theory of brain function
+
+- discrete time
+
+- A neuron has a certain fixed time period to accumulate excitation; at the end of this time it either fires or it does not fire. Then a new time period starts afresh, with all previous activity forgotten
+
+- grandmother cell
+
+- something as complicated as a specific human memory could hardly be the property of any one neuron
+
+- Perceptron
+
+- one of the earliest computer-modelled neural networks
+
+- plasticity
+
+- This initial arrangement of connections and connection strengths will change as a result of the experiences each individual organism undergoes as a result of mechanisms such as LTP
+
+- selforganising map (SOM)
+
+- A self-organizing map (SOM) or self-organizing feature map (SOFM) is a type of artificial neural network that is trained using unsupervised learning to produce a low-dimensional (typically two-dimensional), discretized representation of the input space of the training samples, called a map. Self-organizing maps are different from other artificial neural networks in the sense that they use a neighborhood function to preserve the topological properties of the input space.
+
+- unsupervised learning,
+
+- learning vector quantisation,
+
+- the problem of trying to find hidden structure in unlabeled data.
+
+- LVQ can be understood as a special case of an artificial neural network, more precisely, it applies a winner-take-all Hebbian learning-based approach. It is a precursor to Self-organizing maps (SOM)
+
+- recurrence
+
+- the axons of neurons are often observed to form cycles; that is, they send activity back, directly or indirectly, to neurons that have already stimulated them (see Figure 1.18). You can see that this is just a classic example of feedback
+
+- Ising spin glass
+
+- one kind of recurrent network and provided a deep theoretical analysis of its properties. He noted its analogies with certain other types of physical phenomena,
+
+- units or processing elements (PEs))
+
+- weights
+
+- Computer scientists tend to prefer the term unit to neuron, because they want to avoid the suggestion that they are attempting an accurate model of the biological neuron two basic building blocks to worry about in any neural network model
+-
+
+- activation function
+
+- The net input is passed to it. Its task is to calculate the activation of the unit.
+
+- sigmoids
+
+- Because of the S-shaped profile of their graphs, such functions as these are also sometimes known as sigmoids.
+
+- output function
+
+- A few neural models put the activation through another function, the output function,to calculate the proportion of the unit’s activity that will be passed on
+
+- topologies
+
+- patterns of connection
+
+- hidden layer
+
+- no contact with the world around the system; it is purely internal, and is thus generally called the hidden layer.
+
+- feedforward networks
+
+- one-way flow of activation through the network
+
+- Lattice networks
+
+- They generally comprise a one-, two-or three-dimensional grid of units fed by a set of dummy input units (like the input layer in a feedforward network).
+
+- lateral connections
+
+- these kinds of lateral connections are found in the brains of humans and other mammals
+
+- Recurrent networks
+
+- A recurrent network, then, has at least one feedback connection. However, it’s more usual to find that such networks are fully recurrent, with every unit feeding back to every other unit, except itself
+
+- clamp
+
+- force or clamp the activations
+
+- bias
+
+- it is possible to provide a perceptron with an adjustable threshold and still work with the weights alone, by altering the topology of the network slightly and incorporating a bias.
+
+- learning rule
+
+- an automated procedure by means of which the system can learn by adjusting its weights itself.
+
+- Hebb Rule ,orHebbian learning
+
+- the earliest example of a learning rule in artificial neural networks
+
+- If two units at either end of a weighted link are activated simultaneously, then the value of the weight is increased by some amount. c If two units on either side of a weighted link are activated at different times, then the value of the weight is decreased by a certain amount.
+
+- Supervised learning
+
+- presupposes a bank of training data, usually a set of exemplars. Each exemplar will be a pair, consisting of an input object and a ‘correct’ or desired output object. Learning then proceeds through an external teaching process presenting each exemplar to the system in turn – usually many times – correcting the system in some way when it outputs a ‘wrong’ answer (as compared to the ‘correct’ answer in the training set), and generally doing nothing when the system comes up with the ‘correct’ answer.
+
+- Unsupervised learning (I called it reinforcement learning
+
+- proceeds without a teacher. Certain actions or outputs of the system are reinforced, others weakened, as time passes, but there is no omniscient access to any ‘correct’ answer.
+
+- signal graph
+
+- a graph isessentially a set of nodes connected by edges (each of which may carry a weight or acost). Now, to visualise a neural network as a signal graph, all we need to do is considersuch a structure’s characteristic nodes and edges:
+
+- a special type of block diagram[1]—and directed graph—consisting of nodes and branches
+
+- architectural graph
+
+- in which neurons are represented as a single node and weights are omitted.
+
+- dot product (also known as the inner product
+
+- If we think of this as an operation on the two vectors x and w, it corresponds to the dot product (also known as the inner product) of the two:
+
+- scalar
+
+- the dot product of two vectors is not a vector, but a single number, a scalar
+
+- matrix
+
+- Rather than treat these two vectors separately, we can treat them as a single entity, a matrix
+
+- bold
+
+- Vectors are always represented with bold lower-case letters.
+
+- ADALINE s
+
+- Early linear systems of this type were sometimes referred to as ADALINEs (ADAptive LInear NEurons).
+
+### input space
+
+### - decision boundary
+    - the point where the response unit is just changing from an inactive 0 response to firing with a response of 1.
+
+### - linear equation
+    - Ax+ By + C = 0
+
+### - linearly separable
+    - it is possible to draw a straight line that will partition the space in the right way.
+
+- tesseract
+
+- a four-dimensional cube, technically known as a tesseract
+
+- hypercube
+
+- mathematicians generally just refer to any cube of more than three dimensions as a hypercube
+
+- hyperplane
+
+- the boundary is thus a three-dimensional plane, or hyperplane.
+
+- weight space
+
+- This time the inputs have fixed values and the weights can be plotted.
+
+- training rules
+
+- learning rules (often known also as training rules in the neural networks community)
+
+### - the perceptron rule.
+    - The simplest of the learning algorithms for perceptrons originated with Rosenblatt himself – the perceptron rule.
+
+- error signal
+- ?? n/a
+
+### - learning constant
+- which governs the rate at which learning takes place. h must be positive. If its value is small then learning takes place slowly
+
+### - perceptron convergence theorem
+- There are limitations on perceptrons, as you’ll learn shortly, but these are mainly limitations of the perceptron itself, rather than of the perceptron rule.
+
+### - gradient descent
+- another learning rule, and key technique in supervised neural network training
+
+### - Delta rule
+    - or Widrow–Hoff rule,
+    - or the least mean square (LMS) rule
+    - a cluster of specific learning rules, all based on the notion of minimising the error a network is making.
+    - The delta rule often appears under other names
+
+- error surface and steepest descent
+    - n/a
+
+- error space
+
+- the space in which the error is plotted
+
+- unipolar function
+
+- the value of the function varies between 0 and 1,
+
+- derivative
+
+- this gradient is given by the derivative of the response unit’s activation function
+
+- a measure of how a function changes as its input changes
+
+- a bipolar function
+
+- varies between –1 and 1
+
+- associative network ,or associative memory
+
+- The idea of associative memories is to store pairs of patterns that are related to one another, so that if one pattern is clamped to the input, the associated pattern appears at the output.
+
+- hetero-associators
+
+- These networks associate one pattern with another, different, pattern. The two patterns may be of equal size, but this is not necessarily the rule: the input and output patterns may well be of different size.
+
+- auto-associators
+
+- each pattern is associated with itself, so the input and output sizes are equal
+
+- the usefulness of autoassociators becomes clear when we note their power to reconstruct damaged or noisy patterns.
+
+- parity
+
+- the property of the image in Figure 2.27, of having an odd or an even number of patterns in the image.
+
+- connectedness
+
+- Simple perceptrons of the kind that I’ve been discussing up to now cannot effectively distinguish connected from unconnected images
+
+- feature detectors
+
+- They respond by activating in the presence of crucial features in the input
+
+- the order of the perceptron.
+
+- The maximum number of connections between the input layer and any associative unit
+
+- multi-layer perceptron
+
+- a single perceptron with multiple layers
+
+- hidden units or the hidden layers
+
+- The units in the intermediate layers of a multi-layer system are not directly part of the input or the output of the system: they are purely internal
+
+- error backpropagation or the generalised delta rule
+
+- a new algorithm for the training of multi-layer perceptrons
+
+- Input layer
+
+- This can contain as many units as are necessary to represent the input pattern. In  some practical applications, inputs of many thousands of units can be found. As with the two-layer perceptron, the input units are dummies, whose activations are clamped to the values representing each element of the input pattern.
+
+- Hidden layers
+
+- There may be as many hidden layers as required. Practically speaking, however, it is never necessary to use more than two, and one hidden layer is generally sufficient for nearly all problems.
+
+- Output layer
+
+- As in the two-layer perceptron, the final layer represents the output of the system. It can contain as many units as required.
+
+- Units
+
+- The learning rule we use for training multi-layer perceptrons is, as one of its names suggests, a generalisation of the delta rule. Therefore all the units in the hidden and output layers are required to have continuous activation functions, such as the unipolar sigmoid of Equation 2.10, or the bipolar version of Equation 2.14. Unless I say otherwise, from now on I’ll be dealing with the unipolar sigmoid in the examples I discuss. The units of the input layer, being only dummies, do not strictly require an activation function.
+
+- Weights and connections
+
+- Like the single-layer perceptron, multi-layer systems invariably have a fully connected topology: all the units of a layer are connected to all the units in the succeeding layer, with no recurrent connections or links between units within a layer.
+
+- local minima
+
+- The backpropagation algorithm always seeks the steepest path down. But it is quite possible for the training process to arrive at the state I’ve illustrated in Figure 2.40(c), which is far from the error minimum, but where there is no path down – all the paths are up. The system is trapped. In such cases, there may be little remedy but to start again.
+
+- vanilla backpropagation
+- Many improvements on the original algorithm, now sometimes called (rather contemptuously, perhaps) vanilla backpropagation, have been proposed; and there has been intensive research into the factors that affect training.
+
+- momentum constant , momentum term
+    -  Most of the problems of training under backpropagation
+       stem from the irregularity of the error surface. In any
+       particular state, the steepest path down the surface may
+       not actually be in the overall direction of the minimum at
+       all. It is possible to compensate for this by adding
+       a momentum term to the calculation of the changes to the
+       weight vectors of each unit
+
+- overtraining or overfitting
+
+- Forcing the network further and further towards the error minimum by training for more and more cycles is not necessarily an advantage. The network can become locked into a final state where it is difficult for it to generalise from the information it has learned.
+
+- validation set
+
+- to test it out on a set of patterns that are similar to those in the training set, but not quite the same (these would sometimes be called a validation set).
+
+- Radial basis function (RBF) networks
+
+- Gaussian.
+
+- The key difference between perceptrons and RBFs is in the properties of units in the hidden layer. In this layer, the units have a special kind of activation function known as a Gaussian. The weight vectors of these units are subjected to a special kind of unsupervised training, the aim of which is to enable these units to detect and respond to certain categories of input. This kind of unsupervised approach is known as cluster discovery,
+
+- Self-growing networks
+
+- do not start with a fixed topology. With such systems, the object of training is not just to find a suitable set of weights, but also to build a network with the optimum number of units.
+
+- cascade-correlation (CC) network
+
+- Cascade-Correlation is a new architecture and supervised learning algorithm for artificial neural networks. Instead of just adjusting the weights in a network of fixed topology, Cascade-Correlation begins with a minimal network, then automatically trains and adds new hidden units one by one, creating a multi-layer structure. Once a new hidden unit has been added to the network, its input-side weights are frozen. This unit then becomes a permanent feature-detector in the network, available for producing outputs or for creating other, more complex feature detectors.
+
+- Lattices
+
+- units are arranged in a one or more dimensional grid, often with lateral interconnections among them. Input is supplied from a separate set of dummy input units.
+
+- Recurrent networks
+
+- these have at least one feedback connection (contrast this with feedforward networks). Units do not generally feed directly back to themselves.
+
+- calibration
+
+- The process of naming the cluster is known as calibration, and lies outside the scope of unsupervised learning.
+
+- Euclidean distance
+
+- The kind of distance we instinctively think of
+
+- angular distance
+
+- the cosine of the angle between the two vectors
+
+- rods and cones
+
+- visual field
+
+- specialised neurons that fire in response to light falling on them
+
+- the volume of space in front of the eye
+
+- retinal ganglia
+
+- signals are passed via a number of intermediate cells to another kind of neuron, the retinal ganglia.
+
+- receptive field
+
+- The area of the retina that projects onto each ganglion is known as its receptive field
+
+- visual cortex
+
+- neural signals finally reach the brain in an area at the back known as the visual cortex, at a receiving station known as V1.
+
+- cerebral cortex
+
+- this very large structure is a deeply crumpled and fissured sheet of tissue, about 2 –4 millimetres thick, forming a dome over the entire set of the brain’s inner structures
+
+- cortical columns
+
+- neurons there appear to be organised in cortical columns, each made up of between 1000 and 10 000 neurons (see Figure 3.9). Connections up and down within the column are much denser than lateral connections between columns
+
+- topographical ordering
+
+- where areas in a map correspond to certain groups of features,
+
+- vector quantisation
+
+- The most common way is to use variations on an unsupervised learning procedure known to mathematicians as vector quantisation.
+
+- Voronoi tessellations , Voronoi regions or Voronoi cells
+
+- Voronoi vector
+
+- The idea of vector quantisation is to divide the entire space up into regions, known as Voronoi tessellations, Voronoi regions or Voronoi cells, and to represent each region with a single vector, termed a Voronoi vector, representing that entire region.
+
+- code vector
+
+- A complex input is simply reduced to, and represented by, a single code vector, which we can tag with a specific index number or code word.
+
+- competitive learning ,sometimes also known as winner-takes-all learning.
+
+- nodes compete for the right to respond to a subset of the input data.[1] A variant of Hebbian learning, competitive learning works by increasing the specialization of each node in the network. It is well suited to finding clusters within data.
+
+- self-organising feature map (SOFM) – sometimes just known as a self-organising map (SOM)
+
+- a neural architecture and a training process based on vector quantisation.
+
+- lateral excitation and inhibition.
+
+- In the formation of maps the interactive processes at work are believed to be rather different: specifically, they are termed lateral excitation and inhibition.
+
+- self-organising phase
+
+- in which the unfolding and ordering of the map  above takes place
+
+- convergence phase
+
+- in which the map is fine-tuned and an accurate representation of the statistical regularities in the data set is formed.
+
+- Learning vector quantisation (LVQ)
+
+- a supervised learning technique for fine-tuning the map during (or after) the convergence phase.
+
+- data dredging
+
+- data mining is sometimes contemptuously referred to as data dredging.
+
+- word histogram
+
+- In statistics, a histogram is a graphical representation showing a visual impression of the distribution of data
+
+- gene clustering
+
+- in which related genes are grouped in clusters
+
+- layered recurrent networks
+
+- types of networks in which the basic multi-layer, feedforward topology has been adapted to cope with inputs that evolve in time
+
+- Elman network
+
+- A recurrent neural network (RNN)
+
+- long short-term memory (LSTM)
+
+- problems that arise in layered recurrent networks, and a potential solution to them in the long short-term memory (LSTM)
+
+- fully recurrent networks
+
+- a different kind of recurrent topology, one without layers, and with much denser recurrent connections than are generally found in simple recurrent networks
+
+- Brain-State-in-a-Box
+
+- Hopfield network
+
+- two powerful theoretical models
+
+- Among other properties, the state of systems such as these evolves over time.
+
+- dynamic systems
+
+- Hopfield networks belong to a much broader category of systems (not limited to neural networks) known as dynamic systems
+
+- chaos
+
+- One property of certain kinds of dynamic system is chaos,
+
+- time series
+
+- the performance of certain stocks over long periods of time in an attempt to predict which way they will move in the future
+
+- garden path sentences
+
+- they lead you up the garden path and abandon you there.
+
+- layered recurrent networks
+
+- One class of recurrent topologies exploits the power of multi-layer feedforward networks by combining their layered structure with feedback connections
+
+- Input –output networks.
+
+- These are made up of a multi-layer perceptron with a single output. This output is fed directly back to become part of the input. The output may be fed into a delay line so that many past inputs are included at once
+
+- State space models
+
+- Here, the feedback connection is from one of the hidden units. The number of hidden units that feed back is known as the order of the network.
+
+- Recurrent multi-layer perceptrons.
+
+- These are a generalisation of the state space model, comprising a multi-layer perceptron with more than one hidden layer, the activation vector of each hidden layer being fed back into that layer
+
+- context units.
+
+- the network must be given memory. Source: Elman (1990) An Elman network is a proposed solution to this problem.
+
+- It is a state space model of order n, where n is the number of hidden units: in other words, all the hidden units feed back to become part of the input.
+
+- local field
+
+- the net input from context units, internal units and external inputs
+
+- lexical classes
+
+- As each new word is read, the expectation of a certain kind of word coming next gradually rises. These ‘kinds’ are the lexical classes of the word: nouns, verbs, adjectives, and so on.
+
+- epochwise backpropagation through time (EBPTT)
+
+- The idea of EBPTT is that the network should not be treated as a fixed entity, with a certain number of layers, but as a network that grows layer by layer at each computational step. Each new time step adds a new layer to the network, so the passage of time is represented as the spatial growth of the network, each new layer representing the state of the network at a new time step.
+
+- truncated error backpropagation through time
+
+- It’s evident that for large networks and for very long sequences, EBPTT places heavy demands on computer resources, as each new layer of the network has to be saved – all the weights and activations – as the sequence of inputs unfolds. So a revised version, truncated error backpropagation through time, is sometimes used, in which an arbitrary cut-off point is imposed.
+
+- vanishing gradients
+
+- in a long sequence, certain very early elements may have a strong influence on items that occur much later on. However, with the passing of time, this influence may gradually be diluted within the network as it unfolds, and may be forgotten altogether by the time the later item appears. Therefore, during training, error signals flowing back in time tend to vanish (or in certain cases they may explode). You can see that this must be a universal problem in recurrent networks.
+
+- long short-term memory (LSTM)
+
+- LSTM is a fairly recent innovation in neural network design, aimed at tackling the vanishing gradient problem. The
+
+- memory cells
+
+- the bank of memory cells that replace the context units.
+
+- constant error carousel (CEC).
+
+- At the heart of it is a single unit known as the constant error carousel (CEC). The activation of the CEC is calculated using a linear function, usually just the sum of the inputs it receives. Notice, however, that the CEC has a recurrent self-connection, with a fixed weight of 1, so some of the input it receives is its own output. You
+
+- key addressable
+
+- Computer memories are key addressable. In a key addressable memory, a piece of information can only be retrieved by means of one special part of it, known as the key
+
+- fully recurrent network
+
+- There are no layers – or, if you like, there is a single layer – and every unit is connected to every other unit (except itself).
+
+- state
+
+- the set of activations {a1,a2,a3} at time step ti the state of the network at that time.
+
+- state transition.
+
+- the system can be in a certain state and then move to another
+
+- state space
+
+- the set of all possible states that the system can be in
+
+- attractors
+
+- Stable states such as blocks or patterns of activation – {1,0,1} in our first network – towards which the system tends to converge, are termed attractors.
+
+- periodic attractors.
+
+- Stable states consisting of oscillations between two or more states, such as blinkers
+
+- transients or quasi-periodic states
+
+- Patterns like gliders that reconstitute themselves after a certain number of steps
+
+- phase space
+
+- The network state evolves in time and moves around the state space (also sometimes known as the phase space), from state to state.
+
+- trajectory
+
+- I’ll refer to the path of the system through the state space from now on as the system trajectory.
+
+- energy function
+
+- a function of the network state, the value of which changes as the state changes, and which he called the energy function
+
+- asynchronous stochastic update
+
+- In our experiments at the beginning of this section we updated all the units of our little three-unit network at each time step. In the Hopfield model, we only update one, chosen randomly at each step.
+
+### - basins of attraction
+- the minimum energy states would be the deepest valleys. The areas around these are known as basins of attraction, because the system state, when it enters such a region, will be drawn inexorably down to the bottom, like water flowing down a hill, into the attractor –
+
+### - false attractors
+- They are nowhere near an energy minimum, in fact they are very high energy states. However, all the other states it is possible to move to from them are higher energy still. A system entering such a state can never leave it, as energy can only diminish or stay the same. The system is trapped in a false attractor
+
+### - chaos
+- It was once thought that only complex systems can produce complex behaviour; and if a system displays apparently random behaviour this can only be due to randomness within it. But there is now abundant evidence that is not true: out of even very simple systems, chaos can emerge. lawless behaviour governed entirely by law.
+
+### - strange or chaotic attractors.
+- the time evolution of chaotic systems is often characterised by strange or chaotic attractors. Figure 4.29 illustrates one of the most famous of these: the Lorenz attractor. This illustrates the trajectory through the phase space of a system generated by simple rules. As the system state winds around the attractor, it never repeats exactly the same path, but never leaves the strict bounds of the attractor.
+
+### - olfaction
+- the sense of smell

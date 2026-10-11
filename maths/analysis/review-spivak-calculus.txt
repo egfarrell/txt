@@ -1,0 +1,280 @@
+
+
+### Calculus On Manifolds: 
+    - A Modern Approach To Classical Theorems Of Advanced Calculus (5e)
+    - Michael Spivak
+
+- 01 Review 
+- 02 Review 
+- 03 Review 
+
+
+### Review 01
+    - Very well known classic, but... (Reviewer: WM Yang)
+
+    - With its instantly recognizable cover, Calculus on
+      Manifolds (1965) is a classic and for cultural reasons,
+      every serious math/theoretical physics grad student should
+      have read this deceptively slim volume by his/her first
+      year of grad school. As one of the earliest texts on this
+      subject, it's a admirable and ambitious attempt to
+      modernize multivariable calculus (and the author wrote it
+      at the age of 25!), but for several reasons, the text is of
+      limited pedagogical value.
+
+    - The most serious problem with this text is the number of
+      errors. While they do not necessarily disrupt the overall
+      picture the author is trying to convey, a few statements in
+      the book are wrong in a substantial way, and many others
+      require additional hypotheses or slight modifications. The
+      astute student should carefully consider each statement the
+      author makes before assuming its validity, and if false,
+      spend some time thinking about how to make the statement
+      true. Reading this book with this degree of scrutiny is, of
+      course, an exceedingly time-consuming challenge, but could
+      be very rewarding....
+
+    - Compounding the frequent occurrence of errors is the
+      terseness of the text. Nonobvious implications and
+      arguments in proofs are frequently glossed over by words
+      like "obviously" or "clearly" or merely strung together by
+      a series of equal signs.
+
+    - Problems with this book in detail:
+
+    - 1) a) The notation is poorly chosen, especially with
+      respect to (alternating) forms and tangent vectors and
+      spaces, such as the use of `\Lambda^k(V)` instead of the
+      more standard `A^k(V)` or `\Lambda^k(V^*)` for the space of
+      alternating tensors on `V`.
+
+    - In the addendum, he corrects this usage but claims that
+      `\Omega^k(V)` has become the standard notation for this
+      space. However, `\Omega^k(M)` is actually more commonly
+      used as a notation for the vector space of differential
+      k-forms on a manifold M.
+
+    - b) Sometimes, even minor typos will result in considerable
+      confusion on the part of the student. For instance, on p.
+      97, Spivak writes `A\subset R^n`, when he means `A\subset
+      R^m`, leading to confusion about how to think about and
+      visualize an n-cube. Another important typo occurs in Thm.
+      2-13 (p.43), a statement later used to prove Thm. 5-1.
+
+    - The reader can easily come up with counterexamples to this
+      theorem as stated. To correct this theorem, `f\circ h`
+      should be replaced by `f\circ h^{-1}`. Again, this is
+      a small, but potentially bewildering error. There are
+      numerous other smaller errors, like an unwarranted
+      assumption in the proof of Thm. 5-2, for instance...
+
+    - Combined with minor typos and/or poor choice of notation,
+      the terseness of his writing makes some parts of the text
+      very difficult to comprehend for the beginner. The
+      definition of the pullback of a differential form, for
+      instance (p. 89), is given in a particularly
+      incomprehensible way because Spivak uses the same notation
+      in two closely related (cf. p. 77) but inconsistent ways
+      without explanation. Long story short, Spivak implicitly
+      used the abbreviation `f^*` for `(f_*)^*` (where `f_*` is
+      a map defined earlier on p. 89) without any comment to that
+      effect. Although this is a conventional abbreviation in
+      differential geometry, this notation is baffling for the
+      beginner if not properly explained.
+
+    - The errors/problems I mentioned here led to many hours of
+      confusion. There are probably many others that I just
+      glossed over without even recognizing any problem. (Indeed,
+      there are several lists of errata online, as well as
+      discussions on math stack exchange regarding these and
+      other errors or sources of confusion.)
+
+    - 2) Spivak spends too long on the less interesting minutiae
+      of derivatives and multiple integrals in chapters 2 and
+      3 (for example, his long discussion on the subtleties of
+      Fubini's theorem), and still gets some of it wrong or
+      imprecise (like the proof of the Riemann-Lebesgue criterion
+      for Riemann integrability, for example).
+
+    - 3) In chapters 4 and 5, precious little is given in the way
+      of intuition for the endless list of definitions relating
+      to conceptually novel ideas like forms, tangent spaces,
+      n-cubes, chains, and manifolds/diffeomorphisms. Perversely,
+      he draws a star to define "star-like set" for the statement
+      of Poincare lemma - a waste of space better spent on
+      virtually anything else. The proof of Stokes' theorem is
+      beautiful in its austerity, though utterly incomprehensible
+      on first reading.
+
+    - Despite the claim in the book's preface that only calculus
+      and linear algebra are required as prerequisites, the truth
+      is that mathematical maturity and sophistication, at least
+      at the level of Chapters 1-8 of Rudin's "Principles of
+      Mathematical Analysis", if not a bit more, are needed for
+      the reader to really grasp the finer points of the text.
+      A theory course in linear algebra, e.g. one based on
+      Halmos' "Finite-Dimensional Vector Spaces" or Hoffman and
+      Kunze's "Linear Algebra", is also needed. For instance,
+      Spivak assumes familiarity of the reader with the concept
+      of algebraic dual spaces. An understanding of the basics of
+      point set topology would also help greatly.
+
+    - The opaqueness of this book stem in part from the author's
+      usage of an odd mixture of elementary and advanced
+      terminology and techniques. Thus despite his efforts, to
+      understand what Spivak has written with any depth requires
+      some familiarity with the methods and heuristics of
+      differential geometry. But of course, the whole point of
+      the book's last two chapters was to introduce undergraduate
+      students to some basic ideas from differential geometry!
+      Thus, this book is a nightmare for self-directed learning
+      -- a good professor or a friend who has done well in
+      a modern differential geometry course (covering
+      differential forms and manifolds) is essential. I suspect
+      that a good number of the positive reviews for this book
+      come from people merely browsed through or never even got
+      to Chapters 4 or 5.
+
+    - Munkres's "Analysis on Manifolds" treats similar topics in
+      a slightly more concrete manner. The biggest difference is
+      that he uses the submanifolds approach rather than
+      (singular) cubes and chains which, at this level, are not
+      particularly useful or essential anyway and only add to the
+      confusion. It's more than twice as long as Spivak, which
+      reflects a more accurate gauging of how much explanation is
+      required for these difficult topics. It does occasionally
+      err on the side of being too pedantic, his proofs tending
+      to be long and wordy, and his exercises are on the easy
+      side, but the work as a whole is orders of magnitude better
+      than Spivak for teaching intuition. Highly recommended for
+      the serious undergrad!
+
+    - Lastly, it's worth mentioning that the contents of this
+      little book serve as a teaser for the first volume of
+      Spivak's five-volume Great American Differential Geometry
+      Book "A Comprehensive Introduction to Differential
+      Geometry". This volume gives a thorough, clear, and
+      engaging exposition of the ideas presented in "Calculus on
+      Manifolds", plus a lot more. However, the exposition is
+      quite abstract and students might (at least initially) find
+      the sophistication and the amount of material covered to be
+      overwhelming. In this connection, Loring Tu's book "An
+      Introduction to Manifolds" is a much more focused, less
+      encyclopedic work geared towards beginning graduate
+      students. It includes many well chosen examples to give
+      some concreteness to the plethora of abstract concepts but
+      does so without watering them down. John Lee's
+      "Introduction to Smooth Manifolds" is more complete in its
+      coverage, but is correspondingly less accessible but is
+      still very lucidly written. Although Spivak suggests
+      "Calculus on Manifolds" as a prerequisite for his
+      subsequent tome, just about everything in the differential
+      geometry portions of Calculus on Manifolds (chapters 4 and
+      5) reappears in it and is explained with greater clarity
+      there.
+
+    - In summary, "Calculus on Manifolds" is a book of historical
+      interest and reading it is part of becoming immersed in the
+      "culture" of mathematics. Furthermore, the ideas that
+      appear in "Calculus on Manifolds" form the nucleus of the
+      modern mathematician's conception of differentiable
+      manifolds. Thus the serious student of geometry, topology,
+      and/or analysis would do well to grok them! However, they
+      are better explained in nearly every other textbook and one
+      should not hesitate to use alternate sources to learn them.
+      If you're an undergrad (I first encountered this book as
+      a freshman), read it for fun, and if you find these ideas
+      fascinating, try pursuing them seriously using Munkres or,
+      if you're up for a challenge, any of the three graduate
+      texts I mentioned earlier. If you're a grad student,
+      revisit "Calculus on Manifolds" after finishing a real
+      differential geometry course to appreciate Spivak's
+      youthful efforts to make the subject accessible to
+      mathematical neophytes.
+
+
+### Review 02
+    - The reviewers claiming that the errors in this book are
+      merely typographical are mistaken. (Reviewer: aj)
+
+    - This book became famous because of the rather ingenious
+      proof of Stoke's Theorem in Spivak's original course notes.
+      The book was published, it seems, simply to make that proof
+      and the associated machinery, which at the time were
+      somewhat novel, widely accessible. That this is a book
+      intended for differential geometers and topoligists
+      considering teaching this materal, rather than a book
+      intended for self study, is evinced by the staggering
+      number of errors.
+
+    - Many reviewers have claimed that the errors are
+      predominantly typographical, and in any event do not affect
+      the the development of the mathematics. This is untrue. The
+      mathematical errors were so glaring that the book is now
+      published with an addenda fixing some, but not all, of the
+      incorrect mathematics. For instance, there is a circularity
+      in the development of the integration apparatus which is
+      not addressed in the addenda: in an attempt to bound the
+      image of a set under a map, it is assumed that
+      a diffeomorphism sends a set of measure zero to another set
+      of measure zero; at this point in the text, nothing of the
+      sort has been proved, and the text actually uses this
+      special case in proving the general case that all
+      diffeomorphisms send all sets of measure zero to other sets
+      of measure zero.
+
+    - Now, this is just one example. And anyone who has seen the
+      material more carefully developed can spot this problem
+      quickly, and prove the special case on their own. But
+      certainly this makes the book unsuitable to the
+      uninitiated.
+
+    - I should say that Rudin's undergraduate text is no better
+      in this regard. In Rudin, the change of variables theorem
+      is proved in a very limited case. He then attempts to build
+      the integration of differential forms over chains machinery
+      as in Spivak, but in doing so he implicitly uses a much
+      more general version of the change of variables theorem
+      than was proved.
+
+    - The third popular book at this level treating this subject
+      is by Munkres. Many students complain that this book is
+      pedantic, which may or may not be true. But it is the only
+      one where Stoke's Theorem is rigorously and completely
+      proved, without relying on circular or incomplete lemmas.
+      To those students who claim Munkres is "too easy," and
+      instead celebrate Spivak, I would simply point out that
+      Spivak was obviously sufficiently obtuse to them that they
+      missed the mathematical holes sprinkled throughout.
+
+    - I scored the book 2/5 because the publisher ought to have
+      requested the author release a second edition when it
+      became clear the errors were sufficiently problematic that
+      an errata-addendum was needed. It is still an
+      unapologetically efficient resource for instructors
+      interested in teaching this material.
+
+
+### Review 03
+    - (jaaziel) This book is a classic, but has many many ...
+
+    - I learned from this book as an undergrad; like the other
+      reviewers mentioned, it had several errors. Some problems
+      are difficult to decipher, while others are not practical
+      due to the errors. Overall it's frustrating to learn from
+      this book on your own. For self-study, Munkres is a better
+      option. I personally referred to Munkres, Cartan, and
+      Bachman.
+
+    - The first half of the book covers a typical multivariable
+      analysis course in a rather appreciable short amount of
+      pages.
+
+    - The second part of the book concludes with Stokes' Theorem
+      and here is where the real frustration begins. For
+      starters, weeks worth of exterior calculus is condensed
+      into one slim chapter. You could try referring to other
+      sources but the notation used by Spivak makes it
+      frustrating to translate between authors. It takes a lot of
+      patience until you finally are able to appreciate his
+      development of the proof of Stokes' Theorem.

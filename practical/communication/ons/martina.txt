@@ -1,0 +1,47 @@
+
+Hi Martina,
+
+I just had two questions about time-scheduling for the VAT
+investigations.
+
+Task 1:
+    So far I've analysed 65 files out of 110 files that the
+    VAT code creates. But at this rate it'll take another
+    8-9 days to analyse every file and re-create the full
+    system on my PC.
+
+    I'm wondering is this time scale alright? Or is it
+    better to switch to a high-level "fuzzy" analysis and
+    finish in 2-3 days? I'm coming from a programming
+    "culture" which analyses code line-by-line, but Im
+    worried this is too long for an Editing/Imputation
+    situation.
+
+Task 2: 
+    I had a idea about creating an automated test system
+    using the work from Task 1. I could write a SAS script
+    that only selects 5 or 6 companies as test cases from
+    the HMRC VAT file. e.g. 1 simple case, 1 complex, 1 with
+    stagger=0, stagger=1 etc. Only these companies would
+    then run through the *entire* process.
+
+    At the end a report would print: e.g.
+    Vat Unit:                Vat Unit:             
+    Cast Type: Simple        Cast Type: Complex
+    Cleaning:  marker 1      Cleaning:  marker 1   
+    Employment:  marker 1    Employment:  marker 1 
+
+    It would trace exactly whats happening with certain
+    types of companies. If changes were made to the VAT
+    process in the future, the same companies could run
+    through the new process and look for problems. 
+
+    Again I think building automatic tests would take
+    ~ 10-15 days coding so not sure if this is worth the
+    time involved?
+
+Any ideas or thoughts you had would be great.
+
+best regards,
+Enda
+

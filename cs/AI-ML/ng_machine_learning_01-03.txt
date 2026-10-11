@@ -1,0 +1,31 @@
+Andrew Ng machine learning 01-03
+
+supervised learning
+	we are given the "right answer" for each example of the data.
+	regression: predict real-valued output value
+	classification: predict discrete value output
+
+unsupervised learning
+	clustering algorithms, we dont give the computer 
+    the right answer in advance...
+	compare to supervised classification, 
+	where we told the system which tumours 
+	were malignant (X) and which were benign (O)
+
+unsupervised learning summary: 
+	we ask the system to find structure in the data for us.
+
+Training Set
+	just a sample data set
+	m = # training examples (rows in data set)
+	x = "input" value, "feature"
+	y = "output" value, "target"
+	(x,y) = one specific training example (row)
+	(x^(i), y^(i)) = the ith training example
+
+learning algorithm 
+	comes up with a function (hypothesis) which 
+	maps from x (house size) to y (house price)
+
+Regression
+	Cost function - basically least squares difference

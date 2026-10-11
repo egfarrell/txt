@@ -1,0 +1,30 @@
+symlinks
+
+### Linux Soft link
+    `ln -s  [EXISTING file]  [NEW link]`
+
+### Linux Hard link
+    ln [existing file] [new link]
+
+### Linux link options
+     `-f`   force a link even if destination file exists already
+     `-s`   make symbolic link (link doesnt update if file moved)
+     `-b`   make backup of pre-existing destination file
+
+### Linux Dropbox Folder link
+    - Soft link only
+    - Hard folder link not possible
+    ln -s "/home/ef/Dropbox/IT/User/" "/home/ef/.config/sublime-text-2/Packages/User"
+
+
+### Windows
+    - file: 
+        mklink {link name} {existing source file}
+    - directory:
+        mklink /D {link name} {existing folder}
+
+### Windows 7 Dropbox Hard Folder link
+    mklink /J "C:\Users\itef\Downloads\Sublime\Data\Packages\User" "C:\Users\itef\Dropbox\IT\User"
+
+### Windows XP Dropbox link
+	junction "C:\Documents and Settings\ef# Work\Application Data\Sublime Text 2\Packages\User" "C:\Documents and Settings\ef# Work\My Documents\Dropbox\IT\User"

@@ -1,0 +1,81 @@
+
+### AIRS
+
+- The ARIEL InfraRed Spectrometer (AIRS), uses Teledyne Imaging
+  Sensors (TIS) H1RG detectors for photon detection. 
+- These are infrared detectors, and are not based on CCD
+  (Charge-Coupled Device) or CMOS (Complementary
+  Metal-Oxide-Semiconductor) technology. 
+- Instead, they are specialized infrared detectors designed to
+  operate in the infrared range, specifically in the range of
+  `1.25 µm` to `7.8 µm` 
+
+    - ### Key points:
+    - H1RG Detectors: The Teledyne H1RG detectors are `HgCdTe`
+      (Mercury Cadmium Telluride) based infrared arrays, not CCDs
+      or CMOS sensors. HgCdTe is a material commonly used for
+      infrared detection due to its sensitivity in the IR.
+    - CCD and CMOS Usage: CCD and CMOS sensors are more commonly
+      used in the _visible spectrum_ for imaging and photometry.
+        - While they can be used in spectrometers, especially in
+          the visible range, they are not suitable for the longer
+          infrared wavelengths covered by AIRS. Therefore,
+          infrared spectrometers like AIRS typically use
+          specialized infrared detectors like those made from
+          HgCdTe.
+
+- In summary, the AIRS spectrometer on ARIEL does not use CCD or
+  CMOS detectors but rather uses HgCdTe-based infrared detectors,
+  designed to be sensitive to the infrared wavelengths that the
+  instrument is observing. 
+
+- Spectrometers, whether in visible or infrared ranges, do use
+  detectors (like CCDs, CMOS, or HgCdTe arrays) to detect
+  photons, but the choice of detector technology depends on the
+  wavelength range of interest.
+
+
+### Detailed info: HgCdTe dectors
+    - HgCdTe-based infrared detectors, like those used in the
+      ARIEL InfraRed Spectrometer (AIRS), operate based on the
+      principles of semiconductor physics, but they are optimized
+      for detecting infrared (IR) radiation, particularly in the
+      mid to long-wavelength infrared range. 
+
+### 1. Material Composition and Bandgap Tuning
+   - Material: HgCdTe stands for Mercury Cadmium Telluride. It is a ternary compound semiconductor that combines mercury (Hg), cadmium (Cd), and tellurium (Te). 
+   - Bandgap Tuning: The bandgap of HgCdTe can be adjusted by varying the ratio of Hg and Cd. This ability to tune the bandgap is crucial because it allows the detector to be sensitive to different parts of the infrared spectrum. For instance, a higher concentration of cadmium increases the bandgap, making the detector sensitive to shorter IR wavelengths, while a higher concentration of mercury reduces the bandgap, making the detector sensitive to longer IR wavelengths.
+
+### 2. Detection Mechanism
+   - Photon Absorption: When infrared photons hit the HgCdTe detector, they have enough energy to excite electrons from the valence band to the conduction band, creating electron-hole pairs. The energy required to excite these electrons is lower in HgCdTe than in silicon (used in CCDs and CMOS), making HgCdTe sensitive to infrared wavelengths.
+   - Carrier Collection: The excited electrons (and the corresponding holes) are then collected by an electric field within the detector material. This collection of charge carriers creates a current or voltage that is proportional to the amount of incident infrared radiation.
+
+### 3. Device Architecture
+   - Photovoltaic vs. Photoconductive: HgCdTe detectors can operate in either photovoltaic or photoconductive modes:
+     - Photovoltaic Mode: Similar to a solar cell, the detector generates a voltage when IR photons are absorbed. This mode is typically used for high-performance applications because it provides lower noise and better sensitivity.
+     - Photoconductive Mode: In this mode, the detector’s electrical conductivity changes when photons are absorbed, resulting in a measurable change in current under an applied voltage.
+   - Pixel Array: Similar to CCDs and CMOS devices, HgCdTe detectors are often fabricated as pixel arrays. In the case of the H1RG detector used in AIRS, the array is 512x512 pixels. Each pixel operates independently to detect the infrared radiation at that specific location.
+
+### 4. Cooling Requirements
+   - Cryogenic Cooling: HgCdTe detectors are often cooled to cryogenic temperatures (e.g., using liquid nitrogen or a cryocooler) to reduce thermal noise. Thermal noise arises from the thermal excitation of electrons in the detector material, which can overwhelm the signal from infrared photons if not minimized. Cooling reduces this noise, making the detector more sensitive to faint infrared signals.
+
+### 5. Readout Mechanism
+   - Multiplexing: The signals from each pixel are read out using a multiplexing scheme, which is often integrated directly onto the detector chip (this is sometimes referred to as a focal plane array, or FPA). This readout is similar to the method used in CCDs and CMOS sensors, where charge or voltage from each pixel is sequentially read out and converted into a digital signal.
+
+### 6. Comparison with CCDs and CMOS Sensors
+   - Wavelength Sensitivity: CCD and CMOS sensors are typically sensitive to visible light (wavelengths between about 400 nm to 700 nm). They use silicon as the semiconductor material, which has a bandgap that limits sensitivity to the infrared. HgCdTe detectors, on the other hand, are optimized for infrared wavelengths, especially in the mid-infrared range (up to around 10 µm or more).
+   - Material and Bandgap: CCDs and CMOS sensors use silicon with a fixed bandgap, while HgCdTe detectors have a tunable bandgap. This tunability is a key advantage for covering different parts of the infrared spectrum.
+   - Cooling: HgCdTe detectors require cryogenic cooling to reduce noise and improve sensitivity. CCDs and CMOS sensors, especially for visible light applications, typically operate at room temperature, though some high-performance CCDs used in astronomy also require cooling.
+   - Readout Noise: HgCdTe detectors, especially when operated in photovoltaic mode, tend to have lower readout noise compared to some types of CCDs and CMOS sensors. This makes them suitable for detecting faint infrared signals.
+
+### 7. Applications
+   - Infrared Astronomy: HgCdTe detectors are widely used in infrared astronomy and planetary science missions (like ARIEL) because they can detect the thermal emission from distant objects and the absorption features of molecules in planetary atmospheres.
+   - Thermal Imaging: These detectors are also used in thermal cameras for military, medical, and industrial applications due to their sensitivity to heat (infrared radiation).
+
+- In summary, HgCdTe-based infrared detectors operate on similar
+  principles to CCDs and CMOS sensors in terms of detecting
+  photons and converting them to electrical signals. However,
+  they are specialized for infrared detection, with a tunable
+  bandgap, different material properties, and a need for cooling,
+  which distinguishes them from the silicon-based CCDs and CMOS
+  sensors used in visible light imaging.

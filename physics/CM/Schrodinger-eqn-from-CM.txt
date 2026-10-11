@@ -1,0 +1,909 @@
+# Schrödinger eqn emerges mathematically from CM
+
+- (2012)
+- HN: https://news.ycombinator.com/item?id=38735725
+
+
+### Comment:
+    - Schrodinger's reasoning was remarkable.
+    - The high-level description of CM was formulated by
+      Hamilton, who started from optics. 
+    - He saw a mathematical analogy between the equations for
+      light and the equations for mechanics. 
+    - The 'principle of least time' (Fermat's principle) for
+      light became the 'principle of least action' for mechanics.
+    - But the principle of least time doesn't predict
+      `diffraction`, just the geometric path of a light ray. 
+        - It fails when the wavelength of the light is large
+          compared to whatever it's interacting with.
+    - At the time, the equations for mechanics were clearly
+      failing for small systems. 
+    - Here's where Schrodinger had his incredible insight: 
+        - what if mechanics broke in the same way as optics?
+          Could matter itself display a kind of "diffraction"
+          when its "wavelength" was similar in size to the
+          objects it was interacting with? 
+        - Could this explain the success of de Broglie's work,
+          which treated small particles like waves?
+    - Guided by that, he was able to add "diffraction" to the
+      equations of matter and come up with the Schrodinger
+      equation.
+    - It's worth reading the original paper if you have a physics
+      background -- probably grad-level. The physics lore is
+      something like "Schrodinger just made a really good guess"
+      but that undersells the depth of his reasoning.
+
+    - kergonath
+        > He saw a mathematical analogy between the equations for
+        > light and the equations for mechanics. The principle of
+        > least time (Fermat's principle) for light became the
+        > principle of least action for mechanics.
+        - I think you are attributing to Hamilton what was
+          developed by others some time before. The jump from
+          optics to mechanics was about 100 years before Hamilton
+          published his principle. Maupertuis was the one who
+          said that physical objects should follow shortest paths
+          in their phase space in a way analogous to light
+          according to Fermat’s principle. This was developed and
+          generalised by Euler and Lagrange (with the
+          Euler-Lagrange equations to derive equations of
+          motions), and then Hamilton’s principle is another
+          generalisation.
+        - It does not affect the point you are making about
+          Schrödinger, though.
+
+        - adrian_b
+            - Before Hamilton, "action" meant "`accumulated
+              living force`", i.e. the integral of the kinetic
+              energy.
+            - The principle of the minimum action of Maupertuis
+              was true only in some restricted cases, and it was
+              false in most mechanics problems.
+            - Hamilton has introduced a new physical quantity,
+              for which he has used only the name `function S`.
+            - He formulated a variational principle for the
+              `function S`, analogous to the principle of the
+              minimum action, but from which it is possible to
+              deduce the system of equations of Lagrange, so it
+              has general applicability.
+            - Hamilton's `function S` is relativistically
+              invariant and nowadays it is usually called
+              Hamilton's action. It is the integral of the
+              Lagrangian, not of the kinetic energy, like the
+              traditional action.
+            - It is proportional with the phase of the wave
+              function in QM. In relativistic mechanics, the
+              Lagrangian is the component of the momentum-energy
+              that is tangent to the trajectory in space-time, so
+              `function S` is the line integral of the
+              momentum-energy over the trajectory in space-time.
+            - So Hamilton's variational principle is quite
+              different in meaning and applicability from the
+              'principle of minimum action' that existed before
+              him. It remains true in all forms of physics that
+              have been discovered after Hamilton.
+
+            - unconed
+                - Why is the general intuitive understanding of
+                  these things so rare that it is not even the
+                  norm to teach it?
+                - (I have yet to encounter an explanation of the
+                  Legendre transform that convinces me the person
+                  actually understands it as something more than
+                  runic manipulation)
+
+            - Koshkin
+                - The best explanation of the Legendre transform
+                  that I have seen can be found in `No-Nonsense
+                  Classical Mechanics` by Schwichtenberg,
+                  Appendix B.
+
+
+        - dataflow 
+            - For those of us who didn't major in physics...
+              where did the whole "action" thing itself even come
+              from?
+            - The whole notion of "action" feels entirely foreign
+              and unintuitive for someone who's just studied
+              Newtonian mechanics. 
+            - At least I've never managed to find a real world
+              feel for what it is, unlike with force or energy.
+
+        - gpsx 
+            - I think of the `Lagrangian`, that we integate to
+              get the "action", as some sort of energy related
+              function. 
+            - I don't really attribute much meaning to it other
+              than minimizing it implies the equations of motion,
+              which are something we can phyiscally grasp.
+            - For a particle in one dimension,
+                - L = L(x(t),v(t))
+            - The solution to the minima is where the "gradient"
+              of `L` with respect to `x` and `v` is zero. 
+            - However, position `x` and velocity `v` are not
+              independent, so that "`gradient = 0`" equation
+              implies:
+                - dL/dx = d/dt(dL/dv)
+            - You can define `dL/dv` as the generalized momentum. 
+            - You can think of `dL/dx` as a force.
+            - This gives you Newtons equation, but you can say
+              you derived it.
+                - F = d/dt(p)
+            - Granted, we didn't really start from a more
+              fundamental place. But then this starts to make
+              more sense when you realize the world is governed
+              by QM. 
+            - And this 'least action principal' comes from the
+              fact that, in the classical physics regime, the
+              only part of the "trajectory" (wave function) that
+              gives a meaningful contribution is the part along
+              with minima of the lagrangian.
+
+            - kkylin 
+                - This being HN, do have a look at SICM for an
+                  appealing approach for hackers.
+            - jdminhbg 
+                - If you prefer Clojure and interactive
+                  notebooks:
+                  https://github.com/sicmutils/sicmutils
+
+        - alecst 
+            - Honestly it's a great question. Even the typical
+              physics major doesn't have a great answer because
+              learning how this derivvation isn't a part of any
+              curriculum I know of.
+            - But if you can accept the principle of least time
+              (that a light ray will travel along the path that
+              takes the shortest time) then you kind of already
+              accept that (ordinary, classical) light somehow
+              knows the time it takes to go along all possible
+              paths, then chooses the minimum.
+            - The 'action' is a kind of thing, discovered by
+              Hamilton, by analogy, that plays the same role in
+              mechanics as time does in optics. 
+            - It's extremely unintuitive that classical systems
+              should minimize anything like a `time` or an
+              `action`.
+            - Think about it: they travel along the minimum path,
+              but how do they know that that path is the minimum?
+              Do they sample the other paths to know?
+            - Well interestingly, Feynman's thesis was about
+              exactly this idea. 
+                - What happens if you start from the assumption
+                  that particles just sample all possible paths
+                  (weighted by something having to do with the
+                  action/time)? 
+                - It turns out you can get the Schrodinger
+                  equation (and optics equations) from that too.
+                  It partially explains how paths "find the
+                  minimum." It turns out they don't, but a nice
+                  cancellation happens that makes the minimizing
+                  path the most probable one.
+
+            - dataflow 
+                > It's unintuitive that classical systems should
+                > minimize anything like a time or an action.
+                - If I get to define the measure arbitrarily,
+                  then I can always find a measure that something
+                  else is a minimum of. 
+                - So in that sense it's not surprising at all.
+                  The interesting question to me is why should
+                  that seemingly arbitrary measure be action?
+                  What does that even mean, physically? I have no
+                  intuition for it.
+                > Think about it: they travel along the minimum
+                > path,
+                    - I'm already stuck here. What would it even
+                      mean for a particle to have an "action"
+                      (whatever that is) that is not minimized?
+                      Like what would that look like, physically?
+                      I understand what it means for distance not
+                      to be minimized, but action isn't
+                      distance...
+
+                - lambdatronics 
+                    > What would it even mean for a particle to
+                    > have an "action" (whatever that is) that is
+                    > not minimized?
+                    - The particle doesn't have an action. The
+                      `trajectory` of a particle is what the
+                      action is defined in terms of. One way to
+                      think of it would be "it's a measure of how
+                      much the trajectory deviates from the one
+                      dictated by Newton's equations (Law 1?
+                      Straight line etc?)."
+                    - Pretty much like what you said: "I can
+                      always find a measure that something else
+                      is always a minimum of."
+                    - About what a trajectory with non-minimal
+                      action would look like: 
+                        - it would be an arbitrary violation of
+                          the equations of motion for the system
+                          (ex: free particle moving in a zigzag
+                          instead of a straight line at constant
+                          velocity). 
+                        - Moving in a straight line at constant
+                          velocity is what Newtonian mechanics
+                          prescribes, and that trajectory will
+                          minimize action for the corresponding
+                          Hamiltonian.
+
+                - EvgeniyZh 
+                    > then you kind of already accept that
+                    > (ordinary, classical) light somehow knows
+                    > the time it takes to go along all possible
+                    > paths, then chooses the minimum
+                    - But it doesn't, minimum (or more precisely
+                      extremum) is a local quality. Basically
+                      light goes by the path with zero derivative
+                      because otherwise neighboring pathes
+                      interfere. Feynman lectures touch on it
+                      relatively early [1] which I think is nice
+                    - [1]
+                      https://www.feynmanlectures.caltech.edu/I_26.html#Ch26-S5
+
+                - alecst 
+                    - It is not local. That’s what’s wild about
+                      it. It’s a minimum over all paths. Re-read
+                      that section you posted.
+                - EvgeniyZh 
+                    > In other words, the principle is that light
+                    > takes a path such that there are many other
+                    > paths nearby which take almost exactly the
+                    > same time. the wavelength tells us
+                    > approximately how far away the light must
+                    > “smell” the path in order to check it.
+                    - For the same reason, it doesn't even have
+                      to minimum at all, it should be extremum.
+
+                - mikhailfranco 
+                    - Many other responses are very good.
+                    > It's extremely unintuitive that classical
+                    > systems should minimize anything like
+                    > a time or an action.
+                    - Perhaps, they minimize the action as the
+                      primary driver (cause), and time (effect)
+                      is generated as part of the solution, as
+                      a definition of evolution ...
+
+### adrian_b (Good comment)
+    - Hamilton did not discover any "action". Like everybody
+      since Maupertuis, a century earlier, Hamilton used "action"
+      with the meaning "accumulated living force".
+    - "Living force" is English for the Latin "vis viva", which
+      is the old name of kinetic energy (the term "kinetic
+      energy" was introduced only later, in 1854, by William
+      Thomson, who in 1892 became Lord Kelvin; for a short time
+      before 1854 "actual energy" was used instead of "kinetic
+      energy" and opposed to "potential energy", as defined by
+      Rankine in 1853). So "action", in the sense introduced by
+      Maupertuis and used by everybody until the 20th century,
+      meant integral of the kinetic energy (actually the living
+      force was mv^2, so the double of the kinetic energy).
+    - Hamilton has introduced a new physical quantity, never used
+      by anyone before him, which he named just "function S".
+      Unlike the principle of the minimum action, which is false
+      except for certain restricted cases, Hamilton's variational
+      principle about the "function S" is always true, including
+      in relativistic mechanics and quantum mechanics.
+    - Nowadays Hamilton's "function S" is usually called
+      "Hamilton's action", because it has the same measurement
+      unit like the traditional action, even if it is a different
+      physical quantity. "Hamilton's" is frequently dropped,
+      which does not cause much ambiguity, because now the
+      traditional "action" is seldom mentioned.
+    - Nevertheless, whenever history is discussed, a very clear
+      distinction between "action" and Hamilton's "function S"
+      must be maintained, otherwise it is impossible to
+      understand the evolution of physics.
+    - Hamilton has discovered his function S by starting from the
+      system of equations of Lagrange and finding a way to deduce
+      them from a simpler principle.
+    - It is a little weird that even if Lagrange had discovered
+      when young, together with Euler, the Euler-Lagrange
+      equations for variational problems, many years later, when
+      he has written his works about mechanics, he has never
+      attempted to use any variational techniques in the
+      formulation of his equations of dynamics (and he dismissed
+      the principle of the minimum action as seldom applicable),
+      so this relationship has been discovered only later, by
+      Hamilton. While Lagrange has been the first who has used
+      correct definitions for the kinetic energy and the
+      potential energy, he has named them just "fonction T" and
+      "fonction V", similarly to Hamilton's use of just "function
+      S".
+
+
+- mr_toad 
+    > how do they know that that path is the minimum? Do they
+    > sample the other paths to know?
+    - Isn’t it just a tautology? After all, how do we measure
+      shortness and straightness?
+
+
+
+- naasking 
+    - Least action is a nice, unifying principle, but to me it
+      strongly hints that our formalisms don't capture the full
+      picture.
+
+
+
+### kergonath 
+
+> For those of us who didn't major in physics... where did the
+> whole "action" thing (let alone the thesis that it's minimized)
+> itself even come from?
+- It comes from Maupertuis’ work in the 18th century (about
+  a century before Hamilton). The initial insight is that
+  a physical object follows the “shortest” possible “path”, in
+  the same way as light follows the quickest path as in
+  Descartes’ law. The difficulty is that the path is in a phase
+  space with more than our usual 3 dimensions, so the whole thing
+  is a bit abstract and calculations are a bit counter-intuitive
+  at first. The approach is still useful because it helps solving
+  problems that are very difficult to solve using Newton’s
+  equations, like systems with constraints or couplings between
+  objects.
+> The whole notion of "action" feels entirely foreign and
+> unintuitive for someone who's just studied Newtonian mechanics.
+- Action is a tool to calculate these shortest paths, and because
+  the actual trajectory corresponds to an extremum of the action,
+  and most of the time to a minimum, the principle is sometimes
+  called the “least action principle”. Fundamentally, that’s
+  almost all there is to it. The rest is defining the action, and
+  processing it to get equations of motion. Action kind of looks
+  like a weird energy in classical mechanics,
+- It is foreign to Newtonian mechanics. If you want to understand
+  how it works you need to consider Lagrangian mechanics, which
+  was a generalisation of Maupertuis’ principle and paved the way
+  for Hamiltonian mechanics (which are another step in
+  abstraction). Newtonian mechanics are built on calculus and the
+  concept of derivative; Lagrangian mechanics are built on
+  variational calculus and the concept of functionals.
+> At least I've never managed to find a real world feel for what
+> it is, unlike with force or energy.
+- Action is actually quite similar to energy, conceptually.
+  Energy is whatever gets minimised in a Newtonian system at
+  equilibrium. Energy changes are governed by differential
+  equations that we can solve to calculate simple trajectories.
+  Action is a function that is minimised along the trajectory of
+  a physical system.
+- This approach is extremely powerful. The same principle can be
+  used to derive the equation of motion for systems following
+  classical or quantum mechanics, or general relativity by
+  “simply” considering different definitions for the action (or,
+  equivalently, different definitions of what we call the
+  Lagrangian function, which is more common). It’s a bit
+  difficult to explain more in this format; if you want to dig
+  deeper you should start by looking into Lagrangian mechanics.
+
+
+
+nimish 7 months ago | root | parent | next [–]
+
+Fermat's principle (least time) predates Maupertuis' but it's not obvious it's basically the same thing. Interestingly Maupertuis was motivated by placing time and distance/space on the same footing, predating Einstein by several centuries.
+
+
+
+whatshisface 7 months ago | root | parent | prev | next [–]
+
+>Energy is whatever gets minimised in a Newtonian system at equilibrium.
+
+For what it's worth, that's only for the stable static equilibria of frictionless systems without air resistance.
+
+
+
+krukah 7 months ago | root | parent | prev | next [–]
+
+It's a great question that, as far as I can reason, has no answer. Newtonian vibes that are familiar to us will only take you so far, and intuitive interpretations of physical quantities often break down when you try to relate them to the scale, experiences, and stimuli of humans.
+
+Let's take momentum, energy, and charge, things that you probably have a strong "real world feel" for. It's worth noting that our intuition for these quantities is actually pretty far-removed from their mathematical origin. Maybe you consider these as different loosely related quantities that pop up in different loosely related calculations, which is a useful and powerful mental model. Momentum is a thing that..."gives velocity to inertial bodies". Energy is a thing...that "does work". Charge is a thing that..."causes forces in the presence of an electric field". If you try to define the terms within each definition, you'll find yourself in some circular definitions, and it'll become unclear which definition, if any, is "most fundamental".
+
+But these quantities are actually quite similar in the sense that they can all be defined in terms of action! Specifically, these are quantities that are conserved because there exists some nice symmetries in the Lagrangian (roughly speaking, a derivative of action). So our intuitive definitions of these things are really just less generalized/more specific understanding of structure that is emergent from action.
+
+Can we look at a physical system and say "oh this one's got a lot of action" or "nature's doing a great job of minimizing the action over here"? No, but we can look at a physical system and say "wow, everything that's happening in here lines up with what I'd observe if this little quantity I defined just so happened to be minimized"
+
+I think no matter how many Lagrangians we integrate or variational calculations we perform, we'll probably never gain a better intuition for action beyond "The Thing That Explains A Lot Of Seemingly Unrelated Physics When It's Minimized." To me, it's both deeply unsatisfying for its abstract and unintuitive nature, but also deeply profound for its universal explanatory power.
+
+tldr; when it comes to action, reject real world feels and embrace mathematical structure.
+
+
+
+Cleonis 7 months ago | root | parent | prev | next [–]
+
+I have created a demonstration of Hamilton's stationary action with interactive diagrams, (supported with discussion of the mathematics that is involved).
+
+Interestingly: it is possible to go in all forward steps from Newtonian mechanics to Hamilton's stationary action. That is the approach of this demonstration. (How Hamilton's stationary action came into the physics community is quite a convoluted story. With benefit of hindsight: a transparent exposition is possible.)
+
+Recommended: read the following two articles in this order: Introduction to calculus of variations: http://cleonis.nl/physics/phys256/calculus_variations.php
+
+Hamilton's stationary action: http://cleonis.nl/physics/phys256/energy_position_equation.p...
+
+The path from F=ma to Hamilton's stationary action goes in two stages: 1) Derivation of the work-energy theorem from F=ma 2) Demonstration that in cases where the work-energy theorem holds good Hamilton's stationary action will hold good also
+
+Also interesting: Within the scope of Hamilton's stationary action there are also classes of cases such that the true trajectory corresponds to a maximum of Hamilton's action.
+
+In the demonstration it is shown for which classes of cases the stationary point corresponds to a minimum of Hamilton's action, and for which classes to a maximum.
+
+The point is: it is not about minimization. The actual criterion is that which both have in common: As you sweep out variation: in the variation space the true trajectory is the one with the property that the derivative of Hamilton's action is zero. The interactive diagrams illustrate why that property holds good (it follows from the work-energy theorem).
+
+Hamilton's stationary action is a mathematical property. When the derivative of the kinetic energy matches the derivative of the potential energy: then the derivative of Hamilton's action is zero.
+
+(Ycombinator does not give control over the layout of the text I submit. I insert end-of-line, to structure the text, but they are eaten.)
+
+
+
+dataflow 7 months ago | root | parent | next [–]
+
+Wow, i'll check it out, thank you!
+
+
+
+nickpsecurity 7 months ago | root | parent | prev | next [–]
+
+I looked into it. There’s a Wikipedia article for action:
+
+https://en.m.wikipedia.org/wiki/Action_(physics)
+
+I bet a lot of movie fans regretted stumbling onto this page. No, I wanted action!
+
+
+
+Koshkin 7 months ago | root | parent | next [–]
+
+> No, I wanted action!
+
+But really what you want is to minimize it.
+
+
+
+andypea 7 months ago | parent | prev | next [–]
+
+Thanks! This is really intersesting and insightful. I'd definitely read the blog-post if you get round to writing it!
+
+
+
+ahartmetz 7 months ago | parent | prev | next [–]
+
+Yeah, I've been taught that Schrödinger basically made a guess as well... Very interesting how it really happened.
+
+
+
+kergonath 7 months ago | root | parent | next [–]
+
+The good thing is that the least action principle is fundamental and very flexible. All the physics are encapsulated in the Lagrangian. So you can come up with any crazy Lagrangian you want, plug it into Hamilton’s principle or Euler-Lagrange equations and see what you get. That way, you can build a whole theory from an insight somewhat easily as the fundamental framework is already in place.
+
+
+
+djmips 7 months ago | root | parent | prev | next [–]
+
+Now all I understand is that he made an educated guess. ;-)
+
+
+
+ben_WG 7 months ago | prev | next [–]
+
+The Schrödinger equation emerges from classical mechanics most closely (well ok that's a bit subjective) from the Hamilton Jacobi frame work, and it was indeed here that Schrödinger saw, in hindsight, because in the beginning he pretty much guessed it, the biggest connection to classical dynamics. This is also related to the optic-mechanical relation that abstracts mechanics to the point it becomes comparable to optics.
+
+Hamilton Jacobi theory: https://en.m.wikipedia.org/wiki/Hamilton%E2%80%93Jacobi_equa...
+
+Optic-mechanical analogy: https://en.m.wikipedia.org/wiki/Hamilton%27s_optico-mechanic...
+
+Schrödinger equation from HJ theory: https://www.reed.edu/physics/faculty/wheeler/documents/Quant...
+
+
+
+patcon 7 months ago | parent | next [–]
+
+> in the beginning he pretty much guessed it
+
+Ah, you've given me a thought I'm grateful for. Thanks!
+
+I'm someone who's had a gut feeling about something in some random niche of science for several years. I've spent that time slowly gathering evidence from the literature to validate my hunch. It feels less like a "guess" and more like a high dimensional observation (of a form that's hard to cite or trace origins for) that first needs to be re-grounded in "real research".
+
+Though maybe it DID feel like a guess to Schrödinger...! but if he didn't say it that way, I'd assume it's not quite so accurate a framing :) though it is an entertaining way to communicate it, and I appreciate that it lends a sense of serendipity and happenstance and luck, which is perhaps the most important thing to telegraph about how science happens... to take a swing at the false inevitability and certainty that has its hooks in our histories!
+
+
+
+danbruc 7 months ago | root | parent | next [–]
+
+I've spent that time slowly gathering evidence from the literature to validate my hunch.
+
+That is most likely the wrong way to go about this, you should probably look for evidence that your hunch is wrong, that it is in conflict with established physics.
+
+
+
+jdewerd 7 months ago | root | parent | next [–]
+
+Right, in fact it's very much "a thing" for bored/retired engineers (or otherwise physics-adjacent) to guess a new physics principle and convince themselves that it must be correct without actually doing the boring and difficult work of checking it against existing known-good principles / data and coming up with experiments that prove it to be usefully differentiated. You know, the difficult parts of science.
+
+This is the source of a steady stream of crackpots that regularly pester the physics community. Don't be one of them. If your trajectory doesn't include a bunch of graduate level physics classes, a literature review, and a big math slog, you are at risk. Existing techniques are very powerful and you need to know them well before you know what counts as a genuine addition.
+
+https://www.youtube.com/watch?v=11lPhMSulSU
+
+
+
+i_am_a_peasant 7 months ago | root | parent | next [–]
+
+Meh, I wish I'd had taken the physics path. But life happened. Too late to change now. Maybe I can at least make a lot of money by making something useful.
+
+
+
+jdewerd 7 months ago | root | parent | next [–]
+
+The fact that physical theory has such good coverage of everyday circumstances is really tough news if you want to do physics, but it's excellent news if you want to do engineering :)
+
+
+
+exe34 7 months ago | root | parent | prev | next [–]
+
+It can mean the same thing - when I have a hunch I think of as many ways of shooting it down as possible - but that often involves predicting something starting from the hunch and then testing that prediction against nature/existing literature. I'd still call it "trying to validate this hunch".
+
+
+
+emmelaich 7 months ago | root | parent | prev | next [–]
+
+Yes, pruning hunches fast is important - then again it's important to have the hunches in the first place.
+
+
+
+_fizz_buzz_ 7 months ago | root | parent | prev | next [–]
+
+It was a guess in a sense, but a very educated guess. Schrödinger didn’t get lucky, he was hard working, talented and very educated in his field. He was already one of the most revered physicist at the time he came up with the Schrödinger equation.
+
+
+
+NotSuspicious 7 months ago | root | parent | next [–]
+
+And in the Christmas spirit, he made his big discovery while cheating with his wife on a Christmas retreat in 1925-1926
+
+>A few days before Christmas, 1925, Schrodinger, a Viennese-born professor of physics at the University of Zurich, took off for a two-and-a-half-week vacation at a villa in the Swiss Alpine town of Arosa. Leaving his wife in Zurich, he took along de Broglie's thesis, an old Viennese girlfriend (whose identity remains a mystery) and two pearls. Placing a pearl in each ear to screen out any distracting noise, and the woman in bed for inspiration, Schrodinger set to work on wave mechanics. When he and the mystery lady emerged from the rigors of their holiday on Jan. 9, 1926, the great discovery was firmly in hand.
+
+https://www.nytimes.com/1990/01/07/books/the-lone-ranger-of-...
+
+He was also an admitted pedophile. It is possible that that "mystery girlfriend" he was with while coming up with his revolutionary perspective on quantum physics was an underage girl he was grooming
+
+https://www.irishtimes.com/life-and-style/people/how-erwin-s...
+
+https://www.forbes.com/sites/rebeccacoffey/2022/01/24/schrdi...
+
+
+
+kridsdale1 7 months ago | root | parent | next [–]
+
+Sounds like a stretch if she was described as “an old girlfriend” (as in, much time has passed, not that she is old). But she may have been significantly young in their first relationship, who knows?
+
+
+
+_a_a_a_ 7 months ago | root | parent | prev | next [–]
+
+wat?
+
+
+
+glompers 7 months ago | root | parent | next [–]
+
+GP is saying that there are hunches that are not ready for primetime but which are creative thought nonetheless, and which need to be worked with before they can become workable. It's a good thought, echoed by quotes from other designers like Alden Dow, as well as theologians, scientists, and engineers. Not an encouraging way of letting GP know you encountered difficulty in engaging the nonstandard phrasing. GP was trying to discuss the phenomenon without disclosing his or her hypothesis directly.
+
+
+
+i_am_a_squirrel 7 months ago | root | parent | prev | next [–]
+
+I'm guessing mushrooms and/or some sort of stimulant.
+
+
+
+mlyle 7 months ago | root | parent | next [–]
+
+Thinking about where ideas come from is valuable.
+
+This thing that I'm intuiting, but don't have a firm logical path to prove or explain:
+
+- Is it actually grounded in subconscious observations of real things, and things that I'm learning but cannot yet articulate?
+
+- Or is it just something that I made up and I'm pursuing uncritically?
+
+Being able to tell the difference more of the time saves a lot of effort.
+
+
+
+bluish29 7 months ago | prev | next [–]
+
+I don't know if there is a rule about science papers links, but I think using the journal paper link [1] is more suitable. The paper is open access, so no need for research gate.
+
+[https://iopscience.iop.org/article/10.1088/1742-6596/361/1/0...]
+
+
+
+JadeNB 7 months ago | parent | next [–]
+
+I'd say the gold standard is DOI, though, for many journals, that's easily derived from the URL:
+
+https://doi.org/10.1088/1742-6596/361/1/012015
+
+
+
+magicalhippo 7 months ago | prev | next [–]
+
+Reminds me of a paper by by Hardy[1] where he introduces five reasonable axioms (his words). Classical and quantum probability theory obeys the first four. However the fifth, which states that there exists continuous transformations between pure states, is only obeyed by the quantum theory.
+
+In that sense he argues that quantum theory is in a sense more reasonable than classical theory.
+
+There's also an interesting link between this and entanglement[2] which seems to rule out other probability theories, leaving only quantum theory able to exhibit entanglement.
+
+Not my field at all though, just find these foundational things interesting to ponder.
+
+[1]: https://arxiv.org/abs/quant-ph/0101012
+
+[2]: https://arxiv.org/abs/0911.0695v1
+
+
+
+danilor 7 months ago | prev | next [–]
+
+If I wanted to know what the community thought of a particular paper, is there a place where I can find a discussion of it? I thought maybe researchgate was the place, but I usually don't see discussion on the paper submission there. I know sometimes you can find the peer reviewer comments before the paper got published, but what I mean is comments from other scientists.
+
+
+
+leephillips 7 months ago | parent | next [–]
+
+Scientists comment on papers by writing papers. For a paper that just appeared, wait a year or so, and check Google Scholar for papers that cite this paper. Check again every few months.
+
+If you know physicists with an interest in this field, you can ask them if they’ve seen the paper and what they think of it. If they have an opinion they’ll probably share it with you freely, but they won’t write it down anywhere.
+
+
+
+rsp1984 7 months ago | parent | prev | next [–]
+
+I created a platform to solve exactly this problem: https://gotit.pub/ Let me know if you have any feedback, always happy to chat!
+
+
+
+AndrewKemendo 7 months ago | root | parent | next [–]
+
+https://gotit.pub/view/1e023g4l3o6b3t1f1q625c4g
+
+I made a link cause I didn't see one via search
+
+
+
+jpmattia 7 months ago | root | parent | prev | next [–]
+
+It's an interesting idea for a site.
+
+Feedback: Searching by Topic, Title or arxiv ID would be well augmented by a DOI search, especially for the current post.
+
+
+
+bowsamic 7 months ago | parent | prev | next [–]
+
+As a physicist, no, that's not a thing, at least not that I know of. Beyond whatever you can find from a simple google search is unknown to us
+
+Best you can do is look for papers that cite this paper.
+
+
+
+bjelkeman-again 7 months ago | root | parent | next [–]
+
+So are the only informal discussions done in person, or via email?
+
+
+
+mseri 7 months ago | root | parent | next [–]
+
+Both I’d say. More recently also online calls/conferences/seminars, and (way more rarely but it happens) on twitter/mastodon/…
+
+
+
+staunton 7 months ago | parent | prev | next [–]
+
+Maybe math overflow or physics overflow might work in rare cases... For most papers, I don't think there's really much a layperson can actively do to find out what experts think.
+
+
+
+lamontcg 7 months ago | parent | prev | next [–]
+
+https://pubpeer.com/ but it is hit or miss. It has a browser extension so it'll alert you if it finds URLs to papers with discussions.
+
+
+
+throwaway81523 7 months ago | parent | prev | next [–]
+
+physicsforums.com is kind of ok sometimes, though I don't go there myself.
+
+
+
+hughw 7 months ago | prev | next [–]
+
+I have not yet read the linked paper, but seismologists have used the Schroedinger wave equation in seismic imaging since at least the 1970s [1], certainly a "classical" system.
+
+[1] https://pubs.geoscienceworld.org/geophysics/article-abstract...
+
+
+
+hxypqr 7 months ago | prev | next [–]
+
+This is not guesswork, if one evening you lie in the garden feeling bad because of a breakup or other reasons and watch the shadow of the lights, you can get similar results. Introducing Fourier transform into optics can indeed explain some phenomena, I can't recall the specifics, but it is related to the shape formed between the light and the fence.
+
+
+
+amai 7 months ago | prev | next [–]
+
+This paper smells like crack pot stuff. That is probably why it collected only two citations in more than 10 years. It also mentions the experiment from Couder et. al. in the summary, which has been debunked several years ago: https://www.quantamagazine.org/famous-experiment-dooms-pilot...
+
+Behind sophisticated math it hides a beginners understanding of physics. Classical mechanics emerges from Quantum Mechanics in the same way as wave optics emerges from ray optics.
+
+https://physics.stackexchange.com/questions/397694/what-make...
+
+If it would be otherwise, you would also argue, that wave optics emerges from ray optic. The experimental evidence is clear against such an interpretation.
+
+
+
+whatshisface 7 months ago | prev | next [–]
+
+>In the case of the Schrödinger equation, this is done by extending the metaplectic representation of linear Hamiltonian flows to arbitrary flows; for the Heisenberg group this follows from a careful analysis of the notion of phase of a Lagrangian manifold, and for the uncertainty principle it suffices to use tools from multivariate statistics together with the theory of John's minimum volume ellipsoid. Thus, the mathematical structure needed to make quantum mechanics emerge already exists in classical mechanics.
+
+If they have to "extend," introduce the notice of "phase" and then recover the uncertainty principle from that, the quantum mechanics was not there to begin with. "A bucket of water emerges mathematically from a bucket."
+
+
+
+ndsipa_pomu 7 months ago | prev | next [–]
+
+Okay, the abstract clearly had english words in there, but I've got no idea what they mean. Does anyone have an overview that would make sense to a non-expert?
+
+
+
+leeoniya 7 months ago | parent | next [–]
+
+Turbo Encabulator?
+
+https://en.wikipedia.org/wiki/Turbo_encabulator
+
+https://www.youtube.com/watch?v=Ac7G7xOG2Ag
+
+
+
+stephenhandley 7 months ago | root | parent | next [–]
+
+This is the first I had heard of "Turbo encabulator". Couldn't resist https://chat.openai.com/share/f32f5b22-0e3c-4228-ba8b-b90684...
+
+
+
+denton-scratch 7 months ago | parent | prev | next [–]
+
+Yup. "Metaplectic" is a new one on me. Wikipedia isn't much help:
+
+https://en.wikipedia.org/wiki/Metaplectic_group
+
+
+
+svnt 7 months ago | root | parent | next [–]
+
+I will try:
+
+A group is a collection of objects that you can transform via certain defined methods and they respond in known ways.
+
+A metaplectic group is like a mirrored version of a group you already know, with a few other changes in the behavior. Internally similar enough that in seeking to understand it you’re not starting from scratch; the group feels familiar.
+
+
+
+lr1970 7 months ago | prev | next [–]
+
+A Big missing part is the wave function and superposition principle that Classical Physics cannot emulate.The paper is at best a mathematical curiosity.
+
+
+
+aleph_minus_one 7 months ago | parent | next [–]
+
+> A Big missing part is the wave function and superposition principle that Classical Physics cannot emulate.
+
+I am not a physicist, but doesn't the Schrödinger equation decribe the wave function?
+
+
+
+Racing0461 7 months ago | root | parent | next [–]
+
+I believe that's that he's saying. thats why we needed the s equation.
+
+
+
+graycat 7 months ago | prev | next [–]
+
+A lot of good physics students here!
+
+When I was a student of physics and math for physics, the math was solid but often the physics had to be just swallowed whole. This thread has some explanations missing from the physics sources I had!
+
+I'm busy with my startup, but I'd like to see how the physics of Lagrange, Hamilton, Schrödinger, etc., e.g., least action, quantum mechanics, really work and to compare them with Newton's calculus of variations (the shape of the wire that would let a bead slide down in least time), deterministic optimal control (e.g., the book by Athans and Falb), Kuhn-Tucker optimization conditions, Lagrangians in optimization, etc.
+
+
+
+Cleonis 7 months ago | parent | next [–]
+
+I created demonstrations with interactive diagrams.
+
+http://cleonis.nl/physics/phys256/calculus_variations.php The following case is used as motivation for developing Calculus of Variations: the shape of a soap film stretching between two coaxial rings. (The name of the solution is 'catenoid'; a surface of revolution.) Then the discussion moves to the Catenary problem: to calculate the shape of a hanging chain. The two problems have the same solution; the curve is the hyperbolic cosine.
+
+Demonstration of Hamilton's stationary action: http://cleonis.nl/physics/phys256/energy_position_equation.p...
+
+The diagrams have sliders. Moving the sliders sweeps out variation of a trial trajectory. The diagram shows how the kinetic energy and the potential energy respond to sweeping out variation.
+
+
+
+ngcc_hk 7 months ago | prev | next [–]
+
+That emerge has a second phase - as one side is 2nd order and the other side is first order, time and space are not of the equal footing. To be compatible with special relativity where time and space are on equal footing one has to … this line of thinking generate the quantum field theory. Still, if I remember correctly he is more onto differential equation.
+
+Later a physics PhD wants deeper or via different path or many lathes. Instead of light know the shortest time, light just goes all paths and we integrate the result.
+
+Philosophically it is the integration first approach of Leibniz vs the differentiation first of newton. Or that in his theology God see all paths and find the best for us. Except it is not God. And all pathes are going (except due to phase only some will be observed.
+
+Btw, these two line of thinking is so different one can easily see - if you see tangent line/plane etc you see it is possibly Newtonian approach. See general relativity or certain formation of the Qft. If you see integration and many paths, you use Leibniz approach. See Qft in its current form.
+
+
+
+transfire 7 months ago | prev | next [–]
+
+Is my impression correct — if you introduce fundamental (quantized) randomness, classic physics turns into quantum physics. Or is that an over simplification?
+
+
+
+kavalec 7 months ago | prev | next [–]
+
+So what happens if we follow this same path starting with general relativity?
+
+
+
+danbruc 7 months ago | prev | next [–]
+
+Not a physicist and only read the abstract, but that does not sound right. One frequently hears that one can recover classical mechanics from quantum mechanics in the limit of Planck's constant becoming zero but not even that seems to be [completely] true [1] as a quick search shows. The other way around, as this paper claims, seems even more unlikely. As they mention a couple of mathematical tools that went into this analysis, maybe they accidentally introduced the relevant differences between classical and quantum mechanics with them. Or maybe just reading the abstract is not good enough and they claim something different than what I think they claim after reading the abstract. If they actually claim that one can recover important aspects of quantum mechanics from classical mechanics without introducing additional concepts or assumptions, then I am highly skeptical.
+
+[1] https://physics.stackexchange.com/questions/32112/classical-...
+
+
+
+fsckboy 7 months ago | prev [–]
+
+isn't it more likely that classical mechanics emerges from the Schrodinger equation?
+
+
+
+monadINtop 7 months ago | parent [–]
+
+it's not more likely, it just does. If we couldn't re-derive all known laws of classical mechanics and thermodynamics from the large scale limit of quantum mechanics, than we would have rejected quantum mechanics as wrong (or incomplete) decades ago.
+
+This paper seeks to show that some of the mathematical framework of quantum mechanics "pops out" of some intuitive (depends on your perspective i guess) machinery from classical mechanics. It doesn't really mean much fundamentlly, and doesn't really reflect the historical derivations of the equations, but it is interesting to look in retrospect how readily some of these equations pop out from seemingly basic frameworks.
+
+Its also interesting to consider the actual historical discovery of these concepts, or any scientific concept that generalised existing theories to a far deeper and more unifying result (e.g classical -> quantum mechanics, newtonian mechanics -> general relativity). You are required to somehow develop a theory that not only extends beyond horizons currently seen, but also one that correctly replicates the theory it seeks to supercede. And of course, you are limited to theoretical tools you already know, since no-one has yet figure a way to reach into the future and pluck out a more suitable notation or mathematical framework. Its like a literary character trying to write the story it is embedded in.
+
+Of course, there are always hints to the keen observer, especially tucked away at the foundations: much of special relativity unravelled itself directly from the laws of electromagnetics, since in the equation the speed of light is never specified, and the naive galilean assumption that everyone made - that time and space are absolute, and speeds must be specified relative to observers - was the veil obscuring our vision. If you take the courage to abandon the doctrine of absoluteness of time and space, and to declare that the speed of light doesn't need to be specified in terms of some preferred reference frame, since the speed of light is invariant for all observers everywhere throughout the universe, the intractable gulfs seperating what we know from what we don't vanish like a mirage, and meld together naturally into a more fundamental, and unified theory.
+
+And we can take the same step again, by noticing the strange coinicdence that in Newton's theory of gravitation and mechanics, the inertial mass happens to exactly equal the gravitational mass, magically cancelling each others contribution. If we declare that these two phenomena are infact exactly the same thing seen from different perspectives, and we realise that the apparant difference between somebody accelerating and somebody falling is an illusion, obscuring the fact that both are simply bodies taking the shortest path through the warped 4-dimensional manifold of spacetime, we once again unify all of our observations into a elegant, geometric theory of immense power and stunning beauty, one that can peer into the hearts of dead stars, and into the birth of all things, despite being first revealed in the brain of an absent minded jewish man, sitting in a cluttered office filled with pipesmoke, in a time where europe was fragmented from the collapse of empires and feudal houses, with wars fought with bayonets and horses still in living memory.
+
+
+
+fsckboy 7 months ago | root | parent | next [–]
+
+> it's not more likely, it just does.
+
+my point was that to the human mind (we all learn to count as toddlers), 2 emerges from 1+1 more than 1+1 emerges from 2. I feel like I'm reading the paper that says the latter.
+
+>or any scientific concept that generalised existing theories to a far deeper and more unifying result (e.g classical -> quantum mechanics, newtonian mechanics -> general relativity). You are required to somehow develop a theory that not only extends beyond horizons currently seen, but also one that correctly replicates the theory it seeks to supercede.
+
+Wigner, The Unreasonable Effectiveness of Mathematics in the Natural Sciences https://en.wikipedia.org/wiki/The_Unreasonable_Effectiveness...
+
+>Its like a literary character trying to write the story it is embedded in.
+
+sure, that's what it feels like, but we know that the characters are not writing themselves. So what's going on? It's not magic, it just seems magical, but humans psychologically are equipped to have a "theory of mind", were we are adapted to imagine/calculate what other people are thinking and feeling, probably because our game theory works better that way, both for cooperation and competition.
+
+Out interal sense of the beauty and majesty of nature and math and science is just more of that, a reflection of our innate sense of these things because it was adaptive. It's more boring than it seems: it's fun to catch and throw balls or stop and smell flowers, but duh.
+
+When it comes to balloons, I have no desire to spoil your enjoyment of inflating them; but don't spoil my enjoyment of letting the air out.
+
+
+
+Jensson 7 months ago | root | parent | next [–]
+
+> my point was that to the human mind (we all learn to count as toddlers), 2 emerges from 1+1 more than 1+1 emerges from 2. I feel like I'm reading the paper that says the latter.
+
+When you crack an egg you say the egg yolk emerges. Similarly you can say that when you crack the classical mechanics shell you get parts of quantum mechanics. We didn't start from quantum mechanics and built up to classical, we started from classical and picked it apart until quantum emerged.

@@ -1,0 +1,286 @@
+$MY_VIDEOS/physics/bala_fundamental/27-Simple-Harmonic-Motion.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 27
+Simple Harmonic Motion
+Today, we will talk, take up the topic of a Simple Harmonic Motion, as you know in
+nature things change with time, dynamical variables change as a function of time and
+very broadly speaking, you can distinguish two different kinds of change. One which is
+completely irregular in some sense, un practicable and the second one shows a lot of
+regularity in particular very often you see periodicity, things come back to the starting
+point after sometime and the cycle is repeated on and on.
+So, this periodic motion is what we are going to talk about today and simple harmonic
+motion is the fundamental paradigm of periodic motion. So, it is so important and
+appears in so many places and it is so common that it is worth paying some attention to
+and understanding in some detail. It is the very model of periodic motion and all periodic
+motion in some sense is build up on making simple harmonic motion more and more
+complicated as one goes along.
+(Refer Slide Time: 01:16)
+
+So, it is the fundamental let me write this down, it is the fundamental model of periodic
+or oscillatory motion. So, let us begin to analysis this simple harmonic motion and let us
+
+do this by starting with what you already know, namely the mechanics or the motion of a
+particle moving in one dimensions say the x axis and let say the particle as mass m and I
+write Newton’s equations for it. So, I start by writing mass times the acceleration equal
+to the force on the particle and the particle moves on the x axis in a manner prescribed by
+this force here.
+And in general this force could be a function of where the particle is. So, let say this F of
+x of course, you could look at the more complicated situation where this is also a
+function of t explicitly. I could shake the particle by hand as a function of time that leads
+to a different kind of motion we will not get into that, it is called force in motion and this
+will study a little later. But, for the moment you look at cases where F is independent of t
+explicitly, but depends on it implicitly, because x depends on t, x will changes a function
+of time and the task is to solve this equation in some sense.
+Now, we have seen that when the force is conservative, I do not put the vector symbols,
+because we have one dimension and we take the convention then when F is positive it
+acts to the right, when it is negative it acts to the left and here is the origin. Then, in the
+case when F of x, if it is a conservative force implies that F of x can actually be written
+as minus the derivative of a certain quantity called the potential V of x.
+So, let us consider the case, where F is a conservative force then this becomes equal to
+minus d V x by d x and the task is to integrate this equation. But, this is not such a trivial
+task, because this is the second derivative, had it been the first derivative I could have
+just written the integral down, but it is a second derivative and we need to find two
+constants of the motion in some sense when we integrated twice.
+But, there is simple way of saying what the constant of the motion in this problem is as
+follows, multiply both sides of this equation in general by x dot. Just manipulate by
+multiplying by x dot on both sides, then you have m the x over d t that is x dot and then d
+2 x over d t 2 this is equal to minus d V x over d x times d x over d t. But, we recognize
+that the left hand side is the derivative of d x over d t whole squared apart from a factor
+half.
+
+(Refer Slide Time: 04:43)
+
+Because, this thing here is a same as saying d over d t of one half m d x over d t whole
+squared, if we differentiate that then you get a factor 2 first which cancels again this. The
+m comes out in the constant and then you have twice d x over d t times the derivative of
+d x over d t which is the second derivative. So, the left hand side is the time derivative of
+this combination, but the right hand side is equal to minus d over d t V of x it is the time
+derivative of this function of x, where x is a function of t that is the chain rule for finding
+the derivative of V of x function of a function, you differentiate first the function with
+respect to it is argument and differentiate the argument with respect to time.
+But, bringing this to the left hand side it says d over d t one half m let me put a dot just
+for convenience, over head dot to denote the time derivative that is a standard notation x
+dot squared or the velocity squared plus V of x equal to 0. So, it says no matter how x
+changes with time, this particular combination of x and x dot does not change with time,
+this combination here which will of course, immediately imply that this combination half
+m x dot squared plus V of x equal to a constant of the motion.
+Because, the derivative of a constant is 0 by definition and let us call this constant E say
+and I have a reason for calling it E, because you can see that we can identify we already
+can see what half m x dot squared is, it is just the kinetic energy of the particle and V of
+x is the potential energy of the particle which is the reason I called V of x the potential.
+
+So, this portion is the kinetic energy and this portion is the potential energy and this E
+now has the significance of total energy.
+So, you can now see that whenever you have a conservative force, this equation
+Newton’s second law written down for this conservative force leads to this and
+conversely from here, you can go back to that by differentiating. So, these two are
+completely equivalent to each other in some sense. So, I from now on, take it that if you
+are able to write down the total energy of the system in this form of a particle moving on
+the one dimension in this form, then I take it that it is equivalent to writing this equation
+of motion and vice versa in both cases.
+Now, how do we determine the value of this constant, it depends on the initial
+conditions. You have to tell me what is the initial value of the position and the initial
+value of the velocity x dot. Because, this is the second order equation in time therefore,
+you have to tell me two initial conditions and once you tell me that I plug those in here
+and then this remains the same at all times, even when x becomes the function of t, it has
+the same numerical value that it had a t equal to 0. So, that is what is meant by saying it
+is a constant of the motion.
+So, once we accept this is so, the next question is what sort of V of x can we look at and
+solve for. Well, the most trivial case is V of x is a constant then of course, there is no
+force, because V of x the potential is a constant the derivative of the potential with
+respect to x is 0 and therefore, the force is identically 0. So, that is the very trivial case.
+
+(Refer Slide Time: 08:58)
+
+The next non trivial case could be to say that F of x or V of x equal to constant implies
+no F of x or rather F of x identically 0. The next case would be when V of x is
+proportional to x itself, the potential is propositional to x that is the first thing you can
+think of, the function is not a constant, but it is linear in the variable x. For example, V of
+x could be equal to m g x where x is greater than equal to 0, this would correspond to
+saying that the particle is moving in a gravitational field, constant acceleration due to the
+gravity being minus g and the positive x direction being taking to be the vertical
+direction from say the floor level.
+So, that would be instead of writing m g h I have written m g x, but it is just the change
+of variable. So, this would corresponds to motion in a constant force field this of course,
+would immediately imply that F of x minus m g the derivative with the minus sign. So, it
+decreases x this force, that two we would study, we know how motion occurs under the
+constant force field they acceleration is constant and therefore, the particle moves. Such
+that, it is displacement at any given time t is proportional to t squared in the leading term.
+The next in order of complication would be when V of x is a quadratic function.
+
+(Refer Slide Time: 10:39)
+
+So, what happens if V of x is proportional to x squared, so let us write it as constant
+times x squared and for reason, which will become clear in a minute. It is easy to write,
+easier if we write half times the constant times x squared, where k is a constant k equal to
+positive constant. What happens now, the force F of x equal to minus k x, because it is
+the derivative become minus sign and now you see the reason by putting a half here,
+because it cancels the two here and it makes the algebra little simpler to write down.
+(Refer Slide Time: 11:34)
+
+What happens now is that the equation of motion becomes x double dot equal to minus k
+over m x. Now, what are the physical dimensions of this quantity k as you can see from
+here the physical dimensions of k over m this is got dimension length and that is length
+then the second derivative puts a 1 over t squared here therefore, the physical dimensions
+of k over m must be t to the minus 2 it is got to be 1 over the seconds squared in units or
+square root of k over m physical dimensions equal to 1 over t which is got the physical
+dimensions of a frequency.
+So, we see how the frequencies emerged here, how periodic notion is immerging from
+this equation of motion, this quantity here has the dimension of the square of a frequency
+and k is positive m is positive. So, let us right this as equal to minus omega squared x,
+where we identified omega to be equal to square root of k over m square to remain
+myself of the fact that this is the positive quantity.
+So, once I have this equation and this is the equation of simple harmonic motion, this
+equation defines simple harmonic motion. Let us call it S H M equation, the next task is
+to ask what are the solutions of this equation here, and to see explicitly there is a periodic
+solution. But, even before that we begin to see something else I have set that once you
+have an equation of this kind one has an identification with the constant of the motion of
+this kind.
+So, let us go back to that language and ask what does it say now, what is this equations
+say this thing will imply that the following quantity one half m x dot squared plus one
+half k x squared equal to E and this is the total energy. So, as soon as you have this
+equation or you have a quadratic potential a potential propositional to x squared you
+have the statement that one half m times the velocities squared, this kinetic energy plus
+this potential energy is a constant and the potential energy has a shape of a parabola
+because it is one half x squared.
+
+(Refer Slide Time: 14:29)
+
+In fact, if you plot it is very simple, if you plot this potential has a function of x you have
+v of x it is a parabola that passes through origin in this fashion and this is one half k x
+squared with the single minimum at the origin. And now you can see what is going to
+happen even without solving the equation of motion, first of all E cannot be negative,
+because it is a sum of two’s squares here and m and k are positive constant. So, E has
+some value like this for instance and this is the constant for a given initial condition, the
+total energy is given some positive value it is a constant.
+Then, this particle cannot be in this region at all, because it is ((Refer Time: 15:22))
+region that is the potential v of x at that level and the total energy is this much therefore,
+this must be my kinetic energy with the minus sign. But, the kinetic energy cannot be
+negative. So, it immediately says that if a total energy of the system of this particle is
+some given number then the particle cannot go to the right of that point or to the left of
+these points it is restricted to this region about the origin. And what it actually does is to
+oscillate back and forth between this point and this point.
+Such that it is total energy remain constant, but when it comes here it is clear that all it is
+energy is potential, because the potential energy is equal to the total energy here and
+when it goes there all it is energy is potential is 0 kinetic energy, but it has kinetic energy
+here, because the potential energy 0 and the kinetic energy is a maximum. So, the kinetic
+
+and potential energy is of this particle or oscillating back and forth such that the sum is
+the constant.
+And the question is what is the frequency osculation and the frequency is; obviously,
+omega for at least the angular frequencies omega. Because, it is immediately follows
+from this equation we can solve that equation and write the general solution of x double
+dot equal to minus omega squared x is x of t equal to there must be two constants of
+integration in this problem, because you are integrating the second order differential
+equation.
+So, let us call those constants A and B then actually one can solve these equations by
+inspection. Because, we know that if you differentiates sin omega t you get cos omega t
+with the factor omega, you differentiate it again you get minus sin omega t. So, we know
+that both sin omega t and cos omega t have second derivatives which are themselves
+times and constant and therefore, they are solution. So, the general solution is of the form
+A cos ((Refer Time: 17:40)) cos here A cos omega t plus B sin omega t, where A and B
+are arbitrary constants.
+In other words, independent of t and x of course, how do you find these constant, you
+have to tell me the initial conditions, you have to tell me what is x of 0 and what is x dot
+of 0. For instance, if you start at this point and let go then the particle will start moving
+backwards to words the origin, because the slop of V is positive here. So, V of x has a
+positive slop therefore, minus d v over d x is negative and negative force means it point
+towards the origin backwards from where ever you are returns to decreases.
+So, the force restore you to this point here, but it over should because of conservation of
+energy till it comes here and here the slop is negative and therefore, minus slop is
+positive which means the forces directed to the right and therefore, it moves back in this
+fashion and indeed you see that cos and sin are periodic function with the time period
+which is 2 pi over omega.
+So, you can write this in many ways, but here is one way of writing it there is an
+equivalent way of writing it or there always has to move two content of integration. So,
+you could also write this as a cosine or sin it does not matter depends on how you choose
+here you are constants omega t plus some delta or B sin omega t plus some other delta
+
+prime these are all equivalent ways of writing this same solution, because you could also
+write this has A cos omega t cos delta and then sin omega t sin delta.
+So, you can identify A sin delta and A cos delta with these constants, let us not even use
+this same symbol here something else say C of D they are all equivalent ways of writing
+exactly the same solution. There is one more way of writing it using complex numbers,
+what would that be we know that cos omega t plus i sign omega t is E to the power i
+omega t. So, you could also write this as equal to some constant C 1 E to the i omega t
+plus C to E to the minus i omega t that is yet another way of writing exactly the same
+solution.
+But, there are advantages to writing this solution this exponential form, because the
+derivative of exponential is a again the same exponential, apart from a constant. The
+disadvantage is the since x is the real number it is real displacement in this problem, the
+complex constant the constant C 1 and C 2 will have imaginary parts they will have to be
+complex. So, that the final x of t is real in this case. So, this is the completely real
+representation, but this is a complex representation of the same solution within matter,
+but we have a general solution and these solutions are periodic. So, now, we have a first
+important result.
+(Refer Slide Time: 21:25)
+
+We can also write cos omega t or sin omega t could also be written as cos 2 pi mu t
+which is the same as writing cos 2 pi t over capital T. Because, this is the frequency, this
+
+quantity is the frequency this quantity is the time period, this quantity is sometimes call
+the angular frequency. But as far as concern there all very, very simply related to each
+other, we have omega equal to 2 pi mu equal to 2 pi over t explicitly I am going to use
+lose terminology which is done physics very often and just call omega the frequency it
+should really be called the angular frequency.
+But, I will call the frequency, because it is related to the time period as 2 pi over t is on it
+or t is 2 pi over omega. So, the motion is periodic, the solutions are periodic as we see
+and the time period there is 2 pi over omega and curtail question is what is this omega
+and now comes the point, the moment I have any dynamical variable, any variable at all
+we saw this in example of the particle moving and the action this potential.
+But, if you have any dynamical variable u such that the total energy of the system which
+describe by this variable u has the form some alpha times, if the total energy has form
+alpha time is u dot squared plus beta times u squared. If the total energy has this form
+that it is some code and code kinetic energy which is depended on u dot squared and a
+potential energy which is depended on u squared with some positive constants alpha and
+beta.
+So, if this happens then u exhibits simple harmonic motion that is granted by the same
+argument that we went through here, it does not matter what this u is, it could be the
+displacement of a mass which is attached to the spring, it could be the angular
+displacement of a simple pendulum, it could be the level of water in a you tube which is
+going up and down, in each arm in simple harmonic motion, it could be the charge on a
+capacitor in an electrical circuit and so on. The lots and lots of instance is very have
+simple harmonic motion we will see some of these things as we go along I will give
+some physical examples.
+But, all that we need to do is to identify the total energy to be of this form and the job is
+done with frequency and this is crucial with angular frequency of course, with the
+angular omega equal to the ratio of these coefficient is with the square root and that is it.
+In the simple harmonic oscillated case which we looked at the particle this quantity was
+one half k and this quantity was one half m and then the square root of k over m was you
+are frequency. And now it is square root of beta over alpha that is it.
+
+So, this is all you have to do in any physical problem, if you want to find out the motion
+is simply harmonic right down the expression for the total energy by whatever physical
+argument and if it turns out to have this some of these two squares with positive
+coefficients you are guarantee that the dynamical variable whose energy is given by this
+expression. We will very simple harmonically with time, periodically with sins and
+cosines has the functions with an angular frequency which is the square root of this ratio
+here. There is another way of seeing this and asking what is the total energy well the this
+example tells us what it is.
+(Refer Slide Time: 26:08)
+
+For instance, this point here for a given energy is the amplitude, so let us call that A and
+this minus A and it is fashion, then it is immediately clear that the total energy of the
+system is equal to the potential energy at the point A. So, it is immediately clear that E
+equal to one half k a squared in this problem, where A is the amplitude. So, we also have
+another feature of simple harmonic motion, namely that the energy is propositional to the
+square of the amplitude in this form and that specify either the energy or the amplitude is
+completely equivalent.
+Once you tell me what the constant k is, you could either tell me the energy are the
+amplitude if you tell me the amplitude I tell you the energy and vice versa that is the
+input. So, this is another important feature of simply harmonic motion very obvious one,
+but the most crucial feature of all is that fact that this time period does not depend on the
+
+amplitude at all. The amplitude is determine by the total energy or vice versa, but T is
+independent of that T equal to 2 pi over omega independent of E I cannot emperies this
+strongly enough.
+Because, this periodic motion which is called simple harmonic motion has this defining
+property is very crucial property that the time period of this periodic motion is
+independent of the energy of the system are to gather or independent of the amplitude of
+the system. And the next thing we will do is look at several physical examples of simple
+harmonic motion and you will see this feature emerging you want it to imply.
+
+

@@ -1,0 +1,166 @@
+
+
+### A Variation: Why symbol `δ`?
+    - $MY_NOTES/maths/analysis/Variations-Extremal-Paths.txt
+    - There is no deep mathematical necessity — it's mostly
+      historical convention, originating with Euler and Lagrange.
+    - They wanted:
+        - a symbol distinct from d, to avoid confusion
+        - something suggestive of “difference’’ or “deviation’’
+        - something easy to write alongside integrals
+    - `δ` was a natural choice because `Δ` (capital delta)
+      already meant a finite difference, and `δ` intuitively
+      evokes an infinitesimal difference but of a DIFFERENT KIND
+      from `dx`.
+    - So the hierarchy became:
+        - `Δx` = finite difference
+        - `δx` = infinitesimal variation of a function
+        - `dx` = infinitesimal differential of a variable
+
+
+### The wrong path (interesting)
+    - we’re interested in `functionals` that take in some
+      function – usually a single-variable function, such as
+      a curve `y(x)` – and return a _NUMBER_. 
+    - But how do we express such a thing mathematically?
+
+    - Well, maybe your first guess might be like:
+        - F(y) = ( y(x) )^2
+
+    - This would indeed be a “function of a function” – it takes
+      in an entire function `y(x)` as its input.
+    - But this does NOT return a number, instead it returns
+      another FUNCTION of the variable `x`. 
+        - For example, if you were to plug in `y(x)=x²`, you’d
+          get `F(x)=x^4`. So, this is not a valid functional.
+        - (so it's actually an "operator"! See below.)
+
+    - Generally, a valid functional that takes in a full function
+      and only returns a single number can be got by writing the
+      functional as a `DEFINITE INTEGRAL`.
+
+
+### Calculus of Variations used for:
+    - Finding paths of shortest distance (geodesics).
+    - Finding surfaces of minimal surface area.
+    - Describing the motion of objects under gravity in GR.
+    - Deriving equations of motion for systems in Lagrangian mechanics.
+    - Modeling the dynamics of fields in field theories.
+    - In optics: Describing the motion of light rays in materials.
+
+
+### Good intro from a Physics POV
+    - $MY_NOTES/physics/CM/Schrodinger-eqn-from-CM.txt
+        - http://cleonis.nl/physics/phys256/calculus_variations.php
+        - http://cleonis.nl/physics/phys256/energy_position_equation.php
+
+### Feynmann lectures
+    - “But watch out. Ordinarily we just have a function of some
+      variable, and we have to find out which value of that
+      variable makes the function least or most. 
+    - For instance, we have a rod which has been heated in the
+      middle and the heat is spread around. 
+        - For each point on the rod we have a temperature, and we
+          must find the point at which the temperature is
+          largest. 
+    - But now, for each `path` in space we have a number and we
+      have to find the `path` in space for which the number is
+      the minimum. 
+    - That is a completely different branch of mathematics. It's
+      not the ordinary calculus. In fact, it is called the
+      calculus of variations.
+
+
+### 09-Mar 2022 Wed
+    - $MY_BOOKS/Physics/Maths/Math-Phy-Variational/OU/BSc-Variational-principles-Prep-Material.pdf
+    - Functions where the 
+        - domain   is a set of real numbers and the
+        - codomain is a set of complex numbers 
+        - are known as _complex functions_ of a real variable. 
+
+    - We'll also meet functions where the DOMAIN is itself a set
+      of functions. Such functions are often known as _operators_
+      or transforms.
+        - Are functions whose domain contains functions not
+          called 'functionals', not operators??
+        - Ah no... great answer
+        - Difference operator/functional
+          https://physics.stackexchange.com/questions/284450/what-is-the-difference-between-a-functional-and-an-operator
+        - Loosely, an operator (acting on a function space) 
+            - takes functions to _functions_ (eg, `f(x)` to
+              `−if′(x)`). 
+        - On the other hand, a functional 
+            - takes functions to _numbers_ 
+            - (think about a certain integral, or the derivative
+              evaluated at a certain point).
+    - This may seem strange, but you've actually met it before.
+      Whenever you differentiate a function, you actually apply
+      the differential operator to a _function_ to obtain another
+      function, namely its derivative. 
+    - So differentiation is in fact an `operator` that maps
+      functions to their derivatives (other functions). 
+    - We won't discuss operators in any great depth, but the
+      concept will occur again in the Fourier transform ...
+
+### Don Lemon
+    - $MY_BOOKS/Physics/Maths/Math-Phy-Variational/Lemons-Perfect-Form-Variational.pdf
+    - Eulers method of minima and maxima became the calculus of
+      variations.
+
+### Gelfand: Calculus of Variations
+    - Gelfand and Fomin wrote a wonderful, clear and concise
+      intro to the calculus of variations.
+    - It requires little more than a calculus and analysis
+      background (say, 1st or 2nd year undergraduate)
+    - Also, the end-of-chapter problems are straightforward, and
+      often follow in-chapter examples, although the resulting
+      algebra can be beastly.
+    - A word of advice: keep in mind that this book is an older
+      text and lacks some modern context. e.g.
+        - the variational derivative of a functional is just the
+          `Frechet derivative` applied to the infinite
+          dimensional vector space of admissible variations.
+        - They use a `norm` on a Sobolev space without defining
+          it as such.
+        - They make no mention of the `Hamiltonian` as the convex
+          conjugate functional of the Lagrangian.
+    - If you're just looking to solve variational problems, you
+      might be fine with this.
+    - On the other hand, if you're looking for more general
+      insight, I'd recommend first learning some basic functional
+      analysis (e.g. Kreyszig, Luenberger) and then match the
+      concepts from this book to modern jargon.
+
+### Applied Calculus of Variations for Engineers 2e
+    - This is one engineers can read comfortably. 
+        - (No rigorous proof)
+    - Basically, it's a mixture of:
+        - Weinstock: Calculus of Variations: with Applications...
+        - Brunt:     Calculus of Variations (Universitext)
+
+    - The book is excellent:
+        1. Excellent organization and comprehensive contents.
+        Systematic separation of topics. Good for computation.
+        2. Contents are clear and easy-to-follow. Each step says
+        what method is used to obtain the next equation.
+        3. Progresses from specific cases to generalized cases,
+        and no attempt made to establish one big generalized eqn
+        (which is the goal of most pure math textbook).
+
+    - Minor problems:
+        1. It has some subtle typos that obscure clarity. Eg,
+           Chapter 1 "by using the mean value theorem", should be
+           "by Taylor series expansion".
+
+        2. The mathematical notations are not precise. The
+           variation starts with comparing two functionals
+                - `I(y)` and
+                - `I(y + epsilon*eta)`.
+            - Throughout the book, `I(y + epsilon*eta)` is
+              written as `I(epsilon)`, which is understandable
+              but not precise.
+
+
+### Links
+    - Introduction to Variational Calculus (Good Vibrations with Freeball) https://www.youtube.com/watch?v=VCHFCXgYdvY
+    - Profound Physics: Calculus of Variations https://profoundphysics.com/calculus-of-variations-for-beginners/

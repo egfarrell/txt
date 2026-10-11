@@ -1,0 +1,42 @@
+14-Vector-and-Tensor-Fields.txt
+
+
+
+- You can't _combine_ a vector taken from the space `V_r` and the
+  space `V_s`. They're totally different!
+    - $MY_IMAGES/physics/what-are-tensors/dont-add-vectors-from-different-spaces.jpg
+
+
+
+- How can you talk about all these vector spaces in one fell
+  swoop?
+- lets establish a single basis for _all_ the vector spaces at
+  once...!
+
+### Coordinate basis
+    - well you could use `∂_μ` as the single over-arching basis
+      for all the vector spaces.. becaues `∂_μ` will apply to any
+      of the vector spaces at a point
+    - hmmm... seems a bit cheap? 
+	- $MY_IMAGES/physics/what-are-tensors/coordinate-basis.jpg
+
+### basis for dual space `V*`
+    - we need something that'll take a differential operator
+      `∂_μ` and result in a real number.
+    - and that is  dx`` (??)
+	- $MY_IMAGES/physics/what-are-tensors/basis-for-dual-space.jpg
+
+- when he writes out a tensor product, he really means this
+  product just for one point... it (nearly) always means at every
+  point...
+- and this leads to the idea of a tensor field
+
+- key little diagram... 
+- the _components_ of a basis vector at each point, is a function
+  of the point, actually depend on the point 
+- here's the diagram... 
+- see if it'll make sense when you look again...
+
+	- $MY_IMAGES/physics/what-are-tensors/vector-at-a-point.jpg
+
+

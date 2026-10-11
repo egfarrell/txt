@@ -1,0 +1,190 @@
+
+# Book:
+    - $MY_BOOKS/Physics/CM/Jakob-Schwichtenberg-Classical-Mechanics.pdf
+    - $MY_IMAGES/physics/CM/Jakob-overview-CM.jpg
+
+### Questions:
+    - page 30, definition angular momentum... bit at end of the
+      equation
+    - Eqn 2.8? should I revise the cross-product?
+
+### "Spaces"
+        - Lagrangian  Mechanics:  CONFIGURATION Space
+        - Hamiltonian Mechanics:  PHASE Space
+        - Newtonian   Mechanics:  PHYSICAL Space
+
+### Total Force 
+    - 2nd law: `dp/dt = F`
+        - note: RHS is usually made from more than one force. 
+    - We need to specify ALL forces acting on a body
+        - $MY_IMAGES/physics/CM/total-force.jpg
+
+### Product Spaces
+    - Example of a product space: 
+        - Gluing a copy of `R` to each point of `R` yields
+          a rectangle.
+        - $MY_IMAGES/physics/CM/product-space-config-space.jpg
+
+### Trajectory
+    - Trajectory of the object: the specific path described by
+      a solution.
+
+### Constants / initial conditions 1
+    - e.g. solution of free particle: 
+        - `x(t) = a + bt`
+    - or for non-free particle: 
+        - `x(t) = A cos(ωt) B sin(ωt)`
+    - But what do the constants mean: `a`, `b`, `A`, `B`. 
+        - (which appeared in the solutions?) 
+        - These encode information about the INITIAL CONDITIONS. 
+    - For a free particle, there are two constants, `a` and `b`,
+      which means we must specify 
+        - the initial position and
+        - the initial velocity.
+
+### Constants / initial conditions 2
+    - nice logic
+    - Direct connection between the two constants `a`, `b` and
+      the initial position and velocity of the object
+        - $MY_IMAGES/physics/CM/initial-conditions.jpg
+
+
+### Equation of motion
+    - for a free particle!
+        - i.e. the "Force" term on the RHS is zero.
+        - $MY_IMAGES/physics/CM/free-particle-EOM.jpg
+
+### Measuring Potential Energy
+    - NOTE: we can’t measure the 'potential' or 'potential
+      energy' of an object directly. We can only measure the
+      resulting FORCE 
+        - `F = − ∂V(x) ∂x`. 
+    - This follows because we could add an arbitrary constant
+      `V(x) → ˜V(x) = V(x) + c` without changing the resulting
+      force.
+    - This means we can shift the potential however we want. In
+      geometrical terms, we can say that the force remains
+      unchanged because the slope remains unchanged by constant
+      shifts of the potential.
+        - $MY_IMAGES/physics/potential-not-directly-measurable.jpg
+    - Only the DIFFERENCE between the `PE` of an object at one
+      position and its `PE` at some other _reference position_
+      are physically important. 
+        - We usually shift the potential so any object at the
+          equilibrium position has zero `PE` and then specify the
+          `PE` at other positions relative to this position.
+    - Aside: 
+        - Historically, physicists used this observation to
+          conclude potentials are only convenient calculation
+          devices that AREN’T REAL because we can’t measure them
+          directly. 
+        - Working with a potential is much simpler than with
+          forces because a force is described by a vector
+          function `F(x)` while a potential is an ordinary
+          function (scalar?) `φ(x)`. 
+            - Think my OU tutor said this in 2008?
+        - Moreover, the freedom to shift the potential often
+          allows calculations to be simplified. 
+        - BUT ...
+            - from a modern perspective, potentials ARE more than
+              just mathematical tools. 
+            - E.g., the Aharonov-Bohm experiment showed that
+              PARTICLES CAN BE AFFECTED in regions where ONLY the
+              potential is non-zero and everthing else is zero. 
+                - alternative wording: PARTICLES CAN BE
+                  INFLUENCED in areas where a potential is
+                  present, even if NO FORCE is acting on them.
+            - In other words, it has been experimentally verified
+              that potentials are REAL. 
+            - In some sense, potentials are at the heart of
+              modern physics and if you want to learn more about
+              them, see: Jakob Physics from Finance
+                - $MY_BOOKS/Physics/Undergrad/Jakob-Schwichtenberg-Finance-Guage-Theory.pdf
+ 
+
+### When a velocity changes...
+    - We care about how quickly the velocity changes. 
+        - Because it tells us about the FORCE acting on it.
+        - Because the velocity of an object changes whenever
+          a FORCE acts on it. 
+    - Describing how objects react when forces act on them is
+      what CM (or almost all of physics) is about.
+
+### CHANGE in (kinetic) energy
+    - `∆KE` equals the `work` done BY the `force`
+
+### Momentum
+    - $MY_IMAGES/physics/CM/Momentum-impulse.jpg
+    - This means the momentum of an object tells us HOW LONG it
+      takes a given force `F` to _STOP_ it. 
+    - An object with large momentum is much harder to stop; 
+        - ie, needs a much bigger force to stop it quickly.
+        - (or a longer time with a smaller force)
+    - Momentum is a _two-fold_ idea: 
+        - mass AND velocity... 
+        - See here how either aspect can be decisive:
+            - $MY_IMAGES/physics/CM/Momentum-two-fold-idea.jpg
+
+### Energy
+    - Aside: notice that in the definition of kenetic energy,
+      it's the _dot-product_ of velocity, not velocity squared!
+    - Later: ah because velocity is a vector, not just a simple
+      number that can be squared?
+        - later: Yes, `q-dot` is a VECTOR made up of 3 velocity
+          functions
+            - $MY_IMAGES/physics/CM/q-dot-vector.jpg
+        - $MY_IMAGES/physics/CM/Definition-Energy.jpg
+
+### Two types of mass (Mach)
+    - You may wonder how the TWO descriptions of mass actually
+      fit together: 
+        - as "gravitational charge" 
+        - as "resistance to being pushed around" 
+    - Historically physicists used two terms 
+        - "gravitational mass" and
+        - "intertial mass" 
+        - because they thought the different roles of `mass`
+          meant there was actually two types.
+    - But the idea that gravitational mass and interial mass are
+      the same thing (now simply called 'mass') was a key insight
+      leading Einstein to GR.
+    - From this perspective, the resistance of an object to being
+      moved around (inertial mass) is a result of the
+      GRAVITATIONAL PULL of all the objects in the universe.
+        - This is 'Machs Principle'
+
+### Mathematical ARENAS for CM
+    - PHYSICAL SPACE: 
+        - e.g. Newtonian formulation, 
+        - written using vectors in Physical space. We describe
+          the behaviour of vectors using his 2nd law.
+    - CONFIGURATION SPACE: 
+        - Lagrangian formulation
+    - PHASE SPACE: 
+        - Hamiltonian formulation
+    - HILBERT SPACE: 
+        - Koopman-von Neumann formulation 
+        - (QM was originally formulated in Hilbert Space, but
+          also possible to formulate QM in phase, config,
+          physical space etc)
+            - Oh didn't know QM could be formulated in physical
+              space?
+            - Later: Yes (for one particle)
+                - See: "GPT, Schrodinger and PHysical Space"
+                - $MY_NOTES/physics/QM/QM-tips.txt
+
+### Notation:
+    - We often use a SINGLE `q` as a shorthand for all
+      coordinates.
+    - e.g. `q ≡ (q1, ..., q2) ≡ (x, y, z)`
+    - So instead of `f(x, y, z)` we write `f(q)`
+
+### Formulations
+    - In CM, multiple formulations of the same system are
+      important if we want to think about new fundamental
+      theories.
+        - Dirac: Equivalent Theories aren't always equally good,
+          because one may be more suitable than the others for
+          future developments.
+
+### Links

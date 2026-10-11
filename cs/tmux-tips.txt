@@ -1,0 +1,314 @@
+tmux tips
+
+### force 256 colors
+    tmux -2
+
+
+# kill frozen pane
+    [prefix] x
+
+### handy keys - dont forget!
+    [prefix] r      rotate window
+    [prefix] ;      last pane
+    [prefix] u      last window
+    [prefix]+!      convert pane to new window
+
+
+### rename running session
+    tmux rename-session -t 0 "Web App Tmux Container"
+
+### List panes
+    `#{pane_tty}` could be handy for osc52 ssh clipboard X11?
+
+    tmux list-panes -aF "#{pane_tty}: #{pane_title} :#{pane_id}" 
+    output:
+        /dev/pty1: DESKTOP-F95821N :%0
+        /dev/pty2: DESKTOP-F95821N :%1
+        /dev/pty3: DESKTOP-F95821N :%2
+        /dev/pty4: rakija :%3
+        /dev/pty5: DESKTOP-F95821N :%4
+        /dev/pty6: DESKTOP-F95821N :%5
+        /dev/pty7: DESKTOP-F95821N :%6
+        /dev/pty8: DESKTOP-F95821N :%7
+
+### Handy scripting
+    set variable
+        tmux setenv -g FOO bar
+
+    check variable: return '1' or '0':
+        tmux display -pv '#{==:#{FOO},baz}'
+
+    nice run-shell conditional
+        bind -n C-f run-shell "if [ #{pane_current_command} = vim ]; then tmux send-keys :hello; else tmux send-keys yes; fi"
+
+    - There are two sets of environment variables
+        - The SESSION env:
+            tmux showenv
+            tmux setenv myvar value
+        - The GLOBAL env:
+            tmux showenv -g
+            tmux setenv -g myvar value
+
+### scripting tmux
+https://news.ycombinator.com/item?id=21951679
+
+### Inject and run command
+tmux send-keys      -t "$SESSION":3.1    "$HOME/bin/myscript.sh" ENTER
+
+###  setting colours in the status bar
+set -g window-status-current-format ' #W#[fg=yellow]#F#[default] '
+set -g window-status-current-format ' (#W) #T#[fg=yellow]#F#[default] '
+
+# Key binding without prefix
+# '-n' means no prefix is needed
+    bind-key -n C-t select-pane -t :.+
+
+### detach other session when attaching
+    (fixes issues with different display sizes)
+    tmux attach -d
+
+### clear "marked" pane
+    - eg. 1:bash`*M`
+    - <leader>M
+    - Capital "M"!
+
+### select specific pane
+    tmux select-pane   -t [session_name]:[window_number].[pane_number]
+
+### split windows evenly:
+    vertical   across: <leader> alt+1
+    horizontal down:   <leader> alt+2
+
+### tmux android (server-auditor/juice ssh)
+    - remap prefix to "M-Space"
+    - works with bluetooth keyboards!
+
+### tmux resize pane
+	<prefix>Ctrl + arrow (keep your finger on control)
+    or
+        tmux resize-pane -R 10
+        tmux resize-pane -L 5
+        tmux resize-pane -D 5
+        etc...
+
+### old alias
+    alias t2="tmux new-session -d &&  tmux split-window -h && tmux select-pane -t 1 && tmux attach"
+
+### redraw tmux
+    if tmux is funny because of other attached session,
+    simply pass a "-d" switch when attaching
+    tmux attach -d
+
+### Incompatible Changes 2.0 to 2.1 (18 October 2015)
+
+    - Mouse-mode has been rewritten.  There's now no longer options for:
+        - mouse-resize-pane
+        - mouse-select-pane
+        - mouse-select-window
+        - mode-mouse
+
+    - Now just one option: set -g mouse on
+
+    * The `c0-*` options for rate-limiting have been
+      removed. Instead, a backoff approach is used.
+
+# UTF characters funny in tmux
+    set new locale:
+    sudo update-locale LANG=en_GB.UTF-8
+    (this worked for my evo machine)
+
+# how to bind semi-colon
+    # bind-key '\;'         copy-mode
+    # bind-key 'C-\;'        copy-mode
+
+### binding tip
+    bind-key -n <<key>> <<command>>
+    means you dont need the prefix key,
+    <<command>> is bound to <<key>> alone
+
+### old config setting
+    # resize panes (ctrl + alt + {key})
+    bind-key -n C-M-k resize-pane -U 1
+    bind-key -n C-M-j resize-pane -D 1
+    bind-key -n C-M-h resize-pane -L 1
+    bind-key -n C-M-l resize-pane -R 1
+
+# show copy mode bindings
+    tmux list-keys
+    tmux list-keys -t vi-copy
+    handy ones:
+        D   copy till end of line
+        J   scroll up
+        K   scroll down
+        N   search reverse
+
+# move pane left/right
+	<prefix>{
+	<prefix>}
+
+# swap window left/right
+    :swap-window -t -1
+    :swap-window -t +1
+
+### ssh into remote, specify which tmux to execute
+    tmux_path="/home/physastro/efarrell/ef_apps/bin"
+    ssh -c arcfour,blowfish-cbc -XC "$@" -t "$tmux_path"/tmux attach
+
+
+# force utf lines for tmux panes
+    tmux -u
+
+# send keys from bash script
+    send-keys -t 0 'workon my_virtualenv' enter C-l
+    send-keys -t 0 'python manage.py runserver' enter
+
+### listing sessions
+    list sessions: show sub-windows: press <SPACE>
+    also:
+        Ctrl-b s      # choose a session from a list
+        Ctrl-b (      # previous session
+        Ctrl-b )      # next session
+        Ctrl-b L      # ‘last’ (previously used) session
+
+### show current time
+    <prefix> t
+
+### use hex colors
+    set-window-option -g window-status-current-fg "#99ad6a"
+
+#[attributes]
+    - allows a comma-separated list of attributes to be specified,
+    - these may be ‘fg=colour’ to set the foreground colour,
+      ‘bg=colour’ to set the background colour,
+    - the name of one of the attributes (listed under the message-attr
+      option) to turn an attribute on,
+    - or an attribute prefixed with ‘no’ to turn one off, for example
+      nobright.  Examples are:
+
+        #(sysctl vm.loadavg) #[fg=yellow,bold]#(apm -l)%%#[default]
+        [#S]
+
+    Where appropriate, special character sequences may be prefixed
+    with a number to specify the maximum length, for example ‘#24T’.
+
+    By default, UTF-8 in string is not interpreted, to enable UTF-8,
+    use the status-utf8 option.
+
+### swap windows 3 and 1
+    :swap-window -s 3 -t 1
+
+### whats current $DISPLAY variable!
+    tmux showenv
+
+### reorder current window to position 0
+    :move-window -t 0
+
+### ctrl+c slow to respond
+	quickly detach then re-attach, the process should have stopped
+    (note I have rate-limiting in my tmux.conf)
+
+### tmux version
+	tmux -V
+
+### change pane layout
+	<prefix><space>
+
+### X11 Display not working when re-attaching session
+	before attaching ("ta") type:
+		echo $DISPLAY
+	and save output
+	then attach and export $DISPLAY={whatever output you saved}
+
+### startup shell-command
+    - if you execute a shell-command that completes, that window will
+      then CLOSE and disappear!!
+    - but if you execute something like 'vim' then the window will
+      still be visible
+
+### zoom out pane (tmux 1.8)
+	<prefix> z
+
+### rename window name
+	<prefix> ,
+
+### mouse copy and paste
+	hold SHIFT while selecting text with mouse
+
+### attaching
+	tmux attach -t <session_name>
+
+### new window in the CWD
+	tmux neww
+	from prompt
+
+### Show pane numbers
+	PREFIX-q	("q" for question)
+
+### Goto Window Number #
+	PREFIX-#
+
+### tmux display env
+    The Solution that You Think Should Fix It
+
+    Of course, we can fix the stale value by issuing the following command
+    (you need to do this for each shell pane/window):
+
+    within tmux session$ export DISPLAY=localhost:10.0 # or the correct
+    DISPLAY value within tmux session$ tmux show-buffer | xsel -i # works
+    on commandline!
+
+    However, if you try your CTRL+C binding, you’ll find that it still
+    does not work. This is because the background shell in tmux will have
+    a stale value for $DISPLAY, same as old windows and panes! Since the
+    background shell is the environment that all your key binding commands
+    run in, your binding won’t work until the $DISPLAY variable value is
+    fixed in the background shell. The Actual Solution
+
+    Alright, I’ll stop teasing you. Here’s the shell script that will fix
+    the stale variable in all of your tmux sessions.
+
+    #! /bin/sh # Yubin totally wrote this one herself
+    # Run this script outside of tmux!
+    for name in `tmux ls -F '#{session_name}'`; do
+        tmux setenv -g -t $name DISPLAY $DISPLAY #set display for all sessions
+    done
+
+    This little script will correct the background shell’s $DISPLAY
+    variable value for all tmux sessions found on the host. Stick this in
+    the .bashrc of your remote host, and then you’ll never have to worry
+    about stale background shell display variables again. :)
+
+    P.S. I want to note quickly here that stale $DISPLAY variables cause
+    problems for vim as well. You might find that if you try to open vim
+    from a stale shell window in tmux (or screen), it’ll hang for a very
+    long time. This is because vim is trying to connect to a non-existent
+    X server. The “Solution that You Think Should Fix It” actually is the
+    real solution for this particular issue. Just export the correct
+    $DISPLAY value and try opening vim again. It should work like a charm.
+
+
+# old bash aliases for TMUX
+### Caused hassle in ONS with gVim!
+    alias tc='tmux new-window'
+    alias tn='tmux next-window'
+    alias ti='tmux previous-window'
+    alias tu='tmux last-window'
+    # alias tp='tmux last-pane'
+    alias ts='tmux split-window -h && tmux last-pane'
+    alias tb='tmux split-window    && tmux last-pane'
+    alias tk='tmux select-pane -U'
+    alias tj='tmux select-pane -D'
+    alias th='tmux select-pane -L'
+    alias tl='tmux select-pane -R'
+    alias tx='tmux kill-pane'
+    alias tr='tmux rotate-window'
+    alias td='tmux detach'
+    alias tm='tmux resize-pane -Z'
+    alias to='tmux copy-mode'
+    alias tp='tmux paste-buffer'
+
+### LInks
+    - Custom user keys                      https://stackoverflow.com/questions/35533839/how-to-bind-ctrl-tab-and-ctrl-shift-tab-in-tmux-for-mintty
+	- Show HN: Sixel-tmux displays graphics https://news.ycombinator.com/item?id=28756701
+    - TMUX Control mode `tmux -CC`          https://github.com/tmux/tmux/wiki/Control-Mode
+    - HN Interesting TMUX tips              https://news.ycombinator.com/item?id=31308099

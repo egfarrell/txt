@@ -1,0 +1,185 @@
+ 
+### keyboard shortcuts
+    navigation pane                     alt+w, k
+    jump to last edit                   shift + F5
+    single space                        Ctrl+1
+    double space                        Ctrl+2
+
+    access HOME tab                     alt  + h
+    "highlight" text                    ctrl + alt + h
+
+    insert picture                      alt  + n, p
+    font dialog                         ctrl + d
+
+    paragraph dialog                    alt+o, p
+    toggle spacing before paragraph     Ctrl + 0
+
+    left para                           ctrl + m
+    centre para                         ctrl + g
+    justify para                        ctrl + j
+
+    grow font                           ctrl + >
+
+
+### Word Mail merge Dates
+    - Specify the date format!!
+    - Else Word will convert dates to American format
+    - \@d/MM/YYYY
+
+### Video HOWTO: Macros
+    - https://www.youtube.com/watch?v=iWkbtYKm-Yk
+
+
+### Word timestamp tracking?!
+    - Cambridge Proofreading:  "through the MS Word timestamp
+      tracking feature"
+
+### insert equation
+    alt + =
+
+### Insert blank line ABOVE table
+    - click in first cell of table, in front of any cell contents
+    - then press `Enter` 
+
+### Good selection of SYMBOLS
+    - Font: Seogue UI Symbol
+    - Subset: Extended Characters - Plane 1
+
+### Import Styles from another Document
+    - In the document you have created your styles and headings,
+      go to the 'Design' tab and click the downward arrow on the
+      style sets. Then choose 'Save as a New Style Set'. A popup
+      window will open to save the style set as a Word Template
+      (*.dotx). Type in a name for the template style set and
+      save it.
+    - In the new document where you want to use these styles, go
+      again to the 'Design' tab and click the downward arrow on
+      the styles sets. Then choose your saved template style set
+      under 'Custom'. The style set will apply to your headings
+      (if included in the template) and you can choose those
+      styles for any paragraph. 
+
+
+### Dont lose previous Markup Authors!
+	- $MY_IMAGES/cs/Word-preserve-markup-authors.jpg
+
+### Marks: File locations
+    - Word sets temporary bookmarks at your last three editing
+      locations; these can be accessed in turn using Shift+F5.
+      For anything more, you'll need to set actual bookmarks.
+      Have you considered using the Document Map?
+
+
+### Keyboard shortcut MARKUP on/off
+    - File - options - Customize Ribbon - Keyboard Shortcuts "Customize" (bottom of window)
+        - Categories: Review Tab
+            - Commands: Show Formatting
+            - Commands: Show Insertions and deletions
+	- $MY_IMAGES/cs/Word-Markup-Review.jpg
+
+### Quick access toobar
+    - Add shortcut to save as pdf:
+    - "Publish as PDF or XPS" 
+
+### Tables: keep all the rows on a single page:
+    - Select the entire table
+    - Select Paragraph Settings -> Keep with next
+    - I always thought it was under Table properties/Row/do not
+      allow row to break across pages, but this setting ONLY
+      applies to a single row with multiples lines breaking
+      across a page.
+
+### Make Word 2016 FAST
+    - Note: `winword /a`  (no addons, very quick)
+    - Aim: change file type association for Word.
+        - open cmd window as ADMINISTRATOR
+        - type "ftype"
+            - Should see:
+                `Word.Document.12="C:\Program Files (x86)\Microsoft Office\Root\Office16\WINWORD.EXE" /n "%1" /o "%u"`
+        - Now over-ride ftype definition to use `/a`
+        - Paste the following into cmd:
+            ftype Word.Document.12="C:\Program Files (x86)\Microsoft Office\Root\Office16\WINWORD.EXE" /a "%1" /o "%u"
+            ftype Word.Document.8="C:\Program Files (x86)\Microsoft Office\Root\Office16\WINWORD.EXE" /a "%1" /o "%u"
+
+    - Old Method: Create a Batch file:
+            @echo off
+            start "" "C:\Program Files (x86)\Microsoft Office\root\Office16\WINWORD.EXE" /a %1
+            REM  "C:\Program Files (x86)\Microsoft Office\root\Office16\WINWORD.EXE" /a %1
+
+### Speed up word
+    - https://support.microsoft.com/en-gb/help/921541/how-to-troubleshoot-problems-that-occur-when-you-start-or-use-word
+    - https://support.microsoft.com/en-gb/help/826857/description-of-the-a-startup-switch-in-word
+    - delete entries here( especially OneNote ): Computer\HKEY_CURRENT_USER\Software\Microsoft\Office\Word\Addins
+    - On Microsoft Word click on File>> Options >> Advance
+        - In advance
+        - Scroll down and untick the _update automatic links_ on open 
+
+
+### Filter Quick Style Gallery
+    - Home Ribbon
+    - Styles section
+    - Tiny arrow in right hand corner
+    - options...
+    - ListDropDown: "Select Styles to Show"
+    - Choose: In Current Document
+
+### select entire table
+    alt + double click
+    `ctrl + 0` (my custom shortcut)
+
+### my customised shortcuts
+    TableSelectTable    ctrl+0
+    apply list bullet   ctrl+shift+l
+
+    SpacePara2
+    SpacePara15
+    SpacePara1
+
+### turn off spell checking (e.g. for code)
+	click language on bottom left status bar
+	tick "Do not check spelling or grammar"
+
+### find next
+	ctrl-pageDown
+	alt-ctrl-y
+	Shift-F4
+
+### footers
+	use ALIGNMENT tab
+	to have text on one side
+	and page number on other side
+
+### sections
+	split document into sections
+	to have different headers and footers
+
+### Numbered Headers
+	use custom lists
+	click on numbered headers
+	from quick-pick examples\",
+
+
+# word EQUATION editor
+
+### commands
+    \wedge      logic conjunction
+    \vee        logic disjunction
+    \neg        logic not
+    \vdash      logic conclusion
+    \forall
+    \exists
+
+    \Rightarrow     (implies)
+    \Leftrightarrow (equivalent)
+
+    \setminus
+    \superset
+    \subset
+    \circ
+    \bar
+    \Bar
+    \bullet
+
+### equations superscript subscript
+    _   subscript
+    ^   superscript

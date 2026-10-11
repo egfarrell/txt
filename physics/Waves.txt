@@ -1,0 +1,83 @@
+
+### Trying to understand the wavevector 'k'
+    - A `wavevector` typically has units of: 
+        - ----------------
+        - CYCLES per METRE
+        - ----------------
+    - It has a magnitude and direction. 
+    - Its magnitude is the `wavenumber` of the wave (inversely
+      proportional to the wavelength), and its direction is
+      perpendicular to the wavefront. 
+    - In isotropic media, this is also the direction of wave
+      propagation. 
+
+### Ah wavevector `k` useful for Fourier
+    - The advantage of using `k` is that it can be NEGATIVE as
+      well as positive: whereas `wavelength` is always positive. 
+    - The negative k’s take care of negative exponentials: 
+        - `exp −2πix/λ = exp ikx` 
+        - where k is the negative number `−2π/λ`
+        - $MY_BOOKS/Physics/QM/QM-primer-gillespie-GOOD.pdf
+
+### GPT
+    - To understand `k` physically, it helps to think how it
+      relates to the wave’s properties and how it provides
+      additional information compared to the wavelength `λ`.
+      Here’s a way to think about `k` intuitively:
+
+1. Spatial Frequency:
+   - `k` represents the `spatial frequency` of the wave, meaning
+     how many wave cycles fit into a unit of distance. 
+        - (rather than the temporal frequency, the period? which
+          is how many wave cycles fit into a unit of time)
+   - The larger the magnitude of `k`, the more wave cycles occur
+     in a given length, indicating a shorter wavelength.
+
+2. Direction and Magnitude:
+   - While `λ` only tells you about the length of one complete
+     wave cycle, `k` tells you both how frequently the wave
+     oscillates (magnitude) and in what direction the wave is
+     traveling (vector direction).
+   - Think of `k` as pointing in the direction the wave is
+     moving. Its magnitude is how tightly the wave is packed in
+     that direction.
+
+3. Wave Propagation:
+   - In a 3D space, a wave can travel in any direction. The wave
+     vector `k` points in the direction of wave propagation. For
+     instance, if the wave is moving diagonally in a room, `k`
+     points along that diagonal.
+   - The physical distance a wave travels before repeating itself
+     is still described by `λ`, but `k` adds the layer of
+     directional information, which is crucial for waves in more
+     than one dimension.
+
+4. Analogy:
+   - Imagine you are standing on a hill with a series of parallel
+     ridges (like waves). If you walk straight across the ridges,
+     the distance between each ridge is the wavelength `λ`.
+     However, if you walk at an angle to the ridges, you
+     encounter ridges more frequently. The direction and
+     frequency with which you encounter these ridges as you move
+     can be represented by `k`.
+
+5. Formula Connection:
+   - The relationship `k = 2π / λ` links the two concepts
+     directly. `k` encapsulates the idea of how often the wave
+     repeats (2π per wavelength) and in what direction this
+     repetition occurs.
+
+6. Practical Visualization:
+   - Consider a plane wave moving in space. At any point, the
+     wave vector `k` tells you the direction in which the
+     wavefronts are traveling. Its magnitude tells you how
+     closely spaced these wavefronts are.
+   - If you could see the wave as a series of parallel planes
+     moving through space, `k` would point perpendicular to these
+     planes and indicate how tightly they are packed.
+
+In summary, `k` is a compact way to describe both the periodicity
+and directionality of a wave. While `λ` gives you the distance
+between repeating features of the wave, `k` tells you how these
+features are oriented and spaced in space, making it a more
+comprehensive descriptor, especially in multiple dimensions.

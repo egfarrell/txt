@@ -1,0 +1,136 @@
+03-Separation.txt
+
+- $MY_VIDEOS/physics/what-are-manifolds/03-Separation.mp4
+- https://www.youtube.com/watch?v=yd28dGdR7Tg&list=PLRlVmXqzHjUQHEx63ZFxV-0Ortgf-rpJo&index=3
+
+He defines a lot of topolgoies with the aim of defining
+_separability_.
+    - He defines (second countable) Hausdorff!
+    - Any decent space, any topology we want to work with in
+      Physics, is almost always Hausdorff
+
+
+### Contents
+    - Different topologies of the line
+        - 1. usual (standard)
+        - 2. nested interval line
+        - 3. closed interval topology
+        - 4. co-finite topology
+        - 5. Lower-limit topology
+    - T_0 Separability:
+    - Euclidean topology
+    - nested interval topology...
+    - closed interval topology
+    - T_1 Separability: (Frechet)
+    - T_2 Separability (Hausdorff):
+    - Types of Hausdorff:
+    - Slotted Disk topology
+    - Subspace Topology
+    - Cartesian Product Topology
+
+
+# Different topologies of the line
+
+### 1. usual (standard)
+
+### 2. nested interval line  
+        - same set, but different topology
+        - makes it profoundly different when you treat it
+          mathematically 
+
+### 3. closed interval topology
+    - `[-1, 1]`
+    - base: two half-open intervals 
+        - [-1, a] a > 0
+        - [b , 1] b > 0
+    - interesting: 
+        - you can make open sets from closed or half-open intervals!
+
+
+### 4. co-finite topology
+    - an interval, where we omit some points 
+
+### 5. Lower-limit topology
+    - famous
+
+
+There's a couple of topologies of the plane too...
+
+
+
+### T_0 Separability:
+    - weakest type
+    - can put at least _one_ of two points in an open set
+
+### Euclidean topology
+    - I've two points...
+    - ie I want an open set, that contains one of the points and
+      not the other
+    - ie can I find open sets that distinguish between these
+      points 
+	- $MY_IMAGES/physics/what-are-manifolds/two-separate-points.jpg
+    - the Euclidean topology is `T_0`, use open intervals to
+      contain one point, and not the other
+
+### nested interval topology... 
+        - interval `1 - 1/n`
+        - can separate the red and green point in some cases...
+        - can define an open set that just contains the red one
+        - $MY_IMAGES/physics/what-are-manifolds/t0_separability_nested_interval.jpg
+        - but if you have two points less than 1/2... you can't
+          separate them!! 
+        - so nested interval is not `T_0` 
+
+
+### closed interval topology
+        - can distinguish two points either side of zero
+        - $MY_IMAGES/physics/what-are-manifolds/t0_separability_closed_interval.jpg
+        - $MY_IMAGES/physics/what-are-manifolds/t0_separability_closed_interval-02.jpg
+        - yes it is `T_0` 
+
+
+### T_1 Separability: (Frechet)
+    - put each point in it's own open set
+    - Euclidean space is BOTH `T_0` and `T_1` 
+    - Co-finite topology is BOTH `T_0` and `T_1` as well
+
+
+### T_2 Separability (Hausdorff): 
+    - you can put any two points in their own open sets
+    - ... but the open sets must be disjoint 
+	- $MY_IMAGES/physics/what-are-manifolds/T2_seperability.jpg
+    - Co-finite topology is `T_1` but not `T_2` 
+    - Euclidean is `T_2` as well 
+
+### Types of Hausdorff:
+    - you replace 'points' with _closed sets_ and you find
+      open sets that separate closed sets from each other
+    - regular
+    - normal
+	- $MY_IMAGES/physics/what-are-manifolds/hausdorff-regular-normal.jpg
+
+### Slotted Disk topology
+    - you split a plane into two halves
+    - allow open sets on both sides but they open sets can't
+      touch the centre line 
+    - on the centre line, create loads of a funny open sets, each one only touches
+      only one point on the line 
+    - you end up with a discrete topology on the centre line 
+	- $MY_IMAGES/physics/what-are-manifolds/slotted_disk.jpg
+
+### Subspace Topology
+    - `L` is a (subspace) line in the Euclidean plane `ℝ^2`
+    - ie `L` is a subset of the Euclidean topology
+    - `L` inherits its own topology. The intersection of every
+      open set on the plane with `L` will induce a topology on
+      `L`. (it will induce the standard open Euclidean topology)
+    - Thats a very common property... you cut out a subspace from
+      a larger space, and you accept the induced topology on the
+      subspace with the intersection of all the open sets of the
+      larger space. 
+
+### Cartesian Product Topology
+    - if you've two different sets, each with a topology, and you
+      cross them... then the new topology is a cross of the two
+      individual topologies
+	- $MY_IMAGES/physics/what-are-manifolds/cartesian-topology.jpg

@@ -1,0 +1,317 @@
+pdf tips
+
+# extract pdf to images
+    pdfimages lec06.pdf ./myimages
+
+### Evince handy keys
+    - F, W, A : Fitting pages
+    - F11     : Full Screen
+    - F5      : presentation mode
+    - F9      : show sidebar
+    - ctrl+l  : Goto Page
+
+### Remove pdf passwords
+    - qpdf
+    - removing passwords, unlocking PDFs, conversion
+    - apt-get install qpdf
+    - remove password with: 
+    - qpdf --decrypt --password="" input.pdf output.pdf
+
+### Evince tip
+    - if bookmark aren't showing, choose `outline` from the
+      lefthand bookmarks dropdown
+
+###  ghostscript gs
+    - combine pdfs:
+    command gs -dFirstPage=1 -dBATCH -dNOPAUSE  -dPrinted=false -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -sOutputFile=MERGED.pdf 1.pdf 2.pdf 3.pdf
+
+    - delete pages:
+    command gs -sPageList=2,4-  -dBATCH -dNOPAUSE  -sDEVICE=pdfwrite -dPDFSETTINGS=//screen  -sOutputFile=OUTPUT.pdf Intro.pdf
+
+    - better quality
+    command gs -sPageList=2,4-  -dBATCH -dNOPAUSE  -sDEVICE=pdfwrite -dPDFSETTINGS=//printer -sOutputFile=OUTPUT.pdf Intro.pdf
+
+    - Handy:
+    -sPageList=1,3,5
+    -sPageList=5-10
+    -sPageList=1, 5-10, 12-
+
+### Ghostscript KEEP hyperlinks!
+    - To preserve links, include flag:
+      -dPrinted=false
+
+### Convert jpg to multipage pdf
+    - A4 300 DPI: 2480 pixels x 3508 pixels (print resolution)
+    - A4 150 DPI: 1240 pixels x 1754 pixels
+    - A4 72 DPI:   595 pixels x  842 pixels (screen resolution)
+
+    - convert my scribe notes image to 4 page pdf
+    convert mywriting.jpg -crop 1x4@ +repage mywriting.pdf
+
+    - Crop 1000px input into A4 pdf?
+    convert mywriting.jpg -crop x1414 +repage 1200x1614+100+100 mywriting.pdf
+
+
+### adobe digital editions (ADE)
+    - BOX.COM: ADE_2.0_Installer.exe
+        - needs MS NET 3.5 SP1 framework
+            - to install this on AWS: goto "server manager", then
+              "roles and features"
+    - deauthorize computer: ctrl + shift + d
+
+### old versions adobe reader
+    ftp://ftp.adobe.com/pub/adobe/reader/win/
+    english version: "enu"
+
+## Adobe Acrobat Reader
+    - useful setting:
+    - 'Disable new acrobat reader'
+    - Gets rid of loads of new toolbars etc
+
+### adobe change background colors
+    - hex: #B8BBA4
+    - Edit -> Preferences -> Accessibility
+        - Hue: 45   or: - Red:   184
+        - Sat: 35       - Green: 187
+        - Lum: 165      - Blue:  164
+
+
+### adobe goto page number
+  ctrl+shift+n
+
+### adobe default PAGE VIEW size
+    - to force intial page size go to "Accessibility" settings and
+      set it there
+
+### pdftk
+    - I use 'qpdf' now. (Couldnt install 'pdftk' on 18.04)
+        qpdf --help
+        qpdf --empty --pages 1.0-calculator.pdf 1.0-calculator-key.pdf  -- 1.0-calc.pdf
+        qpdf --empty --pages 1.1-functions-pH.pdf 1.1-functions-key.pdf -- 1.1-func.pdf
+        qpdf --verbose --empty --pages worksheet-3D-plotting.pdf worksheet-analytical-ODE.pdf -- out.pdf
+
+
+    ### rotate all pages 90/180 degrees ("E", "S" etc)
+    old pdftk:
+            pdftk in.pdf cat 1-endE      output out.pdf
+            pdftk in.pdf cat 1-endS      output out.pdf
+    new pdftk:
+            pdftk in.pdf cat 1-endeast   output out.pdf
+            pdftk in.pdf cat 1-endsouth  output out.pdf
+
+
+    ### join combine pdfs: pdftk  (now use qpdf)
+    pdftk *.pdf        cat          output  out.pdf
+    pdftk physics.pdf  cat 1-100    output  out.pdf
+    pk my.pdf          cat 9 20 40  output  out.pdf verbose
+
+### qpdf
+    - Build from source
+        - https://github.com/qpdf/qpdf
+        - run 'ldconfig' after build!
+
+    - merge multiple PDF files into single PDF:
+        qpdf --empty --pages *.pdf -- output.pdf
+
+    - extract pages range to single PDF, preserving METADATA:
+        qpdf infile.pdf --pages infile.pdf 1-10 -- output.pdf
+
+    - extract pages range of PDF to single PDF, without METADATA:
+        qpdf --empty --pages infile.pdf 1-10 -- output.pdf
+
+    - take pages 1–5 from 'file1.pdf',  pages 11–15 from file2.pdf in reverse:
+        qpdf file1.pdf --pages file1.pdf 1-5 file2.pdf 15-11 -- outfile.pdf
+
+    - Note: page range is a set of numbers separated by commas,
+      number ranges separated dashes, or combinations of those.
+        - The character “z” represents the last page, while “l”
+          represents the first page.
+        - Pages can appear in any order. Ranges can appear with
+          a high number followed by a low number, causes pages to
+          be reversed. Repeating a number will cause an error.
+
+        - Example page ranges:
+            - 1,3,5-9,15-12: mean pages 1, 2, 3, 5, 6, 7, 8, 9,
+              15, 14, 13, and 12.
+            - you can specify single page only.
+            - z-1: mean all pages in the document in reverse.
+
+
+### HN: Scanning documents/books
+    Convert handwritten notes to clearer pdfs
+    - https://github.com/mzucker/noteshrink
+
+    Random comment:
+    - I always find (1) works best:
+    - (1) Scan document at very high resolution as a JPG and then
+      use a third-party program (like Photoshop or whatever) to
+      re-encode the JPG at your preferred low resolution.
+    - (2) Scan document at your preferred low resolution as a JPG
+      straight away. Don't re-encode afterward.
+
+    - > My theory is that scanner manufacturers are deliberately
+      choosing the JPG encoding profile that gets them the
+      fastest result (YES)
+
+    Answer:
+    - ... the downscaling step in #1 may also smooth out noise in
+      the source image. Less noise yields more compressible data.
+    - In my own scanning workflow, I scan at 600 or 1200dpi to
+      png, deskew, downscale, and apply a black/white threshold.
+      This is all done with imagemagick:
+      `mogrify -deskew 40% -scale 25% -threshold 50%`
+    - If I want a PDF after that I'll use `img2pdf`.
+
+### convert pdf to text
+    method 1:
+        pdftotext -layout myfile.pdf
+
+    method 2:
+        pdf2txt.py
+        (tool included with pdfminer)
+
+    methd 3:
+        use google docs
+        in settings - upload settings
+            enable "convert to text option"
+        then upload the pdf!
+
+### get all pdfs from a website? (used it for CERN stuff?)
+    wget -r -A .pdf
+
+### zap background color of a pdf
+    run 'crush-gs' on it!
+
+### adobe acrobat
+    ocr scan:
+        enhance scan - recognise text - searchable image (EXACT)
+
+    reduce pdf size
+        file - save as other - reduced size pdf
+        tools - reduced size pdf
+
+### adobe acrobat - install ubuntu 16.04
+        sudo add-apt-repository "deb http://archive.canonical.com/ precise partner"
+        sudo apt-get update
+        sudo apt-get install acroread  # reports errors
+        sudo apt install adobereader-enu
+
+        or checkout deb files
+            ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/
+
+# convert recursive html to pdf (wkhtmltopdf)
+    # (used this when converting SICM online book)
+    find . -name \*.html | sed 's/.html$//g' | xargs -n 1 --replace=X wkhtmltopdf X.html X.pdf
+
+### convert pdf to grey
+    convert  -colorspace gray {in.pdf} {out.pdf}
+
+# convert djvu to pdf
+	ai djview4
+	open .djvu file in djview4
+	export as... pdf
+
+### pdf rotate view right
+	ctrl + shift + plus
+
+### split a pdf into JPEGS
+	%d is a page number placeholder
+	convert -quality 100 -density 600x600 multipage.pdf single%d.jpg
+
+### combine many JPEGS into pdf
+	# use adobe acrobat
+	# warning - very slow!
+	> convert -compress Zip *.jpg output.pdf
+
+### reduce pdf size
+	$ okular input.pdf
+	Print > Print to File (pdf)
+	Options > PDF Options > Force rasterization
+
+# Extract annotations
+    my script:
+        ~/bin/scan_highlights.sh
+
+    libraries: (doesnt work with conda)
+        conda install pythonqt
+        conda install pyqt
+        gap poppler
+        pip install python-poppler-qt4
+        gap libpoppler
+        ai libpoppler-dev
+        ai libpoppler-qt4-dev
+        ai python-poppler-qt4
+
+
+### Minimal PDF
+    https://brendanzagaeski.appspot.com/0004.html
+    - PDF is a binary format, but it contains mostly plain
+      text
+
+    - Most PDF files do not look readable in a text editor.
+      Compression, encryption, and embedded images are
+      largely to blame. After removing these three
+      components, one can more easily see that PDF is
+      a human-readable document description language.
+
+### Examine PDF internals
+    - handcode pdf tutorial:  https://brendanzagaeski.appspot.com/0005.html
+    - 7 part intro:           https://blog.idrsolutions.com/2013/01/understanding-the-pdf-file-format-overview/#helloworld
+    - intro:                  http://www.mactech.com/articles/mactech/Vol.15/15.09/PDFIntro/index.html
+    - HN:                     https://news.ycombinator.com/item?id=14727662
+
+    - I've spent much of the last year down in the internals
+      of pdfs. I recommend looking inside a PDF to see
+      what's going on. PDF gets a hard time but once you've
+      figured out the basics, it's actually pretty readable.
+
+    - Some top tips; if you decompress the streams first,
+      you'll get something you can read and edit with a text
+      editor
+
+        > mutool clean -d -i in.pdf out.pdf
+
+    - If you hand mess with the PDF, you can run it through
+      mutool again to fix up the object positions.
+
+    - Text isn't flowed / layed out like HTML. Every glyph
+      is more or less manually positioned.
+
+    - Text is generally done with subset fonts. As a result
+      characters end up being mapped to \1, \2 etc. So you
+      can't normally just search for strings but you can
+      often - though not always easily find the characters
+      from the Unicode map.
+
+### Old function
+
+crush_gs() {
+        if is_windows_bash; then
+            # Gitbash quirk:
+            # It expands '/screen' param to root folder path.
+            # Solution: Escape with double-slash...
+            pdf_setting='//screen'
+        else
+            pdf_setting='/screen'
+        fi
+        in_file="$@"
+        out_file=OUTPUT-GS.pdf
+        # Execute ghostscript
+        # ('-dPrinted=false' preserves url links)
+        command gs -sDEVICE=pdfwrite \
+                   -dCompatibilityLevel=1.4 \
+                   -dPrinted=false \
+                   -dPDFSETTINGS=$pdf_setting \
+                   -dNOPAUSE \
+                   -dBATCH \
+                   -sOutputFile=$out_file  \
+                   "$in_file"
+}
+ 
+
+
+### Links
+    - Ghostscript download for windows https://www.ghostscript.com/download/gsdnld.html
+    - Pdfgrep                          https://news.ycombinator.com/item?id=32971748
+    - OCR my pdf                       https://github.com/ocrmypdf/OCRmyPDF
+    - OCR: use gemini (6 secs per pdf) https://news.ycombinator.com/item?id=42952605

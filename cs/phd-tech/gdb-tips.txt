@@ -1,0 +1,325 @@
+gdb tips
+
+
+### Linus
+    - Torvalds explains: “I use gdb all the time.. as
+      a disassembler on steroids that you can program.” 
+    - ... great being able to: 
+      - pause anywhere, increase the verbosity level with a quick
+        `print verbose++`, 
+      - force out of a for loop `(int i=0; i<10; i++)` via `print
+        i=100` and continue, 
+      - or test a function by throwing some test inputs at it. 
+    - ... fans of interactive languages are right that
+      interacting with your code improves the development process 
+
+### Interesting article
+    - article: https://blog.0x972.info/?d=2014/11/13/10/40/50-how-does-a-debugger-work
+    - hn:      https://news.ycombinator.com/item?id=24814854
+    - And play with gdb gdb, or better (way better actually), gdb
+      --pid $(pidof gdb), because two debuggers in the same
+      terminal is insane :-). Another great thing for learning is
+      system debugging:
+        > qemu-system-i386 -gdb tcp::1234
+        > gdb --pid $(pidof qemu-system-i386)
+        > gdb /boot/vmlinuz --exec "target remote localhost:1234"
+    - but I'll keep that for another article!
+
+### handy
+    - gdb -tui
+    - file ko                           load file 'ko' and read symbolic info for debugging
+    - (gdb) b main                      set breakpoint main()
+    - (gdb) tb main                     set TEMPORARY breakpoint main()
+    - (gdb) r                           run                  <--- how to start debugging!
+    - (gdb) bt                          _backtrace_  <--- show call stack
+    - (gdb) display <myvariable>        same as print?
+    - (gdb) p <myvariable>              print variable
+    - (gdb) until                       break out of current loop
+    - (gdb) until 286                   execute till line 286)
+    - (gdb) fin(ish)                    continue running till current function (in selected stackframe) finishes
+    - (gdb) watch
+
+    - (gdb) disassemble <function name>
+    - (gdb) disassemble main
+
+    - (gdb) info registers
+    - (gdb) info variables
+    - (gdb) info locals
+
+    - (gdb) record
+    - (gdb) record btrace
+
+    - (gdb) ... trick gdb to run it multiple times till it crashes
+    - (gdb) reverse-stepi
+
+    - (gdb) whatis myvar  <---- shows datatype of 'myvar'
+
+### Debug a seg fault
+    - http://www.unknownroad.com/rtfm/gdbtut/gdbsegfault.html
+
+### Debug _GCC_ seg fault
+    - https://gcc.gnu.org/bugs/segfault.html
+    - build gcc with
+        --enable-checking
+
+
+### Misc
+    - save variable to file             dump value myfile.txt myvar
+    - clear breakpoints                 disable
+    - display convenience variabless    show conv
+
+
+### Computer Systems: A Programmer's Perspective
+    - he used 'lldb' like a REPL! (print 40000 * 40000)
+
+### background
+    - ./ksplice-gdb-tips.txt
+    - gdb example      https://news.ycombinator.com/item?id=12255290
+    - gdb enhancements https://github.com/dholm/dotgdb
+    - gdb enhancements https://github.com/snare/voltron
+    - gdb enhancements https://github.com/gdbinit/Gdbinit
+
+
+### gdb -> TUI mode (show source code)
+    - gdb -tui
+    https://sourceware.org/gdb/onlinedocs/gdb/TUI-Keys.html#TUI-Keys
+
+    - gdbgui: browser alternative frontend:  https://www.gdbgui.com/
+
+    - very nice on defining window layouts https://beej.us/guide/bggdb/#regasm
+    - layout src         Standard layout—source on top, command window on the bottom
+    - layout asm         Just like "src" layout, except with assembly window on top
+    - layout split       3 windows: source on top, assembly in the middle, and command at the bottom
+    - layout reg         Opens register window on top of either source or assembly, whichever was opened last
+    - tui reg general    Show general registers
+    - tui reg float      Show floating point registers
+    - tui reg system     Show "system" registers
+    - tui reg next       Show next page of registers — important because there might be pages of registers
+                         not in "general", "float", or "system"
+
+    - info win
+    - fs next
+    - set disassembly-flavor intel
+
+    - ctrl+l: refresh screen
+
+    - Dont let stdout mess up gdb -tui
+      https://stackoverflow.com/questions/209534/how-to-highlight-and-color-gdb-output-during-interactive-debugging
+
+    - tui key bindings
+    - https://sourceware.org/gdb/current/onlinedocs/gdb/TUI-Keys.html
+
+### "w_powf.c: no such file or directory" !
+    (c)gdb can't step into the 'libc' source
+
+    solution 1:
+        - don't STEP into the 'libc' code!
+        - just hit "n" over it
+
+    solution 2:
+        - if you really need to step into the code:
+            - first type: `info sources` on GDB command line
+            - this lists where GDB expects the source to be
+                - in my case it was `/build/glibc-t3gR2i`
+            - download the libc source: `ai libc-source`
+            - a tar file will be placed in '/usr/src/libc'
+            - move source to wherever GDB expects it
+
+### "x": eXamine memory
+    - `(gdb)` x/14xb 0xbffff450
+
+    - `(gdb)` x/{repeat}{format}{size} ADDRESS
+    - `(gdb)` x/14       x       b     0xbffff450
+
+    - {format}:           - {size}:
+        - `o` octal         - `b` byte
+        - `x` hex           - `h` halfword
+        - `d` decimal       - `w` word   <-------- normally this one
+        - `f` float         - `g` giant, 8 bytes
+        - `a` address
+        - `i` instruction
+
+
+### attach to running instance
+    - attach gdb to running process via process id
+    ```
+    gdb  <executable>   <PID> <--- wrong?
+
+    gdb  --pid  <PID>
+    gdb  --pid  $(pidof someprog)
+    ```
+
+### _CGDB_: Reading from [STDIN]
+    - Scenario: cgdb doesnt work with line `gets(buffer);`
+    - This is a known limitation.
+    - Theres 2 options for interactive console programs:
+
+    1. Best option: Run program in another terminal and attach
+       cgdb to it by passing the PID
+          - This way the program has a terminal environment to
+            itself and you don't have to worry about cgdb and
+            your program sharing a terminal.
+
+    2. Use the "_TTY_" window. This window ISNT a full-fledged
+       terminal emulator, so wont properly support programs that
+       use things like ncurses.
+            - in the "top" window (command mode) press `T`
+            - new TTY window appears...
+            - press `I`      to enter TTY window
+            - press `<ESC>`  to leave TTY window
+
+
+### _CGDB_ doesnt show/display source
+    - solution 1:
+        - look at debug files in folder:
+        - $HOME/.tgdb
+
+    - solution 2:
+        - My source file has *DOS* line endings!!!
+
+### autoload breakpoints etc
+    - method 1:
+        - save breakpoints <filename>
+        - source <filename>
+    - method 2:
+       - create .`gdbinit` in current folder
+       - enter commands in `.gdbinit` as if directly typed from
+         gdb cmd line
+       - file with be autoloaded
+
+
+### breakpoints not right?
+    - use correct compile flags...!
+    - '-O0' doesnt optimise and is better for debugging
+    - `CF90FLAGS = -O0 -ggdb ... ...`
+
+
+### Supply program arguments
+
+    - Option 1:
+    - prefix executable name with `gdb --args`
+     ```
+        gdb --args myprog  --deep-dish  --toppings=pepperoni
+        (gdb) show args
+        " --deep-dish --toppings=pepperoni"
+     ```
+
+    - Option 2:
+        - Use "set args". E.g. if you normally run like:
+          `myprog  -paramater1   -parameter2`
+        - then do:
+          `(gdb) set args  -parameter1  -parameter2`
+
+
+### Show frames / call stack
+    - `bt` (backtrace)      display call stack.
+    - `f`(rame) <args>      select a frame on the call stack for inspection
+    - `info f`(rame) <args> info about specific frame on the stack. Without arguments, will display the current frame
+    - `info locals`         info about local variables on the stack.
+
+
+### view arguments passed to a function
+    - clever:
+    - jump up a frame and view from calling function. eg:
+    - `(gdb) frame 8`
+    - will put you in the frame of the caller.
+    - Examine the arguments that are being passed.
+
+### display all defined convenience variables
+
+# convenience variables (my own gdb variables)
+    - `set $myvar = 'some/path/here'`
+        - (note: "$")
+        - (note: single quotes for string)
+
+# program variables
+    - `set variable myvar=7`
+        - (note "variable" keyword)
+
+### recompile
+    can run 'make' inside gdb!
+
+### assign (and print) variable
+    `p myvar = 3`
+    $1
+    stores variable values for later use
+
+
+### auto-load options
+    1. You can add the line:
+        `set auto-load safe-path /`
+
+        - To your home directory’s `.gdbinit` file. This will
+          override ALL security and GDB will ALWAYS open
+          a .gdbinit file if it finds one.
+
+        - If you are developing on your own machine, or a secure
+          machine (however you would like to define that), then
+          this is probably the quickest and easiest solution.
+
+    2. If you want to be a little more careful, you can add the
+       directories individually to your home directory’s .gdbinit
+       file:
+            `set auto-load safe-path /home/ef/repos/myproject`
+
+        - Or you allow ALL sub-paths under your home directory
+            `set auto-load safe-path /home/ef`
+
+    3. Finally, you can pass a path in on start-up:
+        `gdb -iex "set auto-load safe-path /path/to/.gdbinit/file"`
+
+    4. If you want to see all the trusted paths, just type:
+        `show auto-load safe-path`
+
+
+### gef (enhanced frontend)
+    - handy python frontend for hacking/exploits
+    - source    https://github.com/hugsy/gef
+    - tutorials https://www.youtube.com/playlist?list=PLjAuO31Rg972WeMvdR_57Qu-aVM8T6DkQ
+    - must have gdb with python support
+        conda install -c conda-forge gdb
+
+    - in .gdbinit:
+        ```
+        source /home/efarrell/.gdbinit-gef.py
+        ```
+
+    - extra packages
+        pip install keystone-engine unicorn capstone-disassemble ropper
+
+    - show python version
+        gdb -nx -ex 'pi print(sys.version)' -ex quit
+
+
+### manually compile GDB
+    - use CONDA!
+    -OR
+    - download from:
+        wget https://ftp.gnu.org/gnu/gdb/gdb-10.1.tar.xz
+
+    - Compile no Python
+        ai texinfo
+        ./configure --prefix="$HOME/.local"
+
+    - Compile with SYSTEM Python support
+        ./configure --with-python=/usr/bin/python3 --prefix="$HOME/.local"
+
+    - _Failed_: Compile with CONDA Python support
+        - Non-standard python (conda) location...
+
+    - _Failed_: Compile GDB github source
+        - Error looking for _bison_?
+
+
+### python:
+    - to start: `(gdb) python`
+    -  `>print('hello world')`
+    - to exit: `>end`
+
+### Links
+    - handy python frontend for hacking/exploits    https://github.com/hugsy/gef
+    - peda for gdb exploits                         https://github.com/longld/peda
+    - frontend: gdb dashboard                       https://github.com/cyrus-and/gdb-dashboard
+    - fg's legendary gdbinit                        https://github.com/gdbinit/Gdbinit
+    - Python link with GDB                          http://0vercl0k.tuxfamily.org/bl0g/?p=226
+    - Nnd – a TUI debugger alternative to GDB, LLDB https://news.ycombinator.com/item?id=43905185

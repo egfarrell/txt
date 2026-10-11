@@ -1,0 +1,12 @@
+py dict arrays
+
+turn dict into list
+  #  mydict.items() NOOO!! (thats a kind of dictionary too)
+  mydict.values()
+
+creating dictionaries
+    keys = [1, 2, 3, 4]
+    values = [55, 56, 57, 58]
+    
+    new_dict = dict(zip(keys, values))
+

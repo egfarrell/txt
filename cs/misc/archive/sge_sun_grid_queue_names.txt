@@ -1,0 +1,104 @@
+sge sun grid queue names
+
+qsub -l
+    this switch requests a resource
+
+
+imppmitest
+    4 cores with a 10 minute limit, this queue is just to test users have there
+    script and code correct. Because the cluster has now been full none stop since
+    christmas many users who are testing MPI jobs have to wait many hours just to
+    find out they have a typo in the script. This 10 minute queue will allow them
+    to test
+    qsub -pe impmpitest 4 -l impmpitest,s_rt=00:00:10 /path/to/your/job.sh
+
+
+impsocket
+    2 queues with 12 cores on each and a limit of 32Gb of memory, this queue is
+    for "socket" jobs
+    qsub -l socket /path/to/your/job.sh
+
+
+imp32
+    1 queue with 32Gb of reserved memory, if your job uses more it will be killed
+    automatically
+    qsub -l imp32 /path/to/your/job.sh
+
+
+imp48
+    1 queue with 48Gb of reserved memory, if your job uses more it will be 
+    killed automatically
+    qsub -l imp48 /path/to/your/job.sh
+
+
+imp64
+    1 queue with 64Gb of reserved memory, if your job uses more it will be 
+    killed automatically
+    qsub -l imp64 /path/to/your/job.sh
+
+
+impqlogin
+    the is a dedicated queue setup for interactive jobs only. Users who need to have interactive 
+    use now have 2 different types of queue.
+    1 just type qlogin and you will get any free interactive slot
+    2 type qlogin -l qname=impqlogin and you will get a slot on a machine with more memory
+
+
+imp7day
+    7 queues on a large memory machine, this queue is governed by time and queue
+    name, if you request a job that will run less than 7 days and the rest of the
+    system is full you will get a slot on this machine or you can directly request
+    this queue. direct request by using the following:
+    If this queue starts getting requested a lot we will 
+    change the queue to "Force request"
+
+    qsub -l qname=imp7day,s_rt=168:00:00 /path/to/your/job.sh
+
+
+
+Hour and Day 
+    We then have 2 more queues they are governed by time only. if the rest of the
+    system is full and your job only runs for a day or an hour and you have put
+    the run time in your script using s_rt = or h_rt= then it will be placed on to
+    impday or imphour, please notice the name change for users who may have
+    requested the day or hour queue in their script before
+
+    Old Way:
+        qsub -l qname=day,s_rt=10:00:00 /path/to/your/job.sh
+        or
+        qsub -l qname=hour,s_rt=01:00:00 path/to/your/job.sh
+
+    New Way:
+        qsub -l qname=impday,s_rt=10:00:00 /path/to/your/job.sh
+        or
+        qsub -l qname=imphour,s_rt=01:00:00 /path/to/your/job.sh
+
+
+Nvidia GPU's CUDA
+    we now support GPU based computing using our dedicated node which has the
+    following hardware 2048 GPU's via 4 X nvidia M2090 Tesla GPU's Nvidia's CUDA
+    environment is available
+
+    interactive:
+        qlogin -l impcuda
+    script:
+        qsub -l impcuda,s_rt=01:00:00 (time to run) /path/to/your/job.sh
+
+
+IDL
+    the IDL software package uses a license server to allow users to run the
+    program. We are limited to 40 concurrent licenses at any time, this includes
+    desktop users, but NOT laptops as they have a fixed license. Currently cluster
+    users are occasionally using what is left of all the available licenses and
+    stoping people from working. To stop this from happening i have instigated a
+    booking system for IDL licenses which users can request. Once all the
+    allocated licenses have been used the job will be held in the queue until a
+    license has been released. This will allow users to fire and forget IDL jobs
+    with out fear of using all desktop licenses. From today ALL jobs that use IDL
+    must request it in the job submission script.
+
+    To request a license please add the following for single jobs:
+    qsub -l IDL_license=1,s_rt=job:time:required path/to/your/job.sh
+
+    If your script starts more than one instance of IDL please change
+    IDL_license=1 to the ammount required to a max of 20

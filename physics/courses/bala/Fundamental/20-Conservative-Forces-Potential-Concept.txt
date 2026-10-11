@@ -1,0 +1,323 @@
+$MY_VIDEOS/physics/bala_fundamental/20-Conservative-Forces-The-Concept-of-a-Potential.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 20
+Conservative Forces: The Concept of a Potential
+We will now go on to a very important basic concept in the study of dynamics of motion
+in general. And it is what to do with, what are called conservative forces, and we will
+introduce the very, very important concept of a potential associated with such forces. So,
+as always let us begin with an extremely simple observation and that is the following.
+
+(Refer Slide Time: 00:42)
+
+We know that if you have a particle or a body of some mass m at some position vector r
+and a force acts on it and displaces this object to enabling point, let say r plus d r. And
+some kind of force acts on it and displaces it by this infinite decimal amount. Then, the
+work done on the particle or the body, let us call it d W, this is equal to F dotted with d r.
+In other words, that component of the force which is along the direction of the
+displacement does the work and it is equal to d W and this amount is given by the scalar
+product of F with d r.
+
+So, this immediately suggest, well for one thing, it says that in Cartesian coordinates for
+instance, you could write this as F x, d x plus F y, d y plus F z, d z. Remembering that d r
+in general can be decomposed along E x, E y and E z and similarly for F. So, this
+suggests immediately that each component F x, F y, F z is some kind of derivative of this
+infinite decimal amount of this work with respect to the corresponding displacement.
+
+For instants, suppose you did not have any displacement in the y and z directions, then d
+W over d x would be equal to F sub x. So, we have this idea that somehow of the other,
+the force and the work it does on a body are related to each other by this rule of
+differentiation. You differentiate this quantity and you sort and you end up with the
+component of the force.
+
+More generally, where does this force go, where does this work go; it goes into the stored
+energy of this system. To give an example, a very simple example, suppose here is a
+ground level and I have a mass m sitting here and we have a shelf at some height h about
+the ground and I lift this mass up and put it up here. I have done work against the
+gravitational field of the earth in lifting this mass up and putting it up at a height h,
+certain amount of height; that is certain height h.
+
+And if I started at rest here and it is at rest here at this point, then it is clear that some
+kind of stored energy of this particle has increased by certain fixed amount. In this case,
+we know the answer, it is m g h and this means that, that m g h is stored as energy in the
+system. And we say that the potential energy of this object in this case is equal to m g h
+and the reason for the word potential is that, if I go to drop this object, when it attains the
+ground level. This energy, this amount of energy gets converted into kinetic energy in
+this object hits the ground, because certain impact.
+
+So, that is the reason for this word potential energy, but already you can see that the idea
+that an object can store energy in a form other than it is kinetics energy is implicit in this
+very, very simple example. Now, what concept of a potential and conservative force is
+going to do is to make this much more general as we will see and we will do this by a
+sequence of examples of various kinds.
+
+(Refer Slide Time: 04:28)
+
+Taking this example itself to start with, what it implies is that, if you have the ground
+level and I say that the potential energy at this point is 0. On the other hand, at a height z,
+let us put the z coordinate in a vertical direction about the ground level, the potential
+energy P E equal to m g z. Then, there is a relation between the force acting on the body
+here and this potential energy.
+
+In the following sense, you can see that the force acting on the body is downwards, like
+this and it is equal to minus g times the unit vector and this z direction minus, because it
+is acting downwards here. It immediately suggests that the relation between these two is
+that, if I call this V of z, the potential energy at a height z above the ground, taking the
+ground level potential energy to be 0. Then, it immediately follows that the force on this
+body F, when it is at a height z above the ground, this is equal to minus d V over d z
+times e z. So, V itself is m g z.
+
+So, d V over d z is m g and we have put a minus e z and you have a force, which is
+minus m g z in this fashion. So, this is the fundamental relation it says the force is the
+minus the derivative of the potential or potential energy in this case, you can appropriate
+unit vector to get the direction. Now, of course, you could put different masses at the
+same height. So, you would like to have a concept, which is related to the gravitation
+
+force alone without bringing in the specific mass.
+
+If I put in some other mass capital M, then again this would be minus capital M g z. So, I
+could define not a potential energy, but a potential gravitational potential, because it is
+the gravitational force, potential at height z equal to say phi of z and this is equal to, in
+this problem this is equal to g time z itself. So, you could look at the potential in this
+sense as the potential energy per unit mass in this case. So, you multiply by the mass and
+you get the actual potential energy of the object and the force of gravity on that object
+would be minus d V over d z.
+
+The force of gravity on any object would be m times the derivative of phi of z. So, force
+equal to mass let me call it test mass to see, whatever be the mass that you put at this
+point multiplied by minus d phi over d z times e z, this fashion. Now, what is the use of
+this concept of a potential, we will see this in a minute after we look at a few more
+examples, then we can see that in each of these cases, it will turn out.
+
+That the force, corresponding force will always be a suitable derivative of some kind of a
+certain potential or if you give a general object with some specific mass or charge or
+something like that, it will be that quantity multiplied by the potential. And it will turn
+out to have the physical meaning of a potential energy of this object. Let us look at a
+second example here immediately.
+
+(Refer Slide Time: 08:36)
+
+Suppose, you have and this is very familiar example in an electrostatics, suppose you
+have an infinite uniformly charged plane. So, the x y plane is uniformly charged plane
+with a surface density equal to sigma say. So, sigma is the amount of charge per unit area
+of this infinite x y plane and then at a height… So, let us draw some coordinate system;
+that is the x y plane; that is x; that is y infinite plane.
+
+So, the plane is of infinite extent in the x y directions and now, at any arbitrary height,
+anywhere for that matter, it does not matter where we choose the origin on this plane, at
+any height z above the plane at this point z, height z above the plane, we can find out,
+what the electric field looks like. The electric field as we know, we put a test charge here,
+a positive test charge and sigma is positive will be perpendicular would be normal to this
+x y plane.
+
+It will be directly upwards and it will have a magnitude E, well the vector itself E at a
+height z will be equal to sigma over 2 Epsilon naught, where Epsilon naught is the
+permittivity of the vacuum, multiplied by the unit vector e z in this fashion; that is e of z.
+The question is, can I relate this e of z to some potential, such that the derivative of that
+potential with an appropriate minus sign is going to give me this force.
+
+And the answer is yes immediately, because this will correspond to a potential phi, which
+will be a function of z of course, equal to minus sigma z over 2 Epsilon naught and this
+probably that e of z equal to minus d phi over d z times e z. The minus signs will cancel
+out and give me this force here. So, this means in this particular problem where the force
+is actually a constant, independent of the height above the x y plane, because it is an
+infinite plane in this direction.
+
+In this problem, it so happens once again like in the problem of gravitational field there,
+the potential is linear in the coordinate. Depends on a single coordinate, there is no
+dependence on x and y, because this thing is uniform and infinitely extend uniformly
+charged. And therefore, this potential does not depend on where you are as far as the x
+and y coordinates concerned, only depends on how far you are above this plane or below
+the plane, we come to that in a minute.
+
+So, such a potential a linear potential, if you differentiated it once will give you constant
+force exactly as in that case here. This is slight difference here, because you could
+potentially go down, you could also go down below the plane, and then if you put a unit
+test charge, a positive test charge here and sigma is positive the force will go in the
+opposite direction. So, what you think the potential is going to be for z less than 0,
+namely below the x y plane that the answer is easy once again to guess.
+
+(Refer Slide Time: 12:27)
+
+In this case, phi of z would be equal to sigma z over 2 Epsilon naught. So, this is for z
+greater than 0, z less than 0. Because, now if you differentiate it and write down minus d
+phi over d z, this would imply therefore that minus d phi over d z is equal to minus sigma
+over 2 Epsilon naught. And if you multiply this by e z, those here which is indeed the
+direction in which the force acts on unit positive test charge here.
+
+So, this again tells you that you can combine both these quantities and this is equal to the
+electric field at a point z, because that is less than 0. So, you could combine both these
+things and say the potential, the electrostatic potential due to an infinite uniformly
+charged plane with charge density sigma sitting on the x y plane. This electrostatic
+potential phi of z must be equal to that we have here minus sigma over 2 Epsilon naught;
+the modulus of z, mod z is minus z in the case of z less than 0. So, it gives you plus sign
+here and you have a minus sign here.
+
+From this, it follows this implies that the electric field E of z equal to, we need to
+differentiate with a minus sign, so this is equal to whatever derivative we had minus d
+phi over d z, e z. Remembering that because the field or the force points upwards above
+the z axis, above the x y plane and below downwards, below the x y plane, it is clear that
+the force changes direction as you go from a above to below, the plane. And therefore,
+
+the potential is discontinues as far as it is derivative is concerned, because the derivative
+gives the field.
+
+The and indeed you see that discontinuity coming from the fact that this potential is a
+function of modulus of z, which has you know the V shape curve plot mod z verses z. It
+is 45 degree line for z positive, 135 degree line for z negative with a sharp point at z
+equal to 0. So, as far as that is concerned, we have a simple expression for the potential
+and we can derive the field from this potential.
+
+Now, the potential energy itself would depend on or the force on the particle itself rather
+would depend on the test charge that you put. So, if you put a charge q, you know that
+the force on the charge is q times e. So, once you have the field finding the force itself
+only is a multiplication a question of multiplication by a certain constant. Now, let us
+look at a less trivial example than this.
+
+(Refer Slide Time: 15:55)
+
+Let us look at what happens, if you have a gravitation force due to us very spherical
+bodies, such as the earth and we ask, given this earth with some radius capital R. This is
+the earth and I ask what is the gravitational field at a point here? Now, this is a
+spherically symmetrical mass distribution, we assume the earth to be a perfect sphere.
+
+For such a situation, Newton’s laws of gravitation terms out to yield a gravitational force
+here, which is directed towards the centre of the earth from the point concerned. It does
+not depend on where you are as for as the latitude or longitude this concerned.
+
+So, it does not matter what the angular coordinates are, at all points at a given distance a
+little r from the centre of the earth the gravitational force is the same magnitude and acts
+always towards the centre of the earth, towards the centre of this mass distribution. So,
+the force at this point acts inwards in this way, the force at that point acts inwards in this
+way. And therefore, we could write this force at a distance r from the origin.
+
+So, this distance is r, this is equal to minus g times m, let us call this the mass of the earth
+times little m; that is my test mass, whatever mass I put at this point, like the test charge
+divided by r squared times the unit vector and the radial direction with a minus sign to
+show that the force is directed radically inwards as suppose to outwards. So, that is the
+force and this we know from Newton’s law of gravitation.
+
+Together with the fact that this is the gravitational force on this point due to every mass
+element of the earth and the remarkable saying which was discover by Newton first is
+that, when you have a spherically symmetrical mass distribution. Then, the field at any
+point out side does not depend on the angular coordinates of that point with respect to
+this origin, but only on the radial distance from this point.
+
+So, this magic property of spherically symmetric mass distribution is common also to the
+case of Coulomb potential or the Coulomb electrostatic between charges. There to if you
+have a spherically symmetrical charge distribution, we will see the potential at any
+external points is dependent only on the radial distance from the centre of this charge
+distribution to the point concern and not on the angular coordinates.
+
+That the reason, I have return r here rather than write r comma theta comma phi, I have
+put those in, no angular coordinates only the radial coordinate decimal put here without a
+vector symbol to show that, it is only dependent on the radial distance. So, this is the
+magnitude of the force without the minus sign and that is the direction minus e r is the
+direction here. So, the question is, can I write down, what the potential energy of this
+
+object is, in other words, is there of function V of r, such that, F of r is equal to minus d
+V over d r, d of r times e sub r. Can be find such a way of r and inspection shows you that
+you can, because you can immediately see that if I choose V of r equal to minus g m m
+over r and nothing else.
+
+Then if I differentiate this quantity, because I have a 1 over r the derivative is minus r
+squared. So, this minus sign from there and there is already minus sign here. So, that is
+gives me a plus sign, but I have to find minus d V over d r that puts the minus sign back
+once again and I multiplied by e r and I get the gravitation force here. So, that is the
+potential and it is in fact, the potential energy of a test mass equal to little m at a distance
+r from the centre of the earth, this is the capital M, the mass M here.
+
+(Refer Slide Time: 20:09)
+
+So, exactly acts in the electrostatic case I can define gravitational potential. So,
+gravitational potential due to the earth at a point at a point distance r from it centre, for r
+greater than or equal to r. We need to have the force due to the entire distribution, the full
+mass of the earth, this quantity is phi of r, it is a functional only of r not of theta and the
+azimuthal angle phi, the latitude or longitude and this quantity is equal to minus g m over
+r.
+
+So, it is function only of a radial distance, once again I differentiate this quantity, I get
+plus g m over r squared take minus the derivative and I get minus g m over r square. And
+I multiplied by the mass to give me the force on a given mass little m and multiply by e r
+and I get this gravitation field here. Now, what is this thing look like, if I plot this
+functions, it says if I plot little r here is 0 and this is phi of r this looks like, we do not
+know, what is going on till you hit capital R.
+
+This formula is only true for little r greater than capital R, greater than equal to capital R,
+namely from the surface of the earth upwards into this space. Something else happen
+inside here, we will come to that sequentially later on, but the graph as for as this is
+concern, start at some finite point minus g m over r and goes like that. So, this quantity
+here G capital M over capital R is what use to calling as little g as you know and with an
+appropriate sign, it is says things for downwards towards a ground.
+
+So, this again tells you that the effect of this force, which is a vector after all, can
+actually the force itself can be expressed as a suitable derivative of a scalar function, call
+the potential in this case. And this is an extremely useful idea, the fact that you have a
+scalar function, which you can read with which gives you all the information; that is
+actually contain in the force itself.
+
+Now, you might have one very important question, which is the following, after all, if
+you have the derivative of this function, equal to this force and this is what a physically
+measurable. We could always say, then that if I add a constant to this potential, it does
+not get differentiated at all, the constant derivative is 0, and therefore the force, the
+physical force will not change.
+
+Does that not mean that the potential in every case is determine only up to an additive
+constant, which is completely arbitrary. Because, it will not show up, when you
+differentiate to get the force and the answer is yes. You always when you specify a
+potential here, have to specify a reference level with respect to which you are measuring
+in this potential are you computing this potential.
+
+(Refer Slide Time: 23:46)
+
+In the case of the example, the normal example of the ground being 0 potential, this you
+say z equal to 0 implies phi equal to 0 with respect to the ground level taken to be 0, the
+gravitational potential at any point at height z above the ground is g time z with respect
+to that 0. In this problem, the reference level is taken to be 0 at infinitely. In other words,
+when an object is infinitely for away from the earth centre, the gravitational potential at
+that point is taken to be 0 and with respect to that 0, the gravitational at any infinite
+distance r is minus G capital M over r.
+
+So, this is important to remember that in every case, we will always implicitly or
+otherwise have a reference level for the potential or the potential energy with respect to
+which you compute or write down expressions for these quantities. This is an important
+point and this reference level is chosen at your convenient. So, as you can see even from
+this simple examples in some problems, it may convenient choose it at some finite point,
+such as the ground, the 0 potential.
+
+On the other hand in other case, it might we convenient to choose it at infinitely on
+physical ground saying that infinitely for away, there is no force, gravitational force is
+vanishing, the small and I choose the potential there to be 0. Now, can we generalize
+these things a little more and the answer is again yes.
+
+(Refer Slide Time: 25:37)
+
+How was z that able to do this calculation in terms of r, without bringing in the other
+coordinates, after all, when we started with the statement that F; that the work done d W
+was equal to F dot d r. And if I write this Cartesians, it is F x, d x plus F y, d y plus d z. In
+general there are three independent coordinates x, y, z or if go to write this in terms of
+spherical pole coordinates for instants. This would be equal to F r, d r plus F theta d theta
+plus F phi d phi with appropriate dimensions for F r, F theta and F phi remembering that.
+
+This quantity here does not have dimensions, this thing here dimensions of length and
+this therefore, dimensions really of a force, but these quantities, these are dimensions
+quantity. So, these components already have force times length as physical dimensions in
+them and that is got we remember. So, how is it that I was able to get away with the fact
+that only r, only this dependence came in and the answer a rows in these examples, the
+answer come from the fact, that I know already, that the force is radially inwards or
+radially outwards and such forces are called central forces.
+
+Force is which in spherical polar coordinate do not depend on the angular coordinates,
+but only the radial coordinate they are call central force. The force is directed only
+radially, it is called a central force. We will come a will elaborate on this concept a little
+more as we go along this concept a little more as we go along. But, that what enable to
+
+show to speak inverts this expression, because the other two terms in some sense, where
+not present at all. When the present, you need a little more general way of writing this
+derivative and it involves, what is called the gradient operator, which I will not going to
+at this stage. But, we will come across examples where you need that, but we will see
+why the central force is a very important concept, why it appears so often.
+
+

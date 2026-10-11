@@ -1,0 +1,1459 @@
+	Hacker News new | past | comments | ask | show | jobs | submit 	login
+
+	Gravity Is Not Like the Other Forces (quantamagazine.org)
+	324 points by pseudolus 6 months ago | hide | past | favorite | 241 comments
+
+
+phn 6 months ago [–]
+I know this is tangential, but as lay person regarding physics I am stuck on the following thought experiment regarding gravity:
+We know about gravitational potential energy. We harness it all the time with dams and whatnot. Generally speaking, when we lift matter high above, we get some of the used energy back when it falls back down.
+But when we talk about sending say, a spaceship into space, it may fall on a different planet, with a different gravity (a function of the planet's mass), changing the amount of energy yielded by the fall.
+The question is: Where is the energy stored in the meantime? Where does the extra energy, if the ship falls into a heavier planet, come from?
+It seems that the energy is being stored somewhere, and that matter itself allows us to tap into that, but is not the place where it is stored. Is there anything I can read to better understand what we know about this?
+
+
+simonh 6 months ago [–]
+That turns out to be a really interesting question. In physics the gravitational energy of a massive body is considered to be negative.
+That takes a bit of getting used to. If you consider the universe after the Big Bang, it consisted of extremely thinly dispersed clouds of hydrogen and helium atoms. Over billions of years these collapsed into galaxies and stars. During the process of that collapse these atoms accelerated towards each other, impacted and heated up considerably due to the release of kinetic energy. This kinetic energy has to come from somewhere, so we consider that the energy of the gravitational field of a star or planet is negative energy. It's an energy deficit.
+As an side, it is estimated that if you add up the energy in star, including the matter it's composed of, and deduct the negative energy of it's gravitational field they cancel out. It seems likely that the net energy of the universe may well be very close to zero.
+https://en.wikipedia.org/wiki/Zero-energy_universe
+
+
+pdonis 6 months ago [–]
+> it is estimated that if you add up the energy in star, including the matter it's composed of, and deduct the negative energy of it's gravitational field they cancel out
+No, this is not true. If it were, the star's mass would be zero.
+What "gravitational potential energy is negative" means is that the mass of the star is less than the sum of the mass of all of its constituents. Or, to put it another way, if we make a star out of a highly diffuse cloud of atoms as you describe, the process will have to release energy (by emitting radiation into space that escapes the star system). But the energy left over is far from zero: the mass of the star is energy.
+> It seems likely that the net energy of the universe may well be very close to zero.
+This is a speculative hypothesis that is not the same as the usual concept of "gravitational potential energy" being negative. The fact that it is often framed in similar terminology is misleading.
+
+
+simonh 6 months ago [–]
+>No, this is not true. If it were, the star's mass would be zero.
+All it means is that if we were to take all the constituent particles in a star and spread them out at 'infinity' from each other (effectively all across the universe), pushing them apart working against the gravity of the star holding it together, the energy required would be equal to the energy in those particles (from their mass, nuclear forces, etc).
+The energy cost of disassembling a star equals the energy in the star, so the net energy of the star is zero. It's just a matter of doing the relevant calculations to see this, which was first done by Pascual Jordan in the 1940s.
+I realise it's a ridiculously counter-intuitive result. Apparently when Einstein was told this, he stopped dead in his tracks while crossing a busy road.
+
+
+pdonis 6 months ago [–]
+> f we were to take all the constituent particles in a star and spread them out at 'infinity' from each other (effectively all across the universe), pushing them apart working against the gravity of the star holding it together, the energy required would be equal to the energy in those particles (from their mass, nuclear forces, etc).
+This would require that all of the particles in the end state of the disassembly were massless (so all of the rest mass goes away in the disassembly process); but if they are massless, they can't also have zero kinetic energy (the only kind of energy a massless particle can have in the absence of gravity) or they don't exist at all. So I don't think the scenario you are implicitly relying on here is possible.
+> It's just a matter of doing the relevant calculations to see this, which was first done by Pascual Jordan in the 1940s.
+Do you have a reference? (And no, I don't mean the pop science references in the "Zero energy universe" Wikipedia article, I mean an actual reference to the published paper by Jordan where he makes the calculations you refer to. Or a more recent paper where someone else makes similar calculations.)
+
+
+simonh 6 months ago [–]
+The particles in the end state would be the same mass they were in the star, and at rest in the star’s frame of reference. Why do you think simply moving them would make them massless?
+As for references, the Wikipedia article explains the publication history of the idea and has references to the relevant papers. Jordan didn’t publish as it was during the war, as I understand it he just discussed it in his correspondences but there has been work done on it since.
+
+
+pdonis 6 months ago [–]
+> The particles in the end state would be the same mass they were in the star, and at rest in the star’s frame of reference.
+Then the energy remaining at the end of the process would not be zero. Rest mass is energy.
+> Why do you think simply moving them would make them massless?
+Because you said "the energy required would be equal to the energy in those particles (from their mass, nuclear forces, etc)"; you included "mass" in the energy that would be required to overcome gravity, and would therefore be gone at the end of the process.
+
+
+simonh 6 months ago [–]
+> Then the energy remaining at the end of the process would not be zero.
+I didn’t say it would be. The final energy would be in the rest mass of the particles, and that’s all the energy there would be, despite just having pumped an entire star masses worth of energy into it to counteract the gravitational energy of the star.
+You’re reading what I wrote and then filtering that into something completely different. You’re not actually replying to what I’m saying, but some bizarre distorted misunderstanding of it. To illustrate...
+> Because you said "the energy required would be equal to the energy in those particles (from their mass, nuclear forces, etc)"; you included "mass" in the energy that would be required to overcome gravity, and would therefore be gone at the end of the process.
+I didn’t say anything about using the mass of the particles to move them about. That is utter nonsense. I just said that’s how much energy it would take. It’s a general point about the amount of energy in the system.
+
+
+pdonis 6 months ago [–]
+> I didn’t say it would be.
+Sure you did:
+"The energy cost of disassembling a star equals the energy in the star, so the net energy of the star is zero."
+> The final energy would be in the rest mass of the particles
+Which contradicts the previous statement of yours that I just quoted. Rest mass counts as energy, so the net energy of the star is not zero, it's the star's rest mass.
+> despite just having pumped an entire star masses worth of energy into it to counteract the gravitational energy of the star.
+No, you would not have to pump an entire star mass's worth of energy into the star to disassemble it. The numbers are easy to run for a typical star, say the Sun, if we assume it to be a spherical distribution of matter with uniform density (an idealization, but it's enough to get the order of magnitude of the energy involved). The gravitational binding energy of such a mass distribution is U = (3/5) G M^2 / R. The numbers for the Sun are:
+G = 6.67e-11 M = 1.989e30 R = 6.957e8
+This gives U = 2.28e41.
+Compare this to the rest energy of the sun, which is M c^2; for c = 299792458 this gives 1.79e47. So the gravitational binding energy of the Sun, which is the amount of energy that would need to be added to the Sun to completely disassemble it, is roughly 1 millionth of the Sun's rest mass.
+(Note, btw, that this energy is added to the Sun, so the total energy of the disassembled Sun is larger, by about 1 part per million, than the total energy of the Sun in its current bound state.)
+
+
+simonh 6 months ago [–]
+The stars energy is its rest mass plus the energy in its gravitational field. That gravitational energy is negative. Otherwise we have all sorts of problems with conservation laws. The energy model for the early universe with its dispersed array of unbound atoms and photons is a matter of record. There are plenty of referenced articles available and I have already explained how to find them. There’s no point complaining to me about it.
+Your calculation of the stars binding energy uses the classical formula, but for a star and the universe generally you need to use relativity. The calculations for this are in the paper linked from reference 5 in the Wikipedia page on the zero energy universe. It’s a free pdf download.
+
+
+pdonis 6 months ago [–]
+> the Wikipedia article explains the publication history of the idea and has references to the relevant papers
+The idea referred to in that article and its references is the speculative hypothesis I mentioned earlier about the total energy of the universe. None of those references do a calculation such as you described, showing that "disassembly" of a gravitating body like a star ends up with zero energy left over.
+
+
+simonh 6 months ago [–]
+The calculations are for universes as a whole regardless of the number or nature of any objects within them. If you care, just follow along with the calculations assuming that any universe has just one star in it. There's no difference in the calculations due to actual quantities because everything cancels out, which is rather the point.
+
+
+saagarjha 6 months ago [–]
+It doesn’t actually make much sense to do that for each individual particle, because the strong force will prevent some of them from being separated due to color confinement.
+
+
+D-Coder 6 months ago [–]
+> I realise it's a ridiculously counter-intuitive result. Apparently when Einstein was told this, he stopped dead in his tracks while crossing a busy road.
+For a smart guy, that's not very smart.
+
+
+gpderetta 6 months ago [–]
+Apart from the zero-energy universe, which is quite an interesting conjecture, as far as I understand, considering gravitational energy to be negative it is only a convenience. There is really no absolute energy value, the only thing that matter is energy deltas and you can pick a zero point arbitrarily. IANAP of course.
+
+
+lambdatronics 6 months ago [–]
+It's a little different in general relativity, because the mass-energy equivalence implies there really is a zero point -- the gravitational energy of the planet would itself add to the apparent mass of the planet, in the same way that the binding energy of nuclei make the nuclei have measurably different masses compared to the sum of the constituents.
+
+
+gpderetta 6 months ago [–]
+Can you elaborate on that? I understand that there is a self interaction component in general relativity, but how does that lead to an absolute zero point? Note that 'because the math says so' can be an acceptable answer as I wouldn't be able to understand the math.
+
+
+lambdatronics 6 months ago [–]
+I'm not an expert on GR, but basically: energy density and mass density are summed up in the Einstein field equations to get the metric tensor that determines the curvature of spacetime. We can measure the curvature, so we can measure the mass/energy density, in absolute term.
+This article gives an example of how that would work: https://en.wikipedia.org/wiki/Gravitational_binding_energy#N....
+
+
+crdrost 6 months ago [–]
+So, uh, general relativity makes all of this stuff really complicated.
+First off, the gravitational energy is not a direct component in the stress-energy tensor that serves as a "source" for gravitational curvature. So it is formally incorrect to say that the gravitational potential energy is a source for gravity. However, the Einstein equations are not linear the way the Maxwell equations are, and you can maybe interpret these nonlinearities as a self-interaction of the gravitational field, causing gravity to be a source of gravity. But the analogy does not seem to be as easy as just saying "here is the gravitational potential energy and by E = mc² ..." [1]
+Secondly, I cannot reiterate enough that general relativity does not in its usual formulations conserve energy. General relativity does not generally give you a good way over a non-infinitesimal part of spacetime to define a volume and sum up all of the energy in that volume, so it makes it very hard to define energy. And then when you try to define it in some obvious ways, you run into some weird paradoxes -- for example due to the expansion of space light from distant stars is redshifted when it arrives at us; one can either do a complicated argument from classical electromagnetic theory or a weaker but more straightforward argument from quantum theory (just track a collection of photons of definite number!) to conclude that this redshift must correspond to a loss of energy.
+This broader idea that the entire universe has zero net "energy" for some definition of energy does exist in some sparse literature, notably Krauss's pop-sci book A Universe from Nothing, but generally those treatments have not made a very robust case for this[2] and I don't think if I asked professional cosmologists that they would regard it as an established fact of modern cosmology, moreso than maybe just a way of speculating that maybe the universe is closed or asymptotically flat or so. (Asymptotical flatness is one way to try to give yourself an "out" so that you can again define mass, either by the ADM or Bondi methods[3].)
+Finally, there is indeed a correlation given by thermodynamics and stellar evolution that due to the virial theorem, "the total internal energy of the star is simply −(1/2) of its gravitational binding energy." [4]
+[1] Baez says a lot of this more eloquently at http://math.ucr.edu/home/baez/physics/Relativity/GR/energy_g...
+[2] e.g. https://arxiv.org/abs/1405.6091 as critical of that particular book, some further history at https://en.wikipedia.org/wiki/Zero-energy_universe . Note that the wikipedia article's claim has a very nice formulation of "could a quantum fluctuation create a star given that it apparently has no net energy?" and like I would view the lack of experimental evidence for this as perhaps experimental disconfirmation, but perhaps there is a more detailed calculation which confirms it as rare or some other excuse that means that you can't do it with a star but only a whole universe.
+[3] This topic is adequately mentioned at https://en.wikipedia.org/wiki/Mass_in_general_relativity .
+[4] PDF warning, https://websites.pmc.ucsc.edu/~glatz/astr_112/lectures/notes...
+
+
+goldenkey 6 months ago [–]
+I am happy that you provided the only realistic answer here. Gravity is the negative to light...radiation pressure pushes and gravity pulls. We live in a yin yang universe. Like Alan Watts would say, the universe is in the middle of cosmic dance, and eventually all positives and negatives will neutralize and we will be back where we started. This bides well for cyclic theories of cosmology.
+https://en.m.wikipedia.org/wiki/Radiation_pressure Radiation pressure - Wikipedia
+
+
+saagarjha 6 months ago [–]
+> This bides well for cyclic theories of cosmology.
+But the second law of thermodynamics really doesn’t. I should note the radiation pressure does not have much to do with gravity, either, unless the only thing you’re focusing on is whether a star is going to collapse.
+
+
+kleer001 6 months ago [–]
+I'd love to hear a refutation to this (however simple) rather than an anonymous and empty downvote.
+
+
+simonh 6 months ago [–]
+Gravity and light are unrelated phenomena, one being a curvature of space and the other a fluctuation in electromagnetic fields. They are in no way the opposite of each other. It’s like saying apples are the opposite of oranges. It’s not even intelligibly refutable.
+
+
+kleer001 6 months ago [–]
+Sorry, that leaves me even more confused. I didn't mean to start an argument though.
+Light pressure is a thing. And gravity certainly pulls. And pulling seems the opposite of pushing.
+> It’s not even intelligibly refutable.
+So, your calling your refutation unintelligent? I don't think that's what you meant.
+
+
+undersuit 6 months ago [–]
+Just light, what about the rest of the electromagnetic range of emissions? Gravity can push, ever tried to roll a car uphill? The weak and strong nuclear forces are also from Bosons, why are light and gravity special? Did you know you can send enough light into a region that you can cause that region to pass into a blackhole, it's a called a Kugelblitz.
+Rapid fire of some refutations.
+
+
+goldenkey 6 months ago [–]
+When a physicist says 'light' they mean electromagnetic energy of all frequencies - not just visible light. All the forces become unified at high temperatures. The universe is thought to have 0 total charge, so even the attractive coulomb force does not counter gravity -- it in sum total, does nothing. Gravity doesn't push the car down the hill, the car pushes you, because it itself is being pulled, silly semantics.
+The gravitional force is a negative, it destroys separation and distance. Light and the other forces create separation and distance.
+In your black hole example, the light has a momentum, and that doesn't vanish if a black hole forms, the black hole will continue moving.
+Rapid fire of some refutations.
+
+
+undersuit 6 months ago [–]
+>Gravity doesn't push the car down the hill, the car pushes you, because it itself is being pulled, silly semantics.
+That was my point. You're looking for some wonderful unifying human beauty. I can make the same arguments.
+>In your black hole example, the light has a momentum, and that doesn't vanish if a black hole forms, the black hole will continue moving.
+My mistake, it's a bit more complicated, what if you pointed two lasers at each other and created a pulse from each of such magnitude the when the light pulses pass by each other the Schwarzschild radius is passed? The blackhole is formed from the photons and nothing can escape the interior of the blackhole. Too much EM radiation can destroy separation and distance.
+Also: https://www.quora.com/Since-photons-are-always-moving-would-...
+
+
+goldenkey 5 months ago [–]
+Blackholes aren't the end - they evaporate.
+The photons had a gravitational field before the black hole. Their gravitational field is merely summed. Their total gravity is still conserved.
+Nothing has really changed. The fate of the universe is still going to be a balancing act..
+
+
+pestaa 6 months ago [–]
+I listen to Alan Watts quite regularly, and always fascinated by the broad range of sciences he can tap into. Even more interesting given the criticism he has towards academia.
+
+
+dmix 6 months ago [–]
+aka Hippies feigning science for some pseudo-religious ends.
+
+
+pestaa 6 months ago [–]
+Are you sure he misrepresented science?
+On the contrary, I get the impression that Alan took scientific discoveries and matched those onto his philosophical stances.
+He objected to the personal beliefs of the stereotypical scientist, and put forward an argument that the science works even if you stop viewing the universe as a purely materialistic mechanism. Which is not to say it then automatically possesses meaning, an intelligent designer or purpose.
+
+
+brandmeyer 6 months ago [–]
+There's a bunch of half-answers in this thread.
+> Generally speaking, when we lift matter high above, we get some of the used energy back when it falls back down.
+> Where is the energy stored in the meantime?
+Potential energy in a gravity well is negative. The "zero" point is the limit when you get far away from all gravitational bodies. The better question is: Where does the kinetic energy come from when you descend down the gravity well in the first place?
+The answer is mass. All potential energy is ultimately realized as a change in mass, equal to the famous `mass_difference * speed_of_light^2`.
+As the body falls down the gravity well, it gains kinetic energy and loses mass.
+When atoms bind together in an exothermic reaction, their final state is bound more tightly than their initial state. They released some energy in the form of molecular-scale kinetic energy (ie, heat), and they have lost mass.
+When atoms change configuration in an endothermic reaction, their final state is bound less tightly than their initial state. Some energy was required to push them up to that higher-energy state (sometimes in the form of heat), and they have gained mass.
+When light nuclei fuse together, their final state is more tightly bound than their initial state. They released some energy in the form of atomic-scale kinetic energy (ie, heat) and a photon, and they have lost mass.
+Ironically, when very heavy nuclei have fissioned, their final state is more tightly bound than their initial state. They released some energy in the form of atomic-scale kinetic energy (ie, heat) and photons, and they have lost mass.
+When a spring is compressed, the molecules within the elastic material are stretched apart from one another such that their final state is less tightly bound than their initial state, and the spring has gained mass.
+
+
+saagarjha 6 months ago [–]
+> Potential energy in a gravity well is negative. The "zero" point is the limit when you get far away from all gravitational bodies.
+Like all potential energies, its definition is relative and its zero point convention.
+> As the body falls down the gravity well, it gains kinetic energy and loses mass.
+So you’re a saying that hydrogen lower in a gravity well will fuse worse?
+
+
+brandmeyer 6 months ago [–]
+> Like all potential energies, its definition is relative and its zero point convention.
+Turns out that this one does have a unique definition because the limit exists, and because the sum of kinetic energy and rest mass determines the gravitational influence of a body.
+> > As the body falls down the gravity well, it gains kinetic energy and loses mass.
+> So you’re a saying that hydrogen lower in a gravity well will fuse worse?
+No. The processes are orthogonal to each other. Forget for the moment that its the release of kinetic energy by dropping down the gravity well that makes the subsequent fusion possible at all. Whether you fused first and then dropped down the well, or dropped down the well first and then fused, the final state is the same.
+
+
+saagarjha 6 months ago [–]
+> the sum of kinetic energy and rest mass determines the gravitational influence of a body
+No, I’m pretty sure it’s just rest mass. The gravitational force doesn’t change based on your kinetic energy.
+> Whether you fused first and then dropped down the well, or dropped down the well first and then fused, the final state is the same.
+Except the problem is that fusion only converts some fraction of mass into energy (while in your hypothesis potential energy is directly converted to mass), so in your case it would actually matter whether the fusing happened before or after falling in because lower in the gravity well, the mass would be less and you’d get less energy from the fusion.
+
+
+Xcelerate 6 months ago [–]
+> The gravitational force doesn’t change based on your kinetic energy.
+This is not correct.
+Gravity is a function of everything that has energy (see the stress energy tensor). It’s a very unusual “force” in this regard. This leads to interesting situations like a perfectly mirrored box of light (if you could have such a thing) weighing more on a scale than a box without light in it. Also, a spinning cue ball or a compressed spring weigh more than a stationary ball and an uncompressed spring. Granted, these differences are so small as to be undetectable by any equipment we could ever build, but it’s still interesting to think about.
+
+
+saagarjha 6 months ago [–]
+You're right, I'm being stupid. Thanks for pointing that out!
+
+
+beamatronic 6 months ago [–]
+Do materials weigh less when cooled to absolute zero?
+
+
+JProthero 6 months ago [–]
+The weight of a sample of matter depends on its total mass energy, and heat contributes to that total. If matter is cooled, it will weigh less, and vice-versa; if it is heated it will weigh more.
+At the kinds of temperatures that normally exist on Earth, the thermal contribution to the total mass energy of a sample of matter is trivial, but in extremely hot conditions, like the first fractions of a second after the big bang, the situation is reversed.
+
+
+cuspycode 6 months ago [–]
+> No, I’m pretty sure it’s just rest mass. The gravitational force doesn’t change based on your kinetic energy.
+The energy-momentum tensor (a.k.a. stress-energy tensor) is what determines spacetime curvature, and it depends on both rest mass, kinetic energy, momentum, pressure, and shear stress.
+
+
+brandmeyer 6 months ago [–]
+> Except the problem is that fusion only converts some fraction of mass into energy
+No. The energy release isn't actually driven by the mass of the reactants. Its driven by the strong and weak nuclear forces, which are in turn driven by quark color, spin, charge, and so on.
+
+
+afiori 6 months ago [–]
+> Like all potential energies, its definition is relative and its zero point convention.
+But for gravity it is different. Gravitational potential energy can go to negative infinity, but never to positive infinity. in particular there is a well defined possible maximum value.
+
+
+TeMPOraL 6 months ago [–]
+> When a spring is compressed, the molecules within the elastic material are stretched apart from one another such that their final state is less tightly bound than their initial state, and the spring has gained mass.
+Wait, isn't this the other way around? Why would molecules be less tightly bound when a string is compressed? They're all being pushed closer together.
+
+
+brandmeyer 6 months ago [–]
+"Less tightly bound" is true at the molecular level whether or not the spring is expanded or contracted from a neutral position. At a molecular level, the rest state is for the molecules is in a kind of bathtub, loosely analogous to the effect that a camlock has in a mechanical system. Strain in either the expansion or compression direction introduces an opposing stress.
+Until the force exceeds enough of the bonds' strength to cause plastic deformation, both directions are "uphill" along the potential energy curve.
+
+
+TeMPOraL 6 months ago [–]
+> both directions are "uphill" along the potential energy curve.
+That makes more sense to me. So they're not necessarily physically "stretched apart" when compressed, but they're still held in a higher energy state, and they want to move back towards lower energy state.
+
+
+jiveturkey 6 months ago [–]
+I only looked this up based on the comment, and I am not versed in this, beyond standard undergrad physics an eon ago. Reader beware.
+The GP is wrong; it's not because molecules are closer or further apart, it's because we have introduced potential energy into the spring. The spring would gain mass regardless if it is compressed (molecules closer together?) or extended (molecules further apart?).
+I used question marks there because a coil spring is a wound wire. The coil-to-coil proximity is not happening at a molecular level and is irrelevant. It is the stretching of the bonds in the [circular] direction of the winding where they get closer/further. Being helical, when deformed one side is in tension and one side in compression, so there's a net zero molecular proximity. So I'm not convinced that spring compression is molecules getting closer, and that spring extension is molecules getting further.
+There's also a torsion spring, which is a bar with the ends fixed in place, that is twisted axially for the spring effect. Often used in formula car applications, but widely elsewhere as well. Here it is clear to see that compression and extension have the exact same effect, and that "closer" and "further" both occur.
+The introduced potential energy is equivalent to mass, hence the spring has gained mass (and the compressing/extending object has lost mass).
+https://www.physicsforums.com/threads/a-compressed-spring-ha...
+
+
+brandmeyer 6 months ago [–]
+I agree that picking compression specifically was misleading.
+> The GP is wrong; it's not because molecules are closer or further apart, it's because we have introduced potential energy into the spring.
+The structure of the electron orbitals leads to a preferred bond length. So, pushing them closer or farther apart from that preferred bond length introduces potential energy into the spring. Its just that either direction is "up" the potential energy well.
+
+
+voldacar 6 months ago [–]
+So once the spring snaps back into its original state, this energy is dissipated as heat and its mass decreases slightly, right?
+
+
+brandmeyer 6 months ago [–]
+> this energy is dissipated as heat
+Heat is kinetic energy, its just randomized. It isn't the conversion of kinetic energy to heat that makes the mass change observable, its the subsequent dissipation of the heat that does so.
+The difference in mass is observable only when the binding energy you release gets outside of the measurement apparatus. Because the mass-energy equivalence goes both ways, any instrument that is set up to measure the mass won't register a change until that heat also dissipates. This equivalence is why physicists will frequently clarify what they mean by distinguishing "rest mass" from "mass", where "rest mass" is the mass that the body will have once it comes to rest.
+Thought experiment: A stretched ideal spring sits inside an isolated enclosure with an instrument set up to measure the mass of the spring, enclosure and everything inside of it. You release the spring and it vibrates back and forth indefinitely. The instrument registers no change in mass at all.
+Variation: The spring is not ideal; it has some damping. The enclosure remains ideal. You release the spring and it vibrates back and forth a little bit before damping slows it down and releases some heat. The heat stays inside the perfect enclosure. The instrument still registers no change in mass at all.
+Variation: The enclosure isn't ideal, either. You release the spring, it vibrates back and forth a little bit before damping slows it down and releases some heat. The heat escapes the imperfect enclosure. The instrument registers a small change in mass, proportional to the energy released / speed of light squared.
+
+
+voldacar 6 months ago [–]
+Yeah, I meant as in "some heat escapes into the environment". That makes a lot of sense, thanks for the explanations as this stuff can be quite unintuitive at times :)
+
+
+Koshkin 6 months ago [–]
+> if the ship falls into a heavier planet
+I would be a genuine paradox if this other planet appeared out of nowhere at some point in the process. That's the key: both the source and the destination mass points have been there all along, and so you must, as usual, take into account all the bodies involved from the very beginning.
+
+
+Rury 6 months ago [–]
+>It seems that the energy is being stored somewhere, and that matter itself allows us to tap into that
+Like others have mentioned, you need to look at the two planets and the spaceship as a system together. The gravitational potential energy you gain from raising a spaceship out of one planet's gravity is equal to the energy you spend getting it out of that planet's gravity well (neglecting efficiencies).
+While the trip from Planet A to Planet B might seemingly "gain" you extra potential energy because of the differences in gravity wells. The reverse trip of going from Planet B to Planet A will reverse that "extra" potential energy you gained as it's more costly to get out of Planet B's gravity well.
+As so, there's no "extra" or created energy within the system. As for where energy is stored, it's simply stored as gravitational potential energy.
+
+
+gizmo686 6 months ago [–]
+> it's simply stored as gravitational potential energy
+This answers the "how", but not the "where". Since energy itself has mass, we would expect the potential energy to carry mass as well; and that that mass/energy should be concentrated in some region of space.
+
+
+Rury 6 months ago [–]
+>This answers the "how", but not the "where
+Potential energy is a property of a system rather than an actual physical thing. It's not energy an object has, it's energy an object potentially has relatively speaking. And it's relative to whatever you use as your reference point in your system.
+>Since energy itself has mass
+Energy doesn't have mass. It is equivalent to mass.
+
+
+kwk1 6 months ago [–]
+This is a good point. Potential energy is relative to a datum, which is arbitrary. So you could say a box on a table has no potential gravitational energy relative to the table, but it does have some relative to the floor. But there was no actual change in energy between the two measurements.
+
+
+cygx 6 months ago [–]
+Excepting the confusion between the relationship of mass and energy which you cleared up, that was a totally legit question: Energy gravitates, so we do in fact need to know where all (non-gravitational) energy - including contributions we label 'potential' - is located if we want to determine the metric.
+The answer to the question of 'where' is the underlying (non-gravitational) physical field (and in particular the electromagnetic field, which is long-range, whereas the nuclear fields normally get folded into mass terms). The case of gravitational potential energy is a bit more subtle: It's excluded from the stress-energy-momentum source term of the Einstein equations, and there's no expression for a gravitational stress tensor (though there are pseudo-tensorial approaches).
+
+
+thanatropism 6 months ago [–]
+I'm not a physicist, but my master's thesis was on numerical ODEs preserving physical (symplectic structure).
+I think the best way of looking at these problems is thinking of space already equipped with a vector field (like streamline plots with little arrows) and objects just being carried by them, as if laying down small rocks on a busy river. Of course, this vector field is not constant and the object's mass alters it, but this will be small in the spaceship vs. planets setting.
+This is more of a mathematical intuition than history-of-the-universe answer, but I think it should help.
+Ed: This is very simple to reason about when talking about independent particles in one dimension; the phase space arises out of a simple variational problem. It's also easy to reason about in 3 dimensions, but the problem is that the "river" in one dimension has two coordinates, momentum and position. So to think of two dimensional space you have to imagine four dimensions, etc. But thanks to Darboux's theorem these dimensions are "coupled in pairs" (this is what symplectic means), and it's not that difficult to visualize four dimensions. Cf. this illustration of the "symplectic camel theorem":
+https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRtOK...
+
+
+martin-adams 6 months ago [–]
+Here's my lay person thinking on this. By lifting objects up or down, you're altering the gravity wells of each object. A spaceship leaving Earth would make Earth's well a bit smaller.
+The question you pose makes me think the following: if it requires no energy to fall down a gravity well, but you can use that falling to generate energy (hydroelectric dam for example), then where does that energy come from?
+So this makes me think that as the following:
+1. Increasing gravity wells (object falling) creates energy debt to the well (the debt is larger), in exchange for harnessed energy by things like hydroelectric dams.
+2. Decreasing gravity wells (object being lifted) pays off the energy debt from the well by you using energy in the lifting action.
+So for me, there's no energy stored, it's just a debt in the form of the size of a gravity well.
+
+
+pdonis 6 months ago [–]
+> A spaceship leaving Earth would make Earth's well a bit smaller.
+While this is technically true, the effect is much too small to measure, and is not what is responsible for the usual phenomena we associate with gravitational potential energy.
+
+
+Tade0 6 months ago [–]
+The question is: Where is the energy stored in the meantime? Where does the extra energy, if the ship falls into a heavier planet, come from?
+From a classical physics perspective everything that has mass is immersed in the gravitational field of everything else, it's just that most of that potential energy turns into kinetic energy only when you get very close to something.
+Basically your potential energy is this mind-bogglingly large number which would only approach zero if the whole universe were condensed into a single point.
+
+
+pdonis 6 months ago [–]
+> when we talk about sending say, a spaceship into space, it may fall on a different planet, with a different gravity (a function of the planet's mass), changing the amount of energy yielded by the fall.
+In a situation like this, you have to consider the total energy of the system, including both massive bodies and the potential energy due to them. The total energy remains constant, but how it is distributed will change: the potential energy of the spaceship will be different at the end than it was at the start.
+> It seems that the energy is being stored somewhere
+It is stored in the geometry of spacetime; at least, that's the only way I know of to conceptualize it.
+
+
+acqq 6 months ago [–]
+> It is stored in the geometry of spacetime
+And because changing the relative position of objects changes the geometry and the conservation of energy and momentum exists, can't we say that we don't even have to think about the geometry as the "store", but that it's enough to know that it is a property of the whole system we observe and that when it changes the conservation is not violated?
+
+
+pdonis 6 months ago [–]
+> changing the relative position of objects changes the geometry
+Yes, although the change due to the spaceship moving is far too small to measure.
+(Technically, the global spacetime geometry doesn't "change", since spacetime is a 4-dimensional geometry that already contains all the information about "changes" in it, so spacetime itself doesn't change at all. But if we think of the local spacetime geometry changing along the worldline of an object like the spaceship, that concept makes sense.)
+> conservation of energy and momentum exists
+You have to be careful with this. There are actually three different senses in which this can be taken in GR, a local one and two global ones.
+The local sense is that the covariant divergence of the stress-energy tensor is zero. This basically says that matter and energy in tangible form (which does not include "energy stored in the gravitational field" or "energy stored in spacetime geometry") can't be created or destroyed.
+The first global sense is that in certain kinds of spacetimes, we can do integrals that evaluate the "total energy" of the spacetime, and these integrals will obey certain conservation laws. But those laws don't necessarily correspond to what we normally think of as "conservation of energy" in a global sense.
+The second global sense is that, again in certain kinds of spacetimes, there is a constant of free-fall motion that can be interpreted as the kinetic plus potential energy of the free-falling object, such as a spaceship on a free-fall trajectory between two planets. This is the sense that has implicitly been used in this discussion. But this constant of free-fall motion only exists in stationary spacetimes, and in stationary spacetimes, the relative positions of gravitating masses cannot change with time.
+If the relative positions of gravitating masses do change with time, the spacetime is not stationary and the constant of free-fall motion that is interpreted as kinetic plus potential energy does not exist. So there is no such thing as a spacetime which has changing relative positions of objects and conservation of energy in the sense we have been using that term in this discussion.
+
+
+zelphirkalt 6 months ago [–]
+Just a lay person here. I would say, that that "potential energy" is not really energy, at least not in the sense of "the energy is inside this object" or "this object has so-and-so much energy". I would say you move an object into a different environment and the environment is all that is needed to make the object act in a certain way. If that environment is a heavier planet, then it means, that the object will behave differently than on Earth. The energy you spent to bring the object away from Earth if you want, is stored in the fact, that this object is now in a different environment than before you spent that energy. If the object were to return to its place, it would make use of energy the other way around.
+Looking at the object alone, you cannot see any of that energy, because it is not really in there, but stored in the fact, that this object is in a different environment. That is what gives it potential.
+
+
+cygx 6 months ago [–]
+Potential energy is energy associated with a system's configuration. For example, arrangements of charges can be more or less energetic, as in, you need to perform or can extract work when you go from one configuration to another.
+This is a rather abstract notion. However, as energy (or rather, stress-energy-momentum) is the source of gravity, you actually do need to know precisely where that energy is located if you want to do general relativity.
+In case of the example above, the energy will be stored in the electromagnetic field.
+The gravitational field itself is an exception to this: While it can be used to store energy, in the general case, it's impossible to locate it. I'd argue this is a consequence of general relativity's unification of gravity and inertia.
+
+
+opless 6 months ago [–]
+The heavier an object is, the deeper its ‘gravity well’ is. You’ve seen the space-time is a rubber sheet metaphor I hope?
+Imagine it like dropping a stone in a literal well. The potential energy is higher on the ground than two meters down the well.
+Since we are in the gravity well of a planet (earth) the energy needed to reach escape velocity is a certain value, because we have to climb the walls of the gravity well. A denser planet has a deeper gradient so requires more energy to escape.
+Falling down the gravity well requires no energy, but the difference of potential energy in “outer space” and “on the planet” is what you’d experience.
+There’s no energy stored per se, when you pump water up into a dam or when you enter orbit, as you expend the energy into work, resulting in a difference of potential energy in two rest states.
+
+
+k__ 6 months ago [–]
+Why are they called gravity wells and not gravity sinks?
+
+
+cdirkx 6 months ago [–]
+Because you can get out of them again.
+A sink, to me, has the connotation of something being removed from a system.
+
+
+opless 6 months ago [–]
+I’d just say that English is a obscure and difficult language. :-)
+
+
+fennecfoxen 6 months ago [–]
+When you send a rocket into space, you burn chemicals (releasing energy located in electrons in the chemical bonds holding the atoms together) gaining thermal energy (the energy of moving atoms in hot rocket exhaust) which is then redirected into kinetic energy (still moving atoms, but they're all moving in the same direction, and more orderly about it).
+When the spaceship moves upwards relative to a large mass (Earth), this kinetic energy is traded for gravitational potential energy. It's still associated with the atoms and other particles, just like the kinetic energy was.
+This does mean that objects in distant space have more of this energy than objects at the bottom of a gravity well, and are therefore more massive (because of mass-energy equivalence). Falling into an intense gravity well is actually one of the more efficient ways to convert mass into energy, which is why the area around black holes is often particularly energetic, with the matter falling in emitting energetic X-rays. This is why you can see quasars even though they are billions of light-years away (the radiation heats the surrounding material and it is very bright.)
+Besides general physics reading, I can recommend the book "Einstein's Universe" to help build a general understanding of both special and general relativity, with particular regard to matters such as mass-energy equivalence.
+
+
+saagarjha 6 months ago [–]
+> Falling into an intense gravity well is actually one of the more efficient ways to convert mass into energy, which is why the area around black holes is often particularly energetic, with the matter falling in emitting energetic X-rays.
+The heat comes from gravitational compression and friction with other material in the accretion disk, not because objects at the bottom of a gravity well have less mass.
+
+
+fennecfoxen 6 months ago [–]
+It's true that object in freefall being attracted towards a gravity well does not have less mass as it approaches deeper parts in the well. However, it will have less rest mass from its potential energy, and more mass due to its kinetic energy. If the object continues on a trajectory past the gravity well and out to space beyond, it will lose that kinetic energy, and regain the potential energy. So in that sense, it's true: the overall mass doesn't change.
+But if the object smacks into something, like an accretion disk around the black hole, or the atmosphere of a planet, then the kinetic energy escapes the object, and is lost to the surrounding system (through mechanisms like friction and compression, as you've mentioned). Per Einstein, this lost energy really does mean the object has lost mass.
+
+
+gpsx 6 months ago [–]
+It is useful to think about all the energy in the problem.
+There is a case where the only energy in the problem is the kinetic energy of the spaceship and the potential energy from gravity. That is the case of firing the spaceship with a giant catapult so that it goes and hits the other planet. In this case, it will be going really fast when it leaves earth. It will slow down as it moves away from earth, leaving its gravity. Then, it accelerates as it falls towards the heavier planet. Then splat, even faster than it was moving when it left earth.
+At any point, the change in kinentic energy will be the negative of the change in potential energy.
+A more common scenario, at least in our imagination, is that a thruster on the spacecraft is adding and removing lots of energy from the spacecraft. The math will still work out. And this way there is hope that the spacehip ends up at rest, not destroyed, on the larger planet. But this time the thruster did lots of work and has to be included in the energy balance.
+
+
+noobermin 6 months ago [–]
+So there are cases in which you could consider energy being "stored" somewhere. The canonical example from EM is energy being stored in the EM field itself like in radiation. In this case for classical static gravitation fields, the potential energy has more to due the motion of the orbiting mass and the nature of the force itself being conservative and so it isn't really stored somewhere in that sense. What I mean by that is a mass that moves against that gravitation force will lose motion due to that force (specifically motion with a component away from the planet) and from math you can then calculate that kinetic energy that would be lost from the orbiting body if it were to get a certain distance away from the mass for example. This process is reversible, that is you can trade distance for kinetic energy, which is a familiar situation like that of a ball being thrown straight up in the air, slowing and then stopping at some height, then falling back down. The reversibility of this trade off then allows you to associate an energy, potential energy, with given heights off the ground which makes calculations easier by considering it as a trade off between the motion and these greater distances. This however isn't the case for all forces. For air resistance this isn't the case, so you can't associate air resistance with a potential energy as a counterexample.
+There are however cases in which energy is real in a sense and isn't just a convenience, and for the most part this is when that energy is associated with motion (momentum specifically) of something. Also, that something would be localized and thus could be considered being stored somewhere. For some examples, of course kinetic energy, but for EM energy, you could consider it being the momentum carried by photons after QED.
+
+
+d_tr 6 months ago [–]
+> The question is: Where is the energy stored in the meantime? Where does the extra energy, if the ship falls into a heavier planet, come from?
+You can say it came from the fact that there existed a point in space with a lower gravitational potential than the one at the spaceship's point of departure.
+Each point p in space is assigned a "gravitational potential" value V(p) measured in energy / mass. The function V(p) is determined by the distribution of mass in the space. A body of mass m moving from point a to point b will gain "gravitational potential energy" equal to (V(b) - V(a)) * m.
+In your case, the spaceship moved from a higher to a lower gravitational potential, thus losing gravitational potential energy (and gaining kinetic energy).
+Note that you are only interested in the differences of values of V at different points, so you can add or subtract any constant to the function V.
+
+
+bluGill 6 months ago [–]
+It doesn't go away. Newtons law of gravity still applies F = Gm1m2/r^2. When you are on earth the gravity of Mars is still affecting you, but r is such a large number (and then we square it) that you can basically ignore it, but it is still there even if we can't measure it. When you get in the rocket you increase the r for how earth's gravity affects you, eventually getting to the point where it is insignificant and then where Mars gravity dominates everything else and so we ignore it, but earth is still affecting things even though it couldn't be measured.
+The above applies to the moon, sun, even every atom in the universe. Fortunately most of them are far enough away that we can ignore them: we don't actually know how to calculate all the math if we wanted to account for them all.
+
+
+saagarjha 6 months ago [–]
+This answers a different question, which is “where does the gravitational force go when I can’t feel it”.
+
+
+raverbashing 6 months ago [–]
+You're confused because basically when we think of potential energy on the surface of the Earth that's an approximation
+In case of a spaceship going from one planet to another you need to consider the potential energy function for both planets in relation to each other (and the Sun's potential energy as well)
+Potential energy on the surface is more like going up and down a ramp in a line. Potential energy in the case of multiple planets is more like a curvy skate park, where you can go from one place to another but have a small change in potential energy in the end.
+Also, potential energy is always relative to something. So if you go to another planet you shouldn't be calculating the potential energy from its surface, but from where you came from.
+
+
+bcgraham 6 months ago [–]
+I always thought it was stored in the “angle” of your geodesic. When you come out of the gravity well, your travel through spacetime is angled to be traversing more time relative to space, making you look like you’re moving slower (when considering only spatial dimensions). As you fall into a gravity well, spacetime curvature changes your geodesic such that you traverse more space relative to time, meaning your travel looks faster in the spatial dimensions.
+
+
+archgoon 6 months ago [–]
+So the term you want to search for is "Conservative Forces". I'll give a brief explanation here so you can find a better one more easily. :)
+Let's take a few steps back and talk about forces, and work. Gravity isn't really a key part of your question.
+Suppose you had a uniform downward force field like so:
+  |  |  |  |  |  |  |  |
+  v  v  v  v  v  v  v  v
+  |  |  |  |  |  |  |  |
+  v  v  v  v  v  v  v  v
+  |  |  |  |  |  |  |  |
+  v  v  v  v  v  v  v  v
+Those are vectors pointing downwards. Now suppose you built a miniature roller coaster. Your first one is super boring
+  |  |  |  |  |  |  |  |
+  v  v  v  v  v  v  v  v
+    car
+   |---\
+  <-------------------->
+  |  |  |  |  |  |  |  |
+  v  v  v  v  v  v  v  v
+It just goes back and forth, perpendicular to the field. Now, if you really grease up the tracks, and have really good bumpers on the end (noiseless, don't heat up, a perfect elastic collision), the car will just bounce back and forth for a very long time, and not speed up or slow down much at all (and ideally, none at all).
+There is a concept of 'work' in physics. When a force points in the direction of motion, we say that a force does work. The total work done along a path is simply the sum (integral) of all the parts of the path, multiplied by their length, multiplied by the amount of force in the direction of the path. This definition chosen so that the amount of kinetic energy gained, or lost, is equal to the work done.
+Since the force is perpendicular for the above path, the 'work' done is said to be zero.
+Now let's have a more interesting path. Let's give the car a kick.
+             car
+       <-   /---|
+   /--------<-------\
+   |                |
+   v                ^
+   |                |
+   \------->--------/
+Here we have two parts, top and bottom, where the force does no work. However, we have a part going down, and a part going up. The car will accelerate going down, and decelerate going up. If we grease the tracks up, then the car will always be traveling at the same speed on the top track. It will also always be moving faster on the bottom track.
+We say that the force does 'work' when the car is on the tracks going down and going up.
+Now, the total amount of work that the force does, for any loop, ends up being zero. This is clear here, since the distance the force is applied downwards, is the same as the distance of the force applied upwards.
+What is slightly less obvious is that any looped track we could build here would have the same property. If we had something like
+  /---\
+  |   |
+   \  |
+    \ |
+     \|
+(and ignore the mechanics of those super sharp turns) we would find that the work done was still zero. The downward diagonal bits would end up still adding up the same amount of work as the upward straight bits (bit of vector math shows this).
+The fact that the work done on any loop is zero makes this particular force a 'conservative force'.
+Not all force fields need to be conservative! Suppose our field was only present on the left side.
+             /---|
+    /--------------------\
+  | | |                  |
+  v | v                  |
+    |                    |
+  | | |                  |
+  v | v                  |
+    |                    |
+  | | |                  |
+  v | v                  |
+    \--------------------/
+This would only do work going down. This would mean that the track car would keep getting accelerated faster and faster.
+Potential energy only makes sense as a concept in the presence of conservative fields. You define a reference point, sometimes chosen to be at infinity, and define the potential energy at each point to be the amount of work done to bring the object to that test point.
+However, you don't need to just be a constant field to be conservative. Gravity, as expressed by Newton, is a conservative field. Regardless of how you arrange a bunch of objects or planets, looped paths will always have zero net work done. This is because the mathematical form of Gravity can be epxressed as the gradient of a scalar (takes a position, gives a number) function.
+You seem happy with the idea that locally on earth, energy is conserved because you get the energy back when you travel in a loop. This doesn't change when you travel in a more complicated path from one planet to another. The force field does work on the object to accelerate it when it moves in the direction of the force, and decelerates it when you pull it back.
+The big takeaway point here is that energy, as a concept, is built on top of (at least classically) the more primitive concept of 'force'.
+
+
+anchpop 6 months ago [–]
+Wow! Great writeup.
+I see some people saying that as an object gets farther away from the gravity well, accumulating more potential energy, the mass of the object increases. Is this true? It seems like it would be very surprising if an object became harder to accelerate just because it changed location.
+
+
+smdz 6 months ago [–]
+My thoughts on this - The energy used in sending a craft up is already lost when the craft leaves the planet. And potential energy can only be induced into the object from a larger mass. That is based on the object's mass and the large mass like a planet pulling the object. And the "value" (read: usefulness/utility) of that potential energy is based on where it exists
+P.S. I am not a physics guy and could be completely wrong here.
+
+
+lazyjones 6 months ago [–]
+> It seems that the energy is being stored somewhere, and that matter itself allows us to tap into that, but is not the place where it is stored.
+It's not stored anywhere, it's always present since the gravitational masses are always present, it's just that a part of it turns into kinetic energy when you are close to large masses (and back once you leave them).
+
+
+ozy 6 months ago [–]
+Bending your spacetime frame of reference costs energy because you have to leverage something and change its frame. And you can use your bend spacetime frame to extract energy by bringing it in contact with another frame. But the bending itself, or maintaining it, or changing it, doesn't cost or yield energy.
+
+
+SuoDuanDao 6 months ago [–]
+The best description I've heard is that energy is a measure of relationship. The spaceship on earth and in space has a relationship with the other planet the whole time, there's just very little that will happen as a result of that relationship until the distance between the two gets smaller.
+
+
+mercer 6 months ago [–]
+I'm currently reading The Information (I highly recommend it!) and while I feel a vague sense of an answer, I'll defer to others more knowledgeable. I just wanted to say that I think this is a wonderful question! Thanks!
+
+
+ksec 6 months ago [–]
+I thought it is actually a very interesting question.
+Hopefully this stays on the front page for another few hours when HN get most of its traffics. Then a physicist will likely pop in with an answer.
+
+
+auntienomen 6 months ago [–]
+The energy is stored in the gravitational field. Gravitational fields can carry energy and momentum.
+The same is true for electromagnetic fields, as anyone sitting in warm sunlight has noticed.
+
+
+visarga 6 months ago [–]
+> Where does the extra energy, if the ship falls into a heavier planet, come from?
+It comes from the heavier planet. It also falls onto the spaceship, just slightly changing its trajectory.
+
+
+agumonkey 6 months ago [–]
+It's funny indeed that a field is not constant and decreases over space so after some point the potential goes "down" ?
+
+
+jiggawatts 6 months ago [–]
+I was going to write up a long-winded spiel about rubber sheets and various ways to look at gravity, including my own unique perspective, then I realised that XKCD has already covered this in "Gravity Wells": https://xkcd.com/681/
+You're just describing the "landscape" of a field. Any field works this way, including the electromagnetic field, it's just that it tends to cancel out over long distances.
+Your scenario is like two people living in shallow valleys atop a high mesa discussing the "free energy" that can be gained by going down to the ocean.
+
+
+BariumBlue 6 months ago [–]
+When you fall, that is potential energy stored via gravity turning into kinetic energy. When you land, that kinetic energy is then turned into thermal energy.
+If you're interested, this would be physics. Physics 1 (usually kinematics) isn't bad if you like math, though I think physics 2 and beyond start to be demanding
+
+
+acqq 6 months ago [–]
+> But when we talk about sending say, a spaceship into space, it may fall on a different planet, with a different gravity (a function of the planet's mass), changing the amount of energy yielded by the fall.
+I guess you imagine there "failing" as something we experience on the surface of the Earth when we drop an object.
+It's not what is happening when "sending a spaceship into space."
+It's actually very hard (as in, one really has to spend a lot of energy) to get a spaceship to some star or planet. One can't imagine it as "just let it fall". I suggest reading the following article for the start:
+https://www.forbes.com/sites/startswithabang/2016/10/01/ask-...
+"Ask Ethan: Why Don't We Shoot Earth's Garbage Into The Sun?"
+Much less energy is needed to shoot something out of the Solar system than is needed to send something into the Sun, even if you want "just" to send it there to burn. Nothing from Earth can "just fall" there, huge amounts of energy from the outside are needed.
+What is actually happening is what already Newton figured out: when we're on Earth, we aren't aware of it but the whole Earth is constantly free failing towards the Sun, and yet we're not leaving the orbit around the Sun.
+>  Where does the extra energy, if the ship falls into a heavier planet, come from?
+A lot of the energy needed for the ship to reach the planet has to be spent by the ship, for the current ships it is launched as the fuel with the ship and later "spent" by the ship (in reality "traded"). The ship can also "spend" the energy of other objects and that energy is really then "spent" (as in bookkeeping, debited to other account, that's what the conservation of energy and momentum is, a kind of bookkeeping) -- the object (e.g. a planet) is indeed slowing down a little, but the change is conveniently small enough:
+https://en.wikipedia.org/wiki/Gravity_assist
+"This explanation might seem to violate the conservation of energy and momentum, apparently adding velocity to the spacecraft out of nothing, but the spacecraft's effects on the planet must also be taken into consideration to provide a complete picture of the mechanics involved. The linear momentum gained by the spaceship is equal in magnitude to that lost by the planet, so the spacecraft gains velocity and the planet loses velocity. However, the planet's enormous mass compared to the spacecraft makes the resulting change in its speed negligibly small even when strictly compared to the orbital perturbations planets undergo due to interactions with other celestial bodies on astronomically short timescales."
+In short, there's nothing "extra" happening -- all the energies and momentums are completely accounted for for everything that happens on the scales reachable to our spaceships. The only energy we can't account to anything else is the one we call "dark" but it is observable just in the movements of the whole galaxies, on the scales practically unreachable to our spaceships.
+
+
+gmantg 6 months ago [–]
+Kinetic energy is fake. We may as well say that it's planet falling on the ship and thus it's energy is the mass of the planet multiplied by v^2/2 and where did that energy come from?
+
+
+JProthero 6 months ago [–]
+>It seems that the energy is being stored somewhere, and that matter itself allows us to tap into that, but is not the place where it is stored. Is there anything I can read to better understand what we know about this?
+Here are some quick recommendations for views on potential and gravitational energy:
+This [1] is a short video from a presentation given by Alan Guth — an early proponent of inflationary cosmology — in which he outlines a thought experiment designed to illustrate how gravitational fields are associated with negative energy. This thought experiment is a standard feature of Guth's introductory talks on inflation; recordings of his academically-oriented talks with more rigorous treatments of the subject are available on YouTube.
+The logic of the thought experiment that Guth describes in the presentation is not controversial among physicists, but there are different perspectives on how to describe it. Guth's former MIT colleague, Sean Carroll, prefers to avoid descriptions involving negative energy and says instead that energy is not conserved in General Relativity. He explains his perspective here [2].
+The cosmologists Luke Barnes and Geraint Lewis discuss different perspectives on fields and energy conservation in this video [3].
+In this video [4], the theoretical physicist Sabine Hossenfelder briefly discusses the physical reality of potentials in the context of the Aharonov-Bohm effect.
+If you have several hours, Sean Carroll has a video series about the Biggest Ideas in the Universe [5]. I haven't been through the playlist yet myself, but I imagine he might go into some detail on the questions you raise, particularly in his discussion of Conservation (1), Force, Energy and Action (3), Spacetime (6) and Fields (9). The Q&A videos following each instalment might also be useful, because his audience frequently asks questions like yours.
+[1] https://www.youtube.com/watch?v=15IGPyRHOaY
+[2] http://www.preposterousuniverse.com/blog/2010/02/22/energy-i...
+[3] https://youtu.be/bcE5RQ7A7Ys?t=423
+[4] https://youtu.be/0GCHzbmMZf0?t=144
+[5] https://www.youtube.com/playlist?list=PLrxfgDEc2NxZJcWcrxH3j...
+
+
+tzs 6 months ago [–]
+Imagine some kind of alien life form that arose and evolved in intergalactic space. They evolve intelligence and start developing physics. Their physics knows about electromagnetism and maybe the strong and weak nuclear forces, but they have never seen any sufficient concentrations of mass to notice gravity.
+They would still know about mass but for them it would just be a property of matter that determines how strongly it reacts to force.
+Their model of how force works would be that for each kind of force there is some kind of charge. How much of that kind of force you have between two bodies is determined by how much of that kind of charge each has and how far apart they are.
+How each body responds to that force is determined by its mass.
+Mass and charge are independent for all of their known forces. You can have two bodies with the same mass but different charge for a given kind force, or two bodies with the same charge for that force but different mass.
+Eventually they would discover gravity and I think it would immediately stand out as fundamentally different from the other forces because its charge is not independent of mass. You double the gravitational charge on a body you also double its mass. You double its mass you also double its gravitational charge.
+
+
+ISL 6 months ago [–]
+Yes. This is the property that makes gravity special and the property that makes tests of gravity challenging. It is known, in a different context, as the Equivalence Principle. Einstein referred to it as his "happiest idea". It is a postulate upon which General Relativity rests.
+I've spent a meaningful chunk of my life working toward improved EP tests. So far, humans have been able to test it to the ~10^-14 level, with no violations yet discovered.
+
+
+amelius 6 months ago [–]
+Are there any other examples of "equivalence principles" in physics?
+
+
+ISL 6 months ago [–]
+As an experimentalist, other similar null searches are the search for proton decay, the search for fractional charge, the search for electric-dipole-moments (of electrons, neutrons, atoms, etc.), tests of lorentz symmetry, tests of the unitarity of the CKM matrix, the search for Majorana neutrinos, etc.
+The lack of proton decay is first on that list for a reason. Nobody really knows why protons are so stable.
+
+
+crdrost 6 months ago [–]
+Well, that depends on what you take to be the defining novelty of the equivalence principle, no?
+So there are other forces that scale like the mass, most notably fictitious forces -- like centrifugal and Coriolis forces. Indeed one way to describe the equivalence principle in general relativity would be to say "gravity is a fictitious force that you feel in coordinates that are not in the proper inertial state, which you'd call free-fall." Most of the other structure is just given by special relativity, which says that whenever you accelerate in any direction, clocks ahead of you seem to tick faster in proportion to your acceleration and their distance from you; and clocks behind, slower (until a sort of "wall of death" at x = -c²/a where clocks appear to stop ticking, a so-called "event horizon"). To first order this is the only thing that is novel about special relativity and all of the other effects can be derived from it. So if you are listening to the equivalence principle and it says that you are accelerating upward by virtue of remaining on the surface of a planet, rather than being in free-fall downward, then you can immediately understand that there must be a gravitational time dilation of your clocks relative to the clocks out in space that you see ticking faster, and in turn you would also see dilation of the clocks that are at a lower altitude than you are.
+If you don't find that terribly novel, you might like some various other ideas that say "these two things that you think are different are the same." Electromagnetism itself is one; electricity seemed to be a property of wool and glass rods while magnets seemed to be hunks of metal that deflect compasses -- then Faraday starts moving compasses with coils of wire. Or for example, Maxwell famously added a correction term to one of the electromagnetic equations (they do not work too well if net charge accumulated at a point, for example in a capacitor, unless you invent a fictitious current to replace the real one). When he did he realized that there was a way to make waves in the electromagnetic medium, and that he could use the constants he had available to calculate what those would be -- and he discovered that they would travel at the same speed as the speed of light. So he inferred correctly that light is an electromagnetic wave, just at a much higher frequency. Then this happened again once more: Glashow, Salam, and Weinberg shared the 1979 Nobel for the discovery that the weak force can be nicely modeled if you suggest that at high energies it unifies with the electromagnetic force, but then at low energies it decouples from the rest of them (ultimately via the Higgs mechanism, which was developed at around the same time). So these two things that seem to be different -- radioactive decay and conventional chemistry -- turn out to fundamentally be two low-energy sides of the same coin, once we pick out the part of the electroweak field whose interactions with the Higgs field cancel to be "electromagnetism" and its orthogonal complement to be the "weak force".
+Even that doesn't seem quite what you are asking. Here's another stab: we discovered that there is a very natural way to phrase the world in terms of "Lagrangians", and Emmy Noether famously proved that when you look at this world that way, there is a duality between continuous symmetries ("the laws of physics are the same from second to second") and conserved quantities ("energy is conserved").
+No, that's a bit too abstract. I guess the question is, what exactly are you looking for?
+
+
+mhaberl 6 months ago [–]
+Based on the article: > Physicists have traced three of the four forces of nature..
+and your comment: > Imagine some kind of alien life form that arose and evolved in intergalactic space.. but they have never seen any sufficient concentrations of mass to notice gravity.
+I am wondering is it possible that we also evolved in some "special" part of space in which we do not percive some other ("fifth") fundamental force of nature just like your 'intergalactic aliens' do not know about gravity?
+
+
+Raro 6 months ago [–]
+Very much! We periodically update our understanding.
+For example, we only knew basic details about the strong nuclear force from the 1910s, and the empirical ingredients for the weak force weren't around until the 1930s.
+We still have very little idea of what mediates dark energy, as well as dark matter interactions (potentially, depending on your favorite model for DM). We know they interact gravitationally, at least.
+Edit: I meant to say it's something of a cosmic accident that we don't interact more or a lot less with the nuclear forces. We are 'lucky' we get to interact with electromagnetic forces so easily.
+
+
+ridiculous_fish 6 months ago [–]
+Dragon's Egg is a fun hard-sci-fi book about a neutron star. On this star, life evolves with chemistry based on the strong nuclear force instead of EM.
+
+
+Raro 6 months ago [–]
+Oh cool!
+Thank you. I am always looking for decent sci-fi recommendations.
+
+
+thehappypm 6 months ago [–]
+Key difference being that massive bodies always attract one another. Two protons try their damnedest to push away from each other. An electron and a proton, sure, look a bit like two gravitationally attracting objects. But a soup of charged particles looks a hell of a lot different than a soup of massive particles.
+
+
+gpderetta 6 months ago [–]
+It is not so different. To double the electric charge of an electron you also have to double its mass.
+
+
+MereInterest 6 months ago [–]
+True, but only if you stick to electrons. Switch to muons, and you have more mass, but the same electric charge. Depending on what particles you use, the mass and charge vary independently.
+
+
+gpderetta 6 months ago [–]
+the point that I tried, and failed, to make is that you can't arbitrarily change the charge of a body without changing its mass.
+
+
+koheripbal 6 months ago [–]
+This is kind of a semantic argument since the word "electron" means a particle with a specific mass and charge.
+A positron would be different.
+
+
+rcxdude 6 months ago [–]
+Yes, but particles like muons exist with much larger mass but the same charge.
+
+
+saalweachter 6 months ago [–]
+Random question: do any particles exist with less mass but the same charge as electrons?
+
+
+some_furry 6 months ago [–]
+No: https://en.wikipedia.org/wiki/Elementary_particle#/media/Fil...
+
+
+jamesmaniscalco 6 months ago [–]
+No, the electron has the lowest mass of all charged particles.
+
+
+jscipione 6 months ago [–]
+Since reading Brian Greene’s books I have a question that I can’t seem to get an answer to. If there really are extra curled up dimensions and the graviton is not connected to the brain of the 3 extended dimensions in our Universe and is therefore free to travel into and out of the curled up dimensions then why does gravity obey the inverse square law? Shouldn’t we be able to detect the extra dimensions by the effect of gravity diminishing faster than inverse square as the gravitons go into and out of the extra dimensions? The inverse square law of gravitational propagation indicates that there either are no extra dimensions or that the graviton is also connected to a brain that prevents it from entering and exiting these extra dimensions. Since the other 3 forces also obey the inverse square law the extra dimensions might as well not exist making the conclusions of string theory invalid. What am I missing?
+
+
+simonh 6 months ago [–]
+This experiment has actually been done, measuring the precise rate of diminishment of gravity over very short distances. So far as we can tell gravity does follow an inverse square law, and the precision of the experiment means that if it does deviate from inverse square, the extra dimensions can be no bigger than around half the width of a human hair. Any bigger than that and the experiment would have detected the deviation.
+https://www.scientificamerican.com/article/string-theorys-ex...
+
+
+JimBlackwood 6 months ago [–]
+No, what you’re saying is correct. If the inverse square law was obeyed perfectly, space would be restricted to 3-spatial dimensions.
+The extra spatial dimensions are usually theorized to be extremely compact so the effects of a higher power law (the inverse square law can be generalised to 1/r^(n-1) with n as your amount of dimensions.) can be neglected.
+Of course, to prove it you’d have to at some point measure these effects, and there is some evidence that the inverse square law breaks down. (https://arxiv.org/pdf/hep-ph/0307284.pdf)
+
+
+jscipione 6 months ago [–]
+I would think that over cosmological distances even if the effect of extra dimensions on the propagation of gravity was tiny, Less than half a human hair, the net effect would be measurable especially if there are not just 1 but 8 extra curled dimensions as M-theory predicts. Well thanks for confirming that what I was thinking was an accurate criticism and I hope that physicists can devise an experiment to prove or disprove the extra dimensions some day soon.
+
+
+d_tr 6 months ago [–]
+I think (because you talk about exiting from and entering into dimensions) you are referring to the conjecture that our universe is embedded in a hyperspace and that gravitational pull from objects inside our universe could be detected by objects somewhere in that hyperspace (perhaps by objects living in other universes embedded in the same hyperspace).
+This is something entirely different from the conjecture that our universe could have additional, compact (i.e. "curled up") dimensions. Maybe you have mixed these two up?
+Regarding the first conjecture, the fact that the inverse square law holds over large distances might be due to the fact that we do not extend into the hyperspace, so we only "feel" the dispersion along two dimensions (hence inverse square law).
+Regarding the second one, the extra compact dimensions are supposed to be so extremely "small", that you would need to probe extremely small distances to find any anomalies. I do not think you can say that anything goes into and out of these extra compact dimensions any more than you can say that anything goes into and out of any of the three "large" dimensions. We are just moving along all these dimensions at the same time, all the time.
+
+
+jscipione 6 months ago [–]
+The two dimensions instead of three represented by the square part of the inverse square law is due to the fact that the surface of a sphere is 2 dimensional, not three dimensional. I don’t know physics well enough to dispute anything else you said but as I understand it only gravity interacts with the extra curled up dimensions, not magnetism or the strong and weak nuclear forces. How do physicists “know” this? No clue but as the article says, gravity behaves differently than the other three forces so there should be an experiment that can show the difference by measuring one thing for gravity and another for the other three forces. I understand that the experiment would have to be conducted over currently impossibly small distances to actually see the graviton disappear as it leaves our three extended dimensions and reappear as it comes back. I don’t understand why the effect wouldn’t be clear to see over cosmological distances but that most likely stems from my ignorance more than theirs.
+
+
+pitaj 6 months ago [–]
+Gravity obeys the inverse square law over large scales. The extra-dimensional curls only apply over very small distances. We haven't yet measured any evidence for gravity behaving differently at those scales, though.
+
+
+jscipione 6 months ago [–]
+Why isn’t the net effect of gravitons going into and out of curled up dimensions as they radiate out detectable over cosmological distances?
+
+
+jscipione 6 months ago [–]
+To answer my own question, perhaps gravitons accelerate as they travel through the curled up dimensions so that the acceleration very closely cancels out the extra distance that the graviton travels through the extra dimension. That would explain it, and would also jive with why gravity is 10^24 weaker than the the weak nuclear force when measured only while the graviton travels through the three extended dimensions we can currently detect.
+
+
+Zenst 6 months ago [–]
+Maybe like a staple in a pile of two dimensional papers, whilst the individual papers will feel the effect of the staple and understand it from one dimension, they wouldn't know about the other bits of paper, they can infer them from the effect of the staple perhaps, but unable to directly or indirectly know for sure. Maybe that will change, but until then, it's a nice way to visualise things.
+
+
+wnevets 6 months ago [–]
+PBS Spacetime had a good episode about this IMO.
+https://www.youtube.com/watch?v=z91oGI5aP0A
+
+
+bollu 6 months ago [–]
+I put in the work to study GR from Susskind' theoretical minimum (fantastic lecture series: https://theoreticalminimum.com/courses/general-relativity/20... ). I still don't understand GR.
+Yes I can now say "oh gravity is '''just''' curvature on a lorentizian manifold", but what in the world does it _mean_? My current picture is something like this:
+A Lorentizian manifold looks locally hyperbolic, so we need to imagine a light cone. Now the curvature of this manifold tells us how we need to distort light cones at different points to build up the full space.
+How the fuck do I visualize this? Is there some way to embed this in low dimension to play with it? For example, to understand regular curvature, you can play around with a sphere and a cone to get a feel for curvature ~= angle deficit ~= loopy deficit ~= holonomy.
+I don't know how to visualize the curvature of space-time, and I'm completely unconvinced I actually understand it beyond squiggles on paper. I'd love a way to embed and visualize this. Please tell me if you know how!
+As an aside: It is definitely possible to get a feel for _hyperbolic geometry_ by playing HyperRogue: (https://roguetemple.com/z/hyper/) --- A free roguelike set in hyperbolic space.
+What I don't grok at all is the _curvature_ across hyperbolic spaces, analogous to how a sphere has _curvature_ across flat spaces. I'd love to know how to get a feel for this.
+
+
+Ono-Sendai 6 months ago [–]
+Sure, I can explain how to visualise it (I think :) )
+First off, a note: lots of people think they know how to visualise GR, but actually don't. For example, explaining with marbles falling down curved rubber sheets doesn't help, because you're using gravity (the marble being pulled down) to explain gravity. And if you think you can just explain it with geodesics along a curved rubber sheet with a heavy weight in the middle, then think about how to explain why a stationary object falls towards the heavy weight.
+Anyway, here is how to visualise it:
+Imagine you are driving a car along some surface. We require that each wheel rotates at exactly the same speed with respect to the surface. Now imagine there is a decreasing curvature gradient from left to right across the path of your car - in other words the surface below the left wheel is curving faster than under the right wheel. Seen from above, the left wheel has extra distance to travel in the vertical direction than the right wheel, to achieve a given horizontal distance. This causes the direction of the car to turn slowly to the left - in other words the car is 'gravitationally attracted' to the left - i.e. towards the region of greater curvature, i.e. towards the attracting mass.
+To explain why static objects are gravitationally attracted to a mass, you just have to realise that according to Einstein, there are no such things as stationary objects (in some sense). Rather, even a 'stationary' object is travelling rapidly through spacetime. To go back to the car metaphor - the car is not stationary, rather it is always driving forwards (through spacetime).
+Some notes on this - think about what a bizarre, weirdly-shaped surface the car must be driving over.
+You can also think of the car front axle as being a wavefront of light.
+And finally - if you think this explanation is too bizarre, don't blame me, blame Einstein. Personally I don't actually like GR as a theory due to how weird it is.
+
+
+vagab0nd 6 months ago [–]
+> For example, explaining with marbles falling down curved rubber sheets doesn't help, because you're using gravity (the marble being pulled down) to explain gravity.
+Exactly, and it drives me nuts. There are many similar examples in SR and GR that maybe help a layperson intuitively, but creates confusion and frustration when you actually try to learn the theory. I can think of 2:
+The "escape velocity" explanation of black hole event horizon. Yes, the number comes out correct. No, it does not make sense and does not help me understand how black hole works.
+"Mass increases when object moves". No it doesn't. And no it doesn't explain why massive particles can't reach speed of light, because in the frame of the object, its speed is zero.
+I can't tell you how much time I've spent searching for the answers, and drowned by these answers that seemingly make sense.
+
+
+ISL 6 months ago [–]
+For the latter concern, you may find this Physics Today article from Okun helpful:
+http://www.hysafe.org/science/KareemChin/PhysicsToday_v42_p3...
+
+
+chadlavi 6 months ago [–]
+isn't it still gravity that keeps the car in contact with the road in your example, meaning it's also using gravity as part of its explanation of gravity?
+
+
+gizmo686 6 months ago [–]
+In this case, the mechanism holding the car to the road is not relevant. The important part of the visualization is the implication of all wheel rotating at the same speed on a curved surface. Any visualization on Earth would have this problem, because gravity effects the possible configurations you can think of.
+If it makes you feel better, move the car and road into space and hold them together via magnatism.
+
+
+raattgift 6 months ago [–]
+Test particles are super-useful.
+Synge in his textbook [1] discusses a five-point curvature detector, which is the formal treatment for a small cloud of non-interacting dust that reveals the Riemann curvature tensor.
+Baez does this succinctly and less formally at [2], using a decomposition of the Riemann curvature tensor into the Weyl tensor and the Ricci tensor.
+One could substitute ticking clocks for coffee grounds: in e.g. exterior Schwarzschild, when the flat-spacetime round-ball is instead a Weyl-curved spacetime American-football, the long axis of the football is radial to M, so the clock closest to M ticks slower than the others (cf. the Riemann tensor and especially the last sentence at [3]).
+One may compare with [4] (and the focusing theorem on the same page).
+- --
+[1] Synge, J.L., "Gravitation: The general theory". (1964) Ch. XI, §8
+[2] http://www.math.ucr.edu/home/baez/gr/ricci.weyl.html
+[3] https://en.wikipedia.org/wiki/Schwarzschild_metric#Curvature...
+[4] https://en.wikipedia.org/wiki/Raychaudhuri_equation#Intuitiv...
+
+
+pa7x1 6 months ago [–]
+Some corrections to hopefully solve some misunderstandings.
+> A Lorentizian manifold looks locally hyperbolic, so we need to imagine a light cone. Now the curvature of this manifold tells us how we need to distort light cones at different points to build up the full space.
+A Lorentzian manifold is not necessarily locally hyperbolic and certainly the existence of light-cones do not follow from its hyperbolic nature. A Lorentzian manifold may be flat or curved, if it's flat we usually call it also a Minkowski space. Curved spaces come in many shapes of forms depending on the curvature which is a complicated geometric object. One particular case of curved space is a hyperbolic space which is one with constant negative curvature. A hyperbolic (constant negative curvature) Lorentzian (space+time) manifold is also called an Anti-de Sitter (AdS) space and plays a very important role in physics (see AdS/CFT correspondence).
+> How the fuck do I visualize this? Is there some way to embed this in low dimension to play with it? For example, to understand regular curvature, you can play around with a sphere and a cone to get a feel for curvature ~= angle deficit ~= loopy deficit ~= holonomy.
+Well, we humans suck at visualizing dimensions greater than 3 and projecting higher dimensional spaces into lower dimensional spaces (like we usually do representing a hypercube) is very hard to grasp unless you already know what you should be seeing. So your best bet is to choose problems with high degree of symmetry and visualizing only the interesting dimensions. For example, a stationary (i.e. doesn't change with time -> 1 dimension less to visualize) and spherical solution (2 more symmetries -> 2 dimensions less to visualize) can be easily visualized, in fact only has one interesting dimension! This solution is usually called Schwarzschild's solution. And because it has so high degree of symmetry it can be embedded a low dimensional space we can see, we usually call that Flamm's paraboloid and you can find a pretty picture here: https://en.wikipedia.org/wiki/Schwarzschild_metric#Flamm.27s...
+> I don't know how to visualize the curvature of space-time, and I'm completely unconvinced I actually understand it beyond squiggles on paper. I'd love a way to embed and visualize this. Please tell me if you know how!
+Unless you develop the ability the visualize higher dimensional spaces your best bet is to select highly symmetrical problems and visualize the interesting dimensions of those, the way we generalize to higher dimensions is through math not through the visual cortex. The brain is a highly plastic structure so maybe with training you could develop the ability to work visually with higher dimensional spaces but I also wouldn't be surprised if the visual cortex has been evolved and finely tuned to work with the macroscopic dimensions it had available and this exercise would turn out to be futile. After all, the ability to generalize to arbitrary high dimensions may have some cost and animals would have benefited very little from it.
+
+
+bollu 6 months ago [–]
+> A Lorentzian manifold is not necessarily locally hyperbolic and certainly the existence of light-cones do not follow from its hyperbolic nature. A Lorentzian manifold may be flat or curved, if it's flat we usually call it also a Minkowski space. Curved spaces come in many shapes of forms depending on the curvature which is a complicated geometric object. One particular case of curved space is a hyperbolic space which is one with constant negative curvature. A hyperbolic (constant negative curvature) Lorentzian (space+time) manifold is also called an Anti-de Sitter (AdS) space and plays a very important role in physics (see AdS/CFT correspondence).
+I am confused. Let me write down the definition I know, and let's error-correct to a point of agreement?
+- A Lorentzian manifold is a pseudo-Riemannian manifold with a metric tensor that can be positive or negative definite, but not zero.
+- A neighbourhood of a Lorentzian manifold is flat if one can assign a coordinate system where we have the minowski metric ds^2 = dx1^2 dx2^2 + ... + dx(n-1)^2 - dxn^2. So it's hyperbolic space of dimension n, Hn. This space has constant negative curvature; You can check by computing the curvature tensor.
+- Thanks for that particular model of Schwarzschild's solution! I wasn't aware of it.
+- Do you have more examples of a similar flavour? I don't care if the solution obeys the einstein field equations. I'm mostly just interested in examples of Lorentzian manifolds with curvature.
+- Thanks for the advice regarding visualizing higher dimensions. I am quite comfortable with the algebra. However, it is often the case that people have great insight into the structure of hyperbolic space, which I am trying to build. Consider Thurston and his famous insight into the structure of 3-manifolds and hyperbolic space.
+
+
+pa7x1 6 months ago [–]
+> I am confused. Let me write down the definition I know, and let's error-correct to a point of agreement?
+Fixing the definitions is a good idea because they may vary slightly in the literature.
+> - A Lorentzian manifold is a pseudo-Riemannian manifold with a metric tensor that can be positive or negative definite, but not zero.
+A bit unconventional definition as it places some of the characteristics of a pseudo-Riemannian manifold into Lorentzian territory. Usually the Lorentzian manifold restricts the signature of the metric to (1, n-1) or (n-1, 1). That is to say, restricts the pseudo-Riemannian manifold to one with only 1 time dimension.
+> - A neighbourhood of a Lorentzian manifold is flat if one can assign a coordinate system where we have the minowski metric ds^2 = dx1^2 dx2^2 + ... + dx(n-1)^2 - dxn^2. So it's hyperbolic space of dimension n, Hn. This space has constant negative curvature; You can check by computing the curvature tensor.
+If the space is flat (Riemann curvature tensor = 0) how can it have constant negative curvature? Hope you see with this question that something is off. Here is a more detailed explanation:
+There is a tight link between Hyperbolic space and the Lorentz transformations. The proper (i.e. no space inversion) ortochronous (i.e. no time inversion) Lorentz group of transformations SO^+(1,n) is an isometry group of H^n. To be noted here the dimensionality difference, this means that a hyperbolic space H^n can be embedded in R^(1,n) and that the action of Lorentz transformations leaves H^n invariant. You can see a neat visualization in the wiki: https://en.wikipedia.org/wiki/Lorentz_group#orthochronous, the Lorentz transformations leave invariant the hyperboloids shown in the picture. The action of a Lorentz transformation in SO^+(1,n) on any vector in one those hyperboloids H^n produces another vector in the same hyperboloid. But H^n is not Minkowski space, it's just one "shell" embedded in a Minkowski space of one additional dimension that is left invariant by SO^+(1,n). These shells have constant negative curvature but the space they are embedded into (Minkowski) is flat.
+This is equivalent to the relation between Euclidean space and spheres. The group of rotations in n-dimensional Euclidean space E^n leaves invariant the spheres S^(n-1). The spheres have positive constant curvature and are embedded in a higher dimensional flat space.
+> - Thanks for that particular model of Schwarzschild's solution! I wasn't aware of it.
+> - Do you have more examples of a similar flavour? I don't care if the solution obeys the einstein field equations. I'm mostly just interested in examples of Lorentzian manifolds with curvature.
+Not that I can think of, to visualize a curved space you always have to embed it in a higher dimensional flat space. To "see" one curved dimension, you need (at least) 2 flat ones in which to embed it. This is what Flamm's paraboloid does, it shows the curved radial dimension of Schwarzschild solution embedded in 2D so we can see how distances change along the way. The problem is that we run very quickly out of "real estate" to show the curvature. If you are a highly visual person I could recommend you to get a copy of Gravitation by Misner, Thorne, Wheeler. It is a masterpiece and comes with huge amounts of visual intuition.
+
+
+bollu 6 months ago [–]
+> If the space is flat (Riemann curvature tensor = 0) how can it have constant negative curvature?
+You are wrong. Locally our space is _hyperbolic_. So "flat" means "flat space-time" means "constant negative curvature", not "zero curvature". This is unlike the Riemannian case where "flat = zero curvature". You seem to be confusing the Riemannian and Lorentzian cases?
+
+
+codethief 6 months ago [–]
+> "flat" means "flat space-time" means "constant negative curvature", not "zero curvature"
+So Minkowski space is not flat according to your definition? This way of defining flatness seems quite unusual to me both from a math and a physics perspective. Could you provide a source?
+> Locally our space is _hyperbolic_.
+How would this even be possible? A hyperbolic manifold is a Riemannian manifold by definition[0] but here we're dealing with a Lorentzian one!
+[0] https://en.wikipedia.org/wiki/Hyperbolic_manifold
+
+
+bollu 6 months ago [–]
+So I think I understand the confusion here. - In Riemannian manifolds, we take R^n as the building block - Every hyperbolic space can be locally represented by R^n. If you do this, the hyperbolic manifold will have negative curvature. Hence, hyperbolic space is a Riemannian manifold. - On the other hand, one can take Minkowski space as a given, and then build spaces where we have space that is locally hyperbolic. So we are trying to complete the analogy:
+    Locally R^n :: Riemannian
+    Locally Minkowski [signature (n-1,1) :: ???
+
+The answer to `???` is _Lorentzian/Psuedo Riemannian_. You can check the wiki link for more(https://en.wikipedia.org/wiki/Pseudo-Riemannian_manifold#Pro...), to quote:
+> Just as Euclidean space can be thought of as the model Riemannian manifold,  Minkowski space with the flat Minkowski metric is the model Lorentzian manifold.
+Notice the use of the word flat here: Just as flatness in the Riemannian case means "globally like R^n", flatness in the psuedo-Riemannian case means "globally like Minkowski".
+You can also notice that the tangent space structure of the psuedo-Riemannian manifold is different from the Riemannian case:
+> Every tangent space of a pseudo-Riemannian manifold is a pseudo-Euclidean vector space. [Once again from the wiki page]
+As for _why_ we do this, my understanding is that we want to generalize SR(special relativity). For SR, we use a single space of signature (3,1). For GR, we want to 'put together' many such spaces, which are then distorted by gravity (this is curvature of space-time). Hence, we take the local space to be (3, 1), and the global space connects versions of (3, 1).
+Does this make sense? Please tell me if this is incoherent; This is my current understanding of the state of things, I could well be wrong.
+
+
+codethief 6 months ago [–]
+> In Riemannian manifolds, we take ℝ^n as the building block
+We take ℝ^n as the building block for any smooth manifold, not just Riemannian ones. Note that there is a difference between ℝ^n and Euclidean space. ℝ^n is a smooth manifold without a metric structure, so it is not a Riemannian manifold automatically. In contrast, Euclidean space is ℝ^n with a metric structure, namely the one given by the standard Euclidean metric δ. So Euclidean space is a Riemannian manifold and it is often denoted by the tuple (ℝ^n, δ).
+Finally, if we denote by η the (n-1, 1) Minkowski metric on ℝ^n, then (ℝ^n, η) is just Minkowski space (in particular, it is a Lorentzian / pseudo-Riemannian manifold).
+> Just as flatness in the Riemannian case means "globally like ℝ^n"
+This is not correct. There are many flat Riemannian manifolds that are not globally isometric (or even diffeomorphic) to Euclidean space (ℝ^n, δ). Take e.g. the torus T^n = S¹ × … × S¹ of any dimension.
+> On the other hand, one can take Minkowski space as a given, and then build spaces where we have space that is locally hyperbolic
+Again, I think you're confusing the terms "Lorentzian" and "hyperbolic" here. As I said (and you then yourself said), a hyperbolic manifold is a Riemannian manifold, not a Lorentzian one. A Lorentzian manifold is locally Lorentzian, not locally hyperbolic. You might want to read pa7x1's excellent explanation again.
+Also note that the quotes you gave from Wikipedia don't contradict what I (or pa7x1) said in the slightest.
+> As for _why_ we do this, my understanding is that we want to generalize SR(special relativity). For SR, we use a single space of signature (3,1). For GR, we want to 'put together' many such spaces, which are then distorted by gravity (this is curvature of space-time). Hence, we take the local space to be (3, 1), and the global space connects versions of (3, 1).
+This is certainly one of way of thinking about it, yes: Locally, we see Minkowski space but globally the geometry (and topology) might be more complicated and this is what GR allows us to implement through a general Lorentzian manifold.
+
+
+bollu 6 months ago [–]
+Thank you, It does appear I am hopefully confused between hyperbolic and Lorentzian :) Thanks for patiently showing me where I am going wrong. For my selfish benefit, could you please collect the definitions of (i) Hyperbolic space (ii) Minkowski space (iii) Lorentzian manifold (iv) Pseudo Riemannian manifold?
+
+
+codethief 6 months ago [–]
+I'm glad I could help!
+> could you please collect the definitions of (i) Hyperbolic space (ii) Minkowski space (iii) Lorentzian manifold (iv) Pseudo Riemannian manifold?
+Sure:
+A Riemannian manifold is a smooth manifold M together with a positive-definite metric g on M.
+A hyperbolic manifold is a Riemannian manifold M of constant negative sectional curvature. It is often required in addition that M be a complete manifold.
+A pseudo-Riemannian manifold is a smooth manifold M together with a non-degenerate metric g on M (of arbitrary signature).
+A Lorentzian manifold of dimension n is a pseudo-Riemannian manifold (of dimension n) whose metric has signature (1, n-1) or, equivalently, (n-1, 1).
+(n+1)-dimensional Minkowski space is the Lorentzian manifold (ℝ^(n+1), η), where η = - (dx⁰)² + (dx¹)² + … + (dx^n)² with respect to the standard coordinates (x⁰, x¹, …, x^n) on ℝ^(n+1).
+
+
+bollu 6 months ago [–]
+And what is the precise relationship between hyperbolic space and Minkowski space? am I right in understanding that one can _embed_ a model of hyperbolic space (the hyperboloid moidel, obeying the equation `-x0^2 + x1^2 + ... xn^2 = 0` as a subspace of the Minkowski space? But Minkowski space is far larger than hyperbolic space?
+
+
+codethief 6 months ago [–]
+pa7x1 already answered that question: https://news.ycombinator.com/item?id=23549361
+
+
+codethief 6 months ago [–]
+>> A Lorentizian manifold looks locally hyperbolic, so we need to imagine a light cone. Now the curvature of this manifold tells us how we need to distort light cones at different points to build up the full space.
+> A Lorentzian manifold is not necessarily locally hyperbolic
+Maybe OP was thinking of some local notion of global hyperbolicity[0] (which, of course, has nothing to do with hyperbolic Riemannian manifolds)?
+[0] https://en.wikipedia.org/wiki/Globally_hyperbolic_manifold
+
+
+pa7x1 6 months ago [–]
+I think you are right on the source of confusion, I have tried to explain the relation between hyperbolic space and Lorentz transformations in my latest answer. See here: https://news.ycombinator.com/item?id=23549361
+
+
+codethief 6 months ago [–]
+This is a great answer! Thanks so much for notifying me!
+
+
+cinquemb 6 months ago [–]
+It seems like something in our way of understanding gravity is also confounded that our perception of it is skewed by our assumptions of time orientability in any given region of spacetime, extends to all regions of spacetime, even those outside of our light cone or those of a light cone trapped within a event horizon.
+
+
+hektorrr 6 months ago [–]
+I would describe myself as a hopeless philosopher in terms of physics. I like to theorise about the nature of everything in universe. In no circumstances I'd say I know what I'm talking about. I'm aware that I lack a lot of knowledge in this field, which actually makes my journey pretty amazing through the learning about the complexity of the universe.
+These few words just to let you know that whatever you read here it might be a complete nonsense and it's not even a pseudoscience but some fantasy/fiction reflections.
+I'm most amazed by the nature of tri-dimensional space itself. Back then, there was popular belief in Aether - the substance that carries wave of lights. To be honest I tend to believe such 'thing' could explain many of the most weirdest questions that appears in my head.
+I wonder if it's possible that the Aether is the space itself. And the space is the Aether. Tiniest, basic 'particles' that are frame for everything else. There would be no 3-dimensional space without at least 4 of such Aether quants. Also for example photons don't just 'fly' through space, but jumps from one quant of Aether to another one. That's how they 'fly' in straight line. That's why when the space is curved they will follow that curvness.
+And the gravity is not just a curved spacetime but something like an atmosphere made of Aether quants that are repelled by the particles containing Higgs boson. Which naturally makes the Higgs boson the only particle that can interact with Aether.
+I know that so far none experiment has confirmed the existence of Aether. But I can't let go the feeling that we are missing something here.
+
+
+at_a_remove 6 months ago [–]
+You are not the first to think of this, or even the hundredth. It's been decades since I first saw it, but I did see someone propose kind of an interesting approach, for amusement: why not take the aether thing as far as it could go? Keep adding bizarre properties to it to explain experimental results. Go wild!
+If I recall, the end result was something very much like the properties of spacetime. But with no particles. Just ... take the particles away. You're attached to the particles.
+The reason you cannot let go of that feeling is that you're trying to attach your base human experience (which is largely Newtonian, low spacetime curvature, quantum effects not immediately visible, a fairly confined region of temperatures and pressures) to a domain where your base experience is completely irrelevant. All of the waves you witnessed were the disturbance of matter as a traveling phenomenon. It's what you grew up on. And so envisioning a scenario wherein the wave isn't carried on some kind of matter, however hidden, "feels" wrong.
+Also, don't do physics without math. If you just want to keep reaching from one analogy to another, you can build all kinds of castles in the sky, but you won't have anything at the end of it. Remember, physics is a quantitative prediction. Your concepts have no math or calculations, and so there is no measurement to contradict them. Nor can you "farm the math out" to other parties. Nobody capable of doing the math will do the math for you. If you desire to pursue this, you must begin to do the math, yourself.
+
+
+saagarjha 6 months ago [–]
+I should note that it’s really not possible to know that aether doesn’t exist or whatever, all of these are just models that experimentally match our observations. And your answer describes why we don’t use it: it’s not that aether is wrong, it’s just that if you try to extend the model to account for observations, you get the same model as what we currently have but corrected slightly because you’re assuming that aether exists. It turns out that it’s just simpler to not assume that, which is why we have our current model.
+
+
+jscipione 6 months ago [–]
+It’s not just that experiments have not detected the aether, the Mendelssohn Morley experiment and subsequent follow up experiments at larger scales shows that the aether definitely does not exist, and that’s where the problems start. If there was aether we should see the effect of drag on light like we do for matter with the Higgs Bosom field, but we don’t. Photons always travels at the speed of light without any drag in every direction. What medium does light travel through? The answer is that there is no medium for the waves to travel through, yet travel and wave they do.
+
+
+Raro 6 months ago [–]
+For some context: the article only interviews quantum gravity researchers, so it has that particular slant. They are concerned with coming up with different strategies to mitigate the issues general relativity has with singularities, and these strategies range from "sensible deviations from general relativity" to "fun, but highly unlikely".
+In terms of how the theory of gravitation is not like the other fundamental forces, I think the most salient point was made by Sera Cremonini: gravitation is not a renormalizable theory. At least in the sense of how we have approached renormalization with the other forces. It is intrinsically non-linear, because the source is the field (and vice-versa).
+To get anywhere close to a grand unified theory that incorporates gravitation requires a rethink of the normalization procedure (and likely requires an entirely new geometric framework—this was a pre-requisite for both general relativity and Newton's Universal Law).
+
+
+codethief 6 months ago [–]
+> For some context: the article only interviews quantum gravity researchers, so it has that particular slant.
+I would go even further: Natalie Wolchover only interviewed string theorists and quantum field theorists. They all assume that gravity in some way or another will just be yet another quantum field theory.
+There is not a single piece of evidence for this, though. Personally, I also don't think it is a particularly promising approach. As Hawking so eloquently put it:
+> But I believe [gravity] is distinctively different, because it shapes the arena in which it acts, unlike other fields which act in a fixed spacetime background.
+(Hawking in Hawking & Penrose: The Nature of Space and Time, chapter 1)
+
+
+Raro 6 months ago [–]
+> I would go even further: Natalie Wolchover only interviewed string theorists and quantum field theorists. They all assume that gravity in some way or another will just be yet another quantum field theory.
+I didn't want to push that point too much. I am personally uncomfortable with the lack of emphasis on empirical evidence. However, that's not to say there can be fruitful results.
+In terms of re-thinking geometric approaches, I quite liked (what I understood of) Nima Arkani-Hamed's suggestion for avoiding issues with localization. Similarly for Penrose's twistor theory.
+
+
+codethief 6 months ago [–]
+> I quite liked (what I understood of) Nima Arkani-Hamed's suggestion for avoiding issues with localization.
+Which suggestion are you referring to? Do you happen to have a link?
+
+
+Raro 6 months ago [–]
+The 'Amplituhedron': https://arxiv.org/pdf/1312.2007.pdf
+The idea is to focus on the amplitude of scattering interactions from the momentum-space twistor perspective, rather than perturbations about a point in space-time.
+For background: Nima made a name for himself by greatly simplifying complex particle interactions, from tens of pages of Feynman diagrams to around a page. I think of the above as an extension of that project. However, I don't recall all the details, as it's been six years since I went to his talk on this.
+
+
+codethief 6 months ago [–]
+Oh yes, I've heard a bit about the Amplituhedron. Unfortunately, it only serves to simplify the perturbative calculations in Yang-Mills theories order by order, i.e. the Feynman diagrams. It doesn't describe the full (non-perturbative) theory, so it's not really a candidate for a replacement of "classic" local QFT.
+
+
+Raro 6 months ago [–]
+Thank you for pointing this out; this accords with my recollection, but you clearly stated a fundamental issue with the approach in its current state.
+I thought of the idea as more a sketch of how things might be looked at with a perspective change, rather than a full-blown theory (at least in the form I saw it in 2014). I guess I was holding out for the (highly unlikely) possibility of an asymptotic limit or something similar. It just seemed to be rooted more in reality than most of string theory/LQG. Of course, that could be my bias towards novelty!
+
+
+codethief 6 months ago [–]
+> I guess I was holding out for the (highly unlikely) possibility of an asymptotic limit or something similar. It just seemed to be rooted more in reality than most of string theory/LQG. Of course, that could be my bias towards novelty!
+I totally understand! I was quite excited about the Amplituhedron, too, when I first read about it!
+
+
+rurban 6 months ago [–]
+They should have started with Newton, not Einstein. Heisenberg is also missing.
+Newton was so excited to detect this new supernatural attracting force over great distances to hold the planets together, as clear proof that God exists.
+Mechanics cannot explain contact-less attracting forces, in mechanics there are only repelling forces, caused by direct contact. Newton never gave up and disappeared into this gravity=god hole forever.
+Quantum-mechanics had the same problem, as Heisenberg detected. The dual nature of particles and waves don't hold for gravity, there cannot be a gravity particle as counterpart to the attracting force. Einstein was the same opinion, but still the Boor folks had their way. Even the Einstein-Podolsky-Rosenstein Paradoxon, which disproved causality in the standard model, was explained away.
+Same for black holes, the mysteriously postulated dark matter and more.
+
+
+ganzuul 6 months ago [–]
+If you are OK with reversing time then mechanics can explain attractive forces. It then becomes a question of why our perspective is one-sided.
+
+
+mnw21cam 6 months ago [–]
+Nope, still repulsive forces. Think about it - two balls head towards each other, collide, and move away from each other, having experienced a repulsive force. Reverse time, and it looks exactly the same.
+Or more mathematically, force is measured in Newtons, which is kg * m / s / s. Reverse the sign of the seconds part of that, and, oh, it's squared so it ends up being exactly the same.
+
+
+rurban 6 months ago [–]
+Nobody is ok with reversing time. Minkowski limit, yes. Reverse for sure not.
+
+
+scotty79 6 months ago [–]
+I don't understand why people think that gravity should be describable by same math other forces are. Why should there be a quantum gravity field or quantum mediating particles for gravity?
+As far as we know gravity is just acceleration due to non-flat shape of space(-time). Why would that have anything similar with exchanging photons, gluons or other bosons? I understand how you might think there's a quantum math for a field. But how can there be quantum math for acceleration?
+
+
+joeberon 6 months ago [–]
+Quantum physicist here. The reason is not that we _want_ to describe both gravity and the standard model using the same formalism, it's that currently general relativity and the standard model are actually fundamentally incompatible and the most obvious way to come up with a model where there are no incompatibilities is to try to describe both using the same mathematical framework.
+>Why would that have anything similar with exchanging photons, gluons or other bosons?
+You make it sound like it is obvious that the strong force would be mediated by gluons or the electromagnetic force by photons, but it actually isn't at all, and it is only relatively recently that we have started describing all forces as being mediated by these so-called "force carriers". It is not obvious at all that there are any photons at all involved in, for example, two magnets repelling each other, or in electromagnetic induction of a current.
+
+
+scotty79 6 months ago [–]
+Thank you for your response. What's the source of incompatibility between standard model and general relativity?
+Gravity is about acceleration and flow of time. What's the problem with plugging general relativity in place of classical dynamics whenever you care about flow of time and acceleration in quantum physics? As if those gravity and other forces and particle had nothing to do with each other.
+Why does general relativity is more incompatible with quantum mechanics than with fluid dynamics for example?
+My understanding is that general relativity says that gravity is not even a real force. It's just a function of acceleration caused by misshapen space-time (deformed by mass/energy).
+Some other things I don't understand... How gravity is considered to be a fundamental force, while Pauli exclusion principle is not, despite the fact that it can keep neutron stars from collapsing. Is it because there's no hope for finding mediating particle in the math that describes the principle because the math is too simple?
+
+
+joeberon 6 months ago [–]
+>Thank you for your response. What's the source of incompatibility between standard model and general relativity? Gravity is about acceleration and flow of time. What's the problem with plugging general relativity in place of classical dynamics whenever you care about flow of time and acceleration in quantum physics? As if those gravity and other forces and particle had nothing to do with each other.
+The difficulty is that the standard model uses "quantum field theory" (QFT) as the physical model in the background to describe it. However QFT is actually quite hacky in a lot of ways, the main one being that actually it predicts that every point of space should have an infinite free energy (see here for example https://en.wikipedia.org/wiki/Vacuum_energy). The way we get around this is by subtracting off this infinite energy, which is one of many similar techniques called "Renormalization" (https://en.wikipedia.org/wiki/Renormalization).
+Well it turns out that if you produce a quantum field theory for gravity, it is not actually possible (or at least in any way easy) to "renormalize" it (i.e. it's really hard to subtract off these infinities)
+The issue is more that QFT is really weird, rather than that general relativity is
+>Why does general relativity is more incompatible with quantum mechanics than with fluid dynamics for example?
+Well general relativity (GR) and QFT both describe fundamental interactions, whereas fluid dynamics describes an emergent property of electromagnetic (EM) interactions between many particles. Gravity is also usually very irrelevant in fluid dynamics unless we are looking at very large objects like the flow of matter in stars for example, so in most cases it is just EM interaction which is fully described by QFT. In other cases we have relatively weak gravity + QFT, for example in those stars, in which cases we can actually already describe the dynamics fully using approximate versions of gravity and not have any incompatibility. In cases where gravity is very strong though we do have these issues as we just don't know what happens due to lacking a proven theory of quantum gravity. One example is how the matter behaves in the super-dense core of a neutron star, known as the neutron star "equation of state", which is currently unknown, as in these cases both quantum and gravitational effects are very strong.
+>My understanding is that general relativity says that gravity is not even a real force. It's just a function of acceleration caused by misshapen space-time (deformed by mass/energy).
+Yes that is completely correct to our understanding, but we could maybe model it as a "real force" by writing a quantum field theory for it
+>Some other things I don't understand... How gravity is considered to be a fundamental force, while Pauli exclusion principle is not, despite the fact that it can keep neutron stars from collapsing. Is it because there's no hope for finding mediating particle in the math that describes the principle because the math is too simple?
+Honestly the fact that the Pauli exclusion principle isn't a force has always been confusing to me too as it behaves like one in so many situations, but it is similar to gravity really which as you said isn't really a force, but more like an influence. In fact GR says that we follow the geodesic (roughly translated to the "shortest path") along the curved space-time, i.e. it is by minimising the so-called "action". This isn't really a force, more like a fundamental law of motion. I think the Pauli exclusion principle is similar in this way, but I don't think it is a satisfactory explanation
+
+
+scotty79 6 months ago [–]
+> Well it turns out that if you produce a quantum field theory for gravity, it is not actually possible  ...
+I heard about that. But why would you want to have quantum field theory of gravity? Why can't you just consider gravity to be only about the shape of space-time in which everything including quantum field theories of everything else happen?
+> Well general relativity (GR) and QFT both describe fundamental interactions ..
+Does GR really describe fundamental interactions? For me it seem that it only describes shape of space-time where all the fundamental interactions take place.
+> In cases where gravity is very strong though we do have these issues as we just don't know what happens due to lacking a proven theory of quantum gravity.
+Isn't it just because we lack data from systems where gravity is extremely strong and systems are small/isolated enough to show any quantum effects? How can we be sure that we need quantum gravity? Why it's not enough to calculate QFT in curved spacetime instead of flat spacetime?
+> One example is how the matter behaves in the super-dense core of a neutron star, known as the neutron star "equation of state", which is currently unknown, as in these cases both quantum and gravitational effects are very strong.
+I see.
+> Yes that is completely correct to our understanding, but we could maybe model it as a "real force" by writing a quantum field theory for it
+Apparently we can't due to problems with renormalization. And I argue we shouldn't be able to because I believe it's completely different thing from a real force and if same math worked for two dissimilar things I'd be worried. :-)
+I'm happy to hear that Pauli principle is unsettling not only to grumpy weirdo like me. :-)
+
+
+joeberon 6 months ago [–]
+>I heard about that. But why would you want to have quantum field theory of gravity? Why can't you just consider gravity to be only about the shape of space-time in which everything including quantum field theories of everything else happen?
+No, because it turns out that curved space-time is actually incompatible with quantum field theory in certain extreme parameter regimes, in a way that it actually makes it impossible to make predictions on scales where both gravitational and quantum effects are very strong (e.g. neutron stars). We want a quantum field theory of gravity as then it will "play nice" with other quantum field theories.
+>Does GR really describe fundamental interactions? For me it seem that it only describes shape of space-time where all the fundamental interactions take place.
+I think it is quite fundamental that energy curves space-time and that it affects the paths of objects (even light), but yes maybe I wouldn't call it a fundamental interaction in the same sense as quantum field theories, particularly because it isn't quantised so it isn't really a single "thing" being exchanged (like a gauge boson). Most physicists do call it an interaction or a force though. I mean that it describes nature on a fundamental and indivisible level (at least so far as our current/most popular understanding)
+>Isn't it just because we lack data from systems where gravity is extremely strong and systems are small/isolated enough to show any quantum effects? How can we be sure that we need quantum gravity? Why it's not enough to calculate QFT in curved spacetime instead of flat spacetime?
+Of course we lack this data, which is why measurements of, for example, the aforementioned neutron star equation of state will give us more understanding. We can't be sure that we need a quantum theory of gravity, it could be that it is actually just impossible to describe both gravity and QFT at the same time. QFT in a curved spacetime is only a first approximation of general relativity and doesn't capture all of the effects of GR (see here for example https://en.wikipedia.org/wiki/Quantum_field_theory_in_curved...). I don't really know much about quantum gravity, but I don't believe that QFT in curved space-time is sufficient, at the very least it doesn't solve the cosmological constant problem (https://en.wikipedia.org/wiki/Cosmological_constant_problem)
+> And I argue we shouldn't be able to because I believe it's completely different thing from a real force
+It's worth considering that what we call a force in quantum field theory is very different from what Newton would have considered a force! Probably in fact the gravitational "force" due to curved space-time would seem more like a force to him, certainly QFT is much weirder than GR after all...
+
+
+scotty79 6 months ago [–]
+> I think it is quite fundamental that energy curves space-time ... Most physicists do call it an interaction or a force though.
+Isn't it sort of 'legacy' way of thinking and naming things?
+> QFT in a curved spacetime is only a first approximation of general relativity and doesn't capture all of the effects of GR (see here for example https://en.wikipedia.org/wiki/Quantum_field_theory_in_curved...).
+Oh. Thank you. This looks way more promising. But I see that it has few very hard to accept results like lack of objective vacuum or particles loosing meaning (which I'm ok with :-)). And I see how it still fails to include influence of particles generated by gravity. But it makes interesting predictions already.
+I really think that's the way forward.
+
+
+sudhirj 6 months ago [–]
+Isn't it conclusive already that gravity insn't a force? It works nothing like what we consider forces, and we already have models that show it's curvature in space-time, not force. A black hole doesn't exert infinite force on things, for example – one could say it doesn't exert any force at all, just curves all paths you could possibly take back in on itself.
+
+
+Ono-Sendai 6 months ago [–]
+I think the big reasons gravity is different are as follows:
+* very weak (many orders of magnitude less strong than the other forces)
+* no positive/negative mass 'charges', the gravitational force is attractive only.
+* works via curvature of spacetime (according to Einstein), instead of the exchange of force particles (e.g. instead of by jiggling fields)
+
+
+klank 6 months ago [–]
+You last point is not necessarily a description of gravity, but a description of the models we use to reason about it.
+
+
+TheMightyLlama 6 months ago [–]
+I would like to join in with many of the statements in this thread describing a joint lack of understanding of the physical universe as well as a deep fascination with it. I certainly count myself among those ranks.
+In watching way too many YouTube videos on quantum physics and gravity I began to create a model of how the universe works at the very small scale and after a while something occurred to me.
+We know that the path of a photon can be bent if it passes near a black hole. The key being that spacetime is being somehow consumed by a black hole and the photon is being dragged towards it. Thus, its path appears bent. I thought that similar effects should happen with volumes of a lighter mass. Perhaps with the same mechanism.
+Neutron stars would have a smaller effect on photons, and a more measurable effect on heavier particles and molecules. Neutron stars would also somehow 'consume' spacetime. Just at a lower rate. Thus heavier particles would escape.
+So too with the earth. Only, in this case, the mass of the earth is small enough that molecules can escape all on their own.
+So, what is gravity? Gravity in this model is the effect of spacetime being consumed. By analogy the spacetime is like standing under a shower. We are glued to the earth because we cannot gain enough purchase against the torrent of spacetime being consumed by the mass of the earth.
+Which brings me to the second question. Well, this is where actually having some physics would be useful. But after many drunken bouts of thought, I'm convinced that this spacetime consumption is down to [color confinement](https://en.wikipedia.org/wiki/Color_confinement#QCD_string).
+Anyway, enjoy. If nothing else, this should at least be useful for some sci-fi anti-gravity mechanism.
+
+
+Balgair 6 months ago [–]
+Great questions/ideas!
+To maybe nit-pick a bit to help out:
+Space time is not 'consumed', it's just curved in 4-D. The Einstein Field Equations are a very good model of what we think is occurring.
+Photons are massless, hence why they can travel at light-speed. Their energy is the thing to worry about when doing GR.
+
+
+TheMightyLlama 6 months ago [–]
+The crucial question I guess is: Why do objects fall down a gravity well if its just a curvature?
+The 'consumption' to me is more intuitive, but then again I'm just not a mathematician. Is it the field equations specifically thatI should look at or are there others?
+And also what type of math structures should I be studying to understand the field equations?
+
+
+pa7x1 6 months ago [–]
+They don't fall a gravity well, they follow straight lines in a curved spacetime. Not subject to the other forces everything follows the straightest line (geodesics) it possibly can in a curved spacetime.
+The field equations define the spacetime geometry but they are very hard to solve, you will gain little insight from them. Instead you should try to understand the concept of a geodesic, how they are extremes of a variational problem, how they are calculated and the physical/geometrical intuition behind them.
+
+
+l33tman 6 months ago [–]
+A standard particle is not a point in 4D, it's a track, if it's locally static (compared to you for example) it's still churning happily along the t-dimension. In GR, the 4D spacetime is curved, so when you burn along the t-dimension locally, you might be seen as moving along one of the spacial dimensions as seen from afar (like, when you observe another guy falling down a building or observing dust getting swooped up by a black hole).
+
+
+Eyght 6 months ago [–]
+This is the same conclusion I've come to, in basically the same way. It's great to see that I'm not alone in thinking along these lines.
+There ought to be a physicist that has walked down this path already. I'd be very interested in reading about their findings.
+
+
+joquarky 6 months ago [–]
+I've often wondered if mass can locally affect the rate of expansion of the universe, causing gravity as a side effect.
+
+
+rudolph9 6 months ago [–]
+> The problem with a quantum version of general relativity is that the calculations that would describe interactions of very energetic gravitons — the quantized units of gravity — would have infinitely many infinite terms. You would need to add infinitely many counterterms in a never-ending process. Renormalization would fail. Because of this, a quantum version of Einstein’s general relativity is not a good description of gravity at very high energies. It must be missing some of gravity’s key features and ingredients.
+Is there a proof backing up the claim that “ Renormalization would fail”? I can see why people would jump to that conclusion but that doesn’t mean it’s true.
+
+
+macspoofing 6 months ago [–]
+>Gravity Breeds Singularities
+Gravity or GR? Is there even any reason to take singularities seriously? Aren't singularities simply places where GR as a theory falls flat on its face and therefore singularities don't actually describe any physical phenomena?
+
+
+codethief 6 months ago [–]
+The short answer to your question is: We don't know.
+
+
+emsal 6 months ago [–]
+Theoretical physics is sporadically coming back into my mind again after a lot of time learning CS and Stats.
+I'm wondering now, is the goal of theoretical physics sort of like the goal of topological data analysis[0]? Reading about things like how Max Planck came up with quantum theory to explain the measurements of black body radiation reminded me a lot of the ML task trying to fit a model to data.
+My bias is definitely showing here but is this a useful framework to be able to think about these things?
+[0]: https://en.wikipedia.org/wiki/Topological_data_analysis
+
+
+markkat 6 months ago [–]
+I’ve long thought gravity is more likely to be the product of space between masses, not something that alters it. My thinking is the “alteration” of we perceive as gravity is lopsided entropy due to a field with a gradient of space.
+I wrote this thought experiment years ago, which was the start of this way of thinking: http://corpusdord.blogspot.com/2006/02/matter-space-and-time...
+
+
+jcims 6 months ago [–]
+Maybe gravity is just diffusion of energy as it tries to smooth the tremendous discontinuities between its condensed form (mass) and free (?) form (vacuum).
+
+
+m3kw9 6 months ago [–]
+Can someone explain Why there is gravity without drawing on math?
+
+
+Extigy 6 months ago [–]
+Imagine that you are standing on the equator of Earth, facing North. Now imagine a friend is also standing somewhere on the equator -- not too far away, but a fair distance -- also facing North. Now, if you both start walking you'll find that you begin to move closer together. The distance between you shrinks as you walk, until eventually you meet at the North Pole. The "force" that is pulling you together is like gravity in that it is caused by the curvature of the Earth's surface as you travel across it.
+With gravity the curvature is intrinsic to space-time itself and is affected by mass. Generally more mass means more curvature. So if you sit two objects in space, at rest with respect to one-another (but still travelling forwards in time), you will find they are pulled together and eventually meet in the same way you and your friend were pulled together and met at the North Pole.
+You might ask why mass affects the curvature of space-time? That I don't know the answer to.
+
+
+machiaweliczny 6 months ago [–]
+Im fine with curvature analogy but why things "move"?
+
+
+chousuke 6 months ago [–]
+Answering a "why" is a bit difficult when it comes to reality. It's just the way it is, and if it were different, you would be asking why it is that way instead, if you still existed at all.
+If you're instead asking what causes the "force" you feel as gravity, then I suppose that can actually be usefully answered with the usual disclaimers about scientific models being only as good as their predictive power. Fortunately, one can accurately explain many phenomena with Newton's theories and even more with general relativity.
+My own (layman) understanding is that the attracting effect of gravity is caused by the shape of spacetime itself; all objects within spacetime generally move "straight", but they must also conform to the shape of spacetime. However, those objects also affect the "shape" such that very massive objects have a macro-scale noticeable effect on the trajectory of other objects. and effectively what is "straight" is dependent on the local region of spacetime. I like to visualize it as a straight line on a piece of paper and how that line changes shape as the paper is bent.
+
+
+koheripbal 6 months ago [–]
+We don't really know, even if we DO use math.
+It's just a fundamental property of the universe that has no explanation (yet).
+String theory tries to formulate why... but that's all just theory for now.
+
+
+logicallee 6 months ago [–]
+When thinking about gravity versus other forces, consider how weak it is. Under you you have Earth weighing 6.6 sextillion tons (5.97 x 10^24 kg). It is 260 billion cubic miles (1 trillion cubic km). All that generates 1g of gravity.
+A basic fridge magnet (not even neodymium) easily generates a magnetic force that can lift several times its own weight. It overpowers the sextillion tons 3:1, no contest.
+
+
+exabrial 6 months ago [–]
+I always find it interesting we have the photon for light, electron for electricity, but no particle for gravity.
+
+
+pjc50 6 months ago [–]
+Gravity waves definitely exist, and have photon-like properties, but I believe the problem is designing an experiment which would prove that gravity is quantised and therefore carried by particles.
+(As with electrons and photons, in a lot of cases their individuality isn't meaningful, so we talk of light wavefronts and bandgaps and so on)
+
+
+gizmo686 6 months ago [–]
+Not a physicist.
+Assuming gravitons exist, then that would mean that they are constantly being exchanged between objects of mass. This would imply that objects containing mass at a fixed distance would spontaneously become entangled due to their gravitational interaction.
+A bit of googling reveals [0], which I believe describes such an experiment.
+[0] https://arxiv.org/pdf/1707.06050.pdf
+
+
+pa7x1 6 months ago [–]
+There is a particle for gravity, it's the graviton (massless, spin-2). It is not observed experimentally because it's extremely far from our technological capabilities.
+In fact, mathematically, General Relativity can be understood as the classical field theory of a massless, self-interacting, spin-2 field. In the same way that electromagnetism is the classical field theory of a massless, non-interacting, spin-1 field.
+
+
+auntienomen 6 months ago [–]
+We haven't observed the graviton, but it's something theorists routinely discuss. Basically, any quantum theory of gravity that reduces to general relativity in its classical limit will pass through a semi-classical regime where it's well-approximated by gravitons.
+
+
+msclrhd 6 months ago [–]
+My understanding is that from General Relativity (GR) mass carrying particles (and other energy-momentum) curves space-time, and that curvature is what we understand as gravity. I'm aware of there needing to be an exchange particle due to quantum mechanical (QM) representations, but have not been convinced how they work.
+I wonder if the Higgs particle could be a candidate for the force carrier in the QM representation of GR (e.g. the resulting higgs field interacts with and causes space-time curvature instead of energy-momentum doing it directly). That is speculation on my part from a lay-person perspective, so could be completely wrong.
+
+
+codethief 6 months ago [–]
+> I wonder if the Higgs particle could be a candidate for the force carrier in the QM representation of GR
+It couldn't. The Higgs boson is a scalar particle (spin 0), the graviton (if it exists) must have spin 2.
+
+
+erklik 6 months ago [–]
+I have no knowledge beyond first-year university physics i.e General Relativity and my understanding of Gravity was that two masses are attracted to one another, which is due to the "curvature" of spacetime.
+However, this sort of stuff i.e. the above article, makes me so curious about the universe and fills me with joy just reading about it. Would you possibly have any suggestions as to what resources one can read preferably books as it allows a journey or at the very least a concrete thing to study. ( I get distracted with wikipedia like websites becuase I jump from link to link and then get completely lost ).
+
+
+codethief 6 months ago [–]
+How much time do you have on your hands? And how long-term a commitment are you willing to make?
+I'm asking because you don't learn these things over night. Gravity & geometry in particular take quite some time to digest and then there's quantum field theory which, in my opinion, takes even more time and is even harder to digest.
+Also, how mathematically inclined are you? Does it bother you when things are not clearly and precisely defined?
+
+
+brummm 6 months ago [–]
+Technically, the photon is also the particle for electricity, not the electron.
+
+
+koheripbal 6 months ago [–]
+I don't think that's correct. Electricity is the electron potential across a medium. That's not the same as an electromagnetic wave.
+
+
+brummm 6 months ago [–]
+Yeah, it is correct. The electromagnetic interaction is mediated by the photon. An electron is just one of the fundamental particles that interacts electromagnetically. We use free electrons in metals for the conduction of electricity, but in the end all the interactions between the electrons, protons, etc are governed by photons.
+If you want to learn more, something to google would be quantum electrodynamics. There are some nice introductory talks about it, but be warned. In order to really understand this, you'll need to study physics, more specifically quantum field theory.
+
+
+saagarjha 6 months ago [–]
+The reason there is a potential is because of electromagnetic forces, which are mediated by photons. It’s a bit complicated.
+
+
+jansan 6 months ago [–]
+What? Give me a link so I can learn.
+
+
+pjc50 6 months ago [–]
+Trick question (or trick answer): depends what you mean by "electricity", which is one of those questions that's simple to ask but collapses into a pile of details on closer inspection.
+The electric field and magnetic field are tied together in the manner described by Maxwell's equations. This results in "electromagnetic waves", which are indeed carried by photons in free space.
+It is often helpful to look at the fields as being the real "electricity", or at least use the lumped approximation we call "current", and this brings various charge carriers along with it. Electrons are the common charge carrier, but ions can carry charge (e.g. in batteries), and in semiconductors we use "holes", which are the absence of an electron. Not an anti-electron, just the space where it's supposed to be.
+
+
+brummm 6 months ago [–]
+So the first paragraph on the photon wiki page might give you a start: https://en.wikipedia.org/wiki/Photon
+
+
+dnadler 6 months ago [–]
+https://en.wikipedia.org/wiki/Photon
+
+
+rommel917 6 months ago [–]
+we don't have particle for gravity, but we also don't have particle for temperature. we just define it as statistical value of multiple particles and everybody is happy and don't search for some tempon particle. Maybe mass is also some statistical property of group of particles.
+Couple of weeks ago there was post on HN about it.
+
+
+saagarjha 6 months ago [–]
+Temperature is usually exchanged through electromagnetic interactions.
+
+
+raattgift 6 months ago [–]
+> usually
+What's the temperature of the cosmic neutrino background now and at decoupling?
+
+
+Ancalagon 6 months ago [–]
+infrared radiation is just photons...
+
+
+martincmartin 6 months ago [–]
+"In theories of quantum gravity, the graviton is the hypothetical quantum of gravity, an elementary particle that mediates the force of gravity."
+https://en.wikipedia.org/wiki/Graviton
+
+
+goalieca 6 months ago [–]
+There is a theoretical graviton particle. But reconciling quantum world with general relatively is not easy. https://en.wikipedia.org/wiki/Graviton
+
+
+bardworx 6 months ago [–]
+There is a hypothetical particle named Graviton that would be the force carrier for Gravity.
+https://en.wikipedia.org/wiki/Graviton
+
+
+77pt77 6 months ago [–]
+It should be the graviton.
+No experimental detection and none expected any time soon.
+
+
+v64 6 months ago [–]
+To be specific, from Wikipedia [1]: "a detector with the mass of Jupiter and 100% efficiency, placed in close orbit around a neutron star, would only be expected to observe one graviton every 10 years, even under the most favorable conditions"
+[1] https://en.wikipedia.org/wiki/Graviton#Experimental_observat...
+
+
+77pt77 6 months ago [–]
+It's like the neutrino of neutrinos.
+
+
+snarf21 6 months ago [–]
+Interesting.... I wonder if it is just a matter of time and focus.
+
+
+close04 6 months ago [–]
+Or really difficult math.
+https://en.wikipedia.org/wiki/Graviton
+
+
+humanfromearth 6 months ago [–]
+Maybe gravity is not a force in a quantum sense, but just geometry of spacetime in the presence of mass? Maybe there is no graviton and no quantum theory is needed to explain gravity.
+Is there any strong evidence that gravity is following quantum mechanics? Maybe a real theoretical physicist can explain.
+
+
+nightcracker 6 months ago [–]
+Considering that gravity is produced by particles who's behavior is quantized, there is essentially no other option than to assume gravity must be as well.
+
+
+humanfromearth 6 months ago [–]
+Do we know for sure? I mean I don’t think the graviton has been observed in action yet. Let me ask another question: is space quantized?
+
+
+pier25 6 months ago [–]
+I could be totally wrong, but as a lay person I had the impression that gravity wasn't actually force.
+So the apple did not fall because it was attracted to the Earth but rather it fell because of the curvature of spacetime.
+
+
+tempodox 6 months ago [–]
+... and then there are the neutron stars, exquisite perversions of physics where atom cores are packed so densely that the electrons have to form a cloud layer around the star.
+
+
+saagarjha 6 months ago [–]
+Not around but inside the star: collapse to degeneracy doesn’t mean that the whole star behaves like a giant atom with electron cloud around it. Most of the electrons are captured by inverse beta decay, anyhow.
+
+
+badrabbit 6 months ago [–]
+What does gravity have to do with energy levels? I thought it was a side effect of motion in curved spacetime (einstein theory)?
+
+
+klank 6 months ago [–]
+Curvature of spacetime is an effect of energy. Check out the Einstein field equations, specifically the stress-energy tensor.
+
+
+tia4tia 6 months ago [–]
+Well, some people say so, others say different https://en.m.wikipedia.org/wiki/Entropic_gravity
+
+
+weeboid 6 months ago [–]
+Ahh, a primary favorite. "Gravity is the grand leviathan of forces". It is my personal belief that, as light and energy were shown equivalent, the third leg of the stool will emerge; that gravity and mass are equivalent. Not as we understand them now; but as mc^2 understood light/energy equivalence.
+Final thought exercise: is it possible, that gravity does not exhibit the same behavior everywhere in the universe? That gravity may have states.
+
+
+vecter 6 months ago [–]
+Man ... I remember when HN wasn't filled with crackpots. Sigh.
+
+
+weeboid 6 months ago [–]
+Ha, yeah.
+
+
+bArray 6 months ago [–]
+Disclaimer: Zero formal background in Physics, but I want to learn.
+It has always felt like gravity is the result of some other "thing" going on. There are two reasons for why I believe this:
+1. Gravitational waves are weird, the idea that the resulting force of gravity can travel away from where it was created. I can't think of any other examples where something similar happens with another force without something "carrying" it.
+2. At lot of the issues we have with our current models come from gravity. If it be on the quantum or Universe scale, our picture of what we believe gravity to be seems to be limited to our localized experience of it.
+I sometimes try to run through a thought experiment where I try to imagine how gravity, space and time may behave at the very edge of the Universe, because things there surely must seem weird. If space and time cannot be created or destroyed, what is being "traded" to expand the Universe?
+An alternate idea I've had is that the Universe is not expanding outwards, but expanding inwards, where galaxies roughly stay where there are and the properties of space-time between them changes. We always imagine the Universe in the three dimensional space we experience it in when thinking about gravity, but the quantum scale seems to suggest there must exist other spatial dimensions.
+Just some brain farts anyway, any reading material people can point me towards I would be highly appreciative :)
+
+
+ajross 6 months ago [–]
+> It has always felt like gravity is the result of some other "thing" going on.
+That's basically the way General Relativity works. Gravity is the curvature of spacetime, which is a function of the local energy density at all points. It isn't something that happens, it's just a shape. The things that "happen" because of gravity are just a side effect of the fact that lines aren't "straight" in the sense our intuition demands.
+
+
+macspoofing 6 months ago [–]
+>Gravitational waves are weird
+Are they though? I know there is a lot of math behind how exactly gravitational waves behave making specific predictions that stem from GR, but even in the Newtonian sense, something like gravitational waves would necessarily exist. That is, even under Newtonian laws, if a body emits a force like gravity which drops in strength with distance, and if that body moves back and forth in relation to you, you would necessarily experience waves of force.
+
+
+codethief 6 months ago [–]
+> That is, even under Newtonian laws, if a body emits a force like gravity which drops in strength with distance, and if that body moves back and forth in relation to you, you would necessarily experience waves of force.
+Not if you take the term "wave" literally. Any action in Newtonian gravity is assumed to occur instantaneously, so while an observer far away from that body would certainly see the gravitational pull varying in time, this would not be the same as a wave traveling through space.
+
+
+Ono-Sendai 6 months ago [–]
+Gravitational waves (radiation) are not that weird. They're kind of like electromagnetic waves. If you accelerate an electric charge it will radiate. Likewise a mass should radiate gravitational waves.
+Two objects gravitationally orbiting each other will spiral into each other due to the loss of energy to grav radiation. This is due to the finite speed of light. Basically each object 'sees' the other object slightly behind due to light propagation.
+
+
+walleeee 6 months ago [–]
+> If space and time cannot be created or destroyed, what is being "traded" to expand the Universe?
+I'm no physicist, but my understanding of the general consensus is that nothing is being "traded" because the universe is not expanding "into" some other space. Space(time) itself is expanding.
+
+
+zackees 6 months ago [–]
+This guy who wrote a book on Magnetism says that Einstein has it wrong and that only by starting over at Tesla's model and moving forward can the physics of the universe be predicted well.
+According to the Tesla inspired model of the ELECTRIC universe, gravity is not a fundament field itself, but an emergent characteristic of "incoherent dia-electric acceleration". The guy who said this is Ken Wheeler.
+Whats also interesting is that this opinion is shared by pioneer of "Low-Energy Nuclear Reaction" Randal Mills. I've been told by the people in this space that the Mills paper provides a comprehensive model that is MUCH better at predicting certain binding energy states of nuclei. In comparison to the standard models all-over the place. It also solves problem of all the dark matter in the universe, which is simply an abundance of tiny hydrogens called hydrino's which contain an electron that has lost momentum and is zipping closer to the nucleus, thus making a more elctro-neutral particle that weakly interacts with other particles (WIMPS).
+If anyone has doubts on the standard model, I suggest checking out "Ken Wheeler" and Randal Mills. Fascinating and deep look at a minority consensus of the universe that appears to be MUCH simpler.
+
+
+beervirus 6 months ago [–]
+Simpler, but not supported by any evidence. Nobody's ever seen a hydrino.
+
+
+macintux 6 months ago [–]
+Thank you for sending me down a rabbit hole. Quite interesting to read the two incomprehensible (to me) and incompatible worlds represented by the believers and the critics on Reddit.
+https://www.reddit.com/r/BrilliantLightPower/

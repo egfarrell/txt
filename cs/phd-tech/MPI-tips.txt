@@ -1,0 +1,176 @@
+
+### interesting point
+    - the whole idea of MPI is NOT to use SHARED MEMORY
+    - (which is often used for concurrent programming)
+
+
+
+
+# NPTEL parallel computing HPC - MPI
+
+### message passing libraries
+    - the programmer doesnt need to learn various OS system
+    - level send and receive calls. So the libraries make the
+    - parallel program PORTABLE
+
+### MODE
+    - mpi is often used in _SPMD_ mode (see architecure notes)
+    - ie same program on each of the nodes
+    - ie single program with info on all the processes
+
+### key functions
+    - MPI_INIT      : setup infrasture, buffers, processors
+    - MPI_FINALISE  :
+    - MPI_COMM_RANK : abstracts notion of process id. any process
+                      can find its own process id by calling this one
+    - MPI_COMM_SIZE : find out the total # of processes running
+    - MPI_SEND      : family of functions e.g. mpi_Isend
+    - MPI_RECEIVE   : family of functions
+
+### compiling
+    - when compiling your program you must link the mpi library
+    - theres a header file `mpi.h`
+
+### mpirun
+    - kick off the program on multipe processors
+    - options:
+        1. # of processors,
+        2. which processors you want it to run on (specify ip
+        address of processor)
+    - note: you can write the program without a clear idea of how
+      many processors you're actually going to use. You just need
+      to specify that at runtime!
+
+### MPI communicators
+    - by default, all processes are part of a single
+      communicator: MPI_COMM_WORLD
+    - But rather than have ALL processors talking to every other
+      one, you could define 3 communicators: e.g. say you have:
+      P1, P2, P3, P4
+    - define Comm1: P1, P2
+    - define Comm2: P3, P4
+    - define Comm3: P2, P3
+    - one process could be part of many different communicators
+      and have a different rank in each one.
+
+### RANK
+    - each process within a communicator has a unique rank,
+      numbered from 0 to n-1
+    - (cause you dont want to use unix process ID's - not unique)
+
+### who am i?
+    - MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
+    - `&myrank` is an integer variable, declared in the program
+
+
+### key logic:
+    `/* Find out my identity in the default communicator */`
+    MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
+    if (myrank == 0) {
+        master();  <---------only 1 process will run this
+    } else {
+        slave();
+    }
+
+### msg "tag"
+    - integer variable
+    - Distinguish between two different messages sent between the
+      same sender and recipient 
+    - Included with each send and receive call
+
+    - if you dont care about the order msgs are received, then
+      include a wild-card as the msg tag. (MPI_ANY_TAG)
+
+### MPI_ANY_SOURCE
+    - a bit like mpi_any_tag, if the receiver doesnt care who the
+      msg came from
+
+
+### send/receive synchronous & asynchronous modes
+
+    - SYNCHRONOUS:
+        - continuation from function MPI_SEND will only happen
+          once complete message has been accepted by receiving
+          process
+
+        - continuation from function MPI_RECEIVE will only happen
+          once full msg received
+
+        - consequence:
+            - this synchronous stuff not only TRANSFERS DATA, but
+              it also FORCES 2 processes to be (momentarily)
+              synchronized
+
+    - ASYNCHRONOUS:
+        - send/receive dont wait for actions to complete before
+          continuing code execution
+
+        - consequence:
+            - must be local storage for messages
+
+        - also
+            - program cant assume data has been received in the
+              next lines of the program, so calls for more
+              careful programming
+
+### MPI_SEND
+    - 6 parameters         :
+    - data buffer address  : e.g. &x
+    - count                : number of items to be sent (e.g. array of integer values)
+    - datatype             : how big each element in the msg is supposed to be
+    - destination          : rank of receiving process
+    - tag                  : message tag
+    - comm                 : communicator within which this communcation is happening
+
+
+### variants on sending (mpi_Isend)
+    - BLOCKING:
+        return after "local actions" complete
+
+    - NON-BLOCKING:
+        - return immediately
+        - consequence:
+            - Assumes data storage used for transfer not modified
+              by subsequent statements before transfer complete
+            - Less portable: implementation must ensure enough
+              local buffer space is provided
+
+        - also need
+            - mpi_wait()
+            - mpi_test()
+
+### GROUP communication
+    - So far it's all about point-to-point messages
+      (send/receive).
+    - Now consider 1 process communicating to 10 other processes.
+    - You could call "mpi_send" 10 times but more efficient to
+      use the group communication primitives (functions):
+        - broadcast
+        - gather
+        - scatter
+        - reduce
+
+### mpi_bcast (broadcast)
+    - parameters:
+        - buffer
+        - count
+        - datatype
+        - root: which process contains the data?
+        - (root=0 if process 0 doing the broadcast)
+        - mpi_comm_group
+
+### SCATTER
+    - collection (array) of data
+    - want ONE ELEMENT to go to each process
+    - not the whole collection!
+    - one additional parameter: buffer INTO WHICH the scatter is going
+
+### GATHER
+    - take individual elements spread accross many processes
+    - and take them all into one "buffer" in one process
+
+### REDUCE
+    - large collection of data gets combined into single value
+    - how does it get combined?
+    - thats specified by the reduce "operation"! 
+        - MPI_Op -> e.g. MPI_SUM, MPI_MAX

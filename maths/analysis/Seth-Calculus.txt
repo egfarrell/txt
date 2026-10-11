@@ -1,0 +1,333 @@
+
+### Links
+    - Book                           $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Seth-Calculus.pdf
+    - YT: Calculus of Infinitesimals https://www.youtube.com/playlist?list=PLFFekKQwSI_1q-qGq1WLSxw3oGfXXzAeH
+
+### Infinitesimal: Not REAL number 
+    - An infinitesimal is an infinitely small number, smaller
+      than any positive real number, yet greater than zero. 
+    - Like square roots of negatives (regrettably-named
+      “imaginary numbers”), infinitesimals seem paradoxical: 
+        - They manifestly _do not belong_ to the familiar system
+          of real numbers
+
+### 'Structural' theorems
+    - the linearity properties (allows us to take derivatives of
+      sums and constant multiples of functions)
+    - product rule
+    - quotient rule
+
+### Lecture 1
+    - Triangles aren't as `similar` as circles. 
+        - You can't `scale` trianges up or down as easily as
+          circles to make them the same size as another triangle
+        - Circles are more 'special'. Each one is just
+          a magnification of the other.
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-01.jpg
+    - Why do we like `similarity` so much?
+        - Because when we have two similar figures, they are
+          proportionate to each other.
+        - A ratio of two sides on one is going to be the same as the
+          corresponding ratio on the other.
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-02.jpg
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-03.jpg
+    - back to circles and similarity:
+        - Because all circles are similar, the ratio of diameter
+          to circumference is the same for all circles.
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-04.jpg
+        - So that ratio is the SAME in all circles, so we call it
+          `π` (shorthand notation)
+    - Circumference Forumula : 
+        - C = 2πr
+        - It's just the formula for `π` re-written.
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-05.jpg
+    - The area of a 'caterpillar'!
+    - Find the area of a circle formula: `A = πr^2`
+        - the area of the circle is the same as the area of the
+          rectangle made up of all the little segments...
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-06.jpg
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-07.jpg
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-08.jpg
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-01-09.jpg
+
+### Lecture 2
+        - Key idea: 
+            - On an infinitesmal scale, curves are STRAIGHT.
+            - ie, the curve and tangent line are
+              indistinguishable
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-02-01.jpg
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-02-02.jpg
+        - Curves are locally straight, but globally 'curvey'
+        - There are a few odd exceptions to this about curves
+          being locally straight, and in those cases calculus
+          breaks down.
+        - Now tie this idea to functions:
+            - All curves are locally straight, so all graphs of
+              functions are locally straight.
+            - What sort of function has a straight line graph? 
+                - `A linear function`!
+            - So locally... all functions are _linear_ functions.
+            - This is good news because linear functions are
+              simple. That's why we study them in primary school.
+        - Constant rate of change
+            - Nice property: Linear functions exhibit a constant
+              rate of change.
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-02-03.jpg
+            - Non-linear functions have a variable rate of
+              change.
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-02-04.jpg
+        - Linear functions have a constant slope
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-02-05.jpg
+        - Non-linear functions have no global slope
+            - but you can get the slope at a POINT
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-02-06.jpg
+        - "Derived" function
+            - Hmmm... this really struck me about the 'derived
+              function' or 'derivative'
+            - for the original function `f` at point `a` you have
+              `13` say...
+            - But for the new derived function `f'` at point `a`,
+              you get a different value: `2`
+            - Never really thought of it like that. Both
+              functions have the same domain, but `f'` outputs
+              a totally different number at each point (compared
+              to `f`)
+            - I'm used to seeing the 'abstract' algebraic formula
+              for `f'`
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-02-07.jpg
+            - We can ask:
+                - where does `f`  send the point?
+                - where does `f'` send the point?
+        - Position function
+            - Does the derivative of a position function have any
+              significance?
+                - Yes: the derivative gives us the local 'rate of
+                  change' of `f`. It tells us how position is
+                  changing locally with time. Velocity...
+
+
+### Lecture 3: Leibnitz notation
+    - `∆x`: 
+        - slightly unintuitive for some reason
+        - -----------------------------------------------
+        - `∆x` = (`x` after change) - (`x` before change)
+        - -----------------------------------------------
+    - `∆x` versus `dx`: 
+        - Another point: `∆x` and `∆y` refer to a REAL change in
+          `x` or a REAL change in `y`
+            - as in a change in the REAL numbers
+        - but `dx` is an infinitesmal change in `x`
+            - aside: 
+                - naming conventions: 
+                - 'prime notation' versus 'Leibnitz notation'
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-01-delta-x.jpg
+    - small point:
+        - With Leibnitz notation, we must specify which point...
+        - ie we add 'when `x=7`' etc beside our `dy/dx` bit
+    - what is the derivative?
+        - it's a RATIO of INFINITESIMAL changes
+    - Advantage of Leibnitz:
+        - We see INSTANTLY what the independent variable is
+
+    - Independent variables (subtle): 
+    - ------------------------------- 
+        - his example of the oven temperature `T` being
+          controlled by the angle `θ` on the hands of a clock
+        - So really, the oven temp `T` is also controlled
+          (indirectly) by the TIME of day: little `t`!
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-02-oven-clock.jpg
+        - Constraint: 
+            - the wider the angle, the greater the temperature
+              `T`
+        - Implication for `θ`: 
+            - graph of `θ` v `T` is monotonically increasing?
+            - means the slope is positive everywhere
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-03.jpg
+            - So it means the derivative `dT/dθ` is POSITIVE
+              everywhere
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-04.jpg
+        - Implication for `t`: 
+                - However `dT/dt` will NOT be positive everywhere
+                - sometimes pos, sometimes neg
+                    - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-05.jpg
+        - Key point:
+            - Think of temperature `T` as a function of `θ`:
+              derivative is always positive
+            - Think of temperature `T` as a function of `t`:
+              derivative varies in sign
+            - So: not enough to speak of the derivative of
+              a function. Must talk about the derivative WITH
+              RESPECT TO a specific variable.
+
+    - Higher order infinitesimal
+    - --------------------------
+        - (real)          * (real)          = real
+        - (real)          * (tiny real)     = real
+        - (real)          * (infinitesimal) = infinitesimal
+        - (infinitesimal) * (infinitesimal) = infinitesimal `<--- 'higher order'`
+        - -----------------------------------------------------------------------
+        - When our concern is with REAL numbers, as it nearly
+          always is, we can discount higher order infinitesimals
+          as ZERO!
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-06.jpg
+
+    - Compute derivative
+    - ------------------
+        - from first principles...
+        - When he creates his output point, he doesn't want to
+          use `dy` in the second coordinate, he wants to keep
+          everything in terms of `x`: 
+            - Doesn't want: `( x+dx, f(x)+dy )`
+            - DOES    want: `( x+dx, f(x+dx) )`
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-07.jpg
+        - Now he starts expanding out things
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-08.jpg
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-09.jpg
+                - Aside: there's only a handful of derivatives
+                  you can compute from first principles. But
+                  that's all we need. Once we have the derivative
+                  of a few functions, we create a few auxiallary
+                  theorems, we'll be able to start combining
+                  them.
+        - Work out `d(x^2)`
+            - Note: we're computing a WHOLE derivative function,
+              not just the derivative AT A POINT.
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-10.jpg
+        - Operator notation
+            - Sometimes the `d/dx` slips over to the side
+            - So it's more like an operator...
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-03-11.jpg
+
+
+### Lecture 4: Polynomials
+    - polynomials: made from a string of mononomials
+        - each `x` term should have a WHOLE-NUMBER expotnent
+    - key: 
+        1. how to get the derivative of a mononomial
+        2. structural task: how to get the derivative of a SUM of
+        functions. ie how to derive combinations...
+    - Get general formula for derivative of: `x^n`
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-04-01.jpg
+    - aside: 3-way 'handshakes' (??)
+        - Now we get this far, but every other combination is
+          going to have at least one higher-order infinitesimal
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-04-02.jpg
+    - Back to deriving: `x^n`
+        - It's simple now, with the binomial bit worked out.
+        - We've proved the 'basic power rule'.
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-04-03.jpg
+    - Now: the `linearity` properties of a derivative
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-04-04.jpg
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-04-05.jpg
+
+### Lecture 5: Derive sin and cos
+    - doing the 'normal' derivative recipe won't work for `sin`
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-01.jpg
+    - Instead of geometric proof ... but first a few facts
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-02.jpg
+    - Geometric proof:
+        - Approach: 
+            - We'll need two facts
+                - Tangent lines are at right angles to radii.
+                - arc length `θ • r = arc length`
+        - First setup our unit circle
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-03.jpg
+        - Add in the infinitesimals
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-04.jpg
+        - How big is the red arc length?
+            - normal formula: `θ • r = arc length`
+            - this situation: 
+                - `dθ • 1 = red arc length`
+                - `    dθ = red arc length`
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-05.jpg
+        - Now we have a tiny infinitesimal triangle 
+            - (arc length isnt curved because it's infinitesimal)
+            - And we look for a `SIMLAR` triangle to try and get
+              a ratio going...
+            - Well he drew the two triangles bigger so we can see
+              what's happening and also added in a tangent line.
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-06.jpg
+            - And there's a right-angle at the tangent
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-07.jpg
+            - Some reasoning with the purple dot to figure out
+              another angle = `θ`.
+            - Using facts like the internal angles add to two
+              right angles.
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-08.jpg
+            - And using opposite angles, he's moved `θ` again
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-09.jpg
+            - And finally he moved in the purple dot into the
+              tiny triangle
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-10.jpg
+        - Finally gets the formula for `d(sinθ)/dx` with all his info
+              from the similar triangles
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-11.jpg
+        - Do the same thing with `d(cosθ)/dx`. But remember
+          a change in `dθ` will be a NEGATIVE change for `cos`.
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-12.jpg
+        - And our formula for  `d(cosθ)/dx`
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-13.jpg
+        - He ends on a double-angle formula trick. Even though we
+          havne't done the 'product rule' yet, we can
+          differentiate this using a double-angle identity.
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-14.jpg
+                - But when he uses the double-angle formula,
+                  there's still another prob. It's a COMPOSITE
+                  function! `0.5 * sin(2x)`
+                - So he uses substitution...
+                - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-05-15.jpg
+
+### Lecture 6: Product and quotient rules
+    - Dont do the naive thing for the product rule
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-01.jpg
+    - To derive the product rule, lets go the geometric route
+      with a rectangle, and represent the product as an AREA.
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-02.jpg
+    - Now increase the input `x + dx` and the area between both
+      functions gets a little BIGGER.
+        - The area could get a bit SMALLER either, but for this
+          example it's easier to make it bigger.
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-03.jpg
+        - and label our new L-strip of extra area
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-04.jpg
+        - work out the area of the L-strip
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-05.jpg
+        - divide both sides by `dx`
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-06.jpg
+    - So now we have our final product rule formula 
+        - (and an example)
+        - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-07.jpg
+    - Nice quick way for the `QUOTIENT` rule
+        - main trick: he moves `y'` over to the rhs
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-08.jpg
+        - and then clean up some more...
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-09.jpg
+        - There's also a mnemonic device to remember it
+            - $MY_IMAGES/maths/analysis/Seth-Calculus/lec-06-10.jpg
+
+
+
+### Microscopic resolution
+    - In biology, the naked eye is perfectly good for some
+      purposes, but a microscope lens reveals the microworld that
+      ultimately explains 'reality' on our scale. 
+    - Similarly, mathematicians found that `real numbers` suffice
+      for BASIC measurement needs, but the PIXILATED image
+      produced by the reals to our naked 'eye' can be sharpened
+      by '_infinitesimal-sensitive_ lenses'. 
+
+### Zoom in and out
+    - Magnitudes that appear equal to the naked 'eye' (in terms
+      of real numbers) may turn out to differ by an infinitesimal
+      amount, when viewed through our infinitesimal-sensitive
+      microscope, 
+    - Conversely, magnitudes that differ by a mere infinitesimal
+      when viewed under the microscope, correspond to the _same
+      real number_ when viewed with the naked 'eye'. 
+
+
+### Links
+    - Author website:                                       https://www.bravernewmath.com/
+    - Youtube channel:                                      https://www.youtube.com/@bravernewmath/playlists
+    - YT: Calculus of Infinitesimals: Differential Calculus https://www.youtube.com/playlist?list=PLFFekKQwSI_1q-qGq1WLSxw3oGfXXzAeH
+    - YT: Multivariate Calculus                             https://www.youtube.com/playlist?list=PLFFekKQwSI_1Mxv6OgaKxMaNYimbdraGX

@@ -1,0 +1,38 @@
+
+### Tensorflowlite?
+    - IMO TensorFlow's advantage over torch is in two things
+      - massive scalability on TPUs, and easy edge deployment
+        with TFLite. Both of these do not play well with the
+        eager mode execution of TF2.x. Jax and the deep learning
+        libraries built on top of it are becoming much better at
+        the former now, though they still have a long way to go
+        in terms of ease of use. 
+    - Also: tf deployment better?
+        - I think TF's deployment story is way better than
+          PyTorch however. TFLite and TFLite micro, along with
+          all the model optimization tooling is just better
+          supported and easy to use compared to whatever PyTorch
+          has
+
+### GPU active tensorflow?
+    > long info
+        from tensorflow.python.client import device_lib
+        print(device_lib.list_local_devices())
+    > short info
+        import tensorflow as tf
+        tf.config.get_visible_devices()
+
+### TensorFlow version
+    python -c 'import tensorflow; print(tensorflow.__version__)'
+
+### Keras version
+    python -c 'import keras; print(keras.__version__)'
+
+
+### Links
+    - Scaleway tensorflow demo             https://www.scaleway.com/en/blog/how-to-make-a-demo-of-your-machine-learning-model-with-gradio/
+    - Learn tensorflow without PhD         https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/#0
+    - Learn tensorflow without PhD (video) https://www.youtube.com/watch?v=vq2nnJ4g6N0
+    - 2023: Is TensorFlow dying?           https://news.ycombinator.com/item?id=34396546
+    - 2022: The end of Tensorflow?         https://www.reddit.com/r/MachineLearning/comments/11r363i/d_2022_state_of_competitive_ml_the_downfall_of/
+

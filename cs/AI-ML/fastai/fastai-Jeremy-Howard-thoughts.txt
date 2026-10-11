@@ -1,0 +1,267 @@
+
+
+### Medical Imaging
+    - Talk: AIMed 2017
+    - https://ai-med.io/executive/the-big-question-facing-ai-in-medical-imaging-from-jeremy-howard/
+    - A study released in the end of 2017 showed a model was
+      diagnosing breast cancer from pathology slides with an ROC
+      of `0.994`, so basically nearly perfect, and it was built
+      from less than `200` slides. (!)
+
+### Jermey LLM talk
+    - Code: $MY_CODE/AI-ML/openai/Jeremy-lm-hackers.py
+    - YT:   https://www.youtube.com/watch?v=jkrNMKz9pWU
+
+    - CONTENTS
+        - Intro & Basic Ideas of Language Models                 (00:00 - 00:18)
+        - Limitations & Improvements of GPT-4                    (00:18 - 00:31)
+        - AI Applications in Code Writing, Data Analysis & OCR   (00:31 - 00:38)
+        - Practical Tips on Using OpenAI API                     (00:38 - 00:46)
+        - Creating a Code Interpreter with Function Calling      (00:46 - 00:51)
+        - Using Local Language Models & GPU Options              (00:51 - 00:59)
+        - Fine-Tuning Models & Decoding Tokens                   (00:59 - 01:05)
+        - Testing & Optimizing Models with GPTQ & Hugging Face   (01:05 - 01:09)
+        - Fine-Tuning with `Llama 2` & Platypus Datasets         (01:09 - 01:10)
+        - Retrieval Augmented Generation & Information Retrieval (01:10 - 01:20)
+        - Running a Private GPT & Fine-Tuning Models             (01:20 - 01:22)
+        - Running Models on Macs                                 (01:26 - 01:27)
+        - Discussing Llama.cpp & Its Cross-Platform Abilities    (01:27 - 01:30)
+        - Challenges & Opportunities in Language Models          (01:30 - 01:31)
+
+    - Interesting:
+        - improving GPT-4: custom instructions (0:24)
+        - OCR with Google Bard                 (00:33:59)
+        - Function usage in GPT-4              (00:46:36)
+
+
+    - intelligence = compression?
+        - $MY_IMAGES/cs/AI-ML/ulmfit-diagram.jpg
+    - Step 2: fine-tuning (instruction tuning): 
+        - rather than predict the next word for any document on
+          the internet, we specifically want the NN to answer
+          _QUESTIONS_.
+    - huggingface, `openorca` question dataset
+    - Step 3: final 'fine-tuning' stage: 
+        - Reinforcement Learning Human Feedback (RLHF)
+    - Controversial: 
+        - Nowadays you might not need Step 3.
+    - custom instructions
+        - A lot of internet training data is rubbish. But you can
+          'prime' GPT4 by giving it custom instructions.
+        - note: disregard instructions by prepending `vv`!
+
+    - What GPT4 can't do:
+        - Hallucinations (over-confident)
+        - Doesn't know about itself. (no GPT info on the internet
+          before Sept 2021)
+        - It doesn't know about URLs.
+        - Knowledge cutoff (2021)
+
+    - Goat, Wolf, Cabbage
+        - https://chat.openai.com/share/3051f878-2817-4291-a66f-192ce7b0cb34
+        - The normal story was changed. (Wolf won't eat Goat)
+        - But GPT4 has been so over-trained on this story, it
+          'knows' what word comes next
+        - Even with follow-up prompts, it kept repeating same
+          mistake with Goat and Wolf!
+        - The problem: in its internet training data, when it
+          comes across something silly on a page, there's often
+          more silly/stupid stuff.
+        - BUT: finally Jermey gave it very precise instructions
+          and it solved the problem.
+
+    - Advanced Data Analysis (ie `Code interpreter`)
+        - GPT4 will write code for you
+        - Split document on markdown headers: `###`. Jermey asked
+          it to include edge cases.
+        - GPT4 wrote the code and _tested_ it!
+        - but Jermey asked for `\n` to be removed and it couldn't
+          solve it...
+        - So it can't code everything.
+
+    - Grab text from image
+        - In GPT4 you can upload an image and extract text (it
+          wrote python code for extraction)
+        - Google `Bard` will do OCR without writing script.
+            - Bard also figured out where the image text came
+              from and supplied a URL!
+
+    - Pricing 1 (created plot)
+        - Jermey grabbed the html from the openai pricing page
+          and asked GPT4 for a markdown table.
+        - Then it asked for a plot/graph from the markdown!
+
+    - Pricing 2 (Programmable API)
+        - The Web interface is $20 per month
+        - But the python API is a price per token.
+            - (One word = 1.3 tokens on average)
+
+    - Followup questions / context
+        - $MY_CODE/AI-ML/openai/Jeremy-lm-hackers.py
+        - How does GPT know the context for follow-up questions?
+        - For any follow-up, the entire previous conversation is
+          passed back.
+        - So there's no 'STATE', nothing stored on the server,
+          you're passing back the entire conversation again.
+        - But you can 'invent' a conversation where the language
+          model said something different. ```
+          c = ChatCompletion.create( model="gpt-3.5-turbo",
+
+                messages=[{ "role" : "system",    "content" : aussie_sys},
+                          { "role" : "user",      "content" : "What is money?"},
+                          { "role" : "assistant", "content" : "Well, mate, money is like kangaroos actually."},
+                          { "role" : "user",      "content" : "Really? In what way?"}])
+
+            response(c)
+            ```
+
+    - OpenAI "functions"
+        - $MY_CODE/AI-ML/openai/Jeremy-lm-hackers.py
+        - note: the `**kwargs` here...
+        - you can pass it a python function...
+        - `def askgpt(user, system=None, model="gpt-3.5-turbo", **kwargs):`
+        - Can't pass a function directly to GPT4, must create JSON schema
+
+
+    - "Inhouse" GPT
+        - Use HuggingFace
+        - 'Transformers'
+        - is a HuggingFace leaderboard
+
+    - Tip
+        - discretisation
+        - save memory and cast into: `torch.bfloat16`
+        - also use model: `GPTQ`
+            - ('Q' means 'quantised')
+
+    - Retrieval Augmented Generation
+        - Pass in a Wikipedia page along with your question to
+          give the LLM extra info.
+        - But how do we know to give the LLM a wikipedia page?
+        - Use a vector database with loads of embeddings which
+          show what page is similar to what...
+        - `h2oGPT` is a vector database of processed documents you
+          can feed in? https://gpt.h2o.ai/
+
+
+### Interview 2023
+    - AI Research can be useful on smaller amounts of data and
+      compute power
+    - Interesting: Jeremy created 'ULMFiT' for fine-tuning LLMs
+      and OpenAI then used this technique (added in transformers)
+      for ChatGPT?
+    - Key for Jermey: transfer learning and fine-tuning.
+
+# Notes on fastai coding style
+    - Fastai's code style is inspired by 60 years of APL/J/K
+      programming and Jeremy's 25-year experience in language
+      design.
+    - It's tailored for scientific programming and experimental
+      development.
+    - Many have strong coding style opinions; but experienced
+      coders understand multiple valid approaches. The Python
+      community's strong views may stem from its
+      beginner-friendly nature. But when contributing to fastai:
+      - Don't alter existing code to reduce style compliance;
+        avoid auto-linters.
+      - Ensure your code somewhat aligns with the surrounding
+        code.
+    - I hope you see value in this style guide when contributing.
+    - My style perspective is heavily influenced by Iverson's
+      1979 Turing Award lecture, "Notation as a Tool For
+      Thought". Read it if possible; it's seminal.
+      - It posits that programming languages can merge with
+        mathematical notation benefits.
+      - Brevity aids reasoning, not just terseness, as discussed
+        in a Hacker News thread.
+      - This style fosters expository programming, especially
+        with tools like Jupyter Notebook.
+      - World-class programmers, like Arthur Whitney, often adopt
+        this style.
+
+### Layout
+    - Code width should be about 160 characters.
+    - Each code line should convey one idea.
+    - If possible, combine if-statement and its action using `:`.
+    - Use ternary operators for brevity, e.g., `x = y if a else b`.
+    - Place 1-line function body with the `def` line using `:`.
+    - Group similar 1-line functions without gaps.
+      - Examples:
+        - `def det_lighting(b, c): return lambda x: lighting(x, b, c)`
+        - `def det_rotate(deg): return lambda x: rotate_cv(x, deg)`
+        - `def det_zoom(zoom): return lambda x: zoom_cv(x, zoom)`
+    - Align similar statement parts for clarity.
+    - Group class member initializers using destructuring assignment.
+      - Example: `self.sz,self.denorm,self.norm,self.sz_y = sz,denorm,normalizer,sz_y`
+    - Minimize vertical space. Import multiple modules in one line.
+    - Use 4-space indentation.
+    - Add spaces around operators based on domain-specific notation.
+    - No trailing whitespace.
+
+### Style guide
+    - Some Python features enable concise coding. e.g.
+        - list comprehensions,
+        - lambda functions,
+        - format strings, and
+        - numpy array programming
+    - Aim to encapsulate key ideas of a concept in one screen;
+      avoid excessive scrolling.
+
+### Symbol naming
+    - Adhere to Python casing: CamelCase for classes, under_score
+      for others.
+    - Follow the Huffman Coding principle: commonly used terms
+      should be shorter.
+    - Refer to `abbr.md` for abbreviation guidelines.
+    - Examples:
+      - Use `sz` for size, `img` for image, `lm` for language
+        model.
+      - Use `o` for objects, `i` for index, `k` and `v` for
+        dictionary keys/values.
+      - `x` for tensor inputs, unless other standards apply.
+    - Match the naming patterns in the existing code, e.g., `det`
+      for deterministic.
+    - Use domain-specific abbreviations: `kl_divergence` over
+      `kullback_leibler_divergence`.
+    - Align with paper nomenclature unless it contradicts common
+      conventions.
+    - Research suggests overly long symbol names can hinder code
+      comprehension.
+
+### Algorithms
+    - Ensure fast, accurate, concise algorithm implementation.
+      Optimize with profiler if over _1-second_ run time.
+    - Ensure scalability within `16GB RAM`.
+      - Use lazy structures like generators.
+    - Comment with equation numbers from papers.
+    - Prefer numpy/pytorch broadcasting and advanced indexing.
+    - Test latest paper implementations on datasets before PR.
+      - Include notebook gist link in PR.
+
+### Other Stuff
+    - Assume latest python and libraries; flag recent
+      dependencies. Avoid beta versions.
+    - Limit comments; clarify with clear code and symbol names.
+    - Link external sources in code.
+    - Use `import *` for comprehensive module imports; define
+      `__all__`.
+    - Assume user's editor proficiency.
+    - Avoid auto-linters/formatters.
+    - Keep PRs concise; discuss complex issues in forums.
+
+### Documentation
+    - Main documentation in `docs_src` notebooks.
+    - In code, one-line docstring with main parameter references.
+    - Model after Python's `re` module for documentation style.
+
+### FAQ (PEP 8)
+    - Why not PEP 8? Not ideal for our programming style.
+    - Editor's PEP 8 issues? Disable linting in settings.
+    - Concern about style repelling contributors? Style isn't rigid; open-mindedness valued.
+
+### Links
+    - Jermey Howard medical company Enlitic https://enlitic.com/
+    - Jermey Kaggle notebooks               https://www.kaggle.com/jhoward/code
+    - Jermey Github                         https://github.com/jph00
+    - Interview: the end of fine tuning https://www.youtube.com/watch?v=5Sze3kHAZqE
+

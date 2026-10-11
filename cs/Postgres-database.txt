@@ -1,0 +1,86 @@
+### Handy
+    - connect:                  $ psql -h [hostname] -p 5432 -d [dbname] -U [username]
+    - List tables:              \dt
+    - List users:               \du
+    - describe table            \d+ 'tablename'
+    - exe location:             /usr/lib/postgresql/13/bin
+    - copy a table:             CREATE TABLE new_table AS TABLE existing_table;
+    - dump db data (only)       pg_dump --column-inserts --data-only comparna_2d -U comparna_2d > my_dump.sql
+
+
+
+
+### Config changes
+    - Config Location :       
+        - v /etc/postgresql/8.4/main/pg_hba.conf
+        - Sample pg_hba.conf:
+            # TYPE  DATABASE                USER                CIDR-ADDRESS     METHOD
+            host    all                     all                 127.0.0.1/32     md5
+            host    comparna_2d             comparna_readonly   192.168.3.0/24   md5
+            host    comparna_2d             comparna_readonly   192.168.4.0/24   md5
+            host    comparna_2d             comparna_readonly   192.168.2.0/24   md5
+            host    comparna_2d             comparna_2d         192.168.2.0/24   md5
+            host    comparna_2d             efarrell            192.168.2.0/24   md5
+            host    comparna_2d_efbackup    comparna_2d         192.168.2.0/24   md5
+
+    - 
+        comparna_2d_efbackup
+
+
+    - After config changes (e.g. to pg_hba.conf) run:
+        - service postgresql-8.4 reload
+
+### Export Postgres to CSV
+    - login as postgres superuser
+    - COPY results_rnachain to '/home/ef/comparna_db/results_rnachain.csv' delimiters',' CSV HEADER;
+    - note: do chmod -R 777 on folder `/home/ef/comparna_db`!
+    - (Because postgres user doesn't have write permissions to
+      someones home folder.)
+
+### superuser
+    - https://serverfault.com/questions/110154/whats-the-default-superuser-username-password-for-postgres-after-a-new-install
+    - postgres user logs in based on "identity"
+        - ```
+        - sudo -u postgres psql -d mydatabase
+        - ```
+    - If you are current a 'root' user, then login as superuser
+      'postgres' will work...
+
+
+### History of name
+    - _PostgreSQL_ also known as _Postgres_, is an open-source
+      RDBMS. It was originally named POSTGRES, referring to its
+      origins as a successor to the _Ingres_ database developed
+      at the University of California, Berkeley.
+    - In 1996, the project was renamed to PostgreSQL to reflect
+      its support for SQL. After a review in 2007, the
+      development team decided to keep the name PostgreSQL and
+      the alias Postgres.
+
+### Connect from DBeaver
+    - If you can connect with `psql` (from the same machine) then
+      you need to set exactly the same connection settings (host,
+      database, user name) in DBeaver.
+    - If you connecting from a different machine then you need to
+      add its IP in `pg_hba.conf`.
+
+### Ubuntu 18.04 install
+    sudo apt-get install wget ca-certificates
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+    sudo apt-get update
+    sudo apt-get install postgresql postgresql-contrib
+
+    - To start cluster:???
+        pg_ctlcluster 13 main start
+
+    - Connect to PostgreSQL
+        sudo su - postgres
+        plsql
+        \conninfo
+        \q
+
+
+### links
+    - dump postgres db to sqlite https://titanwolf.org/Network/Articles/Article?AID=5a15aeb0-e9a7-4f3c-bf12-ca99d2162610#gsc.tab=0
+

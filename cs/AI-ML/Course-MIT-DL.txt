@@ -1,0 +1,52 @@
+### Vids
+    - $MY_VIDEOS/CS/MIT-DL-Course/00001-MIT-Introduction-to-Deep-Learning-6.S191.mp4
+    - $MY_VIDEOS/CS/MIT-DL-Course/00002-MIT-Recurrent-Neural-Networks-Transformers-Attention.mp4
+    - $MY_VIDEOS/CS/MIT-DL-Course/00003-MIT-Convolutional-Neural-Networks.mp4
+    - $MY_VIDEOS/CS/MIT-DL-Course/00005-MIT-Robust-and-Trustworthy-Deep-Learning.mp4
+    - $MY_VIDEOS/CS/MIT-DL-Course/00007-MIT-Deep-Learning-New-Frontiers.mp4
+
+
+
+### Links
+    - Course page                                                 http://introtodeeplearning.com/
+    - Youtube playlist MIT Introduction to Deep Learning | 6.S191 https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI
+
+### Lesson 01 Intro
+    - Perceptron is a SINGLE neuron!
+        - Forward propagation:      $MY_IMAGES/cs/AI-ML/Perceptron.jpg
+        - Perceptron with bias term $MY_IMAGES/cs/AI-ML/Perceptron-with-bias.jpg
+
+    - Why introduce a non-linear activation function?
+        - to make it `non-linear`
+        - all real-world data is non-linear
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/why-activation-1.jpg
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/why-activation-2.jpg
+
+    - Perceptron example
+        - A 'thresholding' funciton with a 'decision boundary'
+        - The whole input space can be drawn on a graph because
+          it's a 2D input space 
+        - Note: this example shows forward propogation of info
+        - Aside: `Z` is the state of the neuron / perceptron
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/Perceptron-example-1.jpg
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/Perceptron-example-2.jpg
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/Perceptron-example-3.jpg
+
+    - Terminology: "Dense layers"
+        - all inputs are connected to all outputs
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/Dense-layers.jpg
+
+    - "Regularisation"
+        - Technique: constrain our optimisation model to
+          discourage complex models
+            - DL models are very large and prone to over-fitting
+        - Why do we need Regularisation?
+            - To improve model generalisation for unseen data
+        - Regularisation 1: DROPOUT
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/Regularisation-1-dropout.jpg
+        - Regularisation 2: EARLY STOPPING
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/Regularisation-2-early-stopping.jpg
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/Regularisation-2-early-stopping-b.jpg
+
+        - Lesson 1 summary
+            - $MY_IMAGES/cs/AI-ML/MIT-DL-course/lesson-1-summary.jpg

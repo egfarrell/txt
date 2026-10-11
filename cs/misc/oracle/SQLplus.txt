@@ -1,0 +1,139 @@
+### handy commands
+    - (no semi-colon needed!)
+    - clear screen
+    - show user
+    - set pagesize 100
+    - start myscript.sql
+
+    - Misc:
+        - `UNDEF` Un-define variable
+        - `F7` show command line history
+        - show table description
+            - desc <TABLE_NAME>;
+        - display CWD
+            - Win7:  host echo %CD%
+            - Linux: host pwd
+
+### oracle sqlplus kludge:
+    - make "@" easier to type! 
+    - (note: @ executes script)
+    #"\C-p": "@"
+
+### Resize column
+    - Set column size 20 wide when returning from a select
+      statement
+    - COLUMN code_name FORMAT A20
+
+### exiting and commiting
+    - sqlplus commits on exit!!
+    - unless
+        - the session terminates unexpectedly in which case it
+          rolls back
+        - or `exit rollback`
+        - or `set autocommit on`
+        - or `commit`
+
+### blank lines
+    - get rid of blank line at top of select results
+    - SET NEWPAGE NONE
+
+### dbms_metadata.get_ddl
+    - you must have
+    - set long 200000
+    - set wrap on
+    - for the output to appear!
+
+### headings gone?
+    - set pagesize 0
+    - will remove headers aswell!
+
+### buffer editing
+    - APPEND              A text      add text at the end of a line
+    - CHANGE /old/new     C /old/new  change old to new in the line
+    - CHANGE /text        C text      delete text from a line
+    - CLEAR BUFFER        CL BUFF     delete all lines
+    - DEL                 (none)      delete a line
+    - INPUT               I           add one or more lines
+    - INPUT text          I text      add a line consisting of text
+    - LIST                L           list all lines in the SQL buffer
+    - LIST n              L n OR n    list one line
+    - LIST *              L *         list the current line
+    - LIST LAST           L LAST      list the last line
+    - LIST m n            L m n       list a range of lines (m to n)
+
+### whats my settings?
+    - (some examples)
+    - show user
+    - show all
+    - define (shows all variable definitions)
+    - show pagesize
+    - show describe
+    -     DESCRIBE [DEPTH {1|n|ALL}][LINENUM {ON|OFF}][INDENT {ON|OFF}]
+
+### echo blank line to sql*plus screen
+    prompt
+
+### launch sqlplus using cmd.exe shortcut
+    C:\DevSuiteHome\BIN\sqlplus.exe lusi_dev/xxxx@csdev.xxx.ac.uk
+    but actually I use CYGWIN + MINTTY
+
+### launch sqlplus using mintty
+    C:\cygwin\bin\mintty.exe /home/itef/cloudfiles/lusidb.sh
+
+### define variables
+    - bind variable
+        - variable default_user varchar2(50)
+        - exec :default_user := 'some string'
+
+    - column variable "defaultuser2"
+        - column place_holder new_value defaultuser2
+        - select USER place_holder from dual;
+
+    - substitution variable
+        - define FileName = 'endatest.sql'
+        - spool &FileName
+
+### difference &variable and &&variable
+    - `&`  gets used ONCE and discarded
+    - `&&` value gets stored for subsequent use
+
+    - `& `
+        - Refer to a defined variable.
+        - If variable is undefined: define variable,
+        - prompt for its value, and undefine it.
+
+    - `&&`
+        - Define variable and prompt for its value
+        - at first occurrence; keep variable
+        - and its value
+
+    - `&n`
+        - Value of nth string on the command line
+        - following the call to the script
+
+    - `.`
+        - Terminate a variable name
+
+
+### SQLPATH [SQL*Plus]
+    - HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_DevSuiteHome
+
+    - When an SQL script file (a file containing SQL statements)
+      is executed with start, the file is searched in the current
+      directory and the directory specified with the environment
+      variable SQLPATH. (On Windows, it's also possible to
+      specify this directory via the registry)
+
+    - Starting SQL*PLUS
+    - Whenever SQL*Plus is started, it looks for login.sql in the
+      directory specified by $SQLPATH and, if exists, executes
+      it.
+
+    - On Windows...
+    - you can also set SQLPATH in the registry:
+    - HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\{oracle_home}\SQLPATH
+
+### show my schema tables
+    - (beginning with S)
+    - select table_name from user_tables where table_name like
+      'S%';

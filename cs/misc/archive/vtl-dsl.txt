@@ -1,0 +1,94 @@
+### More background (vim: gf)
+    $MY_NOTES/cs/misc/DSLs.txt
+
+### using Jetbrains MPS:
+    - mps = Meta Programming System
+    - https://github.com/yseasony/idea-sql-generator-tool
+    - interesting discussion: https://mps-support.jetbrains.com/hc/en-us/community/posts/205827089-What-s-the-output-of-MPS-
+
+### textX: build DSL in Python
+    - https://github.com/igordejanovic/textX
+    - Generating source code:
+    - 'textX' doesn't impose any specific library or process for
+      source code generation. You can use anything from the print
+      function to template engines.
+    - I highly recommend you use some of the well-established
+      template engines.
+    - (has example of using Jinja2 templates to generate Java
+      source code)
+
+### SDMX links:
+    Statistical Data and Metadata eXchange https://sdmx.org/
+    SDMX VTL spec                          https://github.com/vtl-sdmx-task-force/sdmx-vtl
+    stats norway: VTL implementation       https://github.com/statisticsnorway/java-vtl
+    Stats Norway Gitter talk               https://gitter.im/java-vtl/Lobby
+    Stats Norway: Gitter: user             https://github.com/kalessine
+    Stats Norway: Gitter: user             https://github.com/IdarM
+    Stats Norway: Gitter: user             https://github.com/trygu
+    Stats Norway: Gitter: user             https://github.com/hadrienk
+    Italy bank talk (good visuals)         https://www.slideshare.net/DataDrivenInnovation/towards-intelligent-data-insights-in-central-banks-challenges-and-opportunities-for-declarative-languages-luigi-bellomarini
+    VTL presentation                       http://slideplayer.com/slide/6147984/
+    Italian developer                      https://github.com/Muladhara/samizdata
+
+
+### interesting paper:
+    - Linked Edit Rules:
+    - A Web Friendly Way of Checking Quality of RDF Data Cubes
+    - Meroño-Peñuela, Guéret, Schlobach
+
+    - Data editing is “the activity aimed at detecting and
+      correcting errors (logical inconsistencies) in data” [16].
+      Traditionally, edits have been considered at two levels:
+        - micro-edits, aimed at finding inconsistencies in
+          individual records;
+        - macro-edits, “based upon analysis of an aggregate
+          rather than an individual record” [3].
+        - More recently, automatic processing of these edits has
+          gained importance [9].
+
+    - For example, the R packages _editrules_ (validation through
+      micro-edits) and validate (validation through cross-record
+      and cross-dataset macro-edits) are useful tools to
+      automatically validate locally stored statistical datasets.
+    - However, these rule formats are not Web standard
+      ([WebStructured]) nor suitable for efficient Web
+      distribution ([WebDistrib]).
+
+    - Eurostat proposes the eDAMIS Validation Engine (EVE) to
+      validate statistical datasets defining intra (micro) and
+      inter (macro) record rules, but these are kept internally
+      in the system.
+
+    - Finally, SDMX proposes Validation and Transformation
+      Language (VTL). However, VTL:
+        - strongly emphasises transformation instead of
+          validation ([CubeCheck]);
+        - doesnt define a mechanism to publish or link edit rules
+          on the Web ([WebDistrib], [WebStructured], [UniqID]).
+        - No existing approach tackles requirements explicitly
+          [Scope],
+        - does not generate interoperable validation reporting
+          ([Prov], [Annotation]).
+
+### language books
+    - DSL Engineering (Voelter)          https://www.amazon.com/DSL-Engineering-Designing-Implementing-Domain-Specific/dp/1481218581/
+    - Domain specific Languages (Fowler) https://www.amazon.com/Domain-Specific-Languages-Addison-Wesley-Signature-Fowler/dp/0321712943/
+    - Language Implementation Patterns   https://www.amazon.com/Language-Implementation-Patterns-Domain-Specific-Programming-ebook/dp/B00A376HGG
+
+### Links
+    - compiler course 1                            https://www.udacity.com/course/programming-languages--cs262
+    - compiler course 2                            https://www.udacity.com/course/compilers-theory-and-practice--ud168
+    - recursive descent parser                     https://rockie-yang.gitbooks.io/python-cookbook/content/ch2/simple_parser.html
+    - sql-like language transpiler?                http://stackoverflow.com/questions/37218892/good-alternative-to-make-a-sql-like-language-transpiler
+    - Pycon 2017: How to write a Python transpiler https://us.pycon.org/2017/schedule/presentation/410/
+    - Life after Parsing                           http://www.semanticdesigns.com/Products/DMS//LifeAfterParsing.html
+    - How do I start writing a transpiler?         http://stackoverflow.com/questions/29193069/how-do-i-start-writing-a-transpiler-is-it-even-possible
+    - How to write a programming language          https://medium.freecodecamp.com/the-programming-language-pipeline-91d3f449c919
+    - transpiler using ply                         https://github.com/dabeaz/ply/issues/62
+    - HN; Make Your Own Programming Language       https://news.ycombinator.com/item?id=8831689
+    - Python: Building a DSL query language        http://stackoverflow.com/questions/10959489/building-a-dsl-query-language
+    - Why I don’t use a Parser Generator           https://mortoray.com/2012/07/20/why-i-dont-use-a-parser-generator/
+    - antlr                                        https://github.com/antlr/antlr4/blob/master/doc/getting-started.md
+    - DSL: Good Book                               https://tomassetti.me/what-are-good-books-on-best-practices-of-the-design-of-domain-specific-languages-dsl/
+    - dsl in python                                https://stackoverflow.com/questions/31080796/tiny-dsl-implementation-in-python
+    - dsl in python 2                              http://blog.erezsh.com/how-to-write-a-dsl-in-python-with-lark/

@@ -1,0 +1,107 @@
+unix software carpentry
+
+# Backslash:
+\ 	Unix escape character
+\	But backslash on windows is the directory separator
+
+# prints current user
+whoami
+
+# current directory
+    ./
+# parent directory
+    ../
+
+# File sizes
+ls -s -h
+# the "-h" gives human readable output in bytes
+# One file block in 512 bytes
+
+# Move file to current directory
+mv /temp/some.txt .
+
+# Count words
+wc some.txt
+# output: lines words characters filename
+
+# Show first 20 lines of a file
+head -20 some.txt
+# Other txt commands:
+tail, split, cut, uniq
+
+# Pipes and filters
+# Unix programs read from standard input **stdin** and output to **stdout**
+wc -l *.pdb | sort | head -1
+
+# User group information
+/etc/group
+
+# change mode (chmod)
+# add execute permissions:
+chmod u+x
+# remove:
+chmod u-x
+
+chmod u=rwx
+chmod g=rwx
+chmod a=rwx
+
+# put keyboard input into a file
+cat > smallest
+# Press CTRL-D to terminate input stream
+
+# finding
+grep -w -n day haiku.txt
+# -w match whole words
+# -n print line numbers too
+# -i case insensitive
+# -v invert the match
+
+# List all directories/files in OR BELOW current directory
+# if max/min depth unspecified, automatically goes into all subdirectories
+find . -type d
+find . -type f
+find . -maxdepth 1 -type d
+find . -mindepth 2 -type d
+find . -empty
+
+
+# List program files user can run
+find . -perm -u=x -type f
+
+# Find by name in OR BELOW current directory
+find . -name *.txt		# no good, passes expanded list of file names
+find . -name '*.txt'	# better, passes the actual PATTERN
+
+# Find all txt files in your tree, then do a line count
+wc -l `find . -name '*.txt'`
+
+# Spawn another shell
+bash
+
+# quit the spawned shell
+exit
+
+# Variables
+# the DOLLAR sign indicates the **VALUE** of the variable **HOME**
+$HOME
+
+# Run job in back(fore)ground
+&
+fg
+bg
+
+# Access remote computer
+ssh username@remoteComputerName
+
+# Show mount usage
+df -h /home/ef
+
+
+
+
+
+
+
+
+

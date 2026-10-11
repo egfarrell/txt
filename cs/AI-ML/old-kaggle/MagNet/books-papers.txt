@@ -1,0 +1,264 @@
+### - Kinkade, Baylee	(Eastern Michigan University)
+    - An Artificial Intelligence Approach to Modeling the Burton
+      Equation and DST
+        - "decreased the dropout" ?
+        - Papers used:
+        - Burton 1975, An Empirical Relationship between
+          Interplanetary conditions and Dst.
+        - DeForest, 2004, Solar Storms, World and I
+        - Taubes G, 1999, Forecasting the Storms and Showers of
+          Space
+
+
+### GOOD: - "The Challenge of Machine Learning in Space Weather:
+      Nowcasting and Forecasting"
+        - $MY_ZOTERO/2019/camporeale_2019_the_challenge_of_machine_learning_in_space_weather.pdf
+        - https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018SW002061
+
+    - Good Section: 5.1.2 Forecasting Dst
+
+    - The main themes are the need to shift our forecasting
+      paradigm to a probabilistic approach focused on the
+      reliable assessment of uncertainties, and a combination of
+      physics‐based AND ML approaches, known as _gray box_
+
+    - ... the Terminator saga. In the second movie, a scene is
+      shown from the cyborg point of view. The cyborg performs
+      what is today called a segmentation problem, that is
+      identifying single, even partially hidden, objects from
+      a complex image (specifically, the movie's hero is intent
+      in choosing the best motorcycle to steal). The reason we
+      are mentioning this particular scene is that, about 30
+      years later, a landmark paper has been published showing
+      that solving a segmentation problem is not science fiction
+      anymore (see Figure 1; He et al., 2017).
+
+    - small 4 layer NN 
+        - Lundstedt, H et al (2002).
+        - Operational forecasts of the geomagnetic Dst index
+        - https://doi.org/10.1029/2002GL016151
+        - A remarkable feature is that the trained network is
+          extremely compact (especially compared to today's
+          standards), with only four hidden layer neurons. The
+          values of weights and bias were given in the paper, and
+          relative scripts are available on
+        - http://lund.irf.se/rwc/dst/models/.
+            - The meaning of forecast time
+            - The predicted Dst is a one hour forecast from solar
+              wind data measured just upstream of the Earth's
+              magnetosphere. As we use hourly averages as input
+              and output we must clarify what the one hour
+              forecast actually means. The real time data comes
+              in a continuous stream. 
+            - At the same time the model assumes that the data
+              arrives as one hour averages with a one hour
+              sampling rate. To be able to compute the latest one
+              hour average input data we must collect data for
+              that whole hour. In the figure below we assume that
+              the current time is between 05UT to 06UT. The
+              latest one hour input data is computed from the
+              data in the interval 04UT-05UT. The forecasted Dst
+              is then valid for the next one hour interval, in
+              the example 05UT-06UT. This means that the one hour
+              forecast actually varies from a 0 hour forecast to
+              1 hour forecast.
+
+    - Instrument malfunction
+        - Pallocchia et al. (2006) made the interesting argument
+          that in situ solar wind plasma instruments tend to
+          _fail_ more often than magnetometers, because they can
+          saturate for several hours due to large emission of
+          particles and radiation. This can be problematic for
+          operational forecasting based on solar wind density and
+          velocity. For this reason, they proposed an algorithm
+          based exclusively on IMF data and the use of an Elman
+          network, dubbed EDDA (Empirical Dst Data Algorithm).
+          Somewhat surprisingly, they reported a performance
+          comparable to the Lund network (with the caveat that
+          training and test sets were different, 58,000 hourly
+          averages used for EDDA and 40,000 for Lund). An
+          interesting test was shown on the 2003 Halloween storm,
+          when the ACE/SWEPAM instrument malfunctioned for
+          several hours, transmitting incorrect values of density
+          and bulk flow speed, while the ACE/MAG magnetometer
+          continued to produce reliable data. In this situation
+          the Lund operational forecast becomes unreliable, while
+          EDDA still produces valid predictions. 
+
+    - Scaling characteristics (extra NN input)
+        - Vörös and Jankovičová (2002) have made the interesting
+          suggestion of using the information about the scaling
+          characteristics of magnetic fluctuations as an
+          additional input to a NN. They have implemented this by
+          computing the so‐called Hölder exponent of past
+          geomagnetic time series and shown that it significantly
+          improved the prediction accuracy. They also expanded
+          the standard set of inputs by including time
+          derivatives of magnetic field intensity, solar wind
+          speed, and density and performed a dimensionality
+          reduction of inputs by using PCA, effectively reducing
+          the number of inputs to two. A related idea has been
+          more recently proposed in Alberti et al. (2017), where
+          the time scales associated with solar
+          wind‐magnetospheric coupling have been investigated
+          through an Empirical Mode Decomposition, with the
+          suggestion that information relevant at different time
+          scales (i.e., above or below 200 min) can directly be
+          used for geomagnetic forecasting. 
+            - Vörös et al (2002). Neural network prediction of
+              geomagnetic activity: A method using local hölder
+              exponents. 
+            - Alberti et al (2017). Timescale separation in the
+              solar wind‐magnetosphere coupling during St.
+              Patrick's Day storms in 2013 and 2015. 
+
+    - Different combinations of RTSW parameters
+        - Lethy et al. (2018) have presented an extensive study
+          on the geoeffectiveness of different combinations of
+          solar wind parameters, on the effect of different
+          training set periods and of different prediction
+          horizon and time delays, using a single‐layer NN. They
+          have presented results covering 1‐ to 12‐hr‐ahead
+          predictions, and reporting RMSE∼12 and cc∼0.9 for
+          12‐hr‐ahead forecast (tested on a few storms in the
+          period 2016–2017). The authors remark that their method
+          has slightly lower accuracy than other methods for
+          short‐time prediction but that it stands out in
+          medium‐term (12 hr) prediction. 
+
+    - Forward propagation
+        - The standard method of training a NN is by using
+          a so‐called back‐propagation algorithm, where the
+          iterative update of weights and biases are calculated
+          by using information on the gradient (i.e., calculated
+          analytically in a NN) and the repeated application of
+          the chain rule for derivatives (Carè & Camporeale,
+          2018). Other methods exist, based on global
+          optimization techniques including simulated annealing,
+          genetic algorithms, and particle swarm. The latter
+          method has been proposed in Lazzús et al. (2017), for
+          training a feed‐forward NN with a single hidden layer
+          containing 40 neurons. The particle‐swarm technique has
+          the advantage of being less sensitive to the weights'
+          initial conditions, and less prone to being “stuck” in
+          local minima during training. In this work, the authors
+          used inputs composed of the time history of Dst only
+          and a remarkably large data set for training,
+          validation, and test sets (1990–2016). Six different
+          models for forecasting Dst 1 to 6 hr ahead were
+          trained. Predictions up to 3 hr ahead yielded
+          relatively high accuracy when specifically tested on
+          352 geomagnetic storms (the metrics, however, were
+          calculated on the whole data set including the training
+          set): they reported a RMSE∼10.9 for 1 hr ahead and
+          RMSE∼25 for 3‐hr‐ahead predictions. 
+
+    - Genetic Algorithm
+        - Yet a different method to train a NN, based on
+          a Genetic Algorithm has been presented in Vega‐Jorquera
+          et al. (2018), where 1‐ to 6‐hr‐ahead predictions were
+          developed using a single hidden layer NN. The results
+          were very good for 1 hr ahead, but degraded strongly
+          for 6 hr ahead (RMSE∼14). A Genetic Algorithm approach
+          was also proposed in Semeniv (2015). 
+            - Vega‐Jorquera (2018). Ga‐optimized neural network
+              for forecasting the geomagnetic storm index. 
+            - Semeniv, O. (2015). The combined approach for space
+              weather prediction with a guaranteed method and
+              evolutionary algorithm
+
+    - Probabilistic forecasting
+        - We finally turn our attention to probabilistic
+          forecast. The overwhelming majority of methods provide
+          a single‐point estimate, with no indication of
+          probabilities or uncertainties associated to the
+          forecast. However, the quantification of uncertainties
+          and the understanding of how they propagate from data
+          to models and between interconnected models is becoming
+          a predominant theme in Space Weather, recently
+          highlighted in Knipp et al. (2018). In fact, the
+          operational and decision‐making aspect of Space Weather
+          depends largely on the uncertainty of a forecast and on
+          the reliability of such uncertainty. 
+
+    - Non NN: Gaussian Processes (GP)
+        - A clear advantage with respect to parametric models,
+          such as NNs, is that the number of adjustable
+          parameters (hyperparameters, see section 4) in a GP is
+          typically very small. On the other hand, a major
+          drawback is the nonoptimal scalability with the size of
+          the data set. To overcome the computational
+          bottlenecks, sparse (approximate) GP has been proposed
+          and it has become a standard procedure in the Machine
+          Learning literature (see, e.g., Rasmussen, 2004). 
+
+    - Combination NN + GP
+        - An interesting approach that combines the power and
+          scalability of NNs with the probabilistic
+          interpretation of GP has recently been presented in
+          Gruet et al. (2018). In this work, an LSTM NN is
+          trained to provide up to 6‐hr‐ahead prediction of Dst
+          using solar wind parameters and the magnetic field
+          amplitude recorded by a GPS satellite. The NN
+          prediction is then used as a mean function for a GP
+          regression problem, with the final outcome being
+          a Gaussian probabilistic prediction. The model yields
+          a RMSE∼10 and cc∼0.9 for 6‐hr‐ahead predictions, with
+          relevant information on the uncertainty of the
+          predictions, even when tested for storm events. 
+
+
+    - SUMMARY: Geomagnetic Indices Prediction
+        - The reader may feel overwhelmed by the quantity and the
+          diversity of published work. Yet it is not easy to
+          formulate a clear answer to the question: how well are
+          machine learning techniques doing? 
+        - There are at least two main reasons: 
+        - 1: the body of literature has grown in an inorganic
+          way, meaning that new works have not always built on
+          previous results and experience and often new papers
+          propose novel methods that are not straightforward to
+          compare to early works. 
+        - 2:  the degree of freedom for any machine learning
+          technique is quite large, in terms of: 
+                - the regressors to use 
+                - how long of a time history is appropriate, 
+                - time horizon (how many hours ahead to predict), 
+                - how to deal with data gaps, 
+                - time periods used for training, validation, and
+                  test,
+                - the cross‐validation strategy, 
+                - metrics chosen to assess accuracy and
+                  reliability, 
+                -  complexity of a model (e.g., number of layers
+                   and neurons in a NN, hyperparameters in
+                   kernel‐based methods). 
+        - The most appropriate choice of inputs is probably the
+          topic that the most skeptics in the community use to
+          criticize a machine learning approach. 
+        - The argument is that by letting an algorithm choose
+          what parameters are the most informative, with no
+          regard for the physics behind it, one can risk to
+          associate causal information to parameters that are
+          actually not physically relevant and to develop a model
+          that cannot distinguish very well the signal from the
+          noise, ie cannot generalize to unseen data (the
+          proverbial “rubbish in‐rubbish out”). 
+        - In fact, the indisputable advantage of a physics‐based
+          model is that it will return a sensible result for any
+          set of (sensible) inputs, and not only for a subset of
+          seen data, as long as the assumptions and limitations
+          of the model are valid.
+
+
+
+    - Using Solar images... predicting days in advance... 
+    - We believe the answer to these question will be established
+      within the next decade. 
+
+    - And finally, how to incorporate _physics knowledge into
+      a machine learning algorithm_ (or vice versa), to create
+      a proper gray‐box approach is, in my view, the ultimate
+      holy grail quest for Space Weather forecasting.
+
+

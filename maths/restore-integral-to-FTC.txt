@@ -1,0 +1,114 @@
+- maa.org
+- Restore the Integral to the Fundamental Theorem of Calculus
+- 8-10 minutes
+- It is an eye-opening experience to question students who have successfully
+  completed the first semester of Calculus and ask them to state the Fundamental
+  Theorem of Calculus (FTC) and to explain why it is fundamental. The best
+  students will remember that this theorem asserts that integration and
+  differentiation are inverse processes. Some will remember the part that
+  asserts that if f is the derivative of F, then the definite integral of f over
+  [a,b] is F(b) – F(a). But even those who remember what the FTC says are
+  stymied at explaining its importance. The problem is that, for most students,
+  their working definition—and frequently their only definition—of integration
+  is anti-differentiation. I have had students explain that this theorem is
+  important because it defines integration.
+- That, of course, points to a basic problem. I know of no modern calculus
+  textbook that defines the definite integral in any way other than as a limit
+  of Riemann sums. The evaluation part of the FTC, that part of the FTC that
+  most students do remember, is fundamental precisely because the definite
+  integral is defined as a limit of Riemann sums. The FTC provides an alternate
+  and usually much easier route to the evaluation of the integral. But most
+  students never internalize the limit definition. For them, the formative
+  problems of integral calculus are those that involve finding anti-derivatives
+  and evaluating definite integrals through the use of anti-derivatives. Most
+  students can survive calculus, even do quite well in it, with no definition
+  for the integral other than anti-differentiation. Applications to areas,
+  volumes, and accumulations of rates of change can be performed not because
+  students understand why the definite integral is applicable to these problems,
+  but because they have learned how to apply it. The fact that most intructors
+  are reluctant to ask students to solve an unfamiliar problem that first must
+  be cast as a limit of Riemann sums is evidence that few believe that their
+  students really understand the limit definition.
+- Some of the blame for failing to understand integration as anything other than
+  anti-differentiation has been laid at the feet of the ubiquitous presence of
+  calculus in the high school curriculum. Students know in advance that the
+  painful, cumbersome formulas for direct evaluation of limits of Riemann sums
+  will be swept aside as soon as integration is connected to differentiation.
+  Many instructors—I was once among them—believe that if only we could return to
+  those days when students arrived in college totally ignorant of calculus, then
+  students would believe us when we define the integral as a limit and be
+  suitably awed by the emergence of the FTC.
+- History suggests otherwise. Riemann's definition of the integral did not
+  appear until 1854 and was not published until 1868. From the emergence of
+  calculus in the late 17th century until Cauchy's attempts in the 1820s to set
+  analysis upon a rigorous foundation, integration was defined as
+  anti-differentiation. Long after Cauchy, the definite integral continued to be
+  defined exactly as our students would define it today, as a difference of
+  values of an anti-derivative, the values taken at the endpoints of the
+  interval .This is how Lacroix defined it in his Traité élémentaire de Calcul
+  Différential et de Calcul Intégral [1] of 1802, the textbook that dominated
+  calculus instruction in both French and English in the first half of the 19th
+  century. It is how W. A. Granville would define it in the standard American
+  text, Elements of the Differential and Integral Calculus [2], from its first
+  appearance in 1904 through its last edition of 1957. Until the 1950s, most
+  textbook writers chose to define the definite integral in terms of the
+  anti-derivative.
+- Beginning with his second edition of 1911, Granville did state a fundamental
+  theorem of calculus. For him it was the statement that the definite integral
+  could be used to evaluate the limit of a Riemann sum evaluated at the
+  midpoints of the intervals. This distinction takes us to the heart of what the
+  FTC really says. The FTC is telling us about integration, that there are two
+  ways of defining the definite integral: in terms of anti-derivatives or as a
+  limit of a Riemann sum. With suitable restrictions, the simplest being that
+  the function to be integrated is continuous over the interval, they are
+  equivalent. When the FTC first appeared in print in its modern form, in an
+  appendix to an1876 paper of Paul du Bois-Reymond [3], it was descibed as the
+  fundamental theorem of integral calculus (my emphasis), a name that was
+  maintained by Hobson when he popularized it in English in 1907 [4], and that
+  Granville also used. This really is a theorem about integration.
+- We do our students a disservice if we do not make this clear. This does not
+  require defining the definite integral other than as a limit of Riemann sums
+  (but see note [5]) or changing the statement of either part of the FTC. But it
+  does require that we modify how we introduce and explain this theorem. The
+  Evaluation Part of the FTC says that if we have an antiderivative for a
+  continuous function f, then the limit of the Riemann sums of f over the
+  interval [a,b] can be evaluated in terms of the antiderivative of f. The
+  Antiderivative Part of the FTC says that for any continuous function f, the
+  function defined as the limit of the Riemann sums of f with variable upper
+  limit x gives us an antiderivative. In other words, so long as the function to
+  be integrated is continuous, anti-differentiation and limits of Riemann sums
+  give us the same answers.
+- Surely this is the fundamental insight that we credit to Newton and Leibniz.
+  This is where the real power of calculus arises: that a problem that naturally
+  gives rise to a limit of Riemann sums can be evaluated using antiderivatives,
+  but also that antiderivatives can always be generated from limits of Riemann
+  sums.
+- Of course, it is never enough just to tell this to students. They have to
+  discover the power of this equivalence for themselves. To do so requires
+  giving them a succession of ever more sophisticated problems for which the
+  students must determine how to translate the problem into the evaluation of a
+  limit of Riemann sums. They are led to see the usefulness of the Evaluation
+  Part of the FTC as a quick and easy step that enables them to find an exact
+  solution (see note [6]). To understand the power of the Anti-Derivative Part
+  of the FTC, they need to wrestle with problems that seem to call for an
+  antiderivative, but for which an answer can be determined to whatever degre of
+  accuracy is required through the use of an equivalent Riemann sum (see note
+  [7]).
+- We need to restore the recognition that the FTC is really about integration .I
+  would make the plea that we restore the adjective Integral, returning to the
+  language of du Bois-Reymond and Hobson who recognized this as the Fundamental
+  Theorem of Integral Calculus (FTIC), the theorem that tells us not that
+  differentiation and integration are inverse processes to each other, but that
+  integration has two very different manifestations. Recognizing and being able
+  to take advantage of this equivalence is the true source of the power of
+  calculus.
+- [1] Lacroix, S. F. 1802. Traité élémentaire de Calcul Différential et de
+  Calculus Intégral. Paris : Chez Duprat
+- [2] Granville, W. A. 1904. Elements of the Differential and Integral Calculus.
+  Boston : Ginn & Company
+- [3] du Bois-Reymond, P. 1876. Anhang über den fundamentalsatz der
+  integralrechnung. Abhandlungen der Mathematisch-Physikalischen Classe der
+  Königlich Bayerischen Akademia der Wissenschaften zu München. 12: 161–166.
+- [4] Hobson, E. W. 1907. The Theory of Functions of a Real Variable and the
+  Theory of Fourier Series. Cambridge University Press.
+- 

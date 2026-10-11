@@ -1,0 +1,182 @@
+17-The-covariant-derivative-elementary-pedagogy.txt
+
+https://www.youtube.com/watch?v=hK3lt6ovgYc&list=PLRlVmXqzHjUQARA37r4Qw3SHPqVXgqO6c&index=17
+$MY_VIDEOS/physics/what-are-tensors/17-The-covariant-derivative-elementary-pedagogy.mp4
+
+### key:
+    - need to define parallelism first
+    - this allows us define the covariant derivative 
+        - $MY_IMAGES/physics/what-are-tensors/covariant-derivative.jpg
+    - he wrote the covariant derivative with just its components,
+      but then he wrote it out with the full basis vectors too 
+        - $MY_IMAGES/physics/what-are-tensors/covariant-derivative-02.jpg
+    - note: the covariant derivative _increases the rank_ of
+      these tensors 
+        - we started with a vector, took the covariant
+          derivative, and ended up with something with
+          2 indices and it's a tensor now 
+    - _IMPORTANT_: `Γ` is symmetric in it's two lower indices, and
+      this is important, because it means the spacetimes in GR
+      are torsion free
+
+### nice recap:
+    - a thing that is waiting to be paired with a vector to
+      produce a real number is an element of the dual space:
+    - and the metric is like this too... 
+    - $MY_IMAGES/physics/what-are-tensors/metric-like-a-dual-vector.jpg
+
+- ...the metric starts you towards binding all the tangent
+  spaces together, so you can compare vectors in different
+  tangent spaces... 
+    - but on it's own, it isn't enough
+
+- so we'll break the "seal" between all vector spaces
+- this is a big mathematical moment... 
+- enter: the connection...
+- rich idea... exists in QFT as well 
+
+
+### Goal: define the derivative of a vector field
+    - (the derivative is defined by comparing a parallel
+      transported vector)
+    - Starts of with points `p` and `q` (and attached tangent
+      spaces)
+        - $MY_IMAGES/physics/what-are-tensors/connection-01.jpg
+
+    - He adds in a vector field ... must revise that:
+        - $MY_IMAGES/physics/what-are-tensors/connection-02.jpg
+
+    - want to move the vector from `p` to `q` but move it so it
+      remains parallel (pointing in the same direction)
+    - how do you say it's pointing in the same direction?? 
+    - assume (for now) we do know if a transported vector is
+      parallel
+    - then: does the _vector field_ in `q` give the same vector
+      as our hypothetical transported vector? 
+    - Or is it different?
+    - BTW, if the vector field vector at `q` was the SAME, then
+      we'd know there was no change, or derivative, in the field
+      between the two tangent spaces
+    - let's look at the difference. 
+        - $MY_IMAGES/physics/what-are-tensors/connection-03.jpg
+
+
+        - $MY_IMAGES/physics/what-are-tensors/connection-04.jpg
+
+    - in green is the change in the parallel vector
+        - $MY_IMAGES/physics/what-are-tensors/connection-05.jpg
+        - $MY_IMAGES/physics/what-are-tensors/connection-06.jpg
+
+    - then we have the difference between the parallel vector and
+      the `q` vector
+        - $MY_IMAGES/physics/what-are-tensors/connection-07.jpg
+
+    - he writes out the steps again, on the way to the covariant
+      derivative
+        - $MY_IMAGES/physics/what-are-tensors/connection-08.jpg
+
+    - all the mystery is wrapped up in this delta thing that
+      contains the notion of parallelism 
+    - Firstly it should be linear in the separation  `δx^c`, ie
+      as we move `q` back close to `p`, it should go to zero
+        - $MY_IMAGES/physics/what-are-tensors/connection-09.jpg
+
+    - and should be linear in the components of the original
+      vector?
+        - $MY_IMAGES/physics/what-are-tensors/connection-10.jpg
+
+    - finally `Γ` appears! It's this mysterious term that
+      defines parallelism
+        - $MY_IMAGES/physics/what-are-tensors/connection-11.jpg
+
+    - really `Γ` is just a bunch of coefficients ... 
+    - also `Γ` is a function of the spacetime point too. Because
+      it's numbers/coefficients will vary from point to point
+        - ie `Γ` is a function of spacetime
+        - actually it is 4 x 4 x 4 components... a lot! 
+        - $MY_IMAGES/physics/what-are-tensors/connection-12.jpg
+
+    - `Γ` is an affine connection
+    - it adds linear correction to every possible term 
+    - everything we know about parallelism is wrapped up in the
+      affine connection `Γ`
+
+    - but where do we get `Γ` from? 
+    - The answer: ultimately physics will give it to us. 
+    - Physics gives us the metric, and the metric will give us
+      the connection.
+    - but right now, in a mathematical sense, the numbers of `Γ`
+      are arbitrary
+    - but he uses another symbol for `Γ` too... `∇`
+    - ah no... `∇` is for the covariant derivative
+    - $MY_IMAGES/physics/what-are-tensors/covariant-derivative.jpg
+
+### For a scalar field
+    - the connection doesnt matter when it's a scalar function
+	- $MY_IMAGES/physics/what-are-tensors/covariant-derivative-of-scalar-function.jpg
+
+
+### Final comment
+    - everything was based on coordinates in this lecture
+    - but it can all be done in more generality in a coord-free
+      way 
+
+### YouTube
+    -  One thing that I struggle with:  In your derivation of the
+       connection you obtain an estimate for X at the point
+       `x+∆x` by using Taylor's theorem.  
+    - I.e. you are using differentiation.  
+    - And yet the whole problem with determining the covariant
+      derivative is the impossibility of getting a sense of
+      parallelism when dealing with vectors in two different
+      vector spaces.   
+    - Why does this problem not arise when you use Taylor's
+      theorem to get an approximation for the value of `X` at
+      `x+∆x` through the use of the value of `X` at `x`.
+        - Excellet question. Its a good practice to always run
+          down little nagging confusions like these. `X` is
+          a _vector field_ and it is a function of space time:
+          `X(x)`. 
+        - Therefore the components of `X` are also functions on
+          space time: `X^i(x)`. There is no problem taking the
+          derivative of these component functions with respect to
+          the coordinates. That is the ordinary derivative and it
+          exists just fine. 
+        - Since the ordinary derivative exists, Taylor’s theorem
+          applies just fine as well to estimate the components at
+          nearby points in space time. 
+        - The problem is that these estimated new components
+          describe a vector in a different vector space so we
+          cant compare them with the components of the vector
+          field at `x`. 
+        - We have to find a vector at the new point, `x+∆x`,
+          to compare with these new components. 
+        - The big issue is that the ordinary derivative should
+          also be a vector, but the ordinary derivative does not
+          transform like a vector and therefore is not a vector.
+          That does not mean the ordinary derivative is useless!
+          In fact our final result shows that the connection
+          gives us a “correction” term that makes the ordinary
+          derivative a true vector.
+
+    - Hello! Having defined the connection, you're stating at
+      41:20 that it is not a tensor. Could you elaborate on why
+      it is not a tensor? Why doesn't its expression in a tensor
+      product basis make sense? 
+        - The simple (?) answer is that the connection does not
+          transform like the components of a (1,3) tensor. 
+        - You can find a demonstration of this fact in almost any
+          decent book on GR. 
+        - It is not a difficult demonstration. It is interesting
+          that the most important object regarding the geometry
+          of a manifold is not coordinate invariant! Ironic?
+          A little.
+
+
+    - How do you relate this with authors saying the connection
+      is the set of the components of the covariant basis when
+      differentiated with respect to the coordinate system?
+        - Check out 1:04:10 about in lesson 18. I don't think
+          I literally say it, but that is where I make contact
+          with the idea you have read about. It is a good way of
+          looking at it, by the way.

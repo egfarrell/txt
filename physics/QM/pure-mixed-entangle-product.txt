@@ -1,0 +1,229 @@
+# QM — Conceptual Summary
+
+1. Superposition
+2. Product States
+3. Entanglement
+4. Mixed States
+
+### 1. SUPERPOSITION
+
+A quantum state lives in a vector space.
+
+Example:
+- `|ψ⟩ = a|0⟩ + b|1⟩`
+
+### Key ideas
+- Any linear combination of valid states is also a valid state
+- This is just the structure of the theory (vector space)
+- Every state can be written as a SUPERPOSITION
+
+### Important subtlety (basis dependence)
+- Whether something “is a superposition” depends on the chosen basis
+- Example:
+
+`|0⟩ = (|+⟩ + |−⟩)/√2`
+
+So:
+- In the {|0⟩, |1⟩} basis → |0⟩ looks simple
+- In the {|+⟩, |−⟩} basis → |0⟩ is a superposition
+
+### Takeaway
+> “Superposition” is not a special property — it’s universal
+
+### 2. COMPOSITE SYSTEMS & NOTATION
+
+For multiple systems, we use tensor products.
+
+### Notation
+|xy⟩ = |x⟩ ⊗ |y⟩
+
+- First slot → system A
+- Second slot → system B
+
+Examples:
+- |00⟩ = |0⟩ ⊗ |0⟩
+- |01⟩ = |0⟩ ⊗ |1⟩
+- |10⟩ = |1⟩ ⊗ |0⟩
+
+### Generalisation
+For three systems:
+|xyz⟩ = |x⟩ ⊗ |y⟩ ⊗ |z⟩
+
+Example:
+- |010⟩ = |0⟩ ⊗ |1⟩ ⊗ |0⟩
+
+### Interpretation (only valid for product states)
+|xy⟩ means:
+> “A is in state x AND B is in state y”
+
+### 3. PRODUCT STATES
+
+A product state has the form:
+
+|ψ⟩ = |A⟩ ⊗ |B⟩
+
+### Meaning
+- Each subsystem has its own independent state
+- Fully separable description
+
+### Classical analogy
+- Like saying: “this object has property X and that object has property Y”
+
+### 4. ENTANGLEMENT
+
+An entangled state is one that **cannot** be written as a product.
+
+Example:
+|ψ⟩ = (|00⟩ + |11⟩)/√2
+
+### Key properties
+- Not factorisable into A ⊗ B
+- Only the **whole system** has a definite state
+- Subsystems do **not** have independent pure states
+
+### Important clarification
+- This state is a superposition of product states (|00⟩ and |11⟩)
+- BUT it is **not itself a product state**
+
+### Core idea
+> Entanglement = non-separability
+
+### 5. PURE VS MIXED STATES
+
+### Pure state
+A state described by a single vector:
+|ψ⟩
+
+### Properties
+- Maximal information
+- Can show interference
+- Fully coherent
+
+### Mixed state
+A statistical mixture of states:
+
+ρ = p|0⟩⟨0| + (1−p)|1⟩⟨1|
+
+### Meaning
+- With probability p → state is |0⟩
+- With probability (1−p) → state is |1⟩
+
+### Properties
+- Represents uncertainty or classical randomness
+- No coherence between components
+
+### Key distinction
+
+Pure vs Mixed → about **information / certainty**
+Entangled vs Product → about **separability between systems**
+
+These are **independent concepts**
+
+### 6. CRUCIAL INSIGHT: ALL COMBINATIONS ARE POSSIBLE
+
+We can classify states along two axes:
+
+|                | Product (separable) | Entangled |
+|----------------|---------------------|-----------|
+| Pure           | ✔                   | ✔         |
+| Mixed          | ✔                   | ✔         |
+
+### 7. The Four Key Examples (VERY IMPORTANT)
+
+### 1) Pure + Product
+
+State:
+|ψ⟩ = |0⟩ ⊗ |1⟩
+
+### What it is
+- Pure (single vector)
+- Not entangled (factorises)
+
+### Interpretation
+- A is definitely in |0⟩
+- B is definitely in |1⟩
+- Completely independent systems
+
+### 2) Pure + Entangled
+
+State:
+|ψ⟩ = (|00⟩ + |11⟩)/√2
+
+### What it is
+- Pure
+- Entangled (cannot factorise)
+
+### Interpretation
+- Perfect correlations:
+  - If A is 0 → B is 0
+  - If A is 1 → B is 1
+- No independent state for A or B
+- Whole system is definite, parts are not
+
+### 3) Mixed + Product (Separable Mixed State)
+
+State:
+ρ = (1/2)|00⟩⟨00| + (1/2)|11⟩⟨11|
+
+### What it is
+- Mixed (statistical mixture)
+- Not entangled
+
+### Interpretation
+- With 50% probability → both are 0
+- With 50% probability → both are 1
+- Just classical randomness (like a hidden coin flip)
+- No quantum coherence
+
+### 4) Mixed + Entangled
+
+State:
+ρ = p|Φ⁺⟩⟨Φ⁺| + (1−p)(I/4)
+
+where:
+|Φ⁺⟩ = (|00⟩ + |11⟩)/√2
+
+### What it is
+- Mixed (not a single vector)
+- Entangled if p > 1/3
+
+### Interpretation
+- Sometimes the system is entangled
+- Sometimes it’s random noise
+- If enough entanglement remains → still entangled overall
+
+### 8. DEEP CONCEPTUAL TAKEAWAYS
+
+### Superposition
+- Universal feature of quantum states
+- Basis-dependent notion
+
+### Product states
+- Systems are independent
+- Classical-like structure
+
+### Entanglement
+- Systems are fundamentally non-separable
+- No classical analogue
+
+### Pure states
+- Complete quantum description
+
+### Mixed states
+- Statistical uncertainty or loss of coherence
+
+### 9. FINAL INTUITION SUMMARY
+
+- Pure + Product → fully known, independent systems
+- Pure + Entangled → globally known, locally undefined
+- Mixed + Product → classical randomness
+- Mixed + Entangled → noisy quantum correlations
+
+### 10. ONE SUBTLE BUT CRUCIAL FACT
+
+If you take part of an entangled system:
+
+- The `whole system` can be pure
+- But each `subsystem` appears mixed
+
+This is one of the most non-classical features of QM.

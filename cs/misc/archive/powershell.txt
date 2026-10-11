@@ -1,0 +1,33 @@
+windows powershell
+
+### does profile exist?
+	test-path $profile
+	returns TRUE or FALSE
+
+### create new profile
+	new-item -path $profile -itemtype file -force
+	new-item -path $env:windir\System32\WindowsPowerShell\v1.0\profile.ps1 -itemtype file -force
+
+### display alias info
+	get-command <alias name>
+	get-alias | sort-object
+
+### display particular function
+	get-command <function name>
+	get-content function:\<FUNCTION NAME>
+
+### functions
+	function lusidb {rw -irc sqlplus LUSI_DEV@csdev.lboro.ac.uk}
+
+### Profile Locations
+	all users and all shells.
+	> %windir%\system32\WindowsPowerShell\v1.0\profile.ps1
+
+	all users, but only for Microsoft.PowerShell shell.
+	> %windir%\system32\WindowsPowerShell\v1.0\Microsoft.PowerShell_profile.ps1
+
+	only for current user, but affects all shells.
+	> %UserProfile%\My Documents\WindowsPowerShell\profile.ps1
+
+	only for current user and the Microsoft.PowerShell shell.
+	> %UserProfile%\My Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1

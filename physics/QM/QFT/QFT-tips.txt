@@ -1,0 +1,508 @@
+QFT Tips
+
+
+### Bell theorem
+    - QM says: correlations are more fundamental than spacetime
+      separation.
+    - GR says: spacetime separation defines what correlations are
+      allowed.
+    - QFT doesn’t actually resolve this — it sidesteps it
+    - People sometimes say “QFT is relativistic, so Bell is
+      fine.” That’s only half true.
+    - Relativistic QFT:
+        - enforces microcausality: [O(x), O(y)] = 0 for spacelike
+          separation,
+        - prevents superluminal signalling.
+    - But Bell correlations:
+        - do not rely on operator noncommutativity at spacelike
+          separation,
+        - do not correspond to signal propagation,
+        - yet violate local causality in Bell’s precise sense.
+    - So QFT preserves no-signalling, not locality in the
+      classical causal sense.
+    - That’s a crucial distinction, and it’s often glossed over.
+    - GR’s causal structure is stronger than no-signalling; it’s
+      about what can influence what, not just what can be used to
+      send messages.
+    - So QFT and GR pass each other like ships in the night on
+      this issue.
+
+### Dirac: creation / annihilation operators
+    - $MY_NOTES/physics/QM/Constructing-reality-marburger.txt
+    - This entire scheme, including the trick of creation and
+      annihilation operators to handle the multiple-particle
+      issue, was invented by Dirac in 1927 to describe electrons
+      interacting with EM radiation.
+
+### Good book: Inside Interesting Integrals
+    - $MY_BOOKS/Physics/Maths/Analysis/Nahin-Inside-Interesting-Integrals.pdf
+    - $MY_NOTES/physics/People/Paul-J-Nahin.txt
+    - Dedicated to all who understand the frustrating lament in
+      Anthony Zee’s "QFT in a Nutshell":
+        - "Ah if we could only do the integral.. But we can't"
+
+### Lee Smolin: QFT operators
+    - $MY_NOTES/physics/People/Lee-Smolin-interview.txt
+    - There are different ways to stress it, but let's talk about
+      the technical. When we solved the Wheeler-DeWitt equation
+      and the other constraint equations, we didn't just throw
+      some equations together and naively get the answer, because
+      this is QFT. 
+    - It's a different kind of QFT because it's invariant under
+      diffeomorphisms of space rather than under just
+      translations and Lorentz piece. 
+    - But you've got to do the same thing in quantum that you
+      have to do in any other QFT. 
+    - That is, operators live at points and they're _highly
+      divergent objects_. 
+    - And if you _multiply two operators_ together at the same
+      point, it doesn't mean anything. 
+    - So, you have to give it a definition by something like
+      pulling them apart and taking them together at a controlled
+      rate, or changing the dimension, or something like that.
+      You've got to intervene in the definition of the theory to
+      make that product of operators make sense. 
+    - All the preparatory work that I did between graduate school
+      and meeting Abhay and learning about his work, gave me
+      a bunch of techniques to understand those kinds of limits
+      and those kinds of products in a way in which was invariant
+      under diffeomorphisms. 
+
+
+### CFT
+    - A conformal field theory (CFT) is a quantum field theory
+      that is invariant under conformal transformations. In two
+      dimensions, there is an infinite-dimensional algebra of
+      local conformal transformations, and conformal field
+      theories can sometimes be exactly solved or classified. 
+    - Lee Smolin was invited to do it...
+
+### Photons
+    - $MY_NOTES/physics/People/John-Wheeler.txt
+    - ... photon is special. It is its own antiparticle.
+
+### Nima: Weinberg appreciation
+    - https://www.quantamagazine.org/how-steven-weinberg-transformed-physics-and-physicists-20210811/
+    - Weinberg was a master of QFT theory, a branch of physics
+      born from applying the rules of `QM to the EM field` which
+      sees a particle — the photon — as a “quantized” excitation
+      of the field. 
+
+### Strassler talk
+    - https://www.youtube.com/watch?v=e1hkTqqUz0g
+    - $MY_BOOKS/Physics/QM/QFT/Waves-Impossible-Sea-Strassler.pdf
+    - Aside: at the end of the talk, Strassler questions is the
+      QFT/Higgs field approach even correct(!) Because space has
+      some 'impossible' properties!
+    - Space ISNT like this:
+        - $MY_IMAGES/physics/strassler-space-isnt.jpg
+    - Space IS like this:
+        - we ourselves are 'waves' in the fabric of spacetime
+        - (a bit like soundwaves moving through air)
+        - $MY_IMAGES/physics/strassler-space-is.jpg
+    - Space like a musical instrument?
+        - (resonance important... why?)
+        - $MY_IMAGES/physics/strassler-space-like-music.jpg
+        - Electrons and photons are 'wavicles'. 
+            - But key difference: photons cannot slow down and
+              'stop', they travel at the speed of light. 
+            - But electrons can slow down etc:
+                - $MY_IMAGES/physics/strassler-wavicles-1.jpg
+            - and these electron (and other particle) wavicles
+              have a key property: MASS
+                - $MY_IMAGES/physics/strassler-wavicles-2.jpg
+        - Blogpost comment: Terry Bollinger
+            - Ah, wavicles! They are the shapers of the cosmos
+              and the creators of new stars. Read further if
+              you're curious why.
+            - Eddington nailed wavicles beautifully a century ago
+              — and yes, I was completely wrong to disregard his
+              1920s work in a post I did a week or so ago.
+            - For Eddington, a persistent quantum entity was
+              always a wavicle — a Schrödinger wave for fermions
+              or an electromagnetic wave for photons. Yet, as
+              Eddington beautifully describes, that wave can
+              transform itself from an indescribably weak
+              electromagnetic wavefront spanning a good chunk of
+              the cosmos into an atom-scale wave (but still
+              a wave) that a telescope here on Earth can detect.
+            - Eddington never cheated by consciously or
+              unconsciously converting the photon into a little
+              point that resolves the rescaling issue by
+              traveling randomly to this or that spot in the
+              cosmos. Eddington knew telescopes as well as
+              anyone. From that knowledge, he knew that if photon
+              wavicles did not behave exactly like exceptionally
+              diffuse but otherwise ordinary electromagnetic
+              waves, they could never form the beautiful images
+              he saw in his telescopes.
+            - His photon had to be a single, integral unit of
+              energy — a wavicle — at every scale imaginable. The
+              photon had to do this despite the impossibility of
+              converting an incredibly vast and weak sheet of
+              electromagnetic energy into an atomic-scale wave
+              and doing so at impossible, relativity-violating
+              speeds.
+            - Photon wavicles — and also the fermionic or
+              Schrödinger versions of wavicles, though those tend
+              to be far more delicate — can rescale themselves in
+              marvelous ways that Eddington could describe but
+              freely admitted he could not understand. Nor could
+              Einstein, or Bohr, or Schrödinger, or Born.
+              Frankly, we understand it no better today.
+            - However, what I find most fascinating about photon
+              wavicles has not yet been mentioned. It is
+              something you, Ethan Siegel, may like due to your
+              fascination with the formation of stars in the
+              cosmos: It is uncollapsed photon waivicles, not
+              photon particles, that collapse clouds of dust into
+              stars.
+            - Every NASA satellite that uses a light sail is an
+              example of a satellite that catches a tiny bit of
+              the momentum from photon waivicles before sending
+              them off in new directions.
+            - The particle version of a photon cannot do this.
+              All the particle version can do is get absorbed by
+              the dust, heating it without giving it directional
+              urgency. Only the wavicle version of the photon
+              — the version that reflects like a mirror from the
+              dust instead of being absorbed by a single dust
+              atom — can deposit the directional momentum needed
+              to collapse a cloud of dust into new stars.
+
+
+### Preptorial: From Advanced QM to Introductory QFT (Ohlsson)
+    - "More PostGrad Reference than Undergrad, but Excellent."
+    - Before Dirac there really was no "relativistic" QM and
+      fields, as even Pauli's waveforms extending Schrodinger
+      from 1 to 2 wasn't well understood until Dirac's `4x4`
+      matrix explained Pauli. 
+        - That said, you'd think this text would be mostly about
+          Dirac and developments since his 1928 masterpiece.
+    - Positrons and experiments have expanded gauge theories,
+      creating a taxonomy of new particles and properties
+      intersecting SR and QM.
+    - The text covers major trends well, but the math is intense
+      and assumes familiarity with transformations, symmetries,
+      and symbols.
+    - I recommend this for grad students and professionals, not
+      undergrads, unless they've a good teacher or supplemental
+      texts.
+    - The author sometimes fails to explain notations like plain
+      `L` for Lagrangian. Familiarity with relativity and QED is
+      helpful.
+    - Subtle differences in phases, operators, tensors, etc., are
+      often not detailed, assuming prior knowledge.
+    - Familiarity with differential equations, linear algebra,
+      transforms, Lorenz transformations, and Laplacians is
+      necessary.
+    - Knowledge of Dirac's work aids understanding, as his
+      equations are foundational for the text.
+    - The text is well-proofed, with few errors. 
+        - Many recent physics texts lack this rigor, making
+          self-study difficult.
+    - Highly recommended for advanced grad students, researchers,
+      and professors wanting to review derivations and formulas.
+
+### Interesting opinion
+    - $MY_NOTES/physics/books/philosopher_physics_maths_needed.txt
+    - QFT is not a theory yet, if a theory must be formulated
+        in known mathematics!
+    - But practitioners of the "art" of QFT use tools like:
+        - group representation theory,
+        - ordinary and partial differential equations
+        - calculus of variations.
+
+
+### Difference QFT and QED:
+    - QFT is a collection of general principles. It is
+      a specialization of quantum theory (it respects all of the
+      principles of quantum theory and includes some more), but
+      it is still very broad. 
+    - QED is a further specialization. QED is a relatively simple
+      QFT in which the only dynamic entities are the
+      electromagnetic field and one or more fermion fields (such
+      as the electron field). In QED, electron particles are
+      quanta of the electron field, as suggested in the question.
+    - QCD (quantum chromodynamics) is a different specialization
+      of QFT. The Standard Model of particle physics is another
+      one. Other examples are abundant, most of them less
+      relevant to the real world but still useful for building
+      intuition. Here's a Venn diagram to illustrate the
+      relationships:
+        - $MY_IMAGES/physics/QM/different-types-QFT.jpg
+    - By the way, the relationship between particles and fields
+      is not always straightforward. For example, in QCD, the
+      fields are quark and gluon fields, but the resulting
+      particles are mesons (like pions) and baryons (like protons
+      and neutrons). It is still correct to say that particles
+      are field quanta, but not quanta of individual fields. Each
+      particle in QCD is a collective phenomenon that involves
+      all of the fields. The correspondence between fields and
+      particles is more straightforward in QED, but it still
+      involves some subtleties. One of the benefits of studying
+      less-realistic-but-easier specializations of QFT is to help
+      build intuition about such subtleties.
+
+
+### QED genesis
+    - $MY_NOTES/physics/spacetime/Perfect-theory.txt
+    - When Dirac first proposed his equation, he started
+      a revolution in the understanding of particles and forces
+      in nature. 
+        - If the quantum physics of the electron could be
+          described in the same framework as the EM field (i.e.
+          obeying Einstein’s SR), why couldn’t the _EM field
+          itself_ be quantized like the electron? 
+        - Instead of just describing light waves, it should
+          naturally describe photons as well, the quanta of light
+          that Einstein had posited 1905. 
+        - A quantum theory of electrons and light, known as
+          quantum electrodynamics, or QED for short, was the next
+          step on the path to the unification of particles and
+          forces.
+
+### AdS/CFT good explanation
+    - Postscript in Lee Smolin's book
+    - $MY_BOOKS/Physics/QG/Three-Roads-Quantum-Gravity.pdf
+
+### Ads/CFT
+    - $MY_NOTES/physics/metaphysics/Baggot-farewell-to-reality.txt
+    - The holographic principle might well have remained an
+      interesting curiosity in information theory and
+      a fascinating slice of metaphysics. 
+    - But in 1998, Argentinian theorist Maldacena announced
+      a powerful new result. He showed that the physics described
+      by a Type IIB superstring theory within an n-dimensional
+      bulk spacetime is entirely equivalent to the physics
+      described by low-energy quantum field theory applied to its
+      (n-l)-dimensional boundary. 
+    - This was a whole new superstring duality. What makes this
+      duality extraordinary is that low-energy quantum field
+      theory does not include gravity. Yet its dual superstring
+      theory does.
+    - The type of quantum field theory used is referred to as
+      conformal field theory, or CFT. 
+    - This relationship that Maldacena had discovered is then
+      called a CFT/AdS duality.
+    - The caveat is that _our universe is not an anti-de Sitter
+      space_. 
+    - With the accelerating expansion of spacetime and the
+      consequent dilution of matter (both light and dark) that
+      this implies, our universe will come in time to resemble
+      a deSitter, not an anti-deSitter, universe.
+
+
+
+### Trace anomoly
+    - Neil Turok: Physics is in Crisis https://www.youtube.com/watch?v=Dt5cFLN65fI
+
+### No particles
+    - QFT has no particles... it's just a field theory!
+        - $MY_NOTES/physics/courses/flournoy-GR-2021/01-Intro.txt
+
+### Einstein on QFT and SR
+    - Contemporary physicists can't see it is hopeless to take
+      a theory that is based on an _independent rigid space_
+      (Lorentz-invariance) and later hope to make it
+      general-relativistic (in some natural way) 
+        - (Einstein to Max von Laue, September 1950; cited from
+          Stachel 1986a, p. 378).
+    - He defended himself against criticism he had neglected
+      relativistic QFT, in similar terms:
+        - I have not really studied quantum field theory. 
+        - This is because I cannot believe that SR suffices as
+          the basis of a theory of matter, and that one can
+          afterwards make a NON-GENERALLY relativistic theory
+          into a generally relativistic one. 
+        - But I am well aware of the possibility that this
+          opinion may be erroneous 
+        - (Einstein to K. Roberts, September 6, 1954; .cited from
+          Stachel 1986a, p. 378).
+
+### Video: What is QFT?                             
+    - electrons are all local manifestations of the same
+      underlying object: a field
+    - a field is like a _fluid_ that fills all of spacetime(!)
+    - https://www.youtube.com/watch?v=MmG2ah5Df4g
+
+### Structure Interpretation QFT
+    - Great description of a 'fibre bundle'
+        - $MY_BOOKS/Physics/QM/QFT/Structure-Interpretation-Standard-Model-McCabe.pdf
+    - Amazon Review: 
+        - My grandfather actually picked this up at the Caltech
+          library while he was looking for books. He thought
+          I would be interested in it. He was right.
+        - Just a disclaimer: I'm a mathematician doing
+          mathematical physics, so I'm very comfortable with
+          representation theory of Lie groups, differential
+          geometry, functional analysis (including nonlinear
+          functional analysis), partial differential equations,
+          and topology...and there were some parts of the book
+          that required some careful reading.
+    - The author noted in the preface his inspiration for such
+      a book is Derdzinski's  "Geometry of the Standard Model of
+      Elementary Particles" . 
+    - Fortunately, they are republishing that excellent book,
+      which gives you an idea of the mathematical sophistication
+      of the "Structure and Interpretation of the Standard
+      Model".
+    - Although the author sometimes uses rather esoteric
+      philosophical terms, it is only in one chapter, the
+      introduction.
+    - The book deals with the subject of "first quantization" for
+      the standard model. This is "the process of obtaining
+      a Hilbert space of cross-sections of a vector bundle" over
+      the light cone. (page 25) 
+    - The author lucidly explains the notion of a "fibre bundle"
+      which is exquisite. 
+        - I have never seen anyone explain it as well. 
+        - It made the use of such a mathematical gadget
+          straightforward and obvious.
+    - Additionally, the author never made any demands on
+      spacetime as the base manifold (i.e. it wasn't assumed to
+      be flat or curved), so it is a trivial exercise for the
+      motivated reader to incorporate general relativity into the
+      scheme. (I don't think so! You'd have QG then?)
+    - This is a "must have" for anyone who is doing research on
+      the standard model or particle physics, or even wants to
+      learn it from a mathematical point of view. 
+        - It is not a physicist's introduction to the subject,
+          but it's a rigorous introduction to the beautiful
+          topic.
+
+
+### Yang Mills paper: Guage
+    - https://journals.aps.org/pr/abstract/10.1103/PhysRev.96.191
+    - The idea that the neutron and proton correspond to two
+      states of the same particle was suggested at that time by
+      the fact that their masses are nearly equal... Under such
+      an assumption one arrives at the concept of a total
+      isotopic spin' which is conserved in nucleon-nucleon
+      interactions...
+
+    - The conservation of isotopic spin is identical with the
+      requirement of invariance of all interactions under
+      isotopic spin rotation. This means that when
+      electromagnetic interactions can be neglected, as we shall
+      hereafter assume to be the case, the orientation of the
+      isotopic spin is of no physical significance. The
+      differentiation between a neutron and a proton is then
+      a purely arbitrary process. As usually conceived, however,
+      this arbitrariness is subject to the following limitation:
+      once one chooses what to call a proton, what a neutron, at
+      one space-time point, one is then not free to make any
+      choices at other space-time points.
+
+    - It seems that this is not consistent with the localized
+      field concept that underlies the usual physical theories.
+      In the present paper we wish to explore the possibility of
+      requiring all interactions to be invariant under
+      independent rotations of the isotopic spin at all
+      space-time points, 
+
+### Neglected Ideas
+    - Another series of talks that I took a look at and that
+      I can recommend is Nima Arkani-Hamed’s lectures on Physics
+      at Future Colliders at the ICTP summer school on particle
+      physics. 
+        - http://indico.ictp.it/event/9538/other-view?view=ictptimetable
+    - He never actually gets anywhere near discussing the topic
+      of the title for the talks, but does give a very nice
+      leisurely introduction to computing amplitudes for
+      zero-mass particles. 
+    - What he’s doing is emphasizing ideas that are _not often
+      taught_ in conventional QFT courses (although they should
+      be). 
+    - His second talk explains how to think of things in terms of
+      classifying representations of the Poincare group, an old
+      topic that unfortunately is often no longer taught (see
+      chapter 42 of my QM textbook). His third talk emphasizes
+      thinking of space-time vectors as two by two matrices (see
+      section 40.4 of my QM book). 
+    - This is a truly _fundamental idea_ about space time
+      geometry that gets too little attention in most physics
+      courses.
+
+### Dec 27, 2020
+    - You "need" (?) QED before QFT
+
+### Dec 27, 2020
+    - in QFT the `operators` are actually a field
+    - in ordinary QM, the wavefunction is a field, but in QFT the
+      operators are a field
+
+### Brian Keating Podcast
+    - https://www.youtube.com/watch?v=QCKCQNFsJUw
+    - 50:45 “the thing about, i don't think Garrett is actuality
+      accurate; one of the really important things about what
+      happened in the 1970’s, where we actually made progress but
+      we pretend we didn't make progress is in the structure of
+      mathematics, because we’re embarrassed where the progress
+      happened; it happened around the mathematics of field
+      theory, rather than in the specifics of the field theory
+      that seemed to to describe our world. In fact, if Garret
+      has a Lagrangian, which he does, and that Lagrangian is
+      applied to the fields, which it is, Garrett will find that
+      he will have something called a phase space, he will have
+      a configuration space, he will have a phase space. The
+      phase space will inherit a structure called the symplectic
+      form. That symplectic form will become the curvature of
+      a differential operator on something called a line bundle,
+      and that line bundle is something like the XY plane where
+      you can look at functions, and those functions will become
+      the quantum states of a quantum field theory, so  I think
+      Garrett just said is not actually accurate.” nuff said?
+        - Eric: "In some sense, classical field theory is what
+          happens when you stop a mechanics from quantizing
+          itself."
+
+### Lubos Motl - QFT
+    - $MY_BOOKS/Physics/QM/QFT/QFT-Divergences-Lubos.pdf
+    - UV: dynamical problems are problems with a theory
+    - IR: kinematic problems are just hard work for users
+    - ./lubos-divergence-comments.txt
+
+### Non-peturbative QFT
+    - Peter Woit wrote:
+    - “Breakthrough Prizes were announced today. There’s an argument
+      to be made that the best policy is to ignore them. ”
+    - Well the “Breakthrough Prize in mathematics” is actually for
+      a serious work in mathematical physics:
+    - https://www.imperial.ac.uk/news/203853/imperial-mathematician-scoops-3m-breakthrough-prize/
+    - Professor Hairer is recognised “for transformative contributions
+      to the theory of stochastic analysis, particularly the theory of
+      regularity structures in stochastic partial differential
+      equations.”
+    - When you look on the work for which the prize was given
+    - https://arxiv.org/abs/1303.5113
+    - then you see that it threats the stochastic quantization (a
+      mathematical version of quantization that works by converting
+      a classical system into a stochastic pde) and the
+      renormalization of phi^4 theory.
+    - As the author writes:
+    - “One major difference between the results presented in this
+      article and most of the literature on quantum field theory is
+      that the approach explored here _is truly non-perturbative_”
+    - It is always important if someone invents mathematically
+      rigorous methods for threating quantum field theories
+      non-perturbatively, because more difficult systems like qcd and
+      gravity display intense self interactions where such methods
+      could be helpful.
+    - I therefore would say that the prize for this work is well
+      deserved.
+    - The paper should be read, especially by mathematical physicists
+      and high energy theorists.
+
+
+- Recommended in Bohmian lecture:
+    'Quantum mechanics: myths and facts', H. Nikolic (2007).
+    $MY_BOOKS/Physics/QM/QM-Myths-and-facts.pdf
+
+### Links
+    - Folland QFT: A tourist guide for mathematicians                                                   https://www.amazon.co.uk/Quantum-Field-Theory-Mathematicians-Mathematical/dp/0821847058/
+    - Dr. Physics Particle Physics 1: Introduction                                                      https://www.youtube.com/watch?v=mBFDp-ppG6I&t=1s
+    - Video: What is QFT?                                                                               https://www.youtube.com/watch?v=MmG2ah5Df4g
+    - Good?: Schmilz: Particles, Fields and Forces                                                      $MY_BOOKS/Physics/QM/QFT/Particles-Fields-Forces-Schmitz-2e.pdf
+    - Woit recommends: Padmanabhan: Obtaining Non-relativistic QM from QFT: Issues, Folklores and Facts https://arxiv.org/abs/1712.06605
+    - Woit recommends:  Quantum Field Theory The Why, What and How                                      https://link.springer.com/book/10.1007/978-3-319-28173-5

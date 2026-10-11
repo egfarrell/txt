@@ -1,0 +1,147 @@
+
+# Resources
+    - Book:      $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Kline-calculus-intuitive-physical.pdf
+    - Solutions: $MY_BOOKS/Physics/Maths/Analysis/Alt-View/Kline-calculus-intuitive-physical-solutions.pdf
+
+
+### Origins of Calculus
+    - Summary: 4 classes of problems:
+        1.  Celestial motions
+        2.  Tangents to curves
+        3.  Maxima and Minima
+        4.  Lengths of curves, bounded areas
+
+    - The `motion` of celestial bodies became important in the
+      17th century. 
+        - Objects moving near the surface of the Earth and also
+          heavenly bodies, have _variable velocity_ and also
+          variable acceleration. The branches of Maths before
+          Calculus were not able to treat these.
+    - The second problem of the 17th century was the
+      determination of `tangents` to various curves (Fig. 1-1).
+        - $MY_IMAGES/maths/analysis/kline/tangents.jpg 
+        - This question was interesting as pure geometry, but
+          also was significance because the tangent to a curve at
+          a point represents the _direction_ of the curve at that
+          point. 
+        - Thus, if a projectile moves along a curve, the
+          direction in which the projectile is headed at any
+          point on its path is the direction of the tangent at
+          that point. 
+        - To determine if the projectile will strike its target
+          head-on or just at a glancing angle, we must know in
+          which direction the projectile is moving at the point
+          on its path where it strikes the target. 
+        - The invention of the telescope and microscope in the
+          17th century stimulated great interest in `lenses`. To
+          determine the trajectory of light rays after striking
+          the lens surface, we must know the angle the light ray
+          makes with the lens; 
+            - ie the angle (Fig. 1-2) between the light ray and
+              the tangent to the lens
+            - $MY_IMAGES/maths/analysis/kline/tangents.jpg
+        - Thus finding the _tangent_ to a curve was a major
+          topic. (_TODO_: get a screenshot of fig 1 and 2)
+    - Another 17th century problem: `maxima and minima`. 
+        - Eg what elevation angle maximises the range of
+          a cannon. 
+        - What are the max and min distances from the sun as
+          a planet orbits it?
+        - Again Calculus was needed for these...
+    - They also studied the `lengths of curves` and the area
+      bounded by a curve and the volume bounded by a surface.
+        - It was possible to calculate this for simple shapes
+          (bounded by line segments) but more complicated shapes
+          were impossible. e.g. the Earth is an oblate spheroid,
+          hard to calculate volume...
+
+
+### Interesting titbits
+    - Usually we say "the calculus" to refer to the differential
+      and integral calculus as opposed to other calculi. 
+    - The calculus utilizes algebra, geometry, trigonometry, and
+      some coordinate geometry (which we shall study in this
+      book). However, it also introduces some new concepts,
+      notably the derivative and the integral. 
+    - Fundamental to both is the `limit` concept. 
+
+### Studying the calculus needs:
+    - Theory: will use intuitive approach
+    - Technique 
+    - Applications
+
+### Definition of a function
+    - a function is a _relation_ between two variables (e.g. time
+      and distance travelled)
+        - me: this is a bit different to the "black box" idea of
+          a function... something in, and something out
+        - but maybe "relation" is a good word to use... 
+        - I always wondered at `y` "is a function of" `x`.. 
+            - June 2024: this means: f(x) = y
+        - now I can think of it as `y` is "related to" `x` in
+          some way...
+    - the most effective mathematical representation of
+      a function is a _formula_: e.g. `s = 16 • t^2`
+
+### Throwaway remark
+    - The techniques of calculus apply to _single-valued functions_
+    - (not double-valued functions, vector-valued functions etc?)
+
+### function notation: double meaning
+    - Strictly speaking, a function is a _relation_ between two
+      variables, `x` and `y` say. 
+    - The relation might be that `y` is the square of `x`. 
+    - Therefore relation is neither `x` nor `y` but something
+      connecting the two. 
+    - Thus when one says that John is the _father_ of William,
+      the relationship is fatherhood, and this relation is
+      neither John nor William but a connection between them. 
+    - Yet in speaking about these people one might use the word
+      'father' to mean John, _whereas the word strictly refers to
+      the relationship_. 
+    - Likewise in dealing with functions we should distinguish
+      between the relation and the value `y` of the function. 
+    - We could use `f` to denote the relation between `y` and `x`
+      and use `f(x)` to mean `y`. 
+    - However, we often use `y` or `f(x)` to mean the RELATION.
+    - Fortunately, this use of `y` or `f(x)` in the double sense
+      causes no confusion and avoids a lot of unnecessary words.
+
+
+- (The letter `s` is used to denote distance because the Latin word for it is spatium.) 
+
+- `s = 16*(t^2)` For each value we choose for `t` there is no
+  more than one value of `s`. We say `s` is a _single-valued_
+  function of `t`.
+
+- `t = pm*sqrt(s/16)`. Here we say `t` is a double-valued function
+  of `s`, or we can say there are two functions (the plus and
+  minus ones)
+    - $MY_IMAGES/maths/analysis/kline/two-valued-function.jpg
+
+- Be careful when simplifying functions! The numerator and
+  denominator is divided by `x-2` but the resulting function is
+  not the same as the original (at `x = 2`)
+    - $MY_IMAGES/maths/analysis/kline/careful-simplifying-functions.jpg
+
+
+### Limits!
+    - An average speed is simply the distance traveled over an
+      interval of time divided by that interval of time.
+        - avg speed = distance / time
+    - However the _instantaneous_ speed is not obtained by
+      dividing a distance by a time interval. 
+    - key: it is obtained by observing the number that the
+      average speeds approach (`96` in this example)
+    - In mathematical language, we say `96` is the _limit_ of the
+      average speeds, as the time intervals over which the
+      average speeds are computed approach `0`.
+    - Hence the instantaneous speed is obtained by a totally new
+      process: by finding the limit of average speeds.
+    - By this process, we avoid the meaningless expression `0/0`
+      which we'd have to face if we tried to compute the
+      instantaneous speed as distance divided by time.
+
+"The method of increments"
+
+"derived function" is often called the derivative...

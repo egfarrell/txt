@@ -1,0 +1,41 @@
+### http redirect to HTTPS
+    - cd /etc/apache2/sites-available
+    - vim default-ssl.conf
+    ```
+    <VirtualHost *:80>
+    ServerName $domain
+    Redirect permanent / https://english-maths.club/
+    </VirtualHost>
+    ```
+    - also: make sure port 80 is open:
+    `ufw allow http`
+
+### create ssl cert
+
+### Screenoptions
+    - Screenoptions: remove clutter from Admin panel
+
+### recommended plugins
+    - astra
+    - astra starter sites
+    - really simple ssl
+    - ithemes security
+    - updrafts
+    - yoast seo
+    - wp mail smtp by wpforms
+
+    - color schemes: https://coolors.co/
+    - fonts: https://fontpair.co/
+
+    - chrome extensions: "whatfont"
+
+    - logo design: fiverr, Canva
+
+### lifterlms main trick:
+    - if you set a new course catalogue page, and it doesn't
+      fully work, then "deactivate" LifterLMS and then "activate"
+      it again.
+
+### old wordpress demo site
+    - tutoring wordpress blog
+    - https://wordpress.com/view/aetutoring191136850.wordpress.com

@@ -1,0 +1,91 @@
+See also: $MY_NOTES/physics/thermo/pressure.txt
+
+### My question:
+    - "In GR, the source of gravity isn’t just mass, it’s the
+      stress-energy tensor (energy, pressure, and momentum)."
+    - What exactly is 'pressure' in the stress-energy tensor...
+      pressure against what?
+    - How does that contribute to spacetime curvature (ie how
+      does it contribute to making things gravitate)
+
+    - Good—this is exactly the right place to pause and ask
+      “pressure against what?” because in everyday life, pressure
+      is always against a wall or container.
+    - But in GR, pressure means something subtler:
+        - it is the `flux of momentum through space`, and it
+          gravitates just like `energy density`.
+
+
+### 1. Stress-energy tensor in plain terms
+
+The stress-energy tensor `T_{mu nu}` is a 4x4 object that encodes:
+
+    * `T_{00}` = energy density (how much energy per unit volume),
+    * `T_{0i}` = momentum density (like energy flowing in space),
+    * `T_{ij}` = stresses: pressure (diagonal parts) and shear (off-diagonal parts).
+
+- For an isotropic fluid (same in all directions), the diagonal
+  spatial terms are just pressure in the fluid’s rest frame:
+    - ```
+    - T_mu_nu = diag(rho, p, p, p)
+    - ```
+
+    - So in GR, “pressure” isn’t relative to a container.
+    - It’s an intrinsic property of a distribution of
+      matter/energy: the tendency of particles or fields to push
+      in all directions.
+
+
+### 2. Why pressure gravitates
+
+- Einstein’s field equations tell us that spacetime curvature
+  couples to the whole tensor `T_{mu nu}`, not just `rho`.
+
+- In the cosmological (Friedmann) equations, the key combination
+  that drives *acceleration* of the scale factor is:
+
+```
+a_ddot / a = -(4*pi*G/3) * (rho + 3p)
+```
+    - This equation shows:
+        - Energy density `rho` pulls inward (attractive).
+        - Pressure contributes threefold, because pressure pushes
+          along each of the 3 spatial directions.
+
+    - So:
+        - Normal matter: `p ~ 0`, attractive.
+        - Radiation: `p = rho/3`, still attractive, even more
+          strongly than matter.
+        - Vacuum energy: `p = -rho`, so `rho + 3p = rho - 3rho
+          = -2rho`, which flips the sign and makes expansion
+          accelerate (repulsive).
+
+
+### 3. Physical picture of pressure as momentum flux
+
+    - Imagine photons in a box. They bounce around, carrying
+      momentum. The pressure you measure on the walls is
+      literally momentum flux — photons transferring momentum per
+      unit area per unit time. Even if there are no walls, the
+      same momentum flux exists in the photon gas everywhere.
+
+    - GR doesn’t need walls: it “feels” the stress-energy tensor,
+      so the pressure terms contribute to curvature directly.
+      Pressure is real, not just a bookkeeping artifact.
+
+
+### 4. Summary
+
+    - Pressure in the stress-energy tensor is momentum per unit
+      area per unit time carried in each direction of space.
+      Because Einstein’s equations couple spacetime curvature to
+      *all* forms of energy and momentum flux, pressure
+      gravitates. Negative pressure is just as real as positive
+      pressure, and in the vacuum-energy case it causes repulsion
+      instead of attraction.
+
+
+    - Want me to actually sketch out how that `a_ddot
+      / a = -(4*pi*G/3)(rho + 3p)` comes out of the Einstein
+      field equations for a homogeneous, isotropic universe?
+      That’s the cleanest way to see pressure enter gravity.

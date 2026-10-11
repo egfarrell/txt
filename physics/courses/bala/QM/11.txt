@@ -1,0 +1,61 @@
+qm nptel 11
+
+- As energy increases, so does the number of nodes. 
+- Intuitive? Something about the 2nd derivative and curves going
+  up and down.
+
+### Stationary States:
+    - In QM the particle doesnt have _separate_ definate values
+      for KE and PE. Just for the total. 
+    - This is because the momentum and position operators dont
+      commute. 
+    - This is different to the classical hamiltonian in a well
+      where you can get separate values for `KE` and `PE` and add
+      them.
+
+- The expectation value of the `KE` is always positive. 
+- Expectation is linked to the norm (modulus) which is always
+  positive.
+
+### Meta-states:
+    - Can be in a bound finite well for long long time but will
+      eventually tunnel out.
+
+Well: Symmetric (about origin) 
+Do a change of variables and but `x'=-x`.
+Eventually you get φ(-x) = cφ(x). They are lineraly dependent.
+But c must be = +-1.
+
+- The Hamiltonian commutes with the parity operator.
+
+- Therefore the eigenfunctions must be EITHER even or odd.
+
+- Ground State must be EVEN. Why? If its continuous and ODD, then
+  at `x=0` it must have a node. But the ground state cant have
+  a node.
+
+### Isospectral oscillators.
+    - Linear Harmonic oscillator is first member of an infinite
+      family which have EQUALLY SPACED energy levels. 
+    - The harmonic appears again and again, even in QFT where you
+      add one more particle to a quantum field and you increase
+      the energy by a constant amount (adding the particles rest
+      energy or mass)
+
+- Cannot write position and momentum in finite Matrices. Must be
+  infinite matrices.
+
+- Basically because `p` and `x` dont commute. And if you take the
+  trace of both sides of the commutator equation you get
+  a contradiciton.
+
+### DIRAC ladder operators
+    - He solves the harmonic operator using Diracs method which
+      splits the 2nd order eigen-equation into two 1st order
+      equations. 
+    - Basically rewrites the operators `p` and `x` as
+      dimensionless operators `A` and `A† `which commute to `1`. 
+    - These ladder operators (or creation and annaliation
+      operators) simplify things.
+
+When all is solved

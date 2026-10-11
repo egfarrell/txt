@@ -1,0 +1,135 @@
+### Basics:
+    - The propagation of light can be considered in terms of rays
+      and wavefronts in ordinary physical 3D space.
+    - The wavefronts are 2D curved surfaces; the rays are 1D
+      curved lines.
+    - Hamilton's analogy amounts to two interpretations of
+      a figure like the one shown here.
+    - In the optical interpretation,
+        - the `green` wavefronts are lines of constant phase and
+        - the orthogonal [^red] lines are the rays of geometrical
+          optics.
+    - In the mechanical interpretation,
+        - the `green` lines denote constant values of action
+            - (derived by applying Hamilton's principle to
+              mechanical motion) and
+        - the [^red] lines are the orthogonal object
+          trajectories.
+    - The orthogonality of the wavefronts to rays (or
+      equal-action surfaces to trajectories) means we can compute
+      one set from the other.
+
+# GPT discussion
+
+### 1. Geometrical Optics and Wavefronts
+    - In classical (geometrical) optics, we often model light as
+      traveling along straight lines or rays. These rays are
+      perpendicular to surfaces of constant phase, called
+      wavefronts. Think of a stone dropped into a pond—the
+      expanding ripples are circular wavefronts, and the
+      direction in which the ripple moves outward (perpendicular
+      to the ripple lines) corresponds to the ray.
+    - Rays: 1D paths that light follows.
+    - Wavefronts: 2D surfaces of constant phase (e.g. all points
+      on the wave that have oscillated to the same degree).
+    - In a medium with varying refractive index (like air near
+      a hot road), these rays bend—Snell’s law governs how—and
+      the wavefronts become curved.
+
+### 2. Hamilton's Principle in Mechanics
+    - In mechanics, Hamilton developed a reformulation of
+      Newtonian dynamics using the principle of stationary
+      action. In this view, the path that a particle takes
+      between two points in space and time is the one for which
+      the action (a quantity integrating kinetic and potential
+      energies over time) is stationary (usually minimized).
+    - Action (S): Defined as the integral of the Lagrangian (L
+      = T - V) over time.
+    - Particles "choose" the path for which the action is
+      stationary.
+        - The surfaces of constant action can be thought of as
+          mechanical wavefronts.
+
+### Key point:
+    - Now here's the leap:
+        - these constant-action surfaces in mechanics behave
+          mathematically like wavefronts in optics.
+
+### 3. The Optical–Mechanical Analogy
+
+    - Hamilton noticed you can interpret certain mathematical
+      structures in optics as analogous to those in mechanics:
+
+    - Optics                                      Mechanics
+    - ------                                      ---------
+    - Rays                                        Trajectories of particles
+    - Wavefronts (constant phase)                 Surfaces of constant action
+    - Snell's Law                                 Conservation of momentum
+    - Fermat's principle                          Hamilton’s principle
+        - (`light` follows path of least time)        - (`particle` follows path of stationary action)
+
+    - In both cases:
+        - Rays/trajectories are orthogonal to wavefronts/action
+          surfaces.
+        - You can compute rays if you know the wavefronts, and
+          vice versa.
+
+        - In this analogy, the equations governing light rays
+          (from Fermat’s principle) and mechanical trajectories
+          (from Hamilton’s principle) are mathematically
+          identical—this is an example of a variational principle
+          in action.
+
+4. Visualizing the Analogy
+    - $MY_IMAGES/physics/CM/hamiltons-analogy.jpg
+
+    - Imagine a contour map (like those used for topography),
+      where each contour line represents a constant value of
+      action (in mechanics) or constant phase (in optics):
+
+    - The particle or light ray always crosses these lines
+      perpendicularly.
+
+    - Where the lines are close together, the `gradient` is
+      steep—meaning rapid change, which corresponds to higher
+      speed or stronger force (in mechanics) or higher refractive
+      index (in optics).
+
+    - So:
+        - Green lines: wavefronts (optics) / constant action surfaces (mechanics).
+        - Red lines: rays (optics) / particle trajectories (mechanics).
+
+    - By calculating the "green" lines using the Hamilton–Jacobi
+      equation (a reformulation of Hamilton’s principle), we can
+      find the red lines by following the gradient of these
+      surfaces.
+
+### 5. Deeper Implications and Unity
+
+    - This analogy isn't just _mathematical poetry_—it's deeply
+      rooted in the physics:
+        - It bridges wave behavior (optics) and particle dynamics
+          (mechanics).
+        - It foreshadows wave-particle duality seen in QM.
+
+    - In fact, Schrödinger’s equation (foundation of wave
+      mechanics) comes from applying wave ideas to mechanics,
+      inspired by this analogy.
+
+    - The `eikonal equation` in optics and the `Hamilton–Jacobi
+      equation` in mechanics are formally the same type of PDE.
+
+### 6. An Illustration
+    - $MY_IMAGES/physics/CM/hamiltons-analogy.jpg
+    - Picture a set of rippling wavefronts propagating through
+      space...
+        - and from each point on the wavefront you draw a line
+          perpendicular to the curve—these are rays. 
+    - Now imagine instead that those same curves represent
+      increasing values of action for a moving particle, and
+      again you draw perpendicular lines—that gives the
+      particle's path.
+    - The fact that you can interpret the same geometric
+      construction in two entirely different physical
+      contexts—light and particles—is the power of Hamilton’s
+      analogy.

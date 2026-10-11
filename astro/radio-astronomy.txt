@@ -1,0 +1,233 @@
+
+### The Edge of Physics (Anil Ananthaswamy)
+    - Highlight Added Saturday, August 13, 2011, 12:15AM
+    - “Enter Grote Reber”: as the radio engineer turned
+      astronomer himself later wrote about his role, in
+      a whimsical paper called:
+        - "A Play Entitled the Beginning of Radio Astronomy"
+        - $MY_BOOKS/Astro/radio/Reber-Beginning-of-Radio-Astronomy.pdf
+    - As a young Chicagoan, Reber ...
+
+
+### two great books
+    - $MY_BOOKS/Astro/radio/Fundamentals-Radio-Astronomy-Astrophysics.pdf  
+    - $MY_BOOKS/Astro/radio/Fundamentals-Radio-Astronomy-Astrophysics-Solutions.pdf
+    - $MY_BOOKS/Astro/radio/Fundamentals-Radio-Astronomy-Obs.pdf           
+    - $MY_BOOKS/Astro/radio/Fundamentals-Radio-Astronomy-Obs-Solutions.pdf 
+
+### HN: high resolution
+    -  Astronomical radio images are naturally overwhelmingly
+       sharper than optical images, because radio telescopes
+       today can have much larger apertures than optical
+       telescopes.
+    - The best-resolution optical images are made with two large
+      telescopes and a temperature-controlled optical fiber from
+      each one, arranged to interfere optically, yielding an
+      image resolution equivalent to a mirror the size of the
+      distance between the telescopes as the visual field is
+      scanned on each simultaneously to sample pixels of the
+      image, in sequence.
+    - The electromagnetic interference operation must be
+      conducted purely optically because we are not equipped to
+      sample and record time-registered electromagnetic signals
+      at 1 trillion samples per second. (Yet. It is possible in
+      principle, it just hasn't been achieved.)
+    - In contrast, output from radio telescopes can be sampled
+      and recorded with careful time registration, and the
+      samples interfered numerically, so signals from radio
+      telescopes thousands of miles apart can be treated
+      together, yielding images of overwhelmingly finer detail.
+      Even when using just a single radio telescope, a reflector
+      dish can be made much larger than any practical earthbound
+      optical mirror.
+    - So, if a radio-telescope image is indistinct, it is likely
+      that the object imaged is itself indistinct.
+    - The recent image of a black-hole accretion disc was
+      composed from radio-telescope traces. No optical treatment
+      could produce an image of such resolution.
+    - reply
+        - >Astronomical radio images are naturally overwhelmingly
+          sharper than optical images, because radio telescopes
+          today can have much larger apertures than optical
+          telescopes.
+        - They can be higher resolution with very long baseline
+          interferometry but I wouldn't say they are naturally
+          higher. If I'm reading the article correctly these were
+          collected by the ASKAP telescope array in Australia
+          which has a resolution of 30 arcseconds at 1.4GHz [1],
+          which is only about twice as good as the human eye.
+        - [1]
+          https://www.atnf.csiro.au/projects/askap/config.html#:~:text....
+        - To your point, though, when VLBI is used they can get
+          ridiculous levels of resolution. M87 was imaged at tens
+          of microarcseconds of resolution, which is 4-5 orders
+          of magnitude better than any optical telescope in
+          operation today.
+    - reply
+        - Wanted to follow up to say how ridiculous
+          a microarcsecond is. It's approximately equal to 5e^-12
+          in radians, which at this level is approximately the
+          ratio of width to distance.
+        - So, for example, it's like seeing a hydrogen atom from
+          7 meters away. Or a red blood cell from 400km away.
+
+
+### Sara Conference talk 2020
+	- $MY_IMAGES/astro/Radio/SARA-talk-2020.jpg
+    - Radio Astronomy signals are much weaker than expected.
+        - At 1420 Mz the signals are weak even on large antennas. 
+        - On a 10ft dish only the Sun is a few dB.
+        - Most other signals like CasA, the Moon, Cygnus will be
+          fractins of a dB.
+        - It's all about _temperature_. You'll get tired of
+          hearing Kelvin used in so many different ways in radio
+          astronomy. 
+        - Kelvin can be used in noise figure, the signal change
+          and just physical temperature too.
+        - Basically we're measuring energy changes. Everything in
+          radio astronomy is about relating them to the RF energy
+          created by a resistor heated to some degree kelvin.
+        - Useful number: Room temperature (290K) this change is
+          -174 dBm per Hz.
+            - This allows you do some calculations in your head. 
+        - Noise figure is the noise added by the receivers
+          electronics. This is measured in equivalent Kelvin.
+
+    - Gain drift in the electronics looks just like the signals
+      we're looking for. "Often you'll think you have something
+      and it's just a change in temperature in the electronics" 
+        - Laptops, WIFI, smartphones, GPS adds spurious noise. 
+
+    - Calibrate noise sources. Periodically inject noise into the
+      system. You can calibrate your system based on the amount
+      of change you see.
+        - Problem: getting water in the co-ax. Periodic
+          calibration will show this up (ie that your system has
+          changed sensitivity).
+    - Dead parts thermal noise looks disturbingly like working
+      system noise.
+    - Take good notes. The prefessionals have FITS headers on
+      their data with lots of info about the observing
+      conditions. 
+    - Having a filter to protect an "LNA?" is very
+      important.
+    - Learn basic astronomy: get phone apps which identify the
+      sky objects. Watch for Daylight Savings time! Get
+      comfortable with sideral time, universal time etc.
+    - Due south is key. Gives the ability to see the lowest in
+      declination. 
+        - The galactic centre is a bright radio source. But at
+          high latitudes you may see _tree thermal nosie_ or
+          ground noise first, making it more difficult. 
+    - If you're not focussed too well the side lobes of the dish
+      will get larger and instead of being 18 or 20 dB down, they
+      may be higher and that will see thermal noise as you get to
+      low angles.
+    - Precision time is vital to making sense of data and sharing
+      results.
+    - GPS time is good if not internet access, other use internet
+      time servers to keep your loggining computer accurate.
+    - Take good notes: even the wind can cause the antenna to
+      move and that'll show up in the measurements. 
+
+### Student Paper: History of Radio Astronomy(!)
+    - An early radio astronomer was Janzen, who used the
+      telephone to hear noise coming from the centre of the
+      universe. 
+    - Rebel heard it too. After WW II a couple of radar
+      operators, Lowel and Ryan, picked up a lot of second-hand
+      stuff cheap and took off  ...
+
+### Know too much!
+    - In 1933 John Kraus (University of Michigan), attempted to
+      detect the sun by using a searchlight reflector to focus
+      the radio waves. He failed because the receiver was not
+      sensitive enough. 
+    - This was the first use of a reflector-type radio telescope.
+      At the Serendipity meeting, Kraus stated that meaningful
+      accidental discovery occurs only as the result of "being in
+      the right place with the right equipment doing the right
+      experiment at the right time.” 
+    - Another noted astronomer, R. Hanbury Brown, added that the
+      person should "not know too much,” otherwise the discovery
+      might not be made!
+
+
+### Phased Arrays (PHD 2010)
+    - Phased array technology is new to the radio astronomical
+      community. A phased array radio telescope consists of
+      a large number of small antennas instead of a small number
+      of large dishes.
+    - Each of these antennas has a very large field-of-view
+      (FOV), which means that they receive signals from all over
+      the sky simultaneously.
+    - The array is focused on the signal of interest by com-
+      bining the signals from many antennas after correction for
+      the geometrical delay over the array. This is schematically
+      compared to focusing of an incoming wave by a dish in Fig.
+      1.3.
+	- $MY_IMAGES/astro/Radio/phased-array.jpg
+
+
+### Signal Processing
+    - Challenges for signal processing lie in (1) imaging, (2)
+      calibration, (3) interference suppression. These problems
+      are really intertwined. Its interesting that, especially
+      for calibration and interference suppression, FACTOR
+      ANALYSIS is an essential tool.
+    - Our contributions in these areas have appeared in [3, 6,
+      33, 34, 36, 55, 57, 62– 64] and are summarized in the PhD
+      theses [5, 44, 54, 60], which should provide ample details
+      for further reading.
+
+### Polarisation
+    - Radio astronomers (and electrical engineers) define
+      circular polarization from the point of view of the light
+      _EMITTER_.
+    - In this perspective, if the electric field is rotating
+      clockwise it is right circularly polarized and if rotating
+      counter-clockwise it is left circularly polarized.
+    - Most physics textbooks adopt the _OBSERVER_ perspective of
+      the light. Right circular polarization still corresponds to
+      clockwise rotation, but since this is seen from the
+      opposite point-of-view, it corresponds to the radio
+      astronomer’s counter-clockwise rotation or left circular
+      polarization, and vice versa.
+    - Be careful when reading about circularly polarized light to
+      be certain you know which convention is being used.
+
+### Interesting comment
+    - ERA was also shaped by our belief that radio astrophysics
+      owes more to THERMODYNAMICS than to electromagnetism, so
+      Kirchhoff’s law appears more frequently than Maxwells
+      equations. (!)
+
+### misc info
+    - radio signals are often 1% of the system noise. (Everything
+      is giving off radio waves via blackbody thermal emission)
+    - radio signal measurements often given in units of
+      temperature (antenna temperature)
+    - The visible and radio skies reveal distinct "parallel
+      universes” sharing the same space. 
+    - Most optically bright stars are undetectable at radio
+      wavelengths, and many strong radio sources are optically
+      faint or invisible.
+
+### York Astro: Recommended
+    - Burke, B. F.: An introduction to Radio Astronomy, Cambridge University Press, 2014
+    - Lashley, J.: The Radio Sky and How to Observe It, Springer, 2010
+    - Fleisch, D.: A Student’s Guide to Maxwell’s Equations, Cambridge University Press, 2008
+    - James, J.F.: A Student’s Guide to the Fourier Transform, Cambridge University Press, 2011
+
+### Links
+    - Interferometry Jupyter notebooks                    https://github.com/ratt-ru/fundamentals_of_interferometry
+    - Interferometry Course                               https://ratt-ru.github.io/fundamentals_of_interferometry
+    - Interferometry Videos (low volume)                  https://www.youtube.com/channel/UCUmTkrOzojTDz1zENnppGtQ/videos
+    - NRAO Essential Radio Astronomy                      https://science.nrao.edu/opportunities/courses/era
+    - RAdio Astro tools Github                            https://github.com/radio-astro-tools/
+    - Spectralcube                                        https://spectral-cube.readthedocs.io/en/latest/
+    - Good Radio Astro  programmer                        https://github.com/patchvonbraun
+    - Grote Reber archive                                 https://www.nrao.edu/archives/Reber/reber.shtml
+    - A simple 11.2 GHz radio telescope (Hardware) (2020) https://news.ycombinator.com/item?id=26078761
+    - British Radio Astronomers Youtube playlists         https://www.youtube.com/user/britishastronomical/playlists
+    - Chart – Completely Hackable Amateur Radio Telescope https://news.ycombinator.com/item?id=37465586

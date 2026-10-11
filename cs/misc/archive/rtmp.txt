@@ -1,0 +1,11 @@
+
+grab a stream (like wireshark analysis!)
+
+sudo iptables -t nat -A OUTPUT -p tcp --dport 1935 -j REDIRECT
+rtmpsrv
+open web browser and start streaming
+after a while press ctrl+c
+sudo iptables -t nat -D OUTPUT -p tcp --dport 1935 -j REDIRECT
+
+find a line like this from rtmpsrv output:
+rtmpdump -r "rtmp://flash5.lrz-muenchen.de:1935/Mitschau/" -a "Mitschau/" -f "LNX 11,2,202,559" -W "https://videoonline.edu.lmu.de/sites/all/modules/sessionsimple/jw_5_10/player.swf" -p "https://videoonline.edu.lmu.de/en/node/7499" -y "mp4:/lmu/mitschau/wise15/mcmp_wtat151209_panh.mp4" -o mcmp_wtat151209_panh.flv

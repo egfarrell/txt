@@ -1,0 +1,148 @@
+
+- Book: $MY_BOOKS/Cs/C/Extreme-C.pdf
+
+### Macros intro
+    - Macros only exist BEFORE the compilation phase. Therefore
+      the compiler doesn't know anything about the macros. This
+      is important to remember if you are going to use macros
+      instead of functions. (Actually: modern compilers are aware
+      of preprocessor directives)
+    - The compiler knows everything about a function because it
+      is part of the C grammar and is parsed and kept in the
+      parse tree. But a macro is just a C preprocessor directive
+      known only to the preprocessor itself.
+    - Macros allow you to _generate code_ before compilation. In
+      other programming languages, you need to use a code
+      generator to do this.
+
+
+### Use Macros to create DSL
+    - note: LOOP is a "function-like macro"
+    ```
+    #define PRINT(a) printf("%d\n", a);
+    #define LOOP(v, s, e) for (int v = s; v <= e; v++) {
+    #define ENDLOOP }
+
+    Somewhere in Code:
+        LOOP(counter, 1, 10)    <---- "DSL" loop!
+            PRINT(counter)
+        ENDLOOP
+    }
+    ```
+
+### Macro operators, `#`, `##`
+    - `#`: put double-quotes around parameter. 
+        - `#NAME` --> "copy"
+
+    - `##`: concat parameter to other elements 
+        - (ie form variable names) 
+        - `NAME ## _cmd` --> copy_cmd
+
+    ```
+    #define CMD(NAME) \
+        char NAME ## _cmd[256] = ""; \  
+        strcpy(NAME ## _cmd, #NAME);
+    ...
+    CMD(copy)
+    ```
+    - RESULT: 
+    - char copy_cmd[256] = ""; strcpy(copy_cmd, "copy");
+    
+
+### Variadic macro `__VA_ARGS__`
+    ```
+    #define VERSION "ver1"
+    #define LOG_ERROR(format, ...) \
+        fprintf(stderr, format, __VA_ARGS__)
+
+    In code:
+    LOG_ERROR("Invalid number of arguments for version %s\n.",  VERSION);
+    LOG_ERROR("%s is incorrect at index %d for version %s.",    argv[1], 1, VERSION);
+
+    ```
+    - RESULT:
+    - fprintf(stderr, "Invalid number of arguments for version %s\n.",   "ver1");
+    - fprintf(stderr, "%s is a wrong param at index %d for version %s.", argv[1], 1, "ver1");
+
+### Macros: Rule of Thumb!
+    - If a macro can be written as a C function, then write
+      a C function instead!
+
+
+
+### Conditional Compilation #IFDEF
+    ```
+    #define CONDITION
+
+    int main(int argc, char** argv) {
+    #ifdef CONDITION
+        int i = 0;
+        i++;
+    #endif
+        int j= 0;
+        return 0;
+    }
+    ```
+    - The preprocessor sees the `CONDITION` macro's definition
+      and marks it as defined. 
+    - (Note: no value is actually proposed for CONDITION and this
+      is totally valid.) 
+    - Then, the preprocessor continues until it reaches `#ifdef`.
+      Since the `CONDITION` macro is already defined, all lines
+      between #ifdef and #endif are copied to the final code.
+
+### Header Guards , #IFNDEF
+    - Its common practice that the whole content of a header
+      file is enclosed by a  #ifndef-#endif pair, and nothing
+      but comments are left outside.
+    ```
+    #ifndef EXAMPLE
+
+    #define EXAMPLE
+    void say_hello();
+    int read_age();
+
+    #endif
+    ```
+    - Could use `#pragma once` either, but this is not in the
+      official standard
+    
+
+### Pointers: nullify on init
+    - Its very important to nullify a pointer if you are not
+      going to store a valid address upon declaration.
+    - `char* ptr = NULL;`
+    - Use the macro `NULL` rather than 0. Better readability.
+    - Its crucial that pointers be initialized upon declaration.
+      If you don't want to store any valid memory address while
+      declaring them, don't leave them uninitialized. 
+    - Make it null by assigning 0 or NULL! Do this otherwise you
+      may face a fatal bug!
+
+### Pointer to array
+    - Same thing:
+        - `int* ptr = &arr[0];` <--- more long-winded
+        - `int* ptr = arr;`
+    - An array is actually a pointer that points to its first
+      element. The actual datatype of `arr` is `int*`.
+
+### Generic Pointers `void*`
+    - `void* gptr = ptr;`
+    - It can point to any address like all other pointers, but we
+      don't know its actual datatype hence we don't know its
+      arithmetic step size. 
+    - Generic pointers usually hold the content of other
+      pointers, but they forget the actual data types of those
+      pointers. 
+    - Therefore, a generic pointer cannot be dereferenced, and
+      one _cannot_ do arithmetic on it because its underlying data
+      type is unknown.
+
+### Storing sizes: size_t
+
+
+### Functions
+
+### function pointers
+
+### Structures

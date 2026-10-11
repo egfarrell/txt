@@ -1,0 +1,47 @@
+vim windows
+
+Put config files in $HOME (c:\Users\<Username>\)
+	_vimrc
+	_gvimrc
+
+Whats my $HOME directory on Windows?
+	:echo $HOME    
+
+Vundle for Windows
+
+    1. setup git
+    1. setup curl
+    1. git clone vundle
+    1. change vimrc - use "modern vundle" settings
+
+    download mysysgit
+
+    git config --global core.autocrlf false
+    git config --global core.safecrlf true
+    git config --global core.eol lf
+
+    create curl.cmd
+    @rem Do not use "echo off" to not affect any child calls.
+    @setlocal
+    @rem Get the abolute path to the parent directory, which is assumed to be the
+    @rem Git installation root.
+    @for /F "delims=" %%I in ("%~dp0..") do @set git_install_root=%%~fI
+    @set PATH=%git_install_root%\bin;%git_install_root%\mingw\bin;%git_install_root%\mingw64\bin;%PATH%
+    @rem !!!!!!! For 64bit msysgit, replace 'mingw' above with 'mingw64' !!!!!!!
+    @if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%
+    @if not exist "%HOME%" @set HOME=%USERPROFILE%
+    @curl.exe %*
+
+
+    Copy curl.cmd 
+    to C:\Program Files\Git\cmd\curl.cmd, 
+    assuming msysgit was installed to c:\Program Files\Git
+
+    curl --version
+
+
+    set environment variable: HOME =  %USERPROFILE%
+
+    cd %USERPROFILE%
+    git clone https://github.com/gmarik/Vundle.vim.git %USERPROFILE%/vimfiles/bundle/Vundle.vim
+    gvim _vimrc

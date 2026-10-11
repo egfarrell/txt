@@ -1,0 +1,1926 @@
+- $MY_BOOKS/Physics/EM/Heaviside-Maverick-Basil-Mahon.pdf
+  
+
+> - ... and indebted most of all to Paul Nahin for his monumental
+>   biography Oliver Heaviside: Sage in Solitude / Electrical Genius.
+    - (ah right... I thought this was Paul Nahin's book)
+    - $MY_BOOKS/Physics/EM/Heaviside-Sage-Solitude-Nahin.pdf
+
+- What made it different was the idea of the _field_, which had
+  STARTED with Faraday’s notion of 'lines of force'.
+
+- ... Faraday believed that charges and magnets infused _all
+  space_ with 'lines of force', which interacted with lines of
+  force emanating from other charges and magnets to produce the
+  electric and magnetic forces that we feel.
+    - In his view, the space surrounding charges and magnets was
+      not passive but was itself imbued with a kind of `tension`
+      that gave rise to the forces.
+        - (2023: So the space/field around the charges is
+          separate from the lines of force emanating from the
+          charges?)
+
+- The whole route was paved with inspired innovations, but one
+  crucial step stands out:
+    - the prediction that _fleeting electric currents_ exist not
+      only in conductors but in all materials, and even in empty
+      space.
+    - There was no experimental evidence for this extraordinary
+      idea; nor was it prompted by logic. But it was the missing
+      link that brought all the laws of electricity and magnetism
+      together into a compact and ...
+
+- It also meant every time a magnet jiggled or an electric
+  current changed, a _wave of energy_ spread out into space, like
+  a ripple on a pond.
+    - Maxwell calculated the speed of the waves, which turned out
+      to be the very speed at which light travels.
+    - He had united electricity, magnetism and light!
+    - And visible light was only a small band in a vast range of
+      possible waves, which all travelled at the _same speed_ but
+      vibrated at different frequencies.
+
+- They simply didn't know what to make of it. What made it harder
+  was Maxwell presented his results in _two quite different
+  ways_.
+    - In the first, in 1861 and 1862, he explained how everything
+      worked using a imaginary mechanical model, in which space
+      was filled with tiny spinning cells with smaller particles
+      acting like _ball-bearings between_ them.
+    - What people couldn't understand was that Maxwell's model
+      was simply a thought experiment.
+        - They thought that all physical phenomena resulted from
+          mechanical action of some kind and that all would
+          become clear iff we could discover the true mechanisms.
+        - To most of Maxwell's contemporaries, the model was an
+          ingenious but flawed attempt to portray nature's
+          machinery.
+        - Even the most enlightened thought the next step would
+          be to continue searching for a true mechanism by
+          refining the model.
+    - But Maxwell astonished everyone by putting the model aside
+      and rebuilding the whole theory from scratch, using only
+      the laws of dynamics.
+        - In what must have seemed like a conjuring trick, he
+          didn't worry about the detailed mechanism but treated
+          it like a 'black box'.
+        - Using the methods of _Lagrange_, he worked out the
+          relationship between what went into the box and what
+          came out, without assuming anything about the INTERNAL
+          MECHANISM, except it obeyed the laws of dynamics.
+            - (Like him pulling a bell as a child)
+            - Like Dyson's two levels/layers too
+                - $MY_NOTES/physics/EM/dyson-em-hard-understand.txt
+
+- Maybe Maxwell had foreseen the 20th century realisation:
+    - that nature's _ultimate_ mechanisms may be beyond our
+      reach.
+    - But this was too much for the audience at the Royal Society
+      in 1864 as he presented his paper:
+        - 'A Dynamical Theory of the Electromagnetic Field'.
+        - Even those who could follow the mathematics, thought
+          abandoning the mechanical model was backward.
+        - Among them was William Thomson, who despite his
+          brilliance never understood Maxwell's theory.
+
+- Maxwell, like other pioneers who didn't live to explore the
+  country they opened up, didn't have time to investigate the
+  most direct means of access to the country nor the most
+  systematic way of exploring it.
+    - This has been reserved for Heaviside to do.
+    - Maxwell's Treatise was encumbered with the debris of his
+      brilliant lines of assault, his entrenched camps, his
+      battles.
+    - Oliver Heaviside cleared these away, opened up a direct
+      route and explored a considerable trace of country;
+        - The maze of symbols, electric and magnetic potential,
+          vector potential, electric force, current,
+          displacement, magnetic force and induction, have been
+          practically _reduced to two_, electric and magnetic
+          `force`.
+        - Other quantities may be convenient to introduce for
+          `calculations`, but they tell us little of the
+          mechanism of EM.
+        - The duality of electricity and magnetism was an old and
+          familiar fact. The inverse square law applied to both.
+          iNTERESTING: Every problem in one had its counterpart
+          in the other.
+            - The inverse square law for electric and magnetic
+              forces can be visualised by an analogy with the
+              outward flow of an incompressible fluid from
+              a point source.
+            - The vector in this case is the velocity of flow and
+              its divergence is zero everywhere except at the
+              source because the fluid is incompressible.
+            - The amount of fluid emerging PER UNIT TIME from any
+              sphere centred on the point source will be the
+              same, whatever the size of the sphere. (??)
+            - ah yes:
+                - bigger sphere, smaller amount of fluid flow
+                  from each patch of the sphere
+                - small sphere, bigger amount of fluid flow per
+                  unit area of the sphere
+            - It follows that the fluid moves outwards at a rate
+              inversely proportional to the square of its
+              distance from the source, and by analogy,
+              electrical and magnetic forces follow the same law.
+        - Heaviside has extended this to the whole of
+          electromagnetism.
+
+- How did he do it?
+    - He'd say 'by hard work', and indeed it was.
+    - But the key was his creation of a new language for
+      describing electric and magnetic forces and their
+      interaction with one another.
+    - It suited its purpose so well that it's become the standard
+      language used for dealing not only with EM fields but also
+      other topics such as fluid dynamics.
+    - Now simply called _vector analysis_, it seems so natural
+      today that almost nobody wonders how it came about.
+
+- And because they operated in 3D space, the usual way of
+  representing them mathematically was by their `components` in
+  each of three directions at right angles to one other.
+    - So even the simplest vector relationship needed 3 equations
+      to describe it, and the physical meaning was obscured in
+      a forest of symbols.
+    - Heaviside trimmed the tangled vegetation and found a way to
+      represent relationships between vectors using a `single
+      symbol` for each.
+        - The resulting vector equations were not only simpler;
+          they got to the heart of the matter by describing the
+          intrinsic physical relationships _independently of any
+          coordinate system_.
+
+- At any point in the field, a vector has two key properties
+  describing its variation in space:
+    - the vector `curl` and the scalar `divergence`.
+    - We can get an idea of these concepts, and even of the four
+      great 'Maxwell's equations', by following Heaviside's lead
+      and forming a mental picture of the way fields behave.
+    - Think of water flowing in a river. The vector here is the
+      _rate of flow_ – both SPEED and DIRECTION – and, in
+      general, it varies from point to point in the river.
+    - Imagine a tiny paddle-wheel fixed at a given point, but
+      with its axis free to take up any angle.
+        - If the water flows faster on one side of the point than
+          the other, the paddle-wheel will spin and its axis will
+          take up the angle that makes it spin fastest.
+        - The _curl_ of the water flow at our point is a vector
+          directed along this axis with magnitude proportional to
+          the paddle wheel's rate of spin.
+            - $MY_IMAGES/maths/vector-curl.jpg
+        - In more general terms, curl is a measure of the field's
+          _vorticity_, or swirl, at a given point.
+        - It is at the HEART of the relationship between
+          electricity and magnetism.
+        - Two of the four equations where Heaviside summarised
+          Maxwell's theory show how electric and magnetic forces
+          fit together:
+            - at a point in empty space _the CURL of each is
+              proportional to the rate at which the other changes
+              with time_. (Ah! Never realised...)
+        - The equations are:
+            - `curl E = −µ ∂H/∂t`
+            - `curl H =  ε ∂E/∂t`
+                - where `E` and `H` are the Electric and Magnetic
+                  force vectors,
+                - `∂E∂t` and `∂H∂t` are their time rates of
+                  change,
+                - and `µ` and `ε` are the fundamental constants
+                  of magnetism and electricity.
+
+- We just have to look at both equations to see how they act
+  together to make waves in space.
+    - A changing magnetic force wraps, or curls, an electric
+      force `E` around itself.
+    - As that electric force changes, it wraps itself in
+      a further layer of magnetic force `H`, and so on.
+    - Thus the changes in the combined field spread out in a kind
+      of continuous leapfrogging action; they are electromagnetic
+      waves.
+    - Their speed is `1/sqrt(με)` which is the very speed at
+      which light is measured.
+        - Remember hearing this for the first time in Cliffony
+          2008... in the car, while Ania was at some class.
+          Amazing feeling...
+
+- The river analogy also prompts the idea of 'divergence',
+  usually abbreviated to `div`.
+    - It is a measure of EXCESS water _flowing out_ of a small
+      region surrounding our point compared with the amount
+      flowing in.
+    - Assuming water is incompressible (nearly true), these
+      amounts are equal and the divergence is zero everywhere in
+      the river.
+    - Unless we inject extra water at our point.
+    - Then the divergence becomes positive, and if we suck water
+      out it becomes negative.
+    - The concept of divergence is needed to fully describe how
+      electric and magnetic fields behave.
+    - One of the two remaining Maxwell equations says that
+      magnetic force is like the undisturbed river:
+        - it has zero divergence everywhere.
+    - The other says the electric force also has zero divergence
+      where no electric charge is present but that an electric
+      charge causes positive or negative divergence, depending on
+      the sign of the charge.
+    - At a point in empty space there is no charge and the
+      equations are simply:
+            - `div E = 0`
+            - `div H = 0`
+    - Elegant and powerful, they state that electric and magnetic
+      forces obey an inverse square law.
+
+- In his Treatise Maxwell played safe by writing the equations
+  twice – firstly the standard way and then using a form of
+  `quaternion` notation.
+
+- ... in the vector form of the equations, an impenetrable
+  assortment of variables remainded.
+    - For a while he remained as confused as anyone but then saw
+      an opening and got his pruning knife out again.
+    - He wanted simplicity and symmetry, and found them by
+      concentrating on the electric and magnetic FORCES and
+      cutting out the variables called _potentials_.
+    - The idea of potential came from `mathematical ASTRONOMY`,
+      which had helped solve difficult problems.
+        - Like gravitation, electrostatics worked by an inverse
+          square law and it was natural for physicists to use the
+          same methods in electricity .
+        - ASIDE: The potential function was inspired by
+          _Laplace_, author of 'La mécanique céleste', the
+          standard work on mathematical astronomy.
+        - Example of potentials in Astro problem:
+            - Maxwell's analysis of Saturn's rings. Forming the
+              equations of motion in terms of the rings'
+              gravitational potential, he showed that the rings
+              must consist of many discrete solid bodies orbiting
+              independently.
+    - `Electric potential` is the energy held by a charged body
+      by virtue of its POSITION in the field; it's the DIFFERENCE
+      in potential from point to point in the field that gives
+      rise to forces.
+        - A rough analogy is river water held by a dam: its high
+          position relative to the water downstream gives it the
+          potential of providing the energy, and the force,
+          needed to drive a mill or a hydroelectric generator.
+        - _Magnetic potential_ was much harder to understand.
+            - It was a `vector` rather than a `scalar` and
+              represented a property of the magnetic field that
+              was akin to momentum in mechanical systems.
+        - Mysterious indeed, but Maxwell thought it might be 'the
+          _FUNDAMENTAL QUANTITY_ in EM theory' and gave it pride
+          of place.
+
+- Heaviside took a more down-to-earth view. To him, ONLY electric
+  and magnetic forces were real quantities.
+    - The potentials were merely 'metaphysical' and he decided
+      'to murder the whole lot'.
+    - By allowing for the possibility of magnetic conduction
+      currents (effectively assuming north or south magnetic
+      poles might exist without their partners), he created
+      a system with complete symmetry between electricity and
+      magnetism.
+    - Because nobody had ever found a magnetic monopole he set
+      the _magnetic conduction current_ term to zero, but the
+      symmetry was still there in principle.
+    - This resulted in 4 'Maxwell's equations', which summarised
+      everything in terms of electric and magnetic `FORCES`.
+
+- Maxwell would surely have been delighted with Heaviside's work.
+  When his favoured potentials were so rudely dismissed, he would
+  probably have smiled indulgently like a father watching
+  a boisterous child.
+
+- How do things stand today?
+    - By focusing on the electric and magnetic FORCE FIELDS,
+      Heaviside made the theory much easier to understand and
+      more relevant to everyday experience.
+    - His formulation has been used in most subsequent
+      developments and applications of the theory.
+    - But not all:
+        - the wisdom of Maxwell's decision to keep options open
+          still shines through.
+        - Feynman reported in 1964: 'In the general theory of
+          QED, one takes the vector and scalar `POTENTIALS` as
+          the fundamental quantities.'
+    - Honours even.
+
+- Both had been intrigued by the problem of how EM energy moved.
+    - According to Maxwell, _energy was located in space_ – at
+      any instant, each part of space in the EM field contained
+      a definite amount of energy, REGARDLESS of whether the
+      space was empty or occupied by matter.
+    - Most thought this idea strange, but it had an even stranger
+      consequence beyond Maxwell's own work.
+    - When an EM field changed, some parts of the field would
+      lose energy and others would gain.
+    - But energy could not vanish in one place and simultaneously
+      appear in another, because this would involve action at
+      a distance, the concept Faraday and Maxwell had banished.
+    - So _energy had to flow_ , like water in a river.
+
+- Oliver worked out how it flowed.
+    - The direction of `energy flow` was _at right angles_ to
+      both the electric and magnetic forces.
+    - E.g., if the electric and magnetic forces were both in
+      a horizontal plane, the electric force pointing east and
+      the magnetic force north, energy would flow vertically
+      upwards!
+    - And the density of the flow was given by the arithmetic
+      product of these forces multiplied by the `sine` of the
+      angle between them: it was greatest when the electric and
+      magnetic forces were at right angles to each other.
+    - He expressed the rule compactly in vector form as:
+        - `W = E × H`
+            - where `W` is the energy flow VECTOR
+            - and `E × H` is the vector product of the electric
+              and magnetic forces.
+    - This was a great result but shortly afterwards, Oliver
+      found he had been scooped.
+    - John Henry _Poynting_, at Birmingham University and
+      a former student of Maxwell's, had published the same
+      formula several months earlier.
+    - In fact, Heaviside had already given the formula in a paper
+      published about the same time as Poynting's, but only in
+      words, not symbols, and only for a special case.
+    - Heaviside's reaction to this disappointment gives us more
+      insight into his character.
+        - On the one hand he gave generous credit to Poynting and
+          never disputed priority, but on the other he never
+          failed to mention his own part in the matter.
+        - Eg, referring to the `energy transfer` formula in his
+          later treatise 'Electromagnetic Theory':
+            > This remarkable formula was first discovered and
+            > interpreted by Prof. Poynting, and independently by
+            > myself a little later.
+    - It was this discovery that brought the `continuity of
+      energy` into prominence.
+        - But posterity prefers to keep things simple.
+        - The energy vector is known today as the `Poynting
+          vector`, a title with a built-in memory-aid for
+          students, as it points in the direction of flow.
+
+- Poynting gets the glory, but Heaviside did most to investigate
+  the extraordinary consequences of this new formula.
+    - With his background in telegraphy he was interested in how
+      energy travels along conducting wires, and what he found
+      seems to _defy belief_, even today.
+    - No energy passed along the wires themselves (or through the
+      earth, parallel to its surface, where that was used as
+      a return conductor).
+    - The function of wires in a circuit was merely to act as
+      a _guide_ for a _stream of energy_ which travelled
+      alongside them through the surrounding space.
+    - Some of the energy from this stream did enter the
+      conducting wires but as soon as it did so it changed
+      direction and flowed _inwards_, at right angles to their
+      surfaces. 
+        - This was the portion of energy that was dissipated as
+          heat.
+    - But what about the electric current? Didn't that flow
+      inside the wires? Yes it did, but the ENERGY was not borne
+      by the `current` itself but by the accompanying `fields`: 
+        - the lines of magnetic force that encircled
+          a current-bearing wire and those of electric force that
+          spread out radially from it, like spokes.
+    - In the new formula, the direction of energy flow was at
+      _right angles to both these fields_ and so ran _PARALLEL_
+      to the wire.
+        - Aside: Very nearly so, anyway. The lines of energy flow
+          near the wire converged ever so slightly and, when they
+          hit the wire, turned sharply inwards to be converted
+          into heat.
+
+- And what, exactly, was an electric current?
+    - Heaviside was a pragmatist: he saw his job as working out
+      the laws connecting measurable things and wasn't concerned
+      with speculation about nature's hidden mechanisms.
+    - He knew that a current always had a magnetic field around
+      it, and that magnetic force could be measured.
+    - _Magnetic force was the physical manifestation of the
+      current_, and what went on in the wire was of secondary
+      importance.
+    - For him, as for Faraday and Maxwell, electric and magnetic
+      fields were the main thing:
+        - electric charges and currents were simply _effects the
+          fields produced_ in conductors.
+    - He knew that moving charges produced magnetic effects, as
+      currents did, but this did not prove that currents in wires
+      were charges in motion.
+    - The discovery of the ELECTRON later settled this question,
+      a current was indeed a drift of trillions of tiny charged
+      particles in the wire, but a more fundamental question
+      remained: _what is an electric charge_?
+        - Even today, QED has only partly solved the MYSTERY.
+
+- The energy flow formula held another surprise too.
+    - Since the energy entered a wire from outside, it implied
+      that when an electric current started, it flowed first only
+      in the outer part of the wire and took time to penetrate
+      the middle.
+    - High-frequency alternating currents would scarcely
+      penetrate the wire at all because soon after the current
+      had begun at the surface of the wire its direction was
+      reversed and the process would start over again.
+    - This became known as the '`skin effect`' and it showed that
+      signals moved along conducting wires in a way that was even
+      further removed from the early telegraphers' water pipe
+      analogy.
+    - At the frequencies inherent in telephony and high-speed
+      telegraphy, the current hardly entered the wires and, as
+      Oliver explained, the signals just slipped over their
+      surfaces 'like _greased lightning_'.
+
+- He had no doubt that in low resistance lines the _signals_ were
+  propagated through the space alongside the conductors in the
+  form of waves and these were Maxwell's EM waves.
+    - But his belief was based on intuition and mathematics;
+      there was no physical evidence to prove it.
+    - All that people knew for certain about telephone
+      & telegraph signals, were the events at the sending and
+      receiving _ENDS_;
+        - to prove the existence of EM waves along the line one
+          needed to detect them in transit.
+        - Meanwhile, rival theories to Maxwell's continued to
+          flourish, especially in continental Europe.
+        - In his blunt way, Oliver described these theories as no
+          more than 'absurd speculations',
+            - but only when someone supplied experimental proof
+              of EM waves would the speculation cease.
+
+- What intrigued Lodge at first was the way the electrical force
+  put materials (or empty space) under _stress_.
+    - A non-conducting material would absorb the stress like
+      a _spring_, but in a conductor like iron or copper the
+      material would give way and allow a current to flow.
+    - To help others grasp the idea, he built a clever teaching
+      aid using string, pulleys, beads and screws on a simple
+      wooden frame.
+        - By adjusting the screws it could be made to represent
+          a perfect insulator, a perfect conductor, or anything
+          in between.
+
+- Maxwell had progressive ideas on teaching, though he was not
+  good at it himself, and had summarised them neatly in a talk to
+  the British Association for the Advancement of Science.
+    - The human mind is seldom satisfied, and certainly never
+      exercises its highest functions, when doing the work of
+      a calculating machine. …
+    - There are some minds which can contemplate with
+      satisfaction the pure quantities represented to the eye by
+      `symbols`, and to the mind in a form which none but
+      mathematicians can conceive.
+    - There are others who feel enjoyment in following
+      `geometrical` forms, which they can draw on paper, or build
+      in the empty space before them.
+    - Still others are not content unless they can project their
+      whole physical energies into the scene which they conjure
+      up.
+        - They learn at what a rate the planets rush through
+          space, and they experience a delightful feeling of
+          exhilaration.
+        - They calculate the forces with which the heavenly
+          bodies pull at one another, and they feel their own
+          muscles straining with the effort.
+    - To such people, momentum, energy, mass are not mere
+      abstract expressions of the results of scientific enquiry.
+      They are words of power, _which stir their souls_ like the
+      memories of childhood.
+    - For the sake of persons of these different types,
+      scientific truth should be presented in different forms,
+      and should be regarded as equally scientific, whether it
+      appears in the robust form and the vivid colouring of
+      a physical illustration, or in the tenuity and paleness of
+      a symbolic expression.
+
+- Maxwell could hardly have better described the two Olivers.
+    - Heaviside fell into the second group: although he trained
+      himself to be an effective manipulator and dispenser of
+      symbols he was, above all, a master at building a mental
+      picture of geometrical forms.
+    - Lodge, on the other hand, belonged to the group who felt
+      their own muscles straining with the effort.
+        - And when muscles were not enough he conjured up
+          mechanical models to inflict the stresses and bear the
+          strains:
+            - after the beads and string device came a variety of
+              others, each designed to illustrate some aspect of
+              the workings of electricity and magnetism.
+        - He saw the need for mathematics and could, with
+          difficulty, follow the work of others, but was never
+          much of a symbols man.
+
+- ... it seems strange that physicists everywhere were not
+  striving for _this great prize_(?), (ah the EM waves) but Lodge
+  was one of the first people to give the matter serious
+  attention.
+    - The main reason it had been neglected was it was so
+      different from any other experiment and nobody knew how to
+      approach it:
+        - Maxwell's theory predicted the waves but didn't tell
+          anyone HOW to produce/detect them in a lab.
+    - One might have expected Maxwell and his students at the
+      Cavendish to have tried it, but in Maxwell's time the new
+      laboratory was under critical scrutiny from a sceptical
+      public and needed to establish its reputation with some
+      early successes;
+        - experiments on EM waves would have been too hit-or-miss
+          for this purpose.
+    - If the theory was correct then it wouldn't be difficult to
+      generate waves. In fact, one couldn't help but produce
+      waves in ordinary operations with an electrical circuit,
+      like switching a current on or off: the problem lay in
+      _detecting_ them.
+    - Conversely, light waves were easy to detect and, according
+      to Maxwell's theory, electromagnetic, but the problem lay
+      in producing them by any known electromagnetic mechanism
+      because the frequencies required were enormous: more than
+      a million million cycles per second.
+    - With the blithe confidence of youth Lodge decided to try.
+
+- When he met Lodge, Fitzgerald was absorbed in magneto-optics:
+    - trying to explain how the observed phenomena of light such
+      as reflection and refraction could result from purely
+      electromagnetic effects.
+    - Characteristically, his work did not itself solve the
+      problems of the day but had a great influence on later
+      developments by Lorentz and Joseph Larmor.
+    - Also typical was the way he responded to comments on his
+      paper by Maxwell himself, who had refereed it for the Royal
+      Society shortly before he died.
+
+    - Maxwell had pointed out the need to make the physical
+      meaning of the equations clearer.
+    - Fitzgerald acknowledged the fault but had some difficulty
+      putting things right because he hadn't kept a copy and
+      couldn't remember exactly what he had written.
+    - In some embarrassment, he confessed to the Society's
+      secretary, George Stokes, that he had 'got very tired of
+      the paper long before he had finished writing it'.
+      Nevertheless, he did put things right and later gave
+      encouragement to Lorentz and Larmor.
+
+- Before talking to Lodge, Fitzgerald had shown little interest
+  in producing and detecting EM waves but then took up the topic
+  with rare tenacity.
+    - After putting Lodge straight on the impracticability of
+      generating light by known electromagnetic means, he
+      realised that waves like light, but of much longer
+      wavelength, might be radiated from an electrical circuit in
+      which the current was made to oscillate at a rapid but
+      achievable frequency.
+    - Maxwell had not done the calculations to show how much
+      energy would be radiated from such an oscillating circuit
+      and Fitzgerald took up the task.
+    - Almost at once, he stumbled. Maxwell had stated in his
+      Treatise that his own theory gave results that were
+      'mathematically identical' to those of the rival action-
+      at-a-distance theories and, taking this literally,
+      Fitzgerald followed a false trail which concluded that the
+      waves produced by an electrical circuit would simply swing
+      back and forth and never spread out into space.
+        - In fact, Maxwell had meant his statement to apply only
+          when currents were steady and no waves would be
+          produced anyway, but Fitzgerald was thoroughly misled
+          and took _two years_ to realise his mistake.
+    - He found the error himself, described his early ideas as
+      'more or less idiotic', and discovered the true path.
+    - An oscillating current would indeed send waves into space,
+      although only a fraction of the total energy of the field
+      would escape this way – the rest would be "_held captive_"
+      by the circuit.
+    - This was a great step: 
+        - Fitzgerald had separated what came to be called the
+          _near field_, which was restrained by the circuit, from
+          the _far field_, which radiated energy out into space.
+    - Going further, he designed an _antenna_ – in the form of
+      a circular wire loop – and worked out a formula for the
+      amount of energy that it would radiate per second when
+      carrying an alternating current.
+    - Strikingly, the formula showed that the amount of radiation
+      was proportional to the _fourth power of the frequency_:
+        - by making the current oscillate ten times faster you
+          would get ten thousand times as much radiation.
+        - At frequencies of a few thousand cycles per second the
+          radiation would be weak and the wavelength huge but at,
+          for example, 30 million cycles per second the waves
+          could well be strong enough to be detectable and their
+          wavelength would be only ten metres, small enough to be
+          measurable inside a laboratory.
+        - He became convinced that the means of producing
+          frequencies of this order already ...
+
+- At the British Association meeting in 1883 he presented his
+  suggestions, which were summarised for publication in one of
+  the _shortest papers_ ever written; here it is, complete with
+  title.
+
+    - On a Method of Producing Electromagnetic Disturbances of
+      Comparatively Short Wavelengths
+    - This is by utilising the alternating currents produced when
+      an accumulator`†` is discharged through a small resistance.
+        - (`†` 'Accumulator' did not have its present-day meaning
+          of battery. Fitzgerald meant a _capacitor_)
+    - It would be possible to produce waves of as little as 10
+      metres wavelength, or even less.
+
+    - He wasn't giving much away here! The paper was more of
+      a mission statement than a plan: presumably he was writing
+      for people who already knew that to get a short wavelength
+      you needed to keep both the inductance and capacitance of
+      the circuit low.
+
+- Lodge's experiments were important in another way and had
+  nothing to do with lightning.
+    - Maxwell used to say 'I never try to dissuade a man from
+      trying an experiment; if he does not find what he wants, he
+      may find out something else.'
+    - And this is exactly what happened. When Lodge discharged
+      his jar, sparks jumped between the free ends of two wires
+      connected to it.
+    - Nothing remarkable so far, but he found by chance that the
+      sparking could be made weaker or stronger by changing the
+      length of the wires.
+    - This was interesting but puzzling. Only with promptings
+      from a junior colleague did Lodge realise he had stumbled
+      upon evidence of Maxwell's EM waves.
+    - Eureka!
+    - He reasoned that waves from the discharge must be streaming
+      through the space alongside the wires and being reflected
+      back from the free ends; the sparking was, as he put it,
+      a kind of 'recoil kick' from the waves being fired back.
+    - What he had indirectly detected were the resulting
+      _standing waves_.
+    - His second lecture on lightning protection was coming up
+      and in that unlikely context in 1888 he presented a first
+      brief sketch of the long-awaited physical confirmation of
+      Maxwell's theory.
+    - Lodge knew that to get full recognition of his achievement
+      he'd have to carry out more rigorous experiments but there
+      was plenty of time to do this before the British
+      Association for the Advancement of Science's meeting in
+      September.
+
+- ... Weber and Neumann, which both rested on the assumption that
+  electrical charges and currents acted somehow on one another at
+  a distance, with intervening space playing only a passive role.
+    - The contrary idea that space itself was an agent for
+      transmitting `E` and `B` forces seemed weird, and few
+      outside Britain took Maxwell's theory seriously at first.
+    - But Helmholtz was one who did and by the time Hertz arrived
+      he had succeeded in persuading his Berlin colleagues:
+        - firstly that the three theories were all legitimate
+          contenders and,
+        - secondly, it was important to find out by experiment
+          which was correct.
+
+- As a step towards this goal, the University set a prize
+  competition to investigate by experiment 'the `inertia` of
+  electricity in motion' – in essence, Heaviside's 'extra
+  current'.
+
+- At first, the idea was to detect not waves but rather the
+  fleeting currents which the theory predicted would occur in
+  insulators whenever the electric and magnetic fields changed
+  – Maxwell called them _displacement currents_.
+    - The only way they knew to prove these tiny currents existed
+      would be to demonstrate their magnetic effect and Hertz
+      doubted if such a small magnetic force would register even
+      on sensitive instruments.
+    - Still, he tried, and although he found nothing, the work
+      further honed his experimental skill so that when luck
+      presented him with the slenderest opportunity a few years
+      later he was ready to exploit it.
+
+- Playing with some stock apparatus, he found that when he
+  switched on a primary spark-generating circuit not only did
+  sparking occur across the terminals of a secondary circuit
+  a little distance away (an expected result from EM `induction`)
+  but side sparks also appeared from a neighbouring wire.
+    - What was going on? At this stage he didn't know what he was
+      looking for but, prompted by intuition, felt his way
+      towards a great discovery.
+    - While trying many variations in circuit arrangements he
+      found that the intensity of the sparks in his secondary
+      circuit varied as he moved it along near the wire; there
+      was even a neutral point where the sparking stopped.
+        - Here was a standing EM wave, and it could only have
+          resulted from the combined effect of forward and
+          reflected travelling waves – Maxwell's waves.
+    - Hertz had shown that EM waves travelled _alongside wires_,
+      two years before Lodge made the same discovery.
+    - Both had taken advantage of chance observations but Hertz
+      had gone further than Lodge.
+        - He had found the magic instrument that others had
+          sought in vain: 
+            - something to 'feel' the waves with, and it was
+              simply a loop of wire with a spark gap.
+        - If the detector loop was the right size and shape, the
+          waves would set it resonating and generate enough
+          _electromotive FORCE in the wire_ to make sparks jump
+          across the gap.
+        - Naturally, things were not quite that simple.
+        - Even for Hertz, the most gifted of experimenters,
+          results came only after a great deal of trial and error
+          and were the fruit of patience and determination as
+          much as skill.
+        - E.g., at every stage he tried different configurations
+          of primary (transmitter) and secondary (detector)
+          circuits to find which gave the clearest and most
+          consistent results.
+
+        - Waves along wires were exciting but Hertz realised that
+          the clinching test of Maxwell's theory would be to see
+          whether they also travelled through space (or air) with
+          no wire to guide them.
+        - If they did, his loop detector, with its spark gap,
+          would be just the thing to find them.
+        - Making sure his transmitter was well away from stray
+          wires, he made the detector as sensitive as he could by
+          setting its spark gap jaws close together and looked
+          for sparks.
+        - Tiny flashes appeared – faint but unmistakeable.
+        - A good check to make sure that the sparking truly
+          resulted from EM waves would be to produce a standing
+          wave, so he set up a metal plate to act as a reflector
+          and looked to see if the brightness of the sparks
+          varied as he moved the detector from the source towards
+          the reflector.
+            - Indeed they did: there were nodes in the standing
+              wave, where there was no sparking at all, and
+              antinodes where the sparking was strongest.
+            - He had produced and detected EM waves in space.
+    - $MY_IMAGES/physics/EM/Hertz-bounce-wave-lecture-hall.jpg
+
+- By varying the oscillating frequency of his transmitting
+  circuit and tuning the receiver loop to match, he managed to
+  produce and detect a range of waves with wavelengths as long as
+  9 metres and as short as 50 centimetres.
+    - The new waves passed through thick wooden doors but were
+      _reflected_ by any metal surface, just like light by
+      a mirror, and he showed they could be _refracted_ in the
+      same way as light through glass:
+        - for this purpose he built a prism of solid pitch that
+          stood as tall as a man and weighed about a ton.
+    - He knew the frequency of his transmitting circuits by
+      calculation from their values of inductance and
+      capacitance, and this allowed him to measure the speed of
+      the waves in air from the simple formula:
+        - `speed = frequency * wavelength`
+        - `v = ν * λ`
+    - It turned out to be the speed of light:
+        - in a sense they _were light waves_, but of lower
+          frequency and longer wavelength than visible light.
+        - Today we call them radio waves.
+
+- Having shown the waves could be reflected and refracted, Hertz
+  wanted to complete the picture by showing they could also be
+  polarised like light.
+    - This was tantamount to proving the waves resembled light by
+      being transverse, like ripples travelling along a rope,
+      rather than longitudinal, like sound waves.
+    - In polarised light, the transverse wave vibrations are all
+      lined up, rather than being higgledy-piggledy, and Hertz
+      knew this could be achieved by passing light through
+      a crystalline substance which filtered out vibrations in
+      all directions but one.
+    - How could he make a giant crystal that would do the same
+      for his longer waves?
+        - The solution, like many of Hertz's improvisations,
+          seems simple in hindsight.
+        - He built a wooden frame, two metres tall, with parallel
+          copper wires, three centimetres apart, stretched across
+          it like piano strings.
+        - When he sent waves through the grating, any electrical
+          vibrations parallel to the wires were filtered out and
+          only those at right angles to the wires remained – the
+          waves were indeed polarised and behaved just like
+          polarised light.
+
+- The British Maxwellians felt no such restraint.
+    - They had long embraced what they felt was the true
+      interpretation of Maxwell's theory, unfettered by any
+      action-at-a-distance notions.
+    - They were utterly convinced of its correctness. All they
+      lacked was strong physical proof to win over sceptics, and
+      this Hertz had handsomely supplied.
+    - He was, quite simply, a hero.
+    - They showered him with praise, welcomed him into their
+      ranks with joy and set about promoting his work with
+      tremendous enthusiasm.
+    - A later writer reported, with no more than slight
+      exaggeration, that news of Hertz's discoveries reached
+      Germany by way of England.
+
+- But it didn't take him long to identify the main source of
+  Hughes' confusion and muddled results.
+    - It stemmed from the 'skin effect'.
+    - When a current first starts to flow it always begins on the
+      outside of a conductor and takes time to spread to the
+      centre.
+    - A rapidly oscillating current never has time to penetrate
+      far below the skin and so the effective cross-section of
+      the conductor is reduced, thereby _increasing its
+      resistance_ (?) and reducing its inductance.
+    - All this followed from Heaviside's pioneering work on
+      energy flow which was well documented in his papers, but
+      clearly Hughes had no notion of it.
+
+- He described how Hertz had, by the 'beautiful device' of his
+  spark-loops, generated and detected waves not only along wires
+  but in free space, and had shown they travelled at the speed of
+  light, as Maxwell had predicted.
+    - This could only happen if the space through which the waves
+      passed acted as a repository and transmitter of energy; the
+      experiments had demolished all theories of action at
+      a distance.
+
+- As a boy Oliver found he could make ripples travel better along
+  his mother's washing line by _tying knots in the rope_.
+    - The coils in the telephone line would perform a similar
+      function, _adding momentum_ to help the waves travel
+      smoothly and keep their shape.
+    - It was a highly practical idea, but there still seemed to
+      be no point in applying for a patent, at least in Britain.
+
+- The coincidence was all the more remarkable because Hertz had
+  taken a completely different approach.
+    - He had started from Helmholtz's version of Maxwell's
+      theory, which, in Heaviside's view, was not true Maxwell at
+      all because it clung to action-at-a-distance concepts that
+      Maxwell had spurned.
+        - Another reference to Helmholtz 'Theorem'?
+        - $MY_NOTES/physics/courses/how-to-learn-Physics.txt
+    - But by a subtle process of successive approximations Hertz
+      eliminated the action-at-a-distance effects, leaving
+      himself with a Maxwellian EM field.
+    - To arrive at the final equations he chose _to abandon the
+      electric and magnetic potentials_ in favour of forces, just
+      as Heaviside had done.
+
+
+### Operational calculus
+    - Sometimes the operational calculus took him into very
+      strange territory indeed.
+    - In transmission lines the resistive, inductive and
+      capacitive elements were not discrete but continuously
+      distributed along the line and the operational equations
+      contained the square root of `p`.
+    - The operator `p` meant differentiate with respect to time,
+      so `p^2` meant differentiate twice, and so on;
+    - but what on earth did `sqrt(p)` mean?
+    - How could you take the square root of the operation of
+      differentiation?
+    - Oliver wasn't put off by such questions; in fact, he was
+      supremely confident on the point.
+        - The `sqrt` of a `differentiator` occurs in the
+          fundamentals of a physical subject, namely, in the
+          generation of a wave of diffusion.
+        - It is necessary and inevitable; also, when studied, it
+          is found to facilitate working.
+    - By way of 'facilitating working' he found, and made much
+      use of, the extraordinary result:
+        - `sqrt(p1) = 1 / sqrt(πt)`
+    - Here, `t` is time and the bold-face `1` is his symbol for
+      a function that is zero before `t = 0` and `1` thereafter,
+      and represents the action of a switch (or telegraph key).
+    - Amazingly, the square root of differentiation is an
+      operation that can be performed and the result is
+      a perfectly ordinary function of time.
+    - This technique was actually just within the bounds of
+      respectable mathematics; it was Heaviside's cavalier use of
+      it that raised hackles.
+    - But what really sank Oliver's paper was his use of
+      divergent series.
+        - $MY_IMAGES/physics/EM/Heaviside-divergent-series.jpg
+
+
+- All the time, he was driven by the desire to understand
+  electrical circuits and fields.
+    - He hadn't gone into arcane areas of mathematics like
+      `fractional differentiation` and divergent series for their
+      own sake.
+    - He had done so because they turned up in his investigations
+      of Physics and to have ignored them would have been
+      a dereliction of _duty_.
+    - The way to make progress was to experiment boldly with the
+      mathematics, guided all the time by the physics. As he put
+      it: ...
+
+- But the idea of _experimental mathematics_, throwing logic to
+  the winds, was alien to the Royal Society mathematicians:
+    - Not for the first time, Oliver was partly the author of his
+      own misfortune.
+    - Had he made friendly overtures to the 'rigorists',
+      acknowledging their essential role and going halfway to
+      meet them, he might have had a response in kind.
+    - But diplomacy was beyond Heaviside; he never went halfway
+      to meet anybody.
+    - Scattered through his work were passages that seemed
+      designed to irritate orthodox mathematicians.
+    - He would toss in new ideas without defining them precisely,
+      forge ahead with a method before submitting it to proof,
+      and use apparently sloppy notation as a kind of shorthand.
+
+- Gibbs and Heaviside went through the same sequence.
+    - Both eagerly looked up the theory of quaternions, were
+      disappointed in it, and went on to develop a simplified
+      version that was useful.
+    - What they produced was the system of vector analysis, which
+      eventually became the standard language used to describe
+      fields.
+    - Astonishingly, the two men, working quite independently,
+      developed systems that were almost identical.
+
+- Starting with optics, he produced the greatest work ever
+  written on the topic.
+    - His 'Theory of Systems of Rays' brought together all
+      previous results in a single theory so powerful that he was
+      able to extend it to the _whole of dynamics_.
+    - It embodied the 'principle of least action' and a new way
+      of describing any mechanical system in a single function
+      that expressed the relationship between its two basic
+      quantities:
+        - ENERGY AND MOMENTUM.
+    - Hamilton's methods are now standard throughout physics and
+      his name is everywhere because the `characteristic
+      function` he defined for a system is simply called 'The
+      Hamiltonian'.
+    - But he believed his greatest achievement was the invention
+      of quaternions
+
+- What Hamilton did was to take the idea, from complex numbers,
+  of rotation in a plane, and extend it to 3D space.
+    - In a plane there is only one possible _axis_ of rotation
+      about a given point but to specify a rotation in 3D space,
+      three axes are needed, each at right angles to the others.
+    - We can think of one axis as vertical, allowing rotations
+      such as 'turn left' and 'turn right', and the other axes as
+      'north-south' and 'east-west'.
+    - So Hamilton needed three symbols, `i`, `j` and `k`, each to
+      represent a rotation of `90 degrees` about one of the axes.
+
+- The problem of rotations had haunted Hamilton for fifteen years
+  and the solution came to him in a flash walking across the
+  Brougham Bridge in Dublin.
+    - He was so thrilled that for a moment he forgot the dignity
+      of his office as Astronomer Royal.
+    - He produced a pocket knife and carved the outline of his
+      scheme on a stone of the bridge.
+        - `i^2 = j^2 = k^2 = ijk = −1`
+    - His symbols did not obey the traditional commutative law of
+      multiplication. E.g. `ij` was equal to `minus ji`, but he
+      found that with this modification the normal rules of
+      algebra could be applied to super-complex numbers of the
+      form `w + ix + jy + kz`, and believed which he represented
+      by a single symbol `q`.
+    - He called them quaternions and believed they held the key
+      to the mathematics of the physical universe.
+
+- (Fitzgerald, Searle, Heaviside)
+    - The three men never met all together but their interaction
+      played a preliminary part in one of the great triumphs of
+      20th physics: the theory of relativity.
+    - They were all intrigued by the question:
+        - how does the shape of the field around an electric
+          charge change as the charge moves?
+        - Ah this evening: see the 'kink'
+            - kink radiates outwards at the speed of light...
+            - $MY_IMAGES/physics/EM/EM-wave-kink-1.jpg
+            - $MY_IMAGES/physics/EM/EM-wave-kink-2.jpg
+            - $MY_IMAGES/physics/EM/EM-wave-kink-3-radiates-outwards.jpg
+            - $MY_IMAGES/physics/EM/EM-wave-kink-4.jpg
+
+
+- This was the very topic Searle had originally written to Oliver
+  about. By applying Maxwell's theory, they predicted that when
+  the charge approached the speed of light the shape of its field
+  would become compressed along its direction of motion. E.g.,
+  the field around a point charge would change from spherical to
+  ellipsoidal.
+    - Fitzgerald took the idea further and proposed the same held
+      for all matter: that all material bodies contracted along
+      their direction of motion as they approached the speed of
+      light.
+    - If true, this hypothesis would explain the strange result
+      of Michelson and Morley.
+    - They had found that light always appeared to travel at the
+      same speed, no matter how fast or in what direction the
+      observer was moving.
+    - According to Fitzgerald, this happened because the
+      observer's instruments (and observer themselves) contracted
+      by exactly the amount needed to compensate for his
+      movement.
+    - Fitzgerald's idea seemed crazy but, with the interpretation
+      later put on it by Einstein in SR, it is now taken as
+      a fact of nature.
+    - Lorentz had the same idea independently and both are
+      honoured: the Lorentz–Fitzgerald contraction.
+    - A simple formula comes with it.
+        - The _factor_ by which a body appears to _contract_ as
+          it approaches the light speed is the same as that by
+          which a clock on the body appears to _slow down_.
+        - It was  `1 – v^2 /c^2`, where
+            - `v` is the velocity of the body and
+            - `c` the speed of light.
+        - It occurs throughout SR and is sometimes called the
+          'relativistic factor'.
+        - It is also exactly the factor identified by Heaviside
+          and Searle in their work on the electric field of
+          a moving charge.
+
+- For physicists there was one main question:
+    - were the vibrations in the new rays transverse, as in light
+      waves, or longitudinal, as in sound waves?
+    - Oliver's strong views led to a dispute with the illustrious
+      Ludwig Boltzmann.
+    - Both were ardent Maxwell supporters but Oliver contended
+      that Boltzmann was perverting the theory by interpreting it
+      to allow longitudinal waves, as well as transverse ones.
+    - The new X-rays, Boltzmann thought, could be longitudinal
+      Maxwellian waves.
+    - Oliver brooked no such nonsense, writing:
+        - There are no 'longitudinal' waves in Maxwell's theory
+          analogous to sound waves.
+        - Maxwell took care that there shouldn't be any.
+    - He was right. The mysterious X-rays turned out to be just
+      like light waves, but with a much shorter wavelength.
+    - And both were parts of a huge spectrum of Maxwellian waves
+      with wavelengths ranging from nanometres to kilometres, all
+      of them transverse.
+
+- ... argument about, the second law of thermodynamics.
+    - Swinburne was confident and wanted an emphatic victory, so
+      he appealed to the highest authority for a judgement: Max
+      Planck
+    - Success! Planck said that Swinburne had produced 'one of
+      the best and clearest expositions ever written'.
+    - Praise indeed, but Oliver decided to challenge Planck.
+    - Whether he did so in support of Perry or out of sheer
+      devilment we can only guess, but it was a hazardous
+      venture, like a weekend golfer taking on Tiger Woods.
+    - As usual, he struck boldly, writing in The Electrician:
+        - I should like to ask Professor Max Planck whether the
+          view he expresses that 'Nature never undertakes any
+          change unless her interests are served by an increase
+          in entropy' is to be taken with or without any
+          particular reservation or with any special
+          interpretation of 'her interests'.
+        - My thermodynamical ideas are somewhat old-fashioned
+          – viz., that there is invariably a dissipation of
+          energy or loss of availability of energy due to
+          imperfect or total want of _reversibility_ in natural
+          processes.
+    - This entirely agrees in effect with the way of expressing
+      things in terms of 'entropy', although that subtle quantity
+      is certainly 'ghostly', and is somewhat too evasive to be
+      regarded as a physical state even though it be a function
+      of the physical state referred to a standard state.
+    - But the question is how the interests of Nature are served
+      by imperfect reversibility?
+    - Professor Planck's words suggest a choice on Nature's part,
+      as if Nature had any choice.
+    - Goethe said God Himself could not alter the course of
+      Nature. That was truly scientific.
+    - Then, again, what are to be considered the interests of
+      Nature? Are we to take things exactly as we find them, and
+      define the interests in that way?
+    - If so, it carries us no further.
+    - Or is there a theorem of greatest entropy, showing how any
+      variation from the proper course of Nature would tend to
+      reduce the rate of increase of the entropy?
+        - ASIDE: The Electrician printed Planck's reply in March
+          1903. The fact that the great Planck replied quickly,
+          or indeed at all, shows that Heaviside had established
+          himself as someone to be taken seriously by top
+          scientists, even when venturing outside his own field.
+
+
+- Entropy was the mysterious quantity that always tended to
+  increase and thereby ensured, among other things, that heat
+  flowed from hot bodies to cold rather than vice versa.
+    - To Heaviside, a casual visitor to the subject, it looked
+      like a mathematical contrivance, useful for calculation but
+      not a fundamental property of matter.
+    - Planck disagreed, and there was a touch of exasperation in
+      his reply: rash dabblers should refrain from commenting on
+      things they don't understand:
+        - Whether entropy has any 'ghostly' attributes is
+          a question I will not open, but I am for the present
+          quite content to know that it is a quantity which can
+          be measured without ambiguity.
+        - I do emphatically deny, and have always combated the
+          proposition adduced by Mr. Heaviside, of the universal
+          dissipation of energy.
+    - This was enough to show Oliver that he had bitten off more
+      than he could chew. For once, discretion prevailed, and he
+      withdrew from the fray.
+    - To Planck, Heaviside's observation that all natural
+      processes involve waste of energy was a clumsy
+      oversimplification.
+        - For example, the energy lost by atoms when they emitted
+          EM radiation could be completely recovered by
+          reabsorption – none was wasted.
+    - It was the study of this process in so-called 'black body'
+      radiation that led Planck to the discovery of the quantum
+      of energy.
+        - But the discovery only came after Planck had discarded
+          his earlier ideas about entropy and accepted that it
+          did have a certain 'ghostliness': it was not a physical
+          property of matter but a statistical one.
+
+- By the same token, the second law of thermodynamics was
+  a `statistical law`.
+    - It was _physically possible_ for heat to flow from a cold
+      body to a hot one: the only reason it didn't happen was
+      that the probability of such an outcome was tiny.
+    - The startlingly original statistical ideas to which Planck
+      became a reluctant convert came from his compatriot
+      Boltzmann and – who else? – good old Maxwell.
+
+- It was all to do with the numerical factor `4π` that cropped up
+  nearly everywhere in the formulae of electricity and magnetism.
+    - Heaviside hated the `4πs` – they had no business there and
+      wanted to get rid of them.
+    - His argument went to the very origins of the science of
+      electricity.
+    - Coulomb had discovered in the late 18th century that the
+      force between two electric charges obeyed an inverse square
+      law:
+        - the force between two charges in empty space (or air)
+          was proportional to their product divided by the square
+          of the distance between them.
+        - The constant of proportionality was originally taken to
+          be `1` but when physicists and engineers found that
+          this gave an impracticably tiny unit of electric charge
+          they changed it to `1/ε`, where `ε` was a very small
+          number that came to be called the primary electric
+          constant. Also called the "permittivity of free space"
+            - See Shankar, `1/e0`
+            - $MY_NOTES/physics/courses/misc/Shankar_01.md
+        - So the formula for the force `F` between two charges,
+          each of value `q`, separated by a distance `r` was:
+            - `F = q^2 /ε r^2`
+        - So far so good. But as physicists developed the theory
+          of electricity and magnetism many of their equations
+          turned out to contain the numerical factor `4π`,
+          sometimes in the most curious places.
+        - Theoretical physicists got used to the clutter but the
+          effect on newcomers was bewildering.
+        - Heaviside called the whole thing nonsense and said that
+          the fault lay in the original formulation of the
+          inverse square law.
+            - Coulomb's formula for the force between two equal
+              electric charges was based on the idea of action at
+              a distance: that the charges somehow sensed each
+              another and produced a mutual attraction or
+              repulsion acting along the straight line between
+              them.
+        - But this, in Heaviside's opinion, was eyewash. What
+          really happened was that each charge infused the
+          surrounding space with a radial field of electric lines
+          of force, or flux, and the field strength at any point
+          was the flux density there divided by the constant `ε`.
+        - At a point a distance `r` from one of the charges the
+          density of its flux was its charge, `q`, divided by the
+          surface area of a sphere of radius `r`. That is, `q/4π
+          r^2` .
+        - The force on a second charge of value `q` placed there
+          would be `q` times the field strength from the first
+          charge, so the proper formula for Coulomb's force
+          between two equal charges was: `F = q^2 / 4πεr^2`
+        - This was the natural home for the `4π` factor.
+        - Put `4π`s here and in the similar formula for the force
+          between two magnetic poles and they vanish from
+          everywhere else.
+        - The legion of `4π`s that had seemed intrinsic to
+          electromagnetic theory were, in truth, nothing more
+          than correction factors made necessary by the omission
+          of `4π` from its proper place.
+        - A compelling case for change, one would have thought.
+        - But moving `4π` would send ripples through the whole
+          system of units; for a start, `√` the new unit of
+          electric charge would be smaller than the old one by
+          a factor of `√` the art, (4π). [TODO]
+        - Physicists and engineers had grown comfortable with
+          their odd collection, and commercial interests were
+          vested in the status quo.
+            - In short, there was massive resistance to change.
+              This didn't stop Oliver making his pitch.
+
+    - After a while some prominent people added their voices:
+        - John Perry became a great enthusiast, and Sylvanus
+          Thompson and WE Ayrton gave solid support.
+        - One by one, more people came over but the battle went
+          on well into the 20th century.
+        - Eventually Heaviside's cause prevailed. In 1960 his
+          idea to relocate `4π` was formally embodied in the SI
+          (Système Internationale) set of units used by
+          physicists and engineers all over the world.
+
+- Like Volumes I and II, Volume III of "Electromagnetic Theory"
+  was mostly an exposition and development of ideas that
+  Heaviside had introduced in his earlier papers.
+    - But they were profound ideas and the 3 volumes were still
+      brimful of originality.
+    - One theme he continued to pursue at length was the shape of
+      the field surrounding an electrical charge.
+    - As we have seen, he had calculated that the field would
+      contract along the direction of motion as the charge
+      approached the speed of light.
+    - Foreshadowing Einstein's SR, the mathematics suggested that
+      nothing could exceed the speed of light, but this didn't
+      stop Oliver investigating what would happen if the charge
+      did.
+    - He predicted that it would emit radiation in the form of
+      `EM shock waves with a cone-shaped wave front`, something
+      like the sound shock waves we hear when an aeroplane breaks
+      the sound barrier.
+
+- By the 1930s it had became clear from Einstein's theory and
+  supporting experiments that nature did indeed impose a speed
+  limit on all material bodies, and this limit was the speed
+  light travelled in a vacuum.
+    - Heaviside's speculation had looked like science
+      fiction. But, amazingly, it turned out to be fact.
+    - In 1934, the Russian physicist Pavel Cherenkov found
+      conical electromagnetic shock waves, exactly as Oliver had
+      predicted, while studying the movement of _charged
+      particles in water_.
+    - The conical wave front formed because Cherenkov's particles
+      were moving faster than the surrounding water could
+      transmit the waves.
+    - This was possible because light travels _more slowly in
+      water_ than in a vacuum whereas nature's speed limit on any
+      MATERIAL BODY is the same no matter what medium it is
+      moving through.
+    - Cherenkov and his colleagues Ilya Frank and Igor Tamm were
+      awarded the Nobel Prize in 1958 but they made no mention of
+      Heaviside, who had published his first study of
+      faster-than-light particles in 1888.
+
+- In one respect he was by now falling behind, anchored by the
+  very concept that had served him so well: `the field`.
+- Like Faraday and Maxwell, he believed that electric and
+  magnetic energy were borne by _STRESSES that existed in
+  non-conductors_ (including empty space).
+- In his scheme, conductors played only a secondary role, as
+  materials that could not support the stresses of the field and
+  hence held no energy.
+- _A conducting circuit acted as a channel along which the STRESS
+  was released_.
+- Charges and currents were simply effects produced in conductors
+  by stresses in the surrounding field, and the same stresses
+  gave rise to electric and magnetic forces.
+- All this was in complete contrast to the earlier view that
+  electricity was something that existed only in conductors and
+  that electric and magnetic forces resulted from the charges or
+  currents in the conductors acting on one another at a distance.
+
+- The field view had triumphed by predicting EM waves and
+  explaining other phenomena, like the 'skin effect'.
+- But in 1897 JJ Thomson (at the Cavendish), discovered the
+  electron: a material particle with an intrinsic electric
+  charge.
+- A little later Robert Millikan confirmed Thomson's results and
+  measured its electric charge and mass. 
+- Nature had sprung a surprise: the electron was its unit of
+  electricity and it was a constituent of matter .
+- It seemed that _the field theorists were wrong after all_ – an
+  electric current was a physical flow of electrons along
+  a conductor and a charged body had either a surplus or
+  a shortage of electrons on its surface.
+- HEAVISIDE NEVER CAME TO TERMS WITH THE ELECTRON.
+- Despite the experimental evidence he couldn't bring himself to
+  think of it as anything more than a hypothesis.
+- Maxwell's EM theory was _entirely a field theory_, with no
+  place for electrons, and Heaviside was not prepared to modify
+  the theory to let them in.
+- Others were prepared, notably Lorentz and Joseph Larmor, and in
+  the end the electron slotted in neatly.
+- Oliver's main stumbling block was a chicken and egg question:
+    - DOES THE ELECTRIC CHARGE CAUSE THE FIELD OR DOES THE FIELD
+      CAUSE THE CHARGE?
+- Maxwell and his followers thought the field came first, but the
+  electron seemed to require things to be the other way round.
+  For Heaviside, PRIMACY OF THE FIELD was a principal tenet of
+  faith and he couldn't give it up.
+
+- It turned out to be a false dichotomy. Physicists came to the
+  view that BOTH the electron and EM fields were fundamental
+  – there was really no point in assigning cause and effect.
+    - With this interpretation, they adapted and extended
+      Maxwell's theory to accommodate the electron.
+    - In doing so, they went beyond Heaviside's territory;
+        - he had opened up great tracts of electrical theory but
+          his pioneering days were over.
+
+- There were exceptions, notably his introduction of vector
+  analysis.
+    - For example, he avoided the laborious algebraic proof of
+      Stokes' theorem that Maxwell and others had used.
+    - His derivation is simpler, more direct, and largely
+      dispenses with symbols.
+    - It has now become the standard method.
+
+- And in circuit theory his concept of `characteristic
+  impedance`, now indispensable to communications engineers,
+  enabled a better understanding of transmission lines.
+    - If you terminated a line with the appropriate value of
+      impedance – now called the characteristic impedance – the
+      line would behave as though it were infinitely long:
+        - all waves travelling down the line would be absorbed at
+          the receiving end, none reflected.
+        - To arrive at this result he worked out the `impedance`
+          of an infinitely long line with evenly distributed
+          `resistance`, `inductance`, `capacitance` and
+          `leakance` in a way that was breathtaking in its
+          simplicity and elegance.
+        - Suppose the line is already infinitely long.
+            - Then, if you add a short extra length the impedance
+              will be unchanged.
+            - Apply a little elementary circuit theory and the
+              required formula falls out. What is more, the
+              distortionless condition `L/R = C/G` is laid bare.
+
+- One of Steinmetz's achievements was to get colleagues to accept
+  a mathematical device that allowed the theory of DC circuits
+  (where currents were steady) to be extended to AC circuits
+  (where currents oscillated at a fixed frequency).
+    - The trick was to replace the ordinary numbers which
+      represented the electrical resistance of each branch in the
+      circuit by complex numbers of the form `X + jY` , where `X`
+      and `Y` were ordinary numbers and `j` (or `–j`) was
+      `sqrt(–1)`.
+    - They represented what Heaviside called impedance;
+        - the `X` part was a resistance and the `jY` part either
+          an inductance or a capacitance, or a combination of the
+          two:
+            - For a resistor the component of impedance was `R`,
+            - for an inductor it was `jωL`
+            - and for a capacitor it was `1/jωC`, or `–j/ωC`,
+                - where `ω` was `2π` times the current frequency.
+        - One could now apply Ohm's law as if for a DC circuit.
+          When `j^2` came up in the calculations you simply
+          replaced it by `-1`.
+        - This way you could work out, for a given alternating
+          voltage, not only the magnitude of the current but also
+          its phase; whether it lagged behind the voltage by
+          a fraction of a cycle or led it, and what the fraction
+          was.
+        - The scheme worked because the bizarre-seeming symbol
+          `j`, regarded as an operator, had a simple physical
+          meaning: 
+            - it had the effect of _advancing the phase_, of the
+              current or voltage on which it operated, by
+              a quarter of a cycle.
+        - All this fell out of Heaviside's operational calculus.
+        - It was a simple special case:
+            - when a regular sinusoidally oscillating voltage was
+              applied to a circuit, his differential operator `p`
+              became `jω`, and the rest followed.
+            - Heaviside had worked this out long before AC power
+              systems came into commercial use but he never
+              presented the results in a form that power
+              engineers could assimilate and it was Steinmetz who
+              took Heaviside's ideas and demystified complex
+              numbers for them.
+
+- It eventually gained complete respectability but only by adding
+  extra mathematical machinery and moving analysts further away
+  from the physical world and towards one of abstract symbols.
+- Would Heaviside have approved?
+    - Probably not, but the system now taught and practised
+      everywhere is essentially his, dressed in fine clothes.
+    - The first critical steps were taken in 1916 by a Cambridge
+      friend of Searle's, Thomas John l'Anson Bromwich.
+    - He found that he could solve many of Heaviside's
+      operational equations with full mathematical rigour by
+      treating the operator `p` as a _complex number_ and using
+      the advanced technique of complex integration.
+    - Bromwich actually thought Heaviside's own methods were
+      wonderful, with them he could work out solutions mentally
+      without even the need for pencil and paper, but told Oliver
+      he wanted to find a way of 'convincing the purest of pure
+      mathematicians that the `p-method` rests on sound
+      foundations'.
+    - He got no thanks from grouchy Oliver, who replied: 
+        - 'I could never stomach your complex integral method',
+          but his paper stimulated other mathematicians to take
+          an interest in Heaviside's operational methods.
+
+- In the 1920s, JR Carson, a mathematically gifted engineer at
+  The American Telegraph & Telephone Company, came up with
+  a formula for generating Heaviside's `p` function automatically
+  from the corresponding function of time.
+    - The German mathematician Gustav Doetsch brought everything
+      together in the 1930s by combining the approaches of
+      Bromwich and Carson in a complete system with impeccable
+      mathematical credentials.
+    - This was the method of so-called _LAPLACE TRANSFORMS_ which
+      has become a standard tool for engineers and physicists.
+    - The unit step function that Heaviside used all the time and
+      denoted by a bold-faced `1` is now commonly named after him
+      and written as `H(t)`. 
+        - But many of the people who use it with their Laplace
+          transforms know nothing of the story behind `H` .
+
+- The quoted passage is from his article 'The Teaching of
+  Mathematics', published in Nature Oct 1900 and later included
+  in Chapter 10 of Electromagnetic Theory, Volume III.
+
+- Heaviside used the parable beginning 'More than a third of
+  a century ago, in the library of an ancient town' to introduce
+  a review of 'Vector Analysis', by Gibbs' former student EB
+  Wilson.
+    - The review was published by The Electrician in March 1902
+      and reprinted as Appendix K of Electromagnetic Theory,
+      Volume III.
+    - The parable was Oliver's way of expressing his exasperation
+      with quaternions. (When the knowledge-seeking youth finds
+      books on quaternions he studies them eagerly but finds them
+      incomprehensible and dies of disappointment.)
+
+- Poincaré was fond of telling how a colleague who made a long
+  study of Maxwell's Treatise told him:
+    - 'I understand everything in this book, except what is meant
+      by a charged sphere.'
+    - Today we know from QED that electrical forces result from
+      electrons and quarks emitting and absorbing photons but, as
+      Richard Feynman has remarked, nobody knows _why Nature
+      works this way_.
+
+- Heaviside wrote of his first sight of Maxwell's Treatise in
+  a letter to the French engineer Joseph Bethenod in 1918.
+    - Bethenod was an  admirer of Heaviside and included it
+      (translated into French) in an obituary notice for
+      Heaviside published in 'Annales des Postes Télégraphes' in
+      1925.
+    - I am indebted for its inclusion here to Paul Nahin, who
+      quoted it (after retranslation into English) in his
+      biography of Heaviside. 
+        - $MY_BOOKS/Physics/EM/Heaviside-Electrical-Genius-Nahin.pdf
+    - The perils of double translation are well known: there's
+      a story of 'out of sight, out of mind' becoming 'invisible
+      idiot' when translated into Russian and back.
+    - But in this instance both Bethenod and Nahin were careful
+      to translate literally, so we can be confident that the
+      quoted words are close to Heaviside's own.
+
+- The passage beginning 'For my part I always admired the
+  old-fashioned term “natural philosopher”' is from the
+  Introduction to Volume I of his Electromagnetic Theory.
+    - The terms physicist and biologist had not yet become
+      accepted and Heaviside, tongue in cheek, suggests
+      'materialist' and 'organist' as alternatives.
+    - The paragraph finishes with a typical off-beat flourish.
+      How is it possible to be a natural philosopher when
+      a Salvation Army band is performing outside;
+        - joyously it may be, but not melodiously?
+        - But I would not disparage their work; it may be far
+          more important than his.
+
+- Heaviside introduced _vector analysis_ in his papers 'The
+  Relations between Magnetic Force and Electric Current',
+  published in The Electrician in 1882 and reprinted as Article
+  24 of Electrical Papers, Volume I.
+
+- The vectors `E` and `H` are not FORCES in the ordinary sense
+  but rather the `intensities` of the electric and magnetic
+  fields at our arbitrary point.
+    - But they are the forces that would act on a _unit charge_
+      or a unit magnetic pole if either were placed at the point
+      and Heaviside, who much preferred vivid descriptions to
+      abstract ones, always called them forces.
+    - The constants `µ` and `ε` are the ratios of magnetic and
+      electric flux densities to their respective forces.
+    - The curl equations can contain various arrangements of `µ`
+      and `ε` according to the system of units used.
+    - And, today, the magnetic flux density vector `B = µH` is
+      generally used rather than the force vector `H`.
+        - Heaviside favoured the symmetrical arrangement shown in
+          the narrative.
+    - In a deeper sense, there is only one fundamental
+      electromagnetic constant: the speed of light, `c` and its
+      value has to be measured by experiment.
+    - By Maxwell's theory, `c` is equal to (???) has to be
+      measured by experiment.
+    - By lue  (µε). This means that either `µ` or `ε` can be
+      arbitrarily fixed to suit a particular system of units, but
+      when this is done the other is automatically fixed, too,
+      because `µε` must always equal `1/c^2` .
+    - In the system of units most commonly used in Heaviside's
+      time, `µ` was set at `1`.
+    - I have, for simplicity, omitted the suffix `0` generally
+      given to `µ` and `ε` when, as here, they represent the
+      ratios of flux density to force in a vacuum. Technically
+      these are known as the permeability and permittivity of
+      free space.
+    - The same symbols with suffix `r` are used to represent the
+      relative permeability and permittivity of particular
+      substances compared with those of a vacuum.
+
+- The inverse square law for electric and magnetic forces can be
+  visualised by taking as an analogy the outward flow of an
+  _incompressible_ fluid from a point source.
+    - The vector in this case is the velocity of flow and its
+      divergence is zero everywhere but the source because the
+      fluid is incompressible.
+    - The amount of fluid emerging PER UNIT TIME from any sphere
+      centred on the point source _will be the same_, whatever
+      the size of the sphere.
+    - It follows that the fluid moves outwards at a rate
+      inversely proportional to the square of its distance from
+      the source, and, by analogy, that electrical and magnetic
+      forces follow the same law.
+
+
+- The American Henry Rowland showed in 1875 that an electrically
+  charged spinning disc creates a magnetic field.
+
+- Wow
+- In 1889, Heaviside was the first to give the correct formula
+  for the mechanical force on an electric charge moving in
+  a magnetic field.
+    - His result was hidden away in the middle of a long paper
+      and the force has become named after Lorentz instead, who
+      published the same result a few years later. 
+    - Heaviside's paper also contained the first appearance of
+      what became known as the 'relativistic factor'; 
+
+- Fitzgerald's short paper 'On a Method of Producing
+  Electromagnetic Disturbances of Comparatively Short
+  Wavelengths' was published in The Electrician in 1883 and is
+  included in 'The Scientific Writings of the Late George Francis
+  Fitzgerald', edited by Larmor, published in 1902.
+
+- A subject that absorbed the attention of many late 19th-century
+  physicists, among them Lodge and Fitzgerald, was the
+  composition of the aether – the hypothetical substance,
+  pervading all space, thought to be the medium by which light
+  and other EM waves were transmitted.
+    - Both Lodge and Fitzgerald spent much time making imaginary
+      mechanical models of the aether.
+    - Lodge's favourite model had a rack-and-pinion mechanism and
+      Fitzgerald's had pulleys and bands.
+    - They performed a similar function to Maxwell's spinning
+      cells model of 1861 but whereas Maxwell had abandoned his
+      model once he found a way to build his theory without it,
+      Lodge and Fitzgerald held on to theirs.
+
+    - Heaviside took little interest in mechanical models.
+    - Like everyone at the time, he thought an aether of some
+      kind was necessary to store electromagnetic energy and to
+      transmit waves, but he followed Maxwell in keeping an open
+      mind about its structure.
+    - The aether of 19th-century physics needed to operate in
+      absolute space and time, but in 1905 Albert Einstein
+      demolished those notions in his special theory of
+      relativity.
+    - There he showed that all measures of space and time were
+      relative and that the only constant quantity was the speed
+      of light.
+    - There was no longer a home, or need, for the aether; in
+      their new guise, space and time themselves had taken on the
+      role.
+        - So all the efforts of the aether model builders came to
+          nothing in the end. Or did they? 
+        - The keystone of Maxwell's enduring theory, the
+          displacement current, had its origin in the idea that
+          the spinning cells in his construction-kit model could
+          be springy.
+        - And although the dozens of models proposed by Lodge,
+          Fitzgerald, Thomson and others have no direct relevance
+          today they served in their time as powerful stimuli for
+          thought and so contributed to the general development
+          of physical science.
+        - The models of Lodge, Fitzgerald and contemporaries are
+          compellingly described by Bruce Hunt in 'The
+          Maxwellians', and ET Whittaker gives a full treatment
+          of the topic in his splendid book 'A History of the
+          Theories of Aether and Electricity'. 
+            - $MY_BOOKS/Physics/EM/ET-Whittaker-Theories-aether-and-electricity-Vol-1.pdf 
+            - $MY_BOOKS/Physics/EM/ET-Whittaker-Theories-aether-and-electricity-Vol-2.pdf 
+        - In a sense, the notion of an all-pervading aether
+          lives on.
+            - Physicists today believe that what we loosely think
+              of as empty space is awash with virtual particles
+              popping in and out of existence.
+
+- Heaviside's account of his investigation into the compensating
+  effects of _resistances_ and _leaks_ can be found at the end of
+  Chapter 4 of Electromagnetic Theory, Vol I.
+    - I have, for simplicity, omitted from the main narrative
+      a subtle aspect of Heaviside's analysis.
+    - He pointed out that the compensation is only approximate
+      for finite resistance and leakage elements but becomes
+      exact when they are infinitely small, as in a real line
+      with continuously distributed resistance and leakage.
+
+- Heaviside congratulated Hertz on giving 'a death blow' to the
+  concept of action-at-a-distance (and hence to the theories of
+  Helmholtz and others which relied on this concept) in a letter
+  of 1889:
+    - Had he known how greatly Hertz revered his mentor, perhaps
+      Heaviside would not have rubbed salt into his friend's
+      wound.
+    - But with Oliver one can never be sure. Hertz warned
+      Heaviside that his writing was 'a little obscure for
+      ordinary men' in a letter of May 1889.
+
+- Beatrice's recollection of merry times in the stock-room is
+  reported by Searle in 'Oliver Heaviside – A Personal Sketch',
+  published in The Heaviside Centenary Volume.
+
+- Heaviside often used the operational calculus to work out the
+  response of an electrical circuit from the time a voltage
+  source was connected to it.
+    - All such analyses employed his unit step function, which
+      had the value `0` up to time zero, with the value `1`
+      thereafter.
+    - This function is now often written `H(t)` in his honour,
+      but he wrote it as a bold-face `1`.
+    - The voltage of the source could be any function of time,
+      `f(t)`, but, because it was switched into the circuit at
+      time `t=0`, the input voltage to the circuit was, in
+      Heaviside's notation, `f(t)1`.
+    - TODO; The esence of `H(t)`, or `1`, in the function being
+      operated on is crucial to Heaviside's presence of `H(t)`,
+      or `1`,
+        - It ensures that `1/p` is the true inverse of `p`. In
+          other words, while `p` represents differentiation,
+          `1/p` represents the operation of integration up to
+          time `t`.
+        - But Heaviside, in his cavalier fashion, did not always
+          explicitly write in the `1` in his equations.
+        - It was always implied, and he allowed for it in his
+          calculations, but this aversion to rigorous notation
+          could lead his followers astray if they failed to make
+          sure to have a `1` in the function they were operating
+          on.
+        - Ido Yavetz gives a sympathetic and illuminating
+          appraisal of Heaviside's operational calculus in "From
+          Obscurity to Enigma: The Work of Oliver Heaviside,
+          1872–1889" .
+
+- Heaviside made his statement that the square root of
+  a differential operator is intrinsic to physics in Chapter 7 of
+  Volume II of Electromagnetic Theory.
+    - He was right.
+    - It not only occurs in electrical transmission lines but in
+      many other physical systems that are represented by partial
+      differential equations.
+        - These are equations describing the rates at which
+          a physical quantity varies with each of two or more
+          variables.
+        - Those for a transmission line, for example, describe
+          the variations of voltage and current both with time
+          and with distance along the line.
+
+- TODO: Heaviside found the relation √  p1  = 1/ icians  √  (π t)
+  by the 'experimental' method  that infuriated orthodox
+  mathematicians.
+    - Having first solved a transmission line problem by
+      non-operational means, using Fourier series, he then wrote
+      the equations in operational form and observed that the
+      relation had to be true for the operational method to give
+      the right answer, adding breezily at the end:
+        - 'The above is only one way `√` in a thousand'.
+        - The relation is closely linked to the curious result
+          ( −1/2)! = o use the   way √ in a thousand'. 
+        - The relation is closely linked to the curious  π, which
+          was already known to mathematicians. (Heaviside liked
+          to use the factorial function `n ! = 1 × 2 × 3 ×...n`
+          outside its proper domain of integers, thereby causing
+          more irritation to orthodox mathematicians. √
+        - The same result is more conventionally expressed as
+          (1/2) = rd  mat √  π  , where is Euler's gamma
+          function; here it comes from a straightforward
+          integral.)
+        - Heaviside blazes his way through the mathematics in
+          Chapter 7 of Electromagnetic Theory , Volume II.
+
+- It was Gibbs who introduced the notation now used for vector
+  and scalar products;
+    - `a × b` indicates a vector product and `a.b` a scalar
+      product. Or TODO the vector product and `ab` for the
+      scalar.
+    - But the idea Heaviside wrote `V ab` for the vector product
+      and `ab` for the scalar. But the idea of using bold-face
+      letters for vectors was Heaviside's.
+
+- Hamilton thought that his symbolic scheme of opposite rotations
+  (`ij = k` but `ji = −k`) would be just the thing to represent
+  physical relationships like that between electricity and
+  magnetism;
+    - E.g., it was well known that if you reversed the linear
+      direction of the current in a straight wire the circular
+      magnetic field around it would also reverse, but in
+      a rotatory sense, from, say, clockwise to anticlockwise.
+    - But there was a flaw in the scheme. He used `i`, `j` and
+      `k` to represent `90 ◦` rotations about three mutually
+      perpendicular axes and the SAME SYMBOLS to represent unit
+      vectors in the `x`, `y` and `z` directions.
+    - This led to some strange properties:
+        - E.g., the square of a vector was negative.
+        - Heaviside and Gibbs overcame the difficulty by
+          distinguishing between so-called vector and scalar
+          products.
+    - In modern notation bold-faced letters `i`, `j` and `k`
+      represent the three unit vectors, and rotations are not
+      defined not by `i`, `j` and `k` themselves but by their
+      vector products: 
+        - i×j = k 
+        - j×k = i 
+        - k×i = j 
+        - i×i = j×j = k×k = 0 
+    - whereas, in the scalar products: 
+        - i.i = j.j = k.k = 1 and 
+        - i.j = j.k = k.i = 0
+    - Problem solved – the square of a vector was no longer
+      negative – but Tait saw this as a desecration of Hamilton's
+      beautiful scheme
+
+- Maxwell suggested the term 'slope' for the rate of change in
+  space of a scalar field and this has also been adopted,
+  although in modified form, as 'gradient' (`grad` for short).
+
+- Searle had written to outline an error in one of Heaviside's
+  papers. Oliver was grateful and made the correction. The
+  subject was how the shape of a spherical charge changes when it
+  moves – it√becomes an oblate spheroid, squashed in the
+  direction of motion by the factor √bec  (1 − v e w  2 / c 2 ).
+  TODO
+- Heaviside had already shown that the field of a moving point
+  charge would be squashed in the same way.
+    - His first reference to what later became known as the
+      'relativistic factor' was in 'On the Electromagnetic
+      Effects due to a Motion of Electrification through
+      a Dielectric', 
+    - published: Philosophical Magazine in 1889 
+    - reprinted as Article 50 of the collected Electrical Papers,
+      Volume II.
+
+- In Einstein's interpretation it was not that material bodies
+  contracted as they approached the speed of light, but rather
+  that measures of space itself, and time, were different for all
+  observers in relative motion to one another.
+
+- The SI scheme took in Heaviside's idea in principle but
+  minimised the disruption to the system of units by defining `µ`
+  to include the factor `4π` (and hence `ε` to include the factor
+  `1/4π`), an idea first put forward in 1901 by the Italian
+  engineer Giovanni Giorgi. 
+
+- Although the electron slotted in neatly in the end, the process
+  of assimilation was far from smooth; there were many false
+  starts and trips up blind alleys.
+    - The process started a decade before JJ Thomson produced
+      experimental evidence of the electron's existence.
+    - Lorentz made the crucial breakthrough in the early 1890s by
+      assuming, in his calculations, that charged material
+      particles existed in their own right and their charges were
+      not simply by-products of the field.
+    - British Maxwellians were slow to come round to this point
+      of view but eventually Larmor, who had started by modelling
+      electrons as VORTICES in the aether, found his own theory
+      converging with that of Lorentz.
+    - Larmor, an Ulsterman who settled with ease into the life of
+      a Cambridge academic, was brilliant but sometimes got
+      carried away by grand notions and his own facility for
+      mathematical model-building.
+    - Fitzgerald played a key role behind the scenes, encouraging
+      and advising Larmor, and he was pleased with the outcome.
+    - Reviewing Larmor's book 'Aether and Matter' in 1900, he
+      wrote that, 'far from being contrary to the spirit of
+      Maxwell's Treatise', the existence of electrons was 'in
+      reality quite compatible with it, and from some points of
+      view even essential'.
+    - These were deep waters and most scientific historians would
+      say that Fitzgerald was oversimplifying things.
+    - Jed Buchwald gives a scholarly account of the electron's
+      emergence and eventual assimilation in his book From
+      Maxwell to Microphysics .
+        - $MY_BOOKS/Physics/EM/From-Maxwell-to-Microphysics.pdf
+    - Heaviside used the term 'electron' freely in his later
+      papers but what he meant by it was simply a point charge of
+      arbitrary value.
+
+- Searle's friend Crowther visited Heaviside in 1914 and recalled
+  the experience in a letter to Searle (1949)
+    - The incident resembles a reminiscence of HM Butler, Master
+      of Trinity College, in the late 19th century.
+    - He had been a student at the College with Maxwell in the
+      1850s and remembered an afternoon walk with him along the
+      banks of the Cam.
+    - Butler said that he understood hardly a word of his
+      friend's out-pouring of his latest thoughts on electricity
+      and magnetism but that he wouldn't have missed it for
+      anything.
+
+- Stokes' theorem, sometimes called the 'theorem of version', is
+  one of the most fundamental in vector theory.
+    - It says that the line integral of a vector around any
+      closed curve in space is equal to the surface integral of
+      the _curl_ of the vector over any surface bounded by the
+      curve.
+    - Up to Heaviside's time, the standard proof involved heavy
+      mathematics:
+        - you wrote down the formula for the components of curl
+          in the `x`, `y` and `z` directions and slogged it out.
+        - But Oliver's proof, freely adapted for our purpose,
+          runs on the following lines:
+            - On any surface, draw a closed curve, or circuit.
+            - If `E` is the electric force vector in that region
+              of space, the total force, or voltage around the
+              circuit in, say, a clockwise direction, will be the
+              sum of the forces in each tiny element of the
+              circuit: in other words the line integral of the
+              vector `E` around the circuit.
+            - Draw on the surface a line connecting two points of
+              the circuit. There are now two circuits, both
+              containing the line.
+            - The sum of the line integrals of `E` around each of
+              the new circuits, again taken clockwise, will be
+              the same as that around the original circuit
+              because the contributions of the two new circuits
+              along the common line are equal and opposite and
+              cancel one another out.
+            - Even if we draw many inter-crossing lines across
+              the original circuit, making a fine mesh, the sum
+              of the line integrals of `E` around every element
+              of the mesh will still be the same because the
+              contributions from the new lines will all cancel
+              out.
+            - This will be true even if we make the mesh elements
+              very small indeed, each enclosing an infinitesimal
+              surface area.
+            - At any point in a vector field, curl is a measure
+              of the vorticity, or swirl, of the field at that
+              point. It is itself a vector, pointing in the
+              direction a right-handed screw would move if it
+              turned with the swirl, and its magnitude is the
+              amount of swirl around an infinitesimal loop
+              surrounding the point DIVIDED BY THE AREA OF THE
+              LOOP (never knew it was divided by the area), when
+              the loop is positioned in the plane of maximum
+              swirl.
+            - To find the total vorticity over a given surface
+              you take the surface integral of the curl vector by
+              adding together, for each of the infinitesimal area
+              elements `dS` which make up the surface, the
+              component of curl perpendicular to the surface
+              multiplied by `dS`.
+            - In each of our tiny mesh elements the component of
+              `curl E` perpendicular to the surface is, by
+              definition, equal to the line integral of `E`
+              around the element divided by the element's area
+              `dS`.
+            - Rearranging things slightly, the component of `curl
+              E` perpendicular to the surface multiplied by `dS`
+              is equal to the line integral of `E` around the
+              element.
+            - Adding up the values of `dS` multiplied by the
+              component of `curl E` perpendicular to the surface
+              for all the tiny surface elements gives the surface
+              integral of `curl E` over the whole surface.
+            - But the same total can be formed by summing the
+              line integrals of `E` around all the mesh elements.
+              When this is done the contributions from all the
+              internal parts of the mesh cancel out and the
+              result is simply the line integral of `E` around
+              the original curve, or circuit.
+            - Finally, although we have taken `E` to be electric
+              force, the result is a general one;
+                - it will hold for any vector. 
+            - QED.
+
+        - Heaviside's proof requires little mathematical
+          expertise beyond an ability to visualise lines and
+          surfaces in space.
+        - It deals with the properties of vectors, unencumbered
+          by the symbols needed to represent them in a particular
+          coordinate system, and hence gives a direct sense of
+          the physical meaning of the theorem.
+        - He included a representation of the result in cartesian
+          `(x, y, z)` coordinates but this was by way of tidying
+          up once the real work had been done.
+
+- Maxwell's proof, by contrast, is couched entirely in cartesian
+  coordinates, employs quite advanced mathematical techniques,
+  and occupies about two and a half pages of his 'Treatise'. 
+    - Stokes set the theorem as a Smith's Prize problem in
+      Maxwell's exam year at Cambridge, but he may not be its
+      originator.
+    - When Maxwell later wanted to include it in his Treatise,
+      with proper billing, neither Stokes nor anyone else could
+      remember who had thought of it first. 
+    - Historians subsequently found it in a letter dated 1850
+      from William Thomson to Stokes, so perhaps it should
+      rightly be called Thomson's, or Kelvin's, theorem.
+
+### Links
+    - Yavetz, I., From Obscurity to Enigma: Work of Oliver Heaviside, 1872–1889 https://www.amazon.com/Obscurity-Enigma-Heaviside-1872-1889-Historical/dp/3034801769
+    - HN: Oliver Heaviside Operator Calculus                                    https://news.ycombinator.com/item?id=42289913

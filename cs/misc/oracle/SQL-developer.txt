@@ -1,0 +1,94 @@
+### Oracle SQL Developer
+
+### data modelling
+	- In SQL Developer 3, it's pretty straightforward (they could've made it
+	easier). Go to View -> Data Modeler -> Browser. The browser will show
+	up as one of the tabs along the left-hand side. Click on the Browser
+	tab, expand the design (probably called 'Untitled_1'), right-click
+	Relational Models and select 'New Relational Model'. Then just drag
+	the tables you want onto the model.
+
+### compare schemas
+	Tools -> Database Diff
+
+### set date format
+    From SQL Developer, open menu Tools >> Preferences.
+    From the Preferences dialog, select Database >> NLS Parameters from the left panel.
+    From the list of NLS parameters, enter DD-MON-RR HH24:MI:SS into the Date Format field.
+
+### font I use
+	source code bold semi-bold
+
+### hints
+	formats select output
+	select /*csv*/ *
+		from dictionary
+		where table_name like 'USER_TAB%'
+
+	    /*csv*/ /*xml*/ /*html*/ /*delimited*/
+	    /*insert*/ /*loader*/ /*fixed*/ /*text*/
+
+### goto last edit location
+	ctrl + shift + Backspace
+
+### default path for scripts
+	Preferences > Database > Worksheet
+
+### debugging ports
+	40000 - 49000
+
+### Keymappings
+    - ctrl-D    clear worksheet
+	- F8 sql    history
+	- alt-F10   new worksheet
+
+### Database - SQL Formatter - Oracle Formatting
+	- Edit <<<<profile>>>> - Indentation - Spaces
+	- set to 4, for nice crisp indentation
+
+### Database - Worksheet -
+	- show query results in new tabs
+
+### Debugger – Stack
+	- tick "Line" checkbox
+	- See what line number I stepped from when viewing the call stack
+
+### Debugger – Start Debugging Option
+    - Set this to ‘Step Over.’
+    - allows you to start and run a debug session without
+      breakpoints.
+    - If you leave it at the default, starting a debug session
+      will appear to ‘not work.’ - SQL Developer will enter debug
+      mode and run until it finds a breakpoint, breaking
+      condition, or exception. If you have none, it will execute
+      to the end of your program.
+
+### full screen editing
+	double-click tab
+
+### decrease startup time
+	Preferences > Extensions > checkbox: Automatically check for updates
+
+### Toad style browser
+	right click connection
+	choose "schema browser"
+
+### Config Info - SQL Developer 3.x
+	%appdata%\SQL Developer\
+		connections.xml
+			I've saved it in a git repo
+
+	<<sqldeveloper dir>>\sqldeveloper\bin\
+		sqldeveloper.conf –
+			IncludeConfFile ../../ide/bin/ide.conf
+			SetJavaHome ../../jdk
+			AddVMOption  -Doracle.ide.util.AddinPolicyUtils.OVERRIDE_FLAG=true
+			AddVMOption -Dsun.java2d.ddoffscreen=false
+			AddVMOption -Dwindows.shell.font.languages=
+			AddVMOption  -XX:MaxPermSize=256M
+			AddVMOption -Doracle.jdbc.mapDateToTimestamp=false
+			IncludeConfFile  sqldeveloper-nondebug.conf
+
+	<<sqldeveloper dir>>\ide\bin\
+		ide.conf –
+			AddVMOption  -Xmx1024M

@@ -1,0 +1,338 @@
+LECTURE 22
+
+Star Formation and ALMA
+
+                          232
+
+
+N ew stars are forming in the Milky Way every year. To make
+           progress in understanding star formation, we had to be able
+           to measure molecular line emission from dark clouds. And to
+be able to measure the molecular line emission, we had to make major
+progress in several technical areas of radio science.
+
+Working at Millimeter Wavelengths
+
+ Synchrotron radiation from cosmic rays hitting magnetic fields,
+    and from active galactic nuclei, is strongest at low frequencies and
+    dominates the flux density of a spiral galaxy below a few gigahertz.
+
+               106       105        (?m)     103       102
+                                   104
+
+         103                  Total
+
+         102                  Synchrotron
+                              Free?Free
+                              Thermal Dust
+         101
+Sv (Jy)
+         100
+
+         10?1
+
+         10?2
+
+         10?3
+
+                    100       101       102       103       104
+
+                                    (GHz)
+
+ At frequencies of a few tens of gigahertz, thermal emission begins to
+    be important. This is free-free emission from interaction of electrons
+    and protons in ionized gas in H II regions.
+
+ At much higher frequencies, typically above 100 gigahertz, the
+    dominant emission is thermal radiation from interstellar dust. This is
+    basically blackbody emission described by a Planck function.
+
+ Other objects that you've learned about fall in these 3 general
+    categories. Pulsars and supernova remnants follow the general trend
+
+                                   233
+Lecture  22  Star Formation and ALMA
+
+    of nonthermal emission; the Moon and planets follow the emission
+    from dust.
+
+ The 21-centimeter line from neutral atomic hydrogen appears at 1.4
+    gigahertz, which was easily detectable with the equipment available
+    in 1950. Interstellar hydroxyl, the next molecule to be detected, is
+    rather close to the frequency of hydrogen. Its wavelength is 18
+    centimeters.
+
+ Then came the radio recombination lines. These are scattered
+    everywhere throughout the radio spectrum but were first detected
+    and exploited in the 1 to 20 gigahertz range.
+
+ Ammonia and water were detected in 1968 at around 20 gigahertz.
+    Formaldehyde came next in 1969. The first formaldehyde transition
+    to be discovered was around 5 gigahertz, which is a wavelength of 6
+    centimeters.
+
+ During this era, several other molecules were detected through their
+    radio emission. Carbon monoxide (CO) was detected in 1970 at a
+    frequency of 115 gigahertz, or a wavelength of 2.6 millimeters. CO
+    has many other transitions, all at higher frequencies.
+
+ All of a sudden, the frequencies of interest jumped from those of
+    ammonia and water, around 20 gigahertz, to 115 gigahertz, a factor
+    of 5 higher. This created some technical problems.
+
+ To focus the shorter wavelengths, a dish needs a very accurate
+    surface. Spectral lines such as hydrogen, at a wavelength of 21
+    centimeters, are easily reflected and focused with rather crude
+    surfaces. You can live with random surface deviations of a centimeter
+    or so and still focus 21-centimeter waves. But dishes need to have
+    much more accurate surfaces to focus millimeter waves.
+
+ This affects telescope design profoundly. The telescope beam size,
+    which tells us how clearly we can distinguish 2 nearby objects, is
+
+
+
+
+    proportional to the wavelength divided by the dish diameter. Huge
+    dishes, with a big diameter, aren't necessary to get good angular
+    resolution at such small wavelengths.
+ The push into millimeter wavelengths also challenged the limits of
+    receiver technology. To make a long story short, at first there were
+    no amplifiers.
+
+ Our fundamental radio-astronomical system consists of a dish
+    that concentrates the incoming signals and converts them from an
+    electromagnetic wave in free space into an electric current in a wire.
+    This current then almost immediately goes through one or more
+    amplifiers to boost the signal.
+
+ Following amplification, the signal goes into a mixer, where it is
+    converted to another frequency--usually a lower frequency--for
+    further processing. This conversion is called the heterodyne process,
+    or mixing, and the device that does it is called a mixer.
+
+ Roughly, the higher the frequency, the more difficult it is to build
+    amplifiers that actually amplify the signal without contributing
+    excessive noise. Amplification at 100 megahertz is easy; amplification
+    at 100 gigahertz is more difficult.
+
+ Technology has caught up with the need for amplifiers at millimeter
+    wavelengths, and they're now used at frequencies up to about 150
+
+
+Lecture  22  Star Formation and ALMA
+
+    gigahertz--but not beyond that. At higher frequencies, the signal
+    still goes straight into a mixer.
+ Then there's the atmosphere. Less air means less absorption. At
+    radio wavelengths, when something absorbs, it also emits noise.
+    At frequencies below a few gigahertz, the atmosphere absorbs less
+    than 1% of the incoming signal and, as a result, usually adds less than
+    3 kelvins to the system temperature; 3 kelvins is 1% of an atmosphere
+    that has a temperature of 300 kelvins.
+
+ But atmospheric attenuation changes with frequency because
+    common substances, such as oxygen and water vapor, have quantum
+    states that can absorb strongly at radio wavelengths.
+
+ At millimeter wavelengths, you always have to deal with the
+    atmosphere. Radio astronomers working at long wavelengths could
+    use their telescopes 24/7, pretty much regardless of the weather.
+    But once you begin working at the short centimeter and millimeter
+    wavelengths, the weather will sometimes shut you down.
+
+ There are other technical considerations that can make work at
+    millimeter wavelengths difficult; in general, the bandwidths are large
+    and the data rates are high.
+
+
+
+
+                       The 36-Foot Telescope
+
+ When Frank Drake and Frank Low, astronomers at Green Bank,
+    convinced the observatory to build a 36-foot telescope that would
+    work at millimeter wavelengths, it was placed near an existing optical
+    observatory on Kitt Peak, a desert mountain southwest of Tucson,
+    Arizona--high and dry.
+
+ The 36-foot telescope was designed in the early 1960s to observe
+    the planets and whatever else might be interesting at millimeter
+    wavelengths. It didn't have the best surface and had rather large
+    sidelobes from its gravitational and thermal distortions.
+
+ Nonetheless, because the 36-foot telescope was there and
+    accessible to scientists, it was used to discover the emission from CO
+    in 1970 as well as dozens of other interstellar molecules. It pioneered
+    the field of millimeter-wave spectroscopy.
+
+ Modern millimeter-wave radio telescopes are better in every way
+    than the old 36-foot telescope, but because it was in the right place
+    at the right time, was available for use by any scientist, and had
+    good enough performance, it made great discoveries. And those
+    discoveries gave us the tools to begin to unravel the mysteries of
+    star formation.
+
+                            Star Formation
+
+ Star formation is a tough problem. For one thing, it's pretty clear
+    that there are environmental influences on star formation that
+    operate on all size scales, from the galactic scale--10 to hundreds
+    of kiloparsecs--to the scale of a solar system--a few thousandths of
+    a parsec.
+
+
+Lecture  22  Star Formation and ALMA
+
+ This is a galaxy with beautiful spiral arms. It's called M51, or the
+    Whirlpool Galaxy. It has dark dust lanes and H II regions. It also has
+    a companion galaxy, which is the fuzzy blob off to the right. The
+    passage of the small companion perturbed the bigger galaxy and
+    probably produced the beautiful spiral pattern.
+
+ This galaxy is only a third the size of the Milky Way, but its star-
+    formation rate is higher. For its size, it's making more new stars each
+    year than the Milky Way. The interaction with the companion created
+    fairly intense spiral arms, and that boosted the overall star-formation
+    rate. This is a great example of how something on the scale of an
+    entire galaxy can affect star formation.
+
+ Then there's the scale of the spiral arms of galaxies. Most new stars
+    in galaxies like the Milky Way are formed from molecular clouds
+    concentrated in spiral arms. Here, the relevant size scale is about a
+    kiloparsec.
+
+
+
+
+ Gas circulating around a spiral galaxy gets concentrated in the spiral
+    arms. Giant molecular clouds are assembled, and they begin forming
+    new stars. The new stars pop out downstream of the spiral arms.
+
+ Within the spiral arms, star formation takes place in giant molecular
+    clouds. The relevant length scale for giant molecular clouds is about
+    100 parsecs (a tenth of a kiloparsec) or less.
+
+ Within giant molecular clouds, there are regions of enhanced density
+    called cloud cores. These cores contain just a small percentage of
+    the overall cloud mass, but it's in the cores that the action happens.
+    The size scale of cores is about a parsec or less. The densest cores
+    are most likely to be making new stars.
+
+ The dust clouds in the galaxy M51 are stringy, not round. Part of this
+    is the differential rotation of the galaxy. The inner parts go around
+
+
+Lecture  22  Star Formation and ALMA
+
+    more frequently than the outer parts. That tends to stretch structures
+    into filaments.
+
+ Then there's the spiral pattern. Gas flows into the spiral arms, and
+    clouds collide and accumulate along the arc of the arms.
+
+ Filaments can be produced in several ways. When gas clouds collide,
+    they can form sheets, and when sheets collide, they form filaments.
+
+ There are also theoretical reasons based on computer modeling of
+    collapsing clouds for expecting gas clouds to preferentially collapse
+    into filamentary shapes.
+
+ It's only in the last few years that astronomers have realized the
+    importance of filaments to star formation, and there's a tremendous
+    amount that we don't understand. But within molecular cloud
+    filaments, clumps form, and that begins the star-making process.
+
+ Most of the gas in giant molecular clouds is moving supersonically,
+    and this keeps the clouds stirred up. Turbulence is what keeps giant
+    molecular clouds from collapsing entirely to make new stars. It's the
+    regulator.
+
+ But still, there are regions within giant molecular clouds where the
+    turbulence must dissipate, where gas flows into filaments, and within
+    the filaments, clumps form that can coalesce and collapse into stars
+    and clusters of stars.
+
+                                  ALMA
+
+ A number of radio interferometers have been designed to work at
+    wavelengths in the millimeter range. For example, the Atacama Large
+    Millimeter/submillimeter Array (ALMA) sits in the Atacama Desert
+    of northern Chile and has more than 60 dishes. It's a joint project
+    of Asian, European, and North American institutions. Early science
+
+
+
+
+    operations began in 2014, and it's scheduled to be completed by
+    2020. It is already transforming our understanding of star formation.
+ The observatory is located at an altitude of 5000 meters, which is
+    more than 16,000 feet above sea level. It's high above much of the
+    atmosphere in one of the driest locations on Earth. The core of the
+    array consists of 54 dishes, each 12 meters in diameter, of 2 different
+    designs. Like the Very Large Array, the location of the antennas can
+    be reconfigured.
+ Using ALMA, astronomers can measure spectral lines from molecules
+    and thermal emission from dust with unprecedented sensitivity and
+    angular resolution. ALMA has receivers covering the 3-millimeter
+    band at 100 gigahertz all the way up to a frequency of 950 gigahertz,
+    which is a wavelength of less than half a millimeter.
+
+
+Lecture  22  Star Formation and ALMA
+
+ ALMA is beginning to let us see new stars in the making. And just as
+    exciting, we can also see young solar systems being made.
+
+ A star forms when a gas clump collapses to densities so high and
+    temperatures so hot--just from the heat of compressing gas--that
+    nuclear reactions can begin at the core of the cloud. This is what
+    makes a star.
+
+ At the same time, the collapsing gas cloud settles into a rotating
+    disk, and planets begin to condense out and grow. That's how the
+    solar system and all of our planets were made.
+
+ A lump of gas always has some rotation. It condenses out of a
+    swirling, turbulent cloud, so it would be unbelievable if it had no
+    residual rotation. When it begins to collapse under its own gravity,
+    the rotation can support a disk, but it collapses fully at the poles.
+    Finally, the densest part forms a star surrounded by a disk of dust
+    and gas, which begins to form planets.
+
+ For the first time, we're now able to see this in some detail in
+    other systems and watch the process unfold. The initial results are
+    stunning.
+
+ Our understanding of star formation--which began with dark clouds
+    and moved rapidly into giant molecular clouds and millimeter-wave
+    radio astronomy--has now reached another plateau. Expect more
+    discoveries every day.
+
+                              Suggested Reading
+
+   Baars, International Radio Telescope Projects, chap. 6.
+   Verschuur, The Invisible Universe, chap. 7.
+   Wielebinski, Junkes, and Grahl, "The Effelsberg 100-m Radio
+   Telescope."
+
+
+
+
+                         Questions to Consider
+
+1. Interstellar molecular clouds have a range of densities and sizes,
+    and within clouds there can be quite a variety of structures in the
+    gas. The internal structure of a cloud clearly has something to do
+    with whether it forms one star or more. Can you think of ways that
+    the structure of a cloud, or the way it forms stars, might produce
+    the binary stars that are so common?
+
+2. A star-forming cloud holds itself together by its own gravity, but
+    when the stars light up, their radiation drives away the remaining
+    gas. What might this do to the group of stars left behind?
+    Remember that only a fraction of the cloud mass is turned into
+    stars.
+
+
+

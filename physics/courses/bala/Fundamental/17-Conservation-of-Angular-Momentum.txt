@@ -1,0 +1,340 @@
+$MY_VIDEOS/physics/bala_fundamental/17-Conservation-of-Angular-Momentum.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 17
+Conservation of Angular Momentum
+So, let us start we will left of the last time, we were looking at the Conservation of
+Angular Momentum.
+
+(Refer Slide Time: 00:26)
+
+And now I have in mind, a system which consists of N bodies. So, system of N, let say
+particles or masses and this system moves under the effect of forces, which each body
+causes on the other, each mass causes on the others. So, we have a system of Newton’s
+equations, which is d p 1 over d t is F 12 plus dot, dot, dot plus F 1 N and so on, all the
+way down to d p N over d t is F N 1 plus F N 2 and so on up to F N N minus 1.
+
+So, here is the system of these N particles, which are in interaction with each other due to
+some unspecified forces, which are given by F 1 to write up to F N comma N minus 1.
+Now, we already saw that F i j and thus equal to minus F j i, this was a third Law. As a
+consequence, we saw that the sum of momenta of p 1 to p N, this is a constant of the
+
+motion. This implies the p equal to p 1 up to p N equal to constant of the motion.
+
+In other words, this combination of momenta has exactly the same value at all instance
+of time as the particles move and change their individual positions as well as momenta,
+but this sum remains a constant of the motion. What else can we say? Well, we already
+saw last time that if I took r cross this quantity, then if I define the angular momentum,
+well the total angular momentum to be equal to r 1 cross p 1 plus etcetera plus r N cross
+p sub N. This is the total angular momentum about the origin by definition.
+
+And I ask how does that change as a function of time? Well, I would expect given no
+other information that this two, if it is a close system, not in interaction, no forces from
+anywhere else from outside acting on it, I would expect that this also will be a constant
+of the motion, because there is no net talk on the system. But, how do we prove this?
+Well, we need to compute it is time derivative.
+
+(Refer Slide Time: 03:21)
+
+So, d L over d t equal to and now, d r 1 over d t cross p 1, which is 0, because d r 1 by d t
+is the velocity of particle 1 and p 1 is the mass times the velocity of particle 1. So, that
+part is 0, the second part is r 1 cross d p 1 over d t. So, this is equal to r 1 cross d p 1 over
+d t. Similarly, in the second term, the d r 2 over d t cross p 2 cancels and you are left r 2
+
+cross d p 2 over d t plus dot, dot, dot plus r N cross d p N over d t.
+
+In other words, the net change of angular momentum is the vector sum of the torques on
+particle 1, particle 2, particle N of there, but d p 1 over d t is given by this quantity here.
+So, let us put that in and we have this is equal to r 1 cross F 12 plus r 1 cross F 13 plus
+etcetera plus r 1 cross F 1 N. That takes care of just this first term plus and we have to
+write this for all the terms plus r 2 cross F 21 plus r 2 cross F 23 plus etcetera and so on.
+
+We can write down all these terms, we do not need to write all of them down, because we
+can see the pattern immediately. Let me write just one more term and that is the next line,
+which is plus r 3 cross F 31 plus r 3 cross F 32 plus etcetera, and so on. But, we know
+from Newton’s third Law that F 21 is minus F 12. So, if I put that in, this becomes r 1
+minus r 2 cross F 12.
+
+(Refer Slide Time: 05:57)
+
+So, I can recombine this and write this whole thing as d L over d t equal to r 1 minus r 2
+cross F 12. So, that takes care of this term as well as this term. Using Newton’s third
+Law, which says F 21 is minus F 12 vectorial, I put the minus sign on this r 2 and take
+out of a F 12 and here it is. Similarly, this along with this, this term together with this
+term becomes plus r 1 minus r 3, cross F 13.
+
+Again, using the fact that F 31 is minus F 13, similarly, each time you have one term
+here, you have another term with the opposite signs, so you also have terms like plus
+etcetera, and then you have plus r 2 minus r 3 cross F 23 and so on. But, you see
+Newton’s third Law is applicable on the conditions is that, the force between the two
+particles acts along the line joining them.
+
+So, if you have particle i here and particle j here, then this line joining the two of them,
+the force acts in one of the directions, F i j may act in this fashion, F j i may act in this
+fashion for instance or the other way about, it does not matter. But it is along this vector,
+along this line. On the other hand, if in some coordinate system, this quantity is r i and
+that vector is r j. Then, you can see that this vector here is essentially r j minus r i or
+written this way, it is equal to r i minus r j.
+
+So, if you take this vector and add to r j plus r i minus r j, you get r i by the triangular law
+of addition of vectors. So, now we have a situation, where in every one of these terms,
+this force is precisely along the line of this vector, and therefore the cross product is
+identically 0. So, again the input has been Newton’s third Law and that is all and that has
+happen. So, each of these terms is 0, and therefore d L over d t is 0.
+
+So, this says now that is if a net torque on a system is 0, this implies that L is the constant
+of a motion. It does not say that individual else r 1 cross p 1 or r 2 cross p 2 or the sum of
+r 1 cross p 1 and r 2 cross p 2. It does not say that these angular momenta are the
+constants of a motion, just as in the case of the momenta. It says the total angular
+momentum is a constant of the motion as a consequence of the fact that Newton’s third
+law cancels these terms out in pairs here.
+
+So, as long as the force between two bodies is along the line joining them, you have
+guaranteed by Newton’s third Law that the total angular momentum of such a system of
+particles or bodies is going to be a constant of the motion. Again, we ask where does this
+come from? We already mention that the law of conservation of linear motion arose
+because of the homogeneity in space, it does not matter.
+
+The actual location of the origin of the coordinates does not matter. Where does angular
+
+momentum conservation come from? And I write this down, we would not prove it here,
+but I write this down.
+
+(Refer Slide Time: 09:51)
+
+It says, you have the potential for the conservation angular momentum arises from the
+fact that these properties of empty space are the same in all directions. Earlier, we said
+space is homogeneous, in other words the location did not matter, the absolute location
+of the origin did not matter. Now we are going one step further and saying, space is three
+dimensional and it is isotropic, has the same properties in empty space in the absence of
+all matter and so on. It has no feels nothing of sort, the space itself is the same in all
+directions, it is properties are the same in all directions.
+
+So, this arises from the isotropy of space that is the deep reason for the conservation of
+angular momentum, when these circumstances are right. Once again, this can be broken,
+this principle can be broken, the conservation can be broken or violated. Once you
+violate the isotropy of space by having some feel present exactly has in the case of linear
+momentum, we look at again at the example of the projectile.
+
+So, here is the projectile, I project it in some initial velocity and it takes a parabolic path
+and falls on here and that is the origin of coordinates. Now, the question is, what about
+
+the conservation of momentum of this projectile, the answer is it is certainly not
+conserved. Because, you can see that at the initial instant of time, this was the
+momentum and that was a position, it happens that r was equal to 0 in that case.
+
+So, L is equal to r cross p happens to be 0 initially, but when the particle is somewhere
+here for instance that is the direction of p, this is the direction of r and this direction and r
+cross p goes into the board and it is not 0. So, clearly r cross p is not conserved in this
+case, because the isotropy of space is broken, it is broken by the fact that this direction,
+the vertical direction has a field in it, the horizontal direction does not have a field in it.
+
+So, this property of space being exactly the same in all directions is no longer true, the
+moment you have a force of this kind, you have broken the isotropy of space, and
+therefore angular momentum is not conserved. It is only when you have this isotropy of
+an empty space and your physical conditions do not break this isotropy, but you have the
+conservation of angular momentum.
+
+In this problem itself, when I says space has exactly the same properties in all directions
+and if you have a force in it, which also has the same property; that is the same directions
+and only depends on say the distance from some attracting center. Then, the angular
+momentum is indeed conserved.
+
+(Refer Slide Time: 13:04)
+
+And we that in this case, this is an approximation to the fact that you have the earth,
+which is supposed to be a sphere and the laws of the force of gravitation at this point acts
+directly inwards, the force of gravitation at this point acts directly inwards. And in this
+case, if you take this to be the origin of coordinates, these field lines are all going to
+focus inverts towards the center of the earth.
+
+And the magnitude of this force does not depend on where you are on the surface, only
+on the distance you are from the center of the earth and that is a radial distance, which is
+purely the radial coordinate. In this case, the force of gravity is equal to G times the mass
+of the earth times the mass of your little body divided by r squared, where r is the
+distance to the center of the earth, multiplied by the unit radius vector r in the radial
+directions.
+
+So, let us call it r squared, the distance from wherever you are to the center of the earth
+with the minus sign to show that, this is radius vector and this force is opposite the
+radially outward vector, unit vector. There is no angular dependence, there is no
+dependence on the latitude and longitude in this case to this approximation of a perfectly
+spherical earth. And therefore, this force here is radially directed inwards and depends
+only on r and not on the polar angle theta or on the azimuthal angle phi. It does not
+
+depend on those quantities.
+
+In spherical polar coordinates, it does not depend on theta, it does not depend on phi,
+depends only on r. This sort of force directed towards the center of the earth or center of
+attraction is called a central force. Now, central force does not have any angle
+dependence at all, and therefore respects the fact that in all directions as far as the angels
+are concerned, there is no dependence; the force is exactly the same.
+
+Therefore, in such a situation, when this is the force on a body, you would expect the
+orbital angular momentum of that body about the center of attraction, about the origin of
+coordinates to be a constant of the motion. And indeed we know, that when a particle
+goes for example, in an elliptic orbit around the earth, we know that this quantity L is r
+cross p is a constant of the motion.
+
+It is only when you make this approximation of parallel field lines and there is a flat
+earth and there is an origin. Here and you look at the angular momentum about this
+origin, that you say that it is x and y directions are not equivalent to each other, and
+therefore there is no angular momentum conservation. But, in reality, if you look at the
+actual central force of the gravity due to the earth, then indeed about the origin, about the
+center of the earth, there is angular momentum conservation.
+
+It is true that as a particle moves in an elliptic orbit, it is orbital angular momentum about
+the origin, about the center of attraction which is at one of the force of the ellipse is a
+constant of the motion, definitely that is true. So, one should understand the origin of
+this, these conservation principles. They arise ultimately from the properties of space,
+linear momentum, because of the homogeneity of space and angular momentum, because
+of the isotropy of space under the right conditions.
+
+Now, you could immediately ask the natural question, where does the conservation of
+energy come from, in those cases where it is applicable, where does this energy come
+from, conservation come from. The answer again is buried in a various principles and I
+will state it in words, but without any effort to prove it here.
+
+(Refer Slide Time: 17:19)
+
+It is a good idea to know the reason why, even if you cannot prove it at a certain level
+and the conservation of energy, I just erase this, energy arise is from well we exhausted
+isotropy of space, equivalents of all directions in space and we exhausted the
+homogeneity of space. There is one more variable in dynamics and that is time. So, this
+arises from the homogeneity of time, when you have rules of evaluation or rule of
+change or equations of motion, which do not depend on the absolute origin of time.
+
+But, exactly the same, even if you shifted is 0 of your clock arbitrarily, then you have the
+potential for the conservation of energy in suitable conditions and the suitable conditions,
+exactly as in the case of other conservation principles. So, again I want emphasize that
+these are deep principles and properties threes arise from deep property of space and
+time themselves. And then, those properties a refine further, then there are suitable
+modifications to these principles are we apply and a more general conditions and so on.
+
+But, ultimately these conservation principles arise from the fact that the equations of
+motion do not change, if you make certain transformations on the coordinates, on the
+variables, space and time variables, provided you have in variance already built in.
+Provided you have the fact that in the case of conservation of energy for example, if you
+do not have explicitly time dependence rules of evaluation for this variables, then does in
+
+matter even is start the 0 of time, the origin of time.
+
+And in that sense, the homogeneity of time can lead to the conservation of energy. We
+will see consequences of these conservation principles are, because we need a good
+application for this. And a very good place to look for an application is a problem that is
+actually very complicated, but which can be make simple as for as practical conservation
+are involved. It can make simple by applying conservation principles and I have in mind
+the standard problem of collusion of two bodies to start with let us look at that is a
+simplest case.
+
+(Refer Slide Time: 19:32)
+
+So, you have some hard mass here, some mass m 1 and it is moving along and it collides
+with the mass m 2. Now, to the collusion these two particles go off. So, we have an mind
+a situation, where the two particle, which is most convenient to think the mass particles
+would undergo and elastic collusion in the sense that, there is no loss of energy are
+anything like that. The total initial kinetic energy is equal to the total final kinetic energy.
+But, actually happens in the collusion process is very complicated, we do not worry
+about it, it happens very quickly.
+
+But, what we do is to say that, alright here some region in which the particle collide, one
+
+particle goes with some momentum m 1 with some momentum p 1 and m 2 with some
+momentum p 2. The collide bounds of the each other and out go two more particles out
+here. So, this is m 2 with the now momentum p 2 prime and this here m 1 with some
+momentum p 1 prime; that is the standard collusion problem.
+
+And we ask the following question, given p 1 and p 2 and of course, masses m 1 and m
+2, can we say what p 1 prime and p 2 prime are going to be, without knowing very much
+about, what is going on inside this region of interaction. In a very short time a little
+collisions and then for some reason, the collide and this cater out, due to some
+complicated interaction and we move on the way and after words there is no force on
+them.
+
+So, by the first law p 1 is constant till the interaction occurs as is p 2, and then after
+interaction p 1 prime and p 2 prime remain so for ever, in other words, the particles move
+in straight lines with the final momenta. So, the question is can we discover what these
+quantities are given these two quantities base on conservation principles. This is the
+problem collisions kinematics or two bodies catering, catering is another word for
+collisions can we discover this at all.
+
+Well, as always we should look at a simple case. So, let us first look at the case, where
+this particle collides separate in the same line. So, this is a very special case and it
+happens on the certain circumstances.
+
+(Refer Slide Time: 22:07)
+
+So, we look at the simplest instance, where a particle comes along in this fashion m 1
+with the prescribe initial momentum p 1. Since, I am only going to look at this line, I do
+not even draw vector, if p 1 is positive moving this way, p 1 is negative moving the other
+way by convention and hits a particle, which is moving with p 2, momentum p 2 in the
+same direction. But, actually you can do an even simpler problem and that say this is
+projectile of mass m 1, this is the projectile of mass m 1 and it is stationary target from
+mass m 2, which is the target particle, this is before collision.
+
+So, this particle along at a constant momentum p 1, hits this particle in infinite as interval
+of time, something happens to the two particles, and then the separate out once again and
+move along with constant velocity. So, this is before collision and after collisions, since
+we are assumed it to be in same direction, this was a initial direction, after collision in
+general you would expect this particle 1 would bounds back and transfers some of it is
+energy m 2, which will move out there.
+
+So, let us call this m 1, p 1 prime and the other particle goes this way in that is m 2 p 2
+prime. So, what we have done is to set p 2 equal to 0 without laws of generality, the
+target is stationary in the laboratory frame and the projectile comes along hits it, and then
+it separate all here. Now, if p 1 prime is negative, it is moving this way, but it is
+
+conceivable that if you have a very heavy particle coming along, it will push this and
+both will move in the forward direction, it does not matter, consider both cases one short.
+
+So, the sin of p 1 prime determine by it is moving backwards or forwards and p to prime
+of course, expect on physical rounds intuitively to move forwards and not backwards,
+because is no initial momentum in this direction path. Now, how we going to solve this
+problem, we use Newton’s third Law, which it says the rate of change of momentum is
+equal to the force on the body. Therefore, we know that the force of exacted by particle 1
+and particle 2 is minus the force exacted by particle 2 on particle 1.
+
+(Refer Slide Time: 24:45)
+
+Therefore, we know that the rate change of momentum, we know that p 1 prime minus p
+1; that is the change of momentum of the first particle, the change of momentum of the
+second particle is just p 2 prime minus 0. So, it just p 2 prime and we know that p 1
+prime minus p 1 times delta t, the time of collision here this is equal to. So, rate of
+change and let say over delta t, it does not matter in the case over delta t is equal to the
+rate of change of momentum here will p 2 prime minus 0 divided by delta t.
+
+With the minus sin, because we know that F 12 equal to minus F 21, this is F 12, the
+force due to 2 on 1 is the change of momentum, rate of change of it is momentum and
+
+the other guy is this. So, the delta t cancel out in this problem and this will immediately
+imply that p 1 is equal to p 1 prime plus p 2 prime. So, the total momentum before the
+collision is equal to the total momentum after the collision, the algebraic some and either
+side, this is conservation of linear momentum.
+
+So, in future, I am not going to go through this argument about Newton’s third Law, I am
+going to write the conservation of momentum down automatically. Because, you can
+easily convince yourself very trivially that even if p 2 not then 0, but at in some value on
+the same line, it do not matter, you get p 2 prime minus p 2 here and this would become
+p 1 plus p 2 is p 1 prime is p 2 and momentum is conserved.
+
+So, hence fourth, we will simple write down momentum conservation in such situations
+without going to the argument involving Newton’s third Law. But, you must remember,
+that it is comes this argument and it is independent of the actual details of the force,
+because assumption is the force acts from the infinite decimal time delta t and after that
+these are free particles according to moving a particle Newton’s first law. That is all that
+is important and the third Law has we built in has been put in in writing this step and
+second Law has been built in.
+
+And saying that the move freely after the collision thing straight line is given momenta is
+the first law once again. So, all the laws of motion have been put in understand in this
+position problem. Now, we are going to use this principle and we are going to use this
+principle that conservation of energy, because we have return that the yet in order to
+solve this problem and what do we need to solve, given p 1 to find p 1 prime. In other
+words, how is the momentum, initial momentum divided up between the target and the
+projectile after that collision, and then once you know the momenta, you kinetic energies.
+So, we could ask homogeneity is transfer to from the projector to say the target; this is
+what we going to do next.
+
+

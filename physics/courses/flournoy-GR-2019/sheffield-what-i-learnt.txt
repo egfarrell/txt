@@ -1,0 +1,113 @@
+sheffield-what-i-learnt.txt
+
+Alex Flournoy          http://inside.mines.edu/~aflourno/
+GR                     https://www.youtube.com/channel/UCHAwDVSS8oDLLln07cNdU6A/videos
+particle physics notes http://inside.mines.edu/~aflourno/Particle/423.shtml
+
+- GR is NOT a generalisation of special relativity
+
+- use NEWTONIAN instead of SR when: `velocity << c`
+- use NEWTONIAN instead of QM when: `ħ << action (S)`
+
+### Not everything discrete in QM
+    - when are things _discrete_ in QM? 
+        - when defined on a bound interval. 
+        - ie if a particle is stuck in a finite interval
+    - but if a particle is moving on an infinite axis, its momentum
+      is _continuous_
+    - why is angular momentum discrete? 
+        - because angle is on a bound interval from `0` to `2π`
+
+action: integral of lagragian wrt time
+
+- `ħ` has units of angular momentum
+
+- QM has big difference compared to Classical Mechanics:
+  ... INTEFERENCE (cos now we have wave functions too)
+
+- whats the problem if you try and meld QM and SR:
+    - QM: `|ψ|^2 = 1`  ... your particle has to be there somewhere   
+    - SR: Particle number isnt conserved 
+        - (e.g. you can have anti-pairs coming out of the vacuum)
+
+- mass scales as `r^3`
+
+- when do we use GR? when `m/r << ?/G`
+
+- Maxwells EM equations made up of two sets of 2:
+    1.  equation of motion
+    2.  equation of motion
+    3.  Bianchi identity (EM geometry)
+    4.  Bianchi identity  (EM geometry)
+
+### EM "setup"
+    - We use the EM equations to say how SOURCES create -> FIELDS
+        - where "sources" are charge distributions `ρ` and
+          currents `j`
+        - I plug it in everywhere I see it [here] and I solve
+          this set of differential equations, and it tells me
+          what electric and magnetic fields I get.
+      - ie you are given the `ρ`s and `j`s and you solve for `E`
+        and `B`
+    - but this doesn't tell me what an electron does in an
+      electric field! 
+    - You have to use the Lorentz force law with some mechanical
+      system e.g. Newtons Laws
+      - note: you can use Newtons laws to describe an electron if
+        its not moving fast. The electric field itself is always
+        relativistic.
+    - so Lorentz + Newton tells us how the test particles respond
+      to the FIELDS created by the SOURCES.
+    - It's a type of a "background" <-> "test particle" SPLIT.
+        - We assume the fields are very large or fixed. (e.g.
+          Parallel plate capacitor)
+        - and we ignore the electric field that the test particle
+          itself creates
+        - ... we dont take the "back reaction" into account
+    - So the "background/particle" split is a useful way of doing
+      physics. 
+    - But for example, if I just take two electrons and put them
+      together, then in that case I can't just ignore one and
+      focus on the other. I've got a two body problem then.
+        - cf. $MY_NOTES/physics/CM/shaggy-steed.txt
+    - But the "background/particle" split allows us to reduce
+      a lot of things to a one body problems.
+
+### Now the "GR" setup
+    - (which is analogous to the EM setup)
+    - For GR we're going to have _2 equations_ which are going to
+      be very important
+    - EINSTEINS EQUATION 
+        - is going to essentially replace the top half of
+          Maxwells Equations
+        - Einsteins equation tells us that sources (energy and
+          momentum) will create curved spacetimes
+        - e.g. im going to stick a planet here, I'm going to
+          stick a gas of relativistic particles. 
+        - That's going to be in my space. And Im going to use
+          that source to solve for the unknown which is
+          "space-time". 
+        - Now thats half of it...but we're also going to have
+          a Bianchi identity that plays into that as well. (thats
+          actually part of finding the spacetime)
+    - Now... I have a curved spacetime and I want to figure out
+      what a satellite is going to do in that geometry. 
+    - What is its motion? 
+        - Now in EM at this stage, we go to the Lorentz force law
+          and Newtons laws. 
+        - (ie for EM, 
+            - take the field we found from the sources, 
+            - plug it into Lorentz to find the force, 
+            - plug it into Newton to find the _motion_)
+    - But for GR, we're going to take our curved spacetime
+      geometry and find the SHORTEST DISTANCE between 2 points...
+      and thats the path an object will take as it moves under
+      the influence of gravity. 
+    - This is going to be encapsulated in a "geodesic equation"
+        - (This is like my discovery a while ago that there's TWO
+          important equations in GR?)
+            - $MY_IMAGES/physics/GR/Wheeler-Maxim.jpg
+
+GR follows the same framework as EM:
+    
+    lecture 2

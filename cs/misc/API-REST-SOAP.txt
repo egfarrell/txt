@@ -1,0 +1,144 @@
+### What is an API?
+
+- An API (Application Programming Interface) is a way for
+  different software systems to communicate with each other. It
+  defines how one application can request services or data from
+  another application, typically over a network.
+
+- Imagine an API as a waiter in a restaurant:
+    - The customer (one system) gives the waiter (API) an order.
+    - The waiter takes the order to the kitchen (another system),
+      gets the food (data/service), and brings it back to the
+      customer.
+    - The customer doesn’t need to know how the food is made in
+      the kitchen—just how to order it.
+
+- Now, there are different ways to place an order (send
+  a request) and get the food back (receive a response). The two
+  most common ways are REST and SOAP.
+
+
+### 1. SOAP (Simple Object Access Protocol)
+
+- Old-school, formal, and structured way of communication.
+- It's based on XML (Extensible Markup Language), a highly
+  structured format for data.
+- Strict rules: SOAP is very rigid about how messages should be
+  formatted. It’s like having a very strict waiter who only
+  accepts orders in a specific format, and if you don't follow it
+  exactly, you get nothing.
+
+- Key Features:
+    - XML-based: SOAP messages are always in XML format.
+    - Protocol-driven: SOAP follows a strict set of rules, like
+      headers, body, and specific verbs (like `POST` and `GET`).
+    - Stateful: SOAP is typically used for more complex
+      operations where the state (e.g., session data) needs to be
+      maintained between requests.
+    - Security: It has built-in features for security (e.g.,
+      WS-Security).
+    - Error Handling: SOAP has a well-defined way to handle
+      errors (e.g., fault codes).
+
+Example:
+A SOAP request might look like this:
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:web="http://www.example.com/webservice">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetUserDetails>
+         <web:UserId>123</web:UserId>
+      </web:GetUserDetails>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
+
+- When is SOAP used?
+- Enterprise environments where transactions are complex,
+  security is critical, and you need more strict standards (e.g.,
+  financial systems, large-scale services).
+
+
+### 2. REST (Representational State Transfer)
+
+- Modern, lightweight, and flexible.
+- REST is not a protocol like SOAP; it’s an architectural
+  style—more like a set of guidelines than a strict set of rules.
+- Uses standard HTTP methods: REST works over the web using HTTP
+  methods like `GET`, `POST`, `PUT`, `DELETE`, etc., which you’re
+  already familiar with from the web.
+
+- Key Features:
+- HTTP-based: REST APIs use the HTTP protocol directly (the same
+  one used by web browsers).
+- Lightweight: It uses JSON (JavaScript Object Notation) for
+  data, which is easier to work with than XML and more compact.
+- Stateless: Each request is independent. The server does not
+  store any information about previous requests.
+- CRUD operations: REST APIs are typically designed to work with
+  CRUD (Create, Read, Update, Delete) operations, where:
+    - `GET` retrieves data.
+    - `POST` creates new data.
+    - `PUT` updates data.
+    - `DELETE` removes data.
+
+Example:
+A RESTful request might look like this (using `GET`):
+```http
+GET /users/123 HTTP/1.1
+Host: api.example.com
+Authorization: Bearer <token>
+```
+
+Response might be:
+```json
+{
+  "userId": 123,
+  "name": "John Doe",
+  "email": "johndoe@example.com"
+}
+```
+
+### When is REST used?
+- used for web and mobile applications where simplicity, speed,
+  and scalability are more important than strict rules.
+- It's more flexible, easier to use, and works better in
+  environments where different systems need to communicate using
+  web technologies.
+
+
+### Simple Comparison: SOAP vs. REST
+
+ Feature           | SOAP                                 | REST
+-------------------|--------------------------------------|-------------------------------------------
+ Protocol          | Strict, based on XML                 | Flexible, uses HTTP (GET, POST, etc.)
+ Data Format       | XML                                  | Typically JSON (but can also be XML, etc.)
+ Complexity        | More complex, formal                 | Simple and lightweight
+ State             | Stateful (can remember previous calls)| Stateless (each request is independent)
+ Security          | Built-in (e.g., WS-Security)         | Can use HTTPS for security
+ Error Handling    | Well-defined (Fault element in XML)  | Custom (based on HTTP codes)
+ Usage             | Enterprise, complex transactions     | Web, mobile apps, simpler systems
+
+
+### Which One to Use?
+
+- Use SOAP when:
+  - You need strict rules, and transactions are complex (e.g.,
+    financial transactions, legacy systems).
+  - You require built-in security features like encryption and
+    message integrity.
+
+- Use REST when:
+  - You want simplicity, flexibility, and faster development.
+  - Your application involves web or mobile interfaces that need
+    to scale easily.
+  - You prefer JSON and are working in a modern web environment.
+
+### In Summary:
+
+- SOAP is older, more structured, and uses XML. It’s used for
+  enterprise-level, complex, and secure applications.
+- REST is newer, simpler, and uses HTTP and JSON. It's ideal for
+  web and mobile apps where speed, flexibility, and scalability
+  are key.

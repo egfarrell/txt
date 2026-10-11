@@ -1,0 +1,300 @@
+	$MY_IMAGES/astro/Radio/pulsar-magnetic-field-spin-period.jpg
+
+	$MY_IMAGES/astro/Radio/stack-signals-remove-noise.jpg
+
+In this lecture, you will learn how to use pulsars--spinning tops with
+the mass of the Sun that give off a radio pulse every second or so--
+to confirm Einstein's prediction of gravitational radiation. You will also
+learn how to confirm Einstein's theory by measuring a pulsar's Doppler shift.
+
+The Doppler Shift of Pulsars
+
+- The Doppler shift describes how a wave is stretched or
+ compressed as the source of the wave moves toward us or away
+ from us. A pulsar can have a Doppler shift.
+
+### Aside: Measuring Doppler Shift
+
+- You can measure the Doppler shift of the ticks from any clock.
+  To do this, find a small portable clock that gives off loud
+  ticks. Tie it to a meter-long string and whirl it around your
+  head.
+
+- You will hear a steady beat because the clock is not changing
+  its distance from you, but someone standing nearby will hear
+  the increase and decrease of the clock tick rate as the clock
+  on the string approaches them and then recedes from them.
+
+
+- We can think of the pulses as peaks of a wave; we just don't
+  have the rest of the wave. And those peaks will be shifted by
+  any motion.
+
+ - We can measure a Doppler shift from a pulsar--sort of. The rub
+   is that with atoms and molecules, we have a clearly defined
+   rest frequency set by quantum physics. We can measure velocity
+   directly because we know the rest frequency.
+
+ - But for a pulsar, its actual rotational period can be anything
+   from seconds to milliseconds. All we can measure is the
+   observed period, which is the COMBINATION of its _REST PERIOD_
+   and any _DOPPLER SHIFT_.
+
+
+- The terms "period" and "frequency" describe the same thing--
+  namely, some sort of repetitive phenomenon--but they are the
+  inverse of each other. Something that happened 10 times
+  a second has a frequency of 10 hertz and a period of 0.1
+  seconds. Something that happens every 2 seconds has a period of
+  2 seconds and a frequency of 1/2 hertz.
+
+- The Doppler shift is in play for every pulsar in the sky, only
+ we can't use it because we don't know the actual period of the
+ pulsar. We can't use the Doppler shift unless we see the period
+ change.
+
+ In fact, the period we observe of every pulsar changes all the
+ time because we're observing pulsars from a moving platform--
+ the Earth--which spins on its axis toward the east and away from
+ the west. So, as we observe a pulsar rising, we see that its period
+ increases, and as it sets, its period decreases.
+
+ The Earth also goes around the Sun at 30 kilometers per second or
+ so. If we measure a pulsar in the spring of the year and then later
+ in the fall, we will have seen a change in its period because of the
+ Earth's revolution around the Sun.
+
+ But we can correct for all of these motions and measure the Doppler
+ shift of pulsars so precisely that we even need to make corrections
+ to pulse arrival times because Earth's motion is influenced by the
+ gravity of the planet Jupiter.
+
+ This Doppler effect is stronger in some parts of the sky than others.
+ Because we know the Earth's velocity very accurately, this Doppler
+ shift can be used to locate the position of pulsars quite precisely.
+
+ How Do Pulsars Get Their Spins?
+
+ All stars rotate. A star that goes supernova blows off its outer layers,
+ but the inner parts collapse, preserving their angular momentum
+ and spinning up as they fall.
+
+ The result is a neutron star spinning quite fast. The neutron star in
+ the Crab Nebula currently has a period of 33 milliseconds; it rotates
+ more than 30 times each second. At its birth, it certainly had an even
+ shorter period, around a few milliseconds.
+
+ As pulsars age, they slow down and their magnetic field weakens
+ and period increases. Eventually, they cease being observable as
+ pulsars.
+
+     Normal Pulsars
+
+Magnetic Field Strength (Gauss) 1013 Young pulsars spin rapidly  Old pulsars have slower
+   and possess a  periods and weaker
+      magnetic elds.
+   strong magnetic eld.
+
+   Pulsar's life journey
+
+   1012     Death line
+
+   1011 The pulsar's emission  Extinct pulsars
+   becomes too weak for   live here!
+   Earth-based detection
+   the pulsar is extinct.  1
+
+    0.1
+     Spin Period
+
+- Millisecond pulsars are old. They have run out of steam and
+ dropped out of sight. But then, for some of them, an amazing
+ thing happens: They get rejuvenated and spin up--a lot. Their
+ magnetic field is still weak, so their radio emission is weak,
+ but they are spinning fast.
+
+- These pulsars were formed in a binary system, which is where
+ a pair of stars is in mutual orbit around each other. The most
+ massive star went supernova and became a neutron star. That
+ neutron star did the pulsar thing, and over time, its magnetic
+ field weakened and its rotation slowed.
+
+
+- But then, as the other star evolved, it started losing matter
+ and dumping some of the matter on the neutron star. That spun
+ the neutron star back up, to even faster periods than it had
+ before. It made a millisecond pulsar.
+
+- So, a pulsar can get its spin from either its creation in
+ a supernova explosion or by mass transfer from a companion.
+
+- All pulsars are neutron stars. But not all neutron stars are
+ pulsars. To be a pulsar, a neutron star has to have a magnetic
+ field strong enough to produce radio emission, and that radio
+ beam has to sweep across the Earth. Because the beams are
+ relatively narrow, we probably see only 10% of the active
+ pulsars in the Milky Way.
+
+- How Do We Measure Pulsars So Precisely?
+
+- There is radio noise in all of our measurements, and it comes
+ from our electronic equipment, the galactic nonthermal
+ background, the atmosphere, and other sources. The challenge of
+ radio astronomy is how to dig the signal out of the noise.
+
+- But we have one important thing going for us: Noise is truly
+ random. It fluctuates from instant to instant. If you average
+ 2 noisy signals, the noise in one tends to cancel the noise in
+ the other.
+
+- The amplitude of the noise--that is, the height of the noisy
+ signal-- decreases as the square root of the number of samples
+ that you have. If you average 4 noisy signals, the noise in the
+ average has decreased by a factor of 2.
+
+ - We are able to detect pulsars, and almost every other signal
+ in radio astronomy, because as we add data and average, the
+ noise level decreases while the signal stays constant.
+
+
+- We can look at the pulsar and measure the pulse and average
+ down the noise in time, but because pulsar radio emission is
+ broadband, we can also measure it at a number of frequencies
+ and average over frequency as well as time.
+
+- Because of interstellar dispersion, the pulses arrive at
+ slightly different times at different frequencies. We have to
+ shift the samples before adding them lest we blur out the
+ signal. But we can measure the dispersion quite accurately, and
+ the shift is easy.
+
+- Using signal-averaging techniques, we can also measure the
+ period derivative, which is the technical name for the
+ spin-down rate, and also the dispersion measure. This allows us
+ to predict the arrival time of pulses many months into the
+ future.
+
+ - But how do we determine the period in the first place? One way
+ is to average the data using a guess for the period. If we are
+ off, the pulse is blurred because data taken at different
+ times do not add in phase. If we are spot-on, the pulse
+ appears at its sharpest. In detecting new pulsars and
+ measuring their rotational periods, quite a lot of this
+ searching goes on, and it's computationally intensive.
+
+- Confirming Einstein's Theory of Relativity
+
+- In 1972, Joseph Taylor, a young faculty member at the
+ University of Massachusetts in Amherst, wrote a proposal to the
+ National Science Foundation seeking funds to search for new
+ pulsars using Puerto Rico's Arecibo radio telescope, which is
+ 1000 feet across and has no rival in its sensitivity to
+ pulsars.
+
+
+- At the time of Taylor's proposal, there were about 100 known
+ pulsars, but no pulsar had been found in a binary system.
+ Taylor got the grant, began to buy the hardware necessary to
+ build a digital pulsar detection system, and recruited
+ a graduate student, Russell Hulse, as a collaborator.
+
+- They did their search at frequencies around 400 megahertz. At
+ every point in the sky where they took data, their programs
+ searched more than 500,000 combinations of period, dispersion,
+ and pulse shape seeking a detection.
+
+- If you take enough samples of random noise, every once in
+ a while the noise combines to look like something real. But
+ it's not. Given that each spot on the sky would be analyzed in
+ half a million different ways, Hulse set his threshold for
+ detection at 7 standard deviations. This means that a signal
+ would have to be 7 times the expected noise level before the
+ computer would flag it as possibly being real.
+
+
+- Taylor and Hulse took their system to the Arecibo telescope and
+ began searching the sky for new pulsars. The observations were
+ performed on and off for more than a year. In the end, they
+ found 40 new pulsars. One in particular caught their eye. It
+ had a period of around 60 milliseconds, which made it the
+ second-fastest pulsar then known, second only to the Crab
+ pulsar.
+
+- When Hulse reobserved this particular pulsar several times, the
+ pulsar's period couldn't be pinned down. He set up a new data
+ analysis scheme with faster time sampling of the incoming
+ signal. The new data showed that this pulsar's period seemed to
+ be changing in a regular way.
+
+ - Then, Hulse realized that the changes could arise from
+   a changing Doppler shift of the pulsar, which meant that it
+   must be in orbit around another star--a pulsar in a binary
+   system.
+
+ - In short order, Joe Taylor arrived at Arecibo carrying new
+ equipment that made study of this pulsar much easier. Here's
+ what we now know about this amazing system.
+
+
+- There are 2 neutron stars in orbit around each other. Both have
+ about 1.4 times the mass of the Sun, and one of them is
+ a pulsar with its radio beam intersected by Earth. They are
+ quite close together; at their closest, they are only a few
+ times farther apart than the Earth and Moon. They orbit around
+ each other every 7.7 hours. That rapid orbit produces a large
+ Doppler shift in pulse arrival times.
+
+ - In classical physics, there is nothing to keep 2 objects from
+ orbiting each other forever. But Albert Einstein changed all
+ that with his theory of relativity. Under this theory, space
+ is curved around massive objects, and as they interact
+ gravitationally, they radiate gravitational waves. Eventually,
+ the 2 neutron stars will merge as their orbit decays through
+ radiation of gravitational waves.
+
+- The pulsar found by Hulse and Taylor confirmed this theory and
+ provided direct experimental proof that changes in gravity
+ travel at the speed of light. For this, they were both awarded
+ the Nobel prize in Physics in 1993.
+
+- Pulsars can be used to probe the curvature of space predicted
+ by Einstein's theory of relativity. Every object distorts the
+ space around it at least a little.
+
+- When the pulsar is nearly exactly behind the star, its pulses
+ have to travel an extra distance because of the distortion of
+ space. When the pulsar is behind its companion, the pulses are
+ delayed by the extra path they need to travel. This is a direct
+ measurement of the curvature of space.
+
+### Suggested Reading
+
+ - Graham-Smith, Unseen Cosmos, chap. 7.
+ - Hulse, "The Discovery of the Binary Pulsar."
+ - Taylor, "Binary Pulsars and Relativistic Gravity."
+
+
+### Questions to Consider
+
+ 1. Although all frequencies of a pulsar are emitted at the same
+    time, the arrival time of a pulse on Earth depends on
+    frequency because of delay by interstellar electrons (the
+    technical term is dispersion). And the delay is proportional
+    to frequency to the -2 power; a decrease in frequency by
+    a factor of 2 increases delay by a factor of 4. Because the
+    interstellar medium between a pulsar and us changes as
+    ionized clouds drift past, the dispersion changes and pulse
+    arrival times change. How might this be detected and
+    corrected?
+
+ 2. Searches for new pulsars are typically done at frequencies
+    below 1 gigahertz, where pulsars are brightest, but accurate
+    timing of pulsars is done at frequencies above 1 gigahertz,
+    even though the pulsars are weaker there. Can you understand
+    why, in view of the previous question?
+
+ 3. Because we can measure the period of a pulsar extremely
+    accurately and we have to compensate for the Doppler shift of
+    the period arising from the Earth's motion around the Sun,
+    does this give us information on possible extra planets in
+    the solar system, or even a dark companion star to the Sun?

@@ -1,0 +1,55 @@
+
+### What is power? 
+    - It is the `square of your signal`(what exactly is that), integrated through one
+      period, divided by the period length. 
+    - For example, a sine wave of amplitude 1 has a power equal
+      to 0.5. 
+    - If the units of the signal were volts, the units of power
+      in this sense is volts squared. 
+    - If you had multiple frequencies present in your signal,
+      this time domain definition would result in a sum of their
+      respective powers.
+
+### What is a power SPECTRUM? 
+    - How the power is broken down into frequency components. 
+    - If I have two sine waves at different frequencies but both
+      with amplitude `1`, I would see a `0.5` value at each
+      frequency location in the power spectrum. 
+    - If the power spectrum was taken for a signal with units of
+      volts, the units of the power spectrum would be volts
+      squared. 
+    - If I summed together a power spectrum for all frequencies,
+      I'd get exactly the same value as I would with the time
+      domain definition of power mentioned earlier. 
+        - This is _Parseval's theorem_.
+
+### - What is power spectral density? 
+    - A curve that when you take the integral over from frequency
+      `a` to `b`, gives you the power in that frequency band. 
+    - That's really the only difference; you get units of power
+      from a spectral density by taking the area underneath
+      a curve where as you get power from a power spectrum by
+      summing the heights of the curve. If the signal's units
+      were in volts, the units of the signal’s power spectral
+      density would be in V^2/Hz. The power spectrum and spectral
+      density curves are interchangeable, however in practice
+      (i.e. with digitally recorded broadband signals) the power
+      spectrum is sensitive to your choice of frequency
+      resolution, where as the spectral density is not. As you
+      increase the frequency resolution (i.e. decrease dF) the
+      power spectrum will collapse to zero for broadband signals,
+      whereas the spectral density will remain the same height
+      except be smoother or nosier. It avoids this effect by
+      storing the power information in the area under the curve
+      instead of the curve height. This is analogous to why
+      density plots are used when you discretize a continuous
+      probability distribution. Think about what happens if you
+      take a histogram of a uniform distribution and gradually
+      decrease the binwidth of the histogram. Eventually it will
+      flatten to zero. The value of any given point in a spectral
+      density in this sense is meaningless. It is the area under
+      the curve between two points that provides the important
+      information about power. The density plots are still useful
+      to understand the relative differences in power between
+      different frequencies, and is what is more commonly
+      reported.

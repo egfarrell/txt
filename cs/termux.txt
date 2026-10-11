@@ -1,0 +1,127 @@
+
+### Important: OFFICIAL Termux APK
+    - (DONT use Google Playstore, use FDroid)
+    - Fdroid: https://github.com/termux/termux-app#installation
+
+### Termux getting zapped
+    - Apparently in Android 12+, app management software starts
+      zapping Termux... (need to change some power settings)
+    - https://news.ycombinator.com/item?id=42365772
+
+### copy to android clipboard
+    - note:  must use github version of termux
+    1. from firefox: install `termux API app` from github (not Fdroid) v0.50.1
+    2. from termux terminal: pkg install `termux-api`
+    3. pkg uninstall xclip
+
+    set specific permissions:
+        cd $PREFIX/libexec
+        cd termux-am/
+        chmod 400 am.apk
+
+    test:
+        termux-clipboard-set "text"
+
+### Initial setup commands
+    - apt update
+    - apt upgrade
+    - Create links to main Android storage locations
+        - termux-setup-storage
+        - https://wiki.termux.com/wiki/Termux-setup-storage
+    - pkg install openssh
+    - pkg install git
+    - pkg install vim
+    - pkg install tmux
+    - pkg install wget
+    - pkg install rsync
+    - ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+        - (copy id_rsa.pub into bitbucket using FX)
+    - git clone git@bitbucket.org:vcbbgh/dotfiles.git
+
+    - Hide "Extra Keys" on software keyboard
+        - (ie FN, CTRL, arrows etc)
+        - slide from the left edge
+        - a 'drawer' will open
+        - long press on the word 'keyboard'
+        - the row of extra keys will disappear
+
+### termux image viewer
+    - termux-open
+        - use xdo docs to open images from vim!
+        - note: Android 13 
+            - `allow-external-apps = true` in the settings.
+            - /data/data/com.termux/files/home/.termux/termux.properties
+            - https://github.com/termux/termux-app/issues/3441
+
+### install yt-dlp
+    pkg install python
+    pkg install ffmpeg
+    python3 -m pip install --upgrade yt-dlp
+
+### Install JAVA
+    apt update 
+    apt upgrade 
+    apt install openjdk-17
+
+### Customise appearance
+    - https://wiki.termux.com/wiki/Terminal_Settings
+
+### Handy apt commands
+    - pkg search [package-name]
+    - apt show nano
+    - pkg list-all
+    - pkg install [packageName]
+    - pkg uninstall [packageName]
+    - apt install ./my-custom-package.deb
+
+
+### How I installed exuberant ctags
+    - solution 2024, lenovo m10
+        - install universal ctags, activate vim plugin 'tagbar-universal' from my $HOME/.vim
+
+        - solution: build ON DEVICE
+        - doesn't work on Android 13, although it does on android 9,10,11
+            - Step 1: 
+                > setup termux build
+                    g clone --depth 1 https://github.com/termux/termux-packages
+                    c termux-packages/
+                    ./scripts/setup-termux.sh
+
+            - Step 2: 
+                > compile source
+                    cp ~/dotfiles/ini/termux/ctags-5.8.tar.gz  ~/repos
+                        - old way:
+                        wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+                    c ~/repos
+                    utar ctags-5.8.tar.gz
+                    c ctags-5.8
+                    ./configure --prefix=$PREFIX
+                    make
+                    make install
+
+    - ### Other build info
+       - Build package             https://wiki.termux.com/wiki/Building_packages
+       - Create new package        https://github.com/termux/termux-packages/wiki/Creating-new-package
+       - Example: (building ctags) $HOME/dotfiles/ini/termux/old/ctags_build.sh
+
+
+
+
+### View Termux $HOME folder
+    - The file manager needs to support SAF (Storage Access Framework) to view Termux $HOME/folder
+    - Use: FX File Explorer (NextApp Inc.) from Google Play Store
+        - click on the '3 dots' in top right-hand corner
+        - click "Connect to Storage"
+        - on the lhs menu, choose "Termux"
+        - click "use this folder"
+
+### Terminal styles
+    - Termux:styling
+    - https://f-droid.org/en/packages/com.termux.styling/
+    - long-press on the terminal for popup menu. Then 'more', then 'style'
+
+### Key locations to backup
+    - These folders need to be archived before
+      uninstalling/reinstalling Termux
+        - /data/data/com.termux/files/usr
+        - /data/data/com.termux/files/home

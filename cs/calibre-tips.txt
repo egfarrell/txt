@@ -1,0 +1,61 @@
+calibre tips
+
+### BOX.COM: 3 important files 
+    - BOX.COM: calibre-portable.tar.bz2
+    - BOX.COM: ADE_2.0_Installer.exe
+    - BOX.COM: KindleForPC-installer-1.17.44170.exe:
+
+### Tweaks for conversion
+    - Reduce image size:
+        - Look and Feel -> Styling -> Extra CSS:
+        - img {max-height:50%; max-width:50%;}
+    - Structure and Detection
+        - ```
+        - //*[name()='h1' or name()='h2' or name() = 'h3']
+        - ```
+
+### deDRM - Kindle 
+    - General Help https://github.com/apprenticeharper/DeDRM_tools/blob/master/FAQs.md
+    - Help about KFX format: https://www.mobileread.com/forums/showthread.php?t=291290
+
+    - Key point: 
+    - Need old `Kindle for PC` (1.17) for DeDRM to work!
+    - Even `Kindle for PC` 1.24 won't work... 
+      - (and no chance either for versions > 1.25)
+    - (I have this exe on my SD Card and box.com)  
+    - KindleForPC-installer-1.17.44170.exe:
+    - MD-5: 53F793B562F4823721AA47D7DE099869
+    - SHA-1: 73C404D719F0DD8D4AE1C2C96612B095D6C86255
+    - SHA-256: 14E0F0053F1276C0C7C446892DC170344F707FBFE99B695176
+      2C120144163200
+
+    - Need Plugins:
+        - DeDRM Plugin https://github.com/apprenticeharper/DeDRM_tools/releases
+        - KFX-input.zip
+
+### DRM - Adobe Digital Editions
+    - Need old ADE. I have on my SD card (and box.com)
+    - ADE_2.0_Installer.exe
+
+### remove kobo books drm
+    obok plugin
+
+### azw4
+    these are wrapped pdf files
+    use kindle_unpack plugin
+
+### run debug gui
+    calibre-debug -g
+
+### change menu bar
+    in preferences
+    must change 2 bars, "main menu" and "main menu with device"
+    click "up" arrow to move preferences up
+
+### DRM plugin settings
+    preferences - plugins - customise plugin
+    "eInk Kindle serial numbers (first character B, 16 characters etc...)"
+    B008A0A0038310C1
+
+### viewer menubar
+    can drag menubar from left hand side over to top

@@ -1,0 +1,325 @@
+# 3Blue1Brown Explanation Deep Learning
+
+### Videos
+    - YouTube Playlist https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+    - $MY_VIDEOS/CS/3blue2brown-NN/00001-What-is-a-Neural-Network.mp4
+    - $MY_VIDEOS/CS/3blue2brown-NN/00002-Gradient-descent-how-neural-networks-learn.mp4
+    - $MY_VIDEOS/CS/3blue2brown-NN/00003-What-is-backpropagation-really-doing.mp4
+    - $MY_VIDEOS/CS/3blue2brown-NN/00004-Backpropagation-calculus.mp4
+
+### Insights a year later in the BUW
+    - 03 Backpropagation
+        - HUGE COST FUNCTION
+            - We want the (negative) gradient of a vector (cost
+              function) in 13,002 dimensions!
+                - $MY_IMAGES/cs/AI-ML/cost-function-in-13000-dimensions.jpg
+            - But it's hard to image a vector in so many
+              dimensions.
+            - So instead, think of the magnitude of each
+              component as a measure of how sensitive the overall
+              cost function is to each weight and bias.
+                - For example, the cost function is 32 times more
+                  sensitive to a nudge in the yellow component
+                  (3.20) weight, than in a little wiggle to the
+                  small red component (0.10)
+                    - $MY_IMAGES/cs/AI-ML/32-times-the-impact-01.jpg
+                    - $MY_IMAGES/cs/AI-ML/32-times-the-impact-02.jpg
+                    - $MY_IMAGES/cs/AI-ML/32-times-the-impact-03.jpg
+        - "MOST BANG FOR YOUR BUCK"
+            - we can't _directly_ change the 'activation' (output
+              number) for an individual neuron, just the weights
+              and biases that feed into that neuron from the
+              previous layer(s)
+            - and the neurons we really want to target from the
+              previous layer are those with the biggest weights
+            - you also want to target the biggest activations
+              from the previous layer, but you can't do that
+              directly (you have to move "back" a further step
+              and target the weights feeding into that previous
+              layer etc etc)
+                - That gives you the most "bang for your buck"
+                - $MY_IMAGES/cs/AI-ML/bang-for-your-buck.jpg
+            - And the whole thing "propagates backwards"
+                - $MY_IMAGES/cs/AI-ML/everything-propogating-backwards.jpg
+            - Now so far he was just doing it for a single digit
+              '2', but you have to calculate the nudges for each
+              digit, and add them all together...
+                - $MY_IMAGES/cs/AI-ML/average-of-all-nudges.jpg
+        - ### Ah STOCHASTIC gradient descent!!!
+            - To calculate the _exact proper_ gradient descent,
+              we'd have to use all the training data each time we
+              calculate the gradient.. but that's COMPUTATIONALLY
+              EXPENSIVE...
+            - So we _RANDOMLY SPLIT_ (stochastic) the data into
+              mini-batches and work out the negative gradient for
+              each smaller batch... this is much better
+              computationally, but because we're only operating
+              on batches of data at a time, we don't actually
+              compute the most "efficient" descent...
+            - So we're like a 'drunk man' coming down the hill in
+              wobbly steps, rather than the most precise, most
+              efficent, most direct route down the hill (if we
+              were using ALL the data for each negative gradient
+              calculation)
+            - $MY_IMAGES/cs/AI-ML/stochastic-drunk-man-coming-down-the-hill.jpg
+
+### 01 What are neural networks
+    - $MY_VIDEOS/CS/3blue2brown-NN/00001-What-is-a-Neural-Network.mp4
+    - this video: _structure_ of NN's
+    - key points:
+        - "activations" in one layer determine the activations in
+          the next
+
+    - Aim:
+        - Digit Recognition using "Vanilla" NN's
+            - aka "multilayer perceptron"
+        - the "hello world" of NNs!
+
+    - neuron:
+        - thing that holds a number (between 0 and 1)
+        - later: neuron is a function. Accepts all outputs from
+          previous layer and spits out number between `[0, 1]`
+        - (actually entire NN is just a huge complicated function)
+
+    - activation:
+        - the _number_ inside a neuron
+
+    - "input layer"
+        - the 1st layer in the network
+
+    - image 28 x 28 pixels gives 784 neurons in the input layer
+        - $MY_IMAGES/cs/AI-ML/nn-basic-structure.jpg
+        - arbitrary choices in this image:
+            - 2 hidden layers,
+            - 16 neurons (fits nicely on video screen!)
+
+    - What is the networks "answer/prediction"?
+        - The "brightest" neuron in the final output layer
+
+    - why does a network work anyway?
+        - Answer: detect _edges_ and patterns
+        - well humans break up digits into pieces
+          (sub-components)
+            - $MY_IMAGES/cs/AI-ML/nn-disassemble-digits.jpg
+        - so 2nd layer could recognise loads of edges
+        - 3rd layer could learn a single "top loop" component etc
+            - so the neuron that fires for a "top loop", just has
+              to learn how to advance to the final layer and pick
+              the correct digit
+
+    - so propagating through the network, chopping up the digits
+      into components allows a good prediction
+        - $MY_IMAGES/cs/AI-ML/nn-recognise-digit-9.jpg
+
+    - how to activate a single neuron in layer 2
+        - assign a `weight` to the CONNECTIONS to each neuron
+          in layer 2 from all the neurons in layer 1
+        - ie take all the activations from layer 1, and compute
+          their weighted sum (according to the chosen weights)
+            - $MY_IMAGES/cs/AI-ML/nn-weighted-activation.jpg
+        - positive weights are green, negative red
+            - $MY_IMAGES/cs/AI-ML/nn-weight-colors.jpg
+            - Specific region:
+            - To identify an edge in a certain region:
+                - put green positive weights in this area,
+                - add red weights around it
+                - set zero weights everywhere else
+                - $MY_IMAGES/cs/AI-ML/nn-weights-targeted.jpg
+            - the `sum` is largest when the middle pixels are
+              bright and surrounding pixels are darker
+
+        - SIGMOID function
+        - Squish weighted sum between 0 and 1 (normalise)
+                - $MY_IMAGES/cs/AI-ML/nn-normalise-activations.jpg
+                - $MY_IMAGES/cs/AI-ML/nn-sigmoid-func.jpg
+            - but add a bias as well if you want the neuron only
+              to activate if its `> 10` (say)
+                - $MY_IMAGES/cs/AI-ML/nn-sigmoid-bias.jpg
+            - bias: how high the sum needs to be before a neuron
+              gets meaninfully active
+
+        - ReLU: alternative to Sigmoid
+            - Rectified linear unit
+                - $MY_IMAGES/cs/AI-ML/nn-ReLU-rectified.jpg
+            - worked quicker than sigmoid during training
+                - $MY_IMAGES/cs/AI-ML/nn-ReLU-rectified-quick.jpg
+
+        - digit network
+            - each nueron will have 784 (28*28) weights attached
+              and each will have a bias
+            - total numbers needed for connections between
+              Layers 1 and 2.
+                - $MY_IMAGES/cs/AI-ML/nn-connections-layer-1-2.jpg
+            - full digit network has 13,002 weights and biases
+            - ie 13,002 knobs and dials you can tune to identify
+              digits
+                - $MY_IMAGES/cs/AI-ML/nn-connections.jpg
+
+        - compact notation
+            - matrix linear algebra
+                - $MY_IMAGES/cs/AI-ML/nn-compact-notation-01.jpg
+                - $MY_IMAGES/cs/AI-ML/nn-compact-notation-02.jpg
+
+        - Entire network is just a function
+            - input: 784 numbers
+            - output: 10 numbers
+            - complicated! 13,002 parameters
+
+
+
+### 02 Learning: Gradient Descent
+    - VIDEO:
+      $MY_VIDEOS/CS/3blue2brown-NN/00002-Gradient-descent-how-neural-networks-learn.mp4
+    - "learning" is really just calculus
+    - based on finding the minimum of a certain function
+        - $MY_IMAGES/cs/AI-ML/nn-finding-minima.jpg
+    - WEIGHTS:
+        - the _strengths_ of the connections between a neuron and
+          the previous layer
+    - BIAS:
+        - controls if the neuron tends to be active or inactive
+    - we initialise randomly
+    - results will be bad
+
+    - so define a "cost function", to tell the computer "bad!"
+    - `cost` is small when classification is correct,
+        - large when network is wrong
+    - COST is a function too with inputs/outputs etc:
+        - $MY_IMAGES/cs/AI-ML/nn-cost-function.jpg
+    - we want to minimise the cost
+    - hard to find minimum in a huge global complicated function
+
+    - 1D case:
+        - find the slope (derivative) at a certain point
+            - $MY_IMAGES/cs/AI-ML/nn-find-minima.jpg
+        - and step in the negative direction
+        - size of the step can vary
+            - (take small steps close to minimum)
+
+    - 2D case
+        - take NEGATIVE of gradient `∇`
+            - $MY_IMAGES/cs/AI-ML/nn-find-gradient.jpg
+        - find gradient
+
+    -n-dimensional case
+        - huge gradiant matrix, where you want to "nudge" all the
+          weights in the negative direction
+        - looking for most rapid decrease of the cost function
+
+    - note: cost function
+        - is _average_ over ALL the training data
+        - key idea: NEGATIVE GRADIENT
+
+    - cost function magnitudes:
+        - $MY_IMAGES/cs/AI-ML/nn-cost-function-magnitudes.jpg
+        - some neurons matter more than others
+
+    - Visualise weights
+        - weight values can be visualised as a pixel pattern
+        - $MY_IMAGES/cs/AI-ML/nn-weights-pixel-pattern.jpg
+
+    - perceptron
+        - really doesn't break digits into pieces
+        - just has "random" pixel patterns
+        - if you feed it a white-noise image, it'll might
+          confidently predict a "5"!
+        - so perceptron is old technology, but is the basis for
+          newer Convolutional NN and LSTM
+            - $MY_IMAGES/cs/AI-ML/nn-types-of-network.jpg
+
+    - interesting discussion
+        - are NNs just memorising the data?
+        - feed incorrect labels and it just learns them
+
+### 03 Backpropagation
+    - $MY_VIDEOS/CS/3blue2brown-NN/00003-What-is-backpropagation-really-doing.mp4
+
+    - magnitude of a component in the negative gradient vector
+        - tell you how SENSITIVE the cost function is to each
+          weight and bias
+        - eg component "x" is `3.20`, component "y" is `0.10`
+        - therefore a nudge on "x" will have 32 times greater
+          effect than a nudge on "y"
+            - $MY_IMAGES/cs/AI-ML/nn-gradient-component-magnitude-01.jpg
+            - $MY_IMAGES/cs/AI-ML/nn-gradient-component-magnitude-02.jpg
+
+    - 3 ways for increasing the activation of a certain neuron
+        - $MY_IMAGES/cs/AI-ML/nn-increase-activation.jpg
+
+    - track desired changes...
+        - "what do we want to happen to each neuron"
+        - "should each one go `up` or `down`"
+        - also the size of the change should be in proportion to
+          how far away it currently is from it's desired value
+            - here we want a "2" to be output...
+            - $MY_IMAGES/cs/AI-ML/nn-gradient-component-magnitude-01.jpg
+            - $MY_IMAGES/cs/AI-ML/nn-desired-changes-02.jpg
+
+    - do a list of "nudges" you want to happen to the previous layer
+    - and keep moving backwards
+        - $MY_IMAGES/cs/AI-ML/nn-propagate-backwards.jpg
+
+    - but remember, we dont want to just change the activation
+      for a single neuron (otherwise it would classify everything
+      as a "2")
+    - so we take an average of all the desired changes/nudges
+        - $MY_IMAGES/cs/AI-ML/nn-average-back-prop-nudges.jpg
+
+    - Stochastic gradient descent
+        - split training data into mini-batches
+            - $MY_IMAGES/cs/AI-ML/nn-gradient-descent-mini-batch.jpg
+        - mini-batch method is like a drunk man walking down hill
+          quickly.
+            - Each step not always the absolute most optimal and
+              precise step, but you get there quickly!
+              (computational speedup)
+            - $MY_IMAGES/cs/AI-ML/nn-stochastic-gradient-descent.jpg
+
+    Definitions:
+        - back-propagation: how a single training example would
+          like to nudge the weights and biases
+
+    - note: training data
+        - need a lot of training data for this method to work
+        - also training data must be _labelled_
+        - often humans do the labelling ("human-in-the-loop")
+
+
+### 04 Backpropagation Calculus
+    - $MY_VIDEOS/CS/3blue2brown-NN/00004-Backpropagation-calculus.mp4
+
+    - the "chain rule" in the context of networks
+
+    - brilliant: (for a single neuron)
+        - chain rule; sensitivity of Cost `C` to small changes in`∂w`
+        - $MY_IMAGES/cs/AI-ML/nn-chain-rule.jpg
+
+        - and derivative of full cost function
+            - ie for all training examples
+            - $MY_IMAGES/cs/AI-ML/nn-chain-rule-full-cost-func.jpg
+
+        -  then iterate the same chain rule BACKWARDS
+            - $MY_IMAGES/cs/AI-ML/nn-chain-rule-iterate-backwards.jpg
+
+    - and then chain rule for all neurons
+        - basically add in loads of `j`, `k` to index each layer
+        - $MY_IMAGES/cs/AI-ML/nn-chain-rule-multi-neuron.jpg
+
+    - YouTube Comments
+        - 1) In other resources , you typically see these
+          formulas in some more compact _vectorized form_.
+            - This carries the extra mental burden to parse the
+              Hadamard product and to think through why the
+              transpose of the weight matrix is used, but the
+              underlying substance is all the same.
+
+        - 2) Backpropagation is really one instance of a more
+          general technique called _reverse mode differentiation_
+          to compute derivatives of functions represented in some
+          kind of directed graph form.
+
+
+### Links/Resources
+    - I recommend Michael Nielsen http://neuralnetworksanddeeplearning.com/
+    - Digit recognition code      https://github.com/mnielsen/neural-networks-and-deep-learning
+    - NN and topology             http://colah.github.io/

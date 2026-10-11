@@ -1,0 +1,150 @@
+32-Continuous-groups-1.txt
+### Lecture 32 - Continuous Groups 1
+
+group
+    some set of elements where a _composition law_
+    is defined.
+
+noticed about groups
+    getting to the identity element
+    `a     • a^-1 = e`
+    `a^-1  • a    = e`
+    - the right AND left inverse are the same
+
+analytic function:
+    - smooth functions, things that can be differentiated 
+    - any analytic function is infinitely differentiable
+
+lie groups
+    - close links to topology, differential geometry
+
+I'm going to look at:
+    - groups where the elements are _parametrised_ by one or more
+      parameters, but the elements are analytic functions of
+      these parameters
+
+    - in addition to the elements of a group, I have an
+      underlying space of the parameters. and the space is
+      actually an analytic manifold.
+
+    - well its actually a space where I can write these elements
+      as analytic functions of these set of parameters.
+
+lie groups
+    - the elements are analytic functions of the parameters 
+    - this is important:
+    - as well as continuity and connectedness, I've said these
+      are differentiable functions
+    - I can ask for infinitesimals, calculus can be done.
+
+
+Representation
+    - you can represent a group in more than one way
+    - don't confuse the representation with the group itself.
+
+    - you could always represent the objects of a group by other
+      objects, and form a rule to go from an element in the group
+      to that other object.
+
+    - so this other set of objects is a representation of the
+      group. It may be a _faithful_ representation of the group:
+        - it may be a _one-to-one_ mapping between both sets
+          (isomorphism) 
+        - or a _one-to-many_ mapping between both sets
+          (homomorphism)
+
+### Representation of ℝ^1
+    corresponding to every element a ∈ ℝ^1
+    I associate a matrix L_a
+    1 a
+    0 1
+    and replace addition in ℝ^1 with multiplication
+    by these matrices
+
+    a ∘ b = a + b
+    `L_a L_b = L_(a+b)`
+
+    Therefore this set of matrices forms a representation
+    of the Lie Group ℝ^1
+
+    - But its not the same as ℝ^1, these are different objects.
+      Also the rule has been changed
+
+    - but theres no problem, instead of ℝ^1 I could talk about
+      this, and its a perfectly good Representation
+
+    Techncially
+        ℝ^1 ~ {L_a}
+        The group ℝ^1 is isomorphic to the group {L_a}
+
+        {L_a} is a 2x2 matrix representation
+        of the real numbers
+
+        its not the simplest representation (or even very
+        useful), but everything you can do with real numbers
+        you can do with {L_a}
+
+### another ℝ^1 mapping
+    to the S^1 sphere (its a circle!)
+    `f:x -> e^(2πi x)`
+    each revolution of 2π increments by another integer
+    so you actually can many different integers represented
+    by the same point on the S^1 circle
+    This is a many-to-one relationship so is a homomorphism
+
+    - but many different _integers_ on ℝ^1 are mapped to the
+      identity element (identity where θ=0)
+
+    - so all those integers (e.g 0, 1, -1) are called the
+      "_kernel_" of the homomorphism i.e. the kernel of this S^1
+      mapping is ℤ
+
+    so ℝ^1/ℤ ~ S^1
+
+    if you have a point on S^1, you can say where it came
+    from in ℝ^1 modulo an integer. (you can always add an
+    integer to it)
+
+    _locally_ a segment on the circumference of s^1 looks
+    like a bit of the line ℝ^1
+    but _globally_ thats not true, because the curvature on
+    S^1 takes over and has an impact
+
+    so locally in a homomorphism you have a mapping that
+    looks one-to-one, globally it isnt (and in this case
+    theres a non trivial kernel)
+
+generators and lie algebras
+    - once I say the elements are _analytic functions_, I would
+      like to write these functions down.
+    - and very often they are exponential functions. and if they
+      are derivable from the identity element in a specific way,
+      then you can generate the entire set of elements by using
+      a set of _infinitesimal generators_.
+
+    - and these generators will obey the _lie algebra_,
+      corresponding to the lie group.
+
+    - so in a sense, you can replace the study of the group by
+      the study of the lie algebra.
+
+    - and this is the idea behind writing down things which are
+      analytic functions.
+
+lie groups are
+    more than continuous - theyre actually analytic
+
+isomorphism
+    is one to one, it means you can _go back_!
+    go back to the original one uniquely
+
+spheres
+    s^1 is a circle
+    s^2 is a ballon in space
+    s^3 is a 3D sphere
+
+    "not as trivial as you may think, theres deep
+    differences between S^2 and S^3"
+
+representation
+    is basically a _mapping_

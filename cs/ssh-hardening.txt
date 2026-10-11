@@ -1,0 +1,163 @@
+# Minimal SSH Hardening on Amazon EC2 VPS (Ubuntu / systemd)
+
+## Goals
+- key-only SSH authentication
+- disable root login
+- restrict access surface
+- move SSH off port 22
+- ensure config is actually applied (systemd socket activation caveat)
+
+---
+
+# 1. Check effective SSH configuration
+Always verify the active config, not just files:
+
+sudo sshd -T | grep -E 'port|permitrootlogin|passwordauthentication|authenticationmethods|allowusers'
+
+Check listening ports:
+
+sudo ss -tulpn | grep sshd
+
+---
+
+# 2. Create dedicated hardening config file
+
+Never modify system files directly. Use a drop-in file:
+
+sudo nano /etc/ssh/sshd_config.d/99-hardening.conf
+
+Example contents:
+$HOME/dotfiles/ini/ssh-store/99-hardening.conf
+
+Reason:
+- files in sshd_config.d override defaults cleanly
+- avoids conflicts with package updates
+
+---
+
+# 3. systemd socket activation caveat (IMPORTANT)
+
+Some systems use ssh.socket, which forces SSH to listen on port 22 regardless of sshd_config.
+
+Symptom:
+sshd -T shows port 2222
+BUT ss -tulpn still shows port 22
+
+Check:
+
+systemctl list-sockets | grep ssh
+systemctl status ssh.socket
+
+Fix (recommended: disable socket activation):
+
+sudo systemctl disable --now ssh.socket
+sudo systemctl enable --now ssh
+sudo systemctl restart ssh
+
+Verify:
+
+sudo ss -tulpn | grep sshd
+sudo sshd -T | grep port
+
+Expected:
+port 2222
+LISTEN ... :2222
+
+---
+
+# 4. Reload vs restart
+
+Check config validity:
+
+sudo sshd -t
+
+Apply changes:
+
+sudo systemctl restart ssh
+
+(restart required for port changes)
+
+---
+
+# 5. Amazon EC2 Security Group changes
+
+Inbound rules:
+
+Allow:
+TCP 2222  source: your IP (/32) or temporary 0.0.0.0/0
+
+Remove:
+TCP 22
+
+Outbound:
+Allow all (default is fine)
+
+Security group acts as external firewall.
+
+---
+
+# 6. Connect using new port
+
+ssh -p 2222 ef@server-ip
+
+Optional client shortcut (~/.ssh/config):
+
+Host myvps
+    HostName server-ip
+    User ef
+    Port 2222
+
+Connect with:
+
+ssh myvps
+
+---
+
+# 7. Root password status check
+
+Check root password state:
+
+sudo passwd -S root
+
+Output meanings:
+L = locked
+NP = no password
+P = password set
+
+Recommended state:
+L
+
+---
+
+# 8. Verify final security state checklist
+
+sudo sshd -T | grep -E 'port|permitrootlogin|passwordauthentication|authenticationmethods'
+
+Expected:
+
+port 2222
+permitrootlogin no
+passwordauthentication no
+authenticationmethods publickey
+
+sudo ss -tulpn | grep sshd
+
+Expected:
+LISTEN ... :2222 only
+
+---
+
+# Result
+
+SSH now hardened with:
+
+- no root login
+- no password login
+- key-only authentication
+- non-standard port
+- no systemd socket override
+- restricted allowed users
+- reduced brute-force surface
+
+Suitable for personal VPS / low-risk deployments.
+

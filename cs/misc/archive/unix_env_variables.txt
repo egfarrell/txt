@@ -1,0 +1,23 @@
+unix environment variables
+
+# shortcut for setting up (temporary) environmental variable
+export EDITOR=nano
+
+# Show variable values
+printenv
+printenv TERM
+echo $TERM
+env
+ls $HOME/Desktop
+
+# Erasing
+    # While simply setting an empty value to an environment variable may
+    # nullify its effect in most cases
+
+export LC_ALL=
+unset LC_ALL
+
+# Demotes it to a shell variable while preserving value
+export -n LC_ALL
+
+

@@ -1,0 +1,330 @@
+LECTURE 13
+
+The Big Bang: The Oldest Radio Waves
+
+
+- Often in radio astronomy people measure the DIFFERENCE in
+  signals, rather than the actual signal itself
+
+switch in
+    - time
+    - position
+    - frequency
+    - load switching ("load" is old radio name for noise source)
+
+look at difference parts of the sky to figure out what to
+subtract from a signal (ie work out the noise)
+	$MY_IMAGES/astro/Radio/position-switching.jpg
+
+the ground adding 3kelvin to the system temperature
+	$MY_IMAGES/astro/Radio/ground-noise.jpg
+
+- antenna temperature
+
+
+
+
+This lecture is about the radio signals from the big bang. These
+radio waves are very old. They're the oldest electromagnetic
+radiation in the universe. These old radio waves tell a story from a
+time when the universe was very young and very simple.
+
+Radio Noise
+
+Objects in our world constantly emit radio waves--it's thermal
+emission of radio waves. This means that our radio receivers are
+always putting out some sort of signal, even if nothing is coming in
+from the antenna.
+
+Consider a camera. If you block the lens with something at room
+temperature--such as your hand--there will be no picture, because
+nothing in the camera gives off light.
+
+On the other hand, if you block the input to a radio telescope
+receiver, the receiver would see blackbody emission from whatever
+was blocking it. If the object was at room temperature, around 300
+kelvins, the radio emission would be quite bright. Objects at 300
+kelvins don't give off visible light, but they do emit radio waves.
+
+Sources of radio emission--radio noise--that we have to contend
+with in our radio telescopes include noise from the receiver, antenna
+and horn, dish, ground, atmosphere, and unrelated celestial emission.
+
+The signals that we're trying to detect usually sit on top of a
+sea of unrelated emission. For this reason, radio-astronomical
+measurements are almost always differential, which means that
+we're almost always looking at the difference of signals rather than
+the absolute signal.
+
+Observations of pulsars give a great example. The pulse sits atop a
+large amount of radio emission--the so-called system noise, which
+
+
+
+
+comes from the receiver, atmosphere, ground, and so on. Usually, our
+signals of interest are much less than 1% of the total system noise.
+
+Everything except the pulsar is fairly constant with time. Therefore,
+we can just take the average intensity over the entire pulse period
+and subtract it from all the data to eliminate the radio signals that
+aren't of interest. This is called time switching, because we are
+making a comparison between signals that arrive at a different
+time--pulse on compared to pulse off.
+
+This technique can't be used for most celestial radio sources
+because they're pretty constant in time, but we can always do what
+is called position switching, where we compare the radio emission
+in one direction with what we get when we point the telescope in
+another, nearby direction. If we switch quickly enough, the receiver
+noise, atmosphere noise, and so on will remain constant and our
+difference will reflect the different radio emission that comes in
+from the 2 parts of the sky.
+
+
+
+
+Another technique is frequency switching. If you are looking at
+a spectral line that covers a small range of frequencies, you can
+compare the signal at the frequency of the line with what the
+telescope receives at adjacent frequencies. The difference between
+them, in theory, should leave you only with the line emission.
+
+
+
+
+If you are switching in time, position, or frequency, you don't have
+to know what the different parts of the system are doing. You don't
+have to know the atmosphere, receiver, ground, etc., very well
+because their emission all cancels out.
+
+There's another comparison that can be done: load switching, where
+we are switching the receiver between a dish looking at the sky
+and some source of radio noise located just in front of the receiver.
+The load--that is, the noise source--should be a blackbody whose
+temperature we can measure precisely. If we can look at a few
+different temperature loads, we can determine the noise that the
+receiver adds to the system.
+
+With the switch pointed at the load, we have the radio emission
+from the receiver plus the blackbody emission of the load. With the
+switch thrown toward the antenna, we have the same emission from
+the receiver, but instead of the load, we have something from the
+antenna, sky--everything else.
+
+We can compare what's coming in through the telescope to what
+comes from the load and say that the telescope gives us a certain
+antenna temperature. In other words, the radio emission from
+everything in front of the receiver can be related to one number:
+the temperature of a blackbody that would have given the same
+amount of signal.
+
+
+
+
+This is one reason why it's very convenient for radio astronomers to
+pretend that the signals we observe come from thermal objects--
+blackbodies--even if they don't.
+
+The intensity of radio spectral lines is usually given in units of
+temperature--antenna temperature or a related temperature. It is
+the temperature that a blackbody would have if it were producing
+the identical amount of emission as the spectral line does at that
+frequency.
+
+In the same way, we can describe the receiver noise as having a certain
+antenna temperature. This is the temperature that a blackbody would
+have to supply the same amount of radio emission, or radio noise, as
+the receiver does.
+
+In many instances, the antenna temperature is very close to the
+physical temperature of an object, or it's easily related to it, so it's
+not just an arbitrary intensity scale.
+
+The system temperature is the amount of noise in our radio
+telescope system added by everything but what we want to look at
+in the sky. It is an amount of noise expressed as the temperature that
+a blackbody would have to produce that amount of noise.
+
+The Cosmic Microwave Background
+
+In 1964 at Bell Telephone Laboratories in Holmdel, New Jersey, there
+was a very peculiar looking antenna, called a horn reflector, that no
+one was using because the project that it was built for--Project
+Echo, a very early attempt to communicate over long distances by
+way of a satellite in orbit--had come to an end.
+
+
+
+
+Horns funnel the radio waves down to the point where an antenna
+probe can pick them up. Horns have simple beam patterns. They
+don't have many sidelobes because there is no blockage. And they
+don't have legs holding up the receiver in front of them, so the
+telescope beam is quite clean.
+
+Most radio telescope dishes are based on the parabola, which is
+symmetric around a central line and brings incoming plane waves to
+a single focus. Receivers often have a small horn to collect the signal
+and couple it to the antenna. The horn reflector design uses just a
+portion of a parabolic surface, and instead of a small horn in front of
+the receiver, it extends the horn and makes it part of the structure.
+
+
+
+At the Bell Labs facility in 1964, Arno Penzias and Robert Wilson
+were young scientists interested in making very precise radio-
+astronomical measurements. Wilson, in particular, wanted to see if
+there was a faint radio halo around the Milky Way that might have
+been unintentionally removed in position-switched observations.
+
+They had a new load that they could use--a cold load. Penzias
+designed it. It's called a cold load because it uses liquid helium
+to produce very cold blackbody emission. Liquid helium boils at a
+temperature of about 4 kelvins, and they calculated that because
+of heat leakage into the load, it would appear to their receiver as a
+blackbody at about 5 kelvins. So, the load would give 5 kelvins.
+
+What did they expect when they switched from the load to the
+antenna? The atmosphere would give about 2.5 kelvins, and there
+might be 1 kelvin from losses in the antenna itself. At their frequency
+of 4 gigahertz, any galactic synchrotron emission should have faded
+to below 1/10th of a kelvin, and from the ground or other sources,
+they expected less than 1/10th of a kelvin of radio noise. The antenna
+plus atmosphere, and so on, should be around 4 kelvins--20% cooler
+than the 5-kelvin load.
+
+
+
+
+They flung the switch to the cold load and measured the output of
+the receiver; then, they flung the switch to the antenna. The antenna
+was not cooler than the load. It was hotter than the load.
+
+Any kind of error with the load would have increased the noise
+coming out of it and made the antenna seem cooler than the load.
+But they got the opposite result. The antenna, and whatever was
+coming into the antenna, was hotter than they expected. It was not a
+huge difference, but it was a difference, and it was different in a way
+that was not easy to explain.
+
+Penzias and Wilson had detected a completely new source of radio
+emission that came from all directions in the sky. They estimated a
+temperature of 3.5 ? 1 kelvins. It's the remnant of the big bang that
+marked the origin of the universe.
+
+They published their findings in a short paper in The Astrophysical
+Journal. This radiation is now generally referred to as the cosmic
+microwave background. It's also often called relic radiation because
+it is the relic of the big bang.
+
+In the first few sentences of their paper, they made the key points:
+
+It's isotropic, meaning that it comes from all parts of the sky. So,
+it's not just part of the Milky Way.
+
+It's unpolarized. Emission from a blackbody has no preferential
+polarization, unlike synchrotron emission or manmade transmissions.
+
+It's free from seasonal variations. This makes it unlikely that it came
+from any particular object, which would rise and set at different
+times throughout the year.
+
+Meanwhile, a group at Princeton University was working on the
+problem of the origin of the universe. They were led by Robert Dicke,
+
+
+
+
+who came up with the idea of switching a receiver between the
+antenna and a load. The technique is often called Dicke switching.
+
+While Penzias and Wilson were still scratching their heads over
+their result, Dicke had a group at Princeton building a small horn
+antenna to work at a 3-centimeter wavelength to try and detect the
+signal. The groups learned of each other's work, got together, and
+2 short papers were published in The Astrophysical Journal: one
+from Penzias and Wilson reporting their detection and the other
+from Dicke and collaborators reporting the interpretation that it was
+blackbody radiation from the big bang.
+
+A few Soviet scientists were also hot on the trail of the background
+radiation, and in retrospect, the radiation had shown up indirectly in
+the excitation of molecules observed at optical wavelengths.
+
+When the Princeton group finished their antenna and measured the
+radiation, they got 3 ? 0.5 kelvins, in agreement with the Penzias and
+Wilson result of 3.5 ? 1 kelvins. And because the Princeton group
+worked around 10 gigahertz while the Bell Labs group worked at
+4 gigahertz, the agreement meant that the spectrum was thermal
+blackbody emission.
+
+For their discovery, Penzias and Wilson were awarded the Nobel
+prize in physics in 1978. The discovery of thermal radio emission from
+all parts of the sky pretty much clinched the big bang as our theory
+of the origin of the universe. The radiation has been measured quite
+a bit since then and has passed every test.
+
+The COBE (Cosmic Background Explorer) satellite, launched in
+late 1989, measured the blackbody spectrum of the background
+radiation quite precisely and searched for fluctuations across the
+sky. Although the background radiation looked uniform across the
+sky when observed with the Bell Labs horn reflector antenna, it has
+to have structure at some level.
+
+
+Radio Astronomy: Observing the Invisible Universe
+
+This is because at the time that the
+
+radiation was created, the universe
+
+was already beginning to get lumpy.
+
+Gravity was drawing some regions
+
+together, and those slight density
+
+fluctuations should have left a mark
+
+on the radiation. Those density                    COBE satellite
+fluctuations later grew into galaxy
+
+clusters and into all the structures that
+
+we see around us. If we could measure their imprint on the cosmic
+
+background radiation, we'd be seeing the earliest-possible signs of
+
+structure in the universe.
+
+COBE showed the blobby structure of the universe that evolved into
+all the amazing things that we see today. The structures have been
+analyzed extensively, and it turns out that they don't make sense
+unless the universe is dominated by dark matter.
+
+
+
+
+Work on the microwave background continues today. From the
+remnant radiation of the big bang, we know the age of the universe:
+13.799 billion years, with an uncertainty of only 38 million years--an
+accuracy of 99.5%.
+
+Suggested Reading
+
+- Kellermann and Sheets, eds., Serendipitous Discoveries in Radio Astronomy.
+- Mather, "From the Big Bang to the Noble Prize and Beyond."
+- Mather and Boslough, The Very First Light.
+- Smoot, "Cosmic Microwave Background Radiation Anisotropies."
+- Wilson, "The Cosmic Microwave Background Radiation."
+
+Questions to Consider
+
+1. Is it possible for something in interstellar space that is bathed
+by the radiation from the big bang, a 3-kelvin blackbody, to be
+cooler than 3 kelvins?
+
+2. When we look back in space and time to a time when the universe
+was smaller than it currently is, do you think that the radiation
+from the big bang was hotter than 3 kelvins?

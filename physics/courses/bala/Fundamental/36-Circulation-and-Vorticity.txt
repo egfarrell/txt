@@ -1,0 +1,274 @@
+$MY_VIDEOS/physics/bala_fundamental/36-Circulation-and-Vorticity.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 36
+Circulation Vorticity
+The last topic, I want to introduce in the context of fluid dynamics has to do with the
+concept of vorticity, which is a technical word for what we already know in terms of
+eddies or whirlpools or something like that. But, you do not necessarily have to have
+whirlpools or eddies in order to have vorticity in a fluid as we will see. I need to
+introduce a little bit of vector calculus to do this, but we will do this in slow steps.
+(Refer Slide Time: 00:44)
+
+You already have seen that if you give me a scalar field phi of r and t; that is a scalar
+field; well let us forget about the time dependence for the moment. If you give me a
+scalar function of the position coordinates, then from here we can form a vector field,
+namely the gradient of phi or the directional derivative of the scalar field. And that is
+called the gradient of phi, written as grad phi or del phi in this form.
+We have also seen that if give me a vector field, let say some u of r for instance. From
+here, we can form a scalar field, which is the divergence del dot u and that is the
+divergence of this vector field here. It gives you physically, it is equal to the flux per unit
+volume in a limit in which this volume goes to 0 at any given point r and we have a
+formula for it, which is written by writing these out for instance in Cartesian or any other
+
+coordinate system.
+We can write down, what sort of derivatives with respect to the position coordinates, this
+involves here. For instance in Cartesian coordinates it is delta u x over delta x plus delta
+u y over delta y plus delta u z over delta z, but in other coordinate systems you gets a
+little more intricate, we would not go into that right now. The question you can ask now
+is, from a vector field can you form another vector field and the answer is yes.
+So, here is a vector field u of r and from here, you can form another vector field, which is
+called the curl of this field and formally, operationally although that is not the basic
+definition. Operationally, just as this is del dot u, this other field is given by del cross u
+and I will write down this explicitly in a moment here.
+(Refer Slide Time: 03:06)
+
+Physically, what it does is the following, if these are the lines of the vector field u of r,
+then at any point say here, you take an infinite decimal area element delta A pointing
+along some unit vector n. While in area itself, if it is a curve surface for example, you
+cannot associate a unit vector with it and area element is essentially a planner object and
+you can associate a unit normal with it.
+So, if this is the direction of this normal n to this area element delta A, then, what you
+construct is the so called circulation of this vector field by taking u dot d l along a closed
+path around the periphery of this area in this fashion. This quantity is called the
+circulation of the vector field and d l is a line element, we changes the direction as you
+move along here, each d l is infinite decimal, a small tiny vector.
+
+And you move along here, it changes directions, you got it with the u at that point and
+this is called the circulation of the vector field u around this circle here. This contour
+here C, this is the circulation, you find the circulation per unit area and you take the limit
+as delta a goes to 0, the limit is finite, just as we took the flux per unit volume, one
+infinite decimal volume element. And the surface L area delta S of that volume element
+went to 0.
+In the same way, this periphery; this circumference also goes to 0. The area goes to 0 in
+such a way that this quantity, if it has a finite limit, it is called the curl of this vector field.
+So, this is the definition, it is called the curl of u at the point r. So, this is the point r in
+some coordinate system and the curl of u is defined as the circulation, this is the
+circulation of the vector field.
+So, the circulation per unit area is the normal component, it is the component of this
+vector along the direction n or if you dot this quantity, so let us leave it like this. So, to
+find the curl, full curl, you going to have to take different area elements pointing in
+different directions and each case you find the normal component by computing this
+circulation per unit area. Now, this is a cumbersome thing to do, so the obvious thing to
+do it should take the convenient contour and find out, what it is in Cartesian coordinates.
+(Refer Slide Time: 06:24)
+
+It terms out that curl u in Cartesian components is equal to e x times delta u z minus delta
+u y over delta z plus e y delta u over delta z x minus delta u z delta x plus is a delta y
+delta x u y minus delta u x over delta y. So, that is the formula for the curl and it is clear
+
+that this quantity, can also symbolically, it is exactly the same as writing del cross u. So, I
+emphasize again, although it is del cross u and delta u for the curl and divergence
+respectively.
+These are not the definitions of the divergence in curl of a vector field. The definitions
+are in this case, the flux per unit volume and the limit of the flux per unit volume as a
+volume element goings to 0. And this is the circulation per unit area gives you depending
+on the normal to the element of area, it gives you the corresponding component along
+that direction of the curl of this vector field. And this is we like an algorithm for
+computing for the curl is one should tell me this vector in Cartesian coordinates.
+Now, the question is, what is the physical meaning of the curl of the vector field, but
+before that, let me see, where this, let me write down, where this comes in, in our
+problem of the fluid flow.
+(Refer Slide Time: 08:09)
+
+Recall that, our equation of motion of a fluid element was this plus v dot del v, this thing
+here was equal to on the right hand side, we had minus the gradient. And let us look at
+barrow tropic flow as usual d p over rho of p plus phi plus F, viscous which I am
+dropping all the time. This quantity, when we took the dot product with v, we discover
+with essentially the gradient of half v squared.
+But, now without taking the dot product, we can simplify this alone and it terms out that
+this can also we written has there is minus v cross, the curl of v. So, that is del cross v,
+this form that is equal to minus the gradient of integral d p over rho of p plus pi plus
+
+1half v square. So, the statement is v dot del on v is the gradient of half v squared, which
+I bring it to this side minus v cross the curl of v itself.
+(Refer Slide Time: 09:31)
+
+And this quantity del cross v equal to the curl of v equal to sum chi, which is of course,
+function of r and t in general for a fluid. This quantity here this chi is called the vorticity,
+you can define a vorticity at every point in space at every given time for a velocity field.
+If this is a function of r and t, so is this a function of r and t in general and terms of this
+vorticity vector, ((Refer Time: 10:08)) this quantity, this thing here becomes delta v over
+delta t minus v cross chi, equal to this quantity on the right hand side. That is the general
+equation to a fluid element.
+So, let us write down on also ((Refer Time: 10:17)), now before I say, what happens to
+this quantity in general, when you have a fluid flow, which is got vorticity of this kind.
+Before I do that, let me also point out another remarkable statement, which is the
+following. We need to geometrically interpret this vorticity here and the simplest, we are
+doing this is as follows.
+
+(Refer Slide Time: 11:06)
+
+It represents, chi represents twice the local angular velocity of a fluid element, if you
+regard, it has a rigid body. And what is this mean, it means that if you have a flow and
+you focus on some fluid element, you are on that fluid element, you ask never mind how
+the fluid is going around it. You ask, does this fluid element rotate around itself or not, if
+it does, then there is a chi or there is a vorticity and if it does not, there is no vorticity and
+let us immediately given example to show you how this works.
+So, let us look at a flow along a horizontal canal and for simplicity, I will look at the
+surface flow, we will not look at the depth of it. The depth is along the z direction say
+and the flow is the surface of the canal in the x, y plane.
+(Refer Slide Time: 12:19)
+
+So, it looks like this, that is the x direction, this to y direction and let us put our
+coordinate axis, so that down the middle of this canal is the x axis and the flow stream
+line, all the flow lines are parallel to the banks of the canal on both sides. And let
+suppose that is viscosity in the problem, we have already seen this when we first did
+dimensional analysis for ((Refer Time: 12:54)) flow in a pipe.
+I pointed out that if you have a horizontal pipe, the flow is maximum, the velocity is
+maximum at the center or axis of the pipe and it tappers to 0 at the two ends, because of
+this viscosity. So, if I have to draw the velocity vector symbolically, you can see that the
+vector is going to be very large here. And then, it is going to be little smaller here is
+going to be even smaller here, even smaller here and so on, till it is essentially 0 at this
+point and this point.
+And let us give the some coordinates, let us this is the line y equal to 0, this y equal to a
+and y equal to minus a. So, the width of the canal is 2 a and this is what the flow in the
+velocity vector looks like at these points and of course, at this point is exactly the same
+in this form, etcetera. So, these are small vectors, these are medium vector, these are
+small vectors, this is even time in vectors and so on.
+So, to simplify the pictures, so that, it does not complicated, let series all these arrows
+and you have a parabolic profile of this kind in which the maximum speed occurs in the
+center and it tappers of in this direction on both sides. Now, what is a velocity field look
+like in this problem, it is immediately clear that v at any point, we are only looking at the
+surface. We not worried about z coordinate at all, v at any point is the speed multiplied
+by e x, because it is along the x direction at every point.
+And the speed is dependent on how for you are away from the center along the x axis,
+the further up you go, the further up or down you go in the y direction, the speed
+decreases. This v is a function of y alone and it is gotten x component of the velocity,
+which is dependent on y and therefore, you can see that, the curl is not going to be 0 in
+this problem.
+And what is this say and how to this manufacture itself, well I have a proof this, but we
+can show that v of y equal to some constant times a squared minus y squared in this
+problem. It is symmetric about y to minus y; that is clear, it must be 0 at y equal to a and
+y equal to minus a, which is the banks of the canal and in between it is largest. So, the
+function is quadratic and one can show this straight forwardly and it looks like this v of y
+
+looks in this fashion here.
+And this is of course, v x of y and that is the only component of v; that is not 0, because
+a flow is a along the parallel to the x axis everywhere on the surface. Once, you have
+this, the curl of the v only component of the curl of v; that is non-zero. If you recall the
+formula for the curl that we wrote down earlier is e z delta over delta x v y minus delta v
+x over delta y and this component is 0, because the velocity has no component in the
+transfers in the y direction.
+So, you have e z minus delta v x over delta y, but the x of y is given by this. So, this is
+equal to minus k is a minus sign here and the minus sign here. So, this becomes k times
+2, so I differentiate this with respect to y and going to get a minus 2 y and I put kill
+minus sign and you get a 2 k y times e z, this is the curl of the velocity. So, even though
+the stream lines are parallel lines, they are straight lines, you still have a curl and the
+moment you have a velocity with the curl, the flow is set to be rotational.
+If the curl is not identically 0, the curl f of velocity field is identically 0, the flow is set to
+be irrotational, just a piece of terminology. But, what it implies is the following, it
+implies that fluid elements here have a local angular velocity which is given by half is
+curl here. In other words, proportional to k y equal to k y time e z, what it means is the
+following, if I put a small raft here in this fashion and it floats along, then because the
+velocity is larger here and smaller here.
+As time goes along this raft will rotate by it is about it center in this fashion and the
+angular velocity of that rotation is what is measured by this curl here. According to this
+rule, ((Refer Time: 18:09)) which says 2 omega equal to chi. So, this example illustrates
+clearly, what is meant by the curl of the velocity field, it gives you the local angular
+velocity apart from this factor of 2. And not surprisingly, you can see that as you go
+down in this as you go up here or go down here the rotation rate changes and that is what
+this is want to tell.
+
+(Refer Slide Time: 19:03)
+
+Now, where is that, take us here, well now you can see that, if the flow is study, this
+equation delta d over delta t is 0. And more over, if the flow is irrotational, when well
+this term is 0 and this term is 0. And now, even without dot in with v, this whole thing
+has a gradient, which is identically 0. That means, along any direction what so ever, this
+scalar function cannot change. So, it says that integral d p over rho of p plus phi plus half
+v square equal to constant, the same constant throughout the fluid.
+So, we have a powerful statement, it says that this combination here, this scalar
+combination is represents some kind of energy as you can see per unit volume of the
+fluid, this combination does not change throughout the fluid. So, it is the same and all the
+stream lines. We already saw that rotational or irrotational flow, we do not care as long as
+to study barrow tropic etcetera, etcetera.
+We had Bernoulli’s principle, which told as that this combination was constant along
+each streamline. Now, if in addition, there is no vorticity anywhere in the fluid, then this
+constant is the same on all the streamline. So, it is constant throughout the fluid, this
+combination here. If the flow is rotational, then we have already seen that this quantity
+here is constant are given streamline.
+
+(Refer Slide Time: 21:11)
+
+So, here is a given streamline and constant along that, might have a different value on
+this or this or different streamlines. But, again if the flow is irrotational all this constants
+are exactly the same. Even otherwise, if I took this equation and it was study flows of
+that goes away and I dotted this not with v, but with chi.
+(Refer Slide Time: 21:52)
+
+Now, if I dotted with chi, then since chi dot v cross chi is identically 0. This scalar triple
+dot product identically 0, because v cross cui locally perpendicular to chi and this is
+component of along chi with this dot product is 0. Since, this is so chi dot the gradient of
+this quantity in the brackets integral d p over rho of p plus phi plus half v squared is
+equal to 0.
+
+And just as in the previous case, where it was v dot this quantity, which was 0 and I said
+therefore, this quantity is a same along a streamline of flow line of the velocity field v, a
+field line of the velocity field. Similarly, now it says, this quantity does not change,
+because no gradient component along a line on which chi flows. In other words, the field
+lines of this vector chi this circulation vector chi, the vorticity vector chi are such that,
+this combination does not change along these vortex lines.
+So, the field lines of chi are called vortex lines and integral v p over rho of p plus phi
+plus half v squared equal to constant along each vortex line. So, this quantity is constant
+not only along each streamline, but it some given value along streamline with also has
+some given value along each vortex line. And then of course, you could ask, what
+happens if the vortex lines and the streamlines exhaust all possible directions in some
+specific sense, well then the whole thing is constant along entire fluid.
+(Refer Slide Time: 24:18)
+
+And this is what happens, if you took two cylinders, concentric cylinders and you rotated
+it, the inner cylinder keep in this one fixed and if put fluid here. Then, the streamlines are
+lines which are concentric circles with this center as axis. There is no flow in the z
+directional at all and then, each vortex line, each streamline is a circle of some kind like
+this and each vortex line is a line along the cylinder form by these little rings here.
+And now, you are told that this combination is constant along this line, it is also constant
+along this line, therefore it is constant along that line and so on in the fluid have exact the
+value everywhere. So, where the special kinds of flows, where you can make very
+
+general statements based on these principles here of what happens to the vorticity are or
+what happens to this quantity here this conserve quantity along a stream line or along the
+vortex line.
+So, the fact that remains constant both along stream lines and along vortex lines will be
+very powerful way of analyzing fluid flow. We have a dot at all about the other equation,
+the equation of continuity, but along with this statement, you also have the statement that
+the delta rho over delta t plus del dot over times v equal to 0. And if the fluid is
+incompressible, then this term goes out and that is a constant that goes out and you have
+del dot v 0.
+So, you have left with smaller problem of analyzing the velocity field, such that, it
+divergence identically 0 and it is curl way certain simple equations, which we can
+explicitly write down. And then, when large number of formal theorems can be proof
+which a very useful in practice in fluid flow. So, to summarize in a nut shell, we have
+seen the most basic elements of what happens, when you took Newton’s law and applied
+to the motion of a fluid.
+The fluid is a describe by density field and a velocity field at every point, you also have
+to specify the pressure field on it, namely we what the pressure is at every point to take
+the time. Then, in cases like barotropic flow, where the density is a function of the
+pressure alone, we can go ahead of distance in analyzing this complicated partial
+differentially equation, even though it is non-linear. If we neglect the viscosity using
+these general principles on the way, we saw that concept such as divergence, gradient or
+curl and so on of a vector field at a very naturally.
+The next step of course, would be too potent the viscosity term and ask, what happens
+when you have viscosity, when you had viscosity, I am not going to do that, you end up
+with an equation, which improves upon the Euler equation that we written down here. It
+is called the Stokes equation and in principle it contains all the information go on along
+the continuity equation to the solve in principle to solve the problem of fluid flow.
+But, you must add to this boundary conditions initial conditions and so on, the
+mathematical problem of fluid flow is formidable especially the problem of turbulence.
+But, I hope this is given you some introduction to the basic ideas involve in analyzing
+this fluids and how the fundamental equation of fluid flow already follows from in
+assumption of new consequence of motion, I think I will stop here.
+
+

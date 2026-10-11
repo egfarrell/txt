@@ -1,0 +1,30 @@
+webdav folders
+
+### PcManFM connect string
+    davs://ef.tools@gmx.com@dav.box.com/dav
+
+### Ubuntu Box hidden folder
+  - it stores lots of files here:
+    - $HOME/.davfs2 
+
+### Create Lubuntu manual mount 
+    - File 1: /etc/fstab
+        - make sure you have "noauto"!
+        - can mess up if no network connection
+        https://dav.box.com/dav /home/ef/Documents/box davfs user,rw,noauto 0 0
+    - File 2: ~/.davfs2/secrets
+        /home/ef/Documents/box ef.xxxxx@gmx.com <password>
+    - Commands: 
+        `mount ~/box`
+        `umount ~/box`
+        Or my aliases:
+            - `mbox`
+            - `ubox`
+
+### Nautilus
+    File - Connect to Server
+        Server: dav.box.com
+        Type: Secure WebDAV (Https)
+        Folder: /dav
+        Username: ef.xxx@gmx.com
+        Password: xxxxx

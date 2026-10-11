@@ -1,0 +1,42 @@
+
+Try eternal terminal instead: https://eternalterminal.dev/
+
+### Disadvantage: scrollback
+    - there's no terminal SCROLLBACK with mosh!
+    - I reverted to SSH because of this 
+
+### define custom escape key
+    c-^ (ctrl+shift+6 is hard to type!?)
+    MOSH_ESCAPE_KEY
+
+### Manual start
+    - What does the Mosh client do exactly on setup? After SSHing
+      to the target server, it runs the command “mosh-server”.
+    - The Mosh server then starts listening on a UDP port in the
+      allowed range. 
+    - You can do this step manually, too: SSH to a server and run
+        - `mosh-server `
+    - No need to be root, any unprivileged user is good. You’ll
+      see something like this:
+            > MOSH CONNECT 60001 EPZ2sM6Alaaaad4AxWRIqg
+            > mosh-server (mosh 1.3.2) [build mosh 1.3.2]
+            > Copyright 2012 Keith Winstein <mosh-devel@mit.edu>
+            > License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+            > This is free software: you are free to change and redistribute it.
+            > There is NO WARRANTY, to the extent permitted by law.
+            > [mosh-server detached, pid = 15204]
+
+    - NOW WITHIN 60 SECONDS, connect manually from the _CLIENT_
+    - (if the server is manually started, it only waits 60 secs
+      for a connection) 
+        ```
+        MOSH_KEY=EPZ2sM6Alaaaad4AxWRIqg mosh-client myserver 60001
+        ```
+
+### DETACHED mosh server
+    - kill `pidof mosh-server`
+    - if you're logged in via mosh, this will exit your current
+      session too 
+
+### Links
+    - Mosh Alternative with scrolling support https://eternalterminal.dev/

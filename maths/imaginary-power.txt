@@ -1,0 +1,38 @@
+raising to an imaginary power
+(from coding the matrix course)
+
+- One student asked an intriguing question: what does it mean to
+  raise a number to the imaginary number `i`?
+
+- I didn't stop to think of a good answer, but in retrospect the
+  right response would be another question: 
+    - what does it even mean to raise a number to an irrational
+      number (such as `π` or `sqrt(2)`)?
+
+- If you've been brought up thinking that exponential is repeated
+  multiplication, it's not easy to answer the second question.
+
+- One way of addressing both questions at once is with a Taylor
+  series (for those who have seen infinite series). 
+    - One way to define the function
+    `f(x) = e^x`
+    - is this way:
+    `f(x) = x0/0! + x1/1! + x2/2! + x3/3! + ...`
+
+- The denominators are factorials...
+
+- Note that we are defining the exponential in terms of other
+  exponentials (`x^2`, for example) but the latter exponential
+  all involve nonnegative integer exponents, so we can define
+  those in terms of repeated multiplications.
+
+- We think we know how to multiply a real number by itself
+  a number of times, so we can make sense of each summand of the
+  series. 
+    - (Whether we can make sense of an infinite series is another
+      question, best answered in a calculus class.)
+
+- But note that we can also multiply an imaginary number by
+  itself as well! Thus the _INFINITE-SERIES_ definition of
+  exponentiation works even if the input is an imaginary (or,
+  more generally, complex) number.

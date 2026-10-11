@@ -1,0 +1,111 @@
+" CTRLP TIPS
+
+" Tags
+    :CtrlPTag     -> searches local folder for a "./tags" file and displays them
+    :CtrlPBufTag  -> runs "ctags" ON THE FLY and generate a tag list for the current buffer
+
+
+" ctrlp - different types of splits
+  - 't'  ->  in a new tab.
+  - 'h'  ->  in a new horizontal split.
+  - 'v'  ->  in a new vertical split.
+  - 'r'  ->  in the current window.
+
+
+" open new file in vertical split
+    <c-v>
+
+" ctrlP bookmarks cache
+    ~/.cache/ctrlp/bkd
+    cache.txt (I have a copy in my dotfiles)
+
+    " when manually editing cache.txt
+        make sure theres a trailing '/' at the end of the path
+
+" change directory
+	@cd
+
+" delete bookmark
+	mark bookmarks with <C-Z>
+	then press <F7> to delete them.
+
+" add bookmark
+	:CtrlPBookmarkDirAdd
+
+" cursor jump from Ctrlp prompt to Ctrlp window
+	:ToggleFocus()
+	(key: shift-TAB)
+
+" create new file
+	<c-p>somename.file<C-Y>
+
+" go up a directory
+	..
+
+" clear the cache
+	:ClearCtrlPCache
+
+" CtrlP toggle search (filename) or (path)
+	ctrl+d
+
+" CtrlP open file in split
+	ctrl+v  -- vertical
+	ctrl+x  -- horizontal
+
+" CtrlP scroll up/down
+	ctrl+j
+	ctrl+k
+
+" close (handier than escape!)
+	ctrl+g
+	ctrl+c
+
+" Change ctrlp key mappings
+	let g:ctrlp_prompt_mappings = {
+	    \ 'ToggleRegex()':        ['<F5>'],
+	    \ 'PrtClearCache()':      ['<c-r>'],
+	    \ }
+
+" flush the cache before opening CtrlP
+	" Normal CtrlP
+		nnoremap <silent> <Leader>t :CtrlP<cr>
+	" Flush then CtrlP
+		nnoremap <silent> <leader>T :ClearCtrlPCache<cr>\|:CtrlP<cr>
+
+
+" ctrlp new file
+
+    " 1) Using <c-z> to mark a file and use its path as the base dir:
+
+    <c-p><c-d>filetxt<c-z><c-u>New Article/article.txt<c-y>
+    |    |    |      |    |    |
+    |    |    |      |    |    `- start creating the new dir and file
+    |    |    |      |    `- clear the prompt
+    |    |    |      `- mark it to get its parent dirs: content/articles
+    |    |    `- find a file in content/articles/
+    |    `- switch to matching only filename
+    `- start ctrlp
+
+    " 2) Using <tab> to auto-complete each directory:
+
+    <c-p>co<tab>ar<tab>New Article/article.txt<c-y>
+    |    | |    | |    |
+    |    | |    | |    `- start creating the new dir and file
+    |    | |    | `- auto-complete it to articles/ if possible
+    |    | |    `- type the first chars of articles/
+    |    | `- auto-complete it to content/ if possible
+    |    `- type the first chars of content/
+    `- start ctrlp
+
+" stop ctrlP from writing to disk
+    " ctrlp.vim
+        comment out all occurances of
+        cal ctrlp#recordhist()
+
+    " mrufiles.vim
+        fu! s:savetofile(mrufs)
+        -       cal ctrlp#utils#writecache(a:mrufs, s:cadir, s:cafile)
+        +       " cal ctrlp#utils#writecache(a:mrufs, s:cadir, s:cafile)
+
+
+

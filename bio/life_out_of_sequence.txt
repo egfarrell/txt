@@ -1,0 +1,175 @@
+- In the end, “bioinformatics” is likely to disappear, to
+  evaporate as a relevant term for describing biological
+  practice.
+    - This won't happen because biologists stop using
+      computers, but rather because the use of computers and
+      bioinformatic methods will become so ubiquitous that it
+      will make no sense to label it as a practice separate or
+      distinct from biology generally.
+
+- The use of computers in biology has provided epistemic space
+  for particular sorts of problems—those based on large numbers,
+  probability, and statistics.
+    - In so doing, it has also changed the objects that it
+      studies—it has created new kinds of epistemic things.
+    - Sequences, and in particular the large sequence data sets
+      from genomics, are particularly amenable to statistical
+      analysis.
+    - It is the notion of the genome as a disordered object, or
+      an object “out of sequence,” that has allowed computers
+      to become important tools for making sense of biology using
+      statistical-computational methods.
+
+- ... he was attracted to the exciting field of molecular
+  biology, which seemed to be advancing rapidly due to the new
+  techniques of DNA sequencing and cDNA cloning.
+    - Swept up in the excitement, Ostell did some cloning and
+      sequencing of eggshell proteins.
+    - Once he had the sequence, however, he had no idea what to
+      do next, or how to make any sense of it.
+    - Somebody suggested that he use a computer.
+    - Before coming to graduate school, Ostell had taken one
+      computer class, using the FORTRAN programming language on
+      a Cyber 70 mainframe with punched cards.
+
+- In 1995, Michael Waterman published Introduction to
+  Computational Biology: Maps, Sequences, and Genomes , arguably
+  the first bioinformatics textbook.
+    - Waterman’s book was grounded in the treatment of biology as
+      a set of statistical problems:
+        - sequence alignment, database searching, genome mapping,
+          sequence assembly, RNA secondary structure, and
+          evolution, are all treated as statistical problems.
+    - In 1998, the fourteen-year-old journal Computer
+      Applications in the Biosciences  changed its name to
+      Bioinformatics.
+        - In one of the first issues, Russ Altman outlined the
+          need for a specialized curriculum for bioinformatics.
+        - Altman stressed that “bioinformatics is not simply
+          a proper subset of biology or computer science, but has
+          a growing and independent base of tenets that requires
+          specific training not appropriate for either biology or
+          computer science alone.”
+
+- Apart from the obvious foundational courses in molecular
+  biology and computer science, Altman recommended training for
+  future bioinformaticians in statistics (including probability
+  theory, experimental statistical design and analysis, and
+  stochastic processes) as well as several specialized domains of
+  computer science:
+    - optimization (expectation maximization,
+    - Monte Carlo,
+    - simulated annealing, gradient-based methods),
+    - dynamic programming,
+    - bounded search algorithms,
+    - cluster analysis, classification, neural networks, genetic
+      algorithms, Bayesian inference, and stochastic context-free
+      grammars.
+    - Almost all of these methods trace their origins to
+      statistics or _physics_ or both.
+
+- Second, it was an ontological problem — an attempt to find out
+  whether _exon_ scrambling was a “real” biological occurrence or
+  whether it was some sort of artifact of sequencing or other
+  laboratory techniques.
+
+- When I posed this question to bioinformaticians, or when
+  I observed their work in the lab, it seemed that they were
+  using the computer itself to reassure themselves that it was
+  producing “biology” rather than garbage.
+    - This process was often described as a “sanity check”—tests
+      were specially designed to check that the computer was not
+      taking the data and doing something that made no sense.
+    - Bioinformaticians consider these tests to be the
+      computational equivalent of experimental controls.
+    - In a traditional wet lab, a control is usually
+      a well-characterized standard. If you are measuring the
+      length of a sequence on a gel, the control might be
+      a sequence of known length.
+        - If the experiment does not reproduce the length of the
+          control accurately, then it is unlikely that it is
+          measuring the lengths of unknown samples accurately
+          either.
+        - A computational sanity check could be described in the
+          same terms: run the computer program on
+          a well-characterized data set for which the result is
+          known to check that it is giving sensible results.
+        - For example, sometimes it is possible to use the
+          computer to construct an alternative data set (often
+          using random elements) that, when run through a given
+          piece of software, should produce a predictable
+          outcome.
+        - Just as with my project, a large part of the work of
+          doing bioinformatics revolves around the construction
+          of appropriate controls or sanity checks.
+            - This is not a trivial task—the choice of how to
+              construct such tests determines the faith one can
+              put in the final results.
+            - In other words, the quality and thoroughness of the
+              sanity checks are what ultimately give the work its
+              plausibility (or lack thereof).
+
+- The biochemist John Allen has been especially outspoken in
+  arguing that there can be no such thing as hypothesis-free
+  biology and even that such work is a waste of time and money:
+    - “I predict that induction and data-mining, uninformed by
+      ideas, can themselves produce neither knowledge nor
+      understanding.”
+    - Alarmed that hypothesis-driven science is portrayed as
+      “small-scale” and “narrowly focused,” critics of the
+      data-driven approach argue that true science is not
+      possible without a hypothesis. That a lack of a hypothesis
+      indicates a lack of clear thinking about a problem, and
+      that the data produced by hypothesis-free science will be
+      uninterpretable and hence useless.
+
+- In his view, both systems biology and genome-centered biology
+  work at the WRONG LEVEL OF ABSTRACTION— simply examining more
+  data at a genome-wide level will not help biologists understand
+  how organisms work.
+    - In other words, what bothers Brenner is the generality of
+      the questions that are being posed and answered.
+
+- And then the buckets became very clear:
+    - people who didn’t have math or statistics backgrounds,
+      those were the bioinformaticians;
+    - people who had math and statistics backgrounds, who were so
+      important to the organization, those were your
+      computational biologists.
+
+- Although not all biologists saw the divisions quite this
+  starkly, a difference certainly existed between the so-called
+  bioinformaticians and the so-called computational biologists.
+    - Although they both spent the vast majority of their time in
+      front of computers, the two groups usually occupied
+      different workspaces within the institutes and
+      laboratories, ate lunch separately, and went to different
+      parties.
+
+- Biological databases, organized with computers, cannot be
+  thought of as just collections.
+    - Instead, biological databases are orderings of biological
+      materials.
+    - They provide ways of dividing up the biological world; they
+      are tools that biologists use and interact with.
+
+- The flat-file format was suited to the NIH’s notion that
+  a nucleotide database should be no more than a simple
+  collection, a laundry list of sequences.
+    - However, it also embodied a particular way of understanding
+      biology and the function of genes.
+    - George Beadle and Edward Tatum’s “one gene–one enzyme”
+      hypothesis is considered one of the founding dogmas of
+      molecular biology.
+    - Although the idea (and its successor, “one gene–one
+      polypeptide”) had been shown to be an oversimplification
+      even by the 1950s, the notion that it is possible to
+      understand life by considering the actions of individual
+      genes exerted a profound influence on at least forty years
+      of biological research.
+
+- Molecular geneticists began to realize that not all the
+  information necessary to understand gene action was contained
+  within the gene sequence, how the gene was spliced, where it
+  was expressed, and how it was phosphorylated were also
+  crucially important.

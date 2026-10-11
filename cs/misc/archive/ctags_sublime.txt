@@ -1,0 +1,28 @@
+ctags sublime
+sublime ctags
+
+
+install deb
+	ai ctags
+
+generate .tags file
+	ctags -R -f .tags
+
+generate "tags" file and include import statements
+    ctags -R --python-kinds=+i
+
+sublime package
+	install Ctags package
+
+rebuild_ctags
+	ctrl+t ctrl+r
+
+navigate_to_definition
+	ctrl+t ctrl+t or ctrl+alt+]
+
+jump_back
+	ctrl+t ctrl+b
+	ctrl+alt+[
+
+jump_back to_last_modification
+	ctrl+t ctrl+m

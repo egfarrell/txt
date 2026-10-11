@@ -1,0 +1,52 @@
+
+### cannot delete hidden .git folder
+    cd /support/
+    v execInProot  
+    Activate these lines:
+
+    # this line if u cant delete .git
+    PROOT_TMP_DIR=/data/data/com.gnuroot.debian/support/ /data/data/com.gnuroot.debian/support/proot -r /data/data/com.gnuroot.debian/debian -v -1 -p -0 -l -L -b /sys -b /dev -b /proc -b /data -b /mnt -b /proc/mounts:/etc/mtab -b /:/host-rootfs -b /storage/emulated/0/GNURoot/intents:/intents -b /storage/emulated/0/GNURoot/home:/home -b /storage/emulated/0:/sdcard -b /data/data/com.gnuroot.debian/support/:/support -b /data/data/com.gnuroot.debian/support/ld.so.preload:/etc/ld.so.preload  $@
+
+    # this is the normal line;
+    # PROOT_TMP_DIR=/data/data/com.gnuroot.debian/support/ /data/data/com.gnuroot.debian/support/proot -r /data/data/com.gnuroot.debian/debian -v -1 -p -H -0 -l -L -b /sys -b /dev -b /proc -b /data -b /mnt -b /proc/mounts:/etc/mtab -b /:/host-rootfs -b /storage/emulated/0/GNURoot/intents:/intents -b /storage/emulated/0/GNURoot/home:/home -b /storage/emulated/0:/sdcard -b /data/data/com.gnuroot.debian/support/:/support -b /data/data/com.gnuroot.debian/support/ld.so.preload:/etc/ld.so.preload  $@
+
+
+
+### debian GNUROOT
+    - bluetooth keyboard
+        - ctrl+tab        cycle windows
+        - ctrl+shift+n    new window
+        - ctrl+shift+v    paste from android clipboard
+
+    - Preferences:
+        - enable '_default to utf8_ ' so that my 'symbol' text
+          files arent garbled
+        - enable '_alt key sends ESC_' to get command line 'alt'
+          keys working
+
+
+### debian GNUROOT:
+    to set my environment
+    - when login to new shell type:
+        > su root
+
+    - or paste following in /etc/bash.bashrc:
+        > alias go='su root'
+
+
+### debian GNUROOT app
+    to get full proper vim
+    > apt-get install vim-ultisnips
+
+
+### debian GNUROOT debian
+    - Fix annoying display problem when scrolling by 1 line
+    ```
+    set scrolljump=2
+    ```
+    - Also this makes better use of the screen
+    ```
+    set showtabline=0
+    ```
+
+

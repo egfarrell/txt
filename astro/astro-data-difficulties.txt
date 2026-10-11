@@ -1,0 +1,46 @@
+- oxford astronomer Aris Karastergiou
+    - lots of people do research using the rotational stability
+      of pulsars as "clocks"
+
+    - DATA CHALLENGES:
+        - pulsar radiation gets DELAYED DIFFERENTIALLY as it
+          travels through space, depending on it's wavelength
+        - short wavelengths arrive at the telescopes earlier,
+          long wavelengths arrive later
+        - if you want to add together the signal across the whole
+          observing band (across all the wavelength you're
+          sensitve to) you need to account for the differential
+          delay
+        - DE-DISPERSION
+            - tricky to do de-dispersion on a signal you are
+              searching for... you don't know a-priori what the
+              paraemeters of the signal are
+            - and you want to take advantage of the periodic
+              nature of pulsar pulses... but you don't know the
+              period of the new pulsar you're searching for!
+            - the datasets are several gigabits per second
+            - and there are 1 million operations per sample(!)
+
+    - QUESTION: does a pulse profile change?
+    - stack hundreds of profiles which corresponds to decades
+    - build time series that corresponds to certain parts of the
+      profile
+    - use "Gaussian Process Regression" (Bayesian) : make some
+      assumptions about the shape of your data and modelling them
+      in a way that is non-parametric
+        - ie you don't impose laws on how each of these time
+          series behaves a-priori
+        - want to obtain models that are smooth over the time
+          series
+        - so use Python libraries and build our own tools too...
+
+    - ADVICE:
+        - ask how does your data relate to the scientific
+          questions you're asking.
+        - He remembers PHD where he was looking at endless
+          interesting profile patterns from single pulses...
+        - some people find data and signals fascinating, but that
+          doesn't lead anywhere scientifically
+        - think how your modelling can be taken all the way to
+          physical law
+

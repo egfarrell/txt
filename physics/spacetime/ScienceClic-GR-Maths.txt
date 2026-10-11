@@ -1,0 +1,352 @@
+
+Brilliant explanations and visualisations of GR maths
+
+### Videos
+    - Maths of GR: yt playlist https://www.youtube.com/playlist?list=PLu7cY2CPiRjVY-VaUZ69bXHZr5QslKbzo
+    - $MY_VIDEOS/maths/ScienceClic-GR/01-GR-Maths-Spacetime-and-Worldlines.3gp
+    - $MY_VIDEOS/maths/ScienceClic-GR/02-GR-Maths-Spacetime-velocity.3gp
+    - $MY_VIDEOS/maths/ScienceClic-GR/03-GR-Maths-Geodesics.3gp
+    - $MY_VIDEOS/maths/ScienceClic-GR/04-GR-Maths-Metric-tensor.3gp
+    - $MY_VIDEOS/maths/ScienceClic-GR/05-GR-Maths-Curvature.3gp
+    - $MY_VIDEOS/maths/ScienceClic-GR/06-GR-Maths-Energy-fluxes.3gp
+    - $MY_VIDEOS/maths/ScienceClic-GR/07-GR-Maths-The-Einstein-equation.3gp
+    - $MY_VIDEOS/maths/ScienceClic-GR/08-GR-Maths-Summary-and-Applications.3gp
+
+
+### 01 Spacetime and Worldlines 
+    - x-coord: Time (blue) 
+    - y-coord: Spatial (red)
+
+    - note: no object is STATIONARY in GR. Even if it doesn't
+      move in space, it moves forward in time, prgressing towards
+      the future.
+    - All objects have a 'speed' (`c`?) in spacetime. The only
+      thing that can change is how the speed is distributed
+      BETWEEN the coordinates.
+
+
+### 02 Spacetime velocity       
+    - all objects move thru spacetime at the same 'speed': 
+        - `c` the speed of light.
+
+    - First equation: the velocity norm is `c`
+        - `||ṽ|| = c`
+
+    - Interesting: when using natural units, `c=1` ... then time
+      starts to measure distance... 
+        - and the proper time `τ` of an object measures the
+          distance travelled through spacetime.
+
+    - For each second of `τ`, an object travels a distance of
+      1 light second through spacetime...
+
+    - define basis vectors
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-05.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-06.jpg
+
+    - Get components of velocity vector
+
+    - Ah remember this, important for components!!
+        - The `|LENGTH|` of the velocity vector will always be
+          the same!!
+        - It's only the distribution of the components among the
+          coordinates that will change, second by second.
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-07.jpg
+            - Every second that passes for the satellite (`τ`),
+              two seconds will pass for us (`t`)
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-08a.jpg
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-08b.jpg
+            - 2nd coordinate component is angle of satellite
+              around the planet. For each second, the satellite
+              moves 10 degrees
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-08c.jpg
+            - Remember velocity vector always norm `c`
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-09.jpg
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-10.jpg
+        - But need a new version of the Pythagorean theorem. Also
+          the coordinate component values mean nothing physically
+          yet.
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-11.jpg
+
+### 03 Geodesics                
+    - describe the EVOLUTION of the velocity vector as proper
+      time `τ` passes...
+    - When no force is applied, objects move in 'straight'
+      wordlines
+        - Reason for straight lines? Come from 'symmetry':
+        - An object has no reason to turn one way or the other
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-12.jpg
+    - Method for predicting the trajectory of an object:
+        - if we know the velocity vector at one instant, we can
+          'transport' the arrow (velocity vector) along itself to
+          gradually predict the movement of an object.
+        - This type of trajectory, formed by transporting the
+          velocity vector _along itself_ is called a `geodesic`
+    - On a geodesic, a vector doesn't turn, so its derivative wrt
+      proper time `τ` is zero
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-13.jpg
+        - it just means the natural movement of an object is
+          non-accelerating, and when they don't experience any
+          force they tend to move ahead...
+    - But we saw the velocity vector can be written as the SUM of
+      its (components * basis vectors)
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-14.jpg
+
+    - From here just some random screenshots
+        - the change in the velocity vector wrt the coordinate
+          system(for one component)
+        - So this is the acceleration wrt the coordinate system
+          (for this component)
+        - In fact, these white 'change' vectors are actually the
+          Christofels
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-30.jpg
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-31.jpg
+    - There are 8 Christofels: two components for four different
+      vectors
+        - Why 4 vectors?? 
+            - Why not one velocity vector? Or why not two change
+              (acceleration) vectors?
+            - Ah get it: BOTH basis vectors can vary in BOTH
+              directions. So:
+                - `e1` and `e2` in the `e1` direction = 2 vectors
+                - `e1` and `e2` in the `e2` direction = 2 vectors
+            - ie how the grid changes along EACH DIRECTION
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-40.jpg
+        - another list of these vectors
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-60.jpg
+
+### 04 Metric tensor            
+    - How to get the distance between two points?
+    - If the coordinate system isn't orthonormal then there's
+      another way:
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-48.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-49.jpg
+    - Generally, the square of the distance can be written as the
+      some of all possible combinations of two sides, multiplied
+      by some numbers
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-50.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-51.jpg
+        - But if the coord system is sqaure with sides of 1, we
+          get back the Pythagorean theorem
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-52.jpg
+    - The 'multiplied by some numbers' bit is actually the metric
+      tensor
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-51.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-53.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-54.jpg
+    - Now express the norm of the velocity vector
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-55.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-56.jpg
+        - Remember the norm of the velocity is always `c`
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-57.jpg
+    - Metric tensor useful: 
+        - Transform coordinate numbers into real measures of
+          physical distances and angles
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-58.jpg
+        - The metric tensor describes the geometry
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-50.jpg
+    - Only one prob: how do we derive/calculate the metric
+      tensor.
+
+
+### 05 Curvature                
+    - Interesting: if you transport a vector along a flat
+      surface, the image of the  vector is in the _same
+      orientation_ in the new location:
+        - But on a curved surface, the vector has a different
+          orientation!
+        - The orientation of the vector is _path dependent_ on
+          a curved surface!
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-70.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-71.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-72.jpg
+    - Transport a basis vector along two different paths.
+        - The result is oriented differently, if a curved
+          surface.
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-73.jpg
+        - The difference between the two images is `R`. The more
+          curved the surface, the longer `R` becomes.
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-72.jpg
+    - `R` is the difference between two derivatives of the basis
+      vectors in opposite orders.
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-73.jpg
+        - The derivatives of basis vectors give Christofel
+          symbols
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-74.jpg
+        - Riemann tensor too unweildy. Use Ricci tensor instead.
+    - skipped bits...
+    - The Ricci tensor 
+        - measures how `volume` changes as you transport it along
+          a curved surface.
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-80.jpg
+    - The Ricci scalar
+        - for certain symmetrical surfaces, we can characterise
+          the entire curvature by a single number, the Ricci
+          scalar
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-81.jpg
+
+
+### 06 Energy fluxes            
+    - Theme: energy momentum tensor
+    - mass = 'energy density'
+    - It's not just mass that contributes to energy in spacetime.
+      An EM field contributes to energy too.
+    - In all it's forms, energy moves through spacetime like
+      a `fluid`!!!
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-90.jpg
+    - An apple moving through spacetime can be modelled like
+      a flow of energy
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-91.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-92.jpg
+
+
+
+### 07 The Einstein equation    
+    - Most powerful idea: equate the two notions of spacetime
+      geometry and energy flow
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-100.jpg
+    - We'll write an equality between curvature and content
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-101.jpg
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-102.jpg
+    - Eqn is inferred
+        - In our mathematical model, this is the only equation
+          that can't be proven. It is _inferred_ from
+          observations, postulated because it very well describes
+          our world.
+    - Touch the real world
+        - This equation contains all the predictive quality of
+          GR. It allows us to relate the abstract mathematical
+          model to concrete predictions.
+    - Usual form of the equation
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-103.jpg
+        - note: the constant beside `T` the energy-momentum
+          tensor defines the intensity of gravity in the
+          universe.
+        - This constant is chosen for compatability with older
+          theories and recovers Newtonian Gravity when the pull
+          is weak.
+    - Hard to solve
+        - The Einstein eqn is very hard to solve. The lhs
+          contains the Ricci tensor and Ricci scalar: very
+          complicated!
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-104.jpg
+        - Also: both sides of the eqation are closely related.
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-105.jpg
+            - So we often make approximations and use computer
+              simulations to solve such problems
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-106.jpg
+    - Technical Note:
+        - note 1: The Ricci scalar is a `contraction` of the
+          Ricci tensor
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-107.jpg
+        - Whaaaat....??
+        - The Einstein equation remains valid when we swap the
+          Energy-Momentum tensor `T` with the Ricci tensor `R`!!
+            - (apart from changing the gravitational constant)
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-108.jpg
+        - The new eqn is completely equivalent and in some cases
+          can be easier to use!
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-109.jpg
+    - Example
+        - Assume a spherical mass
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-110.jpg
+        - This spherical mass could be the sun or the Earth.
+        - Our goal is to obtain the `metric tensor` `g` at
+          a point around this body (the Earth) and hence the
+          spacetime geometry around the body.
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-111.jpg
+        - Now choose a coordinate system, and observe the test
+          point from a very far distance...
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-112.jpg
+        - Our point sits in a vacuum, therefore the
+          energy-momentum `T` is zero
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-113.jpg
+        - Use the 2nd version of Einsteins Equation
+            - we deduce the Ricci tensor = 0
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-114.jpg
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-115.jpg
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-116.jpg
+        - Solving loads of differential eqns and using the
+          symmetries we postulated for this problem, it's
+          possible to solve for `g`
+            - We get the Schwarzschild Metric
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-117.jpg
+        - Interesting: if the mass of the object is zero, we
+          recover the Minkowski metric from the Schwarzschild
+          metric
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-118.jpg
+        - For a sufficiently compact object, where it's surface
+          is close to it's centre, we can reach a point where the
+          temoral coordinate of the Schwarzschild metric goes to
+          zero.
+            - We've reached the point of no return.
+            - Time is infinitely stretched compared to the
+              outside. (so is proper time `τ` stretched?)
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-119.jpg
+        - This is the Schwarzschild radius, the horizon of a BH
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-120.jpg
+
+
+### 08 Summary and Applications 
+    - Catalogue to different possible solutions and calculate:
+        - Time dilation for astronaut in space station
+        - Eqns of motion for an object falling towards the sun
+        - Explain behaviour of light around a BH
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-130.jpg
+    - Steps for problem-solving in GR
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-132.jpg
+        - 1. Determine spacetime geometry: 
+            - Choose the metric `g` from several options
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-134.jpg
+        - 2. Choose the coordinates
+            - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-135.jpg
+            - Minkowsi often uses Cartesian coords to reflect its
+              linear structure
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-136.jpg
+            - Sometimes no existing solutions (Minkowski,
+              Schwarzschild etc) are suitable. In that case, we
+              have to: 
+                - determine the most appropriate coords, 
+                - start directly from the Einstein Equation, 
+                - and integrate the different curvature tensors
+                  to find an expression for the metric tensor.
+                - This is often very complex and needs computer
+                  simulations.
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-138.jpg
+        - 3. Reduce the number of dimensions.
+                - Analyse the symmetries of our problem to reduce
+                  the number of dimensions.
+                - e.g. for an orbiting body, it will be confined
+                  to a plane, so we can align our coords to this
+                  plane and reduce the problem to two dimensions
+                  of space.
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-139.jpg
+                - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-140.jpg
+        - 4. Seek the solution. 
+            - The problem DESCRIPTION is now complete. 
+            - We have two possibilities: we can 
+                - use the `|norm|` of the velocity to find the
+                  velocity components of an object 
+                    - (find temporal component of an object, the
+                      rate our time passes compared to its own
+                      proper time)
+                    - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-141.jpg
+                    - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-142.jpg
+                - or find the acceleration components
+                    - how the velocity components of an object
+                      changes over time
+                    - This uses the Christofels and geodesic eqn
+                    - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-143.jpg
+    - Summary diagram of full method
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-150.jpg
+
+    - Example 1: orbiting space station
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-160.jpg
+
+    - Example 2: object falling towards the Sun
+        - $MY_IMAGES/physics/GR/ScienceClic/GR-maths-170.jpg
+
+    - Example 3: object falling towards the Sun
+
+### Links
+      - Maths of GR: yt playlist https://www.youtube.com/playlist?list=PLu7cY2CPiRjVY-VaUZ69bXHZr5QslKbzo

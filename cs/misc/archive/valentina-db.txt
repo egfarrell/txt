@@ -1,0 +1,8 @@
+
+valentina studio
+
+csv export
+    - On Windows: choose "LF" as line ending because "CRLF" is funny when a csv
+      is imported into Excel(?)
+    - Even though "CRLF" should be ok. (But maybe because Valentino does a UTF
+      export instead of Text/Ascii)

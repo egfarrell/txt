@@ -1,0 +1,22 @@
+sublime 3 setup
+
+
+#!/bin/bash
+git cl sublime3 User
+git cl oracle
+# git cl fortran
+
+# git clone https://github.com/netatoo/phoenix-theme.git "Theme - Phoenix"
+
+# git clone https://github.com/wbond/sublime_package_control.git "Package Control"
+# cd "Package Control"
+# git checkout python3
+
+git clone https://github.com/textmate/fortran.tmbundle
+cd "fortran.tmbundle"
+git checkout textmate-1.x
+cd ..
+
+#git clone https://github.com/skuroda/Sublime-AdvancedNewFile.git
+
+git clone https://github.com/buymeasoda/soda-theme.git "Theme - Soda"

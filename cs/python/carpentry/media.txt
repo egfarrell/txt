@@ -1,0 +1,43 @@
+software carpentry media
+
+
+Use PIL - Python Image library
+    from PIL import Image, ImageDraw
+
+OpenCV
+    another library in C++ with Python interface
+
+Steganography
+    Hiding msg characters in RGB values
+    JPEG lossy format
+    PNG lossless format
+
+Color represented by RGB triples
+    Black: (0,0,0)
+    White: (255,255,255)
+    Think of color as a vector with three axises.
+
+Also FOURTH value called "alpha" 
+    controls transparency
+    pixel at (0,0) is (255,255,255,255)
+
+Unpack data
+    picture.getdata()
+
+Counting stars
+    Have white background, with black for stars.
+    Set a threshold value, and admit pixels that exceed the limit.
+
+Now scan the image, turning pixels red as they are encountered.
+    Use "floodfill" technique to color in a blob of pixels (blob=star)
+
+Floodfill
+    Can have a WORK QUEUE of coordinates to be checked 
+    or use a RECURSIVE algorithm.
+
+Work with Color Bands
+    pic = Image.open
+    bands = pic.split() ----> three monochrome planes red[], green[], blue[]
+
+Color Bands AND point functions
+    bands[R].point(decrease)

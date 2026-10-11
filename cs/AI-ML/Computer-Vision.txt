@@ -1,0 +1,241 @@
+
+
+### Misc notes, NASA compoetition
+    - https://paperswithcode.com/task/template-matching
+    - good yolo explanation https://www.youtube.com/watch?v=zgbPj4lSc58&list=PL1u-h-YIOL0sZJsku-vq7cUGbqDEeDK0a&index=1
+    - yoto explanation https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
+    - good computer visionhttps://www.youtube.com/@firstprinciplesofcomputerv3258
+    - yolo 8https://www.youtube.com/watch?v=UL2cfTTqdNo&t=1933s
+    - cv info https://www.superdatascience.com/podcast/yolo-nas-the-state-of-the-art-in-machine-vision-with-harpreet-sahota
+    - good talk vision https://www.youtube.com/watch?v=agzG5qsZpvg
+
+
+### Current state of the art 2023
+    - https://magazine.sebastianraschka.com/p/ahead-of-ai-10-state-of-computer
+    - ViT key paper: 2020 An Image is Worth 16x16 Words:
+      Transformers for Image Recognition at Scale.
+    - ViTs like DeiT and Swin are extremely popular architectures
+      due to their state-of-the-art performance on computer
+      vision tasks.
+    - Best object detection?
+        - However, this is what the proposed `Mask DINO` system
+          tries to address. By extending DINO, Mask DINO
+          outperforms all existing object detection and
+          segmentation systems. The idea behind Mask DINO is
+          summarized in the annotated figure below.
+
+### Alternatives to DL
+ 
+    1. Template Matching: 
+        - a smaller image or template is slid over a larger image
+          to find areas that match the template. It's useful for
+          _simple_ pattern recognition tasks.
+
+    2. Feature Detection and Matching: 
+        - Detect and describe local features in images: 
+            - SIFT: Scale-Invariant Feature Transform, 
+            - SURF: Speeded Up Robust Features, 
+            - ORB: Oriented FAST and Rotated BRIEF
+            - These features can be used for tasks like object
+              recognition, image stitching, and tracking.
+        - SIFT 
+            - created in 2004 by D. Lowe at the University of
+              British Columbia to solve the problem of scale
+              variance for feature extraction. SIFT can be broken
+              down into two parts: key-point detection and
+              key-point descriptor extraction.
+        - SURF 
+            - created as an improvement on SIFT in 2006, aimed at
+              increasing the algorithm speed.
+        - ORB 
+            - a combination of FAST and BRIEF Algorithms and
+              created in 2011 as an alternative to SIFT and SURF.
+        - ORB performed best on a little test I read about
+            - https://mikhail-kennerley.medium.com/a-comparison-of-sift-surf-and-orb-on-opencv-59119b9ec3d0
+
+    3. Edge Detection: 
+        - Canny, Sobel, and Prewitt operators detect edges in
+          images, which is a fundamental step in many vision
+          tasks, including object detection and image
+          segmentation.
+
+    4. Histogram of Oriented Gradients (HOG): 
+        - A feature descriptor for object detection tasks,
+          notably in pedestrian detection. Counts occurrences of
+          _gradient orientation_ in localized portions of an
+          image.
+
+    5. Optical Flow: 
+        - Algorithms estimating the _motion_ of objects between
+          two frames of a video sequence based on apparent motion
+          of patterns in the image. It's used in tracking and
+          motion analysis.
+
+    6. (SfM) Stereo Vision and Structure from Motion : 
+        - Techniques to estimate the 3D structure of a scene from
+          a set of 2D images. 
+        - Stereo vision uses images from two cameras, while SfM
+          reconstructs 3D structure from images taken at
+          different viewpoints.
+
+    7. Color Space Analysis: 
+        - Using color models (eg RGB, HSV, Lab) for tasks like
+          skin detection, object tracking, and scene
+          understanding. Color-based segmentation and filtering
+          are common applications.
+
+    8. Morphological Operations: 
+        - Non-linear operations related to the shape or
+          morphology of features in an image, including dilation,
+          erosion, opening, and closing. 
+        - Useful in pre-processing for removing noise or for
+          post-processing of binary images.
+
+    9. Classical Machine Learning: 
+        - Before DL, machine learning techniques such as Support
+          Vector Machines (SVM), Random Forests, and AdaBoost
+          were used with handcrafted features extracted from
+          images for classification and regression tasks.
+
+    10. Graphical Models: 
+        - Including Markov Random Fields (MRFs) and Conditional
+          Random Fields (CRFs) for image segmentation and
+          labeling tasks, where the spatial relationships and
+          context within images are modeled explicitly.
+
+    - While deep learning has become the dominant approach due to
+      its ability to learn complex patterns and perform
+      end-to-end learning from raw data, traditional methods are
+      still relevant. 
+        - They can be more interpretable, require less data, and
+          sometimes computationally less intensive. 
+        - They are also used in conjunction with DL methods to
+          solve specific problems more efficiently.
+
+
+### Old style CV
+    - Japense Pastry shop: identify pastries
+    - https://www.newyorker.com/tech/annals-of-technology/the-pastry-ai-that-learned-to-fight-cancer
+
+### Good computer vision libraries
+
+    1. _Convolutional Neural Networks (CNNs)_: Basic but
+       powerful. Used as a base for many other architectures.
+       Example: LeNet-5 for handwritten digit recognition.
+
+    2. _VGGNet_: Introduced the use of small, 3x3 convolutions.
+       Stacks many such layers. High resource requirements but
+       still effective.
+
+    3. _ResNet (Residual Networks)_: Utilizes "skip
+       connections" or "shortcuts" to make training deep networks
+       easier. Imagine you’re in a maze; shortcuts help you get
+       to the destination without going through all possible
+       paths.
+
+    4. _Inception Networks (GoogLeNet)_: Uses "inception
+       modules" that have multiple filter sizes in parallel. Like
+       having various sizes of nets to catch different fish in
+       the same sea.
+
+    5. _DenseNet_: Connects each layer’s output to every other
+       layer’s input in a feed-forward manner. Imagine
+       a community where everyone talks to everyone, sharing
+       information efficiently.
+
+    6. _EfficientNet_: Scales the architecture's depth, width,
+       and resolution based on a compound coefficient. Like
+       fine-tuning the knobs on an amplifier for best sound
+       quality.
+
+    7. _MobileNet_: Optimized for mobile and embedded devices.
+       Think of it as a lightweight suitcase with only essential
+       items but still functional for a trip.
+
+    8. _NASNet (Neural Architecture Search)_: Uses machine
+       learning to find the best architecture. It's as if a robot
+       were to design the most efficient car by testing multiple
+       designs.
+
+    9. _Vision Transformer (ViT)_: Adapts Transformer models
+       from NLP to image classification. Think of each image as
+       a sentence, where each pixel or patch is a word. The model
+       tries to understand the entire context.
+
+    10. _Swin Transformer_: Builds upon Vision Transformer but
+        adds "sliding window" attention. This is like scanning
+        a book page with a moving magnifier to understand the
+        text better.
+
+    11. _MLP-Mixer_: Relies on multi-layer perceptrons and
+        avoids convolutions. Simple but surprisingly effective.
+
+    - Different architectures excel in different use-cases. E.g.,
+        - constrained resources: MobileNets 
+        - accuracy: EfficientNet and Vision Transformers 
+
+### Alternatives to CNNs and ViTs
+
+    1. Region-based Convolutional Neural Networks (R-CNN):
+        - This family of methods includes R-CNN, Fast R-CNN, and
+          Faster R-CNN. They involve generating region proposals
+          and then classifying and refining these proposals using
+          CNNs.
+
+    2. Single Shot Detectors (SSDs):
+        - SSDs are designed to perform object detection in
+          a single forward pass of the network. They achieve this
+          by predicting the class and location of objects at
+          multiple scales within the same network.
+
+    3. You Only Look Once (YOLO):
+        - Another single-pass object detection algorithm that
+          divides the input image into a grid and predicts
+          bounding boxes and class probabilities directly from
+          the grid cells.
+
+    4. EfficientDet:
+        - EfficientDet is a recent advancement in object
+          detection that uses efficient model architectures
+          (e.g., EfficientNet) and combines them with the focal
+          loss and the bi-directional feature pyramid network
+          (BiFPN) for improved efficiency and accuracy.
+
+    5. CenterNet:
+        - CenterNet is a simple and efficient approach that
+          directly predicts object centers and their bounding
+          boxes, along with other attributes like object size or
+          orientation.
+
+    6. Spatial Transformer Networks (STNs):
+        - STNs are a different paradigm that focuses on learning
+          spatial transformations to improve the spatial
+          invariance of the model.
+
+    7. Graph Neural Networks (GNNs):
+        - GNNs can be used for object detection by treating
+          objects and their relationships as nodes and edges in
+          a graph, enabling the model to reason about object
+          interactions.
+
+
+
+### Links
+    - COURSE: Standford cs231n CNN for visual recognition                                   $MY_NOTES/cs/AI-ML/Stanford-Vision-CS231N.txt
+    - OpenAI CLIP (Contrastive Language–Image Pre-training)                                 https://openai.com/research/clip
+    - OpenAI CLIP (blog)                                                                    https://blog.roboflow.com/openai-clip/
+    - Paper: SAM-CLIP: Merging Vision Foundation Models -> Semantic & Spatial Understanding https://arxiv.org/abs/2310.15308
+    - HN: 	MetaCLIP – Meta AI Research                                                     https://news.ycombinator.com/item?id=38023544
+    - 39 studies about human vision perception                                              https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73
+    - Yt: two-minute papers: new CV news                                                    https://www.youtube.com/user/keeroyz
+    - Overview: A year in CV                                                                https://www.themtank.org/a-year-in-computer-vision
+    - HN: DUSt3R: Geometric 3D Vision Made Easy                                             https://news.ycombinator.com/item?id=39581047
+    - lecture: object detection sliding window                                              https://www.youtube.com/watch?v=5e5pjeojznk
+    - course: deeplearning ai CNNs (a lot of vision stuff)                                  https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF
+    - Book: Foundations of computer vision                                                  https://www.amazon.com/Foundations-Computer-Adaptive-Computation-Learning-ebook/dp/B0C5V9KF13
+    - Book: Computer Vision: Principles, Algorithms, Applications, Learning                 https://www.amazon.com/Computer-Vision-Principles-Algorithms-Applications/dp/012809284X/ref=sr_1_1?crid=3RAPD0RLQVCED&dib=eyJ2IjoiMSJ9.gk1LwvaDb9P_q_QUp8YvXdQsQp_q0cKpvEgxEaukJug_wEu20bQGUYPvQOYREswl7PFIyuUEcdo4d77xfYrkYDe9JVzlkCwojsJSr477ZM6Q6lqyUrCgTvUlDQ_teaxrlRE-Yv9YBA_x8GXq7x2pqDHv5tDhnSvblSbKf3MDGQj0JmHPcof3K1ghOjtiZJEmrITwDOJ-PvIKgpP2WFJbV5OBTvWfHrFbvx1xTXKjyHs.4MIx4JL8rYMYeGpU0zmpguzX81c7vIbvQ7IJdH0lc9k&dib_tag=se&keywords=Computer+Vision%3A+Principles%2C+Algorithms%2C+Applications%2C+Learning%22&qid=1709848938&s=books&sprefix=computer+vision+principles%2C+algorithms%2C+applications%2C+learning+%2Cstripbooks-intl-ship%2C510&sr=1-1
+    - Book: CV Pytorch                                                                      https://www.amazon.com/Modern-Computer-Vision-PyTorch-comprehensive/dp/1803231335/
+    - Lex Good: Jitendra Malik professor at Berkeley                                        https://www.youtube.com/watch?v=LRYkH-fAVGE&t=197s
+    - Facebook SAM 2 segmenter                                                              https://news.ycombinator.com/item?id=41104523
+                                          
+

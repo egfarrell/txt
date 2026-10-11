@@ -1,0 +1,745 @@
+
+### Tim: Big debate: References
+    - $MY_NOTES/physics/QG/BH-Info-Loss-Sabine-Maudlin-BHG.txt
+    - Jerusalem Lectures on BHs and QI Daniel Harlow
+      https://arxiv.org/abs/1409.1231
+    - Black holes, information and decoherence
+      https://arxiv.org/abs/0903.2258
+        - We investigate the experimental capabilities required
+          to test whether black holes destroy information. We
+          show that an experiment capable of illuminating the
+          information puzzle must necessarily be able to detect
+          or manipulate macroscopic superpositions (i.e., Everett
+          branches). Hence, it could also address the fundamental
+          question of decoherence versus wavefunction collapse.
+    - Spacetime topology change and BH information
+      https://arxiv.org/abs/hep-th/0608175
+        - Topology change -- the creation of a disconnected baby
+          universe -- due to black hole collapse may resolve the
+          information loss paradox. Evolution from an early time
+          Cauchy surface to a final surface which includes
+          a slice of the disconnected region can be unitary and
+          consistent with conventional QM. We discuss the issue
+          of cluster decomposition, showing that any violations
+          thereof are likely to be unobservably small. Topology
+          change is similar to the BH remnant scenario and only
+          requires assumptions about the behavior of QG in
+          planckian regimes. It does not require non-locality or
+          any modification of low-energy physics.
+
+
+
+
+### Penrose process
+    - $MY_NOTES/physics/People/John-Wheeler.txt
+    - Reflecting on a rotating black hole, he asked himself if
+      there were not some way to tap its rotational energy. Yes,
+      he mused to himself, if I toss a planet (or other massive
+      object) toward a black hole and the object breaks apart,
+      with one part falling into the black hole and the other
+      part zooming away, the departing piece may carry away more
+      energy than the original object brought in. Robbed of some
+      of its spin, the black hole loses some of its mass...
+    - GPT
+    - Penrose imagined you could steal energy from a rotating
+      (Kerr) black hole:
+        - A rotating black hole drags spacetime around it,
+          creating a region outside the event horizon called the
+          ergosphere. Inside the ergosphere, nothing can remain
+          at rest with respect to distant space—the dragging is
+          so strong you must rotate with the hole.
+        - In this region, a particle can split into two
+          fragments. Because of the warped geometry, it’s
+          possible for one fragment to have negative energy
+          relative to an observer far away.
+        - If that negative-energy piece falls into the black
+          hole, the black hole’s rotation slows down. The other
+          fragment, escaping to infinity, can carry away more
+          energy than the original particle had when it entered.
+        - So: you throw in a particle, it splits, one piece
+          sacrifices itself with negative energy, and the
+          escaping piece comes out richer in energy. You’ve mined
+          rotational energy from the black hole.
+    - This isn’t perpetual motion—eventually the black hole spins
+      down. In fact, Penrose showed that you can at most extract
+      about 29% of a Kerr black hole’s mass-energy this way.
+    - It’s one of the early sparks that suggested black holes
+      aren’t just one-way sinks, but dynamic engines that could
+      power things like quasars and relativistic jets.
+    - A neat continuation of this idea: `Hawking radiation` can be
+      thought of as having a similar "negative energy partner"
+      trick, but it happens right at the horizon rather than in
+      the ergosphere.
+
+
+
+### Independent Scholar? (Numerical Relativity)
+    - Pretorius worked alone, “under the radar” as he recalls,
+      not taking part in any of the big collaborations that were
+      designing computer programs to solve the problem.
+        - Pretorius https://en.wikipedia.org/wiki/Frans_Pretorius
+
+
+### Quantum mysteries of BHs
+    - https://news.ycombinator.com/item?id=33419123
+    - I’ve heard black holes described as “more diameter than the
+      circumference suggests” — to paraphrase Kip Thorne.
+
+### Black hole no hair
+    - $MY_NOTES/physics/People/John-Wheeler.txt
+    - I was thinking of a room full of bald-pated people who were
+      hard to identify individually because they showed no
+      differences in hair length, style, or color. 
+    - The BHshows only three characteristics to the outside
+      world: 
+        - its mass, 
+        - its electric charge (if any), and 
+        - its angular momentum, or spin (if any).
+    - It lacks the “hair” that more conventional objects possess
+      that give them their individuality.
+
+### BH and Entropy
+    - $MY_NOTES/books/annotate/Baggot_farewell_to_reality.txt
+    - Working with Canadian Werner Israel, Australian Brandon
+      Carter and British physicist David Robinson, Hawking
+      demonstrated that holes are surprisingly simple in terms of
+      the maths needed to describe them. 
+    - Their properties and behaviour depend only on their mass,
+      angular momentum and electric charge, a conjecture called
+      the ‘_no hair_’ theorem. 
+        - In this context, ‘hair’ means all other kinds of
+          information apart from mass, angular momentum and
+          electric charge. 
+        - Beyond these basic properties, a black hole is
+          featureless — it has no hair. All other kinds of
+          information are judged to be lost behind the black
+          hole’s event horizon.
+    - In a moment of inspiration one night in November 1970,
+      Hawking realized that the properties of the event horizon
+      meant that this _could never shrink_ — the surface area of
+      a black hole (meaning the area bounded by the event
+      horizon) could in principle never decrease. 
+        - If a black hole _consumes_ an amount of material, then
+          its surface area _increases_ by a proportional amount. 
+        - We do a mental double-take. Isn’t there one other
+          well-known physical property that in a spontaneous
+          change can never decrease? 
+        - So, could there be a connection between the surface
+          area of a black hole and its entropy?
+    - In his 1972 Princeton PhD thesis, Israeli theorist Jacob
+      Bekenstein (another of Wheeler’s students) claimed
+      precisely this. He identified the surface area of a black
+      hole with its entropy. So, when a black hole consumes some
+      high-entropy material, its surface area increases (as
+      Hawking had observed), and this indicates that its entropy
+      increases too, in accordance with the second law.
+    - He was shouted down from all sides.
+    - Hawking was irritated. While this appeared to offer a neat
+      solution, it dragged along with it a number of implications
+      he felt Bekenstein hadn’t properly addressed. 
+        - For one thing, a body with entropy also has to have
+          a temperature. 
+        - And a body with a temperature has to emit radiation.
+        - This made no sense at all. How could a black hole, with
+          properties and behaviour determined only by its mass,
+          angular momentum and electric charge, possess
+          a temperature and emit radiation? 
+        - A black hole is supposed to be ‘black’. Right?
+    - ...
+    - The positive energy particle created in the virtual pair
+      may then escape, to all intents and purposes appearing as
+      though it has been emitted by the black hole. Bekenstein
+      had been right all along. The entropy of a black hole is
+      proportional to its surface area. A black hole does have
+      a temperature. 
+    - Black holes ain’t so black, after all. They emit "Hawking
+      radiation". There is no spontaneous reduction in entropy;
+      no spontaneous increase in the universe’s information
+      content. But there was more trouble. 
+    - Hawking showed that as negative energy (negative mass)
+      particles spill through the event horizon, the black hole
+      must lose mass overall and its surface area must therefore
+      decrease. 
+    - This apparent reduction in entropy is more than compensated
+      for by the entropy of the emitted Hawking radiation. So,
+      having demonstrated that the second law holds even when
+      material is consumed by a black hole, there was no
+      immediate threat of violating the law as a result of
+      emitting Hawking radiation.
+
+
+
+### Zeldowich: Super Radiance
+    - In 1970 & 1972, Zeldowich made an extraordinary prediction:
+    - `Super radiance` is a phenomenon where waves in "certain
+      modes" incident on a rotating BH will be scattered back
+      with increased intensity.
+    - Rotational energy is extracted.
+    - In a particle picture, this corresponds to an increased
+      number of particles, and therefore to `stimulated
+      emission`.
+    - Zeldowich argued that, following Einstein, one should also
+      expect a steady rate of `spontaneous emission` in super
+      radiant modes.
+
+### Avi Loeb BHI talk Dec 2020
+    - some photons have wavenlength longer than the horizon, so
+      they escape
+    - (is this Hawking Radiation in terms of _wavelengths_?) 
+    - Rather than vacuum particle/anti-particle generation?
+    - Interesting: all the matter that falls into the BH, it has
+      to collect somewhere (ie down in the sewer).
+    - Is there a "star" with the `planck density` sitting at the
+      singularity, or does it flow into another universe!
+        - Loeb thought about when his cellar was flooded. He
+          realised he never noticed before that all the water had
+          to flow somewhere!
+        - (Srinivasan lecture: no matter actually "falls" into
+          the BH, for a distant observer it piles up on the
+          horizon)
+
+### Ramesh talk
+    - I call anything that's _not_ a spacelike singularity
+      a "naked singularity"
+    - therefore: a naked singularity is a "timelike singularity"
+    - there are solutions in GR where regions of spacetime
+      receive signals from singularities... ie there are GR
+      solutions with non-spacelike singularities
+    - (me: whats a "spacelike singularity"?)
+
+    - Quora: 
+    - difference spacelike, timelike singularity:
+    - A Spacelike singularity is the one you _cannot avoid_ if
+      you cross the horizon of black hole. The typical example is
+      the Schwarzschild black hole. In relativity, your future
+      lies in a light cone and a spacelike singularity is
+      transverse to your light cone, so however you move, your
+      worldline will intersect the singularity.
+        - In geometry, a _transversal_ is a line that crosses
+          over a pair of parallel lines.
+    - On the other hand, a timelike singularity is parallel to
+      your worldline, it means it does not entirely lie in your
+      future.
+    - Imagine a point and an inverted cone emanating from that
+      point vertically. The point is at the tip of the cone and
+      the surface of the cone is made of light rays emanating
+      from that point with a 45° upward slope.
+    - Since you cannot move faster than light, your worldline
+      must lie entirely inside the cone.
+        - A `spacelike` singularity is like a _horizontal_
+          section of that cone. Every curve lying inside the cone
+          and pointing to the future must eventually cross that
+          plane, the singularity.
+        - A `Timelike` singularity is like the _vertical_ section
+          of the cone. Some curves will intersect that plane, but
+          there also exist curves which go parallel to the
+          vertical plane, while still contained in the cone.
+            - So, the causal structure of spacetime allows you to
+              avoid the timelike singularity.
+
+- Oppenheimer-Synder
+    - spherically symmetric
+    - uniform initial density: that's why all dust particles
+        fall to the centre at the same time
+    - but unrealistic...
+    - eg in the centre, density may curve upwards or
+        downwards
+        - if upward curve density:
+            - less density in the middle
+            - you get shell crossing (local "mild"
+                infinities)... outer parts falling quicker?
+        - if downward curve density
+            - more density in the middle
+            - the centre collapses first, and the outer
+                regions come in later
+            - the horizon still forms first, but if you have
+                an observer that crosses the event horizon,
+                they can still receive signals from the naked
+                singularity itself (?)
+
+    - Weak cosmic censorship
+        - I don't care what happens behind the event horizon but
+          at least outside the horizon there should be no naked
+          singularities
+        - but Penrose says, it seems unreasonable to suppose that
+          the physics in a comparatively local region of
+          spacetime should really care whether a light ray
+          setting off from a singularity should ultimately escape
+          to infinity or not...
+
+    - but there are counter examples to the weak cosmic
+      censorship:
+        - eg super spinning Kerr (solution exists mathematically
+          but no-one knows how to make it)
+
+    - but maybe real, physical initial conditions will never
+      result in a singularity ... ie generic spacetimes may be
+      safe from singularities
+
+    - From astronomers point-of-view:
+        - for the central density models above, soem of these
+          naked singularities just output a "flash" before they
+          disappear behind an event horizon
+        - can you get a "long lived" singularity though?
+        - YES: highly tuned intial conditions:
+            - Joshi, Malafarrina, Narayan (2011, 2014)
+
+    - if you had a naked singularity and you had accretion, what
+      would you observe?
+    - he showed an Andrew Chael video of accretion... and the key
+      point is a "ring", which is nothing to do with accretion,
+      and is the signature of the metric
+    - now what would the "ring" look like for a naked
+      singularity: well for certain "compactness" parameters, it
+      would look just the same as a BH
+        - $MY_IMAGES/astro/bh-accretion/Ramesh-talk-Singularity-accretion.jpg
+
+    - Schwarzschild BH: disk terminates at the ISCO
+    - Naked Singularity: disk can go all the way down to `r=0`
+
+    - Audience question: we can make "tabletop" Event Horizons.
+      Could we make "tabletop" Singularities? Ramesh: I think the
+      "tabletop" experiments are in 2D... planewaves and such...
+      I'd have to think about that... maybe a 2D model, fluid
+      going in... supersonic.... it would be a flash... finding
+      the signal would be tough... very good... I never thought
+      about it... nobody has mentioned the possibility so far...
+
+    - final point about what happens at `r=0` where physics
+      breaks down... Ramesh: by the time the material reaches
+      `r=0`, it has zero mass... it has lost all it's rest-mass
+      energy (via radiation) by the time to get to the centre...
+      so we decided it doesn't matter what boundary condition we
+      put in the middle... all we said was there is no extra
+      signal coming out from the Naked Singularity ... so stuff
+      could fall in, but nothing comes out...
+        - so this is like a BH, but the difference is nothing
+          comes out a `r=0`, rather than the event horizon
+
+### Tidal disruption event
+    - A tidal disruption event (also known as a tidal disruption
+      flare) is an astronomical phenomenon that occurs when
+      a star approaches sufficiently close to a SMBH and is
+      pulled apart by the black hole's tidal force, experiencing
+      spaghettification.
+    - A portion of the star's mass can be captured into an
+      accretion disk around the black hole, resulting in
+      a temporary flare of electromagnetic radiation as matter in
+      the disk is consumed by the black hole.
+    - According to early papers, tidal disruption events would be
+      an inevitable consequence of massive black holes' activity
+      hidden in galaxy nuclei. However later theorists concluded
+      that the resulting explosion or flare of radiation from the
+      accretion of stellar debris could be a unique signpost for
+      the presence of a dormant black hole in the center of
+      a normal galaxy...
+
+### metrics
+    - Ronaldo 2015
+    - In studying BH properties, astrophysicists usually use two
+      famous exact solutions of Einstein’s field
+    - The Schwarzschild solution that describes a static,
+      spherically symmetric gravity of a _non-rotating_ BH
+    - ... and the Kerr solution which describes a stationary,
+      axially symmetric gravity of a _rotating_ black hole.
+    - The Reissner-Nordström solution which describes a static,
+      spherically symmetric gravity of a _charged_, non-rotating
+      black hole is considered to be astrophysically
+      _unrealistic_, because charged macroscopic objects quickly
+      neutralize by accreting plasma of the opposite sign.
+        - Jana Levin etc say no!?
+    - The Schwarzschild and Kerr black holes are now quite
+      familiar objects in astrophysics.
+
+### interesting comment
+    - ../physics/courses/XYLYXYLYX/What-are-tensors/15-Coordinate-Transformations.txt
+    - As another example, in a Kerr-space time of a rotating
+      black hole, there are several coordinate systems that can
+      be used to study the ROTATING black hole.
+    - The transformation between these coordinate systems isn’t
+      `diagonal` either.
+    - On the other hand, the transformation between the various
+      coordinated systems used to study a NON-ROTATING black hole
+      are usually `diagonal`.
+
+
+### The "bulk":
+    - kip talk: seems it's the higher dimension that the BH is
+      embedded in?
+
+### Kip Thorne Talk
+    - $MY_IMAGES/astro/bh-accretion/kip-thorne-talk/vlcsnap-2020-11-08-21h33m26s200.jpg
+    - space and time is personal for each observer
+        - (depends on their state of motion)
+    - my time is different to your time
+    - also: as you move towards a light ray you see it Doppler
+      shifted. The wavelength reduces but the frequency
+      increases. The speed stays the same.
+      - (I was wondering about this before)
+    - black hole: HUGE DIAMETER, small circumference!
+        - eg measure the circumference: 10km,
+        - measure the Diameter: is unbelievably large! 1 million
+          km (!)
+        - Wouldn't be possible in Euclidean geometry - but
+          Euclidean geometry doesn't apply
+        - he gave an example: trampoline
+        - the star which created this BH gave up a lot of energy
+          to create it. (think of the energy to press down on
+          a trampoline)
+    - time warping: if you stopped at the edge of an event
+      horizon, you might age 1 hour and your friends on Earth,
+      1 million years(!)
+    - inside the EH, time is being pulled / flowing towards the
+      singularity. That's another reason you can't get out: you
+      cant move backwards against time.
+    - interesting: what causes the warping? 
+        - Well warping is caused by huge amounts of energy (or
+          mass). Well there's no mass so where is the energy
+          from? Answer: the energy is contained in the warping
+          itself.
+        - If you push a rubber sheet down, you have to do work to
+          push it down. You're putting energy into the stretching
+          of the fabric.
+        - In the same way, there's an enormous amount of energy
+          in the warping of space and time here... and it's that
+          energy that produces the warping.
+        - the BH is held together by a non-linear `self
+          interaction` of the BH, the BH's energy of warping
+          produces the warping. (gravitational soliton)
+    - 10 million BH's in the Milky way
+    - 10^18 in the Universe
+    - masses:     3 Msun to  20 billion Msun
+    - diameters: 10 km   to 100 billion km
+    - infinite number of Einstein rings as you snuggle up to the
+      BH
+    - only 2 types of waves come in to us: EM and GW.
+        - but GWs are great for exploring the "warped" side of
+          the universe because they are made from warped space
+          and time.
+        - EM waves are made from oscillating electric charges.
+        - But GW's are made from things like colliding BH's
+    - first LIGO detection: 
+        - power output for 1/10th second: 50 times the total
+          power output of all stars in the universe (!)
+    - Gravity around a BH isn't an inverse square law(!) it's
+      more complicated than that...
+    - but movement of a particle around a naked singularity is
+      wildly different than that of a BH. 
+        - It's "chaotic" in the mathematical sense.
+    - Kip: there's a huge "splash" in the shape of space as the
+      two BHs merge. ie a vortex emerges from the collision.
+        - (splash! plenum?).
+
+
+### Living Review: Numerical Relativity
+    - https://link.springer.com/article/10.1007/lrr-2015-1
+    - What is the fate of massive stars whose pressure cannot
+      counter-balance gravity? Does the star’s material
+      continually collapse to a single point, or is it possible
+      that pressure or angular momentum become so important that
+      the material _bounces_ back?
+    - The answer to these questions would take several decades
+      more, and was one of the main driving forces to develop
+      solid numerical schemes to handle Einstein’s equations.
+
+### Check this
+    - 1973 — Bardeen, Carter and Hawking derive the four laws of BH mechanics
+    - Bardeen,Carter, Hawking, “The Four laws of black hole mechanics”, Commun. Math. Phys., 31, 161–170 (1973). [DOI].
+
+### Where the Schwarzschild radius comes from
+    - Have the formula for escape velocity
+    - Substitute `c` for the escape velocity
+	- $MY_IMAGES/astro/schwarzchild-radius.jpg
+
+### BH Radiation spectrum
+    - good: 3 types of radiation
+    - Reflection 
+    - Thermal
+    - Corona Power Law 
+	- $MY_IMAGES/astro/bh-accretion/bh-spectrum.jpg
+
+### Penrose
+    - Time is pointing towards the singularity
+    - Singularity is a place in time, not a point in space
+    - inside the trapped surface, is a singularity in your future
+
+### SMBH not dense!
+    - The quantity `Rs` is called the Schwarzschild radius. 
+    - If instead I had taken a mass of order the Sun’s mass, we'd
+      have found a Schwarzschild radius of order only 3km: black
+      holes are very compact.
+    - This is sometimes expressed as saying that they are very
+      dense, and although this is true for stellar-mass black
+      holes, whose mass densities ∼ ρ ∼ `3M/4πR3s` are even
+      higher than the matter in an atomic nucleus, it is
+      definitely not true for supermassiveholes, whose mean
+      density is comparable with that of water or even air.
+
+### Naked Singularities
+    - it's too hard to find NON-axisymmetrical solutions.
+    - Easier to create naked singularity from highly symmetrical
+      initial conditions
+
+### Check this
+    - The reference is Bardeen, J. M. 1973, Timelike and null
+      geodesics in the Kerr metric
+        - in Black Holes Lec Houches, ed. C. Dewitt & B. Dewitt,
+          p.215–239
+
+
+### Paul Francis: What do Quasars look like? Critique Shakura
+    - $MY_ZOTERO/2001/francis_2001_what_do_quasars_look_like.pdf
+    - Some scales: at redshifts greater than one, a micro-
+      arcsecond corresponds to a proper scale of around 1600AU,
+      or 0.01pc. The Schwarzschild radius of a 10 8 solar mass
+      black hole is 2AU
+    - Also disputes the Shakura α-disk model!
+    - This simple model clashes with the observations in two
+      serious ways.
+        - Firstly, if it is assumed that each section of the disk
+          radiates as a black body, the predicted spectrum has
+          the form `F_v ∝ v^(+0.3)` , where `F_v` is the emitted
+          flux per unit frequency and `v` is the frequency.
+            - This is much bluer than the observed colours of
+              even the bluest quasars, which have `F_v ∝ v^−0.3`
+              (Francis 1996)
+        - Secondly, this model predicts that different parts of
+          the continuum spectrum should come from different parts
+          of the disk, blue light from close in and red from
+          further out.
+            - Monitoring of some local AGN, however, shows that
+              variations in the blue and red light appear to be
+              simultaneous, with an upper limit on any time lag
+              of less than 0.3 days(e.g.Edelsonetal.2000,and
+              references therein).
+            - This is several orders of magnitude less than any
+              plausible sound travel time between the blue- and
+              red-emitting regions of the disk. It is unclear
+              what causes the variability in quasar fluxes, but
+              whatever the cause, it should not propagate faster
+              than the sound speed.
+
+    - Within the last few years, a consensus has finally emerged about
+      the nature of the viscosity in AGN accretion disks.
+    - Magnetic instabilities (e.g. Balbus & Hawley 1991) are both
+      inevitable, and provide adequate viscosity.
+    - The consequences of this instability have yet to be worked out
+      in detail, though a first few attempts have been made (e.g.
+      Machida, Hayashi & Matsumoto 2000).
+    - It is clear, however, that a magnetically unstable disk is
+      a very chaotic, non-axisymmetric system.
+    - Its emission is dominated by individual flares, so the peak
+      surface brightness may not lie at the centre.
+    - The accretion disk may look like an X-ray picture of the surface
+      of the Sun, rather than the nice uniform circles of most
+      illustrations.
+
+    - After three decades of work, it is embarrassing to report
+      we cannot yet come up with even a rough sketch of the
+      central regions of a quasar. Gravitational microlensing may
+      help in a variety of ways. Examples include:
+        - If the accretion disk has a colour gradient (with, for
+          example, the bluer regions nearer the centre) then the
+          quasar should exhibit colour changes during a micro
+          lensing event.This is a test of the standard model.
+        - If the continuum emission comes from individual,
+          off-centre flares, disk rotation may cause each flare
+          to cross a caustic many times during a lensing event.
+        - If the emission line region has an ordered velocity
+          field, line profiles will change during a microlensing
+          event. The details are beyond the scope of this review,
+          but any information lensing can provide will be very
+          welcome indeed!
+
+
+### Extreme black holes
+    - The Kerr spacetime’s metric depends on two parameters : the
+      black hole mass `M` and its normalized angular momentum
+      `a`. An important difference with usual stars, which are in
+      differential rotation, is that Kerr black holes are
+      rotating with perfect rigidity : all the points on their
+      event horizon move with the same angular velocity. There is
+      however a critical angular momentum, given by  `a = M` (in
+      units where G=c=1) above which the event horizon would
+      break up  : this limit corresponds to the horizon having
+      a spin velocity equal to the speed of light.
+    - For such a black hole, called extreme, the gravitational
+      field at the event horizon would cancel, because the inward
+      pull of gravity would be compensated by huge repulsive
+      centrifugal forces.
+
+    - Throughout my researchers’s career I always considered
+      that, before writing a computer program with complicated
+      equations and running the machine, pure geometrical
+      reasoning is of a great help to get a preliminary idea of
+      the result. Otherwise, what guarantee have you that your
+      program had no mistake ? I did this kind of geometrical
+      reasoning to guess what I should obtain for the black
+      hole’s accretion disk appearance. In an ordinary situation,
+      meaning in Euclidean space, the curvature is weak. This is
+      the case for the solar system when one observes the planet
+      Saturn surrounded by its magnificent rings, with
+      a viewpoint situated slightly above the plane. Of course,
+      some part of the rings is hidden behind the planet, but one
+      can mentally reconstruct their elliptic outlines quite
+      easily. Around a black hole, everything behaves differently
+      because of the optical deformations due to the space-time
+      curvature, as depicted in the diagram below (published only
+      years later in my popular book on black holes.
+
+
+### BH Resistance
+    - Audience: A black hole has resistance?
+    - Jana: it's actually the resistivity of free space
+    - You calculate it by pretending the BH has a membrane on it.
+      You treat it as a hypothetical conductor with all the same
+      properties. And by doing that, the membraine paradigm tells
+      you, you can actually calculate intrinsic properties of the
+      event horizon in this way.
+    - It's got something to do with the way waves propagate in
+      empty space, how the waves propagate at the horizon.
+    - It's a bit like the BH laws of Thermodynamics. BH's have
+      a "temperature", entropy goes as `1/area`. So similarly we
+      can do that with it's EM properties.
+
+### No hair theorem
+    - usually misread to mean a BH cannot support a B-field in
+      a vacuum
+    - Actually, the no-hair theorem says the only B-field a BH can
+      support in a vacuum is consistent with a monopole of charge
+      (Q)
+    - ie if I have a BH with charge, and it spins, then it does
+      create a dipole magnetic field (B-field) in a vacuum
+    - then the BH can create it's own magnetosphere (like a NS)
+      and then we have all the ingredients of a Pulsar
+    - but it's not going to be a perfect pulsar in the
+      traditional sense, it's going to be erratic due to
+      precession (due to frame-dragging and the Lens Thirring
+      effect)
+
+### Black hole CHARGE
+    - Old view but wrong?: There's so much ambient charge in the ISM, as
+      soon as you put charge on the BH it'll discharge
+    - Wald 1974 Black Hole in a Uniform Magnetic Field : elegant
+      proof
+    - A spinning black hole creates an electric field. Charges
+      want to screen an electric field
+        - $MY_IMAGES/astro/charged-bh-01.jpg
+        - $MY_IMAGES/astro/charged-bh-02.jpg
+
+### Jana Levin: BH Battery
+        - https://www.youtube.com/watch?v=OKEYrAXP0Lg
+        - FARADAY'S LAW in a highly relativistic setting
+        - Two BH's colliding: they are bare, no material, debris,
+          just gravitational waves.
+        - Why? because there's nothing there, just empty regions
+          of spacetime
+        - NS and BH megers: most NS's will fall straight in.
+          They're too small... or the BH's are big enough to
+          swallow the NS whole. There'll be no tidal disruption
+          and no GRB.
+    - $MY_IMAGES/astro/black-hole-battery-circuit.jpg
+    - Takeaways:
+        - A BH/NS will power a bright transient in the final
+          millisecond for 10M•
+        - The timescale is solid because it's set by
+          gravitational radiation loses
+        - The max power is set by the NS B-field
+        - The actual wave band: radio? X-ray? Gamma-ray? Maybe
+          even a sub-population of FREE
+    - More takeaways:
+        - BH's in magnetic fields acquire charge
+        - Charge fluxes, although the average value is stable
+        - A BH/NS will power a bright transient
+        - maybe the only multi messenger counterpart to
+          a gravitational wave detection of BH/NS
+        - A charged BH has its own magnetic dipole and all the
+          features of an unstable, transitory puslar
+
+
+### Jana Levin: Light up a black hole (BH pulsar)
+    - If I unplugged my light-bulb, and had a big enough magnet,
+      and I waved the magnet around, I'd create electricity and
+      light up that lightbulb.
+    - It's a stunningly strange fact, it's just electricity and
+      magnetism. (When you swing around a magnet you make
+      a battery)
+    - Now we have a dark black hole, and next to it we might have
+      a neutron star, whipping around the black hole. And
+      neutron stars are giant magnets.
+    - Now I have a magnet that's waving around, it must create
+      electric fields.
+    - Those electric fields can light up the "light-bulb" of the
+      black hole / neutron star system.
+    - It's a cool idea, but hard to see from far away.
+    - As these things merge, and if we get the ringing of
+      spacetime due to gravitational waves,  we could hear them
+      and see a flash of light. That's the hope.
+    - ### Jana Levin: BH becoming a Pulsar
+        - The BH will aqquire it's own magnetic field in this
+          process. It will become it's own magnet.
+        - If I take a BH and put a huge magnetic field on it in
+          this way, it should emulate a lot of the features of
+          a pulsar:
+        - eg to power jets as it spins around.
+        - But notice: when we saw two neutron stars collide, what
+          we saw was a series of "fireworks". IT went on for
+          a year and was probably the most widely studied event
+          in astronomy. Multi-messenger signals.
+
+
+### Naming Quasars and AGN
+    - Currently ‘quasars’ is still used for brighter AGN.
+    - There is no formal definition; although sources brighter
+      than 44.5 in log (nuLnu) in the V band restframe were
+      attempted to designated quasars.
+    - It is more difficult to determine the division between
+      active and non-active galaxies. All contain supermassive
+      black holes, and all accrete, as we know now.
+    - But not all contain broad quasar-like emission lines. So
+      frequently we refer to those, which contain such lines, as
+      active.
+
+### Nayrahn talk
+    - What makes BH's so special?
+        - Has an event horizon: point of no return.
+        - Has a singularity: _TIME_ stops there
+        - Is very SIMPLE:
+            - Mass: M
+            - Spin: `a_* (J = a_* GM^2 / c) `
+            - Charge: Q (~0)
+                - Nayrahn will ignore charge, because he thinks
+                  charged BH's are unlikely, they will get
+                  discharged. (lots of ions floating around)
+    - Simplicity is an opportunity.
+        - It depends on only 2 parameters (M, `a_*`)
+        - and external parameters: Mdot, disk inclination
+
+
+### Entropy puzzle
+    - black holes seem to have an atomic structure
+    - but not atoms of matter....atoms of what?
+
+    - and the formula for the number of bits in a black hole
+        - has an `r^2` term,
+        - rather than `r^3`
+        - which suggests the SURFACE is the key (holographic principle)
+
+### files
+    - ./BH/qso-quasar-info.txt
+    - ./courses/Srinivasan/Neutron-Stars/12-Black-Holes.txt
+
+### Links
+    - Approaching Black Holes by numerical simulations:  $MY_ZOTERO/2019/fendt_2019_approaching_the_black_hole_by_numerical.pdf
+    - good BH images                                     https://blogs.futura-sciences.com/e-luminet/2018/03/07/45-years-black-hole-imaging-1-early-work-1972-1988/
+    - Unreal engine simulation of BH                     https://news.ycombinator.com/item?id=24773546
+    - Ray trace a BH                                     http://rantonels.github.io/starless/
+    - Measuring and Modelling Blazar Variability (Wiita) https://www.youtube.com/watch?v=5CGreW1NMr0
+    - BHI Black Hole Initiative YouTube                  https://www.youtube.com/channel/UCeKr4Y4flol0SDcV3qNxj_w
+    - BH deformation under external Grav field           https://phys.org/news/2021-05-black-holes-deform-external-static.html
+    - EHT identify engine for BH jets                    https://news.ycombinator.com/item?id=27223520
+    - May 2022: first image of BH Sgr A*                 https://news.ycombinator.com/item?id=31353677
+    - HN discussion: collimate jet                       https://news.ycombinator.com/item?id=33866917
+    - JWST early universe BH's (good discussion)         https://news.ycombinator.com/item?id=37123792
+    - HN: BH iphone simulation                           https://news.ycombinator.com/item?id=42185668
+    - HN: map of inside BH                               https://news.ycombinator.com/item?id=43173773

@@ -1,0 +1,480 @@
+### Nucleic Acid
+    - first observed in the nucleus
+    - has some acidic properties
+    - DNA is a macromolecule - 100 million rungs in the ladder
+    - the phosphorous group on the outside of the ladder gives
+      DNA its acidic qualities
+
+### DNA stands for Deoxyribo Nucleic Acid.
+    - It is a macromolecule (a molecule constructed of smaller
+      molecules) that carries the genetic instructions for the
+      development, functioning and reproduction of all known
+      living organisms.
+    - In eukaryotic organisms (like animals, plants, and fungi),
+      DNA is present in the nucleus of each cell. In prokaryotic
+      organisms (single-celled organisms like bacteria and
+      mitochondria), DNA is present in the cell’s cytoplasm.
+
+### Nucelotides
+    - To understand the "rungs" of the DNA, imagine a ladder
+      split in half down the middle so that each half is a pole
+      with a bunch of half-rungs sticking out. In DNA, these
+      "half-rungs" are a molecule called nucleotides.
+
+    - The nucleotides the building blocks of nucleic acids:
+    - (DNA and RNA)
+        - A   Adenine
+        - T   Thymine
+        - C   Cytosine
+        - G   Guanine
+
+    - When you put both sides of the ladder back together, each
+      rung is made by the bond between two bases. When they are
+      bonded, we call them a base pair ("bp").
+    - `A`denine only bonds with `T`hymine, 
+    - `G`uanine only       with `C`ytosine. 
+    - In the ladder analogy, this means each rung is:
+        - 'A-T'
+        - 'T-A'
+        - 'G-C'
+        - 'C-G'
+
+    - Certain groups of nucleotides that share some common
+      attribute may be designated by "ambiguity codes":
+        - `Y`  Pyrimidine (C or T)
+        - `R`  Purine     (A or G)
+        - `W`  Weak       (A or T)
+        - `S`  Strong     (G or C)
+        - `K`  Keto       (T or G)
+        - `M`  Amino      (C or A)
+        - `D`  A, G, T    (not C - remember as after C)
+        - `V`  A, C, G    (not T - remember as after T/U)
+        - `H`  A, C, T    (not G - remember as after G)
+        - `B`  C, G, T    (not A - remember as after A)
+        - `N`  Any base
+        - `-`  Gap
+
+    - Remember when we split the DNA "ladder" in half down the
+      middle so that each side was a pole with half-rungs
+      sticking out?
+    - These two halves are called strands. To distinguish the two
+      strands, scientists label one the forward strand and the
+      second, the reverse strand.
+
+    - forward --> ATATTTTTTCTTGATATCCACAAACTCTTTT
+    -             |||||||||||||||||||||||||||||||
+    -             TATAAAAAAGAACTATAGGTGTTTGAGAAAA <-- reverse
+
+    - The lines that connect the bases on either side denote
+      a basepair relationship.
+
+    - "Forward" and "reverse" are just labels. The choice of
+      labeling is arbitrary and does not depend on any inherent
+      property of the DNA.
+    - The forward strand is not "special". Scientists decide
+      which to call "forward" and which to call "reverse" when
+      they first analyze the DNA of an organism.
+    - Even though the decision is arbitrary, it’s important to
+      maintain consistency with that decision for the sake of
+      clear communication.
+
+    - The forward and reverse strands may also be denoted with
+      different terms.
+    - Some datasets label them 
+        - `+` and `-`.
+        - `top` and `bottom` strands, 
+        - or even `Watson` and `Crick` strands.
+
+    - In our opinion, these variances are needlessly confusing.
+      Please refer to them as 'forward' and 'reverse'.
+
+
+### directionality of DNA
+
+    - The directionality of DNA is determined by the polarity of
+      the molecules. This direction runs in opposite ways for
+      each strand. Typically, we indicate this polarity with
+      arrows:
+
+    - ------>
+    - ATATTTTTTCTTGTTTTTTATATCCACAAACTCTTTT
+    - |||||||||||||||||||||||||||||||||||||
+    - TATAAAAAAGAACAAAAAATATAGGTGTTTGAGAAAA
+    -                               <------
+    -
+
+    - Most biological mechanisms (but not all) take place on
+      a single strand of the DNA and in the direction of the
+      arrow. Hence, sequences of the DNA above will be "seen" by
+      the biochemical machinery as either:
+
+    - ATATTTTTTCTTGTTTTTTATATCCACAAACTCTTTT
+    - or as:
+    - AAAAGAGTTTGTGGATATAAAAAACAAGAAAAAATAT
+
+    - This last sequence is called the _reverse complement_ of
+      the first and is formed by reversing the order of the
+      letters then swapping A for T and swapping C for G (and
+      vice-versa).
+
+    - Hence a DNA sequence `AAACT` may need to be considered:
+          - original sequence:          AAACT
+          - in reverse:                 TCAAA
+          - as a complement:            TTTGA
+          - as a reverse-complement:    AGTTT
+
+
+### What is sense / antisense?
+    - When a process occurs in the expected direction, its
+      directionality may be called sense; 
+        - if it is going against the normal direction, its
+          directionality may be called anti-sense.
+
+    - Do not confuse "forward/reverse" with "sense/anti-sense".
+        - these are completely unrelated.
+        - The sense/anti-sense is relative to a sequence’s
+          direction.
+            - the sequence, in turn, may come from a forward or
+              reverse strand.
+
+### What gets sequenced?
+    - It is essential to note that instruments do not directly
+      sequence the DNA in its original form. Sequencing requires
+      a laboratory process that transforms the original DNA into
+      a so-called "sequencing library" - an artificial construct
+      based on the original DNA. The process of creating this
+      sequencing library introduces a wide variety of limitations
+      and artificial properties into the results. Also, the
+      method of building the sequencing library will also limit
+      the information that can be learned about the original DNA
+      molecule.
+
+    - Most life scientists use the term "sequencing"
+      over-generously and are often under the assumption that it
+      produces more precise information than what it can deliver.
+
+
+
+### What is a genome?
+
+    - A genome is all of an organism’s DNA sequence. Each cell
+      typically contains a copy of the entire genome. More
+      accurately, each cell has one or more nearly identical
+      copies of the genome. Replication is the process of
+      duplicating the genome when a cell divides.
+
+    - While, due to complementarity, the number of A and
+      T nucleotides and the C and G nucleotides is equal, the
+      relative ratios of AT pairs vs CG pairs may be very
+      different. Some genomes may contain more AT pairs while
+      others may contain more CG pairs.
+
+### What is a genome’s purpose?
+
+    - The genome contains the information that makes the
+      functioning of an organism possible. In cellular organisms,
+      for example, the genome has regions that contain the
+      instructions for making proteins. These are typically
+      called "coding regions".
+
+    - The genome may also have regions used to produce molecules
+      other than proteins, as well as regions that regulate the
+      RATES by which other processes take place.
+
+    - All genomes are subject to evolutionary principles. Hence,
+      some (or even substantial) parts of a healthy genome may be
+      non-functional and may no longer serve any obvious purpose.
+        - Some percent of a genome may consist of copies of
+          various kinds of interspersed, repeat sequences. At
+          some point, biologists labeled these regions "junk
+          DNA", but the term has since become a lightning rod of
+          controversy.
+
+    - Identifying non-functional regions has turned out to be
+      more difficult, and quite more controversial than
+      biologists originally anticipated.
+        - The so-called "C Value Paradox" captures the observation
+          that the size of a genome does not directly determine
+          the genome’s complexity.
+
+### How big is a genome?
+
+    - Functional genomes range from as short as the 300 base
+      pairs of the prions that cause the mad-cow disease to as
+      long as the 150 billion base pairs of Paris japonica,
+      a rare, perennial, star-like flower from Japan. It is
+      common to refer to genome sizes in terms of kilo-bases
+      (thousands), mega-bases (millions), and giga-bases
+      (billions).
+
+    - Some genome sizes :
+        - Ebola virus genome            :  18 Thousand basepairs (18Kb)
+        - E.coli bacteria genome        :   4 Million  basepairs (4Mb)
+        - Baker’s yeast fungus genome   :  12 Million  basepairs (12Mb)
+        - Fruit fly genome              : 120 Million  basepairs (120Mb)
+        - Human genome                  :   3 Billion  basepairs (3Gb)
+        - Some salamander species       : 120 Billion  basepairs (120 Gb)
+
+### What is RNA?
+
+    - Whereas DNA is the blueprint, RNA is a smaller interval of
+      this plan translated into a new kind of molecule.
+    - This molecule is similar to DNA in that it differs only
+      owing to a few chemical modifications that change its
+      properties relative to DNA.
+    - For example, in RNA, the base T (Thymine) is replaced by
+      the nucleotide U (Uracil).
+
+    - RNA is a polymeric, single-stranded molecule that often
+      performs a function and is believed to exist transiently.
+    - Unlike DNA, there are many classes of RNA: mRNA, tRNA,
+      rRNA, and many others. DNA is continuously present in the
+      cell, whereas RNA degrades quickly over time (minutes).
+
+### How does a genome function?
+
+    - The genome has numerous functions, most of which are too
+      complicated (or insufficiently studied) to describe
+      accurately. Instead, scientists employ a "biological
+      narrative" to describe genomic functions and processes.
+
+    - The "narrative story" is made very simple by design, often
+      accompanied by a simplified illustration of events: step
+      1 followed by step 2 followed by step 3, etc. While this
+      helps initially, it also runs of risk of explaining
+      concepts in an oversimplified manner. To give you an
+      example of how this looks in practice, here is
+      a "biological narrative" of what is perhaps the most
+      studied genomic phenomenon: primary mRNA transcription in
+      eukaryotic cells.
+
+    - "The cell begins by transcribing a"gene" (see later) into
+      an RNA molecule. After transcription, pieces of the RNA are
+      cut out and discarded in a process called "splicing." Each
+      discarded piece is referred to as an intron. Each piece
+      between consecutive introns is known as an exon, and the
+      RNA molecule with the introns removed is known as messenger
+      RNA, or mRNA.
+
+    - Part of the cell’s method for identifying introns is the
+      presence of GT and AG, the so-called "splice signals" that
+      usually occur as the first and last dinucleotides of an
+      intron.
+    - But the mere presence of these dinucleotides is not
+      sufficient for splicing to occur. Perhaps 35% of human
+      genes are alternatively spliced, meaning that under
+      different circumstances, various combinations of exons are
+      selected."
+
+    - Remember, again, that the above explanation is a simplistic
+      description of a far more complex phenomenon. Any single
+      detail of it opens a series of yet unexplainable questions:
+    - eg. why is it that only a small subset of GT AG pairs cause
+      splicing and how come the polymerase that initiates
+      a splicing event at a GT knows that there will be a AG
+      later?
+        - Or perhaps it does not know and it is all random but
+          that would have other implications. You see how the
+          rabbit hole only gets deeper and deeper.
+
+### What is a protein?
+
+    - A protein is a three-dimensional macromolecule built from
+      a series of so-called "amino acid" molecules that can form
+      a 3D structure.
+    - There are 20 kinds of amino acids that can form a protein;
+      these are labeled as letters in the "alphabet" of protein
+      sequences, where each letter is an amino acid. The
+      "alphabetical order of the amino acids alphabet is:
+
+        ARNDCEQGHILKMFPSTWYZ
+
+    - Where A stands for Alanine, R for Arginine, N for Asparagine and so on
+
+    - Proteins can be described by their sequence alone. But in
+      our current state of understanding, the sequence itself is
+      typically insufficient to fully determine the protein’s 3D
+      structure or function.
+
+    - Whereas DNA and mRNA usually carry information, proteins
+      are the actual, physical building blocks of life. Every
+      living organism is built out of proteins and functions via
+      the interactions of proteins that are being continuously
+      produced.
+
+    - A short series (less than 40) of amino acids without
+      a well-defined 3D structure is called a polypeptide
+      (peptides).
+
+### How are proteins made?
+
+    - The process of reading DNA and creating mRNA out of it is
+      called transcription. Then, in eukaryotes, the mRNA is
+      transported out of the nucleus (to the cell’s cytoplasm),
+      where it is converted to a protein sequence in a process
+      called translation. Multiple proteins (even hundreds) may
+      be translated from a single mRNA molecule.
+
+    - transcription: DNA –> mRNA
+    - translation: mRNA –> Protein
+
+    - To perform the translation, the mRNA is partitioned into
+      units of three consecutive letters, each called a codon.
+    - A codon is then translated via a translation table into an
+      amino acid. A protein is a sequence of amino acids.
+
+    - There is a genetic code for translating a codon into an
+      amino acid. For example, the codon TCA (or UGA if we
+      describe it as an RNA sequence) codes for S, the amino acid
+      Serine.
+    - There are 64 combinations of codons but only 20 amino
+      acids. Some codons code for the same amino acid, this is
+      called the codon degeneracy. For example:
+        - CGU, CGC, CGA, CGG, AGA, AGG --> Arginine (Arg/R)
+
+    - Most (but not all) amino acids are encoded by more than one
+      codon. A few codons, in most cases TAA, TAG and TGA are the
+      so called stop codons; translation stops when one of them
+      is reached.
+
+    - Start Codon: The translation process begins with the
+      so-called start codon ATG that corresponds to M (the
+      Methionine amino acid).
+
+    - For example the subunit B of the Cholera Toxin protein
+      complex responsible for the massive, watery diarrhea
+      characteristic of cholera infection has the following
+      sequence:
+
+    - MIKLKFGVFFTVLLSSAYAHGTPQNITDLCAEYHNTQIYTLNDKIFSYTESLAGKREMAI
+      ITFKNGAIFQVEVPGSQHIDSQKKAIERMKDTLRIAYLTEAKVEKLCVWNNKTPHAIAAI
+      SMAN
+
+    - It starts with an `M`, the Methionine, which as we just
+      stated is also the start codon. You may think all protein
+      sequences should start with `M`.
+
+    - But wait, remember how every rule has exceptions? That
+      applies here as well. While the overwhelming majority of
+      proteins start with an `M` it is possible for this `M` to
+      get cut off during later processes.
+
+### What is an ORF?
+    - An ORF, or open reading frame, is a sequence of at least,
+      say, 100 consecutive codons without a stop codon.
+
+    - It is important to note that while there is a "standard"
+      translation table, some organisms may use slight variations
+      of it. These are called genetic codes.
+
+    - When translating from genome to protein, the use of the
+      correct genetic code is essential.
+
+### What is a gene?
+
+    - In our experience, the word gene is one of the most misused
+      words in the entirety of biology. It is usually interpreted
+      quite differently by different scientists.
+    - Some think of genes as the DNA that codes for proteins;
+      others think genes may include upstream elements, and so
+      on. The "official" definition of the term gene in the
+      Sequence Ontology is
+
+        - A region (or regions) that includes all of the sequence
+          elements necessary to encode a functional transcript.
+          A gene may include regulatory regions, transcribed
+          regions and other functional sequence regions.
+
+### Do genomes have other features?
+
+    - Genomic regions may have a wide variety of functions. Here
+      are a few often-studied types:
+
+    - Untranslated regions
+    - The region of the mRNA before the start codon (or the
+      corresponding genomic region) is called the 5' UTR (5 prime
+      UTR), or untranslated region;
+    - the portion from the stop codon to the start of the poly-A
+      tail is the 3' UTR (three prime UTR).
+
+    - Promoter regions
+    - The genomic region just before the 5' UTR may contain
+      patterns of nucleotides, called the promoter, that are used
+      to position the molecular machinery that performs the
+      transcription to RNA. For about 60% of human genes, the
+      promoter occurs in a CpG island: a region of DNA where
+      C and G are far more frequent than A and T. Other patterns
+      in the DNA tell the cell when (how frequently and in what
+      tissues) to transcribe the gene; that is, they regulate
+      transcription. A pattern that increases the frequency of
+      transcription operations is an enhancer, while one that
+      decreases the rate is a silencer.
+
+    - CpG islands
+    - CpG islands are regions of DNA where a C (cytosine)
+      nucleotide is followed by a G guanine nucleotide in the
+      linear sequence of bases along its 5’ -> 3’ direction. CpG
+      is shorthand for 5’—C—phosphate—G—3’, that is, cytosine and
+      guanine separated a phosphate; phosphate links any two
+      nucleosides together in DNA. Promoter regions may contain
+      CpG islands.
+
+    - Cytosines in CpG dinucleotides can be methylated. In turn,
+      methylated cytosines within a gene may change the gene’s
+      expression, a mechanism that is part of a larger field of
+      science studying gene regulation, called epigenetics.
+
+    - Below is a section of a CpG island from chromosome 1 of the
+      human genome. It has 30 CpGs and GC% is 77.14.
+
+    - >gi|568815597:36306860-36307069 Homo sapiens chromosome 1, GRCh38.p7 Primary Assembly
+      CGGGGCTCCGGAGAGGCGCGGAGGCCGCGCTGTGCGCGCCGCCGAGGTGAGCGCAAGGGCGGGGACGGGC
+      GCCGGTGGGCGGGTGCACGGAGCCAGTGCGACCCCGGCGTCTCCGGCTCTTAGTGACGGGCGCGGCTCTG
+      GGCGGGACCTCGGGGCCGCCCTGCGGTCTGTGATTGGTTCTCGAGTGCAATGCTCCGCCCTGGGGCGGGG
+
+    - We obtained the above via:
+    - `efetch -db=nuccore -id=NC_000001.11 -format=fasta -seq_start=36306860 -seq_stop=36307069`
+
+### Enhancers
+
+    - Enhancers help a gene turn on and regulate where, when, and
+      how much the gene should be expressed for the cell to
+      function properly.
+    - One enhancer can regulate many genes, and one gene can have
+      many enhancers.
+    - Since DNA is folded and crumpled up in a cell, an enhancer
+      can be far away from a gene it regulates in terms of
+      distance measured along the DNA strand, but physically very
+      close to the gene promoter.
+    - The best way to identify a sequence as an enhancer is to
+      experimentally disrupt it and observe gene expression
+      changes.
+    - Since this is cumbersome in practice, we use proxies like
+      histone modifications (chemical decorations on the
+      structural backbone upon which DNA is coiled) to identify
+      enhancers.
+    - Silencers work similarly: they can be far from a gene,
+      many-to-many relationships, hard to find – but cause a gene
+      to be less, rather than more, expressed.
+
+### What is homology?
+
+    - Two regions of DNA that evolved from the same sequence
+      (through processes of duplication of genomic regions and
+      separation of two species) are _homologous_, or homologs of
+      one another.
+
+    - More specifically, regions in the genomes of two species
+      that are descended from the same area in a common
+      ancestor’s genome are _orthologs_. These regions are said to
+      be orthologous.
+
+    - On the other hand, _paralogous_ sequences or paralogs were
+      separated by duplication of a genomic region within the
+      same genome.
+
+    - Standard pet peeve of many scientists:
+        - Homology is not a synonym of sequence similarity!
+        - Homologous sequences are usually similar to one
+          another, but similarity of sequences does not indicate
+          homology.

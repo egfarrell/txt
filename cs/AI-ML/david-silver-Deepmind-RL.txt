@@ -1,0 +1,103 @@
+### Interesting (first pass)
+    - History and state
+        - $MY_IMAGES/cs/AI-ML/history-observables-RL.jpg
+    - our goal is to build a mapping from the history to an
+      action
+    - 3 types of state:
+        - Environment state
+        - Agent state
+        - Information state (mathematical definition)
+    - "state" is a summary of the information, used to determine
+      what happens next. (because the whole history would be too
+      long and too much info)
+        - formally state is a function of history:
+          - `S = f(H_t)`
+    -   so a valid state could be just to look at the last
+        4 observations (and discard everything else)
+    - Our algorithms dont see the Environment State. Our
+      algorithms only see the observations coming in.
+    - `agent state` is the set of numbers that actually live
+      inside the algorithm. It is the agents internal
+      representation.
+        - the agent state is whatever information is used to pick
+          our next action
+
+### Information state (Markov state)
+    - Its an information theoretic concept
+    - "it tells us when we've built a state that contains all
+      useful information from the history"
+    - The probability of the next state, given the current state,
+      is the SAME as the probability if you showed ALL the
+      previous states to the system(!)
+        - $MY_IMAGES/cs/AI-ML/markov-state.jpg
+    - ie you can throw away all your previous states and just
+      retain the current state, and you'd get the same
+      characterisation of the future...
+    - ie the future is independent of the past, GIVEN THE
+      PRESENT. You only need to store `S_t`, you can throw away
+      the rest of the history
+    - ie the state is a sufficient statistic of the future.
+    - so you can work with something much more compact (just the
+      present state) and everything will be fine...
+    - for the helicopter: 
+        - it's current position, altitude, velocity, weather wind
+          speed etc is enough to know. 
+        - This is the markov state for the heli. You don't have
+          to know where it was flying 10 mins ago.
+    - But if you had an imperfect markov state, and didn't have
+      the current velocity, you'd have to look back through the
+      history to construct the current velocity...
+    - Note: If we retained the entire history, that is also
+      a markov state, (because it has all information) but its
+      not a very useful one...
+    - Note: the environment state is markov.
+    - Conclusion: it's always possible to come up with some
+      markov state.
+
+### Rat experiment
+    - If the rat 'agent state' is the last 3 things in the
+      sequence, then you'd predict electrocution
+        - $MY_IMAGES/cs/AI-ML/Rat-electrified-cheese.jpg
+    - but if agent state was COUNTS, for bells, lights and
+      levers, then you'd predict a piece of cheese
+    - or what if the agent state is the complete sequence? 
+        - Then we don't have enough info in this slide... 
+    - MAIN POINT: so what you believe will happen next depends on
+      your representation of state
+    - Our job is to build an agent state that's useful, that is
+      effective at doing the best job of predicting what comes
+      next...
+
+### Full observability
+    - $MY_IMAGES/cs/AI-ML/markov-mdp.jpg
+    - Agent actually see the full environment state, get's to see
+      all the environment numbers... easiest case
+    - Or: agent state = information state = environment state.
+        - Everything collapses to one state
+    - Formalism: full observability is a MDP: markov decision process
+
+
+### Partial observability
+    - $MY_IMAGES/cs/AI-ML/markov-pomdp.jpg
+    - Agent state ≠ environment state
+    - different formalism: POMDP
+    - so the agent must construct its own state... a few ways of
+      doing this:
+        - save the whole history
+        - use beliefs... I dont know where I am in the
+          environment. I'm going to keep a probability
+          distribution over where I think I am in the
+          environment... (some probability I think the
+          environment state is S1, some prob its S2 etc)
+        - the whole vector of probabilities defines the state
+          we're going to use
+        - recurrent NN: linear combination of the old state
+###
+          + latests observation (then add some non-linearity)
+
+
+Inside an RL agent
+
+### Links
+    - David Silver UCL RL course (good) https://www.youtube.com/watch?v=2pWv7GOvuf0
+    - David Silver UCL RL course (good) $MY_BOOKS/Cs/AI-ML/David-Silver-UCL-course.pdf

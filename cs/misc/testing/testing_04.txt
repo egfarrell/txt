@@ -1,0 +1,53 @@
+udacity software testing 04
+
+Why does Random Testing work?
+
+Problem with random walk testing?
+	didn't reach states with queue nearly full at 1000
+	so added a bias probability to enqueue/dequeue more
+	depending on how many elements in the queue
+
+high common bits / low common bits
+	assert optimised_high_bits(a,b)  == slow_python_high_bits(a,b)
+	slow_python_high_bits is the "reference implementation"
+
+Fuzzing "implicit inputs"
+	timing - perturbing the scheduler
+		generate load
+		network activity
+		thread stress testing tools
+	insert delays near sychronisation code
+	"unfriendly emulators" - insert sleeps?
+
+Can random testing inspire cofidence?
+	Well you would probably need the following conditions:
+		+ well-understood API
+		+ small code
+		+ strong assertions
+		+ mature, tuned random tester
+		+ good coverage results
+	Upshot? We always use other methods of testing aswell!
+
+Trade-offs in  Random Testing
+	Advantages
+		every fuzzer finds different bugs(!)
+		less tester bias
+		weaker hypothesis about where bugs are
+		once testing automated, human cost is zero!
+		often surprises testers and developers
+
+	Disadvantages
+		every fuzzer finds different bugs(!)
+		input validity problem can be hard
+		oracles hard to create
+		no stopping criteria
+		may find unimportant bugs
+			i.e. if really weird rate input cases used
+			then developers wont be interested in the bug
+			e.g. variable name thats 800 characters long!
+			solution: generate inputs that are more likely to be of interest
+		may find same bug many times
+			try to automatically reject repeat bugs
+		hard to debug
+			if test case very large and/or makes no sense
+		

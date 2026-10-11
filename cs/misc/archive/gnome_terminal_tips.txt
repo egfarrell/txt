@@ -1,0 +1,58 @@
+gnome terminal tips
+
+### OSC 52
+    - note: Gnome Term doesn't support OSC 52 copying/pasting.
+    - Use URXVT instead with a small perl script $HOME/.urxvt/ext/52-osc
+
+### Ubuntu 18.04
+    - Activate gnome terminal window
+    wmctrl -x -a gnome-terminal-server.Gnome-terminal
+
+
+solarized color scheme
+    git clone  https://github.com/Anthony25/gnome-terminal-colors-solarized.git
+
+
+Ubuntu 12.04 Gnome-Terminal 
+    I've been using version 3.4.1
+
+force cursor colour
+    echo -ne '\e]12;#ffcc00\a'
+    see ~/bin/gnome-terminal.sh for example
+
+turn off cursor blink
+    ubuntu 18.04 
+        change cursor blink setting in menu
+
+    ubuntu 14.04 DCONF-editor:
+        gconftool-2 --set /apps/gnome-terminal/profiles/Default/cursor_blink_mode --type string off
+
+    ubuntu 12.04 GCONF-editor: 
+        navigate to '/apps/gnome-terminal/profiles/Default',
+        find cursor_blink_mode and change its value to off    
+
+start gnome terminal specific folder
+    gnome-terminal --working-directory=/path/to/dir
+
+start gnome terminal maximised
+    gnome-terminal --window --maximize
+
+increase/decrease font
+    ctrl -
+    ctrl +
+
+Full screen
+	F11
+
+Use the normal microsoft copy and paste for gnome terminal !
+	# gconftool-2 -t str -s /apps/gnome-terminal/keybindings/copy "<Control>c"
+	# gconftool-2 -t str -s /apps/gnome-terminal/keybindings/paste "<Control>v"
+
+
+my (?)gnome customised theme
+    - controls
+    -     mist
+    - Colors
+    -     selected items #454545
+    - window border
+    -     inverted

@@ -1,0 +1,38 @@
+malan 15
+
+### running PHP
+    - you dont have to use interpretor `php <SOMEFILE.PHP>`
+    - instead include `#!/usr/bin/php` in first line of script
+
+### PHP `$_REQUEST`
+    - holds contents of both `$_GET` and `$_POST`
+
+### PHP version of "#include"
+    require("dictionary.php")
+
+### PHP turn off error reporting
+    error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+
+### PHP variables quirk
+    - inside a FUNCTION each global variable
+    - needs to be (re)declared!!
+    - `global $size;`
+
+### Javascript arrives!
+    ```
+    <head>
+        <script type="text/javascript">
+        // <![CDATA[ ]]>
+    ```
+
+    - performs CLIENT-side validation instead of letting the form
+      values go to the server.
+
+### CDATA
+    - A CDATA section starts with `<![CDATA[` and ends with `]]>`
+    - The term CDATA is used for text data that should not be
+      parsed by the XML parser.
+
+### JavaScript objects
+    - document.forms.registration.password.value = ""
+    - `password` is a html textbox with the name attribute "password"

@@ -1,0 +1,660 @@
+
+### Lists
+    - but we can have lists of lists, such as: 
+     - ` [[ ’a’, ’b’], [’c’, ’d’, ’e’]] :: [[Char ]]`
+
+
+### fix mad CABAL package errors
+    - Blog https://www.spiria.com/en/blog/desktop-software/couldnt-read-cabal-file-cabalcabal/
+
+        mkdir cabal-packages
+        cd cabal-packages
+        tar xvf ~/.cabal/packages/hackage.haskell.org/00-index.tar
+
+
+    - Next, we need a way to update Cabal to reflect our changes.
+      Here is the simple script "update_tar.sh" which I have
+      created for this purpose.
+
+        #!/bin/bash
+        rm -f ~/.cabal/packages/hackage.haskell.org/00-index.tar
+        tar cvf ~/.cabal/packages/hackage.haskell.org/00-index.tar *
+
+    - The script "remove_future_packages.sh" is only slightly
+      more complicated. It runs an arbitrary Cabal command,
+      watches it fail, extracts the name of the next problematic
+      file, deletes it, and tries again. And again.
+
+        #!/bin/bash
+        set -e
+        while true; do
+        ./update_tar.sh > /dev/null
+        # capture errors of the form
+        # cabal: Couldn't read cabal file "hashable/1.2.1.0/hashable.cabal"
+        ERR="$(cabal install cabal-dev 2>&1 || true)"
+        if [ "$(echo "$ERR" | grep "^cabal: Couldn't read cabal file")" ]; then
+            FILE="$(echo "$ERR" | grep "^cabal: Couldn't read cabal file" | cut -d'"' -f2)"
+            DIR="$(dirname "$FILE")"
+            echo "removing $DIR"
+            if [ -d "$DIR" ]; then
+            rm -rf "$DIR"
+            fi
+        else
+            echo "done!"
+            break
+        fi
+        done
+
+
+
+### Show all cabal versions
+    cabal list --simple-output [package name]
+
+link_dotfiles code for Haskell
+    ```
+    printf "\nCreating Haskell stuff...\n\n"
+    my_ghci="$PWD/ini/ghci.conf"
+    my_haskline="$PWD/ini/haskeline"
+    # GHCi needs specific file permissions
+    chmod -v go-w "$PWD/ini"
+    chmod -v go-w "$my_ghci"
+    chmod -v go-w "$my_haskline"
+    if [ -d "$HOME/.ghc/" ];  then
+    ln -fsbv "$my_ghci"      "$HOME/.ghc/ghci.conf"
+    ln -fsbv "$my_haskline"  "$HOME/.haskeline"
+    fi
+    ```
+
+
+cabal commands
+    > cabal update
+    > cabal --help
+    > cabal install vector-space
+    > cabal install learn-physics
+
+    > cabal install hscolour
+    > cabal install IPPrint
+
+
+-- https://github.com/data61/fp-course
+    Written by Tony Morris & Mark Hibberd for Data61 (formerly NICTA)
+
+-- "park bench" conference tip (think it was in london)
+    use records as an interface
+    no need to overuse type classes
+
+-- newtype / data
+    newtype - potentially better performance
+    newtype - better for type with just one field
+    data - can have multiple constructors
+
+-- patterns / guards
+    patterns check for EQUAL to something...
+    but what if you want greater or less? then use guards...
+
+-- prefix/infix
+    Conversely, an infix operator is converted to prefix by putting the
+    operator in round brackets (p. 21).
+
+-- make an infix operator prefix
+    (+) 3 4
+    3 + 4
+
+-- A list of GUARDED EQUATIONS such as
+    foo  t | condition_1 = body_1
+    foo  t | condition_2 = body_2
+    foo  t | condition_3 = body_3
+    foo t                = body_4
+
+    -- can be abbreviated as
+
+    foo t   | condition_1  =  body_1
+            | condition_2  =  body_2
+            | condition_3  =  body_3
+            | otherwise    =  body_4
+
+-- equations!
+    A line of Haskell code of the form foo t = ... (or foo
+    t1 t2 = ..., or foo t1 t2 t3 = ..., and so on) is called
+    a Haskell equation. In such an equation, foo is called
+    the function, and t its argument.
+
+-- concrete types
+    Fonzie says: Aaay! When I talk about concrete types
+    I mean like fully applied types like "Map Int String" or
+    if we're dealin' with one of them polymorphic functions,
+    [a] or (Ord a) => Maybe a and stuff. And like, sometimes
+    me and the boys say that "Maybe" is a type, but we don't
+    mean that, cause every idiot knows "Maybe" is a TYPE
+    CONSTRUCTOR. When I apply an extra type to Maybe, like
+    Maybe String, then I have a concrete type. You know,
+    values can only have types that are concrete types!
+
+-- comparison ordering
+    In the "Maybe" a data type, the "Nothing" value
+    constructor is specified before the Just value
+    constructor, so a value of Nothing is always smaller
+    than a value of Just something, even if that something
+    is minus one billion trillion. But if we compare two
+    Just values, then it goes to compare what's inside them.
+
+
+-- show read
+    The Show and Read typeclasses are for things that can be converted to
+    or from STRINGS, respectively.
+
+-- data (Ord k) => Map k v = ...
+    This is not a good style!
+    it's a very strong convention in Haskell to never add typeclass
+    CONSTRAINTS in data declarations. Why? Well, because we don't benefit
+    a lot, but we end up writing more class constraints, even when we
+    don't need them.
+
+type PARAMETERS
+type CONSTRUCTORS
+    data Maybe a = Nothing | Just a
+
+    Here "a" is a type PARAMETER.
+    and ...
+    "Maybe" is a type CONSTRUCTOR
+    ... so "Maybe" is a parameterised type...
+
+    Depending on what we want this data type to hold when it's NOT
+    "Nothing", this type constructor can end up producing a type of
+    Maybe Int,
+    Maybe Car,
+    Maybe String,
+    Maybe a  etc.
+
+
+-- maybe
+    No value can have a type of "Maybe" on its own,
+    because "Maybe" is not a type per se,
+    it's a TYPE CONSTRUCTOR
+
+    Why is _maybe_ defined (abstractly) as a type constructor?
+    Because:
+    _Maybe_ represents an option of either:
+    * "having nothing"
+    * or "having one of something".
+
+    It __doesn't matter__ what the _type_ of that something
+    is.
+
+    So far, we've seen that Maybe a was mostly used to
+    represent the results of computations that could have
+    either FAILED or not.
+
+
+-- data types
+    data {DATATYPE} = {VALUE CONSTRUCTORS}
+
+    -- value constructors specify the different VALUES
+    -- a data type can have
+
+    -- Value constructors are actually FUNCTIONS
+    -- that ultimately return a value of a data type.
+
+
+-- types
+    data Point = Point Float Float deriving (Show)
+    data Shape = Circle Point Float | Rectangle Point Point deriving (Show)
+
+    -- Notice that when defining a POINT, we used the SAME
+    -- NAME for the data type and the value constructor.
+    -- This has no special meaning, although it's common to
+    -- use the same name as the type if there's only one
+    -- value constructor.
+
+
+
+-- modules export
+    We say that a module exports functions. What that means
+    is that when I IMPORT a module, I can use the functions
+    that it exports. It can define functions that its
+    functions call internally, but we can only see and use
+    the ones that it EXPORTS.
+
+-- dictionaries
+    import qualified Data.Map as Map
+    quick because implemented internally as trees
+
+-- Data.Char
+    all have signature Char -> Bool
+    isControl
+    isSpace
+    isLower
+    isUpper
+    isAlpha
+    isAlphaNum
+    isPrint
+    isDigit
+    isOctDigit
+    isHexDigit
+    isLetter
+    isMark
+    isNumber
+    isPunctuation
+    isSymbol
+    isSeparator
+    isAscii
+    isLatin1
+    isAsciiUpper
+    isAsciiLower
+
+-- == equality
+    nub, delete, union, intersect and group
+    whereas:
+    nubBy, deleteBy, unionBy, intersectBy and groupBy
+    take an equality function which they then use...
+
+-- Int
+    length, take, drop, splitAt, !! and replicate all take/return an "Int"
+    for historical reasons.
+    Would be better if they took Integral or Num
+    Data.List supplies generic equivalents
+    e.g. genericLength, genericTake....
+
+-- algebraic data types
+    a "Maybe" value can be either
+    - no elements
+    - or a single element.
+
+-- strick folds
+    foldl' and foldl1
+    lazy folds can give thunks overflow in the stack
+
+-- module importing
+    import Data.List (nub, sort)
+    import Data.List hiding (nub)
+    qualified imports
+        import qualified Data.Map
+        import qualified Data.Map as M
+
+dollar $ (function application)
+    note: <space> is function application in Haskell aswell, but
+    it has much higher precedence.
+
+    sum (map sqrt [1..130]).
+    -- Because $ has such a low precedence, we can rewrite
+    -- that expression as
+    sum $ map sqrt [1..130],
+    -- saving ourselves precious keystrokes!
+    -- When a $ is encountered,
+    -- the expression on its right is applied as the parameter
+    -- to the function on its left.
+
+   But apart from getting rid of parentheses, $ means that
+   function application can be treated just like another
+   function. That way, we can, for instance, map function
+   application over a list of functions.
+
+    ghci> map ($ 3) [(4+), (10*), (^2), sqrt]
+    [7.0,30.0,9.0,1.7320508075688772]
+
+-- composition tip (pointless style) 1
+    Another common use of function composition is defining functions in
+    the so-called point free style. Take for example :
+
+    sum' :: (Num a) => [a] -> a
+    sum' xs = foldl (+) 0 xs
+
+    The "xs" is exposed on both right sides. Because of currying, we
+    can omit the xs on both sides, because calling foldl (+) 0 creates
+    a function that takes a list. Writing the function as
+    sum' = foldl (+) 0
+    is called writing it in point free style.
+
+-- composition tip (pointless style) 2
+    lovely tip!
+    fn x = ceiling (negate (tan (cos (max 50 x))))
+
+    We can't just get rid of the "x" on both right right sides. The
+    x in the function body has parentheses after it. cos (max 50)
+    wouldn't make sense. You can't get the cosine of a function. What
+    we can do is express "fn" as a composition of functions.
+
+    fn = ceiling . negate . tan . cos . max 50
+
+-- composition tip
+    One of the uses for function composition is making
+    functions on the fly to pass to other functions. Sure,
+    can use LAMBDAS for that, but many times, function
+    composition is CLEARER and more concise
+
+-- filter tips
+    We use "takeWhile" here instead of filter because
+    "filter" doesn't work on infinite lists.
+
+    Say we wanted to know the sum of all third powers that
+    are under 10,000. We can't map (^3) to [1..], apply
+    a filter and then try to sum that up because filtering
+    an infinite list never finishes.
+
+-- fold
+    Another way to picture right and left folds is like this: say we have
+    a right fold and the binary function is "f" and the starting value is
+    "z". If we're right folding over the list [3,4,5,6],
+    we're doing this: f 3 (f 4 (f 5 (f 6 z)))
+
+    If we take f to be "+" and the starting accumulator value to be "0",
+    that's 3 + (4 + (5 + (6 + 0)))
+
+-- fold
+    We'd introduce the x:xs pattern and then we'd do some action that
+    involves a single element and the rest of the list. It turns out this
+    is a very common pattern, so some "fold" functions were made to
+    encapsulate it. They're sort of like the "map" function, only they
+    reduce the list to SOME SINGLE VALUE
+
+-- filter v list comprehensions and predicates
+    All of this could also be achived with list comprehensions by the use
+    of predicates. There's no set rule for when to use map and filter
+    versus using list comprehension, you just have to decide what's more
+    readable depending on the code and the context. The filter equivalent
+    of applying several predicates in a list comprehension is either
+    filtering something several times or joining the predicates with the
+    logical && function.
+
+-- guards v patterns
+    We used guards here instead of patterns because we're testing for
+    a boolean condition.
+
+-- pattern matching lists
+    the "x:xs" pattern is used a lot, especially with recursive functions.
+    But patterns that have ":" in them only match against lists of length
+    1 or more.
+
+-- recursion - edge cases
+    Usually the edge case is some scenario where a recursive application
+    doesn't make sense. When dealing with lists, the edge case is most
+    often the empty list. If you're dealing with trees, the edge case is
+    usually a node that doesn't have any children.
+
+    It's similar when you're dealing with numbers recursively. Usually it
+    has to do with some number and the function applied to that number
+    modified. We did the factorial function earlier and it's the product
+    of a number and the factorial of that number minus one. Such
+    a recursive application doesn't make sense with zero, because
+    factorials are defined only for positive integers. Often the edge case
+    value turns out to be an identity. The identity for multiplication is
+    1 because if you multiply something by 1, you get that something back.
+    Also when doing sums of lists, we define the sum of an empty list as
+    0 and 0 is the identity for addition. In quicksort, the edge case is
+    the empty list and the identity is also the empty list, because if you
+    add an empty list to a list, you just get the original list back.
+
+-- interesting mathematics
+    "Num" is not a subclass of "Ord". That means that what constitutes for
+    a number doesn't really have to adhere to an ordering. So that's why
+    we have to specify both the Num and Ord class constraints when doing
+    addition or subtraction and also comparison
+
+-- patterns v guards
+    We used guards here instead of patterns because we're testing for
+    a boolean condition.
+
+-- execute a "hs" file
+    runhaskell
+
+-- Synonym
+    data Card = Card Rank Suit deriving (Eq...)
+    type Hand = [Card]
+    question: why the word "Card" twice?
+
+data Rank Ace | Two | Three..
+    deriving (Eq, Ord, Bounded...)
+
+-- load module
+    :m + Data.AffineSpace Data.VectorSpace
+
+-- lambda function to add one
+    (\x = x+1)
+
+-- currying!!
+    take a function of "n" arguments,
+    and make it a function of 1 argument,
+    that when applied with 1 paramenter,
+    produces another FUNCTION ,
+    which in turn can be applied to all
+    parameters to get the final value
+
+-- currying 2!!
+    Generally, if you have a function like
+        foo a = bar b a,
+    you can rewrite it as
+        foo = bar b
+    because of currying.
+
+map function [list]
+
+-- "it"
+    the last thing evaluated
+
+-- "_"
+    matches anything (i.e. we don't care explicitly what value)
+
+-- predicates (filters)
+    weeding out lists by predicates is called FILTERING.
+    a predicate is a function that tells whether something
+    is true or not, so in our case, a function that returns
+    a BOOLEAN VALUE
+
+Texas range ..
+    [1..100]
+
+Lists
+    constant time or linear time
+
+-- :
+    "cons" for "constructor"
+
+-- !!
+    index
+
+-- immutable
+   Haskell data structures are immutable
+
+-- "/" division
+    always returns a floating point!
+
+-- type classes
+    Eq == or /=
+    Ord >, <, >= and <=
+    Enum
+    Bounded minBound, maxBound
+    Show
+    Read
+    Num         includes all numbers, including real numbers and integral numbers
+    Integral    includes only integral (whole) numbers In this typeclass are Int and Integer.
+    Floating    Float and Double
+
+Floating includes only floating point numbers, so Float and Double.
+:t head
+head :: [a] -> a
+    Hmmm! What is this a? Is it a type? Remember that we previously stated
+    that **types are written in capital case**, so it can't exactly be
+    a type. Because it's not in capital case it's actually a _type
+    variable_. That means that a can be of any type. This is much like
+    **generics** in other languages, only in Haskell it's much more
+    powerful because it allows us to easily write very general functions
+    if they don't use any specific behavior of the types in them.
+    Functions that have type variables are called polymorphic functions.
+    The type declaration of head states that it takes a list of any type
+    and returns one element of that type.
+
+-- empty tuple type ()
+    >which has only one value: ()
+
+
+functions parameters
+    addThree :: Int -> Int -> Int -> Int
+    addThree x y z = x + y + z
+    The parameters are separated with "->" and there's no special
+    distinction between the parameters and the return type. The return
+    type is the last item in the declaration and the parameters are
+    the first three. Later on we'll see why they're all just separated
+    with "->" instead of having some more explicit distinction between
+    the return types and the parameters like :
+    Int, Int, Int -> Int
+
+
+-- pattern
+    This is a common pattern in functional programming. You take
+    a STARTING SET of solutions and then you apply transformations to
+    those solutions and filter them until you get the right ones.
+
+-- strings
+    use double quotes not single quotes!
+
+-- lists
+    [1,2,3] is actually just syntactic sugar for 1:2:3:[]
+
+-- lists
+    not like arrays - not CONSTANT TIME operations!
+    add to front - ":" cons or constructor (quick)
+    add to end   - "++" (takes a long time)
+
+-- syntax sugar - string lists
+    "hello" is just syntactic sugar for
+    ['h','e','l','l','o']
+
+-- ghci define variable
+    We can use the 'let' keyword to define a name right in
+    GHCI. Doing 'let a = 1' inside GHCI is the equivalent of
+    writing 'a = 1' in a script and loading it...
+
+-- backtick
+    We usually use ' to either denote a STRICT version of a function (one
+    that isn't lazy) or a slightly modified version of a function
+
+-- definition
+    When a function doesn't take any parameters, we usually say it's
+    a definition (or a name)
+
+-- if statement
+    else is mandatory
+
+-- boolean
+    &&      and
+    ||      or
+    not     negates true or false
+
+-- negative numbers
+    surround in brackets
+    e.g. 5 * (-3)
+
+-- whats this?
+    logBase :: Float -> (Float -> Float)
+
+-- a list of functions
+    [Float -> Float]
+
+-- function composition
+    f :: Y -> Z
+    g :: X -> Y
+    -- are two given functions.
+
+    -- We can combine them into a new function
+    f . g :: X -> Z
+    -- that first applies 'g'
+    -- to an argument of type X,
+    -- giving a result of type Y,
+    -- and
+    -- then applies 'f' to this result,
+    -- giving a final result of type Z.
+
+    -- We always say that functions take arguments
+    -- and return results. In fact we have
+    (f . g) x = f (g x)
+
+-- install
+    ai haskell-platform
+
+-- naming conventions
+    functions   begin with lowercase letter
+    types       begin with UPPERCASE
+    suffix s    means a list e.g. xs, ns,
+    suffix ss   list of lists e.g. xss
+
+-- white space
+    significant like python
+    used for implicit grouping
+    can have explicit grouping using {a=1;b=1}
+
+-- haskell arrays
+    0-based
+
+
+-- ghci tips
+    -- get info
+        :info odd
+
+    -- clear screen
+        :! clear
+
+    -- ghci - "colon commands"
+        :?, :load, :reload, :edit
+        :quit
+        :(t)ype <some variable>
+
+
+-- ghci setting
+    :set +s in GHCi, which is sweet.
+
+    If you enter :set +s in GHCi, then timing info will be printed after
+    the evaluation of every expression. Note that this will be the timing
+    of the expression as evaluated in the interpreter, without
+    optimisation, so it won't necessarily be an accurate measure of how
+    long things take, or even which of two versions of the same code will
+    be faster, in actual compiled code.
+
+    For that, take a look at the criterion benchmarking library.
+
+
+### Discrete MAth using a computer (2006)
+    - John O'Donnell, Cordelia Hall, Rex Page
+
+    - Besides actually needing large numbers, there is
+      a theoretical benefit from using `Integer` :
+        - the arithmetic operations on this type satisfy the
+          algebraic laws.
+        - For example, we know from algebra that `(x + y)
+          − y = x`, but this is not always true in a computer if
+          the arithmetic is performed with the `Int` type, or
+          always true in a computer if the arithmetic is
+          performed with the `Int` type, or in a language that
+          offers only ﬁxed-word arithmetic.
+        - It might happen that `x` and `y` fit in a machine word,
+          but the intermediate result `x + y` does not.
+        - In contrast, if the arithmetic is performed on the
+          `Integer` type then the program will deﬁnitely satisfy
+          the mathematical law.
+
+    - Haskell supports exact arithmetic on rational numbers,
+      allowing you to work with fractions as well as with their
+      decimal equivalents (approximations).
+
+    - Ratio Integer is the type of rational numbers;
+        - these are numbers in the form of a fraction, where the
+          numerator and denominator are represented with the
+          Integer type.
+        - A rational constant is written in the form numerator
+          % denominator.
+
+    - You can divide two integers using the `/` operator, and the
+      result is an exact rational number.
+
+    - Haskell automatically reduces fractions; for example:
+        - 2/3                          => 0.66667 :: Double
+        - 2/3 :: Ratio Integer         => 2%3 :: Ratio Integer
+        - 2%3 + 1%6                    => 5%6 :: Ratio Int
+        - (1/3 + 1/4) :: Ratio Integer => 7%12
+
+    - But you cannot have a 1-tuple, as that would conﬂict with
+      the use of parentheses to control precedence of operators.
+
+
+### Links
+    - ghcup: General purpose Haskell installer     https://www.haskell.org/ghcup/
+    - Docker "alpine": Build static Haskell binary https://hub.docker.com/r/fossa/haskell-static-alpine

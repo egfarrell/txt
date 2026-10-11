@@ -1,0 +1,350 @@
+farrell@mcs.kent.edu (1993)
+
+### Write Lisp in Maxima
+    - To achieve a computational objective a program can be
+      written either to run at the maxima top level or at the
+      underlying CL level.
+    - The former amounts to writing a program in the maxima
+      language and executed at the maxima top level where maxima
+      commands are given.
+    - The latter allows you to deal with lisp level facilities of
+      maxima and to deal directly with low-level data
+      representations and lisp structures. This is our topic
+      here.
+
+    - Several things make writing a CL program to run under
+      MAXIMA different from just writing a straight CL program:
+      (a) Interfacing your program with MAXIMA, (b) dealing with
+      established maxima data representations for integer,
+      fraction, matrix, polynomial, rational function, and other
+      general mathematical expressions, (c) making calls to
+      existing maxima code. We will address each in turn. With
+      these you can program at a much higher level than most, if
+      not all, programming environments. Imaging you can produce
+      a symbolic determinant with a single CL-level call.
+
+
+### Interfacing to MAXIMA
+
+    - The MAXIMA top level is a read-eval-print loop much like
+      that of lisp. It
+        - Read the next command typed by the user.
+        - Parse the command and render it into an internal form.
+        - This internal form is evaluated by the function
+          "meval", the maxima evaluator. The "meval" execution
+          produces a result which in valid maxima internal
+          representation.
+        - The result is simplified by the function "simplifya"
+          which transforms the answer and returns a valid
+          internal representation.
+        - The final answer is displayed in 2-D form by "displa".
+        - The prompt for the next C-line is displayed and the
+          cycles restarts from step 1.
+
+    - As part of step 2, MAXIMA puts a $ prefix to each and every
+      variable and function name in the command line. Therefore,
+      a name at maxima top level is equated with the same lisp
+      level name with a $ prefix. This also means that if you use
+      a global lisp variable that has a $ prefix, you are dealing
+      with a quantity accessible at maxima top level by that same
+      name without the $ sign.
+
+    - Arrange your CL package to have a main function and give it
+      a name with a leading $ sign, e.g. $quadsolve. This means
+      you are building the support for a maxima top level command
+      quadsolve. If function will receive input arguments and
+      produce the desired result. The incoming arguments will be
+      in simplified maxima internal representation. The result
+      produced by the $quadsolve function can be a yet
+      unsimplified expression in valid internal form. Control
+      passes into your main function $quadsolve from maxima via
+      step 3. The result $quadsolve returns will then be treated
+      by steps 4 and 5. Thus, your code is correctly interfaced
+      to Maxima.
+
+    - A lisp file is loaded into maxima by using "loadfile":
+        ```
+        loadfile("quadsolve.lsp")$
+        ```
+
+### Store session
+    - writefile(keep);
+    -    .
+    -    .
+    - closefile();
+
+    - will write all output you see (including all C lines,
+      D lines etc.) in between on disk under the filename keep.
+      Of course the complete pathname of a file can be used here.
+      For example,
+    - writefile("/user/pwang/keep");
+
+
+### Saving Computational Results for a Later Session
+    - Many times one would like to save the MAXIMA intermediate
+      results for later use. This can easily be done by the
+      SAVE(filename, things); command. The things can be names of
+      variables, functions or arrays. Thus one can do
+      SAVE("my.compu", x,y,mat); for example.
+    - MAXIMA keeps account on your computation. The variable
+      functions is a list of names of functions defined by you.
+      The variable values is a list of variables that still hold
+      values that you have assigned. Similarly, arrays and
+      labels.
+    - An easy way to save many things is to give the SAVE command
+      these key words. Thus
+    - SAVE(filename, functions);
+    - will cause all functions to be saved.
+    - Better yet: SAVE(filename, ALL);
+    - will save everything.
+
+### Finding Functions or Macros Defined in MAXIMA
+    - The MAXIMA main directory is /usr/local/maxima/maxima which
+      contains many files and subdirectories. The basic MAXIMA
+      source codes are kept in the directory src.
+    - A quick way to find almost any function, macro or global
+      flag is to go to the src directory and do `vi -t name`
+    - where name is the macro, function, or flag name you wish to
+      find. If the item is found, you'll get a vi buffer with the
+      cursor positioned on the name you want.
+    - `-t tag`
+        - Edit the file containing the tag tag, and position the
+          editor at its definition.
+
+
+### Expressions and Operations in CL under MAXIMA
+
+    - The advantage of working in the Maxima CL base is speed and
+      the availability of many existing mathematical functions.
+      Eg (div 'x 'y) will construct the symbolic expression:
+        - ((mtimes simp) x ((mexpt simp) y -1))
+    - which is in valid internal representation.
+    - There is a set of functions to help create and simply
+      symbolic mathematical expressions and aid doing
+      arithmetics.
+
+    - To divide two integers a and b one uses `(rat a b)`.
+
+    - For numbers a and b (integer, rational numbers, floating
+      and bigfloats) use `(addk a b)` for addition, `(timesk
+      a b)`, for multiplication.
+
+    - For general symbolic operands (including numbers) we have:
+      addn, muln (ncmuln), power, sub, neg and div.
+
+    - Both addn and muln take a list as the first argument and
+      a T or NIL flag as the second argument. Eg:
+        - `(muln  (list a b (addn (list  c d) nil) nil)`
+    - should be used in a lisp program instead of
+    - `(simplifya (list '(mtimes) a b (list '(mplus) c d)) nil)`
+
+    - The second argument to addn or muln is called a simp-flag.
+      This simp-flag is used to indicate whether the operands are
+      already simplified (T if simplified).
+
+    - Sometimes it is convenient to invoke a top-level macsyma
+      function in a lisp program. For example the top-level
+      command `kill(a,b,c)` can be done at the lisp level as
+      `(mcall '$kill '$a '$b '$c)`
+
+    - Or, alternatively, one can do
+        - ```
+        - (setq x (list '$a '$b '$c))
+        - (mapply '$kill x '$kill)
+        - ```
+
+    - Or yet another form is
+        - ```
+        - (setq x (list ($kill) '$a '$b '$c))
+        - (meval x)
+        - ```
+
+    - By examining the internal value of a C-line you can easily
+      find the correct CL-level form for any operation that can
+      be invoked at the maxima top level.
+
+### A Complete Example
+    $MY_CODE/maxima/LISP-example.lsp
+
+
+### Testing and Debugging
+    - After writing one or a few files, you can test by loading
+      the files into maxima first. This can be done by putting
+      the (load ...) commands in your personal initialization
+      file .maxima.lsp in your home directory.
+
+    - Or use the file .maxima-wd.lsp right in the same directory
+      where you keep the lisp source code for your new package.
+
+    - Please consult the document A Programmer's Guide to AKCL
+      and MAXIMA for information on tracing in CL and on
+      interrupting your computation and switching between MAXIMA
+      top level and the underlying CL level.
+
+
+### Compiling CL Programs for MAXIMA
+    - If you use only CL primitives your program can be compiled
+      using Common Lisp. To find out more about CL and how to
+      compile CL programs consult the man page. `man akcl`
+    - If you use MAXIMA macros etc. it is safer to use MAXIMA to
+      compile your source code file (use the conventional suffix
+      .lsp). Basically you use the UNIX command
+    - `mc file1.lsp file2.lsp ...`
+    - to compile the give source-code files into object-code
+      files. Do a man mc for more info on the MAXIMA compiler mc.
+
+
+### Error Handling
+    - In CL functions written for MAXIMA there is a need to
+      display error messages to the MAXIMA user and to enter
+      a lisp error break. This is done through the use of the
+      merror function.
+        - ```
+        - (merror " a: given wrong argument  m" fn object)
+        - (merror "unbound variable:  m" variable))
+        - ```
+    - The `a` is a formatting request for displaying an atom or
+      list. The `m` is for displaying macsyma expressions in a two
+      dimensional format. The `%` can be used to introduce
+      a newline.
+
+### Polynomial and rational function manipulation
+
+    - MAXIMA has a polynomial and rational function package which
+      defines many useful operations on polynomials and rational
+      functions of one or more variables.
+    - This package uses a different data representation than the
+      general representation. This representation known as the
+      CANONICAL RATIONAL EXPRESSION (CRE) is more suitable for
+      polynomials and rational functions.
+    - The top-level function to put an expression into internal
+      rational form is `rat(expr);`
+
+    - For example, the rational form of `7x^9 + 5x^2 - 19` is
+        - ```
+        - ((mrat simp ($x) (g00018)) (g00018 3 7 2 5 0 -19) . 1)
+        - ```
+
+    - A rational form has the following parts:
+        - The header which is the CAR part of the rational form
+        - the CRE which is the CDR of the rational form
+        - the numerator which is the CAR part of the CRE
+        - the denominator which is the CDR part of the CRE
+
+    - The numerator and denominator are in polynomial
+      representation. The header is a list whose last two items
+      are a list of variables and a corresponding list of
+      internally generated symbols. In the above example the
+      variable list is ($x) and the generated symbols list is
+      (G00018). For implementational reasons, CRE forms use
+      internally generated symbols instead of the user-supplied
+      variables in the data structure.
+
+    - As another example, the polynomial `y^2 + 2xy + x^2` has
+      the following rational form.
+
+        - ```
+        - ((mrat simp ($x $y) (g00019 g00018))
+        - 	  (g00018 2 1 1 (g00019 1 2) 0 (g00019 2 1)) . 1)
+        - ```
+
+    - Thus, a multivariate polynomial is represented as
+      a polynomial in the first variable `(g00018)` with
+      coefficients represented as polynomials in the other
+      variables.
+    - This understanding of how polynomial and rational functions
+      are represented does not mean that we should write code
+      depending on their exact structure. On the contrary, it is
+      advisable to use the system supplied manipulation functions
+      described below.
+
+### Convert between General Representation and CRE
+    - In the lisp-level of Macsyma it is sometimes more
+      convenient to deal with CRE and polynomial forms in
+      implementing certain algorithms. If you decide the
+      computation in your algorithm is best done in polynomial
+      representation you can take user input expressions,
+        1.  Convert them to CRE and polynomial form.
+        2.  Perform the computation.
+        3.  Convert final answers back to general representation.
+
+    - Converting into CRE form:
+        - [a] prog bind global variables `genvar` and `varlist`
+          to NIL,
+        - [b] do (newvar expression) to collect variables on the
+          varlist and genvar. This must be done on enough
+          expressions so that all variables involved in
+          subsequent computations are collected before step (3)
+          is performed.
+        - [c] use (cre expression) to convert expression to CRE 
+        - [e] use (crenum CRE) to obtain numerator polynomial
+        - [f] use (credenom CRE) to obtain denominator polynomial
+
+    - Converting into general representation
+        - `(ratdisrep CRE)`
+        - `(pdis  poly)`
+
+### Builtin operations for CRE
+    - There are many builtin operations you can call to perform
+      manipulations on CRE forms. These are
+    - The gcdflag in rattimes is either 't' or 'nil'. When it is
+      'nil', rattimes does not cancel any possible gcd between
+      the numerator and the denominator of the answer. The var in
+      ratderivative is an internal genvar. 
+
+### Builtin Operations for Polynomials
+    - The following operations work on pure polynomial forms.
+    - Note pdivide returns a list of the quotient and the
+      remainder both in CRE form. 
+
+### Working with Polynomials with the modulus Set
+
+    - Whenever the global variable modulus is set to an integer
+      (usually a prime but need not be) instead of nil, then
+      polynomial and coefficient arithmetic are performed in the
+      field (ring) of integers modulo the modulus. If you program
+      set the variable modulus it is a good idea to for lambda or
+      prog bind it so that it reverts back to its old value when
+      you return from your function.
+
+    - Integer arithmetic modulo the current modulus are performed
+      by .TS center,box; c s c | c l | l . 
+
+
+### Installing a New Module for MAXIMA
+    - After design, implementation, testing, compiling, more
+      testing etc., your module seems finally ready for inclusion
+      in the MAXIMA system as a facility for all other MAXIMA
+      users. This is an exciting time indeed. There are several
+      things to do before a module can be successfully included.
+
+    - (1) The module must have been compiled and tested
+      extensively.
+    - (2) The module must be subjected to an integration test
+      provided by the "runtest" command explained in
+      /user/docs/reports/vaxtest.
+    - (3) There must be clear comments and appropriate internal
+      documentation in the module.
+    - (4) There must be a batch-able demo file which contains: 
+        - (a) documentation of usage and simple examples, 
+        - (b) test cases for the module. 
+    - (5) Follow the installation procedure to include the module
+      under the directory /usr/local/maxima/kent. 
+
+
+### Performing Calculations in the Background
+    - For long calculations, it is convenient to leave a MAXIMA
+      running in the background and use the terminal for doing
+      other things.
+    - To do this, the computation is specified in a batch file.
+      This batch file is run using the batch command in MAXIMA.
+      Then `control-Z` to stop the MAXIMA and put it in the
+      background by the UNIX bg command.
+    - In order for things to work correctly, the batch file
+      should begin with the line `ttyoff:true$`
+    - which will suppress any output to your CRT. In case you
+      need to see the output, then use the MAXIMA writefile and
+      closefile combination as well. At the end of the batch
+      file, include the line `exit()$`
+    - This will cause the MAXIMA to terminate after all commands
+      in the batch file have been processed.

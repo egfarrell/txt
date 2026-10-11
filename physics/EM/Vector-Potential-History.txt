@@ -1,0 +1,528 @@
+# The Vector Potential: A Historical and Conceptual Analysis of
+its Nomenclature and Physical Significance
+
+## 1.0 Executive Summary: The Vector Potential and its Many Names
+
+### 1.1 Introduction to the Conceptual Problem
+
+The magnetic vector potential, conventionally denoted as `A`, is
+a fundamental concept in both classical and quantum
+electromagnetism. Its primary definition, that its curl is equal
+to the magnetic field (B), or `B=∇×A`, establishes its mathematical
+utility.<sup>1</sup> However, the physical meaning of
+`A` has been a subject of profound debate since its inception. Is
+the vector potential a mere mathematical artifact, a convenient
+tool for calculation with no intrinsic physical reality? Or does
+it represent a deeper, more fundamental aspect of the
+electromagnetic field? This report examines the evolution of the
+vector potential, tracing its conceptual lineage through
+a succession of names and interpretations, culminating in
+a modern understanding that affirms its physical significance.
+
+### 1.2 A Direct Answer to the Query
+
+The user's query specifically raises the question of whether
+"electrokinetic momentum" is an alternative name for the vector
+potential. This inquiry touches on a fascinating historical
+ambiguity. The analysis confirms that James Clerk Maxwell
+himself, in certain contexts, referred to the vector potential as
+"electromagnetic momentum".<sup>2</sup> The term "electrokinetic
+momentum" was also used historically in a similar, though not
+identical, sense to describe the dynamical properties of the
+"ether" or the medium of electromagnetic propagation.<sup>3</sup>
+However, the modern meaning of "electrokinetics" has completely
+diverged. Today, "electrokinetics" refers to the study of the
+motion of charged matter, such as particles or fluids, under the
+influence of an electric field.<sup>4</sup> This report will
+clarify this terminological split and demonstrate how the same
+word came to describe two entirely different scientific domains.
+
+### 1.3 A Preview of the Report's Narrative
+
+This report will unfold in a historical and conceptual
+progression. It begins by exploring Michael Faraday's intuitive,
+but mathematically unquantified, concept of the "electrotonic
+state" in the 1830s. It then transitions to the crucial work of
+William Thomson (Lord Kelvin), who provided the mathematical
+framework that would be indispensable for Maxwell. The report
+then delves into Maxwell's own conceptual journey, detailing his
+progression from the "electro-tonic function" to the dynamic term
+"electromagnetic momentum" and, finally, to the "vector
+potential." The discussion will then shift to modern physics,
+exploring how the vector potential is understood today as
+a component of canonical momentum in classical mechanics and how
+quantum mechanics, particularly through the Aharonov-Bohm effect,
+has proven its physical reality. The report concludes by
+reconciling the historical and modern perspectives, showcasing
+how the vector potential's path from a confusing analogy to
+a cornerstone of modern physics is a testament to the complex and
+often non-linear nature of scientific discovery.
+
+## 2.0 A Pre-Maxwellian History: The Conceptual Origins of
+a Potential
+
+### 2.1 Michael Faraday and the "Electrotonic State":
+A Conceptual Precursor
+
+The intellectual history of the vector potential begins not with
+a mathematical equation, but with an obscure, intuitive concept
+proposed by Michael Faraday in the 1830s: the "electrotonic
+state".<sup>7</sup> Faraday, through his experiments on
+electromagnetic induction, observed that a changing magnetic
+field induced an electric current in a nearby wire. To explain
+this phenomenon, he posited that a current-carrying wire created
+a state of "tension" or "strain" in the surrounding
+space.<sup>7</sup> He believed that the induced electromotive
+force was the result of the "setting up of such a state of
+tension or the collapse of such a state".<sup>7</sup> This
+concept was a radical departure from the prevailing view of the
+time, which held that forces acted instantaneously between
+distant point charges, a paradigm known as
+"action-at-a-distance".<sup>8</sup>
+
+Faraday's work represented a foundational ontological shift in
+the physical sciences. Rather than focusing on the particles
+themselves as the source of action, he insisted that the space
+between them was the active agent.<sup>9</sup> For Faraday, space
+was not an empty void but a physical medium, which he called the
+"ether," capable of supporting the "strains of electric and
+magnetic forces".<sup>9</sup> This "field-based" ontology, with
+its emphasis on local action and the physical properties of
+space, is the direct intellectual precursor to Maxwell's field
+theory. The "electrotonic state" is thus more than just
+a historical curiosity; it is the embryonic form of the vector
+potential and the conceptual bedrock of the entire report. It
+introduced the idea of a physical state of the medium that could
+store and transmit the energy and momentum of an electromagnetic
+interaction, a concept that would later be formalized by Maxwell.
+
+### 2.2 William Thomson's Formalization: The Mathematical Bridge
+
+While Faraday's ideas were conceptually profound, they lacked
+a rigorous mathematical foundation. This gap was bridged by
+William Thomson (later Lord Kelvin), who played a pivotal role in
+translating Faraday's intuitions into a quantitative
+framework.<sup>1</sup> In the mid-19th century, Thomson was
+a leading advocate for the idea that all physical phenomena could
+be understood through the motion of invisible material and the
+interrelation of different forms of energy.<sup>11</sup> He was
+particularly interested in using mathematical analogies to unify
+disparate areas of physics.
+
+In a series of papers starting in 1842, Thomson drew
+a mathematical parallel between the flow of heat and the
+distribution of electricity.<sup>8</sup> He found that the
+equations governing these two seemingly unrelated phenomena were
+formally equivalent. This approach allowed him to formalize
+electromagnetic relationships without immediately needing a full
+physical interpretation for the quantities involved.<sup>8</sup>
+In 1847, Thomson introduced a quantity that represented what is
+now recognized as the modern version of the vector potential,
+along with the formula relating it to the magnetic field,
+
+B=∇×A.<sup>1</sup> This was a remarkable achievement, as it
+established a powerful mathematical structure that could be used
+to describe electromagnetism, even if the physical meaning of the
+vector potential remained ambiguous. The fact that a mathematical
+structure could be discovered and utilized before its full
+physical meaning was understood is a key aspect of scientific
+progress. Thomson's work provided the precise vector calculus
+language that Maxwell would later use to imbue the "electrotonic
+state" with physical meaning and a new name, forging a crucial
+link between Faraday's vision and Maxwell's synthesis.
+
+## 3.0 James Clerk Maxwell: The Conceptual Journey from State to
+Momentum
+
+### 3.1 The "Electro-tonic Function": A Bridge to an Obscure
+Concept
+
+James Clerk Maxwell, a profound admirer of Faraday's work, began
+his own journey into electromagnetism by attempting to formalize
+Faraday's qualitative notions. In his 1856 paper, "On Faraday's
+Lines of Force," Maxwell adopted Faraday's terminology, calling
+the vector field that would become the vector potential the
+"electro-tonic function" or "electro-tonic
+intensity".<sup>2</sup> This choice of name served as
+a conceptual bridge, linking his work directly to Faraday's
+foundational ideas about a state of tension in the ether \[user's
+notes\]. Maxwell's early work, like Thomson's, was deeply rooted
+in the search for a mechanical model of the ether that could
+account for electromagnetic phenomena.<sup>12</sup>
+
+### 3.2 "Electromagnetic Momentum": The Dynamical Analogy
+
+The pivotal shift in Maxwell's thinking occurred several years
+later when he developed a more dynamic interpretation of this
+vector quantity. The user's notes correctly identify the crucial
+insight that led to the new name, "electromagnetic momentum."
+Maxwell's 1856 paper established a relationship between the
+induced electromotive force, E, and the time derivative of this
+vector quantity, A, which can be expressed in modern notation as
+E=∂t∂A​.<sup>2</sup> This relationship was particularly
+striking because it bore a direct analogy to Newton's Second Law.
+By multiplying the equation by an electric charge,
+
+q, the left-hand side becomes a force, F=qE. This implies that
+the right-hand side, q∂t∂A​, must be the time derivative of
+a momentum \[user's notes\]. Maxwell saw this formal resemblance
+and made a profound conceptual leap.
+
+This was not merely a mathematical trick; it was a physical
+claim. Maxwell was proposing that a new dynamical property,
+"momentum," could be ascribed to the ether \[user's notes\]. He
+concluded that in the presence of the vector potential, a charge
+would possess a "dynamical momentum, even if it is at rest"
+\[user's notes\]. The new name, "electromagnetic momentum," was
+therefore a claim about the physical world, not just a convenient
+description. This claim laid the groundwork for the modern
+concept of momentum density in the electromagnetic field, which
+is a core component of the Poynting vector,
+S=μ0​1​(E×B).<sup>13</sup>
+
+### 3.3 The Treatise and the "Vector Potential"
+
+In his seminal work, _A Treatise on Electricity and Magnetism_,
+Maxwell introduced a third and final name for the quantity:
+"vector potential" \[user's notes\]. This term, which we use
+today, became the standard designation. However, the conceptual
+journey was not over. Following Maxwell's work, physicists like
+Oliver Heaviside and Heinrich Hertz sought to simplify the
+theory. Heaviside, in particular, famously reduced Maxwell's
+original twenty equations to the four-vector form used today and
+initially sought to "eliminate the potentials" from the theory,
+viewing them as purely mathematical constructs.<sup>14</sup> This
+conceptual debate about the physical reality of the vector
+potential persisted for nearly a century, leaving generations of
+physicists to treat it as a mere calculating tool.<sup>13</sup>
+
+## 4.0 The Physical and Mathematical Meaning of Momentum
+
+### 4.1 The Canonical Momentum in Classical Mechanics
+
+Maxwell's intuitive dynamical analogy was formally validated and
+expanded by the development of Lagrangian and Hamiltonian
+mechanics. In this framework, the generalized, or canonical,
+momentum of a charged particle in an electromagnetic field is
+defined as the sum of its kinetic and electromagnetic
+momenta.<sup>2</sup> This is expressed by the equation:
+
+P=mv+qA
+
+Here, mv is the familiar kinetic momentum of the particle, and
+the second term, qA, represents the electromagnetic momentum
+imparted to the particle by the field.2 The vector potential,
+
+A, is thus formally understood as "potential momentum per unit
+charge," drawing a clear parallel to how the scalar potential, V,
+is interpreted as "potential energy per unit charge"
+(U=qV).<sup>13</sup>
+
+This formal definition of canonical momentum is a direct and
+powerful validation of Maxwell's historical intuition. Maxwell's
+analogy (F=dtd​(qA)) suggested that qA was a form of
+momentum. The Lagrangian formalism proved this by showing that
+the vector potential is a fundamental component of the conserved
+canonical momentum. This elevates Maxwell's analogy from a clever
+observation to a cornerstone of modern classical dynamics,
+linking the historical and contemporary views. The relationship
+is a manifestation of the "minimal coupling" rule, where the
+free-particle momentum operator p is replaced by (p−qA) in the
+presence of a vector potential, reinforcing the idea that A is
+potential momentum per unit charge in a deep, fundamental
+way.<sup>13</sup>
+
+### 4.2 Field Momentum and "Hidden Momentum"
+
+Beyond the momentum of charged particles, the electromagnetic
+field itself can carry momentum. The momentum density of the
+field, denoted by g, is proportional to the cross product of the
+electric and magnetic fields, E×B, and is a component of the
+Poynting vector, which describes the flow of energy and momentum
+in the field.<sup>13</sup> This momentum is distinct from the
+momentum of the charged particles within the field.
+
+A particularly striking and counterintuitive consequence of this
+is the concept of "hidden momentum".<sup>13</sup> Consider
+a seemingly static system, such as a magnetic dipole in a uniform
+external electric field. While the system as a whole is at rest,
+the electromagnetic field itself possesses a non-zero momentum.
+To satisfy the fundamental principle of momentum conservation,
+a counteracting, non-electromagnetic "hidden" mechanical momentum
+must exist within the system to ensure that the total system
+momentum is zero. This remarkable phenomenon demonstrates that
+momentum is not just a property of moving matter; it can be
+stored in static fields. The existence of "hidden momentum"
+reveals the deep, interconnected nature of mechanical and
+electromagnetic quantities and highlights the subtlety required
+to ensure conservation laws hold in all
+circumstances.<sup>13</sup>
+
+## 5.0 Clarifying the "Electrokinetic" Ambiguity
+
+### 5.1 Historical Usage: A Synonym for "Electromagnetic
+Momentum"
+
+The user's query about "electrokinetic momentum" is prescient, as
+it highlights a subtle and often overlooked aspect of historical
+physics nomenclature. The analysis confirms that the terms
+"electrokinetic momentum" and "electromagnetic momentum" were
+used in a similar fashion during the 19th century. One source
+notes that Maxwell himself "developed...the concept of
+'electrokinetic momentum,' defining the vector in terms of
+inductance" and attributing a momentum of density ρA to the
+charges.<sup>3</sup> This confirms the user's suspicion that the
+term was a historical synonym for the dynamical quantity related
+to the vector potential and was a part of the "electro-tonic" and
+"electromagnetic" family of names.
+
+### 5.2 Modern Definition: A Distinct Field of Study
+
+However, over time, the term "electrokinetics" has come to refer
+to a completely different and modern field of study. Today,
+"electrokinetics" is a sub-discipline of physical chemistry and
+fluid mechanics that focuses on the electrically driven
+mechanical motion of charged particles and fluids.<sup>4</sup>
+This field examines the phenomena that occur at the interface
+between a solid and a liquid where an "electrochemical double
+layer" of charges forms.<sup>4</sup> When an external electric
+field is applied, it acts on this double layer, causing the fluid
+or the particles within it to move.
+
+Key phenomena studied within modern electrokinetics include:
+
+- **Electrophoresis:** The movement of charged particles (e.g.,
+  colloids) through a stationary liquid under the influence of an
+  electric field.<sup>4</sup>
+- **Electro-osmosis:** The movement of a liquid through a porous
+  solid or capillary driven by an electric field.<sup>4</sup>
+- **Streaming Potential and Streaming Current:** The generation
+  of a voltage or current when a fluid is forced to move along
+  a charged surface.<sup>4</sup>
+
+The conceptual split in the term "electrokinetic" is a perfect
+case study in the evolution of scientific language. The term was
+once used to describe a fundamental, dynamical property of the
+electromagnetic field itself. Today, it refers to a set of
+applied phenomena involving the macroscopic motion of charged
+matter in fluids. The connection is a shallow one—both involve
+electricity and motion—but the underlying physics and domain of
+study are entirely different.
+
+To provide a definitive resolution to this terminological
+ambiguity, a comparative analysis is presented in Table 1.
+
+**Table 1: Comparison of "Electromagnetic Momentum" and
+"Electrokinetics" (Modern Usage)**
+
+## Index 
+
+| Term                      |
+|---------------------------|
+| Electromagnetic Momentum  |
+| Electrokinetics           |
+| Quantum Momentum Weak Val |
+| Radiation Pressure        |
+| Poynting Vector           |
+| Hydrodynamic Analogies    |
+| Relativistic Field Mom.   |
+
+
+### Electromagnetic Momentum
+- Conceptual Basis: Momentum of EM field and its effect on charges
+- Domain: Fundamental Physics (Classical and Quantum ED)
+- Equations: p = mv + qA ; g = ε0(E×B)
+- Key Figures: Maxwell, Lorentz, Abraham, Minkowski, Feynman,
+  Aharonov, Bohm
+- Physical Manifestations: Aharonov–Bohm effect, EM wave momentum
+  transfer, cavity QED
+
+### Electrokinetics
+- Conceptual Basis: Motion of charged matter in fluids due to E-fields
+- Domain: Applied Science (Fluid Mechanics, Colloids, Materials)
+- Principles: Electro-osmosis, Electrophoresis, Streaming Potential
+- Key Figures: Helmholtz, Quincke, Gouy, Chapman
+- Physical Manifestations: Microfluidics, capillary electrophoresis,
+  lab-on-a-chip systems
+
+### Quantum Momentum Weak Values
+- Conceptual Basis: Weak measurement of canonical momentum linked to `A`
+- Domain: Quantum Measurement Theory, Quantum Foundations
+- Equation: <p>w - <p>w(0) = (e/c)A
+- Key Figures: Aharonov, Vaidman, Lundeen
+- Physical Manifestations: Direct measurement of vector potential,
+  photon weak-value experiments
+
+### Radiation Pressure
+- Conceptual Basis: Transfer of photon momentum to matter
+- Domain: Optics, Astrophysics, Nanomechanics
+- Equations: p = h/λ ; F = Power/c
+- Key Figures: Maxwell, Lebedev, Nichols, Hull, Ashkin
+- Physical Manifestations: Optical tweezers, solar sails,
+  comet-tail dynamics
+
+### Poynting Vector
+- Conceptual Basis: EM energy and momentum flux
+- Domain: Classical Electrodynamics
+- Equations: S = (1/μ0)(E×B) ; g = S/c^2
+- Key Figures: Poynting, Heaviside
+- Physical Manifestations: Microwave guides, laser energy transfer,
+  EM wave pressure
+
+### Hydrodynamic Analogies
+- Conceptual Basis: Fluid-like momentum transport analogous to EM fields
+- Domain: Fluid Dynamics, Analogue Gravity
+- Equations: Navier–Stokes parallels to Maxwell; momentum flux tensor
+- Key Figures: Euler, Helmholtz, Batchelor, Unruh
+- Physical Manifestations: Superfluid vortices, acoustic black-hole
+  analogues
+
+### Relativistic Field Momentum
+- Conceptual Basis: Stress-energy tensor carries momentum and energy
+- Domain: Relativity, Field Theory
+- Equations: T^μν ; momentum density from T^0i
+- Key Figures: Einstein, Minkowski, Landau, Lifshitz
+- Physical Manifestations: Gravitational waves, relativistic jets,
+  field-theory momentum balance
+
+## 6.0 The Vector Potential in Modern Physics: More Than
+a Mathematical Tool
+
+### 6.1 The Aharonov-Bohm Effect: Physical Reality in
+a Field-Free Region
+
+For much of the 20th century, the prevailing view in classical
+electromagnetism was that the electric and magnetic fields (E and
+B) were the physically "real" quantities, while the potentials (V
+and A) were just convenient mathematical tools for
+calculation.<sup>19</sup> This view was dramatically overturned
+by a quantum mechanical phenomenon known as the Aharonov-Bohm
+(AB) effect.<sup>19</sup>
+
+The AB effect demonstrates that a charged particle's wave
+function can be influenced by the magnetic vector potential even
+in a region where the magnetic field is zero.<sup>19</sup> In the
+canonical experimental setup, an electron beam is split and made
+to pass on either side of a long solenoid. The magnetic field is
+confined to the inside of the solenoid, so the electrons pass
+through a region where the magnetic field is zero. However, the
+vector potential,
+
+A, is non-zero everywhere outside the solenoid. The effect is
+observed when the two beams are recombined, and the resulting
+interference pattern is shifted.<sup>20</sup> This observable
+phase shift is directly proportional to the line integral of the
+vector potential around the path enclosing the
+solenoid.<sup>21</sup>
+
+This phenomenon represents a monumental conceptual reversal. It
+proves that in quantum mechanics, the vector potential is
+arguably more fundamental than the magnetic field itself. The
+fact that the field can be zero while the potential is not, and
+the potential still has a measurable, observable effect,
+demonstrates that the vector potential is not a mere mathematical
+abstraction. It must be considered a fundamental physical
+quantity in its own right, one that is crucial for a complete
+description of physical reality at the quantum
+scale.<sup>21</sup>
+
+### 6.2 Direct Measurement via Weak Value
+
+Recent research has pushed the physical reality of the vector
+potential even further. Beyond the Aharonov-Bohm effect,
+physicists have proposed and, in some cases, conducted
+experiments to directly measure the vector potential at a point,
+a feat previously thought impossible because of its gauge
+dependence.<sup>19</sup> This breakthrough uses the concept of
+"weak measurement," a quantum-mechanical technique that provides
+information about a system without significantly disturbing it.
+
+The method proposes to determine the vector potential as the
+difference between the weak value of the canonical momentum of
+a charged particle in the presence and absence of a magnetic
+field.<sup>19</sup> This can be expressed by the equation:
+
+<p>w - <p>w(0) = (e/c) A
+
+where
+    - <p>w    = weak value of canonical momentum with magnetic field
+    - <p>w(0) = weak value without magnetic field
+    - e       = charge
+    - c       = speed of light
+    - A       = vector potential
+
+This proposed direct measurement provides a final, elegant
+validation of Maxwell's original intuition. The equation central
+to this proposal is a modern, quantum-mechanical echo of
+Maxwell's classical insight that momentum is inextricably linked
+to the vector potential.2 It is the ultimate closure to the
+report's historical and conceptual narrative, demonstrating that
+what began as a classical analogy has become a measurable,
+physical reality in the quantum realm.
+
+## 7.0 Conclusion: A Synthesis of History and Concept
+
+The journey of the vector potential, from an obscure and
+confusing concept to a cornerstone of modern physics, is
+a powerful testament to the long and often surprising path of
+scientific discovery. The analysis has shown that the vector
+potential's physical identity was forged in a century-long
+process of conceptual and terminological evolution.
+
+The report has detailed this journey, beginning with Faraday's
+radical field-based worldview and his notion of the "electrotonic
+state." It highlighted William Thomson's critical role in
+providing the mathematical formalisms that made Maxwell's work
+possible. It then explored Maxwell's own conceptual leaps, where
+he moved from an "electro-tonic function" to a dynamic
+"electromagnetic momentum" based on a powerful analogy to
+Newton's Second Law. While the name "vector potential" eventually
+became standard, the conceptual ambiguity about its physical
+reality persisted.
+
+This ambiguity was finally resolved by the advent of quantum
+mechanics. The Aharonov-Bohm effect provided conclusive evidence
+that the vector potential is a physically real quantity, capable
+of producing observable effects in regions where the magnetic
+field is zero. The modern understanding of canonical momentum in
+both classical and quantum mechanics further affirms Maxwell's
+original intuition by formally defining the vector potential as
+a fundamental component of a particle's total momentum.
+
+Finally, the report has clarified the specific ambiguity raised
+by the user's query about "electrokinetic momentum." It was
+confirmed that this was indeed a historical synonym for the
+vector potential in some contexts, a part of the rich and
+evolving vocabulary of 19th-century physics. However, the term
+today refers to a completely distinct domain of applied physics
+concerning the motion of charged matter in fluids. The
+terminological divergence perfectly encapsulates the vector
+potential's own journey: from a complex, dynamic property of the
+fundamental electromagnetic field, it has been refined,
+validated, and confirmed as a cornerstone of our understanding of
+physics.
+
+#### Works cited
+
+1. Magnetic vector potential - Wikipedia, accessed on September 9, 2025,                                                                                        https://en.wikipedia.org/wiki/Magnetic_vector_potential
+2. (PDF) Quantum Wave Mechanics Ch 3. Electromagnetic 4-Potential, accessed on September 9, 2025,                                                               https://www.researchgate.net/publication/364333296_Quantum_Wave_Mechanics_Ch_3_Electromagnetic_4-Potential
+3. An Electrokinetic Momentum Interpretation of the Fields in Electromagnetic Devices, accessed on September 9, 2025,                                           https://www.emerald.com/insight/content/doi/10.1108/eb051775/full/pdf
+4. Electrokinetic-Phenomena Frank Simon - Leibniz-Institut für Polymerforschung Dresden, accessed on September 9, 2025,                                         https://www.ipfdd.de/fileadmin/user_upload/pg/equipment/elektokinetik/2009_Electrokinetic-Phenomena_COST.pdf
+5. Electrokinetics | EBSCO Research Starters, accessed on September 9, 2025,                                                                                    https://www.ebsco.com/research-starters/science/electrokinetics
+6. 10.626 Lecture Notes, Electrokinetics - DSpace@MIT, accessed on September 9, 2025,                                                                           https://dspace.mit.edu/bitstream/handle/1721.1/100188/10-626-spring-2011/contents/lecture-notes/MIT10_626S11_lec29.pdf
+7.  www.matidavid.com>, accessed on September 9, 2025,                                                                                                          https://www.matidavid.com/pioneer_files/Faraday.htm#:~:text=This%20phenomenon%20led%20Faraday%20to,collapse%20of%20such%20a%20state>.
+8. Thomson, Sir William (Baron Kelvin of Largs) - Encyclopedia.com, accessed on September 9, 2025,                                                              https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/thomson-sir-william-baron-kelvin-largs
+9. Michael Faraday - Electrochemistry, Experiments, Discovery ..., accessed on September 9, 2025,                                                               https://www.britannica.com/biography/Michael-Faraday/Theory-of-electrochemistry
+10. Faraday, Thomson, and the Concept of the Magnetic Field | The British Journal for the History of Science | Cambridge Core, accessed on September 9, 2025,   https://www.cambridge.org/core/journals/british-journal-for-the-history-of-science/article/faraday-thomson-and-the-concept-of-the-magnetic-field/F4E1940FD9046E764D8E7EBF0E7BDD7C
+11. William Thomson, Baron Kelvin | Biography & Facts - Britannica, accessed on September 9, 2025,                                                              https://www.britannica.com/biography/William-Thomson-Baron-Kelvin
+12. The Role of Models and Analogies in the Electromagnetic Theory: A Historical Case Study, accessed on September 9, 2025,                                     https://www.researchgate.net/publication/228984887_The_Role_of_Models_and_Analogies_in_the_Electromagnetic_Theory_A_Historical_Case_Study
+13. RESOURCE LETTER Resource Letter EM-1 ... - Reed College, accessed on September 9, 2025,                                                                     https://www.reed.edu/physics/faculty/griffiths/EMMomentum.pdf
+14. History of Maxwell's equations - Wikipedia, accessed on September 9, 2025,                                                                                  https://en.wikipedia.org/wiki/History_of_Maxwell%27s_equations
+15. Electromagnetic Theory - James Clerk Maxwell Foundation, accessed on September 9, 2025,                                                                     https://clerkmaxwellfoundation.org/html/electromagnetic_theory.html
+16.  www.jpier.org>, accessed on September 9, 2025,                                                                                                             https://www.jpier.org/ac_api/download.php?id=23022806#:~:text=The%20canonical%20momentum%20is%20the,terms%20of%20the%20vector%20potential>.
+17. Chapter 13 Maxwell's Equations and Electromagnetic Waves - MIT, accessed on September 9, 2025,                                                              https://web.mit.edu/8.02t/www/802TEAL3D/visualizations/coursenotes/modules/guide13.pdf
+18. On Electromagnetic Momentum | Phys. Rev. - Physical Review Link Manager, accessed on September 9, 2025,                                                     https://link.aps.org/doi/10.1103/PhysRev.16.17
+19. Measuring Electromagnetic Vector Potential via Weak Value, accessed on September 9, 2025,                                                                   https://arxiv.org/abs/1602.04140
+20. arxiv.org, accessed on September 9, 2025,                                                                                                                   https://arxiv.org/abs/2506.07018#:~:text=Unveiling%20the%20role%20of%20vector%20potential%20in%20the%20Aharonov%2DBohm%20effect,-Masashi%20Wakamatsu&text=The%20most%20popular%20interpretation%20of,the%20magnetic%20field%20free%20region>.
+21. Unveiling the role of vector potential in the Aharonov-Bohm ... - arXiv, accessed on September 9, 2025,                                                     https://arxiv.org/html/2506.07018
+22. Measuring Electromagnetic Vector Potential via Weak Value - arXiv, accessed on September 9, 2025,                                                           https://arxiv.org/pdf/1602.04140

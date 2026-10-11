@@ -1,0 +1,46 @@
+
+### How to record
+    - Record terminal to local file, limiting idle time to max
+      2 sec:
+      ```
+      asciinema rec -i 2 demo.cast
+      ```
+      - upload it later
+        ```
+        asciinema upload demo.cast
+        ```
+
+
+### Install on Ubuntu
+    conda install -c conda-forge asciinema
+
+    Or:
+        sudo apt-add-repository ppa:zanchey/asciinema
+        sudo apt-get update
+        sudo apt-get install asciinema
+        asciinema --help
+
+
+### embed screencast!
+    terminal font size: 
+        data-size="small" (default)
+        data-size="medium"
+        data-size="big"
+
+    terminal colors:
+        data-theme="tango"
+        data-theme="solarized-dark"
+        data-theme="solarized-light"
+
+    <script type="text/javascript" src="https://asciinema.org/a/19509.js" id="asciicast-19509" async data-size="medium"></script>
+
+### install curl problem:
+    in cinema_install.sh, instead of:
+        curl -L            --progress-bar "$url" | tar xz -C $tmpdir
+    use:
+        curl -L --insecure --progress-bar "$url" | tar xz -C $tmpdir
+    
+### Links
+    - hacker news discussion https://news.ycombinator.com/item?id=17048922
+    - my biology screencast  https://asciinema.org/a/19509
+    

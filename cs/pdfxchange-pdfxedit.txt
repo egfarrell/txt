@@ -1,0 +1,70 @@
+
+### Links
+    - PDF-XChange (pdf-xedit) editor https://www.tracker-software.com/
+    - Activate in Lubuntu/Wine ~/bin/activate-pdfxedit.sh 
+
+### Handy for comments
+    - change comment color:
+    - "select comments" from the comments tab:
+    - press `ctrl+d` (for example) to change to my `ctrl+d` color
+      which is grey.
+
+
+### Handy for screencasts!
+    - NOTE 1: "F8": Hide Toolbars / Panes
+
+    - NOTE 2: Keep pencil in "EXCLUSIVE" mode!!
+                - Written text will not be 're-selected' in a box...
+
+    - NOTE 3: set pencil width to "2":
+                - open "comment style palette" settings
+                - Clone an existing style...
+                - Change CLONE properties to "border width 2"
+                - $MY_IMAGES/misc/pdf-xchange-comment-styles.jpg
+
+    - Keymappings to switch pencil color:
+        - Goto "Customize toolbars" -> "commands"
+        - Search for "custom style" and icon of a PENCIL...
+            - F1:         Select comments
+            - ctrl + q:   "eraser"
+            - ctrl + d:   "Dark"        Blue(3)    pencil custom style
+            - ctrl + r:                 Red(2)     pencil custom style
+            - ctrl + e:                 Green(2)   pencil custom style
+            - ctrl + h:   "HB pencil"   Enda Grey  pencil custom style 
+          > - ctrl + h:                 Indigo(2)  pencil custom style `<--- old mapping`
+
+### MY SHORTCUTS :
+    ctrl + alt + a   : edit all page content
+    ctrl + alt + s   : save as optimised
+    ctrl + alt + i   : add image
+    ctrl + alt + t   : add text
+    ctrl + alt + r   : resize pages
+    ctrl + alt + d   : deskew pages
+    ctrl + alt + f   : flatten comments
+    F4               : New blank document
+
+    ctrl + shift + d : Toggle "document info bar" (red banner bar that displays if problem with document)
+    ctrl + m         : Show/hide comments
+    ctrl + shift + i : insert pages
+    ctrl + shift + b : insert bookmark of current page
+    ctrl + shift + n : New blank document
+    ctrl + g         : goto page
+    ctrl + '         : show gridlines
+
+### Very handy cropping:
+    - press `<ctrl+alt+t>` for cropping tool
+    - click anywhere on the page ...
+    - it AUTO ASSIGNS the correct crop borders!
+    - less work...
+
+
+### Add border around PDF page
+    - resize pages
+    - choose percentage 120%
+    - do NOT rescale contents
+    - (this makes the page bigger but keeps the contents the same
+      size => a border!)
+
+### define keyboard shortcuts:
+    - right-click blank area on toolbar
+    - click customise toolbars

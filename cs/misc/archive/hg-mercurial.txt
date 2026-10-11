@@ -1,0 +1,12 @@
+
+### short commit log
+    hg log --style compact
+
+### list ignored files
+    hg status -i
+### show status all files
+    hg status --all 
+    - will list all the files in the tree, with a letter indicating its status: 
+        - `M`  modified, 
+        - `C`  clean (owned by hg), 
+        - `I`  ignored.

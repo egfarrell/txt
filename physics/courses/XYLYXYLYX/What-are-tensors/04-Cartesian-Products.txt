@@ -1,0 +1,99 @@
+04-Cartesian-Products.txt
+ 
+$MY_VIDEOS/physics/what-are-tensors/04-Cartesian-Products.mp4
+
+
+- if you get your free dual space, well the dual space is
+  a vector space, so shouldn't it have it's own dual space, to
+  map into the reals... kind of like a "double dual": `V**`???
+    - answer: no! there's not an unending chain of "dual" vector
+      spaces
+    - the dual of the dual, is the original vector space we
+      started with 
+        - brilliant! "Double dual"
+        - $MY_IMAGES/physics/what-are-tensors/dual-of-a-dual-space.jpg
+
+### The lecturer's bracket notation:
+    - this is different to QM
+    - `< map, vector >` 
+
+### Terminology
+    - you have vectors (with lower subscripts)
+    - you have "co-vectors" (with upper subscripts)
+    - although in a way, "co-vectors" are actually just vectors
+      anyway
+        - $MY_IMAGES/physics/what-are-tensors/vectors-and-co-vectors.jpg
+    - but the super/subscripts let you identify which _space_ the
+      vector came from.... 
+    - contravariant vectors come from the (original) vector space 
+    - covariant vectors come from the dual space 
+
+### use of Kronecker delta 
+	- $MY_IMAGES/physics/what-are-tensors/define-dual-basis-with-kroneckar.jpg
+
+### Notation ambiguity
+    - for any vector in the original space, you can't say there
+      is a "naturally corresponding" co-vector in the dual...
+    - it looked like there could be a natural correspondence due
+      to the notation of 
+        - original space: `A^μ e_μ`
+        - dual space:     `A_μ e^μ`
+        - so he changed the coefficients for the dual space to
+          be: `B_μ e^μ`
+
+### Actually executing a map
+    - this is where our definition of the dual basis with the
+      Kronecker delta comes in handy
+        - $MY_IMAGES/physics/what-are-tensors/carry-out-a-dual-mapping.jpg
+    - note: the result of this mapping is a REAL number 
+    - oh and the final result is very reminiscent of the dot
+      product
+        - ah but it's totally different!! 
+        - A dot product is defined between two vectors in the
+          SAME space
+        - but a dual mapping is totally different, involving
+          2 different spaces... just looks similar to the dot
+          product 
+        - $MY_IMAGES/physics/what-are-tensors/dual-mapping-looks-like-dot-product.jpg
+
+### didnt understand this at first:
+    - oh get it now, the "co-vectors" are acctually
+      - _functions_/vectors!! remember his definition...
+    - any given vector is a mapping from the dual space to the reals
+    - any given co-vector is a mapping from the vector space to the reals
+        - $MY_IMAGES/physics/what-are-tensors/vectors-as-mappings.jpg
+    - both vectors and co-vectors are maps in their own way... 
+    - everything is a map! 
+
+
+### Cartesian product
+    - binary operation with a "big X"
+    - it's a binary operation that takes a set on the left, a set
+      on the right, and produces a set
+      - ```
+      - {set} X {set} = {set}
+      - ```
+    - It does so in a very specific way : it creates ordered
+      pairs of combination: one element from the 1st set, one
+      element from the 2nd
+    - remember: vector spaces are sets aswell, so the cartesian
+      product will work on them... 
+
+
+### - Why is it useful?
+    - well it gives us a bit of formal notation that allows us
+      create other binary operations.
+    - it allows me define binary operations as mappings from some
+      set to another set
+        - everything is a "map" in this type of maths
+    - so the Cartesian product allows me to quickly define the
+      domain of some binary operation (mapping)
+    - I need the cartesian product to reflect all the possible
+      ordered pairs
+        - $MY_IMAGES/physics/what-are-tensors/using-the-cartesian-product.jpg
+
+### Extended Cartesian products
+    - ordered triplet:   `A x B x C`
+    - ordered quadruple  `A x B x C x D`
+
+

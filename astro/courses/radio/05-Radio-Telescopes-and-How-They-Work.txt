@@ -1,0 +1,320 @@
+
+- https://www.thegreatcoursesplus.com/radio-astronomy-observing-the-invisible-universe
+
+### Radio Telescopes and How They Work
+
+- Famous Radio Telescopes
+    - Arecibo  
+    - Greenbank: West Virgina
+    - Effelsberg 100m (Germany)  
+    - Jodrell Bank (1950's)  
+    - Giant Metrewave Radio Telescope (Pune): measures Hydrogen
+      in Galaxies
+    - Spain: IRAM: measure gas clouds on verge of creating new
+      stars  
+    - ALAMA: array of dishes 12m diameter  
+
+Remarks:
+    - none of the Radio telescopes above have a dome!
+    - Because they are all too big: KECK has the largest optical
+      telescopes at 10m. ALMA is one of the smallest Radio ones
+      at 12m   
+    - tolerances on a radio telescope a lot looser than an
+      optical  
+
+Materials:
+    - Some are mesh, some are solid dish
+    - the mounting off the ground is different for each,
+      depending on its purpose
+	- $MY_IMAGES/astro/Radio/telescope-focus.jpg
+    - Puse the electyrons from the detector along the probe wire.
+      So the wire has become an "antenna"
+	$MY_IMAGES/astro/Radio/detector-probe.jpg
+
+voltage: height of em wave in detector wire is the "voltage"
+incoming wave split into 2 polarisations: information in both
+polarisations
+- noise added to aid calibration
+- 1cm wavelength = 35 GHz  
+- telescope super cooled: resistance in wire creates noise
+- amplifiers put out their own radiation  
+- usually have the receiver at prime focus: so less noise
+  introducted into the process
+- hetrodyning / mixing: change freq of signal but not losing
+  information (not possible in other parts of the em spectrum)
+
+
+why mix down: because otherwise you'd have to build loads of
+different spectrometers for measuring different sky frequencies.
+
+- Our radios using hetrodyning to mix down radio signals into the
+  audio range
+
+phase error is not absolute; depends on the wavelength you are
+measuring: eg 20m wavs or 2cm waves
+
+a divet in the dish of 0.5 cm will make no difference when
+detecting 20m waves. But when detecting 2cm waves, the divet will
+force the wave to travel an extra 1cm, which will result in
+a 180deg phase shift...cancelling out some wave from the good
+part.
+
+final topic: polarisation
+
+
+LECTURE 5
+
+Radio Telescopes and How They Work
+
+
+
+I n this lecture, you will learn the details of how a radio telescope works. In
+general, a radio telescope collects radio waves from a certain direction
+in the sky and focuses it onto a point, where a receiver can pick up the
+signal. The receiver does a number of things, including amplify the signal.
+The signal is then passed along to systems that detect and measure it.
+
+Radio Telescopes
+
+With a radio telescope, radio waves are funneled in and hit a wire
+in their path. The wire is not fundamentally different from wires that
+we see every day; its most important property is that it will carry
+electricity. This particular wire is called the probe because it probes
+the electric field.
+
+The wire, the probe, is made of a metal such as copper or aluminum.
+These common metals have a lot of free electrons swimming around
+on their surface. Electric current is just an organized motion of these
+electrons.
+
+
+
+You push the electrons from one end of the wire, and the signal
+travels along as electricity. You can push electrons by hitting them
+with an electromagnetic wave. And when that happens, the wire has
+become an antenna.
+
+An antenna is a device that intercepts an electromagnetic wave in
+free space and turns it into an electric current in a wire. The antenna
+for the radio in your car does the same thing: It catches incoming
+radio waves and turns them into a current in a wire.
+
+At the heart of every radio telescope is an antenna--some bit of
+wire or a metal rod--that captures the incoming electromagnetic
+waves and puts out an electric current. The current looks like a wave
+running down the wire, and the amplitude, or height, of the wave is
+called its voltage.
+
+The purpose of a radio telescope dish is to capture as much radio
+energy as possible and focus it on that little bit of wire. For maximum
+efficiency, the probe should be 1/4 of the size of the wave it's going
+to intercept. The radio signal hits the dish and reflects up to the
+primary focal point, or the prime focus, where we can either catch
+it with an antenna or redirect it using another reflecting surface to
+send the signal somewhere else.
+
+
+
+
+This dish has a secondary reflector that redirects the signal down to
+the big horn in the middle of the dish, where the receiver sits.
+
+Here is a dish with the receiver at the prime focus.
+
+
+
+
+Once we have concentrated the radio power on a little antenna--
+which turns it into an electric current in a wire--the next thing that
+we do is amplify it. We feed the signal into a device that makes it
+stronger by many times--a thousand times--so that it turns from a
+faint celestial whisper into something that we can measure.
+
+Here's a modern receiver, inside of which the amplification and much
+more happens.
+
+If you can amplify a signal by a thousand times, why go through the
+trouble of building this big dish with a big aperture, when you could
+have a smaller aperture, a much cheaper dish, and compensate for
+the weaker signal by adding more amplification?
+
+The answer goes back to thermal radiation--the radio radiation
+emitted by every object that acts anything like a blackbody.
+
+Amplifiers act somewhat like blackbodies, and this means that not
+only are they amplifying the incoming signal, they are simultaneously
+
+
+
+
+putting out their own signals--radio noise--that's indistinguishable
+from the radio signals coming from the antenna. And the noise gets
+amplified along with the signal.
+
+If our antenna wire does not carry electricity perfectly--if it has even
+the slightest resistance--it acts a little like a blackbody.
+
+For example, if only 1% of the astronomical signal is lost to resistance
+in the wire, then that same wire adds 1% blackbody noise at the
+temperature of the wire. The astronomical signal is lost, and it's
+replaced by noise. For this reason, most receivers are cooled to a
+few degrees above absolute zero. The colder the blackbody, the less
+it radiates.
+
+Receiver noise can swamp the celestial signals. We make great
+efforts to keep our receivers quiet, but nothing beats starting with
+the strongest astronomical signal possible, which means the biggest
+aperture.
+
+In our schematic of a radio telescope system, the receiver is always
+located at the focal point because even the best wires have loss and
+introduce noise. We want the amplification to occur as close to the
+antenna as possible.
+
+Once the radio signal has been captured by a little antenna, converted
+into a current, and amplified (with noise unavoidably added in the
+process), radio astronomers then use a technique called heterodyning,
+or mixing. One of the marvels of radio engineering, this process
+allows radio astronomers to change the frequency of the signal while
+preserving all of the information it contains--something that is simply
+impossible in other parts of the electromagnetic spectrum.
+
+If you own a radio, you will see that it covers a number of bands--
+AM, FM, maybe others. That means that the radio signals are coming
+through the air at frequencies such as 106.3 megahertz in the FM
+band or 1370 kilohertz in the AM band.
+
+
+
+
+But our radio uses heterodyning to mix those signals down into the
+audio range--kilohertz--where our ears work. The speakers in our
+radios don't know the frequency of the radio station, because by the
+time the radio signal gets to the speakers, it been mixed down to
+audio.
+
+We've collected the signal that passed through the aperture using the
+dish; focused it onto an antenna, which turned the electromagnetic
+radiation into current flowing down a wire; amplified the signal;
+and mixed it to a convenient frequency. The process of detecting
+the signal means converting that current running down a wire into
+a measurement of power. This is done with a device whose generic
+name is a detector.
+
+We use various technologies to detect the power received by
+the telescope. A detector always averages over some band of
+frequencies. If we are just studying the general properties of an
+object emitting blackbody radiation, the band can be quite broad
+because the intensity of blackbody radiation does not change
+rapidly with frequency.
+
+If we are looking at detail in a spectral line, the individual bands we
+measure--the channels in our spectrometer--can be quite narrow.
+But the result is the same: We end up measuring power, and that
+is the voltage squared, at a particular frequency, coming from a
+particular direction in the sky.
+
+In modern times, our detectors are digital and their output goes
+straight into a computer, where it is stored and analyzed.
+
+How a Dish Works
+
+The incoming wave that comes from the direction that we're studying
+is reflected and brought to a focus, where a receiver amplifies the
+signal, and it's sent to a detector for measurement.
+
+
+
+
+The simplest radio dish has the shape of a parabola, which is
+symmetric about a central line called the vertex line. You spin this
+2-dimensional curve about the vertex line to create a 3-dimensional
+dish called a paraboloid.
+
+A radio wave that comes
+through the aperture
+perpendicular to the vertex
+line--like the dotted line in the
+figure--will be reflected off
+the dish and all parts of it will
+arrive at the focus at the same
+time. The wave will be in focus.
+
+The reason this works is that it's a property of a parabola that the
+distance from any point on our incoming wave to the focus is the
+same, no matter what part of the dish it hits.
+
+In the drawing, the 3 parts of the wave that hit the dish at 3 different
+places all arrive at the focus at the same time because they all
+
+
+
+
+traveled the same distance. They arrive in phase with each other.
+The signal is concentrated. It adds, is picked up by the antenna, and
+is amplified by the receiver.
+
+If the wave is not perpendicular to the vertex line but is off at some
+angle, the right part of the wave will arrive at the focus first because
+it has a shorter distance to go. The left part of the wave has a longer
+path, so it arrives at the focus later. The two waves do not arrive in
+phase at the focal point.
+
+The word "phase" refers to a wave cycle. It's often measured in
+degrees, with 360? being a full cycle. We can locate position on the
+wave by a measure of its phase in degrees.
+
+Phase error is not absolute, but depends on the wavelength of the
+signal you are studying. The accuracy we require of our dish surface
+depends on the wavelength where we want to use it. And shorter
+wavelengths, meaning higher frequencies, require a more precise
+dish than is needed at long wavelengths.
+
+
+
+Polarization
+
+The up-and-down electromagnetic wave excites up-and-down motion
+of electrons in our antenna wire that becomes the current we detect.
+
+But electromagnetic waves can have a side-to-side component as
+well, and if we imagine a wave coming in and out, we can see that it
+won't be picked up by our antenna wire, because the wire is oriented
+up and down.
+
+This property of electromagnetic waves is called polarization. The
+radio waves from most astronomical sources are not polarized.
+This means that their orientation is random, changing rapidly from
+horizontal to vertical to everything in between.
+
+
+
+
+Transmitters on Earth are polarized, and the antenna receives the
+strongest signal at one particular angle.
+
+A single antenna wire is sensitive to just one segment of the
+polarized wave and only picks up half of a randomly polarized signal.
+So, we have a parallel system to pick up the other half. That way, the
+full signal is detected. Each polarized antenna connects to its own
+independent set of amplifiers and detectors.
+
+Suggested Reading
+
+- Cottrell, Telescopes, chap. 7.
+- Dunning, "Receiver Systems."
+- Graham-Smith, Unseen Cosmos, chap. 10.
+- Wielebinski, Junkes, and Grahl, "The Effelsberg 100-m Radio Telescope."
+
+Questions to Consider
+
+1. A radio telescope and a drawbridge are both large moving
+   objects. What are the differences between their design
+   properties, and what are their similarities?
+
+2. What are some of the considerations when designing a radio
+   receiving system for your car that don't apply to radio-
+   astronomical receiving systems?
+
+
+

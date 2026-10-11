@@ -1,0 +1,289 @@
+Papers| July 01 1978
+Unperformed experiments have no results 
+Asher Peres
+Am. J. Phys. 46, 745–747 (1978)
+https://doi.org/10.1119/1.11393
+
+# See also
+    - $MY_NOTES/physics/QM/Peres-Contextuality.txt
+    - $MY_NOTES/physics/QM/Peres-unperformed-GPT1.txt       
+    - $MY_NOTES/physics/QM/Peres-unperformed-GPT1-extra.txt 
+    - $MY_NOTES/physics/QM/Peres-unperformed-GPT2.txt       
+    - $MY_NOTES/physics/QM/Peres-unperformed-Gemini.txt     
+
+
+### Abstract
+    - This paper discusses correlations between the results of
+      measurements performed on physical systems which are widely
+      separated, but have interacted in the past. It is shown
+      that quantum correlations are stronger than classical
+      correlations. This property leads to the following paradox,
+      known as Bell’s theorem: Let us assume that the outcome of
+      an experiment performed on one of the systems is
+      independent of the choice of the experiment performed on
+      the other. Now, let us try to imagine the results of
+      alternative measurements, which could have been performed
+      on the same systems instead of the actual measurements.
+      Then there is no way of contriving these hypothetical
+      results so that they will satisfy all the quantum
+      correlations with the results of the actual measurements.
+      However, the weaker classical correlations can be
+      satisfied.
+
+
+# Summary of below
+    - Bell's theorem identifies an impossible trio: 
+        - you cannot simultaneously have locality (distant
+          outcomes are independent), counterfactual definiteness
+          (unperformed measurements have pre-existing values),
+          and agreement with quantum predictions. Experiment
+          confirms QM, so one of the first two must go.
+    - The "contradiction" lives outside QM, not inside it. 
+        - QM is internally consistent. The tension only appears
+          when you try to *explain* its correlations using
+          classical assumptions about pre-existing hidden values
+          — that's where Bell inequalities get derived, and then
+          violated.
+    - Peres' core move is identifying which assumption to cut.
+        - The step "imagine the results of measurements that
+          weren't taken" is where the trouble sneaks in. He
+          argues this assumption — counterfactual definiteness
+          — is simply illegitimate, not forced on us by logic or
+          physics.
+    - The quantum surprise is that local randomness and global
+      structure coexist. 
+        - Each detector locally produces a completely random `±1`
+          outcome, yet the joint correlations across both
+          detectors follow the precise, smooth function `−α·β`. 
+        - Classically, randomness and strong structure trade off
+          against each other — quantum mechanics refuses that
+          bargain.
+    - Peres vs. Bell/Bohmians is a genuine fork, not a mistake by
+      either side. 
+        - Drop counterfactual definiteness → keep locality, no
+          paradox (Peres). 
+        - Keep realism → drop locality, accept a nonlocal world
+          (Bohm/Maudlin). Both are internally consistent; the
+          disagreement is philosophical, about what a physical
+          explanation *must* provide.
+    - The title's irony is the whole point. 
+        - Peres uses counterfactual reasoning throughout — he
+          just refuses to treat counterfactual values as *real*.
+        - The distinction is between using "what would have
+          happened" as an analytical tool versus assuming those
+          hypothetical outcomes physically exist. The former is
+          fine; the latter is where Bell's contradiction is born.
+
+## User Questions
+
+- Is Peres just restating Bell, or adding something new?
+- What exactly is the “contradiction” in Bell/Peres?
+- Why do the two averages (local randomness + strong correlation) feel surprising?
+- Can Bell’s result be resolved by dropping counterfactual definiteness instead of locality?
+
+## 1. What Bell’s Theorem Actually Shows
+
+Bell proves that you cannot have all three:
+
+1. Locality  
+   - Outcomes at A do not depend on settings at B
+
+2. Counterfactual definiteness (CFD)  
+   - All possible measurement outcomes exist (even unperformed ones)
+
+3. Agreement with quantum predictions  
+   - Correlations: E(α, β) = − α · β
+
+→ These three together lead to a contradiction (Bell inequality violation)
+
+## 2. What the “Contradiction” Is
+
+The contradiction is NOT inside quantum mechanics.
+
+It is:
+
+- Assume:
+  - Locality
+  - Pre-existing values for all measurements
+
+- Then:
+  - You derive Bell inequalities
+
+- But:
+  - Quantum mechanics (and experiment) violate those inequalities
+
+→ So:
+  The same system must both satisfy and violate Bell inequalities
+
+## 3. Where the Contradiction Comes From
+
+The crucial step is:
+
+> “Let us imagine the results of alternative measurements…”
+
+This assumes:
+
+- For each run j:
+  - r_j(α), r_j(α′), r_j(β), r_j(β′) all exist simultaneously
+
+This is counterfactual definiteness.
+
+## 4. Peres’ Key Move
+
+Peres identifies that step as the problem.
+
+He says:
+
+> The contradiction only arises because we assume unperformed measurements have results.
+
+So he rejects:
+
+- Counterfactual definiteness
+
+→ Conclusion:
+  “Unperformed experiments have no results”
+
+## 5. The Two Key Equations
+
+### (1) Local average
+
+- `(1/N) Σ_j r_jα(βγδ…) = 0`
+    - Each side alone is random
+    - Independent of distant settings
+    - Implies no signalling
+
+### (2) Correlation
+
+- `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+    - Strong quantum correlation
+    - Violates Bell inequalities
+
+## 6. Why This Is Surprising
+
+- Surprising because both are true at once:
+    - Local outcomes → completely random  
+    - Joint outcomes → highly STRUCTURED
+
+- Classically, you expect:
+    - Random → weak correlation  
+    - Strong correlation → underlying structure
+
+- Quantum mechanics gives:
+    - Random locally  
+    - Strong correlation globally  
+
+→ This combination is impossible in classical local theories
+
+## 7. Correlation vs Dependence
+
+- Important distinction:
+    - Correlation = statistical (many runs)
+    - Dependence = structural (how outcomes are generated)
+
+- Single run:
+    - gives `±1` at `A` and `B`
+    - shows no correlation by itself
+
+- But:
+    - Outcome at `A` may depend on `β` (distant setting)
+    → Nonlocality is about dependence, not visible single-run correlation
+
+## 8. Peres vs Bell/Maudlin
+
+### Bell/Maudlin view
+
+- Counterfactual definiteness is necessary
+    - Bell ⇒ locality must fail
+
+→ Conclusion:
+    - The world is nonlocal
+
+### Peres view
+
+- Counterfactual definiteness is optional
+    - Reject assigning values to unperformed measurements
+
+→ Conclusion:
+    - No contradiction, no need for nonlocal realism
+
+## 9. Two Possible “Resolutions”
+
+- Bell forces a choice:
+    - Option A — Peres
+        - Drop: Counterfactual definiteness
+        - Keep: Locality (operationally, no signalling)
+
+    - Option B — Bohmian / your suggestion
+        - Keep: Realism (values exist)
+        - Drop: Locality 
+        - → Explicit nonlocal theory
+
+## 10. Why the Disagreement Exists
+
+- Key question:
+    > Do unperformed measurements need definite values?
+
+- Bell/Maudlin: YES (required for explanation)
+- Peres: NO (illegitimate assumption)
+
+## 11. The Role of −α · β
+
+- This is the crucial empirical fact:
+    - Smooth angular dependence
+    - Violates Bell inequalities
+
+- Classical models can produce correlations, but NOT this
+  function.
+
+## 12. Important Clarification
+
+- The two equations:
+    - Are NOT contradictory
+    - Are both empirical facts
+
+- The contradiction arises only when you try to explain them using:
+    - local + predefined values
+
+## 13. The “Irony” in Peres’ Title
+
+- Title:
+    > “Unperformed experiments have no results”
+    - But he still:
+    - talks about unperformed experiments
+
+- Resolution:
+    - He distinguishes:
+    - Using counterfactuals as a _TOOL_ ✔  
+    - Treating them as _real physical values_ ✘  
+
+- So:
+    > You can think about them, but they don’t correspond to
+    > reality
+
+## 14. Deep Insight
+
+- Peres’ position:
+    - Counterfactual reasoning = allowed  
+    - Counterfactual VALUES = not real  
+
+## 15. Final Summary
+
+- Bell shows:
+    - You cannot have:
+        - locality
+        - predefined outcomes
+        - quantum correlations
+
+- Peres concludes:
+    > The mistake is assuming predefined outcomes
+
+- Alternative view:
+    > The mistake is assuming locality
+
+- Both are logically consistent — the difference is philosophical.
+
+## 16. One-Line Takeaway
+
+- The tension in QM is not in the equations, but in:
+    > whether unperformed measurements should be treated as
+    > having real outcomes

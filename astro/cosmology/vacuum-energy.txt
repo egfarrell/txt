@@ -1,0 +1,95 @@
+- Me:
+    - "I don't understand why when energy is injected into empty
+      space, gravity becomes repulsive?!"
+
+- It's a real puzzle — basically about the weirdest part of GR
+  and cosmology:
+    - the relationship between energy density in empty space and
+      gravity.
+    - Feynman was hinting at what we now call the COSMOLOGICAL
+      CONSTANT problem.
+
+
+### 1. Normal energy vs. vacuum energy
+
+* In GR, the source of gravity isn’t just mass, it’s the
+  stress-energy tensor (energy, pressure, and momentum).
+* For normal matter (stars, gas, dark matter), energy density is
+  positive, and pressure is usually small or positive. This gives
+  attractive gravity.
+* For radiation (like photons), pressure is also positive, still
+  giving an attractive effect overall.
+
+But vacuum energy — the "energy of empty space" — is special.
+
+
+### 2. Vacuum energy has negative pressure
+
+The vacuum acts like a fluid with:
+
+* energy density: `rho_vac > 0`
+* pressure: `p_vac = -rho_vac`
+
+That minus sign is the kicker. In Einstein’s field equations:
+
+`G_mu_nu = 8*pi*G * T_mu_nu`
+
+the stress-energy tensor of the vacuum looks like:
+
+`T_mu_nu (vac) = -rho_vac * g_mu_nu`
+
+This minus sign leads to repulsive gravity. Instead of pulling
+things together, it accelerates the expansion of space.
+
+
+### 3. The cosmological constant and repulsion
+
+If you take the Friedmann equation for the expansion of the
+universe:
+
+`(a_dot/a)^2 = (8*pi*G/3) * rho - (k/a^2) + Lambda/3`
+
+where:
+
+* `a(t)` is the scale factor,
+* `rho` is normal matter/radiation density,
+* `Lambda` is the cosmological constant.
+
+A positive `Lambda` acts like positive vacuum energy and makes
+`a(t)` accelerate — that’s repulsive gravity. This is literally
+what we observe as dark energy today.
+
+
+### 4. Why Feynman said what he did
+
+He was pointing out a contradiction: quantum field theory
+predicts that the vacuum energy density should be huge (like
+10^120 times bigger than what we infer from cosmic acceleration).
+If that were true, the repulsive gravity from vacuum energy would
+be so strong that the universe would have expanded so fast that
+galaxies could never have formed. Yet galaxies exist, so the
+vacuum energy must be much smaller than naive theory predicts.
+
+So his statement “energy in empty space leads to repulsive
+gravity” is exactly a paraphrase of “a positive cosmological
+constant accelerates expansion.”
+
+
+### 5. Intuition
+
+Why does negative pressure repel? In GR, both energy density and
+pressure gravitate. Positive pressure increases attractive
+gravity, but negative pressure acts like tension — like
+a stretched rubber band pushing everything apart. Vacuum energy
+is like that tension filling all space. Instead of clumping, it
+dilutes nothing and makes expansion accelerate.
+
+
+This whole thing is the heart of one of the biggest unsolved
+problems in physics: why the vacuum energy isn’t absurdly huge.
+It’s not obvious from Newtonian thinking at all — it’s baked into
+the math of Einstein’s equations.
+
+Would you like me to show the exact derivation from the Friedmann
+equation where negative pressure flips the sign to make expansion
+accelerate? (It’s short and makes the repulsion very clear.)

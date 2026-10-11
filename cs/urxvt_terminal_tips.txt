@@ -1,0 +1,101 @@
+urxvt tips
+
+Paste: Primary clipboard "*": shift+insert
+Paste: CLIPBOARD         "+": ctrl+alt+v
+
+### Support OSC52(!)
+    - handy for copying/pasting without X11 etc
+    - Use this small perl script $HOME/.urxvt/ext/52-osc
+    - https://unix.stackexchange.com/questions/629398/does-urxvt-support-the-osc52-escape-sequence
+
+### xfce: merge .Xdefaults changes
+    xrdb -merge ~/.Xdefaults
+
+### ERROR: 'rxvt-unicode-256color': unknown terminal type.
+    mk -p ~/.terminfo/r
+    cp /usr/share/terminfo/r/rxvt-unicode-256color ~/.terminfo/r
+
+### set bash key codes (escape sequences)
+    https://unix.stackexchange.com/questions/185457/disable-keycode-printing-in-urxvt
+
+### how to: bold font
+    URxvt.boldFont:      xft:Ubuntu Mono:style=Bold:pixelsize=17 
+
+### urxvt debian package name
+    ai rxvt-unicode-256color
+
+### change vim cursor (insert into: ~/.vimrc.local)
+    " URXVT has the ability to use  
+    " a fancy cursor for insert mode
+
+    if exists('$TMUX')
+        let &t_SI = "\<Esc>Ptmux;\<Esc>\e[6 q\<Esc>\\"
+        let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+    else
+        " set (this linking) i-beam 
+        let &t_SI = "\e[6 q"
+        " set (kon-blinking) block
+        let &t_EI = "\e[2 q"
+    endif
+
+### build/compile from source
+    - final solution: extract files from '.deb' package
+    - installed from "deb" package: then cannot find: `urxvt.pm`
+        export PERL5LIB=/home/efarell/.local/lib:$PERL5LIB
+        export PERL5LIB=/home/efarell/.local/lib/perl:$PERL5LIB
+
+    - this compiling kinda works on some machines
+    git clone https://github.com/exg/rxvt-unicode
+    c rxvt-unicode/
+    cvs -z3 -d :pserver:anonymous@cvs.schmorp.de/schmorpforge co libev
+    cvs -z3 -d :pserver:anonymous@cvs.schmorp.de/schmorpforge co libptytty
+    sudo apt install libperl-dev
+    ./autogen.sh 
+    ### see below how to compile libptytty
+        export PKG_CONFIG_PATH=$HOME/mylibs/lib/pkgconfig:$PKG_CONFIG_PATH 
+    ### Configure: static link libptytty
+        LDFLAGS="-L$HOME/mylibs/lib -lptytty" CPPFLAGS="-I$HOME/mylibs/include" ./configure --prefix=$HOME/.my-urxvt
+    make
+    make install
+
+    - Note: may need autoconf > 2.71
+        # check version
+        autoconf --version
+        wget https://ftp.gnu.org/gnu/autoconf/autoconf-2.71.tar.xz
+        tar -xf autoconf-2.71.tar.xz
+        cd autoconf-2.71/
+        ./configure
+        time make 
+        sudo make install 
+        . ~/.profile
+        autoconf --version  # you should see your new version now!
+
+    - Compile libptytty
+        Assume `libptytty` source is at: ~/libptytty
+        cmake -DCMAKE_INSTALL_PREFIX=$HOME/mylibs -DBUILD_SHARED_LIBS=OFF ~/libptytty
+        cmake --build .
+        cmake --install .
+
+
+### utf8 symbol glyphs
+    if symbols not displaying, set a fallback font in .Xdefaults!
+    e.g. Monospace is the fallback here!
+    `URxvt*font: xft:Monaco:size=7.5, xft:Monospace:size=8`
+
+### autostart tmux
+    urxvt -e tmux
+
+### copy text
+    simply select it. Then
+    1. goto new window and hit middle mouse button
+    or
+    2. hit SHIFT-INSERT
+
+### text selection
+    double-click word to select it
+    treble click to select line
+
+### Links
+    - urxvt extensions         https://github.com/bookercodes/awesome-urxvt
+    - urxvt Github source code https://github.com/exg/rxvt-unicode
+    - Manual                   https://linux.die.net/man/1/urxvt

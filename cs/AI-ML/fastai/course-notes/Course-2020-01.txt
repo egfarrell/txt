@@ -1,0 +1,86 @@
+
+- Deep Learning equivalent to Human performance in lots of areas.
+	- $MY_IMAGES/cs/fastai/deep-learning-as-good-as-humans.jpg
+
+
+- Deep Learning is a type of neural network learning
+
+- You'll hear the word _CONNECTION_ a lot in this course. That's
+  what it's all about. 
+
+- Minsky wrote a book "Perceptrons". 
+- He showed a single layer of NN is unable to learn simple,
+  critical functions such as XOR.
+
+  Parallel Distributed Processing
+    - $MY_IMAGES/cs/fastai/mit-parallel-distributed-processing.jpg
+
+- "DEEP" = "more layers"!
+
+- Cats and Dogs: a normal program isn't able to differentiate
+  between both animals. Before NN's this simple task wasn't
+  possible.
+
+- The normal step-by-step programming approach doesnt seem to
+  work well for pictures. 
+    - Because we need to spell out every step in the process (in
+      exasperating detail)
+
+- Old programming approach
+	- $MY_IMAGES/cs/fastai/old-programming-step-by-step.jpg
+
+- New ML approach
+	- $MY_IMAGES/cs/fastai/new-ml-approach.jpg
+	- $MY_IMAGES/cs/fastai/new-ml-approach-full.jpg
+
+- A trained model can finally be used like a traditional program:
+    - $MY_IMAGES/cs/fastai/new-ml-approach-final.jpg
+
+- We're building a computer program not by specifying the steps,
+  but training it how to do the task (inference) 
+	- $MY_IMAGES/cs/fastai/ml-definition.jpg
+
+- We want such a flexible model/function, that adjusting weights
+  will cause it to do ANYTHING!
+    - so a NN is a function, parameterised by a set of weights.
+    - It can do any task 
+    - (math proof: Universal Approximation Theorem) 
+
+- "training them" = "finding a good set of weights"
+
+- the process of finding good weight assignments is SGD
+  (Stochastic gradient descent) 
+
+- Modern terminology has replaced some ideas from Samuel in the
+  1960's
+	- $MY_IMAGES/cs/fastai/DL-modern-terminology.jpg
+    - note: modern terminology: parameters + architecture = model 
+    - Limitations inherent to ML:
+        - $MY_IMAGES/cs/fastai/ML-limitations-important.jpg
+
+- Models interacting with the ENVIRONMENT
+    - creates positive feedback loops 
+        - $MY_IMAGES/cs/fastai/positive-feedback.jpg
+    - "proxy" : 
+        - arrest is being used as a proxy for crime. 
+        - In lots of cases, the data is a proxy for some value
+          you truly care about. But the difference between the
+          proxy and the actual value is often significant.
+
+### fastai code
+    - import * is safe in fastai
+    - 4 fastai applications: 
+        - vision, 
+        - text, 
+        - tabular 
+        - and `***` filtering
+    - `doc(...)` 
+    - note: fastai documentation are Jupyter notebooks
+
+
+### Craft
+    - the craft of ML is creating a model with "proper fit"
+        - $MY_IMAGES/cs/fastai/proper-fit-versus-overfitting.jpg
+    - the only way to check for proper fit is trying it on new
+      data that wasnt used to train it.
+

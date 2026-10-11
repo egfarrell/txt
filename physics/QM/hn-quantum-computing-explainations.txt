@@ -1,0 +1,447 @@
+Ask HN: What scientific phenomenon do you wish someone would explain better?
+https://news.ycombinator.com/item?id=22989280
+ 	
+arkanciscan 14 hours ago [-]
+
+Quantum Computers. Not like I'm five, but like I'm a software engineer who has a pretty decent understanding of how a classical turing machine works. I can't tell you how many times I've heard someone say "qubits are like bits except they don't have to be just 1 or 0" without providing any coherent explanation of how that's useful. I've also heard that they can try every possible solution to a problem. What I don't understand is how a programmer is supposed to determine the correct solution when their computer is out in some crazy multiverse. I guess what I want is some pseudo code for quantum software.
+
+reply
+	
+	
+cousin_it 3 hours ago [-]
+
+I think there's no way to understand quantum computing without first understanding some linear algebra, specifically tensor products. How ten 2-dimensional spaces give rise to a 1024-dimensional space, how the Kronecker product of three 2x2 matrices is an 8x8 matrix, and so on. If you're comfortable with that, here's a simple and precise explanation of quantum computing:
+
+1) The state of an n-qubit system is a 2^n dimensional vector of length 1. You can assume that all coordinates are real numbers, because going to complex numbers doesn't give more computational power.
+
+2) You can initialize the vector by taking an n-bit string, interpreting it as a number k, and setting the k'th coordinate of the vector to 1 and the rest to 0.
+
+3) You cannot read from the vector, but exactly once (destroying the vector in the process) you can use it to obtain an n-bit string. For all k, the probability of getting a string that encodes k is the square of the k'th coordinate of the vector. Since the vector has length 1, all probabilities sum to 1.
+
+4) Between the write and the read, you can apply certain orthogonal matrices to the vector. Namely, if we interpret the 2^n dimensional space as a tensor product of n 2-dimensional spaces, then we'll count as an O(1) operation any orthogonal matrix that acts nontrivially on only O(1) of those spaces, and identity on the rest. (This is analogous to classical operations that act nontrivially on only a few bits, and identity on the rest.)
+
+The computational power comes from the huge size of matrices described in (4). For example, if a matrix acts nontrivially on one space in the tensor product and as identity on nine others, then mathematically it's a 1024x1024 matrix consisting of 512 identical 2x2 blocks - but physically it's a simple device acting on one qubit in constant time and not even touching the other nine.
+
+reply
+	
+	
+andyjohnson0 2 hours ago [-]
+
+Thank you for posting such a concise description.
+
+reply
+	
+	
+elgfare 14 hours ago [-]
+
+I recommend Computerphile's videos https://www.youtube.com/playlist?list=PLzg3FkRs7fcRJLgCmpy3o....
+
+I had the same "problem" as you. What finally made me feel I sort of cracked it was those videos. The way I think of it now is: They let you do matrix multiplication. The internal state of the computer is the matrix, and the input is a vector, where each element is represented by a qubit. The elements can have any value 0 to 1, but in the output vector of the multiplication, they are collapsed into 0 or 1. You then run it many times to get statistical data on the output to be able to pinpoint the output values more closely.
+
+reply
+	
+	
+ad404b8a372f2b9 13 hours ago [-]
+
+I don't know if it's accurate (because I never understand anything I read about it) but this is the most concise and clear explanation I've read on this subject to date. Thank you!
+
+reply
+	
+	
+dreamcompiler 9 hours ago [-]
+
+It's accurate. QC is just linear algebra with complex numbers, plus probability extended to the complex domain. Why that's useful is something I'm still struggling with as well.
+
+reply
+	
+	
+sodafountan 8 hours ago [-]
+
+I'd assume it's the speed advantage, but the only problem I can think of that would require that type of exponential speed is cracking hashing algorithms which just seems destructive and counterproductive, like building a digital nuclear bomb - and from my very limited understanding that's a long ways off from being achieved.
+
+I assume there's probably many more complex computational problems outside of my domain that QC can help with. Does anybody know of any?
+
+reply
+	
+	
+brg 7 hours ago [-]
+
+Aside from Shor's, the other is Grover's algorithm which deals with search in an unstructured database. There are more and more superpolynomial speedups which have been discovered in application of QC. A good enumeration of these is the quantum algorithm zoo.
+
+https://quantumalgorithmzoo.org/
+
+reply
+	
+	
+Smaug123 7 hours ago [-]
+
+Grover's algorithm lets you search an unsorted list of four elements with just one "is this thing in the list?" query. Classically, of course, it requires four queries.
+
+More precisely, given f: 2^n -> {0,1} which is guaranteed to hit 1 exactly once, Grover finds the one input which hits 1, and it does so using about 2^{n/2} queries of f; but the constants happen to line up so that when n=2, exactly one query is required.
+
+reply
+	
+	
+skosch 8 hours ago [-]
+
+Many problems require lots of huge matrix multiplications—think simulations of physical systems, i.e. weather systems or molecular interactions, or numerical optimization.
+
+reply
+	
+	
+TJSomething 5 hours ago [-]
+
+Additionally, many problems are can be converted to matrix operations, like graph algorithms.
+
+Note that matrix multiplication takes O(n^2) time with a quantum computer, but O(n^2.807) time on a classical computer.
+
+reply
+	
+	
+gnu-nobody 4 hours ago [-]
+
+> but O(n^2.807) time on a classical computer
+
+Optimizing matrix multiplication for classical computers is an open research problem, and according to wikipedia there are algorithms with O(n^2.37) running time. Also according to wikipedia, it is not proven that matrix multiplication can't be done in O(n^2).
+
+reply
+	
+	
+infogulch 4 hours ago [-]
+
+Ah yes, we may as well add NP-completeness to this thread.
+
+reply
+	
+	
+whytai 12 hours ago [-]
+
+Here is a video of a researcher at Microsoft Quantum lecturing on this: https://www.youtube.com/watch?v=F_Riqjdh2oM "Quantum Computing for Computer Scientists.".
+
+However, even with understanding how a Quantum Computer works at its most basic level I still have difficulty understanding the more useful Quantum Algorithms:
+
+https://en.wikipedia.org/wiki/Shor%27s_algorithm
+
+https://en.wikipedia.org/wiki/Grover%27s_algorithm
+
+reply
+	
+	
+__sy__ 13 hours ago [-]
+
+Since no one has listed it yet, please check out https://quantum.country/
+
+It's by Andy Matuschak and Michael Nielsen, and it is excellent. Have fun!
+
+reply
+	
+	
+cloogshicer 4 hours ago [-]
+
+Yes! How come this isn't higher up in the list? This is one of the best pieces of education I've ever seen. Absolutely wonderful.
+
+reply
+	
+	
+nagarjun 4 hours ago [-]
+
+This deserves to be upvoted all the way to the top!
+
+reply
+	
+	
+dirkt 8 hours ago [-]
+
+Very simplified explanation:
+
+If you understand Turing Machines, you probably also understand other automata. So you probably understand nondeterministic automata [1].
+
+A quantum computer is like a very restricted nondeterministic automaton, except that the "do several things a once" is implemented in physics. That means just like a NFA can be exponential faster than a DFA, a QC can be exponential faster than a normal computer. But the restriction on QCs makes that a lot harder to do, and so far it only works for some algorithms.
+
+As to why quantum physics allows some kind of nondeterminism: If you look at particles as waves, instead of a single location you get a probability function that tells you "where the particle is". So a particule can be "in several places at once". In the same way a qbit can have "several states at once".
+
+> What I don't understand is how a programmer is supposed to determine the correct solution when their computer is out in some crazy multiverse.
+
+Because one way to explain quantum physics is to say that the waveform can "collapse" [2] and produce a single result, as least as far as the observers are concerned. There are other interpretations of this effect, and this effect is what makes quantum physics counterintuitive and hard to understand.
+
+[1] https://en.wikipedia.org/wiki/Nondeterministic_finite_automa...
+
+[2] https://en.wikipedia.org/wiki/Wave_function_collapse
+
+reply
+	
+	
+elorant 7 hours ago [-]
+
+The thing I don't understand about qc is how on earth can you read values from qbits without breaking superposition.
+
+reply
+	
+	
+cyphar 7 hours ago [-]
+
+You can't, it's a fundamental aspect of quantum mechanics (measuring any entangled system collapses it because you've forced the system into a state by measuring it).
+
+The idea is that you structure the QC system such that the computation is done using entangled states, but when it comes to measuring the qubits (to get the result of the computation) the state is such that you'll get meaningful results. This means the quantum state at the end of the calculation would ideally be along whatever axes you're measuring, so you get the same answer 100% of the time.
+
+reply
+	
+	
+elorant 6 hours ago [-]
+
+OK but this implies that you'll have to know beforehand what a result will look like. Which kind of beats the purpose of a general purpose computational device.
+
+reply
+	
+	
+cyphar 6 hours ago [-]
+
+No it doesn't. You know that the result of the computation for an individual qubit will be either 0 or 1 (otherwise it would be useless -- measuring only gives you one bit of information), so you construct the system such that after the computation is done each qubit will be aligned with the |+z> or whatever axis. The key point is that you have to be clever about how you construct the system for a given QC algorithm, not that you cannot do arbitrary computations using the system.
+
+reply
+	
+	
+elorant 6 hours ago [-]
+
+OK but we're back on square one. If you can't read info from qbits without breaking the state of the whole freaking system then what exactly is that you reading? Doesn't the alignment info collapses superposition?
+
+reply
+	
+	
+sasaf5 3 hours ago [-]
+
+You design the algorithm so that it collapses the state into the right result.
+
+reply
+	
+	
+taejo 5 hours ago [-]
+
+You do "break the state of the whole freaking system". Once you've read the output, you're done. You have to set up your initial state again and run the computation from scratch.
+
+reply
+	
+	
+rocqua 6 hours ago [-]
+
+You read the 'probability the qbit is one' by running multiple times and doing statistics.
+
+I found an explanation of schor's algorithm by my colleagues quite helpful. In my experience math seems to be more useful here than computing science.
+
+reply
+	
+	
+0xff00ffee 10 hours ago [-]
+
+Short answer: there isn't an easy answer. Yet. (Give QC another 50 years).
+
+Proof? Just look at all the replies you got: each one is dozens of pages of complex (imaginary) math, control theory, and statistics.
+
+The hardest part of QC is exactly what you described: how to extract the answer. There is no algorithm, per se. You build the system to solve the problem.
+
+This is why QC is not a general purpose strategy: a quantum computer won't run Ubuntu, but it will be one superfast prime factoring coprocessor, for example (or pathfinder, or root solver). You literally have to build an entire machine to solve just one problem, like factoring.
+
+Look at Shor's algorithm: it has a classical algorithm and then a QC "coprocessor" part (think of that like an FPU looking up a transcendental from a ROM: it appears the FPU is computing sin(), but it is not, it is doing a lookup... just an analogy). The entire QC side is custom built just to do this one task:
+
+https://en.wikipedia.org/wiki/Shor%27s_algorithm
+
+In this example he factors 15 into 5x3, and the QC part requires FFTs and Tensor math. Oy!
+
+Like I said, it will take decades for this to become easier to explain.
+
+For fun, look at the gates we're dealing with, like "square root of not": https://en.wikipedia.org/wiki/Quantum_logic_gate
+
+reply
+	
+	
+hyperbovine 1 hour ago [-]
+
+you're in luck my friend. Perl has had a quantum computing module since the late 90s:
+
+https://metacpan.org/pod/Quantum::Superpositions
+
+As far as I can tell this one still outperforms all existing "hardware implementations".
+
+reply
+	
+	
+fnrslvr 2 hours ago [-]
+
+I wrote a basic response, but it got longer than I thought it would and HN complained about it being too long, so here's a pastebin: https://pastebin.com/zTJA4bJh
+
+reply
+	
+	
+bollu 10 hours ago [-]
+
+I honestly recommend the following: 1. Pick up the standard textbook by Nielsen and Chuang, Quantum computation and quantum information. read the first two to three chapters. 2. Solve the exercises for the Q# programming language.
+
+reply
+	
+	
+maest 5 hours ago [-]
+
+IBM's Quantum Experience is great for this. It walks you through the quantum gates you can use and lets you write small programs for quantum processors.
+
+I've found that to be the clearest way of understanding what qcs do.
+
+reply
+	
+	
+aliceryhl 4 hours ago [-]
+
+This podcast episode has an amazing explanation by one of the top researchers in the field: https://www.youtube.com/watch?v=uX5t8EivCaM
+
+The basic idea is that by making the amplitudes of the qubits destructively interfere with each other in certain ways, you can eliminate all of the wrong answers to the question you're trying to answer.
+
+reply
+	
+	
+skocznymroczny 3 hours ago [-]
+
+I looked briefly at QCs and I understood them as kind of a machine that doesn't try every possible solution. It is in every possible solution, and then you can somehow "lock it" in the state that is the solution to your problem. Kind of like NP problems are hard to find a solution but easy to verify a solution.
+
+reply
+	
+	
+KhoomeiK 14 hours ago [-]
+
+I had an aha moment with quantum computers a few months ago when reading an article that explained it as probability distributions. I don't think I have the complete understanding in my mind anymore and I wish I had saved the article, but looking into how quantum computers essentially serve as probability distribution crunching machines might help with your understanding.
+
+reply
+	
+	
+sideshowb 2 hours ago [-]
+
+Like probability distributions, but they don't just sum when you combine them, they interfere (probability is the square of amplitude, which can be negative).
+
+Quantum computing is all about finding ways to hack the interference process to compute more than you otherwise would have.
+
+reply
+	
+	
+arkanciscan 14 hours ago [-]
+
+So can they still do traditional deterministic(?) calculations? Or would that be somewhat akin to using machine learning to do your taxes; possible but just overkill?
+
+I've often heard it said that Quantum Computers can crack cryptographic keys by trying all the possible inputs for a hashing algorithm or something handwavey like that. Are they just spitting out "probable" solutions then? Do you still have to try a handful of the solutions manually just to see which one works?
+
+reply
+	
+	
+bawolff 9 hours ago [-]
+
+"Trying all possible solutions" is generally a bad metaphor for quantum computing and will confuse you. (Its more like you start out with all answers being equal probability, and get the wrong answers to somehow cancel each other out making the "right" answer have a high probability)
+
+I am not a quantum person but i once saw a geometric explanation for grover's algorithm which kind of made it all make sense to me. (grover's algorithm is the quantum algo you use for problems where you dont know any approach better than brute force. It can bruteforce stuff in O(sqrt(n)) guesses instead of O(n) like a normal computer). Basically, the geometric version was that you start with all possibilities being of equal probability (i.e. an even superposition of all possible states), negate the amplitude of the correct answer, then reflect the amplitudes around a line that is the mean of the amplitudes (do that sqrt(n)) times. The end result is the correct answer has a higher probability than the other answers. I unfortunately can't find the thing where i originally saw this, but they visualized it basically as a bar graph (of the amplitudes of possible states) and it seemed much clearer to me than other explanations i have come across
+
+reply
+	
+	
+augustt 14 hours ago [-]
+
+Here's what Scott Aaronson says in regard to "trying all the possible inputs": https://news.ycombinator.com/item?id=17425474
+
+reply
+	
+	
+OkayPhysicist 3 hours ago [-]
+
+Yeah, they can do deterministic calculations. You just avoid ever putting the quibits in a state where measurement gives probabilistic results. it would, however, be a ridiculous use of technology, like using a Neural net to simulate an XOR
+
+reply
+	
+	
+corysama 12 hours ago [-]
+
+There’s an O’Reilly book on Programing Quantum Computers that explains it really well. Bonus: it was written by Batman.
+
+reply
+	
+	
+ruggeri 8 hours ago [-]
+
+I found Quantum Computing Without The Physics epicly helpful. https://arxiv.org/abs/1708.03684
+
+It explains in terms a computer scientist can understand. As in: it sets out a computational model and explores it, regardless whether we can physically realize that machine.
+
+Hope this helps!
+
+reply
+	
+	
+drran 5 hours ago [-]
+
+Qubit is physical random generator, which quickly oscillates between 0 and 1. It does that so quickly, so scientists must operate with probabilities to perform calculations. They create analog quantum computers, where right solutions are much more probable than wrong ones, then let system to figure them out, then sample solutions periodically.
+
+reply
+	
+	
+drocan 13 hours ago [-]
+
+not quantum computers per se but I had my aha moment when I saw quantum computing as "linear algebra with probability coefficients". It's mostly working on superpositioned qubits while doing the calculation and then making them (with linear transformations) as likely as possible to collapse on the solution (when "measured").
+
+reply
+	
+	
+7thaccount 13 hours ago [-]
+
+There is a comic (maybe SMBC) that covers the whole commonly false belief surrounding qubits.
+
+reply
+	
+	
+klmadfejno 13 hours ago [-]
+
+https://www.smbc-comics.com/comic/the-talk-3
+
+The basic gist I get is that quantum computing, for a very specific set of problems, like optimization, let's you search the space more efficiently. With quantum mechanics you can associate computations with positive or negative probability amplitudes. With the right design, you cause multiple paths to incorrect answers to have opposite amplitudes, so that interference causes them to cancel out and not actually happen to begin with. That's just my reading of the comic over and over though.
+
+reply
+	
+	
+Izkata 9 hours ago [-]
+
+Along those same lines, I once heard a description that went something like: "Imagine a Jenga tower so precisely balanced that, when it falls over, it spells out the answer."
+
+reply
+	
+	
+mda 11 hours ago [-]
+
+I found the comic not very good either. Kid suddenly blurts "Wait a minute, that means a qubit corresponds to a unit vector in 2 dimensional Hilbert space" Yeah.
+
+reply
+	
+	
+7thaccount 11 hours ago [-]
+
+I think you have to take that sarcastically like when she mentions that it's not like the classical probability taught in preschool.
+
+reply
+	
+	
+aiisjustanif 9 hours ago [-]
+
+I think because it has less applications for traditional "software" and more applications for efficiency of embedded systems.
+
+But it could have some bleeding edge new applications from the TCP/IP space for urgent point, new methods for cryptography, or speeding up algorithms for searching. ¯\_(ツ)_/¯
+
+reply
+	
+	
+bawolff 9 hours ago [-]
+
+Im not an expert on quantum computers but I'm not aware of any applications in the embedded space.
+
+Generally quantum computers are good for three things
+
+* factoring numbers (and other highly related order-finding problems). RIP RSA, but not that applicable outside of crypto.
+
+* unstructured search (brute forcing a problem in only O(sqrt(n)) gueses instead of an average of n/2 gueses). Certainly useful...but its not a big enough speedup to be earth shattering.
+
+* simulating various quantum systems (so scientists can do experiments easier). Probably by far the most useful/practical application in the near/medium term.
+
+There's not a whole lot else they are good for (that we know of, yet)
+
+reply 

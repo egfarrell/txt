@@ -1,0 +1,231 @@
+
+
+### Don't pulsate!
+    - Pulsars were the first tangible evidence for neutron stars.
+    - _They don’t actually pulsate_ — they ROTATE, which causes
+      them to emit a periodic signal. 
+        - But they were the fabled missing link in gravitational
+          collapse, posited by Landau, studied by Oppenheimer,
+          and explored in meticulous detail by Wheeler and his
+          disciples.
+
+### Precession
+    - $MY_NOTES/astro/courses/CW-Waves-Neutron-Stars.txt
+    - some evidence that radio pulsars show precession
+
+### Surface
+    - NS surface is basically iron...
+    - ... as you go deeper and deeper, it becomes more and more
+      neutron rich
+    - towards the centre "neutron drip": 
+        - nuclear "lattice"?
+        - neutrons leak out of the nuclei
+        - a neutron "gas" is formed, that is a superfluid
+        - protons also leak out, form a gas, and will create
+          a superconductor
+        - so we have a proton superconductor mixed with a neutron
+          superfluid
+        - neutron superfluid turns into vortices
+        - proton gas creates magnetic flux tubes
+    - but a key conclusion: 
+        - this is NOT A PERFECT FLUID inside a NS!
+
+### Supernova explosion
+    - ... results in a NS
+    - Supernovas explosians are the result of a 'bounce and
+      rebound shock' off the iron core 
+    - Pauli exclusion principle the reason that the neutrons
+      don't collapse onto one-another
+    - NS are the most dense objects in the universe
+    - during an supernova explosion, its not only the matter that
+      gets compressed, the magnetic field of the original star
+      also gets compressed. Most stars have pretty weak magnetic
+      fields, but when they get squeezed, they become very
+      powerful
+
+### CAMK high mass NS
+    - PSR J1810+1744: Companion Darkening and a Precise High
+      Neutron Star Mass 
+    - https://ui.adsabs.harvard.edu/abs/2021arXiv210109822R/abstract
+
+    - I don't understand the method,  or systematics, but this
+      star appears to have a clearly higher mass than 2 M_sun
+    - Bryn Haskell
+    - Very interesting, .. gives a value close to predicted
+      theoretical Mmax! (eg from GW inspiral observations)
+    - Maybe we can invite a telescope astronomer (someone from
+      the radial-velocity community) to discuss the methodology?  
+    - In fact systematic errors are not clear to me. For example
+      for one model (column 6, Table 1)
+        - NS mass 1.95 M_sun is consistent with observations at
+          1sigma level.
+        - The very high accuracy of i determination (0.4) is
+          a bit surprising, from the other hand  i is quite
+          sensitive function of the model assumptions
+        - I do not have a firm opinion about this measurement.
+    - Yes, this was also something that I didn't understand, as
+      their quoted errors for a model are smaller than the
+      difference between models. They do say something in the
+      conclusions about how some models cannot reproduce other
+      features of the observations, so they do not favour them,
+      but it's not clear how strong the argument is.
+    - I agree, and also remember the earlier claim of Linares
+      2018 and collaborators (~2.3 MSun, that however involved
+      a big amount of modeling). Here it seems that the modeling
+      still is the real thing (not like masses extracted with
+      other methods).
+        - "Thus, additional physical ingredients are needed and
+          might be probed with more data and improved atmosphere
+          modeling." This is exactly the kind of comment that
+          makes me not willing to bet big money on their final
+          claims.
+        - (Ok, they say: "We have also explored alternative
+          models; in most cases these (worse-fitting) models
+          require higher masses", but it seems generic enough).
+    - This article is being talked about also here in France,
+      I asked some insight from a collegue (Guillaume Voisin) and
+      from his first quick lecture, he said the following :
+        - the authors use very good data
+        - they couple photometry and spectroscopy to get the
+          inclination then they get the mass through radial
+          velocity ; they do so in a way that is state of the art
+        - the model used to fit uses a number of hypothesis,
+          particularly on the properties of the companion star
+          ; they use several models and choose the best fit,
+          therefore the error bars are within this model, and one
+          cannot be sure that there are not more significant
+          systematic error bound to the model.
+        - He summarizes saying that this is might be a very good
+          quality work, but he would not give as much credit to
+          this error bars as he would with a Shapiro effect.
+
+
+### 'Krzeminski' Star
+    - optical counterpart of NS: Cen X-1
+    - Centaurus X-3:  an X-ray pulsar with a period of 4.84 seconds
+
+### Measure distance to Pulsars (Rotation Measure)
+    - PAUL: For some sources, theres only radio wave lengths, we
+      can't see the companion star. 
+        - It's much harder to get the distances eg, for pulsars.
+          In this case, we use a trick called _rotation measure_. 
+        - Often the radio waves coming from these things are
+          polarized, so the radio waves, will be going up and
+          down in this direction. 
+        - But as they travel through interstellar space, the
+          radio waves go past electrons, and they cause the
+          electrons to jiggle. And that rotates the polarisation.
+        - But it tilts it differently depending on whether it's
+          a low frequency or a high frequency wave. 
+        - So the high-frequency waves are rotated less. 
+        - The low-frequency ones are rotated more. 
+        - So what you find is that as you change your frequency,
+          you can see that the angle of polarization shifts. 
+        - And that tells you basically how many electrons are on
+          the line of sight from Earth to this thing. 
+        - Then you have to guess the electron density of
+          interstellar space, which is rather hard and probably
+          not constant. 
+        - But that also gives you a way of measuring distances if
+          you don't see any optical light at all.
+
+
+
+### SARA radio talk
+    - Radio weak signals: use folding to find
+    - Optical weak signals: use image stacking
+    - Use Fourier if we don't know the period of a pulsar.
+    - These are mathematical operations to find periodic
+      (repeating) signals in a dataset.
+    - In pulsar search, the fourier transform converts from
+      "signal vs. time" to "signal vs. frequency". Note:
+      frequency is `1 / time`
+    - Frequency is measure in Hertz: cycles per second.
+    - If you see transient emissions from a pulsar it could be
+      RFI interference. But it also could be an eclipsing pulsar
+      or even a nulling pulsar (some pulsar emissions turn off
+      suddenly and we don't know why)
+    - Summary of steps for Identifying potential pulsars: 
+	- $MY_IMAGES/astro/how-to-identify-pulsars.jpg
+    - Pulsar software: PRESTO
+
+
+### Jana Levin talk: interesting comment
+    - Pulsars are still not fully understood, even after 50 years
+    - Audience question: The outside of a NS has the same
+      solution to Einstein equations as a spinning black hole. 
+      - Could Jana Levins calculation say anything about how the
+        fields around a NS are formed turning it into a Pulsar.
+        -  Jana: Yes a NS is just a black hole that didn't make
+           it far enough. It's the Kerr solution. But the
+           difference is because it doesn't have a no-hair
+           theorem it has an intrinsic dipole, so it's able to
+           sustain itself. 
+        - But it is also charged. So you just do Gauss's law
+          assuming a force-free magnetosphere, and you're going
+          to have an electric field `V x B`. And that tells you
+          there has to be charge on it by Gauss's law.
+    - Random comment: whats the fall-off rate of a B-field around
+      a NS?
+    - Random: NS's can have quadropole as well as dipole
+      B-fields? Jana says you get crazy complicated B-fields. 
+
+### Jana Levin talk: Two NS problems
+
+    1. What is the `EOS`? 
+        - Whats the nature of super-conducting matter? Its a big
+          mystery, so we don't understand the magnetic fields.
+
+    2. We don't understand where these "gaps" are that allow for
+       acceleration. 
+        - Because if it's "4:3" (what's 4:3??) there should be no
+          forces..., no acceleration of charges outside, and
+          somehow there's these regions where the charges are
+          breaking the "force free" rule and becoming
+          accelerators. And that seems to be a very hard problem.
+
+### "Light cylinder"
+    - Neutron stars have a "light cylinder"
+    - a maximum rotational envelope, whereby if it was rotating
+      any faster, the EM field lines would be travelling faster
+      than the speed of light? 
+
+### Pulsars misc
+    - discovered at 80MHz... nowadays: 300MHz - 3GHz
+    - stars with masses > `8*M_sun`
+    - only live millions of years, rather than billions
+    - note: a neutron on its own in space, decays quickly into
+      a proton and an electron. But bound up with others, it's
+      quite stable...
+    - very steady pulses. We have an object the mass of the sun
+      spinning around. That's a lot of inertia!
+    - Pulsars are losing energy as they rotate, but very
+      predictably ... (spin-down rate)
+    - Very hot - over 1 million ºF
+    - Over 100 million times hotter than our sun????
+    - have a main pulse and secondary "inter-pulse". If two
+      magnetic poles, makes sense we see both
+    - 50 years after discovery, still debate about pulse emission
+      mechanism
+    - all pulsars are neutron stars. But not all neutron stars
+      are pulsars.
+    - Because of narrow pulsed beams, we probably only see 10% of
+      pulsars in our Galaxy
+    - neutron stars areant just made of neutrons... they're made
+      of iron etc too
+
+
+### Files
+    - ./courses/radio/10-Pulsars-Clocks-in-Space.txt
+    - ./camk/neutron-star-group.txt
+
+
+### Links
+    - Radio Pulsar Catalogue                                    https://www.atnf.csiro.au/research/pulsar/psrcat
+    - Pulsar Properties (NRAO) National                         http://www.cv.nrao.edu/course/astr534/Pulsars.html
+    - G. Srinivasan Neutron Stars ICTS                          https://www.youtube.com/playlist?list=PL04QVxpjcnji8rMpLhbMYBanjrRg5xgWt
+    - How big is a neutron star                                 https://news.ycombinator.com/item?id=24352188
+    - Neutron stars may be bigger than expected                 https://news.ycombinator.com/item?id=26957355
+    - NS - matter like no other                                 https://news.ycombinator.com/item?id=34955578
+    - Probing NS with Earth analog                              https://news.ycombinator.com/item?id=36656963
+    - HN: Slow-spinning radio neutron star breaks all the rules https://news.ycombinator.com/item?id=40613312

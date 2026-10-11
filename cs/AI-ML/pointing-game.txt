@@ -1,0 +1,95 @@
+### Pointing game: key paper:
+    - "Top-Down Neural Attention via Excitation Backprop"
+    - We propose a new method, Excitation Backprop, for modeling
+      a CNN classifier's top-down attention, creating
+      task-specific maps. This mimics human visual attention,
+      using a probabilistic process to signal downwards in the
+      network.
+    - We introduce _contrastive attention_ for more distinct
+      attention maps, linking it theoretically to Class
+      Activation Map calculations.
+    - We efficiently implement Excitation Backprop for common
+      neural layers.
+    - Our experiments visualize model decision evidence through
+      these maps and assess accuracy in weakly supervised
+      localization tasks on MS COCO, PASCAL VOC07, and ImageNet.
+    - We validate our method's utility in text-to-region tasks,
+      showing promising phrase localization on Flickr30k Entities
+      using a CNN trained on weakly labeled web images.
+    - Finally, we apply our method to model interpretation and
+      data annotation in facial expression analysis and medical
+      imaging.
+    - https://link.springer.com/article/10.1007/s11263-017-1059-x
+
+
+### Key ideas
+    - "Top-Down Attention" in CNNs:
+        - The paper focuses on how top-down attention works in
+          CNNs, a type of neural network commonly used for image
+          recognition tasks. Top-down attention helps the network
+          concentrate on the most relevant parts of an image when
+          making a decision.
+
+    - Biological Inspiration:
+        - The authors took inspiration from the Selective Tuning
+          model, a biologically plausible way of visual
+          processing. This model uses a combination of bottom-up
+          (data-driven) and top-down (goal-driven) processes.
+
+    - New Formulation: `Excitation Backprop`:
+        - Introduces novel method called Excitation Backprop.
+          This method blends top-down and bottom-up information
+          to efficiently calculate which parts of the neural
+          network are most relevant for a given task.
+
+    - Probabilistic Winner-Take-All Process:
+        - Unlike previous deterministic models, Excitation
+          Backprop uses a probabilistic approach to decide which
+          neurons in the network should be focused on. This
+          allows for more nuanced and interpretable attention
+          maps, which are critical for understanding how the
+          network is making its decisions.
+
+    - Contrastive Top-Down Attention:
+        - The authors propose a new concept called contrastive
+          top-down attention. This helps in differentiating
+          between similar top-down signals, making the generated
+          attention maps more distinct and useful for specific
+          tasks.
+
+    - Connection to Class Activation Maps:
+        - The paper establishes a theoretical link between its
+          contrastive attention formulation and Class Activation
+          Maps, which are used to visualize areas of interest in
+          CNNs.
+
+    - Empirical Validation:
+        - The method is tested on various challenging datasets
+          and demonstrated superior performance in tasks like
+          weakly supervised localization (identifying objects in
+          images without detailed training data).
+
+    - Practical Applications:
+        - The paper suggests practical uses of their method, such
+          as in facial emotion analysis and medical image
+          analysis, where understanding the focus of a neural
+          network can be crucial.
+
+    - General Contributions:
+        - The paper's main contributions are the new attention
+          model for CNNs, the enhancement of attention maps'
+          distinctiveness, establishing a connection with Class
+          Activation Map computation, and exploring
+          text-to-region associations using this model.
+
+    - Applications in Model Interpretation and Annotation:
+        - The authors highlight how this new method can be used
+          for interpreting neural network models and assisting in
+          data annotation, particularly in complex fields like
+          _MEDICAL IMAGING_.
+
+
+### links
+    - github: Ruth Fong implement pointing game in pytorch https://github.com/ruthcfong/pointing_game
+    - Ruth Fong lots of resources                          https://www.ruthfong.com/
+    - Grad-cam video                                       https://www.youtube.com/watch?v=COjUB9Izk6E

@@ -1,0 +1,199 @@
+### what is the Coloumb guage?
+    - aka the 'Transverse guage'
+    - problem: instantaneous travel? (NO)
+    - key: in this gauge, the scalar potential `Φ` satisfies the
+      Poisson equation. This scalar potential can have seemingly
+      'instantaneous' effects.
+
+- The Coulomb gauge is a specific gauge condition in EM, used
+  particularly in QED.
+- In this context, a gauge condition is a way to fix certain
+  degrees of freedom in the EM potentials to simplify equations
+  and calculations.
+    - Aside: 
+    - `Gauge fixing` ("choosing a gauge") denotes a mathematical
+      procedure for coping with redundant degrees of freedom in
+      field variables.
+
+- The Coulomb gauge imposes the condition that the divergence of
+  the vector potential `A` is zero: `∇⋅A=0`
+
+- This condition is also known as the `transverse gauge` because
+  it ensures that the vector potential `A` has no longitudinal
+  component, meaning that it is perpendicular (transverse) to the
+  direction of wave propagation in the case of EM waves.
+
+- The main advantages of the Coulomb gauge include simplifying
+  the equations describing EM fields and making certain physical
+  interpretations more straightforward.
+    - e.g, in this gauge, the scalar potential `Φ` satisfies the
+      `Poisson equation`, which resembles the classical equation
+      for electrostatics, allowing an easier separation of the
+      effects of instantaneous electrostatic interactions from
+      the propagation of EM waves.
+
+- This gauge is particularly useful in QED and other areas of
+  physics where the separation of longitudinal and transverse
+  components of fields can significantly simplify the
+  mathematical treatment of electromagnetic interactions...
+    - This line is very interesting:
+        - ...allowing for an easier separation of the effects of
+          instantaneous electrostatic interactions from the
+          propagation of electromagnetic waves.
+
+### Question:
+    - Are there ever any instantaneous effects in EM??
+    - I thought all effects propogated at the speed of light.
+
+### ChatGPT
+- This touches on a fundamental aspect of EM.
+- In the context of the Coulomb gauge and classical EM, when we
+  talk about "instantaneous effects," it's more about the
+  mathematical treatment of certain phenomena rather than
+  implying that physical effects occur instantaneously in
+  violation of relativity.
+
+- In classical EM, particularly within the framework of the
+  Coulomb gauge, the scalar potential `Φ` appears to mediate
+  electrostatic interactions instantaneously.
+
+- This treatment stems from the Poisson equation for `Φ`, which
+  is derived under the assumption of the Coulomb gauge (`∇⋅A=0`).
+
+- The solution to the Poisson equation gives the electrostatic
+  potential due to a distribution of charges WITHOUT EXPLICIT
+  REFERENCE TO THE TIME it takes for changes in the charge
+  distribution to influence the potential at a distance.
+
+- This mathematical formulation simplifies calculations and is
+  consistent with the static or quasi-static limits of EM, where
+  changes in the EM field are slow compared to the time it takes
+  for light to travel across the system under consideration.
+
+- However, this doesn't mean that EM interactions truly happen
+  _instantaneously_.
+
+- According to SR, no information or physical effect can
+  propagate faster than the speed of light in vacuum, `c`.
+
+- This principle is fully respected in the full EM theory,
+  including in the dynamic case where Maxwell's equations
+  describe the finite propagation speed of EM waves and their
+  interaction with matter.
+
+- The seeming CONTRADICTION is resolved when we consider that the
+  full description of EM phenomena, especially in dynamic
+  situations, involves both
+    - the scalar potential `Φ` and
+    - the vector potential `A`,
+    - and their interplay fully respects causality and the finite
+      speed of light.
+
+- In more advanced treatments of EM, such as QED, the propagation
+  of interactions at the speed of light is explicitly accounted
+  for, ensuring consistency with relativity.
+
+- Thus, the "instantaneous" aspect in the Coulomb gauge is
+  a mathematical convenience for certain static or quasi-static
+  problems, rather than a statement about physical reality
+  violating the speed of light limitation.
+
+
+- See Also: How `potentials` in different gauges yield the same
+  retarded electric and magnetic fields
+    - https://arxiv.org/abs/physics/0702217
+        - The explicit proof that the Coulomb-gauge potentials
+          yield the retarded electric and magnetic fields is
+          conceptually important to emphasize the fact that the
+          causal behavior of these fields is never effectively
+          lost when they are expressed in terms of such
+          potentials, despite the result that the `scalar
+          potential` in _this gauge propagates instantaneously_,
+          which would seem to indicate a lost of causality in the
+          electric field.
+        - Similar proofs that potentials in other gauges like the
+          `temporal` or `velocity gauges` yield the retarded
+          electric and magnetic fields are omitted in textbooks.
+          This omission is, however, comprehensible because these
+          other gauges are not usually mentioned in textbooks of
+          electrodynamics.
+        - Actually, the velocity and temporal gauges are
+          less-known than the Coulomb or Lorenz gauges.
+        - The velocity gauge is one in which the scalar potential
+          propagates with an arbitrary velocity and the temporal
+          gauge is one in which the scalar potential is
+          identically zero.
+        - In a recent paper Jackson and Okun have reviewed the
+          interesting history that led to the conclusion that
+          `potentials` in different gauges describe the same
+          physical fields.
+
+### ChatGPT Summary
+
+- The notes discuss an important concept in electrodynamics,
+  particularly focusing on how different choices of gauge, such
+  as the Coulomb gauge, affect our mathematical description of
+  electric and magnetic fields. Main points:
+
+    - Despite different gauges using different mathematical
+      expressions for `potentials`, they all lead to the same
+      physical electric and magnetic fields when calculated
+      correctly.
+    - This means our choice of gauge does not change the physical
+      predictions of EM.
+    - The paper gives a proof showing that even though the scalar
+      potential in the Coulomb gauge seems to propagate
+      instantaneously (which might suggest violations of
+      causality), the resulting electric and magnetic fields
+      still behave causally, respecting the finite speed of
+      light.
+    - This reconciles the seeming contradiction of
+      "instantaneous" effects with relativistic causality.
+    - The notes mention that other gauges, like the temporal and
+      velocity gauges, are less commonly discussed in textbooks,
+      possibly due to their less intuitive nature or because the
+      Coulomb and Lorenz gauges are more widely applicable.
+    - The temporal gauge sets the scalar potential to zero, while
+      the velocity gauge allows the scalar potential to propagate
+      at an arbitrary speed.
+    - Despite these differences, all gauges are capable of
+      describing the same physical reality.
+    - Jackson and Okun review the history and implications of
+      using different potentials in various gauges to describe
+      the same electromagnetic phenomena, highlighting the
+      consistency across different mathematical formulations.
+
+### Opinion on Correctness and Importance:
+
+    - The correctness of these notes hinges on well-established
+      principles in electrodynamics. The ability of different
+      gauges to yield the same physical results for electric and
+      magnetic fields is a foundational aspect of `gauge theory`
+      and EM.
+        - This principle ensures that our mathematical
+          formulations are consistent with physical observations,
+          regardless of the gauge chosen for convenience or
+          simplicity.
+
+    - The importance of these notes lies in their clarification
+      of a potentially confusing aspect of EM—the relationship
+      between gauge choices, causality, and the physical behavior
+      of fields.
+        - By emphasizing that all gauges lead to causally correct
+          electric and magnetic fields, it reassures us that the
+          mathematical tools we use are robust and consistent
+          with the principles of relativity.
+
+    - Moreover, highlighting less commonly discussed gauges
+      broadens our understanding of the flexibility and depth of
+      gauge theory in physics.
+    - The historical context provided by referencing Jackson and
+      Okun's work enriches our appreciation for the development
+      of these concepts over time.
+
+- Overall, these notes underscore an essential point:
+    - the choice of gauge in EM, while mathematically
+      significant, does not compromise the physicality or
+      causality of electromagnetic phenomena.
+    - This reinforces the coherence and unity of physical laws
+      across different theoretical frameworks.

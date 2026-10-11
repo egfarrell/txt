@@ -1,0 +1,135 @@
+### Markdown keywriter
+    - App for writing markdown files
+    - https://github.com/dps/remarkable-keywriter
+
+### SAving Remarkable Writing
+    - Export as PDF from Remarkable desktop
+    - Load into PDFxedit
+    - Export as _images_ JPG at `150`dpi
+    - Import images back into PDFxedit
+
+### Remarkable
+    - pword: qQbZGbymzf
+    - USB web interface ip: 10.11.99.1
+    - SSH ip:               192.168.1.30
+
+    - SSH pub key not working (ssh-copy-id not working)
+        - (remarkable uses `dropbear` ssh server, which stores
+          keys in a different folder)
+        - manually copy:
+        - scp ~/.ssh/id_rsa.pub remark:~/.ssh/authorized_keys
+        - https://remarkablewiki.com/tech/ssh
+
+### Remarkable "Vim 8.1"
+    - Remarkable uses vim  8.1.0034 but there's a missing folder:
+        > /usr/share/vim/vim81/autoload
+    - download this folder from the vim git repo (inside 'runtime' folder)
+    scp -r ~/dotfiles/local/Remarkable/vim-missing-autoload remark:/usr/share/vim/vim81/autoload
+
+### toltec: Package manager ("opkg")
+    - https://toltec-dev.org/#install-toltec
+    - Warning: Toltec only supports OS builds between 2.6.1.71
+      and 2.15.1.1189. 
+    - You will soft-brick your device if you install on an
+      unsupported version. 
+    - See https://remarkable.guide/tech/recovery.html for
+      recovery info if you have done this. 
+
+    opkg update
+    opkg upgrade
+    opkg list
+    opkg list | grep -i build
+    opkg install <package>
+    opkg remove <package>
+    opkg info <package>
+    examples:
+        opkg info yaft
+
+    - to manage 'toltec' installation
+        toltecctl help
+        toltecctl reenable
+        toltecctl generate-opkg-conf
+        toltecctl uninstall
+        toltecctl switch-branch my_test_branch
+
+    /home/root/.bashrc
+        - must include this line in the path
+        PATH="/opt/bin:/opt/sbin:/home/root/.local/bin:$PATH"
+
+### My packages (essential, favourite)
+    opkg install git
+    opkg install git-http
+    opkg install koreader
+    opkg install yaft  # good fast terminal
+    opkg install gcc
+    opkg install make
+
+### Compile exuberant ctags on tablet
+    - COPY SOURCE CODE TO TABLET:
+        scp ~/dotfiles/ini/termux/ctags-5.8.tar.gz remark:~/repos/
+    - SSH TO TABLE. THEN:
+        utar ctags-5.8.tar.gz
+        cd ctags-5.8
+        ./configure --prefix=/home/root/.local
+        make
+        cp ctags ~/.local/bin/
+
+
+### 'Oxide' launcher
+    - REMOVE security pin
+        xdg-settings set pin ''
+    - installation
+        - opkg install oxide
+        - for 'oxide' launcher gestures
+        - enable swipes
+            - (by swiping down from the top)
+        - then when swipes are ENABLED,
+            - swipe up from the bottom to return to lanucher screen
+
+### Use KOReader as your
+    first disable Oxide
+        systemctl disable --now tarnish
+    (or disable xochitl)
+        systemctl disable --now xochitl
+    then enable koreader
+        systemctl --now enable koreader
+
+### KoReader settings
+    - tap bottom left corner or bottom right corner
+        - Page formatting options
+        - (I have set this gesture manually so that it doesn't
+          interfere with Oxide 'swipe up from bottom gesture')
+
+### Stylus/pen I use
+    - Samsung S-Pen (Note Series)
+
+### USB transfer
+    - Settings - storage - USB Web interface -> Enable
+    - Browser: http://10.11.99.1
+
+### DDVK Hack (old)
+	- Gestures: $MY_IMAGES/cs/remarkable-ddvk-hack-gestures.jpg
+    - Version hacked: 2.6.2.75
+    - Done on:  24-Apr 2021 Sat
+    - Making it permanent, DON'T DELETE `/home/rmhacks/xochitl.26275_rm2` !!!
+    - Gihub code https://github.com/ddvk/remarkable-hacks
+
+### Links
+    - stylus list                                https://remarkablewiki.com/tech/stylus
+    - stylus                                     https://www.youtube.com/watch?v=Bgj5Y7NHY74
+    - video desc hacks                           https://www.youtube.com/watch?v=kmOAfpgn5GM
+    - DDVK hacks                                 https://github.com/ddvk/remarkable-hacks
+    - DDVK hacks video                           https://www.youtube.com/watch?v=VSCKqiiIWSQ
+    - Hints and tips                             https://stephanmax.is/writing/2021/04/studying-with-remarkable2
+    - Hints and tips                             https://www.reddit.com/r/RemarkableTablet/comments/lgps4b/looking_for_thoughts_on_stylus_folios_and_hacks/
+    - Transfer files with usb                    https://blog.remarkable.com/how-to-transfer-files-to-your-remarkable-without-wi-fi-d53956bd9869
+    - GOOD: loads of rM tools                    https://github.com/reHackable/awesome-reMarkable
+    - I bricked my remarkable                    https://news.ycombinator.com/item?id=28671743
+    - transfer files: RCU:                       http://www.davisr.me/projects/rcu/
+    - Alternative PDF reader: KO Reader Install  https://github.com/ddvk/remarkable-autoinstall/tree/master/rm2
+    - Alternative PDF reader: KO Reader          https://github.com/koreader/koreader
+    - Launcher: "Oxide"                          https://oxide.eeems.codes/#install-oxide
+    - Launcher: "Oxide" github                   https://github.com/Eeems-Org/oxide/releases
+    - Package manager: Toltec                    https://toltec-dev.org/
+    - terminal: : `yaft` source                  https://github.com/timower/rM2-stuff/tree/master/apps/yaft
+    - terminal: : `reterm` (uses folio keyboard) https://github.com/i-am-shodan/ReTerm

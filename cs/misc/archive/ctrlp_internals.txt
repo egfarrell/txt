@@ -1,0 +1,26 @@
+ctrlp internals
+
+c-x
+	"h" horizontal split
+
+c-v
+	"v" horizontal split
+
+" Mappings:
+      + <cr> "e"
+	      change the local working directory for CtrlP,
+	      keep it open and switch to find file mode.
+
+      + <c-x> "h"
+	      change the GLOBAL working directory (exit).
+
+      + <c-v> "v"
+	      change the local working directory for the current window (exit).
+
+" My version of Bookmarks
+fu! ctrlp#bookmarkdir#accept(mode, str)
+	let parts = s:parts(s:modify(a:str, ':p'))
+	cal call('s:savebookmark', parts)
+	cal ctrlp#exit()
+	cal ctrlp#setdir(parts[1], a:mode =~ 't\|h' ? 'chd!' : 'lc!')
+endf

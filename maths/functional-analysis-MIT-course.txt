@@ -1,0 +1,111 @@
+- MIT Course Functional Analysis
+- https://www.youtube.com/watch?v=uoL4lQxfgwg&list=PLUl4u3cNGP63micsJp_--fRAjZXPrQzW_&index=1
+
+
+- 0:00 - Motivation and Introduction
+    - Functional analysis works with `vector spaces` that are
+      sometimes `infinite-dimensional`, using the techniques of
+      analysis to study their structure and functions defined on
+      them. Besides being a pure mathematical discipline, it
+      finds applications in PDEs and physics.
+
+- 5:27 - Review of Vector Spaces
+    - Vector spaces are defined over a field (here, R or C) and
+      are closed under addition and scalar multiplication. Every
+      vector space has a basis, or a maximal spanning set; its
+      dimension is the cardinality of any basis (this is
+      well-defined). e.g. Finite-dimensional vector spaces over
+      R: R^n (n-fold Cartesian product)
+
+- 13:46 - An Infinite-Dimensional Vector Space
+    - The set of continuous functions from [0, 1] to the complex
+      numbers forms a vector space (sum, multiple of any elements
+      are still in the VS). But the countably infinite set {1, x,
+      x^2,...} is linearly independent in C([0, 1]).
+
+- 16:26 - Norms
+    - To perform analysis, we require a concrete notion of
+      "proximity" or "size" on our spaces. A `norm` assigns to
+      each vector in a vector space some nonnegative real number;
+      as a map it is positive semidefinite, homogeneous, and
+      satisfies the triangle inequality.
+    - A `seminorm` is similar to (but weaker than) a norm; it
+      satisfies the latter two conditions but is not necessarily
+      definite. A vector space endowed with a norm is a normed
+      vector space: these are central objects of study in
+      functional analysis.
+
+- 21:15 - Metric Spaces
+    - A metric on a set provides a notion of distance between its
+      points. It is an identity-indiscernible, symmetric, and
+      triangle inequality-satisfying function; a space with such
+      a distance function is called a metric space (has the
+      metric topology)
+
+- 23:08 - Norms Induce Metrics
+    - Given a norm on a vector space, it induces a metric in the
+      natural way. This allows us to talk about ideas like
+      convergence, completeness, etc. with regards to normed
+      vector spaces.
+
+- 26:11 - Examples of Norms (and NVS)
+    - Euclidean norm on R^n, C^n provide us with the most familiar
+  notion of distance. We can consider more broadly the family of
+  norms called p-norms, of which the Euclidean norm is a special
+  case (taking p = 2). When p = ∞ we consider the norm that picks
+  out the maximal component of a vector in n-space.
+
+- 32:45 - The Space `C_∞{X}`
+    - From a metric space `X` we consider the space `C_∞{X}` of
+      all continuous, bounded functions from `X` to the complex
+      numbers. This indeed forms a vector space - on it, we can
+      introduce the supremum norm that measures the maximal value
+      a function takes.
+    - This turns `C_∞(X)` into a normed vector space. If we take
+      `X` to be some compact interval like `[0, 1]`, the
+      boundedness of continuous functions are automatic.
+
+- 39:24 - The Supremum Norm and Uniform Convergence
+    - When asking what convergence in this metric means for
+      functions in `C_∞(X)`, we find it translates to uniform
+      convergence in the familiar sense from real analysis.
+
+- 42:20 - l^p-Spaces
+    - The l^p spaces consist of p-summable sequences. When p = 2,
+      these are square-summable, etc. and these are all defined
+      to be the sequences on which the respective p-norms resolve
+      finitely.
+
+- 46:38 - Banach Spaces
+    - We are interested in special cases of normed vector spaces
+      that mimic the situation/structure in Euclidean spaces,
+      namely, their completeness.
+    - We have seen that norms (on vector spaces) give rise to
+      metrics, with respect to which we make sense of convergence
+      of sequences.
+    - Cauchy sequences are those whose terms tend arbitrarily
+      close; every convergent sequence is Cauchy, but the
+      converse doesn't necessarily hold (the rationals have many
+      "holes": one can construct a sequence of rationals that
+      close in on sqrt(2) but can't converge to it in Q).
+    - Spaces for which the converse does hold, i.e. Cauchy
+      sequences converge, are complete with respect to that given
+      metric. Banach spaces are normed vector spaces that are
+      complete with respect to the metric induced by the norm.
+
+- 49:52 - Examples of Banach Spaces
+    - R^n, C^n are Banach spaces with respect to any of the
+      aforementioned p-norms. These provide relatively trivial
+      examples, but foundational ones.
+
+- 50:39 - `C_∞(X)` is Banach
+    - A useful nontrivial example - the normed vector space of
+      continuous, bounded functions X -> C actually forms
+      a Banach space with respect to the supremum metric.
+    - The process of showing that it is a Banach space amounts to
+      exhibiting completeness, and is instructive in
+      demonstrating the general procedure for showing that
+      a space is Banach: first take a Cauchy sequence & come up
+      with a candidate for its limit, then show that this
+      proposed limit lies in the space, and finally show that the
+      convergence does occur.

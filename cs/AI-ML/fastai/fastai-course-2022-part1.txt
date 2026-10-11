@@ -1,0 +1,411 @@
+### Course PART 1
+    - Course           https://course.fast.ai/
+    - Code             https://github.com/fastai/course22
+    - Code Mine        $MY_CODE/AI-ML/fastai-2022/
+    - FORUMS           https://forums.fast.ai/
+    - BOOK             $MY_BOOKS/Cs/AI-ML/fastai-deep-learning-for-coders-2020.pdf
+    - YouTube playlist https://www.youtube.com/playlist?list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU
+    - local videos:    $MY_VIDEOS/fastai-part-01-playlist.m3u
+
+### Contents
+    - Lesson-01
+    - Lesson-02
+    - Lesson-03
+    - Lesson-04
+    - Lesson-05 titanic, pandas, linear, manual NN, Random Forests
+    - Lesson-06 OneR, bagging, GBM, Paddy competition
+    - Lesson-07 Brilliant: ensemble models (bagging), one-hot embedding
+    - Lesson-08 Pytorch Parameters, movie embedding, Convolutions, max, avg, concat pool, dropout
+
+### Lesson-01
+    - Forum:   https://forums.fast.ai/t/lesson-1-official-topic/95287
+    - Video:   https://www.youtube.com/watch?v=8SF_h3xF3cE
+    - Summary: https://course.fast.ai/Lessons/Summaries/lesson1.html
+
+    - 0:00:  Intro: Changes since 2015
+    - 0:01:  Is it a bird
+    - 0:02:  Images are made of numbers
+    - 0:03:  Downloading images
+    - 0:04:  Creating a DataBlock and Learner
+    - 0:05:  Training the model and making a prediction
+    - 0:07:  What can DL do now
+    - 0:10:  Pathways Language Model (PaLM)
+    - 0:15:  Top down learning
+    - 0:19:  Jeremy's qualifications
+    - 0:22:  Comparison: modern DL and 2012 ML practices
+    - 0:24:  Visualizing layers of trained NN
+    - 0:27:  Image classification: audio!
+    - 0:28:  Image classification: time series/fraud
+    - 0:30:  Pytorch vs Tensorflow
+    - 0:31:  Example: Fastai buidling on Pytorch (AdamW)
+    - 0:35:  Cloud servers for your notebooks (Kaggle)
+    - 0:38:  Bird or not bird? (Kaggle features)
+    - 0:40:  Python: How to import libraries like Fastai
+    - 0:40:  Best practice: viewing your data between steps
+    - 0:42:  Datablocks API overview
+    - 0:44:  Datablocks API parameters explanation
+    - 0:48:  fastai documentation
+    - 0:49:  Fastai: `learner` (combines model & data)
+    - 0:50:  Fastai: available pretrained models
+    - 0:52:  pretrained models?
+    - 0:53:  Testing model with `predict`
+    - 0:55:  Computer vision: Segmentation
+    - 0:56:  Segmentation code
+    - 0:58:  fastai: Tabular analysis
+    - 0:59:  `show_batch` method
+    - 1:01:  Collaborative filtering (recommendations)
+    - 1:05:  Turn notebooks into a presentation (RISE)
+    - 1:05:  What else with notebooks?
+    - 1:08:  What can DL do?
+    - 1:10:  The first NN: Mark I Perceptron (1957)
+    - 1:12:  ML models at a high level
+    - 1:18:  Homework
+
+    - The DL field has settled down, and a limited number of
+      useful models identified now.
+    - You'll spend more time with `datablocks` and `dataloaders`
+      than tweaking model architectures.
+    - transforms:
+        - all items you train on should be the same size
+    - dataloaders feed a batch of images to the GPU at once... so
+      you are utilising parallel processing
+    - a MODEL:
+        - is the input DATA (in a dataloader) + the NN
+          architecture (e.g. resnet)
+    - `learn.predict` returns 3 things:
+        - prediction as string
+        - prediction as integer
+        - probability of bird/non-bird (for example)
+    - Tabular data: not really going to use `fine_tune` because
+      that's for pretrained models only. And for tabular
+      (financial) data we don't usually have pre-trained models
+    - `dls.show_batch()`
+        - uses "type dispatch" to show a resonable representation
+          of the data, not matter what type it is: image, text,
+          numerical etc
+    - y_range(0.5, 5,5)
+        - if the learner is not predicting a category, but
+          predicting a REAL NUMBER
+        - also: loosen the range a little; we're interested in
+          a range of 1 to 5, but go a bit above and below
+    - `fine_tune(10)`
+        - confusing: even if it's not a pre-trained model with
+          existing weights, we can just do `fine_tune` anyway and
+          it'll do normal training
+            - $MY_IMAGES/cs/AI-ML/fastai/fine-tune-used-as-trainer.jpg
+    - negative numbers-
+        - when adding up and multiplying the weights Jeremy
+          says... "... takes all the negative numbers and puts
+          them to zero"
+
+### Lesson-02
+    - Forum:   https://forums.fast.ai/t/lesson-2-official-topic/96033
+    - video:   https://www.youtube.com/watch?v=F4tvM4Vb3A0
+    - Summary: https://course.fast.ai/Lessons/Summaries/lesson2.html
+
+    - 0:00:  Use fastai book as companion
+    - 0:02:  aiquizzes.com: quizzes on the book
+    - 0:02:  fastai forums
+    - 0:03:  forum Summarizations
+    - 0:04:  Student projects
+    - 0:06:  Putting models into production
+    - 0:08:  Jupyter Notebook extensions
+    - 0:09:  Bing/DuckDuckGo: Gather images
+    - 0:11:  Python/fastai functions: get info
+    - 0:12:  Data Cleaning: by training a model
+    - 0:13:  Resizing methods
+    - 0:14:  RandomResizedCrop
+    - 0:15:  Data augmentation
+    - 0:16:  Question: Does "data augmentation" copy the image multiple times?
+    - 0:18:  Training a model so you can clean your data
+    - 0:19:  Confusion matrix
+    - 0:20:  plot_top_losses
+    - 0:22:  ImageClassifierCleaner demo
+    - 0:25:  CPU vs GPU (VRAM)
+    - 0:27:  Models in production
+    - 0:30:  Git & Github desktop
+    - 0:31:  For Windows users
+    - 0:37:  Deploying DL model
+    - 0:37:  Kaggle: Dog/cat classifier
+    - 0:38:  Model Export: `learn.export`
+    - 0:39:  Kaggle: Download your model
+    - 0:41:  Use trained model: make predictions
+    - 0:43:  `learn.predict` and timing
+    - 0:44:  deploy to Gradio: Shaping data
+    - 0:45:  Gradio interface
+    - 0:48:  Python script from notebook (#|export)
+    - 0:50:  Hugging Face deployed model
+    - 0:52:  How many epochs to train for?
+    - 0:53:  CoLab: Export and download model
+    - 0:54:  Local Install: Python, Jupyter, fastai
+    - 1:00:  Deployment platforms: Hugging Face, Gradio, Streamlit
+    - 1:02:  Hugging Face API
+    - 1:05:  Jeremy website: "tinypets"
+    - 1:08:  Pet example (aabdalla)
+    - 1:09:  Source code
+    - 1:11:  Github Pages
+
+
+
+### Lesson-03
+    - Forum:   https://forums.fast.ai/t/lesson-3-official-topic/96254
+    - video:   https://www.youtube.com/watch?v=hBBOjCiFcuo
+    - Summary: https://course.fast.ai/Lessons/Summaries/lesson3.html
+
+    - 0:00  Survey
+    - 0:01  "Lesson 0" How to fast.ai
+    - 0:02  How to do a fastai lesson
+    - 0:04  How NOT to self-study
+    - 0:05  Most popular student work
+    - 0:07  "Pets breeds" classifier
+    - 0:08  Paperspace
+    - 0:10  JupyterLab
+    - 0:12  A better "pet detector"
+    - 0:13  Comparison of image models
+    - 0:15  Try new models
+    - 0:19  Get model categories
+    - 0:20  What’s in a model
+    - 0:21  Model `architectures`
+    - 0:22  Model `Parameters`
+    - 0:23  General quadratic function
+    - 0:27  Fit function by eye
+    - 0:30  Loss functions
+    - 0:33  Automate parameter search for better loss
+    - 0:42  mathematical functions
+    - 0:43  `ReLu`: Rectified linear function
+    - 0:45  Infinitely complex functions
+    - 0:49  Chart: all image models
+    - 0:52  Enough data?
+    - 0:54  Interpret gradients in unit?
+    - 0:56  Learning rate
+    - 1:00  Matrix multiplication
+    - 1:04  Excel: Build regression model
+    - 1:16  Excel: Build NN: add 2 regression models
+    - 1:18  Matrix multiplication makes training faster
+    - 1:21  Watch out! it’s chapter 4
+    - 1:22  Create dummy variables of 3 classes
+    - 1:23  Taste NLP
+    - 1:27  fastai NLP library vs Hugging Face
+    - 1:28  Homework
+
+
+### Lesson-04
+    - Forum:   https://forums.fast.ai/t/lesson-4-official-topic/96441
+    - video:   https://www.youtube.com/watch?v=toUgBQv1BT8
+    - Summary: https://course.fast.ai/Lessons/Summaries/lesson4.html
+
+    - 00:00  Using Huggingface
+    - 00:03  Fine-tuning pretrained model
+    - 00:05  `ULMFit`
+    - 00:09  Transformer
+    - 00:10  Zeiler & Fergus
+    - 00:14  US Patent "Phrase to Phase" Matching (Kaggle)
+    - 00:16  NLP Classification
+    - 00:20  Kaggle configs, install python/BASH, competition website
+    - 00:24  Pandas, numpy, matplotlib, & pytorch
+    - 00:29  Tokenization
+    - 00:33  Huggingface model hub
+    - 00:36  Examples: tokenized sentences
+    - 00:38  Numericalization
+    - 00:41  Question: rationale behind input data format
+    - 00:43  ULMFit: easily fit large documents
+    - 00:45  Overfitting & underfitting
+    - 00:50  Splitting the dataset
+    - 00:52  Good validation sets
+    - 00:57  Test set
+    - 00:59  Metric vs loss
+    - 01:01  The problem with metrics
+    - 01:04  Pearson correlation
+    - 01:10  Correlation is sensitive to outliers
+    - 01:14  Model Training
+    - 01:19  Question: when to remove outliers?
+    - 01:22  Predictions
+    - 01:25  Research/startups
+    - 01:26  Ethics: Misusing NLP
+    - 01:33  Question: is target "categorical"?
+
+
+### Lesson-05
+    - Forum:   https://forums.fast.ai/t/lesson-5-official-topic/96491
+    - video:   https://www.youtube.com/watch?v=_rXzeWq4C6w
+    - Summary: https://course.fast.ai/Lessons/Summaries/lesson5.html
+    - code     $MY_CODE/AI-ML/fastai-2022/05-linear-model-and-neural-net-from-scratch.py
+    - code     $MY_CODE/AI-ML/fastai-2022/06-why-you-should-use-a-framework.py
+
+    - 00:00  Intro
+    - 00:01  Linear model and NN from scratch
+    - 00:07  Data Cleaning (PANDAS)
+    - 00:26  Creating linear model
+    - 00:38  Creating functions
+    - 00:39  Gradient Descent
+    - 00:42  Training linear model
+    - 00:46  Measuring ACCURACY
+    - 00:48  Using `sigmoid`
+    - 00:56  Kaggle Submission
+    - 00:58  Matrix Product
+    - 01:03  A neural network
+    - 01:09  Deep learning
+    - 01:12  Linear model: final thoughts
+    - 01:15  should use a FRAMEWORK
+    - 01:16  Data Prep
+    - 01:19  Train the model
+    - 01:21  Kaggle Submission
+    - 01:23  Use more models: `Ensembling`
+    - 01:25  FRAMEWORK: final thoughts
+    - 01:26  Random Forests
+    - 01:28  Data preprocessing: `pd.categorical`
+    - 01:30  Binary splits: Male v Female survival
+    - 01:41  Final Roundup
+
+    - pandas tricks:
+        - `fillna` with the mode,
+        - df.describe(include=[np.number])
+    - long-tailed distributions
+        - not good for linear models
+        - trick: use the log to get rid of the long tail
+        - log makes big numbers less big, and doesn't really
+          change small numbers at all
+        - note: log of zero is `NaN`, so do np.log(df.fare `+ 1`)
+    - wow: there's some categorical variables (sex, passenger
+      class, emarked) and you can't multiply them by a numerical
+      coefficient... so do
+        - df=pd.get_dummies(df, columns=[sex, etc etc])
+        - creates new columns: sex_male, sex_female, pclass_1,
+          pclass_2 etc etc
+        - $MY_IMAGES/cs/pandas-get-dummies.jpg
+        - $MY_IMAGES/cs/pandas-get-dummies-2.jpg
+        - later: when talking about random forest, Jermey defines
+          'sex' as a categorical variable
+            - df['Sex'] = pd.Categorical(df.Sex)
+            - and that converted Female into 0, Male into 1
+            - (so we don't have to do this dummy variable stuff?)
+    - Random forests:
+        - trying to find the best binary split threshold point
+          for `age`
+        - he gets all unique `age` values and passes them to his
+          "score function" in turn
+        - the score function gets the `std` of the group * number
+          of items in the group
+        - basically we want items in the group to be as low as
+          possible (hence `std`)
+
+### Lesson-06
+    - Forum:   https://forums.fast.ai/t/lesson-6-official-topic/96972
+    - video:   https://www.youtube.com/watch?v=AdhG64NF76E
+    - Summary: https://course.fast.ai/Lessons/Summaries/lesson6.html
+    - code     $MY_CODE/AI-ML/fastai-2022/07-how-random-forests-really-work.py
+    - code     $MY_CODE/AI-ML/fastai-2022/08-paddy-competetion-part-1.py
+    - code     $MY_CODE/AI-ML/fastai-2022/09-paddy-part-2-small-models.py
+
+    - 0:00  Review
+    - 0:02  `TwoR` model
+    - 0:04  Create decision tree
+    - 0:07  Gini
+    - 0:10  Kaggle: submission
+    - 0:15  Bagging
+    - 0:19  Random forest:intro
+    - 0:20  Creating a random forest
+    - 0:22  Feature importance
+    - 0:26  Adding trees
+    - 0:29  What is `OOB`: out of bag error
+    - 0:32  Model interpretation
+    - 0:35  Removing redundant features
+    - 0:35  "Partial dependence"
+    - 0:39  Explain: why particular prediction?
+    - 0:46  Overfit a random forest?
+    - 0:49  Gradient Boosting
+    - 0:51  "walkthrus"
+    - 0:54  What does "fastkaggle" do
+    - 1:02  fastcore.parallel
+    - 1:04  item_tfms=Resize(480, method='squish')
+    - 1:06  Fine-tuning project
+    - 1:07  Evaluate models: criteria
+    - 1:10  Kaggle: Submit early
+    - 1:15  Sharing kaggle notebooks
+    - 1:20  AutoML: no?
+    - 1:24  first model slow on Kaggle: do image resize preprocessing
+    - 1:27  Novel architectures improve accuracy?
+    - 1:28  Convnext
+    - 1:31  Iterate model with padding
+    - 1:32  Data augmentation on images
+    - 1:34  Iterate model with larger images
+    - 1:36  PANDAS indexing
+    - 1:38  Data-augmentation: what does `tta` use?
+
+
+### Lesson-07
+    - Forum:                                https://forums.fast.ai/t/lesson-7-official-topic/97076
+    - video:                                https://www.youtube.com/watch?v=p4ZZq0736Po
+    - Summary:                              https://course.fast.ai/Lessons/Summaries/lesson7.html
+    - code                                  $MY_CODE/AI-ML/fastai-2022/10-paddy-part-3-scaling-up.py
+    - Jeremy notebook multi-target          https://www.kaggle.com/code/jhoward/multi-target-road-to-the-top-part-4
+    - someone doing multi-target prediction https://www.kaggle.com/code/archietram/small-models-multi-targets/notebook
+
+
+    - 0:00  Commonly: Tweak first / last layers
+    - 0:02  Benefits larger models
+    - 0:05  GPU memory usage
+    - 0:08  What is `Gradient Accumulation`?
+    - 0:20  Run all models with specifications
+    - 0:22  Ensembling
+    - 0:37  Multi-target models
+    - 0:41  `F.cross_entropy`
+    - 0:45  When do use `softmax`?
+    - 0:46  Cross_entropy loss
+    - 0:49  Binary-cross-entropy: How to calculate
+    - 0:52  Pytorch Cross-entropy: 2 versions
+    - 0:54  Learner: multi-target model (two targets)
+    - 1:02  ----------------------------------
+    - 1:02  Collaborative filtering: deep dive
+    - 1:08  Latent factors?
+    - 1:11  Dot product model
+    - 1:18  What is EMBEDDING? (one-hot etc)
+    - 1:22  How to choose number of latent factors
+    - 1:27  Build collaborative filtering model from scratch
+    - 1:29  Understanding `forward` function
+    - 1:32  Adding BIAS (for each movie user)
+    - 1:34  Model interpretation
+    - 1:39  WEIGHT DECAY: how helps?
+    - 1:43  Regularization?
+
+    - very important: predict TWO things
+        - use datablock to define a multi-category prediction
+          model
+        - $MY_IMAGES/cs/AI-ML/fastai-multi-category-prediction.jpg
+
+### Lesson-08
+    - Forum:   https://forums.fast.ai/t/lesson-8-official-topic/97159
+    - video:   https://www.youtube.com/watch?v=htiNBPxcXgo
+    - Summary: https://course.fast.ai/Lessons/Summaries/lesson8.html
+    - code     $MY_CODE/AI-ML/fastai-2022/05-linear-model-and-neural-net-from-scratch.py
+
+    - 0:00  NN from scratch
+    - 0:04  Pytorch: Parameters
+    - 0:07  Embedding from scratch
+    - 0:12  Visualising embeddings: movie bias (crap movies etc) & `pca` of movie latent factors
+    - 0:18  fastai: 'Collaborative filtering' wrapper
+    - 0:22  Embedding distance (how far apart each embedding vector is)
+    - 0:24  Collaborative filtering with DL
+    - 0:30  NLP Embeddings: words in a poem
+    - 0:34  tabular Embeddings:  figured out map of Germany, days of week
+    - 0:44  -------------------------
+    - 0:44  Convolutions
+    - 0:57  Optimizing convolutions
+    - 0:58  Pooling
+    - 1:05  Convolutions as 'matrix products'
+    - 1:08  Dropout
+    - 1:14  Activation functions
+    - 1:20  -------------------------
+    - 1:20  Jeremy AMA
+    - 1:20  Stay motivated?
+    - 1:23  Skew: big expensive models
+    - 1:26  Homeschool children?
+    - 1:28  Walk-through as separate course
+    - 1:29  Turn model into business?
+    - 1:32  Productivity hacks
+    - 1:36  Final words
+
+    - how does pytorch know what to update?
+        - it looks for anything wrapped in `nn.Parameter`
+        - although if you create something with `nn.Linear()` it
+          knows its attributes are parameters too...

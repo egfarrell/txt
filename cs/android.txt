@@ -1,0 +1,214 @@
+
+
+### Foss apps
+    - I've been using FOSS apps, Amaze File Manager, Muzei
+      (wallpaper manager), and Lawnchair (Launcher), for well
+      over 8 years across multiple Android devices and versions,
+      with nary an issue.
+    - The situation with Nova (and SimpleMobileTools before it)
+      is that developers are selling their popular projects. This
+      isn't an "Android" thing, but more of an indictment of
+      sustainability of indie FOSS projects. This isn't limited
+      to consumer apps, though (see: Redis).
+
+### who allows bootloader unlock?
+    - https://github.com/melontini/bootloader-unlock-wall-of-shame?tab=readme-ov-file
+
+### OTG USB stick - slow
+    - Android can crash/reboot if OTG USB drive is too big 
+        - (gets stuck "checking contents")
+    - tip: format the USB as `FAT32`! 
+        - Use RUFUS to format it! https://rufus.ie/en/
+        - then it mounts much quicker
+
+### Disable annoying clipboard popup on android 14
+    adb shell appops set com.android.systemui READ_CLIPBOARD ignore
+
+### How to setup adb
+    - https://www.xda-developers.com/install-adb-windows-macos-linux/
+
+### OTG usb problem
+
+getprop persist.sys.usb.config
+getprop sys.usb.config
+dumpsys usb
+
+setprop persist.sys.usb.config mtp,adb
+setprop sys.usb.config mtp,adb
+settings put global usb_mass_storage_enabled 1
+
+svc usb setFunctions mtp
+settings put global usb_audio_automatic_role_switch 1
+settings delete global usb_configuration_sticky
+
+adb shell settings delete global usb_configuration_sticky
+adb shell settings put global usb_audio_automatic_role_switch 1
+adb shell svc usb setFunctions mtp true
+
+adb shell settings put global adb_enabled 1
+adb shell settings put global development_settings_enabled 1
+adb shell svc usb setPowerRole sink
+adb reboot
+
+### Wireless debug
+    - phone: developer options, enable wireless debugging
+    - laptop: Download latest Android sdk from google
+    cd ~/Downloads/platform-tools 
+    ./adb version (must be great than 30?)
+    ./adb pair 172.20.10.12:38837
+    adb pair 192.168.1.101:35291 488402
+    ./adb connect 172.20.10.12:35567 (note: different `port`, from main wireless debug screen)
+
+### Try to remove apk/adb packages (need root?)
+    - list of bloat packages https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/blob/main/resources/assets/uad_lists.json
+    adb kill-server
+    sudo adb start-server
+    adb devices   
+    adb shell
+
+    Copy to phone downloads folder
+        adb push com.aurora.store_56.apk /storage/emulated/0/Download/
+        adb push com.martinmimigames.simplefileexplorer_17.apk /storage/emulated/0/Download/
+
+
+    Copy to INTERNAL phone Music folder 
+        (its INTERNAL even though it says sdcard!)
+        adb push the-choice /sdcard/Music/
+
+    Copy to phone SDCARD folders
+        adb push myfolder /storage/278E-1696/Music
+        adb push myfolder /storage/278E-1696/Movies 
+
+
+    list packages
+        pm list packages  -s -e
+        pm list packages  -s -d
+            -f: see their associated file.
+            -d: only show disbled packages.
+            -e: only show enabled packages.
+            -s: only show system packages.
+
+        For samsung:
+        adb shell cmd package list packages -f
+
+        pm list users
+        pm list instrumentation
+        pm list permission-groups
+
+    android onyx boox
+        pm uninstall -k --user 0
+
+    android 11
+        adb shell pm disable-user -–user 0  com.gotron.uota
+
+
+
+### UbikiTouch clever hack
+    - UbikiTouch allows global gestures on the left/right edges
+      and the bottom
+    - It will also hide the standard Android navigation bar, but
+      first it needs Write_Secure_Permissions
+    - This can be done by enabling USB debugging and going to:
+        - https://ubikitouch.toneiv.eu/adb/#/
+        - (This website means you dont have to manually install ADB)
+        - $MY_IMAGES/cs/android-ubikitouch-permissions.jpg
+
+### Opening the AOSP Files app
+    - Only one app is specifically granted access by the Android
+      platform to manage files inside the `Android/data` folder:
+      the AOSP Files app.
+    - This used to be easily accessible via a launcher icon in
+      your app drawer, but on Pixel devices at least, that icon
+      is gone in favor of the preloaded Files by Google app.
+    - However, it's still present on the device and it can still
+      be launched.
+    - Option 1: Open up the system Settings, then navigate to
+      Storage and click "Files"
+    - Option 2: Download this Files app from the Play Store,
+      which is really just a shortcut to open the AOSP files app.
+
+### Bricked my lenovo
+    - /system/build.prop:
+        debug.sf.nobootanimation=1
+
+### Google Services to enable/disable (my Lenovo)
+    - Google Account Manager
+    - Google Play Services
+    - Google Play Store
+    - Google Services Framework
+
+### AOSP
+    - Android Open Source Port
+
+### motorola g5 - unlock bootloader
+    - https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a
+
+
+### Android 6.0 reduce animations:
+    - go into Developer mode (hit build six times)
+    - Developer menu options:
+        - Window animation scale
+        - Transition animation scale
+        - Animator duration scale
+
+### disable cellular/phone but keep wifi
+    - enable airplane mode
+    - switch on wifi!
+
+### quirky one:
+    - My bluetooth keyboard: gnuroot debian: use "start/alt+tab"
+      to switch between programs! (not "alt/cmd" button)
+    - to get "\" using the bluetooth keyboard: do "fn"+z
+
+### copy files to my android sd card
+    - just plug in usb cable and transfer
+    - no need to take out the sd card!
+    - note: not reliable???!
+
+### copy photos from android device drive (not sdcard!)
+    Usb computer connection: Camera (PTP)
+    then: adb shell: you're in on the device hard-drive then!
+
+### sd card file paths
+    - INTERNAL memory:    /storage/emulated/0
+    - external sdcard:    /storage/sdcard1
+
+
+### app not installing from google play: (kitkat 4.4.2)
+    unmount sd card, then install
+
+### show device
+    lsusb
+
+### open shell on the tablet
+    adb shell
+
+### install adb
+    sudo add-apt-repository ppa:nilarimogard/webupd8
+    sudo apt-get update
+    sudo apt-get install android-tools-adb android-tools-fastboot
+
+### adb devices
+    show device is "offline"
+    solution:
+        For anyone wondering about 4.2.2, there is
+        a security question that appears on the phone
+        requesting RSA verification with the PC. Be sure
+        your tools are updated AND you allow the PC
+        access by verifying the security question on the
+        devices in question. This fixed it for me.
+
+        And as always, verify you have debugging enabled
+        in the developer options ;)
+
+### backup android device
+    adb backup -f FullBackup.ab -apk -all
+
+### 'es' file explorer
+    1. Navigate to your file/folder of interest
+    2. Long press the file/folder of interest until a check box appears
+    3. Select the "properties" menu item from the "more" menu
+    4. The full path will be revealed
+
+### links
+    - F-droid alternative https://news.ycombinator.com/item?id=43307489

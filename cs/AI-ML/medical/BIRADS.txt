@@ -1,0 +1,225 @@
+### Books
+    - $MY_BOOKS/Bio/Medical/2013-ACR-BIRADS.pdf
+    - $MY_BOOKS/Bio/Medical/2013-BIRADS-Reference-Card.pdf
+
+
+### Summary
+    - BIRADS stands for
+        - _Breast IMAGING-Reporting and Data System_
+    - Developed by American College of Radiology (ACR) for
+      radiologists to categorize mammography findings (but
+      expanded now to include `ultrasound` and `MRI` of the
+      breast).
+
+    - BIRADS provides clear, consistent communication between the
+      radiologist and referring physician and standardizes the
+      terminology used in breast imaging reports.
+
+### BIRADS assessment categories:
+
+    1. BIRADS 0:
+        - Incomplete - Need Additional Imaging Evaluation
+        - This means the mammogram or ultrasound is not complete,
+          and more imaging is needed. This can be due to
+          overlapping tissues, a potential abnormality, or the
+          comparison with prior studies.
+
+    2. BIRADS 1:
+        - Negative
+        - This is a clear or "negative" mammogram or ultrasound
+          with no significant abnormalities.
+
+    3. BIRADS 2:
+        - Benign
+        - This means there is a benign (non-cancerous) finding on
+          the mammogram or ultrasound, and there's no cancer
+          suspicion. Examples might include benign cysts or
+          fibroadenomas.
+
+    4. BIRADS 3:
+        - Probably Benign
+        - The findings are not expected to be malignant but are
+          not definitively benign either.
+        - The recommendation is usually a short-term follow-up
+          (e.g. 6 months) to ensure the ROI remains stable and
+          doesn't change.
+
+    5. BIRADS 4:
+        - Suspicious (4A, 4B, 4C)
+        - The finding is suspicious for malignancy, and a biopsy
+          should be considered. This category can be further
+          subdivided (4A, 4B, 4C) based on suspicion level.
+
+    6. BIRADS 5:
+        - Highly Suspicious of Malignancy
+        - There's a high chance (greater than 95%) that cancer is
+          present. A biopsy is recommended.
+
+    7. BIRADS 6:
+        - Known Biopsy-Proven Malignancy
+        - Used when imaging is performed for a known cancer,
+          either before treatment or to evaluate the results of
+          treatment.
+
+    - BIRADS also includes `descriptors` for mammographic,
+      sonographic, and MRI findings to further characterize
+      lesions and provide standardized terminology.
+
+    - While BIRADS provides a standardized way to describe
+      findings, the final diagnosis (benign vs. malignant) often
+      requires a biopsy tissue diagnosis, especially for lesions
+      at BIRADS `4` or `5`.
+
+
+### BIRADS descriptors
+    - Descriptors help radiologists characterize lesions.
+    - These descriptors serve as a "checklist" of sorts, helping
+      radiologists categorize lesions consistently.
+
+    1. Shape:
+        - Oval
+        - Round
+        - Irregular
+
+    2. Orientation
+        - (compared to skin line):
+        - Parallel
+        - Not parallel
+
+    3. Margin:
+        - Circumscribed (well-defined)
+        - Indistinct
+        - Angular
+        - Microlobulated
+        - Spiculated
+
+    4. Echogenicity
+        - brightness compared to surrounding tissue:
+        - Anechoic
+            - fluid-filled, such as a simple cyst
+        - Hypoechoic
+            - lesion darker than surrounding tissue
+        - Isoechoic
+            - lesion has same brightness as surrounding tissue
+        - Hyperechoic
+            - lesion brighter than surrounding tissue
+        - Complex
+            - combination of anechoic and echogenic areas, like
+              a cyst with a solid component
+
+    5. Posterior Features
+        - seen behind the lesion:
+        - No posterior features
+        - Enhancement (`brighter` area behind the lesion)
+        - Shadowing (`darker` area behind the lesion)
+        - Combined pattern
+
+        - Other descriptors might relate to
+            - lesion size,
+            - elasticity (with elastography techniques),
+            - vascularity (with Doppler techniques)
+
+    - Note: BIRADS 3 (Probably Benign)
+        - often includes findings that are not typical for cancer
+          but are not definitively benign.
+        - Lesions in this category might include fibroadenomas,
+          non-simple cysts, or focal asymmetries that haven't
+          changed over time.
+        - Characteristics like oval shape, circumscribed margins,
+          and parallel orientation might be consistent with
+          BIRADS 3.
+        - But the key is there's a low suspicion of malignancy,
+          and short-term follow-up is typically recommended.
+
+    - While descriptors guide radiologists, the final BIRADS
+      categorization also takes into account
+        - the radiologist's experience,
+        - clinical information, and
+        - comparison with prior imaging.
+
+    - It's not purely a "check-the-box" process. The descriptors
+      help standardize reporting, but there's still an element of
+      professional judgment involved.
+
+    - For more BIRADS info consult the official documentation by
+      the `American College of Radiology`:
+        - $MYBOOKS/Bio/Medical/2013-ACR-BIRADS.pdf
+        - $MYBOOKS/Bio/Medical/2013-BIRADS-Reference-Card.pdf
+
+### "anechoic" and "echolucent" (black)
+    - For ultrasound imaging, the terms "anechoic" and
+      "echolucent" are often used interchangeably. Both describe
+      a region within an ultrasound where the echoes are absent
+      or much weaker than the surrounding areas.
+
+    - Anechoic: Literally means "without echo." Anechoic
+      structures appear BLACK on an ultrasound image.
+      Fluid-filled structures, like simple cysts, are classic
+      anechoic lesions in breast ultrasound.
+
+    - Echolucent: This term emphasizes the relative "lucency"
+      or "lack of echoes" compared to surrounding tissues. It
+      also appears BLACK or VERY DARK on ultrasound images.
+
+    - both terms describe similar sonographic appearances, but
+      "anechoic" is more commonly used in breast imaging.
+      However, in some contexts or regions, one term might be
+      preferred over the other.
+
+### Posterior Acoustic Shadowing
+    - 'Posterior acoustic shadowing' in breast US, especially
+      behind potentially malignant lesions, is rooted in the
+      principles of ultrasound physics and tissue
+      characteristics.
+
+    - simplified explanation:
+
+    1. Sound Attenuation: As ultrasound waves travel through
+       tissue, they lose energy due to scattering, reflection,
+       and absorption. This process is termed attenuation.
+        - If a lesion attenuates the sound waves more than the
+          surrounding tissue, fewer waves will pass through the
+          lesion and continue deeper into the tissue.
+        - As a result, the area behind the lesion will receive
+          less ultrasound energy and appear DARKER on the image,
+          creating a shadow.
+
+    2. Malignant Characteristics: Malignant lesions often have
+       characteristics leading to increased attenuation:
+        - Higher Cell Density: Malignant tumors often have
+          a higher cell density compared to benign tumors or
+          normal tissue. More cells mean more interfaces for the
+          ultrasound waves to scatter and reflect.
+        - Desmoplasia: This refers to the growth of fibrous or
+          connective tissue that often surrounds malignant
+          tumors. This dense tissue can strongly attenuate
+          ultrasound waves.
+        - Calcifications: Malignant lesions can contain
+          microcalcifications, which are tiny calcium deposits.
+          These calcifications reflect ultrasound waves
+          effectively, contributing to shadowing.
+
+    3. Refraction and Reflection: When ultrasound waves
+       encounter a boundary between two tissues with different
+       acoustic impedances (like a solid tumor and surrounding
+       fat), some waves are reflected back to the transducer, and
+       others are refracted or bent.
+        - This can further reduce the amount of ultrasound energy
+          that continues past the lesion.
+
+    4. Comparatively, Benign Findings: Simple cysts, which are
+       fluid-filled and benign, are anechoic and do not typically
+       cause shadowing because the sound waves pass easily
+       through the fluid.
+        - On the other hand, solid benign lesions like
+          `fibroadenomas` may cause some shadowing, but it's
+          often less pronounced than in malignant lesions.
+
+    - While posterior acoustic shadowing can be suggestive of
+      malignancy, it's essential to consider it in the context of
+      other lesion characteristics and clinical factors.
+    - Not all malignant lesions will display shadowing, and not
+      all lesions with shadowing are malignant.
+    - Always, the combined assessment of various ultrasound
+      features will provide the most accurate characterization of
+      a lesion.

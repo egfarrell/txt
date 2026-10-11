@@ -1,0 +1,63 @@
+# --- 1. Identify connection name ---
+nmcli connection show
+
+> (use the exact NAME, e.g. "Auto EF iPhone 2")
+
+# --- 2. Set stable DNS (optional but recommended) ---
+nmcli connection modify "Auto EF iPhone 2" ipv4.ignore-auto-dns yes
+nmcli connection modify "Auto EF iPhone 2" ipv4.dns "1.1.1.1 9.9.9.9"
+nmcli connection modify "Auto EF iPhone 2" ipv4.method auto
+
+nmcli connection modify "Auto EF iPhone 1" ipv4.ignore-auto-dns yes
+nmcli connection modify "Auto EF iPhone 1" ipv4.dns "1.1.1.1 9.9.9.9"
+nmcli connection modify "Auto EF iPhone 1" ipv4.method auto
+
+# --- 3. Set LTE-safe MTU ---
+nmcli connection modify "Auto EF iPhone 2" 802-11-wireless.mtu 1400
+nmcli connection modify "Auto EF iPhone 1" 802-11-wireless.mtu 1400
+
+# --- 4. Reconnect to apply ---
+nmcli connection down "Auto EF iPhone 2"
+nmcli connection up "Auto EF iPhone 2"
+nmcli connection down "Auto EF iPhone 1"
+nmcli connection up "Auto EF iPhone 1"
+
+# --- 5. Disable Wi-Fi power saving (temporary) ---
+iw dev $(nmcli -t -f DEVICE,TYPE,STATE dev | grep wifi | grep connected | cut -d: -f1) set power_save off
+
+# --- 6. Make power saving OFF persistent ---
+sudo nano /etc/NetworkManager/conf.d/wifi-powersave.conf
+
+add:
+> [connection]
+> wifi.powersave = 2
+
+sudo systemctl restart NetworkManager
+
+# --- 7. (Optional) Improve TCP on lossy links ---
+sudo sysctl -w net.core.default_qdisc=fq
+sudo sysctl -w net.ipv4.tcp_congestion_control=bbr
+
+# persist:
+sudo nano /etc/sysctl.conf
+
+# add:
+# net.core.default_qdisc=fq
+# net.ipv4.tcp_congestion_control=bbr
+
+# --- 8. Verify ---
+ip link show | grep mtu
+ping -c 10 1.1.1.1
+tracepath 1.1.1.1
+
+# --- 9. If needed: try slightly higher MTU ---
+# (only if 0% packet loss)
+nmcli connection modify "Auto EF iPhone 2" 802-11-wireless.mtu 1420
+nmcli connection down "Auto EF iPhone 2"
+nmcli connection up "Auto EF iPhone 2"
+nmcli connection modify "Auto EF iPhone 1" 802-11-wireless.mtu 1420
+nmcli connection down "Auto EF iPhone 1"
+nmcli connection up "Auto EF iPhone 1"
+
+# --- 10. Revert MTU (if needed) ---
+nmcli connection modify "Auto EF iPhone 2" 802-11-wireless.mtu auto

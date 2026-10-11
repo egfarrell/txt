@@ -1,0 +1,32 @@
+mplayer tips
+
+### shortcuts
+    I've overwritten shortcuts in ~/.mplayer/input.conf
+    [enter]     play next file
+    [o]         toggle OSD (show time etc)
+    [P]         time progress
+    [f]         full-screen mode
+    [I]         show current filename
+
+### sample config and key bindings
+    /usr/share/doc/mplayer/examples
+    Also:
+        mplayer -input cmdlist
+
+### screenshot path
+     -vf screenshot=/some/path/shot
+
+### from command line
+    mplayer -zoom -af scaletempo {file}
+    (I have bash alias for this now)
+
+### reduce background hiss:
+    mplayer -zoom -af scaletempo,equalizer=-12:-12:-12:0:0:0:12:12:-6:-12 {file}
+
+### put timestamp on screenshot (extra option for video filter vf)
+    -vf expand[=w:h:x:y:o:a:r], where a=1 turns on OSD rendering.
+    -vf expand=::::1:,screenshot
+
+### if mplayer crashes due to hardware conflict change video output (vo)
+    ~/.mplayer/config
+        vo=x11

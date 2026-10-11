@@ -1,0 +1,187 @@
+# Most interesting point of lecture
+    - Stillwell implies Pythagoras theorem is more of
+      a _definition_ that is baked into the Cartesian system.
+
+    - Wildeberger disagrees. He says Pythagoras is not
+      automatically true and is still a _theorem_. It is only
+      automatically true when two sides of the triangle are
+      parallel to the co-ordinate axes.
+
+    - Otherwise, when you get the length of the 3 sides oblique
+      to the co-ord axes, you must still prove that the square of
+      one is equal to the sum of the other two squared.
+
+
+# "Greek" mathematics
+	- Euclid - Egypt - Alexandria (Elements 300BC)
+	- Archimedes - Syria - Syracuse
+
+# Pythagoras Theorem
+	- (Euclid Proposition 47/48)
+	- Babylonians and Egyptians knew of it - e.g. knotted rope
+	- Greeks thought of theorem in terms of AREA, not lengths.
+	- A notion of length IS NOT REQUIRED.
+
+# Theorem
+    - A triangle is right-angled <=> (precisely when) the sum of
+      the area of squares on the shorter sides equal the area of
+      the square on the longer side (hypotenuse)
+
+# Comment
+    - Area is a simpler notion than length - no square roots!
+    - To define length we do need square roots - (thats
+      a consequence of the Pythagoras theorem)
+    - e.g. In Cartesian system:
+        - length |AB| = sqrt(2^2 + 1^2)
+        -             = sqrt(5)
+        - and sqrt(5) is hard to calculate!
+
+# Greeks not happy
+    - they called sqrt(5) an infinite decimal, nowadays
+      "irrational number" But Euclid only needed natural numbers
+      to state his theorem.
+
+# Proof of Pythagoras Theorem
+	- Greeks first to require "proof"
+	- Wildeberger uses "sliding squares" kind of proof
+
+# Why is Pythag important?
+    - Because in modern Cartesian coordinates its used to define
+      length (or distance which is the same thing)
+
+# Father of Greek Mathematics
+    - Thales! Pythagoras was probably his student.
+
+# Pythag discovery
+    - proportions between whole numbers had direct connection
+      with musical notes so a theory of music based on ratios of
+      whole numbers so numbers could be used to describe the
+      natural world.
+
+# sqrt(2)
+    - isnt a rational number!
+    - i.e. not a ratio of natural numbers
+
+# Proof: sqrt(2) isnt a rational number
+    - suppose sqrt(2) = a/b, where a,b are natural numbers
+    with no common factor eventually prove both a and b are
+    even but we said a and b had no common factor
+
+### Differential Geometry
+    - combination of calculus and analytic geometry applied to
+      curves and surfaces
+    - key concept: idea of _curavature_
+    - Huygens: invented pendulum clock (much better timekeeping)
+
+    - PLANAR CURVES:
+    - --------------
+    - 1693: Huygens investigated the involute of a curve
+        - $MY_IMAGES/maths/involute-of-parabola.jpg
+    - involute: tightly unwrapping a string
+    - you can start unwrapping from different points, so you end
+      up with many involutes: `C'`, `C''`
+        - $MY_IMAGES/maths/wild-diff-geom-01.jpg
+    - Huygens proved all involutes are disjoint
+    - He proved all involutes are perpendicular to the tangent of
+      the curve at that point
+    - DUAL NOTION: the _evolute_ of a curve.
+    - First 2 things must be defined:
+
+        1. CENTRE OF CURVATURE: have a tangent point `P` and
+           another point `Q` right beside it. Draw a normal
+           through `P` and a normal through `Q`. Where the
+           normals intersect is the centre of curvature.
+            - Its where adjacent normals to a tangent meet.
+
+        2. OSCULATING CIRCLE:
+            - 'osculum'         = Latin for "little kiss"
+            - osculating circle = "kissing circle"
+            - have a tangent point `P` and a point either side
+              `R` and `Q`. Then these 3 points define a circle as
+              the get closer together.
+            - its the best circle that approxmates the curve at
+              the point `P`
+            - note: the centre of curvature at `P` is also the
+              centre of the osculating circle.
+            - $MY_IMAGES/maths/wild-diff-geom-02.jpg
+
+        - note: the _radius_ of the osculating circle `ρ`  is
+          called the radius of curvature.
+
+        - note: the curvature at `P` is `1/ρ`. So the bigger the
+          radius is, the smaller the curvature.
+          - its often given the letter `k`
+
+    - Now the EVOLUTE: its the path traced out by the centre of
+      curvature as you vary the tanget point `P`
+        - ie is the locus (trajectory) of the centres of
+          curvature.
+
+    - note: the evolute of an involute is the original curve!
+        - $MY_IMAGES/maths/wild-diff-geom-03.jpg
+
+    - involutes come up with cycloids. and the involute of
+      a cycloid is another cycloid.
+
+    - catenary
+    - tractrix: (involute of catenary)
+    - tractrix: taking a rock for a walk!
+    - catenary: (evolute of a tractrix!)
+    - evolute of a parabola is: semi-cubical parabola
+    - $MY_IMAGES/maths/wild-diff-geom-04.jpg
+
+    - SPACE CURVES
+    - ------------
+    - Key people: Clairout, Euler, Cauchy
+    - osculating plane at point `P`. You've got 3 key directions:
+        - Tangent
+        - Principal Normal
+            - (lies in the osculating plane, perpendicular to the
+              tangent)
+        - Binormal:
+            - sticks out of the osculating plane, perpendicular
+              to both the tangent and the principal normal.
+
+    - SURFACES
+    - --------
+    - Euler: 1760
+    - surface: z = f(x, y)
+    - Euler: "I know the curvature of a curve, but what about the
+      curvature of a surface?". Well I need to slice the surface
+      until I get a curve.
+    - How to "slice"  the surface. Well erect a plane that
+      contains the normal. And where this normal plane intersects
+      the surface, you get a planar cross-section curve traced
+      out.
+    - as we rotate this normal plane around, we calculate the
+      curvature `k(θ)`. And we'll find theres two critical
+      (principle) curvatures, the biggest and the smallest. `k1`
+      and `k2`
+    - signed curvatures.
+        - positive curvature
+        - negative curvature
+        - Get a screenshot of him showing the two curvatures with
+          his hand.
+
+    - Now Gauss enters the scene:
+        - 1755 - 1855 (proved FTA)
+    - Theorem Egregium:
+        - `k1 k2 = K` is determinable from the surface itself!
+        - an ant with a ruler and protractor could NOT figure out
+          `k1` and `k2` individually but it could measure `K`
+        - Aside: how does the ant know its on a curved surface?
+            - Maybe by working out the area of a circle on the
+              surface. the area might not equal `πr^2` so the ant
+              knows it's not on a flat surface.
+            - $MY_IMAGES/maths/wild-diff-geom-04.jpg
+        - Big `K` is called the 'Gaussian curvature' at a point.
+        - For a sphere, the curvature is constant at every point
+          and the radious is `ρ`.
+            - so `k1 = 1/ρ`
+            -    `k2 = 1/ρ`
+            - and `K = 1/ρ^2`
+        - There's actually another object with constant
+          curvature: the 'pseudo-sphere'! Its a tractrix
+          revolved. It has constant negative curvature.
+          - The pseudo-sphere is an important model for
+            hyperbolic geometry later on.

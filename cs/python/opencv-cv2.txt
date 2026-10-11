@@ -1,0 +1,15 @@
+
+### Note: saving color space
+    - When saving to disk, remember that cv2 uses `BGR`
+    - But the numpy array might be RGB
+        - img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+        - cv2.imwrite(img_path, img_bgr)
+
+
+### cropping coords
+    - I was wondering why `y` was first, but it's because `y=ROW`
+    ```
+        cropped = img[y:y+H,             x:x+W]
+        cropped = img[start_row:end_row, start_col:end_col]
+    ```
+    

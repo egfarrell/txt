@@ -1,0 +1,12 @@
+
+### correct enclosure
+    #include <iostream>
+    #include "iostream"
+
+### save some typing:
+    - instead of: `std::cout << "hello world"`
+    - you can declare a namespace: using `namespace std`;
+      - and then `cout << "hello world"`
+
+### line breaks
+    std::endl

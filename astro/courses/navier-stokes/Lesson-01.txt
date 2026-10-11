@@ -1,0 +1,110 @@
+- Lesson 1 $MY_VIDEOS/physics/Navier-CFD/01-Navier-Lesson-1.mp4
+
+### Navier stokes equation
+    - LHS:
+        - has "unsteady term"
+        - convective acceleration
+
+Newtonian fluid: stresses and strains are linearly related
+
+### Non-Newtonian fluids:
+    - a cup of yougurt: it's solid, doesn't move sort of.
+    - But if you put your spoon in it, and spin it very quickly,
+      it suddenly becomes liquidy.
+    - Thats a property of a "shear thinning" fluid
+
+
+    - $MY_IMAGES/physics/navier-CFD/navier-eqn-and-Euler.jpg
+
+
+### what is a "solution"?
+    - The full velocity field
+    - And associated pressure: a scalar field
+
+
+### Few analytical solutions
+    - usually there's some symmetry that makes the non-linear
+      term disappear
+    - So are options are:
+        - experimental
+        - computational
+
+### CFD is useful
+    - when experiments not possible. 
+        - e.g. human airway breathing in particles
+    - $MY_IMAGES/physics/navier-CFD/breathing-simulation.jpg
+    - also: speedo swimsuit design
+    - also: CFD movie entertainment
+    - canine nose: molecules drift through passageways
+
+
+# How to: Model & discretize
+    1. Setup mathematical model
+    2. Choose discretization method
+    3. Analyse numerical scheme
+    4. Solve
+    5. Post processing (visualisation)
+
+
+### 1. create mathematical model
+        - PDE'S
+        - BC's boundary conditions
+        - IC's initial conditions
+        - note: also some level of empiricism  / model assumptions
+          (may be wrong)
+
+### 2. Choose discretization method
+    - method for approximating PDE'S by a system of
+        _algebraic_ equations
+
+    - translate an infinite dimensional differential operator
+        into a finite dimensional one
+        ```
+        - L[u(x)] = f(x)  <-- differential operator
+        -       |
+        -       |
+        -       V
+        -     Ax = b
+        ```
+
+    - most important methods:
+        - "big 3"
+            - finite difference
+            - finite volume
+            - finite element (used in materials science)
+        - spectral methods
+        - BEM: boundary element methods
+        - particle methods
+
+    - there will be information loss
+
+    - two aspects
+        - discretize the geometry
+            - grid
+            - mesh
+        - discretize the model
+            - we want all continuum mathematical operators to be
+              Transformed into _arithmetic_ operations on the
+              grid points
+
+    - What's a Solution:
+        - the value of all our unknown variables at the grid
+          point
+
+### 3. Analyse numerical scheme
+    - all numerical schemes must satisfy a number of conditions
+      to be accepted:
+        - consistency
+        - stability
+        - convergence
+    - also analyse accuracy
+
+
+### 4. Solve
+    - obtain grid-point values of all flow variables
+    - you can have two situations:
+        - unsteady (time dependent)  => ODE's
+        - steady  => algebraic system of eqns
+    - we need
+        - time integrators
+        - linear solvers

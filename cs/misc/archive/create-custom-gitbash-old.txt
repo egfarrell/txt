@@ -1,0 +1,33 @@
+### create your own customised windows gitbash!
+    - with TMUX, Arch PACMAN etc...!
+
+    first install 'buildextra' Git for windows sdk
+        https://github.com/git-for-windows/build-extra/releases
+    then
+        cd /usr/src/build-extra
+        (The folder will be empty)
+        git fetch
+        git checkout master
+        ./portable/release.sh enda_custom
+        
+    but before running "release.sh" make the following changes:
+        - add extra packages in script: 
+            - 'build-extra/make-file-list.sh'
+
+        - in this line:
+            - packages="$packages mingw-w64-$ARCH-git-doc-html ncurses mintty vim
+                    winpty less gnupg tar diffutils patch dos2unix which subversion
+                    mingw-w64-$ARCH-tk mingw-w64-$ARCH-connect git-flow docx2txt
+                    mingw-w64-$ARCH-antiword ssh-pageant"
+
+    - then run the release script:
+        https://github.com/git-for-windows/build-extra/blob/master/portable/release.sh
+
+        - but comment out the line at the bottom:
+        - (in case anything goes wrong with the final steps)
+            - 'rm $TMPPACK'
+
+        - ps: note: something funny happened to me with this parameter
+            - [--output=<directory>]
+
+

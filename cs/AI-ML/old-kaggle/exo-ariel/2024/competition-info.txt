@@ -1,0 +1,121 @@
+### Context
+    - Exoplanet Discovery: Over 5,600 exoplanets have been
+      discovered, challenging our understanding of Earth's
+      uniqueness and the potential for life elsewhere.
+
+    - ESA Ariel Mission (2029): Aimed at studying 1,000
+      extrasolar planets' atmospheres in detail.
+
+### Challenge Overview
+
+    - Objective: Extract the ATMOSPHERIC SPECTRA from exoplanet
+      observations, estimating the uncertainty levels.
+
+    - Data: Sequential 2D images of the spectral focal plane
+      taken over hours as an exoplanet transits its host star.
+
+    - Difficulty: The task involves detrending data corrupted by
+      instrumental noise to reveal faint atmospheric signals.
+
+### Approaches
+
+    1. Approach 1:
+        - Train directly on full 3D data cube to extract spectra.
+        - Pros: Rich information.
+        - Cons: Requires significant computing resources.
+
+    2. Approach 2:
+        - Summarize the data by summing fluxes along the pixel
+          y-axis, creating 2D images `(Ntimes, Nwavelengths)`.
+        - Transform images to enhance transit depth variations
+          between wavelengths.
+        - Note: NEITHER approach is optimal for denoising jitter
+          time series; a combination of all three domains (image,
+          time, spectral) might be best.
+
+### Evaluation
+    - Metric: Gaussian Log-likelihood (GLL) function.
+    - Formula: `GLL = -1/2(log(2π) + log(σ^2user) + ((y
+      - μuser)^2/σ^2user))`
+    - Final Score Calculation:
+    - The score is derived by comparing predicted spectra and
+      uncertainties against ground truth, normalized between [0,
+      1].
+    - Higher scores = Better models.
+
+### Submission Requirements
+    - File Format: Include predictions for each `planetid` with
+      567 columns.
+    - First column: `planetid`.
+    - Next 283 columns: Predicted spectra.
+    - Remaining 283 columns: Uncertainties.
+
+
+
+### Dataset Overview
+    - Objective: Extract the chemical spectrum of exoplanet
+      atmospheres using simulated data from the ARIEL mission.
+    - Hidden Test Set: Contains data for roughly 800 exoplanets;
+      some simulations based on real exoplanets are ignored for
+      scoring.
+
+### Metadata Files
+    - `train/testadcinfo.csv`:
+      - Contains analog-to-digital (ADC) conversion parameters
+        (gain and offset) to restore the original dynamic range.
+      - Includes a column identifying the star used for each
+        planet's simulation.
+    - `trainlabels.csv`: Ground truth spectra.
+    - `axisinfo.parquet`: Axis information for both instruments.
+    - `wavelength.csv`: Wavelength grid for each ground truth
+      spectrum.
+
+### Signal Files
+    - General Information:
+    - The dataset includes time series imagery from two
+      instruments: FGS1 and AIRS-CH0.
+    - `FGS1`: Fine Guidance System with sensitivity between 0.60
+      and 0.80 µm, providing high-precision photometry.
+    - `AIRS-CH0`: Infrared Spectrometer with sensitivity between
+      1.95 and 3.90 µm and a resolving power of approximately
+      R=100.
+    - Data captured in uint16 format; to restore original dynamic
+      range, multiply by _gain_ and add _offset_ from the
+      corresponding `ADC file`.
+
+### - Specific Files:
+    - `AIRS-CH0signal.parquet`:
+        - Contains 11,250 rows of images (32x356, flattened into
+          11,392 columns).
+        - Data can be reshaped using `numpy.reshape(11250, 32,
+          356)`.
+    - `FGS1signal.parquet`:
+        - Contains 135,000 rows of images (32x32, flattened into
+          1024 columns).
+        - Data can be reshaped using `numpy.reshape(135000, 32,
+          32)`.
+
+### Calibration Files
+    - Purpose: Calibration files are used to correct
+      sensor-related errors in the data, ensuring accurate
+      measurements.
+      - `dark.parquet`:
+            - Captures thermal noise and bias level by taking
+              exposures with the shutter closed. Used to subtract
+              dark current from science images.
+      - `dead.parquet`:
+            - Identifies dead or hot pixels; dead pixels do not
+              respond to light, hot pixels produce high signals
+              regardless of light.
+      - `flat.parquet`:
+            - Corrects for variations in pixel sensitivity and
+              optical system irregularities by imaging
+              a uniformly illuminated surface.
+      - `linearcorr.parquet`:
+            - Provides information about the linearity correction
+              of the sensor, converting pixel responses to an
+              accurate estimate using a polynomial.
+      - `read.parquet`:
+            - Captures electronic noise introduced during the
+              sensor readout process, even in the absence of
+              light.

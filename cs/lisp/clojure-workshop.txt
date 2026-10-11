@@ -1,0 +1,287 @@
+- Book: $MY_BOOKS/CS/clojure/2020-Clojure-Workshop.pdf
+- Code: $MY_CODE/clojure/workshop/
+
+
+### Joining collections
+    - If you want to concatenate collections, `concat` might be
+      more appropriate than `into`. See how they behave
+      differently here:
+    - ```
+    - user=> (concat '(1 2) '(3 4))
+    - (1 2 3 4)
+    - user=> (into '(1 2) '(3 4))
+    - (4 3 1 2)
+    - ```
+    - aside: `into` really uses `conj` one-by-one and `conj`
+      respects the sematantics of the target collection... so
+      `into` adds the elements of the list '(3 4) to the FRONT of
+      the target list '(1 2)
+
+### Collection and Sequence Abstractions
+    - Clojure's data structures are implemented in terms of
+      powerful abstractions. You might have noticed that the
+      operations we used on collections are often similar, but
+      behave differently based on the type of the collection. 
+    - E.g., `get` retrieves items from a map using a key, but
+      from a vector using an index; 
+    - `conj` adds elements to a vector at the back, but to a list
+      at the front.
+    - A sequence is a collection of elements in a _particular
+      order_, where each item follows another. 
+    - Maps, sets, vectors, and lists are all collections, but
+      only vectors and lists are sequences. (but we can obtain
+      a sequence from a map or a set using `seq`).
+
+### Cons versus Conj
+    - You can add items to your list by using the `cons` function,
+      which operates on sequences:
+    - ```
+    - user=> (cons "Go to work" my-todo)
+    - ("Go to work" "Feed the cat" "Clean the bathroom" "Save the world")
+    - ```
+
+    - Similarly, you can use the `conj` function, which is used because a list is a collection:
+    - ```
+    - user=> (conj my-todo "Go to work")
+    - ("Go to work" "Feed the cat" "Clean the bathroom" "Save the world")
+    - ```
+
+    - Notice how the order of the parameters is different. `cons`
+      is available on lists because a list is a sequence, and
+      `conj` is available to use on lists because a list is
+      a collection. 
+    - `conj` is, therefore, slightly more "generic" and also has
+      the advantage of accepting _multiple elements_ as
+      arguments.
+    - so:
+        - cons ---> for sequences?
+        - conj ---> for collections?
+
+### Can't lookup a collection with a STRING
+    - (keypoint: we must use :keywords)
+    - If you tried to use the "Dollar" string as a function to
+      look itself up in the set, you would get the following
+      error:
+    - ```
+    - user=> ("Dollar" supported-currencies)
+    - Execution error (ClassCastException) at user/eval7 (REPL:1).
+    - java.lang.String cannot be cast to clojure.lang.IFn
+    - ```
+
+    - We cannot use strings as a function to look up a value in
+      a set or a Map. That's one of the reasons _keywords_ are
+      a better choice in both sets and maps.
+
+
+
+### Sets
+    - Hashset #()
+        - note: insertion order isn't repserved in a Hashset
+        - ```
+        - user=> #{1 2 3 4 5}
+        - #{1 4 3 2 5}
+        - ```
+        - Hash Sets are implemented as _Hash Maps_, with the key
+          and the value of each entry being identical.
+          (interesting!)
+
+    - Create a set from a list of values
+        - (`set` will fail here because it expects one argument)
+        - `(hash-set :a :b :c :d)`
+    - Create a set from a another collection
+        - `(set      [:a :b :c])`
+        - `(hash-set [:a :b :c])`
+    - Dedupe a list
+        - `(set      ["No" "Copy" "Cats" "Cats" "Please"])`
+        - `(hash-set ["No" "Copy" "Cats" "Cats" "Please"])`
+
+    - Sorted set
+        - `(sorted-set "No" "Copy" "Cats" "Cats" "Please")`
+        - note: the order is based on a "natural order" (?) the
+          elements contain rather than the order provided on
+          creation.
+        - (You can provide your own sorting function too)
+        - hash-sets are more useful and common...
+
+    - Exercise with sets
+        - $MY_CODE/clojure/workshop/Exercise-2-03.clj
+
+
+### Maps
+        - KEY/VALUE PAIRS!
+            > user=> {:artist "David Bowtie" :song "The Man Who
+            > Mapped the World" :year 1970}
+        -   Instead of literal notation curly braces, you could
+            use the programmatic `hash-map` function
+            >  user=> (hash-map :a 1 :b 2 :c 3)
+        - two types
+            - HashMap (more common)
+            - SortedMap (preserves order)
+        - use "get"
+            > user=> (def favorite-fruit {:name "Kiwi", :color "Green", :kcal_per_100g 61 :distinguish_mark "Hairy"})
+            > user=> (get favorite-fruit :taste)
+            - > nil
+            - (and supply default value if key not found)
+            > user=> (get favorite-fruit :taste "Very good 8/10")
+            - > "Very good 8/10"
+        - Both MAPS and KEYWORDS can be used as functions
+            > (favorite-fruit :color)
+            - > "Green"
+            > (:color favorite-fruit)
+            - > "Green"
+
+        - add a map value
+            - assoc (see also dissoc)
+                > user=> (assoc favorite-fruit :kcal_per_100g (- (:kcal_per_100g favorite-fruit) 1)) 
+                > {:name "Kiwi", :color "Green", :kcal_per_100g 60, :distinguish_mark "Hairy"}
+
+        - update existing value
+            - update
+                - (takes a function as the last value)
+                > user=> (update favorite-fruit :kcal_per_100g dec) 
+                > {:name "Kiwi", :color "Green", :kcal_per_100g 60, :distinguish_mark "Hairy"}
+
+
+### Math Library
+    - Math/PI: Reading a value from a CONSTANT:
+        > user=> Math/PI
+        - > 3.141592653589793
+
+    - Math/random: Calling a function, like the usual Clojure functions:
+        > user=> (Math/random)
+        - > 0.25127992428738254
+        > user=> (Math/sqrt 9)
+        - > 3.0
+        > user=> (Math/round 0.7)
+        - > 1
+
+### ClojureScript numbers
+    - But in ClojureScript numbers are just "JavaScript numbers,"
+      which are all double-precision floating-point numbers.
+    - JavaScript doesnt define different types of numbers like
+      JAVA and other programming languages (e.g., long, integer,
+      and short)
+
+### Ratios
+    - Exact ratios are represented by Clojure as `Ratio` types,
+      which have a literal representation.
+    - `5/4` is NOT an exact ratio, so the output is the ratio
+      itself:
+    > user=> 5/4
+    - > 5/4
+    - note: `2/4` is output as `1/2`
+    - note: `3/1` is output as `3`
+
+### Numbers
+    - By default Clojure implements natural numbers as
+      `java.lang.Long` unless the number is too big for Long.
+        - In that case, it's typed `clojure.lang.BigInt`:
+            > user=> (type 1)
+            - > java.lang.Long
+            > user=> (type 1000000000000000000)
+            - > java.lang.Long
+            > user=> (type 10000000000000000000)
+            - > clojure.lang.BigInt
+
+### Strings
+    - A difference between Clojure and Clojurescript:
+        - In _ClojureScript_, strings are collections of
+          one-character strings, because there's no "character"
+          type in JavaScript.
+        - An example from a ClojureScript REPL:
+
+            > cljs.user=> (last "a collection of 1 character strings")
+            - > "s"
+            > cljs.user=> (type *1)
+            - > #object[String]   <----- look it's a string!
+
+### Collections are equal!
+    - LISTS are considered equal to VECTORS...
+        > user=> (= '(1 2 3) [1 2 3]) 
+        - > true
+
+### Comparing things (identity or value)
+    - In JAVA, comparing things checks if they are the exact same
+      INSTANCE of an object stored in memory, 
+        - ie compares their identity.
+    - Comparisons in Clojure are made by EQUALITY rather than
+      IDENTITY. Comparing _values_ is often more useful.
+    - But if you ever want to compare identities, you can use
+      `identical?`.
+
+
+### Equality
+    - These are FUNCTIONS: '+', '-', '=', '>='
+    - you can pass multiple args to the `=` operator (function?)
+        > user=> (= 1 1 1 -1) 
+        > false
+
+    - `=` operator can compare _types_ as well
+
+        ```
+        > user=> (= nil nil)
+        > true
+        > user=> (= false nil)
+        > false
+        > user=> (= "hello" "hello" (clojure.string/reverse "olleh"))
+        > true
+        > user=> (= [1 2 3] [1 2 3])
+        > true
+        ```
+
+
+
+### "or" behaviour
+    - `or` returns the first 'truthy' value it comes across and
+      in that case, DOESN'T EVALUATE the rest of the expression.
+    - When all values passed to `or` are 'falsey', `or` returns
+      the LAST value.
+        > user=> (or "Hello" "Then" "Goodbye")
+        > "Hello"
+        > user=> (or false "Then" "Goodbye")
+        > "Then"
+
+### "and" behaviour
+    - `and` returns the first 'falsey' value it encounters (from
+      left to right) and in that case DOESN'T EVALUATE the rest
+      of the expression.
+    - When all values passed to `and` are 'truthy', it will
+      return the last value.
+        > user=> (and "Hello" "Then" "Goodbye")
+        > "Goodbye"
+        > user=> (and "Hello" false "Goodbye")
+        > false
+
+
+
+### check if something is "nil"
+    - nil?
+    > (nil? (println "Hello"))
+    > Hello
+    > true
+    - (remember, "println" returns nil!)
+
+
+
+### Naming convention: "?"
+    - `?` character has no special behaviour...
+    - `?` is a naming convention for functions returning
+      a _boolean_.
+
+
+### Truthiness, NIL and equality
+    - `false` and `nil` are the ONLY values treated as 'falsey'
+      in Clojure; everything else is 'truthy'.
+
+    - If we want to know whether something is EXACTLY `true` or
+      `false`, and not just truthy or falsey,
+        - we can use the `true?` and `false?`
+
+        > user=> (true? "true")
+        > false
+        > user=> (true? true)
+        > true
+
+### Basic Special Forms
+    - (I have notes on my remarkable tab)
+    - $MY_CODE/clojure/workshop/Activity-1-02.clj

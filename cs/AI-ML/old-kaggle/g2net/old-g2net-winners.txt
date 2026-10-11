@@ -1,0 +1,158 @@
+
+### Note: Old g2net not useful?
+    - https://www.kaggle.com/competitions/g2net-detecting-continuous-gravitational-waves/discussion/363280
+    - The previous competition was far different from this one.
+    - 1. Their data had a much higher number of training
+      instances
+    - 2. Their data was in time domain
+    - 3. they had a much smaller dimensional size 
+        - input shape: 3x4096
+        - instead we have `2 x 360x2 x 4096`
+    - This means this competition will need a different approach.
+
+
+### [1st Place Solution]
+    - Part 1 https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275476
+    - Part 2 https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275507
+    - Synthetic data generation!!!
+    - Conv1D
+    - optimizer: SGD, wd=1e-4, nesterov momentum, learning rate: 0.1 with cosine annealing
+    - input: 3 channels of raw signal filtered with butterworth filter at 20hz
+    - augmentations: freq masking, time masking, channel shuffle (only Hanford, Livingston), minor time shifts between channels, 5ms
+
+### 2nd Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275341
+    - Trainable frontend in general outperformed fixed frontend.
+    - 1D CNN, WaveNet wavegram, CWT.
+    - Applied bandpass filter to all networks. [16, 512] for
+      CWT-CNN and Trainable frontend CNN, [30, 300] for 1d-CNN.
+      Whitening did not work.
+    - Augmentations: gaussian noise for 2d-CNN networks, and
+      flipped wave amplitude for 1d-CNN.
+    - Re-training on soft(continuous) pseudo-labelled test
+      dataset improved AUC by ~0.001. Label smoothing during
+      pseudo-label also helped a bit.
+    - Cross validated Ridge regression model was used to combine
+      the outputs from neural network models.
+
+### 3rd Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275617
+    - Pretraining with GW, Training with Pseudo Label or Soft
+      Label, BCE, Rank Loss, AdamW, RangerLars+Lookahead
+      optimizer
+    - Preprocessing:
+        - Avg PSD of target 0 (Design Curves)
+        - Extending waves
+        - Whitening with Tukey window
+    - 2D models:
+        - EfficientNet(B3, B4, B5, B7), EfficientNetV2(M),
+          ResNet200D, Inception-V3 (also we performed a number of
+          initial experiments with ResNeXt models)
+        - CQT and CWT images generated based on the whitened
+          signal
+        - Image size 128 x 128 〜 512 x 512
+        - Soft leak-free pseudo labeling from ensemble results
+        - LIGO channel swap argumentation (randomly swapping LIGO
+          channels) for both training and TTA
+        - 1D mixup prior to CQT/CWT
+        - Adding a 4th channel to the spectrogram/scalogram input
+          which is just a linear gradient (-1, 1) along the
+          frequency dimension used for frequency encoding
+          (similar to positional encoding in transformers)
+
+### 4th Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275331
+    - GW waves numpy array --> horizontal stacking all three to get (1,4096*3) array --> band pass filtering ---> Deep conv1d backbone with residuals --->LSTM head ---> Prediction
+    - Numpy ---> signal tukey ---> band pass filter ---> normalized by norm_by =[7.729773e-21,8.228142e-21, 8.750003e-21] --->CQT--> Augmentations[coloredNoise and shift]
+    - Colored noise augmentation was done channel wise while shift was applied sample wise.
+
+### 5th Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275334
+    - PSD whitening with precomputed mean PSD for each channel, custom window function : mirrored sigmoid
+    - 1d augs: shift, noise, mixup, cutmix, shuffle
+    - 2d CQT default settings fmin=16, fmax=1024, hop=12
+    - 5xCNN 2d ensemble with TTA, models and EMA's
+
+### 6th Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275343
+    - wave -> dct -> trainable bp filter -> idct -> 1dcnn/cwt -> 1dcnn/2dcnn/resnet/effnetv2/lstm
+    - best single model：4096x3 -> 1dcnn -> 512x256x3 -> resnet34
+    - augmentation: random shift wave separately, up to 1/32 second, random change phase
+
+### 7th Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275349
+    - Efficient B3 (size=128*128), Wavenet + GRU (Gated recurrent
+      unit), Wavenet
+    - Preprocess: 30Hz highpass filtering, normalized by the
+      absolute means of individual observations
+    - Augmentation: Roll +/-500 points (p=0.5), Scale 0.85-1.15
+      (p=0.5), Multiply -1 (p=0.5)
+
+    - # The bellow frontend is used by all models. dim=128
+    - input = L.Input(shape=(3, 4096)) # 3 observations
+    - x = tf.reshape(input,(-1,4096,1)) # 3 observations folded into batch
+    - x = wavenet(x, dim, dilations=12, kernel_size=5)
+    - x = L.Dense(dim//4)(x)
+    - x = wavenet(x, dim, dilations=12, kernel_size=5)
+    - x = L.Dense(dim//4)(x)
+    - x = L.Dense(dim)(x)
+    - x = tf.reshape(x, (-1,3,4096,dim))
+    - x = tf.transpose(x,(0,2,3,1))
+    - x = L.BatchNormalization()(x)
+    - x = L.Activation('gelu')(x)
+
+### 8th Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275433
+    - Data was multiplied by 1e19 (1e21 later) to ensure that CQT and CWT could be performed correctly using FP16.
+    - Input images: used nnAudio CQT (or CWT) as the first model layer. Then 3 outputs are stacked on frequency axis. Then divided the image by NEG (average of negative sample images) to get rid of noise on average. Finally applied a log scaling. Depending on the model added the mask as an additional channel. Then scaled data to have multiple of 16 dimensions.
+    - Mostly used efficientnet_v2s_s and efficientnet_v2_m from timm package.
+    - Used BCEWithLogitsLoss, Adam and OneCycleLR.
+
+### 10th Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275353
+    - CWT + Resnet34/EfNet, 488x512, 1/5 fold, train 5 epochs
+    - Replace CWT with a multiple layers 1D Conv, the same size as CWT, train 20 epochs
+    - Using different parameter sets(bandpass, time shift, random channel off etc.) to train 10 models above. Ensemble them all.
+    - Augmentation
+        - Trim the original wave to (3, 3904), Random shift +- 65
+        - Random shift each channel +- 5
+        - Random turn off one channel
+        - Random switch channel of two waves (target=0 only)
+
+### 11th Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275405
+    - preprocessing: bpf 30-500, bpf 25-1020
+    - augmentation: mixup
+    - 1DCNN models: used residual connection and dilated convolution/standard convolution with ~24 layers, ~2M parameters.
+
+### 12nd Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275356
+    - Divide the all wave form by 4.6152116213830774e-20 (max(abs) of the entire train and test data).
+    - Use nnAudio to run CQT. Randomly select one of flattop, blackmanharris, or nuttall to the window.
+    - The spectrograms are combined in the frequency direction and input to the model as a single-channel image
+    - Resize to 384x512 before inputting into the model, and normalize the spectrogram of the entire data set in mean, std
+    - Augmentation: Before converting to a spectrogram, mixup. Randomly roll shift in time direction
+    - model: timm tf_efficientnet_b4_ap, Adam, CosineAnnealingLR
+    - Just one part of the final solution. Lots of models in the final stacking!
+
+### 13th Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275841
+    - 3 Channel (native) - stacked the detectors channel wise.
+    - 6 Permutations - Horizontally stacked the 3 detectors with different permutations. Then stacked these 6 permutations channel wise.
+    - CQT+CWT - Took 3 channels(for 3 detectors) from CQT transformation and 3 from CWT transformation and stacked them.
+    - Double CWT - created two parallel CWT transformations with different parameters
+    - Stacking
+
+### 15th Place Solution
+    - https://www.kaggle.com/competitions/g2net-gravitational-wave-detection/discussion/275431
+    - Conv2D
+    - Whitening: Using average PSD. Averaging over all noise
+      samples for each site.
+    - CQT Scaling with filter_scale = 8/bins_per_octave and
+      (fmin, fmax)=(20, 1024). Both abs and angle part were used.
+    - Augmentation
+        - Horizontal/time shift
+        - Pad both side and then horizontal random crop to get
+          time shift image.
+        - Mixup, prevent from overfitting
+        - GeM Fixed power 3 was better than the trainable case.

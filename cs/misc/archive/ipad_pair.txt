@@ -1,0 +1,137 @@
+ipad ubuntu pair
+
+old aliases
+    # iPad idevice
+    alias idp='idevicepair pair'
+    alias idv='idevicepair validate'
+    alias idl='ideviceinstaller -l'
+    alias idroot='ifuse ~/ipad/root'
+    alias idd='ifuse --documents' 
+    alias idc='ifuse --container' 
+    alias idum='fusermount -u'    # unmount
+
+Connect
+    sudo usbmuxd -f
+    idevicepair pair
+
+fav apps
+    ifuse --documents  com.tapparatus.swift         ~/ipad/iswift
+    ifuse --documents  AVPlayerHD.eplayworks.com    ~/ipad/avplayerhd
+    ifuse --container  AVPlayerHD.eplayworks.com    ~/ipad/avplayerhd
+    ifuse --documents  com.goodiware.goodreader4    ~/ipad/goodreader
+    ifuse --container  com.amazon.Lassen            ~/ipad/kindle
+    ifuse --documents  com.amazon.Lassen            ~/ipad/kindle
+
+
+    AVPlayerHD          AVPlayerHD.eplayworks.com			  
+    Amazon Music        com.amazon.mp3.AmazonCloudPlayer	  
+    AnyConnect          com.cisco.anyconnect.gui			  
+    Audible             com.audible.iphone					  
+    Audiobooks          com.audiobooks.ios					  
+    Audiobooks          com.crossforward.audiobooks		  
+    BBC iPlayer         uk.co.bbc.iplayer					  
+    Box                 net.box.BoxNet						  
+    CloudBeats          com.willenapps.cloudplayer			  
+    Coursera            org.coursera.coursera				  
+    DjVu Reader         com.develsoftware.DjVu-Reader		  
+    Doceri              com.spcontrols.doceriremote		  
+    DropVox             com.irradiatedsoftware.DropVox		  
+    Dropbox             com.getdropbox.Dropbox				  
+    Editorial           com.omz-software.Editorial			  
+    Electric Slide      com.elucidatestudios.electricslide	  
+    FlightView          com.flightview.flightviewfree		  
+    Go Mix It           com.POLLEO-LLC.NatureSounds		  
+    GoodNotes           com.goodnotesapp.goodnotes			  
+    GoodReader          com.goodiware.goodreader4			  
+    Guardian            uk.co.guardian.iphone2				  
+    Kindle              com.amazon.Lassen					  
+    Marvin              com.appstafarian.MarvinIP			  
+    MathPad             com.visionobjects.myscriptmathpad	  
+    Mercury             com.ilegendsoft.MBrowser			  
+    Mr. Reader          de.curioustimes.mrreader			  
+    National Rail       uk.nationalrail.ipad				  
+    Notesy              com.notesy-app.com.notesy			  
+    PDF Expert          com.readdle.PDFExpert5				  
+    PDF Splicer         com.kishoretipirneni.bot			  
+    PaperShip           com.shazino.papership				  
+    PerfectReader       com.futuremedia.perfectreader		  
+    Podcasts            com.apple.podcasts					  
+    Polskie Radio       pl.looksoft.polskieradiohd			  
+    Pythonista          com.omz-software.Pythonista		  
+    SayHi               com.sayhi.client					  
+    Self Timer          com.apimac.SelfTimer				  
+    Simplenote          com.codality.NotationalFlow		  
+    SimplyNoise         com.reactorllc.sn					  
+    Skype               com.skype.SkypeForiPad				  
+    Spectaculator       com.spectaculator.Spectaculator	  
+    Swift               com.tapparatus.swift				  
+    Tempo Slow          com.martianstorm.temposlow			  
+    Timer               com.appcubby.timer					  
+    TuneIn Radio        com.tunein.TuneInRadio				  
+    Voice Record        com.dayananetworks.voicerecordpro	  
+    Vyke                cz.acrobits.softphone.vyke			  
+    Weblock             com.futuremind.wpad				  
+    WolframAlpha        com.wolframalpha.wolframalpha		  
+    Zinio               com.zinio.ZinioiPad				  
+    iSSH                com.yourcompany.iSSH				  
+    iTunes U            com.apple.itunesu					  
+    maps.me             com.mapswithme.full				  
+
+search for "swift" app
+    idl
+    idl | grep -i swift
+
+random "housebreak" error
+    must reboot ipad
+
+mount "root" folder of ipad itself
+    ifuse ~/ipad/root
+
+unmount "swift" folder
+    fusermount -u iswift
+
+download/compile in this order:
+    hub clone libimobiledevice/libplist
+    hub clone libimobiledevice/libusbmuxd
+    hub clone libimobiledevice/libimobiledevice
+    hub clone libimobiledevice/usbmuxd
+    hub clone libimobiledevice/ifuse
+    hub clone libimobiledevice/ideviceinstaller
+
+ubuntu packages?
+    ai libssl-dev libusb-1.0 libxml2 libxml2-dev cython 
+    ai autotools-dev libtool libusbmuxd-dev fuse-dbg
+    ai libzip-dev
+
+libplist
+    old: ./configure LDFLAGS="-L/home/ef/anaconda/lib"
+    ./autogen.sh LDFLAGS="-L/home/ef/anaconda/lib"
+    make
+    sudo make install
+
+libusbmuxd
+    ./autogen.sh 
+    make
+    sudo make install
+
+libimobiledevice
+    old: ./configure LDFLAGS="-L/home/ef/anaconda/lib"
+    ./autogen.sh LDFLAGS="-L/home/ef/anaconda/lib"
+    make
+    sudo make install
+
+usbmuxd
+    ./autogen.sh 
+    make
+    sudo make install
+
+ifuse
+    ./autogen.sh 
+    ./configure 
+    make
+    sudo make install
+
+ideviceinstaller
+    ./autogen.sh 
+    make
+    sudo make install

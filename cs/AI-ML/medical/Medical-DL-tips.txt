@@ -1,0 +1,860 @@
+
+
+### Explainable models
+    - key paper: Coherent Concept-based Explanations in Medical
+      Image and Its Application to Skin Lesion Diagnosis
+        - https://arxiv.org/abs/2304.04579
+    - Explainable Deep Learning Methods in Medical Image
+      Classification: A Survey
+        - https://dl.acm.org/doi/full/10.1145/3625287
+    - Towards Concept-based Interpretability of Skin Lesion
+      Diagnosis using Vision-Language Models
+        - https://arxiv.org/abs/2311.14339
+    - Incorporating Expert Rules into Neural Networks in the
+      Framework of Concept-Based Learning
+        - https://arxiv.org/abs/2402.14726
+    - A Framework for Interpretability in Machine Learning for
+      Medical Imaging
+        - https://arxiv.org/abs/2310.01685
+
+### Alternative to DL: BakeryScan!
+    - https://www.newyorker.com/tech/annals-of-technology/the-pastry-ai-that-learned-to-fight-cancer
+    - Kambe explained that the cancer-cell detector, now called
+      Cyto-AiSCAN, was being tested in two major hospitals in
+      Kobe and Kyoto. It had become capable of “whole-slide”
+      analysis: instead of analyzing a cell at a time, it could
+      look at an entire microscope slide and identify the cells
+      that might be cancerous. He pulled up an example, and the
+      assistant handed him a retractable pointer. “This is Level
+      IV,” he said, referring to a sample from a stage-four
+      cancer patient. The microscope slide looked like a tabletop
+      speckled with black spots. Overlaid on the speckled areas
+      were beige, yellow, and red rectangles. Kambe pointed out
+      the red ones. “There is a cancer cell,” he said. He clicked
+      on one, and a zoomed-in image appeared. There were a few
+      blobs, and singled out among them was the tiny cell deemed
+      cancerous. Beside it, a set of sliders showed that cell’s
+      score on the most relevant visual features: the color tone
+      of the nucleus, and its size and texture; the cell’s
+      overall roundness; its “center of gravity,” based on where
+      the genetic material was densest. With the sliders, Kambe
+      said, it’s easy for a doctor to judge which cells are
+      cancerous. The system was apparently working at ninety-nine
+      per cent accuracy. I asked Kambe how it worked—did it use
+      deep learning? “Original way,” he said. Then, with a huge
+      smile, “Same as bread.”
+
+### Good books
+    - "Deep Learning for Medical Image Analysis" - This book
+      provides a comprehensive overview of deep learning
+      techniques in medical image analysis, discussing the latest
+      methods, challenges, and applications.
+    - "Machine Learning and AI for Healthcare" - While broader in
+      scope, this book includes significant content on deep
+      learning applications in healthcare, particularly in
+      medical imaging.
+    - "Medical Image Recognition, Segmentation, and Parsing with
+      Deep Learning" - Focuses on advanced techniques in image
+      recognition and segmentation using deep learning, crucial
+      for medical imaging analysis.
+    - "Artificial Intelligence in Medical Imaging: Opportunities,
+      Applications and Risks" - Offers a balanced view of AI in
+      medical imaging, discussing both opportunities and ethical
+      considerations, with a focus on deep learning.
+    - "Biomedical Image Analysis with Deep Learning" - This book
+      dives into the specifics of applying deep learning to
+      biomedical images, offering both theoretical and practical
+      insights.
+
+### Jeremy: don't see like a radiologist!
+    - https://www.kaggle.com/code/jhoward/don-t-see-like-a-radiologist-fastai
+    - Also medical imaging talk from Jeremy https://ai-med.io/executive/the-big-question-facing-ai-in-medical-imaging-from-jeremy-howard/
+
+### OneR?
+    - Yes, 'OneR' or the 'One Rule' algorithm could theoretically
+      be used as a simple classifier for ultrasound images to
+      predict if a Region of Interest (ROI) is benign or
+      malignant. However, there are some important
+      considerations:
+    - Feature Extraction: OneR relies on categorical or numerical
+      attributes. For ultrasound images, relevant features (like
+      texture, edges, or intensity) must be extracted from the
+      images first, as OneR cannot process raw image data
+      directly.
+    - Simplicity vs. Complexity: OneR's strength lies in its
+      simplicity and interpretability, but this could be
+      a limitation in medical imaging where the distinction
+      between benign and malignant can be subtle and complex.
+      OneR might oversimplify these nuances.
+    - Accuracy and Reliability: In medical diagnostics, high
+      accuracy and reliability are crucial. More sophisticated
+      algorithms like convolutional neural networks (CNNs) are
+      generally better suited for image classification tasks
+      because they can learn complex patterns in the data.
+    - Use as a Preliminary Tool: OneR could be useful as
+      a preliminary analysis tool, offering a quick, first-pass
+      assessment. It might help in flagging cases for more
+      detailed analysis with advanced methods.
+    - Complement to Advanced Techniques: OneR could be part of an
+      ensemble method, where its output is combined with outputs
+      from more complex algorithms to improve overall prediction
+      accuracy.
+
+### keynote talk (miccai)
+    - https://www.youtube.com/watch?v=tbYGqu8E7ic
+    - pitfalls of DICE
+        - optimal for small structure
+        - not optimal for shape
+        - check: voxel-level great recall 0.94, instance level
+          0.5
+
+### Dice
+    - The Dice Score, also known as the Dice Coefficient or
+      Sørensen-Dice Index, is a measure of similarity used
+      especially in medical imaging. It's used to gauge the
+      similarity between two samples, typically between the
+      ground truth and the prediction made by a model. Here's
+      a simple breakdown:
+
+    - Purpose: It's commonly used in image segmentation tasks,
+      like identifying tumors in medical scans.
+    - Calculation:
+        ```
+        # Assuming 'intersection' and 'total_elements' are defined variables
+        # intersection   = count of common elements between two sets
+        # total_elements = total number of elements in both sets
+
+        intersection = 0  # Placeholder value
+        total_elements = 0  # Placeholder value
+
+        # Dice Score calculation
+        dice_score = 2 * intersection / total_elements if total_elements != 0 else 0
+        ```
+
+        - In practical terms, it's twice the number of elements
+          common to both sets (the overlap between prediction and
+          ground truth) divided by the total number of elements
+          in both sets.
+    - Range: The score ranges from `0` to `1`, where 0 means no
+      overlap and 1 means perfect overlap.
+    - Intuition: A high Dice Score means the prediction is very
+      similar to the ground truth, indicating a good model
+      performance in tasks like segmenting out a tumor from an
+      MRI or CT scan.
+
+    - It's a popular metric for evaluating models where the
+      shape, size, and location of the objects (like tumors in
+      medical images) are important.
+
+
+### Image resolution important
+    - https://pubs.rsna.org/doi/full/10.1148/ryai.2019190015
+    - Maximum AUCs were achieved at image resolutions between
+        - 256 × 256 and
+        - 448 × 448 pixels
+    - for binary decision networks targeting emphysema,
+      cardiomegaly, hernias, edema, effusions, atelectasis,
+      masses, and nodules. When comparing performance between
+      networks that utilize lower resolution (64 × 64 pixels)
+      versus higher (320 × 320 pixels) resolution inputs,
+      emphysema, cardiomegaly, hernia, and pulmonary nodule
+      detection had the highest fractional improvements in AUC at
+      higher image resolutions.
+
+### fastai tip: pre-trained models
+    - $MY_BOOKS/CS/AI-ML/fastai-deep-learning-for-coders-2020.pdf
+    - ... FEW pretrained models are currently available in
+      medicine, making transfer learning challenging to use in
+      that domain.
+
+
+### Ultrasound Images: PREPROCESSING
+    - Factors to consider:
+        1. Image Normalization
+        2. Image Resizing
+        3. Data Augmentation
+        4. Handling Class Imbalance
+        5. Pixel Size Consideration
+        6. Contrast Enhancement
+        7. Noise Reduction
+        8. Image Labeling
+        9. Data Splitting
+        10. Batch Normalization
+        11. Feature Extraction
+        12. Transfer Learning
+        14. Check for Artifacts
+
+
+    1. Image Normalization:
+        - Scale pixel values to a standard range, typically
+          [0,1]. This ensures that magnitude of pixel values
+          doesn't unduly influence network.
+        - You can achieve this by dividing each pixel value by
+          `255` if your images are in `8-bit` grayscale.
+
+    2. Image Resizing:
+        - Ensure all images are of same size when inputting
+          into CNN. Decide on a standard input size based on
+          your network architecture.
+
+    3. Data Augmentation:
+        - To increase effective size of your training dataset
+          and improve generalization, consider applying data
+          augmentation techniques like rotations, zooming, flips,
+          and shifts.
+        - Note: Ensure that augmentations you apply are
+          medically plausible. For example, extreme rotations
+          might not be appropriate for breast ultrasound images.
+
+    4. Handling Class Imbalance:
+        - Medical datasets often have imbalanced classes, e.g.,
+         re might be many more benign cases than malignant
+          ones. Address this by:
+            - Oversampling minority class.
+            - Undersampling majority class.
+            - Using data augmentation.
+            - Using weighted loss during training.
+
+    5. Pixel Size Consideration:
+        - Since you have pixel size in `cm` for each image,
+          consider adjusting size or resolution of each image
+          to ensure that structures within images are
+          consistent in size across dataset.
+        - This spatial normalization will help network
+          recognize features at _consistent scales_.
+
+    6. Contrast Enhancement:
+        - Apply histogram equalization or adaptive histogram
+          equalization to enhance contrast of your images.
+          This can help in better highlighting subtle
+          differences.
+
+    7. Noise Reduction:
+        - Medical images might contain noise. Consider applying
+          denoising techniques like Gaussian blurring or more
+          advanced methods like Non-Local Means Denoising.
+
+    8. Image Labeling:
+        - Ensure your labels are consistent and accurate.
+        - Consider using one-hot encoding for labels if your
+          framework requires it.
+
+    9. Data Splitting:
+        - Divide your dataset into training, validation, and test
+          sets. A common split might be 80% for training, 10% for
+          validation, and 10% for testing.
+        - Ensure that distribution of classes is similar
+          across these subsets.
+
+    10. Batch Normalization:
+        - While this is more of a network architecture
+          consideration than preprocessing, using batch
+          normalization layers in your CNN can help in better
+          training convergence and mitigate some preprocessing
+          concerns.
+
+    11. Feature Extraction:
+        - While DL can extract features automatically, maybe
+          consider combining your CNN with hand-crafted features
+          based on domain knowledge for better performance.
+
+    12. Transfer Learning:
+        - If your dataset is relatively small, consider using
+          a pre-trained model and fine-tuning it for your task.
+          This leverages knowledge captured from large
+          datasets like ImageNet.
+
+    14. Check for Artifacts:
+        - Medical images sometimes contain artifacts that are not
+          relevant to diagnosis. You might want to consider
+          removing or minimizing such artifacts during
+          preprocessing.
+
+    - Always loop back with domain experts (radiologists) during
+      model development process.ir insights on data,
+      preprocessing , and model predictions are invaluable.
+
+
+### Feature Extraction
+    - Feature extraction, especially for medical images, can
+      provide the model with more relevant information:
+
+    - 1. HAND-CRAFTED FEATURES (BREAST ULTRASOUND):
+
+        - Hand-crafted features are typically derived from domain
+          knowledge. For breast US, hand-crafted features
+          include:
+
+        - Texture Features:
+            - these can describe pattern or feel of an image
+              region. For instance, `co-occurrence matrices` can
+              give texture descriptors like contrast, entropy,
+              and homogeneity.
+
+        - Shape Features:
+            - Descriptors like compactness, eccentricity, or
+              ratio of major to minor axis lengths of an
+              approximated ellipse to lesion.
+
+        - Statistical Features:
+            - Mean, variance, skewness, and kurtosis of pixel
+              values within a region of interest (ROI).
+
+        - Edge-based Features:
+            - Quantifying sharpness or irregularity of boundaries
+              of lesion.
+
+        - Wavelet Features:
+            - Using wavelet transforms to capture both spatial
+              and frequency domain information.
+
+    - ### 2. CNNs + HAND-CRAFTED FEATURES:
+
+        - key idea: use CNN as a feature extractor for raw image
+          data and append these extracted features with your
+          hand-crafted features before final classification
+          layer(s). Here's how you might do that:
+
+        - Feature Extraction Phase:
+            - Pass your image through CNN, excluding
+              final classification layer(s). This will yield
+              a feature vector (or tensor) for each image.
+            - Separately compute your hand-crafted features for
+              each image.
+
+        - Combination Phase:
+            - Concatenate CNN-extracted feature vector and
+              hand-crafted feature vector for each image.
+              This gives a combined feature vector for each
+              image.
+            - Feed these combined feature vectors into one or
+              more dense layers (in neural network terms) to
+              perform final classification.
+
+        - Training Phase:
+            - When training, you'll backpropagate through
+              entire combined architecture, updating both CNN
+              weights and weights of dense layer(s) that
+              follow feature combination.
+
+        - Prediction Phase:
+            - For new, unseen data, pass images through CNN
+              feature extraction path, compute hand-crafted
+              features, combine, and forward propagate through
+              dense layer(s) to get your predictions.
+
+    - ### 3. ADVANTAGES + CHALLENGES:
+
+        - Advantages:
+            - This approach can sometimes outperform a CNN-only
+              approach, especially if hand-crafted features
+              capture domain-specific knowledge that CNN has
+              can't learn from raw data.
+
+        - Challenges:
+            - Extracting hand-crafted features can be
+              time-consuming and may require domain expertise.
+              Also, combining CNN and hand-crafted features
+              increases complexity of model, which can make
+              training more challenging and increase risk of
+              overfitting.
+                - Regularization techniques may be needed to
+                  mitigate this.
+
+        - Consider collaborating with a radiologist to identify
+          hand-crafted features that could be of relevance to
+          classification task. Having domain expertise for
+          feature engineering is be invaluable.
+
+
+### Image pre-processing
+    - Image pre-processing is vital to ensure input data is
+      in a suitable format for model,
+
+    1. Image Normalization:
+
+        - This is scaling of pixel values to a standard
+          range, often between `[0, 1]` or `[-1, 1]`.
+        - Helps stabilise and accelerate training process. Two
+          common techniques:
+
+        - Min-Max Normalization:
+            - Formula:
+                - `normalized_image = (image - min_value)
+                  / (max_value - min_value)`
+            - For 8-bit grayscale images:
+                - min_value = 0
+                - max_value = 255
+            - Resulting pixel values will be in [0, 1] range.
+
+        - Z-score Normalization:
+            - Standardization Formula:
+                - `normalized_image = (image * mean_value)
+                  / std_dev`
+            - Here, `mean_value` is average pixel value of
+              entire image, and `std_dev` is standard
+              deviation of pixel values.
+            - Resulting pixel values will have a mean of `0` and
+              a standard deviation of `1`.
+
+        - Why Normalize?
+            - NNs generally converge faster whenir inputs
+              have relatively consistent and small ranges.
+            - Gradients don't get disproportionately large or
+              small, leading to a more stable training process.
+
+    2. Image Resizing:
+
+        - Image resizing is necessary when input images have
+          varying dimensions, but your neural network requires
+          a consistent input size. When resizing, you must
+          consider following:
+
+        - INTERPOLATION METHOD:
+            - method used to estimate pixel values for
+              resized image. Common methods include:
+                - Nearest-neighbor: Uses value of
+                  nearest pixel. Fast but can result in jagged
+                  images.
+                - Bilinear: Uses weighted average of
+                  2x2 closest pixels. It's more computationally
+                  intensive than nearest-neighbor but produces
+                  smoother results.
+                - `Bicubic`: Uses weighted average of 4x4
+                  closest pixels. Even smoother than bilinear but
+                  more computationally intensive.
+
+        - ASPECT RATIO PRESERVATION:
+            - If original image's aspect ratio (width to height
+              ratio) isn't same as target size, directly resizing
+              can distort image.
+            - One common approach is to resize image while
+              preserving its aspect ratio and pad image (usually
+              with zeros or mean pixel value) to desired
+              dimensions.
+
+        - ANTIALIASING:
+            - When reducing image size, it's good to apply
+              antialiasing to avoid aliasing artifacts. Aliasing
+              can introduce high-frequency patterns in resized
+              images that might be misleading for neural network.
+
+        - Considerations:
+            - choice of target size will depend on architecture
+              of your neural network and nature of data. For
+              example, if critical details in breast ultrasounds
+              are minute, choosing a higher resolution might be
+              beneficial.
+            - Be aware that resizing can introduce or remove
+              details from an image. If images are _reduced_ to
+              a much smaller size, some details might be _lost_,
+              which can be crucial for medical imaging tasks.
+
+        - Summary: image normalization and resizing are
+          foundational steps in preparing image data for NNs.
+          Properly executed, can lead to more effective training,
+          and improved model performance on real-world data.
+
+### DICOM Image format
+    - medical images with metadata
+    - https://en.wikipedia.org/wiki/DICOM
+
+### Preprocessing
+    - https://www.nature.com/articles/s41598-022-12367-2
+    - Next, all images were cropped to a _SQUARE ASPECT RATIO_ to
+      remove settings, file name, and other information
+      included in exported ultrasound images or video frames
+      (Supplemental Fig. 1).
+    - images weren converted to `16bit` and resized to
+      `512 × 512` pixels. All preprocessing was performed by
+      batch processing in FIJI29.
+
+### Importance of 'feature fusion'
+    - https://www.sciencedirect.com/science/article/pii/S2095809918301887
+    - In medical Ultrasound analysis, TL (transfer learning) is
+      frequently used to pre-train neural networks [3], [41],
+      [52].
+    - In addition to TL, feature fusion is also an option to
+      improve performance of deep learning models [8].
+    - Wang et al. [53] used FEATURE FUSION in a classification
+      study on COVID-19 to further improve NN performance.
+    - In a study of breast cancer diagnosis, Moon et al. [54]
+      FUSED three types of images and achieved good performance.
+
+### CNNs: Approach
+    - 01. Data Preparation
+    - 02. Data Preprocessing
+    - 03. Architecture Selection
+    - 04. Tailoring Architecture
+    - 05. Transfer Learning
+    - 06. Normalization Layers
+    - 07. Activation Functions
+    - 08. Loss Function
+    - 09. Optimization Algorithm
+    - 10. Regularization
+    - 11. Evaluation Metrics
+    - 12. Cross-Validation
+    - 13. Hyperparameter Tuning
+    - 14. Post-processing
+    - 15. Interpretability
+
+    01. Data Preparation:
+        - Gather large and diverse dataset of ultrasound scans
+          with labels indicating whether each scan contains
+          a malignant tumor or not. Ensure dataset is properly
+          annotated.
+
+    02. Data Preprocessing:
+        - Perform standard preprocessing steps, such as
+            - resizing images to a consistent resolution,
+            - normalizing pixel values,
+            - augmenting dataset to increase its diversity.
+        - Augmentation techniques like rotation, flipping, and
+          zooming can help improve model generalization.
+
+    03. Architecture Selection:
+        - You can start with a pre-existing CNN architecture as
+          a base, such as a well-known architecture like VGG,
+          ResNet, or Inception.
+        - These architectures have been proven effective in
+          various computer vision tasks and can serve as a solid
+          foundation.
+
+    04. Tailoring Architecture:
+        - Fine-tune chosen architecture for your specific task.
+          Consider adding more convolutional layers to extract
+          relevant features from ultrasound images. You may also
+          _REDUCE_ number of `fully connected layers` and neurons
+          at final classification layer to avoid overfitting.
+
+    05. Transfer Learning:
+        - Transfer learning can be beneficial, especially with
+          limited data. You can use a pre-trained CNN on a large
+          dataset (like ImageNet) and fine-tune it on your breast
+          ultrasound dataset. This approach leverages
+          knowledge gained from a broader range of images.
+
+    06. Normalization Layers:
+        - Consider adding normalization layers like `Batch
+          Normalization` to stabilize and speed up training.
+
+    07. Activation Functions:
+        - Use appropriate activation functions like ReLU
+          (Rectified Linear Unit) in hidden layers to introduce
+          non-linearity. For binary classification tasks like
+          tumor detection, a sigmoid activation function at
+          output layer is suitable.
+
+    08. Loss Function:
+        - Utilize an appropriate loss function, such as binary
+          cross-entropy, for binary classification tasks.
+
+    09. Optimization Algorithm:
+        - Choose an optimization algorithm like `Adam` or
+          `RMSprop` for training network. Adjust learning
+          rate as needed during training.
+
+    10. Regularization:
+        - Implement regularization techniques like `dropout` and
+          `L2 regularization` to prevent overfitting, especially
+          if you have a relatively small dataset.
+
+    11. Evaluation Metrics:
+        - Select evaluation metrics tailored to task, such as
+          accuracy, precision, recall, F1-score, and `AUC-ROC`
+          (Area Under Receiver Operating Characteristic curve).
+          These metrics can provide insights into model's
+          performance.
+
+    12. Cross-Validation:
+        - Use cross-validation to assess model's performance
+          and robustness. Split your dataset into training,
+          validation, and test sets, and use k-fold
+          cross-validation to ensure that model generalizes
+          well.
+
+    13. Hyperparameter Tuning:
+        - Fine-tune hyperparameters like batch size, learning
+          rate, and network architecture to optimize performance.
+
+    14. Post-processing:
+        - Depending on model's output, you may need
+          post-processing steps like thresholding to make
+          final decision about presence of a malignant tumor
+          in an ultrasound scan.
+
+    15. Interpretability:
+        - Consider techniques for interpreting model predictions,
+          such as `Grad-CAM` or `LIME`, to understand which
+          regions of ultrasound images are contributing to
+          model's decisions.
+
+    - Remember that choice of architecture and
+      hyperparameters may require experimentation and validation
+      on your specific dataset.
+
+
+### Alternatives to CNNs
+    - 1. Recurrent Neural Networks (RNNs)
+    - 2. Autoencoders (AE)
+    - 3. Transformers
+    - 4. Capsule Networks
+    - 5. Generative Adversarial Networks (GANs)
+    - 6. Graph Neural Networks (GNNs)
+    - 7. Attention Mechanisms
+    - 8. Hybrid Models
+
+    - While CNNs have been most popular and successful choice for
+      image analysis tasks, there are other NN architectures that
+      can be used for ultrasound (breast) images:
+
+    1. **Recurrent Neural Networks (RNNs):**
+        - Application: Useful when dealing with sequences of
+          images or video clips of ultrasound scans.
+        - Concept: RNNs can capture temporal dependencies between
+          sequential frames, helping in tasks like tracking
+          moving abnormalities across scans.
+
+    2. **Autoencoders (AE):**
+        - Application: Anomaly detection, denoising, and feature
+          extraction.
+        - Concept: Autoencoders are trained to reconstruct their
+          input, and hidden layers can capture useful feature
+          representations.
+        - Sparse autoencoders or variational autoencoders can be
+          particularly useful for capturing salient features or
+          generating new synthetic images.
+
+    3. **Transformers:**
+        - Application: Classification, segmentation ...
+        - Concept: Originally designed for NLP, transformers have
+          shown impressive results in vision tasks recently. they
+          can capture long-range dependencies in data, which
+          might be useful for some ultrasound tasks.
+
+    4. **Capsule Networks:**
+        - Application: Classification and segmentation ...
+        - Concept: Capsule networks recognize patterns in an
+          image in a way that's invariant to their pose,
+          lighting, and viewpoint. This could be useful in
+          ultrasound images where appearance of structures might
+          vary based on angle of scan.
+
+    5. **Generative Adversarial Networks (GANs):**
+        - Application: Image enhancement, augmentation, and
+          synthesis.
+        - Concept: GANs consist of two networks (generator and
+          discriminator) trained adversarially. They can be used
+          to generate synthetic ultrasound images or enhance real
+          ones.
+
+    6. **Graph Neural Networks (GNNs):**
+        - Application: Situations where relationships between
+          image regions can be modeled as graphs, e.g., tumor and
+          surrounding tissues' relations.
+        - Concept: GNNs are designed to work with
+          graph-structured data. If ROIs in ultrasound images are
+          represented as nodes and their relationships as edges,
+          GNNs can be useful.
+
+    7. **Attention Mechanisms:**
+        - Application: Can be integrated into CNNs or other
+          network types to allow model to focus on specific
+          parts of an image.
+        - Concept: Attention mechanisms weigh importance of
+          different regions of an image, giving more significance
+          to areas that are more likely to be informative for
+          a given task.
+
+    8. **Hybrid Models:**
+        - Combining multiple architectures, like a CNN with an
+          RNN, can be helpful for tasks that need both spatial
+          and temporal understanding.
+
+    - When considering an alternative to CNNs, it's essential to
+      consider specific problem you're trying to solve and nature
+      of data. For instance, for standard image classification or
+      segmentation tasks in ultrasound imaging, CNNs will likely
+      remain primary.
+        - However, if you're dealing with a unique problem like
+          tracking objects across sequential scans, then
+          architectures like RNNs might be more appropriate.
+
+
+### Handcrafted features 1
+    - Hand-crafted features in medical imaging, like lesion
+      margins or texture in ultrasound images, refer to specific
+      characteristics of images that experts have traditionally
+      identified as important for diagnoses.
+        - These are features that aren't automatically determined
+          by the model but engineered based on medical knowledge.
+          This process often involves `image processing`
+          techniques and algorithms.
+
+    - Creating these features for a CNN differs from typical CNN
+      usage. Usually, CNNs are designed to identify relevant
+      features onir own from raw data during training process.
+      However, if you have a specific reason to use hand-crafted
+      features (like relying on proven medical criteria), you can
+      integratem into your DL model. Example:
+
+    1. _Image Pre-Processing:_ Before extracting features, it's
+       important to pre-process images to standardize input and
+       enhance quality. This might involve:
+        - Resizing: Ensuring that all images are of same size.
+        - Noise Reduction: Using filters to reduce image noise.
+        - Contrast Enhancement: Improving visibility of important
+          details.
+
+    2. _Feature Extraction:_ You can use image analysis
+       techniques to extract hand-crafted features. These are
+       often based on established medical knowledge:
+        - Lesion Margin:
+            - You could create an algorithm to identify and
+              highlight boundaries of lesions. This might involve
+              edge detection techniques, such as Sobel filter, or
+              contour detection techniques, often available in
+              image processing libraries.
+        - Texture Analysis:
+            - Texture features might be extracted using methods
+              like Haralick texture features, Local Binary
+              Patterns (LBP), or Gabor filters, which quantify
+              texture of lesion regions by analyzing distribution
+              and relationships of intensities of local pixel
+              groups.
+        - Region-Based Features:
+            - these could include properties like area,
+              perimeter, or solidity of detected lesions. You
+              could use segmentation techniques to isolate these
+              regions and then calculate these features.
+
+    3. _Feature Standardization:_ After extracting these
+       features, you'll want to standardizem, ensuring they're on
+       a consistent scale. This is because features might have
+       different units of measurement or magnitude ranges.
+
+    4. _Integration with CNN:_ Once you have your features,
+       instead of feeding raw image data into CNN, you would use
+       these processed features as input.
+        - However, this isn't standard practice for CNNs, as it
+          bypasses much of their strength in feature detection.
+        - One approach could be to use a `hybrid model` where
+          these hand-crafted features are input into fully
+          connected layers after convolutional layers, allowing
+          the CNN to also learn from raw pixel data.
+        - This requires a custom NN architecture that accepts
+          these two types of input:
+            - raw image data for convolutional layers and
+            - hand-crafted features for fully connected layers
+              later in network.
+
+    5. _Training:_ Then train your model on these features
+       instead of raw images, fine-tuning the CNN's weights to
+       your specific dataset based on feedback from the loss
+       function.
+
+    6. _Validation and Testing:_ Finally, validate and test your
+       model using separate, non-overlapping datasets that model
+       wasn't trained on to ensure it generalizes well to new,
+       unseen data.
+
+    - Remember, success with hand-crafted features in DL depends
+      on many factors, including quality of features, CNN
+      architecture, and the specifics of medical images you're
+      using.
+    - Often, enhancing a CNN with hand-crafted features can
+      complement automatic feature extraction by the
+      convolutional layers, potentially providing model with
+      valuable, domain-specific insights that might not be
+      obvious from raw image data alone.
+
+### Hand crafted features 2
+    - Creating hand-crafted features for US images and then
+      feeding them into a CNN is a two-step process.
+    - First, you extract hand-crafted features, and then combine
+      or integrate these features with a CNN-based approach.
+
+    1. _Hand-crafted Feature Extraction_: there are various
+       techniques to extract hand-crafted features from medical
+       images.
+
+        1. Lesion Margin:
+            - Edge Detection: Apply edge detection techniques
+              like `Sobel` or `Canny` edge detectors to
+              highlight boundary of lesion.
+            - Contour Detection: Use contour detection algorithms
+              (e.g., in OpenCV) to identify and extract
+              lesion's outline.
+
+        2. Texture:
+            - Gray-Level Co-occurrence Matrix (GLCM): It captures
+              spatial relationships of pixels. From GLCM, you
+              can derive various texture features like contrast,
+              energy, homogeneity, and correlation.
+            - Gabor Filters: Useful for capturing local
+              spatial-frequency information in images.
+            - Local Binary Patterns (LBP): Captures local texture
+              information.
+
+        3. Others:
+            - Shape-based Features: Area, perimeter, eccentricity
+            - Statistical Features: Histogram-based features,
+              mean, standard deviation, skewness, and kurtosis of
+              pixel intensities.
+
+    2. _Integration with CNN_: Once hand-crafted features are
+       created,re are several strategies to combinem with
+       a CNN-based approach:
+
+        1. PARALLEL Fusion:
+            - Train a CNN on raw images.
+            - Train a separate machine learning model (like an
+              `SVM` or fully connected NN) on hand-crafted
+              features.
+            - During inference phase, combine outputs from CNN
+              and machine learning model. This can be done by
+              concatenation followed by a few fully connected
+              layers.
+
+        2. SEQUENTIAL Fusion:
+            - Train a CNN on raw images.
+            - Append hand-crafted features to one of dense
+              layers of CNN.
+            - Train a few more layers on combined features.
+
+        3. INPUT Fusion:
+            - Enhance or preprocess images using hand-crafted
+              features or techniques (e.g., using output of
+              edge detection as an additional input channel).
+            - Train a CNN on this enhanced input.
+
+    - While this is an outline, the best approach depends on your
+      dataset and the specific clinical challenges you're
+      addressing.
+    - Remember that power of CNNs is inir ability to learn
+      features DIRECTLY from data.
+    - Thus, integration of hand-crafted features can be useful
+      but might not always yield a performance benefit.
+
+### Links
+    - MICAD medical imaging conference                                  https://www.micad.org/
+    - MICAD medical imaging Youtube videos                              https://www.youtube.com/@micad8765/videos
+    - MICCAI Medical Imaging Computing & Computer Assisted Intervention http://www.miccai.org
+    - MICCAI Ultrasound SIG Special Interest Group                      http://www.miccai.org/special-interest-groups/sig/
+    - MICCAI Ultrasound-SIG 2023                                        https://miccai-ultrasound.github.io/#/asmus23?id=call-for-papers
+    - MiCCAI Conf Proceedings: ASMUS: Simplifying Medical Ultrasound    https://link.springer.com/conference/asmus
+    - Thomas Schultz: Visualization & Medical Image Analysis Group      https://cg.cs.uni-bonn.de/person/1143
+    - Jeremy Howard Medical Imaging                                     https://ai-med.io/executive/the-big-question-facing-ai-in-medical-imaging-from-jeremy-howard/
+    - AI Med conferences                                                https://ai-med.io/videos/
+
+    - adiomics classification model                                https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(23)00462-X/fulltext
+    - self-suupervised learning for medical imaging                https://www.fast.ai/posts/2020-01-13-self_supervised.html
+    - specialised or general models                                https://news.ycombinator.com/item?id=38472128
+    - NPTEL MEDICAL                                                https://dth.ac.in/medical/national.php
+    - Papers with code: medical                                    https://paperswithcode.com/area/medical
+    - Papers with code: lesion segmentation                        https://paperswithcode.com/task/lesion-segmentation/latest
+    - Papers with code: medical classification                     https://paperswithcode.com/task/medical-image-classification/latest
+    - Book: Practical DL computer vision: chapter on breast cancer https://www.amazon.com/Practical-Learning-Computer-Vision-Python/dp/B0BF2Q747G/
+    - Check this paper: Holver bus diagnosis                       https://www.youtube.com/watch?v=4iFXXcCmAlA
+    - Course: deeplearning.ai for medicine                         https://www.deeplearning.ai/courses/ai-for-medicine-specialization/
+

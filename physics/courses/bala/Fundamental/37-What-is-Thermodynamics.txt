@@ -1,0 +1,342 @@
+$MY_VIDEOS/physics/bala_fundamental/37-What-is-Thermodynamics.flv
+Lecture – 37
+What is Thermo Dynamics
+The last topic we are going to cover in this course, in this very short course is a brief
+description of a very important subject namely that of Thermodynamics. Now, we begin
+this course by understanding a little bit about the mechanics and dynamics of individual
+particles, single particle, two particles or a collection of particles and so on. We went on
+to understand, what happens when you have a wave motion, when you have waves in a
+continuous medium such as the string or air or solid medium and then, we also studied a
+little bit about the dynamics of fluids namely, what the equation of motion of a fluid is,
+what it is consequences are and so on.
+
+So, logically the next thing to do is to ask what happens when you have a very large
+number of collections of particles and this is what matter generally is. Because, we know
+that matters consists of atom and molecules and we know that the number of these
+molecules or atoms in any normal size sample of matter is exceedingly large,
+astronomically large. In fact, it is bigger than astronomically large, because it is of the
+order of Avogadro's number typically, which is of the order of 10 to the 23 or 10 to the
+24.
+So, we are faced with this problem that we need to be able to understand the collective
+behavior of an exceedingly large number of elementary consequence, whether they are
+atoms or molecules, does not matter, but we need to be able to come to cribs with this
+problem of describing system with very large number of elementary constituents or a
+very large number of degrees of freedom in technical terms.
+This requires totally different techniques from the once that we have been talking about
+so far and thermodynamics is one such technique. In fact the subject itself, when I am
+going to say a large number of things in words today, I am going to do a lot of talking,
+because it is a deep subject, it has very profound certainty in it and it is good that we
+understand, what is involved in this subject very clearly before we begin to understand or
+carry out the mathematics involved in the subject.
+
+I want to make a special point of this today, because the general impression that the
+beginning student gets from courses, elementary courses on thermodynamics or
+statistical mechanics is that, it has to do with a lot of partial differentiation, partial
+derivatives, using the calculus in various ways and so on without much physical content.
+Nothing could be further from the truth, the subject is an extremely physical one, it is
+based on physical postulates, it describes real physical system and is in some sense a
+very fundamental subject.
+Finally, say so there is several definitions of thermodynamics possible, the one that
+seems most suitable here would be to say that it is in fact, the study of transfer of energy
+from one system to another if you like or the energetic of systems. And as you know,
+energy is one of the most fundamental physical quantities with which we are pre
+occupied by most of the time. So, in that sense it becomes crucial to understand how to
+deal with systems with a very large number of degrees of freedom.
+Most of what I am going to say today will be quantitative, will be statements that I make
+and I will try to the extent possible to write them down on the board even at the expands
+of a being very slow as I go along in terms of coverage of material. Because, I think the
+issues involved are so deep and so settled, that it is good to spend time and understand
+them clearly write from the beginning.
+Throughout, I am also going to be pointing out that thermodynamic itself is not a
+fundamental subject in that sense, it is derived from a deeper subject called equilibrium
+statistical mechanics, which is outside the preview of this course, but which is needed in
+order to understand the loss of the thermodynamics. And let me say it, write out in the
+beginning the loss of thermodynamics a very small set of loss tell you a huge amount of
+information about systems, large systems, but the loss themselves are not really
+fundamental loss, these loss are derivable from a mode, from deeper considerations from
+what is called the fundamental postulates of equilibrium statistical mechanics. We
+probably will not get to that in this course except that passing dimensions, but it is good
+to remember that the thermodynamic is a derived subject in a very, very specific and
+precise manner which I will explain.
+
+(Refer Slide Time: 04:52)
+
+So, our first problem is to ask what happens if you took a container of some specified
+volume V and you put N particles in it, where this N is very large. So, much, much
+greater than 1, say of the order of 10 to the 24 or something like that and you have these
+particles moving above in this container, if it is a container of gas interacting with each
+other and we would like to know what physical information we can get from this system,
+how to understand the physics of this system of particles which are interacting with each
+other.
+You can see immediately based on our experience in mechanics, we wrote down the
+equations of motion for one particle or two particles in a center force problem. Even that
+was formidable and quite difficult to solve. When I pointed out, that when you have three
+or more particles, you really do not have enough constants of the motion to solve code
+and code the problem analytically in closed form. So, when you have 10 to the 24
+particles, it is completely hopeless to do this, but still in principle we could ask, what is it
+that we need in order to understand the physics or the dynamics of the set of particles.
+What you need is of course, the coordinates of all these particles, where i labels the
+particles 1 to N if you like, you would need to know the moment of p i, you would need
+to know the forces on all these particles due to every pairs. So, you need to know what is
+the force, net force on the particle i F sub i and what is it is angular momentum and what
+is it is energy and so on and so forth.
+
+You would need to know all these dynamical variables at any given instant of time and
+then, in principle you would solve Newton’s equations of motion for each particle and
+write down the solutions for all the dynamical variables at any subsequent instant of
+time. Now, this is; obviously, in practical if you have 10 to the 24 particles, not only is it
+in practical, it is virtually impossible; not only is it virtually impossible, it is actually
+useless in some sense.
+Because, at the end of the day, when you look at the system like this, the questions we
+ask of the system do not require a detailed knowledge of these quantities here. The
+questions we would ask, for instance if this is a gas would be, how much should I heat
+this gas in order to make it to a certain amount of work, what is the energy input that I
+can give to this gas in order to extract some work, how much heat comes out of this gas
+when I do some work on it and so on.
+So, these are questions which have nothing to do with individual particles at all, the
+clearly question which have to do with on a much larger coarse-grained scale. For
+instance if I want to know what is the pressure of this gas, what I would do is to ask what
+is the force per unit area on the walls of this gas on the average. I do not worry about,
+what happen every peak of second, because the particles interact, they hit the walls
+etcetera and the action is actually happening in peak of seconds or less, that is not what I
+am measuring.
+What I am measuring is, over a larger times scale I am measuring some kind of average
+force here. So, the key word here is average, I am always averaging overall the
+possibilities of what the elementary consequence can do. So, this is the whole point that
+the knowledge of these variables which I should called microscopic variables, I am going
+to use this term microscopic in a very specific sense.
+By microscopic,
+
+I mean the variables pertaining to each individual elementary
+
+constituent of the system namely each molecule or each atom of this system, those are
+the so called microscopic variables. And if I do this for all the variables, a specification
+of all these tells me everything in principle that I need to know about this system at any
+given instant of time and I would call that a microstate of the system.
+A microstate involves knowing this for the full set up particles, so dot, dot, dot for i
+equal to 1, 2 all the way up to N. So, microstate involves a great deal of information in it,
+
+it involves knowing completely the state of each elementary constituent of the system at
+any given instant of time and; obviously, for a system like this, the number of microstate
+is enormous. For instance, even if each particle, instead of a particle imagines replacing
+it with the coin or something like that, a coin has only two stage, there is a head and there
+is a tail.
+So, if you have a n coins, the number of possible head and tail combinations that you can
+form from the set of n coins is 2 to the power N, it is already exponentially large in the
+number of particles N and that is what happens in a real system. The number of possible
+microstate is truly astronomically large; it is exponentially large in the number N here
+that is important to the number here. So, even listing all these states can be quite of
+formidable task in general, but in principle we can think of doing so and we know that
+there are large numbers of microstates of the system. On the other hand, I already said
+that the kind of questions we ask of such a system would be average questions. There
+will be questions about what is the average total energy of the system.
+(Refer Slide Time: 10:49)
+
+So, let us write down some of these variables, average total energy. What is the volume
+of this system? What is the number of particles in the system, the total number of
+particles here and then, we could ask more detail questions like, what is the pressure of
+the system, what is the temperature and so on. We have to define these quantities yet, but
+
+we have a whole lot of these things here, we also know that if it is a thing like a gas or a
+liquid or something like that, they would be a lot of disorder.
+Then, we have to specify what is meant by this disorder, we must have a quantitative
+measure of this disorder and that is called the entropy of the system. I will write the
+symbol down for it and explain what it is little later, so there is the symbol and so on. So,
+we have a whole collection of these variables, which have not, which are in principle
+related to these microscopic variables, but in practice would be some kind of averages
+over various possibilities for these microscopic variables here and what would one call
+these, I call them microscopic variables and a specification of this would be specifying a
+microstate of the system.
+And the statement I am making now is that, in thermodynamic and in general for such
+system we are interested microstate of the system. We trying to find out here, what
+certain average properties are like for the system and then, extract as much information
+as possible from it and what thermodynamics does is to study these average quantities, if
+you like these are thermodynamic variables, these set of variables are thermodynamic.
+There are several other thermodynamic variables, we will talk about a few of them, but
+you should appreciate right away the distinction between these microscopic variable
+pertaining. There is nothing to do with a microscope, the word is used only in the sense
+that these are the variables corresponding to the very small constituents, individual
+constituents of our system and these variables or the microstates are specified by
+specifying all these microscopic variables, whereas the thermodynamic state of the
+system is specified by specifying the macroscopic variables, the thermodynamic
+variables.
+Next point, the whole science of thermodynamics, the word is a misnomer unfortunately.
+It should have been called thermo statics, because there is no time dependence in the
+thermodynamics; not at this level, in any case. Thermodynamics deals with systems in
+thermodynamic equilibrium and let me so important definition that we need to write it
+down.
+
+(Refer Slide Time: 14:10)
+
+So, thermal thermodynamic, it is called thermal equilibrium; there is a technical way of
+defining what thermal equilibrium is, but unlike mechanically equilibrium where we
+understand for instance if you have a particle in a harmonic oscillated potential, the
+equilibrium point is the minimum of this potential. Similarly, we can talk about the
+thermodynamic equilibrium,
+
+this would
+
+be the state which corresponds to the
+
+thermodynamic variables being at some minimum, sometimes maximum depending on
+how you define it.
+The minimum of some thermodynamic potential if you like, which is not got the
+connotation of potential energy, but it can be cost in a language which looks like this,
+which looks like the minimum of some energy. But, the better way to define thermal
+equilibrium is to say that it is a state in which of a system, a macroscopic system in
+which these averages, these thermodynamic variables have values which are time
+independent.
+So, there is no time dependence at all, all macroscopic average values are time
+independent. As I said, this can be made rigorous, but for our purposes this affixes at the
+moment, this definition is enough macroscopic average values. Now, of course, this
+means that if you go back to this analogy of the gas here, this means we are thinking of a
+situation where the system is static, the macroscopic system in this sense that the
+
+pressure of this gas which is the average force exacted per unit area of the walls of the
+container is independent of time, it does not change with time at all.
+Of course, dynamics is going on inside things r time dependent, because the molecules
+himself are flying about colliding which each other and so on and there is a lot of
+dynamics going on. This system is not in mechanical equilibrium in that sense, the
+elementary constituents need not be in equilibrium at all of course, they are moving, but
+the averages of the macroscopic quantities are time independent. And of course, should
+you want to change the state of the system, you must do so in such a way that
+thermodynamics continuous to apply, which means you always do it sufficiently slowly
+that the system attains thermodynamic equilibrium always.
+(Refer Slide Time: 17:11)
+
+For instance, a very famous example would be to take a piston, gas and put a piston over
+it and move the piston out very slowly and there is a gas here. So, what you causing is an
+expansion of this gas here, but it is done so slowly, that at any instant of time compare to
+the time scale on which the molecules move, the system is essentially static, that the
+average quantities are time independent and this is called quasi static thermal
+equilibrium, if you like.
+So, the processes are slow enough that you do not have any sudden time dependence
+coming in. One can extend this and consider cases, where there is time dependence, but
+
+in the most elementary definition I am talking about here, there is no time dependence in
+these quantities.
+(Refer Slide Time: 17:59)
+
+So, the word itself thermodynamics should have been something likes thermo statics, but
+we are stuck with this term here, so we will leave it as it stands. So, now, we made some
+statement so far, that we are going to look at cases where you have a large number of
+elementary constituents, we will not worry about the detailed dynamics or what happens
+to these constituents, but we will look at average quantities which are averaged over all
+possible, various possible configurations of the elementary constituents themselves and
+that should give us some information.
+The real miracle, the incredible thing is that even though we are sacrificing detailed
+information about the microscopic constituents, we can still using just a very small
+number of loss namely the loss of thermodynamics extracted great deal of information
+about these average quantities that we are interested in. So, that is the real miracle of
+thermodynamics here. In the same breath, I should always say that the system itself, by I
+mean talking about average quantities such as the average energy and so on. What do I
+mean by that?
+
+(Refer Slide Time: 19:30)
+
+Well, if I take a beaker of water and put it here on this table in contact with the rest of the
+atmosphere, then as you know if the water is very hot, it is hotter than the atmosphere it
+losses heat to the atmosphere. The atmosphere gains a certain amount of heat and the
+whole thing equilibrates at some common temperature, this water is then in thermal
+equilibrium with the rest of the system, which I would call a heat path or a ((Refer Time:
+19:58)), the atmosphere around it.
+Now, the molecules of this object is moving around, but the fact that it is at a fixed
+temperature is a reflection of the fact that the average kinetic energy of each molecule is
+fixed. It remains unchanged in time at some value, which is determined by the
+temperature in fact, the temperature is a measure of this average kinetic energy. But,
+what is interesting is that all the time there are molecules flying out of it and getting back
+in to it.
+There are things going in to the vapor above the liquid and molecules getting back in to
+the fluid here, there is lot of agitation, thermal agitation here. So, the actual total energy
+of the molecules of this fluid is not fixed, it is fluctuating, it fluctuates extremely rapidly
+with time. So, that is the whole point, that an object like this does not have if it is in
+contact with that atmosphere does not have a fixed energy.
+A system at a constant temperature does not have a fixed energy, on the other hand it has
+a very definite average energy and the symbol E that I have used here is for the average
+
+energy, average over all the fluctuations which arise due to the random thermal motion
+of the molecules here and of the atmosphere. Now, this realization of what is meant by
+thermal noise took a long time to occur, it is at the root of what we mean by heat itself.
+So, let me write that down heat itself, the energy of random molecule or atomic motion
+at the atomic or molecular level, the so called molecular motion. It is not random in
+principle, in principle if you actually know all the forces, all the momentum, all the
+particles, all the position and so on, then in principle one can compute what these
+quantities are at later instance of time in principle and then, we randomness.
+But, in practice of course, there is randomness, because we do not have that detailed
+information. So, this random molecular motion, the energy of corresponding to that is
+what we called heat, it took a long time for this recognition to sink in, it came in the 19th
+century. Once people like Boltzmann and Gibbs and Maxwell and so on, illustrated what
+is meant by thermodynamic and statically mechanics.
+Then, it was realized that the fluctuations that arise due to random molecular motion is
+very, very crucial, these fluctuations are important and thermodynamics is a science,
+which averages over these fluctuations and deals with these average quantities alone. So,
+in that sense thermodynamics is a science of averages of macroscopic quantities, it is not
+that the fluctuations are unimportant, they are important, but there is no way of
+calculating them in general inside the preview, in the preview of thermodynamics itself.
+You need to go to a more fundamental subject namely equilibrium statistical mechanics
+in order to find out, what the effect of the fluctuation says and say little more about this
+as we go along, because it is important to understand the origin of things like specific
+heat. Now, having said this about thermodynamics, let us immediately ask what sort of
+variables have you dealing with now, what are thermodynamic variables really.
+We listed a few there, but it is there a better way of writing these variables. Well, since
+we are going to deal with large system, it is clear that all these variables can be quite
+large in numerical value. Avogadro's number itself is much, much larger compare to
+unity and it turns out that you have two kinds of thermodynamic variables.
+
+(Refer Slide Time: 24:15)
+
+One is the extensive variety and the other is the intensive. What I mean by extensive
+variables are those which depend on the systems size, in other words if the system size or
+the number of particles N, that is foremost example of an extensive variable, practically
+defines what I mean by an extensive variable, the volume of the system. These are
+extensive variables, they increase with the size of the system in some lose manner, on the
+other hand corresponding to these two objects, one can think of an intensive variable
+which does not depend on the actual physical size of the system.
+For instance, the number of particles per unit volume, so number density N over V. This
+clearly does not depend on the size of the system, if I take certain volume and put a
+volume V and put N particles in it, I double V I double N the density does not change.
+So, it is an intensive variable here and more similarly whether it is the mass density or
+number density does not matter. If I have several spacious of a chemical molecular
+spacious is there, then the concentration of various spacious is certainly an intensive
+variable, the temperature is an intensive variable.
+In fact, the temperature is related as I pointed out to and we will come back to this to the
+average kinetic energy of each molecule. So, it actually dependent on individual
+molecules, the property of individual molecules which means you take the total energy
+divide by the total number of molecules and you get something like the temperature
+
+effectively. So, this again is in intensive quantities here, the pressure is an intensive
+quantity.
+Why do I say this is an intensive quantity? This is the average force per unit area exacted
+for example, in a fluid or a gas, but what would that in turn depend on. This pressure
+would again be the force averaged over a large number of particles and you can finally,
+reduce it to a quantity which is dependent on the density and the temperature. Anytime
+you write an equation of state, you really saying what the pressure is in terms of other
+intensive quantities and in case you are not convinced by this, let me point out.
+(Refer Slide Time: 27:28)
+
+You already know this; we are going to do this again. Remember the ideal gas equation
+of state was P V is equal to n times R T, this is the form in which you use to the law. Let
+us not call this n ((Refer Time: 27:39)), n is the number of moles that is what you are
+used to. This equation can be rewritten as P V equal to the number of particles times
+Boltzmann constant times T. So, this N and you can rewrite this as P is N over V here
+Boltzmann T and this quantity is an intensive variable, this is an intensive variable.
+Therefore, this is an intensive variable as well; the pressure is definitely an intensive
+variable. Can we think of anything else here? Well, certainly the average energy of the
+system, ((Refer Time: 28:19)) so I use the symbol E although it will turn out that very
+often for a specific kind of energy, you use U here for the internal energy I will talk
+
+about what this U is little while later. Similarly, the measure of the disorder of a system
+is so called the entropy of the system and so on. These are all extensive variables.
+If you increase the system size, these quantities also increase in proportion, on the other
+hand these quantities do not and they form intensive variables. Now, clearly when you
+have an equation between two quantities on the left and right, the left cannot be an
+extensive variable and the right cannot be an intensive variable, they must be of the same
+kind as we see here. Sometimes, you may want to write things in terms of extensive and
+intensive quantities, but then the fact is that buried in here, in n R is this number here and
+therefore, that is an extensive quantity.
+This is an extensive quantity and this way of writing it tells you, it is a relation between
+two intensive quantities. If you bring the mass density into the picture, this is rho k
+Boltzmann T divided by the mass of the molecule, that is the mass density which is
+intensive that intensive and this is incentive here.
+
+

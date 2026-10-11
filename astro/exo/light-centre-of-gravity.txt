@@ -1,0 +1,86 @@
+### "Centre of Gravity" of Light in Kepler's Analysis
+
+- The "centre of gravity" of light refers to the "centroid" of
+  the light distribution recorded by the Kepler spacecraft's
+  detectors.
+- This centroid is the `average position of all light` from the
+  star (or stars) in the image, and it helps determine where the
+  light is coming from.
+
+1. How to Determine the "Centre of Gravity" (Centroid) of Light:
+
+    - Light Distribution:
+        - When Kepler observes a star, the star's light is spread
+          across several pixels on the detector, creating a light
+          distribution or Point Spread Function (PSF). The PSF is
+          usually symmetric and centered around the star's
+          position.
+
+    - Calculating the Centroid:
+        - The centroid is calculated by weighting the position of
+          each pixel by its brightness (intensity) and then
+          taking the average position. Mathematically, if you
+          have pixel positions (x_i, y_i) and their corresponding
+          intensities I_i, the centroid (x_c, y_c) is given by:
+        - `xc = (Σ (xi * Ii)) / (Σ Ii)`
+        - `yc = (Σ (yi * Ii)) / (Σ Ii)`
+
+        - `xi` and `yi` are the positions of each pixel,
+        - `Ii` is the intensity of the light at each pixel,
+        - `Σ` represents the summation over all relevant pixels.
+        - This calculation gives you the "centre of gravity" of
+          the light distribution on the detector.
+
+2. Detecting an "Unexpected Shift" in the Centroid During
+Transit:
+
+    - Normal Shift (Expected):
+        - During a transit, if the planet is orbiting the target
+          star, you might expect a slight shift in the centroid
+          due to the reduction in light. However, this shift
+          should be small and consistent with the star's known
+          position and the expected depth of the transit.
+
+    - Unexpected Shift:
+        - If the centroid shifts more than expected or in an
+          unusual direction, this could indicate that the transit
+          signal isn't coming from the star you think it's coming
+          from. Instead, it might be from a background star (a
+          star near the target in the sky but further away in
+          distance).
+        - For example, if the light's centroid shifts
+          significantly to one side during the transit, it could
+          mean that a fainter, nearby background star is being
+          eclipsed, causing the observed dimming.
+
+3. Deciding if the Shift is "Unexpected":
+
+    - Comparing with Models:
+        - The expected shift can be modeled based on the known
+          properties of the star, the transit depth, and the
+          instrument's characteristics. If the observed shift
+          deviates significantly from this model, it is
+          considered "unexpected."
+
+    - Statistical Analysis:
+        - By analyzing many transits, astronomers can establish
+          a baseline for what is "normal" or "expected" in terms
+          of centroid shifts for that star. Any deviation beyond
+          this baseline can signal an unexpected shift.
+
+    - Multi-epoch Observations:
+        - Observing multiple transits and checking if the shift
+          is consistent or erratic helps determine if it's
+          unexpected. A consistent, minor shift might be normal,
+          while an erratic or large shift suggests something
+          unusual, like a background star being responsible for
+          the transit signal.
+
+- Conclusion:
+    - In summary, the "centre of gravity" of light is determined
+      by calculating the centroid of the light distribution on
+      the detector. Any unexpected shift in this centroid during
+      a transit, especially when compared to models or
+      statistical baselines, can indicate that the transit might
+      be due to a background star rather than the target star,
+      leading to further investigation.

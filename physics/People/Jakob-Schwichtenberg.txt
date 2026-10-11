@@ -1,0 +1,302 @@
+TYP = Teach Yourself Physics
+
+### TYP:  Classical Mechanics
+    - The best classical mechanics book is The Lazy Universe by
+      Jennifer Coopersmith.
+        - $MY_BOOKS/Physics/Maths/Math-Phy-Variational/PLA-Lazy-Universe-Jennifer.pdf
+    - I also recommend
+        - "Classical Mechanics" by John R. Taylor,
+        - "Introduction to Classical Mechanics" by David Morin
+        - "Classical Dynamics" by David Tong
+
+### TYP:  Electrodynamics
+    - My number one recommendation is
+        - `A Student’s Guide to Maxwells Equations` (Fleisch)
+        - The sole focus is to explain the fundamental EM
+          concepts and equations in a student-friendly way.
+        - No real-world applications but perfect for
+          fundamentals.
+    - Additional good textbooks
+        - `Feynman Lectures Vol 2`
+        - `Intro to Electrodynamics` by David J. Griffith
+    - The standard reference professors love to recommend is
+      "Classical Electrodynamics" by John D. Jackson.
+        - However Jackson’s book is not really good for
+          beginners; he spends too much time on complicated
+          calculations. And it’s often not clear what's
+          fundamental and what's only important for applications.
+
+
+### TYP:  SR
+    - A great book to understand the fundamentals is `Spacetime
+      Physics` by Taylor and Wheeler. A rare exception where two
+      experts have written a very student-friendly book.
+
+    - SR is so important because it's key insight of the constant
+      speed of light reveals a fundamental symmetry of nature.
+        - In general, a symmetry is a set of transformations that
+          keep the object in question unchanged.
+        - Using SR, we learn that the speed of light must remain
+          unchanged, and so, we can start to think about all
+          allowed transformations for which this is true.
+        - The set of these transformations is known as the
+          _Poincare symmetry_ and lies at the heart of the
+          Standard Model of Particle Physics and GR.
+
+    - Knowing that our laws must be invariant under all Poincare
+      transformations is a very powerful restriction and is
+      almost sufficient to derive all fundamental equations
+      (Klein-Gordon equation, Maxwell, the Dirac equation).
+
+    - The math toolbox to describe symmetries is _group theory_.
+    - The set of transformations that leave a given object
+      unchanged along with a rule to combine them is called
+      a "group".
+    - The symmetry at the heart of SR is the Poincare group and
+      consists of all transformations (e.g. rotations and
+      translations) that leave the speed of light unchanged.
+
+    - Therefore, to understand the deep implications of SR, you
+      should learn the principles of group theory and how to
+      apply them to study the Poincare group. Luckily, there are
+      many great books on group theory.
+
+    - I've written `Physics from Symmetry` and there're great
+      alternatives like
+        - Kurt Sundermeyer: `Symmetries in Fundamental Physics`
+        - Matthew Robinson: `Symmetry and the Standard Model`
+
+    - Be warned: all these books go far beyond SR because it's
+      hard not to get excited about all the things we can learn
+      once we understand group theory.
+
+
+### TYP:  QM
+    - My favorite QM book: `Quantum Mechanics` by David Griffith.
+        - He explains the fundamental aspects of QM in detail and
+          always makes sure you understand how each concept is
+          used in practice.
+        - And in contrast to other books, he dives right in
+          without 100+ pages of preparation chapters. This makes
+          the book extremely enjoyable to read and ideal for
+          self-study.
+
+    - Other good textbooks are the `Feynman Lectures Vol 3` and
+      `Principles of Quantum Mechanics` by Ramamurti Shankar.
+
+    - The standard recommended by professors is 'Quantum
+      Mechanics' by Claude Cohen-Tannoudji.
+        - But it's not really an intro book because it starts
+          with around 100 pages of math without any proper
+          motivation, and is generally lacks insightful
+          comments on what is happening in calculations.
+
+
+### TYP:  QFT
+    - By far the best QFT textbook is `Student-Friendly Quantum
+      Field Theory` by Klauber.
+        - $MY_BOOKS/Physics/QM/QFT/Student-Friendly-QFT-Klauber.pdf
+
+        - Don't let the weird cover fool you. It's a serious
+          textbook with all relevant equations.
+        - But it presents them as gently as possible and ensures
+          the reader doesn't get lost.
+            - Eg, overview charts to help show how each concept
+              and equation fits into the bigger picture.
+
+    - Other good ones:
+        - Griffith: "Introduction to Elementary Particles"
+        - Schwartz: "Quantum Field Theory & the Standard Model"
+        - Alvarez-Gaume and Vazquez-Mozo:
+            - "An Invitation to Quantum Field Theory"
+            - $MY_BOOKS/Physics/QM/QFT/Invitation-to-QFT-Gaume.pdf
+
+    - Professors recommend :
+        - `An Intro to Quantum Field Theory` by Peskin & Schroder
+        - `The Quantum Theory of Fields Vol. 1` by Weinberg.
+        - But you should consult these only sporadically,
+          especially as a beginner, because they make QFT appear
+          more complicated than it really is.
+        - A beginner can get lost in the details and it's hard to
+          keep track of which derivations are essential.
+
+
+### TYP:  GR
+    - My favorite is `Relativity, Gravitation and Cosmology` by
+      Ta-Pei Cheng.
+        - $MY_BOOKS/Physics/Spacetime/GR-Basic-Tai-Pei-Cheng-2e.pdf
+        - In contrast to almost all other books on GR, it's
+          a quick read but still it explains the fundamentals
+          carefully and clearly. This makes Cheng's book an ideal
+          starting point.
+        - But before reading it, it makes sense to read a short
+          primer: `A No-Nonsense Introduction to General
+          Relativity` by Sean Carroll
+            - $MY_BOOKS/Physics/Spacetime/GR-Carroll-Summary.pdf
+
+    - Other good textbooks are:
+        - "Gravity" (Hartle)
+            - $MY_BOOKS/Physics/Spacetime/GR-Basic-Hartle.pdf
+        - "Einstein Gravity in a Nutshell" (Zee)
+            - $MY_BOOKS/Physics/Spacetime/GR-Zee-Brief.pdf
+            - $MY_BOOKS/Physics/Spacetime/GR-Zee.pdf
+        - "A First Course in General Relativity" (Schutz)
+            - $MY_BOOKS/Physics/Spacetime/Schutz-gr.pdf
+
+### TYP:  Thermo & SM
+
+    - The thermo lectures by Sanjoy Mahajan have nice examples
+      for intuitive understanding and a useful "further reading".
+        - $MY_BOOKS/Physics/Thermo/Sanjoy-Mahajan-Termo-Lectures-2004.pdf
+
+    - Arguably the most important notion in thermodynamics is
+      _entropy_. The following helped me understand it:
+
+        - The essay on Entropy and Gambling by Brian Skinner.
+            - https://gravityandlevity.wordpress.com/2009/04/01/entropy-and-gambling/
+
+        - Entropy? Honest! by Tommaso Toffoli.
+            - $MY_BOOKS/Physics/Thermo/Papers/Entropy-Honest-Tomasso-Toffoli.pdf
+
+        - Edwin T. Jaynes' papers The Second Law as Physical Fact
+          and as Human Inference and Gibbs vs Boltzmann
+          Entropies.
+            - ET Jaynes:
+            - The second law as physical fact and as human
+              inference, (1998)
+            - Gibbs vs Boltzmann Entropies. doi:
+              10.1119/1.1971557 (1965)
+
+        - Thermodynamics and classical mechanics are a lot more
+          similar than one might think at first glance(!).
+        - This is discussed nicely in a post titled "Classical
+          Mechanics versus Thermodynamics" by John Baez.
+            - https://johncarlosbaez.wordpress.com/2012/01/19/classical-mechanics-versus-thermodynamics-part-1/
+
+        - What is Statistical Mechanics? by Roman Frigg.
+          Excellent starting point to get an overview quickly.
+            - http://philsci-archive.pitt.edu/9133/
+
+    - I really enjoyed `Statistical Mechanics` by James Sethna.
+        - $MY_BOOKS/Physics/Thermo/Statistical-Mechanics-Sethna.pdf
+
+    - Another good one is:
+        - `Fundamentals of Statistical and Thermal Physics`
+        - by Frederick Reif.
+        - $MY_BOOKS/Physics/Thermo/Fundamentals-Statistical-Physics-Reif.pdf
+
+    - When you've developed an understanding, you might enjoy:
+        - The "quantropy" posts (John Baez).
+            - https://johncarlosbaez.wordpress.com/2011/12/22/quantropy/
+        - There's an intriguing connection between quantum
+          theories and statistical mechanics.
+
+        - There are interesting attempts to understand GR from
+          a thermodynamical perspective.
+        - This idea goes by the name "_entropic gravity_".
+        - Quanta magazine's "The Case Against Dark Matter" by
+          Natalie Wolchover has a gentle intro.
+            - https://www.quantamagazine.org/erik-verlindes-gravity-minus-dark-matter-20161129/
+        - see also:
+            - Classical, deterministic GR encodes thermodynamic
+              (statistical) behavior!
+            - $MY_NOTES/physics/thermo/BH-Info-GR-Thermo.txt
+
+
+### Teach Yourself Physics Bibliography
+
+- 1965  _Gibbs vs Boltzmann Entropies_ - E. T. Jaynes
+- 1972  _Albert Einstein, Creator and Rebel_ - Banesh Hoffmann
+- 1975  _Science Past, Science Future_ - Isaac Asimov
+- 1976  _One More Derivation of the Lorentz Transformation_ - Jean-Marc Lévy-Leblond
+- 1977  _Quantum Mechanics_ - Claude Cohen-Tannoudji
+- 1982  _Gantenbein_ - Max Frisch
+- 1985  _Surely You’re Joking, Mr. Feynman!_ - Richard Feynman
+- 1986  _The Variational Principles of Mechanics_ - Cornelius Lanczos
+- 1987  _Quantum Cosmology_ - Lizhi Fang, Remo Ruffini
+- 1989  _Mathematical Methods of Classical Mechanics_ - V. I. Arnold
+- 1989  _The New Physics_ - P. C. W. Davies
+- 1992  _Doing Physics_ - Martin Krieger
+- 1992  _Spacetime Physics_ - Edwin Taylor, John Wheeler
+- 1993  _Physics and Chance_ - Lawrence Sklar
+- 1994  _The Interpretation of Quantum Mechanics_ - Roland Omnes
+- 1994  _Principles of Quantum Mechanics_ - Ramamurti Shankar
+- 1994  _On Proof and Progress in Mathematics_ - William P. Thurston
+- 1995  _Opinion_ - V. I. Arnold
+- 1997  _The Four Agreements_ - Miguel Ruiz
+- 1998  _The Second Law as Physical Fact and as Human Inference_ - E. T. Jaynes
+- 1999  _Conceptual Foundations of Quantum Field Theory_ - Tian Cao
+- 1999  _Gödel, Escher, Bach_ - Douglas Hofstadter
+- 1999  _Classical Electrodynamics_ - John Jackson
+- 2000  _Disciplined Minds_ - Jeff Schmidt
+- 2002  _The Devil in the Details_ - Robert Batterman
+- 2002  _World Constants and Limiting Transition_ - G. Gamow, D. Ivanenko, L. Landau
+- 2003  _Mathematical Circles_ - Howard Eves
+- 2003  _Theory and Reality_ - Peter Godfrey-Smith
+- 2003  _Gravity: An Intro to Einstein’s GR_ - J. B. Hartle
+- 2003  _Theoretical Concepts in Physics_ - Malcolm Longair
+- 2003  _Norwegian Wood_ - Haruki Murakami
+- 2003  _A Brief History of Space-Time_ - J. Stachel
+- 2003  _Quantum Field Theory in a Nutshell_ - A. Zee
+- 2004  _My Life as a Quant_ - Emanuel Derman
+- 2004  _Faster Than the Speed of Light_ - Joao Magueijo
+- 2004  _The Backwards Arrow of Time..._ - Cosma Rohilla Shalizi
+- 2005  _Introduction to Quantum Mechanics_ - David Griffiths
+- 2005  _Is It Time for a Science Counterpart...?_ - Sanjoy Mahajan, Richard R. Hake
+- 2005  _The Road to Reality_ - Roger Penrose
+- 2005  _Why No ‘New Einstein’?_ - Lee Smolin
+- 2006  _Mindset_ - Carol Dweck
+- 2006  _Not Even Wrong_ - Peter Woit
+- 2007  _101 Things I Learned in Architecture School_ - Matthew Frederick
+- 2008  _A Student’s Guide to Maxwell’s Equations_ - Daniel Fleisch
+- 2008  _Outliers_ - Malcolm Gladwell
+- 2008  _Introduction to Elementary Particles_ - David Griffiths
+- 2008  _Pragmatic Thinking and Learning_ - Andrew Hunt
+- 2008  _The Trouble with Physics_ - Lee Smolin
+- 2009  _The Strangest Man_ - Graham Farmelo
+- 2009  _A First Course in General Relativity_ - Bernard Schutz
+- 2010  _Predictably Irrational_ - Dan Ariely
+- 2010  _Relativity, Gravitation and Cosmology_ - T. P. Cheng
+- 2010  _Against Method_ - Paul Feyerabend
+- 2011  _The Infinity Puzzle_ - F. Close
+- 2011  _A PhD Is Not Enough!_ - Peter Feibelman
+- 2011  _Thinking, Fast and Slow_ - Daniel Kahneman
+- 2011  _Symmetry and the Standard Model_ - Matthew Robinson
+- 2012  _An Invitation to Quantum Field Theory_ - Luis Alvarez-Gaumé, Miguel Vázquez-Mozo
+- 2012  _When Supergravity Was Born_ - David Appell
+- 2012  _The Structure of Scientific Revolutions_ - Thomas Kuhn
+- 2012  _A Cultural History of Physics_ - Karoly Simonyi
+- 2012  _Antifragile_ - Nassim Taleb
+- 2013  _Seeking Wisdom: From Darwin to Munger_ - Peter Bevelin
+- 2013  _Professor Borges: A Course on English Literature_ - Jorge Borges
+- 2013  _A Unified Grand Tour of Theoretical Physics_ - Ian Lawrie
+- 2013  _Interpreting Quantum Theories_ - Laura Ruetsche
+- 2013  _An Introduction to Spinors_ - Andrew M. Steane
+- 2013  _Modern Electrodynamics_ - Andrew Zangwill
+- 2013  _Einstein Gravity in a Nutshell_ - A. Zee
+- 2014  _Spacetime and Geometry: An Introduction to General Relativity_ - Sean Carroll
+- 2014  _Arnold: Swimming Against the Tide_ - Boris Khesin
+- 2014  _Student Friendly Quantum Field Theory_ - Robert Klauber
+- 2014  _Quantum Field Theory and the Standard Model_ - Matthew Schwartz
+- 2014  _Symmetries in Fundamental Physics_ - Kurt Sundermeyer
+- 2015  _Logically Fallacious_ - Bo Bennett
+- 2015  _The Professor Is In_ - Karen Kelsky
+- 2016  _Peak_ - Anders Ericsson, Robert Pool
+- 2016  _Philosophy of Science: Key Concepts_ - Steven French
+- 2016  _The Role of Quantum Information in Thermodynamics_ - John Goold, et al
+- 2016  _Entropy? Honest!_ - Tommaso Toffoli
+- 2017  _The Lazy Universe_ - Jennifer Coopersmith
+- 2017  _Introduction to Electrodynamics_ - David Griffiths
+- 2017  _The Undoing Project_ - Michael Lewis
+- 2017  _Three Roads to Quantum Gravity_ - Lee Smolin
+- 2018  _Lost in Math_ - Sabine Hossenfelder
+- 2018  _Physics from Symmetry_ - Jakob Schwichtenberg
+- 2018  _No-Nonsense Quantum Mechanics_ - Jakob Schwichtenberg
+- 2018  _The Elephant in the Brain_ - Kevin Simler, Robin Hanson
+- 2019  _The Dawn of the Post-Naturalness Era_ - Gian Francesco Giudice
+- 2019  _Making Better Sense of Quantum Mechanics_ - N. David Mermin
+- 2019  _Demystifying Gauge Symmetry_ - Jakob Schwichtenberg
+- 2019  _No-Nonsense Classical Mechanics_ - Jakob Schwichtenberg
+- 2019  _No-Nonsense Electrodynamics_ - Jakob Schwichtenberg
+- 2019  _Physics from Finance_ - Jakob Schwichtenberg
+- 2019  _Ultralearning_ - Scott Young

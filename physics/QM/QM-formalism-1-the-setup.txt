@@ -1,0 +1,172 @@
+First see: $MY_NOTES/physics/QM/Hilbert-Space.txt
+
+# Me:
+- What is:
+    1. eigenvalue
+    2. eigenvector
+    3. eignbasis
+    4. observable operator
+
+- e.g. in the situation of measuring the position `x` of an electron..
+- I always wondered why we "need" to use an eigenvector, eigenvalue etc
+
+# GPT
+
+- I’ll first give the core meaning of each term, then explain why
+  QM *needs* them rather than just choosing them.
+
+### 0. Setup: what QM “measurement” means
+
+- In QM, the state `|ψ⟩` is a complete description of the system.
+
+- A measurement is not “reading off a property the particle already had”.
+
+- Instead, it is an _interaction_ that FORCES the state to give
+  a definite outcome. Mathematically, that forcing is encoded
+  using operators and their eigen-structure.
+
+
+### 1. Observable operator (eg: position x̂)
+
+- Meaning:
+    - An observable `operator` is the mathematical object that
+      represents a measurable physical quantity.
+
+- For position in 1D, the observable is the position operator `x̂`.
+
+- What it does:
+    - `x̂` acts on state vectors and tells you “what position
+      would be registered *if* the system were in a state with
+      a definite position”.
+
+- In the x-representation, `x̂ ψ(x) = x ψ(x)`
+
+- Significance:
+    - Operators encode how measurement devices interact with
+      states.
+    - Each observable has its own operator because different
+      measurements are physically different interactions.
+
+- Crucially:
+    - Different observables generally do not commute → they
+      cannot share a common set of definite values.
+
+### 2. Eigenvector (example: |x⟩)
+
+- Meaning:
+    - An eigenvector of an observable operator is a STATE that
+      gives a DEFINITE OUTCOME when that observable is measured.
+
+- For position:
+    - `x̂|x⟩ = x|x⟩`
+
+- Interpretation:
+    - If the electron is in the state `|x⟩`, then a position
+      measurement will *certainly* return the value `x`.
+
+- No probabilities. No spread. Just `x`.
+
+- Significance:
+    - Eigenvectors represent “perfectly sharp” states for that
+      observable.
+
+- This is not optional:
+    - QM needs states that correspond to definite measurement
+      outcomes, otherwise the theory could never explain why
+      measurements ever give single numbers.
+
+### 3. Eigenvalue (example: x)
+
+- Meaning:
+    - An eigenvalue is the _numerical result_ that comes out of
+      a measurement when the system is in the corresponding
+      eigenvector.
+
+- For position:
+    - Eigenvalue `x` = the position value shown by the detector.
+
+- Interpretation:
+    - Eigenvalues are not abstract math numbers — they are
+      literally the possible measurement readouts.
+
+- Significance:
+    - The spectrum of an operator tells you which values can
+      ever be observed.
+
+- For position, the spectrum is continuous.
+- For energy in an atom, it’s discrete.
+- For spin, it’s finite.
+
+- That’s where quantization actually enters the theory.
+
+### 4. Eigenbasis (example: {|x⟩ for all x})
+
+- Meaning:
+    - An eigenbasis is the complete set of all eigenvectors of an
+      observable.
+
+- For position:
+    - The set of all `|x⟩` for x ∈ ℝ.
+
+- Interpretation:
+    - The eigenbasis is the “coordinate frame” associated with
+      that measurement.
+
+- Any state `|ψ⟩` can be expanded as:
+    - `|ψ⟩ = ∫ ψ(x)|x⟩ dx`
+    - Here ψ(x) = ⟨x|ψ⟩.
+
+- Significance:
+    - This expansion is what allows QM to make PROBABILISTIC
+      predictions.
+
+- The squared magnitude `|ψ(x)|²` gives the PROBABILITY density
+  for measuring position `x`.
+
+### Why eigenvectors/eigenvalues are NECESSARY
+
+...and not just convenient.
+
+- This is the key conceptual point.
+
+- QM has three empirical facts it must explain:
+    1. Measurements yield definite outcomes (single numbers)
+    2. Outcomes are probabilistic
+    3. Different measurements are incompatible (`x` vs `p`, etc.)
+
+- The eigenstructure solves all three at once:
+    - Definite outcomes → eigenvalues
+    - States with certainty → eigenvectors
+    - Probabilities → expansion coefficients in an eigenbasis
+    - Incompatibility → different operators have different eigenbases
+
+- There is no simpler mathematical structure that does all of this simultaneously.
+
+- If we didn’t use eigenvectors, we:
+    - couldn’t define “definite position”
+    - couldn’t explain why measurements collapse to single values
+    - couldn’t explain why measuring `x` destroys info about `p`
+
+### Position measurement in one sentence
+
+- Measuring position means:
+    - “Expand the state `|ψ⟩` in the position eigenbasis `{|x⟩}`,
+      then randomly select one eigenvalue `x` with probability
+      `|⟨x|ψ⟩|²`, and project the state onto `|x⟩`.”
+
+- That entire sentence collapses without eigenvectors and eigenvalues.
+
+### Deep intuition (important)
+
+- Eigenvectors are not mathematical decoration.
+- They are the only states that a measurement device recognizes
+  as STABLE outcomes.
+
+- Every real detector is built to respond to eigenstates of the
+  observable it measures.
+
+If you want, next we can:
+– connect this directly to projection/collapse,
+– contrast position eigenstates with momentum eigenstates,
+– or explain why position eigenstates are “unphysical” idealizations yet still indispensable.
+

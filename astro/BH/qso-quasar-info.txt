@@ -1,0 +1,128 @@
+
+
+
+### Old annotation from 2011
+    - A luminous quasar at a redshift of z = 7.085 https://arxiv.org/abs/1106.6088
+
+### Terminology
+    - "Quasar" is still used for brighter AGN
+
+### Quasar Info
+
+    - One of the great mysteries of quasar spectra is their great
+      _homogeneity_ despite a factor of ~100,000 range in their
+      luminosities. No other class of astronomical objects seems
+      to share in this characteristic.
+
+    - Quasars are found to vary in luminosity on a variety of
+      time scales. some vary in brightness every few months,
+      weeks, days, or hours. 
+        - This means that quasars generate and emit their energy
+          from a very small region, since each part of the quasar
+          would have to be in contact with other parts on such
+          a time scale to coordinate the luminosity variations.
+
+    - Quasars provide clues to the end of the big bang's
+      reionization. The oldest quasars (redshift ≥ 6) display
+      a Gunn-Peterson trough and have absorption regions in front
+      of them indicating that the intergalactic medium at that
+      time was neutral gas. 
+        - More recent quasars show no absorption region but
+          rather their spectra contain a spiky area known as the
+          lyman-alpha forest. This indicates that the
+          intergalactic medium has undergone reionization into
+          plasma, and that neutral gas exists only in small
+          clouds.
+
+    - Quasars exhibit very bright emission features relative to
+      a low intensity continuum in their spectra. Indeed it was
+      only through careful analysis of the spectra of quasars
+      that astronomers realised they were not just faint stars.
+
+### Quasar Spectra
+
+- when the spectrum of the quasar is analysed a few key features
+  are apparent:
+
+1. its spectrum shows characteristic strong emission lines rising
+   above a broad continuum.
+
+2. The emission lines are not where we would expect to see them
+   if the object was a nearby star.
+    - The lyman α line on the left of the spectrum is formed by
+      transitions between the n = 1 and n = 2 energy levels in
+      neutral hydrogen. This normally produces spectral lines
+      with a wavelength of 121.6 nm or 1216 ångstroms which is in
+      the ultraviolet part of the spectrum.
+    - However here the lyman αlpha line is clearly seen at
+      a wavelength of about 4,100Å in the visible part of the
+      spectrum. Why is this? 
+        - The standard explanation is that the quasar it at
+          a vast distance from us so appears to be receding from
+          us due to the expansion of the universe. The high
+          recession velocity of the quasar relative to us means
+          that its spectral lines appear shifted to longer
+          wavelengths. They have been redshifted. the quasar
+          shown has a redshift of 2.3251 as measured from the
+          shift in the lines for this spectrum.
+
+### SDSS _Main_ Quasar Sample
+    - These are outliers from the ugri stellar locus and are
+      selected in the magnitude range 15.0 < iPSF < 19.1. Both
+      point sources and extended objects are included, except
+      that extended objects must have colors that are far from
+      the colors of the main galaxy distribution and that are
+      consistent with the colors of AGNs; these additional color
+      cuts for extended objects are specified in Section 3.4.4 of
+      Richards et al. (2002). Even if an object is not a ugri
+      stellar locus outlier, it may be selected as a main quasar
+      sample target if it lies in either of these
+      2 "inclusion"regions: (1) "mid-z", used to select 2.5
+      < z < 3 quasars whose colors cross the stellar locus in
+      SDSS color space; and (2) "UVX", used to duplicate
+      selection of z <= 2.2 UV-excess quasars in previous
+      surveys. These inclusion boxes are specified in Section
+      3.5.2 of Richards et al. (2002). Note that the QSO_CAP and
+      QSO_SKIRT distinction is kept for historical reasons (as
+      some data that are already public use this notation) and
+       results from an original intent to use separate selection
+      criteria in regions of low ("cap") and high ("skirt")
+      stellar density. It turns out that the selection efficiency
+      is indistinguishable in the cap and skirt regions, so that
+      the target selection used is in fact identical in the
+      2 regions (similarly for QSO_FIRST_CAP and QSO_FIRST_SKIRT,
+      below).
+
+### _High-Redshift_ Quasar Sample (QSO_HIZ)
+    - These are outliers from the griz stellar locus and are
+      selected in the magnitude range 15.0 < iPSF < 20.2. Only
+      point sources are selected, as these quasars will lie at
+      redshifts above z~3.5 and are expected to be classified as
+      stellar at SDSS resolution. Also, to avoid contamination
+      from faint low-redshift quasars which are also griz stellar
+      locus outliers, blue objects are rejected according to eq.
+      (1) in Section 3.4.5 of Richards et al. (2002). Moreover,
+      several additional color cuts are used in order to recover
+      more high-redshift quasars than would be possible using
+      only griz stellar locus outliers. So an object will be
+      selected as a high-redshift quasar target if it lies in any
+      of these 3 "inclusion" regions: (1) "gri high-z", for z >=
+      3.6 quasars; (2) "riz high-z", for z >= 4.5 quasars; and
+      (3) "ugr red outlier", for z >= 3.0 quasars. The specifics
+      are given in eqs. (6-8) in Section 3.5.2 of Richards et al.
+      (2002).
+
+### FIRST Sources (QSO_FIRST_CAP, QSO_FIRST_SKIRT)
+    - Irrespective of the various color selection criteria above,
+      SDSS stellar objects are selected as quasar targets if they
+      have 15.0 < iPSF < 19.1 and are matched to within 2 arcsec
+      of a counterpart in the FIRST radio catalog
+
+### Other
+    - Finally, those targets which otherwise meet the color
+      selection or radio selection criteria described above, but
+      fail the cuts on iPSF, will be flagged as QSO_MAG_OUTLIER
+      (also called QSO_FAINT). Such objects may be of interest
+      for follow-up studies, but are not otherwise targeted for
+      spectroscopy under routine operations (unless another
+      "good" quasar target flag is set).

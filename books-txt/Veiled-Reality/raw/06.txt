@@ -1,0 +1,765 @@
+### 6 The Density Matrix Formalism
+
+In
+quantum physics, we often need to consider ensembles that
+are not pure cases, that is, that cannot be described by state vec-
+tors. This is so, for instance, when an ensemble is composed
+of several subensembles that are described by nonequivalent
+state vectors. It also happens in most cases in which we con-
+sider ensembles of definite subsystems of some larger systems.
+The density matrix-or "statistical operator"-formalism is one
+that makes it possible to deal with such situations swiftly and
+efficiently.
+The purpose of this chapter is not to give a systematic review
+of all the properties of statistical operators. Rather, it describes
+those properties that are the most useful for the particular ap-
+plications we have in mind, that is, the description of mixtures,
+the various kinds of mixtures, and the problems associated with
+nonseparability and measurement theory.
+6.1 The Statistical Operator (Density Matrix)
+α
+α
+Definition 1. Let E₁, E₂,,E,,E,, be μ ensembles of physical
+H
+μ
+systems, all of the same type, let N be the number of elements
+of E, and let Ê be the ensemble of all the N = ΣN elements.
+of the various E. Let us assume, moreover, that each Eα can
+be described by a normalized ket |> (the kets | > are not
+necessarily mutually orthogonal). Then the operator
+α
+a
+p =
+Σιφας
+N
+> <фа
+N
+α=1
+(6.1)
+19
+7980
+60
+6 The Density Matrix Formalism
+is called the "statistical operator of ensemble Ê "Although, prop-
+erly speaking, p is an operator, not a matrix, it is quite often also
+called the density matrix associated with Ê
+Some Mathematical Properties
+The basic mathematical properties of p are as follows
+(i) p is Hermitean
+(ii) p is positive definite, that is,
+<u|p|u >> 0
+for any ❘u >
+(iii)
+Tr(p) = 1
+(62)
+(63)
+where Tr(A) means the trace of operator A (see Appendix 1
+for a definition of this notion)
+This follows from Eqs (61) and (55) since, {\n>} being an
+orthonormal basis of the Hilbert space H of the system,
+Tr(p) = Σ N/
+=
+=
+η,α
+Ν
+ΣΝ
+W W Wo
+η,α
+<n\><\n>
+< $a\n >< n\$a>
+<a a>= 1
+α
+a
+(64)
+[Note also that, by the same token, for any | > and |ø >
+Tr({y >< ¢|) =< $\¥ >
+(64a])
+Properties (i-iii) have the following consequences
+(iv) Every diagonal element of p in any matrix representation
+is nonnegative In particular, its eigenvalues are nonnegative
+[this is an immediate consequence of (ii)]
+(v) The eigenvalues pr of p satisfy
+0 ≤ Pn ≤ 1
+n
+(65)6.1 The Statistical Operator (Density Matrix)
+This follows from properties (iii) and (iv).
+81
+(vi) If p is a projection operator, it projects onto a one-dimensional
+subspace.
+If p is a projection operator, then
+p²
+= P
+(6.6)
+The same algebraic equality holds in regard to any given eigen-
+value
+Pr
+2
+=
+Pn
+(6.7)
+so that p = 0 or p = 1. Property (iii), however, entails that
+Σημ = 1
+12
+(6.8)
+so that only one eigenvalue is equal to one, all the others being
+zero. The general expression p = Σ \n > Pn < n| thus reduces in
+this case to one term only. Q.E.D
+(vii)
+Tr(p²) ≤ 1
+(6.9)
+and the equality sign can hold only if p is a projection
+operator.
+This inequality is a consequence of the facts that (a)—as easily
+verified-Tr(p²) = Σp² and (b) no point of the hyperplane (6.8)
+with nonnegative coordinates p, lies outside the hypersphere
+12
+P1
+n
+Σp²₁ = 1
+n
+(6.10)
+Concerning the equality case, note that when the numbers
+.P, satisfy both Eqs. (6.8) and (6.10) they also satisfy
+Ση(1 - 1) = 0
+11
+(6.11)
+Since none of the individual terms in the sum can be negative
+because of inequalities (6.5), all of them are zero. Equation (6.8)82
+82
+6. The Density Matrix Formalism
+then entails that only one p is equal to one, the others being
+zero. Q.E.D
+(viii) When p is written as in Eq. (6.1), a necessary and sufficient
+condition for p to be a projection operator is that all the a>
+be identical up to phase factors, or, in other words, that the
+sum in Eq. (6.1) reduces to one term.
+The condition is obviously sufficient. To show that it is necessary
+let us note that-as is easily shown from Eq. (6.1)—
+N&NB
+Tr(p²) = Σ NaN | < $ap > 1²
+α,β
+N²
+B
+The condition Tr(p²) = 1 thus gives
+-
+ΣNaN(1 − | < $als > 1²) = 0
+α,β
+α
+Since none of the terms in the sum can be negative (the |¢â > are
+normalized), all of them must be zero. Thus, since both N and
+NB must be assumed different from zero,
+β
+| < ¢a | $ß > |² = 1 =< $a\$a >< ¢ß\$ß >
+α
+This is the case in which the Cauchy-Schwarz inequality reduces
+to an equality. The foregoing equality therefore implies that for
+any α, B
+Φα >= λαβ Φ >
+(6.12)
+where A is a number that, moreover, has modulus 1 since the
+two kets are normalized. Q.E.D
+6.2 Pure Cases and Mixtures
+Pure Cases
+As already noted, an ensemble E that can be described by a state
+vector 4 > is called a pure case.6.2 Pure Cases and Mixtures
+83
+Instead of describing E by means of the (normalized) ket
+| >, we can equally well describe it by means of the statistical
+operator
+p = 14 > < 41
+(6.13)
+which is a projection operator. Let A be an observable. Then
+Tr(pA) = Σ < n\w >< w\A\n >= - Σ
+< y\A\n><n\y >=< y\A\w >
+n
+n
+In this formalism, therefore, the mean value of an observable A
+is given by the expression
+< A >= Tr(pA)
+Similarly let
+P(ak) = Σk,r><k,r|
+(6.14)
+be the projection operator onto the subspace Hε spanned by the
+eigenvectors of A corresponding to the eigenvalue ak. Then
+Tr[pP(ak)] = Σ| < k,r\w > |²
+Thus the statistical frequency with which a measurement of A is
+predicted to yield outcome ak is just
+W = Tr[pp(a)]
+Mixtures
+α
+(6.15)
+An ensemble Ê obtained by combining all the elements of several
+subensembles E is a mixture, although, as will be made clear,
+this statement is not a general definition of the concept. If every
+E can be described by a state vector 14 > and if these |α >
+are not all identical up to phase factors, the mixture obtained is
+not a pure case. Let us use the word "mixture" in the restrictive
+sense that it excludes
+pure cases.
+៧
+X)=4
+84
+6. The Density Matrix Formalism
+It is very convenient to describe Ê by means of the statistical
+operator p defined by expression (6.1). Then the mean value of
+any observable A of Ê is
+<A>=
+>ΑΣΝ, ΚΑ>
+α
+where <A> Is the mean value of A on E. Equation (6.14) then
+shows that
+<A>=
+N
+ΣN„Tr(|$a >< $a|A) = Tr(pA) (6.14a)
+a
+Thus the expression (6.14) for the mean values, derived above
+for pure cases, applies equally well to the mixtures considered
+here. A similar argument shows that the same is true in re-
+gard to expression (6.15), which gives the probabilities of obser-
+vation. Mathematically, what differentiates such mixtures from
+pure states is that the statistical operators that describe mixtures
+are not projection operators:
+This follows from proposition (viii), which shows that, if the sta-
+tistical operator p expressed by (6.1) were a projection operator
+all the operators | >< α would be identical to each other.
+Under such conditions Ê would be the pure case described by
+|α >< ¢ã❘ or by the corresponding |Þâ >
+α
+Finally, it is important to note that, if an ensemble Ê is not
+a pure case, there are several ways (in fact an infinity of them)
+in which its statistical operator p can be expressed in the form
+(6.1). If, for instance, the | $ > are not mutually orthogonal, it is
+always possible to consider a representation {\n,r >} in which
+the matrix p (see Section 6.4) is diagonal. Then p can also be
+expressed as
+p = Σn, r > qn < n,r|
+n,r
+α
+(6.16)6.2 Pure Cases and Mixtures
+85
+Note that the qn then have an interpretation in terms of
+probabilities. For example, if A is an observable with eigenvalue
+equation
+An,rann,r >
+the probability that, on the ensemble described by p, a mea-
+surement of A would yield outcome a 1s, according to formula
+(6.15)
+m
+Wm
+W₁ = Tr(pΣm,s><m,s\) = km9m
+S
+where k, is the dimension of the eigensubspace of A correspond-
+ing to eigenvalue am (i.e., the number of possible values of the
+index r).
+• Remark 1. Let an interesting property of statistical opera-
+tors be mentioned here. It concerns the case in which we know
+with certainty that if we perform a measurement of an observ-
+able A the outcome will be some definite value ar. Formulas (6.1)
+and (6.15) then yield
+N.
+Σ Na² | < k,r\$a > |² = &n‚k
+Since the N are all different from zero by assumption, this shows
+that
+a
+<k,r|da >= 0
+α
+for any k different from n; in other words, it shows that ev-
+ery belongs to the subspace H, spanned by the (n,r>
+In the case in which we know that simultaneous measure-
+ments of the compatible observables A, B, C, would yield the
+definite outcomes am, bn, cq, the foregoing argument shows
+α
+that the > are all contained in the intersection of the sub-
+spaces Hm, H, H₁, When this intersection is one-dimensional,
+Ha'
+Ê therefore reduces to the
+tors common to am, bn, cq,
+pure case described by the eigenvec-
+Because of the possibility of writing
+down any statistical operator in the form (6.16), the latter result
+holds good for any statistical operator, irrespective of whether
+or not it is given explicitly by a formula such as (6.1).86
+6. The Density Matrix Formalism
+• Remark 2: Remark 1 applies in particular to the case in
+which the considered measurement M of A is ideal and our
+knowledge of what its outcome will be comes from a previous
+ideal measurement Mo of A, made just before M. This shows that
+as a consequence of measurement Mo, the statistical operator p
+describing the ensemble of systems must be changed abruptly
+from whatever it was before Mo took place to a form involving
+only kets > belonging to H. The notion of collapse is thus
+extended to mixtures.
+Whenever H,, is not one-dimensional, Remark 8 of Chapter 3
+also applies. In other words, the exact composition of the col-
+lapsed state operator depends on the nature of the measuring
+instrument. However, the observation made at the end of this
+Remark 8 also holds good here. If it is requested that Rule 8
+of Chapter 3 applies strictly (and that not only the probability
+of such and such outcomes but also the nature of the collapsed
+statistical operator should not depend on the order in which
+the measurements are performed), then the precise structure of
+the collapsed p is determined [1]. The relevant formulas appear
+below.
+6.3 Time Dependence of Statistical Operators
+Let p be a statistical operator, that describes a pure case or a
+mixture of the kind we have just defined; p is given by the
+general formula (6.1). The time evolution of the [> in the
+Schrödinger representation is given by Eq. (5.8) so that
+p(t) = u(t,to)p(to) Ut (t, to)
+α
+(6.17)
+Because of Eq. (5.11) for the time variation of U(t,to) and the
+corresponding equation concerning U*, (6.17) yields
+ih
+dp(t)
+dt
+= [H,p]
+(6.18)
+Formula (6.18) is called the "Schrödinger equation for the statis-
+tical operator." In spite of a formal similarity (up to a sign) with
+Eq. (5.19), it holds in the Schrödinger picture.6.4 Density Matrices
+It is important to observe that
+p²(t) = U(t,t₁)p(†)U† (†‚t₁)U(†‚t₁)p(†₁)U†(t,t。)
+= U(t,to)p² (to)U* (t, to)
+so that if p² (to) = p(to), then
+p²(t) = p(t)
+87
+62
+In other words, if an ensemble of systems is a pure case, it cannot
+evolve into a mixture if the time evolution is governed by the
+Schrödinger equation (3.2).
+6.4 Density Matrices
+{, \n >, } being, as above, an orthonormal basis of the Hilbert
+space H of the system under study, any operator A operating in
+H can be described in this basis by the (finite or infinite) matrix A,
+the elements of which are¹
+Amn
+=< m|A\n>
+A is said to be the matrix corresponding to A in the representation
+{, \n>, } In particular a density matrix, p, (a matrix in the
+proper sense) can in this way be associated with any statistical
+operator p In view of Eq. (6.1) its matrix elements are
+Pm,n = Σ <m\da >
+a=1
+N
+N
+< Pa\n>
+(6.19)
+N
+=
+Σ
+<m/p>
+< n/a >*
+(6.20)
+N
+a=1
+μ
+Formulas (6.14) and (6.15) are then easily transcribed to
+< A >= Tr[pA]
+and
+wk = Tr[pp(a)]
+(6.21)
+(6.22)
+1. Some more information about matrices in quantum mechanics are to be found
+in Appendix 1.88
+88
+6. The Density Matrix Formalism
+respectively, where the symbol Tr[M] just means the trace of
+matrix M in the usual sense, that is the sum of its diagonal
+elements.
+Although the x' > defined by means of formula (3.3b) and
+made use of in Section 5.3 are not normalizable in a strict sense,
+still they also can be used for associating a “matrix" to an oper-
+ator, and in particular to a statistical operator p The lines and
+columns of such a generalized matrix are labeled by the contin-
+uous variables x' and x" Its general element is
+p(x',x") = < x' |px" >
+(6.23)
+If the ensemble is a pure case, described by 14 >, this formula
+leads, with the help of Eq. (6.13), to
+p(x',x") = 4 (x') w* (x")
+(6.24)
+This formula is easily generalized to the case of mixtures as well
+as to the case of systems composed of more than one particle.
+6.5 Alternative Formulation of the Quantum Rules
+The rules given in Chapter 3 apply only to ensembles that can
+be described by state vectors. As shown in Section 6.2, these
+rules entail as consequences new expressions for quantum prob-
+abilities and mean values, which can be called the-derived—
+"statistical operator rules.” However, it is also possible to formu-
+late the statistical operator rules directly instead. These rules are
+then chosen as basic axioms, and the rules described in Chap-
+ter 3 become but special consequences of these axioms. In the
+new formulation, ensembles (be they pure cases or mixtures)
+are directly described by statistical operators, observables are
+still described by Hermitean operators, and the rules yielding
+the statistical distribution and the mean values of the predicted
+measurement outcomes are, respectively, expressions (6.15) and
+(6.14).
+When stated in this manner, the rules of quantum mechanics
+apply directly, not only to pure cases but also to mixtures. For-
+mally, this is a distinct advantage. In the case of mixtures defined
+by their statistical operators, the new formalism also has another
+merit. Since such a mathematically defined mixture is, as shown,6.5 Alternative Formulation of the Quantum Rules
+89
+equivalent not to one but to several physical mixtures such as
+Ê, the old formulation, in terms of state vectors, would imply,
+in some cases, some arbitrariness in the choice of the latter. The
+new formulation has no such defect.
+Finally, it should be mentioned that such considerations have
+opened the way to other axiomatic formulations of quantum me-
+chanics that are both concise and very general. One of them goes
+back to Birkhoff and von Neumann [2] and was further devel-
+oped by von Weissäcker [3], Mackey [4], Jauch and Piron [5,6],
+and others. The basic structure in this approach is the set of all
+the "yes-no" questions. Mathematically, this constitutes a lattice.
+Supplementary axioms are necessary in order to recover all the
+usual principles of quantum mechanics, so that this approach
+has a certain degree of adaptability that may offer some advan-
+tage. Starting from it Jauch [7], for instance, has suggested some
+modifications of quantum mechanics that would dispose of a
+few of the difficulties described below. At the same time, these
+modifications change some of the predictions of quantum the-
+ory. They thus originate a new theory and hence fall outside the
+scope of this study.
+Another axiomatic formulation was initiated by von Neu-
+mann, Jordan, and Wigner [8] and developed by Segal [9], Haag
+and Kastler [10], Primas [11], and others. Its basic idea is to give,
+axiomatically, the structure of an algebra to the set of all bounded
+observables, and to relate formalism and experiment by means
+of a mean value rule that reads as follows: The mean value of the
+outcomes of measurements of any observable A on an ensemble of sys-
+tems of the same type is a real, positive linear functional m(A) of the
+element A of the algebra that corresponds to this observable. Again,
+it can be shown that the usual formulation in terms of Hilbert
+spaces, statistical operators, and so forth can be recovered at
+the price of some supplementary assumptions of a quite gen-
+eral nature, the rejection of which would not, as it seems, open
+interesting vistas.
+These axiomatics constitute a very inspiring field of study.
+However it should be remembered that, at least in the domain in
+which usual quantum mechanics is undoubtedly applicable-
+that is, in the domain of the systems endowed with a finite,
+even if immensely large, number of degrees of liberty—they are
+entirely equivalent to the latter, which, for this reason, remains
+the main subject of our investigations.90
+90
+6. The Density Matrix Formalism
+Henceforth we therefore understand the expression "the
+quantum rules" as meaning "the rules dealing with statistical
+operators and/or state vectors." We can therefore make Assump-
+tion Q more precise by restating it as follows.
+Assumption Q' For the purpose of making statistical predictions
+about the outcomes of measurements bearing on observables
+that belong properly to the physical systems S composing an
+ensemble E, where E is specified without reference to future
+observations on these S, E can always be described by some
+statistical operator. By "belong properly" is meant that the said
+observables can be measured by operating exclusively on S.
+The study of quantum mechanics thus understood-and the
+investigation of the types of epistemological descriptions con-
+sistent with it is the main subject of this book.
+6.6 The State Operator
+As the content of Section 6.4 has shown, when the quantum rules
+are expressed by means of statistical operators, these operators
+play, in this new formulation, the role the state vectors play in the
+set of rules stated in Chapter 3. In this sense it may therefore be
+said that the notion of a statistical operator generalizes the notion
+of a state vector. At any rate, this certainly holds true as long as
+these concepts are merely used as tools for making statistical
+predictions concerning what will be observed; which, after all,
+is one of the main roles of state vectors. The idea that such
+operators may generally be used to represent states of systems
+is therefore a natural one. And in fact it is one the literature
+on quantum physics uses quite extensively. In this context the
+expression "statistical operator" is accordingly often replaced
+by the expression "state operator."
+A word of caution is in order, however. The word "state"
+being usually attributed a meaning that extends far beyond the
+strictly operational one just mentioned, the expression "state
+operator" may well convey, in the mind of its users, some too
+hasty physical interpretations of the formalism it is a part of;
+and this, as we shall see, can lead to erroneous views. At the
+present stage, however, let us simply mention this fact. Detailed
+comments are deferred to Chapter 8.67 Measurement and the "Density Matrix" Formalism
+6.7
+Measurement and the “Density Matrix” Formalism
+91
+In this formalism, the probability that, upon a measurement of
+an observable A, result a is obtained is expressed by Eq (615),
+as we saw This formula thus replaces and generalizes Rule 6 of
+the state-vector formalism Let us now explain by what formulas
+Rules 9, 10, and 10a, which state how the ensemble is to be de-
+scribed after measurement, are to be replaced (and generalized)
+in the density matrix formalism
+Let an ideal measurement be performed on an ensemble
+of systems S, described by the state operator p That is, let an
+observable A be measured on each system S (this implies of
+course an interaction with an instrument, but we refrain at this
+stage from analyzing this interaction) Then we can either
+(a) pick out the systems S on which outcome at has been
+obtained, or
+(b) consider again the ensemble of all systems S—that is, mix
+up all the systems again
+In both cases the question is What state operator is to be
+attributed to the resulting ensemble? In fact, the operator looked
+for turns out, in both cases, to be quite easily expressible in terms
+of p Let us derive the corresponding formulas [12, 13], first in the
+simple case in which all the eigenvalues of A are nondegenerate
+and then in the case in which some of them are degenerate
+Nondegenerate Eigenvalues
+Case (a): The state operator in question, Pk, is a projection oper-
+ator on a one-dimensional vector space | > It is therefore
+Pk = Pk = |wk >< 4x1
+Because of Eq (64a),
+Tr(Php) =<wlpluk >
+(625)
+(626)
+(Note that this expression is just the probability Pk that the value
+a is observed) Therefore Eq (625) can be rewritten as
+Pk =
+14k >< wk|p|4k > < 4k!
+Tr(Pp)
+=
+PkpPk
+Tr(Pkp)
+(627)92
+42
+6 The Density Matrix Formalism
+Case (b): The state operator p' we are looking for is a weighted
+sum of the state operators (6 27), the weights being the relative
+numbers of outcomes ak, which are given by Eq (626) This
+immediately yields
+p = Σ PkpPk
+ΣΡΑΦΡΑ
+k
+Degenerate Eigenvalues
+(628)
+In this case simple expressions are obtained only if it is assumed
+that the measurement process obeys Rule 10a For the sake of
+calculation it is then convenient to express p as a linear combi-
+nation
+= Σ wip₁ = Σ wild₁ > < $;\
+Σωρ ΣΙΦ Φίλ
+P =
+1
+(629)
+of projection operators on mutually orthogonal states |ø; > Such
+an expansion is, as already mentioned, always possible, and
+the p; are the statistical operators of subensembles whose union
+constitutes a mixture (a proper mixture in the sense that will be
+defined in Section 72) having p as its statistical operator Of
+course, the w, are the relative numbers of individual systems in
+all of these subensembles
+Case (a): Let P be the projection operator onto the subspace
+pertaining to eigenvalue a Each subensemble described by a
+|; > is transformed by the measurement into its projection on
+this subspace renormalized to unity, that is, into
+Px\ >
+√xik > =
+(<
+| Pk |
+>)1/2
+(630)
+The subensemble labeled i is thus transformed into a sub-
+ensemble that has
+Xik >< Xinh
+(6 30a)
+as its statistical operator We must now recombine all of these
+statistical operators that correspond to a given value of k into a6.7 Measurement and the "Density Matrix" Formalism
+93
+93
+weighted sum, the weights being the relative population num-
+bers within this "k" set; that is, n₁k/nk, where (N being the total
+population):
+=
+nkNw; <₁\P\ >
+==
+(6.30b,c)
+When Eq. (6.30) is carried over into the product
+N₁k|X₁k >< X₁k|, the factors < ;P|; > in the numerator and
+the denominator cancel one another, so that, on the one hand,
+n₁k|x₁k >< x₁ = NwPk\; >< ;\Pk
+and thus
+Σn₁k | X₁k >< X₁k = NPkpPk
+and on the other hand,
+N₁ = N Σw; < $; \ Pk|; >= N Tr(Pkp)
+1
+Finally, therefore,
+(6.31)
+Pk =
+PkpPk
+Tr(Pkp)
+(6.32)
+Case (b): The total probability that outcome a is obtained is
+obviously given by formula
+Σw; Tr(Pl><l) = Tr(Pxp)
+(6.32a)
+Hence the statistical operator p' we are looking for, obtained
+by combining the subensembles labeled k with weights propor-
+tional to their population number, is again
+p' = Σ PkpPk
+(6.33)
+Admittedly, not every measurement procedure leads to Rule
+10a, as already noted. For example, the measurement procedures
+corresponding to von Neumann's proposal cited earlier lead to94
+94
+6. The Density Matrix Formalism
+Rule 10a' For such procedures formulas (6.32) and (6.33) are, of
+course, not valid; but nor is, for them, the rule (Rule 8, in Chapter
+3) that the time order of immediately consecutive measurements
+of two compatible observables is totally irrelevant.
+6.8 Wigner's Formula for Probabilities
+Again, let us consider an ensemble E of N systems S described
+by the statistical operator-or "state operator"-p Let us now
+assume that on these systems a measurement is made of an ob-
+servable A that has eigenvalues {,a;, } and that this first
+measurement is immediately followed by a measurement of an-
+other observable B with eigenvalues {, bk, } Let P^A^ and PÅ
+be the projection operators onto the subspaces pertaining to a;
+and b respectively; and let us ask for the probability p(a;,bk)
+that the outcomes of these two measurements should be aj and
+bk respectively.
+Among the N systems S there are
+N₁ =
+N = N Tr(P^p)
+(6.34)
+of them on which the first measurement yields outcome a, and
+immediately afterward the ensemble of these N systems is
+described by the statistical operator [see Eq. (6.32)]:
+Pj
+=
+PAPPA
+Tr(PAP)
+(6.35)
+so that each of them has a probability Tr(PRP) of yielding out-
+come bk. On the whole, then, the number of systems yielding
+outcomes a; and bk 1s
+N; Tr(P) = N Tr(PP,^P^)
+(6.36)
+The probability we are looking for is therefore
+p(a,,bx) = Tr(PPAP)
+This formula can easily be generalized to
+surements of more than two observables A,B,
+(6.37)
+successive mea-
+,F,G and to the6.9 Wigner's Phase-Space Distribution Function
+95
+case in which the measurements are separated by finite time
+intervals. The final result is the Wigner formula [14]
+plaj, bk, fr85) =
+Tr(PP
+PPP ^ P B PF)
+A В
+k
+(6.38)
+where the PA,
+,PG are now the Heisenberg-picture projectors
+onto the corresponding subspaces, the Heisenberg-picture pro-
+jectors being derived from the Schrödinger-picture projectors by
+means of the formula [compare Eq. (5.37)]
+P = U¯¹(t",t')PU(t",t')
+(6.39)
+where t" is the time of the considered measurement and t' the
+time of the preceding measurement (the initial time in the case
+of P^). Of course, in the case in which the Hamiltonian is zero
+the P's coincide with the P's.
+6.9 Wigner's Phase-Space Distribution Function
+Let p be a statistical operator and A a Hermitean operator, and let
+us define two functions of the real variables x and p as follows:
+f(x,p)
+=
+(2π) -1 S
+ds e
+-1sp
+< x + hs/2\p\x - ħs/2> (6.40)
+-
+a(x,p) = |ds' e s'p < x + hs' /2\A\x − ħs' /2 >
+ħ√
+(6.41)
+Following Wigner [15] let us consider the quantity K defined
+by the formula
+K
+=
+= SS
+dx_dpf (x,p) a* (x,p)
+(6.42)
+with the help of formulas (6.40), (6.41), and the well-known
+formulas
+(2π) -1 | e' (s'-s)³ dp = 5 (s' − s)
+Seils-
+(6.43)
+and
+<u|A|v>*<v|A|u >
+(6.44)96
+6. The Density Matrix Formalism
+K can be written
+dx ds < x + ħts/2|p|x − ħs/2 >
+K
+= √f dx
+SS
+<x hs/2A\x + s/2>
+(6.45)
+Let us then perform the change of summation variables de-
+fined by
+X = x + Ms/2
+X' = x -ħs/2
+whose Jacobian is ħ¯¹ K then reads
+K
+= [[ dXdX' <X\p\X' >< X'\A\X >
+which, in virtue of Eq. (3.17) takes the form
+K
+= √ dx
+dX < X\pA|X >= Tr(pA) =<A>
+This shows that with the help of formulas (6.40) and (6.41)
+the mean value of an observable A on an ensemble described by
+the statistical operator p can be expressed as the right-hand side
+of Eq. (6.42). This formula is formally quite similar to the one
+that, in classical mechanics, yields the mean value of a physical
+quantity a(x,p) depending on the position x and the momentum
+p of a particle when the ensemble over which this mean value is
+defined is described by the joint probability distribution function
+f(x,p), which for this reason, and because these developments
+are due to Wigner, is called the Wigner distribution function.
+The Heisenberg "uncertainty" relations imply that in general
+f(x,p) cannot be interpreted as really being a joint probability
+distribution. As we know, since x and p do not commute, they
+cannot be measured simultaneously and if, say, p were exactly
+measured, the ensuing wave function would be a plane wave, so
+that the probability of getting some well-specified p value upon
+a measurement of p and then some well-specified x value upon
+a subsequent measurement of x could not be equal to f(x,p)
+In fact, f(x,p) is not even necessarily nonnegative for all the
+values of its arguments, as it should be, of course, if it were a
+probability distribution. But still, this function is useful in some
+contexts (see Section 14.10).6.9 Wigner's Phase-Space Distribution Function
+References
+1. R. Balian, Am. J. Phys. 57, 1019 (1989).
+2. G. Birkhoff and J. von Neumann, Ann. Math. 37, 823 (1936).
+3. C.F. von Weissäcker, Naturwissenschaften 42, 521 (1935).
+97
+97
+4. G. Mackey, Mathematical Foundations of Quantum Mechanics, W.A. Ben-
+Jamin, New York, 1963.
+5. C. Piron, Helv. Phys. Acta 37, 439 (1963).
+6. J.M. Jauch and C. Piron, Helv. Phys. Acta 42, 842 (1969).
+7 J.M. Jauch in Foundations of Quantum Mechanics, Proceedings of the En-
+rico Fermi International Summer School, Course IL, B. d'Espagnat (Ed.),
+Academic Press, New York, 1971.
+8. J. von Neumann, P. Jordan, and E.P. Wigner, Ann. Math. 35, 29 (1934).
+9. I.B. Segal, Ann. Math. 48, 930 (1947).
+10. R. Haag and D. Kastler, J. Math. Phys. 5, 848 (1964). See also A.M.
+Gleason, Math. Mech. 6, 885; H. Margenau and J.L. Park, Int. J. Theor.
+Phys. 1, 211 (1968).
+11. H. Primas, Chemistry, Quantum Mechanics and Reductionism, Springer-
+Verlag, Berlin, 1981.
+12. G. Lüders, Ann. Phys. 8, 322 (1951).
+13. L. Furry, Boulder Lectures in Theoretical Physics, Vol. 8A (1965), U. of
+Colorado Press, Boulder, 1966.
+14. E.P. Wigner, Am. Journ. Phys. 31, 6 (1963). E.P. Wigner in Foundations
+of Quantum Mechanics, Proceedings of the Enrico Fermi International
+Summer School, Course IL, B. d'Espagnat (Ed.), Academic Press, New
+York, 1971.
+15. E.P. Wigner, Phys. Rev. 40, 749 (1932).98
+
+ 

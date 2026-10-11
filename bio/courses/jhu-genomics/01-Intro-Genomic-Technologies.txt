@@ -1,0 +1,278 @@
+
+
+### Specialisation
+../jhu-genomics-specialisation.txt
+
+### Introduction to Genomic Technologies
+https://www.coursera.org/learn/introduction-genomics
+
+### Content
+    - 00 Overview
+    - 01 Molecular Biology
+    - 02 Measurement
+    - 03 Computing
+    - 04 Data Science
+
+
+# 00 Overview
+    $MY_VIDEOS/bio/genomics/00-overview/03_why-genomics.mp4
+    $MY_VIDEOS/bio/genomics/00-overview/04_what-is-genomics.mp4
+    $MY_VIDEOS/bio/genomics/00-overview/05_what-is-genomic-data-science.mp4
+
+    - we don't understand:
+        - The whole programme of human development from embryo to
+          grown human is encoded in our genome but this is
+          something we don't (yet) understand.
+
+    - The code in our cells determine all the different cell
+      types.
+    - The genome in a skin cell is identical to the genome in
+      a long stringy neuron cell.
+
+    - Cancer is a genetic disease. We define a particular cancer
+      by the type of cell that it started in:
+        - eg skin cancer: melanoma
+        - eg blood cancer: leukaemia
+        - all cancers have common phenotype:
+            - they divide without control
+
+    - mutation: change in the genome
+        - damage
+        - accident in replication
+
+    $MY_IMAGES/bio/intro-genomics/01-central-dogma.jpg
+
+    - DNA: 4 letters
+    - RNA: 4 letters
+    - protein: 20 letters
+        - (each RNA triplet encodes an amino acid, proteins are
+        chains of 200 - 300 amino acids)
+        - 4^3 = 64 triplet combinations
+        - 3 special codons: STOP
+        - ./nucleic-acids-to-protein.txt
+
+    - proteins do most of the FUNCTIONAL work in the body
+
+    - Actually the central dogma isn't true! Info can flow the other
+    way! There are features on the DNA that are affected by the
+    proteins themselves. A sort of feedback loop. Information is
+    flowing backwards
+
+    - SEQUENCING at the heart of the genomics revolution
+
+
+### Genomics:
+    - Branch of molecular biology concerning the structure,
+      FUNCTION, evolution and mapping of genomes
+    - mapping: (sequencing) where the genes are and other
+      interesting bits
+    - gene: has changed a lot over the past 50/100 years
+    - gene: old: an inheritable unit
+    - GENE: small section of the genome that encodes a protein
+      that in turn has some function.
+
+### genomic data science:
+    - other names:
+        - "computational genomics",
+        - "computational biology",
+        - "statistical genomics",
+        - "bioinformatics"
+    - Biology
+    - Stats
+    - Computer Science
+
+### genomic life cycle:
+    - start with some subjects (e.g. humans)
+    - collect samples (eg skin cells)
+    - prepare samples and send for sequencing
+    - sequencer generates enormous amounts data
+    - "reads": short fragments of dna sequences
+    - align reads to reference human genome (1 reference genome
+      for now)
+    - tells us how they differ from reference genome
+    - for every genome in a person, you've got 2 copies (one from
+      each parent)
+    - question: how does reference differ from the 2 copies you
+      have?
+    - do analysis: deposit  data in public database (CBI), then
+      apply more analysis to these datasets
+
+### stage 1: experimental design
+    - I've a question, how much data do I need, how many subjects
+      do I need, what kind of data
+    - often "sequence data", but modifications
+        - "ChIP-seq"
+        - metaSeq
+    - alignment & assembly: how much of a particular gene is
+      present, find the genes that were expressed in tissue you
+      are studying
+    - preprocess and normalise data
+    - sequence machines have errors:
+        - random
+        - systematic
+    - question: for a sample: what genes were turned on and at
+      what level were they present in?
+
+
+- population genomics
+- integrative genomics (Systems Biology)
+
+
+# 01 Molecular Biology
+    $MY_VIDEOS/bio/genomics/01-molecular-biology/01_just-enough-cell-biology.mp4
+    $MY_VIDEOS/bio/genomics/01-molecular-biology/02_important-molecules-in-molecular-biology.mp4
+    $MY_VIDEOS/bio/genomics/01-molecular-biology/03_the-human-genome-project.mp4
+    $MY_VIDEOS/bio/genomics/01-molecular-biology/04_molecular-biology-structures.mp4
+    $MY_VIDEOS/bio/genomics/01-molecular-biology/05_from-genes-to-phenotypes.mp4
+
+
+# 02 Measurement
+    $MY_VIDEOS/bio/genomics/02-measurement/01_polymerase-chain-reaction.mp4
+    $MY_VIDEOS/bio/genomics/02-measurement/02_next-generation-sequencing.mp4
+    $MY_VIDEOS/bio/genomics/02-measurement/03_applications-of-sequencing.mp4
+
+    - For PCR you need:
+        - DNA
+        - Primers
+        - Polymerase
+        - lots of A, G, C, T molecules
+
+    - PCR Process:
+        - Melt at 94º C
+        - Cool to 54º C
+        - Warm up to 72º C
+        - Repeat
+
+    - NextGen
+        - errors: $MY_IMAGES/bio/intro-genomics/next-gen-errors.jpg
+        - sequencer computes quality: look at how "pure" each spot color
+          was
+
+    - NextGen Applications
+
+        - if you want to know the proteins, you need to know the
+          protein coding exons (the introns get thrown away)
+        - exons only comprise 1.5% of the genome
+        - use a bead to rip out only the exonic bits
+
+        - RNA sequencing... at the end of transcription the RNA
+          has a long sequence of A's at the end: "poly(A) tail"
+            - CCUAGAAAAAAAA
+
+        - ChIP-seq:
+            - cross-link protein to DNA
+            - find protein binding sites
+
+        - Methyl-seq
+            - methylation seq: find methylation marks (groups)
+            - where on the genome the DNA has been _methylated_
+            - important epigenetic modification
+            - methyl groups only ever attached to 'C'
+            - affects which proteins are being expressed in the
+              cell
+            - Methyl marks can be passed on from one cell cycle
+              to another as cells divide
+            - method: split DNA into 2 identical samples
+              (aliquots)
+            - Bisulfite conversion on one sample: convert all
+              `C`s that are NOT Methaylated into `U`
+            - sequence again and comapre strands
+            - Need special aligners because the converted DNA (C
+              -> U conversion) doesn't match the ref genome we
+              usually align to.
+
+# 03 Computing
+    $MY_VIDEOS/bio/genomics/03-computing/01_what-is-computer-science.mp4
+    $MY_VIDEOS/bio/genomics/03-computing/02_algorithms.mp4
+    $MY_VIDEOS/bio/genomics/03-computing/03_memory-and-data-structures.mp4
+    $MY_VIDEOS/bio/genomics/03-computing/04_efficiency.mp4
+    $MY_VIDEOS/bio/genomics/03-computing/05_software-engineering.mp4
+    $MY_VIDEOS/bio/genomics/03-computing/06_what-is-computational-biology-software.mp4
+
+    - CS has 3 strands:
+      - Theory  
+      - Systems  
+      - Applications  
+
+    - Algorithms don't (neccessarily) need a computer. Eg
+      a cooking recipe is an Algorithm.
+
+    - He mentioned algorithms for finding local maximums / also
+      "bubble" sort.  
+
+    - Internal storage of DNA. (2 bits)
+        - Reduced dataset: {A, C, G, T}  
+        - To get 4-fold compression:
+            - A: 00 
+            - C: 01 
+            - G: 10 
+            - T: 11 
+
+    - Worked out a probability distribution for 10 bases around introns:
+        - "donor" intron :   typically has "GT"
+        - "acceptor" intron: typically has "AG"
+        - $MY_IMAGES/bio/intro-genomics/Intron-Probability-distribution.jpg
+
+    - Efficiency: accessing memory is a bit like a "travelling
+      salesman" problem. Want to minimise round-trips between
+      memory and hard-disk 
+
+    - interesting titbit: "RNA editing"
+        - sometimes some nucleotides in the RNA can be edited by
+          the cell. You have a piece of RNA that doesn't quite
+          match the DNA. Therefore the protein might be
+          different.
+        - Only affects 1 or 2 nucleotides. Not any nucleotide can
+          be changed into another. 
+
+    - RNA editing debacle. 
+        - Some researchers take a huge dataset and tried to find
+          examples of it.
+        - Approach: sequence DNA and RNA from the same person and
+          align both sequences to each other.  
+        - done recently, but the scientists didnt know the
+          software well. Thought they had discovered hundreds of
+          new examples of RNA editing.
+        - well the software normally has 1 mis-alignment per
+          1 million.  
+        - but in a "big data" dataset, this can yield 100s or
+          errors and seeming mis-matches between the DNA seq and
+          RNA seq.
+        - Moral: Check the software! Trust it but verify.  
+        - ### Evolution of translational omics
+            - Following a recent case involving premature use of
+              omics-based tests in cancer clinical trials at Duke
+              University, the NCI asked  IOM establish
+              a committee to recommend ways to strengthen
+              omics-based test development and evaluation.
+
+
+    - Tuexdo pipeline:
+        - turns reads into genes
+        - each gene has several "splice isoforms"
+        - each isoform can be expressed at a different level  
+        - NEW tuxedo suite of tools: Bowtie2, Hisat, StringTie,
+          Ballgown  (ie cufflinks is old...)
+        - Alignment is the most basic computational prob. But
+          different software systems give different answers (eg
+          BWA and Bowtie2). Problem isn't totally discrete and
+          well defined.  
+        - $MY_IMAGES/bio/intro-genomics/align-software-different-answers.jpg
+
+    - new technology to produce longer and longer reads. But isnt
+      software to actually process it yet.
+
+    - NOTE: if underlying SEQUENCING TECHNOLOGY has changed, the
+      software may no longer be giving correct results  ...
+
+# 04 Data Science
+    $MY_VIDEOS/bio/genomics/04-data-science/01_why-care-about-statistics.mp4
+    $MY_VIDEOS/bio/genomics/04-data-science/02_what-went-wrong.mp4
+    $MY_VIDEOS/bio/genomics/04-data-science/03_the-central-dogma-of-statistics.mp4
+    $MY_VIDEOS/bio/genomics/04-data-science/04_data-sharing-plans.mp4
+    $MY_VIDEOS/bio/genomics/04-data-science/05_getting-help-with-statistics.mp4
+    $MY_VIDEOS/bio/genomics/04-data-science/06_plotting-your-data.mp4
+    $MY_VIDEOS/bio/genomics/04-data-science/07_sample-size-and-variability.mp4
+    $MY_VIDEOS/bio/genomics/04-data-science/08_statistical-significance.mp4
+    $MY_VIDEOS/bio/genomics/04-data-science/09_multiple-testing.mp4
+    $MY_VIDEOS/bio/genomics/04-data-science/10_study-design-batch-effects-and-confounding.mp4

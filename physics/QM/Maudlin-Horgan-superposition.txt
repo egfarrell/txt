@@ -1,0 +1,127 @@
+### Youtube:
+    - Explaining QM | John Horgan & Tim Maudlin
+    - https://www.youtube.com/watch?v=7hJWOld5EsM
+
+- Great discussion on: 
+    - `superposition`, `entanglement`
+
+- see also: 
+    - $MY_NOTES/physics/QM/pure-mixed-entangle-product.txt
+
+### Entanglement
+    - Subtle: not every engangled state would lead to violations
+      of locality. But violations of locality always stem from
+      entangled states.
+    - Horgan:
+        - So you can have local forms of entanglement?
+    - Maudlin:
+        - Yes. You can have a single particle with a DOF for
+          position, and a DOF for spin. And these two can be
+          entangled, just for a SINGLE PARTICLE.
+        - But there's no non-locality because only one particle
+          is involved. To get non-locality we must do experiments
+          on 2 objects that are separated.
+    - aside:
+    - But see difference between entanglement and `measurement`:
+        - $MY_NOTES/physics/QM/Sabine-Entanglement.txt
+        - $MY_NOTES/physics/QM/Sabine-Entanglement-analysis-GPT.txt
+
+### Superposition
+    - Horgan: I've realised entanglement is a special form of
+      "`superposition`" (?)
+    - Maudlin: No! That's often said, but not correct!
+        - `Superposition` just means we have a `vector space`,
+          and in a 2D case, when you add one vector to another
+          you get a "superposition" of 2 vectors.
+        - And every vector is a superposition of other vectors in
+          infinitely many ways.
+        - So you can't say this state (vector) is a superposition
+          and that one isn't. They are ALL superpositions.
+        - But they're NOT all ENTANGLED though!
+        - A state is either entangled or it isn't.
+
+### interference (destructive)
+    - Tim makes good point:
+        - you open one slit,        you get    light.
+        - You open the other slit,  you get    light.
+        - You open both slits,      you get NO light.
+
+    - (Reminds me of the MIT QM class, with the rotating
+        polarisers. I was wondering how light can be cut off,
+        then appear again... but really it's just
+        interference?)
+
+### Wave function
+    - Don't call the `wave function` a probability WAVE.
+    - Call it a probability AMPLITUDE because you have to square
+      it to get a probability.
+    - You never get destructive interference between
+      probabilities, because probabilities are always positive.
+    - However at the level of AMPLITUDES (before you do the
+      squaring) you can get `destructive interference` there.
+        - Because the amplitudes are just like vectors.
+
+### Product states
+    - Prepare `state A` in room 1.
+    - Prepare `state B` in room 2.
+    - So you have "product" states: `AA`, `AB`, `BA` etc.
+    - You might think that's all the states you can have.
+        - But that's not true.
+    - You can have ENTANGLED states which are a superposition of
+      PRODUCT states. But "they" (the engangled states??)
+      themselves are not product states.
+        - ie, it's not possible to understand the entangled state
+          as just `(a state here) + (another state there)`
+        - ie it's NOT this part on it's own, plus this part on
+          it's own and the whole state is just the logical sum of
+          those two...
+
+### - Entangled states:
+    - they are: NON-PRODUCT states of separated parts of a system
+    - (You don't get this in classical physics)
+
+    - Einsteins problem: Einstein letter to Bohr:
+        - If I take any little piece of space, I should be able
+          to say what's happening there, completely independently
+          of what's happening anywhere else.
+        - (But that's what entanglement denies)
+
+
+### Give up Relativity?
+
+- Tim gave nice GHZ description:
+
+    - I finally get it
+        - $MY_IMAGES/physics/QM/Tim-GHZ-explanation.jpg
+
+    - Horgan:
+        - "Is there something to do with time here?"
+        - "The order of the observations?"
+
+    - Tim:
+        - You can put relativity into the mix. You can put the
+          detectors at spacelike separation. (ie there is no
+          fact-of-the-matter about time-ordering)
+
+        - But... in some theories you do need an order.
+        - David Albert explains this in "QM and Experience"
+
+        - But if you want to take that route, you have to give up
+          on Relativity. You need more STRUCTURE on space and
+          time than Einstein recognised. You have to go back to
+          something closer to Newton to get the theory to run.
+
+    - Tim likes Bohmian Pilot waves but hard to make it
+      compatible with Relativty.
+
+    - But remember, Einstein was never confronted with having to
+      violate Bell's inequality when he created SR and GR.
+        - So he didn't postulate extra structure to Spacetime
+            because he didn't need it!
+
+    - Bell(?): Why should people remain wedded to the Relativity
+      that existed before this stuff was confronted
+
+    - Tim: Quantum Computing guys just hide the big measurement
+      mystery of QM by adding a "measurement gate" to their
+      diagrams.

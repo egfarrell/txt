@@ -1,0 +1,71 @@
+# Computer Systems: A Programmer's Perspective
+Carnegie Mellon
+
+
+- $MY_BOOKS/CS/C/CSapp-Programmers-Perspective-3e-Global.pdf
+- $MY_BOOKS/CS/C/CSapp-Programmers-Perspective-3e.pdf
+
+- Course Overview      http://www.cs.cmu.edu/~213/schedule.html
+- Lectures             https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b96d90ae-9871-4fae-91e2-b1627b43e25e%22&view=0&page=1
+- Alternative Lectures https://www.youtube.com/playlist?list=PLpIxOj-HnDsPZIJYO4U9f-xRI8bBadaso
+- Also Berkeley:       https://inst.eecs.berkeley.edu//~cs61c/sp15/
+
+### Notes
+    - ./csapp/01-Overview.txt
+    - ./csapp/02-Bits-ints-Part1.txt
+    - ./csapp/03-Bits-ints-Part2.txt
+    - ./csapp/04-Floating-Point.txt
+    - ./csapp/05-Machine-Level-I-Basics.txt
+    - ./csapp/06-Machine-Level-II-Control.txt
+    - ./csapp/07-Machine-Level-III-Procedures.txt
+    - ./csapp/08-Machine-Level-IV-Data.txt
+    - ./csapp/09-Machine-Level-V-Advanced-Topics.txt
+    - ./csapp/10-Program-Optimization.txt
+    - ./csapp/11-The-Memory-Hierarchy.txt
+    - ./csapp/12-Cache-Memories.txt
+    - ./csapp/13-Linking.txt
+    - ./csapp/14-ECF-Exceptions-Processes.txt
+    - ./csapp/15-ECF-Signals-and-Nonlocal-Jumps.txt
+    - ./csapp/16-System-Level-I-O.txt
+    - ./csapp/17-Virtual-Memory-Concepts.txt
+    - ./csapp/18-Virtual-Memory-Systems.txt
+    - ./csapp/19-Dynamic-Memory-Allocation-Basic-Concepts.txt
+    - ./csapp/20-Dynamic-Memory-Allocation-Advanced-Concepts.txt
+    - ./csapp/21-Network-Programmin-Part-1.txt
+    - ./csapp/22-Network-Programming-Part-II.txt
+    - ./csapp/23-Concurrent-Programming.txt
+    - ./csapp/24-Synchronization-Basics.txt
+    - ./csapp/25-Synchronization-Advanced.txt
+    - ./csapp/26-Thread-Level-Parallelism.txt
+    - ./csapp/27-Future-of-Computing.txt
+
+
+### instructor comment
+    - assembly code - text 'form'
+    - object code   - binary 'form'
+    - one-to-one mapping between them
+
+### History 'x86'
+    - first one '8086', then '8286' etc
+    - is that the same as '286', '386', '486' etc?
+    - x86 is a bit like English - quirky and idiosyncratic
+    - x86 is 'CISC'
+        - Complex Instruction Set Computer (versus RISC)
+        - has 500 instructions, two big manuals
+
+### ARM (Advanced RISC Machine)
+      - Originally Acorn RISC Machine (Cambridge)
+      - Lower power requirements than x86 (cos instruction set is
+        simpler) and can be customised.
+
+### ISA - [I]nstruction [S]et [A]rchitecture
+    - higher level abstraction
+    - part of processor design you need to understand to write
+      assembly code. e.g. registers
+    - Microarchitecture: 
+        - actual low-level implementation of the architecture. 
+        - e.g. cache sizes, core frequency
+
+### Lecture 1
+    - ints aren't integers, floats aren't reals
+    - he used 'lldb' like a REPL! (print 40000 * 40000)

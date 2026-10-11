@@ -1,0 +1,541 @@
+2007 debate
+https://www.youtube.com/watch?v=KtHQGs3zFAM
+
+- I'm here with Jim Coplien and Bob Martin and we have two
+  interesting divergent opinions on the value of TDD. 
+- So let's open up the floor and hear you guys talk about it!
+
+2. Bob Martin: First thing to say is: I am sitting here next to
+   one of my heroes. I read Jim's book in 1991-1992, changed the
+   way I thought about software, changed the way I thought about
+   C++ in particular, so it's a great honor to be here. I think
+   we have a disagreement - I'm not sure, possibly, it may
+   a difference in perspective - but my thesis is that it has
+   become infeasible, in light of what's happened over the last
+   6 years, for a software developer to consider himself
+   "professional" if he does not practice test driven
+   development.
+
+- Jim Coplien: Well it may be good, because you did this at your
+  keynote yesterday: you said what you mean by "test driven
+  development". I have adopted a very strong position against
+  what particularly the XP community is calling "test driven
+  development". And I've audited this versus a lot of tutorials
+  at about 4 conferences in the past 6 months and they give
+  a very consistent story on what they mean. Here, it was
+  a little bit different yesterday, so maybe for the sake of
+  making this a meaningful conversation can you quickly reiterate
+  so we're on the same page.
+
+3. Bob Introduces his 3 laws of TDD and Jim Responds
+
+    - B: So I have 3 laws of test driven development. The first
+      one is: a test driven developer does not write a line of
+      production code until he has written a failing unit test,
+      and no production code can be written until there is
+      a failing unit test.
+
+
+    - the second law is, you do not write more of a unit test
+      than is sufficient to fail, and not compiling is failing.
+      So you cannot write very much of the unit test before you
+      write production code.
+
+    - The third law is you cannot write more production code than
+      is sufficient to pass the test. You cannot write a little
+      bit of unit test and then run off and write production
+      code. These three laws lock you into a cycle that is
+      perhaps 30 seconds long, and that means that you are
+      actually writing unit tests and production code
+      concurrently, with the tests perhaps 30 seconds to a minute
+      ahead. That is my definition.
+
+    - J: Per se, the concerns I have about TDD aren't problematic
+      to what you've just said in isolation, so if it's no more
+      and no less than that we may not have a big disagreement.
+      What my concern is, comes out of doing broad work with
+      a lot of clients and some of interactions with other
+      consultants and other scrum masters who have seen these
+      things happening in their project. And we've seen 2 major
+      problems: 
+        - one is that use of TDD without some kind of
+          architecture or framework into which you're working
+      - which was very strongly Kent's original position: you use
+        TDD to drive your architecture
+      - leads to a procedural bottom-up architecture because the
+        things you are testing are units.
+
+- We just had a discussion upstairs about "is TDD the same as
+  unit testing?" Well, no, it's a little more, but unit testing
+  was a great idea in Fortran, when you could build these layers
+  of APIs and the units of organization of the software were the
+  same as the units of testing, but today the units of
+  organization of the software are objects and we're testing
+  procedures and there is a little bit of a mismatch. Now, if you
+  are using the procedures to drive your architecture, I think
+  you are trying to build a 3 dimensional structure from
+  2 dimensional data, and you end up going awry. And one of the
+  things we see a lot, in a lot of projects, is that projects go
+  south on about their 3rd sprint and they crash and burn because
+  they cannot go any further, because they have cornered
+  themselves architecturally. And you can't refactor your way out
+  of this because the refactoring has to be across class
+  categories, across class hierarchies, and you no longer can
+  have any assurances about having the same functionality.
+
+- The other problem we've seen is that this destroys the GUI and
+  this is what Trygve [Reenskaug] and I talk a lot about, because
+  you have this procedural architecture kind-of in a JAVA class
+  wrapper; you no longer are driving the structure according to
+  domain knowledge and things that are in the user's conceptual
+  model of the world, which is where object orientation came
+  from. I mean even Kent, as he's very often said: "you can't
+  hide a bad architecture with a good GUI." The architecture will
+  always shine through to the interface, and I strongly believe
+  that, and that is why I believe we need something in the
+  infrastructure that gives you a picture of what the domain
+  model is out at the interface. Then, if I want to apply Uncle
+  Bob's 3 rules I probably don't have a problem with that, but
+  I want a starting place that captures this other dimension,
+  which is the structural dimension.
+
+4. Alright. But you do not accept the thesis that the practice of
+   test driven development is a pure requisite to professional
+   behavior in 2007.
+
+    - I absolutely do not accept that.
+
+5. OK. So we can come back to that one because I think that is an
+   interesting topic, just on the topic of professionalism, but
+   before we do that: there has been a feeling in the Agile
+   community since about '99 that architecture is irrelevant, we
+   don't need to do architecture, all we need to do is write
+   a lots of tests and do lots of stories and do quick iterations
+   and the code will assemble itself magically, and this has
+   always been horse shit. I even think most of the original
+   Agile proponents would agree that was a silliness. I think if
+   you went and talked to Kent now he would be talking about what
+   he always talked about: metaphor, whatever the heck that was.
+
+And in fact he says this, in "XP explained" or something, his page 131 of his
+book he says: "Yes, do some up-front architecture, but don't knock yourselves
+out".
+
+6. Sure. OK. But now let me come back and throw a different light on this. I
+think architecture is very important, I've written lots of articles and books
+about architecture, I am the big architecture freak. On the other hand I don't
+believe architecture is formed out of whole cloth. I believe that you assemble
+it one bit at a time, by using good design skills, by using good architectural
+skills, over the weeks and months of many iterations. And I think that some of
+the architectural elements that you create, you will destroy; you will
+experiment in a few iterations with different forms of architecture. Within 2 or
+3 iterations you will have settled into the architecture you think is right and
+then be entering into a phase of tuning. So my view of that is that the
+architecture evolves, it is informed by code that executes, and it is informed
+by the tests that you write.
+
+J: I do agree that architecture evolves, I do believe it's informed both by the
+code that you write and, maybe even earlier, by use cases that come in, that
+inform you about things that are relating to scope and other relationships; but
+if you try to do things incrementally, and do them literally incrementally,
+driven by your interaction with the customer without domain knowledge up-front,
+you run the risk that you do it completely wrong.
+
+I remember when I was talking with Kent once, about in the early days when he
+was proposing TDD, and this was in the sense of YAGNI and doing the simplest
+thing that could possibly work, and he says: "Ok. Let's make a bank account, a
+savings account." What's a savings account? It's a number and you can add to the
+number and you can subtract from the number. So what a saving account is, is a
+calculator. Let's make a calculator, and we can show that you can add to the
+balance and subtract from the balance. That's the simplest thing that could
+possibly work, everything else is an evolution of that.
+
+If you do a real banking system, a savings account is not even an object and you
+are not going to refactor your way to the right architecture from that one. What
+a savings account is, is a process that does an iteration over an audit trail of
+database transactions, of deposits and interest gatherings and other shifts of
+the money. It's not like the savings account is some money sitting on the shelf
+on a bank somewhere, even though that is the user perspective, and you've just
+got to know that there are these relatively intricate structures in the
+foundations of a banking system to support the tax people and the actuaries and
+all these other folks, that you can't get to in an incremental way. Well, you
+can, because of course the banking industry has come to this after 40 years. You
+want to give yourself 40 years? It's not agile.
+
+So you want to capitalize on what you know up-front, and take some hard
+decisions up front, because that will make the rest of the decisions easier
+later. Yes, things change; yes, architecture evolves; and I don't think you'd
+find anyone who will say "put the architecture in concrete". I also do not
+believe in putting the code in place, that is, the actual member functions, up
+front. You put the skin, you put the roles, you put the interfaces that document
+the structure of the domain knowledge. You only fill them out when you get a
+client who is willing to pay for that code, because otherwise you are violating
+Lean. So you do things "just in time," but you want to get the structure
+upfront, otherwise you risk driving yourself into a corner.
+
+7. So I would say that a little differently, and take exception to some of it. I
+would not very likely fill in the interfaces with abstract member functions or
+defunct member functions. I might create objects that will fill the place of
+interfaces. So, in Java terms, I might have an "interface-something" with
+nothing in it, but I am not going to load it with a lot of methods that I think
+might be implemented one day. That is something that I am going to let my tests
+drive, the requirements drive, and I am going to be watching it like a hawk to
+see if there is any kind of architectural friction that would cause me to split
+that interface.
+
+But the problem is: that's like saying that words have meaning apart from any
+definition. And so the fact that I call something a mule, without saying what a
+mule is, doesn't make it a mule. Like Abraham Lincoln said, "Calling a mule an
+ass doesn't make it one." And so the thing that gives meaning to stuff is the
+member functions as semantics. You don't want to go crazy and you don't want to
+be guessing, and here is where I agree with Kent. He says in the "XP Explained"
+book: "You don't want to be guessing" and that is true. But I do want to assert
+what I know and there are some things you just know about the structure of a
+telecom system, a banking system. You know that you don't build a recovery
+object. I was on a restructuring project in a large telecom company once where
+they were redoing a toll switch using object oriented techniques and modern
+computer science techniques, and I got assigned to work with the guy who was
+making the recovery object. Well this is ludicrous, recovery isn't an object,
+but yet his superficial knowledge of the domain let him do that. If you get down
+to understanding what the member functions of that are then you will see this
+isn't even an object. So you ask: "How do I know it's not an object? What are
+its member functions?" "Uh... to recover". "Great. That is a lot of help."
+Actually I think there are people who have capitalized on this and it's now
+called SOA. That is the danger.
+
+You want to have something there to give the object meaning.
+
+8. OK. And I would even agree with that. You need something there to give the
+object meaning. I am going to be really minimal about that.
+
+Me too. No disagreement.
+
+9. And then I am going to let executing code inform my future decisions, so I am
+not going to create a massive architecture, or a huge system based on
+speculation.
+
+That is right. No disagreement.
+
+10. So back to the beginning: how long would you spend before you started
+writing executable code. Let's say, on a system that will eventually wind up
+being two million lines of code?
+
+So, 2 million is, in my experience, pretty small. I am working with hundreds of
+millions. Before the first executing code... it depends a lot on the individual
+system, but let's say I were building a simple telecom system. What I would
+probably do, let's say I am doing it in C++, I would have at least constructors
+and destructors in place and be able to start to wire up important relationships
+between the objects and...
+
+11. Would you have tests, testing those wirings?
+
+I would have tests for those wirings. An obvious test is to make sure, when the
+system comes up and goes down, that the memory is clean, for example. Half an
+hour.
+
+12. Excellent. So where is our disagreement? Perhaps our disagreement is on the
+notion of TDD and professionalism. That was the second part.
+
+I think that is a separate disagreement, but maybe we can put this one to rest,
+this is nice. But the thing I want to make clear for the audience is that,
+again, I think when I am running into people that are doing things right, that
+avoid the kind of problems they talked about earlier, it's not TDD
+out-of-the-book or TDD out-of-the-box. So, people have found a way to move to
+what Dan North now calls BDD, for example, which I think is really cool (if you
+ignore the RSpec part and all the stuff which is kind of dragging it back to too
+low of a level).
+
+So there are a lot of people doing the right thing and my concern is that they
+are calling this good thing TDD and then people are going to buy books and they
+are going to look up TDD and they are going to find this old thing which is
+"architecture only comes from tests," which I have heard four times in tutorials
+in the past 6 months, and that is just, like you say, horse shit. But now, on to
+the professionalism issue, how would you know a professional if you saw one?
+
+13. They practice TDD? (smiling)
+
+"Professional," to me, is just someone who makes money for doing a job in that
+area.
+
+14. Yeah, I know, and I am going to push on that one, because I think that
+something our industry has lacked is a standard of professionalism.
+
+We'll take your definition as a starting point and then we can talk about that.
+
+15. But that is not actually my definition, I was joking. I think that nowadays
+it is irresponsible for a developer to ship a line of code that he has not
+executed in a unit test, and one of the best ways to make sure that you have not
+shipped a line of code that you have not tested is to practice TDD.
+
+J: I do disagree with that. Now, I think there is something deeper that is
+important, and let me attack this by example. As an example of something I could
+do as an alternative: I could wave my hands and say a lot of things about code
+inspections or pair programming and those are good and probably have more value,
+but it's kind of an independent discussion. But let me give you something that I
+think hits the nail on the head even more importantly. Let's look what a unit
+test is. What a unit test does is: looks at an AP of a procedure and kind of
+goes and hits the state space of the arguments and maybe hits a half a dozen of
+them, or a hundred or a few million of (2 to the 32nd power) or whatever, and so
+you're just doing hit and miss. That is really heuristic, you've got to be
+really lucky to find bugs doing that.
+
+What I think is more powerful is "design by contract." So you have
+preconditions, post conditions and invariants. Now, the technology isn't there
+in most languages. They haven't matured to the point where Eiffel has, where you
+can statically check these things, but you can build additional infrastructure
+to do that kind of thing. I think it has all the advantages TDD, there are these
+advantages (supposed advantages), about: I am going to think hard about the
+code, I am going to focus on the external view and so forth. And I have found,
+at least for me, that contracts do that more effectively than tests do.
+Furthermore, they actually give you broader coverage because you are covering
+the entire range of the arguments rather than just randomly scattering some
+values in there.
+
+Now, Bertrand Meyer actually taken this further and he has something called CDD,
+which is Contract Driven Development, where what he does is: he takes contracts
+and he kind of feeds random numbers at them and if they don't meet the
+preconditions you don't run them because you know that test will fail, but he
+tests if the post conditions hold after you run the test, and if they don't it's
+a bug. And they have actually done this. They have a tool that automatically
+runs tests. They have done this on the Eiffel library and they ran it about a
+week, they found 7 bugs in the 20 year old Eiffel library - that is kind of
+interesting. But it comes from a part of the code where you are expressing
+intentionality in a way that has hope of being traced back to something of
+business importance, and the problem about TDD, as most people practice it down
+at the class level, is that it's really, really difficult to trace those APIs at
+a class level sometimes all the way up to business significance.
+
+16. So I am having trouble with that. As I remember Eiffel - and I actually
+thought this discussion was put to bed a long time ago - as I remember Eiffel
+and "design by contract," you specify preconditions, post conditions and
+invariants around every method and around your class, the invariants of your
+class. Test driven development, or a suite of unit tests, virtually does the
+same thing, it specifies a set of incoming checks on the arguments, outgoing
+checks on the returned values, explores the state space, as you said, of the
+methods. So I always thought that they were one-to-one, you could always
+transform contracts into unit test or transformunit tests into contracts, with
+the exception that the direction of the dependencies is different, and you know
+that I am a big dependency freak. Unit tests depend on code, on production code,
+which I think is good, production code doesn't depend on unit tests; whereas
+contracts are smeared through the code, which bothers me.
+
+I think you are creating a dualism that needn't be created, in that there is one
+thing, which is the code, the code is the design, it's what's delivered,
+anything else is not Lean. In typical projects that use unit testing, the code
+mass is about the same as a test mass, and where there is code, there's bugs.
+You cut your velocity in half. There is well known examples, the most famous
+example is the ADA compiler where actually, use of test driven development
+increased the number of bugs in the code, because your code mass increases,
+because you have more tests. If you are using assertions you have this nice
+coupling, that is essential coupling, between the semantics of the interface and
+the code itself. Whereas with the tests the coupling is a lot messier and hard
+to manage. There was another point you've made I was going to react to...
+
+17. I am surprised that you think the code mass is different.
+
+J: In my experience, it is. If I look at how people actually use this: I like it
+when I see a JUnit spec that looks like assertions, but a lot of the time it
+isn't.
+
+18. I agree with that: there are messy tests, but there is messy code. I don't
+like arguments that the "tool is easy to abuse therefore you shouldn't use it,"
+that would invalidate almost everything...
+
+That isn't my argument. My argument is: how I am seeing this being used in broad
+practice - and they are not getting it.
+
+19. Well, OK. And do you see contracts being abused in broad practice?
+
+First of all, they are not being used enough...
+
+20. Right! By the way, since we've just got a couple of minutes left, just a
+trivia question - and I don't know the answer. Who is it that first used "DD"
+with some letter in front of it? We've got CDD now, we've got BDD, TDD and I
+don't know what else and the earliest one I can remember is Rebecca Wirfs-Brock,
+Responsibility Driven Design. Was there an earlier one?
+
+DD ... was a UNIX command to do disk dump... but that probably doesn't count.
+Thank you Bob, good seeing you again.
+
+
+### Comments
+
+
+Are we Growing or Building Systems?
+
+by Juan Bernabo / Feb 18, 2008 09:13
+
+Hi,
+
+I just wanted to say that I´m a fan of both guys, I´m also an architecture freak that is learning to try to let it go, and do architectural decisions to be made in a more just in time way.
+
+When Jim talks about TDD he talks about his assumption on TDD as testing units like in isolation not connected with business value, but pretty much TDD is evolving to include and start with the tests that drive an user story, pretty much like an executable specification, and not as just a unit test of a class in isolation, but exercising all the architecture by each functional test that specifies a user scenery.
+
+I think the bottom of this discussion is what is the right approach build or grow a system?
+
+And if we grow it, can we refactor the architecture as nature does when a tree grows from a seed to it´s final form?
+
+Why nature goes refactoring things, could it simply go trying to build trees instead of growing them?
+
+Christopher Alexander in his "The Nature of Order" collection talks about a process for architecture were they are generated and not searched, he even gets to say that alive or valid configurations were mathematically not possible to get by searching the configuration space, so the ONLY way to have systems that are healthy requires a generative approach.
+
+So he talks about two processes of creating an architecture, by search, something done upfront, and something done by generation, what he calls whole extension transformations, pretty much what I think is TDD, the only trouble with this is that the next transformation must be decided by us just in time "by evaluating the level of life that particular part of the system has", this is made by looking into ourselves and feel if that make us feel more alive as more beauty in it.
+
+I think this skill is not teached, and most of the great developers and architects that I know, they can tell, or evaluate this just by looking at code and say this "sucks" or this is beautyfull, but most developers don't use this information to guide their design decisions, and that maybe is getting us into trouble with TDD.
+
+Today technologies allows us to do architecture agnostic code, by using late wiring and IoC, so much more easily than 10 or 15 years ago we can effectively delay the decision about how to wire things even as late as in runtime. This allows me to be free on some of the decisions about architecture, maybe this were architectural decisions already made.
+
+So maybe Agile as in other disciplines is getting us to rethink our assumptions or methafors about all disciplines and we got to architecture.
+
+Probably architects should work in code driven by most important or architecture significant user stories or use cases to implement them and evolve architecture in a test driven way to evolve and stabilize them before they can talk about a settled architecture and look continuously for opportunities.
+
+Juan.
+Re: Are we Growing or Building Systems?
+
+by Henri Frilund / Feb 19, 2008 08:08
+
+I like gardening and I think there's some analogy in gardening to making software systems :)
+
+To get tomatoes from your own garden, you can't really build them. But it doesn't work that well if you just throw tomato seeds everywhere and start waiting either. Well yes, you might eventually get a tomato strand that will grow by itself, but it'll take a long time and you'll probably get really small tomatoes.
+
+So what I do when I want big tomatoes fast is I build an environment upfront that makes it possible for my tomatoes to grow fast and after that I nurture them by giving water etc.
+
+I think this principle applies for software making quite well because you really don't usually have the time to wait for the architecture to "grow" naturally so you set up an environment (domain model, main contracts, architectural borders etc) and then start "growing" the system using TDD or WhateverDD. This applies especially if the underlying domain is established (which it usually is).
+
+-Henri
+DbC an aspect of TDD
+
+by Michael Sawicky / Feb 20, 2008 03:23
+
+It is great to see these topics come into broader conversation; thank you! These days I am more and more surprised that we continue to frame Design by Contract and TDD unit testing as “doing virtually the same thing.” These practices are complementary, not exclusive of one another.
+
+The unit testing aspect of TDD provides specification-context that informs design and helps us control the increments of our design/development cycle. DbC on the other hand is a concise way to inspect and enforce design detail – using a mechanism that is more concise and efficient than external unit tests. Although it’s true that unit tests can be used to do what DbC does, it can be a lot more work to do so.
+
+DbC also provides value beyond the context of unit testing since assertions continue to be exercised during system testing and functional testing. Actually, when given a robust implementation, assertions can also be available for analyzing faults in production systems.
+
+Perhaps it would be helpful to describe DbC as an *aspect* of TDD, with the best “TDD value” being achieved when both unit testing and DbC are combined. Who knows, maybe having the discipline to use both practices together is a sign of a “highly evolved” professional?
+
+;-)
+
+Thanks again for covering these interesting topics!
+-MSaw
+Growing vs Building, Bottom up vs Top down
+
+by Paul Beckford / Feb 24, 2008 08:08
+
+Firstly great article. This type of stuff is the meat of what programming is all about and more articles like this would be welcomed. Thanks InfoQ.
+
+Bob and Jim have highlighted the issues as have most of the posters. I think it isn't either/or and that you need to do both. Where XP stepped in is it re-addressed the balance after years of focusing on top down methodologies like Booch, OMT, RUP etc. The truth is you often need very little top down design/architecture and that design should be validated through real stories and bottom up (TDD) code. I've heard this called producing a "walking skeleton" in the earlier iterations that provides a first pass architecture and provides a framework to hang other stories on TDD style.
+
+From what Jim has said, it sounds as though he does something similar. I never really understood Kent Becks Metaphor idea much, but an architectural "skeleton" is an easier idea to grasp and can serve the same purpose by communicating the "design in the large" to the entire team.
+
+To me the power of validating top down decisions (architecture) with bottom up code (TDD), is that you will get signs that your architecture doesn't fit your problem, very early on. These will manifest themselves as "architectural smells", and these smells provide an opportunity to evolve your architecture to something better (often simpler) at very low cost, since you haven't made a huge commitment (deferred commitment).
+
+Couple of points that haven't been raised yet:
+
+1) Domain Driven Design (DDD) plays well with TDD/BDD. Your "ubiquitous domain language" and high level domain model is often the starting place for your top down architecture/design, again validated bottom up.
+2) Ron Jefferies website is a great place to learn how to do TDD right from an expert. TDD provides opportunities for learning an discovery by "listening to your code". This "listening" is a skill and goes way beyond any hard and fast rules. To develop skill in anything takes time and practice:
+
+www.xprogramming.com/
+
+Ron discusses these issues also, and explores them through "experiments in code". He calls what Jim calls "architecture" "programming by intent". Which is a name I like because it stresses the fact that you think you know what your code should do. After doing TDD for a number of years I am still surprised by just how often my intent is actually sub optimal or just plain wrong.
+
+Paul.
+More on the TDD Controversy
+
+by Martin Jul / Feb 26, 2008 01:47
+
+TDD will ruin your architecture! When Jim Coplien said this in his presentation about Scrum and Architecture at the JAOO 2007 conference he really got people's attention. His statement sparked one of the most passionate debates at the conference. I posted a summary of the discussion on our blog here: The TDD Controversy.
+Fantastic
+
+by Stuart Charlton / Feb 26, 2008 03:51
+
+Two of my heroes!
+
+Jim's points should be remembered: Good architecture requires "stable intermediate forms" to evolve: structure matters! Secondly, you can't create an structure without denoting what it means to some degree. But as Bob says, just don't go too crazy with it.
+
+As for the 'professionalism' angle, I'm concerned this is rather harsh. I fear that it's true, though.
+
+The vast majority of software developers in my experience across multiple industries don't practice TDD, or if they do, they only make a token effort of it. Does that make them unprofessional? Perhaps. I'm not sure what good would come out of pointing it out.
+
+If you want to change the behaviour of the industry, start with providing incentives to IT hiring managers and project managers whose mindsets lead to dysfunctional behaviour in their projects. Calling their teams "unprofessional" might scare them into action, or it might just make them defensive ("we don't need the best, just what we can get" is one line I've heard numerous times.)
+Cedric Beust weighs in on Test-First, -Last, etc.
+
+by Deborah (Hartmann) Preuss / Mar 02, 2008 08:43
+
+I noticed that in our recent video on Design for Testability, Cedric Beust raised the topic of TDD, calling it "the elephant in the room." He asked those who don't write all their tests up front:
+
+    Don't you feel a bit dirty? What with all those books ... telling you you should be doing TDD, and otherwise you are not professional?
+
+    Is it just me? I try to do it... sometimes it feels right, sometimes it doesn't..."
+
+    ... am I doing something wrong, or is it ok?
+
+
+Of his own work on TestNG he notes that, although he does value TDD he actually seems to write only 10% of his tests up front, and he went on to look at some of his concerns with TDD.
+
+You can view this part of the talk around 32 minutes into the presentation.
+
+Cause and effect
+
+by Gordon Reynolds / Mar 04, 2008 05:58
+
+I'll start by admitting I haven't yet watched this debate, so I'm really just reflecting on the statements I see in other replies to this thread, e.g., that TDD/GUT = professionalism.
+
+I have been trying - in vain - for months, if not years, now to introduce a unit testing "ethic" in the team I work with. Easily the most common "reason" given is that there "just isn't time". But I detect an undertone of skepticism that is really the root of the problem: the developers here just don't see any positive value in it.
+
+What I finally realized is that it is insufficient to simply state that (1) it's an industry best practice, that (2) the likes of Martin Fowler and Robert C. Martin are advocates of the practice, so (3) please unit test. All such arguments are bound to fail in one way or another without first discussing what objective you hope to achieve by adopting the practice - and by showing that what developers are doing now FAILS to achieve those objectives, e.g., fewer bugs, better design, refactoring freedom. Advocating a practice in the abstract is tantamount to saying "just do it because I say so".
+
+So, IMHO, professionalism is not defined by practices, it is defined by the objectives those practices hope to achieve, and the mindset of the developer who adopts them. After all, it is fairly easy to generate useless unit tests; does that make you a "professional"?
+CDD vs. TDD
+
+by Tim Stewart / Mar 05, 2008 11:52
+
+Contracts from CDD are passive in that a contract violation is caught while running the product. Someone or something still has to exercise the code to catch the contract violations. That something might be a unit test. If you choose to exercise the code manually, you have your work cut out for you as you try to exercise all of the branches. CDD by itself is not enough. You need people or other code to exercise the system. If you use people, you need to document the various interactions required to test all of the branches of the code.
+
+BTW, when a contract violation occurs, can you continue running the product or is some exception thrown? Also, when a contract is violated, you may have a hard time tracing down why the contract failed. TDD addresses this very nicely by having isolated, stateless tests.
+
+Tests from TDD are active in that they can be run automatically. When a test fails, subsequent tests can still be run. When a test fails, it's easier to find out why.
+Re: CDD vs. TDD
+
+by Johannes Brodwall / Apr 05, 2008 11:12
+
+I have also only seen "passive contracts". But Cope hints in this interview (and elsewhere) about teams using some sort of tooling to exercise the contracts. I would very much like to see these tools demonstrated.
+
+My second difficulty with CDD is the fact that many methods are coupled in some way. Even with the humble Stack.push, how do you write a sufficient contract that doesn't mess up the object state in the process? (If you consider an answer, remember both to check "Stack.top == argument" and "Stack.pop; Stack.top = @pre.top")
+Re: CDD vs. TDD
+
+by Steven Shaw / Jun 28, 2010 07:09
+
+CDD sounded a lot like QuickCheck to me. These 'checks' are not performed at runtime but runs as 'tests'. Instead of choosing specific values to test, 100s or 1000s of test cases can be generated that conform to the constraints (preconditions), code is then run and failure to match the postconditions results in a failure where the generated values are reported. At least that's my understanding. QuickCheck like test frameworks are available in many languages.
+Re: Cedric Beust weighs in on Test-First, -Last, etc.
+
+by Esko Luontola / Dec 15, 2010 08:27
+
+"Of his own work on TestNG he notes that, although he does value TDD he actually seems to write only 10% of his tests up front, and he went on to look at some of his concerns with TDD."
+
+Could that and this be somehow connected? michaelfeathers.typepad.com/michael_feathers_bl...
+
+Also I don't agree with his notion that TDD would be useful only for beginners. On the other hand, I think that it requires lots of skill and practice to be able to use TDD effectively. Corey Haines sums it up quite nicely at www.vimeo.com/groups/7657/videos/3756344
+Re: Cause and effect
+
+by Dan Austin / Jun 20, 2014 10:30
+
+- Watching this debate years later, I'm motivated to respond to
+  this comment by the mention of Fowler and "Uncle Bob" in such
+  reverent tones. These two individuals have made a career out of
+  positioning themselves as thought leaders. The sheer arrogance
+  of the moniker "Uncle Bob", the 8th Light "you can be a master
+  like me" vibe is sickening. I find it particularly galling that
+  in this interview, Martin dares to directly say, in effect,
+  that anyone who doesn't follow the brain droppings of people
+  like him and Fowler should be considered "unprofessional."
+  People like you swallow that hook, line, and sinker, and then
+  badger your "less professional" coworkers. These people have
+  caused untold damage in their misguided attempts to promote the
+  "One True Way" of development, with themselves as the guiding
+  lights. Coplien here seems much more practical and balanced.
+  Martin and Fowler should dry up and blow away. Balance in all
+  things. TDD is not The Way(tm). Software is too complex to have
+  a single best way to do everything. Anyone who says otherwise
+  is a moron, despite any good ideas they may have.

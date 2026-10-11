@@ -1,0 +1,47 @@
+
+### gpgpu
+    - If you want to dig deeper, GPGPU is the act of a GPU
+      performing tasks normally handled by the CPU (processor).
+      Before GPGPU, data could be passed from the CPU to the GPU,
+      but not back. 
+    - GPGPU changes this and allows data to flow in both
+      directions. 
+    - This _bidirectional_ processing is hugely beneficial in
+      a wide variety of tasks relating to video, still image and
+      3D graphics.
+
+### Is a loop parallelizable?
+    - Simple test: If the results differ when the code is
+      executed backwards, the loop iterations are not
+      independent.
+    - BUT: This test alone is not sufficient
+
+### max speedup
+    - `s`   : time for serial fraction of work (the key)
+    - `1-s` : time for non-serial stuff that can be parallelised
+    - `p`   : number of processors
+
+    using 1 processor:
+        > T1 = s + (1-s) = 1
+
+    using T processors
+        > Tp = s + [(1-s) / p]
+
+    speedup ratio
+        > T1 / Tp <  1/s
+
+- which means if half of the stuff is paralleisable you still
+  achieve a speedup less than 2!!!!
+
+### Parallel programming courses
+    - Coursera parallel fundamentals https://www.coursera.org/learn/parallelism-ia/home/week/1
+    - Colfax How to course           https://colfaxresearch.com/how-series/
+    - Parallel programming course!   https://stanford-cme213.github.io/
+
+### Links
+    - Hackers delight book?
+    - cuda programming                  https://ulhpc-tutorials.readthedocs.io/en/latest/cuda/
+    - Combine MPI CUDA (2010)           https://arc.aiaa.org/doi/abs/10.2514/6.2010-522
+    - hn discussion numerical analysis  https://news.ycombinator.com/item?id=24574574
+    - Sheffield CPU parallel course     https://paulrichmond.shef.ac.uk/teaching/COM4521/
+    - kokkos tutorial / wiki            https://github.com/kokkos/kokkos/wiki/Introduction

@@ -1,0 +1,351 @@
+
+### On shell
+    - The phrase “on shell” comes from the mass shell, or more
+      precisely the `mass hyperboloid` in Minkowski spacetime.
+    - In relativistic mechanics, a free particle with mass *m*
+      must satisfy
+        - `E^2 - p^2 = m^2`  (using c = 1 units).
+    - If you plot energy versus momentum, all the physically
+      allowed 4-momenta for that mass lie on a `two-sheeted
+      hyperboloid` — a “shell” in momentum space.
+    - So a momentum vector on the mass shell satisfies the
+      physical dispersion relation, while a vector off the shell
+      does not.
+    - When early quantum field theorists (Dirac, Feynman, Dyson,
+      etc.) began manipulating propagators, they noticed that
+      virtual particles in internal lines violate this relation
+      — they have “off-shell” four-momenta. 
+        - Only the incoming and outgoing real particles in
+          a scattering amplitude are “on shell.” 
+        - The phrase then broadened: any configuration that
+          satisfies the dynamical equations (not just kinematic
+          mass relations) is “on shell.”
+    - From there, the idiom spread backward into CM and GR. When
+      a relativist says *the Hamiltonian is a boundary term
+      on-shell*, they mean that once the Einstein equations (the
+      gravitational field’s “mass shell”) are imposed, all the
+      bulk contributions cancel, leaving only boundary terms.
+    - So the genealogy is:
+        * 1930s: “mass shell” in relativistic particle physics
+        * 1940s–50s: “on/off-shell” in QFT for real vs. virtual
+          particles
+        * 1960s onward: adopted by field theorists and
+          relativists to mean “satisfying the equations of
+          motion.”
+    - It’s a delightful case of jargon evolving across subfields
+      — a fossil from the birth of QFT that now shows up
+      everywhere from Feynman diagrams to BH thermodynamics.
+
+
+### Synchronisation
+    - https://arxiv.org/html/2509.09361v1
+    - Poincaré’s synchronization and Einstein’s synchronization
+      may look similar at the procedural level, but they are
+      embedded in fundamentally different conceptual frameworks.
+      For Poincaré, synchronization is a convention,
+      a _convenient fiction_ layered over an underlying “true
+      time” defined by motion through the ether. The procedure
+      yields local time, an ”apparent” valuable time for
+      observers in uniform motion, but not the fundamental time.
+      Poincaré still assumed the ether. The procedure only
+      “works” because observers are ignorant of their absolute
+      motion through it. Synchronization is a pragmatic patch,
+      not a reconstruction of physics. Poincaré considers
+      synchronization to be an adjustment rule in the service of
+      celestial mechanics and longitude measurements
+      — a technical fix that makes dynamics manageable.
+    - For Einstein, synchronization is not a convention masking
+      reality — _it is what time means_. There is no hidden
+      “true” time. By declaring that the ether is superfluous,
+      Einstein promoted the synchronization procedure from
+      a convention to the operational definition of simultaneity.
+      There is no “true” time to compare against. The
+      light-signal procedure is definitive, not provisional. The
+      relativity of simultaneity emerges not as a correction but
+      as the core of the new kinematics.
+    - Even if Einstein had known Poincaré’s 1898 paper, the
+      conceptual leap from “conventional synchronization under
+      the ether” to “synchronization as the very definition of
+      time, with no ether” is so radical that appropriation does
+      not explain it. Thus, Einstein did not need Poincaré’s 1898
+      or 1900 procedure. The procedure was in the air: railway
+      clocks, telegraphy, and astronomical longitude. Everyone in
+      scientific Europe was aware of signal-based
+      synchronization. What Einstein did was to invert its
+      meaning: what for Poincaré was a practical fiction became,
+      for Einstein, the essence of time itself.
+
+### Check this book
+    - Jean-Marc Ginoux’s: Poincaré, Einstein and the Discovery of
+      Special Relativity: An End to the Controversy (2024)
+    - https://arxiv.org/html/2509.09361v1
+    - This book seeks to close the debate over the respective
+      roles of Poincaré and Einstein. Yet what is presented as an
+      "end" may instead invite a more careful analysis of how
+      similar equations can conceal divergent conceptions. 
+    - The aim here is not to rehearse priority disputes but to
+      show how Einstein's ether-free, principle-based kinematics
+      marked out a path that, unlike its contemporaries, became
+      the canonical form of special relativity. To this end,
+      I reconstruct side by side the 1905 derivations of Poincaré
+      and Einstein, tracing their similarities and, more
+      importantly, their differences. This paper reconstructs, in
+      a novel way, the 1905 derivations of Einstein and Poincaré,
+      highlighting their contrasting paths.
+
+
+### Special Relativity in General Frames
+    - Éric Gourgoulhon 
+    - https://www.amazon.com/Special-Relativity-General-Frames-Astrophysics/dp/3642372759/
+    - Jim Curry review(!)
+    - I like Woodhouse's book for SR. It is clear and it sets
+      problems so well that a student can use to demonstrate to
+      him(her)self a degree of understanding. 
+        - So, I wouldn't set aside that text entirely. It's very
+          good. 
+    - But this book from Gourgoulhon is of overwhelming interest.
+      Its presentation is very careful indeed, showing with
+      clarity not only what is true but why that is true. 
+    - It gives a coherent intellectual basis for SR. Questions
+      that might perplex a student are often answered without
+      ever having to be asked, simply because the whole logic is
+      set out so well. 
+    - Like Bourbaki, it doesn't just expose some techniques of
+      mathematical physics, it exposes them in "the right way"
+      and so facilitates a deeper understanding. 
+    - The text is very convenient because long sections of it can
+      simply be read directly with understanding often reducing
+      the need to stop and scribble out a calculation to verify
+      a result. The results offered are up-to-date and practical.
+    - The French school never ceases to amaze me with the care
+      and good sense they offer study materials to the rest of
+      us. In every generation, they have proven their quality. 
+
+### Robins: "Reciprocal Embedding"
+    - $MY_NOTES/physics/books/robins_reviews.txt
+    - Time-distance intervals are invariant in relativity only
+      via their embedding in the reciprocal transformations
+      demanded by two observers, each of which can declare
+      himself at rest, the other in motion.
+
+    - Without this `reciprocal embedding` of the Lorentz
+      transformations to achieve invariance, SR does not exist.
+
+
+### Bell's spaceship paradox
+    - This Paradox Took 17 Years To Solve. It's Still Debated.
+    - https://www.youtube.com/watch?v=PO4a2zO8zW8
+    - Interesting:
+        - SR can actually handle acceleration and accelerated
+          reference frames.
+        - (But it needs `CMIF`: Co-moving inertial frames)
+    - There are 3 frames of reference:
+        - Inertial (stationary) observer
+            - $MY_IMAGES/physics/Spacetime/Bell-spaceship-inertial-observer.jpg
+            - Reason for thread snap: Length contraction:
+              Spaceships contract. String is attached to both
+              spaceships and so snaps under tension.
+        - REAR Spaceship
+            - Reason for thread snap: Non simultaneous
+              acceleration?
+            - Rear sees front spaceship accelerate "too quickly".
+              Distance between both spaceships widens?
+        - FRONT Spaceship
+            - Reason for thread snap: Non simultaneous
+              acceleration?
+            - Front guy sees rear spaceship accelerate too
+              slowly. Distance between both spaceships widens?
+    - Interesting comment:
+        - Me: Basically accelerating objects CANNOT SHARE the
+          same reference frame?
+        - Your comment makes the same ASSUMPTION about the
+          problem that gives rise to the paradox.
+            - It assumes that any two objects that are
+              ACCELERATING at the same rate at the same time are
+              SHARING a reference frame.
+            - They are not.
+        - The only objects that can share a reference frame are
+          INERTIAL OBJECTS and only when their velocity vectors
+          are exactly identical in direction and magnitude at the
+          same time.
+            - If they're even slightly misaligned in any
+              direction or magnitude at a specific time, the two
+              inertial objects are officially in TWO DIFFERENT
+              REFERENCE frames, even by SR standards.
+        - Two spaceships traveling at exactly the same constant
+          speed in exactly the same direction (that is, their
+          velocity vectors are exactly equivalent) will agree on
+          how long they each are and how far apart they each are.
+            - They both share the SAME COORDINATE SYSTEM, and so
+              will measure each other and their separation on
+              that shared coordinate system.
+            - A third spaceship observing them, with an unequal
+              velocity vector, will disagree, because it is on
+              its own _boosted_ coordinate system.
+        - And likewise, by SR standards, all objects in
+          accelerating frames of reference are in their own
+          exclusive little club, regardless whether any other
+          objects not already dragged along for the ride have
+          otherwise equal acceleration functions.
+        - So the two spaceships accelerating "simultaneously" are
+          in their own exclusive reference frames and must
+          therefore be considered INDEPENDENTLY of one another.
+            - To an accelerating frame of reference, time AND
+              space translation matter.
+            - Two objects sharing the same acceleration function
+              MUST have the same position in both time AND space
+              in order to share a common reference frame.
+            - If the functions are displaced in either term (time
+              or space), then the objects are in SEPARATE
+              reference frames.
+
+
+### Bell Spaceship: GPT Analysis 1 
+    - Me: What is the difference between
+        - the COORDINATE based Lorentz-FitzGerald contraction and
+        - the PHYSICAL Lorentz-FitzGerald contraction?
+    - key:
+        - ChatGPT seems to be saying it's actually two different
+          ways of understanding the SAME effect. But from Tim
+          Maudlin, I thought they were two separate effects?
+    - ChatGPT
+        - The Lorentz-FitzGerald contraction, also known as the
+          'Lorentz contraction' or 'length contraction', is
+          a phenomenon predicted by SR.
+        - According to SR, when an object moves at a significant
+          fraction of the speed of light relative to an observer,
+          its length appears shortened in the direction of
+          motion.
+        - There are two common ways to describe the
+          Lorentz-FitzGerald contraction:
+            - the coordinate-based approach and
+            - the physical approach.
+        - COORDINATE-BASED Lorentz-FitzGerald contraction:
+            - In this approach, the Lorentz-FitzGerald
+              contraction is described in terms of coordinate
+              transformations between different reference frames.
+            - When an object is moving relative to an observer,
+              the coordinates of its endpoints are transformed
+              using the Lorentz transformation equations.
+            - These equations incorporate the relativistic
+              effects of time dilation and length contraction.
+              From the perspective of the observer, the object's
+              spatial extent in the direction of motion appears
+              contracted.
+        - PHYSICAL Lorentz-FitzGerald contraction:
+            - The physical approach focuses on the physical
+              properties of the moving object itself.
+            - In this approach, when an object moves at
+              relativistic speeds, its constituent particles
+              undergo a physical contraction in the direction of
+              motion.
+            - This contraction is not merely an artifact of
+              coordinate transformations but represents an actual
+              physical reduction in size.
+            - The physical Lorentz-FitzGerald contraction arises
+              from the relativistic effects on the motion of
+              _charged particles_ within the object.
+                - As an object accelerates, its charged particles
+                  experience a _change in momentum and emit
+                  electromagnetic radiation_.
+                - This radiation exerts a drag force on the
+                  particles, causing them to bunch together in
+                  the direction of motion and giving rise to the
+                  contraction effect.
+        - Both the coordinate-based and physical descriptions of
+          the Lorentz-FitzGerald contraction lead to the same
+          predictions and are consistent with each other.
+        - They are two different ways of understanding the SAME
+          underlying phenomenon.
+        - The coordinate-based approach emphasizes the
+          mathematical transformations between reference frames,
+          while the physical approach focuses on actual physical
+          processes occurring within the moving object.
+
+
+### Bell Spaceship: GPT Analysis 2 (six months later, GPT 4o)
+    - Yes, you are correct. The thread would indeed need to
+      expand as seen in the spaceships' frames to combat the
+      tension it feels. Here is the corrected explanation: 
+
+    - WHY DOES THE THREAD SNAP?
+    - In Bell's spaceship paradox, the thread snaps due to the
+      following reason:
+        - As the spaceships accelerate, they maintain a constant
+          distance in their initial inertial frame. However, due
+          to the principles of SR, the distance between them as
+          measured in the instantaneous rest frame OF EITHER
+          SPACESHIP increases.
+        - The Lorentz contraction effect is relative to the rest
+          frame of the accelerating objects. Since the spaceships
+          are accelerating and thus changing frames, each
+          spaceship sees the other moving away more quickly.
+        - The constant acceleration leads to a situation where
+          the thread, which would need to expand as seen in the
+          spaceships' frames to match the increasing distance
+          between the spaceships, experiences tension and
+          eventually snaps.
+
+    - In essence, from the perspective of the inertial frame in
+      which the spaceships were initially at rest, the
+      spaceships' simultaneous acceleration keeps the distance
+      between them constant. However, in the rest frame of the
+      accelerating spaceships, the distance between the
+      spaceships increases. The thread, which cannot physically
+      expand to accommodate this increasing distance, experiences
+      tension and snaps. Corrected Conclusion
+
+    - The thread snaps not because of a split in the types of
+      contraction but because of the relativistic effects of
+      maintaining a constant distance during simultaneous
+      acceleration. The notion of coordinate-based and physical
+      Lorentz-FitzGerald contraction, as highlighted by Maudlin,
+      helps illustrate the complexities of relativistic motion,
+      but the snapping of the thread is fundamentally due to the
+      relativistic tension arising from the ships’ constant
+      distance in their original rest frame versus the need for
+      the thread to expand in their new accelerated frames.
+
+### Minkowski not isotropic!
+    - $MY_NOTES/physics/spacetime/Maudlin-Philosophy-Physics-annotate.txt
+    - Minkowski space-time is _NOT ISOTROPIC_ in the same way as
+      Euclidean space.
+        - DIFFERENT DIRECTIONS in Minkowski space-time can have
+          a different geometrical flavor.
+        - This allows Minkowski space-time to explain the
+          behavior of light.
+
+
+### Sean Carroll: Simultaneity: SR Reference frames
+    - (Good, I always wondered about this)
+    - key:
+        - we can "talk" about simultaneity but that's not the
+          same as a universal physical simultaneity.
+    - Question:
+        - According to SR, we can't talk about what's happening
+          _now_ on Kepler 54b.
+        - But what if the 'Planet Federation' designated a zero
+          coordinate in spacetime, and sent spaceships with
+          perfectly sychronised clocks to numerous planets...
+          etc...
+    - Sean:
+        - Sure... you can definitely layout a "reference frame"
+          in SR / GR...
+        - The only claim of Relativity is there's _nothing
+          special_ about your reference frame.
+        - If the federation wants to lay out one reference frame
+          which we use to talk about what's happening at one
+          moment on this planet and some other planet, there's
+          nothing to stop the Klingons from laying out
+          a completely different frame which is tilted in
+          spacetime wrt to the first one.
+        - Either one of those is perfectly ok.
+        - There's nothing in SR that says we can't "talk" about
+          simultaneity.(!)
+        - IT'S JUST THAT IT'S NOT OBJECTIVE, NOT UNIVERSAL.
+            - It's not builtin to spacetime itself. It's just
+              a choice individual people choose to make.
+
+### Bergson's critique of SR:
+    - $MY_NOTES/physics/metaphysics/Bergson.txt
+

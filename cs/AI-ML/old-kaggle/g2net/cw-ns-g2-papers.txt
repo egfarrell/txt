@@ -1,0 +1,218 @@
+
+
+### INBOX
+    - Good: analog audio sounds to GWs (in zotero) https://arxiv.org/abs/2201.03683
+    - Wave-U-Net: Multi-Scale Neural Network for Audio Source Separation (for iSTFT) https://arxiv.org/abs/1806.03185
+    - [Bayley et al. (2019) 260 (PRD)] (Unmodelled searches) A very weakly modelled search for weak psuedo-sinusoidal continuous signals; Uses the Viterbi algorithm to efficiently find the maximum sum of power/ statistic across a time-frequency plane (hence SOAP); Requires no templates and runs on “raw” GW data; Is exceptionally good at finding detector line features (also annoying); Extension work applies a CNN to the output for better signal vs line discrimination;
+
+
+### Competition Organisers
+    - Rodrigo Tenorio 
+        - https://orcid.org/0000-0002-3582-2587
+
+    - Michael J. Williams (PhD student)
+        - https://orcid.org/0000-0003-2198-2974
+        - https://scholar.google.ch/citations?user=xVRsHDUAAAAJ&hl=en&oi=sra
+
+    - Chris Messenger
+        - https://orcid.org/0000-0001-7488-5022
+        - https://scholar.google.co.uk/citations?user=EWgF9qwAAAAJ&hl=en
+
+
+
+### Papers
+    - 2022: Removal of non-Gaussian noise transients                                        https://arxiv.org/abs/2105.09933
+    - 2022: All-sky search: Layperson summary                                               https://www.ligo.org/science/Publication-O3AllSkyCW/
+    - 2022: All-sky search for continuous gravitational waves from isolated neutron stars   https://arxiv.org/abs/2201.00697
+    - 2022: ML Gravitational-Wave Search Mock Data Challenge                                https://arxiv.org/abs/2209.11146
+    - 2022: Status and perspectives of Continuous Gravitational Wave searches               https://arxiv.org/abs/2202.01088
+    - 2022: Searches for GWs from Known Pulsars at Two Harmonics                            https://arxiv.org/abs/2111.13106
+    - 2021: Search Methods for CGW Signals from Unknown Sources                             https://arxiv.org/abs/2111.12575
+    - 2020: Enhancing gravitational-wave science with machine learning                      https://arxiv.org/abs/2005.03745
+    - 2020: Camk: GW constraints on the equatorial ellipticity of millisecond pulsars       https://arxiv.org/abs/2007.14251
+    - 2019: Convolutional neural networks: a magic bullet for gravitational-wave detection? https://arxiv.org/abs/1904.08693
+    - 2019: Deep-Learning continuous gravitational waves                                    https://arxiv.org/abs/1904.13291
+    - 2018: Deep Learning for real-time gravitational wave detection                        https://www.sciencedirect.com/science/article/pii/S0370269317310390
+
+
+### 2022: Removal of non-Gaussian noise transients
+    - https://www.aei.mpg.de/continuouswaves/Gating2021
+    - https://arxiv.org/abs/2105.09933
+    - The core idea of gating is to detect and remove glitches in
+      the time-domain.
+    - Typically gating in preparation for transient signal
+      searches tends to be less aggressive in removing data than
+      the gating in preparation for persistent signal searches,
+      by using shorter gates and higher thresholds. With this
+      approach a number of glitches survive, increasing the false
+      alarm rate, but transient signals that may happen near
+      glitches are not discarded together with the glitch.
+      Persistent signals on the other hand are always-on, thus
+      even with the most aggressive cleaning, only a small frac-
+      tion of signal is removed.
+    - In this Section we describe our gating method that presents
+      two novelties with respect to publicly available gating
+      methods: 1) the adaptive determination of the gate duration
+      2) the self-adjusting amplitude threshold for
+      gate-identification, based on a iterative data-quality
+      check of the gated data.
+    - For each chunk the following steps are taken:
+        - high-pass the data with an 8th-order Butterworth filter
+          at 10 Hz. Since the released Advanced LIGO data is not
+          to be used for astrophysical searches below 10 Hz, we
+          refer to this as the input data
+    - Gating also mitigates artefacts introduced by glitches at
+      the frequencies cleaned-out in the frequency domain. The
+      line-cleaning procedure used in many continuous- wave
+      searches substitutes the data at frequency bins that have
+      been flagged to harbour disturbances, with Gaus- sian
+      noise. In these bins fake SFT data is created with
+      a standard deviation consistent with the noise level esti-
+      mated based on the real data, in nearby-frequency bins. If
+      the data in these nearby bins is quite Gaussian, the fake
+      noise will look like a realisation of noise from the nearby
+      bins. But if the nearby noise has significant non- gaussian
+      contributions, the fake noise will not look at all like the
+      noise in the nearby bins, and in the pres- ence of loud
+      glitches, it will be higher. The gating re- moves these
+      non-gaussian contributions and, with them, this type of
+      problem
+    - We apply our gatestrain to the O3a public data with minimal
+      changes in parameters with respect to the O1/O2 data, in
+      order to allow for a slightly more aggressive gating. This
+      is justified because the O3 data is _significantly more
+      glitchy_ than the data from the two previous Advanced LIGO
+      runs.
+    - There is a caveat: [31] exclude SFTs with a total gate
+      duration longer than 30 s. The data zeroed-out in this way
+      is included in the count given in the last two columns of
+      Table II. In order to make a fair comparison we also adopt
+      this criterium and zero-out the entire SFT when our gate
+      duration is longer than 30 s. We include this data in the
+      zeroed-out count in the last columns of Table II for the
+      gatestrain method. With this convention gatestrain
+      preserves 222 h of data that the self-gating gates instead
+      remove.
+    - We also recover the fifteen isolated continuous-wave
+      hardware injections below 2 kHz [33] using the F-statistic
+      with comparable efficiency in both data sets. Like [31] we
+      too could not recover the signal at 12.34 Hz due to the
+      high noise in this frequency range. The relative gain in
+      detection statistic with respect to [31] is a few percent.
+    - While the pyCBC method of [13] is proven perfectly adequate
+      for compact-binary-coalescence searches in O1 and O2, for
+      continuous-wave searches our gatestrain method keeps more
+      data untouched.
+
+
+### 2019: Convolutional neural networks: a magic bullet 
+    - https://arxiv.org/abs/1904.08693
+    - CURRICULUM TRAINING
+        - However, if this r 3-dependency is modeled cor- rectly
+          when sampling parameters for simulating training data,
+          a large fraction of the data will be barely above the
+          detectability threshold. This makes it hard for the
+          machine learning methods to actually learn anything.
+        - One common approach to address this problem is to split
+          the training into diferent phases, frst training on
+          “easy” examples (in this case events with strong GW
+          signals), and then gradually replacing or complementing
+          the training set with “harder” (i.e., fainter)
+          examples. 
+        - In our experiments, however, this so-called _curriculum
+          learning_ [61] did not lead to relevant improvements of
+          the fnal performance.
+    - NORMALISATION
+        - As usual for CNNs, before feeding an example time
+          series x as input during training, validation, and test
+          time, we nor- malize it via (x − µ)/σ, where µ and
+          σ are computed as the medians of the mean and standard
+          deviation of each individ- ual example in the training
+          set.
+    - POST-PROCESSING
+        - Finally, we apply two postprocessing steps to the raw
+          network output: smoothing and thresholding. To smooth
+          the output time series, we apply a rolling average as
+          a convolution with a rectangle function. The window
+          size (i.e., width) of this rectangle function can be
+          tuned depending on the metric we want to optimize (see
+          next section). Smoothing removes short spikes, which
+          otherwise could be confused with the presence of
+          signals. By default, we choose a window size of 256
+          time steps. In the subsequent thresholding step, the
+          smoothed output is mapped from (0, 1) to {0, 1}
+          depending on whether it exceeds a threshold t. 
+
+
+### 2022: Status perspectives of CW searches               
+    - $MY_ZOTERO/storage/69EPPFKP/2022-Status\ and\ perspectives\ of\ Continuous\ Gravitationa.pdf
+    - Potential targets for Earth-based detectors are _galactic
+      sources_.
+    - All sky surveys
+        - The frequency investigated ranges from 10 to 2048 Hz
+          and from −10−8 to 10−9 Hz/s for the first frequency
+          derivative, each pipeline covers a subset of this
+          parameter space except for the FrequencyHough. 
+        - The frequency range is wide enough to cover most of the
+          _expected sources_: young and energetic NS, millisecond
+          pulsars and signals from r-mode oscillations.
+        - The search results are generic and are valid for any
+          quasi-monochromatic, persistent signal characterized by
+          the parameters investigated in this search following
+          the linear phase evolution in Equation (29). 
+        - No GW observation has been reported, and the _best
+          constraint_ on the strain amplitude at the 95%
+          confidence level is ∼1.1 × 10^(25) in the 100–200 Hz
+          frequency range. This is the first all-sky search using
+          Advanced Virgo data.
+
+
+
+### 2022: ML Gravitational-Wave Search Mock Data Challenge                                
+    - https://arxiv.org/abs/2209.11146
+    - Of these, 4 are ML algorithms. We find that the best
+      machine learning based algorithms are able to achieve up to
+      95% of the sensitive distance of matched-filtering based
+      production analyses for simulated Gaussian noise at
+      a false-alarm rate (FAR) of one per month. In contrast, for
+      real noise, the leading machine learning search achieved
+      70%. 
+    - To improve the state-of-the-art, machine learning
+      algorithms need to reduce the false-alarm rates at which
+      they are capable of detecting signals and extend their
+      validity to regions of parameter space where modeled
+      searches are computationally expensive to run. 
+    - Based on our findings, we compile a list of _research
+      areas_ that we believe are the most important to elevate
+      machine learning searches to an invaluable tool in
+      gravitational-wave signal detection.
+
+### 2021: Search Methods for CGW Signals from Unknown Sources
+    - https://www.mdpi.com/2218-1997/7/12/474
+    - CW searches require a very fine parameter-space resolution
+      in order not to miss a signal, making the computing cost of
+      a matched-filtered search unviable.
+    - As a result, searches for CW signals from unknown sources
+      tend to follow a _hierarchical approach_
+    - See page 11 for ML methods.
+
+
+### 2022: Searches for GWs from Known Pulsars at Two Harmonics                            
+    - https://arxiv.org/abs/2111.13106
+
+### 2020: Enhancing gravitational-wave science with ML
+    - https://iopscience.iop.org/article/10.1088/2632-2153/abb93a
+    - https://arxiv.org/abs/2005.03745
+    - GLITCH CLASSIFICATION
+        - The first step in the characterization of _detector
+          transient noise_ is to distinguish the glitches from
+          potential astrophysical signals and then classify them
+          into different families. 
+        - Deep Convolutional Neural Networks [49, 50] (CNNs) are
+          extremely promising for glitch classification based on
+          time-frequency representations. CNNs are designed to
+          extract features from 2D matrices, such as images, and
+          use these features for classification purposes. 
+        - Feeding time-frequency transforms, Omega Scans [51],
+          and Q-transforms [52] to a CNN-based deep network is an
+          effective approach to glitch classification.

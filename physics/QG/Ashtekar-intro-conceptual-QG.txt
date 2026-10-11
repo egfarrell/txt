@@ -1,0 +1,580 @@
+$MY_BOOKS/Physics/QG/Einstein-Studies-02-Conceptual-Problems-QG.pdf
+See also:
+$MY_BOOKS/Physics/QG/Rovelli-2000-Notes-for-a-brief-history-of-quantum-gravity.pdf
+
+KEY:
+    - dual role of the metric: determines spacetime geometry 
+    - but ALSO 
+    - an analog of the Newtonian potential
+
+# Introduction: The winding Road to Quantum Gravty
+- by Abhay Ashtekar
+- (January 1990)
+
+> Traveler, there are no paths; Paths are made by walking.
+> Antonio Machado
+    - Hmmm, similar to:
+    - Hans Urs von Balthasar's “Holy Saturday” theology
+        - Easter: He Walked Where There Was No Path
+
+- GR and quantum theory are among the greatest intellectual
+  achievements of this century. Each has profoundly altered our
+  conceptual understanding of the physical world.
+    - Furthermore, each has successfully described the physical
+      phenomena in its own domain to an astonishing degree of
+      accuracy. And yet, they offer strikingly different pictures
+      of physical reality.
+
+- Indeed, at first one is surprised that physics could keep
+  progressing in the face of so deep a conflict. The reason of
+  course is the "accidental" fact that the fundamental constants
+  in our universe conspire to make the Planck length so small and
+  Planck energy so high compared to laboratory scales.
+
+- Because of this we happily maintain a schizophrenic attitude,
+  using the precise, geometric picture offered by GR for cosmo
+  and astro phenomena, and the QM world of chance and intrinsic
+  uncertainties when dealing with atomic and subatomic particles.
+
+- Although this strategy is appropriate for practical purposes,
+  it is highly unsatisfactory from a conceptual viewpoint.
+  Everything from our previous physics experience indicates that
+  both pictures must be approximations; special cases that arise
+  as appropriate limits from a single, universal theory.
+
+- That theory must therefore represent a synthesis of GR and QM.
+  This would be the quantum theory of gravity.
+    - Not only should it correctly describe all known physical
+      phenomena, but it should also adequately handle the Planck
+      regime.
+    - This is the future theory that we invoke when faced with
+      phenomena, such as the big bang and the final state of
+      black holes, where the worlds of GR and QM must unavoidably
+      meet.
+
+- Research in QG dates back at least to the thirties when the
+  necessity of _quantizing the gravitational field_ was first
+  analyzed in some detaiL
+
+- However, QG really only "took off" in the late fifties. The
+  general developments since then loosely represent THREE STAGES,
+  each spanning roughly a decade. The purpose of this chapter is
+  to present a broad sketch of these developments.
+
+### First stage
+
+- Firstly, there was EXPLORATION. The goal was to treat gravity
+  like any other physical field. The EM field had been
+  successfully quantized using two approaches:
+
+    - _CANONICAL_ approach:
+    - electric and magnetic fields obeying Heisenberg's
+      uncertainty princIple are at the forefront, and quantum
+      states arise naturally as gauge-invariant functionals of
+      the vector potential on a spatial three-slice.
+        - Another view:
+        - $MY_BOOKS/Physics/QG/Rovelli-Brief-History-QG.pdf
+        - The canonical line of research is the attempt to
+          construct a quantum the- ory in which the Hilbert space
+          carries a representation of the operators corresponding
+          to the full metric, or some functions of the metric,
+          without background metric to be fixed. The program was
+          set by Bergmann and Dirac in the fifties. Unraveling
+          the canonical structure of GR turned out to be
+          laborious. Bergmann and his group, Dirac, Peres,
+          Arnowit Deser and Misner completed the task in the late
+          fifties and early sixties. The for- mal equations of
+          the quantum theory were then written down by Wheeler
+          and DeWitt in the middle sixties, but turned out to be
+          too ill-defined. A well defined version of the same
+          equations was successfully found only in the late
+          eighties, with loop quantum gravity
+
+
+    - _COVARIANT_ APPROACH:
+    - one first isolates and then quantizes the two radiative
+      modes of the Maxwell field in space-time, without carrying
+      out a (3+1)-decomposition, and the quantum states naturally
+      arise as elements of the Fock space of photons.
+        - NOTE: The term "covariant" is thus somewhat misleading.
+          It may nonetheless be used to distinguish this approach
+          from the canonical method since it does not involve
+          a (3+1)-decomposition of space-time.
+        - Another view:
+            - $MY_BOOKS/Physics/QG/Rovelli-Brief-History-QG.pdf
+            - The covariant line of research is the attempt to
+              build the theory as a QFT of the fluctuations of
+              the metric over a flat Minkowski space, or some
+              other background metric space. The program was
+              started by Rosenfeld, Fierz and Pauli in the
+              thirties. The Feynman rules of GR were laboriously
+              found by DeWitt and Feynman in the 60s. t’Hooft and
+              Veltman, Deser and Van Nieuwenhuizen, found firm
+              evidence of non-renormalizability in the 70s. Then,
+              a search for an extension of GR giving
+              a renormalizable or finite perturbation expansion
+              started. Through high derivative theory and
+              supergravity, the search converged successfully to
+              string theory in the late eighties.
+
+- Attempts were made to extend these techniques to GR. In the EM
+  case the two methods are completely equivalent. There is only
+  a change of emphasis when going from one to the other.
+
+- However in the gravitational case, the difference is profound.
+  This is not accidental. The reason is rooted in one of the
+  essential features of GR:
+    - namely the dual role of the space-time _metric_.
+
+- To appreciate this let us begin with field theories in
+  Minkowski space-time, say Maxwell's theory.
+    - Here, the basic dynamical field is represented by a tensor
+      field `F_μν` on Minkowski space.
+    - The space-time geometry provides the kinematical arena on
+      which the field propagates. The background, Minkowskian
+      metric provides the light cones and the notion of
+      causality.
+    - We can foliate this space-time by a one-parameter family of
+      space-like three-planes, and analyze how the values of the
+      electric and magnetic fields on one of these surfaces
+      determine those on any other surface.
+    - The isometries of the Minkowski metric let us construct
+      physical quantities carried by EM waves such as fluxes of
+      energy, momentum, and angular momentum.
+
+- In GR, by contrast, there's no background geometry. The
+  space-time metric itself is the fundamental dynamical variable.
+
+- On the one hand, it's analogous to the Minkowski metric in
+  Maxwell's theory;
+    - it determines space-time geometry, provides light cones,
+      defines causality, and dictates the propagation of all
+      physical fields (including itself).
+
+- On the other hand, it is the analog of the _Newtonian
+  gravitational potential_, and therefore the basic dynamical
+  entity of the theory, similar, in this respect, to the `F_μν`
+  of Maxwell's theory.
+
+- This dual role of the metric is a precise statement of the
+  heart of GR:
+    - the _equivalence principle_.
+    - It is this feature that is largely responsible for the
+      powerful conceptual economy of GR, its elegance and
+      aesthetic beauty.
+    - However, this feature also brings many problems with it.
+        - We can already see in the classical theory several
+          manifestations of them.
+        - Eg, it is because of the absence of a background
+          geometry that it is so difficult to analyze
+          singularities of the theory and to define the energy
+          and momentum carried by gravitational waves.
+    - Since there is no 'a-priori' space-time, to introduce basic
+      notions such as causality, time, and evolution, one must
+      first solve dynamical equations and construct a space-time.
+    - As an extreme example, consider black holes, whose
+      definition requires the knowledge of the causal structure
+      of the ENTIRE space-time.
+        - To calculate if the given initial conditions lead to
+          the formation of a black hole, one must first obtain
+          their maximal evolution, and, using the causal
+          structure detennined by _that_ solution, ask if its
+          future infinity has a past boundary. (???)
+
+- Because there is no longer a clean separation between the
+  kinematical arena and the dynamics, substantial care is
+  therefore already needed in the classical theory when
+  formulating even basic physical questions.
+
+- In QM the problems become even more serious.
+    - Recall that because of the uncertainty principle, already
+      in nonrelativistic QM, particles don't have well-defined
+      trajectories;
+    - time-evolution only produces a probability amplitude `Ψ(x,
+      t)`, rather than a specific trajectory, `x(t)`.
+
+- Similarly, in QG, even after evolving an initial state, one
+  would not be left with a specific spacetime.
+
+- In the absence of a space-time geometry, how is one to
+  introduce habitual physical notions such as causality, time,
+  scattering states, and black holes?
+
+- So the canonical and the covariant approaches have adopted
+  dramatically different attitudes to face these problems.
+
+- In the CANONICAL approach, one notices that, in spite of the
+  above conceptual difficulties, the Hamiltonian formulation of
+  GR is well-defined, and one attempts to use it as a stepping
+  stone to canonical quantization.
+    - One wants to construct the mathematical framework first and
+      then use it to suggest a physical interpretation.
+    - The fundamental canonical commutation relations are to lead
+      us to the physical uncertainty principle.
+    - The MOTION generated by the Hamiltonian is thought of as
+      TIME EVOLUTION.
+    - The fact that certain operators on the fixed ("spatial")
+      three-manifold commute is supposed to capture the
+      appropriate notion of causality.
+    - The emphasis is on preserving the geometrical character of
+      GR, retaining the beautiful fusion of gravity and geometry
+      that Einstein created.
+    - In the 60s, the Hamiltonian formulation of the classical
+      theory was worked out in detail, and a precise quantization
+      program was laid down.
+        - However, this path which was so successful in particle
+          physics, meandered away from the mainstream QFT
+          developments.
+    - In the canonical program, it's hard to see how gravitons
+      could emerge, how scattering matrices are to be computed,
+      how Feynman diagrams are to dictate dynamics and how
+      virtual processes are to give radiative corrections.
+    - To use a well known phrase, the emphasis on geometry of the
+      canonical program "drove a wedge between GR and the theory
+      of elementary particles."
+    - More importantly, due to difficult technical problems, many
+      internal goals of program itself remained unattained. The
+      quantum version of Einstein's equations turned out to be
+      too hard to solve exactly.
+    - Since no perturbation expansion preserving the spirit of
+      the program was available, much of the discussion remained
+      rather fonnal, and most of the conceptual problems of QG
+      remained unsettled.
+
+    - Summary:
+    - Uses Hamiltonian GR to quantize geometry while preserving
+      Einstein’s spacetime fusion.
+    - Builds a formal framework: canonical commutators define
+      uncertainty; Hamiltonian motion gives time evolution.
+    - Commuting spatial operators encode causality.
+    - Though developed in the 1960s, it diverged from QFT,
+      failing to recover gravitons or scattering physics.
+    - Technical barriers left quantum Einstein equations unsolved
+      and the program largely formal.
+
+
+- In the COVARIANT approach the emphasis is just the opposite.
+  Field-theoretic techniques are to be applied even if it means
+  sacrificing the geometric beauty of GR. Indeed, even the
+  dynamics given by Einstein's equations are not sacrosanct.
+
+    - The first step, is to split the spacetime metric `g_μν`
+      into two parts:
+        - `g_μν = η_μν + G∙h_μν`
+        - `η_μν` is a background, kinematical metric (often flat)
+        - `G` = Newton's constant
+        - `h_μν` = the deviation of the physical metric from the
+          chosen background, the dynamical field.
+
+    - The two roles of the metric tensor are now split.
+        - With splitting, most of the previous conceptual
+          problems seem to melt away.
+        - Only `h_μν` is quantized when transitioning to quantum
+          theory. The quanta of this field propagate on the
+          classical background spacetime with metric `g_μν`.
+
+    - If the background is in fact chosen to be flat, one can use
+      the Casimir operators of the Poincare group to show that
+      the quanta have spin two and rest mass zero. These are the
+      gravitons.
+
+    - The Einstein-Hilbert Lagrangian tells us how they interact
+      with one another. Thus, in this program, quantum GR was
+      first reduced to another QFT in Minkowski space.
+
+    - One could apply to it all the machinery that had been so
+      successful in particle physics. Now we had a definite
+      program to compute amplitudes for various scattering
+      processes. Unruly gravity appeared to be tamed and forced
+      into the mould created for the other forces of nature.
+
+    - It was in the 60s that this procedure was first spelled out
+      in detail. The quantum effects of gravity could now be
+      visualized vividly in terms of exchanges of gravitons.
+        - As in other field theories, calculations of physical
+          amplitudes could be carried out using Feynman diagrams.
+        - Consistent Feynman rules for computing
+          graviton-graviton interactions were discovered.
+        - Differences between abelian and nonabelian couplings
+          were noted.
+        - Covariant QG was shown to be perturbatively unitary.
+        - Thus, by the early 70s, the covariant approach had led
+          to several concrete results.
+
+### Second Stage
+
+- We now come to the second stage of development.
+    - This was marked by enthusiasm and hope.
+    - Motto: Go forth, perturb, and expand!
+
+- The enthusiasm was first generated by the discovery that
+  Yang-Mills theory coupled to fermions is renonnalizable if the
+  masses of gauge particles arise from a spontaneous
+  symmetry-breaking mechanism.
+    - This led to a successful theory of electroweak
+      interactions. Physics witnessed a renaissance of QFT.
+
+- The enthusiasm spilled over to gravity; it reenforced the hope
+  _perturbative methods_ would be applicable to quantum GR too.
+
+- Consequently, much 70s gravity research was within the
+  covariant approach. Courageous calculations were perfonned to
+  estimate radiative corrections.
+
+- However, research soon ran into its first road block.
+- Detailed calculations revealed GR IS PERTURBATIVELY
+  NON-RENORMALIZABLE at two loops.
+
+- To appreciate the significance of this result, let us return to
+  the quantum theory of photons and electrons.
+    - This theory is perturbatively `renorrnalizable`.
+    - Although individual terms in the perturbation expansion of
+      a physical amplitude may diverge due to radiative
+      corrections involving closed loops of virtual particles,
+      these infinities are of a specific type;
+        - they can be systematically absorbed in the values of
+          free parameters of the theory, the fine structure
+          constant and the electron mass.
+
+- Thus, by renonnalizing these parameters, individual terms in
+  the perturbation series can be systematically rendered finite.
+    - (However, the series when summed almost certainly diverges,
+      a point that will become relevant later)
+
+- In quantum GR, such a systematic procedure is not available;
+    - infinities that arise due to radiative corrections are
+      genuinely troublesome.
+    - Put differently, when one includes Feynman diagrams with
+      two or more loops of gravitons and attempts to extract
+      finite answers, the quantum theory acquires an infinite
+      number of underdetermined parameters.
+
+- It therefore has no predictive power at all!
+    - However, buoyed by the success of perturbative methods in
+      electro-weak interactions, the community was reluctant to
+      give up in the gravitational case.
+
+    - In the case of weak interactions, it was known that the
+      observed low-energy phenomena could be explained using
+      Fermi's simple four-point interaction.
+        - The problem was this Fermi model led to
+          a non-renonnalizable theory.
+
+    - The new, renormalizable theory of weak interactions
+      referred to above does reduce to the Fermi model in the
+      low-energy regime, but differs from it at a fundamental
+      level.
+        - It marshals new processes that are significant only at
+          high energies, but which cure the problem of
+          non-renormalizability.
+        - It was natural to look for similar processes in the
+          gravitational case.
+
+- This led to higher-derivative theories, theories in which the
+  Lagrangian contains curvaturee-squared terms with appropriate
+  coupling constants, in addition to the Einstein-Hilbert term.
+    - The new terms play a significant role only at high
+      energies, and leave the low-energy or long-distance
+      behavior of the theory unaltered.
+    - Thus, in the classical, macroscopic regime, the new theory
+      would basically reproduce GR.
+    - For appropriate choices of coupling constants, the theory
+      does become renonnalizable. In fact the theory is
+      asymptotically free; at high energies, it behaves as if it
+      were a free field theory.
+
+    - However, it fails to be `unitary` unfortunately!
+
+    - In the perturbative treatment, the Hamiltonian is unbounded
+      from below, signaling a dramatic instability.
+    - Thus the idea of mimicking the theory of weak interactions
+      finally fails, although it was promising at first.
+
+- So far, these approaches generally considered the gravitational
+  field in isolation. But the unification of the electroweak
+  interactions led to another suggestion:
+    - Perhaps a viable theory would result _only_ when gravity is
+      coupled to suitably chosen matter fields.
+
+- The most striking example of this is probably `supergravity`.
+    - The hope was that the infinities of the bosonic fields,
+      including gravity, would be cancelled by those of the
+      fermionic fields, giving a renonnalizable theory of gravity
+      interacting vith matter.
+    - Much effort went into the most sophisticated version of the
+      theory, `N=8 supergravity` in the hope it could be employed
+      as a genuine GUT.
+
+- It turns that some infinity cancellations do occur, and that
+  supergravity is indeed better behaved than GR coupled to matter
+  the standard way.
+    - Furthermore, the Hamiltonian is manifestly positive and the
+      theory is unitary. Unfortunately, the theory again turns
+      out to be non-renormalizable.
+
+- Thus unlike QFT in curved spaces, the results regarding gravity
+  in the 70s and early 80s were mainly negative in character,
+  albeit important.
+
+- Perturbative methods revive once again in the 80s, due
+  to the renaissance of string theory.
+    - In string theory, one abandons point particles and the
+      corresponding local fields and considers extended objects
+      (strings) as fundamental.
+
+- It is remarkable, however, that the familiar physical
+  particles, including the spin two, rest mass zero graviton, do
+  in fact arise naturally in the theory as various components of
+  string excitations.
+    - What's more, the theory only has _one free parameter_.(??!)
+    - All couplings are therefore fixed automatically; very
+      little is fed in from the outside.
+
+- Consequently, hope was expressed that this theory would
+  incorporate all the information about the physical world; it
+  would be a TOE.
+
+- Technical successes of the theory generated a great deal of
+  enthusiasm. The theory is unitary and, although a conclusive
+  proof is yet to be published, the general consensus among
+  experts is the theory is finite, not just renonnalizable
+  order-by-order perturbation theory.
+
+- Unfortunately, however, when summed, the series diverges and
+  does so uncontrollably. At first One might wonder if this
+  should be regarded as a serious failure of the theory. After
+  all, even in QED the series is believed to diverge.
+
+- However, QED is an inherently incomplete theory. It ignores
+  many processes that must come into play at high energies or
+  short distances.
+    - In particular, it completely ignores the microstructure of
+      space-time, and simply assumes that space-time can be
+      approximated by the smooth continuum of Minkowski space at
+      arbitrarily small distances.
+    - Therefore, it can blame the divergence of its perturbation
+      series on all these effects that lie outside its realm.
+
+- A TOE on the other hand, cannot escape so easily. It must face
+  the energy regime squarely, including the complications at the
+  Planck scale.
+    - It must incorporate all these effects. It cannot plead
+      ignorance and shift the burden of infinities to yet another
+      theory.
+
+### Third Stage
+
+- Thus, we have now entered the THIRD stage of development.
+    - The mood is markedly different. The heady enthusiasm gave
+      way to deeper reflection.
+    - The conceptual questions of the 60s are again a focal
+      point. The key lesson from the second stage is that
+      perturbative, field-theoretic methods are not viable QG.
+
+- The assumption that space-time can be represented by a SMOOTH
+  CONTINUUM at arbitrarily small length scales simply leads to
+  inconsistencies.
+    - We can neither ignore the microstructure of space-time nor
+      presuppose its nature. We must let QG unravel it.
+
+- Irrespective of whether we prefer strings or local fields, GR
+  or higher derivative theories, we must face the problem of
+  quantization _NONPERTURBATIVELY_.
+
+- As a well-known poetic expression goes, if we begin by
+  "steam-rollering" space-time into flatness and linearity, we
+  will learn nothing by "waving the magic wand of quantum theory
+  over the resulting corpse."
+
+- Once again the orientation of research has shifted.
+  Nonperturbative ideas are being explored in string theory.
+    - For, in spite of the divergence of the perturbation series,
+      it may well exist as an exact theory.
+
+- Furthermore, nonperturbative effects may be crucial in removing
+  the current ambiguities, particularly in the reduction of the
+  theory to four space-time dimensions.
+    - In quantum GR itself, the canonical program has been
+      revived using new technical and conceptual tools.
+        - Some exact solutions to the quantum Einstein equations
+          have been obtained.
+        - These have given us an inkling as to how different the
+          true microstructure of space-time is likely to be from
+          a smooth continuum.
+
+- Furthermore, gravity is no longer treated separately, divorced
+  from particle pllysics. A unified mathematical framework seems
+  to bind it to other basic interactions.
+    - At the end of the 70s, the path-integral or
+      sum-over-histories was launched using Riemannian metrics
+      (ie, positive-definite).
+    - The program is being vigorously applied to minisuperspaces
+      that arise in cosmology. Conceptual questions of cosmology
+      are being analysed using fresh ideas.
+    - Finally, new numerical initiatives have been launched to
+      test if GR can exist nonperturbatively as a field theory.
+
+- Had perturbative methods worked, we'd have been left with
+  a rather simple picture space-time, and many of the conceptual
+  problems that arise from the dual role of the metric would have
+  simply disappeared, or been simplified enormously.
+
+- Now we _must_ face those questions seriously.
+
+- Is it appropriate in QG to work with a fixed space-time
+  manifold?
+    - Shouldn't the topology also be subject to quantum
+      fluctuations?
+    - Is there then a _quantum theory of topology_?
+    - Can the topological fluctuations representing worm holes be
+      responsible for the laboratory values of coupling
+      constants?
+    - In particular, do they force the cosmological constant to
+      vanish?
+
+- Another set of questions concerns a quantum theory of the
+  universe as a whole. Is such a program viable or even
+  meaningful?
+    - These questions have revived interest in quantum
+      measurement theory.
+    - Is it possible that some aspect of QG is in fact
+      responsible for the "collapse of the wave function", the
+      key ingredient of the Copenhagen interpretation?
+
+- A related question is: Why does the world around us look so
+  classical? Is it because of some special initial conditions?
+    - Normally, in physics, initial conditions are simply
+      supplied externally.
+    - However, we are now attempting to construct a "complete"
+      theory.
+    - Should there be a place in it for a THEORY OF INITIAL
+      CONDITIONS?
+    - Are there laws that govern the initial state of the
+      universe? The final state of an evaporating black hole?
+    - What is the role of time in QG?
+    - Is the unitarity of evolution that we take for granted in
+      QM exact, or can small deviations occur due to QG effects?
+      If so, how small?
+
+- Finally, most of the work to-date assumes the rules of QM are
+  to remain intact in its unification with GR.
+    - Why should this be?
+    - Isn't there a need to generalize the basic framework of QM
+      itself to accommodate the absence of a background
+      space-time?
+
+- One cannot help but be struck by how qualitatively different
+  these questions are compared to those pursued in the 70s.
+    - In retrospect, it appears that a complacent attitude
+      towards such issues had then developed in the false
+      security of perturbative methods.
+
+- Indeed, in most circles it wasn't even respectable to show
+  one's unease with quantum measurement theory, or suggest that
+  rules of QM aren't absolutely sacrosanct.
+    - The 80s brought a growing realization that one cannot
+      escape from such issues indefinitely.
+    - The goal of this volume is to summarize the current status
+      of these conceptual problems of QG.
+
+- January 1990

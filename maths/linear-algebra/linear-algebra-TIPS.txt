@@ -1,0 +1,269 @@
+### (Linear) Transformations
+    - Transformations are essentially functions
+    - Why not say 'function'?
+        - Because 'transformation' suggests MOVEMENT.
+    - Executing a transformation 'on' a vector is the same as doing
+      a dot product on that vector.
+        - (that vector is 'dotted' with the transformation
+          'vector'?)
+        - $MY_NOTES/maths/linear-algebra/3b1b-3Blue1Brown-Linear-Algebra.txt
+
+### Dot-products
+    - Normal understanding: way of understanding _projections_
+      and how much two vectors point in the 'same' direction...
+    - But Grant problem:
+        - We all know the dot product relates to PROJECTION and
+          the visual idea of projecting one vector on top of the
+          other etc..
+        - But why does the dot-product `NUMERICAL PROCESS` of
+          matching coordinates, multiplying them and adding, have
+          anything to do with projections and the  `GEOMETRIC`
+          interpretation?
+        - aside:
+            - A VISUAL EQUIVALENT to the formal properties of
+              linear transformations:
+                - if you take a line of EVENLY-SPACED dots, and
+                  apply a linear transformation `L`, then the
+                  dots will still be EVENLY-SPACED in the output
+                  space. See:
+                  $MY_NOTES/maths/linear-algebra/transformations-even-spacing.txt
+        - Back to Grant problem ...
+            - First: for any transformation `L`, we must follow
+              what happens to the basis vectors `i` and `j`
+            - Then: there's a nice association between `2x1`
+              matrices, and `1x2` vectors
+                - $MY_IMAGES/maths/linear-algebra/matrix-vector-similar-01.jpg
+                - $MY_IMAGES/maths/linear-algebra/matrix-vector-similar-02.jpg
+            - Also: There's some kind of connection between
+              linear `transformations` THAT TAKE VECTORS TO
+              NUMBERS (dual transformations??), and `vectors`
+              themselves.
+            - This is why taking the dot-product with a _UNIT
+              VECTOR_ can be interpreted as projecting the vector
+              onto the span of that unit vector and taking the
+              length.
+            - But what about NON-UNIT vectors?
+            - ...
+            - Finale: any time you have a 2d-to-1d linear
+              transformation, there's going to be some unique
+              vector `v` corresponding to that transformation.
+                - so 'applying' the transformation is the same
+                  thing as taking the dot-product with that
+                  unique, special vector.
+
+
+### Key theorem in Linear Algebra: IMT
+    - Invertible Matrix Theorem
+        - $MY_NOTES/maths/linear-algebra/IMT-theorem.txt
+
+### Hubbard: Lots of Linear algebra (and calculus)!
+    - $MY_NOTES/maths/linear-algebra/Hubbard-Vector-Calculus.txt
+
+### "Homogeneity"
+    - Linear transformations preserve:
+        - Property 1. Vector addition
+        - Property 2. Homogeneity
+            - (Preserves Scalar Multiplication)
+            - `L(c * v) = c * L(v)`
+    - Why "homogeneity"?
+        - From the Greek `homos`, meaning "same."
+            - It signifies the output of transformations behave
+              the 'same way' wrt scalar multiplication.
+            - ie, maintains the SAME proportionality: 
+                - if the input is scaled by a factor of `c`, the
+                  output is also scaled by `c`.
+        - Connection to Homogeneous Functions
+            - In general, a function `f(x)` is called homogeneous
+              of degree `k` if scaling its input by `c` results
+              in scaling the output by `c^k`, i.e.,
+                - `f(cx)=c^k ∙ f(x)`
+            - For linear transformations, `k=1`, meaning they are
+              homogeneous of degree 1. This special case means
+              the transformation preserves _linear scaling_
+              exactly.
+    - Why "homogeneity" 2:
+        - Because it reflects how scaling a vector scales the
+          output in the SAME WAY—preserving the "uniformity" of
+          scaling.
+        - Etymology:
+            - From Greek homogenēs:
+                - homos = same
+                - genos = kind or type
+                - → "Of the same kind"
+        - Why it applies in linearity:
+            - Here 'homogeneity' means that applying a scalar to
+              the input and then the transformation gives the
+              same kind of result as applying the transformation
+              first and scaling later:
+            - L(c * v) = c * L(v)
+            - This ensures the output _behaves uniformly_ with
+              respect to scalar multiplication.
+        - In short: "homogeneous" implies uniform scaling
+          behavior, which is central to linear structure.
+
+
+### Dot-product formula (Cartesian coords)
+    - $MY_NOTES/maths/Dark-Art-LA-Seth.txt
+    - We can compute the dot product of two vectors in `ℝ^n` by
+      summing the products of their corresponding _CARTESIAN_
+      coordinates. (Beware: ONLY in Cartesian coords)
+
+### linear maps: transform the GRID!
+    - $MY_NOTES/maths/Dark-Art-LA-Seth.txt
+    - linear maps transform space itself (the entire 'grid') 
+    - (I always thought a map trasnformed a single vector only)
+
+### 2015: Coding the matrix course
+    - Key file where I defined "matrix - vector" multiplication:
+        - $MY_NOTES/maths/linear-algebra/coding_matrix/03-matrix.md
+
+### Determinant
+    - $MY_BOOKS/Physics/Maths/Misc-Overview/Princeton-Companion-to-Mathematics.pdf
+    - Added December 09, 2011
+    - the determinant is better thought of as a property of
+      _linear maps_ rather than of matrices.
+    - Mathemaniac channel:
+        - https://www.youtube.com/watch?v=wCZ1VEmVjVo
+        - "in a 2D linear map, the determinant is the scaling factor for areas"
+        - note: if determinant is negative, it means some sort of
+          _reflection_ or change in _orientation_ has taken place
+          with the linear map...
+
+### Sam Richie Recommendation
+    - $MY_NOTES/maths/linear-algebra/3b1b-3Blue1Brown-Linear-Algebra.txt
+    - This course completely changed my attitude, giving me
+      a rock-solid intuition for "a matrix _represents_ a linear
+      transformation".
+
+### Matrix multiplication
+    - First saw it in high school, where matrices are presented
+      without any real motivation, and matrix multiplication
+      seemed a weirdly-defined operation.
+    - When I did linear algebra in college and matrix
+      multiplication was presented as the way to _compose linear
+      transformations_, it made way more sense.
+    - reply
+        - The easiest way to describe matrix multiplication is
+          nested function composition.
+            - f(x) = 2x
+            - g(x) = x + 5
+        - It should hopefully be obvious that "nesting" the two
+          isn't commutative:
+            - g(f(x)) = (2x) + 5 = 2x + 5
+            - f(g(x)) = 2(x + 5) = 2x + 10
+        - A miraculous fact is that no matter how many functions
+          we stack, we only ever have two terms: `x` and
+          a constant term.
+        - Thus, we can represent this 'linear system' in terms of
+          its coefficients, as long as we agree on an order:
+            - e.g. `2x + 5` might become "`2, 5`" in our system.
+        - You can do "multiplication" on these packs to compose
+          them together, and even though the rules feel obtuse,
+          they follow the logic of FUNCTION COMPOSITION.
+        - A matrix represents a similar function transform, only
+          in 3 dimensions, and in order to handle rotation, it
+          needs to swap around x/y/z.
+        - So an `identity matrix` is really saying:
+            - f(x) = 1x + 0y + 0z + 0
+            - f(y) = 0x + 1y + 0z + 0
+            - f(z) = 0x + 0y + 1z + 0
+        - reply
+            - Aced my university linear algebra class with no
+              idea what I learned. It didn't start to click until
+              I started using it for tangible problems.
+        - reply
+            - Matrices are funny. You encounter them as
+              a teenager reading 3D graphics tutorials, learn
+              they can compactly represent scalings, rotations,
+              and translations, and that several transformations
+              can be conveniently “_stacked_” using this thing
+              called matrix multiplication which looks like this…
+              and that’s it.
+            - Now you can use them for a cool practical purpose,
+              but the tutorials never derive or attempt to
+              justify why `mmul` looks like that, often because
+              the author doesn’t know either!
+            - Or you can learn about them in school and be given
+              neither a real-world use case nor a rationale or
+              derivation for `mmul`.
+            - Or you can encounter them in college, and the
+              experience depends on whether it’s a good or bad
+              kind of a linalg class.
+            - But even there, after all the definitions and
+              lemmas and derivations, it’s easy to end up not
+              grokking how `mmul` does what it does even if you
+              grasp all the building blocks – vector spaces,
+              bases, how matrices can represent bases and systems
+              of linear equations and linear operations on
+              vectors and how they’re all kinda equivalent.
+        - reply
+            - Reminds me of a story when I was a student.
+            - We had a group project about "360° pong". Our group
+              decided it meant the paddles had to travel in
+              a circle around the playfield and I decided
+              matrices and stacked 2D transformations were the
+              way to go.
+            - The other students gave me blank stares,
+              I basically said "trust me, you don't need to
+              understand them to use them" and went off coding.
+            - We ended up with the most impressive pong clone, as
+              nearly all of them had axis-aligned rectangular
+              paddles going around a rectangular path, whereas
+              ours had a stretched half-circle paddle going
+              around a circle path always facing the center of
+              the playfield, alongside walls and level editors.
+            - The following weeks, the teacher announced the next
+              topic was matrices. We stared at each other and
+              grinned.
+            - If anyone wants to stare at an old C codebase from
+              10 years ago by a bunch of first year students:
+              https://code.google.com/archive/p/pong-norris/
+        - reply
+            - It took a class in neural networks in my thirties
+              to really understand matrix multiplication
+        - reply
+            - I did a rigorous linear algebra course in school,
+              and it went over my head despite passing it.
+            - Saw it explained in a _slide of Andrew Ng's ML_
+              course and everything clicked perfectly.
+                - (Me too!)
+        - reply
+            - The Coursera one? That's the exact course I was
+              thinking of.
+        - reply
+            - I actually had the same experience with that class.
+
+### XYLYXYLYX: Good intro Algebraic structures
+    - $MY_NOTES/physics/courses/XYLYXYLYX/What-are-tensors/19-GOOD-Algebraic-Structures-I.txt
+    - $MY_NOTES/physics/courses/XYLYXYLYX/What-are-tensors/20-Algebraic-Structures-II-Modules-to-Algebras.txt
+
+### Interesting: Limited Vocabulary of Linear Algebra
+    - Use GA for software...
+    - $MY_BOOKS/Physics/Maths/Algebra/Efficient-Implementation-of-Geometric-Algebra-Fontijne.pdf
+    - The problem with linear algebra is that its vocabulary is
+      limited, leading to all kinds of kludges.
+    - Some examples:
+        - Vectors formalize DIRECTIONS, but in geometry one often
+          needs POINTS. This is solved by introducing an
+          ‘origin’, relative to which vectors can indicate
+          points.
+        - One problem with this idea is the semantic difference
+          between a `DIRECTION VECTOR` and a `POINT VECTOR` is
+          not encoded in the vector type itself.
+    - In software, both concepts are represented by the same
+      vector type, and interpretation is up to the coder.
+        - Eg, the coder must remember that sometimes
+          point-vectors TRANSFORM differently than
+          direction-vectors.
+    - Each line of the singular column can be made quantitative
+      using `r`.
+
+### Links
+    - really good linear algebra                                       https://news.ycombinator.com/item?id=13904881
+    - MathTheBeautiful:                                                https://www.youtube.com/channel/UCr22xikWUK2yUW4YxOKXclQ/playlists
+    - 3Blue1Brown: (brilliant)                                         https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+    - Seth: Dark Art Linear Algebra: Intuitive Geometric               $MY_NOTES/maths/Dark-Art-LA-Seth.txt
+    - Strang Vision Linear Algebra 2020                                https://ocw.mit.edu/resources/res-18-010-a-2020-vision-of-linear-algebra-spring-2020/index.htm
+    - check this: fastai linear algebra course
+    - ipython notebooks for strang linear algebra! (pinboard bookmarked)
+    - Immersive Linear Algebra                                         https://news.ycombinator.com/item?id=40329388

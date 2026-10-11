@@ -1,0 +1,45 @@
+
+### Bala QM NPTEL 06
+
+### Classical:                                                   
+    1. Dynamical variables in phase space, `Pi`, `Qi` etc.            
+    2. Poisson Brackets {Pi, Qi}
+    3. Phase space variables
+    4. Hamiltonian Equations
+
+### QM:
+    1. Operators on vectors of Hilbert Space
+    2. Commutators. `[Pi, Qi] = iħ 1`
+    3. State vectors
+    4. No direct analog to Hamilton Equation. 
+        - Schroedinger Equation. or Heisenberg equations of motion.
+
+
+- Say you have an expectation value of an operator ... `<A>` with eigenfunctions `Φn`...
+
+- The components `C_n` carry the time dependence. The basis `Φ(n)` is fixed.   
+
+- `< Φn|ψ(t) > = Cn(t)`     gives probability amplitude
+
+- The probability the system is in the state `Φn` at time `t` is
+  given by `|Cn(t)|^2`. Thats a (main) postulate of QM!
+
+- `<ψ(t) | ψ(t)> = |Cn(t)|^2` 
+    - provided the wavefunction is normalised. 
+    - (i.e. provided `< ψ(t) | ψ(t) > = 1`)
+
+- If the wavefunction isn't normalised then divide by a normalisation factor.
+- Just like the partition function `Z` in Statistical Mechanics.
+
+- When `A` is in state `Φ_n`, its value is `λn`.
+- i.e. A |Φn = λn |Φn⟩
+- Then the expectation value, or weighted average is simply `<A> = ∑ |Cn(t)|^2`. 
+    - λn
+
+- But after a few tricks you can display the expectation value another way:
+    - <A>(t) = <ψ(t) |A| ψ(t)> / <ψ(t) | ψ(t)> 
+    - This is a fundamental formula.
+
+- `A` looks like a diagonal matrix element (in some weird basis `Φn`). 
+- These matrix elements are expectation values.
+

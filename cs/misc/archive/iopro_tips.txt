@@ -1,0 +1,24 @@
+iopro
+
+sql connection string
+    dont have any spaces in it!!
+
+sql
+    import iopro.pyodbc as pyodbc
+
+    # Open database 
+    # SQLite
+    connection_string = 'DSN=odbc_sqlite;DATABASE=/path/to/mydb.sqlite'
+
+    in ~/.odbc.ini (user data sources)
+        [odbc_sqlite]
+        Description=SQLite database
+        Driver=SQLite ---> if entry in /etc/odbcinst.ini
+        Driver=/usr/local/lib/libsqlite3odbc.so
+
+    connection = pyodbc.connect(connect_string)
+    cursor = connection.cursor()
+
+
+text adapter
+    transits = iopro.text_adapter(dat_file, parser='fixed_width', field_widths=(26,26,26,26,26,26,26,26,26))

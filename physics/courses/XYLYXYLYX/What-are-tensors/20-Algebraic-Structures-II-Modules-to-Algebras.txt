@@ -1,0 +1,111 @@
+20-Algebraic-Structures-II-Modules-to-Algebras.txt
+
+
+$MY_VIDEOS/physics/what-are-tensors/20-Algebraic-Structures-II-Modules-to-Algebras.mp4
+
+
+
+- Two main categories last time:
+    - Group-like
+    - Ring-like
+	- $MY_IMAGES/physics/what-are-tensors/summary-algebraic-structures-1.jpg
+
+
+
+- Vector space is an Abelian group under `+`. But it has access
+  to the bin or real numbers as well
+	- $MY_IMAGES/physics/what-are-tensors/vector-space-access-to-two-sets.jpg
+
+### "R-Module"
+    - R = ring
+    - Module = more general version of a vector space 
+	- $MY_IMAGES/physics/what-are-tensors/basic-structure-of-R-module.jpg
+    - Set 1: Group
+    - Set 2: Ring
+    - left module:  R x G -> G 
+    - right module: G x R -> G 
+    - main difference to vector space: the "bin" of scalars is
+      just a `ring` and not a `field`
+
+    - wow: gets tricky keeping track of all the operations... and
+      they should be linear
+	- $MY_IMAGES/physics/what-are-tensors/R-module-operations.jpg
+    - have to assert: 
+    - that the Rings identity operates like an identity on the
+      members of the (Abelian) group 
+
+
+### "F-module" (aka Vector Space)
+    - an `R` module can become a vector space
+    - Set 1: a Group {} 
+    - Set 2: a Field {}  (a commutative division ring)
+    - there are proofs that only work for vector spaces that
+      don't work for R-modules... 
+    - Vector spaces can always be given a basis (either finite or
+      infinite) 
+        - but R-modules can only occasionally be given a basis
+
+### Vector Field
+    - look at the diagram; the vector field chooses one vector at
+      each point in spacetime
+    - `∂_μ` establishes a basis in _every vector space_ at once
+        - $MY_IMAGES/physics/what-are-tensors/vector-field-revision.jpg
+    - firstly vector fields form an abelian group (I can just add
+      the components) 
+    - tricky conversation about set of infinitely differentiable
+      functions on a vector field???
+
+### "An" Algebra
+    - we're going to give our Vector space a multiplicative
+      property
+    - and the multiplication has to be right and left
+      distributive 
+    - and the multiplication is bilinear and this builds up an
+      algebra 
+        - interesting: this multiplication doesn't have to be
+          _associative_ 
+        - aside: almost all the interesting groups in physics are
+          non-associative
+        - Youtube:
+        - At 32:49 you state that most of the important groups in
+          physics are non-associative. I suppose you were
+          referring to algebras that are non-associative in
+          physics, such as Lie algebras.
+        - Yes, those were the groups that triggered that comment.
+          Of course there are plenty of associative groups
+          relevant to all sorts of physics, so don't take me too
+          seriously, but as far a deep and fundamental physics
+          goes, I feel my little comment was justifiable.
+
+
+### Tensor Algebra
+    - its a _set_
+    - used for "p-forms"
+    - first some notation for tensor products: 
+        - $MY_IMAGES/physics/what-are-tensors/tensor-product-notation.jpg
+    - Then talk about the direct sum 
+        - $MY_IMAGES/physics/what-are-tensors/direct-sum.jpg
+
+- Define a set for the tensor algebra
+- its going to be a massive direct sum
+	- $MY_IMAGES/physics/what-are-tensors/tensor-algebra-definition.jpg
+	- $MY_IMAGES/physics/what-are-tensors/tensor-algebra-definition-02.jpg
+- the tensor algebra is actually an infinite tuple 
+- the multiplication operation for the tensor algebra seems to be
+  the cartesian product
+    - but we must define this multiplication property? 
+
+he defines an `i2` operator, that is like an addition propertery
+for the big Tensor algebra set
+
+- then he creates an _injection map_
+
+- some books show you adding two tensor products but you cant do
+  that, as they're from different spaces
+- but what they means is they are using this "injection mapping"
+  that uses the direct sum
+
+
+Final point:
+- from this massive tensor algebra set, we'll create an _exterior
+  algebra_

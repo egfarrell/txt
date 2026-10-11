@@ -1,0 +1,52 @@
+02-Elementary-Definitions.txt
+
+$MY_VIDEOS/physics/what-are-manifolds/02-Elementary-Definitions.mkv
+
+
+Topics in this lecture:
+    - Open 
+    - Closed
+    - Limit Points
+    - Closure
+    - Interior
+    - Exterior
+    - Boundary
+    - Density
+
+
+
+- How can the points be "near" each other in a topology
+
+
+### Neighbourhoods approach
+    - didn't understand the 4 axioms of Neighbourhoods 
+
+### Closed Set
+    - easy to define
+    - is the complement of some open set
+    - ie the complement of an open ball, is the boundary of the
+      open ball, and the entire rest of the plane... 
+	- $MY_IMAGES/physics/what-are-manifolds/complement_of_open_set.jpg
+
+### Limit Points
+    - retreat back to the notion of a _neighbourhood_
+    - aside: an open set is a neighbourhood of all it's points 
+    - open Neighbourhood: 
+        - is an open set that contains a point 
+    - Definition of Limit Point 
+        - `S` is a subset of `X` 
+        - `p` is a limit point of subset `S` if every open
+          neighbourhood of `p` also contains at least one point of `s`
+        - $MY_IMAGES/physics/what-are-manifolds/limit_point.jpg
+
+### counter-intuitive limit points
+        - the actual limit-point itself doesnt have to be in `s` 
+        - the limit point could be on the open boundary of `s` 
+        -  but all it's neighbourhoods will contain at least
+           1 point in `s`, therefore `p` is a limit point of `s`
+
+### Another approach to limit points
+    - sometimes defined using sequences
+
+### Closure of a set
+    - the set plus its limit points

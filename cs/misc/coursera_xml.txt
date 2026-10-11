@@ -1,0 +1,112 @@
+Coursera XML
+	Extensible Markup language
+	also has streaming format
+	"competitor" to relational model
+
+Tag (Tree)
+	describes content instead of formatting (like HTML)
+	Tags can be nested
+	Can have (unique) attributes
+	finally text strings (form leaf element of the tree)
+
+flexibility
+	any particular attribute is OPTIONAL for each tag
+	extra OPTIONAL ELEMENTS can be inserted (e.g. remark tag inside book)
+	sub-elements can be REPEATED (e.g. 3 authors for one book, 1 author for another)
+		All this isn't possible with relational databases,
+		you'd have to have the OPTIONAL bits filled in with NULLS
+	so with XML, you can have "inconsistences"
+
+				Relational			XML
+Structure		Tables				hierarchial Tree, Graph
+Schema			Fixed in advance	"self-describing", schema+data mixed together, flexible
+Queries			SQL, Relational		not mature
+Ordering		none				implied order from document structure
+Implementation	native				addtional "add-on" layer over relational database
+
+Schema note
+	XML can have a "schema" aswell if you want
+
+well-formed xml
+	survives XML parser.
+	* single root element
+	* all tags matching, proper nesting
+	* unique attributes within elements
+
+parsed XML
+	DOM - programmatic document object model
+	SAX - stream
+
+Displaying XML
+	use rule-based language to translate to html
+	CSS - cascading style sheets
+	XSL - extensible sytlesheet language
+
+"valid" XML
+	meets basic requirements of "well formed" XML
+	AND adheres to content-specific spec
+		DTD - Document Type Descriptor 
+		XSD - XML SCHEMA description
+
+sample parser?
+	xmllint
+
+Typed versus Non-Typed XML!
+	Having DTD/XSD
+
+DTD tricks
+	Can be in same file as XML itself
+
+	root element: bookstore
+		<ELEMENT! Bookstore (Book ¦ Magazine)*>
+		this is a regex saying that our document 
+		can have ZERO or MORE occurances of Book OR Magazine elements
+
+	sub-elements: 	
+		<!ELEMENT Book (Title, Authors, Remark?)>
+		Title and Authors elements are mandatory
+		Remark is optional - hence question mark
+
+	attributes:
+		<!ATTLIST Book  ISBN CDATA #REQUIRED
+						Edition CDATA #IMPLIED>
+		define attributes for book element
+		ISBN is compulsory while Edition is optional
+
+	<!ELEMENT Authors (Author+)>
+		Authors collection is made up of ONE or MORE Author elements
+
+	<!ELEMENT first_name (#PCDATA)>
+		PCDATA means a string (can be zero length)
+
+ID, IDREF, IDREFS
+	Author ident = "HG"
+	"pointers" within an XML document
+	<!ATTLIST Book  ISBN ID #REQUIRED
+			  Price CDATA #REQUIRED
+			  Authors IDREFS #REQUIRED>
+	look at Book and Authors here
+	so how do you refer to an ID?
+		<!ATTLIST Bookref Book IDREF #REQUIRED>
+
+IDREFS
+	one or more ID values separated by spaces
+
+Pointers
+	are untyped, so it can check that an ID is exists somewhere as an element
+	but it mightnt be the one you think
+	Correct: <Bookref Book="ISBN-xxx-xxx-xxx">
+	Incorrect: <Bookref Book="HG">
+	HG is a valid Author ID but not a valid book!
+	but you wont get any DTD errors from this XML snippet
+
+XML schema (XSD)
+	it is similar to DTD but also has:
+	data types, e.g. type="xsd:integer"
+	keys, 
+	(typed) pointers,
+	XSD is written in XML itself (not like DTD)
+
+	
+
+

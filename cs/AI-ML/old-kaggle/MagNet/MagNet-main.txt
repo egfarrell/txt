@@ -1,0 +1,283 @@
+MagNet: Model the Geomagnetic Field
+
+### Key conclusions
+    - MY CODE $MY_CODE/AI-ML/magnet/README.md
+
+### Physics/Domain Knowledge
+    - A _geomagnetic index_ is a simple measure of geomagnetic
+      activity that attempts to condense a rich set of
+      information about the status of the magnetosphere in
+      a single number. Many such indices exist: historically `Kp`
+      and `Dst` are probably the most widely used, but many more
+      have been proposed
+
+    - Solar Wind:
+        - is a charged plasma, mostly protons
+
+    - Dst
+        - basically, how the "ring current" changes
+        - The Dst index is based on four low‐latitude stations,
+          and measures the _deviation of the horizontal
+          component_ of the Earth's magnetic field from its
+          long‐term average.
+        - Its a proxy for the axisymmetric magnetic signature
+          of magnetospheric ring currents (Sugiura, 1963).
+        - It is an hourly based index, measured in nanotesla, and
+          it can be considered a continuous value index, even
+          though it is expressed as an integer, with minimal
+          increments of 1 nT.
+
+
+### Acronyms
+    - NOAA     National Oceanic & Atmospheric Administration
+    - ACE      Advanced Composition Explorer (NASA)
+    - DSCOVR   Deep Space Climate Observatory (NOAA)
+    - NCEI     National Centers for Environmental Information
+    - CIRES    Coop Institute for Research in Env Sciences
+    - RTSW     Real-time solar-wind
+    - SOHO     Solar and Heliospheric Observatory
+    - STEREO   Solar Terrestrial Relations Observatory
+    - SDO      Solar Dynamics Observatory
+    - VAP      Van Allen Probes
+    - GOES     Geostationary Operational Environmental Satellite system
+    - POES     Polar Operational Environmental Satellites
+    - DMSP     Defense Meteorological Satellite Program
+    - GONG     Global Oscillation Network Group.
+    - CME      Coronal Mass Ejections
+    - IMF      Interplanetary Magnetic Field
+    - GSE      Geocentric solar ECLIPTIC (coordinates)
+    - GSM      Geocentric solar MAGNETOSPHERIC (coordinates)
+    - nT       nanoTesla
+
+
+
+
+### Useful:
+    - Hi, great question: you’ll make predictions for `t0` and
+      `t1` at `58,678` individual times. That’s half the amount
+      compared to training data, so if you can run the training
+      data in the time limit you have plenty of buffer room.
+
+    - Hi! There is indeed a _private_ test set, and it is more or
+      less the same as the public test set.
+
+    - You can also _downsample_ the data because of very high
+      frequency per minute samples but the target is per hour.
+
+    - It would be great to include 2 packages for time-series
+      forecasting: timeseries-fastai, pytorch-forecasting.
+
+    - Domain knowledge
+        - Coronal mass ejections, make their way to the Earth in
+          3-4 days, they collide with the magnetic field of the
+          Earth and cause it to change its shape.
+            - https://image.gsfc.nasa.gov/poetry/ask/a11534.html
+        - USGS 1-min Dst index
+            - https://pubs.er.usgs.gov/publication/70036726
+        - Relevant papers
+            - https://scholar.google.com/scholar?&q=+dst+solar+wind+&hl=en
+
+    - Ok, mystery solved. 1533600 are the number of minutes that
+      we aggregate for hourly predictions... So the “real” number
+      is `1533600 / 60 = 25560`
+
+    - Wind speed coord system
+        - heliocentric?
+        - monitor this: https://community.drivendata.org/t/wind-speed-coordinate-system/5756
+
+    - We've learned from data exploration:
+        - features exist across different SCALES
+        - features are provided at different FREQUENCIES
+        - certain IMF features are highly correlated
+        - there are missing values
+
+    - Strong correlation between Dst and Bz (southern component
+      of Earths Magnetic field?)
+      https://www.youtube.com/watch?v=V0mHHEhGngc
+
+    - Remember: Sensor readings relate to both the IMF _and_ plasma from solar wind
+
+    > Note: Dont use Dst as input!
+        - This is a real-time prediction task.
+        - Therefore, your solution must not:
+            - use data captured at same/later time to predict Dst
+            - take Dst as an input
+
+    > Important!
+        - from SATELLITE_POS
+            - train_a:  3.3 years    1,200 days
+            - train_b:  6.0 years    2,190 days
+            - train_c:  6.5 years    2,435 days
+
+
+### Images
+	- lagrangian points          $MY_IMAGES/cs/AI-ML/MagNet/lagrangian-l1.jpg
+	- lagrangian point animation $MY_IMAGES/cs/AI-ML/MagNet/L1_animation.gif
+	- Earth Magnetosphere        $MY_IMAGES/cs/AI-ML/MagNet/Earths-magnetosphere.jpg
+	- Sample time series data    $MY_IMAGES/cs/AI-ML/MagNet/sample-time-series.jpg
+	- IMF coord axis             $MY_IMAGES/cs/AI-ML/MagNet/IMF-coord-axis.jpg
+	- IMF southward Bz           $MY_IMAGES/cs/AI-ML/MagNet/IMF-southward-Bz.jpg
+	- CME and CIR storms         $MY_IMAGES/cs/AI-ML/MagNet/dst-storm-graphs.jpg
+
+
+### FINDINGS
+    - train_a
+        - `Speed`  jumps when dst drops $MY_IMAGES/cs/AI-ML/MagNet/speed-v-dst.jpg
+        -  `Temp`  jumps when dst drops $MY_IMAGES/cs/AI-ML/MagNet/temp-v-dst.jpg
+        -  Often a little break in `bx`, y, z before dst drop? $MY_IMAGES/cs/AI-ML/MagNet/bzyz-versus-dst.jpg
+        -  oh `bt` strong correlation $MY_IMAGES/cs/AI-ML/MagNet/bt-versus-dst.jpg
+
+### TODO/Misc/findings
+    - convert time series to VISUAL and use visual trainer?
+    - transfer learning for time series analysis
+    - train 2 models? one on DSCOVR and one on ACE, then compare?
+    - Or use one model when there is missing/error data
+    - have multi-stage models, multi-stage pipeline?
+    - physics bolt-on module at end to check for outliers?
+      Physics bolt on kind of uses human knowledge?
+      ("human-in-the-loop")
+    - model should only be trained on batches of 7 days?
+    - Jeremy: fewer epochs? model more general, touch data less
+    - agregate less than an hour? Just keep the minutes?
+    - see how much dst changes from hour to hour
+    - leave NULL training data? how to treat NULLs?
+        - pre-scan for missing 7 day data... ?
+        - I think the NULLS are valuable
+        - Handle missing data   https://towardsdatascience.com/7-ways-to-handle-missing-values-in-machine-learning-1a6326adf79e
+    - are the satellite positions a waste?
+        - `b?_gse` is the same as `b?_gsm` most times anyway
+    - just train the model for ONE prediction ...
+        - then shift the input data by an hour...
+        - dont train on TWO predictions
+    - Vpython plot mag field?
+    - is derivative/rate-of-change of IMF variables most important?
+        - ie derivative matters more than actual values?
+        - it goes all spikey when dst drops?
+    - Fastai _Time Series_ tricks and tips  ../fastai/fastai-timeseries.txt
+    - IMPORTANT: t0, t1 mis-aggregated? https://community.drivendata.org/t/sampling-issue-in-benchmark/5811
+    - define a simple _baseline_ first
+    - check the "`_`": train, test, val = get_train_test_val(data, test_per_period=6_000, val_per_period=3_000)
+    - check: what data is in the local docker image
+    - shifting -1, -2 hours https://community.drivendata.org/t/sampling-issue-in-benchmark/5811/3
+    - Big prob: public data https://community.drivendata.org/t/can-we-use-external-data/5842/2
+    - for solar wind dates: supply a sequence number so the model
+      knows which date is after another?
+
+    - learn = cnn_learner(dls, resnet18, y_range=(-1,1))  <--- should mine be (-2000, 500)?
+
+    -  Combining text and images $MY_CODE/AI-ML/fastai/02_production.py:248
+
+    - SCALING features: does fastai need this?
+        - magnet benchmark: what's the fastai equivalent?
+            - We'll fix this using the `StandardScaler` from
+              scikit-learn.
+            - It's a standard affair. It'll help us subtract the
+              mean and divide by the standard deviation for each
+              feature. What's nice about it is that it'll save
+              the
+
+
+    - What is ADAM and optimizer?
+        - ~/repos/magnet/models/benchmark-notebook.py
+        - After instantiating the model with these
+          hyperparameters, we'll compile it with
+          [mean_squared_error] as our loss function and [adam] as
+          our optimizer.
+
+    - TODO: implement sophisticated safeguard for null or
+      infinite `t0`, `t1` values. (benchmark returns -12)
+
+
+    - Nice example of "TabularPandas" that I'll need:
+        - $MY_CODE/AI-ML/fastai/09_tabular.py:602
+
+    - batch size
+        - https://towardsdatascience.com/implementing-a-batch-size-finder-in-fastai-how-to-get-a-4x-speedup-with-better-generalization-813d686f6bdf
+        - One common perception is that you should not use large
+          batch sizes, because this will cause overfitting, and
+          you might run out of memory.
+        - While the latter is obviously true, the former is more
+          complicated than that, and to answer it, we will have
+          a little dive into an OpenAI paper “An Empirical Model
+          of Large-Batch Training”.
+            - https://arxiv.org/pdf/1812.06162.pdf
+        - key: have batch size smaller than simple noise scale
+
+
+    ### This is the tabular code I need
+        from fastai.tabular.all import *
+        path = untar_data(URLs.ADULT_SAMPLE)
+
+        dls = TabularDataLoaders.from_csv(path/'adult.csv', path=path, y_names="salary",
+            cat_names = ['workclass', 'education', 'marital-status', 'occupation',
+                        'relationship', 'race'],
+            cont_names = ['age', 'fnlwgt', 'education-num'],
+            procs = [Categorify, FillMissing, Normalize])
+
+        learn = tabular_learner(dls, metrics=accuracy)
+        learn.fit_one_cycle(3)
+
+
+    ### timeseries
+            - To capture seasonality, cycles, and trend in
+            time-series data, you need to categorify the date
+            field. Jeremy made that abundantly clear in the lessons
+            and also stresses it in the data preparation section of
+            the Rossmann example 4
+
+
+    ### timeseries tips
+        - https://forums.fast.ai/t/using-fast-ai-to-predict-site-traffic-tabular-time-series/67140
+        - In your call to label_from_df you’re not specifying
+        regression (_FloatList_). Also your metric should be
+        something like rmspe, not accuracy as accuracy isn’t for
+        regression like you’re doing
+
+        - I don’t think you’ll need to transform the y values here to
+        make them smaller (unless it’s very large user counts) but
+        you should pass in a y_range to your tabular_learner
+
+    ### Augmentation
+            - augmenting by adding _gaussian noise_
+            - dropping a percentage of the original measurements
+            (kind of like input dropout)
+
+    - plot the 7 days, and feed an image of the plot???
+
+
+    - key: IMAGE REGRESSION
+        - $MY_CODE/AI-ML/fastai/06_multicat.py
+        - search for ef label: IMAGE REGRESSION!
+
+        - image regression https://medium.com/analytics-vidhya/facial-age-prediction-with-fastai2-d67fdb575539
+        - https://forums.fast.ai/t/datablock-for-image-regression-fastai-v2/77859
+
+        - https://docs.fast.ai/data.transforms.html
+        - Normalize.from_stats(mean, std)
+        - Normalize.from_stats(*imagenet_stats)]
+
+        # fastai 2 Vision course
+            - https://forums.fast.ai/t/a-walk-with-fastai2-vision-study-group-and-online-lectures-megathread/59929
+            - Good image regression https://github.com/muellerzr/Practical-Deep-Learning-for-Coders-2.0/blob/master/Computer%20Vision/06_Scalar_Regression.ipynb
+
+### Links
+    - Benchmark model https://www.drivendata.co/blog/model-geomagnetic-field-benchmark/
+    - Code Submission https://www.drivendata.org/competitions/73/noaa-magnetic-forecasting/page/288/
+    - COMPETITION     https://www.drivendata.org/competitions/73/noaa-magnetic-forecasting/page/279/
+    - Problem         https://www.drivendata.org/competitions/73/noaa-magnetic-forecasting/page/279/
+    - Data            https://www.drivendata.org/competitions/73/noaa-magnetic-forecasting/data/
+    - Discussion      https://community.drivendata.org/c/magnet-model-the-geomagnetic-field/43/l/latest
+    - Runtime repo    https://github.com/drivendataorg/noaa-runtime
+
+    - Solar cycle progression   https://www.swpc.noaa.gov/products/solar-cycle-progression
+    - Research papers           https://scholar.google.com/scholar?hl=en&as_sdt=0%2C6&as_ylo=2015&q=disturbance+storm+time+%28dst%29+prediction+%7C+forecasting&btnG=
+    - Geomag resources Colorado https://geomag.colorado.edu/
+    - Geomag resources NOAA     https://www.ngdc.noaa.gov/geomag/
+    - The Solar Wind            https://www.youtube.com/watch?v=YsvVPgcyJ4w
+    - The IMF                   https://www.spaceweatherlive.com/en/help/the-interplanetary-magnetic-field-imf.html
+    - _THE WINNERS_             https://github.com/drivendataorg/magnet-geomagnetic-field
+
+    - MY FILES
+        - MY CODE                   $MY_CODE/AI-ML/magnet/README.md
+        - MY SQL explore: good!     $MY_CODE/AI-ML/magnet/my-code/sql-explore.sql
+        - MY Pandas explore:        $MY_CODE/AI-ML/magnet/my-code/pandas-plot.py

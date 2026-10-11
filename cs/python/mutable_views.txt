@@ -1,0 +1,9 @@
+py mutable views
+
+# @jakevdp: Be careful with mutable views in Python!
+
+>>> import numpy as np
+>>> x = np.ones(5)
+>>> x[1:] += x[:-1]
+>>> print x
+[ 1.  2.  3.  4.  5.]

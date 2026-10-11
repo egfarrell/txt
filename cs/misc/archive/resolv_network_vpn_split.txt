@@ -1,0 +1,18 @@
+resolv conf network
+
+some dynamic thing that creates a symlink for /etc/resolv.conf
+    sudo dpkg-reconfigure resolvconf
+
+
+vpn split
+    (when I worked in lboro)
+
+    go to
+        /etc/resolvconf/resolv.conf.d
+    edit file
+        head
+    insert test
+        nameserver 192.168.0.1
+
+    now you can have vpn and internet working!
+

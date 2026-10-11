@@ -1,0 +1,20 @@
+py datatype conversion
+
+Converting data types
+    c = 21             
+        type(c) results in "int". value is 21.
+
+    c = float(c)       
+        type(c) results in "float". value is 21.0.
+
+    c = 20.9
+
+    c = int(c)         
+        type(c) results in "int". value is 20. 
+        (decimal part just truncated)
+
+    round(20.9)        
+        returns float, value 21.0
+
+    int(round(20.9))   
+        returns int, value 21

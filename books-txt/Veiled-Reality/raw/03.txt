@@ -1,0 +1,555 @@
+### 3 The Rules of Quantum Mechanics
+Standard quantum mechanics—the theory that is made use of
+in practice and is, because of this, taught in university courses-
+is a theory that is weakly objective only. For this reason it is most
+conveniently and neatly expressed by means of a set of basic
+rules of calculation that enable physicists to make predictions
+concerning what will be observed.
+3.1 Statement of the Rules
+Before the rules are stated, two definitions should be given.
+Definition 1. Physical System. Classical and quantum physics both
+make considerable use of the expressions "physical system" and
+"state of a physical system." Indeed, any sufficiently isolated
+thing a voltmeter, an electron, or a molecule-is a physical
+system (the latter two, and more generally, systems that are of
+molecular size or smaller and for which a description in terms of
+classical physics is obviously insufficient, are often called micro-
+scopic systems). As a matter of fact, the concepts implied by the
+two expressions appear so obvious as to seem a priori or inher-
+ently meaningful notions. A word of caution is thus appropriate
+at the start. As results from the discussion in the following chap-
+ters, the concepts of systems and states, which are extremely
+useful in quantum mechanics, should nevertheless be handled
+with some care in that formalism. In particular, it should not
+be assumed that in all cases in which we intuitively speak of
+a physical system (and even of a "completely isolated physical
+system") this system (supposing the word is used) is necessarily
+in some definite, known or unknown, "state." More precisely,3.1 Statement of the Rules
+43
+we may not always assume that a system possesses at all times
+a constant number of, known or unknown, properties (position,
+momentum, spin component along some direction, etc.) that can
+properly be considered as pertaining to it alone. Counterexam-
+ples to such an assumption are given below.
+In what follows, the expression physical system is taken in its
+familiar, intuitive sense, as discussed above. For instance, a par-
+tially but sufficiently isolated atom (or electron, molecule, etc.)
+is a physical system or, for short, a system. As for the expres-
+sions state and quantum state, they are not always given the same
+definitions in the existing literature. At this stage, therefore, we
+avoid introducing them.
+->
+Definition 2. Ensembles. Quantummechanics is essentially a prob-
+abilistic theory. Except in special cases it makes no predictions
+that bear on individual systems. Rather, it predicts statistical fre-
+quencies. In other words, it predicts, as a rule, the number n of
+times that a given event will be observed when a large number
+N of physical systems of the same type and satisfying specified
+conditions are subjected to a measurement process. The statisti-
+cal frequency or probability of the event is then the number n/N
+(more precisely the limit, assumed to exist, of this ratio when
+N ∞). The collection of N systems is called a statistical ensem-
+ble, or, for short, ensemble. Each individual system is an element of
+the ensemble. The elements of the ensemble are noninteracting.
+Ideally, it should be imagined that to each element corresponds
+one particular apparatus by means of which the measurement
+is made. Only in the cases n/N = 1 or 0 is it possible to say
+that the theory makes a prediction that bears on individual sys-
+tems, since in these cases the prediction is that the given event
+either will or will not be observed on any individual element.
+Therefore quantum mechanics is sometimes called an ensemble
+theory. This appellation is literally correct, but when it is used,
+it is necessary to be on guard against unwarranted inferences.
+As will be shown in detail in Chapter 13, quantum ensembles
+are conceptually extremely different from the classical image the
+very term ensemble naturally conveys.
+The rules of quantum mechanics can now be summarized as
+follows (comments and alternative choices of axioms are post-
+poned to later chapters).44
+
+Rule 1: A vector space H that has the structure of a Hilbert space
+is introduced for describing ensembles of physical systems of
+the same type. There are instances in which, for the purpose
+of
+predicting the results of definite experiments, such an ensemble
+can be associated with a definite element of H Such an element,
+or ket, is then called a state vector Ensembles that can be described
+this way are called pure cases.
+Rule 1 calls for some remarks.
+• Remark 1. As Rule 6 in this section makes apparent, two
+kets differing only by a phase factor give rise to the same pre-
+dictions. Such a phase factor has therefore no physical meaning
+although, in a superposition such as those considered in Rule 3,
+the relative phases are of course meaningful. The expression
+"definite element of H" should therefore be understood with
+this restriction.
+• Remark 2: A frequent practice is to associate individual sys-
+tems with state vectors. Often, this may be done without incon-
+venience. From a theoretical standpoint, however, the use of en-
+sembles is preferable unless special precautions are taken. Rule
+1 does not imply that every ensemble (or, in the language just
+alluded to, every system) can be described by a state vector. In-
+deed the majority of ensembles are such that no state vector can
+be attributed to them, not even in a loose language (see Section
+7.2).
+Rule 1a (Superposition principle): Any ket of H can usually de-
+scribe an ensemble of physical systems.
+Exceptions exist. They are known as superselection rules.
+When a ket 4 > can be written as a linear combination of sev-
+eral kets |₁ >, N>, one says that (4> is a superposition of
+11 >,
+ΙΦΝ >
+Rule 2: If two nonidentical systems S and S' are elements of en-
+sembles that can be described by means of the kets | > and 4' >
+respectively, the ensemble of the compound systems composed
+of S and S' can also be described by a ket, denoted |4 >>|4' >
+1. Readers not familiar with Hilbert spaces and related notions also used in this
+chapter are referred to Appendix 1.3.1 Statement of the Rules
+45
+or more briefly | > | > (or | > | >). This ket is defined as
+an element of the tensor product HH' of the Hilbert spaces H
+and H' corresponding to S and S' respectively.²
+Rule 3: The evolution in time of a state vector | 4 > that describes
+an ensemble of systems subjected only to external forces is causal
+and linear. This means that if
+|(t) >= a₁₁(t) > + a2|42(t) >
+(3.1)
+then
+|y (t') >= a₁₁ (t') > + a2142 (t') >
+(3.1a)
+In the statement of this rule the term "external forces" means,
+as usual, that the influence (often called "reaction") of the system
+on the physical entities that create the forces can be neglected.
+If this is not the case, a larger system, including these entities,
+should be considered, and Rule 3 should be applied to the larger
+system.
+It should also be noted that the usual Schrödinger equation
+a
+at
+H\w(t) >= ih|w(t) >
+(3.2)
+where H is the Hamiltonian, is just a particular realization of Rule
+3. The point is that Rule 3 embodies all the general properties of
+the Schrödinger equation that are of interest in the subsequent
+discussion.
+Rule 4: To every measurable dynamical quantity³ A there corre-
+sponds a Hermitean operator operating on the elements of the
+vector space defined in Rule 1.
+For convenience we call simply Hermitean a Hermitean op-
+erator for which the eigenvalue problem can be solved (see J.
+von Neumann [1, Sec. 2.9]). Following Dirac we henceforth call
+2. Note the difference with classical field theory, where instead we have vector
+sums of functions all defined on the same space.
+3. The term dynamical quantity means, as usual, a physical quantity such as posi-
+tion, velocity, or momentum that is liable to change in time (with the exception
+of time itself).440
+46
+3. The Rules of Quantum Mechanics
+a dynamical physical quantity an observable. Two observables are
+said to be compatible, or commuting, if the corresponding opera-
+tors commute.
+Rule 5: The measurement of an observable A necessarily yields
+one of the eigenvalues of the operator associated with A.
+Henceforth the expression "eigenvalue [eigenket] of observable
+A" is often used as abbreviation for "eigenvalue [eigenket] of the
+operator associated with A."
+Rule 6: Let the symbols α and (k,r > denote, respectively, the
+eigenvalues and the normalized eigenvectors of observable A (r
+is a degeneracy index), and let 14 > be a normalized ket that
+describes an ensemble of physical systems S immediately be-
+fore a measurement of A on S. Then the probability that this
+measurement will yield value ak is given by
+Wwk = Σ1 < kr\w > 1²
+(3.3)
+When the kets are not normalized to unity, expression (3.3)
+must be modified in such a way that it is not affected by the
+arbitrariness in the normalization; that is, it must be replaced by
+Ψυκ
+= Σ
+| <k,r\y > |²
+<k,r|k,r >< w/4 >
+(3.3a)
+Again, what, in (3.3) and (3.3a), is meant by "probability"
+is just the relative statistical frequency with which, according to
+our predictions, the result a will be obtained upon measurement
+of A.
+Remark 3. The possibility of generalizing the concept of
+measurement and, in particular, of dissociating it from "the ob-
+server,” or of reducing the observer to an ordinary physical sys-
+tem, is discussed in later chapters. What is meant here by the
+word "measurement" is the interaction of a system S with a
+generally complex entity S' incorporating, along with measur-
+ing apparatus and so forth, the observer. And what is meant by
+"the value yielded by the measurement” is just what this ob-
+server reads on the apparatus. At this stage we make no effort to
+describe the observer in the same way as an ordinary physical3.1 Statement of the Rules
+47
+system, and for the time being the entity S' need not be ana-
+lyzed further as to its constituents. In other words we formulate
+prediction rules that are for the time being independent of the
+more subtle question whether or not the observer (for whom the
+predictions are made) is to be identified with a physical system
+in the ordinary sense. At this stage we simply leave this ques-
+tion open. On the other hand, independently of the answer to
+be made to the said question, it is important to be aware that
+within the formulation of the quantum mechanical formalism
+developed here, the measurement results are attributed a basic
+role, and that, correlatively, they must, when obtained, be con-
+sidered strictly true, "by definition" of the very notion of truth.
+The question whether and to what extent this conception may
+or should be altered is partly a philosophical question but also
+partly a physical one. It will be tackled in due course.
+• Remark 4. The observables that have a continuous spec-
+trum have eigenvectors that are not renormalizable. Concerning
+the measurement of these observables, some technical changes
+should therefore be made in expression (3.3). These are described
+in the textbooks. Then, when applied to a position measurement,
+Eq. (3.3) reproduces Eq. (2.19). A nonrigorous but simple way to
+derive this result is to define a "position eigenket" (x' > corre-
+sponding to position x by the formulas
+xx' >= x' x' >
+(3.3b)
+and
+< x' \x" >= d(x' – x")
+-
+(3.3c)
+where x is the position operator, and to define the wave function
+(x) by the relation
+y(x) =< x/y >
+(3.3d)
+Suppressing index r (no degeneracy) and identifying wk with the
+probability density P(x), we thus get
+P(x) = w(x) | ²48
+3. The Rules of Quantum Mechanics
+which is just Eq. (2.19) (since in [2.19] the denominator, here, is
+1 because ſſſ | < x|y > |² dv = 1)
+Rule 7: For any observable it is always possible, at least concep-
+tually, to invent a measuring device that satisfies the following
+condition: If the observable is measured twice on a given system,
+and if the time interval between the two measurements is van-
+ishingly small, then both measurements yield the same result.
+Such a measurement will be called an ideal one or a measurement
+of first kind. All other measurements are measurements of the
+second kind.4
+Theorem. Let A and B be two compatible observables. It is a
+theorem of Hilbert space theory (see Appendix 1) that there
+then exists a set {|k,],r >} of kets of H that are eigenkets of both
+A and B, that is, that obey
+and
+rule.
+Alk, j,r>= alk,1,r>
+B|k,1,r>= b;lk,1,r>
+This theorem makes it possible to formulate the following
+Rule 8: Let again A and B be two compatible observables. If ideal
+measurements infinitely close in time are made of both A and B,
+then with the preceding definition of |k,1,r>, the probability of
+obtaining the pair of results ak, b; on an ensemble described by
+the normalized state vector | 4 > 1S
+W₁₁ = Σ| <k,], r\ > 12
+Jr\y
+Wk,J
+(3.4)
+independently of the order in which the measurements are
+made.
+Although Rule 8 does not deal with the state of the system
+after the measurements take place, and hence, strictly speaking,
+4. Note that some authors use the word "ideal" to designate what is called a
+"complete" measurement below.3.1 Statement of the Rules
+49
+49
+does not rule out the possibility that this final state might depend
+on the order of these measurements, still it implies that, at least
+as far as the outcomes of these measurements are concerned, the
+order of succession of two ideal measurements made on compat-
+ible observables is irrelevant whenever the time interval between
+them is vanishingly small. Thus Rule 8 gives meaning to the no-
+tion of "simultaneous measurements" of such observables. This
+notion can obviously be extended so as to cover the case of an
+arbitrary number of compatible observables. In particular, a com-
+plete measurement on a system S is a set of simultaneous (ideal)
+measurements of the observables corresponding to a complete
+set (see Appendix 1) of commuting Hermitean operators acting
+on the vector space associated to S.
+If the kets involved are not normalized, expression (3.4)
+should be modified in the same way as expression (3.3) was
+changed to expression (3.3a).
+• Remark 5: It is important to realize that in expressions such
+as (3.3) the degeneracy index r can (and often does) correspond
+to the existence of observables that are not measured and are
+compatible with those that are. For example, in the case consid-
+ered in the formulation of Rule 8, if observable B is not measured,
+the probability w/ of obtaining result a upon measurement of
+A is the same as if B were measured and the outcome were not
+recorded; that is,
+Σωκ
+W₁ = Σwk,₁ = Σ \k,],r\w > |²
+(3.5)
+which is identical with formula (3.3), the role of r being played
+by the pair of indexes j, r
+Rule 9: Let A, B, be a complete set of compatible observables
+pertaining to some type of systems and let E be any well-defined
+ensemble of such systems. If, for some reason, the outcomes of
+simultaneous ideal measurements of A, B, that will or could be
+performed on the elements of E are known (or assumed known)
+with certainty and are the same for all the elements of E, then E
+can be described by a ket.50
+50
+3. The Rules of Quantum Mechanics
+Let be this ket. Let ak, bj be the (known) results of the
+measurements to be made on these systems. The probability of
+getting the results ak, bi is unity, and so by Eq. (3.3a),
+1
+=
+|<k, 1,
+<k,j, k,j,
+14 > 12
+>12
+>< 4/4 >
+This is the Cauchy-Schwarz inequality in the case in which
+it reduces to an equality. It follows that | 4 > is proportional to
+|k, J, > Since a numerical factor is just a normalization con-
+stant without physical significance, the following proposition
+can be stated (for future reference we call it Proposition A).
+Proposition A. The ket considered in Rule 9 is
+| >= |k,1,
+4
+>,
+A special case of Rule 9 is the following: The prior knowl-
+edge of the outcomes of simultaneous measurements of A, B,
+to be made at time t comes from a previous measurement of
+these observables performed at a time to immediately before t.
+In this case, Proposition A is known as describing the collapse
+or reduction of the wave packet taking place at time to. It can be
+restated as follows:
+Rule 10 (Collapse theorem): Let E₁ be an ensemble of systems S.
+Immediately after simultaneous ideal measurements have been
+performed on a complete set of compatible observables pertain-
+ing to the systems S by a community of observers, this commu-
+nity can describe by a ket any subensemble E of Eo that is com-
+posed of systems S on which the measurements have yielded
+identical sets of outcomes. This ket is the eigenket common to
+the eigenvalues found as outcomes of the measurements.
+• Remark 6: This theorem is often stated as an independent
+postulate. We see here that it can be proved on the basis of the
+other quantum rules. The foregoing proof refers to Rule 9, but
+Remark 2 in Section 6.2 points out that the theorem can also be
+derived from a weaker assumption.
+Finally, we must also consider the case in which an incomplete
+measurement is performed on a system. We then make the fol-
+lowing postulate.3.2 
+
+Rule 10a: Let Eo be an ensemble of systems S that is described by
+a ket Immediately after we have performed simultaneous
+ideal measurements on an incomplete set of compatible observ-
+ables A,B, pertaining to the systems S, we can describe by a
+ket every subensemble E of E that is composed of systems S on
+which the measurements have yielded identical sets ak, bj, of
+results. This ket (to within a renormalization factor, of course)
+is the projection of 4 > on that subspace of the Hilbert space
+of S that is spanned by the eigenvectors common to A, B, that
+correspond to eigenvalues ak, bj,
+• Remark 7 A great number of the problems quantum me-
+chanics deals with require only the use of Rules 1–5. Conse-
+quently the physicists who are only interested in such problems.
+never have to cope—at least not professionally-with the ticklish
+epistemological questions concerning the role of the observers
+and so forth that were alluded to in Remark 3. In fact, if quan-
+tum mechanics just consisted of Rules 1-5 it would, concerning
+these questions and the possible ways to answer them, show no
+great difference from classical physics (and correspondingly the
+notion of ensembles would not be needed in order to formulate
+it). On the other hand, the latter observation should be qualified
+in at least three ways. First, it is meaningful only to the extent
+that the considered systems can be thought of as isolated from
+their environment and, as we shall see this often is, much more
+than in classical physics, a questionable approximation. Second,
+Rule 2 entails a phenomenon called entanglement (on which more
+later) which has no counterpart in the realm of classical physics.
+Third, it is of course the case that in a number of problems the
+other rules (6-10) come into play. These are the main reasons
+why quantum physics calls for the consideration of epistemo-
+logical problems that the physicists of the classical age could
+legitimately ignore.
+3.2 Complements
+Gathered in this section are a few further remarks, useful for ei-
+ther understanding the preceding rules and remarks more thor-
+oughly or applying them to specific problems to be encountered
+later in the book. The remarks are numbered sequentially to
+those of Section 3.1.52
+62
+3. The Rules of Quantum Mechanics
+• Remark 8: 5 Remark 5 may suggest a time evolution of the
+considered ensemble differing from the one described by Rule
+10a. Consider for example an observable A having degenerate
+eigenvalues
+A|k,r >= ak|k,r >
+(3.6)
+and another observable B having the same eigenvectors but non-
+degenerate eigenvalues
+B|k,r>= bk|k,r >
+(3.7)
+As is easily shown, A and B are compatible. Remark 5 then
+suggests a possible, though roundabout, way of measuring A.
+This is to measure B first without recording the outcome and then
+to measure A. With the help of Rule 8 and formulas (3.3) and (3.5)
+it is easily checked that the probability of outcome a is then the
+same as if the measurement of B had not been done. However,
+the collapse theorem (Rule 10) shows that immediately after the
+measurement of B having yielded outcome bkr we have to do
+with an ensemble in which a proportion
+Wkr = |<k,r|w > 2
+(3.8)
+of systems is described by ket |k, r > Since these kets are also
+eigenkets of A, the A measurement may naturally be assumed not
+to change them, so that keeping only the systems having yielded
+outcome a amounts to selecting the subensembles described by
+the |k,r > Hence, after this sequence of measurements we are
+left with an ensemble that cannot be described by one ket only
+but is a (proper) mixture of the thus described ensembles (see
+Section 7.2 for a definition of proper).
+It was suggested by J. von Neumann [1] that this result
+should be generalized to the case in which no observable B is
+actually measured at all. 6 Rule 10a should then be replaced by
+5. Can be bypassed on first reading.
+6. Von Neumann was at this point only interested in the description of the
+total ensemble of systems, composed of all the systems S after their interaction,
+irrespective of which outcome at the latter has produced. For this ensemble he
+proposed a description that amounts to putting together all the Ę considered in53
+3.2 Complements
+Rule 10a. Again let Eo be an ensemble of systems S that is
+described by a ket |> Immediately after we have performed
+an ideal measurement of an observable A whose eigenkets and
+eigenvalues are defined by Eq. (3.6), the ensemble E₁ of systems
+on which outcome af has been obtained is a mixture with weights
+Wk,r
+(ΣWkr) -1
+r
+ак
+(3.9)
+of ensembles each which is described by one of the kets |k,r >
+As the preceding example of a "roundabout" way of mea-
+suring A clearly shows, the possibility cannot be ruled out of
+measuring procedures in which Rule 10a' instead of Rule 10a
+would apply. On the other hand it was proved by Balian [2]
+(see also [3]) that only Rule 10a is fully compatible with Rule
+8, at least if it is assumed that every Hermitean operator in H
+corresponds to an observable. The point is that if a is a degen-
+erate eigenvalue of A, Hermitean operators D commuting with
+A can be shown to exist with the following property. If Rule 10a
+is replaced by any other prescription (for example, Rule 10a'),
+the mean value of D when A has been measured first (without
+recording the outcome) is not what comes from applying Rule 8
+to the pair A, D. so that with any rule other than 10a and with
+commuting operators such as A and D, Rule 8 fails and the order
+of the measurements is, in fact, relevant."
+• Remark 9. Let the eigenvalue equation of observable A be
+Alk,rak|k,r >
+(3.10)
+as above. A decomposition of the unit operator can then be
+written (see Appendix 1) as
+1 = Σ |k, r > < k,r|
+Σ\kr><kr|
+k,r
+(3.11)
+Rule 10a' below; so that it is natural to consider Rule 10a' as strongly suggested
+by his proposal.
+7 Such operators D are, for example, projector operators onto eigenvectors of
+A pertaining to eigenvalue a and distinct from any one of the |k, r >54
+3. The Rules of Quantum Mechanics
+Applying formula (3.11) to the identity
+A = A.1
+then gives, with the help of (3.10)
+A = Σ |k,r > ak < k,r| = ΣaxPk
+(3.12)
+k,r
+k
+where
+P₁ = Σk,r><k,r|
+(3.13)
+is the projector onto the "eigensubspace" corresponding to eigen-
+value ak. Expression (3.12) is known as the spectral representation
+of observable A. With its help, Eq. (3.3) can be rewritten as
+Wk =< 4|pk|4 >
+(3.14)
+or equivalently (see Appendix 1) as
+W = Tr[Pkly >< |]
+(3.15)
+• Remark 10: For observables with a continuous spectrum
+the sum in Eq. (3.13) must of course be replaced by an integral.
+In the case of the observable position, for example, the projec-
+tion operator onto the subspace corresponding to a particle S
+lying, on the x'x axis, somewhere between x = a and x =
+Remark 4)
+bis (see
+.b
+S°
+dx' \x' >< x' |
+with of course
++00
+[*** dx' \x' >< x' | = 1
+00
+(3.16)
+(3.17)
+These formulas are easily generalized to several variables.
+They imply that if an ideal position measurement is made on a
+particle described by state vector 4 > for the purpose of ascer-
+taining whether or not it lies inside the (a, b) interval and if the3.2 Complements
+55
+59
+outcome is positive, then, according to Rule 10a, the (unrenor-
+malized) ket describing the particle after this measurement must
+be
+-b
+| 'P'1,unr >= ["* dx' \x' >< x' \y >
+w
+(3.18)
+so that the corresponding (unrenormalized) wave function is
+1,unr(x) = < X|tung >=
+-
+=
+།
+、
+[*°
+dx' < x\x' >< x' \ y >
+(3.19)
+dx' 6(x − x') y (x')
+-
+where Eq. (3.3c) has been used. Hence
+(x) if a< x < b
+1unr(X) =
+0
+outside.
+Such a measurement has the effect of chopping off the part of
+the wave function whose argument lies outside the (a,b) interval.
+Note that since
+K =
++00
+Le 141, unr ( x) 1² dx
+00
+is not unity, after collapse the normalized wave function 41(x)
+must be written
+·b
+Y₁ (x) = K-1/2
+· S° dx's (x − x') y (x²)
+a
+(3.20)
+Note, however, that although this process admits, of a simple
+(even if, admittedly, nonrigorous) mathematical description, its
+conceptual interpretation is in fact much less elementary than one
+might think. Indeed, as given, the very description of the pur-
+pose motivating the measurement is misleading. This is because
+it suggests that the measurement reveals where the particle re-
+ally was. As will be seen (Section 4.4), this is not the case. The
+quantity for 14(x) |² dx is the probability, not that the particle 15 in
+(a, b) but only that it should be found within (a, b).56
+3. The Rules of Quantum Mechanics
+References
+1. J. von Neumann, Mathematical Foundations of Quantum Mechanics. Prince-
+ton U. Press, Princeton, N.J., 1955.
+2. R. Balian, Am. J. Phys. 57, 1019 (1989).
+3. J.S. Bell and M. Nauenberg, in Preludes in Theoretical Physics, in Honor
+of V.F. Weisskopf, A. De Shalit, H. Feshbach and L. Van Hove (Eds.),
+North-Holland, Amsterdam, 1966.
+
+
+ 

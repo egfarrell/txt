@@ -1,0 +1,521 @@
+### Paczyński–Wiita potential
+
+
+$MY_BOOKS/Astro/CAMK/Pacznyski-Wiita-EF-notes.pdf
+$MY_BOOKS/Astro/CAMK/Paczynksi-Wiita-Notes.pdf
+
+
+### Wlodek
+    Hello again Fatemeh and Enda,
+
+    - Just to get you started on the basics of thin disk motion,
+      I would recommend you remind yourself of the EFFECTIVE
+      POTENTIAL approach to orbital motion in classical
+      mechanics:
+        - `U(r) = V(r) + l^2/(2r^2)`
+
+    - And then try to derive:
+        - angular circular orbits
+        - and the specific angular momentum in them `l(r)`
+    - for the Paczynski-Witta potential `V(r) = GM / (r - r0)`
+
+    - The ISCO position in Schwarzschild is reproduced by `r0 = 2GM / c^2`
+
+    - The `r0 -> 0` limit reproduces Newtonian point mass
+    - (as always, `c^2 -> \infty` => GR -> Newton).
+
+    - You can also try my potential Kluźniak-Lee in:
+        - $MY_ZOTERO/2002/kluźniak_lee_2002_the_swallowing_of_a_quark_star_by_a_black_hole.pdf 
+
+    - and its version in Partharasathy, Cemeljic, Kluzniak.
+        - $MY_ZOTERO/2017/parthasarathy_et_al_2017_mhd_simulations_of_oscillating_cusp-filling_tori.pdf 
+
+    - $MY_IMAGES/astro/bh-accretion/Kluzniak-Lee-Potential.jpg
+
+
+### Resources
+    - https://phys.libretexts.org/Bookshelves/Classical_Mechanics/Book%3A_Classical_Mechanics_(Dourmashkin)/25%3A_Celestial_Mechanics/25.04%3A_Energy_Diagram_Effective_Potential_Energy_and_Orbits
+    - ocw classical mechanics https://ocw.mit.edu/courses/physics/8-01sc-classical-mechanics-fall-2016/
+
+    - Physics Demos Youtube Guy
+        - 8.3  Newtons Law of Gravitation https://www.youtube.com/watch?v=qbopRYKgCsw
+        - 8.5  Lagrangian in Polor Coords https://www.youtube.com/watch?v=hN-mW2vdbwg
+        - 8.6  Energy in Polar Coords     https://www.youtube.com/watch?v=yWjUbjv8_4A
+        - 8.7  Effective Potential        https://www.youtube.com/watch?v=pNh40VySYzY
+
+        - $MY_IMAGES/physics/CM/effective-potential-eqn.jpg
+
+
+    - XYLYXYLYX
+       - $MY_NOTES/physics/courses/XYLYXYLYX/What-is-GR/26-Central-force-problem-in-classical-mechanics.txt
+       - $MY_NOTES/physics/courses/XYLYXYLYX/What-is-GR/27-Effective-Potential.txt
+       - $MY_NOTES/physics/courses/XYLYXYLYX/What-is-GR/28-Classical-Central-Force-Problem-Orbit-shape.txt
+
+
+    ### Good
+        - https://theoretical-physics-digest.fandom.com/wiki/Paczynski_Wiita_Potential
+        - $MY_BOOKS/Astro/BH-accretion/Two-body-problem-potential.pdf
+        - $MY_BOOKS/Astro/BH-accretion/Schwartzchild-potential-Olso-Uni.pdf
+        - page 160! $MY_BOOKS/Physics/CM/CM-Gregory-good.pdf
+        - MIT MIT 8.962 GR lecture: has V_eff https://www.youtube.com/watch?v=_uNWqE3LS1E
+        - Basic BH lectures (conceptual) https://www.youtube.com/watch?v=r5GagFzUdtE&list=PL_onPhFCkVQioTaLmC36YqGcJXvM8OA_X&index=71
+
+### MTW discussion
+    - Page 911
+    - They recommend: 
+    - de Felice 1968 
+    - Wilkins 1972 
+
+### My Notes:
+    - orbit "turning point": 
+        - ie point of closest approach. 
+            - When all the energy is potential energy and there's
+              zero kinetic energy
+    - the paczynski-wiita potential was altered to allow of for
+      the horizon
+    - orbital velocities: sqrt of the paczynski-wiita potential?
+    - $MY_IMAGES/astro/bh-accretion/orbital-velocity.jpg
+
+    - Premature use of EOM's in the stationary action principle
+      invalidates the principle.
+        - it came up a few times, you can derive the Lagrangian
+          of the effective potential in 2 ways,  but one has
+          a "+" sign and the other a "-"
+        - This is related to working out that the Lagrangian for
+          φ is a cyclic coordinate, hence constant... but you
+          can't subsititue this back into the original Lagrangian
+        - Alternative explanation
+            - Effective potential is defined by the formula
+              E=Tradial+Veff(r). Your calculation shows that once
+              you make this identification it is not true that
+              L=Tradial−Veff, but that is fine. This happens
+              because centrifugal term (i.e. the one with angular
+              momentum) is really kinetic term and not a true
+              potential. Hence it must enter the Lagrangian with
+              plus sign, unlike the "real" potentials.
+            - key/interesting point: the effective potential, or
+              centrifugal potential, is really a kinetic term and
+              not a true potential.
+
+        - ah bingo!
+        - the whole `l^2/(2r^2)` comes from the kenetic energy
+          term, when you write out the mechanical energy of the
+          system (and comes from the spherical coord system too?)
+            - $MY_IMAGES/physics/CM/mechanical-energy-gives-l-squared.jpg
+        - even though the `l^2` bit came from the KE, it looks
+          like a potential energy, because it only depends on `r`
+            - aside: ok, `l^2` has a  `φ-dot` but that's
+              a constant, so no time dependence
+
+    - Earths orbit: look the minimum U_eff is at 1 AU!
+    - also in this diagram, look at the huge barrier as you get
+      close to the sun... it increases to  `∞` almost... so our
+      little planet won't get close to the sun unless it loses
+      angular momentum...
+        - $MY_IMAGES/physics/CM/effective-potential-earths-orbit.jpg
+    - interesting; for a given angular momentum, the circle is
+      the minimum energy orbit
+    - another approach: `T_eff`
+        - $MY_IMAGES/physics/CM/effective-potential-formula-breakdown.jpg
+    - Two body problem, centre of mass moves in straight line
+        - $MY_IMAGES/physics/CM/two-body-com-straight-line.jpg
+
+    - orbital velocity has 2 components, `θ` and `r`
+        - $MY_IMAGES/physics/CM/orbital-net-velocity.jpg
+
+    - a "circular orbit": `dr/dτ = 0`. 
+        - It's radius does not change! 
+        - Then `Energy = sqrt(effective potential)`
+
+    - interesting fact lagrangian
+        - the 1-body problem is the same as the 2-body problem?
+
+    - another derivation of effective potential... again we see
+      that some of the "potential" actually comes from the
+      kinetic energy
+        - $MY_IMAGES/physics/CM/orbital-total-energy.jpg
+        - $MY_IMAGES/physics/CM/orbital-total-energy-02.jpg
+        - now its turned into a 1D system and that's easy to plot
+
+    - Rondald et al. 2013 has some good stuff
+        - Review equatorial geodesic motion
+        - $MY_IMAGES/astro/singularity/formulas-equatorial-circular-motion.jpg
+        - $MY_IMAGES/astro/singularity/formulas-eff-pot-timelike-circular-geodesics.jpg
+
+
+
+
+
+### Wlodek Talk
+    - 2014 | Klużniak
+    - Exploring GR effects in Newtonian physics
+    - https://ui.adsabs.harvard.edu/abs/2014pas..conf...21K
+
+    - Stationary toroidal configurations1 of non-gravitating
+      fluid in axisymmetric GR metrics were presented in a paper
+      by Paczyński’s collaborators, Abramowicz et al. (1978).
+    - It allowed to model accretion flow through the inner edge
+      of the disk, a so-called _Sikora’s beak_, in a manner
+      analogous to Roche-lobe overflow in binary systems.
+    - However, the only feasible approach to modelling the inner
+      structure of a thin accretion disk was through a numerical
+      solution of the equations of (viscous Shakura & Sunyaev,
+      1973, alpha disk) motion.
+    - The problem to be solved was how to reconcile Newtonian
+      gravity with the presence of the marginally stable orbit.
+    - This was accomplished brilliantly by considering circular
+      orbits in a spherical pseudo-potential (Paczyński & Wiita,
+      1980) GM V (r)
+        -              GM
+        -  V (r) = −  -------  (1)
+        -              r − rG
+
+      with rG = 2GM/c^2 the Schwarzschild radius.
+
+      - This led to the appearance, in a purely Newtonian
+        calculation, of a marginally stable orbit (at the correct
+        radius! `r_ms = 3r_G`).
+      - It was then possible to show that radial flow could be
+        accounted for (Paczyński & Bisnovatyi-Kogan, 1981), while
+        the correct inner boundary condition is that of transonic
+        flow (Muchotrzeb & Paczyński, 1982).
+
+    - And thus opened the floodgates of accretion disk research.
+      It is worth noting that the pseudo-potential given in eq.
+      (1), and its variants , are used even today ...
+    - Of course, _ray-bending_ cannot be modelled in this way, so
+      for this and other reasons photon spectra obtained in such
+      calculations have to be taken with a grain of salt.
+
+    - Interestingly, Kepler’s law `P^2 ∝ R^3` has an identical form
+      in Newton’s 1/r2 gravity and in the Schwarzschild metric,
+      the Keplerian frequency being `Ω_k (r) = GM/r^3`
+
+    - Related to this, and to the instability of orbits for all
+      `r < r_ms` , is the difference in angular momentum: 
+        - in the Newtonian `1/r` potential `l^2_k = GM r` is
+          increasing with `r`, thus satisfying Rayleigh’s
+          criterion for stability, 
+        - while in the Schwarzschild case `l^2_k  = GM r/(1 − rG
+          /r)2` has a minimum at `r = r_ms` and its radial
+          derivative is negative for `r < r_ms` .
+
+
+
+
+### Plots of the potential
+    - 2011 | 6    | Crispino
+    - Pseudo-Newtonian potentials and the radiation emitted by a source swirling around a stellar object
+    - https://ui.adsabs.harvard.edu/abs/2011PhLB..697..506C
+
+    - We use pseudo-Newtonian potentials to compute the scalar
+      radiation emitted by a source orbiting astellar object. We
+      compare the results in this approach with ones obtained via
+      QFT in Schwarzschild spacetime.
+    - We find that, up to the marginally stable circular orbit,
+      the potential that better reproduces the Schwarzschild
+      results is the Nowak–Wagoner one.
+    - For unstable circular orbits, none of the pseudo-Newtonian
+      potentials considered in our analysis produces satisfactory
+      results. We show that the Paczynski–Wiita potential, the
+      most used in the literature to analyze accretion
+      disks, generates the least satisfactory results for the
+      scalar radiation emitted by the source in circular
+      orbitaround a Schwarzschild black hole.
+
+    - We assume natural units and signature throughout this
+      Letter. `c = ħ = G = 1`
+
+    - NOTE!!!! THIS IS THE STARTING POINT...
+    - Pseudo-Newtonian potentials are modifications of the
+      Newtonian potential
+        - `V_new(r) = - M / r`
+        - Where `M` is the mass of the central object.
+
+    - Then PW is:
+        - `V_pw(r) = - M / r - 2M`
+
+
+    - From these potentials, we can find the ORBITAL STRUCTURE of
+      a particle in uniform circular motion around a stellar
+      object in Minkowski spacetime for each case:
+
+    - First, find the specific mechanical energy
+        - `E(r) ≡ (1/2 ̇r^2) + (1/2 l^2/r2) + V(r)`
+
+    - The specific angular momentum is:
+        - `l(r) = sqrt(r^3 dV/dr)`
+
+    - wolfram alpha
+        - simplify (-m/(r-2*m)) + ((-m*(r^3))/(2*(r)^2)*((r-(2*m))^2))
+
+    - The specific Mechanical energy is then:
+        - `E_new(R) =  - M / 2R`
+        - `E_pw (R) = (- M / 2R) [ (R - 4M)R   ]`
+        - `                      [ ----------- ]`
+        - `                      [ (R - 2M)^2  ]`
+
+    - The circular BOUNDED orbits are obtained by imposing `E(R)
+      < 0`  where `R` is the radius of the circular orbit.
+
+    - The MARGINALLY bounded orbit is defined as the orbit where
+      the mechanical energy vanishes `E(R) = 0`.
+
+
+    - We plot the specific mechanical energy for the potentials.
+      We see that only the Paczynski–Wiita potential reproduces
+      the exact value of the marginally bounded circular orbit
+      provided by GR (r_mb = 4M).
+    - We also see that all orbits are bounded in the Newtonian
+      case, as expected.
+        - $MY_IMAGES/astro/bh-accretion/specific-mechanical-energy-for-effective-potentials.jpg
+
+    - Stable orbits are such that `dl_i / dR > 0` (Lord Rayleigh
+      1916!)
+        - $MY_IMAGES/astro/bh-accretion/psuedo-newtonain-potential-stable-orbits.jpg
+
+    - In this Letter we investigated the use of pseudo-Newtonian
+      po-tentials in the computation of the radiation emitted by
+      a parti-cle in circular motion around a stellar object.
+
+    - Although being eventually good approximations for some
+      situations in the context of accretion disks, we have shown
+      in the present study that pseudo-Newtonian potentials do
+      not produce satisfactory results for the radiation emitted
+      by relativistic particles orbiting black holes.
+
+
+
+### Cambridge notes
+    - The combination of linear momentum, angular momentum, and
+      energy conservation in our system has led to a dramatic
+      simplification: 
+        - a system of two particles in `3D` space has been
+          reduced to a problem of finding the motion of one
+          particle travelling in `1D`.
+    - Notice that while 2 particles moving in 3D involves 12
+      pieces of information (the position and velocity of both
+      particles), our current simplified problem only involves
+      two: 
+        - the position and velocity of a 1D particle.
+    - Thus, we have 10 fewer pieces of information to find.
+    - This dramatic simplification, along with the incredible
+      ubiquity of the central potential, makes the two-body
+      problem one of the most important problems in Physics.
+
+
+
+### Stack Physics
+        - https://physics.stackexchange.com/questions/34298/does-effective-potential-for-a-gravitational-force-have-a-maximum-below-e-0
+        - The effective potential is the Newtonian potential AND
+          a CENTRIFUGAL potential
+            - $MY_IMAGES/physics/CM/effective-potential-is-fictitious.jpg
+        - The effective potential energy is not the same as the
+          orbital energy.
+        - The orbital energy is a _constant_ of the orbit, while
+          the effective potential energy _varies_ throughout the
+          orbit.
+        - For a parabolic orbit the orbital energy is always
+          zero, but the effective potential energy varies between
+          positive and negative depending on the phase of the
+          orbit.
+
+### Effective Potential (Stack Physics)
+    - https://physics.stackexchange.com/questions/193105/what-is-an-effective-potential-in-classical-mechanics
+
+    - It isnt necessary to introduce the effective potential in
+      orbital mechanics but its really useful.
+
+    - Say we have a particle moving in a central gravitational
+      potential. Newton's laws give you a vector equation of
+      motion `mx⃗ ¨=−∇U` where `U = −GMm/r`
+
+    - In a general coordinate system this is a complicated set of
+      three coupled differential equations.
+
+    - We want to simplify and decouple these equations as much as
+      possible. So we work in spherical coordinates. I'll leave
+      the derivation of the angular parts of the equation of
+      motion to the textbook, let's focus on the radial part. The
+      left hand side of Newton's law becomes
+
+    - So now it's a matter of interpretation:-we can now think of
+      `r` as the coordinate of a particle living in one
+      dimension. We have effectively add a term to newton's law
+      for `r` that has no derivatives on it. 
+        - Why not call that a potential? In other words, why not
+          rearrange the above equation so that it looks more like
+          a simple 1D mechanics problem
+
+    - It is an extremely useful picture, because we all know how
+      a particle moves in a potential!
+    - Given an angular momentum, you can plot the potential and
+      immediately see where the STABLE circular orbits are (the
+      MINIMA OF THE POTENTIAL).
+
+    - You can also qualitatively see how there is a barrier to
+      approaching the object too closely (which makes sense--if
+      you have angular momentum you wouldn't expect a head on
+      collision)
+
+    - This is pretty non-trivial: you have computed a 2D problem
+      (finding a circular orbit, or even oscillations around that
+      orbit). In other words, the problem was much simpler than
+      it originally appeared (you didn't have to solve three
+      arbitrary coupled differential equations, just one simple
+      one with a potential), and we take advantage of this by
+      using an effective potential. This kind of trick shows up
+      all over the place in physics.
+
+
+### Weak points
+    - 2004 | 16   | Fukue | General Relativity and the
+      Pseudo-Newtonian Potential
+      | https://ui.adsabs.harvard.edu/abs/2004PASJ...56..681F
+    - A weak point of the pseudo-Newtonian potential for the
+      non-rotating case is its singularity at a Schwarzschild
+      radius: the potential diverges at `r_g`. 
+    - As a result, physical quantities oftenunphysically diverge
+      atrgwhen we use this pseudo-Newtonianpotential. This is not
+      very serious in the region ofr≥rmb.Onthe other hand, this
+      problem becomes serious when we treatthe flow in the close
+      vicinity ofrg, like, e.g., a slim disk (e.g.,Abramowicz et
+      al. 1988; Watarai et al. 2000).
+    - Another weak point of the pseudo-Newtonian potential isthat
+      it does not describe a special relativistic effect, such
+      asa Lorentz factor.For the latter point, Abramowicz et al.
+      (1996) proposed a re-scaling of velocities in order to give
+      a special relativistic correc-tion on the quantities under
+      the pseudo-Newtonian potential.That is, they
+      regardvasγv,whereγ=1/√1−(v/c)2.In this paper, we propose
+      a metric correction on the quanti-ties found under the
+      pseudo-Newtonian potential to givea general relativistic
+      correction, in addition to the specialrelativistic
+      correction.
+
+### Guess
+    - PSEUDO-NEWTONIAN GRAVITATIONAL POTENTIALFOR SCHWARZSCHILD-DE SITTER SPACETIMES
+    - Originally, the P-W potential was introduced by a guess,
+      when attempting toinclude the Schwarzschild radius into the
+      Newtonian gravity. However, there is a sim-ple heuristic
+      method for derivation of the pseudo-Newtonian potentials
+      that yieldsthe P-W potential. The same method was used for
+      the derivation of the pseudo-Newtonian gravitational
+      potential for the equatorial plane of Kerr spacetimes
+      aswell23. Then the position of the marginally stable
+      circular orbit corresponds to theposition determined by
+      using the general relativistic approach, anddifferences
+      inpositions of marginally bound circular orbit determined
+      in both the ways are rela-tively small. In this paper, this
+      heuristic method is just used for derivation of
+      thepseudo-Newtonian gravitational potential for the SdS
+      spacetimes
+
+    - Heuristic?
+        - 2002 | 81   | Mukhopadhyay      | Description of Pseudo-Newtonian Potential for the Relativistic Accretion Disks around Kerr Black Holes                                                                                           | https://ui.adsabs.harvard.edu/abs/2002ApJ...581..427M
+
+### Wikkipedia Definition
+    - Paper: "Thick accretion disks and supercritical luminosities"
+    - References: $HOME/repos/marks/journal-refs/paczynski-wiita-refs.txt
+    - $MY_ZOTERO/1980/paczyńsky_wiita_1980_thick_accretion_disks_and_supercritical.pdf 
+
+
+    - The Paczyński–Wiita potential is an approximation of the
+      gravitational potential around a _non-rotating_ black hole.
+    - Done by Bohdan Paczyński & Paul Wiita in 1980, one of the
+      most-cited from the first 40 years of A&A
+
+    - The potential is:
+        - $MY_IMAGES/astro/bh-accretion/paczynski-Wiita-potential.jpg
+
+    - where
+        - `r`   = radial distance from the black hole
+        - `G`   = gravitational constant
+        - `M`   = black hole mass
+        - `r_g` = `2 G M / c^2` Schwarzschild radius.
+        - `c`   =  speed of light
+
+    - The potential exactly reproduces the locations of the
+      innermost stable circular orbit (ISCO) and the marginally
+      bound orbit.
+
+    - It also exactly reproduces the form of the angular momentum
+      and accurately approximates the Keplerian angular velocity
+      and epicyclic frequency.
+
+    - Because the Paczyński–Wiita potential reproduces these GR
+      effects and is easy to calculate, its widely used in
+      numerical simulations of black hole accretion.
+
+
+### Abramowicz: The Paczynski-Wiita potential. A step-by-step "derivation"
+    - $MY_ZOTERO/2009/abramowicz_2009_the_paczyński-wiita_potential.pdf 
+    - This potential CANNOT be used for rotation BH's (doesn't
+      handle Lense-Thirring effect)
+    - Cannot be used for self-gravitating fluids (`∇^2 ≠ 0`)
+    - The Paczynski-Wiita potential accurately models GR effects
+      in the Newtonian theory that determines the motion of
+      matter near a nonrotating black hole.
+
+    - Interesting
+        - This potential is NEITHER an approximation of
+          relativistic gravity  nor a fitting formula.
+        - Instead,  its a unique (“pseudo”)Newtonian model of the
+          gravity of a nonrotating black hole.
+
+    - Key formulas:
+        - $MY_IMAGES/astro/bh-accretion/Derive-paczynksi-Wiita.jpg
+
+    - It reproduces exactly:
+        - `r_ms = ISCO`: location of the marginally stable orbit
+        - `r_mb` the location of the marginally bound orbit
+        - `L(r)`: the form of the Keplerian angular momentum
+
+    - It  also  reproduces accurately, but not exactly:
+        - the form of the Keplerian  angular  velocity `Ω(r)`
+        - and of the radial epicyclic frequency `κ(r)`
+
+    - Velocities of matter calculated with Paczynski-Wiita could
+      exceed the light speed.
+        - This creates a serious problem when one calculates the
+          observed appearance of matter (e.g.spectra) by the
+          method of ray tracing.
+
+### Logarithmic potential for the gravitational field of Schwarzschild black holes
+    - Nikolay I. Shakura, Galina V. Lipunova
+    - https://arxiv.org/abs/1808.01141
+
+    - In the Newton celestial mechanics, a gravitational
+      potential is a basic concept. In the GR there is generally
+      _no concept_ of a gravitational potential.
+    - In special cases, however, it is possible to use such
+      a concept. This gravitational potential is different from
+      what is usually termed asa pseudo-Newtonian potential.
+
+    - Non-rotation BH,
+        - the Paczynsky & Wiita potential (1980) is used
+
+    - Rotating black hole,
+        - Artemova et al. (1996) proposed a formula for
+          a pseudo-Newtonian gravitational force acting on
+          particles near Kerr BH.
+
+    - we consider a non-rotating BH and ‘logarithmic’ potential.
+      This gravitational potential, and allowing for the
+      curvature of the space-time, provide laws of motion for
+      a free particle identical to those in GR.
+
+
+    - For free particles in circular orbits, velocities are found
+      from the radial component of the Navier-Stokes equation:
+    - $MY_IMAGES/astro/bh-accretion/paczynski-wiita-potential-summary.jpg
+
+
+
+### Ray Tracking guy
+    - He talks about a "magic potential" and "Binet equation"
+    - http://rantonels.github.io/starless/
+
+### Interesting papers
+    - Paczynski-Wiita-like potential for any static spherical black hole https://arxiv.org/abs/1511.00699
+    - oslo uni astro course https://www.uio.no/studier/emner/matnat/astro/nedlagte-emner/AST1100/h08/undervisningsmateriale/

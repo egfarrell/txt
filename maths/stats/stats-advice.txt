@@ -1,0 +1,109 @@
+# Advice
+
+### 1. Non parametric statistics.
+    These are statistical tests which make a bare minimum of
+    assumptions of underlying distributions; in biology we are
+    rarely confident that we know the underlying distribution,
+    and hand waving about central limit theorem can only get you
+    so far.
+
+    Wherever possible you should use a non parameteric test:
+
+    1. Mann-Whitney (or Wilcoxon if you prefer) for testing
+       "medians" (Medians is in quotes because this is not
+       quite true. They test something which is closely
+       related to the median) of two distributions,
+
+    2. Spearman's `Rho` (rather pearson's `r2`) for
+       correlation, and the Kruskal test rather than ANOVAs
+       (though if I get this right, in Kruskal you can't do
+       the more sophisticated nested models you can do with
+       ANOVA).
+
+    3. Finally, the wonderful _Kolmogorov-Smirnov_ (I think
+       it sounds like good vodka) test of whether two sets
+       of observations come from the same distribution. All
+       of these methods have a basic theme of doing things
+       on _the rank of items_ in a distribution, not the
+       actual level. So - if in doubt, do things on the
+       _rank of metric_, rather than the metric itself.
+
+### 2. R (or I guess S).
+    R is a cranky, odd statistical language/system with
+    a great scientific plotting package. Its a package
+    written mainly by statisticians for statisticians, and
+    is rather unforgiving the first time you use it. Its
+    worth persevering.
+
+    It's basically a combination of excel spreadsheets on
+    steriods (with no data entry. an Rdata frame is really
+    the same logical set as a excel workbook - able to
+    handle millions of points), a statistical methods
+    compendium (it's usually the case that statistical
+    methods are written first in R, and you can almost
+    guarantee there are _no bugs in the major functions_
+    - unlike many other scenarios) and a graphical data
+    exploration tool (in particular `lattice` and `ggplot`
+    packages).
+
+    The syntax is inconsistent, the documentation sometimes
+    wonderful, often awful and the learning curve is like
+    the face of the Eiger. But once you've met `p.adjust()`,
+    `xyplot()` and `apply()`, you can never turn back.
+
+### 3. The problem of multiple testing,
+    And how to handle it, either with the _Expected value_,
+    or _FDR_, and the backstop of many of piece of
+    bioinformatics - _large scale permutation_.
+
+    Large scale permutation is sometimes frowned upon by
+    more maths/distribution purists but often is the only
+    way to get a sensible sense of whether something is
+    likely "by chance" (whatever the latter phrase means
+    - it's a very open question) given the complex,
+    hetreogenous data we have.
+
+    10 years ago perhaps the lack of large scale compute
+    resources meant this option was less open to people, but
+    these days basically everyone should be working out how
+    to appropriate _permute_ the data to allow a good
+    estimate of "surprisingness" of an observation.
+
+### 4. relationship between P-value, Effect size, Sample size
+    - This needs to be drilled into everyone - we're far too
+      trigger happy quoting Pvalues, when we should often be
+      quoting _P-values and Effect size_.
+
+    - Once a `P-value` is significant, it's higher significance
+      is sort of meaningless (or rather it compounds _Effect_
+      size things with _Sample_ size things, the latter often
+      being about relative frequency).
+
+    - So, if something is significantly correlated/different,
+      then you want to know about how much of an effect this
+      observation has.
+
+    - This is not just about GWAS like statistics - in genomic
+      biology we're all too happy quoting some small Pvalue not
+      realising that often with a million or so points, even very
+      small deviations will be significant. Quote your `r2`, Rhos
+      or proportion of variance explained...
+
+### 5. Linear models and PCA.
+    - Theres a tendency often to jump to quite complex models:
+      networks, or biologically inspired combinations, when our
+      first instinct should be to crack out:
+
+    - for prediction: the well established `lm()` - linear model
+    - for dimensionality reduction: `princomp()` - PCA
+
+    - These are old school techniques - and often if you want to
+      talk about statistical fits one needs to make gaussian
+      assumptions about distributions - but most of the things we
+      do could be done well in a linear model.
+
+    - And most of the correlation we look at could have been
+      found with a _PCA biplot_. The fact that these are 1970s
+      bits of statistics doesn't mean they don't work well.
+
+

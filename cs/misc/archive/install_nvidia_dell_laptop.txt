@@ -1,0 +1,41 @@
+install nvidia DELL laptop
+
+Here is my fix:
+
+1.Download the right driver for linux from nVidia and put it into your
+home folder. I used
+http://www.nvidia.com/object/linux-display-ia32-304.60-driver.html
+
+2.Open terminal and enter 
+    sudo apt-get --purge remove nvidia-* 
+after that 
+    echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
+and
+    sudo update-initramfs -u
+
+3.Reboot, previous steps are taken from the guide here:
+http://www.overclock.net/a/install-nvidia-drivers-in-ubuntu-11-04-11-10
+
+4.Boot into recovery mode, from there choose 'resume normal boot'.
+A few warnings - continue.
+
+5.In login screen press crtl+alt+F1 and log in.
+
+6.Enter 'sudo service lightdm stop'. If you don't get right back into
+virtual terminal press crtl+alt+F1 again.
+
+7.Enter 'ls'. You should see all things in your home folder listed,
+nvidia driver being one of them.
+
+8.Enter 'chmod +x nvidia-304-60'. nvidia-304-60 being the file you
+downloaded, this may be different.
+
+9.Enter 'sudo sh nvidia-304-60'. See above ^
+
+10.The installer will start, ask you to agree to the terms and
+conditions and continue to compile.
+
+11.After that it will ask if it should register for automatic
+compiling (Yes) and if it should run nvidia-xconfig (Yes).
+
+12.Enter 'sudo reboot' to reboot normally. Done!

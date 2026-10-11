@@ -1,0 +1,215 @@
+### lisp for NUMERICAL programming
+    - HN user: reikonomusha
+    - I’ve been a sort of oddball in the numerical/scientific
+      computing world in the past 10 or so years in that I mostly
+      reject using Python for serious numerical programming. This
+      seems to be against the common wisdom of my PhD scientist
+      colleagues who grab for Python any and every chance they
+      get.
+    - The Python community has done an amazing job making a suite
+      of scientific software. Numerical libraries and plotting
+      are excellent in Python. Sympy and Sage are both very
+      ambitious, and in my opinion, quite successful projects. So
+      what’s the problem?
+    - Longevity and stability. Make fun of it all you want, but
+      old crusty FORTRAN code, and in the past 20 years C and
+      C++, are the bedrock of serious scientific applications.
+      Python usually isn’t. I’m not confident enough to say why
+      with certainty, but maybe it has to do with the fact that
+      Python APIs and type signatures (whether written out or
+      not) are too handwavy and easy to change without detection.
+    - In addition to this, I rarely find that people, scientists
+      especially, are writing applications in Python. Python is
+      too hard to deploy as an application sane people can use,
+      is a mess to configure, and difficult to make efficient if
+      your slow parts aren’t rewritten. Most scientists slop code
+      around in Jupyter notebooks which bitrot and are forgotten
+      about in 6 months.
+    - The world is clearly in need of good numerical code and
+      environments, even with Python’s amazing ecosystem. Julia
+      has been popular among my savvier programming colleagues
+      and it has attracted very high quality contributions,
+      rivaling and exceeding Python in some cases.
+    - Back to me: what do I do? I write my numerical applications
+      in Common Lisp. It’s probably as unpopular of a choice as
+      it gets in the scientific world. I use Lisp because:
+        - The language is standardized and my code won’t break
+          when the compiler updates
+        - I can write very high performance floating point code,
+          using SIMD/AVX, and readily inspect the assembly code
+          at the function level
+        - I can easily bind to C and Fortran libraries
+        - I can deploy applications as static executables
+        - I can avoid garbage collection and heap allocations
+          with careful programming
+        - I can write generic, extensible interfaces
+        - I can debug algorithms live—in the depths of stack
+          traces—without the compile-printf-edit cycle, which is
+          insanely useful when encountering tricky floating point
+          accuracy bugs.
+    - Clearly I’m a “programmer’s programmer” though, which may
+      be a hint as to why Lisp remains unsuitable for scientist
+      use. Most scientists don’t know or don’t care what a stack
+      allocation is, and that’s fine, because the tools have
+      evolved around them in such a way they can be hugely
+      successful without that knowledge. It’s also remiss to not
+      mention that scientists typically have 8+ years of training
+      in their (non-software) discipline, and “ain’t nobody got
+      time for [programming],” despite its growing importance and
+      necessity.
+    - The biggest negative of using Lisp is that a lot of work
+      you’d take for granted in Python or Julia is not done. It
+      took me several hours to get a certain complex 2^n
+      dimensional matrix factorization routine working from
+      LAPACK in Lisp, whereas in Python it would take me 30
+      seconds flat to look it up, read the documentation, import
+      it, and call it. So it’s definitely the case that Lisp’s
+      “startup overhead” is high. But at the end of the day, if
+      I’m building an electromagnetic simulator, I feel some
+      pre-baked math routines are the least of my concerns, and
+      the overall code structure and quality is of the highest
+      concern. Python is suboptimal in that category, in my
+      opinion.
+
+
+### Lisp quoting
+    - Lisp `quot` operator corresponds to how we use quotes in
+      English
+    - Cambridge is a twon with 90,000 people. 'Cambridge' is
+      a word containing nine letters.
+
+### ASDF
+    - "Another System Definition Facility"
+    - ASDF is the de facto standard build facility for Common
+      Lisp. Your Lisp implementation probably contains a copy of
+      ASDF. To load it: `(require "asdf")`
+
+### Alan Perlis
+    - Pascal is for building pyramids — imposing, breathtaking,
+      static structures built by armies pushing heavy blocks into
+      place.
+    - Lisp is for building _organisms_....
+
+### LISP as seen from Scheme
+    - Common Lisp and Scheme are contemporary Lisp languages, and
+      each has influenced the other.
+    - Like Scheme, Common Lisp adopted lexical scoping and
+      first-class procedures, although Common Lisp's syntactic
+      extension facility does not respect lexical scoping.
+    - However Common Lisp's evaluation rules for procedures are
+      different from the evaluation rules for other objects, and
+      it maintains a separate namespace for procedure variables.
+      This inhibits procedures as first-class objects.
+    - Also, Common Lisp does not support continuations or require
+      proper treatment of tail calls, but it does support several
+      less general control structures not found in Scheme.
+    - While the two languages are similar, Common Lisp includes
+      more specialized constructs, while Scheme includes more
+      general-purpose building blocks out of which such
+      constructs (and others) may be built...
+
+### LISP mantra
+    - Variables don't have types. Only values have types
+
+### Barak Pearlmutter Maynooth Uni
+    - Some express distaste for Common Lisp's new LOOP feature,
+      but I don't understand why. No one objects to the PROG
+      feature, which allows one to write programs. Similarly, the
+      LOOP form is for loops. Eg: to find the total temperature
+      of STARLIST, a list of stars represented as lists whose 3rd
+      element is their temperature, with just the PROG feature
+      one would write
+
+        (prog (temp ttemp)
+          (psetq ttemp 0
+                 temp starlist)
+            loop
+          (cond ((null temp) (return ttemp)))
+          (psetq ttemp (+ ttemp (caddar temp))
+                 temp (cdr temp))
+          (go loop))
+
+    - but LOOP allows the computation to be expressed more
+      conversationally
+
+        (loop with ttemp = 0
+          for star in starlist
+          do add caddr of star to ttemp
+          finally return ttemp)
+
+    - while remaining more efficient than the ugly
+        (reduce #'+ (mapcar #'caddr starlist))
+    - or
+        (apply + (map caddr starlist))
+
+
+
+### setq / setf
+    - `setq` is just like `set` with a quoted first arg
+        - `(set 'foo '(bar baz))` is just like
+        - `(setq foo '(bar baz))`
+    - `setf`, is subtle indeed -- it's like an "indirection".
+    - I suggest:
+      http://www.n-a-n-o.com/lisp/cmucl-tutorials/LISP-tutorial-16.html
+    - In short `setf` takes the first argument as a "reference",
+      so that e.g. (aref myarray 3) will work (as the first arg
+      to setf) to set an item inside an array.
+    - Another answer:
+        - (set  ls '(1 2 3 4))  =>  Error - ls has no value
+        - (set 'ls '(1 2 3 4))  =>  OK
+        - (setq ls '(1 2 3 4))  =>  OK - make ls (quote ls) and then have the usual set
+        - (setf ls '(1 2 3 4))  =>  OK - same as setq so far BUT
+        - (setf (car ls) 10)    =>  Makes ls '(10 2 3 4) - not duplicated by setq/set
+
+
+
+
+### Mentally parsing LISP
+    - When  "Everything is a function call" clicked, it felt
+      natural. (note: special forms, or macro-expansions both
+      have surface syntax of "function call")
+    - MATHS: `sin(x)` is like lisp `(sin x)`
+    - CS: function `move(dog, home)` in lisp `(move dog home)`
+    - So, for `(= 1 2)` I read as:
+    - 'call the equals comparison on 1 and 2'.
+
+
+### Lisp and Vim  - handy:
+    - if I have a syntax error, eg mismatched brackets, my "code
+      cell" delimiter wont render correctly.
+    - It'll appear as a simple comment instead of GREY BLOCK;
+    - Moral: ensure code cells appear as blocks!
+
+### Nielson - Tiddy Lips
+    - "The Maxwells equations of software"
+    - $MY_BOOKS/cs/LISP/Nielsen-TiddlyLisp-Maxwells-Eqns.pdf
+    - $MY_CODE/LISP/nielson-lisp/
+
+### AKCL
+    - Austin Kyoto Common-Lisp (AKCL).
+    - Fore-runner of GCL and also original lisp used in Maxima.
+
+### Gregory Chaitin: Lisp books
+    - The Unknowable
+    - Exploring Randomness
+    - Limits of Mathematics
+
+### vim help:
+    lispwords: extra words for indenting lisp
+
+### My files
+    ./lang/lisp/lisp-advantages.md
+
+### Links
+    - SICP done with common lisp                  https://eli.thegreenplace.net/tag/sicp
+    - Loving Common Lisp                          https://leanpub.com/lovinglisp
+    - Algorithms (using LISP)                     https://leanpub.com/progalgs
+    - An intuition for LISP syntax                https://news.ycombinator.com/item?id=24892297
+    - HN How to learn lisp                        https://news.ycombinator.com/item?id=25441664
+    - Good lisp book                              http://www.gigamonkeys.com/book/
+    - Lisp NUMERICAL programmer!                  https://news.ycombinator.com/threads?id=reikonomusha
+    - Common Lisp ecosystem, 2020                 https://news.ycombinator.com/item?id=26065511
+    - Haskell design but generic                  https://algebradriven.design/
+    - Barack Pearlmutter Maynooth Lispy Brain Lab http://www.bcl.hamilton.ie/
+    - Common Lisp intro site + HN discussion      https://news.ycombinator.com/item?id=28725958
+

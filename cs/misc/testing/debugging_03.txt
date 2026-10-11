@@ -1,0 +1,80 @@
+udacity debugging 03
+
+SIMPLIFICATION - delta debugging 
+	keep chopping the input till you pinpoint the error
+	or keep chopping new patches of sourcecode till offending lines found
+	so any regression test failing, use delta debugging (blame-o-meter)
+	however you need your build systems automated
+	and also a version control that can give fine differences
+	"git bisect" does this
+
+simplifying failures
+	how to find what is relevant to the failure
+	and how to do this automatically
+	e.g. mozilla bugathon -> 
+	keep removing some HTML till bug narrowed down (culprit: <select> tag)
+
+a simplified test case means
+	less (human) burden to understand
+	less (human) burden to explain
+	easier to communicate
+	usually means smaller program states
+	usually means fewer program steps
+
+Automated simplification
+	strategy
+	e.g. BINARY SEARCH (Kernighan & Pike)
+	remove half the input and check output
+	then remove other half of input and check output
+
+	automated test 
+	e.g. something that feeds HTML 
+	to mozilla and records if it crashes
+
+Delta debugging
+	increase granularity of input data 
+	by removing smaller and smaller parts
+
+	1. 	split data into "n" subsets, n=2 initially
+	2. 	if after removing a subset the remaining subset (complement) fails, 
+		then proceed with that complement subset and set n=max(n-1,2)  
+		{use "max" cos you never want to drop below 2}
+	3.  Otherwise all tests have passed so increase granularity: 
+		n = min(2n, input) and back to step 1
+		{use "min" function cos granularity can never be bigger than input}
+
+	delta debugging gives a simplified input where every single character matters
+	cos removing it changes an output from fail to pass
+
+	if you get one half to fail, it has the same efficiency as "binary search"
+
+Hierarchy of functions
+	remove_html: 	raise an assert error as a postcondition if ">" found
+	test: 			try the "core" function and catch any assert exceptions
+	ddmin: 			calls "test" and keeps stripping the input
+
+Fuzz testing
+	"fuzzer" function: generates random inputs for a program or API
+	keep submitting fuzz until program breaks
+	when program breaks, pass offending input to delta debugging
+	you end up with a "minimal failing input"
+
+Causality - "actual cause"
+	when we fix an defect we want to show that
+	1. it is actually an error
+	2. it causes the error
+
+	because there are:
+	errors that are not causes (some other code mistake)
+	causes that are not errors (<select> tag)
+
+	also, we want an "actual cause" that assumes
+	and changes as little as possible, but still
+	produces the defect
+
+Improve Delta Debugging 
+	its rather "dumb" i.e. economical with its assumptions
+	However give Delta Debugging knowledge of the input
+	data structure and it becomes more efficient
+	e.g. supply a list of tokens to the test function,
+	or tell Delta Debugging where to split sub-strings

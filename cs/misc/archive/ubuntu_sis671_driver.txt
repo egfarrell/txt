@@ -1,0 +1,31 @@
+ubuntu sis671 driver
+
+# install sis mirage 671 drivers
+    from ~/Dropbox/IT/Linux/ubuntu1204
+        get sis-32-bit-1204.tar.gz
+        tar xvzf sis*.tar.gz
+        sudo mv -v sis671_drv.* /usr/lib/xorg/modules/drivers
+        sudo mv -v xorg.conf /etc/X11
+
+older method
+    http://hellbunker.blogspot.com/2011/03/driver-sis-m671-m672-for-upcoming-natty.html
+
+    # Build - Package
+    # - git
+    # - xorg-dev
+    # - mesa-common-dev
+    # - libdrm-dev
+    # - libtool
+    # i forgot the other package name, just remind me if i need to put other -dev packages.
+
+
+    # This sources already pre-patched by me so you don't have
+    to patch it again. The patch older is for all of you who
+    want to help keeping this driver alive for further. Let's
+    fire up the terminal and start the build
+
+    git clone git://github.com/hellnest/xf86-video-sismedia-0.9.1.git
+    cd xf86-video-sismedia-0.9.1
+    ./configure --prefix=/usr --disable-static
+    make
+    sudo make install

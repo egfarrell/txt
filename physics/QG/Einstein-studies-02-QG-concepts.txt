@@ -1,0 +1,182 @@
+- $MY_BOOKS/Physics/QG/Einstein-Studies-02-Conceptual-Problems-QG.pdf
+
+
+- See: ./Ashtekar-intro-conceptual-QG.txt
+
+- I've loadsa comments from this book scattered in
+    - $MY_NOTES/physics/QM/QFT/QFT-tips.txt
+    - $MY_NOTES/physics/spacetime/spacetime-tips.txt
+
+# Einstein and Quantum Mechanics (John Stachel)
+
+### Some lessons from GR (p. 32)
+    - Lesson 1:
+        - don't break asunder what G-d has put together:
+        - inertia and gravitation
+    - The first lesson Einstein learnt is the fundamental
+      importance in any gravitational theory of the equivalence
+      principle, which he expressed as inertia and gravitation
+      being 'wesensgleich', the same in essence, or essentially
+      _the same_.
+    - There is no absolute DISTINCTION between gravitation and
+      inertia, but it depends on the _frame of reference_
+      employed.
+    - Once the appropriate mathematical tool had been developed,
+      this lesson can be expressed by saying the affine
+      connection of spacetime cannot be split-up uniquely into
+      two parts,
+        - one of which is an `inertial` connection,
+        - the other a `gravitational` field tensor
+        - (remember, the difference between two symmetric
+          connection fields is a tensor field).
+    - Till the end of his life, Einstein stressed the
+      significance of `affine connection` as the correct
+      mathematical representation of the gravitational-cum
+      -inertial field.
+    - [Interesting discussion then about the importance of the
+      affine connection, more than the Riemann tensor...]
+
+    - Lesson 2
+    - This involves the meaning of 'general covariance'.
+    - Einstein's interpretation of this concept is connected to
+      the reason why 3 years elapsed between him deciding the
+      metric tensor was the correct mathematical representation
+      of gravitation (late 1912) and finally adopted the
+      generally covariant equations for the gravitational field,
+      now called the Einstein equations (late 1915).
+        - The main obstacle was his failure to realize that in
+          a generally covariant theory, although the points of
+          a manifold are mathematically individuated by
+          a coordinate system, they are NOT PHYSICALLY
+          INDIVIDUATED before/until one has a metric tensor field
+          on a manifold. (to use modern terminology)
+            - Warsaw Sept 2023: See Rickles. Seems like Statchel
+              is arguing against substantivalism.
+            - $MY_NOTES/physics/metaphysics/Rickles-Philosophy.txt
+
+    - Lesson 3
+    - Originally, Einstein had considered the second solution to
+      be physically distinct from the first, and hence rejected
+      the generally covariant field equations because they didn't
+      provide a physically unique solution for the gravitational
+      field corresponding to a given source distribution (for
+      more discussion of the "hole" argument see Stachel 1986b,
+      1987~,1989)
+    - After two years he finally realized that two such solutions
+      could be considered as two mathematically distinct
+      exemplifications of the _same physical solution_ if one
+      stipulated that the physical properties of the manifold
+      points inside the hole in any solution to the field
+      equation depend entirely on the nature of the solution;
+      hence, when one creates the second solution by "dragging",
+      the physical significance of the points is dragged along
+      with the field.
+        - It is this stipulation that constitutes the physical
+          meaning of the concept of general covariance, which,
+          properly speaking, has _nothing to do with coordinate
+          transformation_.
+    - In the case of GR, one can express this idea by saying:
+      Until one introduces a metric, a manifold does not consist
+      of physical events but only of mathematical points with no
+      physical properties;
+        - it is the _metric that imparts the physical character_
+          of events to the points of a manifold.
+
+
+    - Lesson 3 'summary'
+        - After two years he recognized that two mathematically
+          distinct solutions can represent the same physical
+          reality if one assumes that the physical properties of
+          manifold points inside the hole depend entirely on the
+          field itself.
+        - When a new solution is created by dragging, the
+          physical meaning of those points is dragged with the
+          field.
+        - This assumption gives general covariance its physical
+          significance, independent of any coordinate
+          transformation. In GR, a manifold has only abstract
+          points until a metric is introduced; the metric gives
+          those points their physical character as events.
+
+
+    - Advantages of the fibre bundle:
+        - $MY_NOTES/maths/geometry/guage-fibre-fiber-bundles.txt
+    - One moral of the story is that GR is better formulated
+      mathematically by a fiber bundle approach in which the
+      metric is represented by a cross section of the bundle.
+        - On doing this, you realize immediately that in the
+          bundle approach, the points of the base manifold do not
+          represent physical events, which instead are
+          represented by _mappings_ from a point on a cross
+          section of the bundle into a point of the base
+          manifold.
+        - If you have no cross section (no metric), you have no
+          such mapping and hence no events (see Stachel 1986b for
+          more details of this approach).
+        - It follows that any point of the base manifold can
+          "represent" any event in an appropriate MAPPING.
+
+    - No metric, no nothing
+        - Finally, there is a issue which I call the "no metric,
+          no nothing" point of view.
+        - To quote Einstein: On the basis of GR, the concept of
+          SPACE, as opposed to 'what fills space' ... has no
+          separate existence.
+        - If we imagine the gravitational field, ie, the
+          functions `gik` to be removed, there does not remain
+          a space of the type [of Minkowski space in special
+          relativity-JS] but absolutely nothing, not even
+          a 'topological space' [ie, a manifold'-JS].
+        - For the functions describe not only the field but
+          simultaneously the topological metrical structural
+          properties of the manifold ...
+    - There is no such thing as empty space, i.e., a space
+      without a field. Space-time does not claim existence on its
+      own, but only as a structural quality of the field
+      (Einstein 1952).
+    - Einstein was well aware his views on this question were far
+      from universally shared:
+        - It required a severe struggle to develop the concept of
+          independent and absolute space, indispensable for the
+          development of theory.
+        - It has required no less stenuous exertions to
+          subsequently overcome this concept, a process which is
+          not yet completed (Einstein 1954b)
+        - cf: Dainton lists different types of spacetime:
+            - $MY_IMAGES/physics/GR/types-of-spacetime-Dainton.jpg
+
+
+    - Global Manifold & tension with QM
+        - Although the two ideas are not identical, the moral
+          I want to draw from this final point may be related to
+          Chris Isham's work .
+        - Suppose you really take seriously the view that there
+          is something _fundamentally local_ about the way GR
+          approaches a prob1em.
+            - Then there is another fundamental tension between
+              the basic approaches of GR and of QM because in
+              a deep sense QM is fundamentally global its
+              approach to problems.
+        - It doesn't make sense to talk about the wave function
+          on one patch of space-time, or the sum over all paths
+          on one patch of space-time.
+            - In solving a QM problem, you have to consider the
+              whole manifold from the beginning. 
+            - The conventional mathematical approach to GR, which
+              starts with a manifold, masks this tension.
+        - If we develop a mathematical formulation of GR that
+          _emphasizes the element of locality_ from the
+          beginning, it would emphasize this contrast more
+          sharply.
+        - Such an emphasis on the tension may be a necessary
+          stage in finding its ultimate resolution.
+        - Indeed, this way of thinking also suggests new
+          possibilities. Perhaps the existence of a global
+          manifold is just a special case.
+            - Maybe the ultimate theory all the patches won't
+              always fit together to form a manifold, except in
+              the classical limit.
+        - Perhaps my ideas may connect here with Isham's. If you
+          don't build a global manifold at the beginning, maybe
+          you're better off, because you may have to get rid of
+          it in the end anyway.

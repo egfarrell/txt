@@ -1,0 +1,74 @@
+unix readline stty
+
+# list readline variables
+    bind -V
+
+# list readline key bindings
+    bind -P
+
+# change readline editing mode
+    set -o vi
+    set -o emacs
+
+# inputrc mapping 'control-j'
+    dont do it!
+    'c-j' is similar to RETURN or unix line-feed
+    and messes up CGDB
+
+# dont understand this tip
+    Before running the emulator on a Unix-type system, stty needs to be
+    used to put the keyboard into raw mode (and afterwards it needs to be
+    put back to cooked). So, run the emulator using something like this
+    script (provided as “runme”):
+
+    stty cbreak raw -echo min 0
+    ./cable3 bios Dos6.22.img
+    stty cooked echo
+
+# when customising readline
+# you must ubind any stty mappings first
+    set bind-tty-special-chars off
+
+# list stty key bindings
+    stty -a
+
+# interesting note
+    readline does not bind over Ctrl-W since it is handled by the terminal
+    driver by default:
+
+    $ stty -a
+    (...) werase = ^W; (...)
+
+    To disable this, you have to run (in ~/.bashrc):
+
+    stty werase undef
+    bind '"\C-w": backward-kill-word'
+
+    .inputrc will not help here since it is read when Ctrl-W is still assigned to werase.
+
+    Also note that \C-w format keyseqs must be enclosed in double-quotes, as above.
+
+
+# ubind key for this command
+    -u downcase-word
+    -u kill-word
+
+# unbind a key combination
+    -r "\C-l"
+    -r "\C-h"
+
+# re-read .inputrc
+    using keys
+        By default, "C-x C-r" is bound to "re-read-init-file"
+
+    using command
+        bind -f ~/.inputrc
+        "bind" is a readline command
+        "-f" takes key settings from a file
+
+    spawn new login shell
+        bash -l
+
+    or set a custom key in .inputrc
+        set editing-mode vi
+        "\C-x\C-r": re-read-init-file

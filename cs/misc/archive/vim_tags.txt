@@ -1,0 +1,22 @@
+vim tags
+
+
+If you use <C-]> to jump to a tags defination, you can use "g<C-]>"
+instead of "<C-]>". Then if there are more than one match, you will be
+asked to choose one.  Although this method will not work when you
+start vim with a tag specified.
+
+I have the following maps in my .vimrc to switch the meaning of "g<C-]
+>" and "<C-]>".
+    :noremap <C-]> g<C-]>
+    :noremap g<C-]> <C-]>
+
+
+ It is not obvious at all, but the following settings will
+> allow you to select from a list of matches when there are
+> multiple matches:
+>
+> :set cscopetag
+> :set cscopetagorder=1
+>
+> See :help cst and :help csto

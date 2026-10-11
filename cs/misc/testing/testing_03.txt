@@ -1,0 +1,149 @@
+udacity software testing 03
+
+### Pseudo Random Number Generator
+    - The "seed" completely determines the sequence of "random"
+      numbers generated. So if you need to run the same sequence
+      again, use the same seed!
+
+### Random Test Driver Script
+	Random testing loop ->
+	separate QA tests that can run overnight
+
+	PRNG ---> Random Test Case Generator ---> SUT ---> Oracle
+
+	PRNG: supply "seed"
+	Case Generator: need domain knowledge
+	Oracle: Save failed test cases for later inspection
+			(The fail could be an assertion violation)
+
+Timeout
+	Each test loop has a timeout which triggers a "FAIL"
+
+Discussion about Unix read
+	result = read(fd, buf, nbytes)
+
+	"fd": file descriptor
+	"buf": memory block
+	"nbytes": byte count
+
+	read can return LESS than nybtes and no error occurs. pernicious!
+	so setup a "read_all" function that never returns partial reads.
+	and underneath "read_all" theres a fault inject read "read_fi" that
+	will actually mimic returning less bytes.
+
+Input Validitiy - Web browser
+	passing random sequences of 1's and 0's to a web browser
+	will result mainly in page errors (malformed HTML).
+	Now it is possible that some subset of the (malformed) random bits
+	will cause browser crashes but that is still only a small part of
+	the output domain.
+	So need to pass more valid random data than that penetrates the code
+	more deeply
+
+Input Validity 2 - 	A browser:
+	scans for valid HTTP protocol code
+	scans for valid HTML (lexical analysis)
+	perfroms rendering
+	advanced processing - forms, cookies, scripting
+
+	Now fuzz the browser using totally random bits,
+	and most of it won't get past the HTTP checks.
+	So you've high coverage of early parts of the system
+	but not much deep code coverage.
+
+	Solution:
+	generate: protocol correct random stuff, then valid HTML tokens,
+	then use a grammar to create valid HTML and finally include some
+	random scripting stuff.
+
+	You end up with a coverage curve which is a flat line on the coverage graph
+	i.e. it spans all areas. This requires sensitivity to the input and more work
+	but the pay-off is uncovering high value bugs.
+
+
+Valid Credit Card numbers
+	Issuer Identifier - Account Number - check digit (Luhns Algorithm)
+	So you need to use Luhns Algorithm to generate valid credit card numbers
+
+Input Validity Problem
+	when generating invlalid inputs, they execute a boring part
+	of the SUT and triggering input rejection errors. So the random
+	loop spends a lot of time "spinning".
+
+	However sometimes the SUT DOESNT reject the input cos it fails
+	to contain sufficient validitiy checking logic. This causes
+	misbehaviour and crashes, which humans look at, but then get
+	tired of cos its not valid input => our testing loop is
+	producing no actionable output.
+
+	Interfaces that are internal or don't span trust boundaries
+	often don't have full validitiy checking for performance, maintainability reasons.
+
+Random Testing v Fuzzing
+	originally Fuzzing meant the same as random testing.
+	But around 2000 Fuzzing came to mean "penetration testing"
+	to find security holes in software (web applications).
+	Plenty of these penetration tools available with lots of
+	canned knowledge of http/html protocols to generate input.
+
+Alternative Histories
+	INTEL floating point division error (Fdiv)
+	only 1 in 9 billion inputs triggered a bug
+	but can run 8 billion random tests per day
+	=> expected daily failure rate of 0.96
+
+
+Ways to Generate Random Inputs:
+"Mutative Fuzzing"
+	generative:
+		inputs are created from scratch. more time-consuming.
+	mutation-based:
+		create inputs by modifying non-random test-cases
+		how?
+		* by flipping bits
+		* by modify selected fields
+		* by adding/removing/replacing tokens,
+		or sub-tress of the abstract syntax tree (AST)
+
+Oracles	(must be automated!)
+	weak:
+		checks for system crash
+		violation of language rules
+		violation in enhanced execution environment (e.g. "VALGRIND")
+
+	Medium:
+		assertion checks
+
+	Strong:
+		the best ones!
+		alternative implementation
+			e.g. Python list used to crosscheck "queue" program
+
+		compiler differential testing:
+			e.g. 2 versions of C compiler
+
+		old verstion of SUT:
+			e.g. after a refactoring change
+
+		reference implementation:
+			best one! an implementation you can trust!
+
+		Function inverse pairs:
+			Do you get back the original data??
+			assembler <-> disassembler
+			encryption <-> decryption
+			compression <-> decompression
+			save <-> load
+			transmit <-> receive
+			encode <-> decode (audio, video) ok...will be a bit lossy
+
+		Null Space transformation
+			Take random test case and make a change that
+			SHOULDNT affect how its treated by the SUT.
+			If there is some sort of difference then you've found a bug!
+
+			e.g. Output should be the same in each of the 3
+			cases below otherwise problem with python compiler!
+				1. def foo(a,b) return a+b
+				2. def foo(a,b) return (a+(b))
+				3. def foo(a,b) return id(a)-(-b)

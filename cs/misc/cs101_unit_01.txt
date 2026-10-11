@@ -1,0 +1,32 @@
+udacity cs101 unit 01
+
+backus-naur form
+	its a replacement grammar.
+	<non-terminal> -> replacement
+	keep going until you hit a terminal
+
+Sentence -> Subject verb object
+Subject -> noun
+Object -> noun
+
+noun -> I
+noun -> python
+noun -> cookies
+I, python, cookies are "terminals"
+
+
+DERIVATION
+	replace the <non-terminals> until you can replace no more
+
+PYTHON GRAMMAR
+	for arithmetic expressions
+	expression = expression operator expression
+	expression -> number
+	operator -> +
+	operator -> *
+	number -> 0,1,2...
+	expression -> (expression)
+	+, *, 1, 2, are "terminals"
+	can make infinitely many expressions from this because recursive
+
+

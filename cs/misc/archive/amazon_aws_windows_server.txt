@@ -1,0 +1,43 @@
+amazon aws windows server
+RDP: ec2-46-137-55-178.eu-west-1.compute.amazonaws.com:3389
+User: 	Administrator
+Password: countryish
+
+
+RDP
+	You can download an RDP file for this instance which will launch
+	Remote Desktop Connection and connect to your instance. You will
+	need to note down your password because the Remote Desktop
+	Connection software will open in a new window.
+
+
+Password generation
+	and encryption can sometimes take more than 30 minutes. Please
+	wait at least 15 minutes after launching an instance before trying
+	to retrieve the generated password.
+
+Note:
+	Only AMIs which have Ec2SetPassword set/enabled in their
+	Config.xml file will generate a new password!!!!
+
+	Instances launched from a custom AMI will inherit the User and
+	Password of the AMI's parent instance.
+
+	When creating a custom AMI remember to enable Ec2SetPassword or
+	take note of the current password. See the EC2Config Service
+	documentation for more details. Need help configuring your remote
+	access software?
+
+
+enable Audio over RDP with
+Amazon AWS - Windows 2008 R2 instance
+	1. 	Click Start -> All Programs -> Administrative Tools -> Server Manager.
+	2. 	In Server Manager window, Click Configuration -> Services.
+	3. 	Find and enable Windows Audio services, change Startup type to Automatic.
+	4. 	Next go to Start -> Run -> tsconfig.msc.
+	5. 	This will launch Remote Desktop Session Host Configuration Console.
+		Select RDP-Tcp, and right click properties.
+	6. 	Then go to Client Settings.
+		Under "Redirection - Disable the following"
+		deselect Audio and video playback and Audio Recording.
+	7. 	Once completed, restart the OS. The audio should play to your RDP client.

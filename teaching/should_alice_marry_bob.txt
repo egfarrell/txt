@@ -1,0 +1,227 @@
+Should Alice marry Bob
+    by Timothy Gowers
+    Nov. 1, 2012
+
+Two problems:
+
+1. You are in an airport and are walking from the main departure
+lounge to a rather distant gate. On the way there are several moving
+walkways. There is a small stone in your shoe, which is annoying
+enough that you decide that you must remove it. If you want to get to
+the gate as quickly as possible, and if there is no danger of your
+annoying other passengers, is it better to remove the stone while on
+a moving walkway or while on stationary ground, or does it make no
+difference?
+
+2. You want to give £1,000 to somebody as a 21st birthday present. The
+person in question is just about to turn 16. A savings scheme offers
+a guaranteed interest rate of 3 per cent for the next five years,
+provided you save the same amount at the beginning of each year. What
+should this amount be so that you end up with £1,000?
+
+And which of those two questions did you find more engaging? If you
+are like almost everybody, you will already be thinking about the
+first, but the second will make your heart sink.
+
+Recently, the government has expressed a wish that all schoolchildren
+should study mathematics up to the age of 18, a view that appears to
+have cross-party support. As a mathematician, I am a firm believer in
+the benefits, both direct and indirect, that mathematical
+understanding can bring. However, I am also aware that many
+intelligent people thoroughly dislike mathematics, give it up at the
+age of 16, and have absolutely no regrets afterwards. Will two further
+years of mathematics really make a difference to such people, other
+than turning them off the subject even more?
+
+One method that is sometimes proposed for making subjects more
+appealing is to make them ‘relevant’. In mathematics, this supposed
+relevance often takes the dismal form of ‘word problems’ such as this:
+two apples and three pears cost £1.80, while four apples and one pear
+cost £1.60. What do apples and pears cost each? To solve such
+a problem, the technique is to turn the words into equations and solve
+the equations. Here one might begin by saying, ‘Let A be the number of
+apples and P be the number of pears. Then 2A+3P=180 and 4A+P=160.’
+Then, using standard techniques, one shows that A=30 and P=40, so
+apples are 30p each and pears 40p each.
+
+But problems like that don’t feel relevant at all. This problem may
+pretend to be about a trip to the greengrocer’s, but we all know that
+it is really just a flimsy disguise for some equations. We also know
+that a question of this form would never arise at the greengrocer’s:
+if you want to know the price of apples, you look at the little sign
+that tells you the price of apples.
+
+What is it that gives the stone-in-shoe question its appeal? Part of
+the answer is that one can imagine being in the situation described,
+or at least one can imagine that somebody might be in that situation.
+But that cannot be the whole story, because one can also imagine
+needing to know how much money to put away into a savings scheme in
+order to end up with a certain amount, and yet that question has no
+appeal at all. Another difference between the two questions is,
+I believe, more important: whereas the second question asks for
+a number, the first asks for a piece of advice. Many people, when
+asked to do a numerical calculation, switch off immediately, but
+almost nobody switches off when asked for advice: the natural reaction
+is to put oneself in the position of the person seeking the advice and
+to try to work out the best thing to do. The stone-in-shoe question
+exploits this instinct, at least initially, and it can then be
+answered without any calculations. (Just imagine how much less
+appealing the question would become if you were told the speed at
+which you walked and the speed of the moving walkways. Fortunately,
+you don’t need to know these.)
+
+One might think that if calculation and solving equations were absent
+from a mathematics course, then there would be nothing left to teach.
+But that is quite wrong: there are plenty of things one could teach,
+many of them entertaining, important and useful in later life. Here
+are some examples.
+
+We often need to make decisions based on incomplete data. Exact
+calculation is usually not possible in such situations, so it is very
+useful to be good at making rough estimates. For instance, will the
+benefits of building a high-speed rail line to Birmingham outweigh the
+costs? Even to begin to think about this question, one should have
+a rough idea of the number of journeys that would be made on the line
+each day. A useful trick for getting the right order of magnitude for
+quantities like this is to break the problem up into smaller parts. In
+this case we could estimate the number of hours per day that trains
+run on the line, the number of trains per hour, the number of
+carriages per train, the number of rows of seats per carriage, the
+number of seats per row and the proportion of seats that would
+typically be occupied. We would then need to multiply these numbers
+together. My own guesses, which I have made simple round numbers so
+that the multiplication will be easy, are 15, 4, 10, 20, 5 and 1.
+Multiplying those -together I get 60,000. Perhaps you would like to
+object to my assumption that the proportion of seats occupied is equal
+to 1. Of course I don’t actually believe that all seats would be
+occupied, but I think that most of them probably would be, and at this
+level of -accuracy rounding up a number like 0.8 to 1 is perfectly
+acceptable.
+
+Another skill of genuine use is that of getting to the heart of
+a question by abstracting away irrelevant details. Consider the
+following dilemma faced by Alice, who has just been proposed to by her
+boyfriend Bob. Alice is very fond of Bob, who is a better match than
+any of her previous boyfriends, but she worries that whatever she
+does, she may end up with regrets. If she accepts his proposal, she
+risks going on to meet somebody she would much prefer to be married
+to, but if she refuses him, she risks never again meeting anybody as
+suitable.
+
+Let us imagine that Alice is determined to be married by the age of
+36, and that by that age she would expect to have had serious
+relationships with eight people, of whom Bob is the third, say. Then
+we can model Alice’s situation as follows. She is presented with
+a sequence of eight random numbers, one by one. At any time, she can
+say ‘stop’ and the number that has just been presented to her is the
+one that she must accept. What strategy will give her the best chance
+of accepting the largest number? ‘There’s the house. This must be the
+folly.’
+
+‘There’s the house. This must be the folly.’
+
+This purely mathematical problem encapsulates Alice’s difficulty and
+has a known solution. Given the numbers above, it can be shown that
+Alice’s best chance of avoiding later regrets is to turn down Bob and
+then go for the first person she meets who is better than Bob.
+However, the validity of this advice depends on a number of
+questionable assumptions — not least of which is that the ‘irrelevant
+details’ that were abstracted away really were irrelevant — so this
+question is a good example both of the power of mathematics and of its
+limitations.
+
+A third skill that is extremely useful is the ability to evaluate
+statistics, since we are continually bombarded with statistical
+arguments of widely varying degrees of soundness. For example, studies
+have shown that British vegetarians have, on average, higher IQs than
+the general population. Does this show that meat is bad for your
+brain? What other explanations might there be for an observation like
+this? How informative is an average anyway? Given some numerical data,
+what else can one usefully calculate from it besides the average? How
+large a random sample is needed if you want to be convinced that an
+observation is probably more than just a typical random fluctuation?
+One can get a feel for this kind of question without ever calculating
+an average or a standard deviation.
+
+How should this kind of mathematics be taught? I strongly believe in
+two guiding principles. The first is to start with the real-world
+questions rather than with the mathematics. That is, rather than
+explaining mathematical ideas (about statistics, say) and then
+discussing how they can be applied to the real world, a teacher should
+instead start with a question that is interesting for non-mathematical
+reasons and keep a completely open mind about what mathematics has to
+contribute to the discussion.
+
+The second is to make the discussion as Socratic as possible. Rather
+than asking the question and then explaining the answer, the teacher
+should just ask the question and leave the job of answering it to the
+pupils. The teacher’s role would be to guide the discussion,
+encouraging it when it moves in fruitful directions and making gentle
+interventions such as ‘Does everybody agree with that?’ when somebody
+says something wrong and is not corrected. This would be the opposite
+of the kind of spoonfeeding that goes on with GCSE and A-level.
+
+Imagine if a teacher came into the classroom and said, ‘I’ve just read
+in the news that they are considering culling 70 per cent of badgers
+in certain areas of the country to halt the spread of TB in cattle.
+How on earth do they work out how many badgers there are in the first
+place? And how will they be able to tell whether the culling has
+worked?’ And imagine if the teacher admitted without any embarrassment
+to not knowing the answers. The aim would be to prompt a discussion in
+which the pupils were treated like adults and encouraged to think. The
+discussion would have many features that occur in real life: it would
+be open-ended, it would involve quantities that are hard to measure,
+it would be about estimates rather than exact calculations, and it
+would be responding to a non-mathematical need.
+
+Can this possibly work? In February I was at a meeting about
+mathematics education at which Michael Gove was present, and at which
+I advocated this kind of course. The idea interested various people at
+the meeting, so in June I wrote a blog post about it, for which
+I compiled a list of over 50 questions that I thought could be the
+basis of interesting classroom discussions. One of those interested,
+Sir John Holman, arranged for me to visit Watford Grammar School for
+Boys, where I was given two hours with a class of about 25
+sixth-formers, some from that school, some from the equivalent girls’
+school, and some from a nearby comprehensive. Some were doing maths
+A-level and some were not. I discussed about half a dozen questions
+with them in the way I have been suggesting, and that left me
+convinced that it can be done.
+
+Another person who was interested was Charlie Stripp, the chief
+executive of Mathematics in Education and Industry, an independent
+curriculum development body. He got in touch with me and said that MEI
+wanted to try to develop a course along these lines. Very recently,
+the government has agreed to provide the necessary funding, not just
+for developing the course, but for working out how best to assess it
+and for organising appropriate training for teachers, both of which
+will be essential, given how different this course will be from
+a traditional mathematics course. There is no guarantee that the
+course will be taken up by schools, and even if it is, it will not be
+suitable for everybody. But there is nothing to lose by making
+a course of this type available, and it is an experiment that is
+surely worth trying.
+
+Some further questions for interested readers. The best answers will
+be published in next week’s letters page (letters@spectator.co.uk).
+
+1. Roughly how often would you expect somebody in the UK to dream of
+the death of a loved one and that loved one to die the very next day?
+
+2. You play a game in which when it is your turn, you can either add
+a point to your score and remove two points from your opponent’s
+score, or stop the game. You start with five points, and when someone
+stops the game you get £10 for every point you then have. Your
+opponent, whom you dislike, starts, choosing to add a point to his/her
+score and remove two points from yours. What should you do?
+
+3. A divorcing couple are dividing up their possessions. The husband
+and wife agree about the financial values of these possessions but
+attach different sentimental values. Devise a good procedure for
+carrying out the division.
+
+4. Roughly how many people could fit into the Isle of Wight?
+
+You can find Timothy Gowers’s blogpost on teaching mathematics at
+specc.ie/howtoteach and his account of visiting Watford Grammar School
+for Boys at specc.ie/watfordgrammar 

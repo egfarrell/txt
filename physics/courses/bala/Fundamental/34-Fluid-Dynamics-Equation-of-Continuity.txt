@@ -1,0 +1,277 @@
+$MY_VIDEOS/physics/bala_fundamental/34-Fluid-Dynamics-Equation-of-Continuity.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture - 34
+Fluid Dynamics
+Equation of Continuity
+Having looked at the condition for hydro static equilibrium of a fluid, let us move on
+now to fluid motion itself. Now, have in mind the motion of a fluid in stream lines, you
+already familiar with the idea of stream lines, namely if some kind of smooth study flow
+and I will explain these terms carefully as we go along. But, it is flow, which is not
+chaotic or turbulent as suppose to smooth study flow, which is not chaotic or turbulent or
+like a waterfall or anything like that.
+But, a flow which is kind of regular as you can put a little piece of dies somewhere and
+you know, it moves in some kind of smooth curve. So, we have a flow of that kind in
+mind. Now, the first concept we have to understand is the idea of a current density.
+(Refer Slide Time: 01:02)
+
+In other words, if these are the flow lines of a fluid, if you put a unit area here an area
+element, we could ask, what is the mass of fluid crossing this area per unit time, per unit
+area per unit time, this mass is called the current density j as a function of r and t. It is the
+mass of, at the point r at time t; it is the mass of fluid crossing unit area per unit time.
+And of course, it is caught a direction j and that is the direction of a local fluid velocity.
+
+So, it is not hard to see, that this is in fact equal to rho, which could be a function of r and
+t general, the density multiplied by the fluid velocity r and t. So, by definition the current
+density j is the product of rho and v here. Now, we could ask, when this fluid is in
+motion assuming that, there are no points in the fluid, which are either sources of fluid
+coming out or sinks into which the fluid disappears.
+So, without any sources or sinks, we could ask then, what is going to happen to a little
+volume element d v at some random point, at some point here. There is some fluid,
+which is going in and there are some fluid, which is going out through certain phases of
+this volume element. So, we could ask, what is known as the net flux of the fluid through
+this volume element, which would corresponds to adding up all that fluids, which is
+going in, ignore all the fluid which is going out and subtracting the formal from the latter
+gives you the outward flux of the fluid from that point here.
+And let us find out, what this quantity is, now clearly if I use a volume element of this
+kind which is parallel, whose sides are parallel to the coordinate axis, then the
+contribution of the velocity vector pointing this direction on that phase would be the
+component of this velocity vector normal to this phase. So, that would be in this case, if I
+choose my coordinate system in this fashion as usual x, y, z, this phase is normal to the y
+axis. So, the current component j y is what is going to play a role here at that point.
+Similarly, across the two other phases, it is going to be j x and j z. Now, what is coming
+in here is j y at an earlier point d y over 2 to the left of x, y, z and here it is d y over 2 to
+the right of x, y, z. So, exactly the same way as we found the flow of force on a fluid
+element was minus the gradient of the pressure.
+
+(Refer Slide Time: 04:12)
+
+In this case, the same argument, exactly the same argument, but using this vector j will
+tell you that the net flux, the net amount of fluid that is flowing out through this volume
+element. Net fluid flux through the volume element d v is equal to delta j x over delta x;
+((Refer Time: 04:38)) that is the portion contribution out phases normal to the x axis plus
+delta j y over delta y plus delta j z over delta z multiplied by d x, d y, d z which is d v.
+So, net I should write this more carefully. So, let us write this as net outward fluid flux, it
+is equal to this quantity here. This is the mass of fluid that is flowing out through the l
+volume element d v through all the phases of it, put together. Whatever goes in with a
+negative sin, whatever goes out with a positive sin will automatically give you this
+quantity here.
+By the same argument, exactly the same argument that we use in finding that the gradient
+of the pressure gave you minus the gradient of the pressure gave you the net force on the
+fluid on the volume element. In exactly the same way, you end up with this combination
+here d v. Therefore, the flux per unit volume is just this quantity in brackets, this is the
+flux per unit volume at the point x, y, z.
+((Refer Time: 06:08)) So, at any point in the fluid at the point r, you have to find these
+derivatives and remember, these derivatives would occur, because each component of
+this is the function of r and t. They would involve derivatives of rho and v in general, but
+
+that is the quantity that appears in the flux per unit volume. This quantity has gotten
+name, this thing here.
+Notice that, you could also write this as del dot j, the reason you write in this form is
+because j x, because j we call is e x, j x plus e y, j y plus e z, j z and the del was an
+operator which look like this. So, you can write this as a dot product of this vector
+operator del with the current density j. This quantity is called the divergence of j and it
+sometimes written as the divergence of j inwards.
+I emphasis again that this idea of the flux per volume at a given point is applicable to any
+vectors field at all, it does not have to be the current, any vectors fields such as the
+electric feel or a magnetic feel and so on. The flux per unit volume by calculating the
+influx surround in infinite decimal volume element at any point is defined as the
+divergence of that vector field at the point. And then Cartesian coordinates, it is written
+in this form or in this form.
+So, this is not the definition of the divergence, it is an algorithm, if you like for finding
+this quantity here is the algorithm for finding that the divergence. So, the divergence
+itself is defined as the flux per unit for volume of a vector field at any point here. And
+what we found here is the flux of the current density, which in the fluid case happens to
+be rho times b. But, what is this quantity equal to ((Refer Time: 08:42)) what is this
+going to be equal to and that is interesting to ask.
+(Refer Slide Time: 08:54)
+
+Because, it is obvious that in the absence of sources and sinks, you must have the rate of
+change d over d t delta over delta t, rho of r comma t, this is going to be the rate of
+change of unit of the mass of unit volume of the fluid at the point r at any given instance
+of time t, it could increase, it could decrease etcetera. And clearly, if the system has the
+flux going in and nothing coming out, the density is going to increase, this is going to be
+positive.
+If on the other hand, the flux is mostly outwards, then more fluid going out, then going
+in, then this quantity is going to decrease at that point. In any case, this is what is going
+to balance minus del dot j of r comma t, because this with the minus sin is the invert flux
+per unit volume and this is the rate of change per unit volume, rate of change the mass
+from unit the volume at the point r at time t.
+So, this is got to be, if there is no source are sinking here, this is got to be given by
+whatever flow the flux of the fluid here, the net invert flux of the flow, which is minus
+del dot j. So, together, this implies the delta rho over delta t plus del dot j equal to 0 at all
+times at all points in the absence of sources and sinks. This equation, which is essentially
+conservation of matter or conservation of mass here is called the equation of continuity.
+And it is a crucial input, because notice, that what the equation of continuity telling us is
+that, there is the constraint on the way rho and j behave, remember rho j times v. So,
+delta over delta t plus del dot rho times v equal to 0 is connecting rho and v. Means, these
+two quantities, these two fields are not independent of each other. We call what I said
+earlier namely the task of fluid dynamics in some sense of hydro dynamics is to
+determine, what rho and v, r, this scalar field and the vector field r, given the pressure
+and the external force and so on and so forth.
+So, this is the task of fluid dynamics, but you already have independent of what forces
+you apply in the fluid, you already have the constraint equation in the equation of
+continuity. So, we must keep that in mind here, before we go on to finding out, what the
+equation of motion actually is. The next step is the following, before I do that, let us
+point out the following simple case.
+
+(Refer Slide Time: 12:09)
+
+If the fluid is incompressible, which is not a bad assumption in many cases, even in the
+case of gases as long as you are dealing with very high temperatures. You are not dealing
+with very voile and fluctuations in the density due to different temperatures or going near
+the speed of sound in the medium in the fluids, so that you have shock waves and so on.
+As long as you are dealing with such velocities or such conditions, then for velocity is
+much lower than the speed of sound in the fluid essentially the fluid is incompressible,
+even a gas is essentially incompressible, when it is flow.
+If that happens, if fluid is incompressible then rho of r t equal to rho equal to a constant
+in space and time, which immediately implies that this constant comes out of the
+derivative operators, this del involves basically differentiation. It comes out and this
+quantity is of course 0 and as a consequence del dot v 0. So, this says that, wherever you
+are in the fluid, this must be 0, such a flow is set to be solenoidal, these set to be
+solenoidal vector.
+For reason, we would not going to that is the technical term, but this simplifies matters
+enormously, because it is says the equation of continuity, does not involved the density at
+all, it just says the del dot v, the divergence of v must be 0 at all points. So, it puts kinds
+of condition on the velocity v here in the very important case of incompressible flow.
+
+Next, we now turn to real business which is to write the equation of motion f of fluid
+elements. So, we need to start by writing Newton’s equation for a fluid element and that
+is now straight forwardly done.
+(Refer Slide Time: 14:41)
+
+Because, we already know that the force on this fluid element per unit volume is minus
+gradient of p plus rho times F external, if such force is exist two times F external, this
+remember is the force per unit mass. And this is the density, which is the mass per unit
+volume. So, this term is the external force per unit mass and per unit volume. So, the
+force per unit mass multiplied by the mass per unit volume, this is the force per unit
+volume; that is already the force per unit volume.
+This must be equal to the mass per unit volume, which is rho times the actual ratio d v
+over d t. So, that is the equation of motion of a fluid element at any point r at any time t,
+given this quantity and this quantity, you should able to determine this quantity.
+Assuming that we know already, but remember rho and v are connected by the equation
+of continuity.
+So, if you like in some sense this equation gives you that dynamics, it is the analog of
+Newton second law, it is Newton second law and this gives you the conservation of
+mass. So, together these equations are supposed to determine rho and v, one can divide
+by rho and write this immediately as d v over d t minus radiant of p divided by rho plus F
+external, where remember F external is a force per unit mass on the fluid here.
+
+So, this is the basic equation that we have to deal with in fluid motion, where knowledge
+of this should be sufficient and this should be sufficient determine this v. But, this is
+easier set that done, it is a very, very non-trivial task, you will see for complications that
+arise a way as you see in the moment. First of all, this is valid even rho, when rho is not
+constant, even when the fluid is mot, it is compressible; it is compressible say and
+changes with sometime, this equation still valid.
+The next step is to ask what is this time derivative, here is acceleration here, remember
+that v is a function of space and time. So, if you followed a fluid element, which happens
+to occupy the point at time r at time t, then the rate of change of this v with t, the total
+time derivative will have two components. It implies that d over d t, v of t must be equal
+to 1 v of r and t, must be equal to one part of the time derivative time change.
+Arises because, there is an explicit depends on time of the flow of the velocity vector at
+any given point. So, here is a point, this is the velocity vector one instant of time, little
+later it is here, little later it is here and so on, due to this inexplicit dependence on time
+here. There is a change with of this v with respect to time and that is of course, equal to
+delta v of r delta t.
+But, that is not end of the story plus there is a contribution which arises, because this
+change is the fluid element moves as a function of time and therefore, there is a change
+of it is coordinate as a function of time and this of course, is x, y and z. So, there is
+portion which comes due to delta v over x times d x over d t plus delta v over delta y, d y
+over d t plus delta v over delta z e z.
+So, the fact that remember now, we are tracking now the unit element, we tracking now
+the force per unit volume of a fluid element located at the point r at time t and the fluid is
+moving, perhaps in unsteady way. So, the velocity filed is self changes explicitly with
+time and it changes implicitly, because the fluid is moving, because this r as time
+dependents and the velocity at that point, the rate of change this r is precisely what we
+called v.
+So, this quantity here can be rewritten in the following way d v over d t forget about the
+arguments here, let us forget about the r and the arguments here it is delta v over delta d t
+plus. Now, what is this, well as you can see delta v over delta x, delta v over delta y, delta
+
+v over delta z arises by taking that del operator, the gradient operator and acting on the
+vector v here. So, we let us write this out, let us write this out explicitly.
+So, you have v x delta over delta x, v plus v y delta over delta y, v plus v z delta over
+delta z, this is v x, this is v y and this is v z. So, we have the total derivative of the
+velocity v is given by the partial derivative of it is explicit time dependents plus v x times
+this, v y times this plus v z times that. But, you see these quantities delta over delta x,
+delta over delta y, delta over delta z arise from the components of the gradient operator,
+the del the triangle operator.
+So, this can be written as delta v over delta t plus v dot del, where this v dot del stands
+for the following quantity. It is stands for this combination of quantities acting on v, the
+partial derivatives act on v, so that is by definition v dot del here on v.
+(Refer Slide Time: 21:51)
+
+So, we have this beautiful formula which says that d over d t of this function of r and t is
+in fact equal to delta over delta t plus v dot del acting on v of r. So, the total derivative is
+the partial derivative with respect to time plus v dot del, this extra term here appears in
+the total derivative acting on whatever the velocity vector is out there. This quantity here
+is like a derivative due to the fact that fluid is being dragged along which be moved
+along and it is called the conductive derivative, it arises due to the motion of the fluid.
+
+So, notice that v appears in two places, we started by writing and equation of motion for
+the fluid elements to this mass time acceleration here. So, we wrote down everything for
+unit mass of the fluid and we discover mass time acceleration gave you d v over d t, but
+it was a total derivative, but in the case of fluid, it becomes the partial derivative plus the
+conductive derivative.
+This is crucial this extra thing here make the whole thing non-linear, because v appear is
+now in two different places in a product form. So, this immediately means that fluid
+dynamics is inherently non-linear. We started with Newton’s equations, which look a
+very simple equation, but it inherently for the velocity field gave us this little piece of
+complication here is which it responsible ultimately for much of the complication in
+fluids not all of it, but much of it as we see.
+(Refer Slide Time: 23:54)
+
+So, now, where are we, let us write that down, so the fluid elements the equation now has
+become delta v over delta d t plus v dot on v equal to minus delta p over rho plus F e x t.
+now if it should so turn out, this of external is a conservative force, such as gravity.
+Namely, it is obtained by from the derivative of a potential, then we already know that
+for a conservative force, let us write that here.
+
+(Refer Slide Time: 24:42)
+
+For a conservative force F external, we have F external equal to minus the gradient of
+some scalar potential, which has now the physical meaning of the potential energy per
+unit mass, because this F is the force per unit mass. So, this is must be a form gradient of
+some phi, such as gravitational potential rho g h, rho g z would be the gravitational
+potential. Then, would have a force in the z direction, which is minus g times e z.
+So, we have the external force, which is derive from a potential and this is the potential
+energy per unit mass of fluid and if you put that in, this becomes equal to in that case
+minus gradient p over rho minus the gradient of phi. So, this is the equation of motion of
+a fluid element, but you might now say, I put a conservative force, but the fluid also has
+the viscosity and the innovative that to account.
+And viscosity not a conservative force, it is a dissipative force, because ultimately it is
+represent some loss or dissipation a friction inside the medium yes indeed that term two
+exist. And in general, ((Refer Time: 26:22)) this should really the added. So, should add a
+rho times F viscous, which is the viscous drag per unit mass of the fluid. In which case
+you get here F viscous and you would continue to get here viscous.
+So, it is getting fairly complicated, you can see that already there is a complication due to
+this quantity here, which I will call non-linearity. It is a quadratic non-linearity, there are
+two powers of v here, this is a v here and a v here. You would have expected linear
+equation, because we would set well mass times acceleration, acceleration is rate of
+
+change of time derivative velocity, but it is now appearing in a implicit form as well with
+the v dot del on v here. This complicates matters as we already said, but this is the
+equation, basic equation of motion here.
+Solving this equation in any really complicated situation is really, really tough, but we
+will see various simple cases of it. But, I thought I should bring this show you how the
+very basic application of the basic principles, namely just the equation of motion will
+give you, automatically lead you. Using the fact that, we are dealing with continuous
+medium, automatically lead you to this fairly complicated equation. This is called the
+Euler equation.
+Actually, I thing that, Euler’s equation is the one that get without viscous term, but it
+differs on what the actual terminologies. But it is equation of motion of a fluid element
+and like to leave it like that. Our next task is the following, I am going to drop this as
+viscous, there are models for which I might mention it the end, but go to the drop this
+thing here and assume that, you have just the conservative force here plus this special
+gradient.
+And then, we need to have some knowledge of how the presser changes function of the
+density and we will look at the special cases. In particular, if you had an incompressible
+fluid, then there is no problem, think simplify enormously, no viscosity, this is a constant
+and then, one can actually try to make head way and see, while this gets us. In particular
+way we like to integrate this equation once to see in some analog of something is looks
+like the energy in the case of particle motion. We found the most integrate motion was
+the energy can we do the same thing here is what we will look at next.
+
+

@@ -1,0 +1,55 @@
+python advanced talk
+
+- everything is an object
+- everything can be grouped into a set
+- think of all python collections as sets (lists)
+
+### morphism
+    - when we apply a functor to a set to turn
+    it into something else
+
+### main point
+    anything in python can be transformed into
+    anything else by simply applying functors
+    to sets
+
+list comprehensions
+dict comprehensions
+
+iterkeys
+itervalues
+iteritems
+
+### bound/unbound methods
+    - if a function is mapped to an object then its a bound function
+    - def functions in modules "bind" that function to the modules
+    - functions in classes are bound
+    - lambda functions are unbound
+
+### izip itertools library
+    when zipping 2 different length lists
+    izip will pad the shorter list with "none"
+
+
+### filter
+any, all
+difference arrays and generators
+reduce - haskell calls this fold
+
+### closures
+    - mult_by_3 = mult_closure(3) -
+    - create a new function that retains some STATE that you passed in
+
+### monkey patch
+    - "mock" library for monkey patches
+    - (ie patches that only apply during a particular run)
+
+difference iterator, generator?
+
+generator
+    "yield" - entry, exit point for generator
+    if you call list(some_generator) and "some_generator"
+    doesnt have an end point, you'll run out of memory!
+
+generator expression (not a list expression!)
+    `steper = (x**2 for x in range(10,50))`

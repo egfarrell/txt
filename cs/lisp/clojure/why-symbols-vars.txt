@@ -1,0 +1,146 @@
+# Why does Clojure distinguish between Symbols and Vars?
+    - Stackoverflow
+      https://stackoverflow.com/questions/11662084/why-does-clojure-distinguish-between-symbols-and-vars
+    - See: $MY_CODE/clojure/symbols-vars.clj
+    - other way of posing this question:
+        - Why are there two levels of INDIRECTION for mapping
+          symbols to their underlying values?
+
+### Symbols are names
+    - Unlike most programming languages, Clojure makes
+      a distinction between things and the names of things. In
+      most languages, if I say something like var x = 1, then it
+      is correct and complete to say "x is 1" or "the value of
+      x is 1". But in Clojure, if I say (def x 1), I've done two
+      things: I've created a Var (a value-holding entity), and
+      I've named it with the symbol x. Saying "the value of x is
+      1" doesn't quite tell the whole story in Clojure. A more
+      accurate (although cumbersome) statement would be "the
+      value of the var named by the symbol x is 1".
+    - Symbols themselves are just names, while vars are the
+      value-carrying entities and don't themselves have names. If
+      extend the earlier example and say (def y x), I haven't
+      created a new var, I've just given my existing var a second
+      name. The two symbols x and y are both names for the same
+      var, which has the value of 1.
+    - An analogy: my name is "Luke", but that isn't identical
+      with me, with who I am as a person. It's just a word. It's
+      not impossible that at some point I could change my name,
+      and there are many other people that share my name. But in
+      the context of my circle of friends (in my namespace, if
+      you will), the word "Luke" means me. And in a fantasy
+      Clojure-land, I could be a var carrying around a value for
+      you.
+
+### But why?
+    - So why this extra concept of names as distinct from
+      variables, rather than conflating the two as most languages
+      do?
+    - For one thing, not all symbols are bound to vars. In local
+      contexts, such as function arguments or let bindings, the
+      value referred to by a symbol in your code isn't actually
+      a var at all - it's just a local binding that will be
+      optimized away and transformed to raw bytecode when it hits
+      the compiler.
+    - Most importantly, though, it's part of Clojure's "code is
+      data" philosophy.
+    - The line of code (def x 1) isn't just an expression, it's
+      also data, specifically a list consisting of the values
+      def, x, and 1. This is very important, particularly for
+      macros, which manipulate code as data.
+    - But if (def x 1) is a list, than what are the values in the
+      list? And particularly, what are the types of those values?
+    - Obviously 1 is a number. But what about def and x?
+    - What is their type, when I'm manipulating them as data?
+        - The answer, of course, symbols.
+    - And that is the main reason symbols are a distinct entity
+      in Clojure. In some contexts, such as macros, you want to
+      take names and manipulate them, divorced from any
+      particular meaning or binding granted by the runtime or the
+      compiler. And the names must be some sort of thing, and the
+      sort of thing they are is symbols.
+
+### Comments
+    - This is a great answer, but doesn't clarify, for me, why
+      Clojure chose a different route than Common Lisp. – Mars
+      Mar 8 '14 at 19:20
+    - If extend the earlier example and say (def y x), I haven't
+      created a new var, I've just given my existing var a second
+      name. -- this is incorrect; x and y are _TWO DISTINCT
+      VARS_, not one var with two names.
+        - @phyzome That's technically true, but I don't think
+          that actually makes any difference. That is invisible
+          to the user. – J Atkin Jan 10 '18 at 19:24
+        - @JAtkin It's not invisible if they use alter-var-root
+          or binding or other var operations. They're completely
+          separate vars.
+
+
+
+
+### Answer: indirection
+    - I have surmised the following question from your post (tell
+      me if I'm off base):
+    - Why are there two levels of indirection for mapping symbols
+      to their underlying values?
+
+    - When I first went to answer this question, after a while
+      I came up with two possible reasons: "re-defing" on the
+      fly, and the related notion of dynamic scope. 
+    - However, the following has convinced me that neither of
+      these is a reason for having this double indirection:
+
+        => (identical? (def a 0) (def a 10))
+        => true
+
+        => (declare ^:dynamic bar)
+        => (binding [bar "bar1"]
+            (identical? (var bar)
+                        (binding [bar "bar2"]
+                        (var bar))))
+        => true
+
+    - To me, it shows that neither "re-defing" nor dynamic scope
+      produce any alteration to the relationship between
+      a namespace qualified symbol and the 'var' it points to.
+
+    - At this point, I'm going to ask a new question:
+
+    - Is a namespace-qualified symbol always synonymous with the
+      var it refers to?
+
+    - If the answer is YES, then I simply don't understand why
+      there should ever be another level of indirection.
+
+    - If the answer is NO, then I'd like to know under what
+      circumstances a namespace qualified symbol would point to
+      different vars during a single run of the same program.
+
+    - I suppose, in summary, great question :P
+
+
+### Answer: Runtime changes
+    - Strange that nobody mentions this, but even though there
+      are surely more than one reason for this var indirection,
+      one big reason is the possibility to change the reference
+      during runtime while development in the repl.
+    - Therefore you can see the changed effects in the running
+      program while you modifying it which allows a development
+      style with instant feedback (or things like livecoding).
+
+    - See this for a better explanation: 
+    - Daniel Solano Gomez Understanding the Clojure Runtime:
+        - https://www.youtube.com/watch?v=8NUI07y1SlQ
+    - He also discusses some performance implications and gives
+      an example where this extra indirection costs about 10%
+      performance.
+    - Not so bad though considering what you get for it. 
+    - The biggest penalty is additional heap usage and the long
+      Clojure startup time which is still a big problem I think.
+
+### Answer: threads
+    - So indirecting symbols to Vars permits thread safe dynamic
+      re-binding (maybe this can be done in other ways, but
+      I don't know). I take this to be part of the core clojure
+      philosophy of rigorously and pervasively distinguishing
+      between identity and state to enable robust concurrency. 

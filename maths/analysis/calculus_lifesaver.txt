@@ -1,0 +1,116 @@
+
+Book:
+$MY_BOOKS/Physics/Maths/Analysis/calculus-lifesaver.pdf
+
+# LIMITS
+--------
+
+### How do we know if theres a horizontal asympotote?
+    - Check limits at infinity. As x--> infinity, f(x) --> L
+
+### what about sin(1/x) at zero?
+    - DNE Does not evaluate. 
+    - Has to keep going between 1 and -1 but at shorter and shorter intervals
+
+### Misconceptions
+    - asymptote - Cannot be crossed?
+    - No! see `sinx/x`
+
+    - horizontal left and right totes must be the same ? 
+    - No! inverse tan of x
+
+### Sandwich theorm
+    - Evaluating Limits at `a`, Rational Functions
+    - If you can plug in `a` and get something sensible then limit exists at `a`
+    - If you get something insensible (zero/zero) then its an indeterminate form.
+    - zero on the bottom, then verticle asymptote.
+    - tricky square root sign above or below, multiply by conjugate.
+
+tricks: factorise
+tricks: divide by highest degree term and multiply by same term
+       This zaps all the other terms down to zero
+
+### Summary: 
+    - degree on top higher? Goes to +-infinity
+    - degree on top lower? Goes to zero.
+    - Degrees equal? Goes to ratio of leading coefficients
+
+### Trick with negative square roots!
+    - We know `x` is negative so whats the sqrt(4x^6)? Its MINUS
+      2x^3!!! 
+    - Dont forget minus. Cos we're squaring an (ODD) cube
+      function.
+
+### Limits for absolute values.
+    - Should: Convert into piecewise function.
+    - basically for the standard formula of absolute value, 
+    - stick in whatever youre trying to evaluate.
+
+    - Has nice example with |x-3|/x-3 ... just watch you cant
+      have zero in denominator. (Its a step function)
+
+
+### two sided limits 
+    - DNE sometimes
+    - lim 1/x = + - infinity
+
+    - How do we know if theres a vertical asymptote at "a"?
+    - Well one or both of the left and right limits --> infinity
+      at "a"
+
+
+
+# INTEGRATION
+-------------
+
+### Substitution Methods
+    - ie reverse the chain rule
+
+    ### log trick
+        - if you have a function `f(x)` as the denominator
+        - and its derivative `f'(x)` as the numerator
+        - then theres a quick shortcut and the integral evaluates
+          to `ln|f(x)| + c`
+
+### definite integrals - migrate the bounds!
+    - if you substitute over to `t-land`, you must change the bounds of integration as well
+
+### nth root of linear in x
+    - (ax +c)^1/5 .... then let t^5 = (ax + c) and barrel away at the normal method
+
+### trick with e^x and e^2x
+    - notice that e^2x is actually (e^x)^2
+
+### Integration by parts
+    - ie reverse the product rule
+
+    - mainly apply the formula with the correct choice of `u` and `dv`
+
+    - start with the product rule written out
+    - then solve for `u*dv/dx`
+    - then integrate both side
+    - then by the chain rule cancel all the dx's
+    - youre left with: `∫udv = uv - ∫vdu`
+
+### you get your original integral back!
+    - sometimes you integrate by parts (twice) and you end up with your original integral on RHS.
+    - then move it back over the equals sign and readjust by any constant
+
+### integrate ln(x)
+    - can do this by parts aswell! 
+    - let `dx = dv`
+
+### integrate inverse trig functions
+    - do this by parts aswell!
+
+### Trig integration
+    - theres 2 trig identities that are used all the time
+    - cos(x)^2 = 1/2(1-cos(2x))
+    - sin(x)^2 = 1/2(1-sin(2x))
+    - this comes from: cos(2x) = 2*cos(x)^2 - 1 
+
+### odd powers of trig functions
+    - ∫cos{x}^m*sin{x}^n
+    - take odd power, or lowest odd power if both odd, and lower it by one, pairing the thing with dx
+    - then write your new even power as cos{x}^2 or sin{x}^2
+    - then turn them all into t's

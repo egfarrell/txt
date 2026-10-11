@@ -1,0 +1,154 @@
+11-The-metric-tensor.txt
+
+side discussion ./11-side-discussion.txt
+$MY_VIDEOS/physics/what-are-tensors/11-The-metric-tensor.mp4
+
+- aside: once we know the inner product for the basis vectors, we
+  know it for the whole vector space
+
+- interesting: the dual space _doesn't have an inner product_?
+    - Ah Later in YouTube the lecturer answers: I guess there are
+      three ways you could start: inner product on the vector
+      space, inner product on the dual space, or a metric tensor.
+      Pick any one and the other two are forced upon you.
+
+- two ways of defining the inner product
+    - way 1: on the vector space, take 2 basis vectors 
+    - way 2: use a contravariant tensor product map
+        - $MY_IMAGES/physics/what-are-tensors/2-ways-defining-metric.jpg
+
+- ie: I've two ways of mapping things from the cartesian product
+  of the vector space into the real numbers `ℝ`
+    - Way 1: the inner product 
+    - Way 2: entire space of infinite number of maps, any one of
+      which will do the same thing
+    - so can I find a map in `V* ⊗ V*` that duplicates the inner
+      product?
+
+So choose numbers that make both ways match...
+- and they we'll have selected one tensor from the dual product
+  space that mimics the inner product
+
+ah another good thing about the metric tensor: it allows us to
+finally create a natural connection between the underlying
+vector space and the dual space
+	- $MY_IMAGES/physics/what-are-tensors/using-the-metric-tensor.jpg
+
+    - From YouTube:
+    - Vectors and covectors can be put in 1-1 correspondence, but
+      there is no "canonical" or "natural" way to do this for
+      a general vector space. 
+    - However, if V is an inner product space, then there is
+      a natural mapping. YOu will see that is a later lesson!
+
+
+nice terminology:
+    - "I'm going to use the metric tensor to _measure_ all the
+      vectors in that vector space."
+    - ah... measure in the sense of getting a real number out...
+      (from combining two vectors)
+    - well thats the idea of "metric" anyway... measuring
+      something...
+
+### Connection between a space and it's dual
+    - Now we have a big change in the relationship between
+      a vector space and it's dual space. 
+    - Up to now you didn't really have a natural linkage between
+      a vector in the underylying space, and in the dual space.
+      Sure you could write out a co-vector in the dual with the
+      same "components" as the underlying vector. But they have
+      the same "components" but they're not related in any way.
+    - The metric will help me pick out a natural connected vector
+      in the dual space.
+        - $MY_IMAGES/physics/what-are-tensors/metric-connects-space-and-its-dual1.jpg 
+        - $MY_IMAGES/physics/what-are-tensors/metric-connects-space-and-its-dual2.jpg
+    - really nice: just punch in "half" of what the metric tensor
+      is looking for... and you're left with a natural dual...
+        - ie you've contracted the "upper" index against the
+          metric tensor, and you're left with a lower index
+        - $MY_IMAGES/physics/what-are-tensors/metric-connects-space-and-its-dual3.jpg
+
+    - underlying vector space: components are _contravariant_
+    - dual       vector space: components are _covariant_
+    - note: we're talking about the components
+
+
+
+
+
+### Youtube
+    - At 00:53, having defined a basis in V, how do you know
+      a basis in V* exists that satisfies the Kronecker delta
+      function?
+        - XylyXylyX
+        - V* contains _every possible mapping_. So the mapping
+          that takes e_0 --> 1, e_1 --> 0, e_2 ->0 and e_3 -->
+          0 certainly is part ofV* and we call that map e^0. Same
+          for e^1, e^2, and e^3. 
+
+    - I was thinking how did someone come up with the idea of needing an inner
+      product in the vector space, like why would someone want to promote the
+      vector space to a inner product space?
+        - XylyXylyX
+        - I am not sure of the answer, except that to model what we know about
+          geometry we need a way of defining “length” and “angle” and an inner
+          product is the only way to do that.
+
+
+    - When you established the relation between the V and V*  you
+      contracted the indices of the contravariant component with
+      the components of the "metric tensor" and you insisted on
+      the metric tensor. If we had any tensor coming from V*@V*
+      wouldn't the indices contract the same way?
+        - Yes. The metric tensor is only "special" because we
+          have chosen it to be special, but any (0,2) tensor will
+          perform a mapping that could be used as a metric if we
+          want. However, in GR we will have some restrictions on
+          our choice. In particular will will be forced to choose
+          a symmetric (0,2) tensor for example. Also, a GR metric
+          will have to have a certain "signature" in order to
+          connect GR with Special Relativity.. But mathematically
+          speaking, we could choose any (0,2) tensor as a metric
+          and they will all execute the same sort of mappings and
+          contractions as you point out.
+
+    - I'm confused in 20:55, since you've mentioned before:
+      "covariant transform is what we called when dealing with
+      the basis",  why is Aμeμ the covariant form of A?
+        - Becasue it is customary (an unfortunate IMO) to cite
+          the transformation property of the component . In most
+          texts you never see the basis vector all you see is
+          "A^\mu" which is the contravariant components of
+          a member of V in the basis `e__\mu`. So the habit of the
+          classical treatment of vectors calls A^\mu the
+          "contravariant for of the vector A".
+
+
+    - Can I summarize this lesson as: taking the inner product of
+      A (superscript alpha) e (subscript alpha)  and B in V or
+      taking the tensor A (subscript alpha) e (superscript alpha)
+      and operating on B will result in the same real number.
+      Hence in the end we don't care whether we used the dual
+      space (tensors or covectors) or the original vector space
+      (inner product) to construct a mapping to the Reals as we
+      have a relationship that ensures that the result is
+      identical.
+        - Yes, that is correct. However, in GR you will always
+          use the dual space vectors to make the mapping because
+          we always use the metric tensor to execute inner
+          products. It is slightly hidden, but whenever you see
+          a subscript on the vector component you know that the
+          metric tensor has been applied to lower it. Many texts
+          do not even mention the notion of an "inner product"
+          and some even define `A^mu B_mu` as the "inner
+          product." But if you understood this lesson then none
+          of these differences will confuse you.
+
+
+    - interesting
+    - The metric tensor is the only (0,2) tensor that _mimics the
+      inner product_ given to the underlying vector space. That
+      is what makes it special. But yes, any symmetric (0,2)
+      tensor could be a metric tensor.
+
+

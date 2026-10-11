@@ -1,0 +1,67 @@
+05-Machine-Level-I-Basics.txt
+
+
+- lecture: $MY_BOOKS/Cs/C/csapp-lectures/05-machine-basics.pdf
+
+### Summary of this lesson
+	- $MY_IMAGES/cs/Summary-Assembler-I.jpg
+
+### Assembler:
+
+    - A `.` in front of assembly instructions are just directives
+      for a debugger or linker (e.g. to tell the linker it's
+      a globally defined function)
+
+    - debugger:
+    .type  sumstore, @function
+
+    - Linker:
+    .globl sumstore
+
+### Disassemble
+    - objdump -d a.out
+    - gdb can disassemble too... 
+	- $MY_IMAGES/cs/disassemble.jpg
+
+### Integer registers
+    - If you use the `%r` registers, you're manipulating _64_ bits
+    - If you use the `%e` registers, you're manipulating _32_ bits
+      (the lower order 32 bits)
+	- $MY_IMAGES/cs/integer-registers.jpg
+
+### Old IA32 registers
+	- $MY_IMAGES/cs/old-IA32-registers.jpg
+
+### Special Register
+    - the stack pointer: `%rsp` (64 bit) or `%esp` (32 bit)
+    - can't use this one any old way 
+
+### Moveq Combinations
+    - moveq SOURCE, DESTINATION
+    - note: can't do memory to memory operations
+	- $MY_IMAGES/cs/Moveq-combinations.jpg
+    - Displacement: 
+        - moveq D(R) i.e. moveq Mem[Reg[R] + D]
+        - `moveq 8(%rbp), %rdx`
+        - moveq 8 bytes further on from the memory address of `%rbp`
+
+### "SWAP()": Simple addressing example
+    - note: 1st and 2nd arguments are stored in `%rdi` and `%rsi`
+    - The compiler comes up with the other registers itself,
+      using the 'register allocation algorithm'
+	- $MY_IMAGES/cs/Addressing-example.jpg
+	- $MY_IMAGES/cs/Addressing-example2.jpg
+	- $MY_IMAGES/cs/Addressing-example3.jpg
+	- $MY_IMAGES/cs/Addressing-example4.jpg
+	- $MY_IMAGES/cs/Addressing-example5.jpg
+
+### Full form of memory addressing
+    - The full form is used for manipulating arrays
+    - `Rb` is the base  register 
+    - `Ri` is the index register 
+	- $MY_IMAGES/cs/complete-memory-addressing.jpg
+
+### Arithmetic operations
+    - note: the DEST is actually a source too for the arithmetic
+      operation. Then the final result is put into the DEST
+	- $MY_IMAGES/cs/arithmetic-operations.jpg

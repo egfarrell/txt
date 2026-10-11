@@ -1,0 +1,96 @@
+
+### Nice talk
+    - Andy Barto and Rich Sutton: 
+        - More on the History of Reinforcement Learning (RL)
+    - Intrinsic motivation research (so true!)
+    - Nomadic Researchers
+    - https://www.coursera.org/lecture/sample-based-learning-methods/andy-barto-and-rich-sutton-more-on-the-history-of-rl-1riMx
+
+### RL: A Reward is...
+    - ... a scalar feedback signal
+    - Interesting RL ASSUMPTION:
+        - all goals can be described by the maximisation of
+          expected cumulative reward
+    - Controversial idea... is it correct?
+
+### RL is ...
+    - ... DECISION-MAKING!
+    - (Engineers call it optimal control)
+        - $MY_IMAGES/cs/AI-ML/many-faces-RL.jpg
+
+
+### RL General ideas
+    - baby 10 mins old will mimic adult putting out tongue
+        - $MY_IMAGES/cs/AI-ML/newborn-baby-mimic.jpg
+        - object permanence: earlier for monkeys
+    - sparse reward setting
+    - Reward shaping:
+        - manually guide your policy, because if the task is too
+          difficult it's never going to find a solution
+        - Tasks that are too hard:
+            - Atari Montezumas Revenge, Find key
+            - Robotic arm stack
+        - Reward shaping has to be redone for every new
+          environment you want to train a policy in
+        - Reward shaping suffers from the "alignment problem"
+            - basically 'overfitting', the agent tries to
+              maximise the reward but neglects the bigger goal
+    - Why do humans learn so quickly?
+        - Investigating human priors for playing video games
+            - https://arxiv.org/abs/1802.10217
+        - humans have 'priors', 'embedded knowledge', prior
+          information
+            - $MY_IMAGES/cs/AI-ML/human-priors-importance.jpg
+            - eg video game: ladders are to be climbed, angry
+              faces are the 'enemy' etc
+        - But RL has very bad sample efficiency.
+            - Must give them loads of training frames before they
+              can figure out what the desired behaviour is
+
+### Differences: Supervised, Unsupervised in RL
+    - Supervised: we assume the learner has access to LABELED
+      EXAMPLES giving the correct answer.
+        - You can think of supervised learning as requiring
+          a teacher helping you by giving the correct answer.
+    - In _RL_, a reward gives the agent some idea of how good or
+      bad its recent actions were.
+        - A reward is like someone who can identify good
+          behavior, but can't tell you exactly how to do it.
+    - Unsupervised learning: sounds like it could be related but
+      really has a very different goal.
+        - Unsupervised learning is about _extracting underlying
+          structure_ in data. 
+        - It's about the data representation. It can be used to
+          construct representations that make a supervised OR
+          `RL` system better.
+    - Techniques from both supervised and unsupervised learning
+      can be used within `RL` to aid generalization.
+    - In `RL`, we focus on the problem of learning while
+      interacting with an ever-changing world.
+    - We don't expect our agents to simply compute a good
+      behavior and then execute that behavior in an open loop
+      fashion.
+    - We expect our agents to get things wrong, to refine their
+      understanding as they go.
+    - The world is not a static place and our goals change. An
+      agent that immediately integrates its most recent
+      experience should do well especially compared to ones that
+      try to perfectly memorize how the world works.
+    - The idea of learning online is extremely powerful and is
+      a defining feature of RL.
+
+### Types of RL algorithms
+	- $MY_IMAGES/cs/AI-ML/RL-algorithms-summary.jpg
+	- $MY_IMAGES/cs/AI-ML/RL-algorithms-summary-2.jpg
+
+
+
+
+### Links
+    - Video: Intro to RL                       https://www.youtube.com/watch?v=JgvyzIkgxF0
+    - Video: David Silver UCL RL course (good) https://www.youtube.com/watch?v=2pWv7GOvuf0
+    - Book: David Silver UCL RL course (good)  $MY_BOOKS/Cs/AI-ML/David-Silver-UCL-course.pdf
+    - Deep RL will transform manufacturing     https://news.ycombinator.com/item?id=27557856
+
+
+

@@ -1,0 +1,68 @@
+
+
+
+### Install MS Office Professional Pro 2010
+    install "winbind" via synaptic 
+        - (Install fails half-way through otherwise)
+
+    WINEPREFIX=~/.wine32 WINEARCH=win32 wine wineboot
+
+    WINEPREFIX=~/.wine32 WINEARCH=win32 winecfg 
+        - change version to "Windows XP" 
+
+    WINEPREFIX=~/.wine32 WINEARCH=win32 wine ~/Documents/TOOLS/Office_2010_ProPlusAc_SP1_English_x32.exe 
+
+    > Fix Powerpoint not starting
+        WINEPREFIX=~/.wine32 WINEARCH=win32 winecfg
+        - Use 'winecfg': override the library `riched20` forcing
+          it to use "Native (windows)" instead of "Native then
+          builtin". 
+        - $MY_IMAGES/misc/wine-fix-powerpoint.jpg
+
+    > For nicer display
+        WINEPREFIX=~/.wine32 WINEARCH=win32 winetricks corefonts
+
+    > Turn on font smoothing
+        WINEPREFIX=~/.wine32 WINEARCH=win32 winetricks 
+
+
+
+### How to open pdf file
+    wine ~/Documents/TOOLS/PDFXedit/PDFXEdit.exe "E:\Downloads\dr3quasars.pdf"
+
+### Wine desktop launchers
+    /home/ef/.local/share/applications
+
+### Install main windows fonts
+    - winetricks corefonts
+
+### Setting to "60" improved my PDF-Xchange application
+    - system.reg:"LogPixels"=dword:00000060
+    - user.reg:"LogPixels"=dword:00000060
+    - user.reg:"LogPixels"=dword:00000060
+
+
+### WINE font smoothing
+    - (Enter the dword values as "decimal")
+    - [HKEY_CURRENT_USER\Control Panel\Desktop]
+    - "FontSmoothing"="2"
+    - "FontSmoothingType"=dword:00000002
+    - "FontSmoothingGamma"=dword:00000578
+    - "FontSmoothingOrientation"=dword:00000001
+
+### Tried this font smoothing too
+cat << EOF > ./fontsmoothing
+REGEDIT4
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"FontSmoothing"="2"
+"FontSmoothingOrientation"=dword:00000001
+"FontSmoothingType"=dword:00000002
+"FontSmoothingGamma"=dword:00000578
+EOF
+
+WINEPREFIX=~/.wine32 wine regedit ./fontsmoothing
+
+
+### Links
+    - Bottle (nice GUi for wine) https://news.ycombinator.com/item?id=29612976

@@ -1,0 +1,107 @@
+### Quaternion Algebra
+    - https://news.ycombinator.com/item?id=46775758
+
+    - One of perks of PhD of quantum physics is that quaternions
+      get mundane: https://en.wikipedia.org/wiki/Pauli_matrices. 
+    - `SU(2)` is everywhere (normalized quaternions). 
+    - These are are more common than regular rotations of 3D
+      space, `O(3)`.
+        - Reply: Neat, I didn't realize the `SU(2)` spinor stuff
+          worked through quaternions.
+    - Baez wrote about them. (Octonions)
+        - https://arxiv.org/abs/math/0105155 
+            - The "octonions" are the largest of the four normed
+              division algebras. While somewhat neglected due to
+              their nonassociativity, they stand at the
+              crossroads of many interesting fields of
+              mathematics. 
+            - Here we describe them and their relation to
+              Clifford algebras and spinors, Bott periodicity,
+              projective and Lorentzian geometry, Jordan
+              algebras, and the exceptional Lie groups. We also
+              touch upon their applications in quantum logic,
+              special relativity and supersymmetry.
+        - Comment: One idea I like links Lorentz group in
+          dimensions 3,4,6 and 10 with the modular group SL(2,Z)
+          that is at a crossroads of several hardcore math
+          themes. For Lie algebras:
+            - sl(2, R) ≅ so(2,1)
+            - `sl(2, C) ≅ so(3,1)`
+            - sl(2, H) ≅ so(5,1)
+            - sl(2, O) ≅ so(9,1)
+        - Dirac equation is the `C` case, the other cases have
+          their uses.
+    - In short:
+        - scaling -> real numbers
+        - 1d rotations and scaling -> complex numbers
+        - 2d rotations and scaling -> quaternions
+        - In the case of quaternions, it's called
+          `double-covering`, which turns out (rather than being
+          an artefact), play fundamental role in particle
+          physics.
+    - Practical intuition for 3D graphics: 
+        - There's a 1-1 mapping between complex numbers and 2D
+          rotation matrices that only do rotation and scaling.
+        - The benefit is that the complex number only has two
+          coefficients, not four like the matrix. 
+        - Multiplying these complex numbers is the same as
+          multiplying the equivalent matrices. 
+        - Quaternions are the same idea just in 3 dimensions
+          (with 3 imaginary units `i`, `j`, `k`, not just `i`,
+          one per plane).
+    - Quaternions also solve for what we normally have `3D+time`
+      for.
+    - And Lewis Carroll, preferred Euclidean geometry over
+      quaternions, for "Alice's Adventures in Wonderland" (1865).
+    - Quaternions:
+        - ` q = a + bi + cj + dk`
+        - `-1 = i^2 = j^2 = k^2`
+    - Summarized by a model:
+        > In a quaternion, if you lose the scalar (a) — the
+        > "real" or "time" component — you are left with only the
+        > three imaginary components (i, j, k) rotating endlessly
+        > in a circle.
+        - An exercise for learning about Lorentzian mechanics,
+          then undefined: Rotate a cube about a point other than
+          its origin. Then, rotate the camera about the origin.
+        - 4D Quaternions (a + bi + cj + dk) are more efficient
+          for computers than 3D+t Euclideans. 
+        - Quaternions do not have the Gimbal Lock problem that
+          Euclidean vectors have. Quaternions interpolate more
+          smoothly and efficiently, which is valuable for
+          interpolating between keyframes in a physical
+          simulation.
+        - Why are rotations and a scalar a better fit?
+            - Quaternions were published by Hamilton in 1843, in
+              application to classical mechanics and Lagrangian
+              mechanics.
+            - Maxwell's (1861,1862) original ~20 equations are
+              also quaternionic; things are related with complex
+              rotations in EM field theory too. Oliver Heaviside
+              then "simplified" those quaternionic expressions
+              into accessible vectors.
+            - Is there Gimbal Lock in the Heaviside-Hertz vector
+              field reinterpretation of Maxwell's quaternionic EM
+              field theory? Maxwell's has U(1) gauge symmetry.
+        - And then quantum has complex vectors and unitarity too.
+        - History of quaternions:
+          https://en.wikipedia.org/wiki/History_of_quaternions
+    - In 1985 Ken Shoemake dropped the idea like a bomb on the
+      computer graphics industry and it changed the way hackers
+      thought about rotations forever.
+        - https://www.ljll.fr/~frey/papers/scientific%20visualisation/Shoemake%20K.,%20Quaternions.pdf
+
+
+
+### Quaternions
+    - ... the correct _algebraic_ description for 3D vectors
+    - Quaternions also allows for vector division (Gaussian 2D
+      complex number vectors don't allow division?)
+    - However the quaternions weren't suitable for describing
+      Cartesian vectors in 3 dimensions (!)
+    - the clue to understanding why is that the quaternions (and
+      complex numbers) describe the rotational algebra of these
+      spaces SO2 and SU2, and are not actually suitable to
+      describe Cartesian vectors
+
+

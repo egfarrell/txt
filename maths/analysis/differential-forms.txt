@@ -1,0 +1,835 @@
+### visual intro to differential forms - fortney
+    - If T is a linear transformation from `ℝ^n` to `ℝ` then its
+      often simply called a linear function or a linear
+      functional.
+
+    - Technically, in order to write linear transformations `T
+      : Rn → Rm` as a matrix we have to have _ordered bases_ for
+      both Rn and Rm;
+    - that is, our basis elements have to have a set order.
+        - ASIDE: See other point a few pages above: "A basis is
+          an _indexed_ set, NOT an ordered set"
+        - But we generally think of our Euclidian unit vectors as
+          having the intuitively obvious order, `e1` first, `e2`
+          second, `e3` third, and so on. We proceed with a couple
+          examples before giving a general definition.
+
+    - Now we turn our attention to linear functionals, which are
+      a special case of linear transformations when the codomain
+      is simply `R`.
+
+    - We can see that the matrix representations of linear
+      functionals are 1 × n matrices, which are just row vectors.
+      This is an important point, linear functionals are
+      represented by row vectors.
+    - When we write 1 × n matrices, or row vectors, we generally
+      put commas between the entries just to make everything
+      clear.
+
+    - The last major topic in this section is the definition of
+      the dual space of a vector space. Suppose we are given
+      a vector space `V` . In this book the only vector spaces we
+      will be considering are `Rn` for some integer `n`.
+    - The set of all linear functionals on V is called the dual
+      space of V , which is denoted as `V ∗`.
+
+    - All of this generalizes to any vector space `V` and youll
+      often (though not always) see the basis elements of
+      V written with subscripts and the basis elements of `V ∗`
+      written with superscripts.
+    - For example, if {v1, v2, . . . , vn} is the basis of some
+      vector space V then we would write the dual basis as {v1,
+      v2, . . . , vn}, which is a basis of `V ∗`.
+    - Thus any v ∈ V can be written as a linear combination of
+      {v1, v2, . . . , vn} and hence as a column vector and any
+      α ∈ V ∗ can be written as a linear combination of {v1, v2,
+      . . . , vn} and hence as a row vector.
+    - This allows α(v) to be computed using matrix multiplication
+      as a row vector multiplied by a column vector. This also
+      explains why we always write elements of the vector space
+      as a column vector, because elements of the dual space are
+      written as row vectors and it is very important to always
+      distinguish between vector space and dual space elements.
+    - In vector calculus classes the dual space is not introduced
+      so for convenience vectors are sometimes written as row
+      vectors. We will never do that in this book.
+
+    - A quick word about what the � · � is and why it is needed.
+      The � · � represents something called the Euclidian norm
+      and is essentially the multi-dimensional version of the
+      absolute value | · |.
+    - Given a vector ... which is just the length of the vector.
+      If you are thinking of the vector v as being the point (x0,
+      . . . , xn) this gives the distance of the point from the
+      origin. Without the norm both the numerator and the
+      denominator in our definition would be a point or vectors
+      in Rm, depending on how you view them, and one can not
+      divide a point or vector by another point or vector.
+    - _The norm allows us to simply divide numbers_.
+    - It is easy to get a little confused. The notation can be
+      a little ambiguous. But often a little ambiguity allows
+      a great deal of flexibility, so the ambiguity is tolerated,
+      or even embraced.
+    - Notice that `Df`, `Df(x)`, and `Df(x0)` are all used to
+      denote the linear transformation which is an approximation
+      of the function `f`. If we are being general and have not
+      actually chosen a particular base point x0 yet then we use
+      Df or Df (x). If we have chosen a base point x0 then we use
+      Df (x0).
+    - This is analogous to saying that the derivative of f (x)
+      = x2 is f � or f �(x), both of which are 2x, but that the
+      derivative of f at the point x0 = 3 is f �(3), which is 6.
+    - Also, drawing accurate pictures is no longer possible. To
+      draw the graph of `f : Rn → Rm` would actually require
+      drawing `Rn+m`.
+    - The picture we draw is of course similar, but one must
+      recognize that it is actually a
+     
+
+### Gradient scalar function
+    - $MY_NOTES/maths/linear-algebra/vectors-vector-spaces.txt
+    - $MY_BOOKS/Physics/Spacetime/GR-Basic-Incomprehensible-thing.pdf
+    - Contravariant vectors and one-forms should be thought of as
+      different representa�ons of the same geometrical object.
+    - They are alternaive ways of describing an infinitesimal
+      displacement of a point on a manifold, namely as either: 
+        - a tangent vector to a parameterised curve 
+            - (aka a contravariant vector), 
+        - or an infinitesimal change in a scalar FUNCTION 
+            - (aka a `gradient one-form`).
+            - Aug 2023: there's that idea of a scalar FUNCTION
+              involved when working out the gradient
+            - I always forget about the function involved
+
+
+### Pullbacks:
+    - ### 25-Nov 2025 Tue 
+    - (drinking alone in Clink hostel)
+    - $MY_BOOKS/Physics/QG/DeWitt-Pursuit-of-QG.pdf
+    - This line really struck:
+        - "Like many physicists he talks of gauge fields as
+          connections. In reality gauge potentials are pull-backs
+          of connections on a principal bundle."
+    - Went searching for a book I was reading in Derby around
+      2014/2015
+        - Found it
+        - $MY_BOOKS/Physics/Maths/Math-Phy-Forms-diff-geometry/Edwards_advanced_calculus_forms_approach.pdf
+    - Aside: I was reading about 'reflection' pullbacks and saw
+      a kind of connection to the Hadamard / PETE gate I was
+      reading about at the weekend in Ballinafid.
+        - $MY_NOTES/physics/QM/Hadamard-H-gate-PETE.txt
+        - $MY_IMAGES/physics/diff-form-pullback-hadamard-gate.jpg
+        - Symbolically,
+            - `0` → (0  +  1)/√2  ("white")
+            - `1` → (0 `−` 1)/√2  ("black", note the minus)
+        - Simple geometric picture: H as a REFLECTION ACROSS AN
+          AXIS, which also makes `H² = identity` feel inevitable.
+
+
+
+### Don't worry about coordinates
+    - $MY_NOTES/maths/analysis/differential-forms-gpt.txt
+    - A differential form is a gadget that packages a function
+      and some orientation/geometry together so you can integrate
+      it over curves, surfaces, or volumes — without worrying
+      about `coordinates`.
+        - A 1-form is something you can integrate along a curve.
+        - A 2-form is something you can integrate over a surface.
+        - A 3-form is something you integrate over a volume.
+
+
+### Stokes Theorem
+    - A third principle is that differential forms are the right
+      way to approach the various forms of Stokes' Theorem.
+    - We say this with trepidation because distinguished
+      colleagues tell us they never really understood
+      differential forms.
+    - We believe differential forms can be taught to freshmen if
+      the forms are presented geometrically as integrands that
+      take an oriented piece of a curve, surface or manifold and
+      return a number.
+
+### Compare: Tensors versus differential forms
+    - Quote: A tensor is a mathematical construction that “eats”
+      a bunch of vectors, and “spits out” a scalar. 
+
+    - My question: 
+        - does this mean a tensor is the same as a differential
+          form?
+    - Answer: 
+        - A tensor and a differential form are related but not
+          the same thing. 
+
+    - Tensors:
+        - A tensor is a mathematical object that can be used to
+          represent linear relations between geometric vectors,
+          scalars, and other tensors.
+        - Tensors can have different ranks, where the rank (or
+          order) of a tensor is determined by the number of
+          indices needed to describe it. 
+        - For example, a scalar is a rank-0 tensor, a vector is
+          a rank-1 tensor, and a matrix is a rank-2 tensor.
+        - Tensors can "eat" vectors and "spit out" other tensors,
+          which can be scalars, vectors, or higher-order tensors.
+
+    - Differential Forms:
+        - A differential form is a specific type of antisymmetric
+          tensor that is used in differential geometry.
+        - Differential forms are particularly useful in calculus
+          on manifolds and are used to define integrals over
+          paths, surfaces, and higher-dimensional manifolds.
+        - An `n-form` is an antisymmetric tensor of rank `n`,
+          which means it takes in `n` vectors and returns
+          a scalar. 
+            - For example, a 1-form takes a vector and returns
+              a scalar, a 2-form takes two vectors and returns
+              a scalar, and so on.
+
+    - In essence, while all differential forms are tensors
+      (specifically, antisymmetric tensors), not all tensors are
+      differential forms. Tensors have a broader definition and
+      encompass a wider variety of objects, whereas differential
+      forms are a specialized subset of tensors used mainly in
+      the context of calculus on manifolds and integration.
+
+### Youtube: link forms / chains
+    - Aleph 0; The derivative isn't what you think it is.
+    - Homology, Cohomology
+    - https://www.youtube.com/watch?v=2ptFnIj71SM
+
+### Curry recommends:
+    - Geometry of Differential Forms (Morita)
+    - Differential Forms in Algebraic Topology  (Bott and Tu)
+    - and "the course":
+        - Semi-Riemannian Geometry With Applications to
+          Relativity (Barrett O'Neill)
+
+### Review Fortney
+    - $MY_NOTES/maths/analysis/Fortney-visual-forms-review.txt
+    - key: 
+        - don't count 'pierced sheets'?
+    - As Bachman warns, "_counting pierced sheets_" is not a good
+      way to visualize integration of forms; 
+        - `plane fields` are a much better generalization, but
+          despite that, it appears in this book. 
+    - Fortney correctly highlights some forms where this _IS_
+      valid, though doesn't specify clearly which ones should be
+      used and which should be avoided. 
+        - He also declares that such pictures are necessarily
+          nearest-integer estimations of form integrals, unless
+          you visualize a "partially pierced" sheet. 
+    - Alas, we see this awkward old method trotted out again
+      anyway, potentially because poor physics majors may
+      encounter it in a certain famous tome on relativity...
+        - ($MY_BOOKS/Physics/Big4/1973-Gravitation-MTW.pdf)
+
+
+### Flanders: Differential Forms / Applications Physical Sciences
+    - There's a lot to like about this book. The bad news is
+      there's a few things really not to like.
+    - If you're a physics grad student, I'd recommend you
+      put this book on your reading list. But I also recommend
+      you postpone this book until you have developed
+      a reasonable degree of comfort with the typical tensor
+      calculus based approach to differential geometry along the
+      lines of Differential Geometry.
+    - To get a better feeling, let's take a look at the contents.
+    - The blurb says "Requiring familiarity with several variable
+      calculus and some knowledge of linear algebra and set
+      theory." So to me that sounds like a background of a third
+      year undergrad. But I feel completely safe in saying that
+      anyone with precisely this level of background will be
+      COMPLETELY blown away by this book.
+    - The blurb ends with a nice quote from the American
+      Mathematical Monthly telling us this book is "very readable
+      - indeed, enjoyable." And this is the first problem with
+        this book: it is in fact quite a challenging book
+        masquerading as an easy one.
+    - Inside, we will skip directly to the "Preface to the First
+      Edition". Weighing in at less than two pages, this preface
+      actually provides a valuable high level overview of the
+      book. We are faced with ten chapters. The first in an
+      introduction; chapters 2, 3, and 5 provide theoretical
+      development; chapters 4, 6, 8, and 9 are applications to
+      differential geometry; chapter 7 contains applications to
+      differential equations; and chapter 10 applications to
+      physics.
+    - We then find the statement "Probably on first reading..."
+      This statement is a powerful omen. You should absolutely
+      expect to read this book at least twice. This particular
+      piece of advice encourages us to merely try to develop
+      "some intuition for the subject" on our first read rather
+      than working through things in detail. That's good advice.
+    - So, on to chapter 1. Chapter 1 is only four pages. The
+      first two pages motivate differential forms via the change
+      of variables theorem for multiple integrals. That's nice.
+      It's also probably the most concrete part of the book. The
+      last two pages launch into a discussion of the differences
+      between differential forms and tensor methods. That's funny
+      because this book repeatedly emphasizes that the reader
+      doesn't need to know anything about tensors to read this
+      book, but then it can't seem to stop talking about them.
+      Again, make no mistake: if you aren't already pretty
+      comfortable with tensors, you will probably not get much
+      out of this book.
+    - Also, in the midst of this two page discussion we are
+      greeted by a host of undefined terms and concepts. Trust
+      me, this discussion will make much more sense to you on
+      your second trip through the book.
+    - Chapter 2 is a fourteen page whirlwind on exterior algebra.
+      The first thing that struck me about this chapter was the
+      level of abstraction: surprisingly high considering its
+      intended audience of scientists and engineers. This is
+      a very compressed treatment, and nowhere is the level of
+      compression more evident than in the discussion of the
+      Hodge star operator. Yes, everything you need to know to
+      compute the star operator in an arbitrary finite
+      dimensional inner product space is actually in this two
+      page treatment, but wringing it out is pretty challenging.
+    - With algebra out of the way, it's time for some calculus in
+      chapter 3. Section 3.1 defines differential forms on
+      Euclidean space, and section 3.2 introduces the exterior
+      derivative. 
+    - Section 3.3 discusses mappings and introduces what is
+      usually called the "pullback" of a differential form. 
+    - It goes on show how pullbacks relate to the previously
+      introduced notions of exterior multiplication and exterior
+      differentiation: quite nicely, thank you. 
+    - Section 3.4 and 3.5 are very short sections on changes of
+      variables and a theorem from theoretical mechanics that
+      arises in the transition from Lagrangian mechanics to
+      Hamiltonian mechanics. Section 3.6 is a comparatively long
+      section (2 1/2 pages) that proves the converse of the
+      Poincare lemma. The proof is good, but unenlightening.
+      Section 3.7 provides an example for the converse of the
+      Poincare lemma, and section 3.8 is a brief comment on
+      partial differential equations, and how differential forms
+      often expose them to be simpler than they at first appear.
+      Section 3.9 is a set of problems.
+    - This entire chapter spans only 13 pages!
+    - So with all that out of the way by page 32, we're now ready
+      for some applications in chapter 4. Section 4.1 introduces
+      the important idea of a "moving frame". For anyone with the
+      strongly recommended background in classical differential
+      geometry, this may well be a new idea, and its importance
+      will be one of your key takeaways from this book. Section
+      4.2 discusses the relationship between orthogonal and
+      skew-symmetric matrices. Section 4.3 introduces the six
+      dimensional frame space. Section 4.4 discusses the
+      Laplacian in curvilinear coordinates via differential
+      forms. Section 4.5 digs into the differential geometry of
+      two dimensional surfaces in three space from the
+      perspective of differential forms. Although this treatment
+      might initially seem somewhat cryptic, the elegance of
+      differential geometry using differential forms starts to
+      become apparent quickly. Section 4.6 is a brief section on
+      the differential form formulation of Maxwell's equations,
+      and 4.7 is a problem set.
+    - Chapter 5 is our last chapter on theory, and it centers
+      around Stokes' Theorem. So far this book has restricted its
+      treatment of differential forms to Euclidean space. The
+      first section in this book is a very short blurb to
+      motivate the move to manifolds which section 5.2 introduces
+      properly. The author provides a stripped down approach to
+      manifolds common in applied math books, and I thought it
+      was well done. Section 5.3 and 5.4 introduce tangent spaces
+      and differential forms on manifolds respectively. Section
+      5.5 introduces Euclidean simplices as we move toward
+      integration. I found this treatment to be particularly
+      clear. Section 5.6 introduces us to chains and boundaries
+      on manifolds, and section 5.7 defines the integral of
+      a differential p-form over a p-chain. And it is in this
+      section that we encounter one of the truly infamous
+      passages in this book. "As an exercise, one could check
+      that each of the standard tricks used to evaluate surface
+      integrals, etc. fits into the above scheme of things. It
+      hardly seems worth our time here."
+    - Hardly seems worth "our" time? This is the only book I have
+      ever read where the author just directly came out and told
+      me that he didn't think explaining something to me was
+      worth his time. Nice.
+    - Section 5.8 covers Stokes' theorem. And I found this
+      treatment unusually clear. Section 5.9 discusses periods of
+      forms and De Rahm's theorems which are stated and discussed
+      but not proven. Section 5.10 gives some examples of the
+      applications of De Rahm's theorems to surfaces. Section
+      5.11 is about mappings of chains and the behavior of
+      integrals with respect to pullback. Section 5.12 is
+      a problem set.
+    - Chapter 6 is titled "Applications to Euclidean Space" and
+      is a short grab bag of topics. Section 6.1 deals with
+      volumes and areas of spheres in n dimensions, and the
+      differential form treatment of such. Section 6.2 is on
+      winding numbers and degrees of mapping. Section 6.3 is on
+      the Hopf Invariant for mappings between certain high
+      dimensional spheres. It's less than a page long, so
+      obviously there are not a lot of details, but what is given
+      is quite clear. Section 6.4 is titled "Linking Numbers, The
+      Gauss Integral, and Ampere's Law", and again is very short.
+      There are no exercises for this chapter.
+    - Chapter 7 is "Application to Differential Equations".
+      Weighing in at 30 pages, this is one of the beefiest
+      chapters in the book. Section 7.1 is devoted to the study
+      of harmonic functions in E^n. All of the results in this
+      section are the standard, elementary results in harmonic
+      function theory, but all of these results are now proven
+      relying heavily on differential forms. Results proven
+      include Green's Formula, Green's Symmetric Formula, Gauss'
+      Mean Value Theorem, Maximum/Minimum Principle, and the
+      Uniqueness Principle for the Boundary Value Problem. The
+      idea of the Green's function for an arbitrary domain is
+      introduced, and the Poisson Integral Formula for E^n is
+      determined. The section concludes with a proof of
+      Liouville's Theorem. All of these results will be
+      immediately familiar to anyone with an introductory course
+      in complex analysis, but again, these results are
+      demonstrated for E^n rather than just E^2. And again, the
+      elegance of the differential form approach is readily
+      apparent.
+    - Section 7.2 is a short section on the Heat Equation.
+      Essentially all that is demonstrated here is uniqueness of
+      solutions for the boundary value problem.
+    - Section 7.3 is on the Frobenius Integration Theorem. This
+      is a central result about the existence of integrating
+      factors for linearly independent differential one forms.
+      This section is ten pages, and provides a detailed proof of
+      the Frobenius Theorem. It begins with some motivation, and
+      then proves the result for a single form before stating and
+      proving the general result. The reader will need to be
+      comfortable with the theory of ordinary differential
+      equations to follow this section. Section 7.4 follows this
+      up with three applications of the Frobenius Integration
+      Theorem, thus demonstrating its importance.
+    - Section 7.5 is a short section on systems of ordinary
+      differential equations, and Section 7.6 is on the Third Lie
+      Theorem, which is fundamental in the study of Lie groups.
+      This result is proven in detail. There are no exercises for
+      this chapter.
+    - Chapter 8 is on applications to differential geometry. At
+      almost 40 pages, it is the longest chapter in the book. In
+      section 8.1 it picks up where 4.5 left off with surface
+      theory. Section 8.2 extends this treatment to hypersurfaces
+      in E^n in preparation for the abandonment of the embedding
+      space. Several crucial constructs appear in this section
+      including curvature forms and the Riemann curvature tensor.
+    - Section 8.3 takes the plunge into Riemannian geometry, and
+      introduces more key elements of differential geometry
+      including the Christoffel symbols. The section ends with
+      four pages discussing the relationships between the
+      differential form treatment of differential geometry and
+      the more usual tensor treatment. Again, this is very
+      helpful if you are familiar with the tensor treatment. If
+      not...
+    - Section 8.4 is a six page survey of Hodge theory. It states
+      the fundamental result, but only proves uniqueness of the
+      forms asserted to exist. I thought this section was
+      excellent. Also excellent, is section 8.5 on Affine
+      Connections. In particular, the definition of an Affine
+      Connection in the differential form treatment will be quite
+      eye opening to anyone with the traditional tensor
+      background. It was enough to single-handedly sell me on the
+      utility of the differential form treatment of differential
+      geometry. Unfortunately, this section is also home to one
+      of the most painful moments in the book. On the very first
+      page the author mentions the dual basis of one-forms. This
+      will be a readily familiar concept to anyone with
+      a background in differential geometry, which this book
+      claims you don't need. The only problem is, he had never
+      defined this concept. So I checked the index to see if
+      I missed it, but it wasn't even in the index.
+    - We finally encounter the necessary definition in the
+      problem set at the end of chapter 10. Better late than
+      never? I didn't really think so, and this book lost serious
+      points for this egregious organizational error. If I hadn't
+      already known what he was talking about, I would have been
+      baffled.
+    - Section 8.6 is a problem set.
+    - Chapter 9 is a short chapter on applications to group
+      theory. Section 9.1 contains the pertinent definitions of
+      Lie group, structure constants, and so on. 9.2 provides
+      some examples of Lie groups, while 9.3 and 9.4 cover matrix
+      groups. 9.5 discusses bi-invariant forms, and section 9.6
+      is a problem set.
+    - Chapter 10 is Applications to Physics. The bulk of this
+      fairly lengthy chapter is dedicated to classical mechanics,
+      and is alone worth the price of buying and the trouble of
+      reading this book. After seeing a wide variety of
+      ham-fisted treatments of differential forms by classical
+      mechanics books, I found this chapter extremely clarifying.
+      However, the reader must already know Hamiltonian mechanics
+      to get much of anything out of this chapter. Section 10.1
+      is a short introduction to phase and state spaces. Section
+      10.2 is on Hamiltonian systems. Section 10.3 covers
+      integral invariants. And it covers them very well. Section
+      10.4 is dedicated to brackets: Poisson, Lagrange, and Lie.
+      Section 10.5 is on Contact Transformations. Then we get
+      a short section on fluid mechanics in 10.5, and a problem
+      set in 10.6 to wind things up.
+    - Overall impressions: While the exposition is generally
+      good, there are times when the author makes non-trivial
+      assertions either in derivations or in proofs. I found this
+      a bit exasperating, as just a little bit more text could
+      have provided considerably more clarity in these
+      situations. The notation is overly sparse. In particular,
+      sigma's for sums are NEVER indexed. In all cases it is left
+      to the reader to determine exactly what is being summed
+      over. And this frequently changes even from one step to the
+      next during derivations. The book is filled with numerous,
+      helpful figures, and while they say a picture is worth
+      a thousand words, a book that is this short, covers this
+      much territory, and has a bunch of picture in it, well you
+      can pretty much figure that the exposition is going to have
+      to be pretty terse. And it is. Sometime overly so.
+    - In addition, the index is almost, but not quite, completely
+      worthless. And the bibliography has far too high
+      a proportion of books in languages other than English.
+    - To wrap up this far too long review, I had my doubts about
+      this book. In fact, I had them for quite a while. It was
+      the last chapter, and the second reading that really sold
+      me on it. It definitely has its flaws, but it also really
+      shines in certain spots. Recommended, but make sure you
+      bring the background it requires or you will be left in the
+      dust.
+
+
+### Flanders: Differential Forms/Applications Physical Sciences 2
+    - A difficult book to review. This was a book which
+      I acquired many years ago, an acquisition based upon words
+      written in Gravitation (Misner, Thorne and Wheeler):
+      "relatively easy with many applications." (page 90). 
+    - Let me say I do not consider Flanders to be "relatively
+      easy," however, it does have "many applications." The
+      preface includes this: "a well-trained undergraduate should
+      find the book quite accessible." Let me say, I do not find
+      Flanders to be "quite accessible." Now, I do not intend to
+      be too negative, as there is much here that is useful. The
+      issue is that the best parts of the book come much later in
+      the book (the applications). Were I to offer a bit of
+      advice, be sure to complete the book Advanced Calculus
+      (1956, Creighton Buck) or part one of the book Linear
+      Algebra and Analysis (1967, Lichnerowicz). Flanders has
+      presented an exposition of almost two-hundred pages. Twelve
+      pages will consist of an exposition of exterior algebra and
+      ten pages of exterior derivative, therefore you need to
+      remain on guard !
+    - First, totally assimilate the 'Glossary of Notations'
+      before opening page one. 
+    - Also, understand how to disentangle the meaning of
+      commutative diagrams (eg: pages: 23, 26, 56, 62, 72).
+    - A minor complaint: fluid mechanics is given too much
+      hand-waving for my tastes (section #10.6, pages 188-193).
+    - The positive attributes of this monograph are found in the
+      applications (and exercises):
+    - (1) Read: "What we shall do is express everything in sight
+      in terms of the right-handed orthonormal frame, apply the
+      derivative operator to these relations to derive further
+      ones, and continue until we obtain no further results."
+    - (page 32). That line explains almost all of the
+      manipulations of chapter four, moving frames. It is
+      a well-written, until you reach the section of Maxwell's
+      equations (pages 44-47), again, too much hand-waving for my
+      tastes.
+    - (2) A highlight, chapter five: manifolds and integration.
+      Learn: The boundary of a boundary is zero (page 58 and 63).
+    - You learn a bit about simplices, orientation and chains. An
+      exercise asks you to show that Projective n-Space is
+      a manifold (exercise #4, page 73). I did not appreciate
+      this phrase: "in applications, one does not bother to spell
+      out in detail how a given geometrical region may be
+      considered as a chain, but rather relies on the usual
+      combination of experience and intuition." (page 64). That
+      'experience and intuition' is hardly part and parcel for
+      undergraduates.
+    - (3) Convexity, will be heavily utilized chapter eight
+      (differential geometry). I am not certain that
+      undergraduates are significantly exposed to that concept:
+      convexity. Certainly, many engineers and physicists are
+      deficient in that concept.
+    - Learn: "the spherical harmonics are eigenfunctions for the
+      generalized Laplacian on the two-sphere." (page 142).
+    - There is a nice exercise: "Let us be given a closed,
+      convex, surface with constant mean curvature, prove that
+      that surface is a sphere." (exercise #1, page 148).
+      Flanders sneaks-in the definition of "dual" basis vectors
+      (page 127).
+    - (4) Another interesting chapter, nine, provides a glimpse
+      into group theory (Lie Groups). However, learn basics of
+      group theory before tackling this chapter (Birkhoff and Mac
+      Lane, A brief Survey of Modern Algebra). Most computations
+      are easy to follow (for instance, see bottom of page 157
+      and continuation page 158).
+    - (5) Let me conclude with a few observations: As with texts
+      of this ilk (intermingling physics with mathematics),
+    - something always gets slighted. In my opinion, Harley
+      Flanders should have spent more elaboration on fundamentals
+      at the beginning of the book. The applications
+      (differential equations and differential geometry) are well
+      done, but the algebraic preliminaries early-on are
+      presented at too brisk a pace for beginners. You need
+      already be aware of vector spaces, linear functionals (page
+      14), linear independence, cartesian product notation (page
+      27) and determinants (page 10). These are exactly the
+      topics that might already get short-shrift in the usual
+      undergraduate course !
+    - (6) I note that this text is referenced in many other
+      books: Gravitation by Misner, Thorne and Wheeler (1973, the
+      one that got me started), Elementary Differential Geometry
+      by Barrett O'Neill (1966) and Second Year Calculus by
+      Bressoud (1991). By all means study Bressoud before
+      studying Flanders. Of course, Advanced Calculus by Buck, is
+      prerequisite. Return to Harley Flanders, because the
+      applications he presents are of continuing efficacy for
+      advanced work.
+
+
+### 1 forms
+    - https://math.stackexchange.com/questions/664648/what-does-dx-mean-in-differential-form
+    - https://math.stackexchange.com/questions/304552/different-definitions-of-a-one-form
+    - `dx_1` is a differential 1-form (aka a covector field)
+      which associates to each point in space a linear map from
+      `ℝ^n -> ℝ`
+    - The action of this linear map is to take a vector and spit
+      out its COMPONENT IN THE `X_1` DIRECTION.  !!!
+    - In other words, it is the covector `[1 0 0 ... 0]`.
+
+
+
+### differential form
+    - A _1-form_ is a function which grows proportionally to how
+      fast you're moving.
+    - Thus it doesn't matter how you parametrize the curve you
+      are moving on: you either end up integrating a smaller
+      function for a longer period of time, or a bigger function
+      for a shorter period of time.
+    - This is why you can't integrate _functions_ on manifolds:
+      they have no intrinsic "unit speeds", because there are
+      many choices of local coordinates - but you can still
+      integrate _differential forms_.
+    - k-forms just generalize this to higher dimensions.
+    –  Steven Gubkin 
+
+
+### Visual Introduction to Differential Forms on Manifolds
+    - Amazon Review
+    - As warned about thoroughly in Bachman, "_counting pierced
+      sheets_" is not a good way to visualize integration of
+      forms; plane fields are a much better generalization
+      anyway, but despite all that, it is done in this book.
+      Fortney points out (correctly) that there are some forms
+      where this IS valid
+    - though not specifying clearly and accessibly which ones
+      should be used and which should be avoided= and also points
+      out that such pictures are necessarily nearest-integer
+      estimations of form integrals, unless you visualize
+      a "partially pierced" sheet...
+    - oh and...  tangent plans are _not_ "attached" to manifolds
+      like Post-It notes at their corresponding points, nor are
+      they "translated subspaces" replacing the origin with the
+      studied point like some kind of affine plane, though this
+      undoubtedly helps tie in Calculus WHEN carefully presented.
+    - Rather, they are *entirely new vector spaces.* There's too
+      much to risk with confusing the first-time student with
+      this analogy, much more so than the "planar shish-kebab"
+      picture of integration mentioned above.
+
+
+# gradients - differential forms
+
+### difference between GRADIENT and SLOPE
+    - A gradient is a vector
+    - and slope is a scalar
+    - Gradients really become meaningful in multivarible
+      functions, where the gradient is a vector of partial
+      derivatives.
+    - With single variable functions, the gradient is a one
+      dimensional vector with the slope as its single coordinate
+      (so, not very different to the slope at all).
+        - July 2024: I came across this definition of a gradient
+          today when researching the Jacobian and now this
+          comment makes more sense!
+
+
+### vector calculus grad (gradient)
+    - `grad f` is perpendicular to level curves
+    - (or perpendicular to tangents of level curves)
+
+    - (`grad f`)   is the direction of most rapid increase
+    - (`- grad f`) is the direction of most rapid DECREASE
+
+    - (`grad f`) is Orthogonal to surface
+
+    - If youve got a surface `f(x,y,z) = c`, and a tangent plane
+      at `P` to a surface (prodcued by at least two velocity
+      vectors of smooth curves through P), you can always produce
+      a vector orthognal to the surface by taking `grad f`.
+
+
+### Intro GR (lewis ryder)
+    - ...Gradients are thus dual to basis vectors.
+
+    - They are conceptually distinct entities, and in fact are
+      somewhat analogous to reciprocal lattice vectors in solid
+      state physics; indeed Pauli refers to them in this way.
+
+    - They are now however referred to as ‘one-forms’ or 1-forms.
+    - Instead of denoting them as `e^u`, as above, it is common
+      to use Greek letters for 1-forms (e.g. `ω`)
+
+
+### DIFFERENTIAL FORMS AND ALL THAT by H. Zapolsky
+    - This notation exhibits an isomorphism between tangent
+      vectors and derivative operators. !!!
+
+
+### 1 forms
+	- how many stacks are pierced
+
+
+### 2 forms
+	- a differential 2-form can:
+    - ... (eat)
+    - ... (be paired with)
+    - ... (act on as a function)
+    -       ----> a parallelogram
+
+
+### wedge
+	dx ^ dy is a 2-form (wedge product?)
+	it CONVERTS two 1-forms to a 2-form
+
+### "d" on a function/form
+	is the analogue of gradient on 1-forms
+
+### "dy"
+	- this is the "d" function applied to the "y" function!
+	- so "dy" is the level sets of the gradient of y
+
+### "dudv" versus "du ^ dv"
+	- `dudv` in an integral is un-oriented, ie its the same as `dvdu`
+	- whereas `du ^ dv` is oriented
+
+`∫s dx^dy`
+	integral over surface "s"
+	= FLUX of upward vector field
+	= AREA of SHADOW of surface `S` on `xy` plane
+	= grid of tubes of flux (count how many go through a surface)
+
+	- `dx` is a row of stacks in the x direction
+	- `dy` is a row of stacks in the y direction
+
+    - in 3 dimensions the `dx^dy` is like the cross-product:
+      - `i x j = k`
+    - however you can only use the "cross product" in
+      3 dimensions! (but wedge in any dimensions!)
+
+
+### why is orientation so important?
+    - cos you want the interior boundaries of any surface to
+      CANCEL,
+    - and you just want to be left with the OUTER boundary
+    - therefore
+    - `dx^dy	= - dy^dx`
+    - switching order means you switch the orientation
+
+
+### orientation
+    - its not great to use the direction a normal vector is
+      pointing as orientation
+    - better to orient using something intrinsic to the
+      surface...
+    - ... so use a swirl
+
+
+### 'Swirl'
+    - if the 'swirl' on the surface youre integrating over is the
+      same as the "swirl" of the flux tubes (`dx ^ dy`) then the
+      integral is positive.
+    - If the swirls dont match, then the integral is negative
+
+
+
+### What are Differential Forms?
+
+At the most basic level, differential forms are mathematical
+objects that generalize the concept of functions, gradients, and
+even more complex objects in calculus to higher dimensions, but
+with a twist that makes them incredibly suited for integration
+over complex spaces like manifolds.
+
+### The Basics
+
+1. **0-Forms**: A 0-form is just a function. It assigns a number
+   to every point in a space. For example, temperature at
+   different points in a room can be considered a 0-form.
+
+2. **1-Forms**: These are the first step into differential forms
+   proper. A 1-form can be thought of as a gradient, but in a way
+   that is independent of coordinates. It's a rule that, at every
+   point in space, assigns a linear function from vectors at that
+   point to numbers. Intuitively, you can think of a 1-form as
+   representing a flow field across a surface, assigning
+   a density and direction to each point.
+
+3. **Higher-Order Forms**: Just as vectors can be generalized to
+   tensors, 1-forms can be generalized to 2-forms, 3-forms, and
+   so on. A 2-form, for example, is something that can be
+   integrated over a surface, and a 3-form can be integrated over
+   a volume. Higher-order forms are built by taking wedge
+   products of 1-forms, creating objects that can intuitively be
+   thought of as "oriented area elements" or "oriented volume
+   elements."
+
+### Integration and Manifolds
+
+The real power of differential forms comes from their role in
+integration. The integration of a 0-form (a function) over
+a line, a 1-form over a surface, or a 2-form over a volume, is
+defined in such a way that the result is independent of the
+coordinates chosen to describe the manifold. This is crucial in
+physics, where laws should not depend on our choice of
+coordinates.
+
+1. **Stokes' Theorem**: A key theorem in the use of differential
+   forms is the generalized Stokes' theorem, which relates the
+   integration of differential forms over a manifold to the
+   integration of their derivatives over the boundary of the
+   manifold. This theorem encompasses several familiar results
+   from vector calculus, including the fundamental theorem of
+   calculus, Green's theorem, and Gauss's theorem, unifying them
+   into a single framework.
+
+2. **Physical Applications**: Differential forms are particularly
+   suited to physics because they can elegantly express laws of
+   conservation, such as those of mass, charge, and energy, in
+   a geometrically invariant form. For example, Maxwell's
+   equations, which govern electromagnetism, can be beautifully
+   expressed in terms of differential forms, highlighting their
+   independence from any specific coordinate system and making
+   them universally applicable in any geometric setting.
+
+### Why Differential Forms?
+
+The invention and use of differential forms are motivated by the
+need for a mathematical language that is both capable of handling
+the complexities of curved spaces and invariant under different
+coordinate transformations. This is not just a mathematical
+nicety but a physical necessity, as the laws of physics are
+observed to have these properties. Differential forms provide
+a framework that is both powerful and flexible, allowing for the
+description of physical phenomena in any coordinate system and
+any dimension, a critical feature for the advancement of
+theoretical physics, especially in areas like general relativity
+and gauge theories.
+
+In summary, differential forms give us a robust and versatile
+tool for exploring the geometry of space and the formulation of
+physical laws, capable of capturing the complexities of the
+universe in a beautifully simple and unified way. They embody the
+principle that the fundamental laws of physics are geometric in
+nature, independent of how we choose to represent or view the
+physical world.
+
+### Links
+    - Shifrin Math 3510 Day24: Differential forms https://www.youtube.com/watch?v=Nh5XFX0iKgE
+    - Visualising differential forms              https://news.ycombinator.com/item?id=41609744
+

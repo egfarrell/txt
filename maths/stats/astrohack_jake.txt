@@ -1,0 +1,170 @@
+# thinking of 1000 coin tosses:
+    * Frequentist: think of it as 1000 _times_, and 500 will
+      be heads. ie. think 'repeated trials'
+    * Bayesian: if you think of it as an _odds_: like I have
+      even odds of getting a heads next, I'll bet you one
+      dollar to your 1 dollar
+
+# Cosmology example
+    * Bayes: we can write the probability of omega matter
+      `P(Ω_matter)` because its expressing this uncertainty
+      of what the value of `Ω` is. And we can condition on
+      data or theory or whatever we want.
+
+    * frequentism: this expression `P(Ω_matter)` is
+      meaningless because theres only one omega matter,
+      theres only one value. So you can't repeat something
+      over and over and get a different true value for omega
+      matter. ("ok it can get a little muddy because you can
+      talk about observed values or derived values from your
+      data that can change depending on noise in your data
+      but here I'm talking about the value itself, the
+      fundamental value of omega matter")
+
+# philosophy
+    So this philosophical difference between 'Frequentism'
+    and 'Bayesianism' _constrains_ the types of problems we
+    can work on and the way we can _express_ the science
+    we're interested in.
+
+# grabbed from Foreman-Mackay
+    we want to compute the probability of science
+    `P(science)` where 'science' is whatever parameters
+    describe the model we think describes the universe.
+
+    So your science might be whats `Ω_matter`, or whats the
+    orbital characteristic of this planet around a given
+    star.
+
+    So we're fundamentally expressing our science, our
+    knowledge of the world, in terms of a probability.
+
+# conditioning
+    but we need something to inform our science, so we put
+    in this little bar and say 'the probability of the
+    science given the data'.
+                `P(science|data)`
+    and this is a conditional probability.
+    ie `P(science|data) = P(science and data) / P(data)`
+
+    Think in Venn diagrams!
+
+          XXXXXXXXXX
+         XX         XXX
+        XX            #XX#####
+       X            ###.XX   ######
+     XX            ##....X        ###
+     X      _D_   ## ....XX         ##
+    XX            #._S+D_.X          #
+    X             #.......X          ##
+    XX            #......XX           #
+     XX           #.....XX    _S_     #
+      XXXX        ## .XXX            ##
+         XXXXXXXXXXXXXX              #
+                      ###          ###
+                        ############
+
+
+# background info
+    Often we arent conditioning our science on just the
+    things we measure. We're also conditioning on some sort
+    of background information. ie background info might be
+    things like:
+    > 'GR is correct' 'we are working in an FRW metric'
+    Background info are _assumptions_.
+
+# nuisance parameters
+    what we actually have is:
+    1. the probability of science and the nuisance parameters
+    2. given the data and background information!
+
+    So Bayesian analysis is looking at:
+                `P(science, nuisances | data, info)`
+                `P(Θs, Θn  | D, I)`
+
+    Nuisance parameters might be things like a power
+    spectrum slope that we dont really care about but that
+    affects our model.
+
+# difference Frequentist v bayesian
+    * note: Frequentists are trying to find long term
+      repetitions. Instead of trying to find a probability,
+      they are trying to find an _estimator_, ie. some sort
+      of point estimate 'theta-hat' `ˆθs` of our science
+      parameters we expect.
+    * Whereas Bayes is trying to come up with a (posterior)
+      _probability_ of the parameters given the data: `P(Θs
+      ... | D ...)`
+
+# machine learning
+    tends to be more Frequentist oriented for
+    computational considerations
+
+
+# how do you interpret uncertainty
+    * Freq _Confidence Intervals_: 95% of the time when
+      I run the experiment and construct an uncertainty
+      _ellipse_, the ellipse will contain the true value.
+      (or I'm going to draw this ellipse and theres a 95%
+      chance that similarly drawn ellipses will contain the
+      true value)
+
+    * Bayes _Credible Region_: I'm going to draw this
+      ellipse and theres a 95% chance the true value lies in
+      there
+
+    * (multiple ellipses) versus (one ellipse and multiple
+      values)
+
+# probability units tip!!
+    * Probabilities are normalised to 1. So `∫P(A) dA = 1`
+      and notice thats the units of `P(A)` are `1/A`!
+    * When you start doing complicated probability
+      manipulations, then checking that the units match on
+      both sides is a good check:
+    * `P(A|B) = P(A and B) / P(B)`  so that
+    * `1/A    = (1/AB)     / (1/B)`
+
+# marginalisation + nuisances!
+    Because a probability must sum to 1, we know for a joint
+    probability the double integral must sum to:
+    * `∫∫ P(A,B) dA dB = 1`
+    * but
+    * `∫  ??        dB = 1`
+    * well the "??" could be
+    * `∫  P(B)      dB = 1`
+    * therefore
+    * `P(B) = ∫ P(A,B) dA`  <---- thats marginalisation
+
+    But heres the kicker. One useful way of dealing with
+    _nuisance_ parameters is just to integrate them out. ie in
+    the example above lets say 'A' was a nuisance and we
+    just integrated it out
+
+# Jaynes
+    His first chapter builds probability from the ground up
+    as if we knew nothing about the universe!
+
+# jake astrohack: Hoggs definition of a model
+    * a model is a probabilistic _generating function_ for
+      our data (D) given some parameters (Θ)
+    * `P(D|Θ)`
+    * note that `P(D|Θ)` is the opposite of what we really
+      care about. We really want: `P(Θ|D,I)`
+    * `P(D|Θ)` is something we can compute, its similar to
+      the liklihood we saw earlier
+    * note: for `P(D|Θ)` the `Θ` parameters could be the
+      slope and intercept (`m`, `b`) of a line which would
+      allow us to generate the data. We can draw the line
+      and ask whats the random scatter around that line and
+      generate the data.
+
+# jake astrohack: data and model testing
+    * given a scatterplot of data with error bars, and also
+      given a model, we can ask:
+    > whats the probability that these data were drawn from
+    > that model.
+    * we ask how likely each data point is, given the
+      model, and we multiply these probabilities together.
+      We turn it from a single probability into a joint
+      probability (for independent events)

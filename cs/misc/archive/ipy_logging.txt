@@ -1,0 +1,24 @@
+ipy logging
+
+logstart                
+    start logging (must execute before "logon", "logoff")
+
+logstop                 
+    Quit logging
+
+logoff                  
+    swtich-off logging (temporarily)
+
+logon                   
+    switch-on logging (after a temporary switch off)
+
+logstate                
+    show if logging is on/off
+
+runlog file1 file2      
+    run named files (as log files) inside the interpreter
+
+run file1               
+    same outcome as "runlog" if file1 is a logfile.
+    ie force any file to be treated as a log file    
+

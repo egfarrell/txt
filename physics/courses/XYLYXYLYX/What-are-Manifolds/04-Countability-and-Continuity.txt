@@ -1,0 +1,73 @@
+04-Countability-and-Continuity.txt
+
+- https://www.youtube.com/watch?v=L1MC5GvlxPI&list=PLRlVmXqzHjUQHEx63ZFxV-0Ortgf-rpJo&index=4
+- $MY_VIDEOS/physics/what-are-manifolds/04-Countability-and-Continuity.mp4
+
+
+### Contents
+    First countable
+    Second countable
+    Continuity
+    Homeomorphisms
+
+
+- nested collection of open sets that contain the point `p`
+- nested collection could terminate
+- but generally, say in open ball topology, theres an infinite
+  number of nested open sets (they go down forever)
+- as long as you dont have the discrete topology, there will
+  always be more than one point in the set...
+
+this-is-something and then
+
+	- $MY_IMAGES/physics/what-are-manifolds/countable.jpg
+
+- but the question is not is there an infinte number of open
+  sets, but is there a _countable_ number of them
+- if the diameter of each open set comes from `ℝ` it's going to
+  be uncountable...
+
+- nested open neighbourhoods:
+    - if you can create a countable number of open sets around
+      each point, the space is _first countable_
+
+### First countable
+    - property about any point
+
+### Second countable
+    - property about any open set
+    - I should be able to find a countable basis that can create
+      any open set
+
+- All of our manifolds must be Second countable.
+  - It has to do with stitching together manifolds.
+
+
+Lower limit topology is finer
+Euclidean topology is coarser
+`T_E ⊂ T_LL`
+
+
+- the whole point of Hausdorff & countability is to keep you away
+  from strange spaces... we want good stable ones for our
+  Manifolds
+
+### Continuity
+    - function between two topological spaces
+    - $MY_IMAGES/physics/what-are-manifolds/continuity-01.jpg
+    - all this machinery has to make contact with the `ε, δ`
+      stuff of limits
+    - interesting:
+        - the continuity of `f` depends critically on the inverse
+          function of `f`!
+    - something about pre-images ...
+
+### Homeomorphisms
+    - if the function `f` is continuous
+    - and the inverse `f^-1` is a function (1-to-1) and
+      continuous
+    - then we're dealing with a Homeomorphism 
+    - Homeomorphisms preserve
+        - Compactness
+        - Separability
+        - Connectedness

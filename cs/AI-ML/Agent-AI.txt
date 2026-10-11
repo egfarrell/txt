@@ -1,0 +1,381 @@
+# What is an AI Agent?
+
+### Takeaway:
+    - The points below show the diverse perspectives that
+      constitute an 'agent' in the current AI landscape.
+    - It's clear there isn't a single universally accepted
+      definition, but a set of overlapping ideas centered around
+      autonomy, goal-orientation, tool use, and LLM-driven
+      control.
+
+### Contents
+    1.  Autonomous Goal-Oriented Systems
+    2.  Tool-Using LLMs
+    3.  LLM-Driven Control Flow
+    4.  Long-Running Processes
+    5.  Acting on Behalf of a User
+    6.  Multi-Step Task Completion
+    7.  Metaphorical and Abstract Definitions
+    8.  Simpler/Humorous Definitions
+    9.  Vague or Incomplete Definitions
+    10. Questioning the Definition
+    11. Specific Implementations or Examples
+    12. Non-Technical or Business-Oriented Definitions
+    13. Relating Agents to Other Concepts
+
+
+### 1. Autonomous Goal-Oriented Systems
+
+- Definition:  Agents are AI systems that independently work
+  towards achieving a defined goal. They can plan, make
+  decisions, and adapt without constant human intervention.
+
+- Supporting Quotes:
+    - An application that can autonomously learn, adapt, and act
+      in pursuit of its assigned goal.
+    - An AI agent is a system that autonomously processes inputs,
+      formulates strategies, and executes actions to meet user
+      defined goals, adapting its behavior based on feedback and
+      outcomes.
+    - An AI agent is a system that can perceive its environment,
+      reason about its options, and take actions to achieve
+      specific goals.
+    - An agent is a system that can pursue a goal-oriented
+      behavior, adapt along the way to achieve its goals, without
+      any external input.
+    - A system designed to plan, operate, and validate on a set
+      of goals over a period of time.
+    - An AI agent is an autonomous entity powered by LLMs that
+      can interact with environments, make decisions, and execute
+      actions to achieve specific goals or perform tasks...
+    - A digital entity that can autonomously plan, act and
+      collaborate to achieve broadly defined outcomes
+    - An agent is a system that can perceive information, use
+      tools, plan, memorize, and act independently. Multi-agent
+      system is a system that has agent roles, including
+      management roles, requirements analysis, designers,
+      developers, testing roles, debugging roles, and support
+      roles
+
+### 2. Tool-Using LLMs
+
+- Definition: Agents are often characterized by their ability to
+  use tools or external systems (APIs, functions, etc.) to
+  accomplish tasks. They leverage LLMs to decide when and how to
+  use these tools.
+
+- Supporting Quotes:
+    - A large language model hooked up to tools that lets it do
+      useful things
+    - LLM-based program that can make a plan, iteratively execute
+      that plan, using tools if needed.
+    - Agents = LLMs that can access and use tools to perform well
+      defined tasks and workflows.
+    - An agent has senses “precepts” and an action space. It uses
+      actions from its action space to effect its environment. It
+      then observes that environment and repeats until it
+      accomplishes its goals. Modern LLM based agents can use,
+      for instance, arbitrary Python functions, as tools -
+    - agent = llm + memory + planning + tools + while loop
+    - agent = goal + access (to relevant end points) + auth
+      + verification of results + LLM + planning + RL (reward
+        correct behavior)
+    - agent ~= something with a goal that uses tools to try to
+      achieve that goal
+    - AI agent ~= ai system with a goal that uses tools to try to
+      achieve that goal
+    - LLM that can use several tools to achieve multi step task.
+    - AI (e.g. LLM) that calls tools to plan, execute and reflect
+      on high level tasks.
+
+### 3. LLM-Driven Control Flow
+
+- Definition: Agents are applications where the sequence of
+  actions or control flow is not predetermined but is dynamically
+  decided by an LLM based on the context and goal.
+
+- Supporting Quotes:
+    - The more agentic an application is, the more an LLM
+      decides the control flow of the application
+    - definition from @sethjuarez (who can correct my
+      phrasing): an agent is LLM-based control flow
+    -  IMO it might make more sense to look for what the
+       characteristics of a modern AI app are - I like Harrison’s
+       idea that it’s one where the control flow/loop is
+       dynamically driven by an LLM.
+    -  Agent: LLM predicting next token -> LLM predicting next
+       action
+    - An agent is a series of LLM calls with a budget (time,
+      money etc). Basically something becomes agentic when you
+      bet on its output directly instead of reviewing it.An
+      analogy would be the difference between trading research
+      programs and high frequency trading programs.
+
+
+### 4. Long-Running Processes
+
+- Definition: Agents are often designed to operate over extended
+  periods, handling tasks that require ongoing monitoring,
+  updates, or interactions.
+
+- Supporting Quotes:
+    - Agents are processes that interact with the real world
+      over long time horizons to achieve goals. E.g. an agent
+      could periodically check flight prices and book for you
+      once the conditions are good; or it could track your
+      communication and remind you of overdue important messages
+    - The one we use internally is:An AI system that's
+      capable of carrying out and completing long running, open
+      ended tasks in the real world.The real world can be
+      physical or online.
+    - software that is being able to independently navigate open
+      ended environments, complete long ranged tasks and course
+      correct if needed to -
+    -  Functionally analogous human:  (to name a few:having
+       agency/taking actions, reason/planning, operate with
+       context, long running, pause/resume task, delegate and
+       list goes on)Technically more capable digitally (non
+       embodied) as they are powered by LLMs with lots of memory
+       etc.
+
+### 5. Acting on Behalf of a User
+
+- Definition:  The concept of agency often involves acting on
+  behalf of a user or entity, representing their interests and
+  making decisions for them.
+
+- Supporting Quotes:
+    - An agent is trusted to act on behalf of and in the
+      interest of those being represented. Eg an agent of the
+      government has authority to say/do things that the
+      government will be responsible for.If there’s no trust
+      there is no agent.
+    - “Takes action on your behalf”It intentionally works
+      also to describe any type of delegation.
+    -  a system that is trusted to make impactful decisions on
+       behalf of
+    - Agents don't just present options—they make decisions on
+      our behalf and take action accordingly.
+
+### 6. Multi-Step Task Completion
+
+- Definition: Agents are capable of breaking down complex tasks
+  into smaller, manageable steps and executing them in a sequence
+  to reach the overall objective.
+
+- Supporting Quotes:
+    - A system capable of executing complex, multi-step tasks
+      with little to no human intervention
+    - “An AI system component that performs non-trivial,
+      multi-step operations that previously would have required
+      a human.”
+    - llm-driven software that achieves autonomous operation on
+      complicated tasks by splitting them into multiple steps
+      like a human would
+    - An AI agent is an expert in a specialized yet complex
+      multistep activity, where at each step it makes decisions,
+      ultimately fulfilling it's objective.
+
+### 7. Metaphorical and Abstract Definitions
+
+- Definition: Some definitions describe agents in more abstract
+  or metaphorical terms, focusing on their ability to interact
+  with an environment, exhibit agency, or replace human tasks.
+
+- Supporting Quotes:
+    - I am using 'agent' to mean 'control system for future
+      states'
+    - That which exhibits agency in response to internal,
+      external, or anticipated changes
+    - It's software that fulfills aspects of 'agency'.
+    -  A tool is an extension of man; an agent is a simulacrum
+       of one.
+    - An agent is a wrapper around trust.
+    - an agent could be real or fake, human or bot, or a rat in
+      a hat controlling a guy, I don’t care. I can tell him to do
+      stuff, he can do the stuff. (As opposed to a non-agent who
+      can say stuff, but can’t actually DO anything)
+    - An agent makes use of the inherent intentionality of any
+      natural or artificial language to organize and initiate
+      processes which may have material effects.
+
+
+### 8. Simpler/Humorous Definitions
+
+- Definition:  Some tweets offer simpler or humorous takes,
+  highlighting specific aspects or poking fun at the hype.
+
+- Supporting Quotes:
+    - LLM calls in a for loop
+    - While loop around LLM call
+    - A theoretical construct with infinite potential and zero
+      real-world applications, perfect for impressing venture
+      capitalists.
+    - Whatever AutoGPT isn't, that was going to change the world
+      and then
+    - Currently “ai agent” == “ai grifting”
+
+### 9. Vague or Incomplete Definitions
+
+- Definition: Some tweets had definitions that were either very
+  short, unclear, or didn't fully capture the nuances of what an
+  agent is.
+
+- Supporting Quotes:
+    - Enabling LLM to efficiently complete the task
+    - llm based applications.
+    - An interpretable model
+    -  A feedback loop
+
+### 10. Questioning the Definition
+
+- Definition: Some tweets highlight the difficulty in defining
+  agent or question whether a robust definition exists.
+
+- Supporting Quotes:
+    - The most AI thing ever is that you can ask for definitions
+      of key terms like agent, AGI, or sentience, and never get
+      the same answer twice.
+    - There is no robust definition, only definitions which are
+      more-or-less useful in different contexts. When we refer to
+      Agents at @NapthaAI we're usually talking about
+      a cybernetic loop controlled by an LLM.
+    - A robust definition would recognize 'agent' as a concept
+      beyond ML/AI. An agent is an organization, that perceives
+      and processes information, to create self-originated
+      solutions to problems, in order to act on and manipulate
+      its environment toward intrinsic or extrinsic goals.
+
+### 11. Specific Implementations or Examples
+
+- Definition: Some tweets define agents by referring to specific
+  examples or implementations, like ChatGPT Code Interpreter or
+  particular frameworks.
+
+- Supporting Quotes:
+    - The @TheoriqAI litepaper defines agents as, AI
+      agents are autonomous software systems that leverage modern
+      generative AI models to plan, access data, use tools, make
+      decisions, and interact with the real world to perform
+      specific functions. - But a picture is worth
+      a thousand
+    - A question I always ask myself about any proposed
+      definition of agent is whether or not ChatGPT Code
+      Interpreter qualifies as an agent under that
+      definitionIt's a great example of a tool-using LLM
+      running in a loop that is trying to achieve a goal - is
+      that agentic enough?
+    - Here’s mine, compressible to a short three-element
+      definition. From
+
+    - A LLM-based systems that can plan and use tools
+      auto-discovered with
+    - No need to go NIH
+
+
+### 12. Non-Technical or Business-Oriented Definitions
+
+- Definition: These definitions frame agents in terms of their
+  business value or their role as digital assistants.
+
+- Supporting Quotes:
+    - A button a business can deploy which can be clicked over
+      and over with the dual objective of save and make money.
+
+    - An AI agent: the digital butler who never needs a coffee
+      break, still learning not to send your shopping list to the
+      Mars Rover by mistake. Thoughts?
+    - Concierge for
+[purpose]They know their stuff and how to
+      get it, I know mine and what I'm looking for, by helping
+      them know what I want they're better able to make it
+      happen.
+    - An agent is a smarter, tireless, version of you on
+      steroids. Lacking consciousness…as of now
+
+
+### 13. Relating Agents to Other Concepts
+
+- Definition: These tweets define agents by drawing parallels to
+  other concepts like functions, PID controllers, or
+  metaprogramming.
+
+- Supporting Quotes:
+    - The LLM equivalent of 'functions'. You send an input and
+      get an output which you then use in the 'parent' LLM
+      context
+    - a PID controller with with an LLM/LRM as the control unit.
+      Typically only runs until an objective is achieved, but can
+      be endless
+    - It's just metaprogramming to me. It means that a program
+      can be designed to read, generate, analyse, or transform
+      other programs, and even modify itself, while running.
+      (Cit. Wikipedia)
+
+
+### Twitter contributers
+    - @airshaped
+    - @AlanHicksLondon
+    - @attunewise
+    - @captaink99
+    - @cartick
+    - @coenen
+    - @Dan_Jeffries1
+    - @DanielMiessler
+    - @DanyX23
+    - @datanicks
+    - @EmilStenstrom
+    - @evanlimes
+    - @firasd
+    - @fred_pope
+    - @ggcaponetto90
+    - @gshotwell
+    - @HanchungLee
+    - @hwchase17
+    - @Imaadmkhan1
+    - @imaurer
+    - @kellogh
+    - @LastWordSword
+    - @MarkSchmidty
+    - @mbrg0
+    - @meta_x_ai
+    - @nazimadakli
+    - @ndzfs
+    - @nicoritschel
+    - @niviksha
+    - @pamelafox
+    - @patricksrail
+    - @Plinz
+    - @ppuliu
+    - @realOldBilly
+    - @reidbarber
+    - @rickwong888
+    - @riley_stews
+    - @RobRoyce
+    - @romechenko
+    - @romechenko
+    - @romechenko
+    - @ruthefordml
+    - @sameeurehman
+    - @saran945
+    - @scottjla
+    - @secureurbag
+    - @sethu_rn
+    - @sggresearch
+    - @simonw
+    - @SubtleGradient
+    - @summitbytes
+    - @SwePalm
+    - @swyx
+    - @theprincessxena
+    - @thornewolf
+    - @Tjido
+    - @TranquilTrader4
+    - @upster
+    - @veeragoni
+    - @vitbramm
+    - @yumahey
+    - https://en.wikipedia.org/wiki/Agency_(psychology
+    - https://github.com/nbonamy/nestor
+    - https://langchain-ai.github.io/langgraph/
+    - https://theatlantic.com/technology/archive/2024/07/ai-agents-safety-risks/678864/…

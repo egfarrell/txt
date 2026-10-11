@@ -1,0 +1,51 @@
+
+### tts api
+    - https://cloud.google.com/text-to-speech/docs/list-voices-and-types
+    - $HOME/bin/ef-tts.py
+
+### Attach disk
+    lsblk
+    lsblk -f
+
+    - `bio-disk "/dev/sdb"`
+        sudo mkdir /bio-tarballs
+        sudo chown -R ef /bio-tarballs/
+        sudo mount /dev/sdb /bio-tarballs
+        > - UNMOUNT
+            sudo umount -d /dev/sdb
+
+    - `rosetta-run-disk "/dev/sdb"`
+        sudo mkdir /rosetta-run
+        sudo chown -R ef /rosetta-run/
+        > sudo mkfs -t xfs /dev/sdb
+        sudo mount /dev/sdb /rosetta-run
+        > - UNMOUNT
+            sudo umount -d /dev/sdb
+
+    - Note:
+        - if I stop the instance and then restart it, I'll have
+          to remount the disk again
+
+### Billing
+    - There was a flat `18 zl` per day on my trial account.
+    - It was a 3000GB Standard Persistent Disk (PD) in Frankfurt
+        - "Storage PD Capacity in Frankfurt"
+    - But that was too high?
+        - Project name       Project ID              Service description     Service ID          SKU description                     SKU ID              Cost type   Usage start date    Usage end date      Usage amount    Usage unit          Unrounded Cost (zÅ‚)    Cost (zÅ‚)
+        - -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        - protein-folding    totemic-effect-324620   Compute Engine          6F81-5844-456A      Storage PD Capacity in Frankfurt    7A7B-EA46-2897      Usage       13/09/2021          30/09/2021          1,770.09        gibibyte month      329.487839              `329.49` ??
+        - protein-folding    totemic-effect-324620   Compute Engine          6F81-5844-456A      Storage PD Capacity in Frankfurt    7A7B-EA46-2897      Usage       01/09/2021          13/09/2021          1,184.04        gibibyte month      220.39958               `220.4`  ??
+
+
+### openvpn
+    - must create _firewall_ rule for VPN port 1194 (UDP?)
+
+### access / root password
+    - root password not set initially. Enter:
+        - sudo passwd
+    - gce creates my root user as 'ef'
+        - (because I have project-wide 'ef' ssh keys)
+
+### Links
+    - Create GPU instances https://cloud.google.com/compute/docs/gpus/create-vm-with-gpus#console_1
+    - Quotas               https://console.cloud.google.com/iam-admin/quotas

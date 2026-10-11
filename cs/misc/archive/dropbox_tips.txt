@@ -1,0 +1,28 @@
+dropbox tips
+
+useful alias
+    alias db='dropbox.py'
+
+    Note: this python file can be run like a 
+    bash script because it starts with:
+    #!/usr/bin/python
+
+download folder using wget 
+    wget https://www.dropbox.com/sh/xxxxxxxxxxxxxxx/xxxxx?dl=1 -O 32bit.zip
+    note: ?dl=1 at end the SHARE link!
+    note: -O 32bit.zip
+
+download single file using wget
+    add ?dl=1 
+    at end of SHARE link!
+
+setup dropbox
+    wget -O dropbox.tar.gz https://www.dropbox.com/download/?plat=lnx.x86_64
+    tar -xvfz dropbox.tar.gz
+    ~/.dropbox-dist/dropboxd
+
+old commandline aliases
+    alias dstart='python ~/dropbox.py start'
+    alias dstop='python ~/dropbox.py stop'
+    alias dstat='python ~/dropbox.py status'
+

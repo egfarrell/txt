@@ -1,0 +1,65 @@
+06-Tensor-Product-Spaces.txt
+
+$MY_VIDEOS/physics/what-are-tensors/06-Tensor-Product-Spaces.mp4
+
+
+### Youtube comment
+    - This lecture and the one on tensor contraction are my two
+      most problematic lectures. Can you tell me exactly what the
+      confusion is, then maybe I can address it. What I am trying
+      to do here is actually construct a special kind of vector
+      space called a “Tensor Product Space”. I am doing this by
+      constructing objects called. “Tensors” that map elements of
+      a Cartesian Product space of vectors and covectors to real
+      numbers. It is worth a deep understanding of everything in
+      this lecture, or all that follows is hopeless!
+
+    - Question about ordering: Answer: The ordering with the
+      tensor product symbol is the map and the ordering with the
+      Cartesian product ( the plain "x" without a circle around
+      it) is what is being mapped The map named "V* @ V" takes an
+      order pair from V X V* to the real numbers.
+
+rememver: the number of vector spaces involved in the cartesian
+product is the _rank_
+
+remember: a tensor product space is also a VECTOR space
+	- $MY_IMAGES/physics/what-are-tensors/tps-recap.jpg
+
+(so a tensor is a "vector" really, because the tps is a vector
+space)
+
+- $MY_IMAGES/physics/what-are-tensors/tensor-components-and-basis.jpg
+
+extending the TPS idea to higher dimensions
+	- $MY_IMAGES/physics/what-are-tensors/extending-tps.jpg
+
+an arbitrary vector in the TPS will be written as (4^4 basis vectors)
+	- $MY_IMAGES/physics/what-are-tensors/abitrary-tensor-with-its-basis.jpg
+
+if you look at a single vector in the TPS, written out in it's
+full glory with the `T` components in front and then the 4 basis
+vectors, you actually see the full machinery of a vector space:
+    - you see addition of vectors
+    - you see multiplication by a scalar (the `T` components) 
+
+oh head wrecking... another level of generalisation...
+- now create a cartesian product of the _duals_ `V* ⊗ V*`
+- and you end up with all the indexes reversed 
+	- $MY_IMAGES/physics/what-are-tensors/dual-tensors.jpg
+
+now the final level of generalisation:
+for the cartesian product bit, mix up the vectors and the dual
+vectors together
+
+side note: tensor product symbol is "overloaded"
+	- $MY_IMAGES/physics/what-are-tensors/tensor-product-symbol-overloaded.jpg
+
+and when you start mixing the underlying vector space and the
+dual space you get tensors that look like this:
+	- $MY_IMAGES/physics/what-are-tensors/mixed-tensor.jpg
+	- $MY_IMAGES/physics/what-are-tensors/mixed-tensor2.jpg
+
+interesting: we just use the components really in GR... don't
+carry round the basis vectors
+	- $MY_IMAGES/physics/what-are-tensors/use-tensor-components-only.jpg

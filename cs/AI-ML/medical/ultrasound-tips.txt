@@ -1,0 +1,284 @@
+### BIRADS classification
+    ./BIRADS.txt
+
+### Lecture: Breast Ultrasound (Health4TheWorld)
+    - Example: mammogram shows high density mass.
+        - so proceed with ultrasound.
+        - Result: ultrasound showed hypoechoic, irregular mass
+          with _angular margins_
+            - $MY_IMAGES/bio/ultrasound/irregular-mass-angular-margins.jpg
+    - MESSAGE: Breast ultrasound is central to diagnosis and also
+      sampling of breast lesions
+    - key book: $MY_BOOKS/Bio/Medical/2013-ACR-BIRADS.pdf
+    - Important: lesions in the breast tend to grow along the
+      _ductal system_, and in the radial dimension
+        - $MY_IMAGES/bio/ultrasound/transducer-orientation.jpg
+        - So better to scan in the radial and anti-radial
+          dimensions?
+    - Worrying: posterior acoustic shadowing
+        - $MY_IMAGES/bio/ultrasound/worrying-posterior-acoustic-shadowing.jpg
+    - "Calcifications": echogenic bright white dots...
+        - $MY_IMAGES/bio/ultrasound/calcifications-1.jpg
+        - $MY_IMAGES/bio/ultrasound/calcifications-2.jpg
+        - $MY_IMAGES/bio/ultrasound/calcifications-3.jpg
+        - Why ultrasound for _calcifications_?
+            - to look for an underlying mass.
+            - Also to see if ultrasound guided sampling is
+              possible.
+        - But really need Mamogram to fully characterise
+          Calcifications?
+        - Vascularity: Don't think the absence of vascularity
+          means benign. Carcenoma mass often doesn't have
+          Vascularity.
+            - $MY_IMAGES/bio/ultrasound/vascularity-counter-intuitive.jpg
+    - _Compression_: is important to make sure posterier acoustic
+      shadowing isn't an `artefact`
+        - BUT: dont use too much compression which would
+          block/hide blood flow in a lesion
+            - $MY_IMAGES/bio/ultrasound/compression-important-but-not-too-much.jpg
+    - "Size Doppler colour box": don't make it too big
+        - $MY_IMAGES/bio/ultrasound/doppler-colour-box.jpg
+    - SIMPLE CYSTS: by far the most _common_ breast mass.
+        - Rating: BI-RADS 2
+        - Criteria: No vascularity, looks very regular.
+            - $MY_IMAGES/bio/ultrasound/simple-cysts-1.jpg
+            - $MY_IMAGES/bio/ultrasound/simple-cysts-2.jpg
+            - $MY_IMAGES/bio/ultrasound/simple-cysts-3.jpg
+            - $MY_IMAGES/bio/ultrasound/simple-cysts-4.jpg
+        - for cysts: should be no flow on Doppler!
+            - $MY_IMAGES/bio/ultrasound/simple-cysts-5.jpg
+        - Sometimes a nearfield artefact:
+            - $MY_IMAGES/bio/ultrasound/simple-cysts-6-near-field-artefact.jpg
+            - $MY_IMAGES/bio/ultrasound/simple-cysts-6-near-field-artefact-2.jpg
+        - HARMONCIS: sometimes help resolve artifactual echos
+            - Never make a solid mass look cystic by adjusting
+              the gain inappropriately.
+                - $MY_IMAGES/bio/ultrasound/simple-cysts-7-harmonics-gain.jpg
+        - Clustered microcysts:
+            - common incidental finding (~6%)
+                - $MY_IMAGES/bio/ultrasound/clustered-microcysts.jpg
+    - COMPLICATED CYSTS:
+        - $MY_IMAGES/bio/ultrasound/complicated-cysts.jpg
+        - $MY_IMAGES/bio/ultrasound/complicated-cysts-2.jpg
+        - Mobile fluid echos (fluid debris)
+        - (move the patient to ensure mobile echos are truly
+          mobile)
+        - $MY_IMAGES/bio/ultrasound/complicated-cysts-3.jpg
+        - But 0.3% of complicated cycsts were malignant
+        - $MY_IMAGES/bio/ultrasound/complicated-cysts-4.jpg
+    - lesion in dermis/skin
+        - $MY_IMAGES/bio/ultrasound/skin-lesions.jpg
+
+### To be sorted
+    - https://school-of-radiology.com/courses/summer-school-2023/#trailer
+        - $MY_IMAGES/bio/ultrasound/multimodality-needed-to-detect.jpg
+        - 75% of breast cancers come from this duct????
+            - $MY_IMAGES/bio/ultrasound/most-cancers-from-this-duct.jpg
+    - ultrasound: an artifact will be only visible in one plane, a pathology in two planes.
+        - See lion!
+        - $MY_IMAGES/bio/ultrasound/need-two-planes-for-pathology.jpg
+    - Bi-RADS: reporting schema for the breast: Mamogram, Ultra, MRI
+    - Axilla: any carcenoma, heads towards the lymph node
+    - ultrasound: compression effect on lesion is important
+    - ultrasound: what is ANechoic
+
+### Handy
+    - Lesion: an _injury_ to a person's body or to an organ
+      inside their body
+
+### Differential Diagnosis
+    - What is "differential diagnosis" for breast US:
+        - "Breast carcinoma without nodular structure and
+          prominent diffuse or local infiltration is also
+          difficult for differential diagnosis.
+        - The minimum changes in a kind of local clump of ducts
+          (dilated or not dilated), in association with their
+          chaotic distribution, especially in peripheral parts of
+          the breast, can be a sign of ductal breast carcinoma. "
+    - "Differential diagnosis" refers to the process of
+      distinguishing between different possible medical
+      conditions or diseases that may have similar or overlapping
+      characteristics when examining a patient's breast using
+      ultrasound.
+    - It involves identifying and differentiating between various
+      potential diagnoses, particularly when the presentation of
+      a medical condition is not immediately clear and may share
+      common features with other conditions.
+    - In this paragraph, it suggests that breast carcinoma
+      WITHOUT a distinct nodular structure and WITH prominent
+      diffuse or local infiltration can be challenging to
+      diagnose.
+        - The term "differential diagnosis" means when
+          radiologists encounter such cases, they must consider
+          and rule out various conditions or diseases that could
+          be causing these ultrasound findings, as these findings
+          may not be unique to breast carcinoma.
+        - For example, they might need to differentiate between
+          breast carcinoma and other conditions that could show
+          similar ultrasound characteristics, like benign clumps
+          of ducts or other abnormalities.
+
+### MICAD Keynote: 2022
+    - https://www.youtube.com/watch?v=RMYDcIRI7ew
+    - Interpretability is very important
+        - (Covid example: trained on adults with covid, but
+          children as the control group. What is the network
+          picking up here really? The age of the lungs?)
+
+### Deep Learning not so simple!
+    - MICAD Medical Imaging conference 2022
+    - Opening Speech by Prof. Leo Joskowicz
+        - https://www.youtube.com/watch?v=P41UjqXUMlc
+    - Race car analogy
+        - $MY_IMAGES/bio/ultrasound/dl-not-easy-for-medical-imaging.jpg
+    - Need to remember 5 things:
+        - The promised land:
+            - with medical imaging there is no 100% certain right
+              answer. Experts differ. Only certainty at 0.8 or
+              0.9 etc. The promised land is 'fuzzy'.
+        - Annotated data
+            - quality, quantity, distribution
+        - Production of annotated data
+            - method, cost?
+        - DL pipelines
+            - images normalised etc
+        - Deep Network
+            - highly technical: which type of network to use
+
+### Types of cysts
+    - $MY_IMAGES/bio/ultrasound/types-of-lump.jpg
+    - $MY_IMAGES/bio/ultrasound/normal-cyst.jpg
+
+### Hypoechoic (not reflect)
+    - Hypoechoic: When a body structure does not reflect
+      ultrasound waves as well as other structures around it.
+    - `Hypo` means less than normal, `echoic` means echo-like.
+    - On ultrasound scans, hypoechoic structures appear DARKER
+      than the structures around them.
+
+### Difference: "Hypoechoic" and "echolucent"
+    - "Hypoechoic" and "echolucent" describe the appearance of
+      tissues or structures in an ultrasound image. While BOTH
+      indicate a reduced ability to reflect or transmit
+      ultrasound waves, there are subtle differences in their
+      usage:
+    - Hypoechoic:
+        - "Hypoechoic" refers to a region or structure in an
+          ultrasound image that appears DARKER or less bright
+          compared to surrounding tissues.
+        - This darkness indicates the area is reflecting fewer
+          ultrasound waves, suggesting that it may have
+          a different density or composition compared to the
+          surrounding tissues.
+        - Hypoechoic areas may indicate the presence of a mass or
+          lesion, such as a tumor, cyst, or blood clot, which can
+          have a different density or composition than the
+          surrounding healthy tissue.
+    - Echolucent:
+        - "Echolucent" describes an area in an ultrasound image
+          that appears COMPLETELY BLACK or devoid of echoes.
+        - In this context, "lucent" means transparent or clear.
+          Echolucent areas do not reflect ANY ultrasound waves
+          and appear as black voids in the image.
+        - Echolucent areas are often _fluid-filled_ regions, such
+          as cysts or abscesses, where sound waves pass through
+          the fluid with little to no reflection.
+    - In summary, both describe how tissues or structures appear
+      in ultrasound, but "hypoechoic" suggests a relatively
+      reduced reflection of ultrasound waves compared to
+      surrounding tissues, which can be indicative of differences
+      in tissue density.
+    - "Echolucent," on the other hand, describes areas COMPLETELY
+      DEVOID of echoes and are often associated with
+      _fluid-filled_ structures.
+    - The choice of terminology depends on the specific
+      characteristics of the region being described in the
+      ultrasound examination.
+
+### kaggle advice
+    - https://www.kaggle.com/competitions/be-481-project-03/discussion/231129
+    - Lessons I learned:
+    - The image sizes are NOT all equal. Be careful when
+      designing a neural network structure:
+        - any networks with _fully connected layers_ must include
+          input images that are the SAME SIZE.
+    - This doesn't mean you can't use a fully connected layer.
+      Will you be dealing with it on the NN side or on the image
+      side? It's up to you.
+    - If you're building a NN compatible with _variable_ input
+      image shapes, you may only be able to select a batch size
+      of `1`.
+    - The possibility of overfitting is very high. Ensure you are
+      prepared for it. Know when to stop the training and save
+      your intermediate models along the way.
+
+
+### Medical Imaging talk
+    - $MY_IMAGES/bio/medical/imaging/humans-and-computers.jpg
+    - What I'm doing: tumour segmentation
+    - NNs can identify 'high order' objects in an image. Not just
+      a straight line... but a left-ventricle for example.
+    - Different NN configurations.
+        - $MY_IMAGES/bio/medical/imaging/loadsa-NN-networks.jpg
+    - Screenshot taken from Asimov Institute Netherlands:
+        - https://www.asimovinstitute.org/
+    - For medical imaging: `semi-supervised` learning good!
+        - labels may be sparse, or noisy
+        - or experts have little time to label images
+    - interesting: ML needs 200,000 images for cardio echo
+      classification
+        - But human can be certified 'expert' with 750 images
+    - Foetus heart defects
+        - downsampled the 1000s of images to 5 key _views_
+        - tried a classifier on each individual view
+        - then use composite classifier:
+            - $MY_IMAGES/bio/medical/imaging/foetus-defect-system.jpg
+    - The system had 96% accuracy
+        - $MY_IMAGES/bio/medical/imaging/thanks-from-Zuck.jpg
+    - But AI some really bad errors too
+        - $MY_IMAGES/bio/medical/imaging/bad-ML-errors.jpg
+    - data hungry:
+        - NN need a huge amount of images.
+        - Hard for medical imaging which is rare
+        - $MY_IMAGES/bio/medical/imaging/data-hungry.jpg
+    - DL hitting a wall?
+        - $MY_IMAGES/bio/medical/imaging/dl-wall.jpg
+    - kaggle competition
+        - AUC = 0.7, not great?
+        - $MY_IMAGES/bio/medical/imaging/kaggle-competition.jpg
+        - but there was poor data!
+            - Some heart scans were from kittens?
+        - Key: `CLEAN YOUR DATA`
+        - key: make sure the data is REPRESENTATIVE
+            - $MY_IMAGES/bio/medical/imaging/data-relevant.jpg
+        - key: interrogate the model. What features did it learn?
+        - Hard with NN, but do it anyway.
+            - Saliency maps
+            - Gradient weighted maps
+            - $MY_IMAGES/bio/medical/imaging/interrogate-features.jpg
+    - For the future:
+        - free humans from endless labelling!
+        - So we need non-supervised learning?
+        - so try semantic segmentation instead?
+            - $MY_IMAGES/bio/medical/imaging/semantic-segmentation.jpg
+        - make DL more data efficient
+            - "smarter" data
+            - Get AI to choose which training/test images?
+            - $MY_IMAGES/bio/medical/imaging/DL-more-efficient.jpg
+        - Advice for medical staff
+            - ask these questions
+            - $MY_IMAGES/bio/medical/imaging/ML-advice-for-doctors.jpg
+        - Multi-disciplinary possibilities
+            - A Doctor + physicist collaborated to create medical
+              ultrasound
+            - $MY_IMAGES/bio/medical/imaging/Dr-and-Physicist.jpg
+            - https://www.ob-ultrasound.net/ingehertz.html
+
+### Good files
+    - BIRADS system        $MY_NOTES/cs/AI-ML/medical/BIRADS.txt
+    - Deep Learning advice $MY_NOTES/cs/AI-ML/medical/ultrasound-DL-tips.txt
+
+
+### Links
+    - NPTEL Benign diseases of the breast 1                             https://dth.ac.in/medical/course-inner.php?id=372
+    - medical imaging                                                   https://onlinecourses.nptel.ac.in/noc21_bt50/preview

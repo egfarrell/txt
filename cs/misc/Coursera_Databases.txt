@@ -1,0 +1,38 @@
+Coursera Databases
+
+Common terminology
+	Relation  - table
+	Attribute - column
+	Tuple     - row
+
+- attribute : each attribute has a type (or domain)
+- Schema    : structural description of relations in database
+- Instance  : acutal database contents at a given moment in time
+
+NULL
+	special value for "unknown" or "undefined"
+	Craig has GPA = "NULL"
+		so hes not returned for query GPA < 3.5
+		so hes not returned for query GPA >= 3.5
+		and hes not returned for query (GPA < 3.5) or (GPA >= 3.5)!!
+		even though you'd think that query would return all tuples
+	so be careful with NULLS!
+
+key
+	- a single attribute whose value is unique in each tuple
+	- or a SET of attibutes whose COMBINED value is unique
+
+Creating and using a relational database
+	Design schema, create using DDL
+	"bulk insert" initial data
+	execute ad-hoc queries and modifications 
+	in high level languages
+
+Query language
+	synonymous with DML - data manipulation language
+	Relational Algebra - formal
+	SQL - actual/implemented
+
+Queries return relations
+	query on relations returns a relation (closure)
+	can run a query on query results (composition)

@@ -1,0 +1,84 @@
+### valid_pct = 0.2
+    - sets aside 20% of the data to validate model after training
+
+### Overfitting
+    -  train too long
+     - not enough data
+     - too many model parameters
+     - result: accuracy will get worse
+
+### "Architecture"
+    - the mathematical function you're optimizing
+
+### Learner
+    - 'learners': what are the PARAMETERS that best cause the
+      architecture to match the labels in this data
+
+### "Epoch"
+    -  when every image in the dataset has been looked at once
+
+### Metrics
+    - "error_rate": the percentage of items that are incorrectly
+      classified
+    -  accuracy is `1.0 - error_rate`
+
+### lOSS (measurement of performance)
+     - "Loss" is not the same as the metric
+     - "Loss" is more about adjusting the parameters of the model
+     - sometimes you can change the model and the accuracy and
+       the error_rate don't change, but the loss function will.
+        - (ie you change the parameters but none of the dog
+          classifications actually change, or none of the cat
+          ones change, so the "accuracy" will stay the same)
+
+### Test set
+    - set aside a 3rd data set, separate from training
+      & validation sets.
+    - because you could overfit the validation set!
+
+### TIME SERIES data
+    - when we take out 20% of the data for validation, we don't
+      remove 20% random points, but we chop off the end instead
+
+### Question:
+    - is overfitting: training error < validation error
+
+### Transfer Learning
+    - using a pretrained model for a different task
+    - uses less data and quicker
+
+### Visualisation
+    - Visualising and Understanding Convolutional Networks
+    - very important paper, allowed each layer to be "visualised"
+
+
+- "catostrophic forgetting"
+
+### parameters:
+    - Arthur Samuel described them as the numbers which change
+      what the model (Architecture) does
+
+### hyperparameters:
+    - the choices about what numbers you pass to the function to
+      do the actual fitting
+
+### Pretrained models
+    - model zoo's
+    - imagenet
+    - but not enough models, not enough people working on
+      transfer learning
+
+### Weakness
+    - DL not good for conversation bots
+
+### Misc
+    - difference between recomendations and predictions, eg Terry
+      Pratchet example
+
+    - great discussion on p-values
+
+    - interesting paper:
+        - Creating Great Data Products "drive train approach"
+
+    - neglected angle:
+        - maintainence of ML models, how should they be updated

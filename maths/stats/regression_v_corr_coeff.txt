@@ -1,0 +1,79 @@
+# Key point:
+    REGRESSION lines are different to CORRELATION.
+
+- Try analyzing these two rather contrived datasets in R
+
+# First:
+    _X   Y_
+     5   1
+     5   9
+     13  9
+     13  17
+
+# then:
+    _X   Y_
+     5   3
+     5   7
+     13  11
+     13  15
+
+It helps to do scatter plots + regression line for both as
+we did in class to get a feel for the data. Note how the
+regression line is the same for both, but the distance from
+the data points to the line is greater in the first set.
+
+If you then use the summary function to get the regression
+you see they have identical slopes of 1.00 (I did say this
+was contrived!) However running a correlation on each shows
+a correlation of 0.71 for the first set and 0.89 for the
+second.
+
+- The regression coef. tells us how to predict `y` knowing `x`,
+- the correlation tells us how good that prediction is
+  likely to be.
+
+- The question asks about "the distance between an individual dot
+  and the regression line". 
+- What is actually meant is the _vertical distance_ and not the
+  actual (perpendicular) distance between the point and the line.
+
+- This corresponds to a detail that prof. Conway omitted in the
+  lectures, probably due to lack of time, but which should, be
+  highlighted because it makes the lecture somewhat misleading.
+
+    - Correlation DOES NOT distinguish between the dependent and
+      independent variables,
+    - while the (common form of the) _regression_ line does
+      distinguish between them.
+
+The formula for (Pearson) correlation coefficient is
+symmetrical w.r.t. to x and y, while regression line
+minimizes just the squared residuals of y (this could be
+told in simpler terms, but I don't want to give out the
+answer to the question ;).
+
+For a simple demonstration, try drawing two scatter plots
+with regression lines. Let the first show memory.visual on
+x and memory.verbal on y, as in the lecture, and for the
+other swap the coordinates.
+    
+> layout(matrix(1:2, 1))
+> plot(impact$memory.verbal ~ impact$memory.visual)
+> abline(lm(impact$memory.verbal ~ impact$memory.visual))
+> plot(impact$memory.visual ~ impact$memory.verbal)
+> abline(lm(impact$memory.visual ~ impact$memory.verbal))
+
+While the points are just reflected over the diagonal, the
+regression lines are completely different. The regression
+line for the first case goes to the right side of the points
+at the ceiling - as it should.
+
+In the reflected picture, the regression line goes straight
+through these points - again as it should. Thinking about
+why both pictures are correct but different should be
+revealing about the difference between scatter plots and
+regression lines.
+
+This has quite practical consequences: many people draw
+regression lines in Excel scatter plots to show the
+correlation, which is wrong.

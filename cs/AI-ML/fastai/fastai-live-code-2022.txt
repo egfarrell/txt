@@ -1,0 +1,805 @@
+### Live coding 2022
+    - Youtube Playlist: Live coding https://www.youtube.com/playlist?list=PLfYUBJiXbdtSLBPJ1GMx-sQWf6iNhb8mM
+    - Forums                        https://forums.fast.ai/t/live-coding-aka-walk-thrus/96617
+    - local videos:                 $MY_VIDEOS/fastai-livecode-playlist.m3u
+
+
+### Content
+    - Session-01
+    - Session-02
+    - Session-03
+    - Session-04
+    - Session-05
+    - Session-06
+    - Session-07
+    - Session-08 good: fit_one_cycle, fine_tune, how to use `test_dl`
+    - Session-09 lots of image advice
+    - Session-10 train lots of models, (paddy-small etc), also: gradient accumulation trick
+    - Session-11 WandB hyperparameter sweeps
+    - Session-12 Brilliant: takes apart the model layers / head etc
+    - Session-13 Brilliant: totally understand datablocks, datasets, dataloaders now (finally!)
+    - Session-14 Early stopping (no good), PROGRESSIVE resizing (feed new dataloaders), weighted dataloaders
+    - Session-15 long session: dls = dblock.`weighted_dataloaders`(dset, wgts=weights, bs=16)
+    - Session-16 mainly discussion... weighted datasets, boosting
+    - Session-17
+    - Session-18 Regex, fixing images, APL etc
+
+### Session-01
+    - https://www.youtube.com/watch?v=56sIyFjihEc
+    - https://forums.fast.ai/t/live-coding-1/96649
+
+### Session-02
+    - https://www.youtube.com/watch?v=0pWjZByJ3Lk
+    - https://forums.fast.ai/t/live-coding-2/96690
+
+### Session-03
+    - https://www.youtube.com/watch?v=B6BQiIgiEks
+    - https://forums.fast.ai/t/live-coding-3/96707
+
+### Session-04
+    - https://www.youtube.com/watch?v=uKUMT6Bj4l8
+    - https://forums.fast.ai/t/live-coding-4/96727
+
+### Session-05
+    - https://www.youtube.com/watch?v=gdsa2VawOeM
+    - https://forums.fast.ai/t/live-coding-5/96733
+
+### Session-06
+    - https://www.youtube.com/watch?v=V3cN-bqFUh4
+    - https://forums.fast.ai/t/live-coding-6/96794
+
+### Session-07
+    - https://www.youtube.com/watch?v=cagqUrHMDJ0
+    - https://forums.fast.ai/t/live-coding-7/96811
+    - 0:00  Kaggle Competitions
+    - 0:06  Paperspace
+    - 0:10  Kaggle: local machine setup
+    - 0:14  Kaggle: API token
+    - 0:18  Kaggle: download competition zip
+    - 0:25  pipe output to head: view first 10 lines
+    - 0:28  Paperspace
+    - 0:29  Remove pip from `/storage`
+    - 0:30  Install kaggle and update symlinks
+    - 0:32  Upload kaggle API json
+    - 0:33  Paperspace: Download kaggle competition file
+    - 0:35  Persistent conda env: Install, unzip
+    - 0:36  Unzip kaggle file: notebooks (too slow)
+    - 0:40  Unzip kaggle file: home directory
+    - 0:41  Executable script for unzipping
+    - 0:43  notebook to explore kaggle data
+    - 0:48  Browse image files
+    - 0:51  Review image metadata
+    - 0:53  Image data loaders and labelling function
+    - 0:56  Create learner
+    - 0:57  Monitor training with `nvidia-smi dmon`
+    - 1:02  Summary
+
+
+### Session-08
+    - https://www.youtube.com/watch?v=-Scs4gbwWXg
+    - https://forums.fast.ai/t/live-coding-8/96825
+    - 0:05  Kaggle notebook on local computer
+    - 0:09  Setup: own GPU server
+    - 0:15  Pickup from Session 07
+    - 0:16  Get file sizes (slow way)
+    - 0:17  Parallel processing: speed things up
+    - 0:23  `timm`: Different image models
+    - 0:29  fine tuning model
+    - 0:30  `fine_tune`: Description
+    - 0:35  what does `fit_one_cycle` do?
+    - 0:48  fine-tuned model: apply to TEST set
+    - 0:49  docs: test `dataloader` for inference
+    - 0:52  Submit file to kaggle
+    - 1:00  Kaggle: Visually check submission results
+    - 1:02  Kaggle: command-line submission
+    - 1:06  Kaggle: Check leaderboard
+    - 1:07  Fix results file and resubmit
+    - 1:10  Questions
+
+    - Python pathlib
+        - path = Path()
+    - What does `fit_one_cycle` do?
+        - fit_one_cycle uses a 'scheduler'. This changes the
+          learning rate during the training.
+        - uses a "cosine" scheduling (annealing)
+            - Plot: learn.recorder.plot_sched()
+        - https://iconof.com/1cycle-learning-rate-policy/
+    - Great question about learn.lr_find()
+        - is it a bit like fit_one_cycle???
+        - no. It submits 100 batches and monotonically incrases
+          the learning rate... so the x-axis is a bit like
+          time passing...
+        - for the first while the LOSS doesn't drop at all...
+          it's not learning... but then suddenly the LOSS drops
+          and that's where you've hit the sweet spot with
+          learning rate
+            - $MY_IMAGES/cs/AI-ML/fastai-learning-rate-example.jpg
+        - so really it's the _gradient_ of the loss that's
+              important. When the gradient is steeply downwards,
+              the model is LEARNING WELL
+
+    - test data set
+        - nice way of getting the text of the predictions
+        - $MY_IMAGES/cs/AI-ML/fastai-get-preds-vocab.jpg
+        - check this: learn.show_results()
+
+
+### Session-09
+    - https://www.youtube.com/watch?v=EK5wJRzffas
+    - https://forums.fast.ai/t/live-coding-9/96847
+    - 0:01   Installing `timm` persistently in Paperspace
+    - 0:04   Fixing broken symlink
+    - 0:06   Vim(!)
+    - 0:16   Kaggle: Improving model for competition
+    - 0:24   Saving a trained model
+    - 0:34   `tta`: Test time augmentation
+    - 0:39   Kaggle: Prepare file for submission
+    - 0:45   Compare new predictions with previous
+    - 0:46   Submit new predictions
+    - 0:49   create an ensemble model
+    - 0:54   Change probability of affine transforms
+    - 0:57   Improving accuracy
+
+    - Jeremy wants to beat his student!
+        - firstly student trained for LONGER
+        - also did better batch AUGMENTATION
+        - Jeremy: if you train over 5 epochs you're in danger of
+          over-fitting(!)
+
+
+### Session-10
+    - https://www.youtube.com/watch?v=zhBRynq9Yvo
+    - https://forums.fast.ai/t/live-coding-10/96874
+    - 0:00   Questions
+    - 0:06   Kaggle: Steps for Standard Image Competition
+    - 0:08   Best models: fine-tuning image recognition
+    - 0:12   Thomas Capelle script to run experiments
+    - 0:14   Github Gist
+    - 0:16   Weights and Biases API
+    - 0:17   Automating Gist generation
+    - 0:20   fine tuning: Summarise and rank models
+    - 0:23   Model performance: Scatter plot
+    - 0:25   Best models for 'non Imagenet' images
+    - 0:33   Pretrained models - Model Zoo, Papers With Code, Huggingface
+    - 0:37   Applying learning: small models
+    - 0:46   Applying learning: large models
+    - 0:47   Gradient accumulation (prevent out of memory)
+    - 0:52   Majority vote
+
+    - note: his key notebook: paddy-small.ipynb
+    - Rice competition:
+        - the rice pictures aren't like imagenet stuff the model
+          are trained on
+        - also most images are the same shape and size: try to
+          take advantage of that
+        - see notebook: the best models for fine-tuning
+            - https://www.kaggle.com/code/jhoward/the-best-vision-models-for-fine-tuning
+            - key: what _TYPE OF DATA_ was model trained on?
+            - If targets are satellite planet images, then the
+              weights of a pre-trained models will be fairly
+              useless because they've learnt specific features
+              which aren't in satellite images.
+            - also _SIZE_ of dataset important: on a big dataset
+              you have time / epochs to take advantage of lots of
+              paraemeters in a model, but if you don't have much
+              data, you don't have much ability to do that...
+        - oh: `weights and biases` have a yaml file where you can
+          feed in loads of models, learning rates etc
+        - nice: Jeremy threw a csv of results into a github
+          `gist` (!)
+            - https://gist.github.com/jph00/959aaf8695e723246b5e21f3cd5deb02
+        - tip: you can do `to_csv(stringio_obj, index=False)` ie
+          write a 'csv' file to a StrinIO object
+        - aside: error rate = 1 - accuracy
+        - note: `vit` models very good at identifying images it
+          hasn't seen before (good on the 'planet' data)
+    - rest of this lecture:
+        - he ran a 'paddy-small' notebook with loads of (small memory) models to
+          see what had a low error rate
+            - note: he used a seed each time because he wanted to
+              compare them
+        - then he ran a 'paddy-large' notebook, with the
+          'large' versions of the best 'small' models, but didn't
+          use a seed
+            - but big models ran out of memory
+            - so he did his 'halving the batch size' trick and
+              only zeroed the gradients every 2 iterations, and
+              do the 'update' every 2 iterations
+            - ie you can calculate in 2 batches what you used to
+              calculate in one batch (it's mathematically
+              identical, called 'gradient accumulation')
+
+    - jupyter: best models for fine-tuning https://www.kaggle.com/code/jhoward/the-best-vision-models-for-fine-tuning
+
+
+
+
+
+### Session-11
+    - https://www.youtube.com/watch?v=j-zMF2VirA8
+    - https://forums.fast.ai/t/live-coding-11/96891
+    - 00:00   Recap: 'Paddy' Competition
+    - 04:30   Kaggle: Tips on notebook votes
+    - 07:30   Gist uploading question
+    - 10:30   `Weights and Biases` Sweep
+    - 14:40   Tracking GPU metrics
+    - 16:40   'fastgpu'
+    - 20:00   .gitconfig
+    - 21:00   Analysis notebook
+    - 26:00   "Parallel coordinates" chart on `wandb`
+    - 31:30   hyperparameter optimisation: Brute force vs human approach
+    - 37:30   Learning rate finder
+    - 40:00   Debugging port issues: `ps`
+    - 42:00   TMUX: Background sessions
+    - 46:20   jupyter: Iterating between notebooks
+    - 49:00   jupyter: Toggle Cell 'All Output'
+    - 50:50   Final transform for `vit` models
+    - 52:05   `swinv2` fixed resolution models
+    - 53:00   Building ensemble - appending predictions
+    - 55:50   Model stacking
+    - 57:00   Kaggle: Submission notebooks
+
+    - timm model analysis notebooks https://github.com/tcapelle/fastai_timm/blob/main/analysis.ipynb
+
+    - Jeremy has a module that does something similar to WandB...
+      it's fastgpu
+    - how to fine tune a timm model:
+        - Integrate timm and fastai (and WandB)
+        - https://github.com/tcapelle/fastai_timm/
+
+    - fancy plot: parallel coords
+        - https://docs.wandb.ai/guides/app/features/panels/parallel-coordinates
+
+    - Jeremy discusses lots of model architectures...
+        - 'vit' was good and 'swin'
+        - paddy-small.ipynb
+
+    - WEIGHTED models: he has a '_stack_' of models and he gets
+      the mean of the 'tta' predictions
+
+### Session-12
+    - https://www.youtube.com/watch?v=GuCkpjXHdTc
+    - https://forums.fast.ai/t/live-coding-12/96909
+    - 00:00   Best vision models for fine tuning
+    - 10:50   export file `pth` format
+    - 12:30   "Multi-head" model setup
+    - 16:00   Guaging error rate
+    - 20:00   Look inside model
+    - 22:30   Model Shape
+    - 23:40   Last layer: end of head
+    - 26:00   Changing last layer
+    - 29:00   Creating 'DiseaseAndTypeClassifier' subclass
+    - 38:00   Debugging plumbing of new subclass
+    - 46:00   Testing new learner
+    - 49:00   Create new loss function
+    - 52:00   Get predictions for two targets
+    - 56:00   Create new error function
+
+
+    - jupyter: best models for fine-tuning https://www.kaggle.com/code/jhoward/the-best-vision-models-for-fine-tuning
+
+    - Brilliant stuff... he takes apart a model
+    - removes the last layer and wraps the existing model in
+      a new model that will have TWO classes of predictions now:
+        - rice disease
+        - rice variety
+
+        - look inside a model
+            - learn.summary()
+            - m = learn.model()
+            - head = m[1]
+            - last_layer = head[-1]
+            - list(last_layer.parameters())
+            - delete last layer
+                - del(head[-1])
+
+    - he's going to create a new model a few different ways
+        - Create a new Python class: `DiseasedTypeClassifier`
+            - dtc = DiseasedTypeClassifier(m)
+            - $MY_IMAGES/cs/AI-ML/fastai-create-new-model-subclass.jpg
+        - NICE: he copied his current learner that has
+          dataloadres... but then inserted HIS new model that he
+          just defined in Python
+            - from copy import deepcopy
+            - learner2 = deepcopy(learner)
+            - learner2.model = dtc
+            - aside: he got a 'mixed precision' error with his
+              new model because he originally had defined `learner`
+            - then another error:
+            - there was no loss function defined for this new
+              model class
+            - you can look at any loss function via:
+                - learner.loss_func
+            - nice: he looked at the source code for the fastai
+              'vision_learner' class and see how they created
+              a loss function
+            - then he creates his own custom loss function
+                - $MY_IMAGES/cs/AI-ML/fastai-create-your-own-loss-func.jpg
+            - then creates his own metrics 'error_rate'
+                - $MY_IMAGES/cs/AI-ML/fastai-create-your-own-metrics.jpg
+
+
+    - check: fastai `create_head()` function
+
+
+### Session-13
+    - https://www.youtube.com/watch?v=INrkhUGCXHg
+    - https://forums.fast.ai/t/live-coding-13/96924
+    - 0:00   Intro and Questions
+    - 0:05   MultiTask Classification Notebook
+    - 0:07   Good fastai tutorials
+    - 0:08   `DataBlock` API
+    - 0:12   How does ImageBlock, get_image_files work
+    - 0:15   How `aug_transforms` works
+    - 0:17   Convert ImageDataLoaders to `DataBlock`
+    - 0:22   PyTorch DataLoaders: last batch?
+    - 0:23   Step2: Make DataBlock spit three things
+    - 0:27   Modify `get_y` to send as two inputs
+    - 0:32   Looking into Dataset objects
+    - 0:33   multiple `get_items`?
+    - 0:35   Hacky notebook: use data frames for DataBlock
+    - 0:39   TransformBlock and ImageBlock
+    - 0:49   Source code: TransformBlock, DataBlock
+    - 0:54   Dataset, Dataloaders discussion
+    - 0:58   Define DataBlock for Multi-task classification
+    - 1:05   Training a _multi-task_ model
+
+    - first thing he did was replicate previous lesson using the
+      `datablock` API (it's a level lower than get_image_files?)
+    - interesting:
+        - under the hood
+        - get_image_files calls `PILImage.create`(...some
+          path...)
+    - aside:
+        - for a dataloader, you can drop the last batch, because
+          it may not have enough items to reach the standard
+          batch size, say 64
+    - key:
+        - for a datablock to have 2 output categories, you define
+          a key line:
+            - blocks = (Imageblock, CategoryBlock, CategoryBlock)
+    - Python syntax sugar
+        - mydict_img2variety['100022.jpg']
+        - actually calls `__getitem__` behind the scenes
+        - $MY_IMAGES/cs/AI-ML/fastai-fancy-datablock.jpg
+    - important:
+        - how to tell fastai that in this line we have one input,
+          and TWO outputs???
+            - blocks = (Imageblock, CategoryBlock, CategoryBlock)
+        - we add this to our datablock:
+            - `n_inp = 1`,
+        - before adding his datablock into a 'dataloader', he
+          inserts it into a 'dataset' first
+            - datasets are easier to debug
+            - there's no batches in them, just one item at a time
+    - datablocks 'flow':
+        - `get_items`=get_image_files gets all your things
+        - `get_y`=[parent_label, get_variety] then PICKS OUT the
+          things (from get_items) that you pass to your 'blocks'
+            - blocks = (Imageblock, CategoryBlock, CategoryBlock)
+        - in this example, we don't need a special `get_x`
+          becaues `Imageblock` just takes paths directly
+        - actually here's a nice datablock that is built from a pandas
+          df (I think I used colreader for magnet in 2021)
+            - $MY_IMAGES/cs/AI-ML/fastai-fancy-datablock-2.jpg
+    - world's simplets datablock
+        - $MY_IMAGES/cs/AI-ML/fastai-fancy-datablock-3.jpg
+        - note: whatever is actually in `blocks` is what gets
+          'output' from the datablock
+
+    - wow:
+        - `ImageBlock` is actually a shortcut for
+            - TransformBlock(type_tfms=PILImage.create, batch_tfms=IntToFloatTensor)
+        - aside: so my 8-bit images are actually getting converted to floats!
+
+    - another aside:
+        - `item_tfms` only get done by the dataloaders... not by
+          the datablock / datasets
+        - `item_tfms` don't run on the GPU yet because they're not in
+          a batch yet
+
+    - defining a datablock to predict 2 categories
+        - 1. Rice Disease
+        - 2. Rice variety
+        - but in this screenshot, we have a prob: our 2 `get_y`
+          transformations CAN'T be turned into a `tensor` (to be
+          fed later to a dataloader)
+            - $MY_IMAGES/cs/AI-ML/fastai-datablock-not-tensors.jpg
+        - solution: instead of having our 2 get_y items as
+          `TransformBlock`, we instead call them `CategoryBlock`
+            - `CategoryBlock` will convert these text labels into
+              `TensorCategory(.. n ..)`
+
+
+
+
+### Session-14
+    - https://www.youtube.com/watch?v=cs6di5g4Yyo
+    - https://forums.fast.ai/t/live-coding-14/97011
+    - 0:00   Questions
+    - 0:00   Concept: 'early stopping'
+    - 0:04   Different models, which one to use
+    - 0:05   Gradient Boosting Machine: different model predictions
+    - 0:07   AutoML tools
+    - 0:07   Kaggle winners approaches, ensemble
+    - 0:09   Test Time Augmentation (TTA)
+    - 0:11   Training loss vs validation loss
+    - 0:12   Averaging a few augmented versions
+    - 0:13   Unbalanced dataset and augmentation
+    - 0:15   On balancing datasets
+    - 0:15   WeightedDL, Weighted DataLoader
+    - 0:17   Weighted sampling on Diabetic Retinopathy competition
+    - 0:19   Lets try something…
+    - 0:21   Environment variables:  multiple GPUs
+    - 0:21   Multi-target model
+    - 0:23   Debugging
+    - 0:27   Transforms: 128x128 and 5 epochs
+    - 0:28   Progressive resizing
+    - 0:29   Fine tuning again but on larger 160x160 images
+    - 0:34   Small bug, restart (without creating new learner)
+    - 0:37   Re-run second fine-tuning
+    - 0:40   Source of progressive resizing idea?
+    - 0:41   Changing things during training
+    - 0:42   Paper: Fixing train-test resolution discrepancy
+    - 0:44   Fine tuning again, but larger 192x192 images
+    - 0:46   Detour: paper reference management
+    - 0:48   Final fine-tuning 256x192
+    - 0:49   Looking at WeightedDL, WeightedDataLoader
+    - 0:57   Results of fine-tuning 256x192
+    - 0:58   Question: look at callbacks
+    - 0:59   About `SaveModelCallback`
+    - 1:00   Contributing, Documentation, “Docments”
+    - 1:03   Question: lr_find()
+    - 1:04   Question: Training for longer, decreasing validation loss, epochs, error rate
+    - 1:06   Question: Progressive resizing and reinitialization
+    - 1:08   Question: _RESOLUTION INDEPENDENT_ models
+
+    - Session-14
+    - aside:
+        - convnext models are resolution independent
+        - if you change the resolution you just have more patches
+          to cover... as the (same) filter moves patch-by-patch
+        - note: `vit` and `swin` are not resolution indpendent
+            - although Jermey says there's a setting you can pass
+              to `timm` to make them resolution independent?
+    - aside:
+        - don't look at the validation loss to see if you're
+          over-fitting
+        - look at the ERROR RATE (instead)
+        - the validation loss can actually get worse, while the
+          error rate gets better
+    - aside:
+        - Jeremy doesn't really train the `lr` much anymore. For
+          computer vision it's always around: 0.008, 0.01
+    - early-stopping callback:
+        - Jeremy doesn't use: doesn't play nice with `1Cycle` or
+          `fine_tuning`... if u stop early, the `lr` doesn't have
+          a chance to go down... also the training hasn't settled
+          down..
+        - so earlier epochs don't have better accuracy
+        - if I saw earlier epochs had better accuracy then I'd
+          know I'm over-fitting and would try more data
+          augmentation
+    - student question:
+        - for certain values of input `x`, 
+            - use one particular model, 
+        - for other values of `x` 
+            - use a different model etc
+        - Jeremy: seen this on kaggle: 
+            - train an ensemble of models, feed the outputs into
+              a gradient boosting machine
+            - easy to over-fit
+            - if you've trained well, you'll only get a tiny
+              increase
+
+    - ensembling: kaggle winners use (complex) ensembling, but
+      often that's just to get the last fraction of a % to win...
+    - why tta:
+        - example: you've got a screw head that's hard to see...
+          so you turn it around, look at it from different angles
+        - tta is the sample... you're giving the model different
+          'angles' of the image
+        - for easy images to classify, it doesn't make
+          a difference... but for hard ones, that extra angle or
+          info can make it easier
+        - another advantage of tta: sometimes on training data
+          the model gets 'over-confident' e.g. 0.9 percent
+          certain... cos it's seen these images 1000s of times...
+          (so the training loss is lower than the validation
+          loss)... but `tta` can smooth out over-confident probs
+          and you might get a 0.9 and a 0.1 etc so the final
+          prediction will be lower, less confident, more
+          reasonable
+            - (the high probabilities don't neccessarily affect
+              accuracy, but tta will remove the 'over confidence'
+              of high probabilities... gives better probabilities)
+        - unbalanced data?
+            - yes could over-sample low frequency classes
+            - fastai has a `weighted` dataloader
+
+    - PROGRESSIVE RESIZING
+        - originally training at `128x128`... not very big...
+          Jeremy not expecting much
+        - but INSTEAD of throwing away the model trained on SMALL
+          images and starting again with larger images... lets
+          `fine_tune` this model on slightly bigger images e.g.
+          `192x192`
+        - this will be quicker...
+        - also it's kinda data augmentation... giving it
+          different sized images, that should help
+        - how to do it? Feed the SAME learner, a NEW dataloader!
+
+    - throwaway comment:
+        - ... maybe at the end of training we can turn off data
+          augmentation? Because that's what we really care about:
+          unagumented images
+
+    - throwaway comment 2:
+        - you can take a model trained on 224x224 images and get
+          it to predict 360x360 images... and it'll generally go
+          pretty well..
+
+    - weighted dataloader
+
+### Session-15
+    - https://www.youtube.com/watch?v=6JGoes9_bPs
+    - https://forums.fast.ai/t/live-coding-15/97024
+    - 0:00   Questions
+    - 0:02   Running notebooks in background
+    - 0:04   Xrdp: server connection
+    - 0:07   Connect to Paperspace machines remotely?
+    - 0:06   Installing `Xrdp`
+    - 0:13   startup issue in Paperspace
+    - 0:16   tmux: Native windows with `tmux -CC a`
+    - 0:18   tmux: mouse support
+    - 0:20   Experiment: close notebooks while fine tuning
+    - 0:24   Recap: _PROGRESSIVE RESIZING_
+    - 0:26   Build weighted model
+    - 0:29   Images: Pick out those hard to classify
+    - 0:33   Weighting with `1/np.sqrt(value_counts())`
+    - 0:36   Merging weights with image description dataframe
+    - 0:38   Build datablock
+    - 0:40   Weighted dataloaders
+    - 0:41   Datasets for indexing: get an `x,y` pair
+    - 0:44   Sort list of weights and image files, to match them
+    - 0:47   Batch transforms not applied (datasets didn’t have this method)
+    - 0:49   Reviewing errors
+    - 0:55   Python debugger `pdb %debug`
+    - 0:56   List comprehension (assign weight to images)
+    - 0:59   Use `set_index` instead of sort_values
+    - 0:59   Review weighted dataloaders with `show_batch`
+    - 1:00   Review weighted sampling
+    - 1:03   Updating fastai library: make weighted sampling easier
+    - 1:04   Is `WeightedDL` a callback?
+    - 1:06   modifying weighted_dataloaders function
+    - 1:10   fixing tests for weighted_dataloaders
+    - 1:13   editable install of pip in fastai
+    - 1:16   modifying PETS notebooks to work on splitter
+    - 1:18   How splitters work in datablock
+    - 1:20   modifying weighted dataloader using weights from Dataset
+    - 1:23   running tests in fastai and create 'github issues'
+    - 1:24   fix failing test
+    - 1:29   creating commit to fix
+    - 1:31   'nbdev hook' to clean notebooks
+
+    - minute 33:
+        - Weighting under-represented classes: 2 reasons:
+        - some images are harder and you want to show the model
+          them more often
+        - and some are less common, also want to show more often
+    - one way to weight:
+        - take their reciprocal `1 / value_counts`
+        - take their root reciprocal `1 / sqrt(value_counts)`
+    - danger with weighting: OVER-FITTING
+    - inference time:
+        - because the model has (over?) trained on less
+          representative cases, and the model thinks they are
+          more probable than they really are, then you have to
+          _REVERSE_ that when making a prediction
+    - gotcha:
+        - when passing weights, it just weights for the training
+          set, not for the validation set
+    - Key methods:
+        - DataBlock.weighted_dataloaders <--- better way
+    - note:
+        - an 'epoch' isn't exactly an epoch anymore!
+        - Because u may not see every single image once... (due
+          to the new weighted sampling) ... so an epoch is just
+          equal to the total number of rows in the input training
+          dataset
+
+
+### Session-16
+    - https://www.youtube.com/watch?v=WhuhnJMNack
+    - https://forums.fast.ai/t/live-coding-16/97059
+    - 00   Start
+    - 01   Weighting: WeightedDL
+    - 01   Curriculum Learning / Top Losses
+    - 03   Distribution: 'test set' vs 'training set'
+    - 03   Curriculum Learning related to Boosting?
+    - 04   Which images the model fails on
+    - 04   Are labels ever wrong? By accident, intentional?
+    - 06   Image annotation issues: 'Paddy Kaggle discussion 4'
+    - 08   `UNIFESP` X-ray Body Part Classifier Competition 4
+    - 10   Medical images / DICOM Images
+    - 10   fastai for medical imaging
+    - 11   `JPEG 2000` Compression
+    - 12   ConvNet Paper
+    - 13   On Research Field
+    - 15   When is paper worth reading?
+    - 17   When stop iterating a model? - Using the right data.
+    - 20   Use 'Semi-Supervised' Learning, 'Transfer' Learning
+    - 21   Not enough data on certain category. `Binary Sigmoid` instead of `SoftMax`
+    - 23   Question: Kaggle submission
+    - 25   Kaggle: Public and private leaderboards
+    - 29   Last lesson?
+    - 31   `GradientAccumulation` in notebook:  $MY_CODE/AI-ML/fastai-2022/10-paddy-part-3-scaling-up.py
+    - 37   Kaggle: “Save & Run” notebook
+    - 38   Visualise: inputs/outputs to a model
+    - 40   Visualise: “middle” of a model (convnet)
+    - 41   Part 2: Outputs of a hidden layer
+    - 42   Ethics
+    - 44   fastai1/courses/dl1/excel/
+
+    - ### Session-16
+    - boosting: 
+        - calculate the difference between the actuals and your
+          predictions to create residulas... and then create
+          a model to predict the residuals
+        - then you can add those 2 predictions together
+        - if not done carefully can lead to over-fitting
+    - for wrong predictions:
+        - find the things we're confident of that are wrong...
+          and ???
+        - something about chapter 2 in the book
+    - which type of papers to read?
+        - papers that done well in competitions
+        - also: things that do well with transfer learning
+          (Jeremy doesn't train from scratch much)
+    - student question: 
+        - when I deploy a model, it does badly
+        - Jermey: not training on relevant / correct data
+        - so deploy somehow and gather real data that you will
+          encounter
+        - also: use semi-supervised learning / transfer learning
+        - medical imaging: deploying to a new hospital to a new
+          MRI machine: then do fine tuning
+    - IMPORTANT: if not enough data in certain categories...
+        - use `binary sigmoid` rather than softmax
+        - then triage that item to human review
+    - aside: Jeremy was using gradient accumulation wrong
+    - Jeremy has a `report_gpu` function to help figure out batch
+      size
+
+
+### Session-17
+    - https://www.youtube.com/watch?v=bk2ylRhka_8
+    - https://forums.fast.ai/t/live-coding-17/97166
+    - code $MY_CODE/AI-ML/fastai-2022/lesson-17.py
+
+    - 00:00   Paperspace: Clone fastai/paperspace-setup
+    - 02:30   pipi fastai & pipi -U fastai
+    - 03:43   mamba `universal-ctags`
+    - 05:00   Adding normalization to TIMM models
+    - 06:06   fix `pre-run.sh`
+    - 07:35   Normalization in vision_learner (with pretrained model statistics)
+    - 09:40   Adding TIMM models
+    - 13:10   model.default_cfg() to get TIMM model statistics
+    - 16:00   Lets go to `_add_norm()`… adding `_timm_norm()`
+    - 20:30   Test and debugging
+    - 28:40   Redesign
+    - 32:23   Apply redesign for TIMM
+    - 36:20   `create_timm_model` and `TimmBody`
+    - 38:12   Check default config for TIMM models
+    - 39:05   `create_unet_model` working with TIMM
+    - 40:20   Basic idea: U-nets
+    - 41:25   Dynamic U-net
+    - 48:00   fast.ai convolutional layer
+    - 49:00   What needs to be changed?
+    - 51:45   Unique? TIMM models cut head and tail off?
+    - 53:10   Layers Notebook doesn’t work
+    - 54:04   Can we still predict rice disease?
+    - 55:28   Possible to create a layer that learns normalization?
+    - 56:11   When fine-tuning, basically normalization doesn’t matter...
+    - 57:25   Question: `U-net` on mobile app inference
+    - 59:16   Better error initially, but no difference as it trains
+    - 01:00   Questions?
+    - 01:01   Why normalization used to matter a lot?
+    - 01:02   François: fine-tuning Keras models
+
+    - ### Session-17
+    - add normalisaiton to timm models
+    - normalization: subtract the means and divide by std in each
+      channel
+        - _KEY_: need to normalise THE SAME WAY as when the model
+          was trained
+        - i.e. mean 0, std 1 etc etc 
+    - _KEY_vision_learner: has normalise parameter!!
+    - `timm` has its own stats 
+        - (currently fastai doesnt normalise any timm models)
+    - check this: getting started wtih pytorch image models
+      (practioner guide)
+        - https://towardsdatascience.com/getting-started-with-pytorch-image-models-timm-a-practitioners-guide-4e77b4bf9055?gi=23a7a52c0f26
+    - vision_learner info: it calls `create_timm_model`
+      internally itself if you pass a string
+    - $MY_CODE/AI-ML/fastai-2022/lesson-17.py
+        - $MY_IMAGES/cs/AI-ML/fastai/timm-models-1.jpg
+    - KEY: when using timm models, must use the same normalise
+      stats as the model was trained on
+    - 20 minute mark:
+        - he adds code to fastai base, to use timm model
+          default_cfg to normalise
+        - $MY_IMAGES/cs/AI-ML/fastai/timm-models-2.jpg
+    - minute 24
+        - looks at `Timmbody` class
+    - minute 39:
+        - code refactor: get create_unet_model to work with timm
+    - unets
+    - instead of final pooling layer and predictions, (after all
+      the downsampling path) instead it starts an 'upsampling
+      path' to deconvolve the output...
+    - on the downsampling path.. fastai does a '`dummy eval`' (a
+      zero length batch, or 1 item batch) to find the shape of
+      the output of every layer
+    - then where the size changes, that's where fastai wants the
+      'cross-connections' to be on the upsampling path
+    - minute 53:
+        - 'layers' notebook: find this in fastai
+    - aside: 
+        - `batch_norm` is a layer that "learns" normalisation
+    - 01:01   
+        - Why normalization used to matter a lot?
+        - previously, people didn't FIND TUNE models
+        - (but now fine-tuning makes normalisation less important)
+        - previously we didn't have batch norm either
+        - and previously we used to just fine-tune the head only
+          (didn't realise you have to fine-tune the batchnorm
+          layers too)
+    - end sting: actually in the fastai code the norm stuff
+      wasn't actually working until he fixed it today!
+
+### Session-18
+    - https://www.youtube.com/watch?v=k6QSqz9_vQA
+    - https://forums.fast.ai/t/live-coding-18/97187
+    - 0:00  Forum: image links.
+    - 0:03  Explaining `src`, `dest` triple quotes (multi-line strings)
+    - 0:05  real-life issues: Problem solving process
+    - 0:05  Managing `src` and `dest` in text files / terminal file input/ vim
+    - 0:07  Cat function usage, printing file contents, copying files using cat.
+    - 0:10  `fastcore.utils`: path creation and text reading.
+    - 0:13  Abbreviation standards and naming conventions.
+    - 0:14  Regex, and future learning (e.g., perl one-liners).
+    - 0:18  Estimating desired image sizes.
+    - 0:23  Checking text rows, find specific text in 'src.txt'.
+    - 0:23  Understanding `rg`, installing, using in Jupyter.
+    - 0:26  Jeremy's approach: exploring functions, simple case demonstrations.
+    - 0:28  Splitting links in src.txt, regex steps for name, size, and url extraction.
+    - 0:30  Creating a dictionary from tuples, benefits of interactive programming.
+    - 0:31  Regex grouping for extraction and handling incorrect string patterns.
+    - 0:33  Search and replace using regex, basic to complex examples.
+    - 0:36  Regex patterns for various characters and exclusions.
+    - 0:38  Debugging regex, understanding specific patterns.
+    - 0:39  Regex usage for line start/end, online resources, Jeremy's opinion on mastering regex.
+    - 0:46  Understanding re.search function's output.
+    - 0:47  Replacing note-image-links, Jeremy's incremental Jupyter notebook process.
+    - 0:48  Using dictionary for name-url replacements.
+    - 0:49  Retaining image size, pattern capturing for png/jpeg, optional patterns.
+    - 0:50  Replacing patterned strings with captured tuples.
+    - 0:54  Handling missing dictionary keys.
+    - 0:57  Nearing completion.
+    - 1:00  Jupyter cell management: forum image size formats.
+    - 1:05  Resolving forum image size issues.
+    - 1:08  Handling dest's mismatched image names.
+    - 1:11  Converting notebook to app, simplifying code.
+    - 1:15  Installing gradio, starting with demo code.
+    - 1:18  Exploring file uploads in gradio.
+    - 1:19  Implementing dual textboxes in gradio.
+    - 1:21  Creating HuggingFace space, browser-based app.py, and requirement.txt.
+    - 1:26  Future live-coding, APL sessions.
+    - 1:28  Understanding APL, its Turing award significance.
+    - 1:29  Exploring Dyalog, APL history, and its mathematical nature.
+    - 1:36  APL's relevance for PyTorch, tensor, numpy programmers, fun in APL function definition.
+    - 1:39  Current APL applications.
+    - 1:42  Jeremy's personal APL use.
+    - 1:45  `J` intro....
+    - 1:46  Jeremy's approach to teaching APL, math teaching to children.

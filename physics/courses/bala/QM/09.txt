@@ -1,0 +1,32 @@
+### QM Nptel 09
+
+- Constants in infinite potential well:
+    - `L`, `m`, `hbar`
+
+- Constants not used:
+    `Kb`: Working at 0K so no boltzmann constant
+    `G`:  No gravity in setup
+    `C`:  No speed of light - assuming non-relativistic setup
+
+
+- Normalisation condition helps produce distinctive solution.
+
+- The eigenstates of the infinite-well Hamiltonian in position
+  space aren't eigenstates in momentum space.
+
+- But the position eigenstates could be represented as
+  a superposition of 2 momentum eigenstates.
+
+- (by rewriting `sin(x)` using `e`)
+
+- The you get two sharp peaks at `-hbar kn` and `+hbar kn`
+    - ie like two delta functions.
+
+- But! remember we said the eigenstates have to be in `L2` ie
+  square integrable.
+
+- And the dirac delta function isnt in `L2`.
+
+- The resolution! You dont integrate from `-∞` to `∞` BUT from `0` to `L`.
+
+- This stops the momenta from becoming delta functions. Theyre actually smooth functions instead.

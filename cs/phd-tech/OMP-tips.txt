@@ -1,0 +1,18 @@
+
+
+### omp_get_num_threads() returns 1
+    - https://stackoverflow.com/questions/11071116/i-got-omp-get-num-threads-always-return-1-in-gcc-works-in-icc
+    - In a sequential section of the program omp_get_num_threads
+      returns 1.
+        - https://gcc.gnu.org/onlinedocs/libgomp/omp_005fget_005fnum_005fthreads.html
+    - It is only in the parallel section that omp_get_num_threads
+      would return a value other than 1.
+
+### openmp VERSION
+    - OpenMP is built-in to your COMPILER. 
+    - Check the version of your compiler 
+        echo | cpp -fopenmp -dM | grep -i open
+    - or 
+    - export  OMP_DISPLAY_ENV="TRUE"
+        - then run a simple OMP program
+

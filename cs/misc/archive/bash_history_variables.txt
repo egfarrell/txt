@@ -1,0 +1,19 @@
+unix history
+
+HISTSIZE     --> number of lines of command to store in history "list" (memory)
+HISTFILESIZE --> number of lines of command to store in history "file"
+
+
+The history "file" is not updated as you type the commands. The
+commands get stored in a "list" separately (accessed by the history
+command). 
+
+The number of stored commands is controlled by HISTSIZE value. When
+the shell (interactive) exits, the last $HISTSIZE lines are appended
+to $HISTFILE from that "list".
+
+ If HISTFILESIZE is set, then after this operation, it is ensured that
+ only $HISTFILESIZE lines (latest) exist in $HISTFILE . 
+
+And when the shell starts, the "list" is initialized from $HISTFILE
+upto a maximum of $HISTSIZE commands.

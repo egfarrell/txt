@@ -1,0 +1,56 @@
+malan 03
+C Datatypes
+	char		single character
+	double		64-bit real value
+	float		32-bit real value
+	short		16-bit integer
+	int			32-bit integer
+	signed		positive or negative integer (up to +/- 2 billion)
+	unsigned	positive only integer (up to 4 billion)
+	long		32-bit integer aswell!
+	longlong	64-bit integer
+
+64-bit architecture
+	refers to the size of the integers
+
+modulus
+	% (apparently its useful)
+
+boolean not true
+	while (!thankful)
+
+printf for numbers
+	<width>.<precision>
+	.2f		give me 2 places after the decimal point
+	.99f	give me 99 places (however float doesnt go that far)
+
+exactly comparing floating point numbers:
+	don't do it - won't be exact same!
+
+type-casting
+	float answer = 17 / (float) 13
+
+help
+	man 3 sleep
+	different to just "man sleep"
+
+standard output (sdout)
+	has a buffer - but you can flush it
+	fflush(sdout)
+
+conditionals
+	there both a "while" loop AND a "do...while" loop
+
+	if
+	else if
+	else
+
+	switch (something)
+		case i:
+			// something
+			break;
+		case i:
+			// something
+			break;
+		default:
+			break;

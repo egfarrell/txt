@@ -1,0 +1,18 @@
+imagemagick install no root
+
+
+Put the tar file where you want it to make the Image Magick folder, then...
+
+> tar -xvzf ImageMagick-6.1.7-7.tar.tar
+
+
+> ./configure --prefix=/my/home --with-perl-options='PREFIX=/my/home'
+
+** CHANGE /my/home (both times) to YOUR directory where you'd like the Image Magick bin file to go. ***
+
+> make
+
+> make install
+
+THAT'S IT!  8)
+

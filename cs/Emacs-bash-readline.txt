@@ -1,0 +1,45 @@
+
+### Bash Emacs mode
+    - ~/.inputrc
+
+- NAVIGATION
+- EDITING
+- PROCESSES
+- HISTORY
+
+### NAVIGATION
+    - Ctrl + a       Go to beginning of line.
+    - Ctrl + e       Go to end of line.
+    - Alt + f        Move cursor forward one word.
+    - Alt + b        Move cursor back one word.
+    - Ctrl + f       Move cursor forward one character.
+    - Ctrl + b       Move cursor back one character.
+    - Ctrl + x, x    Toggle between current cursor position and beginning of line.
+
+### EDITING
+    - Ctrl + _               Undo! (need "shift" too for `_`)
+    - Ctrl + x, Ctrl + e     Edit current command in $EDITOR. (mine: `ctrl+o`)
+    - Alt + d                Delete word after cursor.
+    - Alt + Delete           Delete word before cursor.
+    - Ctrl + d               Delete character beneath cursor.
+    - Ctrl + h               Delete character before cursor (like backspace).
+    - Ctrl + k               Cut line after cursor to clipboard.
+    - Ctrl + u               Cut line before cursor to clipboard.
+    - Ctrl + d               Cut word after cursor to clipboard.
+    - Ctrl + w               Cut word before cursor to clipboard.
+    - Ctrl + y               Paste last item to be cut.
+
+### PROCESSES
+    - Ctrl + l        Clear entire screen (like clear command).
+    - Ctrl + z        Place currently running process into a suspended background process (and then use fg to restore it).
+    - Ctrl + c        Kill currently running process by sending SIGINT signal.
+    - Ctrl + d        Exit current shell.
+    - `Enter  ~  .`   Exit a stalled SSH session.
+
+### HISTORY
+    - Ctrl + r   History search: Backwards (reverse-i-search)
+    - Ctrl + s   History search: Forward   (i-search)
+    - Ctrl + g   History search: Exit
+
+    - Ctrl + p   History Command line: previous command (mine: `ctrl+k`)
+    - Ctrl + n   History Command line: next command 

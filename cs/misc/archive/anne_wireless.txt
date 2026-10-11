@@ -1,0 +1,16 @@
+Anne Wireless
+@ECHO OFF
+echo Resetting Wireless EIRCOM connection...
+netsh interface set interface "Wireless Network Connection" disabled
+Timeout /T 6 /nobreak
+echo.
+echo Start up Wireless Again.
+echo EIRCOM should reconnect within 20 seconds.
+netsh interface set interface "Wireless Network Connection" enabled
+Timeout /T 20 /nobreak
+
+72790ac975da
+rainbow
+rainbow1
+rainbow2
+francis

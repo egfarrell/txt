@@ -1,0 +1,236 @@
+### Clifford sqrt(-1)
+    - the bivector `e_1,e_2` squares to `-1`
+	- $MY_IMAGES/maths/clifford-square-root-minus-one.jpg
+
+### Clifford simplifcation of EM!
+    - see: $MY_NOTES/physics/EM/EM-tips.txt
+
+### Clifford Algebra
+    - basic definition
+        - $MY_IMAGES/maths/clifford-algebra-basics.jpg
+    - unifies quaternions, gibbs vectors and complex numbers
+        - $MY_IMAGES/maths/clifford-algebra-unifies.jpg
+    - cliffords multivector allows a description of points,
+      oriented lines, oriented planes, oriented volumes
+    - $MY_IMAGES/maths/clifford-algebra-descriptions.jpg
+    - Clifford algebra is 8 dimensional:
+        - 1 scalar
+        - 3 vectors
+        - 3 bivector planes
+        - 1 trivector volume
+
+
+### Quaternions
+    - $MY_NOTES/maths/geometry/Quaternions.txt
+    - ... the correct _algebraic_ description for 3D vectors
+    - scaling -> real numbers
+    - 1d rotations and scaling -> complex numbers
+    - 2d rotations and scaling -> quaternions
+    - In the case of quaternions, it's called `double-covering`,
+      which turns out (rather than being an artefact), play
+      fundamental role in particle physics.
+ 
+ 
+
+### Misc
+    - CA Summary:
+        - $MY_IMAGES/maths/Clifford-algebra-summary.jpg
+    - Clifford algebras build on Grassman Algebras 
+        - (EigenChris teaches Grassman first)
+    - Key aspects of any Clifford algebra:
+        - you have something that squares to `+1` or `-1`
+        - you have things that anti-commute
+    - Complex numbers are `Cl(0,1)`
+        - zero symbols that square to `+1`
+        - 1 symbol that squares to `-1`
+    - Algebra of PHYSICAL SPACE
+        - (Pauli matrices?)
+        - `Cl (3, 0)`
+        - 3 symbols that sqaure to `+1`
+        - 0 symbols that square to `-1`
+        - The 3 symbols anti-commute with each other.
+            - $MY_IMAGES/maths/algebra-physical-space-APS.jpg
+    - Spacetime Algebra
+        - $MY_IMAGES/maths/Spacetime-algebra.jpg
+    - Aside: Grassman and Clifford algebras can be built from the
+      quotient of a tensor algebra(!)
+        - $MY_IMAGES/maths/build-Grassman-from-Tensor-Algebra.jpg
+
+
+
+### Youtube comment on GA
+    - XYLYXYLYX Course: GA
+      https://www.youtube.com/watch?v=WN_4j8v6cXo&list=PLRlVmXqzHjURrQfMx6o_Ji0926mPKkzOw&index=48
+    - Joe Heafner @joeheafner2495
+    - I've taught undergraduate intro physics for thirty years.
+      You and @eigenchris have influenced me so much. Your videos
+      on tensors and relativity have been a huge help. I love
+      your conversational presentation style, which I see as
+      modeling a discussion format for teaching, replacing the
+      status quo lecture method. 
+    - Regarding geometric algebra, I've known about it since my
+      undergrad days (1985-1989) but certainly did not understand
+      it until much later. 
+    - I've met David Hestenes and have talked with him about
+      bringing GA into the undergraduate curriculum. He even
+      wants to see it taught in high schools, which I think would
+      be a great innovation. 
+    - One of his PhD students (Terje Vold) actually tried using
+      GA in undergrad courses and was, according to Hestenes,
+      subsequently denied tenure for his efforts. 
+    - Vold published two seminal papers in 1993 in the American
+      Journal of Physics (I can provide copies if you're
+      interested) outlining how GA can be implemented in both
+      undergraduate mechanics and E&M. 
+    - I have introduced bivectors as a replacement for cross
+      products within the context of mechanics for angular
+      momentum and torque because they make so much more physical
+      sense 
+        - (e.g. the physics of rotations happens in a plane so
+          why do we quantify it with _a vector perpendicular_ to
+          that plane?) 
+        - My students had no obvious difficulties with it. Alas,
+          I didn't introduce bivectors in E&M. 
+
+
+### EigenChris point-of-view
+    - Various entities in Clifford Algebras
+        - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-01.jpg
+    - Doing Physics with Clifford Algebras: 
+        - 'batteries included': we don't need to invent any new
+          mathematical objects to solve the problem
+        - e.g. unite the 4 Maxwell equations into a single
+          equation.
+    - Other resources for Clifford algebras
+        - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-02.jpg
+    - WEDGE product: 
+        - wedge product and bivectors
+        - `u ∧ v` is a plane segment from `u` and `v` with an
+          orientation that follows the arrows
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-03.jpg
+
+    - WEDGE product: used to represent rotations and angular momentum
+        - old way for angular momentum (right-hand rule)
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-04.jpg
+        - problem with old way: if we reflect in a mirror, the
+          vector points in the opposite direction. Strange
+          behaviour for a vector!
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-05.jpg
+        - BUT... bivector represent immediately obvious, and
+          mirror reflections are predictable (reversing the
+          orientation in a way that makes sense)
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-06.jpg
+
+    - 'negative' wedges
+        - If you add a vector and it's negative you get zero.
+        - The same for bivectors...
+        - So it makes sense to write: `v ∧ u = - u ∧ v`
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-07.jpg
+        - Therefore... the wedge product is anti-commutative
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-08.jpg
+
+    - Magnitude of bivector
+        - The 'magnitude' is the AREA of the bivector
+        - Zero area then it's a 'zero' bivector
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-09.jpg
+        - Parallel bivectors -> zero wedge product
+        - bivector wedged with itself -> zero wedge product
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-10.jpg
+
+
+    - Wedge is `distributive`
+        - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-11.jpg
+        - visual interpretation:
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-12.jpg
+
+
+    - Multiply by scalar
+        - Multiply each individual vector by `3`
+            - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-13.jpg
+        - They resulting bivectors might look different in the
+          previous image but:
+            - IMPORTANT
+            - if plane segments are the same area and same
+              orientation, then the bivectors are considered
+              equal
+            - Also: the SHAPE of the plane segment can be
+              anything... they're all equivalent.
+                - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-14.jpg
+                - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-15.jpg
+
+    - Some algebraic tricks
+    - wedge products being anti-commutative is logically the same as
+      wedging with itself = 0.
+        - You can derive one from the other
+        - $MY_IMAGES/maths/Clifford-Vectors/EigenChris/Clifford-16.jpg
+
+### Geometric Algebra Provide Loophole to Bell’s Theorem? 
+    - https://arxiv.org/abs/1203.1504
+    - Scott on Joy Christian https://scottaaronson.blog/?p=1028
+    - In 2007, and in later papers, Joy Christian claimed to
+      refute Bell’s theorem, presenting an alleged local
+      realistic model of the singlet correlations using
+      techniques from geometric algebra (GA). 
+    - Several authors published papers refuting his claims, and
+      Christian's ideas did not gain acceptance. 
+    - However, he recently succeeded in publishing more complex
+      versions of his theory in fairly mainstream journals. How
+      can this be? 
+    - The mathematics and logic of Bell's theorem is simple and
+      transparent and has been intensely studied and debated for
+      over 50 years. Christian claims to have a mathematical
+      counterexample to a purely mathematical theorem. 
+    - Each new version of Christian’s model used new devices to
+      circumvent Bell’s theorem or depended on a new way to
+      misunderstand Bell’s work. These devices and
+      misinterpretations are in common use by other Bell critics,
+      so it useful to identify and name them. 
+    - I hope that this paper can serve as a useful resource to
+      those who need to evaluate new “disproofs of Bell’s
+      theorem”. 
+    - Christian’s fundamental idea is simple and quite original:
+        - he gives a probabilistic interpretation of the
+          fundamental GA equation `a • b = (ab + ba) / 2`
+        - . After that, ambiguous notation and technical
+          complexity allows sign errors to be hidden from sight,
+          and new mathematical errors can be introduced.
+
+### Time As a Geometric Property of Space
+    - https://www.frontiersin.org/articles/10.3389/fphy.2016.00044/full
+    - The proper description of time remains a key unsolved
+      problem in science. Newton conceived of time as absolute
+      and universal which “flows equably without relation to
+      anything external.” 
+    - In the 19th century, the 4D algebraic structure of the
+      quaternions developed by Hamilton, inspired him to suggest
+      that he could provide a unified representation of space and
+      time. 
+    - With the publishing of Einstein's SR these ideas lead to
+      the generally accepted Minkowski spacetime formulation of
+      1908. Minkowski, though, rejected the formalism of
+      Hamilton's `quaternions` and adopted an approach using
+      `four-vectors`. 
+    - The Minkowski framework is indeed found to provide
+      a versatile formalism for describing the relationship
+      between space and time in accordance with Einstein's
+      relativistic principles, but nevertheless fails to provide
+      more fundamental insights into the nature of time itself.
+      In order to answer this question we begin by exploring the
+      geometric properties of three-dimensional space that we
+      model using Clifford geometric algebra, which is found to
+      contain sufficient complexity to provide a natural
+      description of spacetime. This description using Clifford
+      algebra is found to provide a natural alternative to the
+      Minkowski formulation as well as providing new insights
+      into the nature of time. Our main result is that time is
+      the scalar component of a Clifford space and can be viewed
+      as an intrinsic geometric property of three-dimensional
+      space without the need for the specific addition of
+      a fourth dimension.
+
+
+### Links
+    - @EigenChris: Clifford Algebras (from Spinors perspective) https://www.youtube.com/watch?v=nktgFWLy32U
+    - @sudgylacmoe: Swift intro to Clifford Algebra             https://www.youtube.com/playlist?list=PLVuwZXwFua-2nUoECBT-y1egzZN5PA4bL
+    - @bivector: advanced Clifford Algebras                     https://www.youtube.com/@bivector/featured
+    - HN: Poor foundations in GA                                https://news.ycombinator.com/item?id=41336657

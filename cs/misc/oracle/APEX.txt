@@ -1,0 +1,115 @@
+### initial default apex admin
+	User: admin
+	Password: run @apxchpwd
+
+### Internet access
+    - Open APEX administration console for outside access
+    - (other than localhost):
+    - EXEC DBMS_XDB.SETLISTENERLOCALACCESS(FALSE);
+
+### what apex version?
+	- select version_no from apex_release;
+	- select version from dba_registry where comp_id='APEX';
+
+### Oracle XML DB HTTP Server Port
+	- check: 	 SELECT DBMS_XDB.GETHTTPPORT FROM DUAL;
+	- enable:  EXEC DBMS_XDB.SETHTTPPORT( 8080 );
+	- disable: EXEC DBMS_XDB.SETHTTPPORT(0);
+
+### Old logins 2012
+    - Production APEX
+        - LBORO_TEST_DEV
+        - e.farrell@lboro.ac.uk
+
+    - lboro test APEX
+        - ws_traindev
+        - itef/itef
+
+    - Amazon AWS APEX
+        - admin/Testapex1!
+        - itef_sandbox
+        - itef/itef
+
+
+### APEX display image
+	- (blob_content) in report
+	- return '<img src="'||apex_util.get_blob_file_src('P6_PRODUCT_IMAGE',:P6_PRODUCT_ID)||'" />';
+
+	- didnt work: <img src="#WORKSPACE_IMAGES##FILENAME#"></img>
+	- didnt work: <img src="wwv_flow_file_mgr.get_file?p_id=#ID#"></img>
+
+### APEX "f" procedure
+	- The “f” is a system procedure at the heart of the Apex engine.
+
+	- It is responsible for
+		- displaying an Apex page,
+		- processing it,
+		- and linking to other Apex pages
+
+	- The complete “f?p” URL has the following syntax:
+		- f?p=App: Page: Session: Request: Debug: ClearCache: itemNames: itemValues: PrinterFriendly
+		- f?p=
+		- App:
+		- Page:
+		- Session:
+		- Request:
+		- Debug:
+		- ClearCache:
+		- itemNames:
+		- itemValues:
+		- PrinterFriendly
+
+
+### install APEX 3.2.1 (on top of XE 11g)
+    - (Crazy Saturday night in 2012 getting all this to work)
+
+	# remove 4.0 version first
+		cd c:\<location of 4.0 zip>
+		# logon as sysdba
+		@apxremov.sql
+
+	extract zip to c:\apex32
+		cd c:\apex32\apex
+
+	# logon as sys
+		sqlplus sys as sysdba
+		enter <password>
+		(in my case password was test)
+
+	# install apex 3.2
+		@apexins SYSAUX SYSAUX TEMP /i/
+
+	# change ADMIN password
+		@apxchpwd
+
+	# load images
+		# be careful you specify the BASE DIRECTORY
+		# (c:\apex32)
+		# where you unzipped the apex 3.2 files!!!
+		# and not the deeper directory
+		# (c:\apex32\apex)
+
+		# method 1
+			# configure PL/SQL embedded gateway
+			@apex_epg_config c:\apex32
+			alter user anonymous account unlock;
+
+		# method 2
+			# if not upgrade/previous install
+			@apxldimg c:\apex32
+
+### view: APEX_APPLICATION_FILES
+    - this is where uploaded files automatically go first
+
+	- get workspace ID
+		In APEX: HOME > SQL Workshop > SQL Commands
+		Run: select &WORKSPACE_ID. from dual;
+			returns some ID e.g.: 1727604209203622
+
+	- set security ID
+		In TOAD/SQL*PLUS
+		exec wwv_flow_api.set_security_group_id(1727604209203622);
+
+	- now check apex_application_files
+		select count(*) from APEX_APPLICATION_FILES;
+		select filename from APEX_APPLICATION_FILES;

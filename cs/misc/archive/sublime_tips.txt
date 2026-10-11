@@ -1,0 +1,108 @@
+sublime tips
+
+surround quote a visual selection
+	select text, press " or ' etc.
+	then press "ESC" and not "jk"
+
+manually force auto-complete selector
+	alt+/
+	alt+n ( in insert mode)
+
+better performance from remote desktop
+	"scroll_speed": 0,
+
+Project - ignore folder
+	edit project
+	"folders":
+	[
+		{
+			"path": "/C/cygwin/home/itef/repos/AP100 - Online Postgrad Applications",
+			"folder_exclude_patterns": ["PortableFirefox"]
+		}
+	]
+
+themes
+	flatland
+	phoenix
+
+
+dont mix up!
+	"tab_completion": false, ---> pressing tab will insert the best matching completion.
+	"auto_complete": true, ---> auto complete WINDOW to be triggered automatically when typing.
+
+Skip outside quotes or brackets
+	type quote or bracket!!!
+
+Using a register (k)
+	"kyy 	yank current line (to register k)
+	"kyw	yank current word (to register k)
+	"kdw	delete current word (to register k)
+	"kdd 	delete current line  (to register k)
+
+highlight current line in insert mode
+		add
+	        self.view.settings().set('gutter', True)
+	        self.view.settings().set('highlight_line', True)
+		in
+			vintage.py
+			class EnterInsertMode(sublime_plugin.TextCommand):
+			class ExitInsertMode(sublime_plugin.TextCommand):
+
+move by sub-words
+	alt + w/W
+	alt + right/left
+
+find scope selector e.g. for HTML
+	edit /Packages/HTML/HTML.tmlanguage
+	and search for "ScopeName"
+
+make auto-complete selector display in text files
+	"auto_complete_selector": "text, source - comment",
+
+
+Detect kepress in console
+	'sublime.log_input(True)'
+
+(soft) undo selection/quick add
+	ctrl+u
+
+split selection into lines
+	ctrl+shift+l
+
+multicursor mouse select
+	ctrl+shift+RIGHT-mouse-click
+
+multicursor mouse deselect
+	alt+shift+RIGHT-mouse-click
+
+Quick Add Cursor
+	quick add next		ctrl+d
+	quick skip next		ctrl+k, ctrl+d
+	quick skip next		ctrl+k+d
+
+show scope name
+	ctrl+alt+shift+p
+
+replace all
+	ctrl+alt+enter
+
+open find-in-files results
+	F4
+
+Old keyboard shortcuts (I use VIM now)
+	Uppercase 				    ctrl k u
+	Lowercase 				    ctrl k l
+	select line 			    ctrl-l
+	spelling 				    F6
+	bracket jump 			    ctrl-m
+	insert literal tab          shift-tab
+	Delete Line				    Ctrl-X
+
+open sublime in lubunturc
+		subl --project ~/.config/sublime-text-2/Packages/User/projectsLinux/notes.sublime-project --command 'show_panel {"panel": "find_in_files"}'
+
+
+
+
+
+

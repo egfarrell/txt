@@ -1,0 +1,57 @@
+I was going to download:
+Real Analysis: A Historical Approach by Saul Stahl (Author)
+https://www.amazon.com/Real-Analysis-Historical-Saul-Stahl/dp/0471318523
+
+But then read Blajo's critique:
+
+- The purpose of this book is straightforward enough: "The need for rigor in
+  analysis is often presented as an end in itself," but here the theory is
+  presented in a manner that "reflects [its] evolution," whence "rigor is ...
+  introduced as an explanation of the convergence of series in general and of
+  the puzzling behavior of trigonometric series in particular." (p. v).
+
+- I say that Stahl betrays this cause and ends up doing more harm than good to
+  anyone interested in such an approach to real analysis.
+
+- I shall argue for this claim by focusing on the lynchpin of Stahl's
+  enterprise, which is flagged as such already on the first page of the preface:
+  "the nondifferentiability of Euler's Trigonometric Series provides the crucial
+  counterexample that clarifies the need for this careful examination of the
+  foundations of calculus" (p. v).
+
+- Very well, let us turn to this "crucial counterexample." It is based on the
+  following three series:
+- (i) 1/2 = cos(x) - cos(2x) + cos(3x) - cos(4x) + ...
+- (ii) x/2 = sin(x) - sin(2x)/2 + sin(3x)/3 - sin(4x)/4 + ...
+- (iii) x^2/4 = pi^2/12 - cos(x) + cos(2x)/2^2 - cos(3x)/3^2 + cos(4x)/4^2 - ...
+
+- Now: "The last two are valid for -pi < x < pi ... whereas the first is false
+  for all values of x ... Yet it is the same procedure of differentiating
+  infinite series that leads from the valid last equation to the valid middle
+  equation and from there to the false first equation." (p. 59)
+
+- There you have it---the "crucial counterexample" which "clarifies the need"
+  for a "careful examination" of convergence.
+
+- Now I will tell you how Euler or any of his contemporaries would have replied
+  to this utter nonsense: they would simply have pointed out that (i) is in fact
+  not "false" at all. When Stahl calls it "false," what he really means is that
+  the partial sums do not converge. Well, yes, Dr. Stahl, of course they don't.
+  We don't need no fancy epsilons to tell us that. Just look at (ii). Since the
+  maximal slope of sin(nx) is n, the maximal slope of sin(nx)/n is 1. In other
+  words, the slopes (i.e., the terms in (i)) are not diminishing with n. So of
+  course you cannot approximate the series by a partial sum. But that does not
+  mean that the series is "false." All it means is that one crude and vulgar
+  method of trying to evaluate it fails. No problem whatever arises from this
+  fact unless one dogmatically insists that this crude and vulgar method is The
+  One and Only Method Acknowledged by Righteous and Pious Men (or "the
+  definition," to use the conventional shorthand for this phrase). Euler himself
+  would have looked at the matter differently. He was instead keen to "keep the
+  usefulness of divergent series and preserve their reputations." And that with
+  good reason: since (i) can be integrated to yield the other true series it is
+  not "false" but useful, just as Euler said.
+
+- In other words: Stahl's fancy-pants theory of convergence does not solve any
+  problem, but rather creates a problem where previously there was none. Of
+  course this does not "clarify the need" for the theory in question any more
+  than poisoning a well "clarifies the need" for an antidote.

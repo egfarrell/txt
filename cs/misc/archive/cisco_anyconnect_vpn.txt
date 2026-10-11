@@ -1,0 +1,23 @@
+cisco anyconnect vpn
+
+update march 2013
+    use anyconnect client again (got openconnect error)
+    ocx vpnsetup.sh 
+    sudo ./vpnsetup.sh 
+    installs to /opt/cisco/vpn/
+    installs to unbuntu start menu too
+
+
+EF update March 2013
+	now I use ubuntu openconnect
+	with a GUI network-manager-openconnect
+
+connect from command line
+	cd /opt/cisco/anyconnect/bin
+	vpn connect <<some host name>>
+
+show status
+	vpn stats
+
+terminate connection
+	vpn disconnect

@@ -1,0 +1,106 @@
+
+### Stimulating games from 'Entropy Demystified':
+$MY_BOOKS/Physics/Thermo/Ben-Naim-Entropy-Demystified.pdf
+
+- Online Simulations:
+    - http://www.ariehbennaim.com/simulations/index.htm
+
+- My local Simulations:
+    - $MY_CODE/physics/Ben-naim-simulations/README.txt
+
+
+### Contents
+    - Program 1: "Binary dice"
+    - Program 2: "Regular dice"
+    - Program 3: "Card Deck"
+    - Program 4: "Simulation of expansion of ideal gas"
+    - Program 5: "Simulation of mixing two ideal gases"
+    - Program 6: "Find the hidden coin"
+    - Program 7: "Generating the Normal distribution"
+
+
+### Program 1: "Binary dice"
+    - This program is a simplified version of the program used
+      for the simulations described in Chapter 4. Here, you
+      choose the number of dice and the number of steps. The
+      program starts with an all-zero configuration. At each step
+      the program chooses a dice (either at random or
+      sequentially) then flips it to get either “zero” or “one”
+      with probability . The program records the sum of the dots
+      on all the dice, and plots the sum as a function of the
+      number of steps. It is suggested that you start with
+      a small number of dice; 4, 8, 10, 20 and then go to 100 and
+      200. If you have a fast-working computer, you can go up to
+      1000 dice and 2000 steps. This will take some time but it
+      is rewarding. Check both the random and the sequential
+      options. Follow the changes in the curve when you increase
+      the number of dice. Examine the smoothness of the curve,
+      the number of steps to reach the equilibrium line, and the
+      number of times the sum goes back to zero. Have fun and
+      good luck.
+
+### Program 2: "Regular dice"
+    - This program does the same as program 1 but uses regular
+      dice with outcomes 1,2,3,4,5,6. You can play with this
+      program if you feel more comfortable with the conventional
+      dice. It does not add anything new to what you can learn
+      from program 1.
+
+### Program 3: "Card Deck"
+    - This program is essentially the same as program 1 but makes
+      use of cards (or if you like dice having 13 outcomes
+      1,2,…13). You can play with this program if you prefer to
+      look at cards, instead of dice. Again, you would not gain
+      anything new with this game. Enjoy yourself.
+
+### Program 4: "Simulation of expansion of ideal gas"
+    - The program is essentially equivalent to program 1.
+      However, instead of dice, you start with N dots, each dot
+      representing a particle. Instead of two outcomes {0,1}you
+      have the two outcomes {L,R}, L and R stand for being in the
+      left or the right compartment. The equivalence of the two
+      processes is described in Chapter 7. The program chooses
+      a particle at random, then chooses either R or L at random
+      and place the particle in either the R or L compartment,
+      respectively. The graph follows the total number of
+      particles in the left compartment from the initial to the
+      equilibrium state. This is essentially a simulation of an
+      expansion of an ideal gas.
+
+### Program 5: "Simulation of mixing two ideal gases"
+    - This is essentially the same as program 4, but with two
+      sets of particles. The blue dots expand from the left (L)
+      compartment to the entire volume, and the red dots expand
+      from the right (R) compartment to the entire volume. This
+      is often referred to as a “mixing process”, but it is
+      basically an expansion of two different gases. Again, this
+      program does not add any new idea that is not contained in
+      the expansion process simulated in program 4.
+
+### Program 6: "Find the hidden coin"
+    - This is a very important game to learn what “missing
+      information” means. You can see the difference between the
+      “smart” and the “dumb” strategy as discussed in Chapter 2.
+      You choose the number of boxes N. The program chooses
+      a number between 1 to N at random, say K, and hides a coin
+      in the box numbered K. You can see where the coin is, by
+      clicking the “reveal coin” button, but I do not recommend
+      that you do so until after you play the game. Click on
+      “start” and ask where the coin is. You can either select
+      single boxes like {1,7,20…}, or a range of boxes like
+      {1-30, 30-70}. The program answers you with either a YES or
+      a NO. You keep on asking binary questions until you find
+      where the coin is hidden. Examine how the total number of
+      questions changes according to the “strategy” you choose
+      for asking questions (see also Chapter 2 for more details).
+
+### Program 7: "Generating the Normal distribution"
+    - In this program you can generate the normal distributions
+      that are discussed in Chapters 3 and 7. You throw n dice at
+      random. The program calculates the sum of the outcomes and
+      records how many times each sum has appeared. The
+      frequencies of occurrence of each sum, is then plotted as
+      a function of the sum. Start with 2 and 4 dice and see how
+      the frequencies as a function of the sum changes when the
+      number of dice increases to 16 and 32. For larger number of
+      dice, see Figures 3.7 and 3.8.

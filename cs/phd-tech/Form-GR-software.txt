@@ -1,0 +1,23 @@
+
+
+### Handy
+    Off statistic;
+    Format 40;
+
+### Build FORM
+    - I used prefix: /work/efarrell/local
+    - install LZIP (to inflate GMP tar):                       https://www.nongnu.org/lzip/
+    - install GMP (GNU Multiple Precision Arithmetic Library): https://gmplib.org/
+    - install ZLIB:                                            https://zlib.net/
+    ```
+    ./configure --prefix="/work/efarrell/local" --with-gmp=/work/efarrell/local --with-zlib=/work/efarrell/local
+    ```
+
+
+### Links
+    - FORM: Github           https://github.com/vermaseren/form
+    - FORM: Website          https://www.nikhef.nl/~form/maindir/maindir.html
+    - FORM:  Discussion      https://www.nikhef.nl/~form/forum/index.php
+    - FORM:  vim syntax      https://github.com/vim/vim/blob/master/runtime/syntax/form.vim
+    - FORM:  maintainer      https://github.com/tueda
+

@@ -1,0 +1,63 @@
+05-Tensor-Products.txt
+
+$MY_VIDEOS/physics/what-are-tensors/05-Tensor-Products.mp4
+
+- tensors are maps, that operates on a pair of vectors to give
+  a real number 
+
+### 2nd viewing:
+    - we're going to use all the _covectors_ lying around in the
+      dual space to construct our tensor
+    - and this tensor will bring the elements of the cartesian
+      product of the original vector space `V` into the reals `ℝ`
+    - when you glue two covectors together and create your single
+      tensor "map object", you apply it to 2 vectors... and you
+      know you have to end up with a real number... and what is
+      the only way you can get a real number?
+        - look at this image... the tensor gadget eats two
+          vectors and matches off each co-vector with a vector... 
+        - which transforms them into a real number 
+        - which results in the product of 2 real numbers...
+        - which finally gives a real...
+	- $MY_IMAGES/physics/what-are-tensors/defining-a-tensor-to-map-to-the-reals.jpg
+
+### wow, interesting definition of a tensor:
+    - its a map from the cartesian product of all possible pairs
+      of vectors (from the same vector space) that return a real
+      number...
+
+    V x V
+    (v, w)
+	- $MY_IMAGES/physics/what-are-tensors/definition-of-tensor.jpg
+
+### Not a vector space
+    - note: the set you get when you create a cartesian product
+      of a vector space with itself, is not a vector space
+    - you'd have to define an addition, scalar mult etc 
+    - (you could turn it into a vector space by using the _direct
+      sum_) 
+
+- The tensor product is kind of a "map" 
+    - the `[β ⊗ α]` is a single map made from the tensor product
+      of two maps from the dual space `β` and `α`. 
+    - This tensor product operates on two vectors in the original
+      vector space, and the result is a real number
+    - $MY_IMAGES/physics/what-are-tensors/construction-of-a-tensor.jpg
+
+He proved tensor (products?) are linear
+	- $MY_IMAGES/physics/what-are-tensors/tensors-are-linear.jpg
+
+### result tensor product spaces (TPS's): 
+- the _set_ of tensor products of two _covectors_ is a vector
+  space.
+
+- set of basis vectors for tensor product space
+	- $MY_IMAGES/physics/what-are-tensors/tps-basis-vectors.jpg
+
+- write out a single element of the TPS in terms of it's basis
+vectors
+	- $MY_IMAGES/physics/what-are-tensors/tps-vector-with-its-basis.jpg
+
+    - look at the appearnce of `T_νμ` which is a set of number
+    cofficients of the basis vectors, when a single tensor
+    product is written out with its basis vectors. 

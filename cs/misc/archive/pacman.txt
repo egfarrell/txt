@@ -1,0 +1,23 @@
+### config files
+    /etc/pacman.conf
+    /etc/pacman.d
+    /var/lib/pacman/local (local database)
+
+### handy
+    - pacman -Ss tree       search for package
+    - pacman -S tree        install package
+
+    - pacman -Qe            list installed packages
+    - pacman -Ql            list package content
+
+    - pacman -Fy            update package databases 
+    - pacman -Fs            find file (exact match)
+    - pacman -Fxs           find file (inexact) but case must match
+
+### Install packages without typing LONG NAMES
+    - pacboy -S x265:x      will install:  mingw-w64-`x86_64`-x265-2.3-1
+    - pacboy -S x265:i      will install:  mingw-w64-`i686`-x265-2.3-1
+    - pacboy -S x265:m      will install:  both types
+
+### helpful info: pacman in gitbash
+    https://github.com/msys2/msys2/wiki/Using-packages

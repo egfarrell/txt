@@ -1,0 +1,104 @@
+### directional derivative partial derivatives
+
+- Chapter 7.3: Gradients and directional derivatives
+    - $MY_BOOKS/Physics/Maths/Math-Phy-General/Bachman-calculus-demystified.pdf
+    - $MY_BOOKS/Physics/Maths/Math-Phy-Forms-diff-geometry/bachman_differential_forms_01.pdf
+    - $MY_BOOKS/Physics/Maths/Math-Phy-Forms-diff-geometry/bachman_differential_forms_02.pdf
+    - $MY_BOOKS/Physics/Maths/Math-Phy-Forms-diff-geometry/bachman_differential_forms_paper.pdf
+
+	- $MY_IMAGES/maths/directional-derivative-01.jpg
+	- $MY_IMAGES/maths/directional-derivative-02.jpg
+    - $MY_IMAGES/maths/Gradient-symbol-01.jpg
+
+    - There is a mixup with `î` and `ĵ` in the BOTTOM right-hand
+      corner??
+        - $MY_IMAGES/maths/Gradient-symbol-02.jpg
+
+    - Bachman forms book:
+	- $MY_IMAGES/maths/directional-derivative-03.jpg
+	- $MY_IMAGES/maths/directional-derivative-04.jpg
+
+
+### See also:
+    - Fleisch: "Vectors as Derivatives"
+        - $MY_NOTES/physics/UnderGrad/Fleisch-Vectors-Tensors.txt
+    - Hubbard (5th edition, page 129)
+        - $MY_NOTES/maths/linear-algebra/Hubbard-Vector-Calculus.txt
+
+
+- Directional derivative is just a _NUMBER_!!
+- Remember, we're talking about rates-of-change here.
+    - Everything is about derivatives, rates-of-change.
+
+Link between partial derivatives and directional derivatives!!
+
+* partial derivative of `f` wrt `x`,
+    - is like the directional derivative of `f`
+    - along the `x` axis
+
+* partial derivative of `f` wrt `y`,
+    - is like the directional derivative of `f`
+    - along the `y` axis
+
+* But with the directional derivative,
+    - you get the partial of `f` along some _linear combination_
+      of the `x` and `y` axis.
+
+### Then he showed a picture:
+    - The vectors `f(x, y)` and the vector `u` (the direction
+      vector), together both of them form a special plane. and
+      the directional derivative is the slope of the tangent line
+      in a special plane.
+
+    - This special plane is not (neccessarily) orthogonal to the
+      `x` and `y` axis.
+
+- You dont have to use limits to calculate the directional
+  derivative.
+
+- There are more efficient ways. You can:
+
+    * __DOT__ the direction vector with the GRAD vector, to get
+      the directional derivative.
+
+### The direction vector should be a unit vector?
+
+    - Before you _DOT_ with the _GRAD_ field you should check
+      it's a unit vector.
+
+    - How do you make the direction vector be a unit vector?
+      Divide it by its length.
+
+    - Ah but Fortney has a useful point if the direction vector
+      IS NOT a unit vector!!!
+        - $MY_BOOKS/Physics/Maths/Math-Phy-Forms-diff-geometry/Visual-Intro-Differential-Forms-Fortney.pdf
+        - Page 50
+        - This is exactly the same definition as in the
+          multivariable calculus case, only without the
+          requirement that `vp` be a unit vector.
+        - Thus, the number that we get from this definition of
+          directional derivative will not be the slope of the
+          tangent line if `vp` is not a unit vector but will
+          instead be the “rise” of the tangent line to the graph
+          of `f` at the point p as we move the length of `vp`.
+
+### Pilgrimage 2022
+    - $MY_BOOKS/Physics/Maths/Math-Phy-Forms-diff-geometry/bachman_differential_forms_01.pdf
+        - Page 3: slopes of perpendicular vectors
+        - Page 14: Very good about the SPEED of a directional
+          derivative. If the speed is actually `1`, then the
+          directional derivative can be called the slope
+            - $MY_IMAGES/maths/differential-forms/directional-derivative-sometimes-slope.jpg
+            - What the directional derivative represents is the
+              rate-of-change of function `f` as we walk along
+              `l`with speed `|V|`
+            - The directional derivative ONLY represents a slope
+              when the speed `|V|` is 1
+            - There's actually three 'actors' here that I never
+              keep track of: 
+                - The `Point` (where we're evaluating at), 
+                - The `function` and 
+                - then the `speed` which is actually the length
+                  of the vector that's pointing in the direction
+                  we're walking
+

@@ -1,0 +1,758 @@
+Note: see `SETUP-INSTALL` below
+
+### Links
+    - BOOK pdf          $MY_BOOKS/Cs/AI-ML/fastai-deep-learning-for-coders-2020.pdf
+    - Course            https://course.fast.ai/
+    - FORUMS            https://forums.fast.ai/
+    - Book Repo         https://github.com/fastai/fastbook
+    - fast.ai website   https://www.fast.ai/
+    - YouTube playlists https://www.youtube.com/user/howardjeremyp/playlists
+
+### Code
+    - code: $MY_CODE/AI-ML/fastai-2020/01_intro.py
+    - code: $MY_CODE/AI-ML/fastai-2020/02_production.py
+    - code: $MY_CODE/AI-ML/fastai-2020/03_ethics.py
+    - code: $MY_CODE/AI-ML/fastai-2020/04_mnist_basics.py
+    - code: $MY_CODE/AI-ML/fastai-2020/05_pet_breeds.py
+    - code: $MY_CODE/AI-ML/fastai-2020/06_multicat.py
+    - code: $MY_CODE/AI-ML/fastai-2020/07_sizing_and_tta.py
+    - code: $MY_CODE/AI-ML/fastai-2020/08_collaborative-filtering.py
+    - code: $MY_CODE/AI-ML/fastai-2020/09_tabular.py
+    - code: $MY_CODE/AI-ML/fastai-2020/10_nlp.py
+    - code: $MY_CODE/AI-ML/fastai-2020/11_midlevel_data.py
+    - code: $MY_CODE/AI-ML/fastai-2020/12_nlp_dive.py
+    - code: $MY_CODE/AI-ML/fastai-2020/13_convolutions.py
+    - code: $MY_CODE/AI-ML/fastai-2020/14_resnet.py
+    - code: $MY_CODE/AI-ML/fastai-2020/15_arch_details.py
+    - code: $MY_CODE/AI-ML/fastai-2020/16_accel_sgd.py
+    - code: $MY_CODE/AI-ML/fastai-2020/17_foundations.py
+    - code: $MY_CODE/AI-ML/fastai-2020/18_CAM.py
+    - code: $MY_CODE/AI-ML/fastai-2020/19_learner.py
+    - code: $MY_CODE/AI-ML/fastai-2020/20_conclusion.py
+
+### Videos
+    - video:1  Intro                                                    $MY_VIDEOS/CS/fastai/01-Deep-Learning-for-Coders-2020.mp4
+    - video:2  Fastai                                                   $MY_VIDEOS/CS/fastai/02-Deep-Learning-for-Coders-2020.mp4
+    - video:3  Mean pixels 3,7                                          $MY_VIDEOS/CS/fastai/03-Deep-Learning-for-Coders-2020.mp4
+    - video:4  basics linear, nn: (also: petbreeds, softmax, nll_loss)  $MY_VIDEOS/CS/fastai/04-Deep-Learning-for-Coders-2020.mp4
+    - video:5  Ethics                                                   $MY_VIDEOS/CS/fastai/05-Deep-Learning-for-Coders-2020.mp4
+    - video:6  Computer Vision classification: (fine_tune, multi-label) $MY_VIDEOS/CS/fastai/06-Deep-Learning-for-Coders-2020.mp4
+    - video:7                                                           $MY_VIDEOS/CS/fastai/07-Deep-Learning-for-Coders-2020.mp4
+    - video:8                                                           $MY_VIDEOS/CS/fastai/08-Deep-Learning-for-Coders-2020.mp4
+
+### Notes
+    - Notes: ./course-notes/Course-2020-01.txt
+    - Notes: ./course-notes/Course-2020-02.txt
+    - Notes: ./course-notes/Course-2020-03.txt
+    - Notes: ./course-notes/Course-2020-04.txt
+    - Notes: ./course-notes/Course-2020-05.txt
+    - Notes: ./course-notes/Course-2020-06.txt
+    - Notes: ./course-notes/Course-2020-07.txt
+    - Notes: ./course-notes/Course-2020-08.txt
+
+### SETUP-INSTALL fastai course
+    - To setup GPUs/CUDA: $MY_NOTES/cs/phd-tech/CUDA-Nvidia-gpus.txt
+
+    nvidia-smi
+
+    > IPPT PAN: licz
+        conda create --name pytorch_env
+        conda activate pytorch_env
+        - `licz has cudatoolkit 11.4, but 11.3 is compatabile`
+        conda install mamba
+        conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+        mamba install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+        conda install matplotlib chardet sqlalchemy pyodbc pandas ipython sympy jupyter
+        conda install scikit-learn scikit-image
+        > must 'pip install' opencv, because 'conda install' will
+        > mess the pytorch version
+            pip install opencv-python
+            doesn't work: conda install -c conda-forge opencv --freeze-installed
+
+        conda install -c fastchan fastai
+        conda install -c conda-forge nbdev
+        cd $MY_REPOS
+        git clone --depth 1  https://github.com/fastai/fastai.git
+        cd $MY_REPOS/fastai/dev_nbs/course
+
+
+
+    > on RAKIJA (nvidia driver 470.57.02)
+        conda create --name pytorch2 python=3.9
+        conda activate pytorch2
+        conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
+        conda install ipython
+        conda install -c conda-forge fastai jupyter voila
+
+        Don't install fastbook: will break my pytorch?
+            ---> conda install -c fastai fastbook
+
+    > on CAMK DISCO (nvidia driver 470.xx)
+        - Took loads of attemps!
+        - needed right combination of:
+            - Nvidia Driver,
+            - Cudatoolkit
+            - Pytorch versions
+        - (key: Pytorch 1.7.1)
+        - Found the key line at:
+            - https://pytorch.org/get-started/previous-versions/
+            - and
+            - https://elenacliu-pytorch-cuda-driver.streamlit.app/
+
+
+
+        `MAIN COMMANDS`
+        conda create --name pytorch_env5 python=3.8
+        conda activate pytorch_env5
+        conda install mamba
+        mamba install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=11.0 -c pytorch
+        conda install ipython jupyter
+
+        conda install -c fastchan fastai
+        conda install -c conda-forge nbdev
+        cd $MY_REPOS
+        git clone --depth 1  https://github.com/fastai/fastai.git
+        cd $MY_REPOS/fastai/dev_nbs/course
+
+
+        # Old: Problem: CUDA 11.3
+            - conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+            - Ah problem!
+            - Found GPU0 NVIDIA GeForce GTX 780 which is of cuda capability 3.5.
+            - PyTorch no longer supports this GPU because it is too old.
+            - The minimum cuda capability supported by this library is 3.7.
+            - See here for list of compute capabilities
+            - https://discuss.pytorch.org/t/gpu-compute-capability-support-for-each-pytorch-version/62434/7
+
+        # Old Problem: pytorch/cudatoolkit too old:
+            - conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=9.2 -c pytorch
+
+        Install fastai from GIT:
+            git clone https://github.com/fastai/fastai.git
+            # Use tag 2.5.3
+            g co 2.5.3 -b 2.5.3
+            edit `settings.ini` to set `pytorch==1.7.1 torchvision==0.8.2`
+            then OUTSIDE the fastai folder type:
+                pip install -e "fastai[dev]"
+
+
+    > on Google cloud GCE (orthodox)
+        conda create -n fast
+        conda install -c fastchan fastai
+            - aah same problem
+            - pytorch=1.1 and torch.cuda.is_available() FALSE
+
+
+    > Conda Old (Jan 2021)
+         wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+         ocx Miniconda3-latest-Linux-x86_64.sh
+         ./Miniconda3-latest-Linux-x86_64.sh
+         conda create -n fast
+         y
+         coa fast
+         conda install -c fastai -c pytorch -c conda-forge fastai jupyter fastbook voila
+         pip install sentencepiece
+         - WARNING:
+             - In fastai notebooks this command will break the env:
+             - "pip install -Uqq fastbook"
+
+    > do book + jupyter
+         cd ~/repos
+         - official
+             git clone https://github.com/fastai/fastbook.git
+         - mine
+             git clone git@bitbucket.org:vcbbgh/fastbook.git
+         cd fastbook/clean
+         jupyter notebook password
+         jup-remote-start
+
+
+
+# QUESTIONS:
+    - Note:
+        - answers to these questions on the fastai book website?
+        - https://book.fast.ai/
+
+### Questions (02_production)
+    - $MY_CODE/AI-ML/fastai-2020/02_production.py
+    - Give example where the bear classification model might work poorly in production, due
+      to structural or style differences in the training data.
+    - Where do text models currently have a major deficiency?
+    - What are possible negative societal implications of text generation models?
+    - In situations where a model might make mistakes, and those mistakes could be harmful, what is
+      a good alternative to automating a process?
+    - What kind of tabular data is deep learning particularly good at?
+    - What's a key downside of directly using a deep learning model for recommendation systems?
+    - What are the steps of the Drivetrain Approach?
+    - How do the steps of the Drivetrain Approach map to a recommendation system?
+    - Create an image recognition model using data you curate, and deploy it on the web.
+    - What is `DataLoaders`?
+    - What four things do we need to tell fastai to create `DataLoaders`?
+    - What does the `splitter` parameter to `DataBlock` do?
+    - How do we ensure a random split always gives the same validation set?
+    - What letters are often used to signify the independent and dependent variables?
+    - What's the difference between the crop, pad, and squish resize approaches?
+        - When might you choose one over the others?
+    - What is data augmentation? Why is it needed?
+    - What is the difference between `item_tfms` and `batch_tfms`?
+    - What is a confusion matrix?
+    - What does `export` save?
+    - What is it called when we use a model for getting predictions, instead of training?
+    - What are IPython widgets?
+    - When might you want to use CPU for deployment? When might GPU be better?
+    - What are the downsides of deploying your app to a server, instead of to a client (or edge)
+      device such as a phone or PC?
+    - What are three examples of problems that could occur when rolling out a bear warning system in
+      practice?
+    - What is "out-of-domain data"?
+    - What is "domain shift"?
+    - What are the three steps in the deployment process?
+
+
+
+### Questions (04_mnist_basics)
+    - $MY_CODE/AI-ML/fastai-2020/04_mnist_basics.py
+    - How is a grayscale image represented on a computer? How about a color image?
+    - How are the files and folders in the `MNIST_SAMPLE` dataset structured? Why?
+    - Explain how the "pixel similarity" approach to classifying digits works.
+    - Whats a list comprehension? Create one that selects odd numbers from a list and doubles them.
+    - What is a "rank-3 tensor"?
+    - What is the difference between tensor rank and shape? How do you get the rank from the shape?
+    - What are RMSE and L1 norm?
+    - How can you apply a calculation on thousands of numbers at once, thousands of times faster
+      than a Python loop?
+    > - Create a 3×3 tensor or array containing the numbers from 1 to 9. Double it. Select the bottom-right four numbers.
+    - What is broadcasting?
+    - Are metrics generally calculated using the training set, or the validation set? Why?
+    - What is `SGD`?
+    - Why does SGD use mini-batches?
+    > - What are the seven steps in SGD for machine learning?
+    - How do we initialize the weights in a model?
+    - What is "loss"?
+    - Why can't we always use a high learning rate?
+    - What is a "gradient"?
+    - Do you need to know how to calculate gradients yourself?
+    - Why can't we use accuracy as a loss function?
+    - Draw the sigmoid function. What is special about its shape?
+    - What is the difference between a loss function and a metric?
+    > - What is the function to calculate new weights using a learning rate?
+    - What does the `DataLoader` class do?
+    > - Write pseudocode showing the basic steps taken in each epoch for SGD.
+    - Create a function that, if passed two arguments `[1,2,3,4]` and `'abcd'`, returns `[(1, 'a'),
+      (2, 'b'), (3, 'c'), (4, 'd')]`. What is special about that output data structure?
+    - What does `view` do in PyTorch?
+    > - What are the "bias" parameters in a neural network? Why do we need them?
+    - What does the `@` operator do in Python?
+    - What does the `backward` method do?
+    - Why do we have to zero the gradients?
+    > - What information do we have to pass to `Learner`?
+    > - Show Python or pseudocode for the basic steps of a training loop.
+    - What is "ReLU"? Draw a plot of it for values from `-2` to `+2`.
+    - What is an "activation function"?
+    - What's the difference between `F.relu` and `nn.ReLU`?
+
+
+### Questions (05_pet_breeds)
+    - $MY_CODE/AI-ML/fastai-2020/05_pet_breeds.py
+    > - Why do we first resize to a large size on the CPU, and then to a smaller size on the GPU?
+    - If you are not familiar with regular expressions, practice them.
+    - What are the two ways in which data is most commonly provided, for most DL datasets?
+    > - Look up the documentation for `L` and try using a few of the new methods that it adds.
+    - Look up the docs for Python `pathlib` and try using a few methods of the `Path` class.
+    - Give two examples of ways that image transformations can degrade the quality of the data.
+    > - What method does fastai provide to view data in a `DataLoaders`?
+    > - What method does fastai provide to help you debug a `DataBlock`?
+    - Should you hold off on training a model until you have thoroughly cleaned your data?
+    - What are the two pieces that are combined into cross-entropy loss in PyTorch?
+    > - What are the two properties of activations that softmax ensures? Why is this important?
+    > - When might you want your activations to not have these two properties?
+    - Calculate the `exp` and `softmax` columns of <<bear_softmax>> yourself (ie, in a spreadsheet,
+      with a calculator, or in a notebook).
+    - Why can't we use `torch.where` to create a loss function for datasets where our label has more
+      than two categories?
+    - What is the value of log(-2)? Why?
+    - What are two good rules of thumb for picking a learning rate from the learning rate finder?
+    > - What two steps does the `fine_tune` method do?
+    - In Jupyter Notebook, how do you get the source code for a method or function?
+    > - What are discriminative learning rates?
+    > - How is a Python `slice` object interpreted when passed as a learning rate to fastai?
+    > - Why is early stopping a poor choice when using `1cycle` training?
+    - What is the difference between `resnet50` and `resnet101`?
+    - What does `to_fp16` do?
+
+
+### Questions (06_multicat)
+    - $MY_CODE/AI-ML/fastai-2020/06_multicat.py
+    - How could multi-label classification improve the usability of the bear classifier?
+    - How do we encode the dependent variable in a multi-label classification problem?
+    - How do you access the rows and columns of a DataFrame as if it was a matrix?
+    - How do you get a column by name from a DataFrame?
+    - What is the difference between a `Dataset` and `DataLoader`?
+    - What does a `Datasets`    object normally contain?
+    - What does a `DataLoaders` object normally contain?
+    - What does `lambda` do in Python?
+    - What methods customize how independent & dependent variables are created with data block API?
+    - Why is softmax not an appropriate output activation function for a one hot encoded target?
+    - Why is `nll_loss` not an appropriate loss function when using a one-hot-encoded target?
+    - What is the difference between `nn.BCELoss` and `nn.BCEWithLogitsLoss`?
+    - Why can't we use regular accuracy in a multi-label problem?
+    - When is it okay to tune a hyperparameter on the validation set?
+    - How is `y_range` implemented in fastai?
+        - (See if you can implement it yourself and test it without peeking!)
+    - What is a regression problem? What loss function should you use for such a problem?
+    > - What do you need to do to make sure the fastai library applies the same data augmentation to
+    >   your input images and your target point coordinates?
+
+### Questions (07_sizing_and_tta)
+    - $MY_CODE/AI-ML/fastai-2020/07_sizing_and_tta.py
+    - What is the difference between ImageNet and Imagenette?
+        - When is it better to experiment on one versus the other?
+    - What is normalization?
+    - Why didn't we have to care about normalization when using a pretrained model?
+    - What is progressive resizing?
+    - Implement progressive resizing in your own project. Did it help?
+    - What is test time augmentation? How do you use it in fastai?
+    - Is using `TTA` at inference slower or faster than regular inference? Why?
+    - What is Mixup? How do you use it in fastai?
+    - Why does Mixup prevent the model from being too confident?
+    - Why does training with Mixup for five epochs end up worse than training without Mixup?
+    - What is the idea behind label smoothing?
+    - What problems in your data can label smoothing help with?
+    - When using label smoothing with 5 categories, what is the target associated with `index 1`?
+    > - What is the first step to take when you want to prototype quick experiments on a new dataset?
+
+### Questions (08_collaborative-filtering)
+    - $MY_CODE/AI-ML/fastai-2020/08_collaborative-filtering.py
+    - What problem does collaborative filtering solve?
+    - How does it solve it?
+    - Why might a collaborative filtering predictive model fail as a useful recommendation system?
+    - What does a _crosstab_ representation of collaborative filtering data look like?
+    - Code a crosstab representation of the MovieLens data
+        - (you might need to do some web searching!).
+    - What is a latent factor? Why is it "latent"?
+    - What is a dot product? Calculate a dot product manually using pure Python with lists.
+    - What does `pandas.DataFrame.merge` do?
+    - What is an embedding matrix?
+    - What is the relationship between an embedding and a matrix of one-hot-encoded vectors?
+    > - Why do we need `Embedding` if we could use one-hot-encoded vectors for the same thing?
+    - What does an embedding contain before we start training (assume not using a pretained model)?
+    - Create a class (without peeking, if possible!) and use it.
+    - What does `x[:,0]` return?
+    - Rewrite the `DotProduct` class (without peeking, if possible!) and train a model with it.
+    - What is a good loss function to use for MovieLens? Why?
+    - What would happen if we used cross-entropy loss with MovieLens? How would we need to change
+      the model?
+    - What is the use of bias in a dot product model?
+    > - What is another name for weight decay?
+    - Write the equation for weight decay (without peeking!).
+    - Write the equation for the gradient of weight decay. Why does it help reduce weights?
+    - Why does reducing weights lead to better generalization?
+    - What does `argsort` do in PyTorch?
+    - Does sorting movie biases give the same result as averaging overall movie ratings by movie?
+        - Why/why not?
+    > - How do you print the names and details of the layers in a model?
+    - What is the "bootstrapping problem" in collaborative filtering?
+    - How could you deal with the bootstrapping problem for new users? For new movies?
+    - How can feedback loops impact collaborative filtering systems?
+    > - When using a neural network in collaborative filtering, why can we have different numbers of
+    >   factors for movies and users?
+    - Why is there an `nn.Sequential` in the `CollabNN` model?
+    - What kind of model should we use if we want to add metadata about users and items, or
+      information such as date and time, to a collaborative filtering model?
+
+
+
+### Questions (09_tabular)
+    - $MY_CODE/AI-ML/fastai-2020/09_tabular.py
+    - What is a continuous variable?
+    - What is a categorical variable?
+    - Provide two words used for the possible values of a categorical variable.
+    > - What is a "dense layer"?
+    - How do entity embeddings reduce memory usage and speed up neural networks?
+    - What kinds of datasets are entity embeddings especially useful for?
+    - What are the two main families of machine learning algorithms?
+    - Why do some categorical columns need a special ordering in their classes?
+        - How do you do this in Pandas?
+    - Summarize what a decision tree algorithm does.
+    - Why is a date different from a regular categorical or continuous variable, and how can you
+      preprocess it to allow it to be used in a model?
+    - Should you pick a random validation set in the bulldozer competition?
+        - If no, what kind of validation set should you pick?
+    - What is pickle and what is it useful for?
+    - How are `mse`, `samples`, and `values` calculated in the decision tree from this chapter?
+    - How do we deal with outliers, before building a decision tree?
+    - How do we handle categorical variables in a decision tree?
+    > - What is bagging?
+    - What is the difference between `max_samples` and `max_features` when creating a random forest?
+    - If you increase `n_estimators` to a very high value, can it lead to overfitting? Why/why not?
+    - In the section "Creating a Random Forest", just after <<max_features>>, why did
+      `preds.mean(0)` give the same result as our random forest?
+    - What is "out-of-bag-error"?
+    - list reasons why a model's validation set error might be worse than the _OOB_ error.
+      How could you test your hypotheses?
+    - Explain why random forests are well suited to answering each of the following question:
+      - How confident are we in our predictions using a particular row of data?
+      - For predicting with a particular row of data, what were the most important factors,
+            - and how did they influence that prediction?
+      - Which columns are the strongest predictors?
+      - How do predictions vary as we vary these columns?
+
+
+### Questions (10_nlp)
+    - $MY_CODE/AI-ML/fastai-2020/10_nlp.py
+    - What is "self-supervised learning"?
+    - What is a "language model"?
+    - Why is a language model considered self-supervised?
+    - What are self-supervised models usually used for?
+    - Why do we fine-tune language models?
+    - What are the three steps to create a state-of-the-art text classifier?
+    - How do 50,000 unlabeled movie reviews help create a better text classifier for IMDb dataset?
+    - What are the three steps to prepare your data for a language model?
+    - What is "tokenization"? Why do we need it?
+    - Name three different approaches to tokenization.
+    - What is `xxbos`?
+    - List 4 rules that fastai applies to text during tokenization.
+    - Why are repeated characters replaced with a token showing the number of repetitions and the
+      character that's repeated?
+    > - What is "numericalization"?
+    - Why might there be words that are replaced with the "unknown word" token?
+    - With a batch size of 64, the first row of the tensor representing the first batch contains the
+      first 64 tokens for the dataset. What does the second row of that tensor contain?
+        - What does the first row of the second batch contain?
+        - (Careful—students often get this one wrong!
+        - Be sure to check your answer on the book's website.)
+    - Why do we need padding for text classification? Why don't we need it for language modeling?
+    - What does an embedding matrix for NLP contain? What is its shape?
+    - What is "perplexity"?
+    - Why do we have to pass the vocabulary of the language model to the classifier data block?
+    - What is "gradual unfreezing"?
+    - Why is text generation always likely to be ahead of automatic identification of
+      machine-generated texts?
+
+### Questions (11_midlevel_data)
+    - $MY_CODE/AI-ML/fastai-2020/11_midlevel_data.py
+    - Why do we say that fastai has a "layered" API? What does it mean?
+    - Why does a `Transform` have a `decode` method? What does it do?
+    - Why does a `Transform` have a `setup`  method? What does it do?
+    - How does a `Transform` work when called on a tuple?
+    - Which methods do you need to implement when writing your own `Transform`?
+    - Write a `Normalize` transform that fully normalizes items (subtract the mean and divide by the
+      standard deviation of the dataset), and that can decode that behavior. Try not to peek!
+    - Write a `Transform` that does the numericalization of tokenized texts
+        - (it should set its vocab automatically from the dataset seen and have a `decode` method).
+        - Look at the source code of fastai if you need help.
+    - What is a `Pipeline`?
+    - What is a `TfmdLists`?
+    - What is a `Datasets`? How is it different from a `TfmdLists`?
+    - Why are `TfmdLists` and `Datasets` named with an "s"?
+    - How can you build a `DataLoaders` from a `TfmdLists` or a `Datasets`?
+    - How do you pass `item_tfms` and `batch_tfms` when building a `DataLoaders` from a `TfmdLists`
+      or a `Datasets`?
+    - What do you need to do when you want to have your custom items work with methods like
+      `show_batch` or `show_results`?
+    - Why can we easily apply fastai data augmentation transforms to the `SiamesePair` we built?
+
+
+### Questions (12_nlp_dive)
+    - $MY_CODE/AI-ML/fastai-2020/12_nlp_dive.py
+    - If your Project dataset is so big and complicated that working with it takes a lot of time,
+      what should you do?
+    - Why do we concatenate the documents in our dataset before creating a language model?
+    - To use a standard fully connected network to predict the fourth word given the previous three
+      words, what two tweaks do we need to make to our model?
+    - How can we share a weight matrix across multiple layers in PyTorch?
+    - Write a module that predicts the third word given the previous two words of a sentence,
+      without peeking.
+    - What is a recurrent neural network?
+    - What is "hidden state"?
+    - What is the equivalent of hidden state in ` LMModel1`?
+    - To maintain the state in an RNN, why is it important to pass the text to the model in order?
+    - What is an "unrolled" representation of an RNN?
+    - Why can maintaining the hidden state in an RNN lead to memory and performance problems?
+        - How do we fix this problem?
+    - What is "BPTT"?
+    - Write code to print out the first few batches of the validation set, including converting the
+      token IDs back into English strings, as we showed for batches of IMDb data in <<chapter_nlp>>.
+    - What does the `ModelResetter` callback do? Why do we need it?
+    - What are the downsides of predicting just one output word for each three input words?
+    - Why do we need a custom loss function for `LMModel4`?
+    - Why is the training of `LMModel4` unstable?
+    - In the unrolled representation, we can see that a recurrent neural network actually has many
+      layers. So why do we need to stack RNNs to get better results?
+    - Draw a representation of a stacked (multilayer) `RNN`.
+    - Why should we get better results in an RNN if we call `detach` less often?
+        - Why might this not happen in practice with a simple RNN?
+    > - Why can a deep network result in very large or very small activations? Why does this matter?
+    > - In a floating-point representation of numbers, which numbers are the most precise?
+    - Why do vanishing gradients prevent training?
+    - Why does it help to have two hidden states in the LSTM architecture?
+        - What is the purpose of each one?
+    - What are these two states called in an LSTM?
+    - What is tanh, and how is it related to sigmoid?
+    - What is the purpose of this code in `LSTMCell`: `h = torch.cat([h, input], dim=1)`
+    - What does `chunk` do in PyTorch?
+    - Study the refactored version of `LSTMCell` to ensure you understand how and why it does the
+      same thing as the non-refactored version.
+    - Why can we use a higher learning rate for `LMModel6`?
+    - What are the three regularization techniques used in an AWD-LSTM model?
+    > - What is "dropout"?
+    - Why do we scale the weights with dropout? Is this applied during training, inference, or both?
+    - What is the purpose of this line from `Dropout`: `if not self.training: return x`
+    - Experiment with `bernoulli_` to understand how it works.
+    - How do you set your model in training mode in PyTorch? _In evaluation mode?_
+    - Write the equation for activation regularization (in math or code).
+        - How is it different from weight decay?
+    - Write the equation for temporal activation regularization (in math or code).
+        - Why wouldn't we use this for computer vision problems?
+    - What is "weight tying" in a language model?
+
+
+### Questions (13_convolutions)
+    - $MY_CODE/AI-ML/fastai-2020/13_convolutions.py
+    - What is a "feature"?
+    - Write out the convolutional kernel matrix for a top edge detector.
+    - Write out the mathematical operation applied by a 3×3 kernel to a single pixel in an image.
+    - What is the value of a convolutional kernel apply to a 3×3 matrix of zeros?
+    - What is "padding"?
+    - What is "stride"?
+    - Create a nested list comprehension to complete any task that you choose.
+    - What are the shapes of the `input` and `weight` parameters to PyTorch's 2D convolution?
+    - What is a "channel"?
+    - What is the relationship between a convolution and a matrix multiplication?
+    - What is a "convolutional neural network"?
+    - What is the benefit of refactoring parts of your neural network definition?
+    - What is `Flatten`? Where does it need to be included in the MNIST CNN? Why?
+    - What does "NCHW" mean?
+    - Why does the third layer of the MNIST CNN have `7*7*(1168-16)` multiplications?
+    - What is a "receptive field"?
+    - What is the size of the receptive field of an activation after two stride 2 convolutions? Why?
+    - Run *conv-example.xlsx* yourself and experiment with *trace precedents*.
+    - Look at Jeremy or Sylvain's Twitter "like"s, for any interesting resources.
+    - How is a color image represented as a tensor?
+    - How does a convolution work with a color input?
+    - How do we see the data in `DataLoaders`?
+    - Why do we double the number of filters after each stride-2 conv?
+    - Why do we use a larger kernel in the first conv with MNIST (with `simple_cnn`)?
+    - What information does `ActivationStats` save for each layer?
+    - How can we access a learner's callback after training?
+    - What are the three statistics plotted by `plot_layer_stats`? What does the x-axis represent?
+    - Why are activations near zero problematic?
+    - What are the upsides and downsides of training with a larger batch size?
+    - Why should we avoid using a high learning rate at the start of training?
+    > - What is 1cycle training?
+    - What are the benefits of training with a high learning rate?
+    - Why do we want to use a low learning rate at the end of training?
+    - What is "cyclical momentum"?
+    > - What callback tracks hyperparameter values during training (along with other information)?
+    - What does one column of pixels in the `color_dim` plot represent?
+    - What does "bad training" look like in `color_dim`? Why?
+    - What trainable parameters does a batch normalization layer contain?
+    - What statistics are used to normalize in batch normalization during training?
+        - How about during validation?
+    - Why do models with batch normalization layers generalize better?
+
+
+### Questions (14_resnet)
+    - $MY_CODE/AI-ML/fastai-2020/14_resnet.py
+    - How did we get to a single vector of activations in the CNNs for MNIST in previous chapters?
+        - Why isn't that suitable for Imagenette?
+    - What do we do for Imagenette instead?
+    - What is "adaptive pooling"?
+    - What is "average pooling"?
+    - Why do we need `Flatten` after an adaptive average pooling layer?
+    - What is a "skip connection"?
+    - Why do skip connections allow us to train deeper models?
+    - What does <<resnet_depth>> show? How did that lead to the idea of skip connections?
+    - What is "identity mapping"?
+    - What is the basic equation for a ResNet block (ignoring batchnorm and ReLU layers)?
+    > - What do ResNets have to do with residuals?
+    - How do we deal with the skip connection when there is a stride-2 convolution?
+        - How about when the number of filters changes?
+    - How can we express a 1×1 convolution in terms of a vector dot product?
+    - Create a `1x1 convolution` with `F.conv2d` or `nn.Conv2d` and apply it to an image.
+        - What happens to the `shape` of the image?
+    - What does the `noop` function return?
+    - Explain what is shown in <<resnet_surface>>.
+    - When is top-5 accuracy a better metric than top-1 accuracy?
+    - What is the "stem" of a CNN?
+    - Why do we use plain convolutions in the CNN stem, instead of ResNet blocks?
+    - How does a bottleneck block differ from a plain ResNet block?
+    - Why is a bottleneck block faster?
+    - How do fully convolutional nets (and nets with adaptive pooling in general) allow for
+      progressive resizing?
+
+
+### Questions (15_arch_details)
+    - $MY_CODE/AI-ML/fastai-2020/15_arch_details.py
+    - What is the "head" of a neural net?
+    - What is the "body" of a neural net?
+    - What is "cutting" a neural net? Why do we need to do this for transfer learning?
+    - What is `model_meta`? Try printing it to see what's inside.
+    - Read the source code for `create_head` and make sure you understand what each line does.
+    - Look at the output of `create_head` and make sure you understand why each layer is there, and
+      how the `create_head` source created it.
+    - Figure out how to change the dropout, layer size, and number of layers created by
+      `cnn_learner`, and see if you can find values that result in better accuracy from the pet
+      recognizer.
+    - What does `AdaptiveConcatPool2d` do?
+    - What is "nearest neighbor interpolation"? How can it be used to upsample convolutional
+      activations?
+    - What is a "transposed convolution"? What is another name for it?
+    - Create a conv layer with `transpose=True` and apply it to an image. Check the output shape.
+    - Draw the U-Net architecture.
+    - What is "BPTT for Text Classification" (BPT3C)?
+    - How do we handle different length sequences in BPT3C?
+    - Try to run each line of `TabularModel.forward` separately, one line per cell, in a notebook,
+      and look at the input and output shapes at each step.
+    - How is `self.layers` defined in `TabularModel`?
+    - What are the five steps for preventing over-fitting?
+    - Why don't we reduce architecture complexity before trying other approaches to preventing
+      overfitting?
+
+
+### Questions (16_accel_sgd)
+    - $MY_CODE/AI-ML/fastai-2020/16_accel_sgd.py
+    - What is the equation for a step of SGD, in math or code (as you prefer)?
+    - What do we pass to `cnn_learner` to use a non-default optimizer?
+    - What are optimizer callbacks?
+    - What does `zero_grad` do in an optimizer?
+    - What does `step` do in an optimizer? How is it implemented in the general optimizer?
+    - Rewrite `sgd_cb` to use the `+=` operator, instead of `add_`.
+    - What is "momentum"? Write out the equation.
+    - What's a physical analogy for momentum? How does it apply in our model training settings?
+    - What does a bigger value for momentum do to the gradients?
+    - What are the default values of momentum for 1cycle training?
+    - What is RMSProp? Write out the equation.
+    - What do the squared values of the gradients indicate?
+    - How does Adam differ from momentum and RMSProp?
+    - Write out the equation for Adam.
+    - Calculate the values of `unbias_avg` and `w.avg` for a few batches of dummy values.
+    - What's the impact of having a high `eps` in Adam?
+    - Read through the optimizer notebook in fastai's repo, and execute it.
+    - In what situations do dynamic learning rate methods like Adam change the behavior of weight
+      decay?
+    - What are the four steps of a training loop?
+    - Why is using callbacks better than writing a new training loop for each tweak you want to add?
+    - What aspects of the design of fastai's callback system make it as flexible as copying and
+      pasting bits of code?
+    - How can you get the list of events available to you when writing a callback?
+    - Write the `ModelResetter` callback (without peeking).
+    - How can you access the necessary attributes of the training loop inside a callback? When can
+      you use or not use the shortcuts that go with them?
+    - How can a callback influence the control flow of the training loop?
+    - Write the `TerminateOnNaN` callback (without peeking, if possible).
+    - How do you make sure your callback runs after or before another callback?
+
+
+
+### Questions (17_foundations)
+    - $MY_CODE/AI-ML/fastai-2020/17_foundations.py
+    - Write the Python code to implement a single neuron.
+    - Write the Python code to implement ReLU.
+    - Write the Python code for a dense layer in terms of matrix multiplication.
+    - Write the Python code for a dense layer in plain Python (that is, with list comprehensions and
+      functionality built into Python).
+    - What is the "hidden size" of a layer?
+    - What does the `t` method do in PyTorch?
+    - Why is matrix multiplication written in plain Python very slow?
+    - In `matmul`, why is `ac==br`?
+    - In Jupyter Notebook, how do you measure the time taken for a single cell to execute?
+    - What is "elementwise arithmetic"?
+    - Write the PyTorch code to test whether every element of `a` is greater than the corresponding
+      element of `b`.
+    - What is a rank-0 tensor? How do you convert it to a plain Python data type?
+    - What does this return, and why? `tensor([1,2]) + tensor([1])`
+    - What does this return, and why? `tensor([1,2]) + tensor([1,2,3])`
+    - How does elementwise arithmetic help us speed up `matmul`?
+    - What are the broadcasting rules?
+    - What is `expand_as`? Show an example of how it can be used to match the results of
+      broadcasting.
+    - How does `unsqueeze` help us to solve certain broadcasting problems?
+    - How can we use indexing to do the same operation as `unsqueeze`?
+    - How do we show the actual contents of the memory used for a tensor?
+    - When adding a vector of size 3 to a matrix of size 3×3, are the elements of the vector added
+      to each row or each column of the matrix? (Be sure to check your answer by running this code
+      in a notebook.)
+    - Do broadcasting and `expand_as` result in increased memory use? Why or why not?
+    - Implement `matmul` using Einstein summation.
+    - What does a repeated index letter represent on the left-hand side of einsum?
+    - What are the three rules of Einstein summation notation? Why?
+    - What are the forward pass and backward pass of a neural network?
+    - Why do we need to store some of the activations calculated for intermediate layers in the
+      forward pass?
+    - What is the downside of having activations with a standard deviation too far away from 1?
+    - How can weight initialization help avoid this problem?
+    - What is the formula to initialize weights such that we get a standard deviation of 1 for
+      a plain linear layer, and for a linear layer followed by ReLU?
+    - Why do we sometimes have to use the `squeeze` method in loss functions?
+    - What does the argument to the `squeeze` method do? Why might it be important to include this
+      argument, even though PyTorch does not require it?
+    - What is the "chain rule"? Show the equation in either of the two forms presented in this
+      chapter.
+    - Show how to calculate the gradients of `mse(lin(l2, w2, b2), y)` using the chain rule.
+    - What is the gradient of ReLU? Show it in math or code. (You shouldn't need to commit this to
+      memory—try to figure it using your knowledge of the shape of the function.)
+    - In what order do we need to call the `*_grad` functions in the backward pass? Why?
+    - What is `__call__`?
+    - What methods must we implement when writing a `torch.autograd.Function`?
+    - Write `nn.Linear` from scratch, and test it works.
+    - What is the difference between `nn.Module` and fastai's `Module`?
+
+
+### Questions (18_CAM)
+    - $MY_CODE/AI-ML/fastai-2020/18_CAM.py
+    - What is a "hook" in PyTorch?
+    - Which layer does CAM use the outputs of?
+    - Why does CAM require a hook?
+    - Look at the source code of the `ActivationStats` class and see how it uses hooks.
+    - Write a hook that stores the activations of a given layer in a model (without peeking, if
+      possible).
+    - Why do we call `eval` before getting the activations? Why do we use `no_grad`?
+    - Use `torch.einsum` to compute the "dog" or "cat" score of each of the locations in the last
+      activation of the body of the model.
+    - How do you check which order the categories are in (i.e., the correspondence of
+      index->category)?
+    - Why are we using `decode` when displaying the input image?
+    - What is a "context manager"? What special methods need to be defined to create one?
+    - Why can't we use plain CAM for the inner layers of a network?
+    - Why do we need to register a hook on the backward pass in order to do Grad-CAM?
+    - Why can't we call `output.backward()` when `output` is a rank-2 tensor of output activations
+      per image per class?
+
+
+### Questions (19_learner)
+    - $MY_CODE/AI-ML/fastai-2020/19_learner.py
+    - What is `glob`?
+    - How do you open an image with the Python imaging library?
+    - What does `L.map` do?
+    - What does `Self` do?
+    - What is `L.val2idx`?
+    - What methods do you need to implement to create your own `Dataset`?
+    - Why do we call `convert` when we open an image from Imagenette?
+    - What does `~` do? How is it useful for splitting training and validation sets?
+    - Does `~` work with the `L` or `Tensor` classes? What about NumPy arrays, Python lists, or pandas DataFrames?
+    - What is `ProcessPoolExecutor`?
+    - How does `L.range(self.ds)` work?
+    - What is `__iter__`?
+    - What is `first`?
+    - What is `permute`? Why is it needed?
+    - What is a recursive function? How does it help us define the `parameters` method?
+    - Write a recursive function that returns the first 20 items of the Fibonacci sequence.
+    - What is `super`?
+    - Why do subclasses of `Module` need to override `forward` instead of defining `__call__`?
+    - In `ConvLayer`, why does `init` depend on `act`?
+    - Why does `Sequential` need to call `register_modules`?
+    - Write a hook that prints the shape of every layer's activations.
+    - What is "LogSumExp"?
+    - Why is `log_softmax` useful?
+    - What is `GetAttr`? How is it helpful for callbacks?
+    - Reimplement one of the callbacks in this chapter without inheriting from `Callback` or `GetAttr`.
+    - What does `Learner.__call__` do?
+    - What is `getattr`? (Note the case difference to `GetAttr`!)
+    - Why is there a `try` block in `fit`?
+    - Why do we check for `model.training` in `one_batch`?
+    - What is `store_attr`?
+    - What is the purpose of `TrackResults.before_epoch`?
+    - What does `model.cuda` do? How does it work?
+    - Why do we need to check `model.training` in `LRFinder` and `OneCycle`?
+    - Use cosine annealing in `OneCycle`.

@@ -1,0 +1,293 @@
+
+
+### An Introduction to Statistical Mechancis and Thermodynamics:
+    - $MY_BOOKS/CS/Physics-Software/Python-Statistical-Mechanics-Swendsen-1e.pdf
+    - $MY_BOOKS/CS/Physics-Software/Python-Statistical-Mechanics-Swendsen-2e.pdf
+
+
+### Preface
+> Habe Muth dich deines eigenen Verstandes zu bedienen. 
+- (Have the courage to think for yourself.) 
+- Immanuel Kant, in Beantwortung der Frage: Was ist Aufklärung?
+
+- The disciplines of statistical mechanics and thermodynamics are
+  very closely related, although their historical roots are
+  separate. The founders of thermodynamics developed their
+  theories without the advantage of contemporary understanding of
+  the atomic structure of matter. 
+
+- Statistical mechanics, which is built on this understanding,
+  makes predictions of system behavior that lead to thermodynamic
+  rules. In other words, statistical mechanics is a conceptual
+  precursor to thermodynamics, although a historical latecomer.
+
+- Unfortunately, despite their theoretical connection,
+  statistical mechanics and thermodynamics are often taught as
+  separate fields of study. 
+
+- Even worse, thermodynamics is usually taught first, for the
+  dubious reason it is older than statistical mechanics. All too
+  often students end up regarding thermodynamics as a set of
+  highly abstract mathematical relationships, the significance of
+  which is not clear. 
+
+- This book is an effort to rectify the situation. It presents
+  the two complementary aspects of thermal physics as a coherent
+  theory of the properties of matter. My intention is that after
+  working through this text a student will have solid foundations
+  in both statistical mechanics and thermodynamics that will
+  provide direct access to modern research.
+
+### Guiding Principles
+
+- In writing this book I have been guided by a number of
+  principles, only some of which are shared by other textbooks in
+  statistical mechanics and thermodynamics.
+
+* I have written this book for students, not professors. Many
+  things experts take for granted are explained explicitly.
+  Student contributions have been essential in constructing
+  _clear explanations_ that do not leave out 'obvious' steps that
+  can be puzzling to a beginner.
+
+* The goal is to provide the student with _conceptual
+  understanding_, and the problems are designed in the service of
+  this goal. They are quite challenging, but the challenges are
+  primarily conceptual rather than algebraic or computational.
+
+* I believe students should have the opportunity to _program
+  models_ themselves and observe how the models behave under
+  different conditions. Therefore, the problems include extensive
+  use of computation.
+
+* The book is accessible to advanced undergraduate and graduate
+  students and I've taught such a course using the same approach
+  for both groups. As the _mathematics_ is entirely
+  self-contained, students can master all of the material even if
+  their mathematical preparation has some gaps. Graduate students
+  with previous courses on these topics should be able to
+  self-study this book, to make up for any gaps in their
+  training.
+
+* After working through the text, a student should be well
+  prepared to continue with more _specialized topics_ in
+  thermodynamics, statistical mechanics, and condensed-matter
+  physics.
+
+# Pedagogical Principles
+
+- The goals described above result in unique features of my
+  approach, which I think merit mention.
+
+### Teaching Statistical Mechanics
+
+    * The book begins with _classical statistical_ mechanics to
+      postpone the complications of quantum measurement until the
+      basic ideas are established.
+
+    * I have defined _ensembles_ in terms of _probabilities_, in
+      keeping with Boltzmann’s vision. In particular, the
+      discussion of statistical mechanics is based on Boltzmann’s
+      1877 definition of entropy. This is not the definition
+      usually found in textbooks, but what he actually wrote. The
+      use of Boltzmann’s definition a key feature of the book,
+      enabling students to obtain a deep understanding of the
+      foundations of both statistical mechanics and
+      thermodynamics.
+
+    * A self-contained discussion of probability theory is
+      presented for both discrete and continuous random
+      variables, including all material needed to understand
+      basic statistical mechanics. This material would be
+      superfluous if the physics curriculum included a course in
+      probability theory, but unfortunately, that is not usual.
+      (A course in statistics would also be very valuable for
+      physics students, but that's another story.)
+
+    * Dirac delta functions are used to formulate the theory of
+      continuous random variables, as well as to simplify the
+      derivations of densities of states. 
+        - This is not the way mathematicians tend to introduce
+          probability densities, but I believe that it is by far
+          the most useful approach for scientists.
+
+    * Entropy is presented as a logical consequence of applying
+      probability theory to systems containing a large number of
+      particles, instead of just an equation to be memorized.
+
+    * The entropy of the classical ideal gas is derived in
+      detail. This provides an explicit example of an entropy
+      function that exhibits all the properties postulated in
+      thermodynamics. The example is simple enough to give every
+      detail of the derivation of thermodynamic properties from
+      statistical mechanics.
+
+    * The book includes an explanation of Gibbs’ paradox, which
+      is not really paradoxical when you begin with Boltzmann’s
+      1877 definition of the entropy.
+
+    * The apparent contradiction between observed irreversibility
+      and time-reversal invariant equations of motion is
+      explained. 
+        - I believe that this fills an important gap in
+          a student’s appreciation of how a description of
+          macroscopic phenomena can arise from statistical
+          principles.
+
+### Teaching Thermodynamics
+
+    * The four fundamental postulates of thermodynamics proposed
+      by Callen have been reformulated. The result is a set of
+      six thermodynamic postulates, sequenced so as to build
+      conceptual understanding.
+
+    * Jacobians are used to simplify the derivation of
+      thermodynamic identities.
+
+    * The thermodynamic limit is discussed, but the validity of
+      thermodynamics and statistical mechanics does not rely on
+      taking the limit of infinite size. This is important if
+      thermodynamics is to be applied to real systems, but is
+      sometimes neglected in textbooks.
+
+    * My treatment includes thermodynamics of non-extensive
+      systems. This allows me to include descriptions of systems
+      with surfaces and systems enclosed in containers.
+
+### Organization and Content
+
+- The principles described above lead me to an organization for
+  the book that is quite different from the norm. As stated
+  above, while most texts begin with thermodynamics for
+  historical reasons, I think it is far more preferable from the
+  perspective of pedagogy to begin with statistical mechanics,
+  including an introduction to those parts of probability theory
+  that are essential to statistical mechanics.
+
+- To postpone the conceptual problems associated with quantum
+  measurement, the initial discussion of statistical mechanics in
+  Part I is limited to classical systems. 
+    - The entropy of the classical ideal gas is derived in
+      detail, with a clear justification for every step.
+      A crucial aspect of the explanation and derivation of the
+      entropy is the use of Boltzmann’s 1877 definition, which
+      relates entropy to the probability of a macroscopic state.
+      This definition provides a solid, intuitive understanding
+      of what entropy is all about. It is my experience that
+      after students have seen the derivation of the entropy of
+      the classical ideal gas, they immediately understand the
+      postulates of thermodynamics, since those postulates simply
+      codify properties that they have derived explicitly for
+      a special case.
+
+- The treatment of statistical mechanics paves the way to the
+  development of thermodynamics in Part II. While this
+  development is largely based on the classic work by Herbert
+  Callen (my thesis advisor), there are significant differences. 
+    - Perhaps the most important is I have relied entirely on
+      Jacobians to derive thermodynamic identities. 
+    - Instead of regarding such derivations with dread, as I did
+      when I first encountered them, my students tend to regard
+      them as straightforward and rather easy. 
+    - There are also several other changes in emphasis, such as
+      a clarification of the postulates of thermodynamics and the
+      inclusion of non-extensive systems; that is, finite systems
+      that have surfaces or are enclosed in containers.
+
+- Part III returns to classical statistical mechanics and
+  develops the general theory directly, instead of using the
+  common roundabout approach of taking the classical limit of
+  quantum statistical mechanics. 
+
+- A chapter is devoted to a discussion of the apparent paradoxes
+  between microscopic reversibility and macroscopic
+  irreversibility. 
+
+- Part IV presents quantum statistical mechanics. The development
+  begins by considering a probability distribution over all
+  quantum states, instead of the common ad-hoc restriction to
+  eigenstates. 
+
+- In addition to the basic concepts, it covers blackbody
+  radiation, the harmonic crystal, and both Bose and Fermi gases.
+    - Because of their practical and theoretical importance,
+      there is a separate chapter on insulators and
+      semiconductors. The final chapter introduces the Ising
+      model of magnetic phase transitions.
+
+- The book contains about a hundred multi-part problems that
+  should be considered as part of the text. In keeping with the
+  level of the text, the problems are fairly challenging, and an
+  effort has been made to avoid ‘plug and chug’ assignments. The
+  challenges in the problems are mainly due to the probing of
+  essential concepts, rather than mathematical complexities.
+  A complete set of solutions to the problems is available from
+  the publisher.
+
+- Several of the problems, especially in the chapters on
+  probability, rely on computer simulations to lead students to
+  a deeper understanding. 
+    - In the past I have suggested that my students use C++, but
+      for the last two years I have switched to VPython for its
+      simplicity and the ease with which it generates graphs. 
+    - An introduction to the basic features of VPython is given
+      in in Appendix A. Most of my students have used VPython,
+      but a significant fraction have chosen to use a different
+      language—usually Java, C, or C++. I have not encountered
+      any difficulties with allowing students to use the
+      programming language of their choice.
+
+### Two Semesters or One?
+
+- The presentation of the material is based primarily on
+  a two-semester undergraduate course in thermal physics that
+  I've taught several times at Carnegie Mellon University.
+    - Since two-semester undergraduate courses in thermal physics
+      are rather unusual, its existence at Carnegie Mellon for
+      several decades might be regarded as surprising. 
+    - In my opinion, it should be the norm. Although it was quite
+      reasonable to teach two semesters of classical mechanics
+      and one semester of thermodynamics to undergraduates in the
+      nineteenth century, the development of statistical mechanics
+      was just beginning, it is not reasonable today.
+
+- However, even at Carnegie Mellon, only the first semester of
+  thermal physics is required. All physics majors take the first
+  semester, and about half continue on to the second semester,
+  accompanied by a few students from other departments. 
+    - When I teach the course, the first semester covers the
+      first two parts of the book (Chapters 1 through 18), plus
+      an overview of classical canonical ensembles (Chapter 18)
+      and quantum canonical ensembles (Chapter 22). This gives
+      the students an introduction to statistical mechanics and
+      a rather thorough knowledge of thermodynamics, even if they
+      do not take the second semester.
+
+- It is also possible to teach a one-semester course in thermal
+  physics from this book using different choices of material. For
+  example:
+
+    * If the students have a strong background in probability
+      theory (which is, unfortunately, fairly rare), Chapters
+      3 and 5 might be skipped to include more material in Parts
+      III and IV.
+
+    * If it is decided that students need a broader exposure to
+      statistical mechanics, but that a less detailed study of
+      thermodynamics is sufficient, Chapters 14 through 17 could
+      be skimmed to have time to study selected chapters in Parts
+      III and IV.
+
+    * If the students have already had a thermodynamics course
+      (although I do not recommend this course sequence), Part II
+      could be skipped entirely. However, even if this choice is
+      made, students might still find Chapters 9 to 18 useful for
+      review.
+
+    - One possibility that I do not recommend would be to skip
+      the computational material. I am strongly of the opinion
+      that the undergraduate physics curricula at most
+      universities still contain too little instruction in the
+      computational methods that students will need in their
+      careers.
+

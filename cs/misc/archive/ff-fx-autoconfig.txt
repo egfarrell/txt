@@ -1,0 +1,104 @@
+# fx-autoconfig Setup Instructions
+
+Guide for setting up fx-autoconfig to enable custom Firefox keyboard shortcuts.
+
+## Prerequisites
+
+- Firefox installed via Mozilla PPA (or similar)
+- `$HOME/dotfiles/ini/firefox/userChrome-custom.uc.js` from dotfiles
+
+## Installation
+
+### 1. Clone fx-autoconfig
+
+```bash
+cd $HOME/repos
+git clone --depth 1 https://github.com/MrOtherGuy/fx-autoconfig.git
+```
+
+### 2. Install config files to Firefox directory
+
+```
+sudo mkdir -p /usr/lib/firefox/defaults/pref/
+sudo cp $HOME/repos/fx-autoconfig/program/config.js       /usr/lib/firefox/
+sudo cp $HOME/repos/fx-autoconfig/program/config-prefs.js /usr/lib/firefox/defaults/pref/
+
+# permissions
+sudo chmod 644 /usr/lib/firefox/config.js
+sudo chmod 644 /usr/lib/firefox/defaults/pref/config-prefs.js
+```
+
+### 3. Find Firefox profile directory
+
+```
+ls -la ~/.mozilla/firefox/
+# Example: u44mmgnb.default-release
+```
+
+### 4. Create chrome/JS directory in your profile
+
+```
+# Navigate to profile
+cd ~/.mozilla/firefox/xxxxxxxx.default-release/
+```
+
+### 5. Copy fx-autoconfig files + custom script
+
+```bash
+cpr $HOME/repos/fx-autoconfig/profile/chrome           ~/.mozilla/firefox/xxxxxxxx.default-release/
+cp  $HOME/dotfiles/ini/firefox/userChrome-custom.uc.js ~/.mozilla/firefox/xxxxxxxx.default-release/chrome/JS/
+
+# Verify
+ls -la ~/.mozilla/firefox/xxxxxxxx.default-release/chrome/JS/
+```
+
+### 6. Restart Firefox
+
+Close Firefox completely and restart it.
+
+## Verification
+
+1. Open Firefox
+2. Press `Ctrl+Shift+J` to open Browser Console
+3. Look for messages like:
+   ```
+   Browser is executing custom scripts via autoconfig
+   [TabRemap] Script starting with Hotkeys API...
+   [TabRemap] Ctrl+N configured for next tab
+   [TabRemap] Ctrl+I configured for prev tab
+   ```
+
+4. Test the shortcuts:
+   - Open multiple tabs
+   - Press `Ctrl+N` → should switch to next tab
+   - Press `Ctrl+I` → should switch to previous tab
+
+## Troubleshooting
+
+### Scripts not loading
+
+Check that fx-autoconfig is installed correctly:
+```bash
+ls -la /usr/lib/firefox/config.js
+ls -la /usr/lib/firefox/defaults/pref/config-prefs.js
+```
+
+### Script disabled
+
+Firefox menubar → Tools → userScripts → Check that "Custom Tab Navigation" is enabled (has checkmark)
+
+### Need to clear startup cache
+
+If you make changes to scripts, you may need to clear Firefox's startup cache:
+- Firefox menubar → Tools → userScripts → "Restart and clear startup cache"
+
+## Notes
+
+- The `suppressOriginal: true` option disables the default Ctrl+N (new window) and Ctrl+I (page info) shortcuts
+- If you want to change the keyboard shortcuts, edit the `key:` values in `userChrome-custom.uc.js`
+- Scripts are loaded per-window at `DOMContentLoaded` event
+
+## Reference
+
+- fx-autoconfig repo: https://github.com/MrOtherGuy/fx-autoconfig
+- Your custom script: `userChrome-custom.uc.js` in dotfiles repo

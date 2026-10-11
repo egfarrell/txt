@@ -1,0 +1,266 @@
+# Sean Carroll intro
+
+- The question of the day is:
+    > "Is the wave function real/physical, or is it merely a way
+    > to calculate probabilities?"
+
+This issue plays a big role in Tom Banks’s guest post (he’s on
+the "useful but not real" side), and there is an new paper by
+Pusey, Barrett, and Rudolph that claims you can't simply treat
+the quantum state as a probability calculator.
+
+I haven't examined the paper yet, but it's getting positive
+reviews. I'm a "realist" myself, as I think the best
+definition of "real" is "plays a crucial role in
+a successful model of reality," and the quantum wave
+function certainly qualifies.
+
+To help understand the lay of the land, we're happy to host this
+guest post by David Wallace, a philosopher of science at Oxford.
+David is a leader in the effort to make sense of the many-worlds
+interpretation of QM, in particular the knotty problem of how to
+get the Born rule ("the wave function squared is the
+probability") out of this formalism.
+
+He was also a participant in our recent time conference, and the
+co-star of one of the videos I posted. He's a very clear writer,
+and I think people will get a lot out of reading this.
+
+
+# Why the quantum state isn't (straightforwardly) probabilistic
+
+In QM, we routinely talk about so-called "superposition states"
+- both at the _microscopic_ level ("the state of the electron is
+a superposition of spin-up and spin-down") and, at least in
+foundations of physics, at the _macroscopic_ level ("the state of
+Schrodinger's cat is a superposition of alive and dead").
+
+A large part of the "problem of measurement" is the problem
+of making sense of these _superposition_ states, and there
+are basically two views.
+
+1. On the first ("_state as physical_"), the state of
+   a physical system tells us what that system is actually,
+   physically, like, and from that point of view,
+   Schrodinger's cat is seriously weird.
+
+   What does it even mean to say that the cat is both alive
+   and dead? And, if cats can be alive and dead at the same
+   time, how come when we look at them we only see
+   definitely-alive cats or definitely-dead cats?
+
+   We can try to answer the 2nd question by invoking some
+   mysterious new dynamical process - a "collapse of the wave
+   function" where the act of looking at the cat magically causes
+   them to jump into alive-cat or dead-cat states. But a physical
+   process which depends for its action on "observations",
+   "measurements", even "consciousness", doesn't seem
+   scientifically reputable.
+
+   So people who accept the "state-as-physical" view generally
+   try to make sense either of quantum theory without collapses
+   (that leads you to something like Everett's many-worlds
+   theory), or to modify quantum theory to replace it with
+   something less problematic.
+
+2. On the second view, ("_state as probability_"),
+   Schrodinger's cat is totally unmysterious. When we say
+   "the state of the cat is half alive, half dead", we just
+   mean "it has a 50% probability of being alive and a 50%
+   probability of being dead".
+
+   And the so-called collapse of the wavefunction just
+   corresponds to us looking and finding out which it is.
+   From this point of view, to say that the cat is in
+   a superposition of alive and dead is no more mysterious
+   than to say that Sean is 50% likely to be in his office
+   and 50% likely to be at a conference.
+
+- Now, to be sure, probability is a bit philosophically
+  mysterious. What _exactly_ it means to say something is 50%
+  likely can be controversial. But we have a number of ways of
+  making sense of it, and for all of them, the cat stays
+  unmysterious.
+
+- For instance, perhaps we mean that if we run the experiment
+  many times, we'll find that half the cats live, and half of
+  them die. (Frequentist view)
+
+- Or maybe we mean that we, personally, know that the cat is
+  alive or dead but we don't know which, and the 50% is a way of
+  quantifying our lack of knowledge. (This is the _Bayesian
+  view_.) But on either view, the weirdness of the cat still goes
+  away.
+
+- So, it's very tempting to say that we should just adopt the
+  "state-as-probability" view, and get rid of the quantum
+  weirdness.
+
+- But this doesn't work, because just as the
+
+    - "state-as-physical" view struggles to make sense of
+      _macroscopic_ superpositions,
+
+    - so the "state-as-probability" view founders on
+      _microscopic_ superpositions.
+
+- Consider, a simple interference experiment. We split a laser
+  beam into two beams,  Beam 1 and Beam 2, with a half-silvered
+  mirror.
+
+- We bring the beams back together at another such mirror and
+  allow them to interfere. The resultant light ends up being
+  split between say:
+    - Output Path `A` and
+    - Output Path `B` and we see how much light ends up at each.
+
+- It's well known that we can tune the two beams to get any
+  result we like: e.g. all the light at `A`, all of it at `B`, or
+  anything in between.
+
+- It's also well known that if we block one of the beams, we
+  always get the same result: half the light at `A`, half the
+  light at `B`.
+
+- And finally, it's well known that these results persist even if
+  we turn the laser so low only _one photon_ passes through at
+  a time.
+
+- According to QM, we should represent the state of each photon,
+  as it passes through the system, as a superposition of:
+  `(photon in Beam 1) + (Photon in Beam 2) `
+
+    - According to the "state as _physical_" view,
+        - the photon is in a strange kind of non-local state.
+
+    - But with the "state as _probability_" view,
+        - it seems to be shorthand for "the photon is either in
+          beam 1 or beam 2, with equal probability of each.
+        - --------------------------
+        - And that CAN'T BE CORRECT!
+        - --------------------------
+
+- For if the photon is in _beam 1_ (therefore according to QM,
+  described by a non-superposition state, or at least not by
+  a superposition of beam states) we know we get result `A` half
+  the time, result `B` half the time.
+
+- And if the photon is in _beam 2_, we also know that we get
+  result `A` half the time, result `B` half the time.
+
+- So whichever beam it's in, we should get result `A` half the
+  time and result `B` half the time.
+
+- And of course, we don't.
+
+- So, just by elementary reasoning - I haven't even had to talk
+  about probabilities - we seem to rule out the
+  "state-as-probability" rule.
+
+- Indeed, we seem to be able to see, pretty directly, that
+  _something goes down each beam_. If I insert an appropriate
+  phase factor into one of the beams (either of the beams)
+
+- I can change things from "every photon ends up at `A`" to
+  "every photon ends up at `B`".
+
+- In other words, things happening to either beam affect physical
+  outcomes.
+
+- It's hard to make sense of this unless both beams are being
+  probed by physical "stuff" on every run of the experiment. That
+  seems pretty definitively to support the idea that the
+  _superposition is somehow physical_.
+
+- There's an interesting way of getting around the problem. We
+  could just say that my "elementary reasoning" doesn't actually
+  apply to QM - it's a holdover of old, bad, classical ways of
+  thinking about the world.
+
+- We might, for instance, say that the kind of
+  "either-this-thing-happens-or-that-thing-does" reasoning I used
+  above isn't applicable to quantum systems. (Tom Banks, in his
+  post, pretty much says this)
+
+- There are various ways of saying what's problematic with this,
+  but here's a simple one. To make this kind of claim is to say
+  the "probabilities" of QM don't obey all of the rules of
+  probability.
+
+- But in that case, what makes us think that they are
+  probabilities?
+    - They can't be relative frequencies, for instance:
+    - it can't be that 50% of the photons go down the left branch
+      and 50% go down the right branch.
+    - Nor can they quantify our ignorance of which branch it goes
+      down, because we don't need to know which branch it goes
+      down to know what it will do next.
+
+- So to call the numbers in the superposition "probabilities" is
+  question-begging. Better to give them their own name, and
+  fortunately, QM has already given us a name: _amplitudes_.
+
+    - But once we make this move, we've lost everything
+      distinctive about the "state-as-probability" view.
+
+- Everyone agrees that according to QM, the photon has some
+  amplitude of being in beam `A` and some amplitude of being in
+  beam `B` and indeed, that the cat has some amplitude of being
+  alive and some amplitude of being dead.
+
+- The question is, _what does that mean?_
+
+- The "state-as-probability" view was supposed to answer, simply:
+  it means that we don't know everything about the photon's (or
+  the cat's) state;
+    - but that now seems to have been lost.
+    - And the earlier argument that something goes down both
+      beams remains unscathed.
+
+- Now, I've considered only the most straightforward kind of
+  state-as-probability view you can think of: a view which
+  I think is pretty decisively refuted by the facts.
+
+- It's possible to imagine subtler probabilistic theories; maybe
+  the quantum state isn't about the probabilities of each term in
+  the superposition, but it's still about the probabilities of
+  something.
+
+- But people's expectations have generally been that the
+  _ubiquity of interference effects_ makes that hard to sustain,
+  and a succession of mathematical theorems, from classic results
+  like Bell-Kochen-Specker, to cutting-edge ones like Pusey,
+  Barrett and Rudolph, have supported that expectation.
+
+- In fact, theres only one current "state-as-probability" theory
+  that seems half-way viable:
+    - the probabilities aren't the probability of anything
+      objective, they're just the probabilities of measurement
+      outcomes.
+
+- Quantum theory, in other words, isn't a theory that tells us
+  about the world: it's just a tool to predict the results of
+  experiment.
+
+- Views like this, which philosophers call _instrumentalist_, are
+  often adopted as fall-back positions by physicists defending
+  'state-as-probability' takes on quantum mechanics:
+    - Tom Banks, for instance, does exactly this in the last
+      paragraph of his blog entry.
+
+- There's nothing particularly quantum-mechanical about
+  instrumentalism. It has a long and rather sorry philosophical
+  history: most contemporary philosophers of science regard it as
+  fairly conclusively refuted.
+
+- But I think it's easier to see what's wrong with it just by
+  noticing that real science isn't like this. According to
+  instrumentalism, palaeontologists talk about dinosaurs so they
+  can understand fossils, astrophysicists talk about stars so
+  they can understand photoplates, virologists talk about viruses
+  so they can understand NMR instruments, and particle physicists
+  talk about the Higgs Boson so they can understand the LHC.
+
+- In each case, it's quite clear that instrumentalism is the
+  wrong way around. Science is not "about" experiments; science
+  is about the world, and experiments are part of its toolkit.

@@ -1,0 +1,113 @@
+### oracle UTL_FILE
+    - The UTL_FILE package lets your PL/SQL programs read and
+      write operating system (OS) text files. It provides
+      a restricted version of standard OS stream file
+      input/output (I/O).
+
+### Summary
+    CREATE OR REPLACE DIRECTORY development_dir AS '/dev/source';
+    CREATE OR REPLACE DIRECTORY test_dir AS '/test/source';
+
+    GRANT READ ON DIRECTORY development_dir TO senior_developer;
+
+    -- you must specify an upper-case string!!!
+    -- 'TEST_DIR'
+    handle := UTL_FILE.FOPEN (location => 'TEST_DIR',
+                              filename => 'myfile.txt',
+                              open_mode => 'r');
+
+### UTL_FILE_DIR
+    - Although not officially deprecated, the UTL_FILE_DIR
+      approach is rarely used with the latest versions of the
+      Oracle database. Using directories is much easier and more
+      flexible.
+
+
+### Background
+    - Prior to Oracle9i Release 2, whenever you opened a file,
+    you needed to specify the location of the file.
+    Such hardcoding of values should be avoided:
+        - What if the location of the data changes??
+        - How many programs will you have to go fix??
+        - How many times will you have to make such changes??
+
+### One approach
+    - A better approach is to declare a variable or constant and
+      assign it the value of the location.
+
+    - If you do this in a package, the constant can be referenced
+      by any program in a schema with EXECUTE privilege on the
+      package:
+
+        PACKAGE accts_pkg
+        IS
+            c_data_location
+            CONSTANT VARCHAR2(30) := '/accts/data';
+        ...
+        END accts_pkg;
+
+        DECLARE
+            file_id UTL_FILE.file_type;
+        BEGIN
+            file_id := UTL_FILE.fopen (accts_pkg.c_data_location, 'trans.dat', 'R');
+        END;
+
+
+### Better approach
+    - That’s great. But even better is to use a SCHEMA-LEVEL
+      OBJECT that you define in the database: a directory.
+
+    - This type of object is also used with BFILEs, so you can
+      “consolidate” file location references in both DBMS_LOB and
+      UTL_FILE by using directories.
+
+    - Before creating a directory, the DBA must grant you 'CREATE
+      ANY DIRECTORY' privileges.
+
+    - CREATE OR REPLACE DIRECTORY development_dir AS '/dev/source';
+    - CREATE OR REPLACE DIRECTORY test_dir AS '/test/source';
+
+### Remember!
+    - Regarding directories and UTL_FILE:
+    - Oracle does not validate the location specified.
+    - When you specify the name of a directory. It simply
+      associates that string with the named database object.
+
+    - When you specify the name of a directory in a call to, say,
+      UTL_FILE.FOPEN, it is not treated as the name of an Oracle
+      object; it is treated as a case-sensitive string.
+
+    - If you do not specify the name as an uppercase string, the
+      operation will fail!!!
+
+    - ### WORKS:
+        handle := UTL_FILE.FOPEN (location => `'TEST_DIR'`,
+                                  filename => 'myfile.txt',
+                                  open_mode => 'r');
+
+    - ### FAILS:
+        handle := UTL_FILE.FOPEN (location => `test_dir`,
+                                  filename => 'myfile.txt',
+                                  open_mode => 'r');
+
+    - Once created, grant permissions to the folder:
+        - GRANT READ ON DIRECTORY development_dir TO
+          senior_developer;
+
+    - Finally, you can query the contents of ALL_DIRECTORIES to
+      determine which directories are available in the current
+      schema.
+
+    - You can also leverage this view to build some useful
+      utilities. Here is one example: print a list of all the
+      directories defined in the database:
+
+    /* File on web: fileIO.pkg */
+    PROCEDURE fileIO.gen_utl_file_dir_entries
+    IS
+    BEGIN
+        FOR rec IN (SELECT * FROM all_directories)
+        LOOP
+            DBMS_OUTPUT.PUT_LINE ('UTL_FILE_DIR = ' || rec.directory_path);
+            END LOOP;
+    END gen_utl_file_dir_entries;

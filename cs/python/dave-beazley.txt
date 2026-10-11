@@ -1,0 +1,55 @@
+Dave Safari Books Online Course
+
+
+notice XML and "findall"
+
+```
+from xml.etree.ElementTree import XML
+doc = XML(data)
+
+for pt in doc.findall('.//pt'):
+    print(pt.text)
+```
+
+
+
+
+every python operation (`+, *, etc`) is implemented by a "magic method" `(__iter__, __getitem__ etc)`
+
+so if you create a "custom container" class, you must implement __len__ etc....
+
+context manager "with"
+    its a way of enclosing a block of statements where you're using some kind of resource
+
+for attributes: "dot" operator on an object acutally accesses an underlying dictionary!!! myobj.__dict__
+for methods: "dot" operator accesses a __dict__ on the class definition object Holding.__dict__['const'](h)
+h.const()
+
+lock down the "dot" .... @property
+
+"descriptor" (eg get, set) implements the dot
+
+check this: getattr
+
+how does python create an object?
+behind the scene theres a "Type" class that int, float, etc are based on
+but user-defined classes are also based on "Type"
+So the "Point" class is actually created like this behind the scenes:
+Point = type(name, bases, methods)
+where name is a string
+bases is a tuple (object, )
+methods is a dictionary {'__init__': __init__ ... ... )
+
+intercept a step in class creation
+Class Point(metaclass=mytype):
+    def __init__ ... ...
+
+metaclasses -> to "supervise" child classes
+
+customise iteration:
+ use a "generator" FUNCTION (def countdown) or use a "generator" comprehension
+yield yield yield!
+
+coroutines
+
+alternate constructors: @classmethods

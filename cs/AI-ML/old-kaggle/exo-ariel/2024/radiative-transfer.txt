@@ -1,0 +1,74 @@
+
+### RADIATIVE TRANSFER Models
+
+    - Context: EXOPLANET transmission spectroscopy.
+
+    - Radiative transfer model: 
+        - set of equations and physical principles to describe
+          the propagation of radiation (light) through an
+          exoplanet's atmosphere. 
+
+    - These models simulate how starlight:
+        - passes through the atmosphere, 
+        - gets absorbed, scattered, 
+        - and re-emitted at different wavelengths, 
+
+    - It's key to understanding the planet's atmospheric
+      composition, structure, etc.
+
+### Key Elements:
+
+    1. Atmospheric Composition: 
+        - The model accounts for the gases, clouds, or hazes
+          present in the atmosphere. 
+        - Different gases absorb and scatter light at specific
+          wavelengths, creating unique signatures (spectral
+          features).
+
+    2. Absorption and Scattering: 
+        - Radiative transfer models incorporate absorption by
+          molecules (such as water vapor, methane, carbon
+          dioxide, etc.) and scattering by molecules or aerosols. 
+        - These processes are wavelength-dependent, and the model
+          calculates how much light is transmitted, absorbed, or
+          scattered as it passes through the atmosphere.
+
+    3. Temperature Profile: 
+        - The atmospheric temperature affects how molecules
+          absorb and emit radiation. 
+        - Most radiative transfer models use vertical temperature
+          profiles (how temperature changes with altitude) to
+          calculate how light interacts with the atmosphere at
+          different layers.
+
+    4. Geometry: 
+        - In transmission spectroscopy, the model typically
+          focuses on the star's light passing through the limb
+          (edge) of the exoplanet as it transits in front of the
+          star. 
+        - The path length of the starlight through the atmosphere
+          changes with ALTITUDE, and radiative transfer models
+          account for this geometry to simulate the transmission
+          spectrum accurately.
+
+    5. Emission and Reflection: 
+        - Though primarily focused on transmission (light passing
+          through the atmosphere), some radiative transfer models
+          also consider the thermal emission from the planet
+          itself or reflected starlight, which is crucial for
+          understanding the full radiative budget of the system.
+
+### Purpose in Transmission Spectroscopy: 
+    - Radiative transfer models are used to generate THEORETICAL
+      SPECTRA of exoplanet atmospheres by solving for the
+      intensity of light as a function of wavelength. 
+        - When comparing these MODEL SPECTRA to observed
+          transmission spectra (measured during a planetary
+          transit), scientists can infer details about the
+          planet's atmosphere, such as the presence of specific
+          molecules, pressure, temperature, and cloud layers.
+
+- These models are vital for interpreting the absorption features
+  in starlight that's filtered through the exoplanet's
+  atmosphere. It reveals crucial information about the planet's
+  composition and structure.

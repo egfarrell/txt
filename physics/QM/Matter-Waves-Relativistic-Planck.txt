@@ -1,0 +1,100 @@
+# Setup
+    - Fascinating: the WAVE NATURE of matter can be inferred by
+      making Planck’s relation `relativistically invariant`.
+    - Einstein could have seen this years earlier, but didn’t.
+
+### Aside: 
+    - See note "### deBroglie, Planck" in
+        - $MY_NOTES/physics/phy-tips.md
+
+### Planck's Relation
+
+- First, Planck originally gave us:
+- `E = h f` or 
+- `E = ℏ ω` (`ω = 2πf`)
+
+- This was introduced for light, and later Einstein used it for
+  photons. At this stage, `f` is just “the frequency of something
+  oscillating”, and there's no SPATIAL WAVE built in yet.
+
+### Now add SR
+- In SR, energy and momentum are not independent.
+- They form a 4-vector: `(E/c, p)`
+
+- Under Lorentz transformations, energy and momentum mix with
+  each other.
+- So if `E` is proportional to `ω` (Planck's relation), 
+    - then `p` had better be proportional to something that mixes
+      with `ω` in the same way.
+
+- This is the key inference.
+
+### What mixes with frequency?
+- Note: In relativity, time and space mix.
+
+- The time component of a WAVE `4-vector` is:
+    - the frequency `ω` 
+- The spatial components of that wave `4-vector` is:
+    - the wavevector `k`.
+- The WAVE 4-vector is: 
+    - `(ω/c, k)`
+
+
+- This transforms under Lorentz transformations in exactly the
+  same way as `(E/c, p)`
+
+Aside: My note:
+    - Now we've two vectors:
+        - Energy momentum 4-vector: `(E/c, p)`
+        - Wave 4-vector:            `(ω/c, k)`
+
+
+- If you want `E = ℏω` to be true in all inertial frames, not
+  just one, consistency almost forces `p = ℏk`
+
+- That’s the whole punchline. You don’t assume matter waves — you are led to them.
+
+### de Broglie wavelength
+
+- Physically this means once you accept `p = ℏ k` you immediately
+- get a wavelength:
+    - `λ = 2π/|k| = h/p`
+    - (note: wave vector `k = 2π/λ`)
+
+- That is exactly the de Broglie wavelength. 
+- A free particle with definite momentum must be associated with
+  a spatial oscillation.
+
+- At this point, “wave nature of matter” is no longer an extra
+  hypothesis — it is the relativistically consistent extension of
+  Planck’s relation.
+
+### Why Einstein didn’t do it
+- (and why deBroglie did)
+
+- Einstein already had:
+    - `E = ℏω`
+    - + relativistic energy–momentum relations
+
+- But he mainly thought of `E = ℏω` as a property of LIGHT
+  quanta, not a universal rule for all particles.
+
+- deBroglie made the conceptual leap:
+    - if photons obey this correspondence between particle
+      quantities and wave quantities, why not electrons, atoms,
+      anything with energy and momentum?
+
+- Once you impose Lorentz covariance, the leap becomes almost unavoidable.
+
+### Summary
+
+- At undergrad level, the logic can be summarized as:
+    - Planck: `E = ℏ ω`
+    - Relativity: `(E, p)` must transform together
+    - Waves: `(ω, k)` transform together
+    - Consistency → `p = ℏ k`
+    - Therefore matter with momentum `p` has wavelength `λ = h/p`
+
+- So the wave nature of matter is not guessed — it drops out of
+  demanding that Planck’s relation make sense in relativistic
+  spacetime.

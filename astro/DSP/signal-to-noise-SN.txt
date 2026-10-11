@@ -1,0 +1,157 @@
+- "signal-to-noise ratio" (S/N or SNR) is a fundamental concept
+  that measures the quality of a signal by: 
+    - comparing its strength (the "signal") 
+    - to the level of background noise or unwanted variation
+      ("noise").
+
+- Understanding this ratio is crucial for interpreting
+  astronomical observations, where faint signals are often buried
+  in noise.
+
+### 1. Basic Idea of Signal and Noise
+   - Signal:
+        - a signal could be the light coming from a star, galaxy,
+          or other celestial object. This light is collected by
+          a telescope and detected by an instrument like a camera
+          or spectrograph.
+
+   - Noise:
+        - Noise represents random fluctuations or interference
+          that obscure the true signal. It can come from various
+          sources, including:
+        - Instrumental noise
+            - (e.g., imperfections in the detector).
+        - Sky noise
+            - (e.g., light pollution, atmospheric turbulence).
+        - Statistical noise
+            - (e.g., photon shot noise, which arises from the
+              random arrival of photons).
+
+
+- The signal is the information we care about, the noise is the
+  unwanted variation that makes it harder to accurately detect
+  and measure that signal.
+
+### 2. Mathematical Definition
+    - The signal-to-noise ratio (S/N) is defined mathematically as:
+    - `S/N = S / N,`
+        - where:
+            - `S` is the strength of the signal.
+            - `N` is the strength of the noise.
+
+- The ratio indicates how strong the signal is compared to the
+  noise. A higher S/N means a clearer detection, while a lower
+  S/N means the signal is harder to distinguish from the noise.
+
+### 3. First Principles: Counting Photons
+    - In astronomy, most detectors are photon-counting devices,
+      meaning they count individual photons (particles of light)
+      that hit the detector. The signal strength is proportional
+      to the number of photons detected from the source, while
+      noise usually has several components.
+
+    - Signal (S):
+        - The signal is proportional to the number of photons
+          detected from the astronomical object (let's denote
+          this as N_signal). If a detector collects N_signal
+          photons over a given period of time, the signal
+          strength is related to this photon count.
+
+    - Noise (N):
+        - The noise comes from multiple sources; in many cases,
+          a key contributor is _Poisson noise_ (or _shot noise_),
+          which arises because photons arrive randomly. The
+          Poisson noise is proportional to the square root of the
+          total number of photons detected, including both the
+          signal photons and background photons (`N_total`).
+          Mathematically, the noise due to 'shot noise' is
+          roughly `N_total^1/2`.
+
+- In cases where the noise is dominated by shot noise, the
+  signal-to-noise ratio becomes:
+
+    - S/N ≈ N_signal / sqrt(N_total).
+
+    - If N_total ≈ N_signal (i.e., the background noise is negligible), this reduces to:
+
+        - S/N ≈ sqrt(N_signal).
+
+    - This means the signal-to-noise ratio improves as the square
+      root of the number of detected photons. This relationship
+      is important because it tells us that to increase the `S/N`
+      by a factor of 2, we need to detect 4 times as many
+      photons, which often means longer exposure times.
+
+
+### 4. Other Noise Sources
+
+- In addition to Poisson noise, there are other forms of noise
+  contributing to the overall noise level:
+
+   - Readout noise:
+        - Comes from the electronic process of READING out the
+          signal from a detector.
+   - Dark current:
+        - Noise due to THERMAL electrons in the detector, even in
+          the absence of light.
+   - Sky background:
+        - Caused by the brightness of the night sky, which is
+          very significant for ground-based observations.
+
+- Each of these sources adds to the total noise, and they often
+  combine in quadrature. For example, if you have multiple
+  independent sources of noise (`N1`, `N2`, ..., `Nn`), the total
+  noise `N_total` is:
+
+    - N_total = sqrt(N1^2 + N2^2 + ... + Nn^2).
+
+### 5. Improving S/N ratio
+    - Several strategies can improve it:
+        - Longer exposures:
+            - Collecting more photons over a longer time
+              increases the signal and, due to Poisson
+              statistics, also increases the noise. However, the
+              signal increases faster than the noise, improving
+              the S/N.
+        - Better instruments:
+            - Reducing the contribution of instrumental noise
+              (e.g., readout noise or dark current) can improve
+              the S/N.
+        - Larger telescopes:
+            - A larger telescope collects more light, increasing
+              the number of detected photons and thereby
+              improving the signal.
+
+### 6. Example in Astronomical Observations
+    - Imagine you are observing a faint star. The signal you get
+      from the star depends on the number of photons the
+      telescope collects.
+    - Let's say the telescope collects `1000 photons` from the
+      star in a given exposure time. The Poisson noise in this
+      case would be `sqrt(1000) ≈ 31.6 photons`.
+
+    - Therefore, the S/N would be:
+            - `S/N = 1000 / 31.6`
+            - `≈ 31.6`
+
+    - This is a relatively good S/N ratio, meaning the star's
+      signal is clear relative to the background noise.
+
+    - If you extend the exposure time and collect `4000` photons,
+      the noise would increase to   `sqrt(4000) ≈ 63.2 photons`,
+      and the S/N would now be:
+        - `S/N = 4000 / 63.2`
+        - `≈ 63.2`
+        - which is twice as good.
+
+### Summary
+    - The S/N ratio is a critical metric in astronomy to assess
+      the quality of observational data.
+    - It is based on counting photons from celestial objects and
+      comparing their signal strength to random fluctuations
+      (noise).
+    - A high S/N means a strong, clear signal, while a low S/N
+      suggests the data is overwhelmed by noise.
+    - Increasing S/N typically requires longer observations,
+      better equipment, or more advanced noise reduction
+      techniques.

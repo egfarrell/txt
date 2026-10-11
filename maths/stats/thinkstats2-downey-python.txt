@@ -1,0 +1,125 @@
+### Key
+    - probability: the study of random events
+    - statistics: using data samples to support claims about populations
+
+### probability v stats
+    - can be considered inverse to each other. In probability
+      theory we consider some underlying process which has some
+      randomness or uncertainty modelled by random variables, and
+      we figure out what happens. In statistics we observe
+      something that has happened, and try to figure out what
+      underlying process would explain those observations.
+
+    - ...so statistics observes what happens in the physical
+      world, theorizes about the underlying process, and then
+      having found the process, uses it in the sense of
+      probability to predict what will happen next?
+
+    - ...probability theory is mainly concerned with the
+      deductive part, statistics with the inductive part of
+      modelling processes with uncertainty.
+
+### tools of statistics
+    - data collection: we will use data from a large national
+      survey that was designed explicitly with the goal of
+      generating statistically valid inferences about the US
+      population.
+
+    - descriptive statistics: we will generate statistics that
+      summarize the data concisely, and evaluate different ways
+      to visualize data.
+
+    - exploratory data analysis: we will look for patterns,
+      differences, and other features that address the questions
+      we are interested in. at the same time we will check for
+      inconsistencies and identify limitations.
+
+    - hypothesis testing: where we see apparent effects, like
+      a difference between two groups, we will evaluate whether
+      the effect is real, or whether it might have happened by
+      chance.
+
+    - estimation: we will use data from a sample to estimate
+      characteristics of the general population.
+
+# study types
+    - cross-sectional: at a single moment in time
+    - longitudinal: repeatedly over a period of time
+
+
+# terminology
+    - respondents: people who take part in the study
+    - cohort: a group of respondents
+    - representative: every member of population has equal chance
+      of participating in the study.
+    - over-sampling: if not representative and certain
+      respondents recruited at rates higher than their
+      representation in the population
+        - disadvantage: not easy to draw conclusions about
+          general population
+
+# recodes
+    - Values calculated using the raw data. Recodes are often
+      based on logic that checks data consistancy.
+    - In general, its better to use recodes than the raw data
+      itself. e.g. 'prglngth' is a recode based on 'wksgest'
+      (weeks of gestation)
+
+
+### "sample" variance
+    - normal formula for variance but with (n-1) in the
+      denominator. Estimate the variance in a population using
+      a sample.
+
+### distributions
+    - Summary statistics are concise, but dangerous, because they
+      obscure the data. An alternative is to look at the
+      distribution of the data, which describes how often each
+      value appears.
+
+    - Most common representation of distribution: histogram
+      A graph that shows the frequency or probability of each
+      value.
+
+    - In this context, frequency means the number of times
+      a value appears in a dataset — it has nothing to do with
+      the pitch of a sound or tuning of a radio signal.
+
+    - A probability is a frequency expressed as a fraction of the
+      sample size `n`.
+
+
+### Statistical Bias: Are first babies born later?
+
+    - Casual conversations often report this effect. In casual
+      conversation, there is nothing wrong with anecdotes, so
+      I don’t mean to pick on the people I quoted.
+
+    - But we might want evidence that is more persuasive and an
+      answer that is more reliable. By those standards, anecdotal
+      evidence usually fails, because:
+
+    - # small number of observations:
+        - If the gestation period is longer for first babies, the
+          difference is probably small compared to the natural
+          variation. In that case, we might have to compare
+          a large number of pregnancies to be sure that
+          a difference exists.
+
+
+    - # selection bias:
+        - People who join a discussion of this question might be
+          interested because their first babies were late. In
+          that case the process of selecting data would bias the
+          results.
+
+
+    - # confirmation bias:
+        - People who believe the claim might be more likely to
+          contribute examples that confirm it. People who doubt
+          the claim are more likely to cite counterexamples.
+
+    - # inaccuracy:
+        - Anecdotes are often personal stories, and often
+          misremembered, misrepresented, repeated inaccurately,
+          etc.

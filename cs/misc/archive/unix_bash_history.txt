@@ -1,0 +1,48 @@
+unix bash history
+
+Writing out to ~/.bash_history only when you log out is no good,
+because what if your terminal dies unexpectedly? You'll lose the
+history of any commands you typed there. This can happen if you kill a
+bash process, or if the machine powers off unexpectedly, or who knows
+what. So, to manually update your ~/.bash_history immediatety, at any
+time you can use this:
+
+history -a
+
+which tells bash to append to ~/.bash_history any commands in the
+current terminal that aren't already in there.
+
+The second behavior of bash I dislike is that it reads from the
+history file only at login, mostly because I always have many
+terminals open at once. I run a command from one terminal, then run a
+different command from another, switch back and forth etc. These
+terminals may be appending all kinds of nice new lines to the end of
+my ~/.bash_history, but because bash never reads the history file
+except at login, they're never accessible except in the terminal where
+the command was originally run. Luckily you can force bash to re-read
+your history file via:
+
+history -n
+
+which tells bash to read any new lines that have appeared in
+~/.bash_history since the last time it looked.
+
+Now, say I type a really long command, e.g. a huge long Perl one-
+liner, in one terminal, and I want to then access and run that command
+in another terminal via bash history. With bash's default behavior, I
+can't do it; each terminal has its own history. What I could do is
+type history -a in the first terminal, and history -n in the second
+terminal; then it'd work wonderfully.
+
+I find the thought of having to do that all the time tedious, though.
+Better would be for bash to do it for me every time I run a command.
+You can accomplish this by putting something like this in ~/.bashrc:
+
+export PROMPT_COMMAND="history -a; history -n"
+
+PROMPT_COMMAND lets you specify a command that bash will run every
+time it shows you a fresh command prompt, i.e. every time you run a
+command and the command finishes. So the above tells bash to read any
+new lines that have appeared in ~/.bash_history since the last time it
+read it, and then append the last-run command from this terminal to
+~/.bash_history, every time you run a command.

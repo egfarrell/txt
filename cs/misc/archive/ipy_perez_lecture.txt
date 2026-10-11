@@ -1,0 +1,86 @@
+ipy perez lecture
+%%
+	cell magic
+
+%timeit
+%%bash
+%%file
+
+pasting
+	>>> and ... are ignored
+	
+xmode
+	context > default, good balance
+	plain > python normal debug info
+	verbose > all variable values, expensive
+	
+%connect_info
+	3 frontends connect to same kernel
+	
+run
+	-t timeit
+	-p profile
+	-d debugger
+	
+%debug
+	after exception drop into ipdb
+
+%gui
+	qt
+	can have a gui window and your session together
+		
+embed
+	from ipython import embed
+	deep inside some code base
+	starts ip shell inside shell process
+	
+ipython notebook --script
+	create .py files each time you save the notebook
+	
+repr method
+	a=10
+	a
+	10
+	how did you get 10 out of this object?
+	the repr (representation) method
+	
+display()
+	show representation
+	
+image
+	i=image(path, embed = true)
+	also [youtube] object!
+
+pandas dataframe
+	set html repr option to true
+	df
+	dataframe will display as html table
+	
+configure help
+	ipython --help-all | grep ...
+	
+where is ipython
+	ipython locate
+	
+runtime configuration
+	%config
+	
+create your own magic
+	ip= get_ipython
+	ip.register magic function
+	
+
+
+
+	
+
+
+	
+
+	
+	
+
+
+
+
+

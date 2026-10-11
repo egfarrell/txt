@@ -1,0 +1,120 @@
+
+
+- Living Review
+- https://link.springer.com/article/10.12942/lrr-2013-1
+- $MY_BOOKS/Astro/BH/Abramowicz-Fragile-Accretion-Living-Review-2013.pdf
+
+
+- $MY_IMAGES/astro/bh-accretion/types-of-acc-disks.jpg
+
+
+Destinations:
+    - 01 Quasars
+    - 02 Microquasars, Stellar-mass BH's
+    - 03 Event Horizon
+    - 04 Ergosphere
+    - 05 Marginally Stable Orbit (ISCO)
+    - 06 Angular Momentum Transport & energy Dissipation
+    - 07 Radiative Process & Radiative Transfer
+    - 08 Thick Disk 
+    - 09 Thin Disk 
+    - 10 Slim Disk  <--- (Wlodek says doesnt correspond to reality)
+    - 11 Advection-Dominated Accretion Flow (ADAF) 
+    - 12 Stability 
+    - 13 Oscillation 
+    - 14 Jets 
+
+
+
+
+- `h = H/R`                     relative thickness (scale height)
+- `ṁ = 0.1 Ṁc^2 / L_Edd`        dimensionless accretion rate
+- `τ`                           optical depth
+- `q = Q_adv / Q_rad`           importance of advection (`Q` represents energy flux)
+- `β = P_gas/(P_gas + P_rad)`   importance of radiation pressure
+- `r_in`                        location of inner edge, 
+- `η`                           accretion efficiency 
+
+
+
+### Numerical simulations good:
+    - for extending analytic work: treats nonlinear perturbations
+      and higher order coupling terms, 
+    - when finding analytic solutions is hard: eg. highly time
+      variable cases or those wtih little symmetry 
+
+
+### 03 Event Horizon etc
+    - 04 Ergosphere
+    - 05 Marginally Stable Orbit (ISCO)
+
+    Definitions:
+    - EVENT HORIZON: 
+        - radius inside of which escape from the black hole is
+          not possible;
+    - ERGOSPHERE: 
+        - radius inside of which negative energy states are
+          possible (giving rise to the potentiality of tapping
+          the energy of the black hole)
+    - MARGINALLY STABLE ORBIT (ISCO):
+        - radius inside of which free circular orbital motion is
+          not possible;
+
+
+    - Our main question is: Could accretion theory unambiguously
+      prove the existence of the event horizon, ergosphere, and
+      ISCO using current or future observations?
+
+    - In realistic astrophysical situations with BH's (esp.
+      quasars and microquasars), the BH itself is uncharged, and
+      the gravity of the accretion disk is almost negligible. 
+    - This means the spacetime metric `g_μν` is given by the Kerr
+      metric, determined by 2 parameters: 
+        - total mass `M*`
+        - total angular momentum `J*`
+
+### Two different standards of “rotational rest”: 
+    - Zero Angular Velocity Observer (ZAVO)  (`Ω = 0`)
+    - Zero Angular MOMENTUM Observer (ZAMO), (`ℓ = 0`)
+        - The 2 frames rotate wrt each other with the
+          frame-dragging angular velocity `ω`
+
+
+### The Paczyński-Wiita potential 
+
+- Two Temperatures
+    - Sometimes we consider a two temperature fluid. (Different
+      temperatures and molecular weights): 
+    - ions
+        - temperature `Ti` and molecular weight `μi` of ions 
+    - electrons
+        - temperature `Te` and molecular weight `μe`
+
+
+- As mentioned in Section 1, the viscosity in astrophysical
+  accretion disks cannot come from ordinary molecular viscosity,
+  as it is orders of magnitude _too weak_ to explain
+  observations. 
+- Instead, the source of stresses in the disk is likely
+  turbulence driven by the magneto-rotational instability (MRI,
+  described in Section 8.2).
+
+
+
+### Shakura-Sunyaev “alpha viscosity”
+    - ... the Shakura-Sunyaev “alpha viscosity” prescription
+      still finds application today. It is an ad hoc assumption
+      based on dimensional arguments. Shakura and Sunyaev
+      realized that if the source of viscosity in accretion disks
+      is turbulence, then the kinematic viscosity coefficient
+      `ν_*` has the form, `ν_* = l_0 v_0`
+
+
+- In most BH accretion disks, it's reasonable to assume ideal
+  MHD, whereby the conductivity is infinite, and consequently the
+  magnetic diffusivity is zero. 
+- Whenever this is true, magnetic field lines are effectively
+  frozen into the fluid. 
+- A corollary to this is that parcels of fluid are restricted to
+  moving along field lines, like “beads” on a wire. In ideal MHD,
+  the Faraday tensor obeys the homogeneous Maxwell’s equation 

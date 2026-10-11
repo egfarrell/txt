@@ -1,0 +1,346 @@
+### Lucas math philosophy intro
+    - $MY_NOTES/physics/metaphysics/John-Lucas.txt
+
+    - I hope this book will be read by students, many of whom
+      will have to write papers of their own.
+    - I therefore give the headings of argument they need to
+      consider. It is not just kindness on my part.
+        - Philosophy is not simply a set of doctrines that can be
+          learned, but an activity, a thinking through problems,
+          trying to clarify the issues, groping towards
+          solutions, feeling the force of objections, and finally
+          coming up with the _least bad answer_ available.
+
+    - Although answers are important, and the ones in this book
+      the best I can think of, they make sense only in the
+      context of the questions being asked.
+
+    - Each reader needs to ask them afresh, and in articulating
+      his own answers, will formulate them differently from what
+      is offered here. But if these notes help towards informed
+      disagreement, I shall be content.
+
+
+### Numbers (Chapters 4, 5, 6 and 11)
+    - Need to distinguish different sorts of numbers:
+        - whole numbers,
+        - fractions,
+        - negative numbers,
+        - real numbers,
+        - complex numbers,
+        - transfinite numbers,
+        - vectors.
+    - Usually quaternions and tensors are not reckoned to be
+      numbers, nor {T , T}. But it is not clear why.
+
+    - Three Approaches:
+        1. `Cardinal`:
+            - Answers to question ‘How many?’;
+            - None, One, Two, Three, ......
+
+        2. `Ordinal`:
+            - Place in a list;
+            - First, Second, Third, ......
+
+        3. `Abstract`:
+            - Symbols defined by formal rules;
+            - 0, 1, 2, 3,…, 10, 11,…, 20,…1024,…, 1, 000, 000,
+              000, 000, 000…1010
+
+
+### I Cardinal Approach
+	- Chief exponents: Frege, Russell
+
+    - The Cardinal Approach sees
+        - a) the Natural Numbers as answers to question ‘How
+          many?’, so must be of a logical shape to fit into
+          quotifiers
+        - b) the Natural Numbers as able to stand on their own
+          and be talked about, so are self-subsistent objects
+          which do not have to be defined only contextually
+
+	Merits
+        1. Locates mathematics on conceptual map
+        2. Explicates numerical quotifiers in first-order logic
+        3. Can explicate numbers in terms of set theory
+
+	Demerits
+        3a) Set theory inconsistent or complicated
+        3b) Which Sets? (§4.7)
+        3c) Requires counting at meta-level
+        4. Fails ordinally (§4.7, p.113)
+
+
+### II Ordinal Approach
+	- Chief exponents: Dedekind, Cantor, [Peano], Kronecker
+
+    - Merits
+        1. Gives systematic account
+        2. Explicates ‘and so on’
+        3. Offers definitions of (Dedekind)-infinite and -finite
+        4. Adequate for all reasonable arithmetic
+
+    Demerits
+        1. Fails to distinguish Counting Numbers from other
+           progressions of order-type : 101, 102, 103,…
+        2. Fails Cardinally M
+        3. Dedekind uses set (system) theory: Peano needs
+           second-order logic, or else fails to characterize the
+           natural numbers monomorphically (§6.3)
+
+
+### III Abstract Approach
+    - Chief Exponents: Peano, all modern treatments
+    - Merits
+        1. Axiomatic
+        2. Clear and intuitive
+        3. Focuses attention on Fifth Postulate (Principle of
+        Recursive Reasoning)
+    - Demerits
+        1. Does not give explicit _definition_ of ‘natural
+        number’, ‘nought’, or ‘successor’
+        2. Fails to characterize the natural numbers
+        `monomorphically` (§6.3) in first-order logic
+            - GPT: Here monomorphically means in a way that
+              ensures there is essentially _only one structure_
+              (up to isomorphism) that satisfies the definition.
+            - So when it says the axiomatic approach "fails to
+              characterize the natural numbers monomorphically"
+              in first-order logic, it's pointing to a famous
+              limitation:
+                - In first-order logic, the Peano axioms _do not
+                  uniquely_ define the natural numbers.
+                - More precisely:
+                    - First-order Peano arithmetic allows for
+                      non-standard models — strange versions of
+                      the natural numbers that include extra,
+                      non-natural elements.
+                    - These models still satisfy all the axioms,
+                      but they aren’t what we usually mean by
+                      "the natural numbers".
+            - To characterize the natural numbers
+              monomorphically, you'd need:
+                - A theory where all models of the axioms are
+                  isomorphic to the standard natural numbers
+                  (i.e., they all "look" the same structurally).
+                - This typically requires _second-order logic_,
+                  where quantifiers can range over sets of
+                  numbers, not just individual numbers.
+                - So, in plain terms: the axiomatic approach in
+                  first-order logic can't pin down the natural
+                  numbers exactly—there are too many possible
+                  interpretations. Hence, it doesn't define them
+                  monomorphically.
+
+### Math schools
+    - Schools Note: Separating the philosophy of Mathematics into
+      separate schools is artificial.
+    - The different schools of thought distinguished below
+      interpenetrate one another, and most thinkers adopt
+      elements from several different tendencies of thought.
+      I do. And at the end I offer my own verdict, to enable the
+      reader to know where I stand, and where he disagrees with
+      me.
+
+### I Empiricism
+	- (§1.1– §1.3, §2.4, §14.1)
+	- Chief exponents: Protagoras, Mill, Gillies, Kitcher
+	- Chief critics: Plato, Frege
+
+    - Brief reading: J.S.Mill, A System of Logic, London, 1843,
+      Book II, chs. 5 & 6, Book III, ch.24
+
+    - Criticized: G.Frege, The Foundations J.L.Austin, Oxford,
+      1950, §7 of Arithmetic, 1884, tr.
+
+    - Further reading:
+        - D.A.Gillies, Frege, Dedekind, and Peano on the
+          Foundations of Arithmetic, Assen, 1982, chs. 3 & 4.
+        - C.G.Hempel. “Geometry and Physical Science”, American
+          Mathematical Monthly, 52, 1945; reprinted in H.Feigl
+          and Wilfrid Sellars,
+        - Readings in Philosophical Analysis, New York, 1949,
+          pp.238– 249.
+        - Philip Kitcher, The Nature of Mathematical Knowledge,
+          New York, 1983.
+
+### II Platonism
+    - (Chapters One and Fifteen)
+    - Chief exponents: Plato, Gödel, Hardy, most working
+      mathematicians.
+    - Chief critics: Plato, Intuitionists, Formalists, North
+      American Naturalists, most modern philosophers
+
+    - Need to distinguish Ontological Platonism (Do mathematical
+      objects really exist?) from Epistemological Platonism (Do
+      we see the truth of mathematics with the “eye of the
+      mind”?)
+
+    - Brief reading:
+        - Roger Penrose, The Emperor’s New Mind, Oxford, 1989,
+          pp.112– 116;
+        - or, with more consideration of mathematical
+          implications, P.Bernays, “Sur la Platonisme dans les
+          mathématiques”, L’Enseignment Mathématique, 34, 1935,
+          pp.52– 69; tr. in Paul Benacerraf and Hilary Putnam,
+          eds. The Philosophy of Mathematics, 2nd ed., Cambridge,
+          1983, pp.258– 271.
+        - Criticized by S.F.Barker, “Realism as a Philosophy of
+          Mathematics”, in J.J.Buloff, ed., Foundations of
+          Mathematics, Berlin, 1969, pp.1– 9.
+
+    - Demerits: Ontologically extravagant, Epistemologically
+      simpliste, Unsatisfactory account of necessity.
+
+### III Formalism
+    - (Chapter Three, §14.7)
+    - Chief exponents: Hilbert, von Neumann, most modern
+      mathematicians in their actual practice.
+    - Chief critics: Plato, Frege, Poincaré
+
+    - Brief reading: J.von Neumann, “The Formalist Foundations of
+      Mathematics, tr. from Erkenntnis, 1931, in Paul Benacerraf
+      and Hilary Putnam, eds. The Philosophy of Mathematics, 2nd
+      ed., Cambridge, 1983, pp.61– 65;
+        - reprinted in A.H.Taub, John von Neumann Collected
+          Works, New York, 1961, vol.2.
+
+    - Need to distinguish different varieties of Formalism:
+        1. ontological formalism
+        2. method of formalisation
+        3. epistemological formalism
+        4. study of formal systems
+
+    Arguments in Favour:
+        1. Anti-metaphysical: nominalism, reductionism,
+           instrumentalism, nothing-buttery
+        2. Accounts for Cogency
+        3. Quest for Certainty
+        4. Logical Geography of Scotland (§3.5)
+        5. Different axiomatizations of geometry and set theory
+        6. Enables us to abstract and see general patterns: a)
+           Projective Geometry: Duality b) Theory of Groups c)
+           Topology and S4
+        7. Analogy with Logical Positivist view of Science
+           [Hilbert]
+
+    Arguments Against:
+        1. Vacuous
+        2. Fails to account for truth of mathematics
+        3. Fails to account for depth/significance of
+           mathematical theorems
+        4. Circular: assumes at the meta-level what it proves at
+           the object level; [Poincaré]
+        5. Non-monomorphism of First-order Peano Arithmetic
+        6. Gödel’s Theorem
+        7. Application Problem
+
+
+### IV Logicism
+    - (§3.7, Chapters Four, Five, Six and Thirteen, §15.8, §15.9)
+    - Chief exponents:
+        - Plato, Frege, Russell, Whitehead, Carnap, Bostock
+    - Chief critics:
+        - Quine, Benacerraf and most modern philosophers of
+          mathematics
+
+    - Brief reading: Rudolf Carnap, “Logicist Foundations of
+      Mathematics”, tr. from Erkenntnis, 1931, in Paul Benacerraf
+      and Hilary Putnam, eds. The Philosophy of Mathematics, 2nd
+      ed., Cambridge, 1983, pp.41– 52.
+
+    - Need to distinguish `Strong Logicism` from weaker
+      varieties.
+
+    - Merits - Logicism Explains:
+        1. mathematical knowledge not based on observation
+        2. emphasis on proof and need for incontrovertibility
+        3. generality and many applications of mathematics
+        4. difficulty in specifying the objects of mathematics
+
+    Difficulties of Logicism:
+        - No clear idea of what logic is.
+            - Does it include set theory?
+            - Is it just first-order logic?
+        - Are logical inferences just those in accordance with
+          a formal rule of Inference?
+
+
+
+### V Intuitionism
+    - (§7.4– §7.7)
+    - Chief exponents: Brower, Beth, Heyting, Dummett, Bishop.
+    - Ignored or silently dismissed by most working
+      mathemticians.
+
+    - Reading: M.A.E.Dummett, “The Philosophical Basis of
+      Inuitionistic Logic”, in H.E.Rose and J.C.Shepherdson,
+      eds., Proceedings of the Logic Colloquium, Bristol, 1973,
+      North-Holland, pp.5– 40;
+        - reprinted in Paul Benacerraf and Hilary Putnam, eds.,
+          The Philosophy of Mathematics, 2nd ed., Cambridge,
+          1983, pp.97– 129.
+        - or M.A.E.Dummett, Elements of Intuitionism, Oxford,
+          1977, ch.1, pp.9– 31.
+
+    - Merits:
+        1. Cheap ontologically; no need to postulate abstract
+        Mathematics exists in the mind of mathematicians
+        entities.
+        2. Welcome emphasis on communal aspect of mathematical
+        thought
+
+    - Demerits:
+        - 1. Fails to distinguish proof from what is proved
+            - 1.1 Can understand theorem without understanding
+              proof
+            - 1.2 Different proofs of same theorem
+        - 2. Implausible rejection of arguments by Dilemma and by
+          Reductio ad Absurdum
+        - 3. Elimination Rules as important as Introduction Rules
+        - 4. Vague boundary of what is effectively computable:
+            - Is effective Procedure any more intelligible to
+              a non-Intuitionist than a platonist concept of
+              truth conditions is to an Intuitionist?
+                - [Alexander George, “The Conveyability of
+                  Intuitionism”, Journal of Philosophical Logic,
+                  17, 1988, pp.133– 156.]
+
+
+
+### Verdict on various philosophies
+
+    - Epistemological Platonists
+        - were right to see the _a-priori nature of mathematical
+          knowledge_, but failed to account for its
+          compellingness; they also were right to stress the
+          importance of pattern recognition, but wrong to think
+          we all invariably agreed what the patterns were.
+
+    - Intuitionists
+        - were right to insist that `mathematical proofs` have
+          a unique and special character, different from other
+          kinds of reasoning.
+        - However, like the Platonists, they were mistaken in
+          assuming that everyone agrees on what counts as a valid
+          proof.
+        - They failed to explain what gives mathematical proofs
+          their universal and compelling force—something we must
+          recognize even when people initially disagree.
+
+    - Formalists
+        - were right to see the importance of casting proofs into
+          incontrovertible form, and therefore expressed as
+          step-by-step derivations, but wrong to think it was
+          simply a matter of following out formal derivations
+          from axioms merely postulated.
+
+    - Logicists
+        - were right to base mathematical concepts on logic and
+          to aim at justifying axioms through logical reasoning.
+        - However, traditional Logicists went too far by
+          insisting on explicit definitions for everything,
+          limiting justification to what could be derived as
+          analytic theorems in first-order logic, and treating
+          logic as purely monologic—ignoring its dialogical and
+          interactive aspects.

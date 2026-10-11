@@ -1,0 +1,127 @@
+### Villar - Generative models as priors for signal denoising
+    - https://www.youtube.com/watch?v=5I13v5JkPZU
+    - The talk is an introduction to the use of generative models
+      as priors for signal processing and denoising, emphasizing
+      their power and flexibility. Traditionally, signal
+      processing relied on exploiting inherent structures in
+      data, such as the sparsity of natural images in the wavelet
+      domain. This approach was foundational in techniques like
+      compressed sensing, which leveraged sparsity to reconstruct
+      signals using fewer measurements. However, with the rise of
+      deep learning, the focus has shifted towards learning these
+      structures from data rather than relying solely on
+      predefined assumptions.
+
+    - The speaker posits that generative models, such as
+      generative adversarial networks (GANs) and autoencoders,
+      are the modern equivalent of sparsity in this domain. These
+      models allow for the generation of realistic data based on
+      learned low-dimensional representations, even under noisy
+      conditions. The speaker highlights various architectures
+      used to train generative models, including GANs, where
+      a generator and discriminator compete to improve the
+      model’s output. One significant challenge in GANs is "mode
+      collapse," where the generator fails to capture the full
+      diversity of the data.
+
+    - The speaker provides examples of how generative models
+      outperform classical denoising methods, such as
+      wavelet-based and total variation approaches. For instance,
+      in a handwritten digit dataset, using a generative model
+      for denoising produced much clearer results compared to
+      traditional techniques. Even without explicit models for
+      noise, generative models can achieve effective denoising by
+      learning from noisy data.
+
+    - The talk also touches on theoretical aspects, discussing
+      results from the compressed sensing literature that
+      demonstrate the advantages of deep learning-based
+      approaches. The speaker references recent work showing that
+      random neural networks can simplify optimization problems
+      in signal processing. The application of these models in
+      real-world problems, such as astronomical signal
+      processing, is also explored, where generative models are
+      used to simulate realistic spectra from stars.
+
+    - In conclusion, the speaker highlights that generative
+      models are powerful tools for signal processing, offering
+      new ways to handle noisy data and reconstruct signals, with
+      significant applications across fields.
+
+### Various techniques
+    - https://www.youtube.com/watch?v=nycofP8G5us
+    - $MY_IMAGES/astro/exo/signal-denoising-techniques.jpg
+
+    - Signal denoising techniques refer to methods and algorithms
+      used to remove or reduce unwanted noise from a signal while
+      preserving the desired signal components. Noise can be
+      introduced during signal acquisition, transmission, or
+      processing, and it can degrade the quality and accuracy of
+      the signal. The goal of signal denoising is to enhance the
+      signal-to-noise ratio (SNR) and improve the clarity and
+      reliability of the desired signal.
+
+    - Signal denoising techniques can be applied to various
+      signals, including audio signals, image signals, time
+      series data, etc. The choice of denoising technique depends
+      on the noise characteristics, the nature of the signal, and
+      the application's specific requirements. Some commonly used
+      signal-denoising techniques include:
+
+    1. Filtering Techniques: Filtering involves the application
+       of linear or nonlinear filters to attenuate or remove
+       noise components from the signal. Low-pass, high-pass,
+       band-pass, and notch filters are commonly used depending
+       on the frequency characteristics of the noise and the
+       desired signal.
+
+    2. Statistical Approaches: Statistical methods exploit the
+       statistical properties of the signal and noise to estimate
+       and separate the noise components from the desired signal.
+       These techniques often involve modeling the movement and
+       noise distributions and using statistical estimators to
+       denoise the call.
+
+    3. Wavelet-Based Techniques: Wavelet transforms decompose
+       signals into different frequency components, allowing for
+       analysis at different scales. By selectively thresholding
+       or modifying the coefficients in the wavelet domain, noise
+       components can be attenuated or removed while preserving
+       important signal features.
+
+    4. Adaptive Filtering: Adaptive filtering techniques
+       dynamically adjust the filter parameters based on signal
+       and noise characteristics. These methods can adapt to
+       signal and noise statistics changes, making them effective
+       in situations where the noise characteristics are not
+       known in advance.
+
+    5. Sparse Representations: Sparse representation techniques
+       exploit that many real-world signals can be represented
+       using only a few significant coefficients. Promoting
+       sparsity can suppress noise, and the desired signal can be
+       reconstructed from the sparse representation.
+
+    6. Machine Learning-Based Approaches: Machine learning
+       algorithms, such as deep neural networks, can be trained
+       to learn the mapping between noisy and clean signals.
+       These models are trained on large datasets and can
+       effectively denoise signals by leveraging the known
+       representations and patterns.
+
+    7. Time-Frequency Analysis: Time-frequency analysis
+       techniques, such as the short-time Fourier transform
+       (STFT) or the spectrogram, provide a joint time-frequency
+       signal representation. By analyzing the time-varying
+       frequency content of the movement, noise components can be
+       identified and suppressed.
+
+    - It's important to note that the choice of denoising
+      technique depends on the specific noise characteristics,
+      the signal, and the application requirements. Multiple
+      methods may often be employed to achieve optimal denoising
+      results.
+
+### Links
+    - Denoising Autoencoder Explained: | Deep Learning          https://www.youtube.com/watch?v=r6f1azwAgRU
+    - Villar - Generative models as priors for signal denoising https://www.youtube.com/watch?v=5I13v5JkPZU

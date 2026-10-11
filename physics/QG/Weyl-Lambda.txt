@@ -1,0 +1,210 @@
+
+### Aside: Lanczos
+    - In 1949, Lanczos showed that the Weyl tensor, which plays
+      a fundamental role in GR, can be obtained from a tensor
+      potential now called the Lanczos potential.
+
+# Chasing the Weyl quote
+
+- The ringing defense of `Λ` is Eddington, not Weyl
+    - The line “I would as soon think of reverting to Newtonian
+      theory as of dropping the cosmical constant” is by
+      Eddington in his book "The Expanding Universe" (early 1930s
+      popular exposition). 
+    - In the same discussion he praises Weyl’s unification
+      attempt and says `Λ` has “a secure position” in Weyl’s
+      theory. 
+    - You can see both the sentence and the surrounding paragraph
+      in a digitized copy; it explicitly attributes the line to
+      Eddington and, in a footnote, cites Weyl for a related
+      remark (see below). 
+
+- The “cosmological factor … part of ours from the very
+  beginning” is Weyl, in Space–Time–Matter Eddington’s page
+  includes a footnote: 
+    - “The cosmological factor which Einstein added to his theory
+      later is part of ours from the very beginning.” and cites
+      Raum. Zeit. Materie, p. 297 (English edition). 
+    - That is: Eddington is quoting (or paraphrasing) Weyl’s
+      Space–Time–Matter to say `Λ` arises naturally in Weyl’s
+      geometric framework rather than being appended ad hoc. 
+    - So your snippet’s second quotation traces to Weyl via
+      Eddington’s citation. 
+
+- About “`λ` intrinsically dependent on the EM potential”
+
+- Here the waters get murkier. Weyl’s 1918 unification builds EM
+  into geometry through a 1-form (often written `Qμ` or `Aμ`)
+  that controls scale (length) transport, and he identifies this
+  with the EM potential—hence the famous gauge idea. 
+
+- That is a genuine gravity–EM link in Weyl geometry. But I still
+  don’t see a primary-source where Weyl says `λ` depends on the
+  electromagnetic potential. What I do see is:
+    - Eddington saying Weyl’s theory “unifies the gravitational
+      and electromagnetic fields” and that `Λ` is essential in
+      that theory.
+    - Later literature (modern Weyl-geometric gravity) where
+      effective Λ-like terms can emerge from the Weyl field or
+      scale sector—consistent with the spirit of Weyl’s program,
+      but not the same as “Weyl himself defined λ(Aμ)”. 
+    - For historical overview and Weyl’s stance on cosmology
+      around the 1923 edition of Raum–Zeit–Materie, Stanford
+      Encyclopedia of Philosophy is handy. 
+
+    - How this maps to your note and Farrell’s book
+        - Your note likely conflates two nearby things in
+          Farrell’s narrative:
+        - Eddington’s emphatic pro-Λ line (the Newtonian quip),
+          which is definitely his.
+        - Weyl’s claim (quoted via Eddington’s footnote) that the
+          “cosmological factor” is built into his framework from
+          the start.
+        - Together, plus a popular-science gloss on Weyl’s
+          EM–gravity unification, can read like “λ is tied to the
+          EM potential.” Historically stricter reading: Weyl
+          geometrizes EM and gravity together; `Λ` has a natural
+          place there; but `λ(Aμ)` as an explicit functional
+          dependence isn’t a standard Weyl quote. 
+
+- Actionable pointers to pin it down further:
+    - Check Space–Time–Matter. Pagination varies by edition, but
+      Eddington’s note points to p. 297 in “English Editjon”;
+      scan that neighborhood for the line on the cosmological
+      factor. Google Books has a limited preview you can navigate
+      by chapter headings. Google Books
+
+- For context on Weyl’s evolving cosmology remarks (esp. the 5th
+  ed., 1923), see SEP’s Weyl entry and histories of relativistic
+  cosmology; they discuss how Weyl assessed Einstein/de Sitter
+  cosmologies and where Λ sits conceptually. 
+
+### Bottom line
+    - The `Λ-as-essential` evangelism quote is Eddington’s.
+    - The “cosmological factor … part of ours from the very
+      beginning” is Weyl (as cited by Eddington) and means
+      Λ arises naturally within Weyl’s unified geometric
+      framework.
+    - The stronger claim that `λ` is intrinsically dependent on
+      the EM potential looks like a popular-level overstatement
+      of Weyl’s geometry rather than a verbatim Weyl assertion.
+
+# More background from GPT
+
+### 1. What Weyl’s 1918 theory was
+
+- Weyl’s ambition in 1918 was to unify gravitation and EM by
+  generalising Riemannian geometry to what became called Weyl
+  geometry (or “purely infinitesimal geometry”).
+
+- In standard Riemannian geometry (used in Einstein’s GR), the
+  metric `g_μν` defines lengths and angles, and the Levi-Civita
+  connection is metric-compatible:
+
+```
+ ∇_λ g_μν = 0
+```
+
+- Weyl replaced this by a connection in which the length of vectors under parallel transport can change:
+
+```
+∇_λ g_μν = − Q_λ g_μν
+```
+
+Here `Q_λ` is a new 1-form (often identified with the electromagnetic potential `A_λ`).
+
+- Weyl identified this 1-form `Q_μ` with the electromagnetic
+  potential. The “gauge” (scale) invariance he introduced
+  corresponded to electromagnetic gauge freedom: 
+    - changing the length scale at each point corresponds to
+      a gauge transformation `A_μ → A_μ + ∂_μφ`.
+
+- The idea: the length-scale of measuring rods might change from
+  point to point, and that change is governed by the same
+  potential that gives the electromagnetic field. Thus the EM
+  field becomes part of spacetime geometry.
+
+- This unified gravitation and electromagnetism conceptually,
+  though it ran into Einstein’s famous “second-clock effect”
+  objection (physical clocks’ rates would depend on their
+  history), which made the proposal untenable experimentally.
+
+
+### 2. The cosmological constant (Λ or λ) in Weyl’s theory
+
+- Einstein added Λ to his field equations in 1917 to allow
+  a static universe. Weyl’s 1918 geometry naturally includes
+  extra geometric terms, and later researchers noticed that its
+  structure can produce an effective cosmological-constant-like
+  term even without adding one by hand.
+
+- In Weyl geometry, local scale transformations and the field
+  `Q_μ` can generate contributions resembling a cosmological
+  constant in the gravitational field equations. Modern
+  “Weyl-geometric gravity” theories explicitly show that such
+  Λ-type terms can arise from the Weyl field itself.
+
+- However, I could not find a primary Weyl text that says
+  literally “λ is dependent on the electromagnetic potential.”
+  That exact dependence is more a modern reinterpretation than
+  a phrase from Weyl’s own 1918–1920 writings.
+
+### 3. Comparing to your note snippet
+
+- Your note said:
+
+- “The cosmological factor which Einstein added to his theory is part of ours from the very beginning.”
+
+- That is indeed something Eddington later quoted from Weyl’s Space-Time-Matter. Weyl meant that what Einstein had to add by hand (Λ) appears naturally in his more general geometry.
+
+- The next line in your note,
+    - “lambda was a factor that was intrinsically dependent on
+      the electromagnetic potential,”
+    - is a stronger statement. It reflects the spirit of Weyl’s
+      geometry—where the electromagnetic potential is built into
+      spacetime structure—but not a direct Weyl quotation.
+      Historically, `λ(A_μ)` as an explicit functional dependence
+      isn’t found in his papers.
+
+### 4. Why this isn’t in standard textbooks
+
+    - Weyl’s 1918 model predicted physically unobserved effects
+      (length and time scales depending on past history), so it
+      was quickly abandoned in that form.
+    - Einstein’s `Λ` served a very different purpose (cosmic
+      staticity).
+    - Later quantum field and gauge theory developments subsumed
+      Weyl’s geometric unification into other frameworks.
+    - Thus the idea that Λ is driven by electromagnetism is
+      historically marginal and survives mostly in
+      modified-gravity research, not in mainstream GR or
+      cosmology.
+
+### 5. Modern reinterpretations
+
+- Weyl’s geometry keeps resurfacing. In scalar-tensor and
+  conformal gravity theories, the Weyl vector or associated
+  scalar field can produce effective cosmological-constant terms.
+
+- Recent papers on Weyl-geometric gravity or Geometric Proca–Weyl
+  fields show models where the vacuum energy (`Λ_eff`) arises
+  from the dynamics of the Weyl field. In these, the cosmological
+  constant is emergent rather than inserted. This is conceptually
+  aligned with Weyl’s original unification spirit, though not
+  historically identical to his equations.
+
+### 6. Working conclusion
+
+- Weyl genuinely unified gravity and electromagnetism through geometry:
+    -   `∇_λ g_μν = − Q_λ g_μν`, with `Q_μ ≡ electromagnetic potential`
+
+- The cosmological constant appears naturally in his framework,
+  so he could claim Λ was “there from the beginning.”
+
+• The assertion that λ explicitly depends on `A_μ` is a later or
+interpretive embellishment, not a clear Weyl statement.
+
+- • To verify details, check Raum-Zeit-Materie (especially around
+  p. 297 of the English edition cited by Eddington) and
+  Eddington’s The Expanding Universe, which contains the “I would
+  as soon think of reverting to Newtonian theory…” line.

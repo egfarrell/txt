@@ -1,0 +1,458 @@
+### Links
+    - Part 2: Youtube Playlist https://www.youtube.com/playlist?list=PLfYUBJiXbdtRUvTUYpLdfHHp9a58nWVXP
+    - Old Part 2: 2019         https://course19.fast.ai/part2
+    - local videos:            $MY_VIDEOS/fastai-part-02-playlist.m3u
+
+
+
+### Contents
+    - Lesson-09   Stable Diffusion
+    - Lesson-10   SD Deep Dive & Tensors
+    - Lesson-11   Matrix multiplication
+    - Lesson-12   Mean shift clustering
+    - Lesson-13   Backpropagation and MLP (Multi-layer Perceptron)
+    - Lesson-14   Backpropagation
+    - Lesson-15   CNNs / Autoencoders
+    - Lesson-16   Learner framework
+    - Lesson-17   Initialization / normalization
+    - Lesson-18   Accelerated SGD ResNets
+    - Lesson-19   DDPM (Denoising Diffusion Probabilistic Models) and Dropout 
+    - Lesson-20   Mixed Precision
+    - Lesson-21   DDIM
+    - Lesson-22   Karras et al 2022
+    - Lesson-23   Super resolution
+    - Lesson-24   Attention and transformers
+    - Lesson-25   Latent diffusion
+
+
+### Lesson-09 Stable Diffusion
+    - Lesson 9  SD           https://youtu.be/_7rMfsA24Ls
+    - Lesson 9A SD Deep dive https://www.youtube.com/watch?v=844LY0vYQhc
+    - Lesson 9B SD Maths     https://youtu.be/mYpjmM7O-30
+    - Chat                   https://forums.fast.ai/t/lesson-9-official-topic/100562
+    - 0:00  Intro
+    - 0:06  This course vs DALL-E 2
+    - 0:10  Take full advantage of this course
+    - 0:12  Cloud computing options
+    - 0:14  Getting started (Github, notebooks, resources)
+    - 0:20  Diffusion notebook from Hugging Face
+    - 0:26  How stable diffusion works
+    - 0:30  Diffusion notebook (guidance scale, negative prompts, init image, textual inversion, Dreambooth)
+    - 0:45  Stable diffusion explained
+    - 0:53  Math notation correction
+    - 1:14  Create an NN to predict noise in an image
+    - 1:27  Working with images and data compression with autoencoders
+    - 1:40  latents that will be input into Unet
+    - 1:43  Adding text as one-hot encoded input to noise and drawing (aka guidance)
+    - 1:47  Represent numbers vs text embeddings with CLIP encoders
+    - 1:53  CLIP encoder loss function
+    - 2:00  Caveat regarding "time steps"
+    - 2:07  Why not all in one step?
+
+
+### Lesson-10 Diving Deeper
+    - Video https://www.youtube.com/watch?v=6StU6UtZEbU
+    - Chat  https://forums.fast.ai/t/lesson-10-official-topic/101171
+    - 00:00  Intro
+    - 00:00  Student’s work from past week
+    - 00:06  Recap Lesson 9
+    - 00:12  Paper: “Progressive Distillation Fast Sampling Diffusion Models” & “Distillation of Guided Diffusion Models”
+    - 00:26  Paper: “Imagic: Text-Based Real Image Editing with Diffusion Models”
+    - 00:33  Stable diffusion pipeline code walkthrough
+    - 00:41  Scaling random noise to ensure variance
+    - 00:50  Homework
+    - 00:53  What are the foundations of stable diffusion? Notebook deep dive
+    - 01:06  ---------------------------------------------
+    - 01:06  Numpy arrays and PyTorch Tensors from scratch
+    - 01:28  History of tensor programming
+    - 01:37  Random numbers from scratch
+    - 01:42  TIP: on random numbers via process forking
+
+
+
+### Lesson-11 Matrix multiplication
+    - Video https://www.youtube.com/watch?v=Tf-8F5q8Xww
+    - Chat  https://forums.fast.ai/t/lesson-11-official-topic/101508
+    - 0:00  Student’s work
+    - 0:13  Workflow: reading an academic paper
+    - 0:16  Read DiffEdit paper
+    - 0:26  Understanding equations in the “Background” section
+    - 0:46  3 steps of DiffEdit
+    - 0:51  Homework
+    - 0:59  Matrix multiplication from scratch
+    - 1:08  Speed improvement with 'Numba' library
+    - 1:19  Frobenius norm
+    - 1:25  Broadcasting with scalars and matrices
+    - 1:39  Broadcasting rules
+    - 1:42  Matrix multiplication with broadcasting
+
+
+
+### Lesson-12 Mean shift clustering
+    - Video https://youtu.be/_xIzPbCgutY
+    - Chat  https://forums.fast.ai/t/lesson-12-official-topic/101702
+    - 0:00  CLIP Interrogator (Gradio app)
+    - 0:10  Matrix multiplication refresher
+    - 0:11  Einstein summation
+    - 0:18  Matrix multiplication: on the GPU
+    - 0:33  Clustering (Meanshift)
+    - 0:37  Create Synthetic Centroids
+    - 0:41  Mean shift algorithm
+    - 0:47  Plotting gaussian kernels
+    - 0:53  Calc distances between points
+    - 0:57  Calc distances between points (illustrated)
+    - 1:04  Get weights and weighted average of all points
+    - 1:11  Matplotlib animations
+    - 1:15  GPUs: Accelerate our work
+    - 1:37  Calculus refresher
+
+    - Amazing insight: 1:21:50
+        - Jeremy manipulates dimensions to make the operation
+          possible!
+
+### Lesson-13 Backpropagation & MLP
+    - Video https://youtu.be/vGdB4eI4KBs
+    - Chat  https://forums.fast.ai/t/lesson-13-official-topic/101876
+    - 0:00    Intro
+    - 2:54    Linear models & rectified lines (ReLU) diagram
+    - 10:15   Multi-Layer Perceptron (MLP) from scratch
+    - 18:15   Loss function from scratch - Mean Squared Error (MSE)
+    - 23:14   diagram: Gradients and backpropagation
+    - 31:30   Matrix calculus resources
+    - 33:27   code: Gradients and backpropagation
+    - 38:15   Chain rule visualized
+    - 49:08   Python debugger
+    - 1:00    Code: Refactoring
+
+
+
+### Lesson-14 Backpropagation
+    - Video https://youtu.be/veqj0DsZSXU
+    - Chat  https://forums.fast.ai/t/lesson-14-official-topic/102018
+    - 0:00   Introduction
+    - 0:00   Code Review and math from Lesson 13
+    - 0:07   f-Strings
+    - 0:10   Re-running the Notebook - Run All Above
+    - 0:11   Starting code refactoring: torch.nn
+    - 0:12   Generator Object
+    - 0:13   Class MLP: Inheriting from nn.Module
+    - 0:17   Checking the more flexible refactored MLP
+    - 0:17   Creating our own `nn.Module`
+    - 0:21   Using PyTorch’s nn.Module
+    - 0:23   Using PyTorch’s nn.ModuleList
+    - 0:24   reduce()
+    - 0:26   PyThorch’s nn.Sequential
+    - 0:27   Optimizer
+    - 0:29   PyTorch’ optim and get_model()
+    - 0:30   Dataset
+    - 0:33   DataLoader
+    - 0:35   Random sampling, batch size, collation
+    - 0:40   What does collate do?
+    - 0:45   fastcore’s store_attr()
+    - 0:46   Multiprocessing DataLoader
+    - 0:50   PyTorch’s Multiprocessing DataLoader
+    - 0:53   Validation set
+    - 0:56   Hugging Face Datasets, Fashion-MNIST
+    - 1:01   collate function
+    - 1:04   transforms function
+    - 1:06   decorators
+    - 1:09   itemgetter
+    - 1:11   PyTorch’s default_collate
+    - 1:15   Creating a Python library with nbdev
+    - 1:18   Plotting images
+    - 1:21   `**kwargs` and fastcore’s delegates
+    - 1:28   Computer Science concepts with Python: callbacks
+    - 1:33   Lambdas and partials
+    - 1:36   Callbacks as callable classes
+    - 1:37   Multiple callback funcs; `*args` and `**kwargs`
+    - 1:43   `_dunder_` thingies
+    - 1:47   Wrap-up
+
+
+### Lesson-15 CNNs-Autoencoders
+    - Video https://youtu.be/0Hi2r4CaHvk
+    - Chat  https://forums.fast.ai/t/lesson-15-official-topic/102322
+    - 0:00   Intro
+    - 0:00   What are convolutions?
+    - 0:06   Visualizing convolutions
+    - 0:08   Creating a convolution with MNIST
+    - 0:17   Speeding up the matrix multiplication when calculating convolutions
+    - 0:22   Pythorch’s F.unfold and F.conv2d
+    - 0:27   Padding and Stride
+    - 0:31   Creating the ConvNet
+    - 0:38   Convolution Arithmetic. NCHW and NHWC
+    - 0:39   Parameters in MLP vs CNN
+    - 0:42   CNNs and image size
+    - 0:43   Receptive fields
+    - 0:46   Convolutions in Excel: conv-example.xlsx
+    - 0:56   Autoencoders
+    - 1:00   Speeding up fitting and improving accuracy
+    - 1:05   Reminding what an auto-encoder is
+    - 1:15   Creating a Learner
+    - 1:22   Metric class
+    - 1:28   Decorator with callbacks
+    - 1:32   Python recap
+
+
+### Lesson-16 The Learner framework
+    - Video https://youtu.be/9YZaYjRKuEc
+    - Chat  https://forums.fast.ai/t/lesson-16-official-topic/102472
+    - 0:00   The Learner
+    - 0:02   Basic Callback Learner
+    - 0:07   Exceptions
+    - 0:08   Train with Callbacks
+    - 0:12   Metrics class: accuracy and loss
+    - 0:14   Device Callback
+    - 0:17   Metrics Callback
+    - 0:24   Flexible Learner: @contextmanager
+    - 0:31   Flexible Learner: Train Callback
+    - 0:32   Flexible Learner: Progress Callback (fastprogress)
+    - 0:37   TrainingLearner subclass, adding momentum
+    - 0:43   Learning Rate Finder Callback
+    - 0:49   Learning Rate scheduler
+    - 0:53   Notebook 10
+    - 0:54   set_seed function
+    - 0:55   Fashion-MNIST Baseline
+    - 0:57   - Look inside the Model
+    - 1:02   PyThorch hooks
+    - 1:08   Hooks class / context managers
+    - 1:12   Dummy context manager, Dummy list
+    - 1:14   Colorful Dimension: histogram
+
+
+### Lesson-17 Initialization / normalization
+    - Video https://youtu.be/vGsc_NbU7xc
+    - Chat https://forums.fast.ai/t/lesson-17-official-topic/102602
+    - 0:00   Changes to previous lesson
+    - 0:07   90% accuracy on Fashion-MNIST
+    - 0:11   Jupyter notebooks and GPU memory
+    - 0:14   Autoencoder or Classifier
+    - 0:16   Why mean of `0` and sd of `1`?
+    - 0:21   What do we mean by variance?
+    - 0:25   Covariance
+    - 0:29   Xavier Glorot initialization
+    - 0:35   ReLU and Kaiming He initialization
+    - 0:36   Applying an init function
+    - 0:38   Learning rate finder and MomentumLearner
+    - 0:40   stride-2 convolutions?
+    - 0:42   Normalizing input matrix
+    - 0:46   85% accuracy
+    - 0:47   Using with_transform to modify input data
+    - 0:48   ReLU and 0 mean
+    - 0:52   Changing the activation function
+    - 0:55   87% accuracy and nice training graphs
+    - 0:57   “All You Need Is a Good Init”: Layer-wise Sequential Unit Variance
+    - 1:03   Batch Normalization, Intro
+    - 1:06   Layer Normalization
+    - 1:15   Batch Normalization
+    - 1:23   Batch Norm, Layer Norm, Instance Norm and Group Norm
+    - 1:26   Putting all together: Towards 90%
+    - 1:28   Accelerated SGD
+    - 1:33   Regularization
+    - 1:37   Momentum
+    - 1:45   Batch size
+    - 1:46   RMSProp
+    - 1:51   Adam: RMSProp plus Momentum
+
+
+
+
+### Lesson-18 Accelerated SGD & ResNets
+    - Video https://youtu.be/nlVOG2Nzc3k
+    - Chat https://forums.fast.ai/t/lesson-18-official-topic/102750
+    - 0:00   Accelerated SGD done in Excel
+    - 0:01   Basic SGD
+    - 0:10   Momentum
+    - 0:15   RMSProp
+    - 0:16   Adam
+    - 0:20   Adam with annealing tab
+    - 0:23   Learning Rate Annealing in PyTorch
+    - 0:26   How PyTorch’s Optimizers work?
+    - 0:32   How schedulers work?
+    - 0:34   Plotting learning rates from a scheduler
+    - 0:36   Creating a scheduler callback
+    - 0:40   Training with Cosine Annealing
+    - 0:42   1-Cycle learning rate
+    - 0:48   HasLearnCB - passing learn as parameter
+    - 0:51   Changes from last week / compare GitHub
+    - 0:52   fastcore’s patch to the Learner with lr_find
+    - 0:55   New fit() parameters
+    - 0:56   ResNets
+    - 1:17   Training the ResNet
+    - 1:21   ResNets from timm
+    - 1:23   Going wider
+    - 1:26   Pooling
+    - 1:31   Reducing number of parameters and megaFLOPS
+    - 1:35   Training for longer
+    - 1:38   Data Augmentation
+    - 1:45   Test Time Augmentation
+    - 1:49   Random Erasing
+    - 1:55   Random Copying
+    - 1:58   Ensembling
+    - 2:00   Wrap-up / homework
+
+
+### Lesson-19 DDPM and Dropout
+    - Video https://youtu.be/ItyO8s48zdc
+    - Chat https://forums.fast.ai/t/lesson-19-official-topic/103201
+    - 0:00   Intro and quick update from last lesson
+    - 0:02   Dropout
+    - 0:12   DDPM from scratch - Paper and math
+    - 0:40   DDPM - The code
+    - 0:41   U-Net Neural Network
+    - 0:43   Training process
+    - 0:56   Inheriting from miniai TrainCB
+    - 1:00   Using the trained model: denoising with “sample” method
+    - 1:09   Inference: generating some images
+    - 1:14   Notebook 17: Jeremy’s exploration of Tanishq’s notebook
+    - 1:24   Make it faster: Initialization
+    - 1:27   Make it faster: Mixed Precision
+    - 1:29   Change of plans: Mixed Precision goes to Lesson 20
+
+
+### Lesson-20 Mixed Precision
+    - Video https://youtu.be/PdNHkTLU2oQ
+    - Chat https://forums.fast.ai/t/lesson-20-official-topic/103322
+    - 0:00   noisify inside a collation function
+    - 0:02   MixedPrecision callback
+    - 0:05   Getting the benefits from MixedPrecision
+    - 0:07   HuggingFace Accelerator
+    - 0:13   Sneaky trick: keep GPUs busy with MultDL
+    - 0:16   Homework and experiment ideas
+    - 0:20   Style Transfer notebook
+    - 0:24   Optimizing an image
+    - 0:30   Loss function and Learner
+    - 0:32   Viewing progress: ImageLogCB
+    - 0:35   Extracting features from a pre-trained network, VGG16
+    - 0:40   Normalizing the image
+    - 0:44   Intermediate representations, features
+    - 0:46   (Hooks homework)
+    - 0:47   Optimizing an image with Content Loss
+    - 0:56   Style Loss with Gram Matrix
+    - 0:59   “A Neural Algorithm of Artistic Style” paper
+    - 1:05   Optimizing to get the final result
+    - 1:07   Possible experiments and miniai
+    - 1:14   Neural Cellular Automata (NCA) notebook
+    - 1:19   Alexander Mordvintsev’s NCA simulation
+    - 1:21   Setting up a Neural Network
+    - 1:27   Getting into code
+    - 1:37   Training
+    - 1:42   Preview of what’s possible
+
+
+### Lesson-21 DDIM
+    - Video https://youtu.be/PXiD7ZjOKhA
+    - Chat https://forums.fast.ai/t/lesson-21-official-topic/103528
+    - 0:00   Cool demo with miniai and CIFAR-10
+    - 0:02   The notebook
+    - 0:07   Experiment tracking and W&B callback
+    - 0:16   Fitting
+    - 0:17   Comments on experiment tracking
+    - 0:20   FID and KID, metrics for generated images
+    - 0:23   FID notebook (18_fid.ipynb)
+    - 0:31   Get the FID from an existing model
+    - 0:37   Covariance matrix
+    - 0:42   Matrix square root
+    - 0:46   Why it is called Fréchet Inception Distance (FID)
+    - 0:47   Some FID caveats
+    - 0:50   KID: Kernel Inception Distance
+    - 0:55   FID and KID plots
+    - 0:57   Real FID - The Inception network
+    - 1:01   Fixing (?) UNet feeding - DDPM_v3
+    - 1:08   Schedule experiments
+    - 1:14   Train DDPM_v3 and testing with FID
+    - 1:19   Denoising Difussion Implicit Models - DDIM
+    - 1:26   How does DDIM works?
+    - 1:30   Notation in Papers
+    - 1:32   DDIM paper
+    - 1:53   Wrapping up
+
+
+### Lesson-22 Karras et al (2022)
+    - Video https://youtu.be/6Bta1tXRUfM
+    - Chat https://forums.fast.ai/t/lesson-22-official-topic/103586
+    - 0:00   Intro
+    - 0:00   Cosine Schedule (22_cosine)
+    - 0:06   Sampling
+    - 0:09   Summary / Notation
+    - 0:10   Predicting noise level of noisy Fashion MNIST images
+    - 0:12   Why `.logit()` when predicting alpha bar t
+    - 0:14   Random baseline
+    - 0:16   mse_loss, why .flatten()
+    - 0:17   Model & results
+    - 0:19   Why are we trying to predict the noise level?
+    - 0:20   Training diffusion without t - first attempt
+    - 0:22   Why it isn’t working?
+    - 0:27   Debugging (summary)
+    - 0:29   Bug in ddpm - paper that cast some light on the issue
+    - 0:38   Karras (Elucidating the Design Space of Diffusion - Based Generative Models)
+    - 0:49   Picture of target images
+    - 0:52   Scaling problem - (scalings)
+    - 0:59   Training and predictions of modified model
+    - 1:03   Sampling
+    - 1:06   Sampling: Problems of composition
+    - 1:07   Sampling: Rationale for rho selection
+    - 1:09   Sampling: Denosing
+    - 1:15   Sampling: Heun’s method fid: 0.972
+    - 1:19   Sampling: LMS sampler
+    - 1:20   Kerras Summary
+    - 1:23   Comparison of different approaches
+    - 1:25   Next lessons
+
+
+### Lesson-23 Super-resolution
+    - Video https://youtu.be/z1In7QaG0fg
+    - Chat
+      https://forums.fast.ai/t/lesson-23-official-topic/103965
+    - Developed super-resolution U-Net model using Tiny Imagenet,
+      focusing on dataset creation, preprocessing, and
+      augmentation. Aim was to upscale low-resolution images.
+    - Used AdamW optimizer and mixed precision for training,
+      achieving around 60% accuracy. Compared our model's
+      performance with others on Tiny Imagenet from 'Papers with
+      Code'.
+    - Addressed limitations of CNNs for image super-resolution.
+    - Introduced `U-net`, a more effective architecture, and
+      implemented perceptual loss. This involved comparing
+      intermediate layer features of the output and target images
+      using a pre-trained classifier. Resulting U-net images were
+      sharper and closer to targets.
+    - Explored challenges in comparing different models.
+      Highlighted perceptual loss's significant improvement,
+      despite lack of a clear comparison metric. 
+    - Applied fast.ai's technique of gradually unfreezing
+      pre-trained networks. Copied weights into our model,
+      trained with initially frozen weights, leading to notable
+      loss reduction.
+        
+
+
+### Lesson-24 Attention & transformers
+    - Video https://www.youtube.com/watch?v=DH5bp6zTPB4
+    - Chat
+      https://forums.fast.ai/t/lesson-24-official-topic/104358
+    - Conclude study of unconditional stable diffusion model. 
+    - Implemented and trained it on fashion MNIST, emphasizing
+      the role of time embedding. 
+    - Explored sine/cosine embeddings, attention, self-attention,
+      and multi-headed attention in stable diffusion. 
+    - Examined `rearrange` function and transformers for vision
+      tasks. Finally, developed a conditional model by
+      integrating a label into the UNet's input, enabling
+      specific class image generation.
+
+### Lesson-25 Latent diffusion
+    - Video https://www.youtube.com/watch?v=8AgZ9jcQ9v8
+    - Chat
+      https://forums.fast.ai/t/lesson-25-official-topic/104573
+    - In the series finale, Johno demonstrates converting sounds
+      to images, then using course knowledge to generate audio.
+      He showcases an effective bird-song generator using this
+      method.
+    - Jeremy concludes "Stable diffusion from scratch,"
+      illustrating the use of variational encoder latents as
+      "pixels" in a diffusion model. He suggests an innovative
+      concept: employing latents for tasks like classification,
+      potentially leading to new methods like latents-FID,
+      latents-perceptual-loss, and advanced diffusion guidance
+      techniques.

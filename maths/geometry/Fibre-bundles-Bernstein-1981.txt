@@ -1,0 +1,131 @@
+### Books
+    - $MY_BOOKS/Physics/Maths/Geometry/Fibre-Bundles-Bernstein_1981.pdf
+
+
+
+- The article opens with a celebration of the historical
+  interplay between mathematics and physics. It sets the stage by
+  noting that the geometry Einstein needed for GR already existed
+  before him, and gauge theories similarly benefited from
+  pre-existing mathematics — specifically fiber bundles.
+
+- It introduces gauge fields: 
+    - mathematical structures that unify physical forces and
+      control how quantum mechanical states transform. 
+    - In 1954 Yang and Mills applied the gauge idea to the strong
+      nuclear force. Only much later did physicists realize these
+      fields were mathematically equivalent to connections on
+      fiber bundles.
+
+- So: Gauge fields ↔ Fiber-bundle connections.
+
+### Physics examples
+    - The authors then dive into physics examples to show why
+      this abstract language is needed.
+    - Quantum spin and the topology of bundles
+- A neutron’s spin behaves strangely:
+    - Rotate its physical orientation by `360 degrees` → the
+      quantum state changes sign
+    - Only after `720 degrees` is the state fully restored
+
+- That’s like twisting your arm with a wine glass or like walking
+  once around a Möbius strip’s edge. The physical rotation is the
+  base space; the quantum phase is the fiber. You must move twice
+  around the base to return to the same point in the fiber.
+
+- Formally, the projection rule for neutron spin precession is:
+
+- orientation angle = 2 * phase angle (mod 360 degrees)
+
+- This is a double-covering fiber bundle: the total space is like
+  a circle wrapped twice around another circle.
+
+- The neutron beam interferometer experiments (Rauch, Bonse,
+  Werner, Klein & Opat) verify that a 360-degree rotation
+  produces destructive interference (because amplitudes differ by
+  sign).
+
+- This experiment demonstrates a topological effect: the twist
+  structure of the bundle itself matters.
+
+- Curvature, parallel transport, and geometry
+
+- The article then switches focus to local structure: how to move
+  along fibers while traversing a curved base. A familiar
+  example: walk around a sphere carrying a direction arrow
+  (parallel transport). A closed loop won’t bring the arrow back
+  to its original direction; the mismatch angle gives
+  a curvature.
+
+- To formalize such “lifting" of paths, mathematicians define
+  a connection: a rule that tells which direction to move in the
+  fiber as one moves along the base.
+
+- • Flat connection → loops lift to closed loops
+
+- • Curved connection → loops lift to shifted endpoints
+
+- This is geometric fiber-bundle structure — different from the
+  purely topological spin example.
+
+- Electrons, the Aharonov-Bohm effect, and gauge fields
+
+- Now the article turns to phase-shift fields: gauge fields.
+
+- Electrons have wave phases. A magnetic field shifts phase
+  without changing energy. Classically, only the magnetic field
+  matters; quantum mechanically, the vector potential
+  A determines the phase shift.
+
+- This is the Aharonov–Bohm effect:
+
+- Electrons pass around a solenoid:
+
+- • The magnetic field B is confined inside the coil
+
+- • The vector potential A exists outside
+
+- • The interference fringes shift
+
+- Thus: the quantum phase shift depends on A, not just B.
+
+- The authors construct a fiber-bundle analogy: a truncated cone
+  capped by a dome.
+
+- • The flat cone ↔ region where B = 0
+
+- • The curved dome ↔ region with magnetic flux
+
+- • Parallel transport around it accumulates angle ↔ electron
+  phase shift
+
+- So this is the geometric aspect: curvature appears only where
+  field exists.
+
+- The final point
+
+- • Neutron rotation illustrated global topology of a bundle.
+
+- • Aharonov-Bohm illustrated local connection and curvature.
+
+- Together they show:
+
+- Quantum theory requires fiber bundles and gauge fields — not as
+  metaphors but as the right mathematical home for physical laws.
+
+- The article closes by suggesting this framework underlies
+  modern unification attempts for all fundamental forces.
+
+- A small diagram-free recap
+
+- Topology:
+
+- 2 * phase = rotation → Möbius-like double covering
+
+- Geometry:
+
+- phase shift along path = integral of A * dx
+
+- curvature = field inside solenoid
+
+- Gauge fields = connections on fiber bundles.

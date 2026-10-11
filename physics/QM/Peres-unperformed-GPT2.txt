@@ -1,0 +1,357 @@
+
+### Background: Peres paper:
+    - $MY_NOTES/physics/QM/Peres-unperformed.txt
+
+
+- Help understand this paper... specifically the final few paragraphs:
+
+Papers| July 01 1978
+Unperformed experiments have no results Available to Purchase
+Asher Peres
+Am. J. Phys. 46, 745–747 (1978)
+https://doi.org/10.1119/1.11393
+
+- This paper discusses correlations between the results of
+  measurements performed on physical systems which are widely
+  separated, but have interacted in the past.
+- It is shown that quantum correlations are stronger than
+  classical correlations.
+- This property leads to the following paradox, known as Bell’s
+  theorem:
+    - Let us assume that the outcome of an experiment performed
+      on one of the systems is independent of the choice of the
+      experiment performed on the other.
+    - Now, let us try to imagine the results of alternative
+      measurements, which could have been performed on the same
+      systems instead of the actual measurements.
+    - Then there is no way of contriving these hypothetical
+      results so that they will satisfy all the quantum
+      correlations with the results of the actual measurements.
+      However, the weaker classical correlations can be
+      satisfied.
+
+[[main part of paper missing... hope u can find it]]
+
+End section:
+
+    > There are two possible attitudes in the face of these
+    > results. One is to say that it is illegitimate to speculate
+    > about unperformed experiments. In brief “Thou shalt not
+    > think.” Physics is then free from many epistemological
+    > difficulties. For instance, it is not possible to formulate
+    > the EPR paradox. [this last part is, BTW, false]
+
+    > Alternatively, for those who cannot refrain from thinking,
+    > we can abandon the assumption that the results of
+    > measurements by A are independent of what is being done by
+    > B. In other words, we should not have written r_jα, but
+    > rather r_jα(βγδ…), where the additional subscripts γ, δ,
+    > … refer to possible experiments on anything else in the
+    > world that has been correlated (read: entangled) with the
+    > history of the j-th particle.
+
+    > The conclusion is surprising. Physicists are used to
+    > thinking in terms of isolated systems whose behavior is
+    > independent of what happens in the rest of the world
+    > (unlike social scientists, who cannot isolate the subject
+    > of their study from its environment). Bell’s theorem tells
+    > us that such a separation is impossible for individual
+    > experiments, although it still holds for averages:
+
+    `(1/N) Σ_j r_jα(βγδ…) = 0`
+
+    > and
+
+    `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+
+    > independently of γ, δ, etc. As it often happens, the
+    > subtlety of nature beggars the human imagination.
+
+
+- My question: why do these final two summation formulas induce
+  a feeling that the subtlety of nature beggars belief?
+- Is it that this: `− α · β` breaks Bell's inequality while at
+  the same time this for a single detector:
+    - `(1/N) Σ_j r_jα(βγδ…) = 0` show a zero average ie random??
+
+### GPT
+
+- First, a bit of orientation.
+
+- The paper is essentially a sharpened restatement of Bell’s
+  theorem, but with a specific philosophical `TARGET`:
+    - he's targetting the idea that unperformed measurements HAVE
+      definite results.
+    - Peres’ slogan “unperformed experiments have no results” is
+      not a throwaway line; it is the logical ESCAPE HATCH from
+      Bell’s contradiction.
+
+- What the symbols mean (informally)
+    - You have pairs of particles labeled by `j` = 1,…,N.
+    - `r_jα` is the result (`±1`) of measuring particle `A` along
+      direction `α`.
+    - `r_jβ` is the result (`±1`) of measuring particle `B` along
+      direction `β`.
+
+- In a classical hidden-variable picture, you imagine that for
+  each pair `j`, the particle already “KNOWS” what result it
+  would give for every possible measurement direction.
+    - Bell’s theorem shows you cannot assign all those
+      hypothetical results consistently while reproducing quantum
+      correlations.
+
+- Peres then says: if you insist on imagining results of
+  unperformed experiments, you must let them depend on what is
+  done elsewhere. That is why he replaces `r_jα` by `r_jα(βγδ…)`.
+- The result at `A` is allowed to depend on what measurement is
+  chosen at `B`, and even on other correlated systems in the
+  universe.
+    - That is already a dramatic conceptual shift: no ISOLATED
+      subsystems at the level of individual events.
+- Now to the two equations at the end.
+
+- First equation:
+    - `(1/N) Σ_j r_jα(βγδ…) = 0`
+    - This says: if you look only at one wing (say `A`), the
+      outcomes are completely RANDOM on average. No matter what
+      measurements are done elsewhere `(β, γ, δ, …)`, the average
+      result is zero.
+    - This is exactly what QM predicts for a singlet state:
+        - each local measurement alone is random.
+        - This guarantees no superluminal signaling. You cannot
+          detect what `B` is doing by looking only at `A`.
+
+- Second equation:
+    - `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+    - This is the quantum correlation. The average product of the
+      outcomes depends only on the relative angle between `α` and
+      `β`, and equals `−cosθ = − α · β`.
+    - This correlation violates Bell inequalities.
+    - Now here is the key point, and this is where the “subtlety”
+      comes in.
+
+- Why this is shocking
+    - Individually:
+        - Each local result looks completely random.
+        - Each local average is zero.
+        - No dependence on distant choices is visible locally.
+    - Jointly:
+        - When you compare the results from `A` and `B`, they
+          show a highly structured, ANGLE-DEPENDENT CORRELATION.
+        - This structure is too strong to be explained by any
+          assignment of PRE-EXISTING local values.
+        - Yet it does not allow signaling and does not show up in
+          any single-detector statistics.
+
+- So yes, your intuition is on the right track, but the surprise
+  is sharper than just “random locally, correlated jointly”.
+
+- The real tension is this:
+    - 1. If outcomes were predetermined and local, Bell
+      inequalities must hold.
+    - 2. If outcomes are not predetermined (unperformed
+      experiments have no results), Bell’s contradiction
+      disappears.
+    - 3. If you insist that outcomes exist for unperformed
+      measurements, you must allow them to depend on distant
+      experimental choices.
+    - 4. Even then, nature conspires so that this dependence
+      cancels out in all local averages, while surviving
+      perfectly in correlations.
+
+- That last fact is what Peres finds almost unbelievable.
+
+- Nature somehow manages to:
+    - Be nonlocal at the level of individual events,
+    - Hide this nonlocality completely from local statistics,
+    - Reveal it only when results are compared afterward.
+
+- Classically, correlations come from SHARED PROPERTIES carried
+  by the particles. Quantum mechanically, the correlations exist
+  without any underlying list of values, and without any locally
+  observable trace.
+
+- This is why he says physicists are used to isolated systems,
+  “although it still holds for averages”. The separation
+  principle survives statistically, but fails microscopically.
+
+- Why Bell’s theorem is doing the real work here
+    - Bell’s theorem tells you that you cannot have all three of
+      the following at once:
+        - Definite results for all possible measurements,
+        - Locality (no dependence on distant choices),
+        - Agreement with quantum correlations.
+        - Peres’ ending says: pick your poison.
+
+- Either:
+    1. Don’t talk about results of unperformed experiments at all
+      (his preferred view), or
+    2. Accept a deeply nonclassical, holistic universe where even
+      hypothetical results depend on everything else.
+
+- The equations show that even if you choose the second route,
+  nature still looks locally innocent while being globally
+  impossible to imitate classically.
+- That combination — strong nonclassical order emerging from
+  local randomness without contradiction or signaling — is what
+  “beggars the human imagination”.
+
+- If you want, next we can:
+    - Rewrite the argument in terms of counterfactual
+      definiteness,
+    - Compare Peres’ stance to Bohmian mechanics or Many-Worlds,
+    - Or walk through a concrete Bell-CHSH example step by step.
+
+
+### me
+    - Could u further explain two points. I don't understand the
+      logic/reasoning:
+
+    1. "If outcomes are not predetermined (UNPERFORMED
+       experiments have no results), Bell’s contradiction
+       disappears."
+        - (me: how does this statement relate to the "two
+          summation formula's" ? If at all?)
+
+    2. "The separation principle survives statistically, but
+       fails microscopically."
+        - (me: But I thought equation 2, a statistical summation
+          shows a "too strong" correlation, ie that the
+          separation principle doesn't survive statistically? Or
+          do you mean equation 1, the "first" summation formula?)
+
+
+### GPT
+
+
+### 1. Why “if outcomes are not predetermined, Bell’s contradiction disappears”
+
+- What Bell’s contradiction actually assumes
+- Bell’s theorem does not start from “quantum mechanics”. It
+  starts from a very specific classical-looking assumption:
+    - For each run `j`, and for each possible setting `α, β, γ,
+      …,` there exists a definite value `r_jα`, `r_jβ`, `r_jγ`,
+      … whether or not those measurements are performed.
+- This is exactly what Peres calls “speculating about unperformed
+  experiments”.
+
+- Once you assume that, you can derive Bell inequalities using
+  simple algebra on numbers `±1`. No quantum mechanics is needed
+  at that stage.
+
+- Where the contradiction comes from
+    - Quantum mechanics predicts correlations like
+    - `(1/N) Σ_j r_jα r_jβ = − α · β`
+    - which violate Bell inequalities.
+
+- So the contradiction is:
+    - Bell inequalities must hold if all `r_jα`, `r_jβ`, … exist
+      simultaneously.
+    - Quantum correlations violate them.
+    - That contradiction only exists because the `r`’s for
+      unperformed measurements were assumed to exist.
+
+- What happens if unperformed experiments have no results
+    - If you drop the assumption that `r_jα` exists when `α` is
+      not actually measured, then you cannot even write down the
+      Bell inequalities.
+    - Why? 
+        - Because the inequalities require you to compare, in the
+          SAME RUN `j`, values like `r_jα` and `r_jα′`, even
+          though only one of `α` or `α′` can be measured.
+
+- Peres’ key move is:
+    - No value → no algebra → no inequality → no contradiction.
+
+- How this relates to the two summation formulas
+    - The summation formulas are written only for actually performed measurements:
+    - 1. `(1/N) Σ_j r_jα(βγδ…) = 0`
+    - 2. `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+
+- These formulas never refer to `r_jα` and `r_jα′`
+  simultaneously. Each `r` appears only in a context where that
+  measurement is actually made.
+
+- So the formulas are consistent precisely because Peres has
+  refused to assign context-independent values to unperformed
+  measurements.
+
+- In short:
+    - Bell’s contradiction requires hypothetical, context-free
+      `r_jα`.
+    - Peres’ equations explicitly allow context dependence and
+      avoid assigning values where no experiment is done.
+    - That is why the contradiction disappears.
+
+### 2. “The separation principle survives statistically, but fails microscopically”
+- What “separation principle” means here
+    - Peres is not talking about “no correlations at all”.
+- He means the operational principle:
+    - What happens at `A` cannot be influenced by what is done at
+      `B`, in any observable way.
+- In modern language: no signaling.
+- Now let’s map this onto the two equations.
+
+- Equation 1: statistical separation survives
+    - `(1/N) Σ_j r_jα(βγδ…) = 0`
+    - This says:
+    - No matter what is done elsewhere `(β, γ, δ, …)`, the
+      statistics at `A` alone are unchanged.
+
+- This is exactly the separation principle at the level of
+  observable statistics. You cannot infer anything about `B` by
+  looking at `A`’s data alone.
+- So separation survives statistically.
+
+- Equation 2: why this does not contradict that
+    - `(1/N) Σ_j r_jα(βγδ…) r_jβ(αγδ…) = − α · β`
+    - This equation involves joint statistics — correlations after
+  results from `A` and `B` are brought together and compared.
+
+- The separation principle never forbids correlations. Classical
+  systems can also be correlated.
+
+- What Bell’s theorem shows is that quantum correlations are “too
+  strong” to be explained by LOCAL PRE-EXISTING properties.
+
+- So equation 2 violates local realism, not statistical
+  separation in the no-signaling sense.
+
+- Why Peres says separation fails microscopically
+    - Microscopically means: at the level of individual runs j.
+- Peres is saying:
+    - If you insist on imagining that each individual result has
+      a definite value even when unmeasured, then those values
+      must depend on distant choices.
+
+- That is why he writes `r_jα(βγδ…)`.
+- So at the microscopic (single-event, counterfactual) level:
+    - The outcome at `A` cannot be thought of as independent of
+      what happens at `B`.
+
+- But at the macroscopic (statistical, AVERAGED) level:
+    - All such dependencies cancel out in equation 1.
+    - No observable influence remains.
+- That is the sense in which separation “fails microscopically
+  but survives statistically”.
+
+- Putting it all together in one sentence
+
+- Equation 1 says:
+    - no signaling, statistical independence of marginals.
+- Equation 2 says:
+    - NONCLASSICAL correlations in joint statistics.
+
+- Bell’s theorem says: you cannot explain both with local,
+  predetermined values.
+
+- Peres’ conclusion says: therefore, unperformed experiments have
+  no results — and nature only looks separable when you average.
+
+- If you want, I can next:
+    - Show explicitly where Bell inequalities use counterfactual
+      values,
+    - Or explain how Bohmian mechanics fits (or doesn’t) with
+      Peres’ conclusion,
+    - Or connect this to contextuality (Kochen–Specker), which is
+      really lurking underneath all of this.

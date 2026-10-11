@@ -1,0 +1,426 @@
+### Appendix 1 Elementary Notions on State Spaces and Operators
+
+Introductory note: A philosopher who, during his or her regular stud-
+ies, never was acquainted with the mathematical formalism of elemen-
+tary quantum physics cannot read this book in its entirety without
+having first acquired some knowledge concerning the subject. On the
+other hand, it must be granted that the available textbooks, full as they
+are of detailed pieces of information intended for the use of professional
+physicists, are not easy reading for such a philosopher In this appendix
+that person will find at least a rough outline of the relevant material:
+an outline, yet, whose only merit is shortness. It lacks everything else,
+and foremost rigor and completeness. It does not even quite meet the
+limited goal of making reading of all the sections of this book totally
+clear and straightforward: the more advanced formalism necessary for
+describing the questions some sections deal with has the effect that they
+are fully understandable only to people already in possession of such a
+background, and I must grant they were written for physicists. As it is,
+however, this appendix still should, I think, be of use for open-minded
+philosophers, unwilling to become physicists, accepting therefore to
+miss some computational details, but anxious all the same to grasp the
+general thread of the analysis and discussion.
+A1.1 Hilbert Spaces and Kets
+As stressed in Chapter 2, a linear combination of two or more
+wave functions is also a possible wave function. Moreover, since
+Eq. (2.19) has a meaning only if the denominator in its right-
+hand side has a meaning, the wave functions that can be used
+in equations such as (2.19) must be square integrable. The set of
+all functions with this general property constitutes an abstract,
+infinite-dimensional vector space, which has the structure of a
+440A1.1 Hilbert Spaces and Kets
+441
+Hilbert space and the same, therefore, is true concerning the set
+of the possible wave functions (more precisely, because of addi-
+tional conditions of regularity and so on, this set is a subspace
+of a Hilbert space). The basic idea underlying the Dirac formal-
+ism is to abstract these quite general properties of the set of the
+possible wave functions from all the other features these func-
+tions may have (such as to be functions of such and such variables
+and so on), and to describe particles—or systems of particles—
+directly by means of abstract vectors—named "kets”—in an ab-
+stract vector space that has the structure of a Hilbert space (again,
+strictly speaking it is a subspace of a Hilbert space: but for our
+purposes in this book we can ignore such mathematically sub-
+tle points, which are important only in fields other than ours,
+and just call this space a Hilbert space). Kets are convention-
+ally designated by the symbol | >, which must be conceived of
+as being just one symbol. When it is necessary to distinguish
+several kets from one another by means of an index it is custom-
+ary to write this index inside the symbol. Examples: In >, | >
+and so on.
+Vector Spaces
+Hilbert spaces are special cases of vector spaces. Vector spaces
+are abstract sets, that is, sets defined by the combination prop-
+erties we decide to impart to their elements. In the case of vec-
+tor spaces these properties essentially are, (i) that any linear
+combination
+a₁ 11 > +a2|2> + +aplp > +
+(A1.1)
+of any number of elements (called vectors) of vector space E
+is itself an element of E (a vector), where a₁, a₂,
+,ap and so
+on are complex numbers, (ii) that there exists a special vec-
+tor 10> of E, called the null vector, such that 0|4 >= |0 > and
+| 4 > +|0 >= |4 >, for any vector 4> of E, and (iii) (distribu-
+tivity) that if y >= |1 > +|2 > + + |k> and a is a com-
+plex number then a|y >= a|1 > +a|2 > + + alk> The vec-
+tors |1 >, 12 >,
+,qare said to be (mutually) independent if
+no set of complex numbers b₁, b₂,,b, exists (short of 0,0,,0)
+such that
+b₁|1 > +b₂|2 > +
++ b₁lq >= |0 >
+(A1.2)442
+Appendix 1. Elementary Notions on State Spaces and Operators
+Otherwise, they are dependent. A consequence of this is that if
+the vectors |1>, 12>,,q> are known to be independent and
+if Eq. (A1.2) holds true, then necessarily b₁ = b₂ = = b₁ = 0.
+If a set of independent vectors |1 >, |2>, ,\n> is such that
+any vector of E can be expressed as a linear combination of
+|1 >,|2 >,,\n >, this set is called a basis of E. It can be proved
+that all the bases of a vector space E have the same number
+of elements, which is called the dimension of E. This dimen-
+sion may be finite or infinite. The dimension of the space of
+the square integrable functions of one or several variables is
+infinite.
+Scalar Products
+A Hilbert space, H, in the sense in which this expression is used
+in the text, essentially is a vector space on which the notion of a
+scalar product of two vectors has been defined. The scalar product
+of vector by vector |x > is a complex number noted < x|w >,
+with the properties that
+< y\x >=< x\y >*
+< x\(a₁|1 > +a₂ |2 > +
+=
++ a₁₂lq>)
+= a₁ <x|1 > +α12 < x\2> +
+(< 1|a₁+ < 2|a₂ + + <9|a₁)\x >
+· a* < 1\x > +a* < 2\x > +
++ a₁ <x19 >
++ a * <9/x>
+where the a; are complex numbers and a* ("star") means com-
+plex conjugation (note that wherever the bar would occur twice
+in succession it is written once only). Two vectors 14 > and
+|✗> are said to be orthogonal if <x|y >= 0. The scalar prod-
+uct < | > of a ket | 4 > by itself is a real, nonnegative num-
+ber, denoted || 4 || 2 || 4 || 15 called the norm of 4 > A basis
+{le₁ >, le₂ >, eN >} of H is said to be an orthonormal basis if
+<elek >= {k, where 5, is the Kronecker symbol, by definition
+equal to 1 if 1 = k and zero if 1 # k.
+==
+Tensor Products
+An important notion is that of the tensor product of two Hilbert
+spaces H₁ and H2. By definition, the Hilbert space H is called
+tensor product of H₁ and H₂ and noted H = H₁ & H₂, if, to any
+pair of vectors | 4(1) >Є H₁, |x(2) >Є H₂, a vector of H, denoted443
+A1.2 Operators
+|¥(1) > ©|x(2) > and called the tensor product of |ø(1) > and
+|x(2) >, is associated, this correspondence being subjected to the
+following conditions: it is linear with respect to multiplication
+by complex numbers, distributive with respect to vector addi-
+tion: (4(1) > +|¢(1) >) ® |x(2) >= |µ(1) > ®|x(2) > +|¢(1) >
+*|x(2) >, and such that once a basis has been chosen in each one
+of the two Hilbert spaces, the set of all the tensor products of
+one element of the basis of H₁ by one element of the basis of H₂
+is a basis of H, so that if the dimensions NË and N₂ of the two
+spaces are finite the dimension of their tensor product space is
+the product N₁N₂. Note that, since H is a vector space, there exist
+elements of H that are not themselves tensor products but just
+linear combinations of tensor products. For example, it can be
+shown that if H₁ (H2) is the set of the square integrable func-
+tions ƒ (¹) (x₁) [ƒ (2) (x2)] of variable x₁[x2], the set of the square
+integrable functions of the two variables x₁ and x2 is just the
+tensor product H₁ & H₂. Clearly, along with products of the type
+f(¹) (x1) f (2) (x2) this set must also contain all possible linear com-
+binations of such products.
+A1.2 Operators
+*
+Operators are symbols of operations changing a ket into another
+ket: thus, |ø >= A|¢ > means that operator A changes | > into
+4 > All the operators considered in quantum mechanics are
+linear, which means that for any kets | 4> and |¢ >, A(|4 >
++|¢ >) = A\y > +A| > A symbol such as < 4|A|¢ > means
+the scalar product of ket A| > by ket | > A is said to be
+Hermitean if y\A\¢ >=< ¢\A\y > for any | and |ø > If
+A is not Hermitean, At is said to be the adjoint of A if, for any
+|¥ > and |ø >, < ¢\A\w >* =< y\A* | 4 > An operator U such
+that the product of U and its adjoint Ut is unity is said to be
+unitary. The product of two operators A and B is defined by
+AB|µ >= A(B\µ >) for any | > (B acts first, changing the ket
+into another ket, and then A acts on this latter ket to change it
+into the final ket). Obviously, there is no reason that AB BA and
+in general this is not the case. When it is the case, A and B are
+said to commute. By definition the commutator of two operators
+A and B, noted [A,B] is the operator AB - BA. It is 0 if A and B
+commute.
+=444
+Appendix 1. Elementary Notions on State Spaces and Operators
+In general the ket A| > is not equal to the product of ket
+|4 > by a number. But, given an operator A, it is in general the
+case that some numbers a, and some kets | Wir > exist such that
+=
+Alwira, wir >
+Such an equation is called an eigenvalue equation. a; is an
+eigenvalue of A and | W₁,, > is an eigenket of A. In general, to an
+eigenvalue a; there correspond several eigenkets | Wir > a, is then
+said to be degenerate. Concerning Hermitean operators it can be
+proved:
+(i) that their eigenvalues are real numbers,
+(ii) that two eigenkets corresponding to different eigenvalues
+are necessarily orthogonal and
+(iii) that, if several such operators, A, B, C, commute there
+exists at least one set of mutually orthogonal kets that are at the
+same time eigenkets of A, eigenkets of B, eigenkets of C, etc.
+Remark. Such sets of orthogonal kets may be used for construct-
+ing an orthonormal basis of the Hilbert space.
+is said
+Definition. If the thus constructed basis is unique (to within ar-
+bitrary phase factors) the set of all the operators A, B, C,
+to be a complete set of commuting operators (CSCO).
+Subspaces, Projectors, etc.
+Let H be a Hilbert space and let | > and | > be two kets
+belonging to H. The set H" of all the lineal combinations a|>
++b>, where a and b are complex numbers is also a Hilbert
+space and is called a subspace of H. It is in fact a two-dimensional
+space with {| >,|$>} as one of its bases. The generalization to
+subspaces of higher dimensionality is trivial.
+In H we can define an operator P = |y >< w\, where |4 > 1s
+normalized to unity (|| 4 ||= 1), through the convention that, for
+any ket |x > of H.
+P|x >= ay >
+with a =< y\x > or
+Plx > | > (< y\x >)A1 3 Matrices
+445
+which implies, for any lx>, (14 >< y|)]x >= |w > (< w|x >), so
+that the bracket may be suppressed and this ket may just be
+written |ø >< ❤/x > Such a possibility of introducing or sup-
+pressing brackets makes the formalism most flexible (note that
+the symbol < | gets thereby some "autonomy" it is called a bra
+and it can be shown that if A|ø >= |ξ
+then <l A†) P
+=
+is called a projector Obviously it obeys the relationship
+p²
+==
+P
+where p² just means PP Obviously also, when P is applied to
+any ket of H it changes it into a multiple of 14>, that is, into
+an element of the one-dimensional subspace of H made up of
+the set of all these multiples P is therefore a projector onto this
+subspace Projectors on subspaces with more than one dimen-
+sion may also be defined For example, if le₁ > and le₂ > are two
+mutually orthogonal kets of H, both normalized to unity, the
+operator P' = |e₁ >< e₁l + le₂ >< 2 is easily seen to be a pro-
+jector (P² = P') and to project on the subspace of H defined
+by le₁ > and le₂ > If the dimension of H is N and if the set
+{le₁ >, e₂ >, , le >} is an orthonormal basis of H, the pro-
+jector 1 = le₁ >< e₁l + le₂ >< e₂l + +len >< eN projects H
+onto itself, that is, changes any ket of H into itself 1 is called
+a "decomposition of unity" The foregoing relationship is then
+sometimes called the "completeness relation" (it goes without
+saying that, in spite of an analogy in wording, this purely math-
+ematical relationship has nothing to do with the "completeness
+hypothesis" defined in Chapter 4) Similarly if the Hermitean
+operator A has eigenvalues {a;} and if an (orthonormal) set
+{\w;,r>} of its eigenkets is a basis of H, it is easily seen that
+the operator
+A' = Σ | Wi‚r > ai < Wirl
+i,r
+has the same effect as A on any ket of H and is therefore identical
+to A A' is called a "spectral decomposition" of A
+A1.3 Matrices
+Let, again, H be an N-dimensional Hilbert space, |> a ket
+of H and {le, >, e₂ >, , eN >} an orthonormal basis, B, of H446
+Appendix 1. Elementary Notions on State Spaces and Operators
+The complex numbers c₁ =<e,|y > (1 = 1, ,N) are called the
+components of > on basis B. They may be arranged in a one-
+column matrix:
+وراح
+C₁
+=
+C2
+is called the column vector representing |4> in basis B. It is
+convenient to similarly arrange the complex conjugates of the c₂
+in a row'
++ = (C₁₁, C₁₂, CN)
+(c,c,
+Further, to any operator A of H let us associate the set of the
+complex numbers A₁‚k = < e¿|A|e̟ > and let us arrange them in
+the form of matrix:
+A11, A12,
+AIN
+A21, A22,
+A2N
+A =
+ANI,AN2, ANNA
+A is called the matrix representing A in basis B. It is easily checked
+that the main formulas of the ket formalism have their counter-
+parts in the matrix formulation. For example, in this formulation
+the eigenvalue equation
+reads
+A\w >= a❘w >
+A4 = ay
+where, in accordance with the general rules of matrix multiplica-
+tion, the one-column matrix Av has the numbers d₁ = Σk₁₁ck as
+its elements. Consequently, the eigenvalue equation has, in fact,A1.4 Spectrum and Spin
+447
+the form of a system of N linear and homogeneous equations
+with N unknown (the c;), namely
+Σκαϊκ
+ΣkАick = ac₁
+It is well known that such a system has a nontrivial solution only
+if the determinant of the coefficients of the c; is zero, which leads
+to a Nth degree equation for a. Its N solutions are the eigenvalues
+of operator A. In the special case that matrix A is diagonal—which
+means that A¿‚k = a; §i,k—it is clear that the diagonal elements a;
+are themselves the eigenvalues. In elementary matrix theory
+there exists an operation, called diagonalization, that transforms
+a nondiagonal matrix A into a diagonal one. It can be shown that
+the diagonal elements of the thus obtained diagonal matrix are
+just the eigenvalues a's, that is, the solutions of the eigenvalue
+equation for operator A.
+
+The Trace
+The trace of a matrix is, by definition, the sum of its diagonal
+elements. It can easily be proved that the matrices that represent
+a given operator in several different orthonormal bases all have
+the same trace, which is called the trace of the operator. The trace
+of a product can easily be seen to be invariant under circular
+permutation of the factors: Tr(ABC) = Tr(CAB) = Tr(BCA).
+
+A1.4 Spectrum and Spin
+The set of the eigenvalues of an operator is called its spectrum.
+The Hermitean operators quantum mechanics makes use of are
+of three different kinds with respect to this notion. Some have
+a purely continuous spectrum (any real number within a given
+range is an eigenvalue); some have a totally discrete spectrum
+(the eigenvalues constitute a discrete sequence); and some have
+a spectrum that is partly discrete and partly continuous. As can
+easily be expected, the physical quantities (the so-called observ-
+ables) that most clearly exhibit specific quantum properties are448
+Appendix 1. Elementary Notions on State Spaces and Operators
+those that correspond to operators having a purely discrete spec-
+trum. This is what makes spin a particularly useful tool in the
+analysis of the conceptual foundations of quantum mechanics.
+Contrary to position and momentum, which have purely con-
+tinuous spectra, angular momentum and spin components have
+purely discontinuous ones. In this book, only the spin notion is
+made use of.
+Classically a spin is but an intrinsic angular momentum:
+the "spin" of the Earth is a vector aligned on the pole axis.
+Quantum mechanically, the spin S of a particle is also a vector,
+the three components of which, Sx, Sy, S₂, along given orthogonal
+axes are described by Hermitean operators. But quantum spin
+exhibits most unfamiliar properties, one of them being that the
+magnitude squared, S² of the spin of a particle of a given type
+(an electron, a photon, etc.) is a fixed quantity, whose value
+only depends on the nature of the particle. Conventionally, one
+writes:
+S² = s(s + 1)ħ
+and the values of s then can only be integer or half-integer. The
+most often encountered particles, electrons, protons, neutrons,
+and so forth all have s = 1/2: they are said to be "spin 1/2 par-
+ticles." The outcome of the measurement of a spin component
+S-along some given direction n―of such a particle can only
+be either +1 or −1, in ħ/2 units. In other words, the eigenvalue
+spectrum of S is composed, in these units, of but the two num-
+bers +1 and −1. Correlatively, the Hilbert space Hs in which the
+operators S, operate is the simplest of all nontrivial conceivable
+ones: it is but two-dimensional. Note moreover that the spin
+component operators corresponding to two different directions
+do not commute. In particular, this is the case concerning the
+operators S, S₁, and S.
+n
+n
+To describe the quantum state of a particle endowed with a
+spin—for example, a spin 1/2—it is necessary to specify both its
+spatial state (for example, by means of a wave function) and its
+spin state. Concerning the latter, because of the just mentioned
+noncommutativity, no ket in Hs exists that is an eigenket of both
+S and S, with n\n' Physically, this implies that, at any time,
+only one component of the spin, S₂ say, can have a well-definedA1.4 Spectrum and Spin
+449
+value, which moreover is necessarily +1 or −1, as already men-
+tioned. Indeed the eigenvalue equation for S₂ reads:
+S₂la >= ala >
+with a = +1 or −1, or, more explicitly
+S₂|+ > = +|+ >
+S₂l- > = − |- >
+Since Hs is two-dimensional and the kets |+ > and |− > are
+mutually independent, these two kets necessarily constitute a
+basis of Hs. This implies that any ket in Hs—that is, any ket
+describing a possible spin state of the particle—is necessarily a
+linear combination of |+ > and -> For example, the eigenket
+w of S corresponding to eigenvalue +1 has the form:
++
+|w₁ >= (|+ > +|- >)/√√2
+Once a basis of Hs-the basis {|+ >,|- >}, say—has been
+chosen, the kets and operators in Hs can be described by, re-
+spectively, column vectors and square matrices, as we know. For
+example, the state S₁ = +1, which, in ket notation, is described
+by w >, is, in this so-called matrix representation, described by
+the column vector
++
+W =
++
+1
+√2
+(+1)
+x
+In this same representation the spin component S₁ is described
+by the matrix
+S. - (91)
+Sx
+=
+(by applying the known rules of matrix multiplication readers
+will easily verify for themselves that the eigenvalue equation
+Sxwx = +Wx
+is satisfied).450
+Appendix 1 Elementary Notions on State Spaces and Operators
+Combination of Spins
+In the main text, systems Σ of two spin 1/2 particles U and
+V are considered According to a general rule (see Chapter 3),
+the spin Hilbert space H of such a system is the tensor product
+of the spin Hilbert spaces Hu and Hy of the two composing
+particles It is therefore four-dimensional Let {\u₁ >,\u_ >} and
+{\v, >,\v_ >} be, respectively, bases of Hч and Hy, and let them
+obey the eigenvalue equations
+and
++
+SY |u± > = ±|u± >
++
++
++
+A basis of H then is {\u₁ > \v >,\u₁ > ©|v_ >, \u_ > Ⓡ
+\V+ >, \u_ > ©\U_ >,} This basis is orthonormal but, of course,
+it is not the only orthonormal basis of H Another one is the one
+made up of the four kets
+|×+ > = \u₁ > ©\v >
+1x+
++
+|xo > = (\u+ >
+|x_ > = \u_ >
+| 4 > = (\u¸ >
++
++
+\v_ > +\u_ > © \v >)/√√2
+\v _ >
++
+® \v_ > −\u_ > ©\v >)1√2
+-
++
+у
+which are simple linear combinations of the former ones These
+four kets turn out to be eigenkets of the operator S² = S² + S²/ +
+S2, which represents the square of the magnitude of the total
+spin In particular, 14 > is the eigenket of S² that corresponds
+to eigenvalue 0 It is called the singlet state Bohm's standard
+example concerning the Einstein, Podolsky, and Rosen problem
+is based on a consideration of this ket (see Chapters 7 and 8) The
+coefficients in the foregoing expressions are called the Clebsch-
+Gordan coefficients relative to the combination of two 1/2 spins
+Tables of Clebsch-Gordan coefficients relative to combinations of
+spins or angular momenta other than 1/2 are to be found in most
+textbooks on quantum mechanics
+
+ 

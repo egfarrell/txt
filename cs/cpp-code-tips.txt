@@ -1,0 +1,73 @@
+
+constexpr
+const
+auto
+std::cerr
+g++ -o outputprog main.cpp hello.cpp -I /my/custom/include/path -std=c++11
+inline
+using / typedef
+libunittest
+enum
+ifstream, ofstream, fstream
+g++", "-o main.out", "main.cpp" "./main.out", stdin=open("input.txt", "r")
+std::getline
+#include <sstream>; std::stringstream(stringVar) >> numericVar;
+#include<cmath>  (pow)
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b = 0;
+    int post, pre = 0;
+    cout<<"Inital values: \t\t\tpost = "<<post<<" pre= "<<pre<<"\n";
+    post = a++;
+    pre = ++b;
+    cout<<"After one postfix and prefix: \tpost = "<<post<<" pre= "<<pre<<"\n";
+    post = a++;
+    pre = ++b;
+    cout<<"After two postfix and prefix: \tpost = "<<post<<" pre= "<<pre<<"\n";  
+    return 0;
+}
+google test framework
+
+### links
+    - udacity course ./lang/cpp/cpp-udacity.txt
+    - c++ guidelines https://github.com/Microsoft/AirSim/blob/master/docs/coding_guidelines.md     
+    - c++ guidelines https://google.github.io/styleguide/cppguide.html
+    - udacity recommended guidelines https://github.com/isocpp/CppCoreGuidelines
+
+### how to compile
+    - standard
+        > g++ -o hello main.cpp -std=c++11
+    - old g++
+        > g++ -o hello main.cpp -std=c++0x
+    - for debugging
+        > g++ -g myprog.cpp
+
+### struct packing
+    declare variables in a struct from largest to smallest.
+    It reduces the struct size and helps the compiler because
+    certain datatypes starting on a memory boundary.
+    e.g.
+    ...
+        double myvar1
+        double myvar2
+        double myvar3
+        int myint1
+        int myint2
+        int myint3
+        char mychar1
+        bool mybool1
+        bool mybool2
+    ...
+    or use #pragma directive (less portable)
+    or use "alignas"
+
+### strings
+    terminated with null character string "\0"
+
+### operators
+    << extraction operator

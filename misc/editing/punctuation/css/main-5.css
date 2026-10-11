@@ -1,0 +1,1089 @@
+@charset "utf-8";
+/* CSS Document [main-5.css] */
+/* Copyright 2021 thepunctuationguide.com */
+@media screen {
+  * {
+    box-sizing: border-box;
+  }
+  /* Allows top-ten badge to be positioned partially off-screen */
+  html#front-page {
+    overflow: hidden;
+  }
+  /* Clear browser margins and push footer to bottom of screen */
+  body {
+    margin: 0px;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-family: source-serif-pro, serif;
+    font-size: 65.5%; /* =10px =1em */
+    position: relative;
+    overflow-x: hidden;
+  }
+  main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin: 1%;
+  }
+  footer {
+    font-family: proxima-nova, sans-serif;
+    background-color: #F5F5F5;
+    padding: 5px;
+  }
+  p {
+    font-size: 2em;
+    line-height: 1.5em;
+    font-kerning: normal;
+    margin: 1em 0px;
+  }
+  div#main-content > section {
+    padding-bottom: 40px;
+    border-bottom: 5px grey solid;
+  }
+  div#main-content section:last-of-type {
+    border-bottom: none;
+  }
+  ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+  }
+  blockquote {
+    padding-bottom: 5px;
+    font-size: 1.5em;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: source-serif-pro, serif;
+    color: #2E2E2E;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.8em;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+  h4 {
+    font-size: 2.25em;
+  }
+  .error-page h1 {
+    font-size: 6em;
+    text-align: center;
+  }
+  .operative-word {
+    font-style: italic;
+  }
+  .recommended-reference {
+    font-weight: 700;
+  }
+  a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: black;
+    outline: none;
+  }
+  #main-content a:link, nav#front-page-nav a:link, footer a:link, #main-content a:visited, nav#front-page-nav a:visited, footer a:visited {
+    color: #656565;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #DFDFDF;
+  }
+  #main-content a:hover, nav#front-page-nav a:hover, footer a:hover, #main-content a:focus, nav#front-page-nav a:focus, footer a:focus {
+    color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: grey;
+    transition: all 0.2s ease;
+  }
+  div#site-title {
+    background-color: #FFD530;
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #606060;
+    outline: none;
+    padding: 5% 0% 0px 0%;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  }
+  span#site-title-punctuation {
+    position: relative;
+  }
+  span#site-title-pilcrow {
+    height: 100%;
+    width: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 66.6 67.6'%3E%3Cdefs%3E%3Cstyle%3E.title-pilcrow%7Bstroke:%23000;stroke-miterlimit:10;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EP%3C/title%3E%3Cpath class='title-pilcrow' d='M41.76,10.9H4L7.68.5H45.4Zm-33,56.2H.7L24,.5h8.06ZM25,67.1H17L40.3.5h8.06ZM40.12,36.48H29.22L41.82.5H52.73a15.4,15.4,0,0,1,8.88,2.31,9.84,9.84,0,0,1,4.22,6.4,17.45,17.45,0,0,1-1,9.3,26.53,26.53,0,0,1-5.55,9.26,26.92,26.92,0,0,1-8.75,6.4A24.58,24.58,0,0,1,40.12,36.48Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 1%;
+    bottom: 23%;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+  }
+  #site-title span {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    font-size: 8.5vw;
+    line-height: 1em;
+  }
+  span#site-title-dot-com {
+    display: none;
+  }
+  span#site-title-p {
+    visibility: hidden;
+  }
+  /* Front-page styling >> */
+  html#front-page main {
+    display: flex;
+    justify-content: center;
+  }
+  nav#front-page-nav {
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  nav#front-page-nav section {
+    font-size: 128%;
+    width: 255px;
+    min-width: 26%;
+    margin: 1% 1% 1% 3%;
+  }
+  nav#front-page-nav section .category {
+    font-family: proxima-nova, sans-serif;
+    font-size: 2.1em;
+    letter-spacing: .01em;
+    font-weight: 400;
+    color: #313131;
+    text-shadow: 1px 1px 2px #DDDDDD;
+  }
+  #front-page-nav section > div:nth-child(2) {
+    font-family: proxima-nova, sans-serif;
+    margin-left: 45px;
+    padding-top: 20px;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #646464;
+    line-height: 1.8em;
+  }
+  .other-matters div {
+    margin-left: -40px;
+  }
+  /*Styles, then places, the relevant punctuation mark in front of the navigation link */
+  nav#front-page-nav a::before {
+    font-family: source-sans-pro, sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #646464;
+    text-shadow: 1px 1px 2px #DDDDDD;
+    display: block;
+    margin-left: -55px;
+    text-align: center;
+    width: 50px;
+    position: absolute;
+    margin-top: -3px;
+  }
+  nav#front-page-nav .period::before {
+    content: ".";
+  }
+  nav#front-page-nav .question-mark::before {
+    content: "?";
+  }
+  nav#front-page-nav .exclamation-point::before {
+    content: "!";
+  }
+  nav#front-page-nav .comma::before {
+    content: ",";
+  }
+  nav#front-page-nav .semicolon::before {
+    content: ";";
+  }
+  nav#front-page-nav .colon::before {
+    content: ":";
+  }
+  nav#front-page-nav .hyphen::before {
+    content: "-";
+  }
+  nav#front-page-nav .en-dash::before {
+    content: "–";
+  }
+  nav#front-page-nav .em-dash::before {
+    content: "—";
+  }
+  nav#front-page-nav .quotation-marks::before {
+    content: "“”";
+  }
+  nav#front-page-nav .ellipses::before {
+    content: ".\00a0.\00a0.";
+  }
+  nav#front-page-nav .brackets::before {
+    content: "[\00a0]";
+  }
+  nav#front-page-nav .parentheses::before {
+    content: "(\00a0)";
+  }
+  nav#front-page-nav .apostrophe::before {
+    content: "’";
+  }
+  nav#front-page-nav .slash::before {
+    content: "/";
+  }
+  nav#front-page-nav .angle-brackets::before {
+    content: "<\00a0>";
+  }
+  nav#front-page-nav .braces::before {
+    content: "{\00a0}";
+  }
+  /* << Front-page styling */
+  #site-wide-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #606060;
+    background: #DDDDDD;
+  }
+  ul.site-wide-nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .site-wide-nav-items li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .site-wide-nav-items a {
+    display: block;
+    font-family: proxima-nova, sans-serif;
+    font-size: 2.5em;
+    word-spacing: 2px;
+    text-shadow: .5px .5px .5px grey;
+    background: #DDDDDD;
+    text-align: center;
+    padding: 6px;
+    min-width: 40px;
+  }
+  .site-wide-nav-items a:link, .site-wide-nav-items a:visited {
+    color: black;
+  }
+  .site-wide-nav-items a:hover, .site-wide-nav-items a:focus {
+    color: #FFD530;
+    background: #343434;
+    outline: none;
+    text-shadow: none;
+    transition: all 0.2s ease;
+  }
+  .site-wide-nav-items a:link.active {
+    color: #343434;
+    background: #FFD530;
+    text-shadow: none;
+    font-weight: bolder;
+  }
+  .site-wide-nav-items a.active {
+    color: #343434;
+    background: #FFD530;
+    text-shadow: none;
+    font-weight: bolder;
+    border-left: solid 2px #606060;
+    border-right: solid 2px #606060;
+  }
+  nav#site-wide-nav ul.site-wide-nav-items:first-child li:first-child a.active {
+    border-left: none;
+  }
+  nav#site-wide-nav ul.site-wide-nav-items:last-child li:last-child a.active {
+    border-right: none;
+  }
+  .site-wide-nav-items span.text-item {
+    display: none;
+  }
+  .site-wide-nav-items li.dropdown-item {
+    position: relative;
+  }
+  .site-wide-nav-items ul.dropdown-content a {
+    font-size: 2em;
+    font-weight: 600;
+    word-spacing: 0px;
+    text-shadow: none;
+    text-align: left;
+    padding: 10px;
+    z-index: 20;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey !important;
+  }
+  .site-wide-nav-items li.dropdown-item:hover ul.dropdown-content {
+    display: block;
+  }
+  /*Written on separate lines so that :hover works in ms IE and Edge, neither of which supports :focus-within*/
+  .site-wide-nav-items li.dropdown-item:focus-within ul.dropdown-content {
+    display: block;
+  }
+  .site-wide-nav-items ul.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 300px;
+    z-index: 10;
+    border-top: 2px;
+    border-top-style: solid;
+    border-top-color: #606060;
+    box-shadow: -2px 2px 10px lightgrey;
+  }
+  #return-to-top {
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 8px;
+    height: 35px;
+    width: 50px;
+  }
+  #return-to-top-text {
+    font-family: proxima-nova, sans-serif;
+    font-size: 1.5em;
+    color: #797979;
+    position: absolute;
+    width: 110px;
+    left: 80%;
+    bottom: 20%;
+  }
+  span#return-to-top-icon {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3Epath%7Bfill:%23797979;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecircle-up%3C/title%3E%3Cpath d='M0 16c0 8.837 7.163 16 16 16s16-7.163 16-16-7.163-16-16-16-16 7.163-16 16zM29 16c0 7.18-5.82 13-13 13s-13-5.82-13-13 5.82-13 13-13 13 5.82 13 13z'%3E%3C/path%3E%3Cpath d='M22.086 20.914l2.829-2.829-8.914-8.914-8.914 8.914 2.828 2.828 6.086-6.086z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+  }
+  span#return-to-top-icon:hover {
+    bottom: 5px;
+  }
+  #about-guide {
+    margin-bottom: 5px;
+    font-size: 1.75em;
+    text-align: right;
+  }
+  div#about-guide span {
+    padding-left: 5px;
+  }
+  #copyright {
+    color: #909090;
+    text-align: right;
+    font-size: 1.2em;
+  }
+  #copyright span:nth-child(2) {
+    display: none;
+  }
+  .contains-page-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    /*
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+*/
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  #main-content {
+    font-size: 85%;
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    flex-shrink: 70;
+  }
+  #page-navigation {
+    margin-right: 10px;
+    margin-top: 20px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 10px;
+    -ms-flex-item-align: start;
+    flex-shrink: 20;
+    align-self: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+  #page-navigation ul {
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+    min-width: 250px;
+  }
+  #page-navigation a {
+    display: block;
+    padding: 2px 10px;
+    font-family: proxima-nova, source-sans-pro, Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    font-size: 1.5em;
+    color: #6A6A6A;
+  }
+  #page-navigation .subsections a {
+    padding-left: 50px;
+  }
+  #page-navigation a:hover {
+    background-color: #E5E5E5;
+    transition: all 0.2s ease;
+  }
+  #page-navigation li.active {
+    background-color: #E5E5E5;
+  }
+  #page-navigation li.active a {
+    color: black;
+  }
+  div#page-navigation > ul > li {
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  /* Styling for titles-of-works page */
+  #titles-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #titles-container h2 {
+    font-size: 2.75em;
+    background: #FFD530;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  #titles-container div {
+    margin-right: 10px;
+    background: #ECECEC;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  #titles-container ul {
+    padding: 10px 10px;
+    margin-bottom: 20px;
+  }
+  #titles-container li {
+    margin-bottom: 20px;
+    font-family: proxima-nova, sans-serif;
+    font-size: 1.75em;
+  }
+  /*Styling for examples*/
+  .example {
+    position: relative;
+    font-family: source-sans-pro, proxima-nova, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    background: #ECECEC;
+    border-radius: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1px;
+  }
+  div.example p {
+    line-height: 1.25em;
+    padding-left: .25em;
+    padding-right: .25em;
+  }
+  div.example p:first-of-type {
+    padding-top: 1.5em;
+  }
+  div.example p:last-of-type {
+    margin-bottom: .5em;
+  }
+  div.example > span {
+    font-family: proxima-nova, sans-serif;
+    font-size: 1.25em;
+    position: absolute;
+    display: block;
+    background: #6A6A6A;
+    color: white;
+    border-radius: 0px 0px 5px 5px;
+    padding: 1.5px 8px;
+  }
+  div.correct > span {
+    background: #387E4E;
+    color: white;
+  }
+  div.incorrect > span {
+    background: #8A1B1D;
+    color: white;
+  }
+  span.erroneous-punctuation {
+    color: #BC0003;
+  }
+  span.uncertain-punctuation {
+    color: grey;
+  }
+  .explanation {
+    color: grey;
+    font-size: 1.75em;
+    margin-top: -.5em;
+  }
+  .internal-example {
+    font-family: source-sans-pro, proxima-nova, sans-serif;
+    color: #424242;
+    font-weight: 600;
+    font-size: 80%;
+  }
+  /*Styling for terminal-punctuation chart*/
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    vertical-align: top;
+    border: 3px solid white;
+    background: #E4E4E4;
+  }
+  th {
+    font-family: proxima-nova, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    font-weight: 600;
+    font-size: 2em;
+    background: #FFD530;
+    border: 3px solid white;
+    padding: 10px;
+  }
+  th.empty-cell {
+    visibility: hidden;
+  }
+  .chart-rule {
+    font-family: source-serif-pro, serif;
+    font-size: 1.75em;
+    padding: 10px;
+  }
+  .chart-example {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    font-family: source-sans-pro, proxima-nova, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    font-size: 1.75em;
+    background: #D0D0D0;
+    border-radius: 5px;
+  }
+  .chart-rule-caption, .chart-example-caption {
+    display: none;
+  }
+  .chart-break {
+    display: none;
+  }
+  .end-of-sentence-row {
+    display: none;
+  }
+  /* Classifications for <cite> elements*/
+  .title-in-italics {
+    font-style: italic;
+  }
+  .title-in-quotation-marks, .title-in-roman {
+    font-style: normal;
+  }
+  ::selection {
+    color: black;
+    background: #FFD530;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contains-page-nav {
+    display: block;
+  }
+  #page-navigation {
+    display: none;
+  }
+  nav#site-wide-nav {
+    display: block;
+  }
+  nav#site-wide-nav ul:last-child {
+    border-top: 2px;
+    border-top-style: solid;
+    border-top-color: #606060;
+  }
+  nav#site-wide-nav ul.site-wide-nav-items:first-child li:last-child a.active {
+    border-right: none;
+  }
+  nav#site-wide-nav ul.site-wide-nav-items:last-child li:first-child a.active {
+    border-left: none;
+  }
+  .end-of-sentence, .style-matter {
+    display: none;
+  }
+  .end-of-sentence-row {
+    display: table-row;
+    font-family: proxima-nova, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    font-weight: 600;
+    font-size: 2em;
+    text-align: center;
+  }
+  .end-of-sentence-row span {
+    padding: 10px;
+  }
+  .end-of-sentence-row td {
+    background: #959595;
+    color: black;
+  }
+  .end-is-abbreviation span::after {
+    content: "ending with an abbreviation"
+  }
+  .end-is-title-question span::after {
+    content: "ending with a name or title of work ending with a question mark"
+  }
+  .end-is-quotation-question span::after {
+    content: "ending with a quotation ending with a question mark"
+  }
+  .end-is-title-exclamation span::after {
+    content: "ending with a name or title of work ending with an exclamation point"
+  }
+  .end-is-quotation-exclamation span::after {
+    content: "ending with a quotation ending with an exclamation point"
+  }
+  .end-is-quotation-period span::after {
+    content: "ending with a quotation ending with a period (not abbreviation) or no punctuation"
+  }
+  .end-is-quotation-abbreviation span::after {
+    content: "ending with a quotation ending with an abbreviation"
+  }
+  .end-is-parenthetical span::after {
+    content: "ending with a parenthetical"
+  }
+  span.chicago-serial-comma::after {
+    content: " when listing more than two items";
+  }
+  span.ap-serial-comma::after {
+    content: " when listing more than two items";
+  }
+  span.chicago-abbreviations::after {
+    content: " when forming abbreviations";
+  }
+  span.ap-abbreviations::after {
+    content: " when forming abbreviations";
+  }
+  span.chicago-apostrophe-s::after {
+    content: " to form possessives of singular proper nouns ending in s";
+  }
+  span.ap-apostrophe-s::after {
+    content: " to form possessives of singular proper nouns ending in s";
+  }
+  .terminal-chart-intro::after {
+    content: " (On mobile devices, the chart might be easier to read if you rotate your device.)"
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 60%;
+  }
+  #main-content {
+    font-size: 90%;
+  }
+  html#front-page main {
+    display: block;
+  }
+  nav#front-page-nav {
+    display: block;
+    margin: 0em 0em 5em 1em;
+    font-size: 120%;
+  }
+  nav#front-page-nav section {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 7.5%;
+  }
+  #front-page-nav section > div:nth-child(2) {
+    padding-top: 5px;
+  }
+  div#site-title {
+    padding-top: 40px;
+    padding-bottom: 15px;
+  }
+  #site-title span {
+    font-size: 9vw;
+  }
+  .site-wide-nav-items a {
+    min-width: 0px;
+  }
+  .example {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  div.example > span {
+    border-radius: 5px 0px 5px 0px;
+  }
+  #titles-container {
+    display: block;
+  }
+  span#return-to-top-text {
+    display: none;
+  }
+  #terminal-punctuation-table {
+    overflow-x: scroll;
+    padding: 0px;
+    font-size: smaller;
+  }
+  table {
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 359px) {
+  body {
+    font-size: 50%;
+  }
+  .other-matters div, #front-page-nav section > div:nth-child(2) {
+    margin-left: 0px;
+  }
+  nav#front-page-nav a::before {
+    display: none;
+  }
+  #main-content {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+}
+@media screen and (min-width: 768px) {
+  div#top-ten-tips a {
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    height: 155px;
+    width: 155px;
+    background: #313131;
+    border-radius: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.1em;
+    padding: 4.5em 1.5em 0em 1.5em;
+    transform: rotate(40deg);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-tap-highlight-color: transparent;
+  }
+  div#top-ten-tips a:link, div#top-ten-tips a:visited {
+    border: none;
+    color: #E3E3E3;
+  }
+  div#top-ten-tips a:hover, div#top-ten-tips a:focus {
+    border: none;
+    color: #E3E3E3;
+    transform: scale(1.3) rotate(40deg);
+  }
+  div#top-ten-tips a:active {
+    border: none;
+    color: #E3E3E3;
+    transform: scale(1) rotate(40deg);
+  }
+}
+/* Keeps site title from getting too big on large displays */
+@media screen and (min-width: 1050px) {
+  div#site-title {
+    padding-top: 4%;
+  }
+  #site-title span {
+    font-size: 6.5vw;
+  }
+  #site-wide-nav {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  nav#site-wide-nav ul.site-wide-nav-items:first-child li:first-child a.active {
+    border-left: solid 2px #606060;
+  }
+  nav#site-wide-nav ul.site-wide-nav-items:last-child li:last-child a.active {
+    border-right: solid 2px #606060;
+  }
+}
+@media screen and (min-width: 1600px) {
+  #site-wide-nav {
+    padding-left: 12%;
+    padding-right: 12%;
+    font-size: 150%;
+  }
+  main {
+    font-size: 150%;
+  }
+  #main-content {
+    max-width: 1110px;
+  }
+  #front-page-nav {
+    font-size: 100%;
+  }
+  div#top-ten-tips a {
+    position: absolute;
+    top: -175px;
+    right: -175px;
+    height: 350px;
+    width: 350px;
+    font-size: 1.5em;
+    padding-top: 5.4em;
+  }
+  #site-title span:first-child {
+    padding-left: 0px;
+  }
+  div.example .example-text:first-of-type {
+    padding-top: 40px;
+  }
+}
+/* Removes pilcrow from title on IE 11 */
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .site-wide-nav-items a {
+    min-width: 0px;
+  }
+  #site-title {
+    padding-top: 1%;
+  }
+  span#site-title-punctuation {
+    position: relative;
+  }
+  span#site-title-pilcrow {
+    display: block;
+    position: absolute;
+    right: 42%;
+  }
+  span#site-title-p {
+    visibility: hidden;
+  }
+  main {
+    margin-top: 5%;
+  }
+}
+/* Removes pilcrow from title on Opera Mini*/
+@media (min-resolution: .001dpcm) {
+  _:-o-prefocus, span#site-title-pilcrow {
+    display: none;
+  }
+  _:-o-prefocus, span#site-title-p {
+    visibility: visible;
+  }
+  _:-o-prefocus, #site-title span {
+    font-size: 40px;
+  }
+}
+@media print {
+  div#site-title:after {
+    content: "ThePunctuationGuide.com";
+    font-family: proxima-nova, sans-serif;
+    font-size: 3em;
+  }
+  div#site-title span, #site-wide-nav, #page-navigation, footer, .chart-break {
+    display: none;
+  }
+  body {
+    font-family: source-serif-pro, serif;
+    font-size: 16px;
+    margin: 4em;
+  }
+  p {
+    line-height: 1.5em;
+  }
+  div.example {
+    border: thin black solid;
+    padding: 10px;
+    margin-bottom: 5px;
+    page-break-inside: avoid;
+  }
+  div.example-text {
+    margin-top: 10px;
+    font-family: sans-serif;
+  }
+  .explanation {
+    padding-top: 5px;
+    font-family: sans-serif;
+    font-size: 12px;
+  }
+  .chart-example {
+    margin-top: 5px;
+  }
+  article:after, #site-title:after, #terminal-punctuation-table:after {
+    content: "This material is copyright © 2020 by thepunctuationguide.com.";
+    font-size: 1em;
+    font-weight: normal;
+    font-family: sans-serif;
+  }
+  article, tr {
+    page-break-inside: avoid;
+  }
+  section {
+    page-break-after: always;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #2F2F2F;
+    color: #E5E5E5;
+  }
+  h1, h2, h3, h4, h5 {
+    color: #CDCDCD;
+  }
+  div#site-title {
+    background-color: #232323;
+    text-shadow: 1px 1px 1px black;
+  }
+  #site-title span {
+    color: #FFD530;
+  }
+  #site-wide-nav {
+    background: #1C1C1C;
+  }
+  .site-wide-nav-items a {
+    background: #1C1C1C;
+  }
+  .site-wide-nav-items a:link, .site-wide-nav-items a:visited {
+    color: #d9d9d9;
+  }
+  .site-wide-nav-items a:hover, .site-wide-nav-items a:focus {
+    color: #FFD530;
+    background: #4F4F4F;
+  }
+  .site-wide-nav-items a:link.active {
+    color: #ffd530;
+    background: #1c1c1c;
+  }
+  .site-wide-nav-items a.active {
+    color: #FFD530;
+    background: #1c1c1c;
+    border-left: none 2px #606060;
+    border-right: none 2px #606060;
+  }
+  .site-wide-nav-items ul.dropdown-content a {
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey !important;
+  }
+  nav#site-wide-nav ul.site-wide-nav-items:first-child li:first-child a.active {
+    border-left: none;
+  }
+  nav#site-wide-nav ul.site-wide-nav-items:last-child li:last-child a.active {
+    border-right: none;
+  }
+  .site-wide-nav-items ul.dropdown-content {
+    box-shadow: 2px 2px 2px black;
+  }
+  .example {
+    background: #202020;
+    color: #BFBFBF;
+  }
+  footer {
+    background-color: black;
+    color: white;
+  }
+  footer a:link, footer a:visited {
+    color: #A1A1A1;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #5F5F5F;
+  }
+  footer a:hover, footer a:focus {
+    color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: grey;
+  }
+  #copyright {
+    color: #AAAAAA;
+  }
+  #main-content a:link, nav#front-page-nav a:link, #main-content a:visited, nav#front-page-nav a:visited {
+    color: #CECECE;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #5F5F5F;
+  }
+  #main-content a:hover, nav#front-page-nav a:hover, #main-content a:focus, nav#front-page-nav a:focus {
+    color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: grey;
+    transition: all 0.2s ease;
+  }
+  nav#front-page-nav section .category {
+    color: #949494;
+    text-shadow: 1px 1px 2px #000000;
+  }
+  #front-page-nav section > div:nth-child(2) {
+    color: #949494;
+  }
+  /*Styles, then places, the relevant punctuation mark in front of the navigation link */
+  nav#front-page-nav a::before {
+    color: #D5D5D5;
+    text-shadow: 1px 1px 2px #000000;
+  }
+  .internal-example {
+    color: #D7D7D7;
+  }
+  span.erroneous-punctuation {
+    color: #FFA6A6;
+  }
+  div#top-ten-tips a:link, div#top-ten-tips a:visited {
+    /*    color: #3B3B3B;
+*/
+  }
+  div#top-ten-tips a:hover, div#top-ten-tips a:focus {
+    color: white;
+  }
+  div#top-ten-tips a:active {
+    color: #3B3B3B;
+  }
+  #page-navigation a {
+    color: #9B9B9B;
+  }
+  #page-navigation a:hover {
+    background-color: #2f2f2f;
+    color: white;
+  }
+  #page-navigation li.active {
+    background-color: #2f2f2f;
+  }
+  #page-navigation li.active a {
+    color: white;
+  }
+  /* Styling for titles-of-works page */
+  #titles-container h2 {
+    background: #959595;
+    color: black;
+  }
+  #titles-container div {
+    background: #202020;
+  }
+  /*Styling for terminal-punctuation chart and style chart*/
+  td {
+    border: 3px solid #2F2F2F;
+    background: #202020;
+  }
+  th {
+    background: #959595;
+    color: black;
+    border: 3px solid #2f2f2f;
+  }
+  .chart-example {
+    background: black;
+  }
+  span#site-title-pilcrow {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18.88 19'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bstroke:%23FFD530;fill:%23FFD530;stroke-miterlimit:10;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3ELayer 2 (2)pilcrow-smaller%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_2-2' data-name='Layer 2'%3E%3Cpath class='cls-1' d='M11.8,3.31H1.61L2.59.5h10.2ZM2.88,18.5H.7L7,.5H9.18Zm4.4,0H5.1L11.41.5h2.17Zm4.08-8.28H8.41L11.82.5h2.95a4.23,4.23,0,0,1,2.4.62,2.76,2.76,0,0,1,1.14,1.73A4.76,4.76,0,0,1,18,5.37a7,7,0,0,1-1.5,2.5A7.17,7.17,0,0,1,14.18,9.6,6.58,6.58,0,0,1,11.36,10.22Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 768px) {
+  div#top-ten-tips a {
+    background: #FFD530;
+    color: #2F2F2F;
+    /*  text-shadow: .5px 2px 5px grey;*/
+    box-shadow: 2px 2px 2px black;
+  }
+  div#top-ten-tips a:link, div#top-ten-tips a:visited {
+    color: #2F2F2F;
+  }
+  div#top-ten-tips a:hover, div#top-ten-tips a:focus {
+    color: black;
+  }
+}
+/* CSS Document *//* CSS Document */
+

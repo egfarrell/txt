@@ -1,0 +1,45 @@
+stats for people who hate them
+
+### arithmetic mean
+    - defined as the point where the sum of the deviations is zero
+    - if you have scores 3,4,5 then
+    - the mean is 4 and
+    - the deviations is +1,0,-1 which equals 0
+
+### geometric mean
+    - Uses multiplication instead of addition to summarise data
+      values
+    - Used when one expects changes to occur in a relative
+      fashion in the data
+    - (aug 2016: dont understand this!)
+
+### harmonic mean
+    - dont know???
+
+### moving average
+    - Compute average of data points in CHUNKS
+    - e.g. average of 1,4,5,10 is 5.0
+    - But a moving average taking 2 measures at a time
+    - gives the avg(1+4) + avg(5+10)
+    - which gives 4.88!
+    - Sometimes more accurate cos takes account of
+    - extreme or unique data points
+
+### weighted mean
+    - sum all values of (Value . Frequency)
+    - then divide by Frequency
+    - Its a quicker way than adding up many individual scores.
+
+### Which alphabet
+    - population PARAMETERS: Greek letters
+    - sample STATISTICS:     Roman Letters
+
+    - Mean:
+        - Population: Greek: μ
+        - Sample:     Roman: X
+
+### variability (aka Spread) (aka Dispersion)
+    - how different scores are from one another
+    - even better: how different scores are from one particular score
+    - what particular score?
+    - well yes the mean.

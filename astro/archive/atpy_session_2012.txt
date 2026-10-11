@@ -1,0 +1,58 @@
+import atpy
+tset = TableSet()
+tset = atpy.TableSet()
+tqso = atpy.Table('schneiderQSOCatalogFull.xml')
+tqso = atpy.Table('schneiderQSOcatalogFull.xml')
+tqso.describe()
+tqso.rows()
+tqso.comments
+tqso.comments()
+len(tqso)
+t.shape
+tqso.shape
+tqso.name
+tqso.name()
+tqso.table_name
+tqso.table_name = "SchneiderCatalog"
+tqso.table_name
+tqso.write('sqlite','SchneiderCatalog.sqlite')
+ll
+tshen = atpy.table('VOTableShenFull.xml')
+tshen = atpy.Table('VOTableShenFull.xml')
+tshen.shape
+tshen.table_name = "CatalogShen"
+tshen.table_name
+tshen.write('sqlite', 'CatalogShen.sqlite')
+tshen.remove_columns ??
+"tshen.remove_columns(UGRIZ, UGRIZ_ERR, UGRIZ_DERED, JHK, JHK_ERR, WISE1234, WISE1234_ERR)"
+"tshen.remove_columns(""UGRIZ"", ""UGRIZ_ERR"", ""UGRIZ_DERED"", ""JHK"", ""JHK_ERR"", ""WISE1234"", ""WISE1234_ERR"")"
+"list = [""UGRIZ"", ""UGRIZ_ERR"", ""UGRIZ_DERED"", ""JHK"", ""JHK_ERR"", ""WISE1234"", ""WISE1234_ERR""]"
+list()
+list
+tshen.remove_columns(list)
+tshen.write('sqlite', 'CatalogShen2.sqlite')
+pwd
+cd ~
+cd Documents/
+cd astro/
+ll
+t.shape
+whos
+tqso.shape
+tshen.shape
+tset.append(tqso)
+tset.append(tshen)
+tset.tables()
+tset.tables
+tset.tables.rename
+tset.tables[0].table_name
+tset.tables[0].table_name = "Schneider"
+tset.tables[1].table_name = "Shen"
+tset.tables
+tset.write
+tset.write ??
+tset.write
+tset.write()
+tset.write('sqlite', 'test.sqlite')
+
+

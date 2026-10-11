@@ -1,0 +1,109 @@
+Ignore this one...
+
+https://www.edx.org/learn/astrophysics/australian-national-university-astrophysics-exploring-exoplanets
+
+# ASTRO2x Exoplanets
+    1. Pulsar planets
+    2. Finding Planets using Reflex Motion
+    3. More radial velocity planets and transits
+    4. Recent transit results
+    5. Gravitational Microlensing
+    6. Debris Disks
+    7. Adaptive Optics
+    8. Direct Imaging
+    9. Earth-like planets
+
+
+My old notes
+
+# aside: crash course astronomy
+    - If we know the planets _mass_ from the stars doppler shift
+    - we can use the planets _size_ from the transit
+    - to calculate its _density_
+        - `density = mass/size`
+
+# what can we derive from a transit?
+
+# radius of the planet
+    ^
+    |       _∆t_
+    |       ----
+    | ......     ....          -
+    |      |     |             |
+    |      |     | _∆B_        | _B_
+    |      |.....|             |
+    |                          |
+    |                          |
+    ---------------------->    |
+
+
+    Dip in brightness (%)       `∆B`
+    Overall Star radius:        `Rs`
+    Planet radius:              `Rp`
+    Fraction of light lost:     `∆B     π∙(Rp)^2`
+                                `--  =  --------`
+                                `B      π∙(Rs)^2`
+
+    radius of planet:           `Rp = Rs ∙ sqrt(∆B/B)`
+
+
+# the orbital period:
+    - if you measure 2 transits you can work out the time between
+      them which gives the period
+
+    ^
+    |
+ B  |    Transit 1                   Transit 2
+    | ....    .........................    ....
+    |    .....                        .....
+    |
+    |
+    ------------------------------------------>
+                    _Time_
+
+
+# orbital radius
+    - how far the star is from the planet.
+
+    `r = cube_root(G∙(Ms)∙P^2 / 4π^2)`
+
+# get exact angle of inclination
+    - we know it has to be nearly edge on (90 degrees).. but! if
+      it transits directly across the equator of the star then
+      the transit time will be:
+
+    `∆t = 2∙Rs / v`
+
+    (_v_ = the orbital velocity of the planet)
+
+    - But if its a glancing transit, or crosses a bit higher up
+      from the equator of the star, you can still work out the
+      exact inclination (eg. 85º or 87º) using `∆t` + some fiddly
+      formula
+
+# big telescopes v small
+    - big:
+        - gather more light but smaller field of view (see
+          fainter objects)
+    - transits:
+        - want to get transits around _bright_ stars so you can
+          do follow-up work. So small telescopes are grand for
+          _bright_ stars!
+
+# global network of transit telescopes (hatsouth-telescope)
+    - you can only monitor the sky for half a day... you could
+      get a particular transit that is always out of phase with
+      wherever you are on Earth
+
+# false positives / contamination
+    1. one star orbiting another one and just "clipping"
+       each other. You'll get a small transit dip BUT you'll
+       see a much bigger radial velocity change if its
+       2 stars.
+    2. 3 objects in a pixel. One star diluting the other 2.
+    3. So often you have to do RV follow-up to confirm its
+       a planet
+
+# hot jupiter formation
+    - migration
+    - billards theory

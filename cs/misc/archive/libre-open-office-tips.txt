@@ -1,0 +1,59 @@
+LibreOffice
+
+### Insert blank line ABOVE table
+    - click in first cell of table, in front of any cell contents
+    - then press Enter or OptionAlt+Enter.
+
+### write -regex find/replace
+    > find: (\#\#\#.*$)
+    > replace: $1
+
+### export comments in pdf
+    tools -> options
+        writer -> print -> Comments: (radio button)  In Margins
+
+### Smooth Fonts
+    - Goto, Tools -> Options -> LibreOffice -> View, 
+    - Check: Use hardware acceleration
+    - UnCheck: everything else
+
+### insert manual page break
+    ctrl+enter (default but I have an lubuntu-rx.xml mapping)
+    set default key: currently ctrl+g
+
+### open calc from command line
+    libreoffice --calc
+
+### convert srt files
+    open them in Excel (OpenOffice Calc)
+
+### word completion
+    Tools - AutoCorrect Options - Word Completion
+
+### impress apply style
+    - In Impress you can apply styles in two ways, both starting
+      from the Styles and Formatting window.
+    - First click on one of the icons at the top left (Graphics
+      Styles or Presentation Styles) to display a list of styles
+      in the category you want.
+    - Then do one of the following:
+        - Position the insertion point in the paragraph or
+          graphic and double-click on the name of the style you
+          want to apply.
+
+### impress caption on image
+    - no option
+    - but double click on image
+    - and write some text
+
+### Transpose rows and columns
+    - Select the cell range that you want to transpose.
+    - Choose Edit - Cut.
+    - Click the cell that is to be the top left cell in the result.
+    - Choose Edit - Paste Special.
+    - In the dialog, mark Paste all and Transpose.
+    - If you now click OK the columns and rows are transposed.
+
+### calc - wrap row text
+    Format - Cells - Alignment
+        wrap text automatically

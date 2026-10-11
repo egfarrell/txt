@@ -1,0 +1,317 @@
+
+### Handy
+    - 'context' in a render object is a dictionary with values
+      for various variables.
+        - The variable placeholders in the HTML get replaced with
+          the values from the context dict.
+
+### Setup env for "Try Django 1.11"
+    conda create -n django-1-11 python=2
+    conda activate django=1.11
+    conda install django=1.11
+    conda install functools_lru_cache
+    conda install ipython
+    conda install -c conda-forge ipdb=0.11
+
+    # for a postgresql database
+    conda install psycopg2
+
+    # for a mysql database
+    conda install mysqlclient #python3
+    conda install MySQL-python #python2
+
+    # for use on heroku
+    - Windows:
+        pip install gunicorn
+    - Linux:
+        conda install gunicorn
+    conda install gunicorn
+    conda install dj-database-url
+    conda install django-crispy-forms
+    conda install pillow
+
+### Interesting points:
+    - 3 layers of settings:
+        - base.py
+        - local.py
+        - production.py
+
+    - setup the system:
+        - python manage.py migrate
+        - python manage.py createsuperuser
+        - python manage.py runserver
+
+    - Django does 3 things:
+        - handles URLs: yelp.com etc
+        - returns responses
+        - remembers things
+
+    - Django uses '_apps_' to manage different functionality
+        - He typed:
+            python manage.py startapp restaurants
+
+    - Most basic: Return "hello" string
+        > "function-based views"
+        - (Can have class-based views too)
+        - two ways of handling responses
+            - from django.shortcuts import `render`
+            - from django.http import `Httpresponse`
+        - `views.py`
+            def home(request)
+                return # a response
+                return render(request, template,    {dict: context for the template})
+                return render(request, "home.html", {dict: context for the template})
+                # or
+                return HttpResponse("hello")
+
+        - need to import the view into a URL
+            - `urls.py`
+                - from restaurants.view import home
+                - ...
+                - urlpatterns = [url(r'^$', home)]
+
+    - Return some HTML
+        - can have f-string substitution in a html string
+        - $MY_IMAGES/cs/django-course/return-basic-html.jpg
+
+    - 7. Return a HTML template
+        - turn our string into a template/html document
+        - templates/base.html
+        - instead of 'f-strings' with have 'context variables'
+          with double curly brackets
+        - $MY_IMAGES/cs/django-course/how-context-variables-work.jpg
+
+    - 8. Context in Django templates
+        - can have conditional rendering inside the templates
+            - $MY_IMAGES/cs/django-course/conditional-rendering.jpg
+        - can have for loops too
+            - $MY_IMAGES/cs/django-course/conditional-rendering2.jpg
+        - you can filter values too using builtins
+            - Template builtins https://docs.djangoproject.com/en/1.11/ref/templates/builtins/
+            - e.g. divisible by
+            - {% if myvalue|divisibleby:"2" %}
+            -       Even number
+            - {% endif %}
+
+        - you can show the whole template using {{ verbatim }}
+
+        - NOTE: 
+            - the template logic should exist in the view
+
+    - 9. Template Inheritance
+        - key point: `{% block content %}`
+        - don't want to keep repeating html in each template
+        - DRY: Don't Repeat Yourself
+        - have a `base.html` with a {% block content %}
+          place-holder
+        - then have the actual `{% block content %}` in other
+          files which extend base.html
+            - $MY_IMAGES/cs/django-course/block-content-extends.jpg
+            - note: {{ block.super }} too!
+
+    - 10. Include Template Tag
+        - `{% include 'snippets/nav.html' %}`
+        - include snippets/css.html
+        - include snippets/js.html
+        - $MY_IMAGES/cs/django-course/include-nav-bar.jpg
+
+
+    - 12: Class Based Views
+        - urls.py: 
+            - important: as_view() to instantiate class
+            - url(r'^contact/$', ContactView.as_view()),
+        - views.py:
+            - handle a "get" method
+            ```
+            class ContactView(View):
+                def get(self, request, *args, **kwargs):
+                    context = {}
+                    return render(request, "contact.html", context)
+            ```
+
+    - 13: Template View
+        - urls.py:
+            url(r'^about/$', TemplateView.as_view(template_name='about.html')),
+            url(r'^contact/$', TemplateView.as_view(template_name='contact.html')),
+        - views.py
+                from django.views.generic import TemplateView
+                # Create your views here.
+
+                class HomeView(TemplateView):
+                    template_name = 'home.html'
+
+                    def get_context_data(self, *args, **kwargs):
+                        context = super(HomeView, self).get_context_data(*args, **kwargs)
+                        num = None
+                        some_list = [
+                            random.randint(0, 100000000), 
+                            random.randint(0, 100000000), 
+                            random.randint(0, 100000000)
+                        ]
+                        condition_bool_item = True
+                        if condition_bool_item:
+                            num = random.randint(0, 100000000)
+                        context = {
+                            "num": num, 
+                            "some_list": some_list
+                        }
+                        return context
+
+    - 14: Remembering things with Models
+        - he logged into the Django admin panel
+        - note: always 2 steps for migrations
+            - python manage.py makemigrations
+            - python manage.py migrate
+        - you can add data to the database via the admin webpage
+            - (must _register_ the model in admin.py)
+        - Google search: "Django model fields"
+
+    - 15: More on Model Fields
+        - two handy datetime fields
+            timestamp = models.DateTimeField(auto_now_add=True)
+            updated   = models.DateTimeField(auto_now=True)
+
+    - 16: Displaying Saved Data
+        - using "Queryset"
+        - `views.py`
+            from .models import RestaurantLocation
+
+            def restaurant_listview(request):
+                template_name = 'restaurants/restaurants_list.html'
+                queryset = RestaurantLocation.objects.all()
+                context = {
+                    "object_list": queryset
+                }
+                return render(request, template_name, context)
+
+        - `restaurant_list.html`
+            {% block content %}
+            <h1>Restaurant List</h1>
+
+            <ul>
+            {% for obj in object_list %}
+                <li>{{ obj }} <br/>
+                {{ obj.name }} {{ obj.location }} {{ obj.category }} {{ obj.timestamp }} {{ obj.updated }}</li>
+            {% endfor %}
+            </ul>
+            {% endblock %}
+
+
+
+    - 17: Understanding Querysets
+        - https://docs.djangoproject.com/en/1.11/ref/models/querysets/
+        - django shell
+            - handy for finding out how things are stored in the
+              database
+            - `python manage.py shell`
+        - manipulate data
+            - qs.filter
+            - qs.update
+            - $MY_IMAGES/cs/django-course/queryset-filter.jpg
+        - create new database object
+            - manual way (inefficient)
+                - obj = RestaurantLocation()
+                - obj.save
+            - django way
+                - obj = RestaurantLocation.objects.create(name='rest2')
+
+    - 18: Generic List View
+        - filter by slug
+        - $MY_IMAGES/cs/django-course/generic-list-views.jpg
+
+    - 19: Restaurant Profile Detail
+        - Django: `DetailView`
+        - aside: 
+            - list views: the context object is always `object_list`
+            - detail views: the context object is always `object`
+
+    - 20: SlugField & Unique Slug Generator
+        - unique slug generator https://www.codingforentrepreneurs.com/blog/a-unique-slug-generator-for-django/
+
+    - 21: Signal for Unique Slug
+        - from django.db.models.signals import pre_save, post_save
+        - $MY_IMAGES/cs/django-course/pre-save-signals.jpg
+
+    - 22: Slugs as URL Params
+        - $MY_IMAGES/cs/django-course/slugs-as-url-params.jpg
+
+    - 23: Get Single Items from the DB
+        - qs.first()
+        - qs.last()
+        - $MY_IMAGES/cs/django-course/get-rows-from-queryset.jpg
+        - 'get' method
+            - obj = RestaurantLocation.objects.get(pk=1)
+        - 'get_object_or_404'
+            - get_object_or_404(RestaurantLocation, pk=1)
+            - returns nice 404 html as well if item doesn't exist
+
+    - 24: Saving Data the Hard + Wrong Way
+        - from django import `forms`
+        - note for security you need a crsf_token
+        - $MY_IMAGES/cs/django-course/crsf_token.jpg
+
+    - 25: The Power of Django Forms
+        - must validate the form!
+            - $MY_IMAGES/cs/django-course/validate-Django-form.jpg
+        - add an if statement to detect form errors!
+            - $MY_IMAGES/cs/django-course/form-errors.jpg
+            - also: no need to specify all the form fields in the
+              html, just include {{ from.as_p }}
+                - $MY_IMAGES/cs/django-course/form-as-paragraph.jpg
+            - custom field validation: 
+                - add new functions called `clean_[fieldname]`
+                - $MY_IMAGES/cs/django-course/validate-form-fields.jpg
+
+
+    - 26: The Extra Power of Django Model Forms
+
+    - 27: Simple + Effective Validation
+
+    - 28: Letting Users own Data
+
+    - 29: Associate User to Form Data in FBV
+
+    - 30: Associate User to Data in Class View
+
+    - 31: Login Required to View
+
+    - 32: LoginView
+
+    - 33: Using Reverse to Shortcut URLs
+
+    - 34: Menu Items App
+
+    - 35: Menu Item Views
+
+    - 36: Limiting Form Field to QuerySet
+
+    - 37: Personalize Items
+
+    - 39: Style Profile with Bootstrap
+
+    - 38: User Profile View
+
+    - 40: Adding a Robust Search
+
+    - 41: Follow Users
+
+    - 42: Follow Button Form
+
+    - 43: Following Home Page Feed
+
+    - 44: Register View
+
+    - 45: Activation Keys
+
+
+
+
+### Handy
+    - Django "raw" sql queries
+
+### Links
+    - Freecodecamp Django 4 hrs   https://www.youtube.com/watch?v=F5mRW0jo-U4
+    - Learn Django 1.11: Youtube  https://www.youtube.com/watch?v=yDv5FIAeyoY
+    - Learn Django 1.11: Github   https://github.com/codingforentrepreneurs/Try-Django-1.11
+    - Create blank Django project https://www.codingforentrepreneurs.com/blog/create-a-blank-django-project/
+    - Course Github page          https://github.com/codingforentrepreneurs/Try-Django-1.11

@@ -1,0 +1,2411 @@
+### 10 On Measurement
+
+The notions and theorems described in the preceding two chap-
+ters raise basic questions to which we shall have to come back.
+But before that we must consider different, though closely re-
+lated, sets of problems: those that concern measurement. Unless
+otherwise specified we investigate them within the realm of con-
+ventional textbook quantum mechanics (no hidden variables).
+For reasons to be unfolded here, measurement constitutes a
+riddle, and a great many theories were put forward as attempts
+to solve this riddle. The number is so considerable indeed that
+to try and review them all would be an almost impossible un-
+dertaking. There is all the less ground for trying to grapple with
+it, as a survey of a number of approaches to measurement the-
+ory was already given in Refs. [1] and [2]. Hence what will be
+done here is merely to explain the problem, sketch and discuss
+its current most popular suggested solutions, and have a look at
+a series of related questions, such as decoherence, formulation
+within the Heisenberg picture, and lack of relativistic covariance
+of the wave-packet collapse.
+10.1 The Basic Problem
+In Section 8.1 it was pointed out that in the case in which two
+quantum systems temporarily interact, after the interaction is
+over the composite system is generally left in what is called an
+"entangled state," which means that its state vector is not just a
+product of state vectors corresponding to each system.
+Macroscopic systems being composed of atoms and fields,
+there is no reason why they should not obey the quantum laws.
+It therefore seems quite natural to consider them as quantum
+15810.1 The Basic Problem
+159
+systems, albeit extremely complex ones. If this point of view is
+taken, then it is, of course, to be expected that at least in some
+cases the interaction that takes place during the measurement
+time between a measurement apparatus A (a macroscopic sys-
+tem of a certain type) and the quantum system S on which the
+measurement is made by means of A will bring the composite
+system SA into an entangled state. As will presently be ex-
+plained, it is this fact that raises the essential interpretational
+difficulty of quantum measurement theory. Although taking the
+interaction between A and its environment adequately into ac-
+count lightens the difficulty, it does not remove it altogether as,
+at a later stage, will be shown.
+n
+To describe, then, the basic problem (also known as the
+"Schrödinger cat problem" because, to picture it more vividly,
+Schrödinger, in the account he gave of it replaced the instrument
+pointer by a cat), let us call |₁ >, , | >, the eigenvectors
+of an observable L that pertains to a system S and whose value
+an experimentalist wants to measure by means of an apparatus
+A. For the sake of simplicity, let us assume that A can only be in
+one of a discrete set of eigenstates {\n,r >}, where n labels the
+possible positions G = g of a pointer, and r is a degeneracy in-
+dex related to all the other variables in A. Needless to say, such a
+description of the apparatus is highly schematic; any conceptual
+difficulty to which it may lead will therefore have to be examined
+with care, within the framework of a more realistic formalism,
+before it can be said to be a true one. Nevertheless, this simple
+picture is useful for illustrating the main features of the problem.
+Let us first consider the case in which S is initially in an
+eigenstate > of L.
+m
+Lym>=1mm >
+(10.1)
+and in which A simultaneously lies in one of the states |0,r>,
+so that the coordinate G has the value go. A is so devised (this
+is a part of our assumption) that, under such circumstances, the
+effect of the interaction is to bring it into one of the states (m,s >
+without changing the state of S. In other words, the state vector
+that describes the composite system S + A undergoes the change
+described by
+14m>10,r> | 4m > \m, Smr>
+(10.2)160
+10. On Measurement
+If this is the case, after the interaction the pointer of A is in the
+position G = 8m, which is in a one-to-one correspondence with
+the eigenvalue l„ of L. Thus Eq. (10.2) can indeed be considered
+as a model describing a process of measurement of L by means
+of A.
+m
+Now, however, let us consider a different initial situation, in
+which A is still described by 10,r> but S is in a superposition of
+states 4m >
+14 >= Σam14m >
+m
+(10.3)
+where the am's are parameters. The superposition principle guar-
+antees that (except in the special cases when superselection rules
+operate) Eq. (10.3) is indeed a possible initial state. Then, as a
+result of Eq. (10.2) and the linearity of the time evolution law
+(Chapter 3: Rule 3), the final state of the compound system is
+necessarily described by
+||
+|Y', >= Σam|xm>
+(10.4)
+with
+m
+|Ym>= 14m > \m,sm,r>
+(10.4a)
+There is a sense in which Eq. (10.4) can be said to adequately
+describe the "measurement process" in the considered situation.
+For this equation shows that if, immediately after the interaction
+between the system S and the instrument A, an observer happens
+to measure (by a procedure we do not analyze) both L (on S) and
+G (on A) on a whole ensemble of S + A systems described by
+the right-hand side of this equation, he is bound to find a 100
+percent correlation between the results. Each time he finds L = lm
+he must find G = 8m and conversely (this immediately follows
+from Rule 8, of Chapter 3). In other words, as soon as he has
+measured G he knows the value he will find upon measurement
+of L. Under these conditions he can dispense with the latter
+operation. We say therefore that by measuring G on A he has
+performed a measurement of L (obviously this argument can be
+extended to a whole chain of instruments A(¹), A(²), A(K), each
+measuring the "pointer coordinate" G(1), G(2) G(),. of the10.1 The Basic Problem
+161
+one preceding it in the chain; the latter is called the von Neumann
+chain). Moreover, while the final state operator
+*
+p = |Y} > < Y₁ | = Σama | >< Y
+m,n
+m
+(10.5)
+admittedly involves cross-terms (terms with m #n), still such
+terms play, in practice, hardly any role. The reason is that—as
+formulas (3.4) or (6.22) together with Eqs. (10.4) and (10.5) easily
+show the probabilities of getting a given outcome for G and a
+given outcome for any observable B pertaining to S upon simul-
+taneous measurements of G on A and B on S involve no such
+terms. And the same is true, of course, concerning the probabil-
+ities relative to measurements of observables pertaining either
+to A alone or to S alone (because of the mutual orthogonality
+of the {\m >} and {\m,sm,r>} respectively). In other words,
+the cross-terms in question can only come in when correlations
+between observables of S and some observables of A differing
+from G are investigated. More detailed investigations (Jauch [3];
+see also [1]) even show that essentially the class of the latter
+contains none of the observables of A that commute with G.
+Under these conditions p can-for all practical purposes-be
+replaced by
+p' = Σ |am|² |Ym >< Ym|
+111
+(10.5a)
+But if we compare this p' with expression (6.1) we observe
+that it is identical to the statistical operator of a (proper) en-
+semble in which a proportion |am|² of the systems have L = 1m
+and G = g. Since, applied to state vector (10.3), probability rule
+(3.3) would have yielded just this result, we see that, in the just
+sketched theory of the measurement process, the probability rule
+in question is recovered.
+Operationally all this is rather satisfactory, but does it mean
+that the physical interpretation of Eq. (10.4) is totally clear? The
+answer is no, for difficult questions are still to be faced. Let us
+have a quick view of them.
+1. Above, we implicitly took it for granted that the over-
+all, composite quantum system under study is composed of
+two definite, distinct parts: S, the system on which the observ-
+able is measured, and A, the instrument of observation. But162
+10. On Measurement
+questions may be asked as to what defines the borderline be-
+tween the two. Is it merely defined by the fact that we find
+it convenient to consider some parts of the global system as
+being "parts of the instrument" or is it determined in a more
+physical way, by the very structure of the system at hand? In
+other words, if we were just given a complex system—that is,
+its Hilbert space, its Hamiltonian, etc.—could we, by mere in-
+spection of these data, determine whether or not this system
+is composed of a "measured system" and an instrument? And
+could we determine what elements of the global system belong
+to each? In a theory such as quantum mechanics, some basic
+rules of which refer to measurement, such questions are signif-
+icant.
+2. Even assuming this question is settled, we must face the
+problem of what determines the "pointer basis" of the instru-
+ment. To understand what is here at issue let us consider the
+simple case in which the index m merely runs from 1 to 2
+and let us suppress the degeneracy indexes, so that Eq. (10.4)
+reads
+|Y >= a₁₁> 11 > +a₂lw₂ > 12 >
+(10.6)
+Let us then assume that the Hermitean operator G' whose
+eigenvalue equation is
+G'IV₁ >= g₁IV>
+with
+V₁ >= 2 1/2 (11 >±2>)
+also represents an observable of the instrument. Equation (10.6)
+can then also be written
+-1/
+| Y₁ > = 2¹¹² [(a₁|₁ > +9₂|¥₂ >) ® [V+>
++(91|41-92142 >) © [V_ >]
+and it is clear that if we somehow get to know the value, gé̟ orgó,
+of G', we thereby also know the state, |×+ >= a₁|4₁ > + α₂\42 >10.1 The Basic Problem
+=
+163
+or |xa₁₁>-a2|42 > of the measured system.¹ This im-
+mediately raises the questions: "What does the instrument ac-
+tually measure?" and "What is the pointer coordinate―G or G'
+or
+?"
+In general the states |✗+ > and ✗_ > are not orthogonal, so
+that they are not the eigenvectors of any observable and to try
+and answer the question at issue some physicists argued that a
+measurement should measure not a state but an observable and
+correlatively proposed the rule that in an expansion of |Y, > of
+the type (10.4) both the {|wm >} and the {\m, Smr >} should be
+sets of orthonormal kets, which, at least when a₁ a₂, would
+eliminate any pointer coordinate other than G. The proposal
+is attractive in the sense that, except for special choices of the
+am's, it does make the admissible pointer basis unique, and thus
+determines unambiguously what is measured and what is the
+pointer coordinate. But it meets with some difficulties, in par-
+ticular when the evolution in time of the global system is taken
+into account. We shall see (Section 10.6) that the environment
+theory proposes a different, more flexible and, as it seems, on
+the whole more satisfactory solution (in this connection see also
+Section 13.7).
+3. Even assuming that difficulties 1 and 2 have been set-
+tled, we must apparently bring at some place the von Neumann
+chain to a close. At some stage (p) it must be said: "And finally
+the observer observes the quantity G(P) on A(P) and finds g(p)"
+As long as the theory does not analyze this last, crucial point
+it must be considered as―to say the least-incomplete. This is
+true even though a positive feature of the von Neumann chain
+concept must be acknowledged, namely the fact that, at least if
+a strictly operational standpoint is taken, then, under fairly gen-
+eral conditions, the place in the chain where the "cut" is made
+is arbitrary. These conditions (to be made more precise below)
+are tantamount to the requirement that the systems which, in
+the chain, lie "after" the cut should be classically describable.
+For this reason the cut in question is often just referred to as the
+"quantum-classical cut."
+1. Suppose for example that we actually measure G' and get g as a result. By
+applying Rule 10a (Chapter 3) we then find that, just after this measurement,
+the state vector of the overall system is |x+ > [V+ >164
+10. On Measurement
+"
+4. To place this cut at the borderline between "matter" and
+'consciousness," as was suggested by some authors [4,5], raises
+difficulties, be it only because of the plurality of conscious-
+nesses. But to place it between the system and some macro-
+scopic physical system called "the instrument" raises the prob-
+lem that when macroscopic systems such as instrument point-
+ers are considered, we like to think of them in the way both
+classical physics and commonsense do, that is, as having def-
+inite positions in space, definite velocities, and so on. More
+precisely, even though we willingly grant that their center-of-
+mass position and velocity should not violate the Heisenberg
+indeterminacy relationships, still we feel reluctant to admit that
+an instrument pointer, for example, could sometimes not lie
+in any definite interval of the instrument scale (nor in any
+other definite region of space either!). Indeed, one essential
+idea that the expression "a classical system" is meant to ex-
+press is that the center-of-mass position of such a system must
+at any time have (perhaps within some tiny uncertainty lim-
+its) a definite value. Now, as explained in detail in Section 4.3,
+this, in turn, means that we can at least imagine somebody
+who would know with certainty, on any particular such sys-
+tem and within the limits just alluded to, what the outcome
+would be of a measurement of this center-of-mass position if
+it were performed. This generates the two difficulties 4a and
+4b now to be made explicit. These difficulties are very much
+linked but for maximal clarity it is suitable to formulate them
+separately.
+4a. This difficulty stems from the just recalled meaning of
+the verb "to have" together with the fact that in replacing p by
+p', that is in going over from Eq. (10.5) to Eq. (10.5a), we had
+to assume the practical inobservability of some entities. Indeed,
+anybody who accepts the description in terms of p' and inter-
+prets p' as describing a proper mixture can truly say—in the
+sense defined above-that a proportion |am|² of the elements of
+the ensemble do have L = 1… and G = gm. But we must remember
+there is a difference between p and p', corresponding to the fact
+that there exist Hermitean operators operating in the Hilbert
+space of the S + A system whose mean values for the two cases
+are different. If these operators correspond to physical quantities
+that conceivably could be measured, if the "commonsense" view
+m10.1 The Basic Problem
+165
+is kept that "of course" an experimentalist can choose at whim
+what observable to measure on S + A, and if it is considered that
+the purely practical obstacles making some measurements un-
+easy are not to be taken into account, then the difficulty cannot
+be coped with. Most measurement theorists do not, therefore,
+accept such stringent conditions and are content that under re-
+alistic conditions the operators in question do not correspond to
+practically observable physical quantities. But the reference, in
+such, allegedly basic, descriptions, to what is practically feasible
+and what is not introduces a touch of subjectivity that raises
+questions.
+4b. As already noted, difficulty 4b is very much linked
+to the foregoing one. In a sense, however, it is even worse
+for it remains even under conditions under which difficulty
+4a would be considered as removed (unobservability of some
+physical quantities). We shall refer to it as the "and-or" diffi-
+culty. To state it let us turn once more to p' [Eq. (10.5a)] and
+to its interpretation as a proper mixture. To some extent, this
+interpretation is backed up, as pointed out, in particular, by
+Gottfried [6], by the fact that the la² appear in p' precisely
+in the same manner as probabilities do in classical statistical
+physics. But is this a truly convincing argument? As stressed
+by Bell [7] "if one were not actually on the lookout for proba-
+bilities, the obvious interpretation of even p' would be that
+the system is in a state in which the various |Ym >'s somehow
+coexist:
+Y₁><₁ and 2>< 2 and
+This is not at all a probability interpretation, in which the different
+terms are seen not as coexisting but as alternatives." In this quo-
+tation Bell, admittedly, makes no reference to ensembles. But it
+is clear that such a reference can hardly help. For indeed, when
+considering a measurement process, we are interested in what
+happens to one individual system S, associated with one individ-
+ual instrument A. And as long as the completeness assumption
+is made it seems impossible to reconcile the thereby implicitly
+assumed uniformity of the ensemble described by p with the di-
+versity of the elements of the proper mixture that, allegedly, p' is
+claimed to describe. To assume that it is just the unobservability166
+10. On Measurement
+of some physical quantities that creates this diversity just sounds
+absurd.
+Difficulty 4b must somehow have been in the mind of most
+quantum physicists for a long time. It may well be what implic-
+itly prompted Everett to put forward his relative state theory
+(see Section 12.1). It was made explicit in Ref. [2] and forcefully
+stressed by J. Bell as just noted. Surprisingly though, it seems
+to have attracted little or no explicit consideration on the part
+of any of the physicists who did put forward quantum mea-
+surement theories. For this reason it will not be further taken
+into account in the review of such theories given below. But
+of course it will be considered in later chapters (Chapter 15 in
+particular).
+10.2 An Explicit Example
+At this stage a preliminary question comes to mind. It has to
+do with the (idealized) process (10.2). Is at least this process
+free of conceptual difficulties? Can it take place in conformity
+with quantum mechanics? In other words, can some interac-
+tion Hamiltonian be built up that does entail such a process?
+Fortunately the answer is yes, as was first pointed out by von
+Neumann in his already quoted book and is now shown on an
+example.
+Of course, in such examples maximal theoretical simplicity
+should be aimed at. Consequently let the system S on which
+the measurement is made just be a spin 1/2 particle and let the
+measured quantity L be the z component S₂ of its spin, so that
+Eq. (10.1) reads (with ħ/2 units)
+L|Pm >= m |Þm >
+, m
+= +1
+(10.7)
+Further, let & be the pointer coordinate and let the time evo-
+lution of the system take place in accordance with the scheme:
+80 (5) m > 8m (§) |+m >
+(10.8)
+which, when the gm (§) are mutually orthogonal, is just a special
+realization of scheme (10.2). Here go (§) and gm (5) are the (nor-
+malized) wave functions of A (more precisely of the pointer of A)
+before and after the interaction respectively (for convenience the10.2 An Explicit Example
+167
+grossly oversimplified assumption of no degeneracy is made).
+The problem is to find an interaction Hamiltonian H' operating
+only during a short time interval (t',t") and having the effect of
+inducing transition (10.8).
+It is easily verified that a solution exists, in the form
+H' = ß(t) L® (−1
+(너)
+a
+-)
+(10.9)
+ẞ(t) being equal to zero except during the short time interval
+(t',t"), during which it is so large that all the rest of the Hamil-
+tonian can be neglected compared to H' Setting
+a(t) = [*B(T) dr
+BC
+ẞ(T) dT
+and
+a =
+±α(t")
+(10.10)
+(10.11)
+it is then easily checked that during the measurement time in-
+terval the ket
+\w+>=g[ = a(t)] | >
++
+(10.12)
+is, for any derivable function g(§), a solution of the Schrödinger
+time-dependent equation. Hence scheme (10.8) does hold, with
+8+ (§) = g(-a)
+(10.13)
++
+and if g(§) is a peaked function choosen so that it is zero for
+E a(t") the condition that 8. (E) be orthogonal to g_ (§) is
+met, so that scheme (10.2) is indeed realized (if g (§) is a Gaussian
+the condition is only approximately met but the overlap of 8+
+and g_ can be made as small as desired by choosing g(§) with a
+small enough width).
+Of course, this specific example of an idealized measure-
+ment process only shows that the scheme (10.2) can be realized.
+It sheds no light on how to remove difficulties 1 to 4b listed in
+Section 10.1. But still, the mere fact that process (10.2) can indeed
+take place in conformity with the Schrödinger equation, that is,
+without violating any of the uncontroversial rules of quantum168
+10. On Measurement
+mechanics, is already worth noticing, since a conception incom-
+patible with this result is sometimes put forward and, what is
+even worse, is often-though wrongly-attributed to Bohr. In-
+deed, in semipopular books or textbooks it is often asserted that,
+according to Bohr, any measurement performed on an atomic
+system unavoidably disturbs this system. Clearly, process (10.2)
+is a counterexample to such a claim. It is true that, in situations
+more realistic than the model described, a small disturbance is
+most often unavoidable, due to the existence of additively con-
+served quantities, such as total angular momentum, shared by
+the system and the instrument (this was first pointed out by
+E. Wigner [8], see also Araki and Yanase [9] and Ref. [1]), but by
+choosing appropriate macroscopic instruments such disturbances
+can be brought below any preascribed level. And anyhow, to at-
+tribute such a conception to Bohr is a misinterpretation of his
+standpoint. His claim was different, for in fact it was that it is
+impossible even to (conceptually, so to speak) make a clearcut
+separation between the behavior of atomic objects and their in-
+teraction with the measuring instruments. So that he seems to
+have considered it meaningless even to mention the attributes
+of a quantum system as if they existed per se, and this led him
+to explicitly criticize the use of such notions as that of a "dis-
+turbance of a phenomenon by observation" (see Section 11.1 for
+more detail).
+10.3 An Unsatisfactory Qualitative Suggestion
+To remove the aforementioned difficulties many proposals have
+been made, some quantitative and some qualitative only. In this
+section, a particularly "sweeping" one of the latter type is con-
+sidered and found unsatisfactory. Though seldom viewed as
+attractive by the physicists, this proposal is not unfrequently
+put forward by contemporary philosophers, and particularly by
+those in the opinion of whom the growing difficulty to commu-
+nicate met with by experts in different scientific fields constitutes
+an indication that the very concept of universal laws is obsolete.
+These thinkers start by pointing out that the quantum mechan-
+ical formalism was developed quite specifically in order to deal
+with phenomena in the microscopic domain and that it is bası-
+cally in this domain that it met with all the successes commonly
+referred to in order to prove its validity. It is therefore—they10.3 An Unsatisfactory Qualitative Suggestion
+169
+say-far from obvious that its basic notions are relevant at ev-
+ery level of the physical description of nature. To claim they are
+amounts they say-to believe in a special brand of reductionism,
+consisting in arguing that quantum physics is the basic theory
+because everything is composed of atoms. But-these persons go
+on saying such an argument is all the more shaky as quantum
+physics itself, via nonseparability and so on, sets rather drastic
+limitations on the adequacy of any physical description based
+on atomistic reductionism. The argument is further backed, in
+the mind of a number of these persons, by the observation that
+even chemistry—the science closest to quantum physics—has
+quite a number of laws and concepts that cannot be derived
+from those of physics in any convincing manner. The conclusion
+drawn is that the conceptual difficulties quantum mechanics
+meets have no substance since they all stem from considering
+that the quantum laws apply to the instruments in spite of these
+being macroscopic systems.
+Although this argument may sound convincing to some ears,
+in fact it is not. First of all, the difficulties scientists in different
+fields have to communicate with one another are of course most
+easily understood by taking into account the complexity of con-
+temporary scientific research, its rapid growth during the last
+decades, and the time-consuming efforts each scientist must de-
+vote to the essential task of mastering his or her own domain and
+reading the corresponding literature. The difficulties in question
+therefore do not testify in any way either for or against the unity-
+of-science conception; and most scientists know very well that,
+now as in the past, concepts developed in one branch of science
+not infrequently prove useful in some apparently quite distinct
+other branches, which testifies in favor of at least some kind of
+universality of basic laws.
+In particular, a few essentially quantum notions, such as
+quantum tunneling, have been shown quite indispensable for
+explaining a number of experimental facts concerning some sys-
+tems of macroscopic size and complexity and which therefore we
+have every reason to call "macroscopic" (see in particular the ex-
+periments reported by Leggett [10, 11]). This seems to contradict
+in a rather blatant way the theory that nature has two (or more)
+different domains, one of them being that of the microscopic sys-
+tems and another one that of the macroscopic physical ones, the
+laws of one domain being exclusively valid in this domain. But if170
+10. On Measurement
+this theory is given up it is no more possible to uphold the argu-
+ment described above, according to which, in situations where
+instruments are at stake, a possible violation of the quantum laws
+applied to systems of which these instruments are parts is admis-
+sible. More precisely, it seems that then the only way to salvage
+this view would be to consider that the macroscopic systems on
+which quantum effects are seen are not "really macroscopic."
+Now, a claim of this sort is fully consistent within a conception
+of physics in which this science is considered as describing, not
+reality "as it really is" but just collective appearances; for then a
+notion such as that of "macroscopic systems" can meaningfully
+be defined by referring to human possibilities. Indeed this is just
+the definition of these systems that will be taken up in Chap-
+ter 15, in connection with the notion of empirical reality. Here,
+however, the context is quite different, for the proponents of the
+foregoing argument do not question the view that the purpose
+of physical research is to describe reality as it really is. Under
+these conditions, the purely negative and human-centered defi-
+nition of a whole class of important systems, considered here, is
+obviously unsatisfactory. In fact, it amounts to pushing forward
+the frontier of the microscopic domain while making it a matter
+of principle to carefully keep the instruments outside this fron-
+tier. This, however, is very much reminiscent of von Neumann's
+chain, and raises the same question: Where is the cut?
+Finally, are the arguments based on nonseparability and on
+the relative autonomy of chemistry significant concerning the
+question at stake? In fact they are not. With regard to chemistry it,
+admittedly, is true (as Primas [12], for example, has very clearly
+shown) that strictly speaking the laws used in chemistry are not
+all deducible merely from the general laws of quantum physics.
+They follow from these laws plus some definite ways of "looking
+at things," ways that prompt us to disregard the nonseparability
+features that make the wave function of any molecule entangled
+with those of all the other molecules in the universe. But clearly
+the truth of this (quite important) remark does not have the
+effect of validating any claim to the effect that the quantum laws
+should be suspended in chemistry. Quite the contrary, we must
+go on considering that these laws are an essential part of any
+description of the complex systems chemistry deals with.
+What has just been noted is also relevant to understand-
+ing why the existence of nonseparability does not constitute a10.4 Still Another Unsatisfactory Qualitative Suggestion
+171
+valid argument against the notion upheld here that the quantum
+laws—though, admittedly, discovered in the atomic realm—are,
+in fact, universal. The point is that the scarcity of typically quan-
+tum phenomena in the macroscopic domain has strictly nothing
+to do with nonseparability. It is due to other causes, which are
+very well understood within the theory that quantum physics is
+universal. Correlatively, nonseparability, far from being a correc-
+tive to atomic (i.e., quantum) physics, is an inherent consequence
+of it. As a result, it is quite mistaken to claim that it is by disre-
+garding nonseparability effects that we can apply the quantum
+laws on the small scale, that is, to atoms. For these reasons the
+plausibility of the hypothesis that the quantum laws and con-
+stants are universal—a plausibility due in particular to the past
+successes of the universality hypothesis applied to other laws
+and constants—is not in the least diminished by the existence of
+nonseparability.
+To sum up, to the extent that the difficulties pointed out in
+Section 10.2 are real ones in quantum physics, they cannot just
+be wiped away by the qualitative general arguments examined
+in this section.
+10.4 Still Another Unsatisfactory Qualitative Suggestion
+Contrary to the previous one, the qualitative suggestion here re-
+ferred to stemmed not from philosophers but from physicists. It
+may even be considered that it constitutes an at least plausible in-
+terpretation of what Heisenberg wrote in Chapter III of his book
+Physics and Philosophy [13] concerning the measurement process.
+The suggestion in question is based on the speculation that the
+difficulties 1-4b in Section 10.1 are all due to the fact that, in the
+there-described schematic measurement theory, the instrument
+A is, before the interaction, ascribed a pure case 10,r > Being a
+macroscopic system, A is of course composed of a great many
+particles and has therefore an extremely large number of de-
+grees of freedom. It is totally impossible to know, at one precise
+time, the values of all the parameters that would precisely spec-
+ify the state of A. To this subjective uncertainty in the overall
+picture the interaction of S with A has but the effect of adding a
+further this time "objective"-element of uncertainty. In other
+words the "probability function" (in Heisenberg's terms) con-
+trolling the various possible outcomes contains, along with the172
+10 On Measurement
+objective element due to the quantum nature of the process, an
+unavoidable, important subjective element due to our ignorance
+of the microscopic initial conditions The suggestion then is that
+when this combination of the two-subjective and objective-
+uncertainty "sources" is taken into account, the uncertainty in
+the measurement result should be explained in a way in which
+difficulties 1-4b simply cannot arise
+The fact on which this argument is based can certainly not
+be denied We do not know precisely the initial state of the
+instrument Indeed, in view of the fact that instrument A pre-
+viously interacted with other systems it could even be claimed
+(see Chapter 8) that describing the "initial state" of A by means
+of a state vector is definitely unrealistic Unquestionably, what
+should be done in the spirit of Heisenberg's remark is to con-
+sider a whole ensemble of S + A systems and describe the initial
+"state" of A by means of a statistical operator
+If this is done, then of course the ensemble of the S + A sys-
+tems is also described by a statistical operator, the time evolution
+of which during the measurement time interval is described by
+known equations But then the question arises Are the difficul-
+tiesof Section101 really removed? In other words Is the statistical
+operator describing the S + A system after the interaction is over,
+of such a form that the ensemble E it describes can be interpreted
+as one containing, in proportions |am|², S + A systems the A part
+of which have G = gm?
+Unfortunately the answer is no This is by no means obvious,
+for the ensemble E is of course represented by a statistical oper-
+ator that is not a projector and when this is the case there exists,
+as we know (Section 8 3), not just one but many (an infinity of)
+physically distinct proper mixtures that are represented by it At
+first sight it could be hoped that among all these proper mixtures
+there should be one having the required properties, if not exactly,
+at least approximately But I showed in Ref [14] that in fact this
+is not the case There would be no point in transcribing here the
+calculations leading to this result, for they are already described
+at length in Ref [1], where the ultimate failure of various other
+attempts at refining the approach sketched in this section is also
+shown (for a critical review of other, more recent, measurement
+theories see also Ref [2, addendum])10.5 Superselection Rules (They Yield No Direct Solution)
+10.5 Superselection Rules (They Yield No Direct Solution)
+173
+In Sections 3.1 and 7.1 superselection rules were mentioned, but
+merely in a somewhat cursory way. Since a conjecture has some-
+times been expressed that this notion could yield quite a straight-
+forward clue to the measurement problem this is a proper place
+for explaining in somewhat more detail the superselection rules.
+This will make it possible to (a) describe the reasons why at first
+sight the notion in question seems to lead to quite a simple so-
+lution of the problem and (b) show why, after all (as has been
+known for a long time by a majority of theorists) this, strictly
+speaking, is a lure (although it could inspire more elaborate
+developments²).
+As already mentioned, while in quantum mechanics the dy-
+namıcal, observable quantities are quite generally associated to
+Hermitean operators the converse is not true: it is impossible
+to consider that all the Hermitean operators operating in the
+Hilbert space of a certain type of system correspond to observ-
+able quantities. It may then happen that the Hermitean operator
+associated with some definite observable Q commutes with all
+the operators associated with observable quantities, without be-
+ing merely a multiple of the unit operator. Such an observable
+Q is called a superselection charge. Let its eigenvalue equation be
+written:
+Q|k,r >= qk|k,r >
+(10.14)
+With {|k,r >} taken as a basis, a general matrix element of the
+matrix corresponding to an observable described by Hermitean
+operator A takes the form
+A₁Sit
+=<1,s|A|j,t>
+(10.15)
+2. Note added in proofs. See e.g., M. Namiki and S. Pascazio, Quantum The-
+ory of Measurement Based on the Many-Hilbert-Space Approach, Physics Reports
+232, p. 303, September 1993 [within the realm of the empirical reality approach
+(see Chapter 15) this nonrelativistic theory may be considered as removing
+difficulty 4].174
+10. On Measurement
+and with the help of the decomposition (3.11) of the unit operator
+the general matrix element of the product Q A may be written
+< 1,s\QA\j,t > = Σ <1,s|Q|k,r><k,r\A\j,t >
+k,r
+= Σ §¡k©s‚r¶k <k,r\A\j,t >
+k,r
+=qi <1,s\A\j,t>
+(10.16a)
+similarly
+<t,s|AQ|J,t >= qj <t,s|A|J,t >
+so that, since, by assumption, QA - AQ = 0:
+(9-9) <1,s|Alj, t >= 0
+(10.16b)
+(10.17)
+This shows that the matrix elements of all the observable
+physical quantities taken between eigenvectors of Q correspond-
+ing to different eigenvalues of Q vanish. In other words, in
+the {|k,r>} basis all the nonvanishing matrix elements of the
+observable physical quantities lie within squares-called super-
+selection sectors—strung together along the main diagonal, each
+square corresponding to one definite q value, as:
+9k
+91
+192
+93..
+0
+91
+92
+93
+0
+The reason why, at first sight, the notion of superselection
+charges seems to provide a way of solving the measurement
+riddle can now easily be explained. With the help of formula
+(3.12) any Hermitean operator A representing an observable can
+be written in the form
+A = Σaα Pa
+Σαρα
+α
+(10.18)10 5 Superselection Rules (They Yield No Direct Solution)
+where the a are the eigenvalues of A and
+Pa = Σ |a, v >< a, v|
+V
+(1019)
+175
+(here |a, v > are the eigenkets corresponding to eigenvalue a…) is
+the projector on the corresponding subspace & If Q is a superse-
+lection charge then the commutator [Q,A] = QA - A Q is equal
+to zero for any A, hence in particular for any choice of the aa,
+which implies that [Q,P₂] = 0 Then, if, just before a measure-
+ment of A, the state of the system is | >, the probability that
+this measurement yields outcome a is
+Pa = Tr[|y >< | Pa] =< w\Pa\w >
+(10 20)
+and if is expanded on the {|k,r >} basis according to
+| 4 > =
+>= Σci,sli, s >
+i,s
+then
+(10 21)
+P₁ = Σcit <i,s|Pa\j,t>
+i,s,j,t
+(10 22)
+But since [Q,P] = 0, Eq (10 17) also applies with PM substituted
+for A, and it shows that all the terms in (10 22) that correspond to
+ij vanish Within any subspace H, of the relevant Hilbert space
+corresponding to a given value of i, that is, of the superselection
+charge, it is then an easy matter to pick up a basis in which the
+matrix corresponding to P is diagonal (this new basis, {|i,r >},
+is obtained by diagonalizing the matrix whose general element
+is <i,s|Pali,t >) Expressed on the basis of H constituted by the
+union of these new H; bases, all the cross-terms in Eq (1022)
+vanish and pa takes the form
+α
+Pa = { \ cir|² <i,r|Pa\i,r >
+i,r
+(10 23)
+This result shows that, for any observable A whatsoever, the
+probabilities of getting this or that outcome are identical to those
+that would obtain if we had to do, not with a pure case, described
+by a state vector, but with a proper mixture in proportions |cr|²
+of systems in states |i,r > Since the stumbling block, concerning176
+10. On Measurement
+a realistic interpretation of the theory, is constituted by the very
+presence of such cross-terms, prima facie their vanishing seems
+to yield the clue to solving the measurement riddle. The idea
+would just simply be to postulate that in such highly complex
+systems as the ones, labeled S + A previously, which involve a
+macroscopic instrument, many Hermitean operators correspond
+in fact to no observable at all (i.e., are physically meaningless)
+allowing for superselection charges to be present, and that the
+pointer position is just one of the latter.
+A priori the idea looks quite attractive since of course it is
+true that for all practical purposes a great majority of all the con-
+ceivable dynamical physical quantities belonging to such sys-
+tems must be considered as lying outside the realm of what can
+possibly be measured. However, the superselection charges no-
+tion does not refer to measurements that in practice cannot be
+performed. It is based, as we saw, on the assumption that some
+Hermitean operators can strictly not be interpreted as referring
+to quantities that would be observable, even in principle—that
+is, they are mere mathematical abstractions that correspond to
+no physical property of the systems—and that all the other Her-
+mitean operators commute with the superselection charges. The
+assumption that the pointer coordinate, G, really is a superselec-
+tion charge therefore implies in particular that the Hamiltonıan
+of the SA system either corresponds to no physical property
+of this system or commutes with G. Since it is quite a basic rule
+of quantum mechanics that the Hamiltonian corresponds to the
+energy, which has always been considered as a most important
+physical property, it seems that the first of these two options
+would imply quite a momentous change in our understanding
+of the quantum mechanical formalism, and it is far from clear
+that such a change could be carried through in a consistent way.
+We are thus left with the idea that the pointer coordinate G com-
+mutes with the Hamiltonian. But, as is well known (and is easily
+verified), a dynamical quantity that commutes with the Hamil-
+tonian is a constant of the motion. The idea thus implies that,
+during the measurement process, G should remain the same (or,
+in other words, that the time evolution of the S + A system leaves
+it in the one superselection sector, q; say, where it was at the be-
+ginning). Quite obviously this is incompatible with the role of G
+as the instrument coordinate since if the pointer does not move10.6 The Role of Environment
+177
+during the process the measurement cannot yield outcomes dif-
+fering from one another.
+This (negative) result is obviously quite general. It is quite
+independent of the precise nature of the instrument A and in
+particular of whether or not the environment of A is considered
+as being itself a part of A. It is true that the interesting devel-
+opments reviewed in the next section and which are based on
+the idea of taking the role of the environment quite seriously
+into account are sometimes described in a language in which the
+expression superselection rules is made use of. But, strictly speak-
+ing, the notion that is there referred to under this name is not the
+same as the one that the name in question customarily refers to
+and that has been described above.
+10.6 The Role of Environment
+A new and promising general line of approach to measurement
+appeared in the early seventies when physicists such as H. Zeh
+made the most important remark [15] (to which we shall come
+back in Chapter 12) that, at the quantum level, macroscopic sys-
+tems never can be considered isolated; for it was immediately
+clear that this opened new possibilities concerning the measure-
+ment problem. Zeh's essential point is that the quantum energy
+levels of even quite tiny macroscopic systems are extremely close
+to one another. From this it follows that transitions between
+nearby levels can be induced by extremely weak fields. So weak
+indeed that, as detailed calculations show, even a small dust
+particle "lost" in interstellar space cannot be considered as re-
+maining quite isolated within any appreciable time interval. In
+consequence, insofar as theoretical attempts such as those men-
+tioned in the foregoing section picture the S + A systems as if they
+were isolated from the outside world, such attempts cannot be
+considered appropriate. They should be replaced by theories ex-
+plicitly taking into account the interaction of the (macroscopic)
+instrument A with its environment E. And, hopefully, in these
+new theories the difficulties 1-4b in Section 10.1 will take more
+tractable forms. Perhaps, even, they will vanish.
+A purposely simplified example that has the advantage of
+clearly exhibiting both the attractive features and the remaining
+weak points of such theories is Zurek's 1982 “bit-by-bit” model178
+10. On Measurement
+Sz
+[16]. In it, as here in Section 10.2, the quantity to be measured
+is the z component L = s₂ of the spin of a spin 1/2 particle S. As
+for the "pointer coordinate" G, for maximal simplicity it is as-
+sumed (in an avowedly "unrealistic" way) that it is a dichotomic
+variable, with nondegenerate eigenvalues g+ and g. The mea-
+surement process is then described by means of an interaction
+Hamiltonian HAS operating, as in Section 10.2, for a short time
+only, and whose effect during this time is symbolically described
+by
+|+ > ®] V > → | + > ®]U+ >
++
+|–> | V > → |- > ®]U_ >
+(10.24a)
+(10.24b)
+where |+ > (|− >) is the eigenket of s₂ corresponding to eigen-
+value +1 (−1) in units ħ/2, |U > (|U_ >) is the eigenket corre-
+sponding to g+(g_) and
++
+|V₁ >= 2-1/2 (|U₁ > ±\U_ >)
+(10.25)
+(An HAS having such properties is quite easily constructed, es-
+sentially on the same lines as H' in Section 10.2.) In Eqs. (10.24)
+|V > clearly represents the initial state of the "pointer" while
+\U > and \U_ > describe its two possible final states, corre-
+sponding respectively to s₂ = +1 and s₂ = -1. Note that the
+pointer may be thought of as being itself a spin 1/2 particle
+and G its spin component S₂, in which case its initial state is just
+the one corresponding to its spin component Sx, along Ox being
+definite and equal to +1 (still in ħ/2 units).
+Of course, at this stage the model involves the difficulties
+mentioned in Section 10.1, and in particular difficulties 2 and 4a.
+To make these explicit it is sufficient to assume that initially
+system S is prepared in a state
+|; >= a+ > +b |- >
+(10.26)
+(that is, in an eigenstate of a component of its spin other than s₂)
+where a and b are two complex numbers with
+|a|2 + |b|² = 1.
+(10.27)10.6 The Role of Environment
+The linearity of the Schrödinger equation then entails that
+| > | V >→ |ƒ >
+(10.28)
+with
+179
+|, >= a\+ > ®[U+ > +b\− > ®[U_>
+(10.29)
+so that of > has the general form of the right-hand side of
+Eq. (10.4), which, of course, gives rise to difficulty 4a. More
+precisely, the mean value on state | D, > of an observable such
+Pf
+as the product sx Sx then involves cross-terms with coefficients
+a*b and b*a that differentiate it from the mean value this same
+observable would have if the final ensemble were a mixture of
+states|+ > ®\U > and |− > ®\U_ > in proportions |a|² and [b]²
+respectively. At this stage, in other words, the model exhibits
+difficulty 4a in a very explicit way.
+For the purpose of removing such defects, an interaction
+between A and the environment E is introduced in the model.
+For computational simplicity the environment in question is as-
+sumed to be composed of a large number N of spins 1/2 that do
+not interact with one another and start interacting with A just at
+the time t = O when the S, A interaction has ceased; and this A, E
+interaction is described by the interaction Hamiltonian
+ΗΑΕ = ΣΗΜΕ
+==
+(10.30)
+with
+HA,E
+k
++
+= g(|U+ >< U₁| – |U_ >< U_]) & (\u+ >< u+ |
++
+-
+−\u_ >< u_\)k ® ПI₁+k₁₁
+= 8kSz ® s²²) ® ПI‚±k¹,
+(10.31)
+where u and (u_ > are the eigenvectors of the z compo-
+nents() of the kth environmental spin. For simplicity it is also
+assumed that the free Hamiltonians of S, A, and E are all zero.
+If„at time t = 0 the state of the combined S + A+ E system is
+N
+Y(0) = | > П1 (αxx | U+ >k + Bx|u_ >k)
+(10.32)180
+10. On Measurement
+it is then immediately shown that at time t this state becomes
+>k
+¥(t) = a\s+ > ®Пk[α exp(1gt)\u¸>
++ẞ exp(−1gt)|U_>k]
++bls_> [a exp(−18kt)|u₁>k
++ßk exp(18kt)|u_>k]
++
+(10.33)
+where
+=
+Is >>\U >
+(10.34)
+The statistical operator of the S,A system-describing an
+improper mixture of such systems-is then obtained by taking
+the partial trace of |Y(t) >< Y(t)| over the environment Hilbert
+space and turns out to be
+p = |a|² |s > < SÅ | + |b|²|s_ >< s_|
++
++z(t) ab* \s >< s_|
++
++z* (t)a*bs_ >< sl
+(10.35)
+where
+z(t) = II[cos 28kt +1(1α |² -| B|²) sin 2gt] (10.36)
+T
+With N large and the coupling constants gk chosen at ran-
+dom, z(t) soon becomes quite small and remains small a very
+long time thereafter (indeed a time comparable to the Poincaré
+cycle's duration). This effect, which has come to be known as de-
+coherence, means that a small time 7 after the system-apparatus
+interaction has ceased the nondiagonal matrix elements of p
+have themselves become (and remain) very small-so small as
+to be negligible for any conceivable practical purpose. Under
+such conditions the mean value, on the considered ensemble, of
+any observable belonging to the S + A system is easily shown
+to be the same as if this ensemble were a proper mixture, com-
+posed, in proportions |a|2 and 16|2, of two subensembles in both
+of which s, and S₂ would have definite values.
+The fact that the two ensembles in question are characterized
+by definite values of S₂ rather than of other "instrument” observ-
+ables is of course due to the circumstance that HA,E commutes
+with S₂, and not with these other observables. As a result, it may10.6 The Role of Environment
+181
+be considered that taking the interaction between the instrument
+and its environment into account has removed difficulty 2. At
+least, this standpoint may be taken up if the distinction between
+instrument and environment is taken for granted, which, actu-
+ally, still raises questions. In a way, the model may also be said to
+meet the demands formulated in Section 10.1 in order to remove
+difficulty 4a. But it meets them only concerning observables be-
+longing to S, to A, or undividedly to both. Of course, there also
+exist Hermitean operators that are not restricted to operate e1-
+ther on the Hilbert space HS, A = HS & HA of the composite S + A
+system or only on that, HE, of the environment, but act on the
+full HSA,E=HSHA HE Hilbert space corresponding to the
+overall physical system under study. If some such operators cor-
+respond to observables the problem must be reconsidered.
+Now, it just happens that in the model here under study
+operators do exist that are good candidates in this respect. The
+example I gave [17] is
+M = s₁ S₁ II₁s()
+x
+'k=1
+(10.37)
+To show this, let us remark first that when an operator C
+is a tensor product of two operators A and B corresponding to
+observables defined on two different subsystems S₁, S₂ of a larger
+system, the quantum mechanical mean value <|C|> of C on
+any | 4 > describing an ensemble of such larger systems is equal,
+as easily checked, to the value obtained by taking the mean on
+this ensemble of the products of the outcomes of measurements
+of A and B, separately performed on each pair S₁, S2. This shows
+that C is measurable whenever A and B are and of course this
+result can be extended to products of an arbitrary number of
+similarly defined observables. In the case under study it is true
+that an actual, simultaneous measurement of S., S., and all the
+s() would be "fantastically" difficult to perform as soon as N
+is large. But this is just a practical difficulty. In theory such a
+simultaneous measurement is conceivable and in view of what
+has just been shown it must then be acknowledged that, in theory
+at least, an experimental procedure exists for measuring M, so
+that it is difficult not to consider M as an observable.
+The reason why this remark is relevant is that the mean
+value of M on an ensemble described by Y(t) [Eq. (10.33)] is,
+at any time t, altogether different from what it would be if this182
+10. On Measurement
+ensemble were one of those in which each "instrument variable"
+S₂ and each "measured quantity" s, has some definite value. This
+is because, as an explicit calculation easily shows, M commutes
+with any HA, and therefore with the total Hamiltonian, so that
+its mean value <M > remains the same as what it was at time
+t = 0, namely
+<M >= (a*b + b* a) ПI₁ (α * * Bk + B* αk)
+(10.38)
+whereas on each one of the two ensembles of systems on which
+S₂ and S₂ have definite +1 or −1 values < M > is equal to zero. If,
+technically, an experimentalist were sufficiently well equipped
+as to be able to apply the above-sketched experimental proce-
+dure and if we assume―or take it for granted—that he would
+be free to apply it, then, if he did (and assuming the experimen-
+tal quantum mechanical predictions are correct) he would get
+results that would falsify the commonsense view according to
+which macroscopic systems always have macroscopically def-
+inite positions. M is an example of the observables we called
+"sensitive" in Section 1.6.
+Should it then be said that the idea examined here—that of
+taking the role of the environment into account in connection
+with the measurement problem-is of no value whatsoever?
+Certainly not, for there exists a subtler way of thinking, in which
+the said idea opens very interesting vistas.
+The point is that, in the very sketchy model described, space
+did not play any role. Indeed it was not even mentioned. As
+compared to actually existing states of affairs this of course is
+a gross oversimplification. Physical environments do extend in
+space
+and this feature is one of the first that a more realistic model
+should take into account. For example, the above model could
+be refined by assuming that the kth environmental spin lies at a
+distance L proportional to k from where the measurement takes
+place and by making some appropriate corresponding changes
+in the interaction Hamiltonian. Then a statistical operator pp.
+could be defined by partial tracing over all the environmental
+spin Hilbert spaces corresponding to k > p, where p is a positive
+integer smaller than N This describes a composite system that
+is "localized" in the sense that it does not extend in space farther
+than L, (more precisely, it describes, of course, an ensemble of
+such systems). And it is trivially verified that pp can be written
+Pp10.6 The Role of Environment
+183
+according to formula (10.35), with the only difference that z(t),
+instead of being expressed by Eq. (10.36) is expressed by a sim-
+ilar formula, in which the product only runs from k = p + 1 to
+N but which still entails for z the property of soon becoming
+extremely small. Under these conditions it is clear that concern-
+ing any observable defined on this composite "localized" system
+(let such observables also be called "localized") the predictions
+from Y(t) and those from a mixture, in proportions |a|² and |b|²,
+of systems having definite s₂ and S₂ values are, for all practical
+purposes, identical. Hence difficulty 4a is essentially removed in
+such models provided that all the entities that ordinary quantum
+mechanics refers to as “observables” and that are not "localized"
+in the above sense should be considered "by fiat" as not being
+truly observable (strictly speaking, the fact that human beings
+are localized does not suffice to render these quantities unob-
+servable since composite measurements can be performed by
+several distant observers who later gather to compare notes).
+In their 1984 paper [18], to which we shall turn again in
+Chapter 12, Joos and Zeh suggested the idea that local, classical
+properties (or at least appearances thereof) have their origin in
+the nonlocal character of the quantum state contrasted with the
+local character of conscious beings. “The interference terms"-
+they wrote "still exist but they are not there!", and further:
+"the collapse could then be based on the assumption on how a
+nonlocal reality is experienced subjectively by a local observer."
+The foregoing remarks may, in a way, be considered as qualita-
+tive illustrations of this quite far-reaching idea. We observe here
+an interesting convergence of views between inferences drawn
+from quantum measurement theory and conclusions that were
+drawn mainlyfrom the Bell theorems [1,19] and consisting in dis-
+tinguishing between a reality per se that can be described only as
+nonlocal ("independent reality" in my terminology) and what
+is experienced by a community of essentially local observers
+(empirical reality). We shall come back to such questions.
+• Remark 1. The objection centered on Eq. (10.38) to the
+Zurek-like attempt at reconciling quantum mechanics with the
+idea that a macroscopic system always has a definite macroscop-
+ically defined position rests in fact on two notions. One is that the
+practical difficulty of performing such and such a measurement
+does not have to be taken into account when discussing basic184
+10. On Measurement
+questions: concerning these, what is significant is only whether
+or not some measuring procedure can be defined. The other one is
+that the experimentalist is free to choose at whim what observ-
+able to measure. Neither one of these two notions is logically
+necessary. As for the first one we shall indeed consider in later
+chapters some possibilities of slightly watering it down. As for
+the second one, it was already pointed out (in Chapter 1) that it
+implies in fact a qualitative difference in the ways of considering
+future (viewed as open) and past (viewed as closed), and this
+difference may be seen as being unwarrantedly centered on man.
+Hence their rejection is conceivable. But it seems reasonable to
+require that if either one is rejected, this should be mentioned
+instead of being kept implicit.
+• Remark 2: Unfortunately, however, this demand is not al-
+ways met. While most of the physicists who developed the the-
+ory reviewed here especially Zeh and Joos—are very careful to
+use words and phrases that faithfully reflect the epistemological
+complexity of the matter, there sometimes are exceptions. In his
+1982 paper [16], for example, Zurek wrote that when the nondi-
+agonal matrix elements of the density matrix of the S + A system
+are small "the probabilities on the diagonal of the density matrix
+are there because of our (i.e., the observer's) ignorance about the
+outcome of the measurement. It is as yet unknown to us but never-
+theless it is definite." Elsewhere in the same article he sımilarly
+wrote "the interaction with the environment forces the system
+to be in one of the eigenstates of the pointer observable rather than
+in some arbitrary superposition of eigenstates." More recently [20]
+he again wrote that "open quantum systems are forced into states
+described by localized wave-packets.
+" 3
+We would most probably be mistaken if we believed that,
+on the substance of the matter at hand, there are real differ-
+ences of opinion between Joos and Zeh on the one hand and
+the cited author on the other hand. More precisely, when all
+is said and done there is no serious ground for doubting that
+the said author subscribes to at least the main lines of the well-
+balanced standpoint of Joos and Zeh. It is true nevertheless that
+3. Some controversy ensued. The texts of seven letters commenting on the last
+quoted article can be found in the April 1993 issue of Physics Today (pp. 84–90),
+together with Zurek's reply.10 7 "Epsilonology" Is of No Help
+185
+to the mind of innocent laymen the sentences quoted, likely to
+be taken at face value, might well convey the quite erroneous
+idea that the theory does show the pointer (and, more generally,
+macroscopic systems) to really be in such and such macrostates,
+in the absolute, ontological sense normally attributed to the verb
+to be That the "environmental measurement theory" here under
+study does not really achieve that much is of course acknowl-
+edged by all the physicists who work on the subject 4 What
+seems most likely is that some of them are considering this
+aspect of the matter as being "merely philosophical and there-
+fore not worth mentioning" While such a general position is
+defensible, nay even healthy, in most cases of normal scientific
+practice, when what is essentially at stake is the agreement bet-
+ween theoretical prediction and experiment, its consistency is
+questionable in problems in which, as here, this agreement is
+not what is under study, and what is looked for is basically an
+understanding of the actual meaning of the formalism
+10.7 "Epsilonology" Is of No Help
+Even in classical physics completely sharp factual statements
+cannot in general be made The values of the dynamical vari-
+ables cannot be given with an infinite number of decimals, no
+physical system can be said to be "perfectly" isolated, and so
+on Hence small differences necessarily exist between a sys-
+tem as it really is and its description by means of simple state-
+ments Moreover, elaborate experimental setups can in general
+be conceived of that, if used as measurement devices, would
+enhance these small differences A trivial example is when we
+have to do with two localized systems whose mutual distance
+is large We are then entitled to say that, as far as gravitation
+is concerned, they may be considered as isolated from each
+other "to a very good approximation," notwithstanding the fact
+that we can always conceive of gravitation-measuring devices
+sensitive enough to detect the small lack of isolation Another,
+3 (continued) Note added on reprinting: More recently Zurek responded again
+(and most positively!) to these critics, by putting forward a new, subtle and thought-
+provoking world view: W H Zurek, Phil Transactions of the Royal Society, London A
+(1998) 356, 1793-1821
+4 This is why the notion of "environment-induced superselection rules” [16]
+was gradually replaced by that of decoherence (see Section 12 3) On such ques-
+tions the exchange of views between Hepp [21] and Bell [22], is worth looking at186
+10. On Measurement
+also quite trivial example is the case when we have to do with
+two strongly peaked, Gaussian-shaped wave packets, the cen-
+ters of which are separated by a distance much greater than
+their widths. We are then entitled to say that, to a very good
+approximation, these wave packets may be considered as sep-
+arated, notwithstanding the fact that we can always conceive
+of measuring devices contrived so as to be especially sensitive
+to amplitudes in the region where the two Gaussian tails over-
+lap. What is read on such a device is an "observable" that takes
+up very different values in the case under consideration and
+in that in which the wave packets are strictly separated (i.e.,
+when they lie at an infinite distance from each other or when,
+instead of being Gaussian, they have finite and nonoverlapping
+supports).
+The possibility well known in classical physics-of con-
+ceiving of such devices and thinking of the observables they
+define is sometimes referred to in attempts at minimizing, or
+even negating the conceptual difference between classical and
+quantum mechanics in the domain of measurements. Basically
+the argument consists first in acknowledging the existence, in
+the quantum case, of "sensitive" observables such as M [Eq.
+(10.37)]—observables concerning which the simple sharp state-
+ment "the S + A + E ensemble is a mixture of two subensembles"
+is grossly false but in pointing out that these observables are ex-
+tremely difficult, if not impossible, to measure. It is then argued
+that if we go as far as taking into consideration "far-fetched"
+observables such as these we must as well take seriously into
+account the fact that also in classical physics observables can
+be defined, as we just saw, the measurement of which would
+falsify elementary "sharp statements" (such as: "The two wave
+packets are separated") some of which are so useful—and even
+essential both in ordinary and in scientific activity. The argu-
+ment then continues by observing that in classical physics the
+existence of such far-fetched observables is not viewed as ba-
+sıcally invalidating our usual statements about systems being
+isolated or separated from one another "to a very good approx-
+imation." Why then, the argument goes on, should the same
+standpoint not be taken in quantum physics? This is supposed
+to mean that the existence of observables such as M should not
+prevent us from asserting that, in the considered example, the10.7 "Epsilonology" Is of No Help
+187
+final S + A+ E ensemble is composed of subensembles the ele-
+ments of which have definite s₂ and S₂ values "to a very good
+approximation."
+As a matter of fact, all the stages in the just-reported argu-
+ment are quite correct except the last one. The inference it draws
+concerning the near identity of the classical and the quantum
+case on this issue is invalid. This is because of one important
+difference between them, which must now be pointed out.
+The difference in question is simply that in classical physics
+a sharp statement bearing on individual systems and falsifiable
+by far-fetched measurements only, can in general be replaced by
+an unsharp (or less sharp) but strictly true one, not falsifiable
+by any measurement bearing on these same systems; whereas
+this is not always the case in quantum measurement theory. In
+the foregoing, "unsharp" means "expressible by an inequality
+rather than an equality.”
+More explicitly, the point is as follows. In the example of the
+two distant, massive objects, the sharp but, as noted, falsifiable
+statement that these systems are isolated from each other can be
+replaced by the unsharp but strictly true statement that the grav-
+itational potential energy between them is smaller than such and
+such a value. There is no observable, far-fetched or not, the mea-
+surement of which would falsify this last statement. Similarly, in
+the classical example of two Gaussian wave packets, the sharp
+but falsifiable statement that they are separated can be replaced
+by the unsharp but strictly true statement that the ratios of their
+"scalar product" (in the familiar sense used in quantum physics)
+to each one of their "norm squared" is smaller than such and such
+a value. On the contrary, in the quantum case here under study,
+and as long as just as in the classical case-individual systems
+are considered, such a replacement is impossible. Of course it
+is possible concerning purely mathematical abstractions such as
+wave functions or kets. Admittedly, in the model considered
+in Section 10.6 the sharp but falsifiable statement that the final
+S+A+E ensemble is composed of the two ensembles speci-
+fied above can be replaced by the abstract, unsharp but strictly
+true, statement that the ket describing the said ensemble is a
+quantum superposition of two kets, each one corresponding to
+definite values of s₂ and S₂, and the scalar product of the cor-
+responding environmental kets is small. But can the statement
+in question in its turn be replaced by some strictly true unsharp188
+10. On Measurement
+one referring to the individual, physical systems themselves, so that
+the inequality expressing it should bear on a physical descrip-
+tion of these physical systems? This approach would amount to
+assuming that the kets describing each subensemble, while not
+being eigenkets of s₂ and S₂ in a strict sense, are good approxima-
+tions to such eigenkets. At time t one subensemble, composed of
+approximately N|a|2 systems, would then be described, not by
+|+ > ©\U > ®|x+ >
++
+but by kets such as
+(1 − ε) |+ > | U > >\x >
++
++ɛ|− > ®\U_ > ®lx' >
+(10.39)
+(10.40)
+while the other one, composed of approximately N|b|2 systems,
+would be described, not by
+but by
+|- > ®]U_ > >|x_ >
+(1 − ŋ)|- > ®|U_ > ®\x" >
++n[+ > ©\U > olx">
+(10.41)
+(10.42)
+E
+with and ŋ both much smaller than unity (here x > stand
+for the П products in the first and second line of Eq. (10.33)
+and x >, 1x > are freely adaptable kets in the environment
+Hilbert space). The hope of being able to replace the sharp but
+falsified statement that "the final ensemble is composed of two
+subensembles the elements of each of which are endowed with
+definite s₂ and S₂ values" by an unsharp but nonfalsıfiable one
+could then materialize if, and—apparently-only if, values of
+ε, ŋ and kets |✗> and ✗" > could be found, such that the asser-
+tion "the final ensemble is a mixture of the two above-defined
+subensemble" would not be falsifiable at all. But this is impos-
+sible, since the expression for the mean value of the hitherto
+considered observable M on any such ensemble cannot involve
+any appreciable term in a*b + b*a and cannot therefore be iden-
+tical to expression (10.38).10.8 Does the Heisenberg Picture Help?
+189
+In private talks theorists sometimes assert that the main dif-
+ficulty in reconciling a universally valid conception of conven-
+tional quantum theory with macroscopic realism stems from
+our predecessors having demanded too much from "realism"
+when they requested the instrument pointers to lie in exactly
+one graduation interval. They consider that the contemporary
+development of the statistical viewpoint renders such an exact-
+ness requirement questionable and they somehow feel that this
+should give a clue to the measurement riddle. The content of this
+section shows that such a hope is a delusion. In other words it
+shows that the conceptual difference existing between classical
+and quantum mechanics in the domain of measurement is quite
+a basic one, not to be wiped off by such simple means as having
+recourse to "epsilons."
+10.8 Does the Heisenberg Picture Help?
+At this stage it is appropriate to inquire whether, by any chance,
+the difficulties in understanding the measurement process in re-
+alistic terms do not just come from making use of the Schrödinger
+instead of the Heisenberg picture. As shown in Chapters 3 and 5,
+state-vector reduction is associated with measurement in both
+pictures. But in the Schrödinger picture the state vector, or more
+generally the state operator, has a dual role. On the one hand it
+evolves in time (according to the time-dependent Schrödinger
+equation) as the physical system also does, and is therefore quite
+naturally considered as representing the "physical reality"-
+whatever this expression means of the system. On the other
+hand it also describes our knowledge of the system: and it is
+as such that it has to be abruptly "reduced" ("reduction of the
+wave packet,” Rules 10 or 10a) when a measurement performed
+on the system changes our information about it. It is prima facie
+conceivable that this dual role should be at the origin of the diffi-
+culties 1-4b listed in Section 10.1. In the Heisenberg picture—as
+stressed in particular, by Unruh [23]—the two roles in question
+are, on the contrary, neatly separated and allotted to quite dif-
+ferent entities. The operators are time-dependent-in fact they
+obey the same equations as the corresponding dynamical quan-
+tities of classical physics-and they can therefore be thought of
+as being the dynamical physical quantities. As for the state vector,
+it is time-independent as long as no measurement is made and190
+10. On Measurement
+changes abruptly when one is performed, which is quite conso-
+nant with the idea that its role is but to describe our knowledge of
+the physical system. By thus separating the behavior of the phys-
+ical world from the increase in our knowledge, the Heisenberg
+picture might well be a good candidate as a framework within
+which the difficulties in question may be hoped to disappear.
+But is this actually the case? To study the matter it is ap-
+propriate to make use of a simplified model (d'Espagnat [24])
+in which, as in Section 10.2, the time evolution of the entities
+describing both the measured system and the instrument can
+be calculated exactly. Such a scheme can be achieved by start-
+ing from an explicitly soluble measurement model described,
+as is generally the case, within the Schrödinger picture and by
+"translating" it into the Heisenberg picture. One very simple
+such model was put forward by A. Peres [25]. It consists in the
+measurement of the z component S₂ of the spin of a spin 1/2
+particle S by means of an instrument A with pointer coordinate
+G. The eigenvalue equations
+S₂|± > = ±± >
+(10.43)
+G|F > = 8|F >
+(10.44)
+=
+serve to define the notations. Moreover, let the initial value,
+at time 0, of G be g+ and let the measurement process con-
+sist in the fact that if S₂ +1 (in units ħ/2) the value of G re-
+mains unchanged, whereas if S₂ = -1 G is flipped to G = g. An
+g_
+interaction Hamiltonian that, according to the time-dependent
+Schrödinger equation, accounts exactly for such a process is
+H' = ß(t)|- >< −| © P
+(10.45)
+where ẞ(t) is a smooth function of time with compact support
+(0, t₁) obeying
+ẞ(t) dt = π
+and where P is the projector
+(10.46)
+1
+P
+=
++
+½ (\F₁ > − | F_ > ) ( < F₁| − < F_\)
+(10.47)10.8 Does the Heisenberg Picture Help?
+for indeed with
+II = |− >< −| © P
+the time evolution operator between times 0 and t₁
+(10.48)
+u = u(t₁,0)
+(10.49)
+takes [because of equation (5.11)] the form
+U = exp(−1πII) = 1 − II + Пexp(-π) = 1 - 2ПI
+= 1 − 2|- >< -| © P
+(10.50)
+and it is easily checked that with
+|w± (0) > = |± > ®\F+ >
+(10.51)
+|y (t₁) > U|y±(0) >= |± > \\F± >
+|y+(t₁) =
+(10.52)
+191
+as requested.
+On this model difficulty 4a of Section 10.2 arises of course as
+soon as we consider shooting on instrument A a particle with a
+spin pointing toward some direction other than z—that is, whose
+spin is described by a linear superposition
+a++b>
+(10.53)
+of states |+ > and |- >, for then the linearity of the Schrödinger
+equation entails that the state vector of S + A at time t₁ must
+consist of a linear superposition with the same coefficients a and b
+of the final states | 44 (t₁) > and |_ (t₁) >, and such a state vector,
+not being a tensor product of a ket belonging to the Hilbert space
+of S with a ket belonging to the Hilbert space of A, has no physical
+interpretation. This is the well-known entanglement riddle.
++
+-
+Does the Heisenberg picture remove this riddle? To try
+and answer this question let us "translate" the model from the
+Schrödinger to the Heisenberg picture. This is easily done since
+U is known. The time dependence of the Heisenberg operators is
+given by the general rule (5.18). In the specific case under study,
+the relevant operators, which operate within the tensor product
+of the
+spin and instrument Hilbert spaces, are, at time zero
+S₂(0) sz 1 (K₁ - K_) 1
+=
+(10.54)192
+10. On Measurement
+which, with
+K₁ = |± >< ±|
+(10.55)
+describes the spin of the particle and
+G(0) = 1 (8+Q+ + 8-Q-)
+(10.56)
+which, with
+Q = |F >< F.
+(10.57)
+describes the instrument “pointer" and can also be written
+G(0)=g+P+(0) + g_P_(0)
+where
+P+(0) = 10 Q+
+(10.58)
+(10.59)
+are at time 0 the relevant Heisenberg projection operators.
+Rule (5.18) (the use of which is here slightly simplified by
+the fact that U happens to be Hermitean, U = U*) then yields
+S₂ (t₁) = S₂ (0)
+and
+G(t) = g+P₁(t₁) + g_P_(t₁)
+(10.60)
+(10.61)
+where P. (t₁), the Heisenberg projection operators at time t₁, take
+up the form
++
+P₁(t₁) = K₁ Q+ + K_ © Q_
++
+P_(t₁) = K₁ Q_ +K_ ® Q+
++
+(10.62a)
+(10.62b)
+Of course, the probabilities that such and such outcomes
+should be obtained when such and such measurements are per-
+formed on both S and A (by means of some superinstrument) are
+the same when calculated using the Heisenberg picture as when
+calculated using the Schrödinger picture, the two pictures be-
+ing completely equivalent in this respect, as is well known. For10.8 Does the Heisenberg Picture Help?
+193
+time tË this is easily verified using Eqs. (10.62). But what inter-
+ests us here are questions such as entanglement-Schrödinger's
+cat riddle-that have to do with interpretation of the theory and
+to repeat, it is prima facie conceivable that such riddles should
+take quite a different form in one and in the other picture. It
+could even be hoped that here—in the Heisenberg picture—they
+disappear.
+Now, one first lesson to be drawn from the model under
+study is that, yes, entanglement does take here a different form
+but that, no, it does not disappear. Formally, as we saw, the
+Schrödinger entanglement is the fact that, in circumstances of
+interest, the ket that, in the Schrödinger picture, describes the
+S+ A system is not a tensor product. This suggests that a for-
+mal definition of entanglement, suitable for being extended to
+other pictures such as Heisenberg's, should be that the symbol
+corresponding to the physical S + A system in such pictures is
+not a tensor product. With such a definition then, clearly, en-
+tanglement also occurs in the Heisenberg representation since,
+as shown by Eqs. (10.61) and (10.62), at time t₁ neither G nor
+the projection operators PÅ are tensor products. It is true that
+this Heisenberg-like entanglement is quite different from the
+Schrödinger-like one since it takes place even in cases in which,
+as in the model, the initial state of the measured system is an
+eigenstate of the measured quantity. But to the extent that en-
+tanglement is considered a difficulty, this remark can hardly be
+seen as alleviating it.
+=
+A second point is that in view of Eqs. (10.62) an adherent to
+the interpretation according to which the Heisenberg operators
+are the dynamical quantities is confronted with a conceptual
+oddity the nature of which can be explained as follows. As we
+saw, in the model S₂ and G both have definite values at t₁ if they
+had definite values at t 0. This being the case, if we really were
+entitled to say, as previously, that at time 0 S₂ (0) and G(0) [Eqs.
+(10.54) and (10.56)] are adequate representations of the physical
+attributes of the S + Asystem, why should somebody coming into
+our laboratory at time t₁ and then being informed of the situation,
+not be allowed to proceed just as we ourselves did at time 0, that
+1s, build up at time t₁ a description of the S + A system made
+up of operators S₂ and G that would both be tensor products?
+By simultaneously describing our (common) knowledge of the
+composite system at time t₁ by means of a ket suitably tailored194
+10. On Measurement
+to this description of the system (and different of course from
+the one we use) this person would have a Heisenberg picture of
+both the system and our knowledge of it just as adequate at all
+times as the one we ourselves built up above.
+Since we have to do with the same system and the same
+"knowledge" in both cases, this plurality—or at least duality—
+of descriptions, which has no obvious parallel in the Schrödinger
+picture, is intriguing. At this stage, the only hope there is of sal-
+vaging the view that the operators represent the physical reality
+of the system and the ket our knowledge of it seems to be to
+identify in some way the state of affairs at hand with the fact
+that when we decide to represent a vector by means of its com-
+ponents we are free to choose the coordinate system in the way
+we like and the set of numbers we get depends on this choice
+of ours. However, in the present case there is nothing that corre-
+sponds to the vector notation. The idea is sometimes entertained
+that the Heisenberg operators are just what would correspond
+to this coordinate-system-independent notation; but the above
+shows this to be a delusion.
+Moreover, anyhow, the analogy with vector components
+is basically superficial. In physics, vectors the components of
+which are numbers are classical entities. And the mathematical
+symbols, p, E, B, r that are made use of in classical physics,
+be they vectors, scalars, or whatever, all have two roles. One of
+them, call it Role a, is that they serve for writing down the gen-
+eral laws, such as the Maxwell equations, considered as good
+candidates for describing the general structure of the world. The
+other one, call it Role b, is that they designate the values that the
+quantities they refer to actually have in some particular instance
+(not all planetary systems have the same number of planets nor
+are their planets exactly at the same places at the same time,
+and so on). Now unquestionably, when, in classical physics, we
+claim that a measurement (assumed ideal) "merely lets us know
+what the values the dynamical quantities p, E, B, etc., of the
+particular system under study actually are, without in any way
+altering them,” we refer to Role b of these symbols, not to Role a.
+Similarly, for the (parallel) assertion that "a quantum measure-
+ment, far from changing the dynamical quantities themselves—
+here represented by the Heisenberg operators such as S₂(t) and
+G(t) of a particular system, merely modifies the knowledge we
+have of them" to have a meaning, it would be necessary that10.8 Does the Heisenberg Picture Help?
+195
+these operators should be interpretable as having Role b, that is,
+as representing some dynamical properties that, under such and
+such circumstances, the system in question contingently has. But
+this is not the case. The Heisenberg operators only have Role a.
+On our model this shows up through the fact that in the equa-
+tions that describe, for example, G(t) [Eqs. (10.58) and (10.61)],
+the two possible values of G,g, and g_, both appear. Apparently
+the illusion that these operators have Role b as well is enter-
+tained by some authors. It presumably stems from the fact that
+in a case in which two systems, such as S and A in our model,
+come into interaction it seems extremely natural to describe the
+overall system they constitute before they interact by means of
+a tensor product of two operators, each of which operates only
+in the Hilbert space of one system. This partial determination of
+the involved operators goes over and beyond the mere general
+formulas derived from the Lagrangian of the theory, and seems
+to take into account at least some of the contingent properties
+the particular systems under study happen to have at the con-
+sidered time. But, as our simple model clearly shows, this is not
+actually the case. The partial determination in question is in fact
+nothing more than a convenient choice we make. In the model,
+it can suitably be made either at time 0 or at time t₁ but not
+at both, and there is no reason whatsoever to consider that the
+contingent physical features (or "dynamical properties") of the
+systems at hand make one of these choices more natural than
+the other.
+Finally, therefore, we come to the conclusion that the Heisen-
+berg operators can in no way reflect the contingent dynamical
+properties of this or that particular system, so that, in case we
+really want the dynamical properties in question to have corre-
+spondents in the theory, we have no other choice than to impart
+such a role to the wave function (or state vector)—which then
+becomes something more than a mere description of our knowl-
+edge. And under these conditions it is not clear that concerning
+the interpretational riddles anything is gained by going over
+from the Schrödinger to the Heisenberg picture. But does this
+mean that the Heisenberg operators have no correspondence
+with reality whatsoever? No, it does not. Their role and useful-
+ness (Role a) in the general equations of the theory amply testify
+to the contrary. However, this is not the contingent reality of this196
+10. On Measurement
+or that particular physical system. It is the structural reality-
+so to speak of the world. Hence the existence and usefulness
+of the Heisenberg picture is highly consonant with the view, to
+be developed in later chapters, that the one word "reality" cov-
+ers in fact two different concepts both of which are meaningful.
+There is, on the one hand, the just mentioned structural reality of
+the world, which has been called "independent reality," and on
+the other hand the observable, contingent reality of this or that
+particular system: the one our wave functions, density matrices,
+and so on tell us something about. From all that has been seen
+in the foregoing sections it then seems to follow in a rather con-
+vincing way that this "empirical reality," as we called it earlier,
+is intersubjective rather than strongly objective.
+10.9 Measurement-Induced Disturbances; Zeno Effect 5
+To explain the so-called watch-dog, or Zeno, effect, the easiest
+way is to use a simple model, and again we shall make use of
+one Peres put forward [26]. Let a spin 1/2 particle whose spin
+is initially directed along Ox be immersed within a constant
+magnetic field B directed along Oz. The particle spin then tends
+to precess around Oz with an angular velocity w depending on
+B, so that its spin state vector at time t is
+-twt
+14 >= 2-1/2 (e¹wt | + > +|ew|->)
+(10.63)
+where and |- > are the eigenvectors of S₂ corresponding to
+eigenvalues +1 and -1 respectively. Suppose, however, that an
+ideal measurement of the x component S, of the spin is repeat-
+edly performed, at times
+==
+t₁ = T/n, t₂ = 2T/n,
+t₁₁ = T
+(10.64)
+We ask for the probability p that all the outcomes of these
+measurements be +1 (in ħ/2 units). Since the eigenvector corre-
+sponding to this value of S, is
+| § > = 2−1/² ( | + > +|− >)
+(10.65)
+5. The rather technical Sections 10.9 to 10.11 may be bypassed on first reading.10.9 Measurement-Induced Disturbances; Zeno Effect
+the probability p₁ that the first measurement yields +1 is
+P₁ = 2³¹ | ( < + | + < −1) (eiwt |+ > +e-iwt | >)|² (10.66)
+T
+2
+=
+cos² w―
+(10.67)
+197
+n
+According to Rule 10 of Chapter 3 the state vector then im-
+mediately collapses to |§> [Eq. (10.65)] again. The probability
+that the second measurement also yields +1 is therefore also
+given by Eq. (10.67). And so on. So that
+For n
+p = (cos² wT/n)"
+->
+∞
+p - 1
+(10.68)
+(10.69)
+which implies that when such repeated observations are in-
+finitely closely packed they simply prevent the spin from pre-
+cessing. A similar argument leads to the conclusion that "con-
+tinuously watching" (or, more precisely, repeatedly observing
+at infinitely short time intervals) an unstable particle to check
+whether it is still there, results in preventing it from decaying
+[27]. For obvious reasons this is sometimes called the watch-dog
+effect. The alternative names Zeno effect or quantum Zeno paradox
+refer to the Greek philosopher Zeno who, by analyzing the mo-
+tion of an arrow in shorter and shorter time intervals, claimed
+he could prove that it never reached its target.
+In real life watching the arrow does not stop it. Indeed it does
+not even slow its motion. Zeno's paradoxical claim is nowadays
+quite generally attributed to the fact that he did not know about
+convergent geometrical series. Is the present case similar? In the
+foregoing calculation have we been misled, when we referred to
+the wave packet being reduced upon measurement, by a sort of
+mixing up of physics with psychology? Prima facie such qualms
+are not quite groundless. Let us therefore show that an, at least
+partial, quantum Zeno effect is indeed something purely physical.
+This can conveniently be done by making use of a simplified,
+explicitly soluble, measurement model [28] built up along the
+lines of the one described here in Section 10.2. Let us therefore
+assume that during a very short time interval extending from
+time t₁_ = t₁ − ε to time t₁+ = t₁ + & the precessing spin interacts198
+10. On Measurement
+with an instrument constituted as described in this section and
+that the interaction Hamiltonian H' [Eq. (10.9)] is then so large
+that the interaction of the spin with the constant magnetic field
+B can be neglected compared to it. Moreover, let the spin be, at
+time to = 0, in the quantum state
+|0 >= Σcmlpm>
+m
+(m
+=
++1,−1)
+(10.70)
+In order to simplify the formulas let us introduce a slight
+change in the notation: the measured spin component is to be
+called S₂ (instead of SX) and, of course, the magnetic field that
+induces the precession will be assumed not to lie along the Oz
+axis (for definiteness it may, for example, be assumed to lie along
+the Ox axis, but this specification plays no role in what follows).
+Calling U the time-evolution operator describing the evolu-
+tion of the between t
+spin
+to and t = t₁ and |Y(t) > the state
+vector of the composite system, we have
+=
+|Y(0) = g()|(0) >
+>
+|Y (t₁) > = g(§)U|¢(0) >
+(10.71)
+= Σ8(§)|¢m >< ¢m\U\¢o >
+(10.72)
+111
+(since, during this time interval, U does not operate on §), and
+|Y (4₁+) >= Σ8 (εam)lm >< m\U\+>
+m
+(10.73)
+From time t₁+ on, the spin again processes freely, until, at
+a time t2_, it encounters, we assume, another instrument quite
+similar to the first one but with state vector h(ŋ), with which it
+interacts from time t₂ = t2 - ε to time t₂+ = 12 + ε. We now have
+to consider the state vector (t) > of the composite system
+made up of the spin and the two instruments. From Eq. (10.73)
+it follows
+|(†1+) >= h(n) Σ8(§ - am)\Þm >< &m|U|40 > (10.74)
+whence
+m
+| (t₂) >= h(n) Σg(§ - ªm)\Û\¢m >< ¢m\U\o > (10.75)
+m10.9 Measurement-Induced Disturbances; Zeno Effect
+199
+where Û is the time-evolution operator describing the evolution
+of the spin from t₁₁ to t₂- This equation can also be written
+1+
+|(12) >= = Σh(n) g (§ - am) | Pk >
+whence
+m,k
+< $x\U\¢m >< ¢m]U\Do >
+|Þ(t₂+) >= Σ h(n − ax) 8(§ — am)|Þk >
+2+
+m,k
+-
+< ¢k\Û\m\ >< ¢m\U\$o >
+(10.76)
+(10.77)
+The probability that, after 2+, & is found with value x,
+n with value y and S₂-upon some ultimate, here unanalyzed,
+measurement-with value 1(1
+=
+±1) therefore is
+p(x,y,j) = | ff 8(n − y)8(x − x) < $;\$(t₂+) > dndɛl²
+-
+-
+-
+= | Σ h(y – a,) 8(x − am)
+M
+< ¢;\Û\Þm >< ¢m\U\o > |² (10.78)
+The probability that & be found in interval [a], and ŋ in
+interval [B] is obtained by summing this p(x,y,j) over 1 and
+within intervals [a] and [B]. It is
+p(α, B) = < out (Σ \øm > K < ¢n\) U\40 >
+mn
+(10.79)
+with
+m,n
+KOB
+mn
+‚ = < ¢mlÛ* Σ(l¢; > ƒß³ < ¢;)\Û\¢n > M,
+M
+m,n
+=
+√
+*
+8* (x - am) g(x - an) dx
+[a]
+-
+ƒ,"³ = √, \h (y = a;) |² dy
+[B]
+(10.80)
+m,n
+(10.81)
+(10.82)
+§
+From these formulas the probabilities pε (α) that ε be found
+in interval [a] irrespective of ŋ and p, (B) that n be found in inter-
+val [B] irrespective of § are immediately obtained by summing
+over all possible values of the disregarded variable. Note that200
+10. On Measurement
+extending this way a to the whole 'ε axis amounts to replac-
+ing the two-by-two matrix M, whose elements are Ma by the
+two-by-two matrix (Mm,n) whose elements are
+M1,1 = M2,2 = 1
+m,n
+M1,2 = M2₁ = √ 8* (x − a₁) 8(x − a₂) dx
+-
+(10.83)
+For reasons that will soon appear, we considered up to this
+point the general case, where g(x - a₁) and g(x - a₂) are not
+fully orthogonal. When they are, or, more precisely, when the
+functions g() and h(n) are sufficiently peaked and the intervals
+between consecutive ak's sufficiently large that the overlaps of
+functions g(x - am) with different values of m and those of func-
+tions h(ya;) with different values of] are vanishingly small, we
+say that the instruments are ideal (or "perfect"). In such cases, of
+course, the foregoing formulas simplify. Let us, for example, set
++1 and c₂ 0 in formula (10.70); that is, let us assume that
+at time t₁ = 0 S₂ is +1 so that | 40 >= |+ >, and let us, moreover,
+take for both intervals [a] and [ẞ] the positive semi-axes Ox, Oy.
+We then get
+C₁ =
+=
+M = 1, M = M₁₁₁ = M = 0
++,+
+ƒ₁+ = §j,+
+so that
++,-
++'-.
+(10.84a)
+(10.84b)
+p(+, +) = | < +|Û|+ > |²] < +\U\+> 12
+P₂(+) = | < +|Û|+ > |²] < +[U]+ > |²
++| < +|Û|− > |²| < −|U|+ > |²
+-
+(10.85)
+(10.86)
+These formulas are interesting because they are at variance
+with what a simple (too simple!) argument might well suggest.
+A proponent of this argument would begin with the remark
+that, in the model described in Section 10.2, the Hamiltonian
+representing the interaction between the spin and the instrument
+was constructed in such a way that the interaction in question
+should not change the spin state it informs us about (see the
+comments there). From this he would "infer" that, generally
+speaking, this interaction has only a registering, passive effect,
+and simply does not affect the spin, full stop. However, formula10.10 Imperfect Measurements
+201
+(10.86) shows that this inference is not correct for if it were, if
+really the first instrument had no effect on the spin whatsoever,
+then the probability p₁(+) would be equal to what it is when no
+instrument is present, namely
+p', (+) = | < +|Û U\ + > |²
+(10.87)
+which it is not. In fact, although formula (10.86) is quite elemen-
+tary what it shows is, in some sense, even more at variance with
+"commonsense" views than the Zeno effect is. In the latter the
+outcomes of all the successive (here the two) measurements are
+taken into account, whereas formula (10.86) applies to the case
+where only the existence of the intermediate one is. As for the
+Zeno effect proper, it is easily recovered by generalizing formula
+(10.85) to a large number n(n→ ∞) of closely packed successive
+measurements (see also Home and Whittaker [29]). In fact, with
+t₁ to t₂-t₁ = T/2, the right-hand sides of formulas (10.67)
+(with n = 2) and (10.85) coincide, as is easily checked.
+-
+All these calculations are made with the sole help of the
+Schrödinger equation, applied to the spin-plus-instruments com-
+posite system. One point they make clear is that there is noth-
+ing inherently paradoxical in the quantum Zeno effect and re-
+lated phenomena, since they are ascribable just to the normal,
+Schrödinger-like time evolution of composite systems, without
+there being any need to refer to such notions as that of "increase
+of information" or even "wave-function collapse."
+10.10 Imperfect Measurements
+The foregoing analysis makes it rather clear that the quantum
+Zeno effect is just as "physical" as any other, and is ascribable to
+the interactions necessarily taking place between the measured
+system and the instruments of observation. But then, the very
+notion that lies at the basis of the effect, namely the idea of an
+înfinite number of measurements taking place in a finite time,
+cannot but raise some questions. To be specific [28], suppose
+again that the observable to be thus repeatedly measured is the
+Z component S₂ of the spin of a spin 1/2 particle and let the
+measurements in question be made by means of Stern-Gerlach
+instruments. Since the particle has a nonzero velocity, if the num-
+bern of instruments is increased while the time interval T withın202
+10. On Measurement
+which all the measurements take place remains the same, at some
+stage the Stern-Gerlach devices must obviously be brought very
+close to one another. But if several such devices are very close,
+their magnetic fields must obviously be very strong for the two
+beams issuing from any one of them to be well separated before
+the particle enters the next one. At the limit n→ ∞,T finite, the
+strength of these fields should be infinite, which of course is an
+unphysical idealization.
+Such considerations point to the existence and even, in some
+circumstances, to the unavoidable use of measurements that can
+well be called "imperfect," in that two instrument states corre-
+sponding to neighboring microsystem states may not be com-
+pletely orthogonal to each other. There exists quite an elaborate
+theory of such measurements. It is called the "theory of opera-
+tions and effects" and is reported on in the next section. Here
+let us merely note that, as used in the foregoing calculations, the
+measurement model described in Section 10.2 easily accommo-
+dates such imperfect measurements, which it simply describes
+by means of wave functions g(§) that are not peaked strongly
+enough for the "displaced" functions g(§ - am) with different
+am's to be practically orthogonal [28]. As a simple example of
+the use of this method let us consider the extreme case in which
+the first measurement is so imperfect that it is practically no
+measurement at all. This means that the functions g(§ - am) very
+nearly coincide. Assuming the second measuring instrument to
+be "perfect" [so that Eq. (10.84b) holds] we get
+M M M = M = 1
++,+
++
+222
+--
+(10.88)
+and with the help of formula (3.11) (expansion of the unit oper-
+ator) it is easily checked that, with Eqs. (10.84b) and (10.88), Eq.
+(10.85) yields
+p(+, +) ≈ | < +|Û U\+ > |²
+(10.89)
+which, when compared to Eq. (10.87), can be interpreted as
+meaning that in this case the behavior of the measured system
+is influenced neither by the fact that the coordinate of the first
+instrument moves toward the +Ox rather than the -Ox direc-
+tion, nor indeed even by the fact that the measured system did
+interact with the instrument in question.10.11 The Formalism of Operations and Effects
+203
+On the other hand, this is of course a limiting case. In gen-
+eral, even for quite "imperfect" instruments, the "displaced"
+functions g(-a) will be far from coinciding, so that the actual
+value of p(+,+) will lie between those given by the right-hand
+sides of Eqs. (10.85) and (10.89).
+To sum up: The content of this section shows that a complete
+Zeno effect is not to be expected and should be viewed as essen-
+tially unphysical, but, as mentioned above, a partial Zeno effect
+Is, on the contrary, something quite likely to be real.
+10.11 The Formalism of Operations and Effects
+The formalism laid out in Section 6.7 describes the effects on a
+quantum system of a measurement performed on this system by
+means of an instrument considered as being external to the for-
+malism itself, in the sense that it is not attributed a Hilbert space.
+The only Hilbert space taken into consideration, both before and
+after the measurement act, is that of the quantum system on
+which the measurement is performed: whence the necessity of
+explicitly bringing collapse into the picture. Moreover, the mea-
+surement in question is an ideal-or "perfect"-one, in the sense
+that if before the measurement the quantum system happens to
+be in an eigenstate of the quantity which is to be measured, then,
+after the measurement process is over, the quantum system still
+is in this eigenstate, and the instrument contains an unambigu-
+ous record of what this state is. As we just saw, in most cases such
+a description is very much of an idealization, and real, physical
+measurement processes are likely to be more or less "imperfect."
+For some purposes it may be useful to dispose of a for-
+malism equivalent to the one of Section 6:7—in the sense that
+applying it does not necessitate bringing a quantum description
+of the instrument explicitly into the picture-even in the case of
+imperfect measurements. Of course, the use and significance of
+such a formalism will be subject to the same general restriction
+as that of the formalism of Section 6.7, namely, the instrument
+must be complex enough—or, in other terms, sufficiently tightly
+bound to its environment—that correlations between it and the
+quantum system defined by quantities such as M [Eq. (10.37)]
+should not be measurable in practice. But still, it is an interesting
+question to know whether or not such a generalization of the
+formalism of Section 6.7 exists. The answer is yes. It is called204
+10. On Measurement
+the formalism of operations and effects [30,31] In fact, as we are just
+about to see, introducing a quantum description of the instru-
+ment happens to be necessary for building up the formalism in
+question. But, to repeat, such a reference to the quantum nature
+of the instrument disappears from the "end result” once built
+up, the formalism can be applied without any reference made to
+the Hilbert space of the instrument.
+As we saw at various places and, in particular, in Section
+8.3, strictly speaking a state operator-or density matrix-can
+only be associated with an ensemble. There are circumstances,
+however, in which we can, without inconvenience, simplify our
+language and speak of "the system"-instead of "the ensem-
+ble of systems"—associated with a given state operator. This is
+here the case and, to construct the formalism, we shall therefore
+(following closely the presentation of Ref. [31]) freely refer to
+individual systems rather than ensembles. Let us then consider
+a measurement process in which a system S, initially described
+by the state operator p, interacts with a measuring instrument A,
+initially described by the state operator PA. After the interaction
+the joint state operator of the S + A system is
+Ptot = Up & PAU+
+where U is the joint evolution operator.
+Let then an apparatus observable G, with eigenvalues gm, be
+observed. Let PM be the corresponding projector. According to
+formula (6.15) the probability of obtaining result gm 1s
+m
+=
+Pm Tr[Ptot 1Pm] = Tr[ppдU1 PU]
+(10.90)
+which can be written as
+Pm = Trs[pFm] = Trs[Fmp]
+with
+Fm = Trд[PдU*1 P„U]
+(10.91)
+(10.92)
+A
+where the symbol Trå (Tr) means partial tracing within the
+Hilbert space of A(S) only, so that Fm is an operator in the Hilbert
+space of S.10.11 The Formalism of Operations and Effects
+205
+Formula (10.91) is similar to formula (6.15). The essential
+difference is that FM is, in general, not a projector (F = Fm).
+Operators such as FM are called Effects.
+m
+Let us now assume that our observation of the instrument A
+has yielded the particular value G. The state operator PM of the
+composite S + A system immediately after the measurement is
+then given by formula (6.32):
+=====
+Pm,tot (1Pm) Plot (1Pm)/Pm
+(10.93)
+At this stage, let us take into account the fact that we are
+only interested in describing S, which means that what we want
+to know is the state operator yielding the probabilities pa of the
+various possible outcomes of future measurements made on S.
+These probabilities are of the form:
+Tr[Pm,tot P1]
+a
+where the P are the corresponding projectors; and it is easily
+verified that this can be written
+Trs[pmP]
+with
+(10.93a)
+Pm = TrA[Pm,tot]
+Hence, in virtue of Eq. (10.93):
+Pm = Trд[(1 Pm) Ptot (1Pm)/pm
+(10.94)
+To within normalization, the numerator can be considered
+as a linear mapping of the system state operator p before mea-
+surement into the (unrenormalized) state operator pm after mea-
+surement. For this reason Eq. (10.94) is conventionally written
+Pm = Fp/Pm
+(10.94a)
+the map
+=
+Fp Tr[1 P Ptot 1 Pm]
+(10.95)206
+10. On Measurement
+being called an Operation. Equation (10.94a)—with definition
+(10.95)-—thus generalizes Eq. (6.32) to the imperfect measure-
+ment case, same as Eq. (10.91) generalizes Eq. (6.22). Note that
+from Eq. (10.95) it follows that
+Trs[Fp] Tr[1 & Pm Ptot 1 PM] = Tr[Ptot 1 PM]
+=
+and comparison with Eq. (10.90) shows that
+Pm = Trs|Fp]
+(10.96)
+Since, as we saw, imperfect measurements are particularly to
+be expected in the cases in which the measurements are repeated,
+it is interesting to see how this formalism applies in an instance
+of repeated measurements such as the one investigated in the
+foregoing section. For this purpose let us first write down the
+probability pε (α) that the pointer of the first instrument is found
+to lie in the interval [a]. From standard quantum mechanics this
+probability is easily found to be:
+√ dε Σ 18 (≤ - am) |² | < ¢m\U\$o > ]²
+n
+and the point is that it can also be written as
+Pε(α) = Tr [F[ε‚α]P1]
+where p₁ = U|40 >< 0 | U+ is the spin state operator at time t₁-
+and
+P1
+F[ɛ] = Σlm > √ 18 (§ - am) |² < ¢m\dɛ
+m
+[a]
+(10.97)
+is an Effect. If the first pointer is seen to lie in interval [α], then
+the state of the composite system at t₁+ is, from formulas (3.20)
+and (10.73):
+Pε(α)-1/2
+-
+↓ ¸¸ dɛ ' § (§ — §' ) Σ 8 (§' — am) \ Þm >< ¢m\U\$o >
+1/2
+[a]
+n1
+= Pε (α) ¯¹/² Σ g (§ - ªm)\$m >< ¢m\U\$0 > for = [α]
+m10.11 The Formalism of Operations and Effects
+207
+and zero elsewhere, so that the corresponding state operator is
+-
+Pε (α)¹Σg(-a)g* (ε' − a)\m>
+m,n
+<me><₁|
+(10.98)
+for and '[a] and zero elsewhere, where, again
+P₁ = U|0><\U*
++
+is the spin state operator at time t₁_. The state operator of the spin
+at time t₁ is obtained from expression (10.98) by partial tracing
+over the instrument variable &, which means setting }' = } and
+summing over §. It is therefore:
+with
+Pα = Fap1/Pε (α)
+F„P₁ = Σ | _ dë8(§ – am)8* (§ = ªn)\¢m >
+m,n
+< &m\P1\&,, >< Onl
+CV
+F is an Operation.
+(10.99)
+The second measurement is identical to the first, and so the
+conditional probability that the second pointer is found to lie in
+interval [ß] if the first one was found to lie in interval [α] is
+pla|B) = Trs[FÛ¤àÛ³].
+where Fil
+is an operator similar in form to F[εa) but with h(n)
+and ß playing the roles of g(§) and a, respectively. Hence the
+joint probability for the two measurements is
+p(α, ß) = p(α|B)p₂ (α) = Trs [FÛ FP₁Û] (10.100)
+and it is easily checked that this formula yields the same value
+for p(a, ẞ) as formula (10.79).
+As this comparison makes it apparent, the formalism of Op-
+erations and Effects yields the same predictions as the standard
+rules of quantum mechanics. It cannot therefore be expected that
+it should, all by itself, remove any of the conceptual difficulties
+enumerated in Section 10.1. It is true that, in a way, it conceals208
+10. On Measurement
+them, but this is only because it is built up on the model of the
+ideal measurement theory described in Section 6.7, and because,
+like this theory, it is valid only in the case in which the possibil-
+ity of future measurements bearing on correlations between the
+measured system and quantum mechanically described parts of
+the instrument is not even considered.
+It is also true, however, that the formalism of Operations
+and Effects shows, in a way, more flexibility than the stan-
+dard rules of quantum mechanics, and the question then arises
+whether this flexibility could be made use of in order to re-
+move the aforementioned difficulties. The flexibility in question
+consists of the fact that to one Effect it is possible to associate
+several Operations, out of which only one corresponds to the
+quantum mechanical predictions concerning future measure-
+ment outcomes. For example, instead of the Operation (10.99)
+the Operation
+Ga P₁ = Σ (f dɛlg (§ - am) |²) 1/2
+[a]
+M,H
+-
+( √ √ § 18 (§ — a ) |²) ³ ³² | m > < pm!P1\$n >< ¢„K10.101)
+[a]
+α
+could be considered. This Operation-considered in Ref. [32]—
+reproduces the Effect (10.97) for a single measurement. It there-
+fore yields the same probability, namely pε (α), as F₁ concerning
+the first measurement. But of course it yields an outcome differ-
+ing from the right-hand side of Eq. (10.100) for the joint probabil-
+ity p(a, b) of the outcomes of two successive measurements. The
+calculations reported in the foregoing section-which yielded
+an unambiguous result-therefore show that using G to de-
+scribe processes governed by the interaction Hamiltonian (10.9)
+would imply a violation of the predictive rules of quantum
+mechanics. This answers the question considered in this para-
+graph. If the predictive rules in question are not to be altered,
+the flexibility of the formalism of Operations and Effects can-
+not be made use of—at least not in the way considered in this
+example in order to remove the conceptual difficulties listed
+in Section 10.1.10.12 Problems in Relativistic Measurement Theory
+10.12 Problems in Relativistic Measurement Theory
+209
+As was seen in Chapter 3, standard textbook quantum theory
+implies wave-packet reduction or collapse (Rules 10 and 10a). The
+peculiar problems that any tentative relativistic measurement
+theory has to cope with are related to the fact that such a collapse
+cannot be purely local. All the probabilities that are associated
+to a ket in virtue of formulas such as (3.3) suddenly change,
+including those relative to possible measurements performed at
+places distant from the one where the considered measurement
+is made [if, e.g., 4(x) is an extended one-particle wave function
+and if I observe the particle to be at point x', the probabilities for
+it to be found anywhere else suddenly vanish].
+This has far-reaching consequences that were nicely summed
+up by Fleming [33]. For example, following I. Bloch [34] let us
+consider two spatially separated space-time regions R₁ and R₂,
+in each of which a measurement is made on a one-particle sys-
+tem. This system must be described by some wave function
+y(x,t) =<x|w(t) > so let us ask what this wave function is at a
+space-time point P lying outside R₁ and R₂, on a spacelike line
+that passes through both regions. From the geometry, there exist
+reference frames in which any space-time point in R₁ is earlier
+than any space-time point in R2. In such a reference frame F',
+space-time point P, with coordinates xo, to, lies after the measure-
+ment in R₁ has been performed. According to Rule (10) or (10a)
+(collapse), in F' the wave function '(x, t) must therefore de-
+pend on the outcome registered in R₁ and cannot depend on the
+outcome of the not-yet-performed measurement in R₂. But there
+also exist reference frames in which R2 is totally earlier than R₁
+Let x, to be the space-time coordinates of P in one such frame
+F" In F" the wave function 4" (x", "") must depend on the out-
+come of the measurement in R₂ and be independent of that of the
+measurement performed in R₁ Hence y' (x, t) and 4" (xő,tő)
+are functions that depend on totally different parameters and
+clearly cannot be related by any kinematic transformation. Since
+the coordinates (x, t) and (✗"", "") are Lorentz transforms of each
+other (remember they are the coordinates of one and the same
+point, in F' and F" respectively) it would seem that the internal
+consistency of the formalism requires the wave functions #' and
+" (which describe the same system in, respectively, F' and F")
+to be Lorentz transforms of each other. That this is impossible210
+10. On Measurement
+in view of the just-made remark must therefore be felt as being
+quite a serious difficulty.
+In order to remove the difficulty in question, the idea could
+be considered that, when a measurement involves a space-time
+interaction region R, the thereby-induced collapse, instead of
+being instantaneous, develops with light velocity, that is, occurs
+along the forward light cone envelope of R. Since such a light
+cone envelope has the same description in any reference frame,
+this hypothesis does restore Lorentz invariance. On the other
+hand if, for example, the system at hand is an electron and the
+measurement is that of a position, the hypothesis in question
+implies that, in one given reference frame F', immediately after
+the measurement performed at a place x has yielded outcome
+"yes," the electron charge is concentrated at x and yet, all the
+same, the probability is still nonzero that the electron is found
+elsewhere. If we imagine observers at rest in F' and scattered at
+large distances from x, there is a nonvanishing chance that one
+of them will observe the electron. If, afterward, this observer sets
+out to meet the one who was at x and if the two compare notes
+on their observations, they will come to the conclusion that the
+law of conservation of electric charge is violated in the process.
+Does the idea (put forward by Hellwig and Kraus [35]) that
+collapse occurs along the past rather than the forward light cone
+of R remove this difficulty? Aharonov and Albert have convinc-
+ingly shown [36] that it does not. One of their arguments is based
+on considering an electron trapped in a double-well potential
+and lying in a quantum superposition with equal amplitudes
+of two wave functions, each of which vanishes in one well. If
+a position measurement is performed in one of these wells at
+some time t₁ (in the reference frame F' where the wells are at
+rest) and if its outcome is positive, then, according to this idea,
+there must be times before t₁ at which the probability was only
+1/2 that the electron would have been found in that well if a
+test for its presence had been performed, while at such a time
+the probability of finding it in the other well was already zero.
+What is more, on a two spin 1/2 particles system lying in a spin
+zero state and each element of which is trapped in one of these
+wells they could show the following: although the total spin is a
+nonlocal observable, still it can be checked, at any time before the
+time t₁ at which a measurement on one of the particles is made
+and without thereby disturbing the system, that this total spin10 12 Problems in Relativistic Measurement Theory
+211
+still has value zero This is inconsistent with the implication of
+the Hellwig-Kraus idea that in the well where the measurement
+was not made the collapse already had occurred at some such
+time (see Fig 10 1, where to labels such a time)
+Aharonov and Albert pointed out that nowithstanding such
+difficulties no real violation of relativity theory-when con-
+ceived of as an operational theory—is to be feared since such
+"Lorentz covariance violating processes" can neither entail su-
+perluminal energy transfers nor allow for superluminal signal-
+ing In view of all this, they first suggested that in the relativis-
+tic domain the whole state vector formalism should be given
+up, and that the calculation of probabilities of well-specified
+measurement outcomes should be carried on by more abstract
+means Later [37] they stressed the fact that in spite of
+appear-
+ances to the contrary the measurement process is covariant Its
+covariance may be made manifest by describing states, not by
+state vectors any more but—in the manner once advocated by
+Tomonaga and Schwinger-by functionals on sets of spacelike
+surfaces For the case of the two spin 1/2 particles in a singlet
+state the corresponding calculations were explicitly made by
+Ghose [38] For the general case Fleming [33] has developed a
+theory in which special such spacelike surfaces, namely space-
+like hyperplanes, have a privileged role, and which admits of
+the same general conclusion
+Figure 10.1. A double-well potential
+.to212
+10 On Measurement
+Taking these developments into consideration, it must be
+granted that when all is said and done the measurement process
+is to be seen as being formally covariant However, this does not
+mean that no lesson is to be drawn from the difficulties reviewed
+To make out more clearly what such lessons may consist of,
+the relativistic case must be compared with the nonrelativistic
+one on a very specific point, which is as follows In nonrelativis-
+tic quantum mechanics let E be a pure case in the sense defined
+in Section 62 In other words, let E be an ensemble of systems
+S described, at some time t, by a state vector Moreover, let this
+state vector, >, be one of the eigenkets | kr > with eigenvalue
+ak of some observable A Formula (3 3) then informs us that if we
+measured A immediately after time t we would with certainty
+get result ak, which means of course that we actually know in
+advance what the outcome of such a measurement would be
+As pointed out in Section 43, under these conditions we may
+consistently assert that at time t and on each element S of E
+considered separately A has the value in question, namely a At
+least, such an assertion conflicts neither with the (nonrelativis-
+tic) quantum rules in general nor with any particular piece of
+information we may possess It is true that nothing forces us
+to utter such a "realistic" assertion and that, for making pre-
+dictions concerning outcomes of future measurements of any
+kind the assertion in question is redundant once | 4 > is known
+Nevertheless, assertions of this kind, in which no reference is
+implied to the way the information has been gained or will be
+used, are in many instances extremely natural Statements such
+as "The energy of a hydrogen atom in its ground state (or in
+any well-specified state) is so and so" are of the considered type
+In view of all this, it would have seemed natural if, also in rela-
+tivistic quantum physics, "realistic" assertions could have been
+validated in the same way, that is, by referring to state vectors
+(remember that in classical relativity theory such realistically in-
+terpretable statements exist, at least as concerns events) But the
+difficulties reviewed at the beginning of this section show that,
+in spite of the formal covariance of the measurement process,
+this definitely is not the case
+More generally, the extent to which the difficulties in question
+force us to water down our realistic views may be appreciated by
+looking at Fleming's approach [33] This author considers two space-
+like hyperplanes II' and II" say, both containing the point P of10.12 Problems in Relativistic Measurement Theory
+ПI'
+t'
+x'.
+R₁
+R₂
+Π"-
+x
+213
+x"
+Figure 10.2. Two hyperplanes, II' and II", both containing point P, and
+such that for II' R₁ lies entirely in the past and R₂ entirely in the future, and
+vice versa for ПI"
+1
+Fig. 10.2 and such that for one of them, II', R₁ lies entirely in the
+past (i.e., all space-time points of R₁ have a negative time coordi-
+nate in the reference frame F' in which all the points of П' are si-
+multaneous) and R2 lies entirely in the future; and vice versa con-
+cerning II" He grants that—as pointed out above-under these
+conditions the wave function ' (x, t) describing the consid-
+ered system in the reference frame F' (considered above) where
+II' corresponds to constant t', is altogether different from the
+wave function 4" (x", "") describing the same system in a ref-
+erence frame F" in which II" corresponds to constant t" But,
+he points out, these wave functions yield the probability am-
+plitudes for the position of a particle at a definite time in each
+reference frame and such probability amplitudes can be empir-
+ically corroborated only by instruments which, in effect, search
+for the particle at a definite time. Now, in two relatively mov-
+ing reference frames such as F' and F" such searches entail two
+distinct, and in fact incompatible experimental arrangements. In
+keeping with Bohr's insistence on the need to take into account the
+whole experimental setup, Fleming argues that therefore there is
+a priori no reason to expect a simple kinematic relationship to
+hold between ' (x, t) and 4" (x", "")214
+10. On Measurement
+We already have been interested in the limitations on the
+possibilities of a realistic interpretation of quantum mechanics.
+It is at the stage just reached that further such limitations that are
+specially introduced (over and above those already known) by
+the relativistic requirements come into full light. As mentioned
+before, in the nonrelativistic case, if | 4(x,t) > happens to be an
+eigenvector of an observable A with eigenvalues ak, knowledge
+that a system S (or an ensemble E of systems) is actually describ-
+able by this | > allows us to consider as valid the assertion that,
+at time t and on this S (or E), A has value ak, full stop. If \(x,t) >
+happens to be the eigenvector common to a complete set of
+commuting operators, knowledge that S (or E) is describable by
+| > similarly makes it permissible to consider as valid the as-
+sertion that, at time t and on this S (or E), all these observables
+have definite values full stop (with the corollary that |4 > itself
+then somehow appears as being "real," at least in some sense).
+Here and above, "full stop" is of course intended to signify that
+there is no need to specify under what circumstances depending
+on the observer the assertion in question is to be considered as
+meaningful and true, and this is undoubtedly a condition that
+any assertion bearing on objects "as they really are" is expected
+to fulfill. But, as we just saw, it is met by no assertion similar
+to the ones considered here as soon as the relativistic require-
+ments are duly taken into account. Instead, there are then the
+Fleming Bohr-like conditions, about which more will be said in
+further chapters but that clearly introduce―via reference to mu-
+tually exclusive experimental arrangements—some dependence
+on circumstances ultimately depending on the state (at least, on
+the "state of motion") of the observer.
+The conclusion must be that, in spite of the formal covariance
+of the process, relativistic quantum mechanical systems cannot,
+as Aharonov and Albert put it [36] "be described in terms of some
+subset of their observable physical variables even at times when
+the system is not directly being observed." Such a conclusion
+does not alter in any way the predictive content of the theory. But
+it undoubtedly has a bearing on its permissible interpretations.
+To quote the same authors once more, “Even if one can predict
+with certainty that any measurement of the total charge of the
+system will yield value e, still neither this charge nor any other
+physical property may consistently be attributed to the state" of
+the system as such.10.12 Problems in Relativistic Measurement Theory
+References
+215
+1. B. d'Espagnat, Conceptual Foundations of Quantum Mechanics, Addison-
+Wesley, Reading, Mass., 2nd ed., 1976.
+2. B. d'Espagnat, Reality and the Physicist, Cambridge U. Press, 1989
+3. J.M. Jauch, Helv. Phys. Acta 37, 293 (1964).
+4. F. London and E. Bauer, La théorie de l'observation en mécanique quantique,
+Hermann, Paris, 1939.
+5. E.P. Wigner, Symmetries and Reflections, Indiana U. Press, Bloomington,
+1967
+6. K. Gottfried, Quantum Mechanics, W.A. Benjamin, Reading, Mass., ch.
+20, 1966.
+7 J.S. Bell, "Against 'Measurement' " in Sixty two Years of Uncertainty, A.I.
+Miller (Ed.), Plenum, New York, 1990.
+8. E.P. Wigner, Z. Phys. 133, 101 (1952).
+9. H. Araki and M. Yanase, Phys. Rev. 120, 622 (1961).
+10. A.J. Leggett, Contemp. Phys. 25, 583 (1984).
+11. A.J. Leggett, The Current Status of Quantum Mechanics at the Macroscopic
+Level in Proceedings of the 2nd International Symposium Foundations of
+Quantum Mechanics in the Light of New Technology, M. Namikı (Ed.),
+Physical Society of Japan, Tokyo, 1987
+12. H. Primas, Chemistry, Quantum Mechanics and Reductionism, Springer-
+Verlag, Berlin, 1981.
+13. W. Heisenberg, Physics and Philosophy, Harper and Brothers, New York,
+1958.
+14. B. d'Espagnat, Nuovo Cim., Supplemento, 4828 (1966).
+15. H. Zeh, Foundations of Physics 1, 67 (1970).
+16. W.H. Zurek, Phys. Rev. D 26, 1862 (1982).
+17 B. d'Espagnat, Found. Phys. 20, 1147 (1990).
+18. E. Joos and H.D. Zeh, Z. Phys. B59, 223 (1985).
+19. B. d'Espagnat, In Search of Reality, Springer-Verlag, New York, 1983.
+20. W.H. Zurek, Phys. Today, October 1991, p.36
+21. K. Hepp, Helv. Phys. Acta 45, 237 (1972).
+22. J.S. Bell, Helv. Phys. Acta 48, 93 (1975).
+23. W.G. Unruh, “Quantum Measurement," in New Techniques and Ideas
+in Quantum Measurement Theory, Annals of the New York Academy of
+Sciences, 480, 242 (1986).
+24. B. d'Espagnat, Found. Phys. 22, 1495 (1992).
+25. A. Peres, "When Is a Quantum Measurement?” in New Techniques and
+Ideas in Quantum Measurement Theory, Annals of the New York Academy
+of Sciences, 480, 242 (1986).
+26. A. Peres, Am. J. Phys. 48, 931 (1980).
+27 B. Misra and D. Sudarshan, J. Math Phys. (N.Y.), 18, 756 (1977).
+28. B. d'Espagnat, Found. Phys. 16, 351 (1986).
+29. D. Home and M.A.B. Whittaker, J. Phys. A, 25, 657 (1992).
+30. E. Davies, Quantum Theory of Open Systems, Academic, London, 1976; G.
+Ludwig, Foundations of Quantum Mechanics, Springer-Verlag, Berlin,216
+10. On Measurement
+1983; K. Kraus, States, Effects and Operations: Fundamental Notions of
+Quantum Theory, Springer-Verlag, Berlin, 1983.
+31. S.L. Braunstein and C.M. Caves, "Quantum Rules: an Effect can have
+more than one Operation," Found. Phys. Lett., April 1988.
+32. A. Barchielli, L. Lanz, and G.M. Prosperi, Nuovo Cim. 72B, 79 (1982).
+33. G.N. Fleming, in The Mini-Course and Workshop on Fundamental Physics,
+held at the Colegio Universitarion de Humacao, Universidad de
+Puerto-Rico, 1985.
+34. I. Bloch, Phys. Rev. 156, 1377 (1967).
+35. K.E. Hellwig and K. Kraus, Phys. Rev. D 1, 566 (1970).
+36. Y. Aharonov and D.Z. Albert, Phys. Rev. D 21, 3316 (1980); Phys. Rev. D
+24,359 (1982).
+37 Y. Aharonov and D.Z. Albert, Phys. Rev. D 29, 228 (1984).
+38. P. Ghose in Bell's Theorem and the Foundations of Physics, Proceedings of
+the International Conference in Memory of John Bell Held in Cesena, 7–10
+October 1991, World Scientific, Singapore, 1993.
+Other Reading
+P. Busch, Macroscopic Quantum Systems and the Objectification Problem, Sym-
+posium on the Foundations of Modern Physics 1990, World Scientific, Sin-
+gapore, 1991.
+
+ 

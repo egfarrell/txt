@@ -1,0 +1,28 @@
+matrices/matrix
+
+Matrix Groups for undergraduates
+    A matrix group means a group of INVERTIBLE matrices. ... You know from
+    linear algebra that invertible matrices represent GEOMETRIC MOTIONS of
+    vector spaces (i.e. linear transformations) so maybe it's not
+    surprising that matrix groups are useful within geometry.
+
+my flash of insight
+    if you have a 2x2 matrix,
+    you are dealing with TWO different "ENTITIES", or vectors, or "THINGS"!!
+    on type "thing" down the COLUMNS and
+    another type "thing" along the ROWS
+    although
+    sometimes you can have the same type of "thing"
+    in both the rows and columns e.g.
+    the markov chain with states A and B
+    The transition matrix has
+        A       B
+    A   p(A|A)  p(B|A)
+    B   p(A|B)  p(B|B)
+
+    So you have a row with state A
+    and a column with state A
+    and that cell "AA" is the probability of state A
+    transitioning to state A (itself)
+    but overall 
+    a 2x2 matrix has TWO different "entities"

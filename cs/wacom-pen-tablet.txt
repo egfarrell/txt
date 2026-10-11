@@ -1,0 +1,44 @@
+
+### Windows:
+    - if device not detected, run: `services.msc`
+        - start service: 'Wacom Professional Service'
+
+    ### Windows Drivers
+        - Stored: in BOX/TOOLS https://app.box.com/folder/124487624102
+        - Stored: on laptop    $HOME/Documents/TOOLS/WacomTablet_6.3.44-1.exe*
+
+### Linux: Handy commands
+    I have a script: ~/bin/set-tablet.sh
+    xsetwacom --list devices
+    xrandr --listactivemonitors
+    xsetwacom --set "Wacom One by Wacom S Pen stylus" MapToOutput HDMI-1
+    xsetwacom --set "Wacom One by Wacom S Pen stylus" MapToOutput eDP-1
+    xsetwacom --set "Wacom One by Wacom S Pen stylus" PressureCurve 0 20 80 100
+
+### Linux: Amazon Tip
+    - I need to run this on Manjaro, but not on ubuntu.
+      - `sudo modprobe wacom`
+
+    - I have a script I run every time I plug my tablet in. Here's what's in it.
+
+    # Flip it 180 degrees so we can use it upside down.
+    xsetwacom --set "Wacom One by Wacom S Pen stylus" Rotate half
+
+    # The default mode is for the cursor to jump to the location
+    where the pen is on the tablet. I sometimes prefer relative
+    mode, because it's more natural and I can just move the
+    cursor bit by bit.
+
+    #xsetwacom --set "Wacom One by Wacom S Pen stylus" Mode relative
+
+    # Other artists use absolute mode, so I guess I will too.
+    # Plus I can map it to a monitor and that way I won't ever lose my cursor.
+    xsetwacom --set "Wacom One by Wacom S Pen stylus" Mode absolute
+    xsetwacom --set "Wacom One by Wacom S Pen stylus" MapToOutput HDMI-1
+
+
+### Links
+    - Extra drivers           https://linuxwacom.github.io/
+    - Area settings for Wacom https://askubuntu.com/questions/1218095/area-settings-for-wacom-lubuntu
+    - WINDOWS drivers         https://www.wacom.com/en-us/support/product-support/drivers
+

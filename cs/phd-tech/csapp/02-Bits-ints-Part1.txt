@@ -1,0 +1,52 @@
+02-Bits-ints-Part1.txt
+
+- lecture $MY_BOOKS/Cs/C/csapp-lectures/02-03-bits-ints.pdf
+
+
+### Bit level representation of numbers
+    - first computer actually used base 10. Had 10 vacuum tubes.
+    - binary is nice because you can have 2 _voltages_, for '0'
+      and for '1'
+    - Really nice: each voltage has a bit of wiggle room: '1'
+      could be any voltage between 0.9v and 1.1v
+        - this allows a bit of 'noise' on the wires
+
+### Binary representation of FRACTIONS
+    - 1.5213 * 10^4 = 1.1101101101101 * 2^13
+    - 0.1 in binary is 1/2
+    - 0.01 in binary is 1/4
+
+### Hex
+    - annoying to be writing big strings of 1's and 0's
+    - so use Hex to base 16
+
+### c data types
+	- $MY_IMAGES/cs/csapp/c-datatypes.jpg
+    - intel machinesŁ ancient _Long double_ is 10/16 bytes (it kinda wastes 6 bytes for
+      each variable to keep things aligned on 64 bit boundaries)
+    - a "64 bit" machine reallz means the address are 64 bits
+
+### handy trick
+    - Use bitwise operators to represent sets
+	- $MY_IMAGES/cs/csapp/bits-and-sets.jpg
+
+### Contrast:
+    - Bit-level operations: &,  |,  ~, ^
+    - Logical operators:    &&, ||, !
+
+### Shift operations
+    - left shifts always the same but two flavours of right
+      shifts
+	- $MY_IMAGES/cs/csapp/shifting.jpg
+
+### Subtleties in C about signed/unsigned
+    - switching between unsigned and two's complement numbers
+    - gotcha: 'C' can do IMPLICIT casting when comparing a signed
+      and un-signed number.
+    - If there is a MIX of signed and unsigned in expressions,
+      'C' implicitly casts signed values into unsigned
+    - $MY_IMAGES/cs/csapp/unsigned-casting.jpg
+
+Sign extension
+tip: if you see a load of 'FFF' in front of a bit pattern, you
+know it's a negative number

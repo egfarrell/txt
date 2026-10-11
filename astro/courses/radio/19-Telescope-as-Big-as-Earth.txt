@@ -1,0 +1,292 @@
+LECTURE 19
+
+A Telescope as Big
+    as the Earth
+
+                               201
+
+
+J ets dump energy into lobes on the outskirts of radio galaxies. But
+       what's happening in the center near the black hole? How are the
+       jets made, and where do they come from? The Very Large Array is
+not sufficient to answer these questions. It does not have enough angular
+resolution. To see into the vicinity of black holes in radio galaxies, we
+need a bigger radio telescope--a radio telescope as big as the Earth,
+which is the subject of this lecture.
+
+                Very Long Baseline Interferometry
+
+ The extragalactic radio source Cygnus A is shown here in an image
+    that combines the radio emission and starlight.
+
+ Let's look more closely at the Cygnus A jet.
+
+ Not much structure is visible in the jet. In fact, the angular resolution
+    of these observations is not good enough to discern any detail about
+    the jets or the radio source in the core. The picture's too blurry.
+
+ The angular resolution of this VLA map is about half an arc second,
+    and that translates to about 500 parsecs at the distance of Cygnus A.
+    A parsec is about the distance from the Sun to the next nearest star.
+    Light takes about 3.25 years to travel a parsec, so a parsec is about
+    3? light-years. Apparently, the jets and the core are smaller than 500
+    parsecs.
+
+
+
+
+ There are other clues about their size. First, there are estimates that
+    the jets are traveling at half the speed of light. That's fast, and it
+    implies that they should be moving by 1 parsec in just a few years.
+    If we could get the angular resolution of a parsec, perhaps we could
+    actually watch the jets move.
+
+ There's another line of thought. Some active galactic nuclei change
+    their visible brightness and radio emission on time scales of months
+    to years. That means that the source of the emission can't be bigger
+    than a few light-years across.
+
+                                                                                             1 light-year
+
+ Let's say that we have a blob of plasma that lights up all at once and
+    begins sending out radio waves. If it's 1 light-year across, it still takes
+    an entire year for the signal from the back to reach us after the signal
+    from the front arrives.
+
+ So, we would see a pulse on a time scale of a year. We could put an
+    upper limit of 1 light-year on the size of the emitting source. It could
+    be smaller if the emission didn't happen all at once, but not larger.
+    A larger object couldn't make such a short pulse. It's an upper limit.
+
+ And that's what we see in some active galactic nuclei. We see
+    fluctuations in radio brightness on time scales of a year. One light-year
+    is about 1/3 of a parsec. So, it seems that we need angular resolution
+    that gives us 1 parsec or better at the distance of Cygnus A.
+
+
+
+
+ To get a resolution of 1 parsec at the distance of Cygnus A, we need
+    an angular resolution of about a milli?arc second, or one thousandth
+    of an arc second.
+
+ At a wavelength of 6 centimeters, this requires a baseline that is 350
+    times longer than the longest VLA baseline. This needs a baseline
+    that's more than 12,000 kilometers long. That's the diameter of the
+    Earth.
+
+ We can make an interferometer with a baseline that stretches from
+    one side of the Earth to another. It's called very long baseline
+    interferometry (VLBI).
+
+ We have 2 radio telescopes on different sides of the Earth. They each
+    receive a signal from a distant object, and the signals are combined
+    in a correlator. The result is a telescope as big as the Earth.
+
+                       The Early Days of VLBI
+
+ So far, we have been discussing connected interferometer pairs,
+    where the 2 dishes are connected to the correlator by a wire, fiber,
+    radio transmitter, or something similar. In the late 1960s, groups first
+    in Canada and then throughout the world developed a technique for
+    creating an interferometer from 2 antennas that were not connected.
+
+
+
+
+ Instead of connecting the signals to a correlator, we simply record
+    them on tape. The tapes are then shipped through the mail to a
+    central location, where they are played back into the correlator some
+    time later. The signal is preserved perfectly on the tape, and the
+    correlation can be done at any time.
+
+ The ability to record the VLBI data has always been a challenge.
+    For VLBI experiments, you have to record hundreds of millions
+    of numbers every second. This has always strained the limits of
+    recording technology and continues to be an issue today.
+
+ In the early days of VLBI, radio astronomers would arrive at remote
+    telescopes with carloads of tapes and balky electronics and struggle
+    with basic logistics. The data rate was so large that it would fill up a
+    tape the size of a large pizza in 5 minutes. Then there'd be the rush
+    to mount another tape to keep the experiment going.
+
+ Thankfully, those days have past. Today, VLBI measurements use
+    disk storage--the kind of disks that are found in many computers.
+
+ While the recording medium is always a challenge, an equally
+    important consideration is that for the VLBI technique to work, you
+    have to be able to synchronize the 2 signals at playback time. And
+    that requires a very accurate time stamp be put on the data at each
+    telescope.
+
+ For this reason, every VLBI system has a highly accurate time standard
+    at every antenna, a time standard that is colloquially called an atomic
+
+
+
+
+    clock. These clocks use the emission from quantized states of an
+    atom to produce a very precise frequency, which can then drive a
+    precise clock, which can be used to time-stamp the incoming radio
+    wave for correlation later.
+
+ In modern times, it's routine to capture radio signals using isolated
+    ratio telescopes scattered across the world and reconstruct a virtual
+    antenna by combining their signals.
+
+ In the United States, the National Science Foundation funded
+    construction of the Very Long Baseline Array (VLBA), which has 10
+    25-meter antennas spread from Hawaii to the Virgin Islands.
+
+Mauna Kea,  Owens Valley,  Brewster,    New Liberty,  Hancock,
+Hawai'i     California     Washington   Iowa          New Hampshire
+
+Kitt Peak,  Pie Town,      Fort Davis,  Los Alamos,   St. Croix,
+Arizona     New Mexico     Texas        New Mexico    Virgin Islands
+
+                                  206
+
+
+ Tape was originally used to transport the signals and play them back
+    into the correlator in New Mexico. But they've since switched to
+    high-density disks. For some measurements where extra sensitivity
+    is needed, other telescopes, such as the Green Bank Telescope, are
+    added to the array.
+
+             Location and Timekeeping with VLBI
+
+ To correlate the signals properly, we need to know the position of the
+    antennas quite accurately. In fact, some early VLBI measurements
+    showed that there were errors in official maps. By observing
+    astronomical sources, we learn about the location of the antennas
+    on Earth.
+
+ The correlation process has to account for the Earth's rotation;
+    after all, it's the Earth's rotation that makes stars rise and set. VLBI
+    measurements produce extremely accurate information on the
+    Earth's rotation, the wobble of the North Pole, and so on. There are
+    many factors that influence the rotation of Earth.
+
+
+
+
+ So, the entire astronomical observational process can be reversed.
+    We take a set of quasars with well-known positions and use them to
+    determine the exact parameters of the rotation of the Earth.
+
+ In the United States, the U.S. Naval Observatory is responsible
+    for providing information on Earth's rotation and polar motion
+    for accurate timekeeping, and they have long recognized the
+    importance of very long baseline interferometry to their mission.
+
+ The Naval Observatory regularly measures the apparent location
+    of a set of reference quasars and uses this information to determine
+    the precise rotation of the Earth. They also feed this information
+    into the global positioning system (GPS). VLBI techniques tell us
+    what time it is.
+
+ Knowing the precise location of an object fixed to the Earth, such as
+    an antenna, can also be used to tell us when that piece of Earth has
+    moved. The crust of Earth is a dynamic system, with plate tectonics
+    and earthquakes constantly rearranging the surface.
+
+ There are areas rebounding from the weight of glaciers during the
+    last ice age and other areas where volcanism causes ground height
+    changes. Some VLBI arrays are dedicated to studying the Earth's
+    crustal motions.
+
+ It may be possible before too long to measure antenna locations
+    with errors of only a few millimeters.
+
+                      Accretion Disks and Jets
+
+ To make any progress in understanding the inner structure of
+    active galactic nuclei, we need an angular resolution of about one
+    thousandth of an arc second, a milli?arc second. With a lot of work
+    and advances in technology and with new telescopes, that resolution
+    has been achieved.
+
+
+
+
+ A great discovery in recent years is that most galaxies like the Milky
+    Way, and probably all large galaxies, have a very massive black hole
+    at their center. Black holes are collections of matter so concentrated
+    that their gravitational force keeps even light from escaping.
+
+ We really don't know how these massive black holes came to occupy
+    the very centers of galaxies, but somehow the formation of the black
+    holes and the formation of the galaxy itself seem to be linked.
+
+ Matter that comes near to the black hole doesn't plunge right in. It
+    settles into a disk, an accretion disk, which gets its name because it's
+    the last stop for matter on its journey to being accreted by the black
+    hole.
+
+
+
+
+ The vicinity of black holes is a fairly violent place, but within the
+    accretion disk, there are regions hospitable to molecules such as
+    water. And indeed water is found there.
+
+ Water molecules can emit very bright radio spectral lines through
+    a process called maser emission. A maser is the radio equivalent of
+    a laser. Maser emission from interstellar water has a frequency of
+    22 gigahertz, and the luminosity of water masers can be enormous.
+    We can detect them at great distances from us.
+
+ So, we have clouds of water vapor emitting bright radio lines in an
+    accretion disk rotating around a black hole, and we can use them
+    to weigh the black hole. We can use the velocities of the masers to
+    weigh the black hole, the same way we can use the velocities of the
+    planets to weigh the Sun--through Kepler's law.
+
+ By watching individual maser spots move as they rotate around in
+    the accretion disk, we can also determine the distance to the galaxy
+    using just a little geometry. This is important because most ways of
+    measuring distances to galaxies rely on indirect methods, such as
+    the brightness of certain stars. With VLBI and water masers, you get
+    distance from velocity and angle.
+
+ Using long baseline interferometry, we can look down at the base of
+    radio jets and watch individual jet blobs emerge. While we now have
+    several promising models for how the jets are actually formed when
+    material from the accretion disk hits the black hole, the full story
+    still eludes us. It is very likely that magnetic fields in the accretion
+    disk become tangled and transfer energy perpendicular to the disk,
+    launching jets.
+
+
+
+
+                           Suggested Reading
+
+Blundell, Black Holes, chap. 7.
+Cottrell, Telescopes, chap. 7.
+Kellermann and Sheets, eds., Serendipitous Discoveries in Radio
+Astronomy.
+Lockman, Ghigo, and Balser, eds., But It Was Fun, parts III.3, IV.9,
+and IV.10.
+
+                         Questions to Consider
+
+1. If a small country wanted to become involved with radio
+    astronomy, it might build and operate a telescope of the 25-meter
+    class for very long baseline interferometry. Why might that be of
+    importance to the world's science?
+
+2. If most galaxies have black holes in the center and galaxies
+    regularly merge or capture smaller galaxies, might we expect
+    to see a galaxy somewhere that has 2 supermassive black holes
+    possibly driving 2 pairs of radio jets?
+
+3. The video lecture showed a movie of the changes in the radio
+    emission from 3C274 over fairly short times. Would this be a
+    good object to use as a calibrator for geodetic very long baseline
+    interferometry studies? If not, what sort of radio source would
+    make an ideal calibrator?
+
+
+

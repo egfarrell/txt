@@ -1,0 +1,30 @@
+
+### Book:
+    - $MY_BOOKS/Astro/DSP/ThinkDSP-Allen-B-Downey.pdf
+
+
+### Frames
+    - Each point in time is called a frame (a term borrowed from
+      movies and video). 
+    - The measurement itself is called a _sample_, although
+      “frame” and “sample” are sometimes used interchangeably.
+    - `framerate` is the (integer) number of frames per second,
+      which is also the _number of samples_ per second.
+
+### Difference between a 'SIGNAL' and its 'WAVE'
+    - A Signal is a (Python) representation of a mathematical
+      function. 
+    - Most signals are defined for all values of `t`, from
+      negative infinity to infinity. 
+    - You can’t do much with a Signal until you evaluate it. 
+    - In this context, “evaluate” means taking a sequence of
+      points in time, `ts`, and computing the corresponding
+      values of the signal, `ys`. 
+    - I represent `ts` and `ys` using NumPy arrays and
+      encapsulate them in an object called a `Wave`. 
+    - A `Wave` represents a signal evaluated at a sequence of
+      points in time. 
+
+
+### Links
+    - Github repo https://github.com/AllenDowney/ThinkDSP

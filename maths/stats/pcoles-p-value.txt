@@ -1,0 +1,160 @@
+In the Dark
+https://telescoper.wordpress.com/2016/12/12/ligo-echoes-p-values-and-the-false-discovery-rate/
+
+### LIGO Echoes, P-values and the False Discovery Rate
+
+- I thought I'd post a grumbly article about an ArXiv paper.
+  Here's the abstract – (hasn’t been refereed yet):
+
+    > In classical General Relativity (GR), an observer falling
+    > into an astrophysical black hole is not expected to
+    > experience anything dramatic as she crosses the event
+    > horizon. 
+
+    > However, tentative resolutions to problems in quantum
+    > gravity, such as the cosmological constant problem, or the
+    > black hole information paradox, invoke significant
+    > departures from classicality in the vicinity of the
+    > horizon. 
+
+    > It was recently pointed out that such near-horizon
+    > structures can lead to late-time echoes in the black hole
+    > merger gravitational wave signals that are otherwise
+    > indistinguishable from GR. 
+
+    > We search for observational signatures of these echoes in
+    > the gravitational wave data released by advanced Laser
+    > Interferometer Gravitational-Wave Observatory (LIGO),
+    > following the three black hole merger events GW150914,
+    > GW151226, and LVT151012. 
+
+    > In particular, we look for repeating damped echoes with
+    > time-delays of 8MlogM (+spin corrections, in Planck units),
+    > corresponding to Planck-scale departures from GR near their
+    > respective horizons. Accounting for the “look elsewhere”
+    > effect due to uncertainty in the echo template, we find
+    > tentative evidence for Planck-scale structure near black
+    > hole horizons at
+
+    _2.9Σ significance level (corresponding to a FALSE DETECTION
+    PROBABILITY of 1 in 270)_.
+
+    > Future data releases from LIGO collaboration, along with
+    > more physical echo templates, will definitively confirm (or
+    > rule out) this finding, providing possible empirical
+    > evidence for alternatives to classical black holes, such as
+    > in firewall or fuzzball paradigms.
+
+- I’ve highlighted some text because as written its wrong.
+
+- I’ve blogged many times before about this type of thing. 
+- The "significance level" quoted corresponds to a "p-value" of
+  0.0037 (or about 1/270).
+
+- If I had my way we’d ban p-values and significance levels
+  altogether because they're presented so often in a misleading
+  way, like here.
+
+- What's wrong is that the significance level is not the same as
+  the FALSE DETECTION probability.
+
+- While it's usually the case that the false detection
+  probability (often called the false discovery rate) will
+  decrease the lower your `p-value` is, these 2 quantities are
+  not the same thing at all.
+
+- Usually the false detection probability is much HIGHER than the
+  p-value.
+
+- The physicist John Bahcall summed this up when he said, based
+  on his experience, “about half of all `3σ` detections are
+  false”.
+
+- You can find a nice (and simple) explanation of this here:
+    - http://www.dcscience.net/2014/03/24/on-the-hazards-of-significance-testing-part-2-the-false-discovery-rate-or-how-not-to-make-a-fool-of-yourself-with-p-values/
+    - (which includes various references worth reading), 
+    - but basically it’s because the `p-value` relates to the
+      probability of seeing a signal at least as large as that
+      observed under a null hypothesis (e.g.  detector noise)
+    - but says NOTHING directly about the probability of it being
+      produced by an ACTUAL signal.
+
+- To answer this latter question properly one really needs
+  a Bayesian approach, but if you’re not keen on that I refer you
+  to this (from David Colquhoun’s blog):
+
+    > One problem with all of the approaches mentioned above was
+    > the need to guess at the prevalence of real effects (that’s
+    > what a Bayesian would call the prior probability).
+
+    > James Berger and colleagues (Sellke et al., 2001) have
+    > proposed a way round this problem by looking at all
+    > possible prior distributions and so coming up with
+    > a minimum false discovery rate that holds universally.
+
+    > The conclusions are much the same as before. If you claim
+    > to have found an effect whenever you observe a `p-value`
+    > just less than 0.05, you'll come to the wrong conclusion in
+    > at least 29% of your tests.
+
+    > If however you use P = 0.001, you’ll be wrong in only 1.8%
+    > of cases.
+
+- Of course the actual false detection probability can be much
+  higher than these limits, but they provide a useful rule of
+  thumb,
+
+- To be fair the Nature item puts it more accurately:
+
+    > The echoes could be a statistical fluke, and if random
+    > noise is behind the patterns, says Afshordi, then the
+    > chance of seeing such echoes is about 1 in 270, or 2.9
+    > sigma.
+
+    > To be sure that they are not noise, such echoes will have
+    > to be spotted in future black-hole mergers.
+
+    > “The good thing is that new LIGO data with improved
+    > sensitivity will be coming in, so we should be able to
+    > confirm this or rule it out within the next two years.
+
+- But unfortunately the LIGO background noise is rather
+  complicated so it’s not even clear to me that this calculation
+  based on “random noise”  is meaningful anyway.
+
+- The idea that the authors are trying to test is of course
+  interesting, but it needs a more rigorous approach before any
+  evidence (even “tentative” can be claimed).
+
+- This is rather reminiscent of the problems interpreting
+  apparent “anomalies” in the CMB, which is something I’ve been
+  interested in over the years. In summary, I’m not convinced.
+
+
+### 5 Responses
+
+    - Phillip Helbig
+    - Regardless of the statistics, the whole idea of firewalls
+      is, let us say, not yet in the state in which a consensus
+      about them exists.
+
+        - Anton Garrett
+        - Has someone developed a version called Firewall XL5?
+
+    - Michel C.
+    - The real surprise might come from the spin measurements
+      rather than any deviation from GR.
+    - I am not an expert in statistics but it seems that the
+      statistical significance depends on the experimental object
+      and subject and its unknown unknowns...
+    - I mean if a test object requires a higher sigma level than
+      it should in a series of tests compared to the mean, it is
+      a sign of unknown unknowns.
+    - The LHC in that sense seems to defy the level of
+      significance on more than the mean, probably due to its
+      high level of complexity generating unknown unknowns.
+
+    Michel C.
+    - As Peter pointed out, the background noise is a known
+      unknown but it is still an unknown unknown at the same
+      time... A statistical fluke!

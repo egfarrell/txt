@@ -1,0 +1,110 @@
+sage compile from source
+
+### Parallel compile
+    - /proc/cpuinfo
+        - Read through that file to determine the number of cores
+          on your system. 
+    - Say your system has two cores and you want to use two
+      threads for compiling Sage in parallel. Then use:
+    - `$ SAGE_PARALLEL_SPKG_BUILD="yes"; export SAGE_PARALLEL_SPKG_BUILD`
+    - `$ MAKE="make -j2"; export MAKE`
+    - `$ make`
+
+### sage installation
+    export SAGE_INSTALL_GCC=yes 
+    make
+
+
+sage build taking memory
+    Another option is to
+        export SAGE_NUM_THREADS=1
+    and still run 'make -j3' (say).
+    so I never heard of SAGE_NUM_THREADS before...
+
+jmol viewer
+    needs java!!
+        ai default-jdk default-jre 
+
+    or needs java version 8?!
+        java -version
+        sudo add-apt-repository ppa:webupd8team/java
+        au
+        ai oracle-java8-installer
+
+
+libgfortran error
+    ai libgfortran3
+
+my source
+    git clone https://github.com/egf25/sage.git
+
+create upstream
+    git remote add upstream https://github.com/sagemath/sage.git
+    git fetch upstream
+    g co develop
+    g merge upstream/develop
+                        
+ai binutils gcc make m4 perl tar dvipng xdg-utils imagemagick
+ai texlive texlive-latex-extra texlive-latex3 texlive-fonts-extra
+ai gettext
+
+ai ffmpeg tk tk-dev dpkg-dev
+ai default-jdk default-jre 
+
+for ubuntu 14.04
+    (cos ffmpeg insnt included?)
+    sudo apt-add-repository http://ppa.launchpad.net/mc3man/trusty-media/ubuntu
+    ak 90BD7EACED8E640A
+    au
+
+
+useful env variables
+
+    export MAKE='make -j1'
+    export MAKE='make -j2'
+    export MAKE='make -j4'
+
+    export SAGE_CHECK=yes
+    export SAGE_CHECK_PACKAGES='!python, !flint'
+
+    note: you cant have BOTH of the next 2 env variables - creates a conflict
+        export SAGE_ATLAS_ARCH=fast
+        export SAGE_FAT_BINARY="yes" 
+        (SAGE_FAT_BINARY="yes" fixes GOMP error when building "R" on ubuntu 14.04)
+        (SAGE_FAT_BINARY="yes" can cause an error if set in ubuntu 12.04) 
+
+if error
+    export SAGE_KEEP_BUILT_SPKGS=yes
+
+Test everything
+    ./sage --testall
+
+check Tkinter ok
+    import _tkinter
+    import Tkinter
+
+    if fails:
+        ai tk tk-dev
+        sage -f python
+        make
+
+        (and try "import _tkinter" again)
+
+system-wide SAGE symlink:
+(copy and paste this line)
+sudo ln -s "$PWD"/sage /usr/local/bin/sage
+
+view optional packages
+    sage --optional
+
+
+order of execution
+    SAGE_ROOT/sage
+    calls
+        SAGE_ROOT/src/bin/sage
+        calls
+            SAGE_ROOT/src/bin/sage-ipython
+
+
+cd sagesource/logs
+    tail install.log

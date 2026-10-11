@@ -1,0 +1,63 @@
+A determinant is a number.
+Discovered in 1683 by Leibnitz and Edo (Japan).
+
+Leibnitz:
+3 equations in 2 unknowns has solutions in x and y if
+    `agn + bhl + cfm = ahm + bfn + cgl`
+    or
+    `agn + bhl + cfm - ahm - bfn - cgl = 0`
+
+Cramers Rule
+    Solving a system of simultaneous linear equations
+    by using determinants. Published 1750 by Gabriel Cramer (Swiss)
+    (see "Unknown Quantity" section 9.2, also p. 170)
+
+Multiplying determinants
+    has something to do with linear transformations.
+
+Good coherent theory of determinants
+    Published by Cauchy 1812 (French Institute)
+
+From stack exchange:
+
+The first thing to think about if you want an “abstract” definition of
+the determinant to unify all those others is that it’s not an array of
+numbers with bars on the side. What we’re really looking for is
+a function that:
+
+```
+takes N vectors (the N columns of the matrix) and
+RETURNS A NUMBER.
+```
+
+- You could think of a determinant as a VOLUME.
+
+- Think of the columns of the matrix as vectors at the origin
+  forming the edges of a skewed box. The determinant gives the
+  volume of that box. For example, in 2 dimensions, the columns
+  of the matrix are the edges of a rhombus.
+
+- You can derive the algebraic properties from this geometrical
+  interpretation. For example, if two of the columns are linearly
+  dependent, your box is missing a dimension and so it's been
+  flattened to have zero volume.
+
+
+- If I may, I would add to this answer (which I think is a very
+  good one) in two minor aspects.
+
+    - First, a determinant also has a SIGN, so we want the
+      concept of oriented volume. (This is somewhat tricky, but
+      definitely important, so you might as well have it in mind
+      when you're learning about "right hand rules" and such.)
+
+    - Second, I think better than a volume is thinking of the
+      determinant as the multiplicative _CHANGE IN VOLUME_ of
+      a parallelopiped under the linear transformation. (Of
+      course you can always take the first one to be the unit
+      n-cube and say that you are just dividing by one.)
+
+- +1: I like this answer because there is a direct link to some
+  application in physics: In special relativity we are talking of
+  the conservation of space-time-volume, which means that the
+  determinant of the transformation matrix is const.

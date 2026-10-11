@@ -1,0 +1,54 @@
+### Copy from s3 bucket down to instance
+
+vastai show connections
+```
+ID     NAME        Cloud Type
+37312  s3-ef-full  s3
+```
+aws s3 ls --summarize --human-readable s3://asr-comp/
+
+vastai cloud copy --src /submission --dst /workspace/test --instance 31643378 --connection 37312 --transfer "Instance To Cloud" --explain
+vastai cloud copy --src /submission --dst /workspace/endatest --instance 31643378 --connection 37312 --transfer "Cloud to Instance"
+
+~ $ vastai cloud copy --help
+usage: vastai cloud copy --src SRC --dst DST --instance INSTANCE_ID -connection CONNECTION_ID --transfer TRANSFER_TYPE
+
+options:
+ -h, --help                        show this help message and exit
+ --src SRC                         path to source of object to copy
+ --dst DST                         path to target of copy operation
+ --instance INSTANCE               id of the instance
+ --connection CONNECTION           id of cloud connection on your account (get from calling 'vastai show connections')
+ --transfer TRANSFER               type of transfer, possible options include Instance To Cloud and Cloud To Instance
+ --dry-run                         show what would have been transferred
+ --size-only                       skip based on size only, not mod-time or checksum
+ --ignore-existing                 skip all files that exist on destination
+ --update                          skip files that are newer on the destination
+ --delete-excluded                 delete files on dest excluded from transfer
+ --schedule {HOURLY,DAILY,WEEKLY}  try to schedule a command to run hourly, daily, or monthly. Valid values are HOURLY, DAILY, WEEKLY  For ex. --schedule DAILY
+ --start_date START_DATE           Start date/time in format 'YYYY-MM-DD HH:MM:SS PM' (UTC). Default is now. (optional)
+ --end_date END_DATE               End date/time in format 'YYYY-MM-DD HH:MM:SS PM' (UTC). Default is contract's end. (optional)
+ --day DAY                         Day of week you want scheduled job to run on (0-6, where 0=Sunday) or "*". Default will be 0. For ex. --day 0
+ --hour HOUR                       Hour of day you want scheduled job to run on (0-23) or "*" (UTC). Default will be 0. For ex. --hour 16
+ --url URL                         server REST api url
+ --retry RETRY                     retry limit
+ --raw                             output machine-readable json
+ --explain                         output verbose explanation of mapping of CLI calls to HTTPS API endpoints
+ --curl                            show a curl equivalency to the call
+ --api-key API_KEY                 api key. defaults to using the one stored in /home/ef/.config/vastai/vast_api_key
+ --version                         show version
+
+Copies a directory from a source location to a target location. Each of source and destination
+directories can be either local or remote, subject to appropriate read and write
+permissions required to carry out the action. The format for both src and dst is [instance_id:]path.
+You can find more information about the cloud copy operation here: https://vast.ai/docs/gpu-instances/cloud-sync
+
+Examples:
+ vastai show connections
+ ID    NAME      Cloud Type
+ 1001  test_dir  drive
+ 1003  data_dir  drive
+
+vastai cloud copy --src /folder --dst /workspace --instance 6003036 --connection 1001 --transfer "Instance To Cloud"
+
+The example copies all contents of /folder into /workspace on instance 6003036 from gdrive connection 'test_dir'.

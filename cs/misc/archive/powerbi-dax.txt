@@ -1,0 +1,256 @@
+
+yymmdd trick
+Extra lines in the header
+replace *
+replace -
+compare headers
+blank rows
+= Table.Combine({Headline_1516, Headline_1617, Headline_1718})
+
+NewTable = DISTINCT(UNION(SELECTCOLUMNS(Table1,"Contract Number",Table1[Contract Number]),SELECTCOLUMNS(Table2,"Contract Number",Table2[Contract Number]),SELECTCOLUMNS(Table3,"Contract Number",Table3[Contract Number])))
+NewTable = UNION(SELECTCOLUMNS(Table1,"Contract Number",Table1[Contract Number]),SELECTCOLUMNS(Table2,"Contract Number",Table2[Contract Number]),SELECTCOLUMNS(Table3,"Contract Number",Table3[Contract Number])))
+
+
+
+
+Matrix "Secrets"
+    - https://www.burningsuit.co.uk/blog/2019/04/7-secrets-of-the-matrix-visual/
+    - No.1 - Grand Totals are really Subtotals.
+    - No.2 - Expand all down one level in the hierarchy.
+    - No.6 – Show text in the Values area. <---- _GOOD_
+        - `Dance Name = SELECTEDVALUE(Dances[Dance])`
+    - No.7 – Use Conditional Formatting.
+        - But format the _background_ color
+
+
+### Table: Conditional Background Color
+    Row_Color = SWITCH(TRUE(), Proachieve_1415_to_1819_NEW[PG_HybridEndYearID] = "14/15", "#dafff7", 
+                               Proachieve_1415_to_1819_NEW[PG_HybridEndYearID] = "15/16", "#EADDEE", 
+                               Proachieve_1415_to_1819_NEW[PG_HybridEndYearID] = "16/17", "#D0DFE9",
+                               Proachieve_1415_to_1819_NEW[PG_HybridEndYearID] = "17/18", "#def4e3",  
+                               "#FFF9D2")
+
+### handy DAX
+    - conditonal formatting
+        - value_display = IF('mytable'[Indicator_type] = "currency", FORMAT (  'mytable'[Value], "£#,0" ), format('mytable'[Value], "Percent"))
+
+    - misc
+        - high_rate = round(DIVIDE(trevor_grades[high_grades], trevor_grades[completers], 0) * 100, 1)
+        - display_course_title = left('course-ratings-pass-retention'[Course_Title], 55)
+        - display_course_title = left(trevor_grades2[Main_PG_AggCourseShortName], 55) 
+        - CONCATENATE only takes 2 arguments , use "&" instead
+            - key_academy_learning_aim = CONCATENATE(Academy_Learning_Aim[Academy], Academy_Learning_Aim[Learning_Aim])
+
+    - create lookup tables 
+        Academy = DISTINCT('course-ratings-pass-retention'[Academy])
+        Academy_Course = DISTINCT(SELECTCOLUMNS('course-ratings-pass-retention', "academy", 'course-ratings-pass-retention'[Academy], "course_code", 'course-ratings-pass-retention'[Course_Code], "course_title", 'course-ratings-pass-retention'[Course_Title]))
+        Slicer_Overall = SELECTCOLUMNS('1718_App_Overall', 'Merge', '1718_App_Overall'[Merge], 'age', '1718_App_Overall'[Age Grp ER], 'ssa2', '1718_App_Overall'[SSA2 Name], 'framework_no', '1718_App_Overall'[Framework], 'Framework_Name', '1718_App_Overall'[Framework name])
+        Academy_Learning_Aim = DISTINCT(SELECTCOLUMNS('learning-aims-ratings-pass-retention', "Academy", 'learning-aims-ratings-pass-retention'[Academy], "Learning_Aim", 'learning-aims-ratings-pass-retention'[Learning_Aim], "Learning_Aim_Title", 'learning-aims-ratings-pass-retention'[Learning_Aim_Title]))
+
+
+
+
+### Visual: custom sort order
+    1. Create a new "Order" table with 2 columns, 
+        - "MyField", "My_Sort_Order"
+        - note: the "MyField" column must be the exact same name
+          as the column you want to sort on the main table
+    2. Goto modelling tab
+    3. Click "Sort By Column" and choose the "My_Sort_Order" column
+    4. When creating a visual, drag the main field from the new "Order" table
+    - ```
+    - GCSE_Entry_Av_Points_Grade     Grade_Order
+    - A*/A                           1
+    - A+                             2
+    - A                              3
+    - A-                             4
+    - B+                             5
+    - B                              6
+    - B-                             7
+    - C+                             8
+    - C                              9
+    - ```
+
+
+### link to a OneDrive URL
+    - Solution:
+      https://community.powerbi.com/t5/Desktop/Unable-to-use-OneDrive-Business-share-link-to-display-images-in/m-p/352032/highlight/false#M158353
+    - to stop messing around with security and crf tokens, we
+      need a URL that ends in ".jpg"
+    - so I switched to the "old" OneDrive interface
+    - click on the "..." beside the image
+    - copy the url link from the popup that appears
+    - the url link should end in ".jpg"
+    - Alternative solution:
+        - Go to your OneDrive folder and click on the 3 dots "..."
+        - Click "Preview"
+        - Once loaded click on "VIEW ORIGINAL" and use that link
+          from address bar instead...
+    - Note: I think the person has to be _signed into_ OneDrive to
+      view the jpg url
+
+
+### Row Level Security (RLS)
+    - to view ALL data:
+        - create a role called _MASTER_ and dont assign a filter to it.
+
+### store images in a column
+    - "data:image/jpeg;base64, " & [BinaryToText]
+    - Cropped Image Gotcha!
+        - 32Kb limit: I've found that the maximum length a string
+          can have to be processed by Power BI is 32766
+          characters.
+        - So once you've converted your image to a Base64 string,
+          if the length of the string is greater than this then
+          it will crop the image.
+
+### value formatting when transposing a table
+    - transpose your data (eg in Excel)
+    - use a matrix
+    - goto Format -> Values -> "Show on Rows"
+
+### create new table manually
+    Query Editor -> View -> Advanced Editor
+
+### SORT stacked barchart by percent
+    - KEY POINT:
+        - define a new column e.g. "dropout percent"
+        - and insert this column as a tooltip.
+        - Tooltips then appear as a "sort option" for barcharts
+    - Steps to create the "dropout percent" column:
+        - Create a new table from existing... (using "Advanced
+          Editor")
+        - `Group by` the column on the axis (e.g. Academy)
+        - `Pivot column` on whatever column the percentages come
+          from (e.g. Startfund)
+        - Add new column: dropout_percent = [No] / ([Yes] + [No])
+    - Now theres a new table and column "dropout percent"
+      which allows a stacked barchart to be sorted by percent.
+    - (And build the stacked barchart from this new table?)
+
+### Convert Boolean True/False ---> to Yes/No
+    Startfund_yn = SWITCH('Dropout By Academy'[StartFund], TRUE, "Yes", FALSE, "No")
+
+### cannot import dates from CSV
+    - manually edit the import ("Edit Queries" -> "Advanced Editor")
+    - change datatype from "_date_" to "_datetime_"
+
+### Excel import gotcha
+    sometimes blank rows are imported from an Excel spreadhsheet
+    - if you look at the data then, it looks like it's all blank,
+      cos the blank rows are at the top...
+
+### Powerbi and Anaconda Python
+    - I was able to get around the error by creating a new conda env with Python 3.5:
+    - `conda create -n powerbi anaconda python=3.5`
+    - Then pip installing relevant packages (I had issues with PowerBI recognizing conda installs):
+
+        ```
+        conda activate powerbi
+        pip install matplotlib
+        pip install pandas
+        ```
+    - After this, you need to point PowerBI to the new env.
+        - File -> Options and Settings -> Options -> Python Scripting
+        - Then add the Path to your new Env. e.g.
+        - "C:\ProgramData\Anaconda3\envs\powerbi"
+
+
+### print a report
+    - click: File -> "Export to PDF"
+        - (no need to upload to online server!)
+
+### turn off microsoft tracking
+    file - options  - usage data
+
+### difference table / matrix
+    a matrix is just a power pivot
+
+### new table with unique values
+        Academies = VALUES(courses_join[Academy])
+        Academies = DISTINCT(courses_join[Academy])
+        Master_Lookup = DISTINCT(SELECTCOLUMNS('basic-ratings', "academy", 'basic-ratings'[Academy], "course_code", 'basic-ratings'[Course_Code], "course_title", 'basic-ratings'[Course_Title]))
+
+        - In most scenarios, when the argument is a column name,
+          the results of the _VALUES_ function are identical to
+          those of the _DISTINCT_ function. Both functions remove
+          duplicates and return a list of the possible values in
+          the specified column. 
+        - However, the VALUES function can also return a blank
+          value. This blank value is useful in cases where you
+          are looking up distinct values from a related table,
+          but a value used in the relationship is missing from
+          one table. In database terminology, this is termed
+          a violation of referential integrity. Such mismatches
+          in data can occur when one table is being updated and
+          the related table is not.
+
+        - When the argument is a table name, the result of the
+          VALUES function returns all rows in the specified table
+          _plus a blank row_, if there is a violation of
+          referential integrity. The DISTINCT function removes
+          duplicate rows and returns unique rows in the specified
+          table.
+
+
+### new table with summary columns from another table
+        Academy_ratings = SUMMARIZE(courses_join, courses_join[Academy], courses_join[Course Code], courses_join[Radar Pass Rating])
+
+### difference [calculated column] v. [measure]
+    - As a rule of thumb:
+        1. If you intend to apply any aggregation to a value (ie.
+        sum, average etc) that shows a result, then stick to
+        a Measure.
+        2. If you intend to use the value for formatting purposes
+        (ie. slicers, row/column category) then add a Column.
+
+    - Calculated columns (and tables) are:
+        - Evaluated for each row in your table, immediately after
+          you hit 'Enter' to complete the formula
+        - Saved back into the model so take up space
+
+    - Calculated Measures are:
+        - Evaluated when you use it in a visual, when the visual
+          is rendered
+        - Not saved anywhere (well, actually there's a cache in
+          the report layer but it's not part of the file when you
+          hit Save)
+
+    - Generally, measures are more useful, but the trade-offs are
+      the performance hit (report runtime vs. pre-processed),
+      storage space, and type of expressions you can use.
+        - For example calculated columns are often used when you
+          want to _filter_ on the result rather than just as
+          a calculated result.
+
+### bar charts
+    - to show a split by various values, drag the field into
+      _LEGEND_
+
+
+### refreshing CSV file
+    - if you added new columns to the CSV you have to goto
+      "Advanced Editor" and delete the clause that says
+      "Columns=xxx"
+
+### links
+    - "Curbal" Power BI Tutorials       https://www.youtube.com/channel/UCJ7UhloHSA4wAqPzyi6TOkw/playlists
+    - Tree structure / Org Chart        https://www.youtube.com/watch?v=4VpGtWSrssE&feature=youtu.be&t=17m42s
+    - all versions of Power BI          https://docs.microsoft.com/en-us/power-bi/desktop-latest-update-archive
+    - PowerBI Report Server (PBIRS)     https://powerbi.microsoft.com/en-us/report-server/
+    - image grid                        https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381355?tab=Overview
+    - card with states                  https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380967
+    - pie charts conditional formatting https://ideas.powerbi.com/forums/265200-power-bi-ideas/suggestions/34906837-conditional-formatting-in-pie-chart-each-segment
+    - card with states                  https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380967
+    - slicer problem                    https://community.powerbi.com/t5/Desktop/Auto-quot-Clear-Selections-quot-for-the-second-slicer/td-p/438510
+    - slicer problem                    https://stackoverflow.com/questions/51822625/initial-value-of-power-bi-slicer-based-on-another-slicer-choice
+    - card with states                  https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380967
+    - Powerbi open link                 https://powerbi.microsoft.com/en-us/blog/power-bi-desktop-may-feature-summary/#urlTables
+    - SSRS embed image                  https://docs.microsoft.com/en-us/sql/reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs?view=sql-server-2017
+    - SSRS add hyperlink                https://docs.microsoft.com/en-us/sql/reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs?view=sql-server-2017
+    - SSRS link to file                 https://social.msdn.microsoft.com/Forums/sqlserver/en-US/f33818f0-add4-4f69-9159-d872ac81906d/create-a-link-to-open-up-excle-file-from-ssrs-report?forum=sqlreportingservices
+    - PowerBI Color Names               https://www.w3schools.com/cssref/css_colors.asp
+    - multiple datatypes                https://community.powerbi.com/t5/Desktop/Columns-With-Multiple-Data-Types/td-p/546110
+    - KPI visual                        https://community.powerbi.com/t5/Desktop/Best-KPI-visual-for-target-comparison/td-p/675869
+    - conditional formatting            https://community.powerbi.com/t5/Desktop/Data-Colors-Advanced-Controls-November-2018-release/m-p/576735#M272647
+    - Microsoft courses                 https://docs.microsoft.com/en-us/power-bi/guided-learning/

@@ -1,0 +1,62 @@
+coursera relational algebra
+
+basics
+	* query (expression) on set of relations
+	* produces a relation
+	* simplest query: a relation name
+	* Use operators to filter, slice, combine
+
+select σ 
+	sigma operator 
+	+ condition we're filtering for 
+	+ relation over which we're applying the filter
+	σ cond Expr
+
+Project ∏ 
+	picks out certain attributes (columns)
+
+Duplicates
+	* not returned for relational algebra (sets)
+	* are returned for SQL (multi-sets, bags)
+
+Cross-Product
+	way of combining relations i.e. Cartesian Product
+	what good is a cross product?
+	as a starting point (expression)
+	on which to apply select and project operators!
+
+Natural Join (bowtie symbol)
+	binary operator (means only 2 at a time!)
+	its actually a projection of a select of a cross-product
+	so actually not giving additional expressive power, 
+	its just a handy abbreviation!
+	Like a cross-product but:
+		* 	only combines tuples where 
+			the (key?) attribute is the same 
+			(e.g. where Table1.studentID = Table2.studentID)
+		*	eliminate one copy of duplicate attributes
+			e.g. Table1.SID and Table2.SID, zap one of them
+
+theta join
+	most DB pro's really mean the theta join when talking about joins
+	Expr1 bowtieθ Expr2 = sigma
+
+Rename operator
+	useful for self-joins
+	want to list pairs of colleges in the same state
+	using alternate notation:
+		c1 := p(n1, state, e1) College
+		c2 := p(n2, state, e2) College
+		CP := c1 (natural join bowtie) c2
+		Ans := σ(n1 < n2) CP
+	stanford stanford
+	stanford berkeley just want this one
+		berkeley berkeley
+		berkeley stanford
+
+Tree notation
+	compiled SQL queries often presented in this way
+
+
+
+

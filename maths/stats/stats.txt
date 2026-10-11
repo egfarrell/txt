@@ -1,0 +1,1852 @@
+
+### GP and MCMC: 
+    - $MY_NOTES/maths/stats/Gaussian-Process-GP.txt
+    - GP + MCMC = Bayesian hierarchical modeling:
+    - GP handles uncertainty over functions given hyperparameters.
+    - MCMC handles uncertainty over the hyperparameters themselves.
+
+### Learn: Bayesian inference & Gaussian Processes
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/543853
+    - Jeroen Cottaar: 2nd in Arlel Data challenge 2024
+        - For Bayesian Inference, I only really have a reference
+          if you want to learn it properly: 
+            - Bayesian Data Analysis 3rd edition by Andrew Gelman
+              and others. 
+            - Heavy going but you will learn so much. You can
+              find it here, including free PDF download:
+              http://www.stat.columbia.edu/~gelman/book/
+        - For GP I recommend starting with:
+            - https://arxiv.org/abs/2009.10862
+            - it's an 8-page paper that covers both the math and
+              the intuition:
+        - If you want to go deeper on GPs, go for this book, also
+          available for download:
+          https://gaussianprocess.org/gpml/
+
+### Stop teaching frequentism?
+    - https://news.ycombinator.com/item?id=44082494
+    - https://arxiv.org/abs/1201.2590
+    - It is time to stop teaching frequentism to
+      non-statisticians (2012)
+        - Abstract: We should cease teaching frequentist
+          statistics to undergraduates and switch to Bayes. Doing
+          so will reduce the amount of confusion and
+          over-certainty rife among users of statistics. 
+    - HN: Yes old, but even worse, it is not a well argued
+      review. Yes, Bayesian statistics are slowly gaining an
+      upper hand at higher levels of statistics, but you know
+      what should be taught to first year undergrads in science?
+      Exploratory data analysis! 
+    - A great book is `Mosteller and Tukey`’s gem: Data Analysis
+      and Regression.
+    - Another is Judea Pearl’s `Book of Why`.
+
+### Bayesian good too
+    - Ariel exoplanet competition
+    - 2nd place solution didn't use deep learning, only Bayesian
+    - Jeroen Cottaar 
+    - https://www.kaggle.com/competitions/ariel-data-challenge-2024/discussion/543853
+    - To me, the most attractive element of BI is how it lets us
+      split our physical thinking from our solver. All our domain
+      knowledge goes into defining the prior, where we can
+      consider one physical element at a time; doing the actual
+      Bayesian Inference to find the posterior is then 'just
+      math'. Not necessarily easy math - but it's entirely
+      separate from our domain knowledge. 
+        - Comment from Jeroen Cottaar: You won't regret learning
+          Bayesian and Gaussian Processes! They're very powerful
+          approaches - even in the many cases where true deep
+          learning techniques are needed, they can still boost
+          performance a lot in steps like feature engineering. 
+
+### Statistics aren't great as physical explanations?!
+    - HN: 8 years since AlphaGo
+      https://news.ycombinator.com/item?id=39758391
+    - discreteevent 
+        - Here's an excellent comment along the same lines (in
+          response to whether our intelligence is statistically
+          based like LLMs):
+        - > mjburgess 
+            - Suppose you touch a fireplace once, do you touch it
+              again? No.
+            - OK, here's something much stranger. Suppose you see
+              your friend touch the fireplace, he recoils in
+              pain. Do you touch it? No.
+            - Hmm... whence statistics? There is no frequency
+              association here, in either case. And in the
+              second, even no experience of the fireplace.
+        - The entire history of science is supposed to be about
+          the failure of statistics to produce explanations. 
+        - It is a great sin that we have allowed pseudosciences
+          to flourish in which this lesson isnt even understood;
+          and worse, to allow statistical showmen with their
+          magic lanterns to preach on the scientific method. 
+        - To a point where it seems, almost, science as an ideal
+          has been completely lost.
+        - The entire point was to entirely throw away our
+          reliance on frequency and association - this is ancient
+          superstition. 
+        - And instead, to explain the world by necessary
+          mechanisms born of causal properties which interact in
+          complex ways that can never uniquely reveal themselves
+          by direct measurement.
+        - https://news.ycombinator.com/item?id=39661963 
+
+### Standard Error
+    - Audio recording: 20200120-210846.txt
+    - So the `standard error` is the `standard deviation` of our
+      sampling distribution.
+    - But the problem is we never take hundreds and thousands of
+      samples to actually build the sampling distribution.
+    - We actually don't know it. So we have to estimate the
+      standard error.
+    - So how do we do that?
+    - We estimate the standard error from our one single sample.
+    - So we get the standard deviation of our one single sample
+      and that's divided by the square root of the number of
+      samples.
+    - And that gives us an estimate of the standard error.
+    - So just to repeat, even though we know by the central limit
+      theorem that the sampling distribution of the mean, for
+      example, will be normally distributed,
+    - we never actually create the sampling distribution but we
+      do estimate the standard error.
+
+
+### precision recall
+    - Precision-Recall (PR) curve and the Receiver Operating
+      Characteristic (ROC) curve might seem similar at a glance,
+      especially in their shape and behavior, they actually serve
+      different purposes and are affected differently by the data
+      distribution, particularly in the context of class
+      imbalance.
+    - Here are some key differences and similarities:
+
+    - Axes and Focus:
+        - The ROC curve plots True Positive Rate (TPR, or recall)
+          against False Positive Rate (FPR).
+        - The PR curve plots Precision against Recall.
+        - Both curves evaluate the performance of a classifier at
+          different thresholds, but they focus on different
+          aspects of the performance.
+
+    - Behavior with Class Imbalance:
+        - The ROC curve can present an overly optimistic view of
+          the classifier's performance in cases of severe class
+          imbalance because FPR does not capture the actual
+          negative instances well.
+        - The PR curve is more informative for imbalanced
+          datasets as it focuses on the performance of the
+          positive class, which is typically the minority class.
+
+    - Interpretation:
+        - A good classifier tends to move towards the top-left
+          corner in the ROC space (high TPR, low FPR).
+        - For the PR curve, a good classifier moves towards the
+          top-right corner (high Precision and Recall).
+
+    - Visual Similarity:
+        - Both curves might appear "mirrored" or "inverted"
+          versions of each other, especially in binary
+          classification tasks. This is because they plot related
+          metrics (TPR/Recall and FPR/Precision) but in different
+          orientations.
+
+    - In summary, while ROC and PR curves might visually resemble
+      each other, they provide different insights. The PR curve
+      is often more revealing in situations where you have
+      a class imbalance or when the cost of false positives is
+      high. The ROC curve is more general and does not focus on
+      any class.
+
+
+### ONS
+    - https://news.ycombinator.com/delete-confirm?id=37395972&goto=item%3Fid%3D37394487
+    - I worked on a short contract in the ONS (2016). What struck
+      me was how expert they were with the statistical algorithms
+      - but how 'messy' some of the data munging was ...
+    - Our section had a combination of SAS scripts, CSV files,
+      Python scripts... a few people using R... all 'glued'
+      together.
+    - And missing data / outliers was a problem. Some firms were
+      slow returning their survey forms and we'd have to impute
+      their data (seemed a bit of an 'art' rather than
+      a science). I suppose these are standard problems for any
+      statistical pipeline - it just seemed a bit hit-and-miss
+      sometimes...
+    - Definitely the statisticians knew their stuff and were
+      expert in their own particular survey. And not biased in
+      any political way that I could see... it's just some of the
+      IT scripts seemed hit-and-miss.
+    - BUT: by 2017 they were redeveloping everything to use
+      automated procedures on a big data platform - more
+      HADPOOP/HIVE/PySpark etc
+    - (Aside: probably lots of big coporations have these IT
+      issues: worked in a big pensions company with PL/1
+      mainframe code from the 1970s... honestly I don't really
+      trust that the pension products all had the right
+      calculations ... impossible to fully trace what that code
+      was doing)
+
+### Receiver Operating Characteristic (ROC)
+    - key:
+        - graph of TRUE POSITIVES v FALSE POSITIVES
+        - ie: "sensitivity" v "specificity"
+        - $MY_IMAGES/maths/statistics/ROC-curve.jpg
+    - Imagine you're the captain of a spaceship, and your mission
+      is to navigate through a dense asteroid field. Your
+      spaceship is equipped with a special radar that can detect
+      incoming asteroids, but sometimes it's not perfect, and you
+      get false alarms.
+        - On the other hand, there are real asteroids that the
+          radar fails to detect, which could be dangerous.
+    - The `Receiver Operating Characteristic`, or ROC, is like
+      a radar performance report that helps you understand how
+      well your radar is working.
+        - In this case, it's not about asteroids but about
+          a binary classification system, like diagnosing
+          a disease (positive or negative), approving a loan
+          (good or bad credit), or detecting spam emails (spam or
+          not spam).
+    - The ROC curve shows how well your classifier (like the
+      radar) can distinguish between the two classes by plotting
+      its performance at various decision thresholds. Here's how
+      it works:
+        - Sensitivity (True Positive Rate):
+            - Imagine this as the radar's ability to correctly
+              detect asteroids. It tells you the proportion of
+              real positives (correctly detected asteroids) to
+              all the actual positives (both detected and
+              undetected asteroids).
+        - Specificity (True Negative Rate):
+            - This is like the radar's ability to correctly
+              ignore harmless space debris and not raise false
+              alarms. It tells you the proportion of real
+              negatives (correctly ignored harmless debris) to
+              all the actual negatives (both ignored and falsely
+              alarmed debris).
+        - Decision Thresholds:
+            - Your radar can be set to different sensitivity and
+              specificity levels by adjusting its sensitivity
+              threshold. Lowering the threshold might help you
+              detect more asteroids, but it may also result in
+              more false alarms.
+    - The ROC curve is drawn by calculating `sensitivity` and
+      `specificity` at various threshold levels. It helps you
+      visualize the trade-off between sensitivity and
+      specificity.
+        - Ideally, you want both values to be high, which means
+          you detect most real positives and ignore most real
+          negatives.
+        - The closer the ROC curve is to the top-left corner of
+          the graph, the better your classifier is at
+          distinguishing the two classes.
+    - In summary, the ROC curve provides a clear picture of how
+      your classifier is performing, just like the radar report
+      shows how well your spaceship's radar is navigating through
+      the asteroid field.
+        - The goal is to have a high-performing classifier,
+          represented by a curve that hugs THE TOP-LEFT CORNER,
+          indicating excellent sensitivity and specificity at
+          various decision thresholds.
+
+### Taming of chance
+    - A lively and provocative writer if often a highly technical
+      one, Professor Hacking wrote several landmark works on the
+      philosophy and history of probability, including “The
+      Taming of Chance” (1990), which was named one of the best
+      100 nonfiction books of the 20th century by the Modern
+      Library.
+    - Also: His book “The Emergence of Probability” (1975), which
+      is said to have inspired hundreds of books by other
+      scholars, examined how concepts of statistical probability
+      have evolved over time, shaping the way we understand not
+      just arcane fields like quantum physics but also everyday
+      life.
+    - HN comment: I recently read the book Against The Gods
+      (1996) on the development of mathematical probability
+      theory in the early modern period, but I wasn't aware that
+      the history in that book seems to have been covered also by
+      Hacking in The Emergence of Probability (1975) and The
+      Taming of Chance(1990). For anyone who has read these
+      books, I'm curious how they relate.
+
+### Difference Bayesian stats and ML
+    - https://news.ycombinator.com/item?id=34387081
+    - Machine learning fundamentally cares about model
+      performance on other _data_, like validation or test sets.
+        - It is looking for models that perform well, but not
+          necessarily model the underlying process.
+    - Bayesian statistics, like most statistics, wants to
+      accurately estimate parameters in the model.
+        - It cares most about _models_ that are portraying the
+          underlying data-generating process.
+
+### Kaggle: Funny quirk with AUC scoring
+    - https://www.kaggle.com/competitions/rsna-miccai-brain-tumor-radiogenomic-classification/discussion/279823#1550125
+    - The real winner ...
+    - Posted in
+      rsna-miccai-brain-tumor-radiogenomic-classification a year
+      ago
+    - With a LB score of 0.36919 (rank 1555/1555), @tommzzhou
+      actually had the best model !
+    - His model has the same discriminative power as a 0.63081
+      one, which ranks #1.
+    - (because auc(y, x) = 1 - auc(y, 1 - x))
+    - Which is actually quite funny !
+    - Reply
+        - If only he had reversed all his predictions…
+    - Reply
+        - Kaggle has (or should I say had, see below) a blanket
+          policy for AUC competitions: _invert_ scores that are
+          `< 0.25` (to counter score hiding).
+    - Reply
+        - I didn't know Kaggle does that under the hood. What are
+          they achieving with this implementation?
+    - Reply
+        - Presumably it is because without this policy you could
+          invert your predictions and get perfect public LB
+          feedback, but without raising your LB position by
+          posting high AUC scores… (as tried here for example
+          ;-P) Or the story by Giulio on Quora: wait until the
+          final week before switching to your real submissions
+          and take everyone by surprise!
+
+### Expectation Value
+    - $MY_BOOKS/Physics/Metaphysics/Jim-Baggot-Farewell-to-Reality.pdf
+    - ... vacuum expectation value (a kind of _fancy average value_)
+
+### Confounding variables
+    - https://news.ycombinator.com/item?id=30607692
+    > ... because approaches like this often have virtually no
+    > explanatory power.
+    - Feynman responded to this when the public demand an
+      "explanatory theory". The answer is usually "don't know":
+        - why does gravity work like that?
+            - Don't know, but we can calculate orbits to great
+              precision;
+        - why do photons or electrons travel like that?
+            - Don't know, but we can make very precise
+              predictions via QED.
+    - The public demand an explanatory theory, because there's an
+      underlying assumption they don't even verbalize: that such
+      an explanatory theory can be understood _without the
+      maths_, that the principles of the laws of physics operate
+      on basic, understandable lego pieces.
+    - What is somewhat inconceivable is that the explanation _is_
+      the maths. To whit, we don't even have an explanation for
+      the idea of inertia! We just observe it, and measure it (as
+      mass). There's no explanatory theory.
+
+        - _Confounding variables_ are a strong argument against
+          this. Give me two sets of data with `no causal
+          relationship`, and it's very possible (if not likely)
+          I'll be able to demonstrate not only a causal
+          relationship but also observational predictability
+          through the existence of confounding variables.
+        - Let me use ML models and this becomes trivial.
+        - Do school names determine how good a school will be?
+            - Of course not.
+            - However, schools have names which tend to be
+              reused: cultural icons, scientists, etc..
+            - And schools in low-performing areas are going to
+              have a different distribution of chosen names than
+              schools in high performing areas.
+            - So you can create a model that will not only
+              demonstrate this but also offer legitimate
+              observational predictability that a school's name
+              will, on average, determine how well it will do.
+        - The only way you could really refute this hypothesis is
+          by understanding the true confounding variable, or by
+          running some huge scale multiple decades long
+          experiment where you changed the names of new schools
+          and measured the performance difference.
+            - That experiment is clearly not really practicable,
+              so all you're left with is understanding.
+        - And this is really where the risk is.
+            - If we ever begin to build upon something that is
+              unsound then it risks everything from that point
+              onward being also invalid.
+            - At best everything collapses and you realize you
+              must have made a mistake.
+            - At worse, you simply end up adding endless
+              epicycles until at some point everything starts to
+              completely stall out muddled in its own invalid
+              fundamentals and irreconcilable complexity.
+
+### Kuhn: inductive logic
+    - Like Popper, Kuhn rejected inductive logic ...
+        - (when inductive logic is done correctly, it IS
+          probabilistic reasoning understood the Bayesian way)
+    - This left Kuhn with no way to deny that paradigms change in
+      physics as arbitrarily as fashions in clothing.
+    - Yet every physicist knows why relativistic mechanics
+      superseded Galilean mechanics:
+        - it has more accurate predictions in experiments that
+          inevitably contain some noise (and therefore have to be
+          analysed probabilistically).
+
+### Percentage Increase (Alcohol)
+    - https://news.ycombinator.com/item?id=26871751
+    - For better context, the baseline "illness rate" was 914 per
+      100,000 which is a 0.914% chance of illness per year.
+    - The "one drink a _day_" group increases that to 918 per
+      100,000 for a risk of 0.918%.
+    - Yes, the consequences are 0.004% (or 4e-05 probability)
+      increase in risk from drinking _daily_.
+    - It's almost like they had to goose the results and drop out
+      "1-2 drinks a week" groups to get positive results.
+        - Reply:
+        - Stating a percentage increase that is calculated by
+          _subtraction_ rather than _division_ is nearly always
+          misleading.
+        - The increase in risk is `0.43%`, which is still low but
+          two orders of magnitute higher than your statement.
+          What you are calculating is the increase in percentage
+          points
+        - https://en.wikipedia.org/wiki/Percentage_point
+            - A percentage point or percent point is the unit for
+              the arithmetic difference between two percentages.
+            - For example, moving up from 40 percent to 44
+              percent is an increase of 4 percentage points, but
+              a 10-percent increase _IN THE QUANTITY BEING
+              MEASURED_.
+                - In literature, the unit is usually either
+                  written out, or abbreviated as pp or p.p. to
+                  avoid ambiguity.
+                - After the first occurrence, some writers
+                  abbreviate by using just "point" or "points".
+        - Ah this is a better explanation:
+        - In 1980, 50 percent of the population smoked, and in
+          1990 only 40 percent of the population smoked. One can
+          thus say that from 1980 to 1990, the prevalence of
+          smoking decreased by 10 percentage points (or by 10
+          percent of the population) or by _20 percent when
+          talking about smokers only_ - percentages indicate
+          proportionate part of a total.
+
+### Nice graph design
+	- $MY_IMAGES/maths/statistics/nice-bar-chart.jpg
+    - Oct 2022: hmmm... but maybe doesn't add anything
+
+### fastai: Median
+    - using a median in a loss function:
+    - the problem with a median is it only cares about 1 number,
+      the number in the `middle`
+    -  you could end up ignoring all the things at each end
+    - in fact, all it really cares about is the _order_ of things
+    - I guess you'd only end up with something that's good at
+      predicting one thing in the middle
+    - But I havent tried it!
+    - Oh, you might end up with a lot of (zero?) bumpy gradients,
+      I think, because you could change your values and the
+      median is unchanged(?)
+
+### Peter Coles:
+    - False detection probability isn't the same as significance
+      level (p-value)!
+    - It's usually true that the false detection probability
+      (false discovery rate) will decrease the lower your p-value
+      is, these 2 quantities are not the same thing at all.
+        - ./pcoles-p-value.txt
+        - On the hazards of significance testing.
+            - Part 2: the false discovery rate, or how not to
+              make a fool of yourself with P values
+            - http://www.dcscience.net/2014/03/24/on-the-hazards-of-significance-testing-part-2-the-false-discovery-rate-or-how-not-to-make-a-fool-of-yourself-with-p-values/
+        - Also: Some papers about p-values
+            - http://www.onemol.org.uk/?page_id=456
+
+
+### Fastai
+    - Great discussion in lecture 2 on P-values
+        - $MY_NOTES/cs/AI-ML/fastai/course-notes/Course-2020-02.txt
+    - despite bad things, a small p-value can tell you that the
+      thing we're looking at probably didn't happen by chance...
+    - `p-value` often depends on how much data you collect?
+    - nice trick:
+        - do your whole NULL hypothesis thing, then pick the
+          opposite NULL hypothesis and repeat the procedure.
+        - If you still get an inconclusive p-value then you don't
+          have enough data to tell you anything at all...
+
+# Heteroskedastic
+    - data drive astronomy: interview with an astronomer
+    - _Heteroskedastic_: the error bars can vary on the same
+      object depending on WHEN you observe it. (opposite:
+      "homoskedastic")
+    - If datasets are not "balanced" most techniques don't work
+      on them.
+        - (eg. most objects in the dataset dont vary in
+          brightness at all)
+    - future/challenge: combining diverse datasets that were not
+      created with the same goals in mind.
+    - Tools: in the 'image domain' deep learning is very popular.
+    - Astronomy: good at maintaining metadata for our data. e.g.
+      FITS images have very good headers with lots of info.
+    - don't want noise levels too much or trivial correlations.
+        - aside: that's funny, I was wondering why Hogg said that
+          _homoskedastic_ assumptions are "always wrong"
+
+### Hogg INverting Matrices
+    - One thing I throw into my papers these days is about
+      numerical linear-algebra operators.
+    - My advice:
+        - Never use the `invert()` function to invert a matrix!
+        - Why not? Because you almost never want the inverse, you
+          want the inverse applied to a vector.
+    - So when you are tempted to do `dot( inv(A), x )` you should
+      instead do `solve( A, x )`.
+    - The first gets a machine-precision (if you are lucky)
+      inverse of `A` and applies it to `x`.
+        - The latter gets a machine-precision (if you are lucky)
+          estimate of `A-inverse` applied to `x`.
+        - You see the difference?
+    - Alternative method:
+        - Well, all of that got complexified today when I learned
+          (from Soledad Villar NYU) about `lstsq()`.
+        - This does the same as `solve()` (and more) but it is
+          zero-safe.
+    - Meaning:
+        - It gives good answers even when the `A` matrix has zero
+          eigenvalues. I think my advice may be evolving.
+
+### Hogg Noise Linear Models
+    - I also spent some time today reading Agresti book on linear
+      models.
+    - Although this book is a bible for linear models and
+      generalized linear models, it states at the very outset
+      (Chapter 1!) that every single method in the entire book
+      will presume there is no noise in the _features_, only
+      noise in the _labels_.
+    - (Think: You're predicting noisy labels `y`, given features
+      `x`)
+    - That assumption of "no noise in `x`" is fine, but it is
+      violated in every important example I know in every single
+      application of any kind of linear model (or nonlinear model
+      of course) in every area, academic and commercial.
+    - Other than that, it's a good assumption.
+
+### Hogg
+    - My view about data analyses (as my loyal reader knows) is
+      that once you write down your assumptions in sufficient
+      detail, the data-analysis method flows directly from those
+      assumptions.
+    - So we wrote down _assumptions_!
+    - I think we have enough to make a method and make this work.
+      One thing we discussed is that the assumptions are strong,
+      but they are also _testable_.
+    - So even the assumptions themselves can become interesting
+      parts of the project.
+
+
+### HN: Distributions and Entropy information Theory
+    - The unpredictability of a message is a measure of its
+      information content. I don't understand this, can you help
+      me understand?
+        - I can give you a uniformly random byte. I can also give
+          you a byte distributed from normal distribution such
+          that ~127 is more likely than 0 and 255.
+        - They'll both be a byte (same bits of information) but
+          getting `0` in one of them will be be a lot more
+          surprising than the other. How is unpredictability
+          a measure of message's information content?
+    - I believe the comment you responded to is referring to the
+      concept of entropy in information theory.
+        - https://en.wikipedia.org/wiki/Entropy_(information_theory)
+    - Hmm I believe you're correct. The answer to my problem
+      above seems to be that even though information is encoded
+      in `8 bits` in both cases, one of them is a lot of more
+      dense.
+    - Yes, it's a fundamental result from Information Theory.
+        - In the situation you describe the _receiver has to know
+          which distribution_ you're using.
+    - See also
+        - https://en.wikipedia.org/wiki/Kolmogorov_complexity
+    - Predictability and compressibility are the same thing.
+        - For large enough quantities of bytes from that
+          distribution, it'd be more efficient to transmit
+          a compression scheme that mirrors the distribution of
+          data you have to send, matching up shorter words
+          on-the-wire with more common bytes.
+
+### Ronald Fisher
+    - He decided to vary several factors of interest
+      simultaneously, and randomly assign different treatments to
+      different plots. He criticised the conventional wisdom
+      that:
+        > we must ask Nature few questions, or ideally, one
+        > question at a time. The writer is convinced that this
+        > view is wholly mistaken. Nature, he suggests, will best
+        > respond to a logical and carefully thought out
+        > questionnaire.
+
+### Data-Driven Astro comment:
+    - if the distribution is _symmetric_, the mean and the median
+      is the same
+
+### Biology course - point about populations
+    - changing populations...
+    - Sometimes you can gather data, make an inference etc about
+      a population
+    - but....!
+    - In the meantime, the population could have changed... the
+      inference may no longer be valid...
+
+### brilliant - OU course - statistically independent
+        - $MY_IMAGES/maths/statistics/statistically-independent.jpg
+    - probability that someone is female and Labour voter
+        - Method 1: 0.1455 (simple probability)
+        - Method 2: 0.1516 (female prob * labour prob)
+    - I didn't know why both methods gave different answers??
+    - Because the events of being female and a labour supporter
+      are NOT statistically independent events.
+        - In reality, there's a slightly lower probability of
+          being female and a labour supporter.
+    - The multiply method only works for _INDEPENDENT_ events
+    - note:
+        - this test works "both ways".
+        - If you have 2 ways of working out the joint probability
+          and you find different answers, then you know there's
+          some sort of dependence here...
+    - (Can this statistical independent apply to Bell's theorem?)
+
+### probability tree
+    - $MY_IMAGES/maths/statistics/use-probability-tree.jpg
+    - sometimes it's handy to use a "tree" to work out tricky
+      probabilities
+    - e.g. whats the probability that (any) 2 beans germinate?
+        - there's three different ways this can happen
+        - this leads on to the idea of "combinations" when
+          working out probabilities
+
+### boxplots:
+    - one of its main uses is for comparisons
+    - hadn't thought of that!
+
+### standard deviation
+    - a measure of the spread of the data... around the mean!
+    - ie not just any old spread
+    - note: SD is a sensitive measure:
+        - cos you're squaring all the deviations (and if you've
+          got one bigger.. bah)
+
+### MIT histograms
+    - you can have a frequency histogram and a density histogram!
+    - ./mit_histograms.txt
+
+### random stats comments
+    - Chi squared is for _CATEGORICAL_ data
+
+### Rosling
+    - As soon as the drugs cured him, Rosling flew to West Africa
+      to join the Liberian epidemiological surveillance team.
+
+    - The team wanted to consolidate data, but struggled with the
+      disparate ways international agencies collected info.
+
+    - “We were losing ourselves in details,” says Rosling. “I saw
+      this was a war situation: all we needed to know is:
+        > are the cases rising, falling or levelling off?”
+
+    - After a few months, it became clear the rate of new cases
+      had diminished. Rosling was rewarded with a traditional
+      chieftainship by the Liberian government.
+
+### sampling (key - never knew this!)
+    - SAMPLING error:
+        - the source of _VARIANCE_. i.e. each time you sample
+          your statistics will vary!
+        - Because the sample isn't the whole population.
+        - Because you are using sampling instead of census.
+    - NON-SAMPLING error:
+        - the source of _BIAS_
+    - But later in the Open Uni M140:
+        - "bias" was listed under SAMPLING ERROR:
+        - eg if the sample wasn't random... then it would be
+          biased.
+        - So is bias non-sampling error or sampling error?
+            - later: ah no, bias is the RESULT of non-sampling
+              error
+    - Ah this image helps: "poor sampling method" is actually
+      "non-sampling" error and results in bias
+      $MY_IMAGES/maths/statistics/statistical-errors.png
+
+### Difference between DATA and INFORMATION
+    - https://www.youtube.com/watch?v=F20qEwXBQaE
+    - Data is a collection of raw facts and figures that must be
+      processed into INFORMATION
+    - Data is nothing unless it is processed
+    - _Unprocessed_ data contains numbers (0-9), Statements and
+      characters
+
+### maths books
+    > the overwhelming majority of people can not learn
+    > mathematics properly from a textbook.
+    - You're right, but most maths textbooks are atrocious (pages
+      of equations).
+        - There's nobody sitting at the _3-way intersection of
+          great mathematician, great writer and great educator_
+          who can write great textbooks.
+    - I've found books with "History" and "Philosophy" in the
+      title much better to learn mathmatics.
+        - Any book without solutions or no historical context has
+          turned out to be useless to me.
+    - I've got something like 4 books on statistics on my shelf.
+      The only one I've learnt anything from is Chatterjee's
+      'Statistical Thought' because it talks about what
+      techniques were developed in context of which problem,
+      failed alternative approaches, explains what was confusing
+      to the greatest minds in Statistics etc.
+    - This is vastly more useful in setting up a framework for
+      statistics that I can attach a whole bunch of proofs and
+      suchlike too.
+        - Its been enlightening in a way that textbooks can't
+          really manage.
+    - $MY_BOOKS/Physics/Maths/Statistics/Statistical-Thought-Chatterjee.pdf
+
+### Probability (Chatterjee)
+    - The most straight-forward way to relate the probability
+      `P(A)` of an event `A` to the relative frequency of `A`
+      would be to suppose there is an infinite sequence of
+      causally independent, identical repetitions of the
+      experiment.
+
+### PROBABILITY v EXPECTATION VALUES
+    - 'Probability' is ...
+        - the CHANCE of a certain EVENT ocurring.
+        - If we roll a dice, the probability of a `3` is `1/6`.
+    - But 'Expectation' is ...
+        - the _AVERAGE VALUE_ of an experiment.
+        - Here the expectation value is `3.5`.
+        - Its the weighted average (weighted by probability)
+        - of the numerical value of each individual outcome?
+            - `(1*1/6) + (2*1/6) + (3*1/6) + (4*1/6) + (5*1/6)
+              + (6*1/6) = 3.5`
+
+    - From Quirky Quantum book:
+        - It can be shown that the `average value` of a random
+          variable (averaged over many trials) is:
+            - $MY_IMAGES/maths/definition-expectation-value.jpg
+    - It's clear that the `average value` of many trials may be
+      an IMPOSSIBLE value for any single trial; 
+        - e.g., the average value of the roll of a die is `3.5`,
+          but no single role can produce that value.
+    - Often, the term "expectation value" or "expected value" is
+      used in the sense of "average value." 
+    - This can be confusing, because the "expectation value" of
+      a die roll is `3.5`, yet you'd never expect the value of
+      a die roll to be 3.5. (good point)
+    - Since the term "average" is clear and precise, we do not
+      use the term "expectation value."
+
+### Random Variable
+    - If we assign NUMBERS to --> OUTCOMES, say
+        - 1 for "heads",
+        - 0 for "tails"
+    - then we have created a mathematical object known as
+      a RANDOM VARIABLE.
+
+### terminology:
+    - CENSUS:
+        - complete coverage of the population
+    - survey: when a sample is selected from the population
+    - population:
+        - need not be people: could be fish, light bulbs,
+          villages etc. Also called the 'target population'.
+    - sample size:
+        - a compromise between economy and accuracy
+    - ideal sample:
+        - a pattern in the sample implies a pattern in the target
+          population. This is a representative sample.
+    - Random sample (selection):
+        - every sample has the same chance of being selected.
+    - random sample:
+        - rolling a die, "one at a time method" for drawing
+          random samples, rather than labelling each sample
+          individually
+        - with bigger samples, generate a list of random digits
+          via computer, and then group the digits together as
+          needed.
+            - eg. if population is 100, and the random numbers
+              are 9, 8, 0, 6, 7, 7, 4 ..., then the "samples"
+              would be 98, 06, 77 etc...
+    - systematic random sampling:
+        - you have a "rule" rather than rolling dice?
+        - e.g. systematic: choose every National Insurance number
+          ending in a certain pair of digits.
+        - Advantages: much quicker usually, and in _certain_
+          situations can give a more representative sample.
+        - must take care with systematic sampling:
+            - e.g. you have consecutive pairs of married couples,
+              the first always being the man.
+            - If the systematic sample always takes the 1st
+              person, you'll end up with a sample of men!
+
+### Stats m140 TMA error (skew)
+    - if it's left skew, its NOT that there's more data points to
+      the left of the median.
+    - By definition the median is the mid-point!
+    - Its that the data points are more SPREAD-OUT to the left!
+    - Right-skew: data more SPREAD OUT to the right
+
+### skew
+    - the skew pulls the _mean_ in that direction
+
+### Probability / Likelihood
+    - to stress this change of perspective, `l_x(θ)` is the
+      likelihood (function) of the "model" `θ`, whereas `p_θ(x)`
+      is the probability (function) of the data `x`.
+    - Both are actually the same function `p(x|θ)` but seen from
+      different perspectives and with `x` (data) and `θ` (model)
+      switching their roles as variable and parameter,
+      respectively.
+
+    - This answer got downvoted but it's ok?
+        - If we put the conditional probability interpretation
+          aside, you can think it in this way:
+        - In probability you usually speculate the probability of
+          a possible event, but in likelihood you have observed
+          some outcome, so you want to find the most likely
+          _source_ or _probability distribution_ from which this
+          event has raised.
+
+### medical physics guy tip
+    - if using advanced statistics, check the ASSUMPTIONS
+    - if using non-linear fitting/modelling, check the ASSUMPTIONS
+
+### Bernouli distribution
+    - each individual event has only _TWO outcomes_ or states:
+      - 1 or 0
+
+### mean / probability distribution
+    > "Mean" means nothing in the context of probability
+    > distributions.
+    - Just wanted to reinforce this point.
+    - It's possible for close to 50% of infections to only
+      incubate for ~1 day and still have a mean of 5.6 days for
+      incubation.
+        - Without knowledge of the distribution, the mean means
+          nothing.
+
+### Why measure the SPREAD of data?
+    - summary: it tells you something about the MEAN.
+    - measures of spread are related to measures of central
+      tendency.
+    - eg: spread tells us how well the mean represents the data.
+    - If the spread of values is large, the mean is NOT as
+      representative of the data as if the spread were small.
+    - This is because a large spread indicates there are probably
+      large differences between individual scores.
+    - Also in research, its often seen as positive if theres
+      little variation in each data group as it indicates that
+      the similar. (?)
+
+### Derive Bayes Theorem
+
+    ### conditional probability
+        - To find the conditional probability
+          `P(E|F)` look at the event `(E and F)` as part of
+          the _REDUCED_ sample space F.
+
+        - ie `P(E|F) = P(E and F) / P(F)`
+
+    ### Intuitive facts from this definition:
+        - Once E occurs its (already) certain:
+            - `P(E|E) = 1`
+
+        - If E and F are mutually exclusive:
+            - `P(E|F) = 0`
+
+        - Rearranging the conditional probability definition
+          gives us a multiplication rule:
+          - `P(E and F) = P(E|F)*P(F)`
+
+        - and if E and F are independent (`P(E|F)=P(E)`) this
+          reduces to the normal multiplication rule.
+            - `P(E and F) = P(E) * P(F)`
+
+    ### Now bayes
+        - "posterior" probability
+        - same as "conditional" probability
+
+        - derive bayes
+        - P(Cause and Effect) = P(Cause) × P(Effect given Cause)
+        - P(Cause and Effect) = `P(Effect) × P(Cause given Effect)`
+        - therefore:
+        - P(Cause) = `P(Effect) × P(Cause given Effect)` / P(Effect given Cause)
+
+### Interactive statistics tutorial - Python and Matlab
+    - Raizada teaching (16 Feb 2011)
+    - https://www.youtube.com/watch?v=nCv_MhaeFo8
+    - http://raizadalab.org/intro-stats.html
+    - I've video on my SD card: stats-tutorial-python.webm
+    - I've code in: $MY_CODE/python/maths/youtube-stats
+
+    ### UNSTABLE MEAN
+        - if you have a low number of data points one outlier can
+          really change the mean
+
+        - but if you have lots of data clustered around the mean
+          then one outlier wont have such a big effect on the
+          normal distribution
+
+    ### ONE SAMPLE T-TEST
+        - shows whether a population mean based on a number of
+          sample points is different from a mean of ZERO
+
+    ### CORRELATION
+        - measures how well can I draw a straight line through
+          these points
+
+    ### CORRELATION MISTAKE 1
+        - easy to get significant correlation if lots of points
+        - even if its not clear whats happening in the data
+
+    ### CORRELATION - SMALL SAMPLE
+        - one point can make a big difference!
+        - he had a correlation `r=0.64` and a p-value of `0.06`
+        - but one extra point killed the correlation (`r=0.2`)
+
+    ### ANSCOMBES QUARTET
+        - its important to graph your data!
+        - Anscombe introduced 4 datasets with similar statistical
+          properties:
+            * mean,
+            * variance,
+            * correlation,
+            * linear regression
+        - but all looked very different when graphed.
+
+### z score
+    - Also known as the "standard score".
+    - how many standard deviations you are away from the mean.
+    - Can apply to any distribution. Doesnt have to be normal
+      distribution.
+
+### Cofficient of Variation (CV)
+    - If you know nothing about the data other than the mean, one
+      way to interpret the relative magnitude of the SD is to
+      divide it by the mean.
+      - This is the "coefficient of variation".
+
+    - Eg: if the mean is 80 and SD is `12`,
+        - CV = 12/80 = `15%`.
+
+    - If the SD is .20 and the mean is .50,
+        - CV = .20/.50 = `40%`.
+
+    - So knowing nothing else about the data, the CV helps us see
+      that even a LOWER SD doesn't mean less variable data.
+        - (?????? check this)
+        - (later: or do they mean that `.20` is lower than `12`)
+
+    - I've found the CV to be an underused metric considering its
+      simple to compute and really helps with understanding
+      relative variability.
+
+### data
+    - Statistical problems can seem complex, but you can get
+      insight by recognizing your data is just one possible
+      instance of a _random process_.
+    - If you have a hypothesis for what that process is, you can
+      simulate it, and get an intuitive sense of how surprising
+      your data is.
+
+### Calculus based approach to stats
+    - Q: Is there a calculus based approach to statistics? Like
+      understanding linear regression simply as a minimization
+      problem, but ALL THE WAY ie extending to other statistical
+      techniques?
+
+    - A: Statistics/Probability theory is really deeply tied to
+      calculus/real analysis .
+
+    - Basically any quantity you think about in statistics or
+      probability _is really an integral_.
+
+    - The trick is that they aren't Riemann integrals, but a more
+      advanced type called Lebesgue integrals, which has to do
+      with measure theory.
+
+    - The main difference between the two is that a Riemann
+      integral counts every area of space the same (ie [0,1]
+      counts just as much towards your integral as [1,2])...
+
+    - but Lebesgue integrals use what is called a measurable
+      function, which maps `f(set) -> positive number`.
+
+    - You can use this function to WEIGHT different parts of your
+      integral differently.
+
+    - So you can make measurable functions that map
+      `f(set) -> how likely that set happens `
+    - (which is exactly the probability)
+
+### markov chains
+    - Walters identifies the key mistake in the thirders'
+      reasoning is they don't appreciate the following fact:
+
+    - In a Markov process one cannot talk about the probability
+      of being in a _state_.
+
+    - One must talk about the probability of passing from state
+      `x` to state `y` in `n` steps.
+
+    - (If the process is ergodic then in a limiting distribution
+      there is some sense of talking about the probability of
+      being in a state, but that is not the case here.)
+
+    - In a Markov process, we may only talk about the
+      probabilities of _transitions_ and we must specify the
+      number of steps, he points out.
+
+    - This refinement has two points that I am going to discuss
+      in more detail.
+
+### effect size?
+    - In many inferential statistics formulas, I need to see
+      whether the observed phenomenon in my sample(s) is large or
+      small relative to my standard error.
+    - Recall that standard error is a measure of the _average
+      amount of variance_, or diﬀerence, we can expect from
+      diﬀerent samples of the same size selected from
+      a population.
+    - So, the question we are asking with many inferential
+      statistics is whether some statistic we see in our sample
+      is big or small compared to the amount of variance (or
+      error) we would expect if we had randomly selected
+      a diﬀerent sample of the same size.
+    - This question can be summarized with the following fraction
+
+### effect size
+    - To calculate an eﬀect size, we need to convert this
+      standard error back into a standard deviation.
+
+    - If we divide the standard deviation by the square root of
+      the sample size to fnd the standard error...  (?)
+
+    - Then we can multiply the standard error by the square root of
+      the sample size to find the standard deviation.
+
+    - my random question: but the standard error isn't actually
+      a standard deviation? or a single sample?
+
+### jake talk?
+    - SHUFFLE: comparing 2 groups
+    - SIMULATE: when u have a generating model
+    - BOOTSTRAP: Eg: what's the mean and standard deviation of
+      stacked turtle backs
+        - keep sampling with replacement and get the mean of all
+          your samples, and you recover the analytic distribution
+
+### standard errors
+    - Standard errors can be used to determine
+      _probabilities_ of sample statistics (such as the
+      mean) in much the same way that we used standard
+      scores to determine probabilities associated with
+      individual scores in Chapter 4.
+    - Because of the usefulness of standard errors in
+      determining probabilities, standard errors play
+      a critical role in determining whether a statistic is
+      statistically signifcant.
+    - Because standard errors are inﬂuenced by sample size,
+      statistical signifcance will also be inﬂuenced by
+      these sample characteristics.
+    - In the next chapter, the issue of statistical
+      signifcance, and the eﬀects of sample size on
+      statistical signifcance, are discussed in more depth
+
+### GSS questions:
+    - how would you create trust in your statistics
+    - MSE -> what can you do/analyse with them?
+
+### datacamp
+    - median is immune to extreme values. It is derived from
+      the _ranking_ of sorted data, and not the *value* of
+      the data,  it is immune to outliers.
+
+    - median is speical name for 50th percentile. ie 50%
+      data are less than the median.
+
+    > np.percentile[mydata, [25, 50, 75]]
+
+    inter-quartile range (IQR) - the middle 50% of the data
+
+    Poisson process: timing of event is completely
+    independent of previous event
+
+    Poisson process: is the limit of the bernoulli for low
+    success probability and large number of trials. ie for
+    rate events
+
+    cdf: more effective - no _binning_ bias.
+
+    You just heard that the Poisson distribution is a limit
+    of the Binomial distribution for rare events. This makes
+    sense if you think about the stories. Say we do
+    a Bernoulli trial every minute for an hour, each with
+    a success probability of 0.1. We would do 60 trials, and
+    the number of successes is Binomially distributed, and
+    we would expect to get about 6 successes. This is just
+    like the Poisson story we discussed in the video, where
+    we get on average 6 hits on a website per hour. So, the
+    Poisson distribution with arrival rate equal to _np_
+    approximates a Binomial distribution for _n_ Bernoulli
+    trials with probability _p_ of success (with _n_ large
+    and _p_ small). Importantly, the Poisson distribution is
+    often simpler to work with because it has only one
+    parameter instead of two for the Binomial distribution.
+
+    normal distribution: light tails: theres a tiny
+    probability of being > 4 standard deviations away from
+    the mean... Real data often has extreme values. When
+    this happens, the normal distribution may not be the
+    best discription of your data.o
+
+    Exponential distribution: the waiting time between
+    arrivals of a poisson process is exponentially
+    distributed.
+
+    fitting a 1D polynomial:
+    > slope, intercept = np.polyfit(total_votes, dem_share, degree=1)
+
+    bootstrapping
+    - The use of resampled data to perform statistical
+      inference
+    - terminology: bootstrap sample: a resampled array. Has
+      the same number of entries as the original data.
+    - terminology: bootstrap replicate: a statistic computed
+      from the resampled array
+
+    - linear regression: this is a parametric model.
+    - Has 2 parameters: the slope and intercept.
+
+    - confidence interval: how is the parameter likely to
+      change under repeated measurements.
+
+    - Hypothesis testing: Assess how reasonable the observed
+      data are assuming a hypothesis is true
+
+    - test statistic: a single number computed from
+      _observed_ data and from data you _simulate_ under the
+      null hypothesis. It is used as a basis of comparison
+      between the two.
+
+    - remember: statistical significance <> practical
+      significance
+
+    - p-value: the probability of observing a test statistic
+      equally or more extreme than the one you observed,
+      assuming the hypothesis you are testing is true
+
+    Hypothesis testing:
+    - clearly state the null hypothesis
+    - define your test statistic
+    - generate many sets of simulated data assuming the null
+      hypothesis is true
+    - compute the test statistic for each simulated dataset
+    - the p-value is the fraction of your simulated data
+      sets for which the test statistic is at least as
+      extremem as for the real data
+
+### cumulative probability
+    - If you want the probability of something happening,
+      you have to integrate the formula for the normal
+      distribution:
+
+    - But doing the _integral is hard_ sometimes, so we use
+      the cumulative distribution function.
+
+    - The Cumulative distribution is probability from -∞ up
+      to a certain number.
+
+    - E.g. To calculate the probability of your value being
+      between -1 and 1:
+
+    1. Get the cumulative probability from
+        -∞ probability up to _1_
+
+    2. and subtract the cumulative probability from
+        -∞ probability up to _-1_
+
+    - The _difference_ between the two values gives your
+      desired probability.
+
+### Mutually Exclusive vs. Independent
+    - ../stats/independent_events.txt
+
+### Interpret Confidence Intervals
+    - (aug 2016: wow look at Jakes astrohack talk - very
+      similar idea)
+
+    - Suppose that a 90% confidence interval states that the
+      population mean is `> 100` and `< 200`. How would you
+      interpret this statement?
+
+    - Some people think it means theres a 90% chance the
+      population mean falls between 100 and 200. This is
+      incorrect.
+
+    - Like any population parameter, the _population mean is
+      a CONSTANT_, not a random variable. It does not change. The
+      probability a constant falls within any given range is
+      always `0` or `1`.
+
+    > The confidence level describes the uncertainty
+    > associated with a _SAMPLING METHOD_.
+
+    - Suppose we used the same sampling method to select
+      different samples and to compute a different interval
+      estimate for each sample.
+
+    - Some interval estimates would include the true population
+      parameter and some would not.
+
+    - A 90% confidence level means we would expect 90% of the
+      _interval estimates_ to include the population parameter;
+
+    - A 95% confidence level means that 95% of the intervals
+      would include the parameter; and so on.
+
+### expected value
+    - Arithmetic mean
+        - simple average of numbers _not weighted_ by anything.
+
+    - Expected Value,
+        - the numbers are weighted by their probability
+
+### sampling distribution
+    No matter what the underlying population distribution
+    is, if you take enough samples, with a large enough
+    sample size (n), then the distribution of the sample
+    mean resembles a normal distribution.
+
+    Amazing! Linked to the central limit theorem.
+
+    Need sample size (n > 25) for each sample to ensure nice
+    tight skew and kurtotis.
+
+    Imagine if you took many samples but with sample size
+    n=1 each time. You wouldn't get a bell curve for the
+    distribution then, you'd just more or less approimate
+    the original distribution. So we need n > 25...
+
+### khan sample mean
+    - For large n, i.e. as n goes to infinity, The sample
+      **MEAN** approaches the **POPULATION MEAN** (μ).
+    - The population mean can be called the expected value
+      aswell.
+    - A random variable is a bit like a sample from an
+      infinite population. (???)
+    - This is an example of the law of large numbers?
+
+### Khan: Law of large numbers:
+    - If you take a _lot of samples_ of a R.V. X,
+    - then the mean of all the samples will approach the
+    - population mean, or the expectation value E[X]
+
+    - not sure? you take a "lot of samples"??
+    - I though large numbers law was if you take _one_ sample
+      with a larger and larger sample size
+
+### correlation v regression
+    see: ../stats/regression_v_correlation_coefficient.md
+
+    - _Correlation_ does not distinguish between the
+      dependent and independent variables
+
+    - while the regression line does
+
+### random variable
+    - Not really a variable but a _function_
+    - Maps you from the world of random processes to a _number_.
+
+    - And this number is going to be random because e.g. we
+      don't know if its going to rain tomorrow.
+
+    - Or its a _number map_ which takes:
+        * the outcomes of an experiment
+        * and maps it to a number
+
+### student t sample
+    - For small samples use the student t distribution
+    - For large samples the distribution of the sample mean
+      will be approximately normal
+
+### Overall Rates paradox
+
+                No. Applied     No. admitted    % admitted
+                ------------------------------------------
+    Dept A
+        Women       50              25              50%
+        Men         100             50              50%
+
+    Dept B
+        Women      _100_            30              30%
+        Men         50              15              30%
+
+    Total
+        Women       150             55             _37%_
+        Men         150             65             _43%_
+
+    Men and women do not apply to the various departments at
+    the _same rate_. It seems to violate the axiom "the
+    whole is equal to the sum of its parts". But it isn't.
+    Because an overall _rate_ is not the sum or average of
+    component _rates_.
+    (Like the average speed question in the civil service
+    exam!)
+
+### @jakevdp
+    - Careful! `68–95–99.7` only works in 1 dimension. In
+      d dimensions it's `0.68ᵈ – 0.95ᵈ – 0.997ᵈ`
+    - (I've messed that up more times than I can count)
+    - Relevant, for example, when drawing contours on
+      Bayesian posterior distributions
+
+### empirical rule
+    - Rule for probability and statistics distributions
+    - basically 68 - 95 - 99.7 rule
+
+    - Probability of being _1_ standard deviation  either side of the mean : 68%
+    - Probability of being _2_ standard deviations either side of the mean : 95%
+    - Probability of being _3_ standard deviations either side of the mean : 99.7%
+
+### decision tree
+    - Decision Trees sub-divide datasets into smaller subsets
+      ("nodes") which contain similar values.
+    - Similarity is measured by calculating the Standard
+      Deviation of each node, with the aim being to reduce the SD
+      to zero.
+ # good stats book:
+    open university - M249 Practical Modern Statistics Book 4
+
+# scatterplots
+    - use 'open' points, not 'filled' in points
+    - easier to see overlap from an amazon review of "elements of
+      statistical learning, Hastie"
+    - in later stats courses, can do a "p value" test to test for
+      linearity
+
+# probability facts (twitter)
+    - Discrete probability is easier than continuous probability
+      because counting is easier than measure theory.
+    - Comment: but integrating is easier than summing
+
+# normalisation - washington uni data science
+    - analysis of emotional sentiment in 20th century books
+    - they looked at emotion words and...
+    - divided by the word "the" to NORMALISE
+    - ... because "the" was an indicator of prose being written
+
+# Great realization by @dstndstn yesterday:
+    - If you express something as a mixture of Gaussians, you get
+      its Fourier Transform for free!
+
+# stats (jake comment)
+    - Machine Learning is statistics in a CS department.
+    - Data Science     is statistics in a startup.
+    - It's statistics all the way down.
+
+# median, errors, sample size
+    - Actually median also not a good metric when _power
+      laws_ are involved.
+    - For example, if half of the country is living below
+      poverty line then you being above median still doesn't
+      mean you have comfortable lifestyle.
+    - Tech people are often told that they have top 10% of
+      salaries in the country but when you look at most of
+      their lifestyles (i.e. below 1%), they are living in
+      cramped apartments, doing 2+ hour commutes,
+      reluctantly sending kids to schools they don't like
+      etc etc.
+    - When most of the people in country have minimum wage
+      below \$10, even median would be pulled too low and
+      that is one reason poverty line is defined such a way
+      that these people don't come under it.
+
+    - Whenever a statistical report uses _averages_ (and no
+      medians anywhere), I always look for a _sample size_,
+      since it gives an indicator on the potential variation
+      for the true average. (Error is inversely proportional
+      to square root of sample size)
+
+# sampling error
+    - difference between population mean and sample mean
+    - `μ - x̄`
+
+    - my question: is the sampling error the same as the
+      standard error?
+
+    - answer: Standard error is a measure of sampling error!
+
+    - There are other measures of sampling error, but
+      standard error is by far, the most commonly used when
+      dealing with survey data.
+
+      But one important point: sampling error is _NOT_ the
+      only reason for a difference between your survey
+      estimate (based on your survey sample) and the true
+      value in the population.
+
+      Another (arguably more important) reason for this
+      difference is _bias_. Bias can be introduced
+        - when designing the sampling scheme,
+        - writing the questionnaire / data collection form,
+        - collecting the survey data,
+        - or analyzing the survey data.
+
+      Most forms of bias cannot be calculated nor measured
+      _after the data are collected_, and are often
+      therefore invisible. Bias must be avoided by using
+      correct procedures at each step of the survey process.
+
+      Bias has NOTHING to do with sample size which affects
+      only sampling error and standard error. As a result,
+      large sample sizes do NOT eliminate bias.
+
+      In fact, the larger your sample size, the more teams
+      you need to collect data for whom it is more difficult
+      to provide the necessary supervision; thus, increasing
+      the likelihood of bias in the data collection.
+
+      I think it best to use a minimal sample size so that
+      survey managers can provide good supervision and data
+      quality checks to ensure a minimum of potentially
+      invisible bias.
+
+    - another answer: Sample error is an important concept
+      for 2 reasons:
+
+    1. in order to distinguish itself from other kinds of
+       error or biases, such as sampling _bias_
+
+    2. common statistics such as standard error and
+       confidence intervals are ONLY _measures_ of the
+       effect of sampling error.
+
+    If you have other biases in your sampling technique,
+    then the standard errors of your estimates won’t capture
+    that, and so you can become overconfident of your
+    statistical tests, which usually means risking too much
+    money. Also, building _confidence intervals_ assumes
+    that the _ONLY source of error_ is sampling error.
+
+# Normal Distribution
+    50% of scores lie above and below the mean
+
+# histograms
+    - Its easy to find the _mode_ on a histogram. Its the
+      _highest_ bin. ie the bin with the highest frequency!
+    - Note: its harder to find the mean and median visually on
+      a histogram.
+
+# histograms
+    are _frequency_ distributions
+
+# bin size
+    - is the _interval_ in which you are counting the _frequency_
+
+# normal distribution AREA 1
+    - The bell curve is a _relative frequency_ distribution, and
+      relative frequencies are linked to probabilities.
+    - And whats nice about the bell curve is we have an equation
+      for it, so we can use the machinery of calculus.
+
+# normal distribution AREA 2
+    - The bell curve is a _theoretical_ curve thats a model for
+      _relative_ frequencies.
+    - The relative frequencies must sum to 1, therefore the area
+      under the normal distribution must sum to 1.
+    - So theres a link between area under the curve and
+      _probabilities_. (!!!) This link all comes from relative
+      frequencies.
+
+# one use of the CLT
+    - Often when mathematicians talk about probability, they
+      start with a known probability distribution and then talk
+      about the probability of events.
+    - The true value of the central limit theorem is that it
+      allows us to use the normal distribution as an
+      approximation in cases where we do _not know_ the true
+      distribution.
+
+# z-scores
+    - are tabulated in terms of number of standard devations, and
+      give the area under the curve _LESS_ than a particular
+      z-score. Really z-scores are a way of applying proability
+      to normalised data.
+
+# Difference CLT and 'Law of Large Numbers'
+    - On a very intuitive level, the law of large numbers tells
+      you what happens to the sample mean of a _single sample_ as
+      your number of observations becomes large.
+
+    - The central limit theorem tells you what happens to the
+      sample means of a _bunch of samples_ as you get more
+      observations in each of them.
+
+# MIT document about histograms
+    1. When all the bins have the same width, the frequency
+       histogram bars have area proportional to the count. So the
+       density histogram results simply from dividing the height
+       of each bar by the total area of the frequency histogram.
+       Ignoring the vertical scale, the two histograms look
+       identical.
+
+   2. Caution: _if the bin widths differ_, the frequency
+      histogram may look very different to the density histogram.
+      There is an example below. Don’t let anyone fool you by
+      manipulating bin widths to produce a histogram that suits
+      their mischievous purposes! In 18.05, we’ll stick with
+      equally-sized bins. In general, we prefer the density
+      histogram since its vertical scale is the same as that of
+      the pdf. Examples. Here are some examples of histograms,
+      all with the data [1,2,2,3,3,3,4,4,4,4]. The R code that
+      drew them is in:
+      - http://ocw.mit.edu/ans7870/18/18.05/s14/r-code/class6-prep-b.r
+      - (look in my "r-code" folder for "mit-histograms.r")
+
+# p-value
+    - whats the probability of getting this value or more extreme
+      assuming the null hypothesis _is TRUE_!
+
+# standard error
+    - the SE tells us the _interval_ in which the population
+    _mean_ is most likely going to lie.
+
+    - M - σ/sqrt(n)     _M_     M + σ/sqrt(n)
+
+    - (note: _M_ is the mean of the sampling distribution, which
+      is (_expected_ to be?) the same as the population mean _μ_)
+
+# z-scores
+    * Definition 1: A z-score is a numerical measurement of
+      a values _relationship_ to the _MEAN_ of a group of
+      values. If the z-score is 0, it means the score is
+      identical to the mean score.
+
+    * The z-score may be positive or negative. A positive
+      value means the score is above the mean and vice
+      versa. Positive or negative scores reveal the _number
+      of standard deviations_ a value is above or below the
+      mean.
+
+    * Definition 2: A 'standard score' (z-score) is the
+      _signed_ number of standard deviations an observation
+      is above/below the mean. A positive standard score
+      indicates an observation above the mean, while
+      a negative standard score indicates a datum below the
+      mean. It is a dimensionless quantity obtained by
+      subtracting the _population mean_ from an individual
+      raw score and dividing this difference by the
+      _population_ standard deviation.
+
+    * The z-score is only defined if one knows the
+      population parameters; if one only has a sample set,
+      then the analogous computation with sample mean and
+      sample standard deviation yields the _Students
+      t-statistic_.
+
+    * Definition 3: The standard score (more commonly
+      referred to as a z-score) is a very useful statistic
+      because it
+
+        1. allows us to calculate the probability of a score
+           occurring within our _normal distribution_ and
+
+        2. enables us to compare two scores that are from
+           different normal distributions.
+
+      The standard score does this by converting (in other
+      words, standardizing) scores in a normal distribution
+      to z-scores in what becomes a standard normal
+      distribution. T
+
+# jvp
+    - In science, all probabilities are conditional.
+    - Treat any unconditioned probability as a warning that
+      assumptions are being ignored.
+
+# z-score
+    - is number of standard deviations away from the mean!
+
+# sampling distribution mean
+    - the mean of sample means, ie. the mean of the sampling
+      distribution is the same in theory as the population mean.
+
+# youtube
+    opinionated lessons in statistics
+
+# histogram bin widths!!!
+    - The principle behind histograms is that the _AREA_ of each
+      bar represents the fraction of a frequency (probability)
+      distribution within each bin (class, interval).
+
+    - Among many books explaining histograms, Freedman, Pisani,
+      and Purves (2007) is an outstanding introductory text that
+      strongly emphasizes the area principle.
+
+    - Its NOT part of the definition that all bins have the SAME
+      WIDTH but instead that the _vertical_ axis is, or is
+      proportional to, _probability density_.
+    - Frequency density qualifies, as does frequency _if_ all
+      bins have the same width.
+
+# jake astrohack: Hoggs definition of a model
+    - a model is a probabilistic _generating function_ for our
+      data (D) given some parameters (Θ) ie `P(D|Θ)`
+    - note `P(D|Θ)` is the opposite of what we care about. We
+      really want: `P(Θ|D,I)`
+    - `P(D|Θ)` is something we can compute, its similar to the
+      liklihood we saw earlier
+    - note: for `P(D|Θ)` the `Θ` parameters could be the slope
+      and intercept (`m`, `b`) of a line which would allow us to
+      generate the data. We can draw the line and ask whats the
+      random scatter around that line and generate the data.
+
+# jake astrohack: data and model testing
+    - given a scatterplot of data with error bars, and also given
+      a model, we can ask:
+        > whats the probability these data were drawn from that
+        > model.
+    - we ask how likely each data point is, given the model, and
+      we multiply these probabilities together.
+    - We turn it from a single probability into a joint
+      probability (for independent events)
+
+# conditioning
+    - but we need something to inform our science, so we put in
+      this little bar and say 'the probability of the science
+      given the data'.
+                - `P(science|data)`
+    - and this is a conditional probability.
+    - ie `P(science|data) = P(science and data) / P(data)`
+
+    Think in Venn diagrams!
+
+          XXXXXXXXXX
+         XX         XXX
+        XX            #XX#####
+       X            ###.XX   ######
+     XX            ##....X        ###
+     X      _D_   ## ....XX         ##
+    XX            #._S+D_.X          #
+    X             #.......X          ##
+    XX            #......XX           #
+     XX           #.....XX    _S_     #
+      XXXX        ## .XXX            ##
+         XXXXXXXXXXXXXX              #
+                      ###          ###
+                        ############
+
+# Frequentist
+    - Often this approach is really _computationally_ convenient.
+    - You find a _point estimate_ and you perform some procedure
+      that finds the confidence bounds around that.
+    - Also if the situation is you're repeating something over
+      and over and you want to make true probabilistic statements
+      about how the procedure will perform in the future: then
+      its a useful way to go.
+
+# difference Frequentist v Bayesian
+    - Frequentists are trying to find long term repetitions.
+    - Instead of trying to find a probability, they are trying to
+      find an _estimator_, ie. some sort of point estimate
+      'theta-hat' `ˆθs` of our science parameters we expect.
+    - Whereas Bayes is trying to come up with a _probability_ of
+      the parameters given the data: `P(Θs ... | D ...)`
+
+# kramer rou bound
+    the limit of how well you can measure somthing given
+    noisy data
+
+# linear algebra
+    - hogg says linear algebra is one of the most important
+      things for data analysis!
+    - Almost all data analysis problems can be cast in a way that
+      looks like linear algebra or it contains linear algebra
+      operations.
+
+### Peter Coles blog
+    > we find tentative evidence for Planck-scale structure
+    > near black hole horizons at 2.9σ significance level
+    > (corresponding to false detection probability of 1 in
+    > 270).
+
+    - What is wrong is that the _significance level_ is not the
+      same as the _false detection_ probability.  While it is
+      usually the case that the false detection probability
+      (which is often called the false discovery rate) will
+      decrease, the lower your p-value is, these two quantities
+      are not the same at all. Usually the false detection
+      probability is much higher than the p-value.
+
+    - Basically it’s because the p-value relates to the
+      probability of seeing a signal at least as large as that
+      observed under a null hypothesis (eg. _detector noise_)
+    - ... but says nothing directly about the probability of it
+      being produced by an actual signal.
+    - To answer this latter question properly one really needs to
+      use a Bayesian approach...
+
+### LIGO HN article
+    - For reference, at least in particle physics the standard
+      for a discovery is usually taken to be five-sigma...
+    - a 1 out of _1.7 million error probability_, plus an
+      independent verification to eliminate systematic errors
+      that would not show up in the statistics.
+
+# Standard Error (Stats in Plain English) Repeat 10 times:
+    > The standard error is, in effect, the STANDARD DEVIATION of
+    > the sampling distribution of some statistic.
+    - (where 'some statistic' could be the mean, the difference
+      between two means, the correlation coefficient etc)
+    * Also: the standard error is the denominator in formulas
+      used to calculate many inferential statistics. This is
+      because the standard error is the measure of how much
+      _random variation_ we expect when drawing samples:
+    - equal size
+    - from the same population.
+
+# difference between Histogram and Bar chart
+    - First, what you are looking for is a 'column' or 'bar'
+      diagram, not really a histogram.
+    - A histogram is made from a frequency distribution of
+      a 'continuous' variable that is separated into bins.
+    - Here you have a column against separate *labels*.
+
+### stats: analyze universe MOOC
+    - fitting a line: "meet our REQUIREMENT that 2/3 of all
+      the data being + or - `1 σ` of the mean"
+
+### Berlin: udacity stats...
+    - the continents example was a bit like wrapping things
+      into bins!
+    - mean=median=mode for a perfect theoretival norm
+      distribution
+
+### misc (summer 2016?)
+    - Often when mathematicians talk about probability they
+      start with a known probability distribution then talk
+      about the probability of events.
+
+    - The true advantage of the Central Limit Theorem is it
+      allows us use the normal distribution as an approximation
+      in cases where we do not know the true distribution.
+
+    - You could ask your father a standard statistics question
+      (but phrased as math) about the probability the mean of
+      a sample will be greater than a given value, if the data
+      comes from a distribution with mean `μ` and sd `σ`...
+    - Then see if he assumes a distribution (which you then say
+      we don't know) or says that he needs to know the
+      distribution. Then you can show that we can approximate the
+      answer using the CLT in many cases.
+
+    - To compare Maths to Stats, I like the 'mean value theorem'
+      of integration as an example. This says that for an
+      integral from `a` to `b` there exists a rectangle from `a`
+      to `b` with the same area, and the height of the rectangle
+      is the average of the curve.
+
+        - The _mathematician_ looks at this and says "cool, I can
+          use an integration to compute an average",
+
+        - The _statistician_ sees the same theorem and says
+          "cool, I can use an average to compute an integral".
+
+        - I actually have wall hangings in my office of the mean
+          value theorem and the CLT (and Bayes theorem!).
+
+### Data Science Fact @DataSciFact Mar 27
+    - A small p-value means the data you saw were unlikely,
+    - assuming the null hypothesis
+    - AND all your implicit ASSUMPTIONS.
+
+### Deborah Haus talk:
+    - When faced with an missing data, you can:
+    1. Ignore
+    2. Interpolate
+    3. Impute
+    4. Model
+
+### Missing Completely At Random (MCAR)
+    - If you have data missing _completely_ at random, you
+      can just _ignore_ those data points
+
+    - But someone says don't ignore them!!
+        - http://machinelearningmastery.com/handle-missing-data-python/
+        - Comment:
+        - And dear reader, please _never ever remove rows_ with
+          missing values. It changes the _distribution_ of your
+          data and your analyses may become worthless.
+
+### jake
+    - Not categorically true, but I think this is a useful
+      summary of how folks approach statistical questions:
+
+    - _Statisticians_: check their Monte Carlo results with
+      analytic methods.
+
+    - _Data scientists_: check their analytic results with
+      Monte Carlo methods.
+
+### Good papers
+    - Characterizing and Managing Missing Structured Data in Electronic Health Records http://www.biorxiv.org/content/early/2017/07/24/167858
+    - change p values to 0.005 https://osf.io/preprints/psyarxiv/mky9j/
+    - change p values to 0.005 https://jasp-stats.org/2017/07/27/jimberger/
+    - Hypothesis testing and model uncertainty. (Bayarri, J. and Berger, J. O. (2013).)
+    - Bayesian statistical inference for psychological research. Edwards, W., Lindman, H., & Savage, L. J. (1963).
+
+### Cross Validation
+    - I explain how to tune meta-parameters
+    - for ONS job:
+        - my-cross-validation-example.txt
+    - for BSc degree:
+        - $MY_BOOKS/Physics/Maths/Statistics/Lboro-Cross-Validation-Explanation.pdf
+
+### Scatter plots and alpha
+    - https://liorpachter.wordpress.com/2017/09/02/a-rebuttal/
+    - If theres too much scatter plot overlap then this advice:
+        - "Hexbin plots and 2-D KDE plots are great ways to work
+          around the limitations of scatter plots in this
+          context, better than playing with alpha."
+    - Comment: The problem is how to set alpha & dot size.
+        - If you set it too low individual points disappear.
+        - If you set it too high you quickly have the overlapping
+          points problem.
+        - Hexbin and 2d KDE tackle that problem for you, don’t
+          ask for magic parameters in advance.
+        - But you lose location of individual points, which may
+          be of separate interest for, say, discussing outliers.
+
+### Stats for Bioinformatics
+    - beware of gotchas with bio systematics!
+    - Biological systems dont follow mathematical principles.
+    - Exceptions are far more normal. They all have systematic
+      behaviours, and some systematic behaviours will _ADD UP_
+      and not cancel out over a large number of observations.
+
+### Important Files
+    - ./civil-serivce-ons-applications.txt
+    - ./ons-heo-application.txt
+    - $MY_NOTES/cs/datasci-tips.txt
+    - $MY_BOOKS/Physics/Maths/Statistics/Lboro-Cross-Validation-Explanation.pdf
+
+### Links:
+    - Analysing Fergusons COVID model - good point: averaging out random noise https://lockdownsceptics.org/second-analysis-of-fergusons-model/
+    - Atlas for aspiring Network Scientist (nice diagrams)                     https://arxiv.org/abs/2101.00863
+    - Tim Maudlin: Chance without numbers                                      https://www.youtube.com/watch?v=eA0rqCNmpm8
+    - Most important statistical ideas                                         https://news.ycombinator.com/item?id=26374788
+    - Denominators matter! (covid vaccinations)                                https://livefreeordichotomize.com/2021/07/21/denominators-matter/
+    - HN: Fit any dataset with a single parameter!                             https://news.ycombinator.com/item?id=28698163
+    - Recommended: naked statistics - charles wheelan                          $MY_BOOKS/Physics/Maths/Statistics/Naked-Statistics.pdf
+    - Recommended: Bill Press: opinionated lessons in statistics               http://opinionatedlessons.org/
+    - math with python (amit saha)                                             https://www.amazon.com/Doing-Math-Python-Programming-Statistics-ebook/dp/B014EELUFQ
+    - Recommended: Statistics the power of data: lock 5:                       http://www.lock5stat.com/
+    - _Good_ course: Statistical Re-thinking                                   https://news.ycombinator.com/item?id=29956390
+    - _Good_: Steve Brunton: FFT and PSD video                                 https://www.youtube.com/playlist?list=PLMrJAkhIeNNRpsRhXTMt8uJdIGz9-X_1-
+    - _Good_: Steve Brunton: Data Book Neural Nets                             http://databookuw.com/page/page-9/
+    - Prominent statistician CR Rao passes away                                https://news.ycombinator.com/item?id=37237240
+    - HN: Get a rabbit: Statistics book reviews                                https://news.ycombinator.com/item?id=37546397

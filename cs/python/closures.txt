@@ -1,0 +1,19 @@
+# closures
+
+# ok... I got a glimmer of understanding!
+# Aug 2016 - oh its much easier now!
+
+# this example is just like the "first class functions" textfile!
+
+>>> def makeConstantAdder(x):
+...     constant = x
+...     def adder(y):
+...         return y + constant
+...     return adder
+...
+>>> f = makeConstantAdder(12)
+>>> f(3)
+15
+>>> g = makeConstantAdder(4)
+>>> g(3)
+7

@@ -1,0 +1,115 @@
+
+### tip:
+    - keep submitting to the leaderboard!
+    - submit something every day...
+    - Jeremy sees people spending months trying to create the
+      perfect model before submitting..
+        - my prob in Feb 2021(!)
+
+### Install python packages with no internet
+    - https://www.kaggle.com/competitions/cmi-detect-behavior-with-sensor-data/discussion/583716#3220198
+
+
+### commandline API
+    - API token location
+        - $HOME/.kaggle/kaggle.json
+
+    - LIST COMPETITIONS
+        kaggle competitions list
+
+    - LIST FILES
+        kaggle competitions files g2net-detecting-continuous-gravitational-waves > ~/g2net-files
+        kaggle competitions files ariel-data-challenge-2024 > ~/kaggle-files
+
+    - DOWNLOAD ALL FILES (TO `CWD`)
+        kaggle competitions download -w g2net-detecting-continuous-gravitational-waves
+        kaggle competitions download -w ariel-data-challenge-2024 
+
+    - DONWLOAD INDIVIDUAL FILE
+        kaggle competitions download -w -f train/00f36a6ac.hdf5   g2net-detecting-continuous-gravitational-waves
+
+
+### Download a file
+    - use this code method, because the Kaggle web UI is a bit
+      dodgy
+    ```
+    import os
+    os.chdir(r'/kaggle/working')
+    from IPython.display import FileLink
+    FileLink(r'images.zip')
+    ```
+
+### No hand labelling!
+    - case of labeling unique samples the rule I found is:
+        > Submissions may not use or incorporate information from
+        > hand labeling or human prediction of the validation
+        > dataset or test data records.
+    - Official info from Inversion:
+        - Here's the general rule: Whatever you do has to be
+          generalizable to unseen data.
+        - You can, e.g., calculate a noise factor and adjust
+          model predictions based on that. You cannot add
+          something to your code that makes an adjustment for
+          a particular observation based on its id (or some proxy
+          that is effectively identifying a specific
+          observation). 
+        - We should be able to completely rename all of the test
+          data, and your model should give the exact same result.
+          And the model should give similar results on completely
+          new test data.
+
+### what is "hotness" filter
+    - Kaggle will not release details to avoid it being gamed too
+      much, but my guess is as follows…
+    - It is a mixture of most votes, and recently run, and most
+      comments. Running a notebook puts it near the top of the
+      Hotness ranking for about 24 hours. If it gains
+      votes/comments it stays a little longer, comments maybe
+      count for a little bit less. As time passes it will sink
+      down to be with notebooks that have similar numbers of
+      votes. Re-running it will put it back at the top but only
+      if "enough" lines have changed (I don't know the details).
+      Then it will sink down again! For old competitions where
+      notebooks are no longer being run the Hotness looks like
+      "Most Votes".
+
+### Get extra GPU
+    - https://forums.fast.ai/t/live-coding-11/96891
+    - btw, just noticed when you run out of gpu quota on kaggle
+      and have like minutes left in your weekly quota, you can
+      still start the "save and run all" and get additional time
+      (up to 9 hours - kernel run time) 
+
+### Save GPU time
+    - Try to save _your input_ which you feed your model, into
+      a DIFFERENT notebook output. 
+    - Then add it into your input of your notebook. 
+    - In this way you won't lose time to load the data every
+      time. Thus your only time will be the model's predict time.
+
+
+### Private score from CSV?
+    - Public leaderboard calculated with `25%` of the test data.
+    - Final results will be based on the other `75%`, so the
+      final standings may be different.
+
+### lingo
+    - repex   : reproducible example
+    - kernels : notebooks or scripts (hosted code environments)
+    - commit  : run code from top to bottom and save static version. Like 'save' in a video game.
+    - Leakage : info about the target variable accidently included in the training data
+
+    - "Shakeup"
+        - significant change in the leaderboard rankings, usually
+          occurring when the private leaderboard (LB) is revealed
+          at the end of the competition. This can happen because
+          the public LB is based on a subset of the test data,
+          while the private LB uses a different, often larger
+          subset of the test data to provide a final ranking.
+
+### Links
+    - Youtube: intro to kaggle playlist https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW
+    - Kaggle Lingo                      https://246aef1d87c138a793.gradio.live
+    - yt: site etiquette                https://www.youtube.com/watch?v=aIus8si_Et0
+    - yt: kaggle lingo                  https://www.youtube.com/watch?v=sEJHyuWKd-s
+    - yt: how to enter competition      https://www.youtube.com/watch?&v=GJBOMWpLpTQ

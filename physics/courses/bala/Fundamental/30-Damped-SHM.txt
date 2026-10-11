@@ -1,0 +1,304 @@
+$MY_VIDEOS/physics/bala_fundamental/30-Damped-Simple-Harmonic-Motion.flv
+Mechanics, Heat, Oscillations and Waves
+Prof. V. Balakrishnan
+Department of Physics
+Indian Institute of Technology, Madras
+Lecture – 30
+Damped Simple Harmonic Motion
+Next, let us take up to the example of a Damped Simple Harmonic Motion and the idea
+is the following, if I look at a simple harmonic oscillator, such as a mass and a spring
+connected to the mass and the simple harmonic oscillation of this mass.
+(Refer Slide Time: 00:36)
+
+You have seen that the equation of motion of this mass Newton's equation is m x double
+dot equal to minus k x, where k is the spring constant or x double dot equal to minus
+omega squared x, where omega squared is k over m here. Now, this motion goes on
+forever for any initial conditions, because there is no mechanism by which energy is
+dissipated. The energy of the spring of the system is constant for any given initial
+conditions.
+And if you recall the face trajectory in this case, in the x dot explain this face trajectory
+was in the form of ellipses for any given energy travels in the clock wise sense. There is
+no damping or dissipation in the system, this oscillator goes on forever and that of
+course, is unrealistic in any physical oscillator, they will always be a mechanism by
+which some loss of energy is incurred, the system comes to a haled either by friction or
+by some other damping mechanism. And we need to in cooperate that in our
+
+understanding of simple harmonic motion.
+Basically, what happens, when you include the effect of such dissipation on this
+conservative motion? Now, this depends on the model, this depends on what kind of a
+friction we have, what kind of what is the precise mechanism by which this friction a
+dissipates energy and so on. But, a very simple and standard model, which is applicable
+in a large number of physical situations, is the following.
+It is exactly what happens, when you drop an object like a ball bearing inside a dense
+liquid, what happens is due to the viscosity of the liquid, the particles velocity get slow
+down, there is friction on this object, because of viscosity. And there is what is known is
+viscous drag or viscous damping, which causes slowing down and dissipation of energy.
+Now, just as when you walk through a crowd, the faster you try to go in a particular
+direction, the more the returning force, because the more the number of collisions from
+the front in exactly the same way.
+The discuss damping in a simplest form is a drag force, which is opposite to the direction
+in which the velocity is directed or opposite to the direction of motion and is proportional
+to the velocity itself. So, the very simplest model that we can put in for damping here is
+to modify this equation, modify to x double dot equal to something which is proportional
+to the velocity.
+Of course, there is this restoring term still this spring force still there, but there is also a
+term, which is in the direction opposite to the direction of the velocity. So, it is
+proportional to minus x dot times some constant. So, minus some gamma x dot and this
+gamma is the damping constant of the friction constant. Notice from this that gamma is
+actually physical quantity of dimensions the same as that are frequency t inverse.
+
+(Refer Slide Time: 04:04)
+
+So, the physical dimensions of gamma are those of inverse time, the same as those of
+frequency. So, what have to done is to really take this equation and rewrite it in the form
+mass times the acceleration equal to minus m omega squared x minus m gamma x and
+canceled out the m and also both sides in order to get this equation. So, this standard
+equation of the form m x double dot plus m gamma x dot plus k x., if you like equal to 0
+is the standard equation for the damped simple harmonic oscillator in one dimension.
+Where, this is the damping constant and that is the spring constant and that is the general
+equation. So, anything which is of this form, any second order differential equation of
+this form would be that of the damped simple harmonic oscillator. So, this is the damped
+s h o equation and a little later, we will look at an electrical analogy for this mechanical
+damped equation.
+But, before that, let us try to look at this solutions of this equation here, earlier I mention
+that this equation must entirely equivalent to saying the total energy E was equal to 1 half
+a p squared or x 1 half m x dot squared plus 1 half m omega squared x squared equal to a
+constant of the motion; that is no longer true. So, this was a constant of the motion and
+that is what let to this ellipse as the phase trajectory, such an expression for a constant
+energy is not available in this case.
+This equation is not consistent with saying that the energy given by this expression is a
+constant. In fact, energy is not conserved in this problem as we will see in a minute, I
+have to mention very carefully that gamma is greater than 0. Because, the friction is
+
+opposed to the motion to the direction of the velocity, so the minus sign and then, a
+positive constant times x dot here, I have choose in the constant to be gamma.
+Actually, I have return m gamma in the equation of motion taking out in m simplify for
+convenient, so that gamma as a same physical dimensions is omega and the idea is we
+will see shortly will be to compare the relative magnitudes of gamma and omega. That it
+control the nature of the motion here. How does one solve equation of this kind? Well,
+there are standard methods for solving such a second order differential equation in
+elementary calculus.
+But, what we need to do here is to write down the solution based almost on inspection, it
+was clear here that the solutions, where E to the plus or minus i omega t. So, some kind
+of exponential and one tries the same thing here, because what happens when you have a
+linear differential equation and this is linear. Because, it is a first power of x here, first
+power of x dot first power of x double dot is to notice that if you take quantity like E to
+the lambda t, well lambda is a constant and you differentiated it once, you bring a lambda
+down, you differentiated the second time you bring another lambda down. So, that the
+operation of differentiation becomes equivalent to the operation of multiplication, when
+it acts on E to the lambda t. So, that suggest immediately that want tries a trial solution x
+equal to some constant. Because, this is a linear equation multiplicand constant with fix
+later on by initial conditions equal to E to the power lambda t.
+Well, lambda is as yet undetermined, if you do that and in put it in here as I said each
+time, you differentiate with respect to time, you being down a lambda. So, it says this
+equation simply says lambda squared plus gamma lambda plus omega squared equal to
+0. Because, this whole thing is multiplied by E to the lambda t and that must be equal to
+0.
+I have now taken out them and return k over m is omega squared. So, that you have two
+constants gamma and omega squared in the problem, lambda is unknown as yet, but it
+has to satisfy this condition here for all t. Since, E to the lambda t is not identically equal
+to 0, this can only we have done, if this bracket vanishes.
+
+(Refer Slide Time: 09:17)
+
+So, this implies that lambda must be such that lambda squared plus lambda gamma
+which in turn implies that you have two possible values lambda can only be equal to
+lambda 1 or 2 which I given by minus gamma plus or minus square root of omega
+gamma squared minus 4 omega squared over 2 these are the two possible roots of this
+quadratic. So, it says that a trial solution of this exponential form is admissible for this
+equation provided lambda is not arbitrary, but can take on either this value or that value
+one of the two roots here, one above obvious values here.
+And since this is a linear equation, this equation is a linear equation if I find one solution
+and I find another solution, any linear combination of the two is also a solution. So, the
+most general solution of this equation this would be a form x of t equal to some constant
+times e to the lambda 1 t let us call it c 1 for the moment plus some other constant e to
+the lambda 2 t that is the most general solution, where the constants c 1 and c 2 have yet
+to be determine.
+But, the exponents the coefficients lambda 1 and lambda 2 are determine in terms of the
+parameters in the problem, namely gamma and omega by these formulas here, these
+expressions here these are the only these are the only possibilities for the general
+solution. But, as soon as you see this let us rewrite this little bit more simply, so let us
+rewrite this as plus or minus minus pi, it is immediately clear that three possibilities
+arise, three distinct possibilities arise depending on the relative strengths of gamma and
+omega.
+
+So, the first thing that arises the first case one would be the case where this number is
+bigger than that number, which means omega is bigger than gamma over 2 and that
+physically corresponds to the case where you essentially have an undammed simple
+harmonic oscillator with natural frequency omega. And the friction constant is small
+compared to the natural frequency or the natural frequency is bigger than half the friction
+constant here that is all that is needed omega must be greater than lambda over 2.
+So, 4 omega squared is greater than gamma squared which will immediately mean that
+lambda 1 comma 2 is minus gamma over 2 plus or minus i times omega squared minus
+gamma squared over 4 and remember this is a positive number. So, we have a pair of
+complex conjugates roots with the real part which is non zero and then imaginary part
+which is non zero. And let us give name to this quantity here, this is the equal to minus
+gamma over 2 plus or minus i times omega shifted. So, this is the shifted frequency or
+shifted angle of frequency omega squared minus gamma squared over 4 square root.
+So, we still have the possibility of oscillatory solutions, but the frequency shifted and
+there is a minus gamma over 2 sitting outside. So, this tells you that the solution is
+exponentially damped. So, this would imply that x of t in general is of the form A e to the
+minus gamma t over 2 that corresponds to this part of the solution times e to the plus or
+minus i omega s which I could as well write as either cos omega s t plus b e to the minus
+lambda t gamma t over 2 sin omega s t.
+So, I have solution which are oscillatory, but with the shifted frequency not the original
+natural frequency, but this combination omega squared minus gamma squared over 4 is
+new frequency and there is an exponentially damping factor here, this is called the under
+damped case. What does it mean? It means that the solutions, if you plot the solutions for
+instance let us look at initial conditions, where x of 0 is A and x dot of 0 is 0. So, that this
+part goes away completely.
+
+(Refer Slide Time: 14:58)
+
+And then you are left with a solution is which looks like this here is t, here is x of t a t
+equal to 0 it starts at the point A and then it osculates with a frequency omega sub s
+angular frequency omega sub s, but instead of being just a cosine curve it is now damp
+by this exponential. So, this looks like and this damping here this function the envelope
+function is e to the minus gamma t over 2 and this is minus this everything. So, it leads to
+damped oscillations
+What does x dot do in such a case well that is easily plotted to here is t, here is x dot of t
+and that is starts with 0, because if x starts with the cosine and there is no sin here, then if
+I differentiate this once I get sin t here omega s t and that is 0 at t equal to 0 and then it is
+negative. So, this thing it is starts at a moves backwards, so you here you started this
+point and then it does this. So, again there is a damping here in this fashion and both the
+velocity and the position tends toward 0 in this case. What happens in the face plain?
+
+(Refer Slide Time: 16:48)
+
+So, face plot is what revels to us what the true nature of this solution is here is x and here
+is x dot and this is the face plain, in the options of damping we would a had ellipses of
+this kind. But, now the system starts at A, but this because of the damping what it does is
+to decrease does not go quite back to A and then keeps doing this and then in inwards
+spiral it is spiral towards x dot equal to 0 and x equal to 0.
+The fact that x changes sin we decreasing amplitude is precisely what makes the spiral
+there and that is reflected here x changes sin goes back and forth, but it decreasing
+amplitudes. So, this is not a ellipses; obviously, it is a spiral of some kind it is an inwards
+spiral tending towards 0, 0 it tends towards the origin in the x plane and x dot plain and
+that is under damped simple harmonic motion. There are cosines and sins, the frequency
+shifted from the original un shifted frequency of omega to omega squared minus gamma
+squared over 4 square root and there is an overall exponential damping factor with the
+characteristic time which is 2 over gamma and that is exactly what these exponential
+certain us.
+So, this is the under damped case in which you have oscillatory behave an oscillatory
+approach towards the equilibrium point of 0 velocity and 0 position. The next case which
+is not quite so interesting is a case when this bracket vanishes exactly when the square
+root vanishes.
+
+(Refer Slide Time: 18:43)
+
+So, we have a second case the omega is exactly equal to gamma over 2 then this bracket
+vanishes the square root and you are left with lambda 1 which implies lambda 1 comma
+2 about the same about equal to gamma over minus gamma over 2. The general solution
+in this case; obviously, cannot we have the form A to the minus lambda 1 t, e to the
+lambda 1 t plus e 2 to the lambda 2 t for the simple reason that they both the same
+solution, general solution is of the form x of t is A to the minus gamma t over 2 plus B t e
+to the minus gamma t over 2. I shall not go into how this is arises it is again a straight
+forward consequence of solving this equation using a proper procedure.
+But, that fact, that you have a t here, next the solution linearly independent from this
+solution that two different functions of t. On the other hand, that the same common
+exponential factor one each of them and as t becomes very large this is not going to
+dominate over that the exponential dominates goes to at 0 exponentially fast although
+this arises this takes care of it and tends go down to 0.
+So, this is again an exponentially damped solution and what happens here in the face
+plane is simply that you have an approach you start at x here, x dot here, you start here it
+goes up trying to become a spiral and then slowly tends towards ((Refer Time: 20:33)) it
+does not cross the x axis never becomes negative, because is this thing here for in initial
+condition such that A is positive and B is 0 is always going to be just an exponential
+damped quantity which is got the same sin. So, x remains positive, but x dot slowly tends
+towards 0 both of them exponential fast this the critically damped case oscillator and the
+third case is when omega becomes less than gamma over 2.
+
+(Refer Slide Time: 21:23)
+
+We have already saw that this was will under damped case this one is the so called over
+damped case and what happens to the lambda 1 and 2. In this case, lambda 1 comma 2
+are both given by just that factor there minus gamma over 2 plus or minus square root of
+gamma squared minus 4 omega squared or rather m squared over write it as square root
+of gamma squared over 4 minus omega square. And please note that both of them and
+negative. So, lambda 1 is negative, lambda 2 is negative both are real and both of them
+negative.
+And the general solution which is of the form A e to the lambda 1 t plus B e to the
+lambda 2 t is a super position of two damped exponentials one of which must faster
+damping exponential, the one in both minus sign, where as the one of the plus sign does
+not decay as fast. Because, it is not shown negative, the picture looks pretty much like
+this in fact, it looks like even more damped to it will damp out even more rapidly in this
+case and we not going to be concern in much more this.
+Because, it just says monotonically these functions x will just decay in time
+monotonically s t increases and not very interesting as for as we are concern, the under
+damped case where still have oscillations when you have a small amount of damping is
+physically very often, the most interesting case of all. Now, let see whether we can look
+at another physical system which displace exactly the same sort of behavior and this has
+to do with the electrical analogy which I made last time to the undamped oscillator.
+
+(Refer Slide Time: 23:33)
+
+If you recall we looked at electrical analogy, if you recall for the un damped oscillator x
+double dot equal to minus omega squared x we also had and L C circuit which look like
+this you had an L here and C here and the charge on this capacitor q behave like L q
+double dot plus q over C was equal to 0. Since, there is no apply voltage on the circuit
+and this L C parallel circuit has exactly the same behavior as this equation x q double dot
+equal to minus omega squared q and omega is 1 over square root of L C.
+We now need to introduce a damping, so that the equation looks like a term with q dot
+present unit. And of course, we know what q dot is it the current in the circuit and we
+need something the voltage across which is proportional to the current unit and that of
+course, is the resistor immediately. So, if I have and LCR circuit and this is the direct
+analog of the damped oscillator, so it is called LCR series circuit, we have a inductor or
+resistor R and a capacitor C.
+Then the equation obit in this circuit by the initial charge on the capacitor will change as
+a function of time according to L q double dot plus R times q dot and this is the current
+and that is of course, a rate of change of the current which is what is giving you by the
+back EMF of the cross inductive by faradays law of induction plus q c equal to 0. Now,
+this is the exact mechanical analog of the equation we had earlier which is m x double
+dot plus m gamma x dot plus k x equal to 0.
+So, the electrical mechanical analogy goes like x the count of part is q, the charge q in a
+capacitor the position x of the damped oscillator is like the charge q instantaneous charge
+
+q on the capacitor. The mass of this oscillator is the analog of the inductor, the gamma
+the friction constant here which has dimensions of time inverse is after you divide
+through by M or L as a case maybe this has the mentions of R over L.
+Notice that L over R is the time constant of an LR circuit. So, we already see this
+analogy appearing and k the analog is 1 over C omega squared the analog is 1 over L C
+and you have exactly the same behavior for this LCR circuit with the resistor there as
+you have in this case and as before the condition for damping over damping etcetera. So,
+we want to have under damped circuit corresponds in the earlier case mechanical case to
+omega greater than gamma over 2 or in this case 1 over square root of L C greater than
+gamma was R over 2 L.
+Or, so if I squares of both sides are 1 over LC greater than R squared 4 L squared. So, let
+us cancel out on L that is the condition, so and those conditions when we the fix the R L
+and C in such a way that the resistance is sufficient the small. So, the way to write this is
+to write this as R squared less than 4 L over C 2 squared root of L C. So, an LCR series
+circuit is under damped, if the resistance smaller than twice the square root of L over C.
+In such a case you guarantee to have an approach that this charge of this capacitor is
+finally, going to tend to q equal to 0 q dot equal to 0 will happen in a oscillatory fashion.
+Such that, the charges go back and forth and oscillates will decreasing amplitude with an
+amplitude which is attenuated by this exponential factor control by the time constant L
+over R here L over R half of that and the fixes the way circuit behaves and of course, one
+could also look at the over damped and the critically damped cases.
+If you recall when you want instrument to point towards which final reading, you would
+like no over oscillations, no over shooting. Because, then you takes time for it to you get
+back, it also not like over damping, because it takes the long, long time for it will reach
+oscillation. So, the most efficient way of arranging matters in such a case, when you
+want a meter to point to a final reading is as in the ballistic galvanometer in ancient use
+of an equipment is to make it critically damped. In other wards to fix matters such that
+this becomes in equality and when that happens you have the most efficient instrument
+for that particular application.
+Now, there are many, many other cases where you use the damped simple harmonic
+oscillator. And this is not just a model of a damped oscillations, it is more than that it
+actually acts serves is the basic model of dissipation in a hues verity of applications of it
+
+is this is just one there many, many others. I should mention in the same breath that if
+you complicate the manner in which damp in occurs. For example, if assume in the
+mechanical case that the damped is proportional to the square of the velocity and not the
+velocity with appropriate sign.
+The matter becomes immediately much more complicated or if you assume for instance
+that the friction is like dry friction and not discuss friction. So, there is a threshold over
+which it does not the access of frictional force and after that there is no frictional force at
+all one iteration threshold is crossed then you have yet another complication and the
+matter is a one again not so trivial at all. So, there are many, many complications which
+you can add on to this.
+But, this simple damped harmonic oscillator serves as a basic paradigm of damped of
+dissipative motion of motion where the total energy is not conserve of oscillatory motion
+which slowly gets damped towards which is 0 and the under damped case in particular is
+a great significant in practical considerations and applications of the oscillator model.
+
+
