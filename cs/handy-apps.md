@@ -21,6 +21,7 @@
     ~/bin/aws/02-inject-dotfiles-aws.sh
 
 ### misc
+    - Voxtral tts model good https://mistral.ai/news/voxtral-tts/
     - Hermes agent https://hermes-agent.nousresearch.com/
     - doomsday: internet in a box https://internet-in-a-box.org/
     - doomsday: Project Nomad local AI https://news.ycombinator.com/item?id=47476821
@@ -74,6 +75,7 @@
     - disposable mailbox email 'mailper'                        https://mailper.com/mailboxes/new
     - Marginalia (Search engine favours text/academic sites)    https://news.ycombinator.com/item?id=28550764
     - HN: tts text to speech                                    https://news.ycombinator.com/item?id=30369968
+    - HN: tts text to speech 2                                  https://news.ycombinator.com/item?id=50069337
     - yt-dlp: Youtube-dl fork (much quicker)                    https://github.com/yt-dlp/yt-dlp
     - raspberrypi??                                             https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
     - Copy and sync databases                                   https://www.fullconvert.com/
