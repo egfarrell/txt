@@ -125,7 +125,7 @@ LLMs fail at Physics and Maths
       quite correct. (!)
 
 ### Physics lore
-    - https://www.math.columbia.edu/~woit/wordpress/?p=15320
+- https://www.math.columbia.edu/~woit/wordpress/?p=15320
     - It is little wonder that Yang, assisted by Mills, gave
       birth to the Yang–Mills theory.
     - He wove together two great legacies:
