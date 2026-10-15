@@ -5165,9 +5165,8 @@ LLMs fail at Physics and Maths
 
 ### Dirac comment
     - https://news.ycombinator.com/item?id=20427311
-    - I would suggest, for getting an improved quantum theory,
-      that one take as basis the theory of functions of a complex
-      variable.
+    - I would suggest for improving quantum theory, that one take
+      as basis the theory of functions of a complex variable.
 
     - HN comment:
     - Quantum physics is based on complex Hilbert spaces. This is
@@ -5181,12 +5180,9 @@ LLMs fail at Physics and Maths
 
 ### Preptorial review of Curry
     - Dynamics teachers use 4 "channels" for different problems:
-        - ANALYTIC:
-            - formulas
-        - QUALITATIVE:
-            - geometric and graphic
-        - NUMERIC:
-            - algorithmic starting with "seed" guesses
+        - ANALYTIC:     formulas
+        - QUALITATIVE:  geometric and graphic
+        - NUMERIC:      algorithmic starting with "seed" guesses
         - STOCHASTIC:
             - mostly research applications where combinatorics
               get so hairy they are handled as random or chaotic.

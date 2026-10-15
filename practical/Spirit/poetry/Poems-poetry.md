@@ -1,6 +1,18 @@
 Check this: Lunar Poetry Podcast #10 - Rosemary Tonks
 
 
+### Delay
+    - The radiance of the star that leans on me
+    - Was shining years ago. The light that now
+    - Glitters up there my eyes may never see,
+    - And so the time lag teases me with how
+
+    - Love that loves now may not reach me until
+    - Its first desire is spent. The star's impulse
+    - Must wait for eyes to claim it beautiful
+    - And love arrived may find us somewhere else.
+    - Elizabeth Jennings
+
 ### Breathing Under Water 
 - “I built my house by the sea.
 - Not on the sands, mind you;
