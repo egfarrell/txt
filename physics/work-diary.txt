@@ -3,31 +3,72 @@
 - See `SWEEP-INTERESTING` below too!
 
 ### 16-Oct 2026 Fri
-    - The Return
-    - $MY_NOTES/physics/QM/Peres-Contextuality.txt
-        - The paper fed debates about what Bell's theorem
-          actually *proves*:
+    - The Return after the pilgrimage...
+
+    ### What is Bell about?
+        - $MY_NOTES/physics/QM/Peres-Contextuality.txt
+        - Peres asked what Bell's theorem actually *proves*:
             - Is it about nonlocality? About realism? About
               counterfactual reasoning... or all three?
             - Peres's answer was firmly in the counterfactual
-              camp, and this continues to be debated today.
-    - $MY_NOTES/physics/QM/Peres-unperformed.txt
+              camp, and it continues to be debated today.
+
+
+    ### Bell & Counterfactual definiteness
+        - $MY_NOTES/physics/QM/Peres-unperformed-Paper.txt
         - Bell's theorem identifies an impossible trio: 
-            - You cannot simultaneously have 
-                - locality (distant outcomes are independent), 
+            - You CANNOT simultaneously have 
+                - locality (local outcome/measurement functions
+                  depend on the local setting [e.g. `a⃗`] and also
+                  `λ`, not the distant setting), 
                 - counterfactual definiteness (unperformed
                   measurements have pre-existing values),
                 - and agreement with quantum predictions. 
                 - Experiment confirms QM, so one of the first two
                   must go.
         - Me:
-            - Where does Bell assume/use/identify 'counterfactual
-              definiteness' in his paper?? 
-            - I thought Bell only assumed causual locality? 
-                - (ie that was the only assumption) 
+            - But where does Bell assume 'counterfactual
+              definiteness'?? I thought he only assumed causual
+              locality? ie that was the only assumption
         - Great answer:
-
-
+            - $MY_NOTES/physics/QM/Peres-CFD-Gemini.txt
+            - Counterfactual Definiteness (CFD) enters right at
+              the beginning of his 1964 paper in his definition
+              of the measurement functions 
+                - Outcome of Alice's measurement along AXIS `a⃗`
+                    - `A(a⃗, λ) = ±1` 
+                    - (ie assign a definite number +1 or −1 to
+                      every possible choice of `a⃗`)
+                - Bob's along AXIS `b⃗` as:
+                    - `B(b⃗, λ) = ±1`                    
+            - When Bell later computes the difference between two
+              correlation experiments:
+                - `P(a⃗, b⃗) − P(a⃗, c⃗) = ∫ ρ(λ) [A(a⃗, λ) B(b⃗, λ)
+                  − A(a⃗, λ) B(c⃗, λ)] dλ`
+                - he writes `B(b⃗, λ)` AND `B(c⃗, λ)` inside the
+                  SAME integral, evaluated on SAME state `λ`.
+                - In the real world, you can measure `B` along
+                  `b⃗` OR along `c⃗`, but never both on the SAME
+                  PARTICLE.
+                - Writing both values as simultaneously existing
+                  for a single system `λ` is the exact definition
+                  of _Counterfactual Definiteness_.
+            - Another LLM
+                - He uses the EPR argument to motivate
+                  predetermined outcomes, then formulates a local
+                  hidden-variable model in which outcomes are
+                  functions of the local setting and λ. The
+                  mathematical derivation uses those functions
+                  for alternative settings as well as the
+                  settings actually chosen. 
+                - Peres's paper draws attention to the
+                  interpretive significance of that step. It is
+                  therefore more accurate to say that Bell's
+                  original argument combines locality with
+                  _EPR-motivated_ predetermination, rather than
+                  presenting locality and counterfactual
+                  definiteness as two explicitly independent
+                  postulates.
 
 
 ### 19-Apr 2026 Sun
@@ -65,7 +106,7 @@
                 - Both are valid. The choice is interpretational, not forced by experiment alone.
 
     - ### The actual Peres paper
-        - $MY_NOTES/physics/QM/Peres-unperformed.txt
+        - $MY_NOTES/physics/QM/Peres-unperformed-Paper.txt
         - Bell’s core result: 
             - You cannot simultaneously maintain 
                 - (i) 

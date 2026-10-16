@@ -1,31 +1,37 @@
-
 ### Me
     - $MY_NOTES/physics/QM/Peres-unperformed.txt
 
     - I did an LLM summary but it confuses me:
-        > Bell's theorem identifies an impossible trio: You
-        > cannot simultaneously have locality (distant outcomes
+        > Bell's theorem identifies an IMPOSSIBLE TRIO:
+        > You cannot simultaneously have locality (distant outcomes
         > are independent), counterfactual definiteness
         > (unperformed measurements have pre-existing values),
-        > and agreement with quantum predictions. Experiment
-        > confirms QM, so one of the first two must go.
+        > and agreement with quantum predictions.
+        > Experiment confirms QM, so one of the first two must go.
 
-    - My question: 
+    - My question:
         - Where does Bell assume/use/identify 'counterfactual
-          definiteness' in his paper?? 
-        - I thought Bell only assumed causual locality? 
-            - (ie that was the only assumption) 
+          definiteness' in his paper??
+        - I thought Bell only assumed causual locality?
+            - (ie that was the only assumption)
         - (aside: people also say he tacitly assumed 'statistical
           independence' but let's not go down that rabbit hole
           just now...)
+
+
+### IMPORTANT
+    - `a⃗` = axis a⃗
+    - `b⃗` = axis b⃗
+    - KEY: ...he writes `B(b⃗, λ)` AND `B(c⃗, λ)` inside the _same
+      integral_, evaluated on the _same state λ_.
 
 
 ### Gemini
 
 - The short answer is: mathematically, Counterfactual
   Definiteness (CFD) enters right at the beginning of Bell's 1964
-  paper in his definition of the measurement functions 
-    - `A(a⃗, λ) = ±1` and 
+  paper in his definition of the measurement functions
+    - `A(a⃗, λ) = ±1` and
     - `B(b⃗, λ) = ±1`
 
 - However, your intuition is completely justified. Bell himself
@@ -41,50 +47,63 @@
 ### 1. Where CFD appears mathematically in Bell (1964)
 
 - In the second section of his 1964 paper (*"Formulation"*), Bell
-  writes the outcome of Alice's measurement along axis `a⃗` as: 
+  writes the outcome of Alice's measurement along axis `a⃗` as:
     - `A(a⃗, λ) = ±1`
-- and Bob's along axis `b⃗` as: 
-    - `B(b⃗, λ) = ±1` 
+- and Bob's along axis `b⃗` as:
+    - `B(b⃗, λ) = ±1`
 - where `λ` represents the complete state (hidden or otherwise)
   of the particle pair.
 
 - Notice what this notation implies:
     - For a given single pair with state `λ`, the function `A(a⃗,
       λ)` assigns a definite number (+1 or −1) to every possible
-      choice of a⃗.
+      choice of `a⃗`.
     - When Bell later computes the difference between two
       correlation experiments:
 
     - `P(a⃗, b⃗) − P(a⃗, c⃗) = ∫ ρ(λ) [A(a⃗, λ) B(b⃗, λ) − A(a⃗, λ) B(c⃗, λ)] dλ`
 
-    - he writes B(b⃗, λ) AND B(c⃗, λ) inside the _same integral_,
-      evaluated on the _same state λ_.
+    - he writes `B(b⃗, λ)` AND `B(c⃗, λ)` inside the _same
+      integral_, evaluated on the _same state λ_.
 
 - In the real world, you can measure `B` along `b⃗` OR along `c⃗`,
-  but never both on the SAME PARTICLE. 
+  but never both on the SAME PARTICLE.
+
 - Writing both values as simultaneously existing for a single
   system `λ` is the exact definition of _Counterfactual
-  Definiteness_. 
+  Definiteness_.
+
 - It assigns a definite outcome to the unperformed experiment
-  ("what Bob *would* have gotten if he had chosen axis c⃗ instead
-  of b⃗").
+  ("what Bob *would* have gotten if he had chosen axis `c⃗`
+  instead of `b⃗`").
 
 
 ### 2. If it's in the maths, why did Bell say he only assumed Locality?
 
-Bell did not view CFD / determinism as an arbitrary postulate; _he believed he had derived it using EPR's argument._
+- Bell did not view CFD / determinism as an arbitrary postulate;
+  he believed he had DERIVED IT using EPR's argument.
 
-In the introduction of the 1964 paper, Bell references the 1935 Einstein-Podolsky-Rosen (EPR) paper:
-1. Quantum mechanics predicts that if Alice and Bob both choose the _same_ axis (a⃗ = b⃗), their outcomes are 100% anti-correlated (A = −B).
-2. Alice and Bob make their measurements at spacelike separation. Under _causal locality_, Alice's choice of setting cannot instantaneously affect Bob's particle.
-3. Therefore, Bob's result must have already been predetermined before Alice made her choice.
+- In the intro of the 1964 paper, Bell references the EPR paper:
+    1. QM predicts that if Alice and Bob both choose the _same_
+    axis (a⃗ = b⃗), their outcomes are 100% anti-correlated 
+        - `(A = −B)`.
+    2. Alice and Bob make their measurements at spacelike
+    separation. Under _causal locality_, Alice's choice of
+    setting cannot instantaneously affect Bob's particle.
+    3. Therefore, Bob's result must have already been
+    predetermined before Alice made her choice.
 
-As Bell later put it in his 1981 paper *Bertlmann's Socks and the Nature of Reality*:
-> *"It is important to realize that in these experiments, we are not just assuming determinism. EPR showed that _locality plus the quantum predictions for parallel analyzers entails determinism_."*
+- As Bell later put it in his 1981 paper `Bertlmann's
+  Socks...etc` 
+    > "It's important to realize that in these experiments, we
+    > are not just assuming determinism. EPR showed that locality
+    > plus the quantum predictions for parallel analyzers ENTAILS
+    > determinism."
 
-Because Bell considered determinism/CFD a *logical consequence* of locality applied to the singlet state, he viewed the subsequent inequality as testing locality itself.
+- Because Bell considered determinism/CFD a *logical consequence*
+  of locality applied to the singlet state, he viewed the
+  subsequent inequality as testing locality itself.
 
----
 
 ### 3. Why the summary (and Peres' 1978 paper) lists CFD separately
 
@@ -93,7 +112,7 @@ Physicists who followed the Copenhagen tradition (such as Asher Peres) rejected 
 Their counterargument was:
 > *"EPR's argument only forces determinism on you if you accept that unperformed experiments have definite answers. But in quantum mechanics, _unperformed experiments have no results_."*
 
-If you refuse to grant EPR's step, insisting that Bob's particle simply has no outcome along axis c⃗ until a measurement along c⃗ physically occurs, then locality does not force determinism on you. 
+If you refuse to grant EPR's step, insisting that Bob's particle simply has no outcome along axis c⃗ until a measurement along c⃗ physically occurs, then locality does not force determinism on you.
 
 When you separate the logic into its purest mathematical components:
 1. _Locality:_ Alice's choice doesn't influence Bob's outcome, and vice versa.
@@ -102,7 +121,6 @@ When you separate the logic into its purest mathematical components:
 
 Together, (1) + (2) + (3) mathematically yield Bell's inequalities. Since quantum mechanics violates these inequalities:
 * _Bell's camp concluded:_ Locality is dead (nature is non-local).
-* _Peres' camp concluded:_ Counterfactual Definiteness is dead. Quantum mechanics is locally causal (no faster-than-light signals can be sent), but standard "realism" fails because *unperformed experiments have no results*.
+* _Peres' camp concluded:_ Counterfactual Definiteness is dead. QM is locally causal (no faster-than-light signals can be sent), but standard "realism" fails because *unperformed experiments have no results*.
 
 This is why Peres structured his 1978 paper as he did: he aimed to derive the contradiction with quantum mechanics purely by showing that assuming definite values for hypothetical, unperformed setups leads to algebraic nonsense, without having to abandon local interactions.
-
