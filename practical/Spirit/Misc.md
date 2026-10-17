@@ -1,4 +1,10 @@
 
+### New Tesla roadster (rocket)
+    - https://www.youtube.com/watch?v=scwlR0QHGOk
+    - yt comment: "3 seconds of rocket thrust followed by 7 hours
+      of refilling the tank. Honestly, sounds a lot like my
+      social battery."
+
 ### Very important: Lots
     - Summer 2026, walk to Lourdes
     - The dangers of Lots
