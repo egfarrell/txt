@@ -2,6 +2,52 @@
 - $MY_NOTES/misc/study-quiz-prompt.txt
 - See `SWEEP-INTERESTING` below too!
 
+### 18-Oct 2026 Sun
+
+    - ### Bell Logic (two-step argument)
+        - $MY_NOTES/physics/QM/Bell/Chain-of-Logic-GPT.txt
+        - $MY_NOTES/physics/QM/Bell/Chain-of-Logic-Gemini.txt
+        - Interesting 1: 
+            - Bell is constructing a local classical `MODEL`. 
+            - This `MODEL` then fails for varying-angle
+              measurements.
+        - Interesting 2:
+            - In many physics courses, you hear:
+                > "Bell proved local hidden variables are
+                > impossible. Nature isnt deterministic
+                > / hidden-variable-based; standard Copenhagen QM
+                > is right, so locality is preserved."
+            - Maudlin points out that this is an elementary
+              logical fallacy. It ignores the first half of the
+              argument (EPR). Bell did not simply show:
+                - Hidden Variables ⇒ Contradiction
+            - He showed:
+                - Locality ⇒ Hidden Variables ⇒ Contradiction
+            - Hence, Locality is what leads to the contradiction. 
+
+    - ### Hidden variables or Determinism
+        - $MY_NOTES/physics/QM/Bell/Bell-TIPS-SUMMARY.txt
+        - $MY_NOTES/physics/QM/Bell/Chain-of-Logic-GPT.txt
+        - I always conflate these. They're not the same thing!
+            - `Hidden variables`: additional variables that
+              supplement the quantum description. More generally,
+              a specification of the relevant physical state.
+            - `Determinism`: the OUTCOME IS FIXED by that state
+              and the measurement setting.
+
+    - ### I don't understand Peres
+        - I still can't see what Peres did/didnt add to Bells
+          argument. I asked GPT:
+            - $MY_NOTES/physics/QM/Peres-significance.txt
+        - Peres's paper has two main moves. 
+            - First, he derives a Bell inequality WITHOUT
+              INVOKING HIDDEN VARIABLES EXPLICITLY.
+            - Second, he examines the hypothetical measurements
+              underlying the argument.
+
+
+
+
 ### 16-Oct 2026 Fri
     - The Return after the pilgrimage...
 
@@ -18,18 +64,19 @@
         - $MY_NOTES/physics/QM/Peres-unperformed-Paper.txt
         - Bell's theorem identifies an impossible trio: 
             - You CANNOT simultaneously have 
-                - locality (local outcome/measurement functions
-                  depend on the local setting [e.g. `a⃗`] and also
-                  `λ`, not the distant setting), 
-                - counterfactual definiteness (unperformed
+                - 1. locality (local outcome/measurement
+                  functions depend on the local setting [e.g.
+                  `a⃗`] and also `λ`, but not the distant
+                  setting), 
+                - 2. counterfactual definiteness (unperformed
                   measurements have pre-existing values),
-                - and agreement with quantum predictions. 
+                - 3. and agreement with quantum predictions. 
                 - Experiment confirms QM, so one of the first two
                   must go.
         - Me:
             - But where does Bell assume 'counterfactual
               definiteness'?? I thought he only assumed causual
-              locality? ie that was the only assumption
+              locality? ie that was his ONLY assumption
         - Great answer:
             - $MY_NOTES/physics/QM/Peres-CFD-Gemini.txt
             - Counterfactual Definiteness (CFD) enters right at
@@ -56,15 +103,15 @@
             - Another LLM
                 - He uses the EPR argument to motivate
                   predetermined outcomes, then formulates a local
-                  hidden-variable model in which outcomes are
-                  functions of the local setting and λ. The
-                  mathematical derivation uses those functions
-                  for alternative settings as well as the
-                  settings actually chosen. 
+                  hidden-variable `MODEL` in which outcomes are
+                  functions of the local setting and `λ`. 
+                - The mathematical derivation uses those
+                  functions for ALTERNATIVE settings as well as
+                  the settings actually chosen. 
                 - Peres's paper draws attention to the
-                  interpretive significance of that step. It is
-                  therefore more accurate to say that Bell's
-                  original argument combines locality with
+                  interpretive significance of THAT STEP. 
+                - It is therefore more accurate to say that
+                  Bell's original argument combines locality with
                   _EPR-motivated_ predetermination, rather than
                   presenting locality and counterfactual
                   definiteness as two explicitly independent

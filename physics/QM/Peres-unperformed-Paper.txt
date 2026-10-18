@@ -20,7 +20,7 @@ https://doi.org/10.1119/1.11393
       correlations.
     - This property leads to the following paradox, known as
       Bell’s theorem: Let us assume that the outcome of an
-      experiment performed on one of the systems is independent
+      experiment performed on one of the systems is INDEPENDENT
       of the choice of the experiment performed on the other.
     - Now, let us try to imagine the results of _alternative
       measurements_, which could have been performed on the same
@@ -35,18 +35,22 @@ https://doi.org/10.1119/1.11393
 # Summary of below
     - Bell's theorem identifies an impossible trio: You cannot
       simultaneously have 
-            - locality (distant outcomes are independent), 
-            - counterfactual definiteness (unperformed
-              measurements have pre-existing values),
-            - and agreement with quantum predictions. 
-            - Experiment confirms QM, so one of the first two
-              must go.
+            - LOCALITY 
+                - (distant outcomes are independent), 
+            - COUNTERFACTUAL DEFINITENESS 
+                - (unperformed measurements have pre-existing
+                  values),
+            - and AGREEMENT 
+                - with quantum predictions. 
+        - Experiment confirms QM, so one of the others must go.
+
     - The "contradiction" lives outside QM, not inside it.
         - QM is internally consistent. The tension only appears
           when you try to *explain* its correlations using
           classical assumptions about pre-existing hidden values.
           That's where Bell inequalities get derived, and then
           violated.
+
     - Peres' core move is identifying which assumption to cut.
         - The step "imagine the results of measurements that
           weren't taken" is where the trouble sneaks in. 
@@ -59,8 +63,7 @@ https://doi.org/10.1119/1.11393
           outcome, yet the joint correlations across both
           detectors follow the precise, smooth function `−α·β`.
         - Classically, randomness and strong structure trade off
-          against each other — quantum mechanics refuses that
-          bargain.
+          against each other — QM refuses that bargain.
     - Peres vs. Bell/Bohmians is a genuine fork, not a mistake by
       either side.
         - Drop counterfactual definiteness → keep locality, no
