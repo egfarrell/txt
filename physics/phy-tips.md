@@ -1460,10 +1460,9 @@ LLMs fail at Physics and Maths
 
 ### Determinism
     - $MY_NOTES/physics/metaphysics/Cushing-philosophical-concepts.txt
-    - Apropos of this, Schrodinger expressed the belief that it
-      is _impossible_ to decide on the basis of observation
-      whether the world is basically deterministic or
-      indeterministic.
+    - ... Schrodinger expressed the belief that it is
+      _impossible_ to decide on the basis of observation whether
+      the world is basically deterministic or indeterministic.
 
 
 ### Newton's version of Fourier
@@ -7364,38 +7363,12 @@ LLMs fail at Physics and Maths
     - space and time flow into one another as frames of reference change
 
 ### Interesting Barbour
-    - principia rests on *emprical* springs e.g Galileo (but
+    - Principia rests on *emprical* springs e.g Galileo (but
       Newton obscured this)
     - lemma 2: the distance any body describes from the beginning
       of its motion under the action of any force is duplicate
       the _RATIO_ of the time
 
-### HN comment:
-    - https://news.ycombinator.com/item?id=17217444
-    - While classical locality is not possible, quantum
-      nonlocality is interestingly both local and not.
-    - Causality is local... but correlation is not.
-    - Nonlocality where both (causality and correlation) are
-      nonlocal would be conseptually easier to understand.
-    - Feb 2023:
-        - Hmmm... so it's only the _correlations_ that are
-          non-local?
-
-### Maudlin
-    - In a nutshell, this is the central conundrum of quantum
-      mechanics:
-        - how does the mathematical formalism that represents
-          a quantum system make contact with the world as given
-          in experience?
-
-    - This is commonly called the measurement problem, though the
-      term is misleading. It might better be called the "where in
-      the theory is the world we live in" problem.
-
-    - But if you've any interest in the implications of quantum
-      theory "What is Real?" is required reading. There is no
-      more reliable, and careful account of the whole history of
-      QM in all its scandalous detail.
 
 ### Cosmology "Axis of Evil"
     - The "Axis of Evil" is a name given to an anomaly in
@@ -10127,7 +10100,7 @@ LLMs fail at Physics and Maths
     - Sean Carroll: Philosophy of Physics and Cosmology (Closer to Truth)                https://www.youtube.com/watch?v=T5-R16GbxY4
     - Sean Carroll: Philosophy/Physics Workshop 2024 talk                                https://www.youtube.com/watch?v=WOW_hEfMimI
     - Elise Crull: The Philosophy of Physics                                             https://www.youtube.com/watch?v=BHO_glbVcIg
-    - Oxford Philosophy of Physics YouTube Channel                                       https://www.youtube.com/c/oxfordphilosophyofphysics
+    - Oxford Philosophy of Physics Channel                                               https://www.youtube.com/c/oxfordphilosophyofphysics
     - Kerry McKenzie Philosophy of Physics Playlist                                      https://www.youtube.com/playlist?list=PLkMaaEPd7InK5NjxlbIKL22Gr-5cqtWOF
 
 ### Websites / Series / General links

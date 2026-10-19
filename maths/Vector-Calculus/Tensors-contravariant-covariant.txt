@@ -1,4 +1,33 @@
 
+
+### What is a tensor? (Jeevanjee)
+    - $MY_BOOKS/Physics/Maths/Abstract-Algebra-Group-Theory/Tensors_groups_for_physicists_2e.pdf
+    - Many older books define a tensor as a collection of objects
+      which carry indices and which “transform” in a particular
+      way specified by those indices. Unfortunately, this
+      definition usually doesn’t yield much insight into what
+      a tensor is. 
+    - We now present the more modern definition of a tensor,
+      which is equivalent to the old one but is more conceptual
+      and is already standard in the mathematics literature. 
+    - This definition takes a tensor to be a `function` which
+      eats a certain number of vectors (known as the rank `r` of
+      the tensor) and PRODUCES A NUMBER. 
+    - The distinguishing characteristic of a tensor is a special
+      property called `multilinearity`, which means that it must
+      be linear in each of its `r` arguments. Recall that
+      linearity for a function with a single argument just means:
+        - T(v + cw) = T(v) + cT(w) 
+        - for all vectors `v` and `w` and numbers `c`). 
+    - This MULTILINEARITY enables us to express the value of the
+      function on an arbitrary set of `r` vectors in terms of the
+      values of the function on `r basis vectors` like `x̂`, `ŷ`,
+      and `ẑ`.
+    - These values of the function on basis vectors are nothing
+      but the familiar components of the tensor, which in older
+      treatments are usually introduced first as part of the
+      definition of the tensor.
+
 ### contravariant vectors random thought
     - We express contravariant components as a LINEAR combination
       of little basis vectors...
