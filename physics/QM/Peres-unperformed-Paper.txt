@@ -31,18 +31,58 @@ https://doi.org/10.1119/1.11393
       However, the weaker classical correlations can be
       satisfied.
 
+# Later:
+    - Ah no, all of below is way too simplistic, overstated and
+      needs to be done again.
+    - Examples of errors:
+        - “Peres vs. Bell/Bohmians is a genuine fork, not
+          a mistake by either side.”
+            - Misleding. Presents the debate as though there were
+              two equally straightforward options:
+            - But CFD, realism, determinism and Bell's local
+              causality are not interchangeable assumptions.
+              Rejecting one does not automatically entail
+              preserving another.
+
+        - “Drop CFD → keep locality, no paradox”-
+            - Totally overstates the case, and creates a false
+              dichotomy
+
+
+        - “Nonlocality is about dependence, not visible
+          single-run correlation”
+            - Conflates 3 things:
+                - Correlation: Statistical relationships between
+                  outcomes across many runs.
+                - Dependence: Whether the probability
+                  distribution of an outcome changes with
+                  a variable, such as a distant measurement
+                  setting.
+                - Bell nonlocality: Correlations that cannot be
+                  explained by a model satisfying Bell's
+                  local-causality conditions and the relevant
+                  auxiliary assumptions.
+        - Better way of saying it:
+            - "Bell nonlocality means that the correlations
+              between distant measurement outcomes cannot be
+              explained by a theory in which each outcome is
+              determined ONLY by local causes."
+            - "However, this does not mean that one detector can
+              visibly detect or control the other detector’s
+              outcome, or that info travels faster than light."
+
 
 # Summary of below
-    - Bell's theorem identifies an impossible trio: You cannot
-      simultaneously have 
-            - LOCALITY 
-                - (distant outcomes are independent), 
-            - COUNTERFACTUAL DEFINITENESS 
-                - (unperformed measurements have pre-existing
-                  values),
-            - and AGREEMENT 
-                - with quantum predictions. 
-        - Experiment confirms QM, so one of the others must go.
+    - Bell's theorem identifies an impossible trio:
+        - You cannot simultaneously have
+        - LOCALITY
+            - (distant outcomes are independent),
+        - COUNTERFACTUAL DEFINITENESS
+            - (unperformed measurements have pre-existing
+              values),
+        - and AGREEMENT
+            - with quantum predictions.
+    - Experiment confirms QM, so one of the others must go.
 
     - The "contradiction" lives outside QM, not inside it.
         - QM is internally consistent. The tension only appears
@@ -53,7 +93,7 @@ https://doi.org/10.1119/1.11393
 
     - Peres' core move is identifying which assumption to cut.
         - The step "imagine the results of measurements that
-          weren't taken" is where the trouble sneaks in. 
+          weren't taken" is where the trouble sneaks in.
         - He argues that this assumption, counterfactual
           definiteness, is simply illegitimate, not forced on us
           by logic or physics.
@@ -92,19 +132,19 @@ https://doi.org/10.1119/1.11393
 Bell proves that you cannot have all three:
 
 1. Locality
-   - Outcomes at A do not depend on settings at B
+   - Outcomes at `A` do not depend on settings at `B`
 
 2. Counterfactual definiteness (CFD)
    - All possible measurement outcomes exist (even unperformed ones)
 
 3. Agreement with quantum predictions
-   - Correlations: E(α, β) = − α · β
+   - Correlations: `E(α, β) = − α · β`
 
 → These three together lead to a contradiction (Bell inequality violation)
 
 ## 2. What the “Contradiction” Is
 
-The contradiction is NOT inside quantum mechanics.
+The contradiction is NOT inside QM.
 
 It is:
 
@@ -116,7 +156,7 @@ It is:
   - You derive Bell inequalities
 
 - But:
-  - Quantum mechanics (and experiment) violate those inequalities
+  - QM (and experiment) violate those inequalities
 
 → So:
   The same system must both satisfy and violate Bell inequalities
@@ -129,22 +169,21 @@ The crucial step is:
 
 This assumes:
 
-- For each run j:
+- For each run `j`:
   - r_j(α), r_j(α′), r_j(β), r_j(β′) all exist simultaneously
 
 This is counterfactual definiteness.
 
 ## 4. Peres’ Key Move
 
-Peres identifies that step as the problem.
+- Peres identifies that step as the problem.
 
-He says:
+- He says:
+    > The contradiction only arises because we assume unperformed
+    > measurements have results.
 
-> The contradiction only arises because we assume unperformed measurements have results.
-
-So he rejects:
-
-- Counterfactual definiteness
+- So he rejects:
+    - Counterfactual definiteness
 
 → Conclusion:
   “Unperformed experiments have no results”
@@ -174,7 +213,7 @@ So he rejects:
     - Random → weak correlation
     - Strong correlation → underlying structure
 
-- Quantum mechanics gives:
+- QM gives:
     - Random locally
     - Strong correlation globally
 

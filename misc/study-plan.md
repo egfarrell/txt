@@ -1,34 +1,25 @@
 - $MY_NOTES/practical/Way-Forward-Timetable.txt
 - $MY_NOTES/physics/work-diary.txt
 - $MY_NOTES/misc/work-sweep.txt
+
 - Productive procrastination https://news.ycombinator.com/item?id=47727659
 
-### Study tip (Wheeler)
-    - "I discovered if I took a break for a hot bath, I came to
-      life again and could work into the night."
-
-
-### LLM Prompt for study quiz:
-    - $MY_NOTES/misc/study-quiz-prompt.txt
-
-
-### tips
-    - Radboud Natural Philosophy dept GR book
-      https://www.math.ru.nl/~landsman/FGRBook2022-online.pdf
+### Tips 
     - See: `Take-Note`
-    - Wheeler: 
-        - "I discovered if I took a break for a hot bath, I came
-          to life again and could work into the night."
+    - John Wheeler: "I discovered if I took a break for a hot
+      bath, I came to life again and could work into the night."
+    - LLM Prompts for study quiz:
+        - $MY_NOTES/misc/study-quiz-prompt.txt
 
 
 ### Current study 2024:
     - Calculus:     $MY_NOTES/maths/analysis/CALCULUS-ANALYSIS-TIPS.txt
 
-    - Seth Calculus + Youtube $MY_NOTES/maths/analysis/Seth-Calculus.txt
-    - Maths:                  $MY_NOTES/maths/analysis/Calculus-Green.txt
-    - Maths:                  $MY_NOTES/maths/analysis/Kline-Intuitive-Calculus.txt
-    - Maths:                  $MY_NOTES/maths/analysis/3b1b-3Blue1brown-Calculus.txt
-    - Seth LA                 $MY_NOTES/maths/Dark-Art-LA-Seth.txt
+    - Seth Calculus $MY_NOTES/maths/analysis/Seth-Calculus.txt
+    - Maths:        $MY_NOTES/maths/analysis/Calculus-Green.txt
+    - Maths:        $MY_NOTES/maths/analysis/Kline-Intuitive-Calculus.txt
+    - Maths:        $MY_NOTES/maths/analysis/3b1b-3Blue1brown-Calculus.txt
+    - Seth LA       $MY_NOTES/maths/Dark-Art-LA-Seth.txt
 
     - Bala dynamics $MY_NOTES/physics/courses/bala/Bala-Dynamics.txt
     - Bala QM       $MY_NOTES/physics/courses/bala/Bala-QM.md
@@ -68,7 +59,8 @@
     - Yang: Thematic Melodies of 20th Century Theoretical Physics - YouTube
 
 ### `Take-Note`:
-    - Very good: Short Cambridge Philosophy of Physics gems...                                                      https://www.cambridge.org/core/publications/elements/elements-in-the-philosophy-of-physics
+    - Radboud Natural Philosophy dept GR book                                                            https://www.math.ru.nl/~landsman/FGRBook2022-online.pdf
+    - Very good: Short Cambridge Philosophy of Physics gems...                                           https://www.cambridge.org/core/publications/elements/elements-in-the-philosophy-of-physics
     - Brilliant: Dialekt Philosophy channel: GR coord explanations                                       https://www.youtube.com/watch?v=2992Bqfas_c
     - Kuhn. Black-Body Theory & Quantum Discontinuity 1894-1912. (2e 1986)                               https://en.wikipedia.org/wiki/Black-Body_Theory_and_the_Quantum_Discontinuity,_1894%E2%80%931912
     - Out-Nowhere-Emergence-Spacetime-Theories                                                           https://www.amazon.com/Out-Nowhere-Emergence-Spacetime-Theories/dp/0198758502
