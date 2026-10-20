@@ -4,6 +4,44 @@
     - audio: 20190407-153346
     - The computation can be done reversibly, that is to say at
       zero entropy cost.
+    - Explanation
+    - ### Reversible computation & entropy
+        - Think of entropy as measure of how much `information`
+          is missing about a system's exact state.
+        - Low entropy: you know `exact state`.
+        - High entropy: `many possible states` consistent with
+          what you know.
+            - (Aside: In physics, entropy also measures how many
+              microscopic arrangements correspond to
+              a macroscopic state.)
+        - So Entropy ≈ uncertainty about microscopic states
+          / missing information.
+        - Irreversible computation erases information: 
+            - Input 0 → output `0`
+            - Input 1 → output `0`
+            - (original input cannot be recovered)
+        - Landauer's principle: 
+            - erasing 1 unknown bit dissipates ≥ kT ln 2 of heat
+              → entropy increase in surroundings ≥ k ln 2.
+        - Reversible computation preserves information: 
+            - Input 0 → output 1
+            - Input 1 → output 0
+            - each output uniquely determines its input, so the
+              operation can be undone.
+        - In principle, reversible computation can produce zero
+          entropy (no heat dissipation).
+        - Key distinction: entropy needn't be zero; the *total
+          entropy production* can be zero in an ideal reversible
+          process.
+            - That is:
+                - Entropy = how much entropy the system has.
+                - `Entropy production` = how much ADDITIONAL
+                  total entropy a process creates.
+                - A reversible process can involve a system with
+                  plenty of entropy, yet produce zero ADDITIONAL
+                  total entropy.
+
+In short: non-zero entropy, zero entropy production.
 
 
 ### Links
