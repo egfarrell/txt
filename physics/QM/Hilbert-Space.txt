@@ -2,7 +2,7 @@
     - $MY_NOTES/physics/QM/Constructing-reality-marburger.txt
     - (??? I thought the 'coordinate axis' was the 'frame'?)
 
-    - The _vector metaphor_ for wave functions runs deep.
+    - The _VECTOR metaphor_ for wave functions runs deep.
     - When David Hilbert saw how important it was for QM, he
       developed a theory of this kind of vector space, now known
       as `Hilbert space` or 'quantum state space'.
@@ -24,25 +24,60 @@
   First, separate three ideas often blurred together:
 
 1. vector space itself
-2. a basis (a set of coordinate axes)
-3. a single axis (one basis vector)
+2. a basis 
+    - (ie a set of basis vectors which define a set of coordinate
+      axes)
+3. a single axis 
+    - (defined by one basis vector)
+
+### Note (Terminology)
+    - A basis vector corresponds to a coordinate axis, but the
+      two are not quite the same mathematical object.
+    - 1. The basis vectors
+        - `i` = (1, 0, 0)
+        - `j` = (0, 1, 0)
+        - `k` = (0, 0, 1)
+        - Each is a single vector: a directed quantity with
+          a particular magnitude and direction.
+    - 2. The coordinate axes
+        - Each basis vector defines a corresponding axis:
+        - `i` defines the `x-axis`.
+        - `j` defines the `y-axis`.
+        - `k` defines the `z-axis`.
+        - An axis, however, is an entire line extending
+          infinitely in both directions. The vector i is just one
+          particular vector along that line.
+    - 3. So, for example, the `x-axis` contains all vectors of the
+      form (a, 0, 0), where a can be any real number. The basis vector
+      `i` is just the particular case `(1,0,0)`.
+
+
 
 - Now apply that to Hilbert space and to measurement.
-- Start with an ordinary analogy, because the logic is identical.
 
-In ordinary 3D space:
-- The space is `ℝ³` itself.
-- A coordinate FRAME is a choice of basis, e.g. `{x̂, ŷ, ẑ}`.
-    - ie a bunch of mutually perpendicular axes
-- A coordinate AXIS is one element of that basis, e.g. `x̂` alone.
+- Start with an ordinary analogy, because the logic is identical.
+  In ordinary 3D space:
+    - The space is `ℝ³` itself.
+    - A coordinate FRAME is a choice of basis, e.g. `{x̂, ŷ, ẑ}`.
+        - ie a bunch of mutually perpendicular axes
+    - A coordinate AXIS is one element of that basis, e.g. `x̂`
+      alone.
 
 - The frame is the whole mutually perpendicular set.
-- An axis is just one direction inside that frame.
+    - An axis is just one direction inside that frame.
 
 - You were right to feel something was off: an axis is not the
   frame; it is part of the frame. Now translate this to QM.
 
 ### Hilbert space:
+
+    - Later Note: 
+    - The paragraphs in this section are a bit loose. 
+    - An observable doesn't always determine a unique basis; an
+      eigenvalue doesn't always pick out one eigenvector; and the
+      coordinate-frame analogy is informal.
+
+
     - The vector space
         - is the Hilbert space of states `|ψ⟩`.
     - A coordinate frame
@@ -52,7 +87,7 @@ In ordinary 3D space:
           observable.
 
 - More explicitly, choosing a physical quantity (observable) `A`:
-    - Position x, momentum p, energy H, spin Sz, etc.
+    - Position `x`, momentum `p`, energy `H`, spin `Sz`, etc.
     - This fixes a particular orthonormal basis `{|aₙ⟩}` of
       Hilbert space.
     - This whole set `{|aₙ⟩}` is the coordinate FRAME.

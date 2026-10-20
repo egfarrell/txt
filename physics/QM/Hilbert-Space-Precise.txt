@@ -1,0 +1,95 @@
+
+- I'd sharpen three points:
+    - An observable doesn't always determine a unique basis;
+    - An eigenvalue doesn't always pick out one eigenvector;
+    - The coordinate-frame analogy is informal.
+
+# Revised notes
+
+### Hilbert space
+
+- The Hilbert space `H`:
+    - A mathematical space containing the state vectors `|ψ⟩`.
+    - Has an inner product and is complete.
+    - Strictly, a physical pure state corresponds to a ray in
+      Hilbert space, rather than to one unique state vector.
+        - State vector: 
+            - one particular vector, with a specific length and
+              direction.
+        - Ray: 
+            - all vectors pointing in that same direction, with
+              any non-zero length.
+    - In QM: 
+        - multiplying a state vector by a NON-ZERO complex number
+          doesn't change the ray. 
+        - For normalised state vectors, this means `|ψ⟩` and
+          `e^(iφ)|ψ⟩` represent the same physical pure state,
+          regardless of global phase `φ`.
+        - Aside:
+            - Strictly, this scalar-multiple statement applies to
+              NON-ZERO complex scalars; the `zero vector` is not
+              a state vector representing a physical state.
+
+- A coordinate frame:
+    - Informally, corresponds to choosing an observable A
+      and using its eigenstates as a basis.
+    - More precisely, the observable determines the relevant
+      eigenstates or eigenspaces, subject to degeneracy.
+
+- A coordinate axis:
+    - Informally, corresponds to one basis vector |aₙ⟩.
+    - More precisely, the vector defines a one-dimensional
+      subspace, analogous to a coordinate axis.
+
+
+### Choosing an observable
+
+- Choose a physical quantity (observable) A:
+    - Position x, momentum p, energy H, spin S_z, etc.
+    - A is represented by a self-adjoint operator.
+
+- For an observable with a discrete, non-degenerate spectrum:
+    - Its eigenstates {|aₙ⟩} form an orthonormal basis.
+    - This basis is analogous to a coordinate FRAME.
+
+
+### Choosing a measurement outcome
+
+- Choose a particular eigenvalue aₙ:
+    - If the eigenvalue is non-degenerate, it identifies
+      one eigenstate |aₙ⟩.
+    - That eigenstate corresponds, by analogy, to one
+      coordinate AXIS.
+    - If the eigenvalue is degenerate, it identifies an
+      eigenspace, not one unique eigenstate.
+
+
+### The hierarchy (as a useful analogy)
+
+- Hilbert space
+- → choose an observable A
+- → obtain its eigenstates/eigenspaces
+- → choose a measurement outcome aₙ
+- → identify the corresponding eigenstate or eigenspace
+
+
+# Two important caveats
+
+### 1. Degeneracy
+
+- If several independent eigenstates share the same eigenvalue,
+  the measurement outcome does not distinguish between them. The
+  outcome identifies an eigenspace, and you can choose different
+  orthonormal bases within that eigenspace.
+
+- So your original statement that choosing a value singles out
+  one basis vector is correct only for a non-degenerate
+  eigenvalue.
+
+### 2. Position and momentum
+
+- Position and momentum have continuous spectra. Their
+  eigenstates, conventionally written |x⟩ and |p⟩, are
+  generalised eigenstates: they are not ordinary, normalisable
+  vectors in the Hilbert space. The simple picture of a countable
+  orthonormal basis

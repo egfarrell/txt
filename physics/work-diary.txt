@@ -7,7 +7,7 @@
 
 ### 20-Oct 2026 Tue
 
-    ### Reversible computation and entropy
+    - ### Reversible computation and entropy
         - The computation can be done reversibly, that is to say
           at zero entropy cost.
         - Explanation
@@ -24,8 +24,79 @@
                   OU and I was wondering is it about microscopic
                   arrangements.
 
+    - ### What is a quantum superposition?
+        - $MY_NOTES/physics/QM/superposition.txt
+        - A quantum state is a vector of `complex amplitudes`
+          that encodes the POSSIBLE outcomes of measurements.
+        - A superposition is simply a `linear combination` of
+          valid states.
+            - `(a)ψ_1 + (b)ψ_2`
+
+    - ### Basis vectors and coordinate axes
+        - $MY_NOTES/maths/linear-algebra/Abstract-vectors-vector-spaces.txt
+        - A bit of terminology I was mixing up!
+        - A `basis vector` corresponds to a coordinate axis, but
+          the two are NOT the same mathematical object.
+        - 1. E.g. consider:
+            - `i` = (1, 0, 0)
+            - `j` = (0, 1, 0)
+            - `k` = (0, 0, 1)
+            - Each is a single vector: a directed quantity with
+              a particular magnitude and direction.
+        - 2. The coordinate axes
+            - Each basis vector DEFINES a corresponding axis:
+            - `i` defines `x-axis`.
+            - `j` defines `y-axis`.
+            - `k` defines `z-axis`.
+            - An axis, however, is an _entire line_ extending
+              infinitely in both directions. The vector `i` is
+              just one particular vector along that line.
+        - 3. Example:
+            - The `x-axis` contains all vectors of the form
+              `(a,0,0)`, where `a` can be any real number.
+            - The basis vector `i` is just the particular case
+              `(1,0,0)`.
+
+    - ### Hilbert Space terminology
+        - $MY_NOTES/physics/QM/Hilbert-Space.txt
+        - $MY_NOTES/physics/QM/Hilbert-Space-Precise.txt
+        - I'd sharpen three points:
+            - An observable doesn't always determine a unique basis;
+            - An eigenvalue doesn't always pick out one eigenvector;
+            - The coordinate-frame analogy is INFORMAL.
+
+    - ### Hilbert Space nitpick
+        - $MY_NOTES/physics/QM/Hilbert-Space-Precise.txt
+        - The Hilbert space `H`:
+            - Mathematical space containing state vectors `|ψ⟩`.
+            - Strictly, a physical pure state corresponds to
+              a `ray` in Hilbert space, rather than to one unique
+              state vector.
+            - `State vector`: 
+                - one particular vector, with a specific length
+                  and direction.
+            - `Ray`: 
+                - all vectors pointing in that same direction,
+                  with any non-zero length.
+            - Phase:
+                - multiplying a state vector by a NON-ZERO
+                  complex number doesn't change the ray. 
+                - For normalised state vectors, this means `|ψ⟩`
+                  and `e^(iφ)|ψ⟩` represent the same physical
+                  pure state, regardless of global phase `φ`.
+                - Aside:
+                    - Strictly, scalar-multiples apply to
+                      NON-ZERO complex scalars; the `zero vector`
+                      is not a state vector representing
+                      a PHYSICAL STATE.
 
 ### 19-Oct 2026 Mon
+
+    - ### What is a tensor?
+    - ### Indeterminism / causality
+    - ### Vision of Determinism (Henry James)
+    - ### Determinism is tricky!
+    - ### LLM summary wrong
 
     - ### What is a tensor?
         - $MY_NOTES/maths/Vector-Calculus/Tensors-contravariant-covariant.txt
@@ -35,8 +106,8 @@
           that it must be linear in each of its `r` arguments.
           Recall that linearity for a function with a single
           argument just means:
-            - T(v + cw) = T(v) + cT(w) 
-            - for all vectors `v` and `w` and numbers `c`). 
+            - T(v + cw) = T(v) + cT(w)
+            - for all vectors `v` and `w` and numbers `c`).
         - This multilinearity enables us to express the value of
           the function on an arbitrary set of `r` vectors in
           terms of the values of the function on `r basis
@@ -49,40 +120,42 @@
     - ### Indeterminism / causality
         - $MY_NOTES/physics/metaphysics/Determinism-Causality.txt
         - Indeterminism doesn't imply a lack of causality; it
-          simply means the outcomes are not predetermined.
+          simply means the outcomes are not PREDETERMINED.
         - Causality can still operate within an indeterministic
           framework, dictating that EFFECTS FOLLOW CAUSES, even
           if those EFFECTS are not uniquely determined.
 
     - ### Vision of Determinism
         - $MY_NOTES/physics/metaphysics/Determinism-Earman-Primer.txt
-        - A most vivid rendering was given by William James in an
-          1884 lecture to Harvard Divinity School:
+        - A vivid rendering was given by William James in an 1884
+          lecture to Harvard Divinity School:
             > What does determinism profess? It professes that
             > those parts of the universe already laid down
             > absolutely appoint and decree what the other parts
-            > shall be. The future has no ambiguous possibilities
-            > HIDDEN IN ITS WOMB: the part we call the present is
-            > compatible with only ONE totality. Any other future
-            > complement than the one fixed from eternity is
-            > impossible. The whole is in each and every part,
-            > and welds it with the rest into an absolute unity,
-            > an iron block, in which there can be no
-            > equivocation or shadow of turning. (1956, p. 150)
- 
+            > shall be.
+            > The future has no ambiguous possibilities HIDDEN IN
+            > ITS WOMB: the part we call the present is
+            > compatible with only ONE totality.
+            > Any other future complement than the one fixed from
+            > eternity is impossible. The whole is in each and
+            > every part, and welds it with the rest into an
+            > absolute unity, an iron block, in which there can
+            > be no equivocation or shadow of turning. (1956, p.
+            > 150)
+
     - ### Determinism is tricky!
         - $MY_NOTES/physics/metaphysics/Determinism-Earman-Primer.txt
-        - I argue that Newtonian physics is not a paradigm for
-          determinism; in fact, Newtonian worlds provide environments
-          that are quite hostile to determinism, and some of the
-          alleged paradigm examples of Newtonian determinism are not
-          examples of determinism at all, at least not without the
-          help of props which sometimes have a suspiciously
-          artificial and even question-begging character. 
+        - I argue that `Newtonian physics` isn't a paradigm for
+          determinism; in fact, Newtonian worlds provide
+          environments quite hostile to determinism, and some of
+          the alleged paradigm examples of Newtonian determinism
+          aren't true examples at all (!), at least not without
+          extra props that are sometimes artificial and even
+          question-begging.
 
     - ### LLM summary wrong
         - Ah no, the model was too simplistic in this file:
-        - $MY_NOTES/physics/QM/Peres-unperformed-Paper.txt
+            - $MY_NOTES/physics/QM/Peres-unperformed-Paper.txt
 
 
 ### 18-Oct 2026 Sun
@@ -90,10 +163,10 @@
     - ### Bell Logic (two-step argument)
         - $MY_NOTES/physics/QM/Bell/Chain-of-Logic-GPT.txt
         - $MY_NOTES/physics/QM/Bell/Chain-of-Logic-Gemini.txt
-        - Interesting 1: 
-            - Bell is constructing a local classical `MODEL`. 
+        - Interesting 1:
+            - Bell is constructing a local classical `MODEL`.
             - This `MODEL` then fails for varying-angle
-              measurements.
+              measurements. Don't forget it's a model he created!
         - Interesting 2:
             - In many physics courses, you hear:
                 > "Bell proved local hidden variables are
@@ -106,7 +179,7 @@
                 - Hidden Variables ⇒ Contradiction
             - He showed:
                 - Locality ⇒ Hidden Variables ⇒ Contradiction
-            - Hence, Locality is what leads to the contradiction. 
+            - Hence, Locality is what leads to the contradiction.
 
     - ### Hidden variables or Determinism
         - $MY_NOTES/physics/QM/Bell/Bell-TIPS-SUMMARY.txt
@@ -119,10 +192,10 @@
               and the measurement setting.
 
     - ### I don't understand Peres
-        - I still can't see what Peres did/didnt add to Bells
-          argument. I asked GPT:
+        - I still can't see what Peres added to Bells argument.
+          Asked GPT:
             - $MY_NOTES/physics/QM/Peres-significance.txt
-        - Peres's paper has two main moves. 
+        - Peres's paper has two main moves.
             - First, he derives a Bell inequality WITHOUT
               INVOKING HIDDEN VARIABLES EXPLICITLY.
             - Second, he examines the hypothetical measurements
@@ -143,15 +216,15 @@
 
     ### Bell & Counterfactual definiteness
         - $MY_NOTES/physics/QM/Peres-unperformed-Paper.txt
-        - Bell's theorem identifies an impossible trio: 
-            - You CANNOT simultaneously have 
+        - Bell's theorem identifies an impossible trio:
+            - You CANNOT simultaneously have
                 - 1. locality (local outcome/measurement
                   functions depend on the local setting [e.g.
                   `a⃗`] and also `λ`, but not the distant
-                  setting), 
+                  setting),
                 - 2. counterfactual definiteness (unperformed
                   measurements have pre-existing values),
-                - 3. and agreement with quantum predictions. 
+                - 3. and agreement with quantum predictions.
                 - Experiment confirms QM, so one of the first two
                   must go.
         - Me:
@@ -162,13 +235,13 @@
             - $MY_NOTES/physics/QM/Peres-CFD-Gemini.txt
             - Counterfactual Definiteness (CFD) enters right at
               the beginning of his 1964 paper in his definition
-              of the measurement functions 
+              of the measurement functions
                 - Outcome of Alice's measurement along AXIS `a⃗`
-                    - `A(a⃗, λ) = ±1` 
+                    - `A(a⃗, λ) = ±1`
                     - (ie assign a definite number +1 or −1 to
                       every possible choice of `a⃗`)
                 - Bob's along AXIS `b⃗` as:
-                    - `B(b⃗, λ) = ±1`                    
+                    - `B(b⃗, λ) = ±1`
             - When Bell later computes the difference between two
               correlation experiments:
                 - `P(a⃗, b⃗) − P(a⃗, c⃗) = ∫ ρ(λ) [A(a⃗, λ) B(b⃗, λ)
@@ -185,12 +258,12 @@
                 - He uses the EPR argument to motivate
                   predetermined outcomes, then formulates a local
                   hidden-variable `MODEL` in which outcomes are
-                  functions of the local setting and `λ`. 
+                  functions of the local setting and `λ`.
                 - The mathematical derivation uses those
                   functions for ALTERNATIVE settings as well as
-                  the settings actually chosen. 
+                  the settings actually chosen.
                 - Peres's paper draws attention to the
-                  interpretive significance of THAT STEP. 
+                  interpretive significance of THAT STEP.
                 - It is therefore more accurate to say that
                   Bell's original argument combines locality with
                   _EPR-motivated_ predetermination, rather than
@@ -235,46 +308,46 @@
 
     - ### The actual Peres paper
         - $MY_NOTES/physics/QM/Peres-unperformed-Paper.txt
-        - Bell’s core result: 
-            - You cannot simultaneously maintain 
-                - (i) 
+        - Bell’s core result:
+            - You cannot simultaneously maintain
+                - (i)
                     - locality,
-                - (ii) 
+                - (ii)
                     - predefined outcomes for all possible
                       measurements (counterfactual definiteness)
                 - and
-                - (iii) 
-                    - agreement with quantum correlations 
-                    - `E(α, β) = −α·β`. 
+                - (iii)
+                    - agreement with quantum correlations
+                    - `E(α, β) = −α·β`.
                 - One of these must be abandoned.
-        - Where the contradiction actually lies: 
+        - Where the contradiction actually lies:
             - It is not within QM itself, but in trying to
               explain quantum predictions using a CLASSICAL
               picture that assumes both locality and pre-existing
               values. This leads to Bell inequalities, which are
               experimentally violated.
-        - Hidden assumption identified by Peres: 
+        - Hidden assumption identified by Peres:
             - The step that generates the contradiction is
               assigning SIMULTANEOUS values to measurements that
               were never performed. This is the assumption of
               counterfactual definiteness.
-        - Peres’ key claim: 
+        - Peres’ key claim:
             - Reject that assumption — “unperformed experiments
               have no results.” Once you stop treating
               hypothetical measurements as having real outcomes,
               the contradiction disappears without needing to
               abandon locality (at least at the level of no
               signalling).
-        - What makes quantum correlations striking: 
+        - What makes quantum correlations striking:
             - Individual outcomes are locally random (no
               signalling), yet jointly they exhibit strong,
-              highly structured correlations (−α·β). 
+              highly structured correlations (−α·β).
             - This combination cannot be reproduced by any
               classical local model with predefined values.
-        - The real interpretational fork: 
+        - The real interpretational fork:
             - Bell’s theorem forces a choice. Either:
                 - → drop counterfactual definiteness
-                  (Peres-style, no predefined values), 
+                  (Peres-style, no predefined values),
                 - or
                 - → drop locality (e.g. Bohmian mechanics,
                   explicit nonlocality).
@@ -283,18 +356,18 @@
 
     - ### Ah! Peres is about Contextuality
         - $MY_NOTES/physics/QM/Peres-Contextuality.txt
-        - Peres reframes Bell, not rederives it. 
+        - Peres reframes Bell, not rederives it.
             - Bell proved QM violates a hidden-variable
-              inequality. Peres diagnoses *why*: 
+              inequality. Peres diagnoses *why*:
                 - the violation comes from illegitimately
                   assuming unperformed measurements have definite
                   outcomes — which QM rejects.
-        - The real target is counterfactual definiteness. 
+        - The real target is counterfactual definiteness.
             - This ties Bell's theorem to Kochen-Specker
               contextuality: quantum observables have no
               pre-existing values independent of measurement
               context. Peres unifies both under one slogan.
-        - Legacy is philosophical more than technical. 
+        - Legacy is philosophical more than technical.
             - The title became canonical Copenhagen shorthand for
               unmeasured quantities, and seeded lasting debate
               about what Bell actually proves — nonlocality, or
@@ -1982,9 +2055,9 @@
               state of being,” of spin. “I can’t really
               articulate it. It had to do with a _sense of
               tensions_ in the body….”
-        - Bohm analyzed QM in three parts; 
+        - Bohm analyzed QM in three parts;
             - as quantized motion,
-            - statistical causality, and 
+            - statistical causality, and
             - indivisible WHOLENESS:
                 - “I came closer to my intuitive sense of nature.
 

@@ -1,3 +1,29 @@
+
+### Basis vectors and coordinate axes
+    - A bit of terminology I was mixing up!
+    - $MY_NOTES/physics/QM/Hilbert-Space.txt
+    - A basis vector corresponds to a coordinate axis, but the
+      two are not quite the same mathematical object.
+    - 1. The basis vectors
+        - `i` = (1, 0, 0)
+        - `j` = (0, 1, 0)
+        - `k` = (0, 0, 1)
+        - Each is a single vector: a directed quantity with
+          a particular magnitude and direction.
+    - 2. The coordinate axes
+        - Each basis vector DEFINES a corresponding axis:
+        - `i` defines the `x-axis`.
+        - `j` defines the `y-axis`.
+        - `k` defines the `z-axis`.
+        - An axis, however, is an _entire line_ extending
+          infinitely in both directions. The vector `i` is just
+          one particular vector along that line.
+    - 3. Example 
+        - The `x-axis` contains all vectors of the form (a,0,0),
+          where `a` can be any real number. The basis vector `i`
+          is just the particular case `(1,0,0)`.
+
+
 ### Vector Story
     - Great history, background
     - $MY_NOTES/maths/linear-algebra/Vector-Story-Arianrhod.txt
