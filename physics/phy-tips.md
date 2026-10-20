@@ -1,6 +1,15 @@
 
 LLMs fail at Physics and Maths
 
+### Understanding of Physics
+    - https://m.youtube.com/watch?v=wD_WNG4LAaE
+    - Flavio del Santo: Which features of QM are not
+      fundamentally quantum...? (but due to indeterminism)
+        - $MY_IMAGES/physics/History-of-Understanding.jpg
+    - Is the lack of understanding due to QM, or were fundamental
+      issues already hidden in Classical Physics?
+        - cf
+        - $MY_NOTES/physics/metaphysics/Determinism-Earman-Primer.txt
 
 ### Frequency and ω
     1) Do `ω` and `f` have the same units?
@@ -10105,7 +10114,7 @@ LLMs fail at Physics and Maths
 
 ### Websites / Series / General links
     - Online Philosophy of Physics Talks (Juliusz Doboszewski)                  https://sites.google.com/site/juliuszdoboszewski/online-philosophy-of-physics-talks
-    - Oxford Philosophy of Physics Seminar                                      https://www.philosophy.ox.ac.uk/philosophy-of-physics-seminar
+    - Oxford Philosophy of Physics Seminar                                      https://m.youtube.com/@OxfordPhilosophyofPhysics/videos
     - LSE Philosophy of Physics Project                                         https://www.lse.ac.uk/cpnss/research/research-projects/philosophy-of-physics
     - O’Hara Lecture Series in Philosophy of Physics (University of Washington) https://phil.washington.edu/ohara-philosophy-physics-lecture-series
     - Institute of Art & Ideas / HowTheLightGetsIn / IAI.tv                     https://en.wikipedia.org/wiki/Institute_of_Art_and_Ideas
