@@ -1,4 +1,5 @@
-First see: $MY_NOTES/physics/QM/Hilbert-Space.txt
+### First read:
+    - $MY_NOTES/physics/QM/Hilbert-Space.txt
 
 # Me:
 - What is:
@@ -10,9 +11,13 @@ First see: $MY_NOTES/physics/QM/Hilbert-Space.txt
 - e.g. in the situation of measuring the position `x` of an electron..
 - I always wondered why we "need" to use an eigenvector, eigenvalue etc
 
+
+### See also:
+    - $MY_NOTES/physics/QM/QM-formalism-Eigenstates.txt
+
 # GPT
 
-- I’ll give the core meaning of each term, then explain why QM
+- I’ll give the core meaning of each term, and explain why QM
   *needs* them rather than just choosing them.
 
 ### 0. Setup: what QM “measurement” means
@@ -42,10 +47,9 @@ First see: $MY_NOTES/physics/QM/Hilbert-Space.txt
 - In the x-representation, `x̂ ψ(x) = x ψ(x)`
 
 - Significance:
-    - Operators encode how measurement devices interact with
-      states.
-    - Each observable has its own operator because different
-      measurements are physically different interactions.
+- Operators encode how measurement devices interact with states.
+- Each observable has its own operator because different
+  measurements are physically different interactions.
 
 - Crucially:
     - Different observables generally do not commute → they
@@ -156,6 +160,34 @@ First see: $MY_NOTES/physics/QM/Hilbert-Space.txt
 
 - That entire sentence collapses without eigenvectors and eigenvalues.
 
+    - LATER: Better rewording to make it shaper:
+        - "Measure the system's position. The measurement yields
+          an outcome `x`, with probabilities governed by `|⟨x|ψ⟩|²`.
+        - In the idealised measurement model, the state is then
+          projected onto the corresponding position eigenstate
+          `|x⟩`."
+        - The key distinction: the mathematics describes the
+          possible outcomes and their probabilities; the
+          laboratory measurement produces the actual outcome. The
+          scientist sets up the experiment, not the result.
+
+    - LATER: more clarification
+        - The measurement process yields one eigenvalue `x`, with
+          probability governed by `|⟨x|ψ⟩|²`, and projects the
+          state onto the corresponding eigenstate `|x⟩`.”
+
+        - The original phrase “randomly select” is simply
+          shorthand for the probabilistic nature of a quantum
+          measurement. It doesn't mean the scientist chooses the
+          outcome.
+
+        - One small technical refinement: because position has
+          a CONTINUOUS spectrum, `|⟨x|ψ⟩|²` is a probability
+          DENSITY, rather than the probability of obtaining one
+          exact value `x`.
+
+
+
 ### Deep intuition (important)
 
 - Eigenvectors are not mathematical decoration.
@@ -165,8 +197,8 @@ First see: $MY_NOTES/physics/QM/Hilbert-Space.txt
 - Every real detector is built to respond to eigenstates of the
   observable it measures.
 
-If you want, next we can:
-– connect this directly to projection/collapse,
-– contrast position eigenstates with momentum eigenstates,
-– or explain why position eigenstates are “unphysical” idealizations yet still indispensable.
-
+- Aside:
+    - Also, the position eigenstates `|x⟩` are idealised
+      mathematical states, not normalisable physical states that
+      a real detector produces exactly. The simple projection
+      picture assumes an IDEALISED measurement.

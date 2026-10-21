@@ -12,30 +12,31 @@
 
     - The choice of which physical _quantity_ to detect dictates
       the choice of coordinate frames (bunches of mutually
-      perpendicular axes) in the quantum mechanical Hilbert
-      space.
+      perpendicular axes) in the QM Hilbert space.
         - The choice of which _value_ of the quantity to detect
           then fixes the particular coordinate axis within the
           frame.
         - (??? I thought the coordinate axis was the frame?)
 
+### See also:
+    - $MY_NOTES/physics/QM/QM-formalism-Eigenstates.txt
+
 
 ### Claude
-- Your confusion is totally understandable — the note is using
-  "frame" and "axis" in a way that can easily blur together.
-  Here's the distinction:
+- This note is using "frame" and "axis" in a way that can blur
+  together. Here's the distinction:
 
 - A coordinate frame = a whole bunch of axes together
     - Think of ordinary 3D space: a coordinate frame is the full
-      set {x, y, z} — three perpendicular axes considered as
+      set `{x, y, z}` — 3 perpendicular axes considered as
       a system. You choose a frame when you decide *how* you want
       to describe the space (e.g., Cartesian vs. spherical
       coordinates).
 
 - A coordinate axis = one single direction within that frame
-    - Within your {x, y, z} frame, the x-axis is just one of the
-      three. Picking a specific axis means picking one particular
-      direction.
+    - Within your `{x, y, z}` frame, the `x-axis` is just one of
+      the three. Picking a specific axis means picking one
+      particular direction.
 
 
 - Now translating to Hilbert space:
@@ -44,19 +45,21 @@
       a whole organized set of perpendicular axes, one for each
       possible outcome of that measurement.
 
-    - Choosing which `specific value` of that quantity you're
-      asking about (e.g., spin-up *specifically*, rather than
-      spin in general) selects one particular axis within that
-      frame.
+    - Choosing WHICH `specific value` of that quantity you're
+      asking about (e.g., spin-up specifically, rather than spin
+      in general) selects one particular axis within that frame.
 
 
 - A concrete example:
 
 - Say you decide to measure spin. That decision picks the "spin
-  frame" — which has two axes: one for spin-up, one for
-  spin-down. But "spin-up" and "spin-down" are the individual
-  *axes* within that frame. You can't have a frame with just one
-  axis — the frame is the whole coordinated set.
+  frame" — which has two axes:
+    - one for spin-up,
+    - one for spin-down.
+
+- But "spin-up" and "spin-down" are the individual *axes* within
+  that frame. You can't have a frame with just one axis — the
+  frame is the whole coordinated set.
 
 - So the hierarchy is: quantity → frame → value → axis. Your note
   is saying these are two separate choices, made at two separate

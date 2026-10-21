@@ -38,18 +38,18 @@
         - `j` = (0, 1, 0)
         - `k` = (0, 0, 1)
         - Each is a single vector: a directed quantity with
-          a particular magnitude and direction.
+          a magnitude and direction.
     - 2. The coordinate axes
         - Each basis vector defines a corresponding axis:
         - `i` defines the `x-axis`.
         - `j` defines the `y-axis`.
         - `k` defines the `z-axis`.
         - An axis, however, is an entire line extending
-          infinitely in both directions. The vector i is just one
-          particular vector along that line.
-    - 3. So, for example, the `x-axis` contains all vectors of the
-      form (a, 0, 0), where a can be any real number. The basis vector
-      `i` is just the particular case `(1,0,0)`.
+          infinitely in both directions. The vector `i` is just
+          one particular vector along that line.
+    - 3. So, the `x-axis` contains all vectors of the form
+      `(a,0,0)`, where `a` can be any real number. The basis
+      vector `i` is just the particular case `(1,0,0)`.
 
 
 
@@ -63,26 +63,27 @@
     - A coordinate AXIS is one element of that basis, e.g. `x̂`
       alone.
 
-- The frame is the whole mutually perpendicular set.
-    - An axis is just one direction inside that frame.
+- The frame is the WHOLE mutually perpendicular set.
+    - An axis is just ONE DIRECTION inside that frame.
 
-- You were right to feel something was off: an axis is not the
-  frame; it is part of the frame. Now translate this to QM.
+- So an axis is not the frame; it's part of the frame. Now
+  translate this to QM.
 
 ### Hilbert space:
 
     - Later Note: 
-    - The paragraphs in this section are a bit loose. 
-    - An observable doesn't always determine a unique basis; an
-      eigenvalue doesn't always pick out one eigenvector; and the
-      coordinate-frame analogy is informal.
+        - The paragraphs in this section are LOOSE. 
+        - An observable doesn't always determine a unique basis; an
+          eigenvalue doesn't always pick out one eigenvector; and the
+          coordinate-frame analogy is informal.
+        - (ie degenerate states may exist)
 
 
     - The vector space
         - is the Hilbert space of states `|ψ⟩`.
     - A coordinate frame
         - corresponds to choosing an OBSERVABLE to measure.
-    - A coordinate axis
+    - A single coordinate axis
         - corresponds to choosing one EIGENSTATE of that
           observable.
 
@@ -126,6 +127,6 @@
 
 - Switch observable → switch basis → same vector, different components.
 
-- That’s exactly why your “vector metaphor runs deep”: it’s not
-  a metaphor at all; it’s literally linear algebra in an
-  infinite-dimensional space.
+- That’s exactly why your “vector metaphor runs deep”: 
+    - it’s not a metaphor at all; it’s literally linear algebra
+      in an infinite-dimensional space.

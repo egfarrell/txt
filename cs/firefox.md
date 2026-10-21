@@ -1,3 +1,7 @@
+
+Mobile useragent
+Mozilla/5.0 (Android 13; Mobile; rv:128.0) Gecko/128.0 Firefox/128.0
+
 ### Firefox "about" locations
     - about:profiles
     - about:policies

@@ -4,13 +4,67 @@
 
 - See `SWEEP-INTERESTING` below too!
 
+### 21-Oct 2026 Wed
+
+    - ### Maxwell viscosity v density
+        - Test: see if I can remember this
+        - Maxwell discovered, much to his surprise, that the
+          viscosity of a gas should NOT depend on its density.
+            - $MY_NOTES/physics/thermo/Viscosity-Density-air.txt
+
+    - ### Getting the terminology sharper
+        - $MY_NOTES/physics/QM/QM-formalism-1-the-setup.txt
+        - Original:
+            - Measuring position means: “Expand the state `|ψ⟩`
+              in the position eigenbasis `{|x⟩}`, then randomly
+              select one eigenvalue `x` with probability
+              `|⟨x|ψ⟩|²`, and project the state onto `|x⟩`.”
+        - Better/sharper:
+            - The MEASUREMENT process YIELDS one eigenvalue `x`,
+              with probability governed by `|⟨x|ψ⟩|²`, and
+              projects the state onto the corresponding
+              eigenstate `|x⟩`.”
+        - Aside:  
+            - position has a CONTINUOUS spectrum, so `|⟨x|ψ⟩|²`
+              is a probability DENSITY,
+        - Also: some intuition
+            - Eigenvectors are not mathematical decorations.
+            - They are the only states that a measurement device
+              recognizes as STABLE outcomes.
+            - Every real detector is built to respond to
+              eigenstates of the observable it measures.
+
+    - ### Ah the word 'value' is confusing
+        - $MY_NOTES/physics/QM/QM-formalism-1-the-setup.txt
+        - $MY_NOTES/physics/QM/QM-formalism-2-toy-claude.txt
+        > The choice of which _VALUE_ (eigenstate?)of the
+        > quantity to detect then fixes the particular coordinate
+        > axis within the frame.
+            - My first thought: 
+                - 'value' in the position basis say, could mean
+                  'choosing' to detect 2.4m ... which didn't make
+                  much sense??
+            - My second thought: 
+                - Claude had a better example, and 'value' meant
+                  choosing to detect specifically `spin-up` (for
+                  example) when the physical quantity selected
+                  was `spin`.
+            - See also:
+                - $MY_NOTES/physics/QM/QM-formalism-Eigenstates.txt
+
+    - ### Frame dragging Frensel?!
+        - $MY_NOTES/physics/QM/QM-generations-Kragh.txt
+        - Relativity had its roots in 19th century optics.
+          Frensel suggested in 1818 that a moving transparent
+          body would partially drag along the ether. 
+
+
 
 ### 20-Oct 2026 Tue
 
     - ### Reversible computation and entropy
-        - The computation can be done reversibly, that is to say
-          at zero entropy cost.
-        - Explanation
+        - ... the computation can be done reversibly, that is to
+          say at zero entropy cost. Explanation:
         - ### Reversible computation & entropy
             - Entropy is a measure of how much `information` is
               missing about a system's exact state.
@@ -20,7 +74,7 @@
                 - (Aside: In physics, entropy also measures how
                   many microscopic arrangements correspond to
                   a macroscopic state.)
-                - Ah there was an old entropy definition from the
+                - Ah! There was an old entropy definition from the
                   OU and I was wondering is it about microscopic
                   arrangements.
 

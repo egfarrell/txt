@@ -1,6 +1,13 @@
 astro tips
 
 
+### Jo Bovy Book: Galatic dynamics
+    - Good chapter 3:  "Elements of Classical Dynamics". 
+    - The acceleration of the Earth laboratory frame is small
+      (0.034 m/s^2) compared to the experiments we perform on
+      Earth (eg a ball rolling down a hill)
+    - https://galaxiesbook.org/
+
 ### ADS export 
     - Custom export of citation list https://ui.adsabs.harvard.edu/help/actions/export
     - ### my custom export
@@ -1622,6 +1629,7 @@ astro tips
     - $MY_BOOKS/Astro/Robinson-Spectroscopy.pdf
 
 ### links
+    - Cosmicus Cosmology / Astronomy                                   https://m.youtube.com/@Cosmicus-w6s/videos
     - How to play with deep space data                                 https://www.youtube.com/watch?v=6wrEZwX_5Ak
     - OU Masters code                                                  https://bitbucket.org/biseps
     - Relative Star Size                                               https://www.youtube.com/watch?v=GoW8Tf7hTGA&t=2s

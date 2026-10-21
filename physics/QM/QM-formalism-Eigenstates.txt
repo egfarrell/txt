@@ -1,0 +1,59 @@
+- The key idea is: an eigenstate of an observable is a state with
+  a definite value for that observable.
+
+### QM examples
+
+- Observable being measured   Example EIGENSTATE  Corresponding eigenvalue  
+- ---                         ---                 ---                       
+- Position, x̂                 |x₀⟩                Position x₀  
+- Momentum, p̂                 |p₀⟩                Momentum p₀  
+- Energy, Ĥ                   |Eₙ⟩                Energy Eₙ    
+- Spin along z, Ŝᶻ            |↑z⟩                +ℏ/2         
+- Spin along z, Ŝᶻ            |↓z⟩                −ℏ/2         
+- Angular momentum, L̂ᶻ        |ℓ,m⟩               mℏ           
+- Photon number, N̂            |n⟩                 n photons    
+
+
+### 1. Position
+
+- Observable: position.
+- Eigenstate: `|x₀⟩`.
+- Meaning: a state with definite position `x₀`.
+
+### 2. Energy
+
+- Observable: the Hamiltonian `Ĥ`.
+- Eigenstate: `|Eₙ⟩`.
+- Meaning: a state with definite energy `Eₙ`. In the absence of
+  time-dependent changes, it evolves in time only by acquiring an
+  overall phase.
+
+### 3. Spin
+
+- Observable: spin along the z-direction, `Ŝᶻ`.
+- Eigenstates: `|↑z⟩` and `|↓z⟩`.
+- Meaning: definite spin outcomes along z, either +ℏ/2 or −ℏ/2.
+
+- Notice that one observable can have multiple eigenstates, one
+  for each possible outcome (or, in more complicated cases,
+  multiple independent eigenstates for the same outcome).
+
+### Connecting this to your coordinate-frame analogy
+
+Your notes' analogy maps onto these examples as follows:
+
+- Hilbert space: the space containing the quantum states.
+- Coordinate frame: choose an observable, such as spin along z.
+- Coordinate axes: the eigenstates associated with that observable, such as |↑z⟩ and |↓z⟩.
+- Coordinates: the amplitudes of a state when expanded in that eigenbasis.
+
+- For example, a spin state can be written as:
+    - `|ψ⟩ = a|↑z⟩ + b|↓z⟩`
+
+- where a and b are probability amplitudes.
+
+- One important qualification: position and momentum eigenstates
+  are idealised _generalised eigenstates_, rather than
+  normalisable vectors in the Hilbert space. 
+- The analogy is therefore especially straightforward for
+  observables with discrete, non-degenerate eigenstates.

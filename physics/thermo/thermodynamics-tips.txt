@@ -1,23 +1,54 @@
 # Thermo Tips
 
 
+### Entropy, states or configurations
+    - Khan Academy
+        - Entropy must be a _reversible_ process to be
+          calculated. Also higher entropy means MORE STATES.
+            - (should read more MICROSTATES)
+        - Don't have to say necessarily that its more disorder.
+
+    - No!? Open Uni says entropy is number of configurations equal
+      to a specified (macro?) state. Unless Khan means "states"
+      where OU means "configurations".
+
+    - OCT 2026, YEARS LATER:
+        - Ah both definitions are essentially similar 
+            - ie Khan 'microstates' = Open Uni 'configurations'
+        - But note: Entropy can be calculated on _irreversible_
+          processes (paths?) too, doesn't have to be reversible
+          as Khan stated.
+        - More precise:
+            - Entropy is a state function. Although `ΔS` can be
+              calculated using a reversible PATH, the actual
+              PROCESS need not be reversible.
+            - Higher entropy corresponds to a greater number of
+              microstates compatible with a given macrostate:
+                - `S = k_B ln Ω`.
+                - `S = k_B ln W`.
+                - where `Ω` = Multiplicity = the number of
+                  microstates compatible with a particular
+                  macrostate.
+                - Aside: symbol `W` often used for multiplicity
+                  as well... (esp in Chemistry)
+
 
 ### Equilibrium
     - $MY_NOTES/physics/People/My-life-quant.txt
     - Equilibrium is a very powerful concept in physics; in
       equilibrium, the numerical values we observe for quantities
       of interest in a stable system are the values that cause
-      two opposing `forces to cancel exactly`.
+      two opposing forces _to cancel exactly_.
     - For example, the temperature of a body stops rising at that
       equilibrium temperature at which the heat flowing into the
       body is canceled by the heat flowing out. Fischer believed
-      that market prices were determined by similar cancelations.
+      market prices were determined by similar _cancellations_.
 
 
 ### equilibration
     - $MY_NOTES/physics/People/Julian-Barbour-Janus-Blinklist.txt
-    - Let’s think back to those arrows of time. There are many of
-      them, but a significant one is _equilibration_.
+    - There are many arrows of time, but a significant one is
+      _equilibration_.
         - It’s a process that leads to an equilibrium, and it’s
           easy to see in action. Just take a glass of water,
           stick your finger in it, and twirl it around. After you
@@ -29,10 +60,8 @@
       particles clustering together, or complexity.
 
 
-
-
 ### Link: GR and Thermo
-    - "The Black Hole Information Paradox"
+    - "Black Hole Information Paradox"
     - Professor Jeff Forshaw (University of Manchester)
     - $MY_NOTES/physics/thermo/BH-Info-GR-Thermo.txt
         - AMAZING: 
@@ -44,8 +73,8 @@
           space-time.
         - The information paradox has catalyzed deep insights,
           suggesting that:
-            - Gravity, thermodynamics, quantum mechanics, and
-              information theory are intimately linked.
+            - Gravity, thermodynamics, QM, and information theory
+              are intimately linked.
             - The basic constituents of reality might not “live
               in space,” but space emerges from `entanglement`
               among more fundamental, non-spatial quantum degrees
@@ -58,7 +87,7 @@
           of GR from a thermodynamical perspective. 
         - This idea goes by the name "_entropic gravity_". 
         - Quanta magazine's "The Case Against Dark Matter" by
-          Natalie Wolchover has a gentle intro.
+          Natalie Wolchover is a gentle intro.
             - https://www.quantamagazine.org/erik-verlindes-gravity-minus-dark-matter-20161129/
 
 
@@ -90,10 +119,9 @@
           fluid with itself.
         - It is difficult to model, and one result is heat, which
           in turn changes the pressure and density of the fluid.
-          So viscous forces are pretty exciting, and we will
+        - So viscous forces are pretty exciting, and we will
           ignore them. We will honor the mystery by simply
           writing ...
-
 
 ### Maxwell discovery viscosity
     - Maxwell discovered, much to his surprise, that the
@@ -1697,7 +1725,7 @@
     - increase the temperature and the gas pressure increases
 
 ### Penrose talk cosmology
-    1. we're told entropy is increasing all the time. so as
+    1. We're told entropy is increasing all the time. so as
        we go backwards the entropy should decrease.
 
     2. But the CMB background from the big bang is in THERMAL
@@ -1710,21 +1738,10 @@
     3. but that contracdicts point 1....
 
 ### Extremum Principle
-    - in Thermodynamics, if there's an isolated system in Thermal
+    - In Thermodynamics, if there's an isolated system in Thermal
       equilibrium then its entropy is at a MAXIMUM
         - see Roger Penrose's talk above in this file... he says
           the same thing...
-
-### Entropy, states or configurations
-    - Khan Academy
-        - Entropy must be a _reversible_ process to be
-          calculated. Also higher entropy means MORE STATES.
-            - (more micro states?)
-        - Don't have to say necessarily that its more disorder.
-
-    - No! Open Uni says entropy is number of configurations equal
-      to a specified (macro?) state. Unless Khan means "states"
-      where OU means "configurations".
 
 ### files
     - $MY_NOTES/bio/genetics/Ben-Naim-Protein-Folding.txt

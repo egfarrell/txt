@@ -1,5 +1,15 @@
 Check this: Lunar Poetry Podcast #10 - Rosemary Tonks
 
+### Listen to the River speak
+    - Seán Ó Ríordáin
+    - ./Listen_to_the_river.txt
+        - "As the unconceited river spoke 
+        - When it raised a poem to the mountains"
+
+### Cúl an Tí
+    - Seán Ó Ríordáin
+    - ./Cul-an-Ti.txt
+
 
 ### Delay
     - The radiance of the star that leans on me
@@ -793,7 +803,7 @@ Chciałbym umrzeć z miłości                                  I'd want to die 
     Psalter Hymnal, 1987
 
     - Bio
-    - Croly, George, LL.D., born in Dublin, Aug. 17, 1780, and
+    - Croly, George, LLD, born in Dublin, Aug. 17, 1780, and
       educated at the Dublin University (MA 1804, LLD 1831).
     - After taking Holy Orders, he laboured in Ireland till about
       1810, when he took up his residence in London, and devoted

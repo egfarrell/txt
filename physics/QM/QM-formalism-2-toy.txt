@@ -14,74 +14,72 @@
       the choice of coordinate frames (bunches of mutually
       perpendicular axes) in the quantum mechanical Hilbert
       space.
-        - The choice of which _value_ of the quantity to detect
-          then fixes the particular coordinate axis within the
-          frame.
+        - The choice of which _value_ (e.g. spin UP)of the
+          quantity to detect then fixes the particular coordinate
+          axis within the frame.
         - (??? I thought the coordinate axis was the frame?)
 
+### See also:
+    - $MY_NOTES/physics/QM/QM-formalism-Eigenstates.txt
+
 ### ChatGPT:
-        - This is a common (and good) confusion.
-        - You’re mixing two levels of “geometry” that sound
-          similar but are not the same thing.
-        - First, separate three ideas that people often blur together:
-            - vector space itself
-            - a basis (a set of coordinate axes or 'frame')
-            - a single axis (one basis vector)
+    - You’re mixing two levels of “geometry” that sound similar
+      but are not the same thing.
+    - First, separate 3 ideas often blurred together:
+        - vector space itself
+        - a basis (a set of coordinate axes or 'frame')
+        - a single axis (defined by one basis vector)
 
-        - Now apply that to Hilbert space and to measurement.
-            - Start with an ordinary analogy, because the logic
-              is identical.
-            - In ordinary 3D space:
-                - The space is `ℝ³` itself.
-                - A coordinate frame is a choice of basis, e.g.
-                  {`x̂`, `ŷ`, `ẑ`}.
-                - A coordinate axis is one element of that basis,
-                  e.g. `x̂` alone.
-                - The frame is the whole mutually perpendicular
-                  set.
-                - An axis is just one direction inside that
-                  frame.
+    - Now apply that to Hilbert space and to measurement.
+        - Start with an ordinary analogy, because the logic is
+          identical.
+        - In ordinary 3D space:
+            - The space is `ℝ³` itself.
+            - A coordinate frame is a choice of basis, e.g. {`x̂`,
+              `ŷ`, `ẑ`}.
+            - A coordinate axis is one element of that basis,
+              e.g. `x̂` alone.
+            - The frame is the whole mutually perpendicular set.
+            - An axis is just one direction inside that frame.
 
-            - You were right to feel something was off: an axis
-              is not the frame; it is part of the frame.
-            - Now translate this to QM.
-            - Hilbert space:
-                - The vector space is the Hilbert space of states
-                  `|ψ⟩`.
-                - A coordinate FRAME corresponds to choosing an
-                  OBSERVABLE to measure.
-                - A coordinate AXIS corresponds to choosing one
-                  EIGENSTATE of that observable.
+    - Now translate this to QM.
+    - Hilbert space:
+        - The vector space is the Hilbert space of states `|ψ⟩`.
+        - A coordinate FRAME corresponds to choosing an
+          OBSERVABLE to measure.
+        - A coordinate AXIS corresponds to choosing one
+          EIGENSTATE of that observable. 
 
-            - More explicitly:
-            - Choosing a physical quantity (observable) `A`:
-                - Position `x`, momentum `p`, energy `H`, spin
-                  `Sz`, etc.
-                - This fixes a particular orthonormal basis
-                  `{|aₙ⟩}` of Hilbert space.
-                - That whole set `{|aₙ⟩}` is the coordinate
-                  frame.
+        - More explicitly:
+        - Choosing a physical quantity (observable) `A`:
+            - Position `x`, momentum `p`, energy `H`, spin `Sz`,
+              etc.
+            - This fixes a particular orthonormal basis `{|aₙ⟩}`
+              of Hilbert space.
+            - That whole set `{|aₙ⟩}` is the coordinate frame.
 
-            - Choosing a value of that quantity:
-                - A particular eigenvalue `aₙ`.
-                - This singles out one basis vector `|aₙ⟩`.
-                - That is a single coordinate axis.
+        - Choosing a value of that quantity:
+            - A particular eigenvalue `aₙ`.
+            - This singles out one basis vector `|aₙ⟩`.
+            - That is a single coordinate axis.
 
-            - So the correct hierarchy is:
-            - Hilbert space
-                - → observable (operator)
-                - → eigenbasis (coordinate frame)
-                - → eigenvector (coordinate axis)
+        - So the correct hierarchy is:
+        - Hilbert space
+            - → observable (operator)
+            - → eigenbasis (coordinate frame)
+            - → eigenvector (coordinate axis)
 
-            - This makes your bullets mostly right, but the last parenthetical comment is indeed incorrect.
-            - Let’s rewrite your last section with corrected language:
+        - This makes your bullets mostly right, but the last
+          parenthetical comment is indeed incorrect.
+        - Let’s rewrite your last section with corrected
+          language:
 
-            - “The choice of WHICH PHYSICAL QUANTITY to detect
-              dictates the choice of coordinate frame (a complete
-              orthonormal basis) in Hilbert space.
-            - The choice of which value of the quantity to detect
-              fixes a particular coordinate axis (one basis
-              vector) within that frame.”
+        - “The choice of WHICH PHYSICAL QUANTITY to detect
+          dictates the choice of coordinate frame (a complete
+          orthonormal basis) in Hilbert space.
+        - The choice of which value of the quantity to detect
+          fixes a particular coordinate axis (one basis vector)
+          within that frame.”
 
             - Why the confusion feels natural:
             - In CM, we often say “the `x-axis`” and mean “the

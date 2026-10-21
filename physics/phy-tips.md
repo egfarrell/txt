@@ -10065,6 +10065,7 @@ LLMs fail at Physics and Maths
     - AAS American Astronomical Society.        https://aas.org
 
 ### YouTube links
+    - Cosmicus Cosmology / Astronomy                                                https://m.youtube.com/@Cosmicus-w6s/videos
     - Tim Maudlin: Spacetime                                                        https://www.youtube.com/watch?v=qG5PzdbtoQo
     - Harvey Brown: Einstein and action-reaction principle                          https://www.youtube.com/watch?v=-9noRWNXnSY
     - Download Sabine                                                               https://www.youtube.com/watch?v=GwzN5YwMzv0
