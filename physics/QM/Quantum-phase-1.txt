@@ -4,29 +4,31 @@
       phase of a quantum "particle?"
 
 # Me:
-    - Is this true? did a gravitational potential change
-      a quantum phase? I've heard of the Aharonov–Bohm effect but
-      I think that was an EM potential that affected the phase
+    - Is it true? Did a gravitational potential change a quantum
+      phase? I've heard of the Aharonov–Bohm effect but thought
+      that was an EM potential affecting the phase.
 
-# ChatGPT said:
+# ChatGPT:
 - Yes, gravitational potentials can change quantum phases. The
   idea is closely analogous to the electromagnetic Aharonov–Bohm
-  effect, but it goes by different names in gravity research. 
+  effect, but goes by different names in gravity research. 
 
 - The most direct example is the Colella-Overhauser-Werner (COW)
   neutron interferometry experiment (1975), where neutrons sent
   through two different paths at different gravitational heights
   acquired a measurable relative phase shift.
 
-- The basic point is: in QM, the phase of a wavefunction evolves
+- Basic point: in QM, the phase of a wavefunction evolves
   according to the action `S`. If the gravitational potential `Φ`
   changes the energy, then it changes `S`, and therefore the
   phase.
 
 - The phase shift for a particle in a potential is 
     - `Δφ = (1/ħ) ∫ (ΔE) dt`
+
 - In a gravitational field, the potential energy difference is 
     - `ΔE = m g h` (near Earth's surface).
+
 - So the phase difference becomes 
     - `Δφ = (m g h T) / ħ` 
     - where h is height difference and 
@@ -37,7 +39,7 @@
 ### More Context: EM Aharonov–Bohm effect:
 
 - The electromagnetic scalar or vector potential can change the
-  phase even when no force acts (no electric or magnetic field
+  PHASE even when no FORCE acts (no electric or magnetic field
   along the path). The phase shift is directly tied to the EM
   potential `A` and `φ`.
 
@@ -46,7 +48,7 @@
 
 - Gravity changes how clocks tick (gravitational redshift) and
   how proper time accumulates. Because quantum phases track
-  proper time via φ ∝ (mc² τ)/ħ, a difference in gravitational
+  proper time via `φ ∝ (mc² τ)/ħ`, a difference in gravitational
   potential leads to different amounts of proper time along two
   paths. So the phase shift is really quantum-mechanical time
   dilation.
@@ -70,15 +72,16 @@
 
 - In gravity, we don’t yet have a universally accepted
   “gravitational potential” in the same gauge sense because full
-  gravity is geometric. But the phenomenon is real: a difference
-  in gravitational potential changes the accumulated proper time,
-  which changes the quantum phase.
+  gravity is geometric. 
 
-- This is part of why QG research pays such close attention to
-  matter-wave interferometry. The gravitational-field-induced
-  phase shift is one of the few clean experimental handles where
-  both QM and GR make direct
-  predictions that meet in the lab.
+- But the phenomenon is real: 
+    - a difference in gravitational potential changes the
+      accumulated proper time, which changes the quantum phase.
+
+- This is why QG research pays close attention to matter-wave
+  interferometry. The gravitational-field-induced phase shift is
+  one of the few experimental handles where both QM and GR make
+  direct predictions that meet in the lab.
 
 If you'd like, we can go deeper into one of these directions next:
 - derivation of Δφ from proper time

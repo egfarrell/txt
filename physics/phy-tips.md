@@ -1,6 +1,23 @@
 
 LLMs fail at Physics and Maths
 
+
+### Why Study physics
+    - $MY_NOTES/physics/QM/Qm-primer-chester.txt
+    - Readers' Orientation: Why, dear reader, do you study
+      physics? To use it technologically? Physics can be used so:
+      but so can art and music. 
+    - But that’s not why you study them. It isn’t their social
+      relevance that attracts you. The most precious things in
+      life are the irrelevant ones. It is a meager life, indeed,
+      that is consumed only by the relevant, by the problems of
+      mere survival.
+    - You study physics because you find it fascinating.
+    - You find _poetry_ in conceptual structures. You find it
+      romantic to understand the workings of nature. You study
+      physics to acquire an intimacy with nature’s way.
+
+
 ### Understanding of Physics
     - https://m.youtube.com/watch?v=wD_WNG4LAaE
     - Flavio del Santo: Which features of QM are not
