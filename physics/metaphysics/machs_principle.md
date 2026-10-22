@@ -19,8 +19,8 @@ P Saulson - 1996 - iopscience.iop.org
 
 - Ciufolini argues the 'dragging of inertial frames' effect of
   a rotating body, to be searched for by the GP-B and LAGEOS III
-  experiments, is a physical manifestation of the general
-  relativistic formulation of Mach's principle.
+  experiments, is a physical manifestation of the GR formulation
+  of Mach's principle.
 
 - However Will attributes dragging to a _gravitomagnetism_
   completely analogous to the electrodynamic case; 
