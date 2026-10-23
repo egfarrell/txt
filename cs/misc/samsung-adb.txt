@@ -143,3 +143,9 @@ adb shell pm disable-user --user 0 com.samsung.android.scpm
 
 # 3. Samsung Intelligence Voice Services
 adb shell pm disable-user --user 0 com.samsung.android.intellivoiceservice
+
+### quick share
+adb shell pm disable-user --user 0 com.samsung.android.aware.service
+
+### companion device manager
+adb shell pm disable-user --user 0 com.android.companiondevicemanager
