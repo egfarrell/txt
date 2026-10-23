@@ -2,7 +2,12 @@
 Samsung xcover5 android 14
 
 
+adb shell pm list packages -u -e > ~/enabled
+adb shell pm list packages -u -d > ~/disabled
+
 adb devices
+
+adb shell dumpsys notification --noredact | grep -i -B 20 -A 20 -E 'XCover5|setup in progress|finish setting up'
 
 # System apps
 adb shell pm list packages -s
@@ -58,3 +63,33 @@ adb shell pm disable-user --user 0 com.sec.android.app.ve.vebgm
 
 digital wellbeing
 adb shell pm disable-user --user 0 com.samsung.android.forest
+
+
+### setup wizards
+adb shell pm disable-user --user 0 com.sec.android.app.SecSetupWizard
+adb shell pm disable-user --user 0 com.google.android.setupwizard
+
+
+### re-enable wallpaper
+adb shell pm enable --user 0 com.samsung.android.app.dressroom
+
+
+### Android switch
+adb shell pm disable-user --user 0 com.google.android.apps.restore
+
+
+### Other misc ones
+adb shell pm disable-user --user 0 com.android.bips
+adb shell pm disable-user --user 0 com.android.dreams.basic
+adb shell pm disable-user --user 0 com.android.dreams.phototable
+adb shell pm disable-user --user 0 com.android.egg
+adb shell pm disable-user --user 0 com.android.printspooler
+adb shell pm disable-user --user 0 com.google.android.printservice.recommendation
+adb shell pm disable-user --user 0 com.google.android.projection.gearhead
+adb shell pm disable-user --user 0 com.microsoft.skydrive
+
+### Theme store
+adb shell pm disable-user --user 0 com.samsung.android.themestore
+adb shell pm uninstall -k --user 0 com.samsung.android.themestore
+
+(but leave this enabled: com.samsung.android.themecenter)
