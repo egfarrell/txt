@@ -1,13 +1,21 @@
 
 Samsung xcover5 android 14
 
-
 adb shell pm list packages -u -e > ~/enabled
 adb shell pm list packages -u -d > ~/disabled
 
+### Are we connected?
 adb devices
 
-adb shell dumpsys notification --noredact | grep -i -B 20 -A 20 -E 'XCover5|setup in progress|finish setting up'
+### Disable samsung account (!)
+Failed: adb shell pm disable-user --user 0 com.osp.app.signin
+
+Failed uninstall:
+adb shell pm uninstall -k --user 0 com.osp.app.signin
+reinstall:
+adb shell cmd package install-existing --user 0 com.osp.app.signin
+
+
 
 # System apps
 adb shell pm list packages -s
@@ -93,3 +101,45 @@ adb shell pm disable-user --user 0 com.samsung.android.themestore
 adb shell pm uninstall -k --user 0 com.samsung.android.themestore
 
 (but leave this enabled: com.samsung.android.themecenter)
+
+
+### Files and messages apps 
+- (I use opensource alternatives)
+adb shell pm disable-user --user 0 com.sec.android.app.myfiles
+adb shell pm disable-user --user 0 com.google.android.apps.messaging
+adb shell pm disable-user --user 0 com.samsung.android.messaging
+
+dont disable this, it's the file picker: adb shell pm enable --user 0 com.google.android.documentsui
+
+
+
+adb shell pm disable-user --user 0 com.google.android.healthconnect.controller
+adb shell pm disable-user --user 0 com.google.android.health.connect.backuprestore
+
+adb shell pm disable-user --user 0 com.google.android.ondevicepersonalization.services
+adb shell pm disable-user --user 0 com.google.mainline.adservices
+adb shell pm disable-user --user 0 com.google.android.googlequicksearchbox
+
+adb shell pm disable-user --user 0 com.facebook.appmanager
+adb shell pm disable-user --user 0 com.facebook.services
+adb shell pm disable-user --user 0 com.facebook.system
+
+adb shell pm disable-user --user 0 com.samsung.android.app.sharelive
+adb shell pm disable-user --user 0 com.samsung.android.app.appsedge
+adb shell pm disable-user --user 0 com.samsung.android.app.taskedge
+adb shell pm disable-user --user 0 com.samsung.android.app.clipboardedge
+adb shell pm disable-user --user 0 com.samsung.android.widget.pictureframe
+adb shell pm disable-user --user 0 com.samsung.android.video
+adb shell pm disable-user --user 0 com.samsung.android.app.parentalcare
+adb shell pm disable-user --user 0 com.samsung.android.smartswitchassistant
+adb shell pm disable-user --user 0 com.sec.android.easyMover.Agent
+
+
+# 1. Samsung Cloud
+adb shell pm disable-user --user 0 com.samsung.android.scloud
+
+# 2. Samsung Cloud Assistant
+adb shell pm disable-user --user 0 com.samsung.android.scpm
+
+# 3. Samsung Intelligence Voice Services
+adb shell pm disable-user --user 0 com.samsung.android.intellivoiceservice
