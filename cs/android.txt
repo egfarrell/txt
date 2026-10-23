@@ -27,29 +27,6 @@
 ### How to setup adb
     - https://www.xda-developers.com/install-adb-windows-macos-linux/
 
-### OTG usb problem
-
-getprop persist.sys.usb.config
-getprop sys.usb.config
-dumpsys usb
-
-setprop persist.sys.usb.config mtp,adb
-setprop sys.usb.config mtp,adb
-settings put global usb_mass_storage_enabled 1
-
-svc usb setFunctions mtp
-settings put global usb_audio_automatic_role_switch 1
-settings delete global usb_configuration_sticky
-
-adb shell settings delete global usb_configuration_sticky
-adb shell settings put global usb_audio_automatic_role_switch 1
-adb shell svc usb setFunctions mtp true
-
-adb shell settings put global adb_enabled 1
-adb shell settings put global development_settings_enabled 1
-adb shell svc usb setPowerRole sink
-adb reboot
-
 ### Wireless debug
     - phone: developer options, enable wireless debugging
     - laptop: Download latest Android sdk from google
@@ -102,17 +79,6 @@ adb reboot
         adb shell pm disable-user -–user 0  com.gotron.uota
 
 
-
-### UbikiTouch clever hack
-    - UbikiTouch allows global gestures on the left/right edges
-      and the bottom
-    - It will also hide the standard Android navigation bar, but
-      first it needs Write_Secure_Permissions
-    - This can be done by enabling USB debugging and going to:
-        - https://ubikitouch.toneiv.eu/adb/#/
-        - (This website means you dont have to manually install ADB)
-        - $MY_IMAGES/cs/android-ubikitouch-permissions.jpg
-
 ### Opening the AOSP Files app
     - Only one app is specifically granted access by the Android
       platform to manage files inside the `Android/data` folder:
@@ -139,10 +105,6 @@ adb reboot
 
 ### AOSP
     - Android Open Source Port
-
-### motorola g5 - unlock bootloader
-    - https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-a
-
 
 ### Android 6.0 reduce animations:
     - go into Developer mode (hit build six times)
@@ -176,12 +138,6 @@ adb reboot
 
 ### app not installing from google play: (kitkat 4.4.2)
     unmount sd card, then install
-
-### show device
-    lsusb
-
-### open shell on the tablet
-    adb shell
 
 ### install adb
     sudo add-apt-repository ppa:nilarimogard/webupd8
