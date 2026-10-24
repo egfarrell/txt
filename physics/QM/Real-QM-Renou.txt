@@ -1,0 +1,54 @@
+- Question: "Could quantum theory work with REAL Hilbert spaces
+  from the start?"
+
+See also:
+    - $MY_NOTES/physics/QM/Complex-Waves.txt
+    - $MY_NOTES/physics/QM/Real-QM-Madelung.txt
+
+
+### Real QM
+
+- “Real quantum theory” means the usual postulates, but with
+  real-valued states and operators, and composite systems built
+  by the usual tensor product.
+
+- For a single isolated system this is indistinguishable from
+  complex QM (Stueckelberg showed in 1960 that you can mimic
+  complex numbers with an extra operator `J` satisfying `J²=−1`).
+
+- The trouble appears for composite systems.
+
+### Experiment
+
+- Renou, Trillo, Weilenmann, Le, Tavakoli, Gisin, Acín and
+  Navascués designed a network scenario:
+    - two independent sources, each sharing entangled states with
+      neighboring parties (Alice-Bob, Bob-Charlie).
+    - They derived a Bell-type inequality that real-valued
+      quantum theory must satisfy, but that complex quantum
+      theory can violate, though only by a small margin.
+
+- Experiments soon followed in 2022 (photonic and
+  superconducting-qubit setups, published in Physical Review
+  Letters), and they found violations well beyond the error bars,
+  favoring complex quantum theory.
+
+### Caveats worth knowing
+
+- The result assumes the sources are independent and that
+  composite systems combine by the tensor product. It rules out
+  that version of real QM, not every conceivable real-number
+  reformulation.
+
+- The gap between the real bound and the complex quantum value is
+  small, so the experiments are demanding.
+
+- It’s a statement about the structure of the theory, not a claim
+  that complex numbers are “physically present” in nature. But it
+  does move them from “convenient” to “operationally needed” for
+  describing multi-party correlations.
+
+- Interestingly, this connects back to Gribbin’s passage:
+  imaginary numbers weren’t forced on anyone by waves, but
+  quantum theory’s composite-system structure appears to demand
+  them.

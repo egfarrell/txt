@@ -1,0 +1,43 @@
+
+- Question: "Could quantum theory work with REAL Hilbert spaces
+  from the start?"
+
+### Madelung (1927)
+
+- Write the wavefunction in polar form,
+    - `ψ = √ρ · e^{iS/ħ}`,
+    - with `ρ` the probability density and `S` a real phase.
+
+- Plug it into the Schrödinger equation and separate real and
+  imaginary parts, and you get two real equations:
+
+    - A continuity equation,
+        - `∂ρ/∂t + ∇·(ρ∇S/m) = 0`,
+        - which says probability is conserved and flows like
+          a fluid with velocity `v = ∇S/m`.
+
+    - A Hamilton-Jacobi-like equation for `S`,
+        - which is the classical one plus an extra term, the
+          “quantum potential”
+        - `Q = −(ħ²/2m)(∇²√ρ)/√ρ`.
+
+- So QM looks like a FLUID obeying classical mechanics plus
+  a strange extra force. This is the seed of Bohm’s pilot-wave
+  theory (1952), where `Q` is taken seriously as a physical
+  influence on particles.
+
+- Two caveats:
+
+    - First, the phase `S` is only defined `mod 2πħ`, so you have
+      to impose a quantization condition on its loop integrals
+      `(∮∇S·dl = nh)` by hand, and the equations break down at
+      nodes where `ρ=0`.
+
+    - Second, this doesn’t really eliminate the complex
+      structure. It just encodes it in two real fields, so `ρ`
+      and `S` together are a complex `ψ` in disguise. 
+
+    - But that’s different from asking whether QM could work with
+      real Hilbert spaces from the start.
+    - See
+        - $MY_NOTES/physics/QM/Real-QM-Renou.txt

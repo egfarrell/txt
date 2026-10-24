@@ -11,9 +11,9 @@
     - In isotropic media, this is also the direction of wave
       propagation. 
 
-### Ah wavevector `k` useful for Fourier
-    - The advantage of using `k` is that it can be NEGATIVE as
-      well as positive: whereas `wavelength` is always positive. 
+### Ah wavevector 'k' useful for Fourier
+    - The advantage of using `k` is it can be NEGATIVE as well as
+      positive: whereas `wavelength` is always positive. 
     - The negative k’s take care of negative exponentials: 
         - `exp −2πix/λ = exp ikx` 
         - where k is the negative number `−2π/λ`
@@ -28,8 +28,8 @@
 1. Spatial Frequency:
    - `k` represents the `spatial frequency` of the wave, meaning
      how many wave cycles fit into a unit of distance. 
-        - (rather than the temporal frequency, the period? which
-          is how many wave cycles fit into a unit of time)
+        - (rather than the temporal frequency, (period) which is
+          how many wave cycles fit into a unit of time)
    - The larger the magnitude of `k`, the more wave cycles occur
      in a given length, indicating a shorter wavelength.
 
@@ -76,8 +76,9 @@
      moving through space, `k` would point perpendicular to these
      planes and indicate how tightly they are packed.
 
-In summary, `k` is a compact way to describe both the periodicity
-and directionality of a wave. While `λ` gives you the distance
-between repeating features of the wave, `k` tells you how these
-features are oriented and spaced in space, making it a more
-comprehensive descriptor, especially in multiple dimensions.
+- In summary, `k` is a compact way to describe both the
+  periodicity and directionality of a wave. 
+    - While `λ` gives you the DISTANCE between repeating features
+      of the wave, `k` tells you how these features are oriented
+      and spaced in space, making it a more comprehensive
+      descriptor, especially in multiple dimensions.
