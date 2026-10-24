@@ -1,4 +1,12 @@
 
+### Oct 2026: eMudhra private key
+    - :)
+    - https://m.youtube.com/watch?v=SMGg7iisHmc&pp=0gcJCS8MAYcqIYzv
+    @SierraJohn118514 hours ago 
+    ----- BEGIN RSA PRIVATE KEY -----
+    4
+    ----- END RSA PRIVATE KEY -----
+
 
 ### AI: The Bitter Lesson
     - https://news.ycombinator.com/item?id=48389360

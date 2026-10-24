@@ -59,6 +59,8 @@
     - Yang: Thematic Melodies of 20th Century Theoretical Physics - YouTube
 
 ### `Take-Note`:
+    - Book: Picturing Quantum processes                                                                  https://www.amazon.co.uk/Picturing-Quantum-Processes-Diagrammatic-Reasoning/dp/110710422X
+        - see also:                                                                                      $MY_BOOKS/Physics/QM/Quirky-Quantum-Geometric-Pictorial.pdf
     - Radboud Natural Philosophy dept GR book                                                            https://www.math.ru.nl/~landsman/FGRBook2022-online.pdf
     - Very good: Short Cambridge Philosophy of Physics gems...                                           https://www.cambridge.org/core/publications/elements/elements-in-the-philosophy-of-physics
     - Brilliant: Dialekt Philosophy channel: GR coord explanations                                       https://www.youtube.com/watch?v=2992Bqfas_c

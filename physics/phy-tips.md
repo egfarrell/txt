@@ -10316,6 +10316,7 @@ LLMs fail at Physics and Maths
     - Can Physics be fixed                                                                https://www.youtube.com/watch?v=OibA-8TCp2o
     - Universal pattern Maths, Physics, Biology                                           https://news.ycombinator.com/item?id=46728878
     - John Duffield, Physics detective                                                    https://physicsdetective.com/
+    - Atomic Physics for everyone                                                         https://news.ycombinator.com/item?id=46961595
 
 
 
