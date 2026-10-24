@@ -3,8 +3,6 @@
 - [Communicated by Mr M. Born]
 - [Received 14 August, read 28 October 1935]
 
----
-
 ### 1.
 
 When two systems, of which we know the states by their respective
@@ -36,8 +34,6 @@ theory of measurement, threatening us thereby with at least
 a *regressus in infinitum*, since it will be noticed that the
 procedure itself involves measurement.
 
----
-
 Another way of expressing the peculiar situation is:
 
 > The best possible knowledge of a whole does not necessarily
@@ -51,8 +47,6 @@ insufficiently known—at least not in the way that it could
 possibly be known more completely—it is due to the interaction
 itself.
 
----
-
 Attention has recently[^1] been called to the obvious but very
 disconcerting fact that even though we restrict the disentangling
 measurements to one system, the representative obtained for the
@@ -60,10 +54,7 @@ other system is by no means independent of the particular choice
 of observations which we select for that purpose and which by
 the way are _entirely_ arbitrary.
 
----
-
 [^1] EPR! A. Einstein, B. Podolsky and N. Rosen, *Phys. Rev.* 47 (1935), 777.
-
 
 ### 2.
 
@@ -73,8 +64,6 @@ at the experimenter’s mercy in spite of his having no access to
 it. This paper does not aim at a solution of the paradox; it
 rather adds to it, if possible. A hint as regards the presumed
 obstacle will be found at the end.
-
----
 
 To begin with, I wish to establish a simple theorem, which makes
 it very obvious that the phenomenon in question is a quite
@@ -90,8 +79,6 @@ seems to be a certain liberty for presuming that perhaps, after
 all, there is always—or at least in most cases—a result possible
 which is also possible when other devices are followed, and that
 perhaps it is this that actually would turn up.
-
----
 
 Let x and y stand for all the coordinates of the first and second
 systems respectively, and Ψ(x, y) for the normalised
@@ -117,8 +104,6 @@ the `fₙ`:
 
 in order to come to know the representative of the other system.
 
----
-
 When the readings on the y-system point to `f_k(y)`, we have to adopt `g_k(x)` as the representative of the x-system.
 
 The coefficients c_k have been introduced in order to assume that the g_k are normalised, i.e.:
@@ -140,7 +125,6 @@ irrelevant phase factor in every g and its reciprocal in the
 corresponding c, and apart from the possible indeterminateness of
 g, should the integral for some values of `k` vanish identically in
 `x`.
-
 
 There is no reason for the g_k to be orthogonal to each other.
 Let us ask when they are, i.e. how must the f_k be chosen for
@@ -166,8 +150,6 @@ multiplier is |c_k|². We have therefore
 |c_k|² f_k(y) = ∫ dx ∫ dy' f_k(y') Ψ*(x, y') Ψ(x, y)      (6)
 ```
 
----
-
 Introducing the function
 
 ```
@@ -183,8 +165,6 @@ of the homogeneous integral equation
 f(y) = λ ∫ K(y, y') f(y') dy'      (8)
 ```
 
----
-
 Provided that the integral in (7) converges, so that K is
 defined, a complete solution of (8) exists.
 
@@ -197,16 +177,12 @@ By using this set for the development (1) one easily satisfies
 oneself that all requirements are fulfilled, in particular that
 the λ⁻¹ are all non-negative and that their sum is unity.
 
----
-
 The general case is evidently that all the λ⁻¹ are different from
 one another, except maybe for an arbitrary set of them vanishing.
 Then the relevant f_k(y) are uniquely determined and so are the
 g_k(x). Hence there is always one and as a rule only one
 development of Ψ(x, y) of the type which might suitably be called
 _“biorthogonal”_.
-
----
 
 Whenever (and of course only when) the eigenfunctions of
 a programme to be carried out on the y-system include the
@@ -237,17 +213,12 @@ Hence the non-invariance is proved.`*`
   biorthogonal development by a particular one, on which you fix
   your attention.
 
-
----
-
 There must, of course, be cases in which the biorthogonal
 development refers to a continuous variable (or set of commuting
 variables), an integral replacing the series (1); and also mixed
 cases. In our present treatment they would be indicated by the
 integral (7) diverging and would therefore require a separate
 treatment, on which I shall not enter here.
-
----
 
 The biorthogonal development is the one to give us true insight
 into the entanglement. If there are no coincidences among the
@@ -261,8 +232,6 @@ system is uniquely determined by a definite observable (or set of
 commuting observables) of the other system.
 
 This is the general case.
-
----
 
 We shall now turn to the opposite extreme, which is the
 Einstein–Podolsky–Rosen case. It could be characterised by all
@@ -278,8 +247,6 @@ representatives (in fact much more so than Dirac’s δ, δ′, δ″, …)
 are involved in this case, making it advisable to deal with it on
 slightly different lines.
 
----
-
 ### 3.
 
 For simplicity’s sake we suppose each of the two systems to have
@@ -293,8 +260,6 @@ considerations of this section except for slight alterations in
 the wording; but for section 4 to hold it would have to be
 assumed that within each of the two systems the degree of freedom
 which we investigate has its Hamiltonian separated from the rest.
-
----
 
 The two systems are of course supposed not to interact with each other.
 
@@ -322,8 +287,6 @@ xΨ = x′Ψ  and  pΨ = p′Ψ      (10)
 
 We shall use no others.
 
----
-
 From (9) the variable x can be observed by observing x₁ and x₂
 separately, because the latter commute. The difference of the
 observed values, x₁′ and x₂′ say, must be equal to x′:
@@ -342,8 +305,6 @@ p₁′ + p₂′ = p′      (12)
 
 so that the result of measuring p₁ serves to predict the result for p₂ and vice versa.
 
----
-
 But of course every one of the four observations in question,
 when actually performed, disentangles the systems, furnishing
 each of them with an independent representative of its own.
@@ -351,8 +312,6 @@ each of them with an independent representative of its own.
 A second observation, whatever it is and on whichever system it
 is executed, produces no further change in the representative of
 the other system.
-
----
 
 Yet since I can predict either x₁′ or p₁′ without interfering
 with system No. 1, and since system No. 1, like a scholar in
@@ -366,16 +325,12 @@ knowledge, quite irrespective of the fact that after having given
 his first answer our scholar is invariably so disconcerted or
 tired out that all the following answers are “wrong”.
 
----
-
 Thus far the results of the paper quoted above.
 
 Now I wish to point out that system No. 1 (say) has further
 knowledge. It does not only know these two answers but a vast
 number of others, and that with no mnemotechnical help
 whatsoever, at least with none that we know of.
-
----
 
 Let us consider a Hermitian operator referring to the first
 system and given as a “well-ordered” analytic function of the
@@ -398,8 +353,6 @@ the other one. That is not trivial, because the equations x = x′
 and p = p′ do not hold, except in the form (10), that is to say
 they are not identities.
 
----
-
 The proof will be produced if we can show that the difference of
 the two operators, when applied to Ψ, gives zero:
 
@@ -412,8 +365,6 @@ Using (9), we may write this in the form
 ```
 { F(x₁ + x′ − x, p₁ + p′ − p) − F(x₁, p₁) } Ψ = 0      (16)
 ```
-
----
 
 To prove it we observe that any operator which ends on its right
 with a factor (x′ − x) or (p′ − p) reduces Ψ to zero, from (10).
@@ -436,8 +387,6 @@ product which differs from the original one in that x₁ and p₁
 have replaced (x₁ + x′ − x) and (p₁ + p′ − p) respectively, and
 also that the order of factors has been reversed.
 
----
-
 But F, owing to its Hermiticity and to the further condition that
 it should not contain √(−1) explicitly, must contain the
 “reversed” power product too.
@@ -445,8 +394,6 @@ it should not contain √(−1) explicitly, must contain the
 Hence after applying the same treatment to all of them, we are
 left with F(x₁, p₁), which cancels with the subtrahend, and the
 statement is proved.
-
----
 
 If F contains √(−1) explicitly, we could replace it by
 
@@ -466,8 +413,6 @@ which now can be replaced by −√(−1).
 From this follows the corollary to prescription (14), that an
 explicit √(−1) has to change sign.
 
----
-
 By this theorem all observables are placed on the same footing.
 Our system, in its virgin state, must know the answers to all of
 them.
@@ -479,8 +424,6 @@ those prepared for x₁ and p₁ respectively.
 
 But this is not so.
 
----
-
 For consider, e.g., the series of observables
 
 ```
@@ -491,7 +434,7 @@ where `b` is to be a positive c-number parameter.
 
 With every value for b we are confronted with a new observable, to which an answer must be pending.
 
--------------------------------------------------------------------------------------------
+-
 - Notes on this page
 - Key result:
 - He proves F(x₁, p₁) = F(x₂ + x′, p′ − p₂) at the level of
@@ -507,7 +450,7 @@ With every value for b we are confronted with a new observable, to which an answ
 - This page is where Schrödinger really pushes the paradox
   hard—he’s showing the system would need to “know” an infinite
   family of observables simultaneously.
-  -------------------------------------------------------------------------------------------
+  -
 
 Moreover the answer must be, irrespective of b, an odd integral
 multiple of `ħ` (though not necessarily independent of b). This
@@ -524,8 +467,6 @@ since we have proved, on the other hand, that the one-to-one
 correspondence between the answers of the two systems necessarily
 extends to all pairs of observables whenever it holds for two of
 them.
-
----
 
 ### 4.
 
@@ -546,8 +487,6 @@ We shall use what Dirac calls a Heisenberg representation; then every variable a
 x₁(t) = e^(iH₁t/ħ) x₁ e^(−iH₁t/ħ)      (18)
 ```
 
----
-
 From prescription (14), including the corollary, we can find out
 what observable of system No. 2 is equivalent to x₁(t); we call
 it [x₁(t)]₂:
@@ -560,8 +499,6 @@ This equation, by its form, indicates the observation on No. 2 at
 time zero which would serve to predict the coordinate of No. 1 at
 time t.
 
----
-
 Solving two equations similar to (18) for x₂ and p₂, we get
 
 ```
@@ -573,8 +510,6 @@ and similarly for p₂.
 Of course H₂ has now to be thought of as written with the
 arguments x₂(t) and p₂(t), which does not affect its form, since
 it is a constant of the motion.
-
----
 
 With these expressions replacing x₂ and p₂ in (19), the
 exponentials with H₂ cancel in the interior, leaving just one in
@@ -591,8 +526,6 @@ where H₁ and H₂ are precisely the functions of equation (17), but written wi
 x₂ + x′ and p′ − p₂   for H₁,
 x₂ and p₂             for H₂.
 
----
-
 This rather complicated function of `x₂` and `p₂` is that
 observable of system No. 2 which is equivalent to `x₁(t)`.
 
@@ -603,8 +536,7 @@ the same for what Dirac calls the Schrödinger representatives.
 That is to say, we can take x₂ and p₂ to have the general meaning
 of x₂ and p₂ of the preceding section.
 
-
--------------------------------------------------------------------------------------------
+-
 - Notes on this page:
 - Important conceptual move:
 - He extends entanglement correlations into time evolution
@@ -618,7 +550,7 @@ of x₂ and p₂ of the preceding section.
     - Not just instantaneous correlations, but dynamically
       evolving correlations across time
 - This is where the paper starts to feel very modern.
-  -------------------------------------------------------------------------------------------
+  -
 
 Regarded as operators they then do not involve the notion of time
 but work on a Ψ-function, which develops according to the wave
@@ -637,8 +569,6 @@ transformation is composed may not be amalgamated, because H₁ and
 H₂, considering the arguments with which they are written, do not
 in general commute.
 
----
-
 All this is moderately trivial. But it is necessary to consider
 it lest one should believe that the antinomies could be solved by
 suggesting or proving that some of the observations must take
@@ -654,8 +584,6 @@ observable.
 
 And any desired observable can be predicted for time t by making
 a suitable observation at time zero on the other system.
-
----
 
 When at time zero a certain observable of system No. 1, say x₁,
 is inferred from observing x₂, I am forced to assign to system
@@ -676,8 +604,6 @@ From the moment I come to know the result I should be faced with
 exactly the same situation, only the pair of canonically
 conjugate observables that is involved changes with time.
 
----
-
 The paradox would be shaken, though, if an observation did not
 relate to a definite moment.
 
@@ -686,13 +612,11 @@ mechanics meaningless, because at present the objects of its
 predictions are considered to be the results of measurements for
 definite moments of time.
 
----
-
 My sincerest gratitude is due to Imperial Chemical Industries,
 Limited, to whose generosity I owe the leisure for carrying out
 these studies.
 
--------------------------------------------------------------------------------------------
+-
 - Notes on this page:
 - Conceptual conclusion:
     - Time evolution does not resolve the paradox
@@ -700,8 +624,7 @@ these studies.
 - Key philosophical punchline:
     - QM assumes observables correspond to definite-time measurements
     - Removing that → breaks the interpretation entirely
--------------------------------------------------------------------------------------------
-
+-
 
 ### SUMMARY
 
@@ -736,8 +659,6 @@ change their mates in the way that the latter, i.e. the
 observables of the second system, undergo a certain continuous
 contact-transformation.
 
----
-
 `*` To make the earlier text conform to the present simplified
 wording, replace x₂ + x′ by P and p′ − p₂ by X. Then X and P are
 canonical conjugates. The mating (x with P and p with X) has to
@@ -746,7 +667,7 @@ be cross-wise, though.
 `†` In fact it persists anyhow, but as a rule in a very much more
 complicated form.
 
--------------------------------------------------------------------------------------------
+-
 - Notes on this page:
 - This is a very compressed restatement of the whole paper:
     - “match” = what we’d now call perfect correlation / functional dependence
@@ -756,10 +677,7 @@ complicated form.
 - That line is essentially:
     - EPR → generalized to all observables
 
--------------------------------------------------------------------------------------------
-
-
-
+-
 
 ### Big picture
 
@@ -782,17 +700,15 @@ Also: What Schrödinger is really saying here:
     - position correlation AND momentum correlation
 - then you implicitly fix:
     - every function `F(x, p)`
-    - → which is exactly why the paradox explode
-
+    - → which is exactly why the paradox explodes
 
 - Note: In this context, “`fix`” does not mean:
     - setting a value by hand
     - or choosing a number arbitrarily
-
-- It means:
-    - the value of one observable is uniquely determined (with
-      certainty) by the value of another observable on the OTHER
-      system
+    - It means:
+        - the value of one observable is uniquely determined
+          (with certainty) by the value of another observable on
+          the OTHER system
 
 - More precise statement
     - When we say: “position is fixed”,
@@ -816,12 +732,12 @@ Also: What Schrödinger is really saying here:
 - If you know:
     - `x₁` = function of `x₂`
     - `p₁` = function of `p₂`
-
-- then for any function F(x, p):
-    - F(x₁, p₁) is determined by F(x₂, p₂)
+    - then for any function F(x, p):
+        - `F(x₁, p₁)` is determined by `F(x₂, p₂)`
 
 - So:
-    - The value of every observable F(x, p) on system 1 is fixed by system 2
+    - The value of every observable `F(x, p)` on system 1 is
+      fixed by system 2
 
 - Why the paradox “explodes”
 - Because:
