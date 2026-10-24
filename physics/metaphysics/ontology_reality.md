@@ -9,15 +9,15 @@
   space/time together
 
 - I don’t think there’s a “problem” around causality, though
-  there are many interesting “issues” about it that are worth
-  figuring out.
+  there are many interesting “issues” that are worth figuring
+  out.
     - My own ontological views are even more _eliminatavist_ than
       Alex Rosenberg’s – I don’t even believe in spacetime!
         - (Here and elsewhere “believe in” should be interpreted
           as “currently think this will be the best available
           explanation, subject to revision as more data and
           better ideas arrive.”)
-    - Our best theories of reality are based on QM, not on
+    - Our best theories of reality are based on QM, not
       relativity, and I think we'll eventually understand
       spacetime as an emergent semi-classical property, not at
       all fundamental.
