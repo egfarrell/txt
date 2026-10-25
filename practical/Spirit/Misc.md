@@ -1,4 +1,25 @@
 
+### The Universe Calling
+    - Suresh Emre Independent Scientist https://sureshemre.wordpress.com/
+    - “O human beings! You are fortunate. The clarion call of the
+      Universal has reached you. That very call is vibrating in
+      every cell of your body. Will you now lie inert in the
+      corner of your house? Will you now waste your time
+      clutching ancient skeletons to your breast and moaning over
+      them? The Supreme Being is calling you in the roar of the
+      ocean, in the thunder of the clouds, in the speed of the
+      lightning, in the meteor’s flaming fires. Nothing will come
+      of remaining idle. Get up and awaken the clouded chivalry
+      of your dormant youth. The path may not be strewn with
+      flowers – an inferiority complex may seek to hold back your
+      every advancing footstep, but even then you have to proceed
+      onward, tearing the shroud of darkness. You will soon rend
+      the thick darkness of despair on the way to the attainment
+      of the Supreme State, and advance onwards in the
+      swift-moving chariot, radiant with the sun’s brilliance.”
+      – Shrii Shrii Anandamurti
+
+
 ### New Tesla roadster (rocket)
     - https://www.youtube.com/watch?v=scwlR0QHGOk
     - yt comment: "3 seconds of rocket thrust followed by 7 hours

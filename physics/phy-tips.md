@@ -10141,182 +10141,189 @@ LLMs fail at Physics and Maths
 
 
 
+    - BOOK: Computational Fluid Dynamics (John Anderson) Nice talk about derivative              https://www.amazon.co.uk/Computational-Dynamics-McGraw-Hill-International-Editions/dp/0071132104
+    - BOOK: From Maxwell to Microphysics                                                         https://www.amazon.co.uk/Maxwell-Microphysics-Aspects-Electromagnetic-Nineteenth/dp/0226078833
+    - BOOK: Galloping with Light: Einstein, Relativity and Folklore                              https://www.amazon.com/Galloping-Light-Einstein-Relativity-Folklore/dp/1456373854
+    - BOOK: Ghost in the atom: Quantum Philosophy (Travis Norsen talk)                           https://www.amazon.com/Ghost-Atom-Discussion-Mysteries-Quantum/dp/0521457289
+    - BOOK: Good books: Springer Undergraduate Lecture notes in Physics                          https://www.springer.com/series/8917
+    - BOOK: Innovation in Maxwells EM theory                                                     https://www.amazon.co.uk/Innovation-Maxwells-Electromagnetic-Theory-Displacement/dp/0521533295
+    - BOOK: Interesting book: Interpreting Quantum Theories (Laura Ruetsche)                     https://www.amazon.co.uk/Interpreting-Quantum-Theories-Laura-Ruetsche-ebook/dp/B07CMG1ZTW
+    - BOOK: Jakob Schwichtenberg No Nonsense books                                               https://nononsensebooks.com/
+    - BOOK: Kuhn: Black-Body Theory and the Quantum Discontinuity, 1894-1912
+    - BOOK: Maudlin recommends: What is Real?                                                    https://www.amazon.co.uk/What-Real-Unfinished-Meaning-Quantum/dp/1473661358
+    - BOOK: New Newton biography                                                                 https://www.amazon.com/Isaac-Newton-Natural-Philosophy-Renaissance/dp/1780239068
+    - BOOK: Preptorial recommends! physics workbook                                              https://www.amazon.com/Essential-Calculus-based-Physics-Study-Workbook/dp/1941691153?ref=pf_vv_at_pdctrvw_dp
+    - BOOK: Pythagoras's Trousers: God, Physics, and the Gender War                              https://www.amazon.com/Pythagorass-Trousers-God-Physics-Gender/dp/0393317242
+    - BOOK: Recommended: Isaac Newton und seine physikalischen Principien                        https://www.amazon.de/Isaac-Newton-Physikalischen-Principien-Entwickelungsgeschichte/dp/1334010897
+    - BOOK: Records of the Future: Classical Entropy, Memory 'Arrow of Time'                     https://www.amazon.com/Records-of-the-Future-Classical-Entropy-Memory-and-the-Arrow-of-Time-Quantum-Physics-free-of-Folklore-1/dp/B00AWGEQQQ
+    - BOOK: Students Guide Schrodingers Eqn (Fleisch)                                            https://www.amazon.co.uk/Students-Guide-Schr%C3%B6dinger-Equation-Guides-ebook/dp/B087MNKBC7
+    - BOOK: The Physical World: An Inspirational Tour Of Fundamental Physics                     https://www.amazon.co.uk/Physical-World-Inspirational-Fundamental-Physics/dp/0198796110
+    - BOOK: The war of art (Steve Pressfield)                                                    https://www.amazon.co.uk/War-Art-Through-Creative-Battles/dp/1936891026/
+    - BOOK: Turning Pro                                                                          https://www.amazon.co.uk/Turning-Pro-Inner-Power-Create/dp/1936891034/
+    - BOOK: VIGNETTES IN PHYSICS G. Venkataraman                                                 https://www.amazon.co.uk/s?k=VIGNETTES+IN+PHYSICS&ref=nb_sb_noss
+    - BOOK: Vector Analysis Versus Vector Calculus (Universitext)                                https://www.amazon.co.uk/Vector-Analysis-Versus-Calculus-Universitext/dp/1461421993
+    - BOOK: autodidact maths list                                                                https://www.amazon.com/ideas/amzn1.account.AESB6VCP7QUSIZQHSNP2LWUAVKVA/2EZUID0RHB1FD?ref=pf_vv_at_ideas_sil
 
-### links
-    - Science audio torrents                                                              $MY_NOTES/my-lists/audio-torrents.txt
-    - The Physical World: An Inspirational Tour Of Fundamental Physics                    https://www.amazon.co.uk/Physical-World-Inspirational-Fundamental-Physics/dp/0198796110
-    - Interesting book: Interpreting Quantum Theories  (Laura Ruetsche)                   https://www.amazon.co.uk/Interpreting-Quantum-Theories-Laura-Ruetsche-ebook/dp/B07CMG1ZTW
-    - Beyond Spacetime  (Quantum Gravity)                                                 http://beyondspacetime.net/
-    - Beyond Spacetime  (Quantum Gravity) YouTube                                         https://www.youtube.com/@BeyondspacetimeNet/videos
-    - Kavili Institute talks                                                              http://online.kitp.ucsb.edu/online/
-    - From Maxwell to Microphysics:                                                       https://www.amazon.co.uk/Maxwell-Microphysics-Aspects-Electromagnetic-Nineteenth/dp/0226078833
-    - Innovation in Maxwells EM theory                                                    https://www.amazon.co.uk/Innovation-Maxwells-Electromagnetic-Theory-Displacement/dp/0521533295
-    - Learn Physics by Programming in Haskell                                             https://news.ycombinator.com/item?id=16453192
-    - Conceptual origins of Maxwell's equations and gauge theory                          https://news.ycombinator.com/item?id=16325605
-    - LMU munich conference: foundations of physics (Barbor)                              http://www.rforge.com/lmucast/virtualplaylist/search_lmucast_results.php?keyword=foundphys2013&attr=itunes%3Akeywords
-    - LMU philosophy videos                                                               https://itunes.apple.com/itunes-u/id722198658
-    - Double-Slit Interference Pattern for Macroscopic Quantum System                     http://link.springer.com/10.1007/s10701-016-0034-7
-    - Uncertain for A Century: QM and The Dilemma of Interpretation                       https://arxiv.org/abs/1604.06488
-    - Is General Relativity a (partial) Return of Aristotelian Physics?                   https://arxiv.org/abs/1604.06491
-    - Do we know what temperature is?                                                     http://arxiv.org/abs/1604.05563
-    - Is 1+1=2 an empirical proposition?                                                  http://arxiv.org/abs/1604.05962
-    - Emergence, causation and storytelling: condensed matter physics and the human mind. https://arxiv.org/abs/1604.06845
-    - Spooky Action at No Distance: On the individuation of quantum mechanical systems    https://arxiv.org/abs/1604.06775
-    - Cartwright measurement                                                              http://arxiv.org/abs/1606.00351
-    - The Story of the Neutrino.                                                          http://arxiv.org/abs/1606.08715
-    - Annette Garbe, Ludwig Lange, Partial Conventionally, Partial  Space-Times           https://arxiv.org/abs/1605.01774
-    - Maudlin recommends: What is Real?                                                   https://www.amazon.co.uk/What-Real-Unfinished-Meaning-Quantum/dp/1473661358
-    - Perimeter: Time, Cosmology, Quantum Physics and Philosophy
-    - Quantum Entanglement: Expository paper providing a historical survey                https://arxiv.org/abs/1506.04262
-    - Becker: What is real discussion: Not Even Wrong                                     http://www.math.columbia.edu/~woit/wordpress/?p=10147
-    - Preptorial recommends! physics workbook                                             https://www.amazon.com/Essential-Calculus-based-Physics-Study-Workbook/dp/1941691153?ref=pf_vv_at_pdctrvw_dp
-    - Ghost in the atom: Quantum Philosophy (Travis Norsen talk)                          https://www.amazon.com/Ghost-Atom-Discussion-Mysteries-Quantum/dp/0521457289
-    - Description of Power laws: Jim holt book Article About Mandelbrot
-    - TED talk: reverse causality... drinking from a cup                                  https://www.youtube.com/watch?v=vh-FSX8jm90
-    - Link from Gave                                                                      https://deref-gmx.com/mail/client/Ipgu_RZdCZc/dereferrer/?redirectUrl=https%3A%2F%2Fras.ac.uk%2Fnews-and-press%2Fresearch-highlights%2Fmatter-falling-black-hole-30-percent-speed-light
-    - The war of art (Steve Pressfield)                                                   https://www.amazon.co.uk/War-Art-Through-Creative-Battles/dp/1936891026/
-    - Turning Pro                                                                         https://www.amazon.co.uk/Turning-Pro-Inner-Power-Create/dp/1936891034/
-    - Creative side projects                                                              https://news.ycombinator.com/item?id=18544547
-    - A collector of Maths and Physics surprises                                          https://news.ycombinator.com/item?id=18588147
-    - Maxwells fluid model of EM                                                          https://news.ycombinator.com/item?id=18587956
-    - animation: neutron star merger                                                      https://www.youtube.com/watch?v=y8VDwGi0r0E
-    - Non-locality vs. non-realism: Arbitrary choice?                                     https://physics.stackexchange.com/questions/197530/non-locality-vs-non-realism-arbitrary-choice
-    - relational quantum mechanic (local, non-real) interpretation.
-    - quirky site                                                                         http://www.autodidacts.io/
-    - apollo landing                                                                      https://www.firstmenonthemoon.com/
-    - Apollo 13 real-time mission simulation                                              https://apolloinrealtime.org/13/
-    - HN Apollo discussion                                                                https://news.ycombinator.com/item?id=27617256
-    - Good! Alexander Moloney Quantum Theory                                              https://www.youtube.com/watch?v=AoJ8NGImz2A&list=PLrbYZnU7vahIbplgN1YwOmpmlTh-cRJZ5
-    - Good! Alex Flournoy university page                                                 http://inside.mines.edu/~aflourno/
-    - Good! Alex Flournoy videos                                                          https://www.youtube.com/channel/UCHAwDVSS8oDLLln07cNdU6A/videos
-    - important! Tensor Explanations. Amanda for Flournoy course                          https://www.youtube.com/channel/UCADQXgS9jJRu-_RzVxmqAIQ/videos?shelf_id=0&view=0&sort=dd
-    - Good! particle physics notes                                                        http://inside.mines.edu/~aflourno/Particle/423.shtml
-    - Schuller nurnberg (banach spaces, normed, QM, GR)                                   https://www.youtube.com/channel/UC6SaWe7xeOp31Vo8cQG1oXw/playlists
-    - EM equations geometric algebra                                                      https://arxiv.org/abs/1010.4947
-    - book: Vector Analysis Versus Vector Calculus (Universitext)                         https://www.amazon.co.uk/Vector-Analysis-Versus-Calculus-Universitext/dp/1461421993
-    - quanum moves game                                                                   https://www.scienceathome.org/games/quantum-moves/e
-    - Ask HN: Physicists of HN, what are you working on these days?                       https://news.ycombinator.com/item?id=19500151
-    - Veritasium physics explanations black holes                                         https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA
-    - LCTTA physics lecturer with interesting tweets                                      https://twitter.com/LCTTA
-    - another physics teacher                                                             https://teachbrianteach.com/
-    - Physics Review Physics Education                                                    https://journals.aps.org/prper/
-    - SICM hacker news discussion (bit about Legendre transform)                          https://news.ycombinator.com/item?id=19765019
-    - Dirac Paper: Principle of Mathematical Beauty
-    - Kuhn: Black-Body Theory and the Quantum Discontinuity, 1894-1912
-    - Letters on Wave Mechanics_Corresp. with Lorentz, Planck and Schrödinger.pdf
-    - Recommended: Isaac Newton und seine physikalischen Principien                       https://www.amazon.de/Isaac-Newton-Physikalischen-Principien-Entwickelungsgeschichte/dp/1334010897
-    - advanced physics                                                                    https://drive.google.com/drive/folders/0B9XbEQh3jB9pbzhEX3J0dkhSTTg
-    - maths/science popular books                                                         https://drive.google.com/drive/folders/0B9XbEQh3jB9pMlRwbC11MjZRYk0
-    - Math                                                                                https://drive.google.com/open?id=0B9XbEQh3jB9pNkhSVzVoYmRtTHM
-    - CS and programming                                                                  https://drive.google.com/open?id=0B9XbEQh3jB9pWVBFX0hqTzA0dUU
-    - History and philosophy of science and math, pedagogy                                https://drive.google.com/open?id=1l4hjiSgO1hTbaQjt9IG1wxQxNi7JtjYE
-    - Bohmian Mechanics Research Network                                                  http://bohmian-mechanics.net/index.html
-    - Pooley talks page: lots of philosophical centres                                    http://www.oliverpooley.org/talks.html
-    - Computational Fluid Dynamics (John Anderson) Nice talk about derivative             https://www.amazon.co.uk/Computational-Dynamics-McGraw-Hill-International-Editions/dp/0071132104
-    - Benjamin Crowell Physics Lectures (Used in Cliffony 2008) ps: he uses Maxima!       http://www.lightandmatter.com
-    - History of Science and Mathematics Beta                                             https://hsm.stackexchange.com/
-    - Shankar: Einstein for the masses lecture
-    - Interviews:  Web of stories                                                         https://www.webofstories.com/
-    - Interviews: "On Being" , sent by Anne McKeown                                       https://onbeing.org/libraries/physics-astronomy-math/
-    - Interviews: Serious Science: various interviews, looks good                         http://serious-science.org/
-    - Dark energy in error?                                                               https://news.ycombinator.com/item?id=21974117
-    - Acceleration anisotropy                                                             https://phys.org/news/2019-11-evidence-anisotropy-cosmic.html
-    - Good quantum information site                                                       https://quantiki.org/
-    - Universe sandbox                                                                    http://universesandbox.com/
-    - John Denker: Quirky combinations of PHysics/Maths/Teaching notes                    https://www.av8n.com/physics/
-    - Another Quirky combinations of PHysics/Maths notes                                  https://www.mathpages.com/
-    - New Newton biography                                                                https://www.amazon.com/Isaac-Newton-Natural-Philosophy-Renaissance/dp/1780239068
-    - autodidact main list (gengogakusha)                                                 https://www.amazon.com/gp/profile/amzn1.account.AHGKLRACYNGKAK6P4WPJ7I7Y7R4Q
-    - autodidact maths list                                                               https://www.amazon.com/ideas/amzn1.account.AESB6VCP7QUSIZQHSNP2LWUAVKVA/2EZUID0RHB1FD?ref=pf_vv_at_ideas_sil
-    - Jakob: Physics guide 3 level explanations - good lagrangian                         https://physicstravelguide.com/
-    - Jakob: Physics guide 3 level explanations - HN discussion                           https://news.ycombinator.com/item?id=22757466
-    - Jakob Schwichtenberg No Nonsense books                                              https://nononsensebooks.com/
-    - Dustin Lazarovici Philosophy of Physics                                             https://philphys.net/
-    - Latest science news RSS feeds                                                       https://sciurls.com/
-    - Interesting: Reports on Progress Journal (looks good)                               https://iopscience.iop.org/journal/0034-4885
-    - Quirky Physics map: derive everything??                                             https://derivationmap.net/
-    - Federic Schuller Geometrical Anatomy of Theoretical PHysics                         https://www.youtube.com/playlist?list=PLPH7f_7ZlzxTi6kS4vCmv4ZKm9u8g5yic
-    - Federic Schuller QM                                                                 https://www.youtube.com/playlist?list=PLPH7f_7ZlzxQVx5jRjbfRGEzWY_upS5K6
-    - HN theoretical physics discussion                                                   https://news.ycombinator.com/item?id=24078420
-    - IOP history of physics group                                                        https://www.iop.org/physics-community/special-interest-groups/history-physics-group#gref
-    - "The Liverpool List" Philosophy message archive                                     https://listserv.liv.ac.uk/cgi-bin/wa?A0=PHILOS-L
-    - XYLYXYLYX Youtube channel                                                           https://www.youtube.com/user/XylyXylyX/playlists
-    - Chasing Einstein                                                                    https://chasingeinsteinfilm.com/about/
-    - QM with Peter Woit                                                                  https://www.youtube.com/playlist?list=PLOaEOh8qMwDLoBJinaH3p31edODHdlb93
-    - Paul Bernays lectures                                                               https://video.ethz.ch/speakers/bernays.html
-    - Wolfgang Pauli lectures                                                             https://video.ethz.ch/speakers/pauli.html
-    - Flip Tanedo (recommended by Suresh Emre) QFT, Mechanics courses                     https://www.physics.uci.edu/~tanedo/docs.html
-    - Balakrishnan Physics colloquium zoom                                                https://www.youtube.com/watch?v=DkRVCNhtGhU
-    - Copernicus College                                                                  https://www.copernicuscollege.pl/?lang=en
-    - Copernicus College YouTube                                                          https://www.youtube.com/c/CopernicuscenterEduPl/playlists
-    - Students Guide Schrodingers Eqn (Fleisch)                                           https://www.amazon.co.uk/Students-Guide-Schr%C3%B6dinger-Equation-Guides-ebook/dp/B087MNKBC7
-	- List of all Physics student guids                                                   $MY_IMAGES/physics/student-guides.jpg
-    - Curated Physics topic List                                                          https://www.curlie.org/en/Science/Physics
-    - what is Genius                                                                      https://news.ycombinator.com/item?id=25915156
-    - Multi-disciplinary Preprints Platform                                               https://www.preprints.org/
-    - Sam Ritchie. Physics + software. Has SICM code!                                     https://roadtoreality.substack.com/
-    - Pythagoras's Trousers: God, Physics, and the Gender War                             https://www.amazon.com/Pythagorass-Trousers-God-Physics-Gender/dp/0393317242
-    - Good Physics / History videos, BBC Dangerous Knowledge Cantor, Romans               https://www.dailymotion.com/xSilverPhinx/playlists
-    - Good talks: Oxford St Cross College  HAPP: History & Philosophy Physics             https://www.youtube.com/user/STXCollege/videos
-    - VIGNETTES IN PHYSICS G. Venkataraman                                                https://www.amazon.co.uk/s?k=VIGNETTES+IN+PHYSICS&ref=nb_sb_noss
-    - Cantors Paradise, History Maths & Physics                                           https://www.cantorsparadise.com/
-    - GOOD: Sabine: Dark Matter has changed: HN discussion                                https://news.ycombinator.com/item?id=27085979
-    - Magellantv Documentaries                                                            https://www.magellantv.com/genres/biography
-    - Timothy Nguyen Guage theory tutorial                                                https://www.youtube.com/c/TimothyNguyen/videos
-    - Eigenbros - Timothy Nguyen (Problems with Eric Weinstein's Geometric Unity)         https://www.youtube.com/watch?v=o31cGMENDTI
-    - Newtonian physics IS deterministic (sorry Norton)                                   https://news.ycombinator.com/item?id=28191408
-    - Applied Science                                                                     https://www.youtube.com/c/AppliedScience
-    - Pyysics based deep learning                                                         https://news.ycombinator.com/item?id=28500577
-    - Ethos download Phd theses                                                           https://ethos.bl.uk/Home.do
-    - Sympy theoretical Physics                                                           https://www.theoretical-physics.net/dev/intro.html
-    - Susan Fowler: self-study physics                                                    $MY_BOOKS/Physics/Undergrad/Susan-Fowler-Self-Learn-Physics.pdf
-    - Susan Fowler: self-study physics HN discussion                                      $MY_BOOKS/Physics/Undergrad/Susan-Fowler-Self-Learn-HN.pdf
-    - Profound Physics: self-study                                                        https://profoundphysics.com/
-    - Answers to Serway, Jewett Physics Ed 9:                                             https://quizlet.com/explanations/textbook-solutions/physics-for-scientists-and-engineers-with-modern-physics-9th-edition-9781133947271
-    - Records of the Future: Classical Entropy, Memory 'Arrow of Time'                    https://www.amazon.com/Records-of-the-Future-Classical-Entropy-Memory-and-the-Arrow-of-Time-Quantum-Physics-free-of-Folklore-1/dp/B00AWGEQQQ
-    - Galloping with Light: Einstein, Relativity and Folklore                             https://www.amazon.com/Galloping-Light-Einstein-Relativity-Folklore/dp/1456373854
-    - Sanjoy Mahajan (Good physics notes, anti-war), recommended by Jakob                 http://web.mit.edu/sanjoy/www/
-    - Sanjoy Mahajan (Good physics notes, anti-war), recommended by Jakob                 http://www.inference.org.uk/sanjoy/
-    - HN: The Book that did it for you in Math/CS                                         https://news.ycombinator.com/item?id=30485544
-    - HN: Armchair science (thought experiments)                                          https://news.ycombinator.com/item?id=31764629
-    - HN: discussion (interesting) two-way speed of light                                 https://news.ycombinator.com/item?id=32108926
-    - HN: Scientific Writing How to                                                       https://news.ycombinator.com/item?id=32479968
-    - The Science of Scientific Writing                                                   https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing
-    - Eric Weinstein Portal clips (some Maths animations)                                 https://www.youtube.com/c/ThePortalClips/videos
-    - Steve Bruton Youtube (he had: Power Spectral Density PSD)                           https://www.youtube.com/c/Eigensteve/playlists
-    - Steve Bruton: Discrepancy Modeling with Physics Informed Machine Learning           https://www.youtube.com/watch?v=7n7xaviepKM&list=PLMrJAkhIeNNQ0BaKuBKY43k4xMo6NSbBa
-    - Z-library siezed                                                                    https://news.ycombinator.com/item?id=33460970
-    - HN: 10 minute Physics (demos/explanations)                                          https://news.ycombinator.com/item?id=33925047
-    - HN: peer review (writer publishes conversational psychology paper: brilliant!)      https://news.ycombinator.com/item?id=33997953
-    - g2net tip: Physics Girl                                                             https://www.youtube.com/@physicsgirl
-    - g2net tip: Veritasum                                                                https://www.youtube.com/c/veritasium
-    - Physics Maths self study project                                                    https://news.ycombinator.com/item?id=34903533
-    - Ed Witten Physics lectures                                                          https://www.youtube.com/@witten342
-    - ChatGPT creating physics theories (with Glowscript code!)                           https://news.ycombinator.com/item?id=35178196
-    - Scientific odessey (Science and religion)                                           https://www.youtube.com/@thescientificodysseypodcas1308/videos
-    - Good science courses                                                                https://news.ycombinator.com/item?id=35536042
-    - Good books: Springer Undergraduate Lecture notes in Physics                         https://www.springer.com/series/8917
-    - Good: YT: A Better Way To Picture Atoms                                             https://www.youtube.com/watch?v=W2Xb2GFK2yc
-    - QM: Sean Carroll interview with Tim Maudlin                                         https://www.preposterousuniverse.com/podcast/2023/06/26/241-tim-maudlin-on-locality-hidden-variables-and-quantum-foundations/
-    - Learn Physics with functional programming                                           https://news.ycombinator.com/item?id=37391161
-    - GOOD: ScienceClic video animations & explanations (esp. Spacetime)                  $MY_NOTES/physics/spacetime/ScienceClic-GR-Visualisation.txt
-    - @melodysheep voyage through space animations                                        https://www.youtube.com/@melodysheep
-    - HN: check this: some Physics demonstrations?                                        https://news.ycombinator.com/item?id=38988312
-    - HN: Not even wrong: 20 year anniversary                                             https://news.ycombinator.com/item?id=39753115
-    - Know time Physics podcasts, India, Tim Maudlin                                      https://www.youtube.com/@KnowTime
-    - Me Orchid ID                                                                        https://orcid.org/0000-0002-6981-5852
-    - Jim Curry Amazon Profile(!)                                                         https://www.amazon.com/gp/profile/amzn1.account.AHNKBGBS3KLJACTK4MDBQQ2W5LYQ/
-    - Slow Science Academy                                                                http://slow-science.org/
-    - Vox: some Physics videos                                                            https://www.youtube.com/@Vox
-    - Wolfram: historical writing                                                         https://writings.stephenwolfram.com/category/historical-perspectives/
-    - HN: debate about Sabines videos about LQG                                           https://news.ycombinator.com/item?id=41808127
-    - Physics books                                                                       https://news.ycombinator.com/item?id=45292648
-    - John Brockman, The Edge                                                             https://www.edge.org/
-    - Independent Physics                                                                 https://independentphysics.com/
-    - Can Physics be fixed                                                                https://www.youtube.com/watch?v=OibA-8TCp2o
-    - Universal pattern Maths, Physics, Biology                                           https://news.ycombinator.com/item?id=46728878
-    - John Duffield, Physics detective                                                    https://physicsdetective.com/
-    - Atomic Physics for everyone                                                         https://news.ycombinator.com/item?id=46961595
+    - FILE: CS and programming                                                                   https://drive.google.com/open?id=0B9XbEQh3jB9pWVBFX0hqTzA0dUU
+    - FILE: GOOD: ScienceClic video animations & explanations (esp. Spacetime)                   $MY_NOTES/physics/spacetime/ScienceClic-GR-Visualisation.txt
+    - FILE: History and philosophy of science and math, pedagogy                                 https://drive.google.com/open?id=1l4hjiSgO1hTbaQjt9IG1wxQxNi7JtjYE
+    - FILE: Letters on Wave Mechanics_Corresp. with Lorentz, Planck and Schrödinger.pdf
+    - FILE: List of all Physics student guids                                                    $MY_IMAGES/physics/student-guides.jpg
+    - FILE: Math                                                                                 https://drive.google.com/open?id=0B9XbEQh3jB9pNkhSVzVoYmRtTHM
+    - FILE: Science audio torrents                                                               $MY_NOTES/my-lists/audio-torrents.txt
+    - FILE: Susan Fowler: self-study physics                                                     $MY_BOOKS/Physics/Undergrad/Susan-Fowler-Self-Learn-Physics.pdf
+    - FILE: Susan Fowler: self-study physics HN discussion                                       $MY_BOOKS/Physics/Undergrad/Susan-Fowler-Self-Learn-HN.pdf
+    - FILE: advanced physics                                                                     https://drive.google.com/drive/folders/0B9XbEQh3jB9pbzhEX3J0dkhSTTg
+    - FILE: maths/science popular books                                                          https://drive.google.com/drive/folders/0B9XbEQh3jB9pMlRwbC11MjZRYk0
+
+    - HN: A collector of Maths and Physics surprises                                             https://news.ycombinator.com/item?id=18588147
+    - HN: Ask HN: Physicists of HN, what are you working on these days?                          https://news.ycombinator.com/item?id=19500151
+    - HN: Atomic Physics for everyone                                                            https://news.ycombinator.com/item?id=46961595
+    - HN: ChatGPT creating physics theories (with Glowscript code!)                              https://news.ycombinator.com/item?id=35178196
+    - HN: Conceptual origins of Maxwell's equations and gauge theory                             https://news.ycombinator.com/item?id=16325605
+    - HN: Creative side projects                                                                 https://news.ycombinator.com/item?id=18544547
+    - HN: Dark energy in error?                                                                  https://news.ycombinator.com/item?id=21974117
+    - HN: GOOD: Sabine: Dark Matter has changed: HN discussion                                   https://news.ycombinator.com/item?id=27085979
+    - HN: Good science courses                                                                   https://news.ycombinator.com/item?id=35536042
+    - HN: Apollo discussion                                                                      https://news.ycombinator.com/item?id=27617256
+    - HN: theoretical physics discussion                                                         https://news.ycombinator.com/item?id=24078420
+    - HN: 10 minute Physics (demos/explanations)                                                 https://news.ycombinator.com/item?id=33925047
+    - HN: Armchair science (thought experiments)                                                 https://news.ycombinator.com/item?id=31764629
+    - HN: Not even wrong: 20 year anniversary                                                    https://news.ycombinator.com/item?id=39753115
+    - HN: Scientific Writing How to                                                              https://news.ycombinator.com/item?id=32479968
+    - HN: The Book that did it for you in Math/CS                                                https://news.ycombinator.com/item?id=30485544
+    - HN: check this: some Physics demonstrations?                                               https://news.ycombinator.com/item?id=38988312
+    - HN: debate about Sabines videos about LQG                                                  https://news.ycombinator.com/item?id=41808127
+    - HN: discussion (interesting) two-way speed of light                                        https://news.ycombinator.com/item?id=32108926
+    - HN: peer review (writer publishes conversational psychology paper: brilliant!)             https://news.ycombinator.com/item?id=33997953
+    - HN: Jakob: Physics guide 3 level explanations - HN discussion                              https://news.ycombinator.com/item?id=22757466
+    - HN: Learn Physics by Programming in Haskell                                                https://news.ycombinator.com/item?id=16453192
+    - HN: Learn Physics with functional programming                                              https://news.ycombinator.com/item?id=37391161
+    - HN: Maxwells fluid model of EM                                                             https://news.ycombinator.com/item?id=18587956
+    - HN: Newtonian physics IS deterministic (sorry Norton)                                      https://news.ycombinator.com/item?id=28191408
+    - HN: Physics Maths self study project                                                       https://news.ycombinator.com/item?id=34903533
+    - HN: Physics books                                                                          https://news.ycombinator.com/item?id=45292648
+    - HN: Pyysics based deep learning                                                            https://news.ycombinator.com/item?id=28500577
+    - HN: SICM hacker news discussion (bit about Legendre transform)                             https://news.ycombinator.com/item?id=19765019
+    - HN: Universal pattern Maths, Physics, Biology                                              https://news.ycombinator.com/item?id=46728878
+    - HN: Z-library siezed                                                                       https://news.ycombinator.com/item?id=33460970
+    - HN: What is Genius                                                                         https://news.ycombinator.com/item?id=25915156
+
+    - JOURNAL: Interesting: Reports on Progress Journal (looks good)                             https://iopscience.iop.org/journal/0034-4885
+    - JOURNAL: Physics Review Physics Education                                                  https://journals.aps.org/prper/
+
+    - MISC: Description of Power laws: Jim holt book Article About Mandelbrot
+    - MISC: Relational quantum mechanic (local, non-real) interpretation.
+
+    - PAPER: Annette Garbe, Ludwig Lange, Partial Conventionally, Partial Space-Times            https://arxiv.org/abs/1605.01774
+    - PAPER: Cartwright measurement                                                              http://arxiv.org/abs/1606.00351
+    - PAPER: Dirac Paper: Principle of Mathematical Beauty
+    - PAPER: Do we know what temperature is?                                                     http://arxiv.org/abs/1604.05563
+    - PAPER: Double-Slit Interference Pattern for Macroscopic Quantum System                     http://link.springer.com/10.1007/s10701-016-0034-7
+    - PAPER: EM equations geometric algebra                                                      https://arxiv.org/abs/1010.4947
+    - PAPER: Emergence, causation and storytelling: condensed matter physics and the human mind. https://arxiv.org/abs/1604.06845
+    - PAPER: Is 1+1=2 an empirical proposition?                                                  http://arxiv.org/abs/1604.05962
+    - PAPER: Is General Relativity a (partial) Return of Aristotelian Physics?                   https://arxiv.org/abs/1604.06491
+    - PAPER: Quantum Entanglement: Expository paper providing a historical survey                https://arxiv.org/abs/1506.04262
+    - PAPER: Spooky Action at No Distance: On the individuation of quantum mechanical systems    https://arxiv.org/abs/1604.06775
+    - PAPER: The Story of the Neutrino.                                                          http://arxiv.org/abs/1606.08715
+    - PAPER: Uncertain for A Century: QM and The Dilemma of Interpretation                       https://arxiv.org/abs/1604.06488
+
+    - PROFILE: Suresh Emre, Independent Scientist                                                https://sureshemre.medium.com/
+    - PROFILE: Suresh Emre, Independent Scientist                                                https://sureshemre.wordpress.com/index/
+    - PROFILE: Jim Curry Amazon Profile(!)                                                       https://www.amazon.com/gp/profile/amzn1.account.AHNKBGBS3KLJACTK4MDBQQ2W5LYQ/
+    - PROFILE: LCTTA physics lecturer with interesting tweets                                    https://twitter.com/LCTTA
+    - PROFILE: Me Orchid ID                                                                      https://orcid.org/0000-0002-6981-5852
+    - PROFILE: autodidact main list (gengogakusha)                                               https://www.amazon.com/gp/profile/amzn1.account.AHGKLRACYNGKAK6P4WPJ7I7Y7R4Q
+    - VIDEO: Chasing Einstein                                                                    https://chasingeinsteinfilm.com/about/
+    - VIDEO: Good Physics / History videos, BBC Dangerous Knowledge Cantor, Romans               https://www.dailymotion.com/xSilverPhinx/playlists
+    - VIDEO: LMU philosophy videos                                                               https://itunes.apple.com/itunes-u/id722198658
+    - VIDEO: Magellantv Documentaries                                                            https://www.magellantv.com/genres/biography
+    - VIDEO: Paul Bernays lectures                                                               https://video.ethz.ch/speakers/bernays.html
+    - VIDEO: Shankar: Einstein for the masses lecture
+    - VIDEO: Wolfgang Pauli lectures                                                             https://video.ethz.ch/speakers/pauli.html
+    - WEB: "The Liverpool List" Philosophy message archive                                       https://listserv.liv.ac.uk/cgi-bin/wa?A0=PHILOS-L
+    - WEB: Acceleration anisotropy                                                               https://phys.org/news/2019-11-evidence-anisotropy-cosmic.html
+    - WEB: Another Quirky combinations of PHysics/Maths notes                                    https://www.mathpages.com/
+    - WEB: Answers to Serway, Jewett Physics Ed 9:                                               https://quizlet.com/explanations/textbook-solutions/physics-for-scientists-and-engineers-with-modern-physics-9th-edition-9781133947271
+    - WEB: Apollo 13 real-time mission simulation                                                https://apolloinrealtime.org/13/
+    - WEB: Becker: What is real discussion: Not Even Wrong                                       http://www.math.columbia.edu/~woit/wordpress/?p=10147
+    - WEB: Benjamin Crowell Physics Lectures (Used in Cliffony 2008) ps: he uses Maxima!         http://www.lightandmatter.com
+    - WEB: Beyond Spacetime (Quantum Gravity)                                                    http://beyondspacetime.net/
+    - WEB: Bohmian Mechanics Research Network                                                    http://bohmian-mechanics.net/index.html
+    - WEB: Cantors Paradise, History Maths & Physics                                             https://www.cantorsparadise.com/
+    - WEB: Copernicus College                                                                    https://www.copernicuscollege.pl/?lang=en
+    - WEB: Curated Physics topic List                                                            https://www.curlie.org/en/Science/Physics
+    - WEB: Dustin Lazarovici Philosophy of Physics                                               https://philphys.net/
+    - WEB: Ethos download Phd theses                                                             https://ethos.bl.uk/Home.do
+    - WEB: Good quantum information site                                                         https://quantiki.org/
+    - WEB: Good! Alex Flournoy university page                                                   http://inside.mines.edu/~aflourno/
+    - WEB: Good! particle physics notes                                                          http://inside.mines.edu/~aflourno/Particle/423.shtml
+    - WEB: History of Science and Mathematics Beta                                               https://hsm.stackexchange.com/
+    - WEB: IOP history of physics group                                                          https://www.iop.org/physics-community/special-interest-groups/history-physics-group#gref
+    - WEB: Independent Physics                                                                   https://independentphysics.com/
+    - WEB: Interviews: "On Being", sent by Anne McKeown                                          https://onbeing.org/libraries/physics-astronomy-math/
+    - WEB: Interviews: Serious Science: various interviews, looks good                           http://serious-science.org/
+    - WEB: Interviews: Web of stories                                                            https://www.webofstories.com/
+    - WEB: Jakob: Physics guide 3 level explanations - good lagrangian                           https://physicstravelguide.com/
+    - WEB: John Brockman, The Edge                                                               https://www.edge.org/
+    - WEB: John Denker: Quirky combinations of PHysics/Maths/Teaching notes                      https://www.av8n.com/physics/
+    - WEB: John Duffield, Physics detective                                                      https://physicsdetective.com/
+    - WEB: Kavili Institute talks                                                                http://online.kitp.ucsb.edu/online/
+    - WEB: LMU munich conference: foundations of physics (Barbor)                                http://www.rforge.com/lmucast/virtualplaylist/search_lmucast_results.php?keyword=foundphys2013&attr=itunes%3Akeywords
+    - WEB: Latest science news RSS feeds                                                         https://sciurls.com/
+    - WEB: Link from Gave                                                                        https://deref-gmx.com/mail/client/Ipgu_RZdCZc/dereferrer/?redirectUrl=https%3A%2F%2Fras.ac.uk%2Fnews-and-press%2Fresearch-highlights%2Fmatter-falling-black-hole-30-percent-speed-light
+    - WEB: Multi-disciplinary Preprints Platform                                                 https://www.preprints.org/
+    - WEB: Non-locality vs. non-realism: Arbitrary choice?                                       https://physics.stackexchange.com/questions/197530/non-locality-vs-non-realism-arbitrary-choice
+    - WEB: Perimeter: Time, Cosmology, Quantum Physics and Philosophy
+    - WEB: Pooley talks page: lots of philosophical centres                                      http://www.oliverpooley.org/talks.html
+    - WEB: Profound Physics: self-study                                                          https://profoundphysics.com/
+    - WEB: QM: Sean Carroll interview with Tim Maudlin                                           https://www.preposterousuniverse.com/podcast/2023/06/26/241-tim-maudlin-on-locality-hidden-variables-and-quantum-foundations/
+    - WEB: Quirky Physics map: derive everything??                                               https://derivationmap.net/
+    - WEB: Sam Ritchie. Physics + software. Has SICM code!                                       https://roadtoreality.substack.com/
+    - WEB: Sanjoy Mahajan (Good physics notes, anti-war), recommended by Jakob                   http://web.mit.edu/sanjoy/www/
+    - WEB: Sanjoy Mahajan (Good physics notes, anti-war), recommended by Jakob                   http://www.inference.org.uk/sanjoy/
+    - WEB: Slow Science Academy                                                                  http://slow-science.org/
+    - WEB: Sympy theoretical Physics                                                             https://www.theoretical-physics.net/dev/intro.html
+    - WEB: The Science of Scientific Writing                                                     https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing
+    - WEB: Universe sandbox                                                                      http://universesandbox.com/
+    - WEB: Wolfram: historical writing                                                           https://writings.stephenwolfram.com/category/historical-perspectives/
+    - WEB: another physics teacher                                                               https://teachbrianteach.com/
+    - WEB: apollo landing                                                                        https://www.firstmenonthemoon.com/
+    - WEB: quanum moves game                                                                     https://www.scienceathome.org/games/quantum-moves/e
+    - WEB: quirky site                                                                           http://www.autodidacts.io/
+    - YT: @dialectPhilosophy Conference: Can Physics be fixed                                    https://www.youtube.com/watch?v=OibA-8TCp2o
+    - YT: @melodysheep voyage through space animations                                           https://www.youtube.com/@melodysheep
+    - YT: Applied Science                                                                        https://www.youtube.com/c/AppliedScience
+    - YT: Balakrishnan Physics colloquium zoom                                                   https://www.youtube.com/watch?v=DkRVCNhtGhU
+    - YT: Beyond Spacetime (Quantum Gravity) YouTube                                             https://www.youtube.com/@BeyondspacetimeNet/videos
+    - YT: Copernicus College YouTube                                                             https://www.youtube.com/c/CopernicuscenterEduPl/playlists
+    - YT: Ed Witten Physics lectures                                                             https://www.youtube.com/@witten342
+    - YT: Eigenbros - Timothy Nguyen (Problems with Eric Weinstein's Geometric Unity)            https://www.youtube.com/watch?v=o31cGMENDTI
+    - YT: Eric Weinstein Portal clips (some Maths animations)                                    https://www.youtube.com/c/ThePortalClips/videos
+    - YT: Federic Schuller Geometrical Anatomy of Theoretical PHysics                            https://www.youtube.com/playlist?list=PLPH7f_7ZlzxTi6kS4vCmv4ZKm9u8g5yic
+    - YT: Federic Schuller QM                                                                    https://www.youtube.com/playlist?list=PLPH7f_7ZlzxQVx5jRjbfRGEzWY_upS5K6
+    - YT: Good talks: Oxford St Cross College HAPP: History & Philosophy Physics                 https://www.youtube.com/user/STXCollege/videos
+    - YT: Good! Alex Flournoy videos                                                             https://www.youtube.com/channel/UCHAwDVSS8oDLLln07cNdU6A/videos
+    - YT: Good! Alexander Moloney Quantum Theory                                                 https://www.youtube.com/watch?v=AoJ8NGImz2A&list=PLrbYZnU7vahIbplgN1YwOmpmlTh-cRJZ5
+    - YT: Good: A Better Way To Picture Atoms                                                    https://www.youtube.com/watch?v=W2Xb2GFK2yc
+    - YT: Know time Physics podcasts, India, Tim Maudlin                                         https://www.youtube.com/@KnowTime
+    - YT: QM with Peter Woit                                                                     https://www.youtube.com/playlist?list=PLOaEOh8qMwDLoBJinaH3p31edODHdlb93
+    - YT: Schuller nurnberg (banach spaces, normed, QM, GR)                                      https://www.youtube.com/channel/UC6SaWe7xeOp31Vo8cQG1oXw/playlists
+    - YT: Scientific odessey (Science and religion)                                              https://www.youtube.com/@thescientificodysseypodcas1308/videos
+    - YT: Steve Bruton Youtube (he had: Power Spectral Density PSD)                              https://www.youtube.com/c/Eigensteve/playlists
+    - YT: Steve Bruton: Discrepancy Modeling with Physics Informed Machine Learning              https://www.youtube.com/watch?v=7n7xaviepKM&list=PLMrJAkhIeNNQ0BaKuBKY43k4xMo6NSbBa
+    - YT: TED talk: reverse causality... drinking from a cup                                     https://www.youtube.com/watch?v=vh-FSX8jm90
+    - YT: Timothy Nguyen Guage theory tutorial                                                   https://www.youtube.com/c/TimothyNguyen/videos
+    - YT: Veritasium physics explanations black holes                                            https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA
+    - YT: Vox: some Physics videos                                                               https://www.youtube.com/@Vox
+    - YT: XYLYXYLYX Youtube channel                                                              https://www.youtube.com/user/XylyXylyX/playlists
+    - YT: animation: neutron star merger                                                         https://www.youtube.com/watch?v=y8VDwGi0r0E
+    - YT: g2net tip: Physics Girl                                                                https://www.youtube.com/@physicsgirl
+    - YT: g2net tip: Veritasum                                                                   https://www.youtube.com/c/veritasium
+    - YT: important! Tensor Explanations. Amanda for Flournoy course                             https://www.youtube.com/channel/UCADQXgS9jJRu-_RzVxmqAIQ/videos?shelf_id=0&view=0&sort=dd
+
+
 
 
 
