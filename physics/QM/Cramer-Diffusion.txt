@@ -1,0 +1,129 @@
+
+### Question
+    - WHY does a diffusion process have to be described by
+      a combination of a backwards AND forward time process...
+    - Why can't an intermediate time be described simply by
+      rolling FORWARD in time from an initial point... or
+      reversing BACKWARDS in time from an end point?
+
+
+Extra:
+    - The Schrödinger Bridge Problem, 1931
+
+
+### Summary
+
+- Can diffusion be described forwards alone? 
+    - Yes.
+- Can it be described backwards alone? 
+    - Mathematically, with qualifications; physically, reverse
+      diffusion needs care.
+- Why combine forward and backward solutions?
+    - To condition an intermediate state on both endpoints.
+- Does QM require two physical time directions?
+    - No.
+- Why multiply `ψ` by `ψ*`?
+    - To obtain the probability density, |ψ|².
+
+
+# Why Diffusion Between Two Fixed States Requires Forward AND Backward Processes
+
+- The reason relates to the difference between 
+    - an INITIAL VALUE PROBLEM 
+        - predicting the future from the past
+    - and
+    - a BOUNDARY VALUE PROBLEM 
+        - deducing what happened inbetween two fixed points in
+          time.
+
+
+### 1. SETUP: TWO FIXED ENDPOINTS
+- In normal physics, if you open a perfume bottle at time `t₀`
+  with distribution `ρ₀`, you only need to run the diffusion
+  equation forward to find the distribution at an intermediate
+  time t.
+
+- However, Schrödinger posed a different problem:
+  - "Suppose you observe the particles at `t₀` with distribution
+    ρ₀, and you also observe them at a later time `t₁` with an
+    improbable distribution `ρ₁`. Given that BOTH observations
+    are true, what was the most probable distribution at an
+    intermediate time `t`?"
+
+- Crucially, `ρ₁` is NOT simply whatever natural forward
+  diffusion produces. It is a constrained, observed target (e.g.,
+  thermal fluctuations caused particles to congregate in an
+  unlikely spot).
+
+### 2. WHY ONE-WAY PROPAGATION FAILS
+
+- IF YOU ONLY ROLL FORWARD FROM THE START (t₀):
+    - Standard diffusion disperses particles toward maximum
+      entropy. If you run forward from ρ₀, the system follows its
+      unconstrained, default path. When it reaches t₁, it spreads
+      into the generic "average" state and COMPLETELY MISSES the
+      target distribution ρ₁. It has no knowledge of the future
+      boundary condition.
+
+- IF YOU ONLY ROLL BACKWARD FROM THE END (t₁):
+    - Mathematically, running the heat/diffusion equation
+      backward in time is ill-posed (fluctuations blow up
+      exponentially). But even conceptually, rolling backward
+      from ρ₁ carries no memory of where the particles started.
+      It would arrive at t₀ in an arbitrary state that DOES NOT
+      MATCH the known starting distribution ρ₀.
+
+
+### 3. THE PROBABILITY LOGIC (BAYES' RULE)
+
+- To determine the probability that a particle was at position
+  `x` at intermediate time `t`, you must ask two questions
+  simultaneously:
+
+  1. How likely was it to arrive at `x` starting from `t₀`?
+     --> Requires propagating FORWARD from `t₀` to `t`.
+
+  2. How likely was it to reach the target at `t₁` starting from `x`?
+     --> Requires propagating BACKWARD from `t₁` to `t`.
+
+By Bayes' Theorem and the Markov property:
+
+  `P(at x at time t | start, end)` ∝ `P(start → x) × P(x → end)`
+
+- Because both conditions must be satisfied at once, the
+  intermediate density splits into the PRODUCT of two functions:
+
+  `ρ(x, t) = φ(x, t) · φ̂(x, t)`
+
+Where:
+  - `φ̂(x, t)` 
+        - obeys the FORWARD heat equation (carrying memory from
+          the past).
+
+  - `φ(x, t)` 
+        - obeys the BACKWARD heat equation (carrying constraints
+          from the future).
+
+Neither function alone represents physical reality; only their product gives 
+the true probability distribution at time t.
+
+
+### 4. LINK TO QM
+- Schrödinger was struck by how closely this mirrors quantum theory:
+
+- In QM, the probability density of finding a particle is given by the Born rule:
+    `P(x, t) = ψ(x, t) · ψ*(x, t)`
+
+- Because Schrödinger's equation contains the imaginary unit 'i'
+  (`iħ ∂ψ/∂t`), taking the complex conjugate `ψ*` is
+  mathematically equivalent to time-reversal `(t → -t)`.
+
+- Just like the diffusion bridge, quantum probability at any
+  moment is formed by the overlap/product of a forward-evolving
+  wave (`ψ`) and a backward-evolving wave (`ψ*`).
+
+- Decades later, John Cramer used this exact concept to develop
+  the Transactional Interpretation of Quantum Mechanics (TIQM),
+  treating quantum events as a time-symmetric "handshake" between
+  an offer wave (`ψ`) moving forward in time and a confirmation
+  wave (`ψ*`) moving backward in time.
