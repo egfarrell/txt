@@ -1,12 +1,15 @@
-
 LLMs fail at Physics and Maths
 
+
+### Schrodinger speaking
+    - "Do Electrons Think?" (BBC 1949)
+    - https://m.youtube.com/watch?v=hCwR1ztUXtU
 
 ### Why Study physics
     - $MY_NOTES/physics/QM/Qm-primer-chester.txt
     - Readers' Orientation: Why, dear reader, do you study
       physics? To use it technologically? Physics can be used so:
-      but so can art and music. 
+      but so can art and music.
     - But that’s not why you study them. It isn’t their social
       relevance that attracts you. The most precious things in
       life are the irrelevant ones. It is a meager life, indeed,
@@ -788,8 +791,8 @@ LLMs fail at Physics and Maths
 
     1. "But this influence is questionable since, as every
        philosopher of science knows, INDETERMINISM only enters at
-       the most controversial point of QM: 
-        - viz., the alleged 'collapse of the wave packet'. 
+       the most controversial point of QM:
+        - viz., the alleged 'collapse of the wave packet'.
         - In any case, the obscurity of the interpretation of
           quantum theory thrown not only philosophers, but ..."
 
@@ -801,7 +804,7 @@ LLMs fail at Physics and Maths
     3. "any moving mass (even electrons in atoms) will radiate
        gravitational energy. In other words, something like
        _Planck’s law of radiation would have to be found for
-       gravitation_ in order to account for the stability. 
+       gravitation_ in order to account for the stability.
         - He repeated this claim again in 1918, stating that 'an
           improved version of quantum theory would lead to
           changes in the gravitational theory'"
@@ -2983,7 +2986,7 @@ LLMs fail at Physics and Maths
         - 3. "any moving mass (even electrons in atoms) will
           radiate gravitational energy. In other words, something
           like _Planck’s law of radiation would have to be found
-          for gravitation_ in order to account for the stability. 
+          for gravitation_ in order to account for the stability.
         - (ie `h` has to be part of gravitation too?)
 
 ### Whitehead
@@ -7925,10 +7928,10 @@ LLMs fail at Physics and Maths
       thermodynamics
     - Verlinde: equations of GR can also be derived
       microscopically... what are the "atoms" of space-time?
-    - Wilczek : 
+    - Wilczek :
         - don't have to think of gravity as something separate
         - the power of the couplings unifies at very high energy
-          or small distance (planck scale).... 
+          or small distance (planck scale)....
         - this is a remarkable fact about the universe that
           didn't have to happen and I think it's telling us
           something...
@@ -10131,8 +10134,7 @@ LLMs fail at Physics and Maths
     - Project Tuva – Feynman Messenger Lectures                                 https://en.wikipedia.org/wiki/Project_Tuva
     - physics concepts to fall asleep to                                        https://www.youtube.com/watch?v=ZffEvgEE-hc
 
-
-
+### More resources
     - BOOK: Computational Fluid Dynamics (John Anderson) Nice talk about derivative              https://www.amazon.co.uk/Computational-Dynamics-McGraw-Hill-International-Editions/dp/0071132104
     - BOOK: From Maxwell to Microphysics                                                         https://www.amazon.co.uk/Maxwell-Microphysics-Aspects-Electromagnetic-Nineteenth/dp/0226078833
     - BOOK: Galloping with Light: Einstein, Relativity and Folklore                              https://www.amazon.com/Galloping-Light-Einstein-Relativity-Folklore/dp/1456373854
@@ -10227,13 +10229,16 @@ LLMs fail at Physics and Maths
     - PROFILE: LCTTA physics lecturer with interesting tweets                                    https://twitter.com/LCTTA
     - PROFILE: Me Orchid ID                                                                      https://orcid.org/0000-0002-6981-5852
     - PROFILE: autodidact main list (gengogakusha)                                               https://www.amazon.com/gp/profile/amzn1.account.AHGKLRACYNGKAK6P4WPJ7I7Y7R4Q
-    - VIDEO: Chasing Einstein                                                                    https://chasingeinsteinfilm.com/about/
-    - VIDEO: Good Physics / History videos, BBC Dangerous Knowledge Cantor, Romans               https://www.dailymotion.com/xSilverPhinx/playlists
-    - VIDEO: LMU philosophy videos                                                               https://itunes.apple.com/itunes-u/id722198658
-    - VIDEO: Magellantv Documentaries                                                            https://www.magellantv.com/genres/biography
-    - VIDEO: Paul Bernays lectures                                                               https://video.ethz.ch/speakers/bernays.html
+
+    - VIDEO: Chasing Einstein                                                      https://chasingeinsteinfilm.com/about/
+    - VIDEO: Good Physics / History videos, BBC Dangerous Knowledge Cantor, Romans https://www.dailymotion.com/xSilverPhinx/playlists
+    - VIDEO: LMU philosophy videos                                                 https://itunes.apple.com/itunes-u/id722198658
+    - VIDEO: Magellantv Documentaries                                              https://www.magellantv.com/genres/biography
+    - VIDEO: Paul Bernays lectures                                                 https://video.ethz.ch/speakers/bernays.html
     - VIDEO: Shankar: Einstein for the masses lecture
-    - VIDEO: Wolfgang Pauli lectures                                                             https://video.ethz.ch/speakers/pauli.html
+    - VIDEO: Wolfgang Pauli lectures                                               https://video.ethz.ch/speakers/pauli.html
+    - VIDEO: The Portal Group, Eric Weinstein                                      https://theportal.group
+
     - WEB: "The Liverpool List" Philosophy message archive                                       https://listserv.liv.ac.uk/cgi-bin/wa?A0=PHILOS-L
     - WEB: Acceleration anisotropy                                                               https://phys.org/news/2019-11-evidence-anisotropy-cosmic.html
     - WEB: Another Quirky combinations of PHysics/Maths notes                                    https://www.mathpages.com/
