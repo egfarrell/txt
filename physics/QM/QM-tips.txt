@@ -1,23 +1,35 @@
-
-
 ### Schrodinger: Simple Wave Equation?
     - $MY_NOTES/physics/QM/Schrodinger-Gribben.txt
     - After his failure with the relativistic hydrogen equation,
       Schrödinger went back to basics. Starting with the standard
-      wave equation of classical mechanics, he used the de
-      Broglie's relationship to convert the wavelengths to
-      momenta, and came up with a very simple wave equation for
-      the electron, similar to the wave equation for light and
-      other EM waves discovered by Maxwell. 
+      wave equation of CM, he used deBroglie's relationship to
+      convert the wavelengths to momenta, and derived a very
+      simple wave equation for the electron, similar to Maxwell's
+      wave equation for light and other EM waves.
     - The derivation is one of those ideas that, like de
-      Broglie’s discovery, seems almost embarrassingly simple
-      once someone has thought of it, provoking the reaction “Why
-      on earth didn’t I think of that?,” but was far from obvious
-      until it was pointed out. 
+      Broglie’s discovery, seems embarrassingly simple, but was
+      far from obvious until pointed out.
     - Perhaps Schrödinger also thought it was embarrassingly
       simple, because before he published his breakthrough he
-      came up with two other, more complicated (and therefore
-      more impressive) ways of deriving his famous wave
+      came up with two other, more complicated ways of deriving
+      his famous wave.
+
+### Difference between Quantum/Classical physics
+    - Quantum needs complex numbers.
+    - Classical can all be done with reals (complex only
+      a convenience)
+    - (See Yang section above about Schrodinger and complex)
+    - (But Barbour had a talk where he says complex aren't
+      neccessarily needed, and Peter Woit says the same
+      somewhere?)
+    - cf
+        - $MY_NOTES/physics/work-diary.txt
+            - ### 24-Oct 2026 Sat
+        - $MY_NOTES/physics/QM/Complex-Waves.txt
+        - $MY_NOTES/physics/QM/Real-QM-Madelung.txt
+        - $MY_NOTES/physics/QM/Real-QM-Renou.txt
+
+
 
 ### Picturing Quantum Processes
     - https://www.amazon.co.uk/Picturing-Quantum-Processes-Diagrammatic-Reasoning/dp/110710422X
@@ -35,7 +47,7 @@
       not how connections are bundled.
     - The authors show that some features associated with QM
       arise simply from cycles in these diagrams; even the
-      no-cloning theorem requires little QM to demonstrate. 
+      no-cloning theorem requires little QM to demonstrate.
     - For those with a QM background, the book offers a fresh
       perspective; for others, a useful intro to process theory.
 
@@ -55,7 +67,7 @@
     - Simulating quantum correlations as a distributed sampling
       problem (2005) https://arxiv.org/abs/quant-ph/0507120
     - Local deterministic model of singlet state correlations
-      based on relaxing measurement independence (2010) 
+      based on relaxing measurement independence (2010)
         - https://arxiv.org/abs/1007.5518
     - On Superdeterministic Rejections of Settings Independence
       (2020) https://arxiv.org/abs/2008.00631
@@ -93,21 +105,21 @@
       written as tensor products of vectors from the two
       subsystems' spaces (only as a superposition of several
       terms of this type).
-     
+
 
 
 ### Sabine: entanglement measurement - nothing changes?
     - $MY_NOTES/physics/QM/Sabine-Entanglement.txt
     - In an experiment, you can flip the spin of one particle,
       say the left one, even without knowing what it is. If it
-      was `−1`, it is now `+1`; if it was `+1`, it is now `−1`. 
+      was `−1`, it is now `+1`; if it was `+1`, it is now `−1`.
         - If you do that, what happens to the particle on the
-          right side? NOTHING. 
+          right side? NOTHING.
         - The other particle itself has not changed, and the two
           particles are still entangled — just the correlation
-          between them has changed. 
+          between them has changed.
         - You have changed an entangled system into a different,
-          also entangled system. 
+          also entangled system.
         - There is no “spooky action” in entanglement, no
           exchange of information that is faster than the speed
           of light.
@@ -151,24 +163,24 @@
     2. eigenvector
     3. eignbasis
     4. observable operator
-    - Key: 
+    - Key:
         - An `eigenvector` of an observable operator is a STATE
           that gives a DEFINITE OUTCOME when that observable is
           measured.
-    - Key: 
+    - Key:
         - Every real detector is built to respond to
           `eigenstates` of the observable it measures.
     - Later: More intuition:
-        - Another definition of '`eigenstate`: 
+        - Another definition of '`eigenstate`:
             - 'Allowed states'
         - As Bohr already perceived when he launched atomic
           theory, the radiated energy advertises the structure of
-          _“allowed” states_ of the radiating system. 
+          _“allowed” states_ of the radiating system.
             - These eigenstates are determined in turn by the
-              internal forces operating on the electrons. 
+              internal forces operating on the electrons.
         - Classical spectroscopy observes light radiated from
           electrons in chemical atoms energized by a spark, or
-          heat, or other means. 
+          heat, or other means.
         - The electrons tumble down from one `eigenstate` to
           another, shedding excess energy along the way as pho-
           tons, the energy quanta of EM force.
@@ -178,7 +190,7 @@
 
 ### Marbuger: the wavefunction
     - $MY_NOTES/physics/QM/Constructing-reality-marburger.txt
-    - (Wavefunction? `ψ`) It doesn't correspond to a force. 
+    - (Wavefunction? `ψ`) It doesn't correspond to a force.
         - It doesn't directly carry energy or momentum.
         - Rather its `intensity` (squared magnitude ...
           [amplitude?]) at each point of space, times the
@@ -195,22 +207,22 @@
 
 ### GHZ better experiment
     - $MY_NOTES/physics/QM/Age-Entanglement-Louisa-Gilder.txt
-        - $MY_NOTES/physics/QM/Peres-unperformed-experiments-Gemini.txt 
-        - $MY_NOTES/physics/QM/Peres-unperformed-experiments-GPT1.txt   
-        - $MY_NOTES/physics/QM/Peres-unperformed-experiments-GPT2.txt   
+        - $MY_NOTES/physics/QM/Peres-unperformed-experiments-Gemini.txt
+        - $MY_NOTES/physics/QM/Peres-unperformed-experiments-GPT1.txt
+        - $MY_NOTES/physics/QM/Peres-unperformed-experiments-GPT2.txt
     - “This is a more powerful refutation of the existence of
       'elements of reality' than the one provided by Bell’s
-      theorem for the two-particle EPR experiment. 
+      theorem for the two-particle EPR experiment.
     - Bell showed that the elements of reality inferred from one
       group of measurements are incompatible with the statistics
-      produced by a second group of measurements. 
+      produced by a second group of measurements.
     - Such a refutation can't be accomplished in a single run,
       but is built up with increasing confidence as the number of
       runs increases. Thus in one simple version of the
       two-particle EPR experiment, the hypothesis of 'elements of
       reality' requires a class of outcomes to occur at least
       55.5% of the time, while QM allows them to occur only half
-      the time”—hence the inequality. 
+      the time”—hence the inequality.
     - “In the GHZ experiment, on the other hand, the elements of
       reality require a class of outcomes to occur all of the
       time, while QM never allows them to occur.”
@@ -220,7 +232,7 @@
     - $MY_BOOKS/Physics/QM/Grete-Hermann-Foundations-QM.pdf
     - QM forces us […] to drop the assumption of the absolute
       character of knowledge about nature, and to deal with the
-      principle of causality independently of this assumption. 
+      principle of causality independently of this assumption.
     - QM has therefore NOT contradicted the law of causality at
       all, but has clarified it and has removed from it other
       principles which aren't necessarily connected to it.
@@ -233,7 +245,7 @@
       additional variables or rules that restore causal
       evolution. Such additions would have to act at the
       interface between the quantum system and the classical
-      measuring apparatus (the “cut/Schnitt”). 
+      measuring apparatus (the “cut/Schnitt”).
     - On both sides of this interface, each domain’s laws hold
       precisely: quantum dynamics for the system, classical
       dynamics for the apparatus. Statistical behavior enters
@@ -244,7 +256,7 @@
       mechanically, as long as some remaining part is described
       classically. If new deterministic variables were
       introduced, their behavior would need to remain consistent
-      no matter where this boundary is placed. 
+      no matter where this boundary is placed.
     - Because shifting the cut changes which components are
       governed by quantum versus classical descriptions,
       enforcing deterministic hidden properties across all
@@ -277,7 +289,7 @@
     - Highlight on Page 34 | Added Monday, Feb 13, 2012, 09:11 AM
         - But in Bohr’s atom, the frequency of the electron’s
           orbit isn't the same as the frequency of the light it
-          emits. 
+          emits.
         - Incredibly, it is a single, pure frequency `halfway`
           between the orbit where the electron started and the
           orbit in which it would land, as if the electron,
@@ -294,11 +306,11 @@
 ### The Peierls bracket
     - $MY_BOOKS/Physics/QG/DeWitt-Pursuit-of-QG.pdf
     - The essence of quantum physics in the `operator formalism`
-      follows from the theory of measurement. 
-    - It can be encoded in the Peierls bracket [pp. 49–54]. 
+      follows from the theory of measurement.
+    - It can be encoded in the Peierls bracket [pp. 49–54].
     - The bracket invented by Peierls in 1952 is a beautiful
       covariant replacement of the canonical Poisson bracket, or
-      its generalizations, used in canonical quantization. 
+      its generalizations, used in canonical quantization.
     - Let `A` and `B` be any two physical observables. Their
       Peierls bracket is defined to be [eq. 4.16]
 
@@ -306,17 +318,17 @@
     - $MY_NOTES/physics/QG/BH-Info-Loss/BH-Info-Loss-Sabine-Maudlin-BHG.txt
     - We need to know that the energy operator in the CFT is dual
       to the energy operator in the bulk. Is that anything that
-      has been established? 
+      has been established?
     - And I mean here specifically an energy operator, not
       whatever it is that implements the dependency on time, or
-      more precisely some `t-coordinate`. 
+      more precisely some `t-coordinate`.
     - there's really no "time operator" in QM, but a relation is
       usually postulated between a Hamiltonian operator and "time
-      translation" in some preferred co-ordinate system. 
+      translation" in some preferred co-ordinate system.
     - All of these connections (between "energy" and some
       Hamiltonian operator, between a Hamiltonian and
       time-translation, what is meant by time-translation at all)
-      have to be dealt with delicately here. 
+      have to be dealt with delicately here.
 
 
 ### Virtual particles / quantum fluctuations
@@ -325,11 +337,11 @@
       "fluctuations", and that mentions the Heisenberg
       time/energy uncertainty principle, as if a virtual particle
       can exist as a short-term fluctuation, but the longer lived
-      it is the less energy it must have. 
+      it is the less energy it must have.
     - This talk is confused because of a misunderstanding of the
       term "fluctuation". There are, for example, "quantum
       fluctuations" in the Minkowski vacuum state, but the state
-      itself is stationary, and doesn't fluctuate at all. 
+      itself is stationary, and doesn't fluctuate at all.
     - The so-called "fluctuations" are expectation values for
       certain quantities if they were measured. No physical
       change corresponds to them.
@@ -340,47 +352,47 @@
     - Zierler:
         - Is the fundamental disagreement between Einstein and
           Bohr settled, or is it still provisional in light of
-          possible surprises?  
+          possible surprises?
     - Smolin:
         - It’s very provisional. I co-authored a surprising paper
           with Clelia Verde arguing that the distinction between
           `past` and `future` is central to QM, separating the
           classical macroscopic world (past) from the quantum
-          microscopic world (future). 
+          microscopic world (future).
         - Heisenberg and Dyson suggested similar ideas, but this
           approach required revising our understanding of `time`.
           The papers are “scary” but logically consistent...
 
 
 ### Philosophy of Physics talk
-    - Colloquium: What's Wrong with QM, and How to Fix It 
-    - Jacob Barandes, Harvard 
+    - Colloquium: What's Wrong with QM, and How to Fix It
+    - Jacob Barandes, Harvard
     - Does textbook quantum theory suffer from fundamental
       inconsistencies, like the measurement problem, or do
-      phenomena like decoherence save the day? 
+      phenomena like decoherence save the day?
     - I'll make the case that the problems with the textbook
       theory are real and significant, and efforts to address
       them have produced many practical spin-offs, including
-      decoherence itself. 
+      decoherence itself.
     - I'll lay out a minimal set of criteria that any consistent
       axiomatic formulation of quantum theory should satisfy.
     - I'll argue that none of the existing options, including the
       Many Worlds interpretation, clear this bar, so another
-      approach to quantum foundations is urgently needed. 
+      approach to quantum foundations is urgently needed.
     - I'll introduce one new such approach, based on a remarkably
       simple axiomatic picture in which every system has an
       old-fashioned configuration in physical space that evolves
       according to an “indivisible” stochastic process, and in
       which wave functions and superposition are no longer
-      literal ingredients of reality. 
+      literal ingredients of reality.
     - I'll also present a mathematical mapping between these
       stochastic processes and the usual Hilbert-space
-      formulation of quantum theory. 
+      formulation of quantum theory.
     - After describing this stochastic-quantum correspondence,
       and going through several concrete examples, I'll turn to
       a careful dissection of Bell's theorem, and show how
       `indivisible quantum theory` points to shortcomings in the
-      theorem's claims about local causality. 
+      theorem's claims about local causality.
     - I will conclude with several intriguing possible
       applications to physics and to other areas of science.
     - References: https://arxiv.org/abs/2302.10778,
@@ -391,31 +403,31 @@
 
 
 ### Decoherence
-    - It was actually Bohm who invented Decoherence... not Zeh 
+    - It was actually Bohm who invented Decoherence... not Zeh
     - $MY_IMAGES/physics/QM/Bohm-decoherence.jpg
 
 ### Concise QM book
     - https://news.ycombinator.com/item?id=45144234
     - Comment: I'd like to learn the history of QM
-    - Answer:  
+    - Answer:
             - Curt Jaimungal's talks with Jacob Barandes.
             - nice background history of QM.
             - complex ideas explained simply
             - https://www.youtube.com/watch?v=7oWip00iXbo
 
 ### Key: The elephant in the room
-    - Lucien Hardy talk at Lee Smolin Fest     
+    - Lucien Hardy talk at Lee Smolin Fest
         - https://pirsa.org/c25023
     - The measurement problem
     - According to unitary evolution we can have
         - `ψ  =  ψ_bigthing at A  +  ψ_bigthing at B`
     - If we believe this, we're on the horns of a dilemma.
       Either:
-    - REALITY PROBLEM: 
+    - REALITY PROBLEM:
         - there's a mismatch between the quantum description and
           way the world appears to be (as big objects appear to
           be in definite places), or
-    - INCOMPLETENESS: 
+    - INCOMPLETENESS:
         - The wavefunction isn't a complete description of
           reality. (Lee thinks this)
     - `The measurement problem` is the elephant in the room.
@@ -427,13 +439,13 @@
           a chair simultaneously here and there).
         - Implication: There's a mismatch between theory and
           observed reality.
-        - Interpretation: 
+        - Interpretation:
             - Either the wavefunction doesn't correspond directly
               to reality, or something about observation
               "collapses" the state.
-        - Examples: 
+        - Examples:
             - Schrödinger’s cat, macroscopic superpositions.
-        - Responses: 
+        - Responses:
             - Collapse theories (e.g., GRW), objective collapse,
               or reinterpretation of the wavefunction.
     2. Incompleteness
@@ -454,10 +466,10 @@
     - $MY_NOTES/physics/metaphysics/Smolin-5-probs-Physics.txt
     - Quantum theory can be described as a new kind of language
       used in a dialogue between us and the systems we study with
-      our instruments. 
+      our instruments.
         - This quantum language contains verbs that refer to our
           preparations and measurements and nouns that refer to
-          what is then seen. 
+          what is then seen.
         - It tells us nothing about _what the world would be
           like_ in our absence.
 
@@ -483,7 +495,7 @@
       transitions being only possible with quantum tunneling"
       thing and want an alternative interpretation:
         - It's only true that the transitions are forbidden under
-          a given simplified model of the atom. 
+          a given simplified model of the atom.
         - It is very much possible to calculate the transition
           probabilities under a more realistic model, and the
           previously "forbidden" transitions are now just regular
@@ -496,7 +508,7 @@
         - This means it interacts with EM radiation only through
           electric dipole interactions, which implies that energy
           transitions must change orbital angular momentum, hence
-          the 21cm transition is "forbidden". 
+          the 21cm transition is "forbidden".
     - But an atom isn't truly an `electric dipole`, and so the
       21cm transition is possible by the magnetic dipole
       interaction, just with low probability.
@@ -509,8 +521,8 @@
         - ./Sabine-measurement-independence.txt
         - This finally brings us to Bell's theorem. I'm not going
           to explain it because you've already watched 20 videos
-          about it, and it didn't help. 
-        - I'll just tell you what it says. 
+          about it, and it didn't help.
+        - I'll just tell you what it says.
         - Bell's theorem says if you WANT a local hidden
           variables model that reproduces QM correctly, then it
           needs to violate `measurement independence`.
@@ -520,26 +532,26 @@
         - Different experiments may be performed on each system.
           We will use a,a′ as variables ranging over possible
           experiments on 1, and b,b′ as variables that range over
-          experiments on 2. 
+          experiments on 2.
         - It isn't assumed that these parameters capture the
           complete state of the experimental apparatus, which
           might have a range of microstates corresponding to each
           experimental setting.
         - It is assumed that the preparation probability
           distribution `ρ` is independent of the processes by
-          which a choice of experiments to be performed is made. 
+          which a choice of experiments to be performed is made.
         - This assumption we call the Measurement Independence
           Assumption.
 
 ### Beam splitter: momentum conservation
     - https://www.youtube.com/watch?v=HEWMwnCZHJY
-    - Question: 
+    - Question:
         - I always thought in QM that conservation laws apply to
           average values. If they truly hold for every single
           event, I find it hard to understand how the
-          Mach–Zehnder interferometer would work. 
+          Mach–Zehnder interferometer would work.
         - Wouldn’t the interaction with the mirrors destroy the
-          interference pattern? 
+          interference pattern?
             - After all, each part of the photon’s wavefunction
               is now in a superposition with the moving mirrors.
         - Furthermore: still considering a Mach–Zehnder
@@ -551,17 +563,17 @@
         - Yes, this is a very good question. The reason that the
           interaction with the beam splitter and/or mirror
           doesn't destroy the superposition is that you can't
-          measure it and in fact don't measure it. 
+          measure it and in fact don't measure it.
         - You can imagine the mirror and/or splitter to be so
           small that they are another particle and the
-          interaction causes a measurable change. 
+          interaction causes a measurable change.
             - If you then measure the splitter-particle, the
               superposition will collapse.
     - Further clarification:
-        - Consider a single photon fired at a beam splitter. 
+        - Consider a single photon fired at a beam splitter.
         - What Sabine means is that the photon only interact with
           a small nano-scale portion of the macro-scale beam
-          splitter that you can see with your eyes. 
+          splitter that you can see with your eyes.
         - While that's technically false (since any small
           momentum change would propagate), the relevant thing is
           that the information about any momentum changes in the
@@ -570,7 +582,7 @@
           background noise in whatever actual setup you have.
         - Even if the momentum of the macro-scale beam splitter
           is very precisely measured, its correlation with
-          interactions with the photon is extremely low. 
+          interactions with the photon is extremely low.
             - This is in contrast with the photon's interaction
               with a detector, where the photon's signal is
               intentionally amplified, so that its presence is
@@ -578,7 +590,7 @@
               electric current) that we can measure.
         - If you then suggest to measure momentum changes in the
           beam splitter at nano-scale portions, then you are
-          turning the beam splitter into a detector. 
+          turning the beam splitter into a detector.
             - This is similar to measuring which slit a particle
               passes through in a double-slit experiment
 
@@ -589,12 +601,12 @@
 ### 'Quantum Logic' Reserach program
     - (Never knew it was a separate research program)
     - $MY_NOTES/physics/metaphysics/craig_callender_interview.md
-    - Why isn’t Schrödinger’s cat a true contradiction? 
+    - Why isn’t Schrödinger’s cat a true contradiction?
     - It could be, in a sense. The `quantum logic` program
       offered something like this picture. But I don’t think that
       program was successful as a physical theory, and many
       controversial assumptions go into reading superpositions
-      like that. 
+      like that.
 
 
 ### QM Miracle
@@ -605,7 +617,7 @@
       classical reality emerges from QM was lacking, and the
       prevailing view was essentially "a _miracle_ happens".
         - (a.k.a. the wave function "collapses", whatever that
-          might actually mean). 
+          might actually mean).
     - QM was accepted as an explanation nonetheless simply
       because it explained the data better than any available
       alternative, and it still does.
@@ -640,7 +652,7 @@
           must leave it at that.
 
 
-### Nice: 
+### Nice:
     - electron in a magnetic field
     - $MY_NOTES/physics/courses/misc/QI_susskind_02.txt
         1. `prepare state`: put in magnetic field
@@ -650,8 +662,8 @@
         of the prepared electron, a different amount of energy is
         radiated
         - WRONG!!! THATS CLASSICAL!
-        - for a real quantum electron, you either get 
-            - no emission of radiation or 
+        - for a real quantum electron, you either get
+            - no emission of radiation or
             - exactly on lump (quantum, photon) of radiation.
         - Appears electron only has two states, `up` and `down`.
 
@@ -670,19 +682,19 @@
       successful attempt (1900) to use the recently-established
       principles of statistical mechanics to account for the
       spectral distribution of thermalized electromagnetic
-      radiation. 
+      radiation.
     - It was soon appreciated that Planck’s energy/frequency
       relation was relevant to the understanding of optical
       phenomena that take place _far from thermal equilibrium_
       (photoelectric effect: Einstein 1905; atomic radiation:
-      Bohr 1913). 
+      Bohr 1913).
     - By 1916 it had become clear to Einstein that, while light
       is in some contexts well described as a Maxwellian wave, in
       other contexts it is more usefully thought of as a massless
-      particle, with energy `E = hν` and momentum `p = h/λ`. 
+      particle, with energy `E = hν` and momentum `p = h/λ`.
         - The mechanical statement `E = cp`* and the wave
           relation `λν = c` become then alternative ways of
-          saying the same thing. 
+          saying the same thing.
             - *: from the relativistic statement `E
               = c ∙ sqrt(p^2 + (mc)^2)` in the limit `m -> 0`.
         - Einstein had in effect “invented the photon” (which,
@@ -702,17 +714,17 @@
       ... that certain observed correlations between experiments
       done far away from each other can't be predicted or
       explained if no causes go faster than light” isn't strictly
-      true. 
+      true.
     - Indeed, _not only_ is there no contradiction between SR and
       QM due to QM predictions and observed violation of Bell’s
       inequality, but the axiomatic reconstruction of QM from
       `information-theoretic` principles shows that the two
-      theories actually follow from the same principle. 
+      theories actually follow from the same principle.
     - Specifically, the kinematics of SR (Lorentz
       transformations) and QM (finite-dimensional Hilbert space)
       both follow fundamentally from the relativity principle:
       the laws of physics (to include their constants of Nature)
-      are the same in all inertial reference frames. 
+      are the same in all inertial reference frames.
     - We spell this out for the "general reader" in our book,
       "Einstein's Entanglement: Bell Inequalities, Relativity,
       and the Qubit" (2024), but here's a synopsis:
@@ -760,7 +772,7 @@
           to the vertical. Since spin is a form of angular
           momentum, classical mechanics says the amount of the
           vertical +1 angular momentum that you should measure at
-          60 deg is `+1*cos(60) = 1/2` (in units of hbar/2). 
+          60 deg is `+1*cos(60) = 1/2` (in units of hbar/2).
         - But, the SG measurement of electron spin constitutes
           a measurement of h, so everyone has to get the same +/-
           1 for a spin measurement in any SG spatial orientation
@@ -769,12 +781,12 @@
           Instead, QM says the measurement of a vertical spin up
           electron at 60 deg will produce +1 with a probability
           of 0.75 and it will produce 1 with a probability of
-          0.25, so the average is (+1 + 1 + 1 - 1)/4 = 1/2. 
+          0.25, so the average is (+1 + 1 + 1 - 1)/4 = 1/2.
           - In other words, QM says you get the common sense
             classical result on 'average only' because of the
             observer-independence of h. [Notice that
             indeterminism follows necessarily, since we have to
-            average the required +/ 1 results.] 
+            average the required +/ 1 results.]
         - Now suppose Alice and Bob are measuring the spin
           singlet state (the two spins are anti-aligned when
           measured in the same direction, as shown in this video)
@@ -805,20 +817,20 @@
           via relative motion, they partition spacetime events
           per their own surfaces of simultaneity and show clearly
           that each other's meter sticks are short and their
-          clocks run slow. 
+          clocks run slow.
         - In other words, the mystery of quantum entanglement
           resides in 'average-only' conservation that results
           from "no preferred reference frame" (NPRF) giving the
-          observer-independence of h (NPRF + h). 
+          observer-independence of h (NPRF + h).
         - And, the mysteries of length contraction and time
           dilation reside in the relativity of simultaneity that
           results from "no preferred reference frame" giving the
-          observer-independence of c (NPRF + c). 
+          observer-independence of c (NPRF + c).
         - So, whose meter sticks are really short and whose
           clocks really run slow? This question arises in the
           (wrong) constructive perspective, there's no causal
           mechanism shortening meter sticks and slowing down
-          clocks in SR. 
+          clocks in SR.
         - Length contraction and time dilation aren't dynamical
           effects, they are kinematic facts due to the light
           postulate, as justified by the relativity principle.
@@ -844,7 +856,7 @@
       `relative states` (Many Worlds) on philosophical grounds
       for contradicting the intuitive notion that there can be an
       privileged frame of reference, i.e. some sort of foliation
-      in spacetime, so he insists it must be wrong. 
+      in spacetime, so he insists it must be wrong.
         - (Tim thinks there *is* a privileged reference frame??)
         - Ah, more clarity from another commenter:
             - One of Tim's dislike of QM is precisely that you
@@ -856,26 +868,26 @@
               things-in-themselves, i.e. particles only have
               properties in relation to other systems.
 
-    - This isn't about "interpretation" or "theory." 
+    - This isn't about "interpretation" or "theory."
         - The mathematical formalism (of QM or QFT?) is literally
-          local in the sense that it is `Lorentz invariant`. 
+          local in the sense that it is `Lorentz invariant`.
     - Supporters of the pilot wave theory tend to mislead people
       by saying that it makes the same predictions as QM, but
       they forget that our best theory of nature is actually QFT
       and not QM, so being able to reproduce QM is hardly that
-      impressive these days. 
+      impressive these days.
     - _QFT relies on locality_ to work, as it is takes SR into
-      account. 
+      account.
     - Maudlin keeps suggesting he's working on his own personal
       model that will somehow solve this problem, yet given it
       remains unsolved for a century I'm not getting hopeful.
     - The mathematics are objectively local, all the talk of
-      "nonlocality" arises either 
+      "nonlocality" arises either
         - philosophically from positing additional metaphysical
           entities which aren't necessary,
         - or arise mathematically due to people like Tim thinking
           QFT must be wrong and it needs to have new parameters,
-          despite there being no evidence it is wrong 
+          despite there being no evidence it is wrong
             - (his contentions with it are on purely
               philosophical grounds).
 
@@ -962,19 +974,19 @@
       theory and gravity (quantamagazine.org)
     - https://web.archive.org/web/20231210224441/https://news.ycombinator.com/item?id=38542166
     - The separation of experiment and environment is an
-      artificial distinction. 
+      artificial distinction.
     - Decoherence is caused by _random phase shifts_, which may
       appear due to interaction with the environment, but by the
       entropic definition of temperature, a sufficiently large
       and warm object will be disorderly enough to have this
-      effect as well. 
+      effect as well.
     - You can not be hot and coherent at the same time, as the
       first implies a large degree of disorder and the other
       implies a large degree of order.
 
 ### Tim Maudlin: QM non-locality and light cones
     - Channel: Know Time #73
-    - Philosophy, Quantum Physics & Time ft. Tim Maudlin 
+    - Philosophy, Quantum Physics & Time ft. Tim Maudlin
         - https://www.youtube.com/watch?v=gaJpM6RsFgo
     - Tim says we should go back to Newton's basic idea of
       a fixed foliation and spacetime cut into universal 'slices'
@@ -1008,8 +1020,8 @@
     - PBR Paper: Quantum state can't be interpreted
       statistically.
         - $MY_BOOKS/Physics/papers/2012-PBR-Reality-of-Quantum-State.pdf
-    - What is PBR about? 
-        - Matt Leifer gives 3 wavefunction interpretations: 
+    - What is PBR about?
+        - Matt Leifer gives 3 wavefunction interpretations:
             - $MY_IMAGES/physics/QM/Tim-PBR-talk/3-interpretations-wavefunction.jpg
         - Tim doesn't like `#2`: "... there's no deeper
           underlying reality". What is Physics supposed to be
@@ -1043,7 +1055,7 @@
         - $MY_IMAGES/physics/QM/Tim-PBR-talk/key-PBR-question-2.jpg
         - $MY_IMAGES/physics/QM/Tim-PBR-talk/key-PBR-question-3.jpg
         - Subtle point: we DON'T have a reliable way to sort
-          (distinguish) `Z-Up` from `X-Up`. 
+          (distinguish) `Z-Up` from `X-Up`.
             - So is there a physical difference between them
               then? (apart from a historical difference in the
               way they were prepared).
@@ -1060,10 +1072,10 @@
     - Main argument:
         - $MY_IMAGES/physics/QM/Tim-PBR-talk/PBR-argument-1.jpg
         - Note: product states can be expressed as entangled
-          states(?!) 
+          states(?!)
             - Ah yes, if your spin basis is an ENTANGLED basis.
             - $MY_IMAGES/physics/QM/Tim-PBR-talk/PBR-argument-2.jpg
-        - Four entangled basis: `α`, `β`, `γ`, `δ`    
+        - Four entangled basis: `α`, `β`, `γ`, `δ`
             - $MY_IMAGES/physics/QM/Tim-PBR-talk/PBR-argument-3.jpg
             - Note: These states are linear independent and
               orthogonal so they can serve as basis states.
@@ -1151,7 +1163,7 @@
     - Or from another angle, see Bell: this confusion about
       operators stems from the misuse of the word 'measurement'
       and 'observable' as if we're measuring some pre-existing
-      value. 
+      value.
         - But as Bohr said, the whoe measurement process is
           a combination of the actual detector interacting with
           the system being 'measured'.
@@ -1699,14 +1711,14 @@
     - $MY_NOTES/physics/QM/superposition.txt
     - A quantum state is a complex-valued function (for position
       representation) or a vector in Hilbert space (the abstract
-      representation). 
+      representation).
     - The physical meaning of superposition is that the state
       encodes the possibility of different measurement outcomes
       _simultaneously_, and that these possibilities can
-      `interfere` with each other. 
+      `interfere` with each other.
     - Formally, if `psi_1`, `psi_2` are state vectors, then any
       linear combination `(a)psi_1 + (b)psi_2` is also a valid
-      state. 
+      state.
     - Superposition just means "ADDING allowed quantum states
       together with complex weights".
 
@@ -2066,7 +2078,7 @@
       its discovery, and instead starts directly from the
       conceptual core: namely, a certain generalization of the
       laws of probability to allow minus signs (and more
-      generally, complex numbers). 
+      generally, complex numbers).
     - Once you understand that core, you can then sprinkle in
       physics to taste, and calculate the spectrum of whatever
       atom you want. This second approach is the one I’ll be
@@ -2084,7 +2096,7 @@
       theory and porting it to this OS: “to quantize.”
     - But if QM _isnt physics_ in the usual sense – if it’s not
       about matter, or energy, or waves, or particles – then what
-      is it about? 
+      is it about?
         - From my perspective, it’s about information and
           probabilities and observables, and how they relate to
           each other.
@@ -2106,7 +2118,7 @@
       and then momentum, you get different results than if you
       measure momentum first and then position' , well then,
       hasn't your explanation already presupposed the concept of
-      time? 
+      time?
     - Also, didn't we already have plenty of non-commuting
       operations that we could do even in classical physics
       (albeit not measurements), like putting on underwear and
@@ -2190,8 +2202,8 @@
       physical states, which should result in a physical state,
       to have interference like that.
     - But this doesn't explain a number of things, like why
-      should the coefficients be complex numbers. 
-        - Why not real numbers? (Barbour asks this too). 
+      should the coefficients be complex numbers.
+        - Why not real numbers? (Barbour asks this too).
         - And why should you have an inner product on that space?
           Why not just linear combinations?
 
@@ -2212,18 +2224,18 @@
       a characteristic so precise that its presence or absence
       makes the difference between smooth deterministic evolution
       and stochastic jumpy “collapses”.
-    - This, in a nutshell is the measurement problem. 
+    - This, in a nutshell is the measurement problem.
     - The Putnam of 1965 was rightfully scandalized by the state
       of it. In 1968 Putnam returns to quantum theory with “The
-      logic of QM”. 
+      logic of QM”.
         - As the title indicates, questioning—or at least
-          discussing—logic itself is now on the main menu. 
+          discussing—logic itself is now on the main menu.
         - Our quick review of the 1965 works have set the table:
           in those, Putnam rejects real physical collapses of the
           wavefunction, “hidden” variables, and the Copenhagen
           interpretation because none of them could deliver what
           he regarded as a plausible account of measurement as
-          a purely physical interaction between physical systems. 
+          a purely physical interaction between physical systems.
     - The question that we must keep in our minds is how the
       introduction of a new logic, or even more radically the
       replacement of classical logic with a new logic, could even
@@ -2232,7 +2244,7 @@
       hands back the very same wavefunction multiplied by
       a number. Such a wavefunction is called an eigenfunction of
       the operator and the number is called its eigenvalue.
-    - At this point, a key physical assumption is made. 
+    - At this point, a key physical assumption is made.
     - The “observable” operators are associated with physical
       magnitudes and the condition for a system to have
       a definite physical magnitude is that its wavefunction be
@@ -2244,7 +2256,7 @@
       position operator represents a system that fails to have
       any definite position, and a waverfunction that isn't an
       eigenfunction of the momentum operator represents a system
-      that fails to have any definite momentum. 
+      that fails to have any definite momentum.
         - And since no POSITION eigenfunction is a MOMENTUM
           eigenfunction, mathematics alone guarantees that no
           system can simultaneously have a definite position and
@@ -2259,9 +2271,9 @@
           of a system or not?
         - 2) How does the "pre-interaction with a 'measuring'
           device" state of a system relate to its
-          post-interaction state? 
+          post-interaction state?
             - What does the outcome of the measurement indicate
-              about the system before it was measured? 
+              about the system before it was measured?
             - Without answers to these questions, physical
               answers, the truth value of many claims can't even
               be addressed.
@@ -2269,17 +2281,17 @@
 
 ### Density matrix theory
     - see: $MY_NOTES/physics/QM/density-matrix.txt
-    - Srinivasan: theres a difference between: 
+    - Srinivasan: theres a difference between:
         - (pure) QM and
-        - quantum statistical mechanics 
+        - quantum statistical mechanics
     - ("QM statistical" is where the density matrix starts to
       come in)
         - https://www.youtube.com/watch?v=hJrlLEbkbrM
     - note: "density matrix" = density operator
-    - Pure State: 
+    - Pure State:
         - a system can be described by a (single?) vector,  or
           linear combination of vectors
-    - Mixed State: 
+    - Mixed State:
         - not in a "pure state"?
     - density matrix:
         - diagonals are called "populations"
@@ -2302,7 +2314,7 @@
 
 
 ### Review: George Greenstein (Quantum Challenge)
-    - The Quantum Challenge: 
+    - The Quantum Challenge:
         - Modern Research on the Foundations of QM
     - I'm a professional physicist working in industry today; my
       PhD was in QFT.
@@ -2390,7 +2402,7 @@
     - An operator "spectrum" is a set of all its eigenvalues.
     - A Spectrum of an operator may be continuous or discrete.
 
-    - The `state` of a system isn't an observable itself. 
+    - The `state` of a system isn't an observable itself.
         - It plays the "ROLE" of a probability distribution.
 
     - In QM, the identity matrix is represented by a bold-face
@@ -2399,8 +2411,8 @@
     - Schroedinger equation is an OPERATOR equation, not an
       EIGENVALUE equation. Its a first-order in time differential
       equation, needs an initial condition to solve it.
-        - An Initial condition is the state at time `t=0`. 
-            - ie `|ψ(0)⟩` 
+        - An Initial condition is the state at time `t=0`.
+            - ie `|ψ(0)⟩`
         - Its an autonomous equation, any instant in time will do
           as the initial time.
 
@@ -2436,7 +2448,7 @@
 ### Exponentiation of operators:
 
     1. `e^A * e^B = e^(A+B)`.
-        - This is true iff `A` and `B` commute. 
+        - This is true iff `A` and `B` commute.
         - ie `[A, B] = 0`
 
     2. So: `(e^A) * (e^-A) = e^(A-A) = 1`
@@ -2464,4 +2476,3 @@
 	- Schrödinger equation emerges mathematically from CM            https://news.ycombinator.com/item?id=38735725
     - Perimeter Institute: The Quantum Tamers                        https://www.youtube.com/watch?v=NLO8MRLr_jQ
     - HN: "I don't understand QM"                                    https://news.ycombinator.com/item?id=50219666
-

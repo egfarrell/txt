@@ -22,8 +22,8 @@
 
     - Attempts to explain HOW this arrow could arise from
       TIME-SYMMETRIC laws often invoke a _past hypothesis_: 
-        - the initial condition with which the Universe came into
-          existence must have been very special.
+        - the initial condition of the Universe must have been
+          very special.
 
     - This is based on thermodynamic reasoning, which seems to
       make a SPONTANEOUS emergence of an arrow of time very
@@ -33,7 +33,10 @@
       provided gravity is not a dominant force, SELF-GRAVITATING
       systems exhibit _anti-thermodynamic_ behavior that is not
       fully understood. 
-      
+        - See also:
+        - $MY_NOTES/physics/thermo/past-hypothesis.txt
+        - $MY_NOTES/physics/thermo/Past-Hypothesis-2.txt
+
     - Since the Universe is the ultimate self-gravitating system 
       and since it cannot be treated as a subsystem, 
       its behavior may well confound thermodynamic expectations
@@ -51,23 +54,21 @@
           `Geometrical Methods of Mathematical Physics`, which
           has a good treatment of the important 'Lie derivative'. 
         - This universal concept is the basis of "best matching",
-          which is the means by which the first Mach’s principle
-          is implemented.
+          which is how the first Mach’s principle is implemented.
 
         - Lanczos’s `Variational Principles of Mechanics`; 
             - My technical chapters might make a book called:
               "The Variational Principles of Relational
               Mechanics". 
-            - Lanczos’s book is a wonderful account of his
-              subject and history, but stays within Newton's
-              paradigm. 
+            - Lanczos’s book is a wonderful, but stays within
+              Newton's paradigm. 
             - Lanczos never asks the Machian questions: 
                 - What is time? 
                 - What is motion?
  
-        - The final book – a must – is Dirac’s gem `Lectures on
-          Quantum Mechanics`, where he develops generalized
-          Hamiltonian dynamics. 
+        - The final book is Dirac’s gem `Lectures on Quantum
+          Mechanics`, where he develops generalized Hamiltonian
+          dynamics. 
             - The mathematics of relational dynamics is
               unthinkable without Dirac’s techniques. 
             - However, there is a difference from Dirac’s
@@ -180,19 +181,18 @@
                 - Symmetry is a clue, not the cause —  
                 - the real task is uncovering the underlying relational structure that produces it.
                   
-# Barbour, end of time
-    - barbour talk:
+# Barbour, End of Time
+    - Barbour talk:
         - Why does Newton want absolute space and time?
         - Because he needs to formulate his 1st law, which says
           that bodies undisturbed by any force travel at:
             - a constant uniform speed
             - in a straight line.
-        - You can't have either of those two things THAT WERENT
-          VERIFIED USING ABSOLUTE SPACE AND TIME!
+        - You can't have either of those two things without using
+          ABSOLUTE SPACE AND TIME to verify them!
 
-    - In Newtonian theory, there has always been a serious
-      problem with absolute space and Newton was not entirely
-      frank about it. 
+    - In Newtonian theory, there's always been a problem with
+      absolute space and Newton wasn't entirely frank about it. 
         - In his guts, he believed in a state of absolute rest
           and when he introduced absolute space, his words
           suggested the existence of one unique framework of
@@ -208,7 +208,7 @@
 
     - It was expected that the relativity principle would only
       hold only for the mechanical processes described by Newtons
-      laws, but not for optical and electromagnetic phenomena.
+      laws, but not for optical and EM phenomena.
 
     - The aether proposed by Lorentz was devoid of all physical
       properties except rigidity. 

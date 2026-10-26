@@ -2849,7 +2849,7 @@ LLMs fail at Physics and Maths
 
 ### Eric Weinstein
     - Brian Keating pod, Apr 2021
-    - Weinstein GU https://www.youtube.com/watch?v=uFirZANoiHI
+        - Weinstein GU https://www.youtube.com/watch?v=uFirZANoiHI
     - guage theory as calculus done right
         - https://pullthatupjamie.com/
     - 3 best physicists 20th century:
@@ -9912,14 +9912,6 @@ LLMs fail at Physics and Maths
     - remember story: lateral thinking:
         - the dragon and the black pebble(!)
 
-### difference between quantum/classical physics
-    - quantum needs complex numbers
-    - classical can all be done with reals (complex only
-      a convenience)
-    - (See Yang section above about Schrodinger and complex)
-    - (But Barbour had a talk where he says complex aren't
-      neccessarily needed, and Peter Woit says the same
-      somewhere?)
 
 ### probability of atom decaying is independent of age (??)
     p. 34 T acausal

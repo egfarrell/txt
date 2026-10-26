@@ -9,11 +9,10 @@
     - the 2nd law of thermodynamics is a dynamical neccessity
 
 ### janus point solutions
-    - Particles but __no box__! 
+    - Particles but _NO BOX_! 
     - Theres always one point where the centre of mass (moment of
       interia?) is at a minimum, and in both time directions it
       expands outwards.
-
     - and because of time-reversal-symmetry (which is a key
       feature) in both directions you have hubble type expansion
 
@@ -23,7 +22,7 @@
       distance)
 
 ### hubble type expansion
-    - is very special, its an attractor of intertial type motion
+    - is very special, its an ATTRACTOR of intertial type motion
 
 ### Poincarre recurrance
     - particles in a box now

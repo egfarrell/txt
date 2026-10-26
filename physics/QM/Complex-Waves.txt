@@ -2,10 +2,10 @@
 
 ### Complex numbers neccessary for Waves?
     - $MY_NOTES/physics/QM/Schrodinger-Gribben.txt
-    - "One place where imaginary numbers CANNOT BE IGNORED is in
-      the equations describing the behaviour of waves. But what
-      we see clearly with hindsight was no more than a vague hint
-      to even the sharpest minds of 1922." 
+    - "One place where imaginary numbers CANNOT BE IGNORED is
+      equations describing the behaviour of waves. 
+    - But what we see clearly with hindsight was no more than
+      a vague hint to even the sharpest minds of 1922." 
 
 
 ### See also:
@@ -19,8 +19,8 @@
 - At least for the classical waves, “Cannot be ignored” is too strong.
 
 - Classical waves: 
-    - Everything can be done with real functions like cos(kx
-      − ωt). Complex exponentials are a convenience. 
+    - Everything can be done with real functions like `cos(kx
+      − ωt)`. Complex exponentials are a convenience. 
     - They turn trig identities into simple algebra, make phase
       shifts a multiplication, and make linear equations easy to
       solve. 
@@ -31,17 +31,18 @@
       before complex notation caught on. In 1922 nothing about
       wave physics forced complex numbers on anyone.
 
-- Where Gribbin’s sentence is pointing, with hindsight: 
-    - the Schrödinger equation, iħ ∂ψ/∂t = Ĥψ, has an explicit i in it. 
+- What Gribbin is highlighting, with hindsight: 
+    - Schrödinger's equation, `iħ ∂ψ/∂t=Ĥψ`, has an explicit `i`
 
-- This is different from the classical wave equation, which has
-  only second derivatives in time and so has real solutions. 
+- This is different from the classical wave equation, which only
+  has second derivatives in time and so has real solutions. 
+
 - The first-order-in-time structure with an `i` is what makes `ψ`
   complex in an essential way, and it’s the setup for what
   Schrödinger did in 1926. 
-- So the sentence is really a forward reference to QM, which
-  makes it a bit misleading as a statement about waves in
-  general.
+
+- So Gribben's sentence is really a forward reference to QM, but
+  makes it a bit misleading about waves in general.
 
 ### But... Madelung...
     - $MY_NOTES/physics/QM/Real-QM-Madelung.txt
@@ -62,10 +63,10 @@
       experiments, and experiments have since favored the complex
       version. 
 
-    - So in QM there’s a real sense in which the complex
-      structure isn’t just convenience, which goes beyond what
-      the classical wave case supports.
+    - So for QM there’s a sense in which the complex structure
+      isn’t just convenience; it goes beyond what the classical
+      wave case supports.
 
-- So: for the 1922 waves, your reading is right. For quantum
-  mechanics, Gribbin’s hindsight is much better justified, though
-  he overstates it by attaching it to waves generally.
+- So: for the 1922 waves, 'cannot be ignored' is too strong. For
+  QM, Gribbin’s hindsight is much better justified, though he
+  overstates it by attaching it to waves generally.
