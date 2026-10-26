@@ -1,4 +1,3 @@
-
 ### Spaced repitition: LLMs etc
     - https://news.ycombinator.com/item?id=44020591
 
@@ -214,73 +213,73 @@
 
 
 ### Links
-    - ESL & Maths Games (looks slick)                                                                     http://www.eslgamesworld.com/Games.html
-    - Summary Verb Tenses                                                                                 https://leo.stcloudstate.edu/grammar/tenses.html
-    - 16 kinds of verb tenses                                                                             https://riopraset.wordpress.com/2013/03/28/16-kinds-of-tenses/
-    - CLT                                                                                                 http://azargrammar.com/teacherTalk/blog/2011/04/why-i-am-not-a-fan-of-the-communicative-approach/
-    - IELTS blog with materials                                                                           http://www.dcielts.com/
-    - Ania got pancakes lesson here                                                                       https://www.teachitenglish.co.uk/
-    - HN foreign languages 1:                                                                             https://news.ycombinator.com/item?id=7390674
-    - HN foreign languages 2:                                                                             https://news.ycombinator.com/item?id=15821575
-    - Build my vocab                                                                                      https://buildmyvocab.in
-    - Rashid tip:                                                                                         http://www.englishforeveryone.org/ (read/writing)
-    - Rashid tip:                                                                                         https://agendaweb.org/
-    - AAUSC 2013 Volume - Issues in Language Program Direction                                            https://books.google.co.uk/books?id=-T3AAgAAQBAJ&source=gbs_navlinks_s
-    - Absolute Beginners | Onestopenglish                                                                 http://www.onestopenglish.com/esol/absolute-beginners/
-    - Angielski Wrocaw - kursy jzykowe, jzyk angielski Wrocaw                                             http://www.ih.com.pl/wroclaw/celta,252.html
-    - Baby babble: babies from 0 to 6 months | NCT                                                        http://www.nct.org.uk/parenting/baby-babble-0-6-months
-    - Beginners | ESOL Nexus                                                                              http://esol.britishcouncil.org/content/learners/grammar-and-vocabulary/beginners
-    - Berlin School of English                                                                            http://berlin.school-of-english.de/pages/
-    - CELTA - British Council - Poland                                                                    https://www.britishcouncil.org/
-    - nottingham ILS School: Cambridge CELTA                                                              http://www.ilsenglish.com/courses/teacher-training/cambridge-celta
-    - Cambridge English Unlimited Placement Test (Written Test)                                           http://www.slideshare.net/mobile/luisvoid/english-unlimited-alltestwrittentest
-    - The Internet Grammar of English                                                                     https://www.ucl.ac.uk/internet-grammar/frames/contents.htm
-    - ELT Experiences | Experiences of an English Language Teacher                                        http://eltexperiences.com/
-    - ELT Training | Scoop.it                                                                             http://www.scoop.it/t/elt-training
-    - ERIC - Older Russian Immigrants' Experiences Learning English                                       https://eric.ed.gov/?id=EJ736726
-    - ESL Holiday Lessons.com: International Women's Day                                                  http://www.eslholidaylessons.com/03/international_womens_day.html
-    - ESL health unit (health vocab and exercises)                                                        http://www.projectshine.org/sites/default/files/unit1_Beg_lesson2.pdf
-    - Find a teaching qualification centre                                                                http://www.cambridgeenglish.org/find-a-centre/find-a-teaching-centre/
-    - Grammar Sites | Scoop.it                                                                            http://www.scoop.it/t/grammar-sites
-    - ICT in ELT Jo Gakonga                                                                               http://jogakonga2011.blogspot.co.uk/
-    - Happy International Women's Day                                                                     http://learningenglishwithmichelle.blogspot.co.uk/2012/03/celebrate-international-womens-day.html
-    - Lesson Ideas on the Web (recommended by grammer course)                                             http://www.scoop.it/t/lesson-ideas-on-the-web
-    - Listen A Minute: Easier English Listening and Activities                                            http://www.listenaminute.com/
-    - Needs analysis: Part 6 | Onestopenglish                                                             http://www.onestopenglish.com/business/teaching-approaches/needs-analysis/needs-analysis-part-6/144575.article
-    - Placement Tests | Macmillan Straightforward                                                         http://www.macmillanstraightforward.com/resources/tests/
-    - Post-CELTA professional development                                                                 http://www.teachthemenglish.com/2015/01/post-celta-professional-development-the-5-keys-to-avoiding-a-bad-first-year-as-a-teacher/
-    - STRAIGHTFORWARD QUICK PLACEMENT  (DIAGNOSTIC TEST)                                                  http://busyteacher.org/engine/download2.php?id=20939
-    - Show HN: 100K sentences help non-native English learners                                            https://news.ycombinator.com/item?id=14447885
-    - TESL-EJ | Electronic Journal English as a Second Language                                           http://www.tesl-ej.org/wordpress/
-    - Teaching Vocabulary & Pronunciation | Cambridge English Teacher                                     https://www.cambridgeenglishteacher.org/courses/details/17665
-    - Learnship.com (Recommended by student in Anias Celta)                                               https://www.learnship.de/pressebereich
-    - Ways to take CELTA | Cambridge English                                                              http://www.cambridgeenglish.org/exams-and-qualifications/celta/ways-to-take-celta/
-    - Women teaching women english                                                                        http://oelp.uoregon.edu/wtwe/printables
-    - elt-training.com: Log in to the site                                                                http://elttraining.mdl2.com/login/index.php
-    - islcollective: 50 000+ Free EFL worksheets                                                          https://en.islcollective.com/
-    - youtube english book audios (e.g. tree or three)                                                    https://www.youtube.com/channel/UCLR04-uqJf-DWAyCcYPi7vg/videos
-    - learn languages parallel texts                                                                      https://news.ycombinator.com/item?id=18474596
-    - Warsaw University: Teaching English to Young Learners                                               https://irk.uw.edu.pl/en-gb/offer/PELNE2021/programme/S2-GPTE/?from=field:P_GPTE
-    - Gripes from ESL speakers                                                                            https://news.ycombinator.com/item?id=27220433
-    - History of English podcast                                                                          https://historyofenglishpodcast.com/episodes/
-    - British Council learn english online                                                                https://learnenglish.britishcouncil.org/
-    - Manycam video effects                                                                               https://manycam.com/
-    - same lessons, different levels                                                                      https://breakingnewsenglish.com/
-    - Readworks Reading comprehension                                                                     https://www.readworks.org/
-    - EAP: Writing English as a Second Language                                                           https://theamericanscholar.org/writing-english-as-a-second-language/
-    - EAP: English hard to master HN                                                                      https://news.ycombinator.com/item?id=26597578N
-    - Simple English version of wikipedia                                                                 https://simple.wikipedia.org/
-    - Refugee workbook good                                                                               https://research.kent.ac.uk/theenglishhubforrefugees/resources/
-    - Ania used for simple questions "to be"                                                              https://www.perfect-english-grammar.com/
-    - Hugh Dellar pronunciation                                                                           https://www.lexicallab.com/2020/01/a-different-kind-of-beginner-level-book-5-pronunciation/
-    - Class activity: Rory Story Cubes                                                                    https://www.storycubes.com/en/
-    - Learning Resources: UN                                                                              $MY_NOTES/teaching/un-learning-resources.txt
-    - Good download site!                                                                                 https://books-here.com/speakout-intermediate-plus-2nd-edition-full-update-2021/
-    - Good download site! Pearson Formula                                                                 http://frenglish.ru/formula_pearson.html
-    - Link: Google Drive Ania Folder:                                                                     https://drive.google.com/drive/folders/1RbAJciuCeI-CP2Tzob3lunljbDuep-pe?usp=sharing
-    - Link: MY Google Drive: Share-Enda-Ania                                                              https://drive.google.com/drive/folders/1Nj4sCt52LUyhrIJ_0XklIQRiaQgYd55i?usp=sharing
-    - Foreign Dispatch: Ideas from code editors applied to foreign language writing (Machine translation) https://news.ycombinator.com/item?id=33652218
-    - HN: Montesori                                                                                       https://news.ycombinator.com/item?id=33913201
-    - Proto Indo European language                                                                        https://news.ycombinator.com/item?id=37376879
-    - Torrent Book: Ready for first (for Ania) https://vk.com/wall-54818022_51188
-
+    - ESL & Maths Games (looks slick)                               http://www.eslgamesworld.com/Games.html
+    - Summary Verb Tenses                                           https://leo.stcloudstate.edu/grammar/tenses.html
+    - 16 kinds of verb tenses                                       https://riopraset.wordpress.com/2013/03/28/16-kinds-of-tenses/
+    - CLT                                                           http://azargrammar.com/teacherTalk/blog/2011/04/why-i-am-not-a-fan-of-the-communicative-approach/
+    - IELTS blog with materials                                     http://www.dcielts.com/
+    - Ania got pancakes lesson here                                 https://www.teachitenglish.co.uk/
+    - HN foreign languages 1:                                       https://news.ycombinator.com/item?id=7390674
+    - HN foreign languages 2:                                       https://news.ycombinator.com/item?id=15821575
+    - Build my vocab                                                https://buildmyvocab.in
+    - Rashid tip:                                                   http://www.englishforeveryone.org/ (read/writing)
+    - Rashid tip:                                                   https://agendaweb.org/
+    - AAUSC 2013 Volume - Issues in Language Program Direction      https://books.google.co.uk/books?id=-T3AAgAAQBAJ&source=gbs_navlinks_s
+    - Absolute Beginners | Onestopenglish                           http://www.onestopenglish.com/esol/absolute-beginners/
+    - Angielski Wrocaw - kursy jzykowe, jzyk angielski Wrocaw       http://www.ih.com.pl/wroclaw/celta,252.html
+    - Baby babble: babies from 0 to 6 months | NCT                  http://www.nct.org.uk/parenting/baby-babble-0-6-months
+    - Beginners | ESOL Nexus                                        http://esol.britishcouncil.org/content/learners/grammar-and-vocabulary/beginners
+    - Berlin School of English                                      http://berlin.school-of-english.de/pages/
+    - CELTA - British Council - Poland                              https://www.britishcouncil.org/
+    - nottingham ILS School: Cambridge CELTA                        http://www.ilsenglish.com/courses/teacher-training/cambridge-celta
+    - Cambridge English Unlimited Placement Test (Written Test)     http://www.slideshare.net/mobile/luisvoid/english-unlimited-alltestwrittentest
+    - The Internet Grammar of English                               https://www.ucl.ac.uk/internet-grammar/frames/contents.htm
+    - ELT Experiences | Experiences of an English Language Teacher  http://eltexperiences.com/
+    - ELT Training | Scoop.it                                       http://www.scoop.it/t/elt-training
+    - ERIC - Older Russian Immigrants' Experiences Learning English https://eric.ed.gov/?id=EJ736726
+    - ESL Holiday Lessons.com: International Women's Day            http://www.eslholidaylessons.com/03/international_womens_day.html
+    - ESL health unit (health vocab and exercises)                  http://www.projectshine.org/sites/default/files/unit1_Beg_lesson2.pdf
+    - Find a teaching qualification centre                          http://www.cambridgeenglish.org/find-a-centre/find-a-teaching-centre/
+    - Grammar Sites | Scoop.it                                      http://www.scoop.it/t/grammar-sites
+    - ICT in ELT Jo Gakonga                                         http://jogakonga2011.blogspot.co.uk/
+    - Happy International Women's Day                               http://learningenglishwithmichelle.blogspot.co.uk/2012/03/celebrate-international-womens-day.html
+    - Lesson Ideas on the Web (recommended by grammer course)       http://www.scoop.it/t/lesson-ideas-on-the-web
+    - Listen A Minute: Easier English Listening and Activities      http://www.listenaminute.com/
+    - Needs analysis: Part 6 | Onestopenglish                       http://www.onestopenglish.com/business/teaching-approaches/needs-analysis/needs-analysis-part-6/144575.article
+    - Placement Tests | Macmillan Straightforward                   http://www.macmillanstraightforward.com/resources/tests/
+    - Post-CELTA professional development                           http://www.teachthemenglish.com/2015/01/post-celta-professional-development-the-5-keys-to-avoiding-a-bad-first-year-as-a-teacher/
+    - STRAIGHTFORWARD QUICK PLACEMENT  (DIAGNOSTIC TEST)            http://busyteacher.org/engine/download2.php?id=20939
+    - Show HN: 100K sentences help non-native English learners      https://news.ycombinator.com/item?id=14447885
+    - TESL-EJ | Electronic Journal English as a Second Language     http://www.tesl-ej.org/wordpress/
+    - Teaching Vocabulary & Pronunciation                           https://www.cambridgeenglishteacher.org/courses/details/17665
+    - Learnship.com (Recommended by student in Anias Celta)         https://www.learnship.de/pressebereich
+    - Ways to take CELTA | Cambridge English                        http://www.cambridgeenglish.org/exams-and-qualifications/celta/ways-to-take-celta/
+    - Women teaching women english                                  http://oelp.uoregon.edu/wtwe/printables
+    - elt-training.com: Log in to the site                          http://elttraining.mdl2.com/login/index.php
+    - islcollective: 50 000+ Free EFL worksheets                    https://en.islcollective.com/
+    - youtube english book audios (e.g. tree or three)              https://www.youtube.com/channel/UCLR04-uqJf-DWAyCcYPi7vg/videos
+    - learn languages parallel texts                                https://news.ycombinator.com/item?id=18474596
+    - Warsaw University: Teaching English to Young Learners         https://irk.uw.edu.pl/en-gb/offer/PELNE2021/programme/S2-GPTE/?from=field:P_GPTE
+    - Gripes from ESL speakers                                      https://news.ycombinator.com/item?id=27220433
+    - History of English podcast                                    https://historyofenglishpodcast.com/episodes/
+    - British Council learn english online                          https://learnenglish.britishcouncil.org/
+    - Manycam video effects                                         https://manycam.com/
+    - same lessons, different levels                                https://breakingnewsenglish.com/
+    - Readworks Reading comprehension                               https://www.readworks.org/
+    - EAP: Writing English as a Second Language                     https://theamericanscholar.org/writing-english-as-a-second-language/
+    - EAP: English hard to master HN                                https://news.ycombinator.com/item?id=26597578N
+    - Simple English version of wikipedia                           https://simple.wikipedia.org/
+    - Refugee workbook good                                         https://research.kent.ac.uk/theenglishhubforrefugees/resources/
+    - Ania used for simple questions "to be"                        https://www.perfect-english-grammar.com/
+    - Hugh Dellar pronunciation                                     https://www.lexicallab.com/2020/01/a-different-kind-of-beginner-level-book-5-pronunciation/
+    - Class activity: Rory Story Cubes                              https://www.storycubes.com/en/
+    - Learning Resources: UN                                        $MY_NOTES/teaching/un-learning-resources.txt
+    - Good download site!                                           https://books-here.com/speakout-intermediate-plus-2nd-edition-full-update-2021/
+    - Good download site! Pearson Formula                           http://frenglish.ru/formula_pearson.html
+    - Link: Google Drive Ania Folder:                               https://drive.google.com/drive/folders/1RbAJciuCeI-CP2Tzob3lunljbDuep-pe?usp=sharing
+    - Link: MY Google Drive: Share-Enda-Ania                        https://drive.google.com/drive/folders/1Nj4sCt52LUyhrIJ_0XklIQRiaQgYd55i?usp=sharing
+    - Foreign Dispatch: code editors applied to FL writing          https://news.ycombinator.com/item?id=33652218
+    - HN: Montesori                                                 https://news.ycombinator.com/item?id=33913201
+    - Proto Indo European language                                  https://news.ycombinator.com/item?id=37376879
+    - Torrent Book: Ready for first (for Ania)                      https://vk.com/wall-54818022_51188
+    - 10to8 Free Appointment Scheduling System                      https://signinapp.com/signinscheduling

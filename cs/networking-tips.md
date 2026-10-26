@@ -1,4 +1,3 @@
-
 ### show available wifi
     sudo nmcli dev wifi rescan
     sudo nmcli dev wifi
@@ -42,13 +41,13 @@
 
 
 ### nmap:
-    - I used for IIMCB: 
+    - I used for IIMCB:
     - press `up-arrow` to get an update on the scanning
 
 ### My ASUS linux mint
     - iphone hotspot keeps dropping
     - https://easylinuxtipsproject.blogspot.com/p/realtek.html#ID6
-    - command: inxi -Fxz 
+    - command: inxi -Fxz
     - Network:
         - Device-1: `Realtek RTL8821CE` 802.11ac PCIe Wireless Network Adapter
             - vendor: AzureWave driver: rtw_8821ce v: N/A port: e000 bus-ID: 02:00.0
@@ -60,22 +59,22 @@
 
 ### Win 8.1: Public wifi login not working
     - BUW in warsaw
-    - Problem: I had `DNS servers` hard-coded to 8.8.8.8 
+    - Problem: I had `DNS servers` hard-coded to 8.8.8.8
         - (in Network and sharing centre...)
-    - Control Panel -> Network and Sharing 
-        -> click on the connection (usually WIFI) 
-        -> click on properties... 
-        - click on IPV4 
-        -> click on properties (again)... 
+    - Control Panel -> Network and Sharing
+        -> click on the connection (usually WIFI)
+        -> click on properties...
+        - click on IPV4
+        -> click on properties (again)...
         - ensure "`Obtain DNS server automatically`" is ticked
 
 ### Internet addressing:
     - Much of the internet is about translating addresses from
       one format to another:
-        - DNS:  Human readable to IP          
-        - NAT:  Private IP     to Public IP   
-        - ARP:  MAC            to Private IP  
-        - BGP:  Public IP      to AS          
+        - DNS:  Human readable to IP
+        - NAT:  Private IP     to Public IP
+        - ARP:  MAC            to Private IP
+        - BGP:  Public IP      to AS
 
 ### Scan network
     nmap -sn 148.81.0.0/24 -oG ~/nmap-output.txt
@@ -112,10 +111,10 @@
     - There's still no connectivity to Facebook's DNS servers:
     - `traceroute a.ns.facebook.com`
       - traceroute to a.ns.facebook.com (129.134.30.12), 30 hops max, 60 byte packets
-      
+
     - They're hours into this outage and still haven't
       re-established connectivity to their own DNS servers.
-    - reply 
+    - reply
         - Its partially there. C and D are still not in the
           global tables according to routeviews ie. 185.89.219.12
           is still not being advertised to anyone. My peers to
@@ -123,7 +122,7 @@
           far they are supposed to go inside their network. (past
           hop 2 is them)
         - `traceroute -q1 -I a.ns.facebook.com`
-    
+
 ### Add DNS entry for Windows 10
     - As administrator, goto folder:
         - c:\Windows\System32\Drivers\etc
@@ -149,7 +148,7 @@
 
 ### netgear N300 wifi range extender
     - http://www.mywifiext.net
-    - ef.tools@gmx.com 
+    - ef.tools@gmx.com
     - see info.md for password
 
 # show listening ports
@@ -172,7 +171,7 @@
     GET /test.html
     <enter>
     ```
-    
+
 
 ### Show DNS upstream server
     - method 1
@@ -181,10 +180,10 @@
         ```
     - method 2
         ```
-        cat /etc/resolv.conf 
+        cat /etc/resolv.conf
         ```
-        - Its 127.0.1.1 on Ubuntu. 
-        - ie local DNS cache server, not actual upstream. 
+        - Its 127.0.1.1 on Ubuntu.
+        - ie local DNS cache server, not actual upstream.
 
 ### ports
     - are LOGICAL connections!
@@ -198,7 +197,7 @@
 
 ### dnsmasq
     - config file:         /etc/dnsmasq.conf
-    - other file:          /var/run/dnsmasq/resolv.conf 
+    - other file:          /var/run/dnsmasq/resolv.conf
     - other file:          /etc/network/interfaces
     - All connection info: /etc/NetworkManager/system-connections
 
@@ -260,7 +259,7 @@
     - step 3: DHCP request
     - step 4: DHCP ACK (acknowledgement)
 
-    - note: addresses valid only for limited time 
+    - note: addresses valid only for limited time
     - can be re-used after expiring.
     - Hosts can keep their addresses by renewing lease.
 
@@ -355,18 +354,17 @@ ping IP router stuff
     - Cisco Packet Tracer (simulates different routers/connection switches)
     - GNS3 (Graphical Network - Emulator)
     - Kitty (enhanced Putty)
-    - TFTP (Virtual FTP server) 
+    - TFTP (Virtual FTP server)
         - transfer files to/from your cisco devices
-    - "Angry IP Scanner" 
+    - "Angry IP Scanner"
         - (see who is out there, in your local IP space)
 
 
-### Links 
+### Links
     - ipleaks                                  https://ipleak.net/
     - Computer networks course                 https://www.youtube.com/playlist?list=PLfgkuLYEOvGMWvHRgFAcjN_p3Nzbs1t1C
     - IPv6 fundamentals                        https://news.ycombinator.com/item?id=28705259
     - Cloudfare BGP, DNS etc (Facebook outage) https://blog.cloudflare.com/october-2021-facebook-outage/
     - My notes: CompTIA Network+               $MY_NOTES/cs/networking/network+-safari-course.md
     - Beej Linux netowrk programming           https://news.ycombinator.com/item?id=32165278
-
-
+    - first 10 mins server                     https://news.ycombinator.com/item?id=11909543

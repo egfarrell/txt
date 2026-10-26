@@ -1,4 +1,20 @@
 
+### The Cures
+    - BBC One - True North, The Miraculous Tales of Mickey McGuigan      
+        - https://www.bbc.co.uk/programmes/b03bys0h
+    - Mickey explains about Pat O'Rouke's special gift of curing
+      sprains that he wants to pass on to his granddaughter.
+      Mickey also talks about Mary Brady who cures colic. 
+        - (Mary makes a sign of the cross)
+        - https://marybradygift.weebly.com
+        - Mary Brady.                          
+        - Esker, Emyvale,
+        - Co. Monaghan.
+        - Tel: 047 - 87188
+        - Mob: 086 - 211 4825
+
+
+
 ### The Universe Calling
     - Suresh Emre Independent Scientist https://sureshemre.wordpress.com/
     - “O human beings! You are fortunate. The clarion call of the

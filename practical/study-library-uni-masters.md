@@ -4,6 +4,9 @@
 - https://hub.ucd.ie/usis/!W_HU_MENU.P_PUBLISH?p_tag=COURSE&PROG=BHSOC010&ARCHIVE=Y
 
 
+### postgrad funding
+- https://www.postgraduatestudentships.co.uk/funding-opportunities
+
 - Rabound Centre Natural Philosophy                                       
   https://rcnp.science.ru.nl/index.html
 

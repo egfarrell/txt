@@ -157,15 +157,12 @@ sympy tips
         init_session()
 
 # Links
-    - sympy programmer:                       http://www.theoretical-physics.net/dev/intro.html
-    -  2017 tutorial                          https://www.youtube.com/watch?v=nfRyux3wEhw
-    -  dot products:                          http://stackoverflow.com/questions/22126133/how-to-do-dot-cross-multiplication-of-vectors-with-sympy
-    -  Variational Calculus:                  https://groups.google.com/forum/#!topic/sympy/cvOjJdEWprM
-    -  euler-lagrange:                        https://github.com/sympy/sympy/pull/2431
-    -  guy who did sympy variational:         http://stackoverflow.com/users/832621/saullo-castro
-    -  skirpichev sympy clone fork :          https://github.com/diofant/diofant
+    - Sympy programmer:                       https://www.theoretical-physics.net/dev/intro.html
+    - 2017 tutorial                           https://www.youtube.com/watch?v=nfRyux3wEhw
+    - Dot products:                           http://stackoverflow.com/questions/22126133/how-to-do-dot-cross-multiplication-of-vectors-with-sympy
+    - Variational Calculus:                   https://groups.google.com/forum/#!topic/sympy/cvOjJdEWprM
+    - Euler-lagrange:                         https://github.com/sympy/sympy/pull/2431
+    - Guy who did sympy variational:          http://stackoverflow.com/users/832621/saullo-castro
+    - Skirpichev sympy clone fork :           https://github.com/diofant/diofant
     - Linear algebra with Sympy Prof. Klopper https://www.youtube.com/watch?v=MBhPaqKRehg&list=PLsu0TcgLDUiIpNUmKGsZhzdmXBTpJHKB0
-
-
-
-
+    - Multibody Dynamics | SciPy 2014 | PyDy  https://www.youtube.com/watch?v=lWbeuDwYVto

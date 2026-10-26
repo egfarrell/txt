@@ -7,9 +7,13 @@ adb shell pm list packages -u -d > ~/disabled
 ### Are we connected?
 adb devices
 
-### Disable samsung account (!)
-Failed: adb shell pm disable-user --user 0 com.osp.app.signin
 
+### Reenable print services
+adb shell pm enable --user 0 com.android.printspooler
+adb shell pm enable --user 0 com.google.android.printservice.recommendation
+
+### Cannot disable samsung account (!)
+Failed: adb shell pm disable-user --user 0 com.osp.app.signin
 Failed uninstall:
 adb shell pm uninstall -k --user 0 com.osp.app.signin
 reinstall:
