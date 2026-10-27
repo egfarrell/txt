@@ -4,6 +4,11 @@ LLMs fail at Physics and Maths
 ### Schrodinger speaking
     - "Do Electrons Think?" (BBC 1949)
     - https://m.youtube.com/watch?v=hCwR1ztUXtU
+    - Also Schrodinger approaching the end of life.
+        - $MY_NOTES/physics/QM/Schrodinger-Gribben.txt
+        - He was clearly contemplating his own fate, but told
+          her: “I am glad of the few years [left], for the world
+          is very, very beautiful.”
 
 ### Why Study physics
     - $MY_NOTES/physics/QM/Qm-primer-chester.txt
