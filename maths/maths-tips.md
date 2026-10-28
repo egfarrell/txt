@@ -2724,6 +2724,11 @@
     - Application:
         - Farthest pair problem, shortest Path across the
           boundary.
+        - Oct 2026: 
+            - Lex talk: Mathematicians wondering is AI just
+              working within the 'convex hull' of known
+              mathematics/papers.
+            - https://m.youtube.com/watch?v=ZAzWPE9CItg
 
 ### convex hull
     - great video -> marked in pinboard
@@ -2731,14 +2736,14 @@
         - (Extra: from coding the matrix)
     - Graham scan
 
-### notation
+### Matrix notation
     - matrix matrix multiplication has _no star_ in the middle:
-    - `AB`
+        - `AB`
 
     - matrix vector multiplication has a star
-    - `A*v`
+        - `A*v`
 
-### remember
+### Remember
     - "null space" applies to matrices
     - "kernel"     applies to functions
         - The Kernel of a function is the set of points that the
