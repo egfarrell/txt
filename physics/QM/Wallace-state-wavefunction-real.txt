@@ -135,7 +135,7 @@ these _superposition_ states, and there are basically two views.
   light at `B`.
 
 - And finally, it's well known that these results persist even if
-  we turn the laser so low only _one photon_ at a time passes
+  we turn the laser so low _ONLY ONE PHOTON_ at a time passes
   through .
 
 - According to QM, we should represent the state of each photon,
@@ -146,14 +146,14 @@ these _superposition_ states, and there are basically two views.
         - the photon is in a strange kind of non-local state.
 
     - But with the "state as PROBABILITY" view,
-        - it seems to be shorthand for "the photon is either in
+        - it seems to be shorthand for "the photon is EITHER in
           beam 1 or beam 2, with equal probability of each.
         - --------------------------
         - And that CAN'T BE CORRECT!
         - --------------------------
 
 - For if the photon is in _beam 1_ (therefore according to QM,
-  described by a non-superposition state, or at least not by
+  described by a NON-SUPERPOSITION state, or at least not by
   a superposition of beam states) we know we get result `A` half
   the time, result `B` half the time.
 
@@ -163,7 +163,29 @@ these _superposition_ states, and there are basically two views.
 - So whichever beam it's in, we should get result `A` half the
   time and result `B` half the time.
 
-- And of course, we DON'T. _(??? why not? what do we get?)_
+- And of course, we DON'T. 
+    - (Ah because we can "tune" the beam so that interference
+      makes it all at `A` or all at `B`, or anything inbetween.)
+
+----------------------------------------------------------------
+ASIDE:
+    - Both beams open: 
+        - Their waves RECOMBINE at the second mirror and
+          interfere. Depending on their RELATIVE PHASE, the light
+          can all go to A or all go to B.
+    - One beam blocked: 
+        - Only one beam reaches the second mirror. With no second
+          beam to INTERFERE with, the mirror sends 50% towards
+          A and 50% towards B.
+    - The crucial distinction is that the second mirror doesn't
+      always produce a 50/50 output. 
+    - That happens when only one input path is illuminated. When
+      both paths are illuminated, interference changes the
+      distribution between the outputs.
+    - And that's precisely the feature Wallace wants to draw
+      attention to: opening the second path changes the outcome,
+      even though it adds another possible route for the photon.
+      ----------------------------------------------------------------
 
 - So, just by elementary reasoning - I haven't even had to talk
   about probabilities - we seem to rule out the
