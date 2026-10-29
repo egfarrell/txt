@@ -21,6 +21,7 @@
     ~/bin/aws/02-inject-dotfiles-aws.sh
 
 ### misc
+    - Ucode virtual phone number (pilgrimagewalk gmail) https://ucode.uk/app/numbers
     - Voxtral tts model good https://mistral.ai/news/voxtral-tts/
     - Hermes agent https://hermes-agent.nousresearch.com/
     - doomsday: internet in a box https://internet-in-a-box.org/
