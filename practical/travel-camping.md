@@ -1,5 +1,8 @@
 
 
+Sam Ritchie endurance running (don't skip the salt pills)
+https://samritchie.io/the-road-to-the-hardrock-100/
+
 - Book: How to cook a wolf: MFK Fisher 1942 
 
 
