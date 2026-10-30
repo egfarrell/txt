@@ -1,0 +1,27 @@
+- An electron's spin can be measured along different directions (e.g. north/z or
+  east/x), with either spin-up (+ℏ/2) or spin-down (−ℏ/2) as the outcome.
+
+- Spin-up along north and spin-up along east are different quantum states.
+
+- The corresponding spin operators do not commute: [Sₓ, S_z] ≠ 0. Therefore, no
+  quantum state has simultaneously definite spin along both axes.
+
+- We can measure both sequentially, but the first measurement affects the state:
+  - Measure north → spin-up.
+  - Measure east → 50% up, 50% down.
+  - Measure north again → 50% up, 50% down.
+
+- Why? A definite spin state along north is an equal superposition of spin-up
+  and spin-down along east. Measuring east destroys the previous definite
+  north-spin state.
+
+- **Weinberg's philosophical point:** We can calculate P(spin-up along north)
+  and P(spin-up along east), but asking for the probability of BOTH
+  simultaneously is problematic: QM does not assign simultaneous definite values
+  to incompatible observables.
+
+- **Key distinction:**
+  - Classical ignorance: properties have definite values, but we don't know
+    them.
+  - Quantum uncertainty: incompatible observables cannot simultaneously have
+    definite values in a quantum state.

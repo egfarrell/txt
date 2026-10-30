@@ -166,206 +166,202 @@ January 19, 2017
   shifts all the intensity of the chord to one of the notes,
   which we then hear on its own.
 
-This can be put in terms of the wave function. If we
-disregard everything about an electron but its spin, there
-isn't much that's wavelike about its wave function. It is
-just a pair of numbers, one number for each sign of the spin
-in some chosen direction, analogous to the amplitudes of
-each of the two notes in a chord.7 The wave function of an
-electron whose spin hasn't been measured generally has
-nonzero values for spins of both signs.
+- This can be put in terms of the wave function. If we disregard
+  everything about an electron but its spin, there isn't much
+  that's wavelike about its wave function. It is just a pair of
+  numbers, one number for each sign of the spin in some chosen
+  direction, analogous to the amplitudes of each of the two notes
+  in a chord.[^7] The wave function of an electron whose spin
+  hasn't been measured generally has nonzero values for spins of
+  both signs.
 
-There is a rule of QM, known as the Born
-rule, that tells us how to use the wave function to
-calculate the probabilities of getting various possible
-results in experiments. For example, the Born rule tells us
-that the probabilities of finding either a positive or
-a negative result when the spin in some chosen direction is
-measured are proportional to the squares of the numbers in
-the wave function for those two states of the spin.8
+- There is a rule of QM, known as the Born rule, that tells us
+  how to use the wave function to calculate the probabilities of
+  getting various possible results in experiments. Eg, the Born
+  rule tells us that the probabilities of finding either
+  a positive or a negative result when the spin in some chosen
+  direction is measured are proportional to the squares of the
+  numbers in the wave function for those two states of the
+  spin.[^8]
 
-The introduction of probability into the principles of
-physics was disturbing to past physicists, but the trouble
-with QM isn't that it involves
-probabilities. We can live with that. The trouble is that in
-QM the way that wave functions change with
-time is governed by an equation, the Schrödinger equation,
-that doesn't involve probabilities. It is just as
-deterministic as Newton’s equations of motion and
-gravitation. That is, given the wave function at any moment,
-the Schrödinger equation will tell you precisely what the
-wave function will be at any future time. There isn't even
-the possibility of chaos, the extreme sensitivity to initial
-conditions that's possible in Newtonian mechanics. So if we
-regard the whole process of measurement as being governed by
-the equations of QM, and these equations are
-perfectly deterministic, how do probabilities get into
-QM?
+- The introduction of probability into the principles of physics
+  was disturbing to past physicists, but the trouble with QM
+  isn't that it involves probabilities. We can live with that.
+- The trouble is that how wave functions change with time is
+  governed by an equation, the Schrödinger equation, that doesn't
+  involve probabilities. It is just as deterministic as Newton’s
+  equations. 
+    - That is, given the wave function at any moment, the
+      Schrödinger equation will tell you precisely what the wave
+      function will be at any future time. There isn't even the
+      possibility of chaos, the extreme sensitivity to initial
+      conditions that's possible in Newtonian mechanics. 
+    - So if we regard the whole process of measurement as being
+      governed by the equations of QM, and these equations are
+      perfectly deterministic, how do probabilities get into QM?
 
-One common answer is that, in a measurement, the spin (or
-whatever else is measured) is put in an interaction with
-a macroscopic environment that jitters in an unpredictable
-way. For example, the environment might be the shower of
-photons in a beam of light that's used to observe the
-system, as unpredictable in practice as a shower of
-raindrops. Such an environment causes the superposition of
-different states in the wave function to break down, leading
-to an unpredictable result of the measurement. (This is
-called decoherence.) It is as if a noisy background somehow
-unpredictably left only one of the notes of a chord audible.
-But this begs the question. If the deterministic Schrödinger
-equation governs the changes through time not only of the
-spin but also of the measuring apparatus and the physicist
-using it, then the results of measurement shouldn't in
-principle be unpredictable. So we still have to ask, how do
-probabilities get into QM?
+- One common answer is that, in a measurement, the spin (or
+  whatever else is measured) is put in an interaction with
+  a macroscopic environment that jitters in an unpredictable way.
+    - Eg, the environment might be the shower of photons in
+      a beam of light that's used to observe the system, as
+      unpredictable in practice as a shower of raindrops. 
+    - Such an environment causes the superposition of different
+      states in the wave function to break down, leading to an
+      unpredictable result of the measurement. (This is
+      "decoherence".) 
+    - It is as if a noisy background somehow unpredictably left
+      only one of the notes of a chord audible. But this begs the
+      question. 
+    - If the deterministic Schrödinger equation governs the
+      changes through time not only of the spin, but ALSO of the
+      measuring APPARATUS and the PHYSICIST using it, then the
+      results of measurement shouldn't in principle be
+      unpredictable. So we still have to ask, how do
+      probabilities get into QM?
 
-One response to this puzzle was given in the 1920s by Niels
-Bohr, in what came to be called the Copenhagen
-interpretation of QM. According to Bohr, in
-a measurement the state of a system such as a spin collapses
-to one result or another in a way that can't itself be
-described by QM, and is truly unpredictable.
-This answer is now widely felt to be unacceptable. There
-seems no way to locate the boundary between the realms in
-which, according to Bohr, QM does or doesn't
-apply. As it happens, I was a graduate student at Bohr’s
-institute in Copenhagen, but he was very great and I was
-very young, and I never had a chance to ask him about this.
+- One response to this was given in the 1920s by Niels Bohr, in
+  what came to be called the Copenhagen interpretation of QM.
+    - According to Bohr, in a measurement the state of a system
+      such as a spin collapses to one result or another in a way
+      that can't itself be described by QM, and is truly
+      unpredictable. 
+    - This answer is now widely felt to be unacceptable. 
+    - There seems no way to locate the boundary between the
+      realms in which, according to Bohr, QM does or doesn't
+      apply. As it happens, I was a graduate student at Bohr’s
+      institute in Copenhagen, but he was very great and I was
+      very young, and I never had a chance to ask him about this.
 
-Today there are two widely followed approaches to quantum
-mechanics, the “realist” and “instrumentalist” approaches,
-which view the origin of probability in measurement in two
-very different ways.9 For reasons I will explain, neither
-approach seems to me quite satisfactory.10 3.
+- Today there are two widely followed approaches to QM, the
+  “realist” and “instrumentalist” approaches, which view the
+  origin of probability in measurement in two very different
+  ways.[^9] For reasons I will explain, neither approach seems to
+  me quite satisfactory.[^10],[^3].
 
-The instrumentalist approach is a descendant of the
-Copenhagen interpretation, but instead of imagining
-a boundary beyond which reality isn't described by quantum
-mechanics, it rejects QM altogether as
-a description of reality. There is still a wave function,
-but it isn't real like a particle or a field. Instead it is
-merely an instrument that provides predictions of the
-probabilities of various outcomes when measurements are
-made.
+- The instrumentalist approach is a descendant of the Copenhagen
+  interpretation, but instead of imagining a boundary beyond
+  which reality isn't described by QM, it rejects QM altogether
+  as a description of reality. There is still a wave function,
+  but it isn't real like a particle or a field. Instead it is
+  merely an instrument that provides predictions of the
+  probabilities of various outcomes when measurements are made.
 
-It seems to me that the trouble with this approach isn't
-only that it gives up on an ancient aim of science: to say
-what is really going on out there. It is a surrender of
-a particularly unfortunate kind. In the instrumentalist
-approach, we've to assume, as fundamental laws of nature,
-the rules (such as the Born rule I mentioned earlier) for
-using the wave function to calculate the probabilities of
-various results when humans make measurements. Thus humans
-are brought into the laws of nature at the most fundamental
-level. According to Eugene Wigner, a pioneer of quantum
-mechanics, “it wasn't possible to formulate the laws of
-QM in a fully consistent way without
-reference to the consciousness.”11
+- It seems to me that the trouble with this isn't only giving up
+  on an ancient aim of science: to say what is really going on
+  out there. It is a surrender of a particularly unfortunate
+  kind. 
+    - In the instrumentalist approach, we have to assume, as
+      fundamental laws of nature, the rules (eg Born Rule) for
+      using the wave function to calculate the probabilities of
+      various results when humans make measurements. 
+    - Thus humans are brought into the laws of nature at the most
+      fundamental level. According to Eugene Wigner, “it wasn't
+      possible to formulate the laws of QM in a fully consistent
+      way without reference to the consciousness.”[^11]
 
-Thus the instrumentalist approach turns its back on a vision
-that became possible after Darwin, of a world governed by
-impersonal physical laws that control human behavior along
-with everything else. It isn't that we object to thinking
-about humans. Rather, we want to understand the relation of
-humans to nature, not just assuming the character of this
-relation by incorporating it in what we suppose are nature’s
-fundamental laws, but rather by deduction from laws that
-make no explicit reference to humans. We may in the end have
-to give up this goal, but I think not yet.
+- Thus the instrumentalist approach turns its back on a vision
+  that became possible after Darwin, of a world governed by
+  impersonal physical laws that control human behavior along with
+  everything else. 
+    - It isn't that we object to thinking about humans. 
+    - Rather, we want to understand the relation of humans to
+      nature, not just assuming the character of this relation by
+      incorporating it in what we suppose are nature’s
+      fundamental laws, but rather by deduction from laws that
+      make no explicit reference to humans. We may in the end
+      have to give up this goal, but I think not yet.
 
-Some physicists who adopt an instrumentalist approach argue
-that the probabilities we infer from the wave function are
-objective probabilities, independent of whether humans are
-making a measurement. I don’t find this tenable. In quantum
-mechanics these probabilities don't exist until people
-choose what to measure, such as the spin in one or another
-direction. Unlike the case of classical physics, a choice
-must be made, because in QM not everything
-can be simultaneously measured. As Werner Heisenberg
-realized, a particle can't have, at the same time, both
-a definite position and a definite velocity. The measuring
-of one precludes the measuring of the other. Likewise, if we
-know the wave function that describes the spin of an
-electron we can calculate the probability that the electron
-would have a positive spin in the north direction if that
-were measured, or the probability that the electron would
-have a positive spin in the east direction if that were
-measured, but we can't ask about the probability of the
-spins being found positive in both directions because there
-is no state in which an electron has a definite spin in two
-different directions. 4.
+- Some physicists who adopt an instrumentalist approach argue
+  that the probabilities we infer from the wave function are
+  objective probabilities, independent of whether humans are
+  making a measurement. I don’t find this tenable. 
+    - In QM these probabilities don't exist until people choose
+      what to measure, such as the spin in one or another
+      direction. 
+    - Unlike the case of classical physics, a choice must be
+      made, because in QM not everything can be simultaneously
+      measured. 
+    - As Heisenberg realized, a particle can't have, at the same
+      time, both a definite position and a definite velocity. 
+    - The measuring of one precludes the measuring of the other.
+      Likewise, if we know the wave function that describes the
+      spin of an electron we can calculate the probability that
+      the electron would have a positive spin in the north
+      direction if that were measured, or the probability that
+      the electron would have a positive spin in the east
+      direction if that were measured, but we can't ask about the
+      probability of the spins being found positive in BOTH
+      directions because there is no state in which an electron
+      has a definite spin in two different directions.[^4]
+        - $MY_NOTES/physics/QM/Quantum-Spin.txt
 
-These problems are partly avoided in the realist - as opposed
-to the instrumentalist - approach to QM. Here
-one takes the wave function and its deterministic evolution
-seriously as a description of reality. But this raises other
-problems. 
+- These problems are partly avoided in the realist approach to
+  QM. Here one takes the wave function and its deterministic
+  evolution seriously as a description of reality. But this
+  raises other problems. 
 
-The realist approach has a very strange implication, first
-worked out in the 1957 Princeton Ph.D. thesis of Hugh
-Everett. When a physicist measures the spin of an electron,
-say in the north direction, the wave function of the
-electron and the measuring apparatus and the physicist are
-supposed, in the realist approach, to evolve
-deterministically as dictated by the Schrödinger equation.
-But in consequence of their interaction during the
-measurement, the wave function becomes a superposition of
-two terms, in one of which the electron spin is positive and
-everyone in the world who looks into it thinks it is
-positive, and in the other the spin is negative and everyone
-thinks it is negative. Since in each term of the wave
-function everyone shares a belief that the spin has one
-definite sign, the existence of the superposition is
-undetectable. In effect the history of the world has split
-into two streams, uncorrelated with each other.
+- The realist approach has a very strange implication, first
+  worked out in the 1957 thesis of Hugh Everett.
+- When a physicist measures the spin of an electron, say in the
+  north direction, the wave function of the electron and the
+  measuring apparatus and the physicist are supposed to evolve
+  deterministically as dictated by the Schrödinger equation. 
+- But in consequence of their interaction during the measurement,
+  the wave function becomes a superposition of two terms: 
+    - in one the electron spin is positive and everyone in the
+      world who looks into it thinks it is positive, and in the
+      other the spin is negative and everyone thinks it is
+      negative. 
+- Since in each term of the wave function everyone shares
+  a belief that the spin has one definite sign, the existence of
+  the superposition is undetectable. In effect the history of the
+  world has split into two streams, uncorrelated with each other.
 
-This is strange enough, but the fission of history wouldn't
-only occur when someone measures a spin. In the realist
-approach the history of the world is endlessly splitting; it
-does so every time a macroscopic body becomes tied in with
-a choice of quantum states. This inconceivably huge variety
-of histories has provided material for science fiction,[^12]
-and it offers a rationale for a multiverse, in which the
-particular cosmic history in which we find ourselves is
-constrained by the requirement that it must be one of the
-histories in which conditions are sufficiently benign to
-allow conscious beings to exist. But the vista of all these
-parallel histories is deeply unsettling, and like many other
-physicists I would prefer a single history.
+- This is strange enough, but the fission of history wouldn't
+  only occur when someone measures a spin. In the realist
+  approach, the history of the world is endlessly splitting; it
+  does so every time a macroscopic body becomes tied in with
+  a choice of quantum states. 
+- This inconceivably huge variety of histories has provided
+  material for science fiction,[^12] and it offers a rationale
+  for a multiverse, in which the particular cosmic history in
+  which we find ourselves is constrained by the requirement that
+  it must be one of the histories in which conditions are
+  sufficiently benign to allow conscious beings to exist. But the
+  vista of all these parallel histories is deeply unsettling, and
+  like many other physicists I would prefer a single history.
 
-There is another thing that's unsatisfactory about the
-realist approach, beyond our parochial preferences. In this
-approach the wave function of the multiverse evolves
-deterministically. We can still talk of probabilities as the
-fractions of the time that various possible results are
-found when measurements are performed many times in any one
-history; but the rules that govern what probabilities are
-observed would have to follow from the deterministic
-evolution of the whole multiverse. If this weren't the
-case, to predict probabilities we'd need to make some
-additional assumption about what happens when humans make
-measurements, and we'd be back with the shortcomings of
-the instrumentalist approach. Several attempts following the
-realist approach have come close to deducing rules like the
-Born rule that we know work well experimentally, but I think
-without final success.
+- There is another thing that's unsatisfactory about the realist
+  approach, beyond our parochial preferences. In this approach
+  the wave function of the multiverse evolves deterministically.
+- We can still talk of probabilities as the fractions of the time
+  that various possible results are found when measurements are
+  performed many times in any one history; but the rules that
+  govern what probabilities are observed would have to follow
+  from the deterministic evolution of the whole multiverse. If
+  this weren't the case, to predict probabilities we'd need to
+  make some additional assumption about what happens when humans
+  make measurements, and we'd be back with the shortcomings of
+  the instrumentalist approach. Several attempts following the
+  realist approach have come close to deducing rules like the
+  Born rule that we know work well experimentally, but I think
+  without final success.
 
-The realist approach to QM had already run
-into a different sort of trouble long before Everett wrote
-about multiple histories. It was emphasized in a 1935 paper
-by Einstein with his coworkers Boris Podolsky and Nathan
-Rosen, and arises in connection with the phenomenon of
-“entanglement.”13
+- The realist approach to QM had already run into a different
+  sort of trouble long before Everett wrote about multiple
+  histories. It was emphasized in a 1935 paper by Einstein with
+  his coworkers Boris Podolsky and Nathan Rosen, and arises in
+  connection with the phenomenon of “entanglement.”[^13]
 
-We naturally tend to think that reality can be described
-locally. I can say what is happening in my laboratory, and
-you can say what is happening in yours, but we don’t have to
-talk about both at the same time. But in QM
-it is possible for a system to be in an entangled state that
-involves correlations between parts of the system that are
-arbitrarily far apart, like the two ends of a very long
-rigid stick.
+- We naturally tend to think that reality can be described
+  locally. I can say what is happening in my laboratory, and you
+  can say what is happening in yours, but we don’t have to talk
+  about both at the same time. 
+    - But in QM it is possible for a system to be in an entangled
+      state that involves correlations between parts of the
+      system that are arbitrarily far apart, like the two ends of
+      a very long rigid stick.
 
 For instance, suppose we've a pair of electrons whose
 total spin in any direction is zero. In such a state, the
