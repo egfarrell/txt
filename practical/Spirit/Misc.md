@@ -11565,3 +11565,6 @@ Yo-Yo Ma
     - HN: Silver amulet oldest evidence of Christianity north of Alps           https://news.ycombinator.com/item?id=42448939
     - Good magazine: Commonweal                                                 https://www.commonwealmagazine.org/
     - Christian meditation Ireland                                              https://christianmeditation.ie/
+    - DBH: Talk about hell                                                      https://www.youtube.com/watch?v=DPSipiwAteg
+    - DBH: Future of Christianity                                               https://www.youtube.com/watch?v=yt8DwVE5plo
+
