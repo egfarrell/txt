@@ -1,4 +1,10 @@
 
+### Hackertube
+    - Andrej Karpathy
+    - HN: https://news.ycombinator.com/item?id=50319510
+    - Hackertube https://hackertube.org/
+    - Hackertube data $HOME/repos/marks/hackertube/
+
 ### Oct 2026: eMudhra private key
     - :)
     - https://m.youtube.com/watch?v=SMGg7iisHmc&pp=0gcJCS8MAYcqIYzv
