@@ -1,0 +1,137 @@
+cf: $MY_NOTES/physics/QM/Weinberg-trouble-with-QM.txt
+
+# Ramsey Interferometry: Quantum Phase and Physical Oscillations
+
+
+## 1. What is actually oscillating?
+
+Imagine an atom with two energy eigenstates:
+
+- |1⟩, with energy E₁.
+- |2⟩, with energy E₂.
+
+A microwave pulse prepares the atom in a superposition:
+
+`|ψ(0)⟩ = (|1⟩ + |2⟩)/√2`
+
+Now comes the extraordinary bit.
+
+QM tells us that each energy eigenstate evolves in time according to:
+
+- |1⟩ → e^(−iE₁t/ℏ)|1⟩
+- |2⟩ → e^(−iE₂t/ℏ)|2⟩
+
+Consequently:
+- |ψ(t)⟩ = (e^(−iE₁t/ℏ)|1⟩ + e^(−iE₂t/ℏ)|2⟩)/√2
+
+Notice something.
+
+The two components accumulate different phases because they have different energies.
+
+The physically relevant quantity is their relative phase:
+
+`Δφ(t) = (E₂ − E₁)t/ℏ`
+
+And therefore:
+
+`Δφ(t) = ΔE·t/ℏ`
+
+The relative phase rotates continuously, at an angular frequency:
+
+ω = ΔE/ℏ
+
+Or, in ordinary frequency:
+
+f = ΔE/h
+
+That's the atomic transition frequency.
+
+
+## 2. Abstract phase -> physically measurable
+
+Here's the crucial step.
+
+Suppose we measure an observable that can connect the two energy states.
+
+Its expectation value can contain terms proportional to:
+
+⟨ψ(t)|A|ψ(t)⟩ ∝ cos(ΔE·t/ℏ)
+
+In other words, the relative phase appears in the predictions for an actual physical measurement.
+
+The oscillation isn't necessarily the atom physically moving backwards and forwards.
+
+Rather, some measurable property of the atom oscillates because of the evolving quantum interference between its two states.
+
+This is not just mathematical decoration.
+
+The interference is experimentally observable.
+
+## 3. Ramsey's experiment makes it tangible
+
+The experiment exploits precisely this phenomenon.
+
+1. First microwave pulse: 
+        - prepares a superposition of two atomic energy states.
+
+2. Free evolution: 
+        - the relative phase accumulates at a rate determined by the energy difference.
+
+3. Second microwave pulse: 
+        - makes the two quantum amplitudes interfere.
+
+4. Measurement: 
+        - detects which energy state the atom occupies.
+
+The probability of finding the atom in either state depends on the accumulated phase.
+
+For an idealised Ramsey experiment, one obtains an oscillatory probability of the form:
+
+`P₂(t) = [1 + cos(Δω·t + φ₀)]/2`
+
+where `Δω` is the difference between the atomic transition frequency and the microwave frequency.
+
+By varying the microwave frequency, one finds the condition for maximum resonance.
+
+This allows extraordinarily precise measurements of atomic transition frequencies.
+
+
+## 4. The really profound point
+
+There is a subtle distinction worth appreciating.
+
+A `global phase` is physically unobservable:
+
+|ψ⟩ → e^(iφ)|ψ⟩
+
+It changes nothing measurable.
+
+But a `relative phase` between components of a superposition is physically significant.
+
+For example:
+
+(|1⟩ + |2⟩)/√2
+
+and
+
+(|1⟩ + e^(iφ)|2⟩)/√2
+
+can produce different measurement probabilities.
+
+So we have something rather remarkable:
+
+- Hilbert space contains vectors.
+- Superpositions contain relative phases.
+- Time evolution changes those relative phases.
+- Relative phases affect interference.
+- Interference changes measurable experimental outcomes.
+
+- The mathematical phase becomes experimentally consequential.
+
+- One final thought: 
+    - The atom doesn't need to be spatially oscillating for there
+      to be a genuine physical oscillation. QM allows an internal
+      state to evolve in a way that produces periodic changes in
+      observable quantities.
+
+That's what makes atomic clocks so beautiful: they turn the time evolution of a quantum state into an extraordinarily stable physical reference for time itself.

@@ -1,0 +1,73 @@
+cf: $MY_NOTES/physics/QM/Weinberg-trouble-with-QM.txt
+
+# Superposition, Relative Phase, and Ramsey Clocks
+
+- Short answer: Yes. The "abstract" superposition has directly
+  measurable physical consequences.
+
+## What's actually oscillating
+
+- If an atom is in a superposition of two energy eigenstates,
+
+- `|ψ(t)⟩ = a·e^(-iE₁t/ħ)|1⟩ + b·e^(-iE₂t/ħ)|2⟩`
+
+- each component rotates in phase at a rate set by its energy.
+  Only the *relative* phase matters, and it advances at the
+  angular frequency
+
+- `ω = (E₂ − E₁)/ħ`
+
+- That's the "natural frequency" in Weinberg's article. Nothing
+  moves through space; what oscillates is the quantum state
+  itself, and with it the probabilities of outcomes for certain
+  observables (e.g., the atom's dipole moment oscillates, which
+  is how an atom in superposition can radiate).
+
+## Why it's measurable: interference
+
+- A global phase on a quantum state is unobservable. A *relative*
+  phase between two components of a superposition is observable,
+  because it determines how those components interfere when
+  recombined. This is the same logic as the double-slit
+  experiment, with "two energy states" instead of "two paths."
+
+## Ramsey's method
+
+1. The first microwave pulse puts the atom into an equal
+   superposition of |1⟩ and |2⟩.
+2. During the free evolution time T, the relative phase
+   accumulates at the atom's natural frequency, while the
+   microwave source (the "local oscillator") advances its own
+   phase at its own frequency.
+3. The second pulse recombines the components. Whether the atom
+   ends up in |1⟩ or |2⟩ depends on the *difference* between the
+   accumulated atomic phase and the microwave's phase.
+4. Counting atoms in each state gives a fringe pattern,
+   P ∝ cos²(Δ·T/2), where Δ is the detuning between the microwave
+   frequency and the atomic frequency.
+
+- Tune the microwave until the fringes show zero detuning, and
+  the microwave frequency now equals the atomic frequency. The
+  longer T is, the narrower the fringes, which is why Ramsey
+  spectroscopy is so precise.
+
+## Is it "physical"?
+
+- The superposition isn't a mathematical decoration on top of the
+  real atom; the state vector *is* our best description of the
+  atom, and the relative phase is a real feature of it. Atomic
+  clocks, which define the second, depend on it. Cesium clocks
+  literally count cycles of this phase evolution.
+
+- Caveat on the GPT answer: "an oscillation in an observable" is
+  right, but the eigenstate populations themselves don't
+  oscillate during free evolution. Only the phase does, and it's
+  invisible until the second pulse converts phase into
+  population.
+
+## Weinberg's point
+
+- Clocks are a sensitive probe: if quantum mechanics were
+  slightly nonlinear or otherwise modified, the phase evolution
+  would deviate subtly from ΔE/ħ, and a good enough clock could
+  in principle detect it.

@@ -1,6 +1,19 @@
 LLMs fail at Physics and Maths
 
 
+
+### Ramsey Interferometry & Atomic Clocks
+    - $MY_NOTES/physics/QM/Ramsey-Interferometry.txt
+    - Ramsey interferometry (or the method of separated
+      oscillating fields) is a quantum phase-measurement
+      technique used in atomic clocks to determine atomic
+      transition frequencies `ω_0` with high precision. 
+    - It improves upon the single-pulse Rabi method by replacing
+      a long, continuous interaction zone with two shorter
+      pulses, reducing field-inhomogeneity sensitivity and
+      creating narrow interference patterns known as Ramsey
+      fringes.
+
 ### Schrodinger speaking
     - "Do Electrons Think?" (BBC 1949)
     - https://m.youtube.com/watch?v=hCwR1ztUXtU
