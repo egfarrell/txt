@@ -4,6 +4,9 @@
     - HN: https://news.ycombinator.com/item?id=50319510
     - Hackertube https://hackertube.org/
     - Hackertube data $HOME/repos/marks/hackertube/
+    - See also:
+    - Hackerbooks https://hackerbooks.org/
+
 
 ### Oct 2026: eMudhra private key
     - :)

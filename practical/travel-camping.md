@@ -1,23 +1,14 @@
-
-
-Sam Ritchie endurance running (don't skip the salt pills)
-https://samritchie.io/the-road-to-the-hardrock-100/
-
-- Book: How to cook a wolf: MFK Fisher 1942 
-
-
-https://www.amazon.co.uk/dp/B09SHBZCK2?ref=emc_p_m_5_i_atc&th=1
-https://www.amazon.co.uk/Clostnature-Man-Tent-Backpacking-Lightweight/dp/B0B8QDFHTZ?crid=1Q1I129WUZVFO&dib=eyJ2IjoiMSJ9.QwcgGpyArut0DkcOsuf4SZMYqakziJ-30NC0FsCaIi9wxy_Cgxh6H-G8Kh9pVPxdLur4ny66wCMkq5nvZA_KO14AlnCtoMZqYcul4uJXJazqrli0NgKIQMy5fVRRvw9gWQmfc5OMtFLRv_6qV5Vwq_YTSjwLkrTxXVBC9DHWvq90HQ_CWl1NhnpAEbvMySW9kG-AZEevH1MSmLF6NLwjxry8C6yMsrw1XiQ7NVc55c4dtb2_6VchQ_jN1G2ShzvYy2AkeR9n0N4hRtfLhJu0Whl_hC0JC8J9s7m6153Q4qw.mIJDNrUgfyW30Z73MvBwWZaA63zT7hUo0U1zspRRVXk&dib_tag=se&keywords=1-person%2Btent&nsdOptOutParam=true&qid=1732447339&sprefix=1-Person%2BTent%2Caps%2C126&sr=8-25&th=1
-
-
-- Durston x dome tent
-- https://durstongear.com/products/x-dome-1-plus-ultralight-backpacking-tent?sca_ref=7847251.HpfFepMgnX
-- https://www.totalsource.ie/fetra-hand-cart-with-platform-powder-coated/
-https://www.fetra.com/hand_carts/outdoor-hand_cart-6103l
-
-closnature 1 person tent https://www.amazon.co.uk/Clostnature-Man-Tent-Backpacking-Lightweight/dp/B0B8QZ147L?crid=2O1KKGXVKKOOJ&dib=eyJ2IjoiMSJ9.KWeTWvds9fo5wxAsZ4DxZP7r2NPqngva9M_Ghna8v2Ti2LARg-HS7ksZmmP6jWqrBfrPApEunyPtZ6mrzjGqXDDS8gjSKD1toQMNeuAlqG1WH6HYO6xgEauxZGY_-p9y4K1u5_K9Si8lHaEBm2fcMGOP7Wk-i68StBCPgma5zrhxmRYihiMTc_gUFgjdt2h6IvWIt-BEfyDaqIyFiCRV2EAe06NRa8N_6qXZ1LsDZEMJm2seXxsH9YRMX_agnWpufTTA6eCmyVacQG2eknHdnJIAn9ouAYLKuJyvjilDRYE.cUzARwr1zswUbWLXCfiLyjATUuKkegv1khrqbckzP7E&dib_tag=se&keywords=tent%2Bone%2Bman&qid=1775478323&sprefix=tent%2Bone%2Bman%2Caps%2C301&sr=8-18&th=1&psc=1
+### tents
+    - Durston x dome tent
+        - https://durstongear.com/products/x-dome-1-plus-ultralight-backpacking-tent?sca_ref=7847251.HpfFepMgnX
+    - closnature 1 person tent
+        - https://www.amazon.co.uk/Clostnature-Man-Tent-Backpacking-Lightweight/dp/B0B8QZ147L?crid=2O1KKGXVKKOOJ&dib=eyJ2IjoiMSJ9.KWeTWvds9fo5wxAsZ4DxZP7r2NPqngva9M_Ghna8v2Ti2LARg-HS7ksZmmP6jWqrBfrPApEunyPtZ6mrzjGqXDDS8gjSKD1toQMNeuAlqG1WH6HYO6xgEauxZGY_-p9y4K1u5_K9Si8lHaEBm2fcMGOP7Wk-i68StBCPgma5zrhxmRYihiMTc_gUFgjdt2h6IvWIt-BEfyDaqIyFiCRV2EAe06NRa8N_6qXZ1LsDZEMJm2seXxsH9YRMX_agnWpufTTA6eCmyVacQG2eknHdnJIAn9ouAYLKuJyvjilDRYE.cUzARwr1zswUbWLXCfiLyjATUuKkegv1khrqbckzP7E&dib_tag=se&keywords=tent%2Bone%2Bman&qid=1775478323&sprefix=tent%2Bone%2Bman%2Caps%2C301&sr=8-18&th=1&psc=1
 
 - make a pot cosy https://www.youtube.com/watch?v=pYW6pcUi8zE
+
+### Sam Ritchie endurance running
+    - don't skip the salt pills
+    - https://samritchie.io/the-road-to-the-hardrock-100/
 
 ### My filter
     - Sawyer micro squeeze
@@ -61,9 +52,10 @@ closnature 1 person tent https://www.amazon.co.uk/Clostnature-Man-Tent-Backpacki
     - hobo can stove https://www.youtube.com/watch?v=yDY37RcUC7M
 
 
-- Shower cap: I learnt in the military to take a small plastic
-  shower cap to put over the tops of your boots at night. Stops
-  the rain and creepies getting in whilst letting them air too.
+### Shower cap:
+    - I learnt in the military to take a small plastic shower cap
+      to put over the tops of your boots at night. Stops the rain
+      and creepies getting in whilst letting them air too.
 
 
 ### Car window screen cover
@@ -75,11 +67,11 @@ closnature 1 person tent https://www.amazon.co.uk/Clostnature-Man-Tent-Backpacki
     - A nalgene water bottle can take very hot water. Fill it up,
       tighten the lid well, pop it in a sock, and you'll have
       a hot water bottle. Plus you can have a warm drink in the
-      night if you need it. 
+      night if you need it.
 
 ### My Gear
     - Boundless voyage Titanium pot https://www.amazon.co.uk/Boundless-Voyage-Titanium-Cookware-Backpacking/dp/B0BLC8W1H6?crid=1HLPJGJPQEA41&dib=eyJ2IjoiMSJ9.PT_AJiyF2pYtsaG_hLzvVPLhhDZzzScjG2zuNIiJAxRX1l4hh9t05dRgH2xj5Johtf0fCWdWT2-MTmNrnw1L0ZNot7kfeNS0uNdqIvWw4c5ukrIdYW67JKxdNbHoKSubcXi_DuwXrebEQY6JuHCIumll9z_MxBdIaMj_fT8MdhVu7uEy3EjtlU4RFhlmYjz7mSE4F_VG2q_y5KmC2_ILrFXnwqtf4bxW1fnT0rXnzyw1bMJy2xiH9OU1zB4BWnoANBpwnzHKo7KxnydgxIEcxAhNFR81piAA4x0fZCbymCIJb7lNiYXQbisImzuhtgRpVPYpyC5AMoraY9PxAK_AAv8uLDjwsGACsLKBuTQ1YCPkPg7fsInGs1wfA2ziE2VIZ7aG5IRADUq3tqvGbhz6hHKpeJxkSM_KqP9B_Oju0QNOpAgUjBidFdkuAlVSxV0R.0VXY36vfw8LZ5dlG1pJ-4v1b2dnjSumRvFcia8XyozU&dib_tag=se&keywords=boundless+voyage+Ti2110C
-    - Lixada 750ml (97mm diameter) Lightweight Titanium Pot with Folding Spork 
+    - Lixada 750ml (97mm diameter) Lightweight Titanium Pot with Folding Spork
 
 ### English language sheet:
     - Meegan authored 'The Kobe One Page Basic English
@@ -125,7 +117,7 @@ Traveller: Steph Devery
         - "Salting Out": Adding a significant amount of salt
           (like table salt, sodium chloride) to an alcohol-water
           mixture (like hand sanitizer) causes the alcohol to
-          separate from the water and other ingredients. 
+          separate from the water and other ingredients.
         - This happens because the salt has a higher affinity for
           water molecules, effectively "pushing out" the alcohol.
           The alcohol will typically form a distinct layer on
@@ -213,7 +205,7 @@ Traveller: Steph Devery
 ### Handy
     - Lucy: I try not to eat sugar on trail because my hikers
       hunger was interfering with my temper and politeness to
-      strangers! 
+      strangers!
         - Once I stopped eating added sugars on trail (advice
           from a cyclist), my hunger stopped completely. I still
           eat fruit though so I guess that’s the answer.
@@ -380,7 +372,7 @@ Traveller: Steph Devery
     - new
         - Phone number: +4850 56 57 803
         - PIN: 247455
- 
+
 ### Gas cannisters
     1. "Coleman" Screw-On Canisters
         - Also called: threaded
@@ -574,63 +566,64 @@ Traveller: Steph Devery
 
 
 ### Links
-    - car insurance excess                           https://www.insurance4carhire.com/
-    - USA Travel Insurance 2016                      https://www.truetraveller.com/
-    - Warsaw Bikes                                   http://www.veturilo.waw.pl/
-    - New Biolite Portable Wood Burning Camp         http://m.ebay.com/itm/201461130926?_mwBanner=1
-    - HN long distance hikes                         https://news.ycombinator.com/item?id=25568856
-    - Book on East Prussia                           https://www.wdl.org/en/item/9158/#languages=eng&q=physics&regions=europe&time_periods=1850-1899
-    - Camino Poland                                  http://www.caminodesantiago.pl/camino_polska
-    - Friends Camino Poland                          https://camino.net.pl/stowarzyszenie/
-    - Camino Europe                                  https://camino-europe.eu/en/eu/homepage-jakobswege/
-    - Mapping USA                                    https://caltopo.com/
-    - OSM Openstreetmap                              https://www.openstreetmap.org
-    - Strava Global heatmap! isolated places         https://www.strava.com/heatmap#7.00/-120.90000/38.36000/hot/all
-    - Windy OSM map app                              https://play.google.com/store/apps/details?id=cz.seznam.windymaps
-    - mapy.cz OSM map app                            https://play.google.com/store/apps/details?id=cz.seznam.mapy&hl=en&gl=US
-    - _BEST_: Mapout                                 https://mapout.app/
-    - Good: Organic maps (Voie de Vezalay)           https://organicmaps.app/
-    - Good: comaps (community fork of organic maps)  https://www.comaps.app/
-    - Magic Earth maps                               https://www.magicearth.com/
-    - Community fork of Maps.ME                      https://github.com/omapsapp
-    - PKS Polonus (bus to Goldap)                    https://pkspolonus.pl/
-    - Zak Express (bus to Goldap)                    https://zakexpress.pl/en/
-    - PKS Nova Bus: Ełk to Goldap                    https://www.pksnova.pl/pl
-    - Explorers Connect                              https://www.explorersconnect.com/
-    - Open Churches: France/Belgium                  https://openchurches.eu/en
-    - Virtual Walks                                  https://www.walking4fun.com/settings/
-    - Polish Provinces                               $MY_IMAGES/misc/Polish-provinces-map.jpg
-    - Warsaw Travel Guide                            $MY_BOOKS/Misc/Travel/Warsaw-Insight-Guide.pdf
-    - Kapp to Cape (11,000 mile cycle)               https://www.amazon.co.uk/Kapp-Cape-Never-Look-Earth/dp/1849539677/
-    - Biking around the world (good tips)            https://www.youtube.com/watch?v=-dRy2qWpCH0
-    - Kinga Tanajewska on her bike                   https://www.youtube.com/channel/UCwn9AheYpfc4F62EZKsOEhw
-    - Celcius Fahrenheit temperature chart           $MY_IMAGES/travel/temperature-chart.jpg
-    - Fearless and far                               https://www.youtube.com/c/MikeCorey/videos
-    - Eva Zu Beck                                    https://www.youtube.com/c/EvazuBeckOfficial/videos
-    - Polarsteps custom maps (Couple at Labre house) https://www.polarsteps.com/
-    - Travellerspoint custom maps                    https://www.travellerspoint.com
-    - Nomadlist remote workers                       https://nomadlist.com/
-    - Nomador House sitting                          https://www.nomador.com/
-    - Cheap German train ticket                      https://news.ycombinator.com/item?id=31445822
-    - how to tie knots                               https://www.animatedknots.com/
-    - Handy knots                                    https://news.ycombinator.com/item?id=31532199
-    - Coillte wild camp                              https://www.coillte.ie/our-forests/recreation-map/
-    - Google Map: Walk to Amettes                    https://www.google.com/maps/d/viewer?mid=1cja90TX-MPep0yWqJwhmfD2-fZziuwg&ll=49.99423005723828%2C2.261049550000007&z=8
-    - Polish rail system enquiry                     http://old.rozklad-pkp.pl/bin/query.exe/en?
-    - flixbus                                        https://global.flixbus.com/bus-routes
-    - map: Neolithic sites Ireland                   https://maps.archaeology.ie/HistoricEnvironment/
-    - 65 year old cyclist                            https://www.theguardian.com/lifeandstyle/2022/aug/22/a-new-start-after-60-i-became-an-adventure-cyclist-at-65-and-rode-from-mongolia-to-scotland
-    - HN bicycle info                                https://news.ycombinator.com/item?id=35343495
-    - Man who walked around the world                https://news.ycombinator.com/item?id=35521654
-    - Dave Kunst walked around the world too         http://davekunst.com/
-    - Plastic can bike panniers                      https://rackhackers.com/
-    - tickless ultrasonic                            https://ticklessusa.com/collections/tickless-tick-repellent-products
-    - Good Warsaw Hostel: Hostel metro               http://hotelpracowniczymetro.pl/?sa=X&ved=2ahUKEwjr1aiaor6CAxVCvt4KHXzFCKUQyK4DegUIAxCoAw
-    - Walking: Angela Maxwell (walking around world) https://www.youtube.com/watch?v=sd8JzIFbIqM
-    - Walking: Lucy Barnard (walking around world)   https://www.youtube.com/@LucyBarnard/videos
-    - Trailgoals hiking posters                      https://trailgoals.com/
-    - European hiking tips                           https://www.youtube.com/@OscarHikes
-    - Trail magazine                                 https://www.livefortheoutdoors.com/camping/tents/
-    - Growing Soles A ninety-six year journey around the world https://www.amazon.com/Growing-Soles-ninety-six-journey-around-ebook/dp/B08K77DNFH
+    - car insurance excess                             https://www.insurance4carhire.com/
+    - USA Travel Insurance 2016                        https://www.truetraveller.com/
+    - Warsaw Bikes                                     http://www.veturilo.waw.pl/
+    - New Biolite Portable Wood Burning Camp           http://m.ebay.com/itm/201461130926?_mwBanner=1
+    - HN long distance hikes                           https://news.ycombinator.com/item?id=25568856
+    - Book on East Prussia                             https://www.wdl.org/en/item/9158/#languages=eng&q=physics&regions=europe&time_periods=1850-1899
+    - Camino Poland                                    http://www.caminodesantiago.pl/camino_polska
+    - Friends Camino Poland                            https://camino.net.pl/stowarzyszenie/
+    - Camino Europe                                    https://camino-europe.eu/en/eu/homepage-jakobswege/
+    - Mapping USA                                      https://caltopo.com/
+    - OSM Openstreetmap                                https://www.openstreetmap.org
+    - Strava Global heatmap! isolated places           https://www.strava.com/heatmap#7.00/-120.90000/38.36000/hot/all
+    - Windy OSM map app                                https://play.google.com/store/apps/details?id=cz.seznam.windymaps
+    - mapy.cz OSM map app                              https://play.google.com/store/apps/details?id=cz.seznam.mapy&hl=en&gl=US
+    - _BEST_: Mapout                                   https://mapout.app/
+    - Good: Organic maps (Voie de Vezalay)             https://organicmaps.app/
+    - Good: comaps (community fork of organic maps)    https://www.comaps.app/
+    - Magic Earth maps                                 https://www.magicearth.com/
+    - Community fork of Maps.ME                        https://github.com/omapsapp
+    - PKS Polonus (bus to Goldap)                      https://pkspolonus.pl/
+    - Zak Express (bus to Goldap)                      https://zakexpress.pl/en/
+    - PKS Nova Bus: Ełk to Goldap                      https://www.pksnova.pl/pl
+    - Explorers Connect                                https://www.explorersconnect.com/
+    - Open Churches: France/Belgium                    https://openchurches.eu/en
+    - Virtual Walks                                    https://www.walking4fun.com/settings/
+    - Polish Provinces                                 $MY_IMAGES/misc/Polish-provinces-map.jpg
+    - Warsaw Travel Guide                              $MY_BOOKS/Misc/Travel/Warsaw-Insight-Guide.pdf
+    - Kapp to Cape (11,000 mile cycle)                 https://www.amazon.co.uk/Kapp-Cape-Never-Look-Earth/dp/1849539677/
+    - Biking around the world (good tips)              https://www.youtube.com/watch?v=-dRy2qWpCH0
+    - Kinga Tanajewska on her bike                     https://www.youtube.com/channel/UCwn9AheYpfc4F62EZKsOEhw
+    - Celcius Fahrenheit temperature chart             $MY_IMAGES/travel/temperature-chart.jpg
+    - Fearless and far                                 https://www.youtube.com/c/MikeCorey/videos
+    - Eva Zu Beck                                      https://www.youtube.com/c/EvazuBeckOfficial/videos
+    - Polarsteps custom maps (Couple at Labre house)   https://www.polarsteps.com/
+    - Travellerspoint custom maps                      https://www.travellerspoint.com
+    - Nomadlist remote workers                         https://nomadlist.com/
+    - Nomador House sitting                            https://www.nomador.com/
+    - Cheap German train ticket                        https://news.ycombinator.com/item?id=31445822
+    - how to tie knots                                 https://www.animatedknots.com/
+    - Handy knots                                      https://news.ycombinator.com/item?id=31532199
+    - Coillte wild camp                                https://www.coillte.ie/our-forests/recreation-map/
+    - Google Map: Walk to Amettes                      https://www.google.com/maps/d/viewer?mid=1cja90TX-MPep0yWqJwhmfD2-fZziuwg&ll=49.99423005723828%2C2.261049550000007&z=8
+    - Polish rail system enquiry                       http://old.rozklad-pkp.pl/bin/query.exe/en?
+    - flixbus                                          https://global.flixbus.com/bus-routes
+    - map: Neolithic sites Ireland                     https://maps.archaeology.ie/HistoricEnvironment/
+    - 65 year old cyclist                              https://www.theguardian.com/lifeandstyle/2022/aug/22/a-new-start-after-60-i-became-an-adventure-cyclist-at-65-and-rode-from-mongolia-to-scotland
+    - HN bicycle info                                  https://news.ycombinator.com/item?id=35343495
+    - Man who walked around the world                  https://news.ycombinator.com/item?id=35521654
+    - Dave Kunst walked around the world too           http://davekunst.com/
+    - Plastic can bike panniers                        https://rackhackers.com/
+    - tickless ultrasonic                              https://ticklessusa.com/collections/tickless-tick-repellent-products
+    - Good Warsaw Hostel: Hostel metro                 http://hotelpracowniczymetro.pl/?sa=X&ved=2ahUKEwjr1aiaor6CAxVCvt4KHXzFCKUQyK4DegUIAxCoAw
+    - Walking: Angela Maxwell (walking around world)   https://www.youtube.com/watch?v=sd8JzIFbIqM
+    - Walking: Lucy Barnard (walking around world)     https://www.youtube.com/@LucyBarnard/videos
+    - Trailgoals hiking posters                        https://trailgoals.com/
+    - European hiking tips                             https://www.youtube.com/@OscarHikes
+    - Trail magazine tents                             https://www.livefortheoutdoors.com/camping/tents/
+    - Growing Soles A 96 year journey around the world https://www.amazon.com/Growing-Soles-ninety-six-journey-around-ebook/dp/B08K77DNFH
     - Passport photo 1PMI 81EN 1228 1248 53U0 00
-
+    - Tibia injuries during 30,000km run               https://onlinelibrary.wiley.com/doi/full/10.1002/jcsm.70368
+    - Book: How to cook a wolf: MFK Fisher 1942
