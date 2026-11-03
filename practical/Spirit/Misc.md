@@ -1,4 +1,12 @@
 
+### Biography important
+    - book: On the trail of AW Tozer: A Biography
+    - "In the Preface to the latter book Tozer wrote, ‘[n]ext to
+      the Holy Scriptures the greatest aid to the life of faith
+      may be Christian biography’. Using Tozer’s biographies as
+      our base I want to set out something of the background
+      against which Tozer’s own life was played..."
+
 ### The Cures
     - BBC One - True North, The Miraculous Tales of Mickey McGuigan      
         - https://www.bbc.co.uk/programmes/b03bys0h
