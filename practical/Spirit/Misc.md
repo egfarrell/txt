@@ -556,7 +556,7 @@
 ### The key: GOD’S LOVE
     - (This is the best note I have in all my thousands of little
       txt files, Science, Theology, Biographies, practical)
-    - $MY_NOTES/practical/Spirit/Pilgrims-Hermits/pilgrim-George.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/pilgrim-George.txt
     - When reporters stopped me on the road to talk with me,
       often their last question was something like this:
         - “What would you like to say to our readers (or
@@ -726,7 +726,7 @@
     - Artist David Shrigley: I stopped watching the news when Trump won
 
 ### Bradbourne plaque: Multyfarnahm
-    - $MY_NOTES/practical/Spirit/Pilgrims-Hermits/John-Bradbourne-Vagabond.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/John-Bradbourne-Vagabond.txt
     - God's love within you is your native land,
     - So search none other, never more depart,
     - For you are homeless save God keeps your heart
@@ -780,7 +780,7 @@
 
 
 ### Ann Sieben: Agression:
-    - $MY_NOTES/practical/Spirit/Pilgrims-Hermits/Pilgrim-Ann-Sieben.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/Pilgrim-Ann-Sieben.txt
     - But since then, with other men with guns I've encountered,
       certainly I have learned the savvy of it all. It's easy. If
       I try -- that's aggression. If I try to respond to
@@ -798,7 +798,7 @@
       try to talk.
 
 ### Ann Sieben: Pilgrim
-    - $MY_NOTES/practical/Spirit/Pilgrims-Hermits/Pilgrim-Ann-Sieben.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/Pilgrim-Ann-Sieben.txt
     - I always must go to a shrine or a pilgrim destination.
       That's the distinction between a pilgrim and a vagabond.
       A pilgrim has a specific destination that the pilgrim wants
@@ -1745,7 +1745,7 @@
 
 
 ### Review of Don Quixote
-    - $MY_NOTES/practical/Spirit/Pilgrims-Hermits/holy-fools-folly.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/holy-fools-folly.txt
     - (Books for Titans podcast)
     - When we meet him, he is a 50-year-old man, he's gaunt,
       skinny and tall. He decides it is fitting and neccessary
@@ -2189,7 +2189,7 @@
       for others and makes the decision easy for you as well.
 
 ### Determination
-    - $MY_NOTES/practical/Spirit/Pilgrims-Hermits/pilgrim-George.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/pilgrim-George.txt
     - But his motto was 'siempre adelante, nunca atras' (always
       forward, never back).
 
@@ -3191,7 +3191,7 @@
       often centred on 'believing'."
 
 ### Future eyes:
-    - $MY_NOTES/practical/Spirit/Pilgrims-Hermits/Pilgrim-Contemplative-Herbert-Smith.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/Pilgrim-Contemplative-Herbert-Smith.txt
     - The pilgrim begins to see how the theological virtures of
       faith, hope and love, though they are trained on God, help
       the pilgrim to penetrate into the depths of the created
@@ -4147,7 +4147,7 @@ Film: The Wonder
           like it. You would be destroyed by an unparalleled
           sense of insecurity, and an exposure to something
           nameless."
-    - $MY_NOTES/practical/Spirit/Pilgrims-Hermits/Creativity-requires-solitude.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/Creativity-requires-solitude.txt
 
 ### Avert Eyes
     - Something that has stayed in my mind since reading the Fr.
