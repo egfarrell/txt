@@ -299,7 +299,7 @@
     - Date of Death: Thursday 11th April 2019
 
 ### Beat of the Drummer
-    - $MY_NOTES/practical/Spirit/Vocation/Pilgrims-Hermits/Pilgrim-George-beat-drum.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/Pilgrim-George-beat-drum.txt
     - “They came from far and wide,” his brother said. “My
       brother marched to the beat of a different drummer. In his
       case, the drummer was the Lord.”
@@ -419,7 +419,7 @@
 
 ### Review of Don Quixote
     - $MY_NOTES/practical/Spirit/retreats/2024-HolyHill.txt
-    - $MY_NOTES/practical/Spirit/Vocation/Pilgrims-Hermits/holy-fools-folly.txt
+    - $MY_NOTES/practical/Spirit/Pilgrims/holy-fools-folly.txt
     - (Books for Titans podcast)
     - When we meet him, he is a 50-year-old man, he's gaunt,
       skinny and tall. He decides it is fitting and neccessary
@@ -9575,7 +9575,7 @@ Yo-Yo Ma
 
 ### The Pilgrim Contemplative (Herbert Smith SJ)
     - See:
-      ./Pilgrims-Hermits/Pilgrim-Contemplative-Herbert-Smith.txt
+      ./Pilgrims/Pilgrim-Contemplative-Herbert-Smith.txt
     - 6 types of conteplatives.
     - My type: (June 2022, or am I a pilgrim contemplative?)
         - Let me next point out a thoughtful, artistic,
