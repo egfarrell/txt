@@ -1,4 +1,36 @@
 
+### Divine Healing
+    - book: On the trail of AW Tozer: A Biography
+    - Dr Charles Cullis was a Boston physician who had been for
+      some time the head of a tuberculosis sanatorium. He was
+      a sincere Christian who was stirred by the distress and
+      hopelessness of many of his patients and moved to pray for
+      their deliverance. Tozer says ‘[t]here followed recoveries
+      so speedy and unusual as to hint of the miraculous’.
+      Eventually abandoned medical remedies and relied totally on
+      the prayer of faith alone. He gave up his medical practice
+      and entered into a _full time ministry of preaching from
+      place to place_ and praying with the sick, with many people
+      coming to hear him.
+    - Also: AB Simpson
+    - To forsake a salary of $5,000 a year and to trust God to
+      provide for his needs and for his family of seven looked to
+      all the world as though Simpson had lost the plot and his
+      wife received Tozer’s sympathy as she tried to follow her
+      husband’s vision:
+
+### Detonating a charge
+    - book: On the trail of AW Tozer: A Biography
+    - From boyhood Simpson had been fed by stories of missionary
+      endeavour and in a chapter suffused with scriptural
+      allusions Tozer describes how the idea of taking the gospel
+      beyond his Jerusalem, his Judea and his Samaria was
+      gestating in Simpson’s mind until God himself confirmed it
+      in his heart by an experience to ‘_detonate the charge_’.
+      That experience came in a dream of a vast auditorium with
+      millions of...
+    - (Like the dream of the 'explosion' before the Nullabour 1998)
+
 ### Biography important
     - book: On the trail of AW Tozer: A Biography
     - "In the Preface to the latter book Tozer wrote, ‘[n]ext to
