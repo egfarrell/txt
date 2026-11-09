@@ -18,6 +18,7 @@
     ~/bin/clean_srt.py
     ~/bin/vtt-clean
     ~/bin/subs
+    ~/bin/ytmd  # format yt commanets
     ~/bin/aws/02-inject-dotfiles-aws.sh
 
 ### misc
