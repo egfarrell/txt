@@ -3049,80 +3049,33 @@
 
 
 ### Buber
-    - Buber drew a distinction between religion, a body of
-      received beliefs and rituals, and what he called
-      “religiosity,” the molten spiritual core from which
-      religions are born.
-    - Traditional Judaism held that living according to law was
-      itself a source and an expression of spiritual fervor.
-    - But Buber was convinced that Orthodox Judaism was no longer
-      a real option for people like him.
-        - “Once religious rites and dogmas have become so rigid
-          that religiosity cannot move them or no longer wants to
-          comply with them, religion becomes uncreative and
-          therefore untrue,” he wrote.
-        - This equation of truth with creativity was something
-          that Buber learned from Nietzsche, and it marked
-          a radically new way of thinking about Judaism.
-    - Truth was no longer a question of what had happened in
-      history (e.g. whether God had really given Moses a set of
-      laws on Mt. Sinai) but of what would best be able to
-      sustain the Jewish people in the future.
-        - To preserve Jewish religiosity, Buber was willing to
-          sacrifice much of the Jewish religion.
-    - The third of Buber’s Jewish inspirations was the most
-      surprising:
+    - $MY_NOTES/practical/Spirit/People/Martin-Buber.txt
+    - Religiosity
+        - But Buber was convinced that Orthodox Judaism was _no
+          longer a real option_ for people like him.
+    - Jeshua
+        - The third of Buber’s Jewish inspirations was the most
+          surprising:
         - the teachings of Jesus.
         - Buber held that it was a mistake to see Jesus as the
-          founder of a new Christian religion. He was, rather,
-          a quintessentially Jewish teacher, whose moral passion
-          and poetic creativity made him an heir to Isaiah and to
-          Jeremiah.
-        - In Buber’s view, the core of Jesus’ teaching was that
-          “God wants to be realized within the world and its
-          worldliness through their purification and perfection.”
-        - Here is the point of connection between Judaism and
-          Buber’s theology of dialogue:
-            - the world is holy because it is where we can
-              encounter God. That is why any theology or politics
-              that seeks to bring this world to an end—through an
-              apocalyptic transformation or a total revolution—is
-              fundamentally opposed to Buber’s Jewish ideal.
-    - In 1939, he engaged in a polemic with Gandhi, who had
-      published a statement saying that Zionism was an injustice
-      to the Arabs of Palestine, and also recommending that the
-      Jews of Nazi Germany stay there and resist by means of
-      nonviolent satyagraha, or “soul force.”
-        - The agonized open letter Buber wrote in response
-          explained that, although such a course might work
-          against the British Empire, against Hitler it was
-          meaningless:
-            - “An effective stand in the form of non-violence may
-              be taken against unfeeling human beings in the hope
-              of gradually bringing them to their senses; but
-              a diabolic universal steamroller cannot thus be
-              withstood.”
-            - Buber insisted that Zionism was not an aggressive
-              or violent movement. “No one who counts himself in
-              the ranks of Israel can desire to use force,” he
-              wrote. This was its own kind of wishful thinking,
-              and Buber admitted that his attitude toward
-              violence involved a contradiction: “We should be
-              able even to fight for justice—but to fight
-              lovingly.”
-    - As a young man, he had sounded a call to rally the Jewish
-      spirit; now he pondered whether Judaism had a future at
-      all.
-        - “How is a life with God still possible in a time in
-          which there is an Auschwitz?” he asked.
-        - “The estrangement has become too cruel, the hiddenness
-          too deep.”
-    - Yet Buber remained convinced that the human need for
-      a relationship with God was indestructible.
-    - That is why he hoped to speak not just to Jews but to
-      a whole broken world. For all of us, he wrote, the question
-      we ask “in the innermost recesses of the heart” is the
-      same: “Can you teach me to believe?”
+          founder of a new Christian religion.
+            - He was, rather, a quintessentially Jewish teacher,
+              whose moral passion and poetic creativity made him
+              an heir to Isaiah and to Jeremiah.
+    - In Buber’s view, the core of Jesus’ teaching was that “God
+      wants to be realized within the world and its worldliness
+      through their purification and perfection.”
+
+
+    - Soul Force
+        - In 1939, he engaged in a polemic with Gandhi, who had
+          published a statement saying that Zionism was an
+          injustice to the Arabs of Palestine, and also
+          recommending that the Jews of Nazi Germany stay there
+          and resist by means of nonviolent satyagraha, or “soul
+          force.”
+
+
 
 ### Mystic of Nagasaki
     - We have disobeyed the law of love. Joyfully we have hated
@@ -3143,9 +3096,9 @@
     - Increasingly he came to believe that Nagasaki had been
       chosen not only to atone for the sins of the war, but to
       bear witness to the cause of international peace.
-    - Men and women of the world, never again plan war! ... From
-      this atomic waste the people of Nagasaki confront the world
-      and cry out:
+    - Men and women of the world, never again plan war! ... 
+    - From this atomic waste the people of Nagasaki confront the
+      world and cry out:
         - No more war!
     - Let us follow the commandment of love and work together.
       The people of Nagasaki prostrate themselves before God and
@@ -3157,7 +3110,7 @@
       Luke: "We are merely servants: we have done no more than
       our duty."
 
-### - Archbishop Joseph Cassidy (Tuam)
+### Archbishop Joseph Cassidy (Tuam)
     - ...it must be very hard to put up with yourself... out of
       your own resources... to live in the monastery of your own
       mind... that must be very very difficult.
@@ -3165,6 +3118,7 @@
       very busy... and then I think I should be one (!)
 
 ### Without Oars
+    - $MY_BOOKS/Spirit/Pilgrimage/Fool/Without-oars-Life-of-Pilgrimage.pdf
     - By: Wesley Granberg-Michaelson
     - "embodied spirituality" important
 
@@ -11381,7 +11335,7 @@ Yo-Yo Ma
       mind, you can simply decide not be dominated. You do that
       by not buying into the game. That's your "Whatever..."
       option. You're just not impressed or cowed. Jay tried to
-      dominate you and you didn't take the bait.
+      dominate you and you didn't _take the bait_.
 
     - In order to pull this third option, you have to really not
       be dominated. _You have to decide that Jay's opinion
@@ -11426,15 +11380,14 @@ Yo-Yo Ma
       squandering it--and I think I am not alone.
 
     - There is a Jewish tale that reveals both the universal
-      tendency to want to be someone else and the ultimate
-      importance of becoming one's self: Rabbi Zusya, when he was
-      an old man, said, "In heaven, they will not ask me:'Why
-      were you not Moses?' They will ask me: 'Why were you not
-      Zusya?"'
+      tendency to want to be someone else and the true importance
+      of becoming one's self: Rabbi Zusya, when he was an old
+      man, said, "In heaven, they will not ask me:'Why were you
+      not Moses?' They will ask me: 'Why were you not Zusya?"'
 
     - From the beginning, our lives lay down clues to selfhood
-      and vocation, though the clues may be hard to decode. But
-      trying to interpret them is profoundly
+      and vocation, though the clues may be _hard to decode_. 
+    - But trying to interpret them is profoundly
       worthwhile--especially when we are in our twenties or
       thirties or forties, feeling profoundly lost, having
       wandered, or been dragged, far away from our true gifts.
@@ -11456,7 +11409,7 @@ Yo-Yo Ma
 
 ### new testament history
     - https://www.youtube.com/playlist?list=PL279CFA55C51E75E0
-    1. Call Me Yeshua          	 Opening lecture of Thomas Sheehan's Conti
+    1. Call Me Yeshua          	 Opening lecture 
     2. Kingdom and Catastrophe 	 A history of Israel.
     3. Left Behind             	 The first century of Christianity.
     4. "Pealing" the Onion     	 From the Gospels and Paul back to Yeshua.
