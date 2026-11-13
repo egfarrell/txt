@@ -5849,40 +5849,10 @@ Film: The Wonder
 
 
 ### Moriarty:
-    - two words for knowledge in Ireland: 'Aithne' and 'eolas'
+    - $MY_NOTES/practical/Spirit/People/John-Moriarty.txt
+    - Two words for knowledge in Ireland: 'Aithne' and 'eolas'
     - He had real 'aithne' with Nature, working as a gardner
-    - Moriarty story:
-        - tribe of porters... stopped & stayed in a trance...
-          they had moved so far so fast.. they had wait for their
-          souls to catch up
-    - movement "local" versus movement "essential"
-        - from a caterpillar to a butterfly
-    - More tidbits:
-        - Read his autobiography: "Nostos" p. 517
-            - https://www.lilliputpress.ie/product/nostos
-        - Youtube clip of book launch: Curlew
-            - What The Curlew Said: "Nostos" Continued
-            - https://www.amazon.com/What-Curlew-Said-Nostos-Continued/dp/184351124X
-        - Connemara documentary on YouTube?
-        - Moriarty wrote about the sacraments...
-            - Serious Sounds
-              https://www.amazon.co.uk/Serious-Sounds-John-Moriarty/dp/1843510979/
-            - Serious Sounds tells of his own spiritual journey
-              through the Christian Sacraments, all the way from
-              birth and baptism to death and the last rites. He
-              draws on memories of his childhood in County Kerry
-              in Ireland where the sacraments for many were the
-              centre of everyday life.
-            - But this is not another backward looking
-              conservative defence of the Catholic Church. John
-              Moriarty was passionate about searching deep down
-              into the inner realities of life, of creation, of
-              our human existence on this planet floating in
-              a seemingly infinite universe. In his journey
-              through the sacraments he draws on his profound
-              knowledge not only of Christianity but also of the
-              deep wisdom of many spiritual/mythical traditions
-              throughout the world.
+
 
 
 ### Valentina Lisitsa
@@ -7179,7 +7149,7 @@ Yo-Yo Ma
       is very sorrowful even to death; remain here, and watch
       with Me.'" (Matthew 26:38) Coming to the disciples, He
       found them sleeping and, in Matthew 26:40, asked Peter:
-    - "So, could you not watch with Me one hour?"
+        > "So, could you not watch with Me one hour?"
     - The tradition of the Holy Hour devotion dates back to 1673
       when Saint Margaret Mary Alacoque stated that she had
       a vision of Jesus in which she was instructed to spend an
@@ -7197,75 +7167,14 @@ Yo-Yo Ma
       our "noise-sphere" covers over everything and we don't
       breath transcendently anymore
 
-### John Moriarty:
-    - $MY_AUDIO/misc/John-Moriarty-Walk-Earth.aac
-    - Seeking to walk beautifully on the Earth
-    - I get a sense walking the roads of Conemara that the whole
-      Earth is a living planet, it's a living thing. Like the
-      rocks are alive, it is all alive.
-    - Me, the Dublin mountains, 2005
-    - Children have experiences that are damaging they can't
-      psychologically 'digest'. Get them to relive it afterwards
-      as an adult, and in a sense be released from it.
-    - I imagine taking European culture back to it's infancy...
-      and see if it went off the rails anywhere there...
-    - Western culture went off track early in the bible... that
-      the Earth was for "Man's use and benefit"
-    - But it's ok to be in collision with your holy book
-    - The bible underwent an immense purification there in
-      Gethsemane. So on Easter Sunday morning, We don't only talk
-      of a risen Christ, we have to talk about a risen Bible...
-    - Can I be religiously in collision with the Holy Book, not
-      rebelliously... and refuse to carry those two Genesis
-      verses ("Rule over", "subdue")
-    - Go out into Nature... you'll encounter (a la Blake)
-      portions of eternity too great for your mind...
-    - Change our beliefs about Nature, because beliefs become
-      actions... (cf Cromwell's beliefs about the Irish, Hitler's
-      about the Jewish People)
-    - Moriarity mentions: Whitehead: "The adventure of ideas"
-    - On the Earth I'm walking "in excelsis": in the highest
-    - What I'm talking about is a _Space Journey_ to the Earth...
-      a coming home to the Earth
-    - Jung: "Memories, Dreams, Reflections":
-        - he couldn't join the tribal dance in Africa...
-            - he wouldn't have emerged sane...
-            - he would have experienced psychic implosion
-        - Check this too: Memories, Myths, and Dreams of an
-          Ojibwe Leader
-    - He lay down into the bog and asked for a poultice to suck
-      out his European head
-        - My European education hurt the Earth
-    - All time is "Once upon a time" time
-        - And when we enter that time, we are nearer the creative
-          genius of the universe
-    - Yeats: "Song of the wandering Aengus"
-        - In Irish mythology, Aengus or Óengus, also called Mac
-          ind Óic, is one of the Tuatha Dé Danann and probably
-          originally a god associated with youth, love,[1] summer
-          and poetic inspiration. The son of The Dagda and Boann,
-          Aengus is also known as Maccan Óc ("the young boy" or
-          "young son"), and corresponds to the Welsh mythical
-          figure Mabon and the Celtic god Maponos.[1]
-    - It might be that the fairy stories bring us closer to the
-      real world than Newtons Laws...
-    - You can sin against a blade of grass, a tree, an animal
-        - If you view anything as less than it is, you sin
-          against it
-    - The Earth or the Universe won't reveal itself to someone
-      who is just a scientist, or just a theologian... but only
-      to someone like Francis who walked out into it 'naked' ...
-      and says Brother Sun and Sister Moon
-    - It is only to someone who walks beautifully on the Earth,
-      that the Earth will reveal itself
+### Moriarty: Combing Europe's hair
+    - $MY_NOTES/practical/Spirit/People/John-Moriarty.txt
     - The Earth won't reveal itself if you crash bits of it
       together, or you put bits of it into a test tube
     - It will only reveal itself to someone who walks beautifully
       on it
     - We need a medicine man who will go down... and comb Europas
       hair
-
-
 
 
 ### 29-Apr 2021 Thu
@@ -7275,16 +7184,21 @@ Yo-Yo Ma
       united but the Persons of the Blessed Trinity, through
       Christ, in the Holy Spirit, to the Father.
     > Those who love me... my Father will love, and we will come
-      to them and make our home with them (John 14:23)
-    > [The Spirit] abides with you, and he will be in you (John
-      14:17)
+    > to them and make our home with them.
+        - (John 14:23)
+    > [The Spirit] abides with you, and he will be in you 
+        - (John 14:17)
 
 ### Walking in India
     - Card from one of the monks
         - $MY_IMAGES/misc/Our-Lady-Vailankanni.jpg
 
-### Mike Collins
-    - Carrying The Fire
+### Mike Collins (Astronaut)
+    - Carrying the Fire: An Astronaut's Journeys
+        - "Collins tells what his space journeys meant to him as
+          a human being [and] discusses the role of man amid the
+          multitudinous mechanical marvels . . . Profoundly
+          affecting." --"The New Yorker 
 
 ### Simon Reeve: Pilgrimage
     - Lincoln catherdral: the "nave" is the same root as naval.
