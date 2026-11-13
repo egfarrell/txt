@@ -5748,7 +5748,7 @@ Film: The Wonder
       is _prayer for others_.'
 
 ### Just Traveling: God, Leaving Home, Spirituality for the Road
-    - Just Traveling celebrates overcoming distance and seeking
+    - 'Just Traveling' celebrates overcoming distance and seeking
       difference as defining human traits.
     - Following the scriptural witness of God as the
       _Earthroamer_, the book explores the liminal qualities of
@@ -5769,14 +5769,14 @@ Film: The Wonder
 ### Foucauld: Little Brothers
     - Charism
     - Born in the vast Saharan desert, the brothers retain
-      a sense of the value of living with a minimum of human
-      supports in the simple presence of the living God.
+      a sense of the value of living with a _minimum of human
+      supports_ in the simple presence of the living God.
     - Their mission is to be “among people” (in the ‘heart of the
       masses’), but like Jesus they retire periodically to the
       ‘desert’, to be more free to seek God, and to learn
-      dependence on God alone. The desert is a place where one is
-      ‘stripped down’ to basic essentials, a key experience on
-      the road to contemplation.
+      dependence on God alone. 
+    - The desert is a place where one is ‘stripped down’ to basic
+      essentials, a key experience on the road to contemplation.
 
 ### Joshua v Usyk
     - Peter Fury: ... this game... it's about the tortoise, not
@@ -5784,9 +5784,9 @@ Film: The Wonder
     - Peter Fury: I wholly believe in life after death... and
       this life is short. You can blink and it's going to end.
       You get attached to this life, you get attached to money,
-      you get attached to fame, you get attached to this bullsh*t
-      and death hit's them a lot harder than people who's got the
-      beliefs and feet firmly on the floor.
+      you get attached to fame, you get attached to this
+      bullsh\*t and death hit's them a lot harder than people
+      who's got the beliefs and feet firmly on the floor.
     - So I believe there's life after death... he's in a better
       place (ex-boxer who recently passed away) and we're all
       going to find out anyway ... very soon.
@@ -5800,14 +5800,13 @@ Film: The Wonder
 ### HN: Laziness discussion
     - https://news.ycombinator.com/item?id=28574627
     - Any action a human being ever takes is a strategy to meet
-      a basic human need.
-    - from Nonviolent Communication:
-        - ./human-needs.txt
+      a basic human need. From Nonviolent Communication:
+        - $MY_NOTES/practical/Spirit/Theology/human-needs.txt
     - Start looking for the needs driving actions and you will
       gain an x-Ray vision that will give you effortless
       compassion.
 
-### - Julian Barbours wisdom/advice
+### Julian Barbours wisdom/advice
     - Brian Keating interview:
         - https://www.youtube.com/watch?v=nojc3iXpFxw
     - (he felt quite influenced by the Greeks):
@@ -5835,7 +5834,7 @@ Film: The Wonder
           (Lev 19:18)
 
 ### Popiełuszko
-    - ./Popieluszko-Polish-Priest.txt
+    - $MY_NOTES/practical/Spirit/People/Popieluszko-Polish-Priest.txt
     - (His church: St. Stanislaus Kostka Church, Warsaw)
     - That's the role of the priest, to offer the Nation's
       suffering to G-d in a sacrafice of the mass.
@@ -5850,9 +5849,11 @@ Film: The Wonder
 
 ### Moriarty:
     - $MY_NOTES/practical/Spirit/People/John-Moriarty.txt
-    - Two words for knowledge in Ireland: 'Aithne' and 'eolas'
-    - He had real 'aithne' with Nature, working as a gardner
-
+    - "That's who and what Jesus is, as I see him. He is the one
+      who _rises out of ruination_. 
+        - He rose out of the ruination of Good Friday, after all.
+          And if he can rise up out of the ruination of Good
+          Friday, he can certainly rise out of this ruin.
 
 
 ### Valentina Lisitsa
@@ -5902,14 +5903,15 @@ Film: The Wonder
     - $MY_IMAGES/Spirit/Soldier2.jpg
 
 ### Nolan tips
+    - $MY_NOTES/practical/Spirit/Jeshua-Jesus/Nolan-Jeshua-books.txt
     - related to the Mark 8:35 saying
     - The truly free person will even be detached from his or her
       ministry or _profession_. We can become so attached to our
       work that, like the rich young man, we could never give
       that up no matter who asked us to do so.
-    - We are enslaved to it with chains that cannot be broken. It
-      is like our enslavement to _success_. Of course we try to
-      be successful, but what happens when we _fail_? Would we
+    - We are enslaved to it with chains that cannot be broken. 
+    - It is like our enslavement to _success_. Of course we try
+      to be successful, but what happens when we _fail_? Would we
       have the inner freedom to _accept failure_ -- as Jesus did?
 
 
@@ -5924,10 +5926,10 @@ Film: The Wonder
         - BUT REPLY:
             - True and not true .
             - The thing is if you sincerely follow the process or
-              ritual or the path , you will inevitably reach the
+              ritual or the path, you will inevitably reach the
               "purpose" of that path .
             - That’s the magic .
-            - Just like if you travel down a road , at some point
+            - Just like if you travel down a road, at some point
               you will reach it’s end, regardless of your goal.
         - ANOTHER REPLY:
             - It also needs to be kept in mind that a process or
@@ -5975,16 +5977,17 @@ Film: The Wonder
     - $MY_IMAGES/Spirit/Irish-Philosophy.jpg
 
 ### Erma Bombeck
-    - Don’t worry about who doesn’t like you, who has more, or who’s doing what.
+    - Don’t worry about who doesn’t like you, who has more, or
+      who’s doing what.
 
 ### Hadza
     - The Hadza are organized into bands, called 'camps' in the
       literature, of typically 20–30 people, though camps of over
-      a hundred may form during berry season. There is no tribal
-      or other governing hierarchy, and almost all decisions are
-      made by reaching an agreement through discussion.
-      Furthermore, the Hadza are egalitarian, meaning there are
-      no real status differences between individuals.
+      a hundred may form during berry season. 
+    - There is no tribal or other governing hierarchy, and almost
+      all decisions are made by reaching an agreement through
+      discussion. Furthermore, the Hadza are egalitarian, meaning
+      there are no real status differences between individuals.
     - While the elderly receive slightly more respect, within
       groups of age and sex all individuals are equal, and
       compared to strictly stratified societies, women are
@@ -6003,25 +6006,25 @@ Film: The Wonder
       doesn't govern.
 
 ### Jordan Peterson, micro-routines,
-        - make a schedule and stick to it
-        - but negotiate with yourself, give yourself rewards,
-          leisure, the schedule isn't a prison
-        - and if you hit the schedule with 50% accuracy, well
-          that's better than 0%
+    - make a schedule and stick to it
+    - but negotiate with yourself, give yourself rewards,
+      leisure, the schedule isn't a prison
+    - and if you hit the schedule with 50% accuracy, well that's
+      better than 0%
 
 ### Interview with Exorcist
     - Fr Vincent Lampert
     - people can (unwittingly) create an entry-point for the
       demonic (addictive behaviour can open an entry)
-    - demonic obsession: mental attacks. Also affects memory and
-      imagination.
+    - demonic obsession: mental attacks. Also affects _memory_
+      and _imagination_.
     - demonic opression is a gift from G-d. e.g. Job, Paul
     - Fr Lampert felt attack, pressure on chest, cold
     - ordinary attack: deception, division (broken), diversion,
       discouragement. D preys on our memory and imagination
-    - when attacked, talk back with the words of scripture (I'll
-      prefer to talk to Jeshua)
-    - lay people only say supplicating prayers to G-d. (the
+    - When attacked, talk back with the words of scripture 
+        - (I prefer to talk to Jeshua)
+    - Lay people only say supplicating prayers to G-d. (the
       priest only commands a Demonic spirit)
     - Good: Chaplet of St Michael Archangel, Prayer of St Joseph,
       Hail Mary, Our Abba...
@@ -6029,9 +6032,9 @@ Film: The Wonder
     - If you read Scripture and there's something you're not sure
       about, turn to the Lives of the Saints. They'll fill in the
       gaps..
-    - posession is always physical, the human soul is reserved
+    - Posession is always physical, the human soul is reserved
       for G-d alone
-    - when under attack: St Michael, Come Holy Spirit
+    - When under attack: St Michael, Come Holy Spirit
     - Anointing of the sick sacrament: powerful sacrament
 
 ### Messi for PSG
@@ -6044,6 +6047,9 @@ Film: The Wonder
 ### Casting Lots
     - One-off decisions only... no long-term things... not
       suitable
+        - Oct 2026: Ah this summer in Lourdes I finally saw how
+          this lots casting was a disaster... but forgot I had
+          already seen that here in 2021 already.
 
 ### Walkers
     - The Highbrow Neanderthal
@@ -6053,17 +6059,18 @@ Film: The Wonder
       said, they seem to have faced a caloric challenge in
       a world with sparse mega fauna.
     - Based on everything I've read, modern humans pre-language
-      excelled at one specific thing: walking very long distances
-      without exhaustion on less calories. Ends up that's pretty
-      dang useful in spreading across the globe.
+      excelled at one specific thing: _walking very long
+      distances_ without exhaustion on less calories. Ends up
+      that's pretty dang useful in spreading across the globe.
 
 ### Derren Brown
     - On the Joe Rogan podcast
-    - the walls in Spain are only 4 foot high
-    - something totally off context in the middle of agression
-    - clicked my fingers and he fell asleep... but I hadn't
-      pre-suggested it the week before... it was just my
-      confidence in that moment
+    - "The walls in Spain are only 4 foot high... "
+        - Something totally off context in the middle of
+          agression...
+        - clicked my fingers and he fell asleep... but I hadn't
+          pre-suggested it the week before... it was just my
+          confidence in that moment
     - Rogan: there's a kind of 'cheat mode' to the human mind,
       a hidden admin panel someone can access
     - Derren Brown started faith healing then... woman with
@@ -6078,28 +6085,30 @@ Film: The Wonder
     - youtube comment: John is a religious atheist
 
 ### Boxers
-    - I just spoke to Woodhall again, and he's clear where boxers
-      get their sense of peace from. "It's all about
-      self-control. It takes an enormous amount of self-control
-      to manage your emotions when punches are raining down to
-      you. Very few people have that level of self-control; it
-      goes against all your natural instincts. It's something
-      boxers have to learn, or they'll never be boxers. And when
-      they have learned it, they take it on into the rest of
-      their lives."
+    - I spoke to Woodhall again, and he's clear where boxers get
+      their sense of peace from: 
+        - "It's all about self-control. It takes an enormous
+          amount of self-control to manage your emotions when
+          punches are raining down to you. Very few people have
+          that level of self-control; it goes against all your
+          natural instincts. It's something boxers have to learn,
+          or they'll never be boxers. And when they have learned
+          it, they take it on into the rest of their lives."
 
-    - The boxing expert Steve Bunce takes a similar view. "Boxers
-      simply have very little to prove away from the ring: no
-      inferiority or short-man problems; no need to test their
-      bullshit manhood. They do all of that four and five nights
-      each week. They are the last to throw punches, the first to
-      stop fights." And interestingly, of Woodhall he says:
-      "Richie is the mildest man in the world. I saw him up-close
-      amateur and pro and he was a nasty fighter. But I bet he's
-      not used his fists without gloves since he was about four!
-      Nothing to prove."
+    - Boxing expert Steve Bunce takes a similar view: 
+        - "Boxers simply have very little to prove away from the
+          ring: no inferiority or short-man problems; no need to
+          test their bullshit manhood. They do all of that four
+          and five nights each week. They are the last to throw
+          punches, the first to stop fights." 
 
-### gospel
+    - And interestingly, of Woodhall he says: 
+        - "Richie is the mildest man in the world. I saw him
+          up-close amateur and pro and he was a nasty fighter.
+          But I bet he's not used his fists without gloves since
+          he was about four! Nothing to prove."
+
+### Gospel
     - This incident in the Gospels is a revelation of the
       compassion of Jesus for people like us and that He will do
       anything he can to free us from the demons, like fear,
@@ -6113,7 +6122,7 @@ Film: The Wonder
 
 ### Discalced Carmelite
     - Discalced means 'no shoes' or in a broader sense, 'no ease'
-    - that's me, always looking for my own ease
+    - That's me, always looking for my own ease
 
 ### Surprises
     - Youtube 'eqm':
@@ -6129,10 +6138,10 @@ Film: The Wonder
       Stauffenberg (a key figure in the July 20th assassination
       plot and the main character in Valkyrie), whatever - or we
       have special people, they helped Jews, like Schindler's
-      List and The Pianist and so on. And I think it was time to
-      actually do something that omitted that part, that just
-      showed what it really was. The horror."
-
+      List and The Pianist and so on. 
+    - And I think it was time to actually do something that
+      omitted that part, that just showed what it really was. The
+      horror."
     - Boll's observation here is astute. While Schindler's List
       and The Pianist are modern classics (in my opinion, at
       least), their focus on tales of personal triumph makes it
@@ -6145,7 +6154,7 @@ Film: The Wonder
     - Mind it not, for if thou dost it will feed thee more, but
       stand still and act not, and wait in patience, till Light
       arises out of darkness and leads thee."
-    - James Naylor (1659)
+        - James Naylor (1659)
 
 
 ### Sam Harris
