@@ -1,4 +1,9 @@
 
+### Rumination advice
+    - Watch some video of Rugby players who have lost (e.g. NZ)
+      or boxers who have lost. Class men... true honour
+      & humility.
+
 ### Divine Healing
     - book: On the trail of AW Tozer: A Biography
     - Dr Charles Cullis was a Boston physician who had been for
