@@ -10256,6 +10256,8 @@ LLMs fail at Physics and Maths
     - VIDEO: Shankar: Einstein for the masses lecture
     - VIDEO: Wolfgang Pauli lectures                                               https://video.ethz.ch/speakers/pauli.html
     - VIDEO: The Portal Group, Eric Weinstein                                      https://theportal.group
+    - VIDEO: Stonybrook, maths, physics ai,                                        https://scgp.stonybrook.edu/video/
+
 
     - WEB: "The Liverpool List" Philosophy message archive                                       https://listserv.liv.ac.uk/cgi-bin/wa?A0=PHILOS-L
     - WEB: Acceleration anisotropy                                                               https://phys.org/news/2019-11-evidence-anisotropy-cosmic.html
@@ -10337,6 +10339,7 @@ LLMs fail at Physics and Maths
     - YT: g2net tip: Physics Girl                                                                https://www.youtube.com/@physicsgirl
     - YT: g2net tip: Veritasum                                                                   https://www.youtube.com/c/veritasium
     - YT: important! Tensor Explanations. Amanda for Flournoy course                             https://www.youtube.com/channel/UCADQXgS9jJRu-_RzVxmqAIQ/videos?shelf_id=0&view=0&sort=dd
+
 
 
 

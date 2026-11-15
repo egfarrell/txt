@@ -1,8 +1,15 @@
+### Great talk about Christianity
+    - https://www.youtube.com/watch?v=mvmnd4jn4qI
+    - Philip Davies interviews Mark Vernon. Mark studied physics
+      at Durham University, and received a PhD in ancient Greek
+      philosophy from the University of Warwick. He also
+      theology at University of Oxford and ordained a priest in
+      Church of England in1994 but left the church 3 years later.
 
 ### Rumination advice
-    - Watch some video of Rugby players who have lost (e.g. NZ)
-      or boxers who have lost. Class men... true honour
-      & humility.
+    - Stop rumination / resentment: Watch some video of Rugby
+      players who have lost (e.g. NZ) or boxers who have lost.
+      Class men... true honour & humility.
 
 ### Divine Healing
     - book: On the trail of AW Tozer: A Biography
@@ -45,14 +52,14 @@
       against which Tozer’s own life was played..."
 
 ### The Cures
-    - BBC One - True North, The Miraculous Tales of Mickey McGuigan      
+    - BBC One - True North, The Miraculous Tales of Mickey McGuigan
         - https://www.bbc.co.uk/programmes/b03bys0h
     - Mickey explains about Pat O'Rouke's special gift of curing
       sprains that he wants to pass on to his granddaughter.
-      Mickey also talks about Mary Brady who cures colic. 
+      Mickey also talks about Mary Brady who cures colic.
         - (Mary makes a sign of the cross)
         - https://marybradygift.weebly.com
-        - Mary Brady.                          
+        - Mary Brady.
         - Esker, Emyvale,
         - Co. Monaghan.
         - Tel: 047 - 87188
@@ -106,10 +113,10 @@
         - $MY_NOTES/practical/Spirit/People/People.txt
     - Integration of Vulnerability and the "Wound": Rather than
       seeking "neat" or "perfect" lives, many figures found their
-      strength precisely in their limitations or suffering. Saint
-      Paul’s theology was defined by a "cruciform power" that
-      prioritized suffering love over imperial strength, and the
-      biblical Jacob is described as being "blessed, but not
+      strength precisely in their limitations or suffering. 
+    - Saint Paul’s theology was defined by a "cruciform power"
+      that prioritized suffering love over imperial strength, and
+      the biblical Jacob is described as being "blessed, but not
       healed," carrying a permanent limp as a sign of his
       disruptive encounter with the divine. As Carl Jung noted,
       the "wound is the price of remaining human"
@@ -135,14 +142,14 @@
   lonely watcher on the hills who has a momentary glimpse of
   infinitude and feels the universe rushing at him." A. E.'s
   LETTERS TO Minanlabain
-    - Watcher on the Hills: 
-    - a study of some mystical experiences of ordinary people 
+    - Watcher on the Hills:
+    - a study of some mystical experiences of ordinary people
     - Raynor c. Johnson
 
 ### Auschwitz
     - $MY_NOTES/practical/Spirit/Shoah/Shoah-Auschwitz-Holocaust.txt
     - “It has been said by many Christians _that Christianity
-      died at Auschwitz_, Treblinka, and Sobidor,” Boyarin wrote. 
+      died at Auschwitz_, Treblinka, and Sobidor,” Boyarin wrote.
 
 ### The Silence is the test.
     - ... the physical component is the arena.
@@ -152,7 +159,7 @@
     - What makes this story striking is how silence becomes the
       true battlefield. The strongest soldiers weren’t the
       fastest or toughest, but those who endured _uncertainty_
-      without guidance. 
+      without guidance.
     - It reveals a rare kind of strength—the ability to move
       forward without reassurance, driven purely by inner
       resolve.
@@ -163,7 +170,7 @@
     - So I want to be a realist. And a realist with hope. And
       hope in the spiritual sense is something entirely different
       from the hopes one clings to.
-    - Hopes always concern something one can imagine. 
+    - Hopes always concern something one can imagine.
     - But `Hope` is openness to surprise. That is my definition
       of `Hope`: openness to surprise.
     - The surprising thing is always something one cannot
@@ -185,7 +192,7 @@
 
 
 ### Comedians
-    - Jerry Seinfeld & Eddie Murphy Debate The Funniest Comedian Of All Time | Netflix Is A Joke
+    - Jerry Seinfeld & Eddie Murphy Debate The Funniest Comedian Of All Time
     - yt comment:
     - Comedians are our angels. They take on the weight of the
       world, public ridicule and societal discomfort to point out
@@ -203,7 +210,7 @@
 ### Emunah vs. Western "Faith"
     - While Western definitions of faith often relate to the
       subjective belief in something unproven, emunah signifies
-      a confident reliance on a _known, proven God_. 
+      a confident reliance on a _known, proven God_.
     - It is not merely the belief that God exists, but the
       ability to trust God's presence and providence in daily
       life
@@ -211,7 +218,7 @@
 ### Moya Brennan, Clannad
     - Brennan is survived by Jarvis and their two children. In
       2022, she credited her Christian faith with helping her
-      endure, including performing through her lung condition. 
+      endure, including performing through her lung condition.
         - “I know God is with me, it’s when we are doing things
           by ourselves, that’s when we feel the stress. I’m not
           saying I’ve got it perfect, we all fall but really
@@ -222,7 +229,7 @@
     - Noticed a picture in the Cathedral of Christ on the Cross
       but his body all scourged.
     - Never really thought about that before... he was still
-      sufferring from the whipping before He was crucified.
+      suffering from the whipping before He was crucified.
 
 ### The Cave
     - https://www.youtube.com/watch?v=FCvQsqSCWjA
@@ -235,32 +242,34 @@
 ### Split
     - $MY_BOOKS/Spirit/Lost-Road-Sean-McGrath.pdf
     - Kierkegaard’s model of faith is Abraham, the patriarch of
-      Judaism, Christianity, and Islam, who believed, Kierkegaard
-      writes, “because of the absurd” (Kierkegaard 1983: 35).
-      Simulta- neously told two seemingly incompatible things by
+      Judaism, Christianity, and Islam, who believed “because of
+      the absurd” (Kierkegaard 1983: 35).
+    - Simultaneously told two seemingly incompatible things by
       God, that he would be the father of many nations and that
       he should sacrifice his son, Isaac, Abraham is plunged into
-      a torment of self- doubt that he can share with no one.7
+      a torment of self-doubt that he can share with no one.
     - Kierkegaard does not spend much time with this happy
       ending. What interests him is the psychology of Abraham as
       he resolves to do the awful deed. He is driven to believe
-      two things that seem to contradict each other: that his
-      only and beloved son, Isaac, must die, and that God is good
-      and will keep his promise and give him progeny. As
-      Kierkegaard puts it, Abraham believes that Isaac will be
+      two things that seem to contradict each other:
+        - that his only and beloved son, Isaac, must die, and
+          that God is good and will keep his promise and give him
+          progeny.
+    - As Kierkegaard puts it, Abraham believes that Isaac will be
       given back to him even as he must die at his father’s hand.
-      He will be given back by virtue of the absurd. What Abraham
-      sacrifices on Mount Moriah is not Isaac but his own sense
-      of what is possible. And in the process, a deepening of
-      what Kierkegaard calls “inwardness” occurs. Abraham can
-      talk to no one about his struggle. He is driven into the
-      innermost depths of his heart. He cannot even put his faith
-      into coherent words. The whole thing is a tangle of
-      contradiction. And yet he resolves to obey God rather than
-      himself. In this resolve, this site of an irreducibly free
-      decision to trust despite all the counter-evidence, Abraham
-      enters into an “absolute relation to the absolute”
-      (Kierkegaard 1983, 56).
+    - He will be given back by virtue of the absurd.
+    - What Abraham sacrifices on Mount Moriah is not Isaac but
+      his own sense of what is possible. And in the process,
+      a deepening of what Kierkegaard calls “inwardness” occurs.
+      Abraham can talk to no one about his struggle.
+    - He is driven into the innermost depths of his heart. He
+      cannot even put his faith into coherent words. The whole
+      thing is a tangle of contradiction. And yet he resolves to
+      obey God rather than himself.
+    - In this resolve, this site of an irreducibly free decision
+      to trust despite all the counter-evidence, Abraham enters
+      into an “absolute relation to the absolute” (Kierkegaard
+      1983, 56).
 
 
 ### Dark Flow / Junk flow
@@ -281,6 +290,7 @@
     - Truth:
         - When speaking to someone, it has to be Truth and Love.
         - Truth without Love is harsh.
+            - (I've done this twice: L'Arche, Holyhill)
         - Love without Truth is false.
     - Intercession:
         - The neighbours lowering the paralytic in through the
@@ -3101,7 +3111,7 @@
     - Increasingly he came to believe that Nagasaki had been
       chosen not only to atone for the sins of the war, but to
       bear witness to the cause of international peace.
-    - Men and women of the world, never again plan war! ... 
+    - Men and women of the world, never again plan war! ...
     - From this atomic waste the people of Nagasaki confront the
       world and cry out:
         - No more war!
@@ -5779,7 +5789,7 @@ Film: The Wonder
     - Their mission is to be “among people” (in the ‘heart of the
       masses’), but like Jesus they retire periodically to the
       ‘desert’, to be more free to seek God, and to learn
-      dependence on God alone. 
+      dependence on God alone.
     - The desert is a place where one is ‘stripped down’ to basic
       essentials, a key experience on the road to contemplation.
 
@@ -5855,7 +5865,7 @@ Film: The Wonder
 ### Moriarty:
     - $MY_NOTES/practical/Spirit/People/John-Moriarty.txt
     - "That's who and what Jesus is, as I see him. He is the one
-      who _rises out of ruination_. 
+      who _rises out of ruination_.
         - He rose out of the ruination of Good Friday, after all.
           And if he can rise up out of the ruination of Good
           Friday, he can certainly rise out of this ruin.
@@ -5914,7 +5924,7 @@ Film: The Wonder
       ministry or _profession_. We can become so attached to our
       work that, like the rich young man, we could never give
       that up no matter who asked us to do so.
-    - We are enslaved to it with chains that cannot be broken. 
+    - We are enslaved to it with chains that cannot be broken.
     - It is like our enslavement to _success_. Of course we try
       to be successful, but what happens when we _fail_? Would we
       have the inner freedom to _accept failure_ -- as Jesus did?
@@ -5988,7 +5998,7 @@ Film: The Wonder
 ### Hadza
     - The Hadza are organized into bands, called 'camps' in the
       literature, of typically 20–30 people, though camps of over
-      a hundred may form during berry season. 
+      a hundred may form during berry season.
     - There is no tribal or other governing hierarchy, and almost
       all decisions are made by reaching an agreement through
       discussion. Furthermore, the Hadza are egalitarian, meaning
@@ -6027,7 +6037,7 @@ Film: The Wonder
     - Fr Lampert felt attack, pressure on chest, cold
     - ordinary attack: deception, division (broken), diversion,
       discouragement. D preys on our memory and imagination
-    - When attacked, talk back with the words of scripture 
+    - When attacked, talk back with the words of scripture
         - (I prefer to talk to Jeshua)
     - Lay people only say supplicating prayers to G-d. (the
       priest only commands a Demonic spirit)
@@ -6091,7 +6101,7 @@ Film: The Wonder
 
 ### Boxers
     - I spoke to Woodhall again, and he's clear where boxers get
-      their sense of peace from: 
+      their sense of peace from:
         - "It's all about self-control. It takes an enormous
           amount of self-control to manage your emotions when
           punches are raining down to you. Very few people have
@@ -6100,14 +6110,14 @@ Film: The Wonder
           or they'll never be boxers. And when they have learned
           it, they take it on into the rest of their lives."
 
-    - Boxing expert Steve Bunce takes a similar view: 
+    - Boxing expert Steve Bunce takes a similar view:
         - "Boxers simply have very little to prove away from the
           ring: no inferiority or short-man problems; no need to
           test their bullshit manhood. They do all of that four
           and five nights each week. They are the last to throw
-          punches, the first to stop fights." 
+          punches, the first to stop fights."
 
-    - And interestingly, of Woodhall he says: 
+    - And interestingly, of Woodhall he says:
         - "Richie is the mildest man in the world. I saw him
           up-close amateur and pro and he was a nasty fighter.
           But I bet he's not used his fists without gloves since
@@ -6143,7 +6153,7 @@ Film: The Wonder
       Stauffenberg (a key figure in the July 20th assassination
       plot and the main character in Valkyrie), whatever - or we
       have special people, they helped Jews, like Schindler's
-      List and The Pianist and so on. 
+      List and The Pianist and so on.
     - And I think it was time to actually do something that
       omitted that part, that just showed what it really was. The
       horror."
@@ -7200,7 +7210,7 @@ Yo-Yo Ma
     > Those who love me... my Father will love, and we will come
     > to them and make our home with them.
         - (John 14:23)
-    > [The Spirit] abides with you, and he will be in you 
+    > [The Spirit] abides with you, and he will be in you
         - (John 14:17)
 
 ### Walking in India
@@ -7212,7 +7222,7 @@ Yo-Yo Ma
         - "Collins tells what his space journeys meant to him as
           a human being [and] discusses the role of man amid the
           multitudinous mechanical marvels . . . Profoundly
-          affecting." --"The New Yorker 
+          affecting." --"The New Yorker
 
 ### Simon Reeve: Pilgrimage
     - Lincoln catherdral: the "nave" is the same root as naval.
@@ -7422,8 +7432,9 @@ Yo-Yo Ma
       time.
 
 
-### The Assasin
-    - estimate the cost of an act or the capability to perform it
+### Parable of the Assassin (Jesus Seminar)
+    - $MY_NOTES/practical/Spirit/Theology/Parable-Assassin.txt
+    - Estimate the cost of an act or the capability to perform it
       successfully
         - $MY_IMAGES/misc/Assasin-01.jpg
         - $MY_IMAGES/misc/Assasin-02.jpg
@@ -7431,14 +7442,13 @@ Yo-Yo Ma
       grounds that Jesus would not use a parable that glorifies
       murder, and because of its use of the phrase "the Kingdom
       of the Father" which is not found in the canonical gospels.
-    - According to some of the fellows of the Jesus Seminar, "the
-      story line of the parable originally had to do with Davidic
-      reversal, as in David and Goliath: The little guy bests the
-      big guy by taking the precautions a prudent person would
-      take before encountering the village bully".[4] A similar
-      message can be found in the parable of the strong
-      man.[citation needed]
-    - ./Parable-Assassin.txt
+    - According to some of the fellows of the Jesus Seminar,
+        - "the story line of the parable originally had to do
+          with Davidic reversal, as in David and Goliath: The
+          little guy bests the big guy by taking the precautions
+          a prudent person would take before encountering the
+          village bully".[4] A similar message can be found in
+          the parable of the strong man.[citation needed]
 
 ### Gaelthacht 1986
     - After being bullied, in the end I accepted my fate and
@@ -11314,7 +11324,7 @@ Yo-Yo Ma
       not Moses?' They will ask me: 'Why were you not Zusya?"'
 
     - From the beginning, our lives lay down clues to selfhood
-      and vocation, though the clues may be _hard to decode_. 
+      and vocation, though the clues may be _hard to decode_.
     - But trying to interpret them is profoundly
       worthwhile--especially when we are in our twenties or
       thirties or forties, feeling profoundly lost, having
@@ -11337,7 +11347,7 @@ Yo-Yo Ma
 
 ### new testament history
     - https://www.youtube.com/playlist?list=PL279CFA55C51E75E0
-    1. Call Me Yeshua          	 Opening lecture 
+    1. Call Me Yeshua          	 Opening lecture
     2. Kingdom and Catastrophe 	 A history of Israel.
     3. Left Behind             	 The first century of Christianity.
     4. "Pealing" the Onion     	 From the Gospels and Paul back to Yeshua.
@@ -11488,4 +11498,4 @@ Yo-Yo Ma
     - Christian meditation Ireland                                              https://christianmeditation.ie/
     - DBH: Talk about hell                                                      https://www.youtube.com/watch?v=DPSipiwAteg
     - DBH: Future of Christianity                                               https://www.youtube.com/watch?v=yt8DwVE5plo
-
+    - Christianity today                                                        https://www.youtube.com/watch?v=mvmnd4jn4qI
