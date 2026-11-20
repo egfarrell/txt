@@ -1,4 +1,11 @@
 
+
+
+### Riemann solved(!)
+    - Terry Tao https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/
+    - Lean experts https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/Discussion.3A.20Alp.C3.B6ge.20Proves.20the.20Riemann.20Hypothesis
+    - Hurried Announcement: Alessandro Masullo GRH https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/
+
 ### Hard to understand others!
     - https://www.math.columbia.edu/~woit/wordpress/?p=15672#comments
     - I like this tough by Daniel Litt on X (your link) : ”I
